@@ -15,7 +15,7 @@ reports suggest are resolved against OAK (#260), evidence snippets are audited
 
 Open PRs: **none**.
 
-Open issues, 16. Eight of the fifteen listed at the last reconcile are now closed
+Open issues, 17. Eight of the fifteen listed at the last reconcile are now closed
 (#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
 come from the reviews of the five PRs above, which is the review loop working as
 intended.
@@ -38,6 +38,7 @@ intended.
 | #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
 | #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
 | #275 | conventions page duplicates the workflow header comments it restates | 7 |
+| #283 | this file's reconciles touch headers but not the section bodies they label | — |
 
 **Recommended next: #252.** It is the third recurrence of one bug class (#184,
 #200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
@@ -476,15 +477,18 @@ verifiable by CI, none blocking anything:
 
 | # | fix | note |
 |---|---|---|
-| #203 | unify `astral-sh/setup-uv` (v3 ×4, v5, v7) | needs a version decision, then mechanical |
-| #205 | declare PyYAML for `pr-shepherd`'s model-resolution step | same shape as #190's `matplotlib` gap |
-| #208 | skip 4-space-indented code blocks in the link check | no impact today; narrower than #202 was |
+| #191 | vendored `history.yaml` has no drift check vs claw canonical | cross-Mech; wants the hub |
+| #197 | `vendored-sync` couples every PR to CultureMech's availability | cross-Mech; wants the hub |
+| #198 | `vendored-sync` paths filter omits 4 vendored files, in every repo | cross-Mech; wants the hub |
 | #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
-| #191 | vendored `history.yaml` has no drift check vs claw canonical | |
-| #192 | justfile claw-module guard implemented twice | |
-| #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
-| #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
-| #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
+| #217 | conventions page is TraitMech-local; cross-Mech placement unsettled | the page landed in #272; #209 is the argument against a fourth copy |
+| #252 | nothing checks `qc.yaml`'s paths filter covers what `qc` reads | **3rd recurrence** (#184, #200, #250); gate machinery fresh from #272 |
+| #275 | conventions page duplicates the workflow header comments it restates | resolve with #217 — consolidate or cross-link, not both |
+
+Closed since this section was written: **#192**, **#193**, **#203**, **#205**,
+**#208**, **#218** (and #199, #200, #202, #204, #215 before them). Action pinning
+and the conventions page landed in **#272**, which also added the
+`ACTION_UNPINNED` gate.
 
 ## 8. The paid Edison sweep's output was lost — RE-RUN COMPLETE (#241), 353/353 tracked
 
@@ -502,36 +506,49 @@ half: 342 of 353 reports existed only on one machine, so the manifest recorded
 353 successes against 11 surviving files. The artifacts are provenance, not
 build output, and are committed.
 
-The re-run was authorised and is under way, launched through the new
-`just trait-graph-sweep` recipe. That recipe exists for the credentials, not
-for convenience: `scripts/research_trait.py` has no `load_dotenv`, so a sweep
-started outside `just` sees no `EDISON_API_KEY` and every call fails instantly.
+The re-run **completed** (#241): 353/353 reports plus citation sidecars, 17 MB,
+tracked. It was launched through the `just trait-graph-sweep` recipe, which
+exists for the credentials rather than convenience — `scripts/research_trait.py`
+has no `load_dotenv`, so a sweep started outside `just` sees no `EDISON_API_KEY`
+and every call fails instantly.
 
-Canaried before fan-out and checked on side effects rather than the exit code —
+Canaried before fan-out and checked on side effects rather than the exit code:
 one real unit produced a 50,846-byte report plus citations, `cached: false`, 57
-references, and a manifest row; 452s wall clock, so ~11 h for 341 at
-`--workers 4`.
+references, and a manifest row.
 
-**Transitional inconsistency, now machine-detectable rather than remembered.**
-The manifest is append-only and predates the tracking change, so many `ok` rows
-still point at artifacts that are not yet back in the tree. `just
-trait-graph-sweep --verify` reports exactly that set and exits 1 — free, no
-calls — and the count falls to 0 as the sweep completes:
+**The manifest reads as a spend record.** 714 rows: 700 `ok` + 13 `fail:1`,
+across five `run_id`s. All 13 failures later succeeded under a later `run_id` —
+which is the distinction that column was added to make, after
+`biofilm_formation` carried three indistinguishable rows.
+
+The transitional inconsistency is gone. `--verify` is now clean and runs in
+`just qc` as `audit-research-artifacts`:
 
 ```
 $ just trait-graph-sweep --verify
-manifest ok rows with a missing artifact: 331
+targets: 353  already-researched: 353  pending: 0
+manifest ok rows with a missing artifact: 0
+reports carrying a malformed CURIE: 0 (0 matches; scanned 707 artifacts)
 ```
 
-It is deliberately not patched into fake agreement, because the record of what
-was billed is the one thing the manifest is good for. Rows carry a `run_id` so
-a retry, a re-bill and the original are distinguishable — `biofilm_formation`
-had three indistinguishable rows before that column existed.
+The malformed-CURIE line is a scan added in #242, not an assertion — four
+reports had been regenerated for double-prefixed CURIEs, and a fifth was in
+flight during the manual grep that found them, so it was missed and needed a
+third paid pass.
 
-Four of the 331 are a different case: reports deleted on purpose because the
-template induced a malformed CURIE, after the running sweep had already passed
-them. They need a second pass once the current one finishes; `--verify` is what
-makes that a check rather than a note someone has to remember.
+### What the sweep left behind — all filed, none blocking
+
+- **#244** — `--verify` checks report *existence* only: not the citation
+  sidecars, not non-emptiness, and never disk→manifest. So the clean output
+  above is narrower than it looks, and a report on disk with no `ok` row would
+  silently suppress a call, since resume is file-existence keyed.
+- **#245** — `cellulolysis` has a second, `-codex` report with no manifest row
+  and no sidecar. #253's provider ranking stops it reaching a page.
+- **#246** — two `-edison-literature-meta.yaml` files, for 2 of 353 traits, and
+  nothing in the repo writes that filename.
+- **#248** — `template_file: /Users/marcin/...` in 342 now-tracked reports.
+- **#249** — the citation sidecars are a broken extraction: 353/353 carry
+  malformed entries, 332/353 list the same reference more than once.
 
 Cost per call is captured nowhere — `duration_seconds` is, but no USD figure —
 which is worth adding before this is ever repeated.
