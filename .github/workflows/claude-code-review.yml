@@ -47,8 +47,13 @@ jobs:
     #    red check on every dependency PR that said nothing about the bump — a
     #    red that trains people to ignore reds.
     #
-    #    Skipping means the check is not reported at all rather than reported
-    #    failing. It does NOT mean dependency PRs go unreviewable: comment
+    #    A job skipped by an `if:` reports **Success**, not "absent" — GitHub
+    #    only leaves checks Pending when the WORKFLOW is filtered out by
+    #    path/branch/message. So the check still appears on Dependabot PRs; it
+    #    just stops being red. That is also what makes this safe if
+    #    claude-review is ever a required check: a conditional skip satisfies
+    #    branch protection, where a filtered-out workflow would block it.
+    #    It does NOT mean dependency PRs go unreviewable: comment
     #    `/review` on one. That run is triggered by the commenter, not by
     #    Dependabot, so it gets secrets and reviews normally. Gate on
     #    `github.actor` rather than the PR author precisely because actor is what

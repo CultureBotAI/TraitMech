@@ -124,17 +124,37 @@ That is not a signal about the bump. It is a permanent red on the class of PR
 *least* likely to be read carefully — a red that trains people to ignore reds,
 which is the failure in "Verify the check ran" above wearing the other colour.
 
-Gate such jobs on `github.actor != 'dependabot[bot]'` so the check is **not
-reported at all** rather than reported failing. Gate on `github.actor`, not on
-the PR author: actor is what determines whether secrets exist, so a human
-pushing to a Dependabot branch correctly re-enables the job.
+Gate such jobs on `github.actor != 'dependabot[bot]'`. Gate on `github.actor`,
+not on the PR author: actor is what determines whether secrets exist, so a
+human pushing to a Dependabot branch correctly re-enables the job.
+
+**A conditionally-skipped job reports Success, not "absent".** This is the one
+place the previous section's instinct misleads. GitHub leaves checks *Pending*
+only when the **workflow** is filtered out by `paths:`/branch/commit-message; a
+**job** skipped by its own `if:` reports **Success**. So the check still shows
+up — it stops being red, it does not disappear. Two consequences:
+
+- Verify this kind of change by looking for *green/skipped instead of red*, not
+  for the check vanishing. Expecting it to vanish reads a working change as a
+  failure.
+- If the check is ever branch-protection-required, a conditional skip still
+  satisfies it. Filtering the whole workflow out would not — it would block the
+  merge on a permanently Pending check. That asymmetry is why the gate belongs
+  on the job, not on the trigger.
 
 Skipping does not make these PRs unreviewable — comment `/review`. That run is
 triggered by the commenter, so it has secrets and behaves normally.
 
-**Do not reach for `pull_request_target` to get secrets back.** It runs with
-secrets attached against PR-controlled content, so any job that checks out PR
-head and executes repository code — `uv sync`, `just` recipes — hands those
-secrets to that code. It is the same hazard the "Refuse fork PRs" guard in
-`claude-code-review.yml` exists to prevent, entered by another door, and
-Dependabot PRs edit `.github/workflows/**` by their nature.
+There are two ways to give a Dependabot run secrets, and both are refused here:
+
+- **Dependabot secrets.** The `secrets` context on a Dependabot run resolves
+  against a separate store, which is why `app-id` arrived *empty* rather than
+  denied. Putting the App credentials there would make the job run. Don't: on
+  `pull_request` the workflow that executes is **PR head's**, and a Dependabot
+  PR's entire content is a change to which action SHAs this job runs. That
+  hands the reviewer App private key to a freshly-bumped, unreviewed action.
+- **`pull_request_target`.** Runs with secrets against PR-controlled content,
+  so any job that checks out PR head and executes repository code — `uv sync`,
+  `just` recipes — hands those secrets to that code. Same hazard the "Refuse
+  fork PRs" guard in `claude-code-review.yml` exists to prevent, by another
+  door.
