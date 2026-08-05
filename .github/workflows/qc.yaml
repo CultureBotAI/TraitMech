@@ -41,6 +41,12 @@ on:
       # every sweep batch, and the shape the gate exists for. Same
       # filter-narrower-than-the-job bug as #184 and #200 (#250).
       - "research/**"
+      # conf/ holds both ratchet baselines — causal_graph_audit_baseline.tsv and
+      # evidence_snippet_baseline.tsv — plus id_label_targets.yaml. Without this
+      # line, WEAKENING a baseline does not re-run qc, which is the one edit
+      # that most needs it. Found by audit-qc-paths on its first run: the fourth
+      # instance of this bug after #184, #200 and #250 (#252).
+      - "conf/**"
   push:
     branches: [main]
   workflow_dispatch:

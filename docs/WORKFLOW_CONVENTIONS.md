@@ -87,10 +87,17 @@ exactly how #215 got in.
 **A `paths:` filter is a promise that the job does not need the files it
 excludes.** When a job grows a new input, the filter has to grow with it.
 
-This has now happened three times — #184, #200, and #250, where `qc` gained
+This has now happened four times — #184, #200, #250 (where `qc` gained
 `audit-research-artifacts` reading `research/**` while the filter still listed
 only the old inputs, so the gate could not fire on the artifact-only PRs it was
-built for. Nothing checks this invariant; #252 tracks giving it a gate.
+built for), and `conf/`, where both ratchet baselines lived outside the filter so
+*weakening* one did not re-run `qc`.
+
+**Enforced now.** `just audit-qc-paths` derives what the `qc` chain reads —
+justfile chain → recipes → scripts → path constants, parsed with `ast` — and
+fails on any top-level directory the filter omits (#252). It found the `conf/`
+instance on its first run. It also fails when it cannot inspect anything, since
+a gate that passes while blind is the failure mode the section below is about.
 
 ## Verify the check ran, not that it was green
 
