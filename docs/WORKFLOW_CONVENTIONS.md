@@ -219,8 +219,11 @@ workflow's `on:` block alone, so a workflow gated this way still counted toward
 the floor while running on nothing. **Fixed in #307** — a workflow whose every
 job carries an `if:` no longer counts, and if that leaves nothing, the failure
 names it rather than reporting a bare "no unfiltered workflow", because those
-two need different fixes. The check does not evaluate the expression; "has an
-`if:`" is the conservative reading, and it can only shrink the counted set.
+two need different fixes. A job also counts as gated when every job it `needs:`
+is gated — GitHub skips a dependent when its dependency skips, so an ungated job
+hanging off a gated one is not guaranteed to run either. The check never
+evaluates the `if:` expression; "has an `if:`" is the conservative reading, and
+it can only shrink the counted set.
 
 Note the separate hazard that remains: if `pr-sanity` alone gained a `paths:`
 filter, `vendored-sync` would keep `NO_UNFILTERED_CI` green while the
