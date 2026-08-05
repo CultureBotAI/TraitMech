@@ -130,6 +130,35 @@ causal_graphs:
     - reference: DOI:10.1007/s10533-024-01186-4
       notes: The reduction rates of dissolved Fe(III)-OM complexes are significantly
         higher than those observed for solid Fe(III) minerals.
+  - subject: dir_trait
+    predicate: uses electron acceptor
+    object: solid_fe3_mineral
+    description: Insoluble Fe(III) oxides are the environmentally dominant terminal
+      acceptor for DIR, which is why the trait requires extracellular electron transfer.
+    evidence:
+    - reference: PMID:15518832
+      snippet: Unlike other commonly considered electron acceptors, Fe(III) and Mn(IV)
+        oxides, the most prevalent form of Fe(III) and Mn(IV) in most environments,
+        are insoluble.
+      notes: Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent
+        environmental form of the acceptor, which is what ties the solid-mineral pool
+        to the trait rather than leaving it a free-standing geochemical observation.
+    predicate_id: METPO:2000008
+  - subject: dir_trait
+    predicate: uses electron acceptor
+    object: dissolved_fe3_om_complex
+    description: Chelator-solubilised Fe(III) is the second acceptor pool, reached
+      without direct contact with the mineral surface.
+    evidence:
+    - reference: PMID:15518832
+      snippet: In contrast, Shewanella and Geothrix species produce chelators that
+        solubilize Fe(III) and release electron-shuttling compounds that transfer electrons
+        from the cell surface to the surface of Fe(III) oxides not in direct contact
+        with the cells.
+      notes: Names the mechanism by which the dissolved Fe(III)-organic-matter pool
+        becomes accessible to the organism, so the existing dissolved-vs-solid rate
+        comparison hangs off the trait instead of floating beside it.
+    predicate_id: METPO:2000008
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -155,4 +184,15 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: 'Added 2 evidence-backed edges connecting the stranded Fe(III)-pool component
+    to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral, and
+    dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008
+    to match the established uses-electron-donor convention. Both carry verbatim snippets
+    from PMID:15518832, checked character-for-character against the PubMed abstract rather
+    than lifted from the deep-research report, whose evidence text is paraphrase (issue 247).
+    Resolves this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.'
   llm_assisted: true

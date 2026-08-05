@@ -126,6 +126,20 @@ causal_graphs:
       notes: 'PDO acts on GSSH: GSSH + O2 + H2O -> GSH + SO3^2- + 2H+; well-defined
         enzymatic edge.'
     predicate_id: METPO:2000016
+  - subject: persulfide_dioxygenase
+    predicate: participates in
+    object: oxidative_sulfur_metabolism
+    description: PDO acts downstream of SQR in the same sulfide-oxidation pathway
+      that deposits elemental sulfur as globules.
+    evidence:
+    - reference: PMID:35653932
+      snippet: 'Heterotrophic bacteria and human mitochondria often use sulfide: quinone
+        oxidoreductase (SQR) and persulfide dioxygenase (PDO) to oxidize sulfide to
+        sulfite and thiosulfate.'
+      notes: Places PDO in the same SQR-initiated sulfide-oxidation pathway the rest
+        of this graph models, which is what attaches the PDO/sulfite branch to the
+        globule mechanism rather than leaving it a free-standing enzymatic fact.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -163,4 +177,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0070224×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: 'Added 1 evidence-backed edge attaching the stranded PDO/sulfite branch to
+    the pathway the rest of the graph models (issue 183): persulfide_dioxygenase
+    participates in oxidative_sulfur_metabolism, grounded biolink:participates_in. The
+    snippet is verbatim from PMID:35653932, checked against the PubMed abstract. Resolves
+    this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.'
   llm_assisted: true
