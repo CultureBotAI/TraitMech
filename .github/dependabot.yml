@@ -1,0 +1,24 @@
+# Keeps the SHA-pinned actions in .github/workflows/ current.
+#
+# This file is load-bearing, not optional housekeeping. #224 rejected
+# "SHA-pin everything" on the grounds that pins rot silently without Dependabot,
+# which is worse than floating tags: a floating `@v4` at least receives security
+# patches, whereas a forgotten SHA is frozen at whatever the pin day shipped.
+# Pinning was adopted WITH this file, and removing it re-opens that hole.
+#
+# Dependabot understands `uses: owner/action@<sha> # vX.Y.Z` and updates both the
+# SHA and the trailing comment together, so the version stays readable.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # One PR per action rather than a lockstep bump: an action upgrade can break
+    # CI on its own, and a grouped PR makes "which of these five did it" a
+    # bisect rather than a read.
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies
