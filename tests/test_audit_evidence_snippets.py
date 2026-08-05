@@ -289,3 +289,52 @@ def test_an_unbaselined_key_is_new():
     from audit_evidence_snippets import compare
     rows = [_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET")]
     assert len(compare(rows, {})) == 1
+
+
+# --- magnitude ratchet for aggregate defects (#291) ----------------------
+
+def _reused(n, graph="g1:*", file="f.yaml"):
+    return _row(file, graph, "REUSED_SNIPPET",
+                f"{n} evidence items share one snippet: 'virulence factors'")
+
+
+def test_a_worse_reused_count_is_new_despite_the_same_key():
+    """REUSED_SNIPPET has no index and carries its magnitude in detail, so
+    dropping detail from the key let 3 -> 9 pass as one unchanged finding."""
+    import audit_evidence_snippets as aes
+    from audit_evidence_snippets import _key, compare
+    baseline = {_key(_reused(3)): 1}
+    aes.BASELINE_MAGNITUDE.clear()
+    aes.BASELINE_MAGNITUDE[_key(_reused(3))] = 3
+    assert len(compare([_reused(9)], baseline)) == 1
+
+
+def test_a_better_reused_count_still_passes():
+    """The rot #270 fixed, from the other side: a count in the KEY would make
+    3 -> 2 an unbaselined finding and fail on an improvement."""
+    import audit_evidence_snippets as aes
+    from audit_evidence_snippets import _key, compare
+    baseline = {_key(_reused(3)): 1}
+    aes.BASELINE_MAGNITUDE.clear()
+    aes.BASELINE_MAGNITUDE[_key(_reused(3))] = 3
+    assert compare([_reused(2)], baseline) == []
+    assert compare([_reused(3)], baseline) == []
+
+
+def test_a_character_count_is_not_ratcheted():
+    """UNSUPPORTIVE_SNIPPET's leading integer is a length, where larger is
+    BETTER — ratcheting it would flag 6 chars growing to 10 as a regression."""
+    from audit_evidence_snippets import _magnitude
+    assert _magnitude(_row("f.yaml", "evidence[0]", "UNSUPPORTIVE_SNIPPET",
+                           "6 chars, supports nothing specific: 'toxins'")) == 0
+    assert _magnitude(_reused(7)) == 7
+
+
+def test_the_real_baseline_records_reused_magnitudes():
+    """Guards the wiring: a baseline read without magnitudes silently disarms."""
+    import audit_evidence_snippets as aes
+    from audit_evidence_snippets import DEFAULT_BASELINE, load_baseline
+    load_baseline(DEFAULT_BASELINE)
+    magnitudes = [v for v in aes.BASELINE_MAGNITUDE.values() if v]
+    assert magnitudes, "no REUSED_SNIPPET magnitudes captured from the baseline"
+    assert max(magnitudes) >= 3

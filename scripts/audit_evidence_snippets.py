@@ -297,6 +297,36 @@ def _key(row: dict[str, str]) -> tuple[str, str, str]:
     return (row["file"], _INDEX_RE.sub("[]", row["locator"]), row["defect"])
 
 
+# Defects whose detail leads with a magnitude that can get WORSE without the
+# finding count changing. REUSED_SNIPPET is the only aggregate this audit emits:
+# one finding per (graph, snippet) whatever the number of items sharing it, with
+# the number in the detail. Everything else is per-item, so more of it means
+# more findings and the occurrence count already catches it.
+#
+# UNSUPPORTIVE_SNIPPET is deliberately NOT here even though its detail also leads
+# with an integer: that integer is a character count, where larger is BETTER, so
+# ratcheting it would flag a snippet growing from 6 chars to 10 as a regression.
+MAGNITUDE_DEFECTS = {"REUSED_SNIPPET"}
+
+# Worst magnitude accepted per key, populated by load_baseline().
+BASELINE_MAGNITUDE: dict[tuple[str, str, str], int] = {}
+
+
+def _magnitude(row: dict[str, str]) -> int:
+    """The leading integer of `detail`, for defects where more is worse.
+
+    Ratcheted as a VALUE, not folded into the key. Putting it in the key would
+    reintroduce the rot #270 fixed from the other side: 3 -> 2 is an
+    improvement, and a key carrying the count would make it an unbaselined
+    finding and fail. audit_causal_graphs.py keys on the leading token for the
+    same information and accepts that cost; a value comparison does not have to.
+    """
+    if row.get("defect") not in MAGNITUDE_DEFECTS:
+        return 0
+    match = re.match(r"\s*(\d+)", row.get("detail", ""))
+    return int(match.group(1)) if match else 0
+
+
 def load_baseline(path: Path) -> dict[tuple[str, str, str], int]:
     """Baselined occurrences per key.
 
@@ -307,11 +337,16 @@ def load_baseline(path: Path) -> dict[tuple[str, str, str], int]:
     count says "two of these were accepted"; a third is new.
     """
     counts: dict[tuple[str, str, str], int] = {}
+    BASELINE_MAGNITUDE.clear()
     if not path.exists():
         return counts
     with path.open() as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
-            counts[_key(row)] = counts.get(_key(row), 0) + 1
+            key = _key(row)
+            counts[key] = counts.get(key, 0) + 1
+            magnitude = _magnitude(row)
+            if magnitude > BASELINE_MAGNITUDE.get(key, 0):
+                BASELINE_MAGNITUDE[key] = magnitude
     return counts
 
 
@@ -327,6 +362,11 @@ def compare(findings: list[dict[str, str]],
         key = _key(row)
         seen[key] = seen.get(key, 0) + 1
         if seen[key] > baseline.get(key, 0):
+            new.append(row)
+        elif _magnitude(row) > BASELINE_MAGNITUDE.get(key, 0):
+            # Same key, same occurrence count, but worse — a graph going from 3
+            # shared snippets to 9 is one REUSED_SNIPPET finding either way
+            # (#291).
             new.append(row)
     return new
 
