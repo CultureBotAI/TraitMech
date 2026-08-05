@@ -273,7 +273,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION MOSTLY DONE (#220); BACKFILL PENDING (corpus-wide)
+## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 of 220
 
 **The `audit-graphs` gate does not catch graph fragmentation.**
 `scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
@@ -303,7 +303,7 @@ Two pieces of work, independent:
    (`cellulase -enables-> trait` points inward, `trait -produces-> glucose`
    points outward). It landed non-blocking as required, but as a **ratchet**
    rather than a pure warning: `conf/causal_graph_audit_baseline.tsv` freezes the
-   1314 known findings and `--fail-on` defaults to `new`, so pre-existing
+   1541 known findings and `--fail-on` defaults to `new`, so pre-existing
    fragmentation never fails while any *newly introduced* island exits 1. Tighten
    with `just audit-graphs --fail-on any` once the backlog below is gone.
 
@@ -320,46 +320,36 @@ check" half is already satisfied by item 1 above — including the design questi
 posed (one-component versus reachable-from-trait), which was answered in favour of
 the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
-**Progress, re-measured 2026-08-03.** Two numbers circulate here and they are
-*not* the same measurement — quote whichever you mean, and say which:
+**Progress, re-measured 2026-08-05 against `conf/causal_graph_audit_baseline.tsv`.**
+Two numbers circulate here and they are *not* the same measurement — quote
+whichever you mean, and say which:
 
 | measure | value | source |
 |---|--:|---|
-| graphs with >1 connected component (undirected) | **220** files | recompute from `causal_graphs` |
-| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **219** files | `conf/causal_graph_audit_baseline.tsv` |
-| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's unit) | **1314** | same file |
-| nodes outside their graph's largest component | **1264** (31% of 4136) | recompute |
+| `FRAGMENTED_GRAPH` findings (one per fragmented graph) | **220** | `conf/causal_graph_audit_baseline.tsv` |
+| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **220** | same file |
+| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's per-node unit) | **1321** | same file |
+| baseline total | **1541** | `just audit-graphs` |
 
-Corpus totals are unchanged: 353 graphs, 4136 nodes. Per-category fragmented
-files: environment 85, **morphology 47**, metabolism 31, physiology 27,
-ecology 18, genomics 11, upper 1 — the baseline has morphology **46**, and that
-one-file gap is real, not arithmetic: see **#220**. `morphology/dumbbell_shaped.yaml`
-splits into two components that *each* contain a node typed `TRAIT`, so every node
-reaches *a* trait node and the audit reports it clean while 7 of its 11 nodes have
-no path to the trait the record is about.
+Corpus totals unchanged: 353 graphs, 4136 nodes. Per-category `FRAGMENTED_GRAPH`:
+environment 85, morphology 47, metabolism 31, physiology 27, ecology 18,
+genomics 11, upper 1.
 
-`cellulolysis.yaml` now verifies as a **single component**, so the #185 fix did
-land — the "1 of 220 done" framing in an earlier revision of this file was wrong
-arithmetic, not lost work: 220 is what is *still* fragmented, not the count before
-the fix.
+**#220 is closed** (#227): `FRAGMENTED_GRAPH` now detects a graph splitting into
+several components even when each component contains its own `TRAIT` node — the
+`morphology/dumbbell_shaped.yaml` case, where every node reaches *a* trait node
+so reachability alone reported it clean, while 7 of its 11 nodes had no path to
+the trait the record is actually about. That is why the two counts above now
+agree at 220 where they previously differed by one.
 
-`data/traits/metabolism/cellulolysis.yaml`
-was the first instance of (2) and where the problem was found. A deep-research
-audit (Edison/PaperQA3 + Codex, independently converging) found that graph split
-into 4 components with 9 of 14 nodes unreachable from the trait node. The fix
-adds **7 evidence-backed edges** to merge it into one graph (`cellulose →
-cellobiose`, `cellobiohydrolase → cellobiose`, endoglucanase / cellobiohydrolase
-/ beta_glucosidase `part_of` cellulase, `cellulosome → enables → trait`,
-`cellulolytic_genes → encodes → cellulase`), grounds `cellobiose`
-(`CHEBI:17057`), and retypes `cellulosome` `CELLULAR_LOCALIZATION` →
-`GENE_OR_PROTEIN` (it is a complex, not a location; the `GO:0043263` grounding is
-unchanged). A `CONNECT_CAUSAL_GRAPH` entry is appended to `curation_history`.
+**Backfill progress: 1 of 220.** `data/traits/metabolism/cellulolysis.yaml` is
+the worked example — 4 components, 9 of 14 nodes unreachable, repaired with 7
+evidence-backed edges. Note that it is also in #267's `ECHOES_RESEARCH_REPORT`
+set (section 10), so it is simultaneously the template for the backfill and an
+example of the snippet shortcut the backfill has to avoid.
 
-Its own deferred list, worth keeping: the LPMO / CBM / transport / phosphorolysis
-branches, splitting `cellobiohydrolase` by chain end, and replacing the generic
-catabolite-repression edge with taxon-specific `cip-cel` evidence. Splitting
-`cellobiohydrolase` by chain end is **blocked**: it needs `EC:3.2.1.91` /
-`EC:3.2.1.176`, and `EC` is not declared in the LinkML prefix map.
+After each batch, regenerate with `just audit-graphs --write-baseline` so the
+ratchet tightens; at zero, switch to `--fail-on any` and drop the baseline.
 
 ## 6. Web design review (#151) — 2 items PENDING
 
