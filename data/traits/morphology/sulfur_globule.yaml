@@ -139,6 +139,9 @@ causal_graphs:
       notes: Places PDO in the same SQR-initiated sulfide-oxidation pathway the rest
         of this graph models, which is what attaches the PDO/sulfite branch to the
         globule mechanism rather than leaving it a free-standing enzymatic fact.
+        Scope caveat (issue 297) - the quote covers heterotrophic bacteria and human
+        mitochondria, not the Thiomargarita/Beggiatoa exemplars of this trait, so it
+        supports the generic pathway claim the object node makes and no more.
     predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'

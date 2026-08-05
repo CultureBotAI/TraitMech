@@ -147,17 +147,19 @@ causal_graphs:
   - subject: dir_trait
     predicate: uses electron acceptor
     object: dissolved_fe3_om_complex
-    description: Chelator-solubilised Fe(III) is the second acceptor pool, reached
-      without direct contact with the mineral surface.
+    description: Solubilised Fe(III) is a second acceptor pool, reachable without
+      direct contact with the mineral surface.
     evidence:
     - reference: PMID:15518832
       snippet: In contrast, Shewanella and Geothrix species produce chelators that
         solubilize Fe(III) and release electron-shuttling compounds that transfer electrons
         from the cell surface to the surface of Fe(III) oxides not in direct contact
         with the cells.
-      notes: Names the mechanism by which the dissolved Fe(III)-organic-matter pool
-        becomes accessible to the organism, so the existing dissolved-vs-solid rate
-        comparison hangs off the trait instead of floating beside it.
+      notes: Establishes that a solubilised, non-contact Fe(III) pool is respired,
+        which is what attaches the dissolved-vs-solid rate comparison to the trait.
+        Scope caveat kept explicit (issue 297) - the quote is about chelators the
+        organism itself secretes, whereas this node is ambient Fe(III)-organic-matter
+        complex, so it supports the existence of the pool rather than its origin.
     predicate_id: METPO:2000008
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
