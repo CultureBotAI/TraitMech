@@ -5,39 +5,49 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-03. Everything merged in this repo through **#216**
-(2026-08-03) — which now includes the whole CI/agent-workflow thread (#194, #196,
-#201, #206, #207, #210, #216, section 7) that was absent from this file — plus the
-claw-side architecture decisions through 2026-07-25.
+Last reconciled: 2026-08-05. Everything merged in this repo through **#272**.
 
-Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
-this PR is the first one it reviews post-merge — which is the real test of that
-fix, since every check before it ran on a branch carrying its own copy.
+Since the last reconcile (2026-08-03) the **research-artifact thread closed out
+end to end**: the paid Edison sweep landed (#240, #241 — 353 reports, 17 MB, now
+tracked), the per-trait research block finally renders (#253), the CURIEs those
+reports suggest are resolved against OAK (#260), evidence snippets are audited
+(#267), and every GitHub Action is SHA-pinned behind a gate (#272).
 
-Open issues, 15 of them — four of them (#214, #217, #218, #220) filed by this
-reconcile and by the #216 / #213 reviews; #215 came from the same pass and is
-already closed, on the line below the table:
+Open PRs: **none**.
+
+Open issues, 16. Eight of the fifteen listed at the last reconcile are now closed
+(#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
+come from the reviews of the five PRs above, which is the review loop working as
+intended.
 
 | # | what | section |
 |---|---|---|
 | #151 | web design review — 2 residual front-end items | 6 |
-| #183 | causal-graph fragmentation — detection landed, **backfill is what remains** | 5 |
+| #183 | causal-graph fragmentation — detection done, **backfill is what remains** | 5 |
 | #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
-| #192 | justfile: the claw-module guard is implemented twice | 7 |
-| #193 | QC dashboard embeds a generation timestamp, so staleness can't be rechecked | 7 |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
-| #198 | **cross-Mech**: spokes now fixed — only the CultureMech `label-correspondence` half may remain | 2 |
-| #203 | three major versions of `astral-sh/setup-uv` across workflows (v3/v5/v7) | 7 |
-| #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
-| #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
+| #198 | **cross-Mech**: `vendored-sync` paths filter omits 4 vendored files | 2 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #214 | grounding residual reports drift with nothing to catch it — **fix open, `audit-derived-reports`** | 9 |
-| #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
-| #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
-| #220 | `audit-graphs` is blind to a graph splitting into two **trait-bearing** components | 5 |
+| #217 | conventions page exists now (#272) but is TraitMech-local; **cross-Mech placement open** | 7 |
+| #244 | `trait-graph-sweep --verify` checks report existence only | 8 |
+| #245 | `cellulolysis` has a second, codex-provider report with no manifest row | 8 |
+| #246 | two `-edison-literature-meta.yaml` files, and nothing in the repo writes them | 8 |
+| #248 | absolute `/Users/marcin/...` path in 342 committed reports | 8 |
+| #249 | citation sidecars are a broken extraction — 353/353 malformed | 8 |
+| #252 | nothing checks that `qc.yaml`'s paths filter covers what `qc` reads — **3rd recurrence** | 7 |
+| #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
+| #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
+| #275 | conventions page duplicates the workflow header comments it restates | 7 |
 
-Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
-**#202** (by #207), **#204** (by #206), **#215** (by #216).
+**Recommended next: #252.** It is the third recurrence of one bug class (#184,
+#200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
+work, and `docs/WORKFLOW_CONVENTIONS.md` currently has to say "nothing checks
+this invariant". #270 is the runner-up — it is ratchet rot in a mechanism landed
+three days ago.
+
+**Not actionable as "next":** #183's backfill is per-trait research curation,
+not a single PR — it is the largest remaining item and wants its own campaign.
+#191/#197/#198/#209/#217 are cross-Mech and want the hub, not this repo.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -367,7 +377,7 @@ It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
 previous revision of this file called #151 "the only open issue in the repo" —
 that has not been true since 2026-07-30; see the header table.)
 
-## 7. CI + agent-workflow thread — SHIPPED; 7 small review issues PENDING
+## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#198/#209/#217/#252/#275
 
 This whole thread post-dates the last reconcile and was previously unlogged here.
 TraitMech is the fleet **pilot** for agent workflows because it is the smallest
@@ -476,7 +486,7 @@ verifiable by CI, none blocking anything:
 | #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
 | #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
 
-## 8. The paid Edison sweep's output was lost — now tracked, and being re-run
+## 8. The paid Edison sweep's output was lost — RE-RUN COMPLETE (#241), 353/353 tracked
 
 `reports/trait_graph_audit_manifest.tsv` recorded a 2026-07-20 sweep that
 **fully succeeded**: 353 distinct traits, every one `ok`.
@@ -586,3 +596,18 @@ decisions in culturebotai-claw#7). All three of this repo's slices shipped:
   + `coverage.png`.
 
 No further TraitMech work here. Any remaining coordination is cross-Mech in claw#7.
+
+## 10. Evidence snippets (#247) — AUDIT LANDED, BACKLOG FROZEN
+
+`just audit-snippets` (#267) ratchets against `conf/evidence_snippet_baseline.tsv`.
+Frozen backlog, 2,737 findings: **2,586 MISSING_SNIPPET** (63% of evidence items
+assert a mechanism on a bare DOI), 71 UNSUPPORTIVE, 60 ELLIPTICAL (ERROR), 13
+REUSED, 7 ECHOES_RESEARCH_REPORT.
+
+The policy settled in #247: a research report is **not** a snippet source. Its
+evidence text goes in `notes:`; `snippet:` requires opening the paper. Written up
+in `docs/CURATION_PLAYBOOK.md`.
+
+Burning this down is the same work as #183's backfill, on the same edges —
+`cellulolysis` is in the ECHOES set and is #183's worked example, so it is the
+natural first target. Residual: **#270** (baseline keys on an array index).
