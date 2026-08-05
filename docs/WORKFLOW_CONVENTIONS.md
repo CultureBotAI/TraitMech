@@ -111,3 +111,30 @@ carry a canary note in their PR for that reason — see `audit-snippets` (#247)
 and the malformed-CURIE scan in `trait-graph-sweep --verify` (#242), both of
 which landed against corpora that were already clean and so could have reported
 zero forever without anyone noticing.
+
+## Dependabot runs have no secrets — skip, do not fail
+
+A `pull_request` run whose `github.actor` is `dependabot[bot]` gets a restricted
+token and **no access to repository secrets**. Any job that needs one dies at
+its first secret-consuming step; `claude-review` died on
+`actions/create-github-app-token` with `Input required and not supplied: app-id`
+on all five PRs that `.github/dependabot.yml` opened (#293).
+
+That is not a signal about the bump. It is a permanent red on the class of PR
+*least* likely to be read carefully — a red that trains people to ignore reds,
+which is the failure in "Verify the check ran" above wearing the other colour.
+
+Gate such jobs on `github.actor != 'dependabot[bot]'` so the check is **not
+reported at all** rather than reported failing. Gate on `github.actor`, not on
+the PR author: actor is what determines whether secrets exist, so a human
+pushing to a Dependabot branch correctly re-enables the job.
+
+Skipping does not make these PRs unreviewable — comment `/review`. That run is
+triggered by the commenter, so it has secrets and behaves normally.
+
+**Do not reach for `pull_request_target` to get secrets back.** It runs with
+secrets attached against PR-controlled content, so any job that checks out PR
+head and executes repository code — `uv sync`, `just` recipes — hands those
+secrets to that code. It is the same hazard the "Refuse fork PRs" guard in
+`claude-code-review.yml` exists to prevent, entered by another door, and
+Dependabot PRs edit `.github/workflows/**` by their nature.

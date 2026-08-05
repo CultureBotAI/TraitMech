@@ -39,11 +39,36 @@ jobs:
     #    Without that, anyone who can comment could spend our tokens at will, and
     #    a comment body is attacker-controlled text this agent then reads.
     #  * comment triggers must be on a PR, not a plain issue.
+    #  * Dependabot-triggered runs are skipped, because they CANNOT work (#293).
+    #    GitHub gives `pull_request` runs from `dependabot[bot]` a restricted
+    #    token and no access to repository secrets, so the very first step,
+    #    `actions/create-github-app-token`, dies on
+    #    `Input required and not supplied: app-id`. The result was a permanent
+    #    red check on every dependency PR that said nothing about the bump — a
+    #    red that trains people to ignore reds.
+    #
+    #    Skipping means the check is not reported at all rather than reported
+    #    failing. It does NOT mean dependency PRs go unreviewable: comment
+    #    `/review` on one. That run is triggered by the commenter, not by
+    #    Dependabot, so it gets secrets and reviews normally. Gate on
+    #    `github.actor` rather than the PR author precisely because actor is what
+    #    determines whether secrets exist — a human pushing to a Dependabot
+    #    branch makes the run privileged again, and it should review.
+    #
+    #    `pull_request_target` is the other way to get secrets here and is
+    #    DELIBERATELY NOT USED. This job checks out PR head content and runs
+    #    `uv sync` and the repo's `just` recipes while holding
+    #    CLAUDE_CODE_OAUTH_TOKEN and a reviewer App token. `pull_request_target`
+    #    would execute exactly that against PR-controlled code with secrets
+    #    attached — the hazard the "Refuse fork PRs" step below exists to
+    #    prevent, reintroduced by another door. Dependabot PRs edit
+    #    `.github/workflows/**` by their nature, which makes it worse, not safer.
     if: >-
       ${{
         (
           github.event_name == 'pull_request' &&
-          github.event.pull_request.head.repo.full_name == github.repository
+          github.event.pull_request.head.repo.full_name == github.repository &&
+          github.actor != 'dependabot[bot]'
         ) ||
         github.event_name == 'workflow_dispatch' ||
         (
