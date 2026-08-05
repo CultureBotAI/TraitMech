@@ -8,6 +8,7 @@
 #
 # Dependabot understands `uses: owner/action@<sha> # vX.Y.Z` and updates both the
 # SHA and the trailing comment together, so the version stays readable.
+# Policy and rationale: docs/WORKFLOW_CONVENTIONS.md
 version: 2
 updates:
   - package-ecosystem: github-actions

@@ -37,6 +37,13 @@ future author to correctly classify a new action as risky-or-not, and it was
 discoverable only by opening the one file that happened to show it. A single
 rule needs no judgement call.
 
+**Enforced, not merely written down.** `just pr-sanity` fails on any `uses:`
+whose ref is not a 40-character SHA (`ACTION_UNPINNED`), because this repo's own
+rule is that a convention repeated becomes a gate — and the one pin that existed
+before #272 was already commented with a version its SHA did not match, one for
+one (#273). The check verifies the SHA only; whether the trailing comment still
+names the right tag needs network and is Dependabot's job.
+
 `astral-sh/setup-uv` also forced the question: it **stopped publishing floating
 major tags after v7**, so `@v8` will not exist and the next upgrade has to name
 a version or a SHA regardless (#224).

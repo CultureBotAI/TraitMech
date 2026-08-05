@@ -83,6 +83,10 @@ TraitMech/
 │   └── seed_from_metpo.py               # OWL → YAML seeder
 ├── tests/
 └── docs/
+    ├── CURATION_PLAYBOOK.md             # how to curate a TraitRecord
+    ├── GROUNDING_POLICY.md              # which ontology to ground to
+    ├── WORKFLOW_CONVENTIONS.md          # CI: action pinning, concurrency
+    └── SCHEMA.md
 ```
 
 ## Workflow

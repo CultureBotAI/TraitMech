@@ -22,6 +22,16 @@ Checks:
                       the last unfiltered workflow ever gains a filter, some PRs
                       go back to being unverified. Self-referential on purpose —
                       this script is what keeps its own guarantee true.
+  ACTION_UNPINNED     a ``uses:`` naming a third-party action by tag or branch
+                      rather than a 40-hex commit SHA. A tag is a pointer its
+                      owner can move, so a compromised upstream reaches CI
+                      holding repo credentials with no diff here. Policy and
+                      rationale: docs/WORKFLOW_CONVENTIONS.md. A gate rather
+                      than a convention because the one pin the repo had before
+                      #272 was already commented with a version its SHA did not
+                      match — one for one (#273). Checks the SHA only; whether
+                      the trailing comment still names the right tag needs
+                      network and is Dependabot's job.
   CONCURRENCY_SHARED_ACROSS_TRIGGERS
                       a cancelling concurrency group shared between
                       ``pull_request`` and a trigger that fires against the same
@@ -255,6 +265,58 @@ def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[di
                 "github.run_id, or condition cancel-in-progress on the event."
             ),
         })
+    return findings
+
+
+# 40 hex characters. Anything shorter is a tag, a branch, or an abbreviated SHA
+# — and an abbreviated SHA is not immutable enough to rely on.
+_PINNED_REF = re.compile(r"^[0-9a-f]{40}$")
+
+
+def _action_refs(text: str):
+    """Yield (line_no, uses_value) for every `uses:` in a workflow.
+
+    Read from raw text rather than the parsed document on purpose: `uses:` can
+    sit in a step, a reusable-workflow job, or a composite, and walking the text
+    catches all of them without enumerating the shapes. A `uses:` that YAML
+    would not accept is already caught by WORKFLOW_INVALID.
+    """
+    for line_no, line in enumerate(text.splitlines(), 1):
+        match = re.match(r"\s*-?\s*uses:\s*(\S+)", line)
+        if match:
+            yield line_no, match.group(1).strip("'\"")
+
+
+def check_action_pins(root: Path) -> list[dict[str, str]]:
+    findings: list[dict[str, str]] = []
+    wf_dir = root / WORKFLOW_DIR
+    if not wf_dir.is_dir():
+        return findings
+    for path in sorted(wf_dir.iterdir()):
+        if path.suffix not in {".yml", ".yaml"}:
+            continue
+        rel = str(path.relative_to(root))
+        for line_no, ref in _action_refs(path.read_text()):
+            # Local composites and container actions carry no upstream to pin:
+            # ./ resolves inside this repo, docker:// is pinned by its own digest
+            # or tag and is not a GitHub Action reference.
+            if ref.startswith((".", "docker://")):
+                continue
+            if "@" not in ref:
+                findings.append({
+                    "check": "ACTION_UNPINNED", "file": f"{rel}:{line_no}",
+                    "detail": f"`{ref}` names no ref at all — pin it to a commit SHA",
+                })
+                continue
+            action, _, git_ref = ref.partition("@")
+            if not _PINNED_REF.match(git_ref):
+                findings.append({
+                    "check": "ACTION_UNPINNED", "file": f"{rel}:{line_no}",
+                    "detail": (f"`{action}` is pinned to `{git_ref}`, which is a "
+                               "movable tag or branch. Use the 40-character commit "
+                               "SHA with the version in a trailing comment "
+                               "(docs/WORKFLOW_CONVENTIONS.md)"),
+                })
     return findings
 
 
@@ -515,6 +577,7 @@ def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
 def sanity(root: Path) -> list[dict[str, str]]:
     files = tracked_files(root)
     return (check_workflows(root)
+            + check_action_pins(root)
             + check_conflict_markers(files, root)
             + check_markdown_links(files, root))
 
