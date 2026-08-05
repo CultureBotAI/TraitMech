@@ -71,3 +71,9 @@ target-version = "py310"
 # F401 rather than excluding the file, so a real problem in generated code
 # still surfaces (#312).
 "src/traitmech/schema/traitmech_dataclasses.py" = ["F401"]
+# Vendored byte-identical from the canonical hub (CultureBotAI/CultureMech) and
+# guarded by vendored-sync.yaml — any local edit fails that gate. The two E741
+# `l` findings are upstream's to fix, not ours: linting them here only tempts a
+# drift-inducing edit. Scoped to E741 so other rules still see the file. The fix
+# belongs in the hub copy (#312).
+"scripts/validate_id_label_correspondence.py" = ["E741"]
