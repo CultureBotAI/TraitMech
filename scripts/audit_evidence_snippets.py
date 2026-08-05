@@ -106,8 +106,15 @@ def _norm(text: str) -> str:
 
 
 def _fold(text: str) -> str:
-    """Casefold and drop punctuation, for cross-document substring matching."""
-    return re.sub(r"[^a-z0-9 ]+", "", _norm(text).lower())
+    """Casefold, drop punctuation, then re-collapse whitespace.
+
+    The second collapse is load-bearing. Stripping punctuation turns a
+    standalone "…" or " — " into a run of spaces, so the snippet folds with a
+    double space where the report's prose folds with one and the substring test
+    fails. That silently weakened the check on elliptical snippets — the ones
+    most worth verifying against a source (#269).
+    """
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]+", "", _norm(text).lower())).strip()
 
 
 def research_text(category: str, slug: str) -> tuple[str, str]:
@@ -255,7 +262,11 @@ def audit(check_reports: bool = True) -> list[dict[str, str]]:
                         "file": rel, "locator": f"{graph_id}:*",
                         "defect": "REUSED_SNIPPET",
                         "severity": SEVERITY["REUSED_SNIPPET"],
-                        "detail": f"{n} edges share one snippet: {snippet[:100]!r}",
+                        # "evidence items", not "edges": an edge may carry more
+                        # than one item, so the count is of items sharing the
+                        # snippet, which is what was actually measured (#269).
+                        "detail": f"{n} evidence items share one snippet: "
+                                  f"{snippet[:100]!r}",
                     })
     return findings
 
@@ -287,7 +298,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--write-baseline", action="store_true",
                     help="freeze the current findings as the accepted backlog")
     ap.add_argument("--fail-on", choices=("new", "error", "any"), default="new",
-                    help="new (default) = ratchet; any = ignore the baseline")
+                    help="new (default) = any finding not in the baseline fails; "
+                         "error = only new ERROR-severity findings fail; "
+                         "any = every finding fails and the baseline is ignored")
     ap.add_argument("--no-report-check", action="store_true",
                     help="skip ECHOES_RESEARCH_REPORT (which reads research/)")
     args = ap.parse_args(argv)
@@ -297,7 +310,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.write_baseline:
         write_tsv(Path(args.baseline), findings)
-        print(f"=== evidence snippet audit: baseline written ===")
+        print("=== evidence snippet audit: baseline written ===")
         print(f"  froze {len(findings)} findings -> {args.baseline}")
         return 0
 

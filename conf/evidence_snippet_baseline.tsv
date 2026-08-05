@@ -1,5 +1,5 @@
 file	locator	defect	severity	detail
-data/traits/ecology/animal_pathogen.yaml	animal_pathogen_metazoan_adaptation:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'virulence factors'
+data/traits/ecology/animal_pathogen.yaml	animal_pathogen_metazoan_adaptation:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'virulence factors'
 data/traits/ecology/animal_pathogen.yaml	animal_pathogen_metazoan_adaptation:bacterial_adhesins->host_cell_attachment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
 data/traits/ecology/animal_pathogen.yaml	animal_pathogen_metazoan_adaptation:complement_evasion->immune_evasion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
 data/traits/ecology/animal_pathogen.yaml	animal_pathogen_metazoan_adaptation:complement_regulator_binding_proteins->complement_evasion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
@@ -129,7 +129,7 @@ data/traits/ecology/host_associated.yaml	host_associated_microbiome:mucin_o_glyc
 data/traits/ecology/host_associated.yaml	host_associated_microbiome:mucus_layer_niches->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/ecosalplus.esp-0006-2023 has no snippet
 data/traits/ecology/host_associated.yaml	host_associated_microbiome:root_exudates->chemotaxis_to_host[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology13020095 has no snippet
 data/traits/ecology/host_associated.yaml	host_associated_microbiome:root_exudates->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad066 has no snippet
-data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'virulence factors'
+data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'virulence factors'
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:biofilm_formation->treatment_resistance_persistence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1370818 has no snippet
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:horizontal_gene_transfer->virulence_gene_acquisition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:host_cell_manipulation->human_disease[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-023-00974-3 has no snippet
@@ -183,7 +183,7 @@ data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:host_metal_acqu
 data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:host_resource_exploitation->host_fitness_cost[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
 data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:host_ubiquitin_pathway_exploitation->host_resource_exploitation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fimmu.2023.1303072 has no snippet
 data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:siderophore_secretion->host_metal_acquisition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
-data/traits/ecology/pathogenic_to_host.yaml	pathogenic_to_host_virulence_factor_program:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'virulence factors'
+data/traits/ecology/pathogenic_to_host.yaml	pathogenic_to_host_virulence_factor_program:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'virulence factors'
 data/traits/ecology/pathogenic_to_host.yaml	pathogenic_to_host_virulence_factor_program:biofilm_formation->immune_evasion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/antibiotics13070619 has no snippet
 data/traits/ecology/pathogenic_to_host.yaml	pathogenic_to_host_virulence_factor_program:biofilm_formation->persistent_infection[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tcsw.2024.100133 has no snippet
 data/traits/ecology/pathogenic_to_host.yaml	pathogenic_to_host_virulence_factor_program:biofilm_matrix->antibiotic_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/bacteria3030008 has no snippet
@@ -531,7 +531,7 @@ data/traits/environment/nacl_optimum_high.yaml	nacl_optimum_high_extreme_halophi
 data/traits/environment/nacl_optimum_high.yaml	nacl_optimum_high_extreme_halophile:na_h_antiporter->salt_in_strategy[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12081738 has no snippet
 data/traits/environment/nacl_optimum_high.yaml	nacl_optimum_high_extreme_halophile:salt_in_strategy->intracellular_kcl[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1002/pro.5003 has no snippet
 data/traits/environment/nacl_optimum_high.yaml	nacl_optimum_high_extreme_halophile:salt_in_strategy->potassium_uptake_system[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1002/pro.5003 has no snippet
-data/traits/environment/nacl_optimum_low.yaml	nacl_optimum_low_non_halophile_setpoint:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'optimal NaCl'
+data/traits/environment/nacl_optimum_low.yaml	nacl_optimum_low_non_halophile_setpoint:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'optimal NaCl'
 data/traits/environment/nacl_optimum_low.yaml	nacl_optimum_low_non_halophile_setpoint:compatible_solute_accumulation->osmotic_stress_adaptation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00619-25 has no snippet
 data/traits/environment/nacl_optimum_low.yaml	nacl_optimum_low_non_halophile_setpoint:cyclic_di_amp->k_uptake_systems[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet
 data/traits/environment/nacl_optimum_low.yaml	nacl_optimum_low_non_halophile_setpoint:cyclic_di_amp->opua_opuc_transport[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet
@@ -1071,7 +1071,7 @@ data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:phage_plasm
 data/traits/genomics/crispr_cas_system.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-019-0299-x has no snippet
 data/traits/genomics/crispr_cas_system.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.molcel.2014.03.011 has no snippet
 data/traits/genomics/gc_content.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	10 chars, supports nothing specific: 'GC content'
-data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:*	REUSED_SNIPPET	WARN	5 edges share one snippet: 'GC content'
+data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:*	REUSED_SNIPPET	WARN	5 evidence items share one snippet: 'GC content'
 data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:codon_usage_selection->gc_content_trait[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'codon usage'
 data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:gc_high_bin->gc_content_trait[0]	UNSUPPORTIVE_SNIPPET	WARN	10 chars, supports nothing specific: 'GC content'
 data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:gc_low_bin->gc_content_trait[0]	UNSUPPORTIVE_SNIPPET	WARN	10 chars, supports nothing specific: 'GC content'
@@ -1303,7 +1303,7 @@ data/traits/metabolism/carbon_fixation.yaml	carbon_fixation_co2_assimilation:rub
 data/traits/metabolism/carbon_fixation.yaml	carbon_fixation_co2_assimilation:wood_ljungdahl_pathway->acetyl_coa[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/bioengineering10121357 has no snippet
 data/traits/metabolism/carbon_fixation.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.02473-10 has no snippet
 data/traits/metabolism/carbon_fixation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-marine-120709-142712 has no snippet
-data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endogl'
+data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endogl'
 data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems:beta_glucosidase->cellobiose[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s13568-023-01658-0 has no snippet
 data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems:beta_glucosidase->glucose[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s13568-023-01658-0 has no snippet
 data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems:ccr->cellulolytic_genes[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/jambio/lxac002 has no snippet
@@ -1515,7 +1515,7 @@ data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:mno2_nanoparticles->mn_oxides[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:molecular_oxygen->manganese_oxidation_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:multicopper_oxidase->manganese_oxidation_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2005.07.009 has no snippet
-data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'energy and microbial life'
+data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'energy and microbial life'
 data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:atp_synthase->atp_production[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.heliyon.2023.e22459 has no snippet
 data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:atp_synthase->proton_motive_force[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.heliyon.2023.e22459 has no snippet
 data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:respiration_energy_cost->carbon_use_efficiency[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-52160-5 has no snippet
@@ -1872,7 +1872,7 @@ data/traits/morphology/coccus_shaped.yaml	coccus_shaped_septal_growth:divisome_c
 data/traits/morphology/coccus_shaped.yaml	coccus_shaped_septal_growth:ftsZ_division_ring->septal_peptidoglycan_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1042/BSR20221664 has no snippet
 data/traits/morphology/coccus_shaped.yaml	coccus_shaped_septal_growth:peripheral_peptidoglycan_synthesis->coccus_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/coccus_shaped.yaml	coccus_shaped_septal_growth:peripheral_peptidoglycan_synthesis->ovoid_shape[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
-data/traits/morphology/cream_pigmented.yaml	cream_pigmented_low_carotenoid_density:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'bacterial carotenoid pigments'
+data/traits/morphology/cream_pigmented.yaml	cream_pigmented_low_carotenoid_density:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'bacterial carotenoid pigments'
 data/traits/morphology/cream_pigmented.yaml	cream_pigmented_low_carotenoid_density:carotenoid_biosynthesis_genes->low_carotenoid_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/pathogens12010086 has no snippet
 data/traits/morphology/cream_pigmented.yaml	cream_pigmented_low_carotenoid_density:carotenoid_gene_disruption->low_carotenoid_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/pathogens12010086 has no snippet
 data/traits/morphology/cream_pigmented.yaml	cream_pigmented_low_carotenoid_density:isoprenoid_precursor_supply->low_carotenoid_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms9040670 has no snippet
@@ -1894,7 +1894,7 @@ data/traits/morphology/diplococcus_shaped.yaml	diplococcus_shaped_septal_separat
 data/traits/morphology/diplococcus_shaped.yaml	diplococcus_shaped_septal_separation:wall_teichoic_acid->hydrolase_septal_localization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.celrep.2023.112756 has no snippet
 data/traits/morphology/disc_shaped.yaml	disc_shaped_anisotropic_wall_growth:disc_shaped_trait->rod_shaped_state[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nature13983 has no snippet
 data/traits/morphology/disc_shaped.yaml	disc_shaped_anisotropic_wall_growth:slayer_glycoprotein_maturation->flat_geometry[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1099/mic.0.001012 has no snippet
-data/traits/morphology/dumbbell_shaped.yaml	dumbbell_shaped_snapping_division:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'snapping cell division'
+data/traits/morphology/dumbbell_shaped.yaml	dumbbell_shaped_snapping_division:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'snapping cell division'
 data/traits/morphology/dumbbell_shaped.yaml	dumbbell_shaped_snapping_division:mechanical_snapping_separation->v_shaped_daughters[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00028-07 has no snippet
 data/traits/morphology/dumbbell_shaped.yaml	dumbbell_shaped_snapping_division:outer_envelope_continuity->mechanical_snapping_separation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00028-07 has no snippet
 data/traits/morphology/dumbbell_shaped.yaml	dumbbell_shaped_snapping_division:polar_growth->mechanical_snapping_separation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00028-07 has no snippet
@@ -2283,7 +2283,7 @@ data/traits/morphology/staphylococcus_arrangement.yaml	staphylococcus_irregular_
 data/traits/morphology/staphylococcus_arrangement.yaml	staphylococcus_irregular_division_cluster:ftsz_ring->divisome_pg_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-024-01607-y has no snippet
 data/traits/morphology/staphylococcus_arrangement.yaml	staphylococcus_irregular_division_cluster:gpsb->ftsz[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-024-01607-y has no snippet
 data/traits/morphology/staphylococcus_arrangement.yaml	staphylococcus_irregular_division_cluster:multiplane_nonorthogonal_division->staphylococcus_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/ncomms4842 has no snippet
-data/traits/morphology/star_shaped.yaml	star_shaped_multiple_prosthecae:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'prosthecate bacteria'
+data/traits/morphology/star_shaped.yaml	star_shaped_multiple_prosthecae:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'prosthecate bacteria'
 data/traits/morphology/star_shaped.yaml	star_shaped_multiple_prosthecae:baca_lmdc_module->local_pg_remodeling[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.86577.2 has no snippet
 data/traits/morphology/star_shaped.yaml	star_shaped_multiple_prosthecae:bactofilins->pbpc_prosthecate_pole[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2017.09.012 has no snippet
 data/traits/morphology/star_shaped.yaml	star_shaped_multiple_prosthecae:elongasome_restriction->zonal_pg_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.86577.2 has no snippet
@@ -2317,7 +2317,7 @@ data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfact
 data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfactant:surfactant->swarm_expansion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1063/5.0128140 has no snippet
 data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfactant:surfactant->swarming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2405 has no snippet
 data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfactant:swarming_trait->flagellar_motility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.57.030502.091014 has no snippet
-data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'prosthecate bacteria'
+data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'prosthecate bacteria'
 data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth:bactofilin_polymers->cell_wall_synthase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.86577 has no snippet
 data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth:bactofilin_polymers->pg_biosynthesis_at_stalk_base[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.86577 has no snippet
 data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth:bactofilin_polymers->stalk_base[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.86577 has no snippet
@@ -2693,8 +2693,8 @@ data/traits/physiology/stress_response.yaml	stress_response_induction:ppgpp->str
 data/traits/physiology/stress_response.yaml	stress_response_induction:rpos->general_stress_resistance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-090110-102946 has no snippet
 data/traits/physiology/stress_response.yaml	stress_response_induction:rsh_enzymes->ppgpp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1099/mic.0.001483 has no snippet
 data/traits/physiology/stress_response.yaml	stress_response_induction:stress_response_process->stress_response_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3032 has no snippet
-data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'carbon source'
-data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:*	REUSED_SNIPPET	WARN	3 edges share one snippet: 'energy source'
+data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'carbon source'
+data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'energy source'
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:cbb_cycle_rubisco->co2_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00599-24 has no snippet
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:co2_fixation->carbon_source_use[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00599-24 has no snippet
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:nife_hydrogenase_h2_oxidation->electron_donor_use[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mSystems.00148-24 has no snippet

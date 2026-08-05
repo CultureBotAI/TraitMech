@@ -208,3 +208,28 @@ def test_the_committed_baseline_matches_the_corpus():
     assert baseline, "baseline is empty — run `just audit-snippets --write-baseline`"
     new = [r for r in audit() if _key(r) not in baseline]
     assert new == [], f"{len(new)} findings are not baselined, e.g. {new[:2]}"
+
+
+def test_fold_collapses_whitespace_left_by_stripped_punctuation():
+    """An elliptical snippet must still match prose that lacks the ellipsis (#269).
+
+    Stripping punctuation turns "…" into spaces; without a second collapse the
+    snippet folds with a double space and the report's prose with one, so the
+    substring test fails on exactly the snippets most worth verifying.
+    """
+    from audit_evidence_snippets import _fold
+    snippet = _fold("GH48, GH6 with CBM2 domains … release glucose")
+    prose = _fold("GH48 GH6 with CBM2 domains release glucose")
+    assert "  " not in snippet
+    assert snippet == prose
+
+
+def test_the_audit_report_is_not_tracked(tmp_path):
+    """It is rewritten mid-`qc`, so a committed copy is unobservably stale (#268)."""
+    import subprocess
+    out = subprocess.run(
+        ["git", "ls-files", "reports/evidence_snippet_audit.tsv"],
+        cwd=REPO_ROOT, capture_output=True, text=True).stdout.strip()
+    assert out == "", (
+        "reports/evidence_snippet_audit.tsv is tracked again; either untrack it "
+        "or wire it into audit-derived-reports on a `git show HEAD:` basis")
