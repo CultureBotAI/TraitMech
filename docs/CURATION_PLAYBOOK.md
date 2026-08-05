@@ -320,7 +320,7 @@ backlog is worked.
 |---|---|
 | `ELLIPTICAL_SNIPPET` | contains `...` or `…`, so it is stitched, not contiguous |
 | `UNSUPPORTIVE_SNIPPET` | too short to support any specific claim (`host`, `toxins`) |
-| `REUSED_SNIPPET` | one snippet on 3+ edges of a graph — the low-diversity problem above |
+| `REUSED_SNIPPET` | one snippet on 3+ evidence items of a graph — the low-diversity problem above |
 | `MISSING_SNIPPET` | a reference with no quote at all |
 | `ECHOES_RESEARCH_REPORT` | also in this trait's report answer — verify against the source |
 

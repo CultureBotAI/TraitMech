@@ -20,9 +20,10 @@ ELLIPTICAL_SNIPPET      contains "..." or "…", so it is stitched rather than
                         contiguous. An explicit playbook violation.
 UNSUPPORTIVE_SNIPPET    too short to support any specific claim ("host",
                         "toxins"). Satisfies the field without doing its job.
-REUSED_SNIPPET          the same snippet on several edges of one graph — the
-                        playbook's "low snippet diversity". Each edge needs a
-                        phrase supporting THAT edge.
+REUSED_SNIPPET          the same snippet on several evidence items of one graph
+                        — the playbook's "low snippet diversity". Each edge
+                        needs a phrase supporting THAT edge. Counted per item
+                        rather than per edge, since one edge may carry several.
 MISSING_SNIPPET         a reference with no quote at all. Schema-legal, since
                         `snippet` is optional, and the largest category by far.
 ECHOES_RESEARCH_REPORT  the snippet also appears in this trait's own research
