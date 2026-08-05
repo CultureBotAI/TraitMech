@@ -274,7 +274,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 of 220
+## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 done, 220 remain
 
 **The gap this section opened with, for the record: `audit-graphs` used to miss
 fragmentation entirely.** It flagged `DANGLING_EDGE` (an edge naming a node that
@@ -284,8 +284,9 @@ into mutually unreachable components — the common case, because a node picks u
 an edge to a neighbour long before it is wired back to the trait node. #185 and
 #227 closed that; the detection half is done.
 
-Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes):
-**220 graphs (62%) have more than one connected component**, and **1264 nodes
+Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes), after
+`cellulolysis` had already been repaired: **220 graphs (62%) have more than one
+connected component**, and **1264 nodes
 (31%) sit outside their graph's largest component**. The worst offenders are the
 generated environment/physiology traits — e.g.
 `environment/ph_delta_mid2.yaml` (15 nodes, 7 components),
@@ -353,9 +354,16 @@ exactly one `TRAIT` node and carries 7 `UNREACHABLE_FROM_TRAIT` rows, so
 reachability catches it perfectly well. The wrong example came from
 `scripts/audit_causal_graphs.py`'s own comment and is tracked in **#284**.
 
-**Backfill progress: 1 of 220.** `data/traits/metabolism/cellulolysis.yaml` is
-the worked example — 4 components, 9 of 14 nodes unreachable, repaired with 7
-evidence-backed edges. Note that it is also in #267's `ECHOES_RESEARCH_REPORT`
+**Backfill progress: 1 done, 220 remaining.** Not "1 of 220" — the arithmetic
+matters here. `data/traits/metabolism/cellulolysis.yaml` was repaired *before*
+the baseline was frozen, so it has **zero** rows in
+`conf/causal_graph_audit_baseline.tsv` and the 220 there are all still to do.
+The corpus was 221 fragmented graphs; #183's own 2026-07-30 figure of 220 is the
+post-cellulolysis count, which is why it matches today's despite one file being
+fixed in between.
+
+It remains the worked example — 4 components, 9 of 14 nodes unreachable,
+repaired with 7 evidence-backed edges. Note that it is also in #267's `ECHOES_RESEARCH_REPORT`
 set (section 10), so it is simultaneously the template for the backfill and an
 example of the snippet shortcut the backfill has to avoid.
 
@@ -478,7 +486,7 @@ the same argument at file scope: the page restates header comments still sitting
 in `pr-sanity.yaml`, `vendored-sync.yaml` and friends, which now cross-link to it
 but were not consolidated into it.
 
-The other pending items are small, independent and fully specified**, each
+**The other pending items are small, independent and fully specified**, each
 verifiable by CI, none blocking anything:
 
 | # | fix | note |
