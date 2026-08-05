@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/dissimilatory_iron_reduction.yaml
+  slug: dissimilatory_iron_reduction
+session:
+  id: 2026-08-05T000000Z-claude-code-183a01
+  timestamp: '2026-08-05T00:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/294
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect the stranded Fe(III)-pool component to the trait
+  details: 'The pair dissolved_fe3_om_complex -> solid_fe3_mineral had no undirected
+    path to dir_trait, so the graph carried a free-standing geochemical rate comparison
+    beside a respiration mechanism. Both nodes are pools of the acceptor the organism
+    reduces, so dir_trait now uses each as an electron acceptor (METPO:2000008),
+    matching the TRAIT -> CHEMICAL shape of the 13 existing uses-electron-donor edges
+    (METPO:2000009). Both snippets are verbatim from PMID:15518832, pulled via PubMed
+    efetch and compared character-for-character in the same run rather than lifted
+    from the deep-research report, whose evidence text is paraphrase (issue 247).
+    Resolves this graph''s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings.
+    Scope caveat recorded in issue 297: the dissolved-pool quote concerns chelators
+    the organism secretes, while the node is ambient Fe(III)-organic-matter complex.'

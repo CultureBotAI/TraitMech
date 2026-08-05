@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/sulfur_globule.yaml
+  slug: sulfur_globule
+session:
+  id: 2026-08-05T000000Z-claude-code-183a02
+  timestamp: '2026-08-05T00:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/294
+events:
+- type: EDIT
+  outcome: changed
+  summary: Attach the stranded PDO/sulfite branch to the sulfide-oxidation pathway
+  details: 'persulfide_dioxygenase -> sulfite was a correct enzymatic fact with no
+    undirected path to sulfur_globule_trait. PDO acts downstream of SQR in the same
+    sulfide-oxidation pathway this graph already models, so it now participates in
+    oxidative_sulfur_metabolism (biolink:participates_in). The snippet is verbatim
+    from PMID:35653932, checked against the PubMed abstract in the same run.
+    Resolves this graph''s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings.
+    Scope caveat recorded in issue 297: the quote covers heterotrophic bacteria and
+    human mitochondria rather than the Thiomargarita/Beggiatoa exemplars, so it
+    supports the generic pathway claim the object node makes and no more.'
