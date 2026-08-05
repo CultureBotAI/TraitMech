@@ -111,3 +111,121 @@ carry a canary note in their PR for that reason — see `audit-snippets` (#247)
 and the malformed-CURIE scan in `trait-graph-sweep --verify` (#242), both of
 which landed against corpora that were already clean and so could have reported
 zero forever without anyone noticing.
+
+## Dependabot runs have no secrets — skip, do not fail
+
+A `pull_request` run whose `github.actor` is `dependabot[bot]` gets a
+**read-only `GITHUB_TOKEN`** and **no access to Actions secrets**. Any job
+needing either dies at its first step that consumes one; `claude-review` died on
+`actions/create-github-app-token` with `Input required and not supplied: app-id`
+on all five PRs `.github/dependabot.yml` opened (#293). The read-only-token half
+is worth remembering separately from the secrets half: a future workflow that
+needs write scope on a `pull_request` run may hit the same wall without using a
+secret at all. Check before assuming either way.
+
+That failure is not a signal about the bump. It is a permanent red on the class
+of PR *least* likely to be read carefully — a red that trains people to ignore
+reds, which is the failure in "Verify the check ran" above wearing the other
+colour.
+
+Gate such jobs on `github.actor != 'dependabot[bot]'`. Gate on `github.actor`,
+not on `github.event.pull_request.user.login`: actor is what determines whether
+secrets exist. A human pushing to a Dependabot branch correctly re-enables the
+job, whereas the PR author stays `dependabot[bot]` forever. **Re-running does
+not help** — GitHub keeps the restrictions "even if the workflow is re-run by a
+different actor", so "Re-run failed jobs" is not a workaround.
+
+Be honest about what that re-enabling costs. One commit from anyone with write
+access makes PR head's workflow file — carrying the bumped, unreviewed action
+SHAs — run holding both tokens. Nothing structural prevents it; what does is
+trust in who holds write access, plus the fork guard for everyone who doesn't.
+That is an acceptable place to land, but it is a trust boundary rather than a
+mechanism, and a doc written to be copied should say which it is.
+
+**A skipped job is not an absent check.** GitHub leaves checks *Pending* only
+when the **workflow** is filtered out by `paths:`/branch/commit-message; a
+**job** skipped by its own `if:` completes with conclusion `skipped` (grey).
+Verify this kind of change by looking for *grey instead of red*, not for the
+check disappearing — expecting it to vanish reads a working change as a failure.
+
+Branch protection accepts `skipped` as satisfying a required check. Treat that
+as an **accepted tradeoff, not a safety property**: if such a job is ever made
+required, this makes a required check auto-satisfy on the one PR class that got
+no review — precisely the false-green the section above warns about. It is
+tolerable here because of what still runs — but be precise about that, because
+"the other gates cover it" is weaker than it sounds. Most workflows carry
+`paths:` filters naming only their own file, so how many gates run on a
+Dependabot PR is a function of *which action got bumped*: observed coverage
+across #277-#281 ranged from **two** functional gates (#277, bumping
+`claude-code-action`, which appears in only two workflow files) to **seven**
+(#281, bumping `actions/checkout`, which appears in nearly all of them).
+
+The floor is `pr-sanity` and `vendored-sync` — the only two *functional gates*
+with no `paths:` filter (`claude-code-review.yml` is unfiltered too, which is
+exactly why the caveat below exists). That floor is the reassuring part:
+**`pr-sanity` is the gate that enforces SHA pinning** (see "Action pinning"
+above), so the check that actually validates *this* class of change is exactly
+the one immune to the filters.
+Everything above two gates is a bonus that depends on the bump's blast radius.
+State it that way wherever you copy this pattern; "seven gates cover it" would
+be false on a #277-shaped PR.
+
+One caveat this creates: `pr-sanity`'s `NO_UNFILTERED_CI` decides "unfiltered"
+from a workflow's `on:` block alone and never looks at job-level `if:`, so a
+workflow gated this way still counts toward that invariant while no longer
+running for the gated class. Harmless while `pr-sanity` and `vendored-sync` are
+themselves unfiltered; `NO_UNFILTERED_CI` fires only when *nothing* is
+unfiltered, so it would take **both** of them gaining a `paths:` filter to
+produce the false-green — at which point `claude-code-review.yml` alone would
+hold the invariant up while running on nothing. (If only `pr-sanity` gained
+one, that is a real loss — the SHA-pinning gate would stop covering exactly
+this PR class — but it is a coverage loss, not a `NO_UNFILTERED_CI`
+false-green.) Tracked in #307.
+
+Skipping does not make these PRs unreviewable. Comment `/review`, or use
+`workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both
+get secrets. `/review` has a second advantage worth knowing: `issue_comment`
+runs execute the **default branch's** copy of the workflow (see "Triggers that
+run from the default branch" above), so it uses `main`'s pinned action SHAs
+rather than the bumped ones under review.
+
+Two known ways exist to give a Dependabot run secrets. **Do not enumerate them
+as a closed set** — the list is not something a conventions doc can guarantee,
+and an absolute is the one shape of claim that gets copied without re-deriving.
+Reject each on its own merits instead.
+
+**`pull_request_target` — live, not inert.** It is tempting to think Dependabot's
+restrictions neutralise it. They do not, in the ordinary case: GitHub's
+read-only-token/no-secrets rule applies when the pull request's **base ref** was
+created by Dependabot — a Dependabot PR stacked on another Dependabot branch. A
+Dependabot PR onto `main` under `pull_request_target` gets a writable token and
+the Actions secrets, which is why `pull_request_target` + Dependabot is a named
+privilege-escalation pattern rather than a dead end.
+
+The three quoted fragments above — the read-only/no-secrets pair, the base-ref
+condition, and "even if the workflow is re-run by a different actor" — are from
+[Dependabot on GitHub Actions](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-on-actions).
+Re-read it rather than trusting this summary: the claim in this section has been
+reversed twice already, which is why the refusal below is built to stand without
+it.
+
+Refuse it for the reason that actually holds: a job like `claude-review` runs
+`gh pr checkout` and then `uv sync` and the branch's `just` recipes while
+holding the OAuth and reviewer App tokens. Under `pull_request_target` that is
+executing PR-controlled code with secrets attached — the hazard the "Refuse fork
+PRs" guard exists to prevent (#212), through a different door.
+
+**Dependabot secrets.** A separate store the `secrets` context resolves against
+on these runs, which is why `app-id` arrived *empty* rather than denied.
+Populating it would make the job run. Don't: on `pull_request` the executing
+workflow comes from the PR itself, and where `dependabot.yml` enables the
+`github-actions` ecosystem — as this repo's does — a Dependabot PR's entire
+content is a change to which action SHAs the job runs. Populating Dependabot
+secrets hands those credentials to an unreviewed, freshly-bumped action.
+
+The same caution applies to the `/review` escape hatch the moment a `uv` or
+`pip` ecosystem is added to `dependabot.yml`: that job runs `uv sync` and the
+branch's `just` recipes while holding the OAuth and App tokens. Today the branch
+diff is confined to `.github/workflows/**`, which those commands never execute,
+so the exposure is theoretical — but it is the same hazard class, and it stops
+being theoretical then.
