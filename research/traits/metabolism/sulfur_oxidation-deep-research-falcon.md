@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:01:19.682191'
 end_time: '2026-08-04T07:09:17.686705'
 duration_seconds: 478.0
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: sulfur oxidation
   trait_identifier: traitmech:000106

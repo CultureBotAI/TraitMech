@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:18:00.774200'
 end_time: '2026-08-04T08:24:36.195716'
 duration_seconds: 395.42
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: filament shaped
   trait_identifier: METPO:1000674

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:19:49.212977'
 end_time: '2026-08-04T00:26:56.506957'
 duration_seconds: 427.29
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: euryhaline
   trait_identifier: METPO:1000627

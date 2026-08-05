@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:25:33.592484'
 end_time: '2026-08-04T07:33:33.817375'
 duration_seconds: 480.22
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: carboxysome
   trait_identifier: traitmech:000072

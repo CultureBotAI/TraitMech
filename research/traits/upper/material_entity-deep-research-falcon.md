@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:12:44.620320'
 end_time: '2026-08-04T12:18:49.003162'
 duration_seconds: 364.38
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: material entity
   trait_identifier: METPO:1000186

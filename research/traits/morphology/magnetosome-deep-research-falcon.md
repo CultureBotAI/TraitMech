@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:58:08.759218'
 end_time: '2026-08-04T09:05:42.502214'
 duration_seconds: 453.74
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: magnetosome
   trait_identifier: traitmech:000071

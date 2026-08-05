@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:04:46.677106'
 end_time: '2026-08-04T06:16:15.850902'
 duration_seconds: 689.17
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: dissimilatory sulfate reduction
   trait_identifier: traitmech:000105

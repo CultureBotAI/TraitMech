@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:56:35.843251'
 end_time: '2026-08-04T07:07:26.010438'
 duration_seconds: 650.17
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: respiration
   trait_identifier: METPO:1000800

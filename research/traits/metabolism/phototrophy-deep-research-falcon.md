@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:43:58.923645'
 end_time: '2026-08-04T06:50:28.823832'
 duration_seconds: 389.9
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: phototrophy
   trait_identifier: traitmech:000037

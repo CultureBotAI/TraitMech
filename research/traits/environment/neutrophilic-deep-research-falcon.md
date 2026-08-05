@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:59:47.060365'
 end_time: '2026-08-04T02:08:12.157983'
 duration_seconds: 505.1
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: neutrophilic
   trait_identifier: METPO:1003001

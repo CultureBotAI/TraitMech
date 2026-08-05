@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:13:59.310232'
 end_time: '2026-08-04T03:22:51.170704'
 duration_seconds: 531.86
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: psychrophilic
   trait_identifier: METPO:1000614

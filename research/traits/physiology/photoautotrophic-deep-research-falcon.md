@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:44:18.973866'
 end_time: '2026-08-04T12:03:39.928908'
 duration_seconds: 1160.96
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: photoautotrophic
   trait_identifier: METPO:1000656

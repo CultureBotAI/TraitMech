@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:57:06.102215'
 end_time: '2026-08-04T08:03:34.562834'
 duration_seconds: 388.46
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: coccobacillus shaped
   trait_identifier: METPO:1000688

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:42:16.788836'
 end_time: '2026-08-04T09:51:12.928476'
 duration_seconds: 536.14
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: red pigmented
   trait_identifier: METPO:1003028

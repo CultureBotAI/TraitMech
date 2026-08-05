@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:40:34.880024'
 end_time: '2026-08-04T06:47:47.857556'
 duration_seconds: 432.98
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: oxygenic photosynthesis
   trait_identifier: traitmech:000034

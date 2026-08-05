@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:56:47.533629'
 end_time: '2026-08-04T09:03:49.936440'
 duration_seconds: 422.4
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: lophotrichous
   trait_identifier: traitmech:000058

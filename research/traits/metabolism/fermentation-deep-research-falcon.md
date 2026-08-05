@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:09:09.939259'
 end_time: '2026-08-04T06:17:02.360068'
 duration_seconds: 472.42
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Fermentation
   trait_identifier: METPO:1002005

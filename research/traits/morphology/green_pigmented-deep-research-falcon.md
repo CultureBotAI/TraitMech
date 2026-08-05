@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:44:47.380170'
 end_time: '2026-08-04T08:55:30.332125'
 duration_seconds: 642.95
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: green pigmented
   trait_identifier: METPO:1003025

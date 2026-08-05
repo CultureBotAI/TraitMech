@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:05:38.481826'
 end_time: '2026-08-04T11:20:11.470259'
 duration_seconds: 872.99
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: dormancy
   trait_identifier: traitmech:000080

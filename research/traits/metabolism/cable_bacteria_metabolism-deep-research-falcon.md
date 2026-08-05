@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:33:03.793825'
 end_time: '2026-08-04T05:41:41.280227'
 duration_seconds: 517.49
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Cable bacteria metabolism
   trait_identifier: METPO:1002003

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:17:10.239056'
 end_time: '2026-08-04T06:27:12.608854'
 duration_seconds: 602.37
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: iron oxidation
   trait_identifier: traitmech:000107

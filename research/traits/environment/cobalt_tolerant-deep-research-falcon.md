@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:09:29.020286'
 end_time: '2026-08-04T00:19:38.183040'
 duration_seconds: 609.16
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: cobalt tolerant
   trait_identifier: traitmech:000015

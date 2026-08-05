@@ -60,6 +60,74 @@ def test_build_command_for_falcon_research():
     assert command[-2:] == ["--max-cost", "1"]
 
 
+def test_build_command_makes_an_absolute_template_repo_relative():
+    """#248: deep-research-client copies --template verbatim into every
+    report's `template_file:` front matter, so an absolute path baked one
+    machine's home directory into 342 tracked reports."""
+    from research_trait import REPO_ROOT
+
+    command = build_command(
+        provider="falcon",
+        template=REPO_ROOT / "templates" / "trait_causal_graph_research.md",
+        output_file=Path("out.md"),
+        citations_file=Path("out.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    assert command[3] == "templates/trait_causal_graph_research.md"
+    assert not command[3].startswith("/")
+
+
+def test_build_command_keeps_a_template_outside_the_repo_absolute():
+    """There is no repo-relative form to record, so the absolute path stands."""
+    command = build_command(
+        provider="falcon",
+        template=Path("/tmp/elsewhere/custom.md"),
+        output_file=Path("out.md"),
+        citations_file=Path("out.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    # .resolve() so the assertion holds on macOS, where /tmp is a symlink.
+    assert command[3] == str(Path("/tmp/elsewhere/custom.md").resolve())
+    assert command[3].startswith("/")
+
+
+def test_a_relative_template_outside_the_repo_is_resolved(monkeypatch, tmp_path):
+    """The child runs at REPO_ROOT, so handing it back the caller's relative
+    string would re-anchor `../elsewhere/x.md` to the repo root and read the
+    wrong file. Resolution happens against the parent's cwd (#248 review)."""
+    outside = tmp_path / "elsewhere"
+    outside.mkdir()
+    (outside / "custom.md").write_text("x")
+    monkeypatch.chdir(outside)
+
+    command = build_command(
+        provider="falcon",
+        template=Path("custom.md"),
+        output_file=Path("out.md"),
+        citations_file=Path("out.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    assert command[3] == str((outside / "custom.md").resolve())
+
+
+def test_output_paths_are_resolved_against_the_callers_cwd(monkeypatch, tmp_path):
+    """Same hazard: a relative --research-dir would have the parent create one
+    directory and the child, running at REPO_ROOT, write into another."""
+    monkeypatch.chdir(tmp_path)
+    command = build_command(
+        provider="falcon",
+        template=Path("templates/trait_causal_graph_research.md"),
+        output_file=Path("out/report.md"),
+        citations_file=Path("out/report.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    assert str(tmp_path.resolve() / "out/report.md") in command
+
+
 def test_research_env_maps_futurehouse_key_to_edison(monkeypatch):
     monkeypatch.delenv("EDISON_API_KEY", raising=False)
     monkeypatch.setenv("FUTUREHOUSE_API_KEY", "test-key")

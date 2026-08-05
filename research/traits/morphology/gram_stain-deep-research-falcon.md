@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:36:51.891517'
 end_time: '2026-08-04T08:47:13.636407'
 duration_seconds: 621.74
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: gram stain
   trait_identifier: METPO:1000697

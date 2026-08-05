@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:06:25.065364'
 end_time: '2026-08-04T03:13:53.249238'
 duration_seconds: 448.18
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pressure delta
   trait_identifier: traitmech:000006

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:49:25.071003'
 end_time: '2026-08-04T08:58:06.859786'
 duration_seconds: 521.79
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: intracellular inclusion
   trait_identifier: traitmech:000066

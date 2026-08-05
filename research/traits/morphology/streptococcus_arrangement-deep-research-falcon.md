@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:12:30.837835'
 end_time: '2026-08-04T10:21:46.414323'
 duration_seconds: 555.58
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: streptococcus arrangement
   trait_identifier: traitmech:000117

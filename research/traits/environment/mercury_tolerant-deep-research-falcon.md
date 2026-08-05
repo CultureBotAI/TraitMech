@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:00:03.854742'
 end_time: '2026-08-04T01:08:02.724456'
 duration_seconds: 478.87
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: mercury tolerant
   trait_identifier: traitmech:000016

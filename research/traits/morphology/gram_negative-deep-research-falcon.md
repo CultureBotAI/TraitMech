@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:35:08.864050'
 end_time: '2026-08-04T08:45:44.014485'
 duration_seconds: 635.15
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: gram negative
   trait_identifier: METPO:1000699

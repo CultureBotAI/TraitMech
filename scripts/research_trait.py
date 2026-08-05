@@ -166,6 +166,28 @@ def research_env(provider: str) -> dict[str, str]:
     return env
 
 
+def _repo_relative(path: Path) -> str:
+    """Render ``path`` relative to the repo root when it lives inside it.
+
+    deep-research-client copies whatever ``--template`` string it is given
+    straight into each report's ``template_file:`` front matter. Passing an
+    absolute path baked one machine's home directory into 342 tracked reports
+    (#248) — a value that is wrong for every reader but one. The command is run
+    with ``cwd=REPO_ROOT`` so the relative form still resolves.
+
+    Falls back to the RESOLVED absolute path for a template outside the repo:
+    it has no repo-relative form to record, and returning the caller's relative
+    string would be actively wrong now that the child runs at ``REPO_ROOT`` —
+    ``../elsewhere/x.md`` would re-anchor to the repo root and read the wrong
+    file. Resolving happens against the parent's cwd, which is what the caller
+    meant.
+    """
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path.resolve())
+
+
 def build_command(
     *,
     provider: str,
@@ -180,17 +202,20 @@ def build_command(
         client_command,
         "research",
         "--template",
-        str(template),
+        _repo_relative(template),
     ]
     for key, value in variables.items():
         command.extend(["--var", f"{key}={value}"])
     command.extend(provider_args(provider))
     command.extend(
         [
+            # Resolved for the same reason as the template above: the child runs
+            # at REPO_ROOT, so a relative --research-dir would have the parent
+            # create one directory and the child write into another.
             "--output",
-            str(output_file),
+            str(output_file.resolve()),
             "--separate-citations",
-            str(citations_file),
+            str(citations_file.resolve()),
         ]
     )
     command.extend(passthrough_args)
@@ -249,7 +274,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    subprocess.run(command, check=True, env=research_env(provider))
+    # cwd is pinned so the repo-relative --template above resolves no matter
+    # where the script was invoked from.
+    subprocess.run(command, check=True, env=research_env(provider), cwd=REPO_ROOT)
     return 0
 
 

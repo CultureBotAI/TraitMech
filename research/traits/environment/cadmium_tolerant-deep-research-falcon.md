@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:09:06.079710'
 end_time: '2026-08-04T00:18:43.845393'
 duration_seconds: 577.77
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: cadmium tolerant
   trait_identifier: traitmech:000013

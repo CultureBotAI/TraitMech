@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:55:45.858745'
 end_time: '2026-08-04T04:04:27.208707'
 duration_seconds: 521.35
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature optimum mid3
   trait_identifier: METPO:1000445

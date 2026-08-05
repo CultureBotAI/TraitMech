@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:32:13.622515'
 end_time: '2026-08-04T04:39:57.404306'
 duration_seconds: 463.78
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: UV radiation tolerant
   trait_identifier: traitmech:000009

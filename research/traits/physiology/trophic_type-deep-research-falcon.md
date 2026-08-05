@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:03:46.994571'
 end_time: '2026-08-04T12:11:30.312862'
 duration_seconds: 463.32
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: trophic type
   trait_identifier: METPO:1000631

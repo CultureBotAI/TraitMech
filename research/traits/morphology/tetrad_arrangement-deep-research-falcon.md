@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:21:50.630963'
 end_time: '2026-08-04T10:28:09.748023'
 duration_seconds: 379.12
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: tetrad arrangement
   trait_identifier: traitmech:000119

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:50:14.058849'
 end_time: '2026-08-04T05:02:06.593247'
 duration_seconds: 712.53
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: GC mid1
   trait_identifier: METPO:1000430

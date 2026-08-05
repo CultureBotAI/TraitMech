@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:15:29.970122'
 end_time: '2026-08-04T01:34:06.595558'
 duration_seconds: 1116.63
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: NaCl delta
   trait_identifier: METPO:1000335

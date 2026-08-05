@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:03:23.139128'
 end_time: '2026-08-04T10:16:53.262802'
 duration_seconds: 810.12
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: sporulation
   trait_identifier: METPO:1000870

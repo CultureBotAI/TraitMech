@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:57:59.934445'
 end_time: '2026-08-04T00:06:24.062320'
 duration_seconds: 504.13
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: aerotolerant
   trait_identifier: METPO:1000609

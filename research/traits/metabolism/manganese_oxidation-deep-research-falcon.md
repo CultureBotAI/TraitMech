@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:25:50.964554'
 end_time: '2026-08-04T06:33:28.519475'
 duration_seconds: 457.55
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: manganese oxidation
   trait_identifier: traitmech:000032

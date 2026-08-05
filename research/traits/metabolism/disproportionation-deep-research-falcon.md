@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:50:07.162040'
 end_time: '2026-08-04T06:09:07.872564'
 duration_seconds: 1140.71
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Disproportionation
   trait_identifier: METPO:1000806

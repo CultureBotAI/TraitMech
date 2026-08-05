@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:15:23.495936'
 end_time: '2026-08-04T05:21:54.416114'
 duration_seconds: 390.92
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: rRNA operon copy number
   trait_identifier: traitmech:000101

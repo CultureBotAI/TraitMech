@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:32:19.586688'
 end_time: '2026-08-03T23:42:17.342793'
 duration_seconds: 597.76
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: parasitism
   trait_identifier: traitmech:000043

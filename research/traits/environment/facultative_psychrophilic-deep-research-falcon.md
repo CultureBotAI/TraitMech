@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:35:05.764914'
 end_time: '2026-08-04T00:44:06.951831'
 duration_seconds: 541.19
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: facultative psychrophilic
   trait_identifier: METPO:1000720

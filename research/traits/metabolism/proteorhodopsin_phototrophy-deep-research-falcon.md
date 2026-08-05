@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:50:33.052115'
 end_time: '2026-08-04T07:01:18.412210'
 duration_seconds: 645.36
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: proteorhodopsin phototrophy
   trait_identifier: traitmech:000036

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:36:03.450503'
 end_time: '2026-08-04T10:45:07.811982'
 duration_seconds: 544.36
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: autotrophic
   trait_identifier: METPO:1000632

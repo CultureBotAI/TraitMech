@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:38:00.789733'
 end_time: '2026-08-04T09:45:52.015807'
 duration_seconds: 471.23
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: prosthecate
   trait_identifier: traitmech:000065

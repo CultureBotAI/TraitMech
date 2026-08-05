@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:03:40.747055'
 end_time: '2026-08-04T08:17:55.410174'
 duration_seconds: 854.66
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: curved shaped
   trait_identifier: METPO:1000670

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:04:27.098407'
 end_time: '2026-08-04T05:14:39.178617'
 duration_seconds: 612.08
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pangenome openness
   trait_identifier: traitmech:000102

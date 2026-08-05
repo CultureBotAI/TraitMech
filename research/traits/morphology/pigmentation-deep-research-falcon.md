@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:30:24.609504'
 end_time: '2026-08-04T09:37:16.897977'
 duration_seconds: 412.29
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pigmentation
   trait_identifier: METPO:1003021

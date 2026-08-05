@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:35:06.125087'
 end_time: '2026-08-04T06:45:43.890499'
 duration_seconds: 637.77
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Oxidative phosphorylation
   trait_identifier: METPO:1000803

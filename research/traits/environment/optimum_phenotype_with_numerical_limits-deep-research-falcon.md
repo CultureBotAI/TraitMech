@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:10:06.511673'
 end_time: '2026-08-04T02:16:52.708849'
 duration_seconds: 406.2
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: optimum phenotype with numerical limits
   trait_identifier: METPO:1000536

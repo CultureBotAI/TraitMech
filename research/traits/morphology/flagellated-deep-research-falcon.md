@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:24:40.523909'
 end_time: '2026-08-04T08:35:02.873002'
 duration_seconds: 622.35
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: flagellated
   trait_identifier: METPO:1000704

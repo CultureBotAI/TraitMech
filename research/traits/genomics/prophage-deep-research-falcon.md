@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:14:50.868640'
 end_time: '2026-08-04T05:23:39.190794'
 duration_seconds: 528.32
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: prophage
   trait_identifier: traitmech:000091

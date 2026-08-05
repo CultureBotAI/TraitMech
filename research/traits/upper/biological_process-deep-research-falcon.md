@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:11:35.027425'
 end_time: '2026-08-04T12:19:24.812361'
 duration_seconds: 469.79
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: biological process
   trait_identifier: METPO:1000630

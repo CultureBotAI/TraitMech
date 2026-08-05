@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:34:42.522856'
 end_time: '2026-08-04T08:41:52.945772'
 duration_seconds: 430.42
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: gliding
   trait_identifier: METPO:1000706

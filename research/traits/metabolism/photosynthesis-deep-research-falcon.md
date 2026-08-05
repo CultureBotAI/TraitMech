@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:43:18.102863'
 end_time: '2026-08-04T06:51:28.388030'
 duration_seconds: 490.29
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: photosynthesis
   trait_identifier: traitmech:000038

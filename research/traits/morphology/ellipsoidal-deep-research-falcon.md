@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:15:32.825884'
 end_time: '2026-08-04T08:25:29.033873'
 duration_seconds: 596.21
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: ellipsoidal
   trait_identifier: METPO:1000673

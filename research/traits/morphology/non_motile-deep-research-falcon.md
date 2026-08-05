@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:08:35.859725'
 end_time: '2026-08-04T09:22:28.315695'
 duration_seconds: 832.46
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: non motile
   trait_identifier: METPO:1000703

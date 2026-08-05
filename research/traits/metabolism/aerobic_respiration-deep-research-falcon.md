@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:24:05.026064'
 end_time: '2026-08-04T05:32:57.694520'
 duration_seconds: 532.67
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Aerobic respiration
   trait_identifier: METPO:1000801

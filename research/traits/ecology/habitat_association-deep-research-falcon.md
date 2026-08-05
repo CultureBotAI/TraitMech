@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:21:05.833045'
 end_time: '2026-08-03T23:27:57.275230'
 duration_seconds: 411.44
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: habitat association
   trait_identifier: traitmech:000047

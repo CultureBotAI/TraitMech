@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:03:25.853067'
 end_time: '2026-08-04T02:10:00.441464'
 duration_seconds: 394.59
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: obligately acidophilic
   trait_identifier: METPO:1003006

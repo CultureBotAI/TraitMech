@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:59:42.547418'
 end_time: '2026-08-04T10:06:09.552292'
 duration_seconds: 387.0
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: spore forming
   trait_identifier: METPO:1000871

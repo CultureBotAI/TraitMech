@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:05:44.567164'
 end_time: '2026-08-04T09:34:25.989824'
 duration_seconds: 1721.42
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: mycelial growth
   trait_identifier: traitmech:000074

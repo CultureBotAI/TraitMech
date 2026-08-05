@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:58:46.608101'
 end_time: '2026-08-04T01:15:24.996960'
 duration_seconds: 998.39
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: ionizing radiation tolerant
   trait_identifier: traitmech:000008

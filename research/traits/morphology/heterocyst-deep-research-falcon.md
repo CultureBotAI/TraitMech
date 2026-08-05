@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:47:15.694319'
 end_time: '2026-08-04T08:56:39.421940'
 duration_seconds: 563.73
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: heterocyst
   trait_identifier: traitmech:000073

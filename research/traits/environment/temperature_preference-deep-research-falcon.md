@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:06:57.649867'
 end_time: '2026-08-04T04:18:38.487677'
 duration_seconds: 700.84
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature preference
   trait_identifier: METPO:1000613

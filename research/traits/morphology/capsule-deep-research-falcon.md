@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:23:55.491114'
 end_time: '2026-08-04T07:38:34.534271'
 duration_seconds: 879.04
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: capsule
   trait_identifier: traitmech:000063

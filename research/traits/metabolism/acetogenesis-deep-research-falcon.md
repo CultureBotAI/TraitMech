@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:23:41.410401'
 end_time: '2026-08-04T05:31:59.336140'
 duration_seconds: 497.93
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Acetogenesis
   trait_identifier: METPO:1000845

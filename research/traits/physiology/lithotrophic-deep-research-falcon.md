@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:20:14.273649'
 end_time: '2026-08-04T11:30:29.664231'
 duration_seconds: 615.39
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: lithotrophic
   trait_identifier: METPO:1000649

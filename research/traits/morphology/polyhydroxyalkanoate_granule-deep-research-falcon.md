@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:34:32.119853'
 end_time: '2026-08-04T09:42:10.765546'
 duration_seconds: 458.65
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: polyhydroxyalkanoate granule
   trait_identifier: traitmech:000067

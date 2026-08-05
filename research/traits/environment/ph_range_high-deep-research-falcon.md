@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:49:02.801397'
 end_time: '2026-08-04T02:59:01.204230'
 duration_seconds: 598.4
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pH range high
   trait_identifier: METPO:1000464

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:26:53.426143'
 end_time: '2026-08-04T11:33:49.982765'
 duration_seconds: 416.56
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: mixotrophic
   trait_identifier: METPO:1000652

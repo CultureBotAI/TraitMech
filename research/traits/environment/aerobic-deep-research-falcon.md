@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:56:37.579903'
 end_time: '2026-08-04T00:08:04.900376'
 duration_seconds: 687.32
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: aerobic
   trait_identifier: METPO:1000602

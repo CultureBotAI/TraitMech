@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:00:19.730006'
 end_time: '2026-08-04T00:09:20.199099'
 duration_seconds: 540.47
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: alkalotolerant
   trait_identifier: METPO:1003009

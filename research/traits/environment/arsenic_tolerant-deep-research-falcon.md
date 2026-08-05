@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:08:09.130920'
 end_time: '2026-08-04T00:14:22.848801'
 duration_seconds: 373.72
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: arsenic tolerant
   trait_identifier: traitmech:000017

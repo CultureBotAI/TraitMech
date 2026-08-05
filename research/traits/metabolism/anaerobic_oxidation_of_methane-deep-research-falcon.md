@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:24:12.593185'
 end_time: '2026-08-04T05:30:59.309088'
 duration_seconds: 406.72
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: anaerobic oxidation of methane
   trait_identifier: traitmech:000033

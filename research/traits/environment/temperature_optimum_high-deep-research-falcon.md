@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:45:16.335964'
 end_time: '2026-08-04T03:55:43.483338'
 duration_seconds: 627.15
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature optimum high
   trait_identifier: METPO:1000447

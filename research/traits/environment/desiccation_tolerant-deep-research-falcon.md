@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:18:51.194589'
 end_time: '2026-08-04T00:31:28.197349'
 duration_seconds: 757.0
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: desiccation tolerant
   trait_identifier: traitmech:000010

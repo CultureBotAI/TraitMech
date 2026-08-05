@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:15:22.868970'
 end_time: '2026-08-04T03:21:23.701944'
 duration_seconds: 360.83
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: radiotolerant
   trait_identifier: traitmech:000007

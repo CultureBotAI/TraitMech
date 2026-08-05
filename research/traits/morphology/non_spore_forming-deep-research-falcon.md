@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:12:37.808125'
 end_time: '2026-08-04T09:22:39.966820'
 duration_seconds: 602.16
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: non-spore forming
   trait_identifier: METPO:1000872

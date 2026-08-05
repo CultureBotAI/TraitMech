@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:00:55.623144'
 end_time: '2026-08-04T12:07:15.468506'
 duration_seconds: 379.85
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: quorum sensing
   trait_identifier: traitmech:000084

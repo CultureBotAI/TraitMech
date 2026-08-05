@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:57:11.781722'
 end_time: '2026-08-04T12:05:42.338475'
 duration_seconds: 510.56
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: photoorganoheterotrophic
   trait_identifier: METPO:1000659

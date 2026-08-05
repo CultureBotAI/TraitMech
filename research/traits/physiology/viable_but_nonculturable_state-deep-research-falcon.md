@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:07:19.462961'
 end_time: '2026-08-04T12:27:56.859410'
 duration_seconds: 1237.4
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: viable but nonculturable state
   trait_identifier: traitmech:000081

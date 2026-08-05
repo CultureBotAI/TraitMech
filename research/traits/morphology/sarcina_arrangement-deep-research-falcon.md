@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:47:50.707623'
 end_time: '2026-08-04T09:59:39.818764'
 duration_seconds: 709.11
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: sarcina arrangement
   trait_identifier: traitmech:000120

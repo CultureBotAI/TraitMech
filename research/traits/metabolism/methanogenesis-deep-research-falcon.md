@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:33:30.875040'
 end_time: '2026-08-04T06:43:52.755207'
 duration_seconds: 621.88
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Methanogenesis
   trait_identifier: METPO:1000844

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:38:36.654781'
 end_time: '2026-08-04T03:47:13.166075'
 duration_seconds: 516.51
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature delta very low
   trait_identifier: METPO:1000483

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:44:08.906745'
 end_time: '2026-08-04T00:51:15.318623'
 duration_seconds: 426.41
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: growth range phenotype with numerical limits
   trait_identifier: METPO:1000535

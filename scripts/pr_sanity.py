@@ -54,6 +54,14 @@ Checks:
                       which is the failure #272's own argument was about (#275).
                       A gate rather than a convention because 5 of 9 workflows
                       had already drifted without it by the time anyone looked.
+  ABSOLUTE_REPO_PATH  a tracked file embedding this repo's own absolute path.
+                      Anything inside the repo has a repo-relative form, so an
+                      absolute one is correct for exactly one machine — #248
+                      baked a home directory into 342 tracked reports via a
+                      tool that copies its ``--template`` argument verbatim.
+                      Keyed on the repo root, not a generic ``/Users/`` pattern:
+                      sibling-checkout paths have no repo-relative form and are
+                      a separate problem (#310).
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
                       exist. Links inside fenced code blocks, indented code
@@ -484,6 +492,40 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
     return findings
 
 
+def check_absolute_repo_paths(files: list[Path], root: Path) -> list[dict[str, str]]:
+    """Flag a tracked file embedding the absolute path of this repo (#248).
+
+    deep-research-client copies its ``--template`` argument verbatim into every
+    report's front matter, so passing an absolute path wrote one machine's home
+    directory into 342 tracked files — correct for exactly one reader. Anything
+    inside the repo has a repo-relative form, so an absolute one is never the
+    right thing to commit.
+
+    Deliberately keyed on the repo root itself rather than a generic ``/Users/``
+    or ``/home/`` pattern: paths pointing at SIBLING checkouts have no
+    repo-relative form and are a different problem (#310). Computing the root at
+    runtime also means this cannot rot into a check for one person's username.
+    """
+    findings: list[dict[str, str]] = []
+    needle = str(root.resolve())
+    for path in files:
+        if path.suffix not in TEXT_SUFFIXES or not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        for lineno, line in enumerate(text.splitlines(), 1):
+            if needle in line:
+                findings.append({
+                    "check": "ABSOLUTE_REPO_PATH",
+                    "file": f"{path.relative_to(root)}:{lineno}",
+                    "detail": ("embeds this repo's absolute path; use the "
+                               "repo-relative form (#248)"),
+                })
+    return findings
+
+
 def check_conflict_markers(files: list[Path], root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     for path in files:
@@ -678,6 +720,7 @@ def sanity(root: Path) -> list[dict[str, str]]:
     return (check_workflows(root)
             + check_action_pins(root)
             + check_conflict_markers(files, root)
+            + check_absolute_repo_paths(files, root)
             + check_markdown_links(files, root))
 
 

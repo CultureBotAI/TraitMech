@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:31:05.314451'
 end_time: '2026-08-04T03:38:06.833184'
 duration_seconds: 421.52
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature delta high
   trait_identifier: METPO:1000487

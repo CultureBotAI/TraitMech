@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:51:37.134806'
 end_time: '2026-08-04T00:00:12.633084'
 duration_seconds: 515.5
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: acidotolerant
   trait_identifier: METPO:1003008

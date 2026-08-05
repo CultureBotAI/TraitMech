@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:42:15.337113'
 end_time: '2026-08-04T11:57:02.115951'
 duration_seconds: 886.78
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: persister cell formation
   trait_identifier: traitmech:000082

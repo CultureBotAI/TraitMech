@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:50:08.234342'
 end_time: '2026-08-04T01:54:59.292022'
 duration_seconds: 291.06
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: NaCl range high
   trait_identifier: METPO:1000472

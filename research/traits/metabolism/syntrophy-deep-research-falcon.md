@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:01:24.330453'
 end_time: '2026-08-04T07:10:16.262961'
 duration_seconds: 531.93
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Syntrophy
   trait_identifier: METPO:1002006

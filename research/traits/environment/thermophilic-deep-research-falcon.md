@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:30:41.665074'
 end_time: '2026-08-04T04:40:52.754577'
 duration_seconds: 611.09
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: thermophilic
   trait_identifier: METPO:1000616

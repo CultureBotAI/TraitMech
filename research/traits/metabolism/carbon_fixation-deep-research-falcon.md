@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:40:42.051779'
 end_time: '2026-08-04T05:57:27.183301'
 duration_seconds: 1005.13
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: carbon fixation
   trait_identifier: traitmech:000019
