@@ -176,6 +176,13 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 }
 .research-card { border-left: 4px solid var(--accent); }
 
+/* The research caveat reuses .graph-warning rather than defining its own tint.
+   A bespoke rule using --accent-soft looked like ordinary chrome — that variable
+   is already the background of table headers, hover rows and .research-card
+   itself — and would have needed its own dark-mode override to maintain (#256).
+   .graph-warning is the established warning idiom on this page and carries
+   both theme branches. */
+
 /* DisMech-style causal pathographs on trait pages */
 .causal-graphs { margin: 1.25rem 0; }
 .causal-graph-card { margin-bottom: 1rem; }

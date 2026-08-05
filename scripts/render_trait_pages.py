@@ -50,6 +50,44 @@ NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
 EMBEDDING_RELEASE = "2026-04-25"
 
+# Provider precedence for the deep-research lookup.
+#
+# The pipeline writes `<slug>-deep-research-<provider>.md` — the suffix is what
+# makes the sweep resumable, since resume detection is file-existence based on
+# that exact name. This renderer looked for a bare `<slug>.md` instead, so the
+# research block never rendered for any trait (#233).
+#
+# A trait can carry reports from more than one provider, so the pick has to be
+# deterministic (#228 made reproducible output a requirement). Sorting by name
+# would be deterministic but wrong: `cellulolysis` has both `-falcon` and
+# `-codex` reports, and alphabetical order picks `codex` — the one artifact in
+# the tree with no manifest row and no citations sidecar (#245). Rank by the
+# provider the tracked sweep actually ran, and fall back to name order so an
+# unrecognised provider still renders reproducibly rather than arbitrarily.
+RESEARCH_PROVIDERS = ("falcon",)
+
+# How much of a report to embed in the page.
+#
+# Embedding whole reports takes pages/ from 16 MB to 31 MB — mutualism.html
+# alone goes 36 KB → 80 KB — to store a second copy of text that #240/#241
+# already track under research/. It also makes every future sweep a 353-file
+# diff against the pages/ staleness gate (#230).
+#
+# The card is a scrolling 480px-tall <pre>, so a reader was never going to see a
+# 30 KB report on the page anyway; they were going to open the file. Embed
+# enough to show what the report covers — scope summary and the start of the
+# candidate nodes — and link the rest. Raising this to a large number restores
+# the full embed if that trade is ever judged the wrong way round.
+RESEARCH_PREVIEW_LINES = 60
+
+# Last line of the rendered prompt. The provider echoes the whole template twice
+# before its answer, so previewing the head of the raw file shows YAML front
+# matter and the prompt and not one research finding. This marker appears
+# exactly twice in all 353 sweep reports, and everything after the second is the
+# answer. A report without it — another provider's layout — falls back to
+# everything after the YAML front matter.
+RESEARCH_PROMPT_TAIL = "Warnings for claims that should not yet be curated into TraitMech"
+
 # GitHub URL bases for the right-rail source-link card.
 GH_BLOB_BASE = "https://github.com/CultureBotAI/TraitMech/blob/main"
 GH_RAW_BASE = "https://raw.githubusercontent.com/CultureBotAI/TraitMech/main"
@@ -194,6 +232,58 @@ def load_node_dim_preview(needed_nodes: set[str]) -> dict[str, str]:
     return out
 
 
+def research_report(category_dir: str, slug: str) -> Path | None:
+    """Return this trait's deep-research report, or None if it has none.
+
+    Matches what the pipeline writes — `<slug>-deep-research-<provider>.md` —
+    and picks by RESEARCH_PROVIDERS when a trait has more than one.
+    """
+    candidates = [
+        path
+        for path in RESEARCH_DIR.glob(f"{category_dir}/{slug}-deep-research-*.md")
+        # Sidecars match the same glob and are reference lists, not reports.
+        # Both separators, because the tree spells this two ways: the pipeline
+        # writes `<report>.md.citations.md`, while _edison_capture bundles use
+        # `<stem>-citations.md`. Only the dot form can occur here today, but the
+        # hyphen form would fail silently rather than loudly — it survives a
+        # dot-only exclusion, and for an unrecognised provider sorts ahead of its
+        # own report ('-' < '.'), so the page would render the bibliography (#259).
+        if not re.search(r"[-.]citations\.md$", path.name)
+    ]
+    if not candidates:
+        return None
+
+    def rank(path: Path) -> tuple[int, str]:
+        provider = path.stem[len(f"{slug}-deep-research-"):]
+        known = provider in RESEARCH_PROVIDERS
+        return (RESEARCH_PROVIDERS.index(provider) if known
+                else len(RESEARCH_PROVIDERS), path.name)
+
+    return min(candidates, key=rank)
+
+
+def research_answer(text: str) -> list[str]:
+    """Strip a report's front matter and echoed prompt, leaving the answer."""
+    lines = text.splitlines()
+    if lines and lines[0].strip() == "---":
+        for i, line in enumerate(lines[1:], 1):
+            if line.strip() == "---":
+                lines = lines[i + 1:]
+                break
+    # The prompt is echoed exactly twice, so the second marker is the boundary.
+    # Anchoring on the LAST one instead would be identical today and fails
+    # unsafely: a report whose answer quotes the instruction line — reports do
+    # discuss what should not be curated — would be cut mid-answer, silently
+    # dropping findings. Overshooting the other way only leaves some boilerplate
+    # in the preview (#255).
+    marks = [i for i, line in enumerate(lines) if RESEARCH_PROMPT_TAIL in line]
+    if marks:
+        lines = lines[marks[min(1, len(marks) - 1)] + 1:]
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    return lines
+
+
 def render_pages(args: argparse.Namespace) -> int:
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
@@ -278,16 +368,19 @@ def render_pages(args: argparse.Namespace) -> int:
 
         yaml_rel = f"data/traits/{category_dir}/{slug}.yaml"
 
-        # Deep-research output: surface research/traits/<cat>/<slug>.md when
-        # the deep-research-client pipeline has produced one. Source of truth
-        # lives at `research/traits/<category_dir>/<slug>.md`; the renderer
-        # treats it as an opaque markdown blob and hands it to the template as
-        # a string. No file → research section is hidden entirely.
-        research_path = RESEARCH_DIR / category_dir / f"{slug}.md"
-        research_md = research_path.read_text() if research_path.exists() else ""
+        # Deep-research output. The renderer treats the report as an opaque
+        # markdown blob and hands it to the template as a string. No file →
+        # research section is hidden entirely.
+        research_path = research_report(category_dir, slug)
         research_rel = (
-            f"research/traits/{category_dir}/{slug}.md" if research_md else ""
+            research_path.relative_to(REPO_ROOT).as_posix() if research_path else ""
         )
+        research_lines = (
+            research_answer(research_path.read_text()) if research_path else []
+        )
+        research_md = "\n".join(research_lines[:RESEARCH_PREVIEW_LINES])
+        research_total_lines = len(research_lines)
+        research_shown_lines = min(research_total_lines, RESEARCH_PREVIEW_LINES)
 
         # Resolve nearest-neighbor records into renderable rows with page links.
         nn_rows = []
@@ -317,6 +410,8 @@ def render_pages(args: argparse.Namespace) -> int:
             nearest_neighbors=nn_rows,
             research_md=research_md,
             research_path=research_rel,
+            research_total_lines=research_total_lines,
+            research_shown_lines=research_shown_lines,
             research_blob_url=(
                 f"{GH_BLOB_BASE}/{research_rel}" if research_rel else ""
             ),
