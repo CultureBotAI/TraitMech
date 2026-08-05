@@ -41,6 +41,15 @@ Checks:
                       which is how the review workflow cancelled itself on every
                       PR (#215). Third bug of this shape after #199 and #196's
                       review, hence a gate rather than a convention (#218).
+  MISSING_CONVENTIONS_POINTER
+                      a workflow whose first line is not the
+                      ``docs/WORKFLOW_CONVENTIONS.md`` pointer. The page
+                      consolidated comment blocks that had been spread across
+                      individual workflows, and then nothing linked to it — so
+                      it was strictly less discoverable than what it replaced,
+                      which is the failure #272's own argument was about (#275).
+                      A gate rather than a convention because 5 of 9 workflows
+                      had already drifted without it by the time anyone looked.
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
                       exist. Links inside fenced code blocks, indented code
@@ -66,6 +75,10 @@ from pathlib import Path
 import yaml
 
 WORKFLOW_DIR = Path(".github/workflows")
+# Every workflow's first line points at the conventions page. #275: the page was
+# unlinked from anywhere, which made it strictly less discoverable than the
+# per-file comment blocks it consolidated.
+CONVENTIONS_POINTER = "Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md"
 
 # Triggers that resolve to the SAME pull request as a `pull_request` run, so
 # they can land in a group keyed on the PR — which is what made #215 possible:
@@ -352,8 +365,16 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
         if path.suffix not in {".yml", ".yaml"}:
             continue
         rel = str(path.relative_to(root))
+        text = path.read_text()
+        if CONVENTIONS_POINTER not in text.split("\n", 1)[0]:
+            findings.append({
+                "check": "MISSING_CONVENTIONS_POINTER", "file": rel,
+                "detail": (f"first line is not `# {CONVENTIONS_POINTER}` — an "
+                           "unlinked conventions page is less discoverable than "
+                           "the comments it replaced (#275)"),
+            })
         try:
-            doc = yaml.safe_load(path.read_text())
+            doc = yaml.safe_load(text)
         except yaml.YAMLError as exc:
             findings.append({
                 "check": "WORKFLOW_INVALID", "file": rel,
