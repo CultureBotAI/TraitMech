@@ -433,6 +433,12 @@ Ontology mappings below are deliberately conservative. Protein names should be g
           <p class="changes">Added 2 evidence-backed edges connecting the stranded Fe(III)-pool component to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral, and dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008 to match the established uses-electron-donor convention. Both carry verbatim snippets from PMID:15518832, checked character-for-character against the PubMed abstract rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.</p>
         </li>
         
+        <li>
+          <time>2026-08-05T12:00:00Z</time> ·
+          <strong>REVERSE_CAUSAL_EDGE_DIRECTION</strong> · claude
+          <p class="changes">Reversed 2 causal edges from dir_trait uses electron acceptor &lt;chemical&gt; to &lt;chemical&gt; enables dir_trait (predicate_id METPO:2000008 -&gt; RO:0002327), issue 295. This supersedes the 2026-08-05T00:00:00Z ENRICH_CAUSAL_GRAPH entry above, which describes those two edges in their original direction and grounding: METPO:2000008 is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so the trait-subject form entailed that dir_trait is a microbe. Graph connectivity from issue 183 is preserved - the edges still join the Fe(III)-pool component to the trait, just in the other direction. Evidence unchanged. Note RO:0002327 has range &#39;biological process or activity&#39;, so the new form is not fully range-correct either, and both acceptor edges now share a predicate with the donor convention - tracked in issues 302 and 303.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -813,7 +819,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Corpus as of 2026-08-05 00:00 UTC from
+      Corpus as of 2026-08-05 12:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

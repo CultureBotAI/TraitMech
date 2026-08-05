@@ -611,6 +611,12 @@ Identifiers below are deliberately conservative. Stable identifiers are supplied
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (InterPro:IPR033966×1, InterPro:IPR001765×1).</p>
         </li>
         
+        <li>
+          <time>2026-08-05T12:00:00Z</time> ·
+          <strong>REVERSE_CAUSAL_EDGE_DIRECTION</strong> · claude
+          <p class="changes">Reversed 1 causal edge from &lt;trait&gt; uses electron donor &lt;chemical&gt; to &lt;chemical&gt; enables &lt;trait&gt; (predicate_id METPO:2000009 -&gt; RO:0002327), issue 295. METPO:2000009 is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so the trait-subject form entailed that this TRAIT node is a microbe; CausalNodeTypeEnum has no organism member, so no causal-graph edge can satisfy that domain. Evidence unchanged; only subject/predicate/object/predicate_id and the edge description moved. Note RO:0002327 has range &#39;biological process or activity&#39;, so the new form is not fully range-correct either - tracked in issue 302.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -991,7 +997,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Corpus as of 2026-08-05 00:00 UTC from
+      Corpus as of 2026-08-05 12:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

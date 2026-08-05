@@ -126,30 +126,47 @@ makes a reasoner conclude the trait node is an organism. Nothing in
 
 `CausalNodeTypeEnum` has no organism member — causal-graph nodes are
 deliberately taxon-agnostic — so **no causal-graph edge can satisfy
-that domain**. Put the chemical in subject position and use the
-relation the corpus already uses for this shape, `RO:0002327`
-(`enables`), keeping the donor/acceptor/source role in the node
-label and the edge description:
+that domain**.
 
-```yaml
-edges:
-- subject: glucose                     # CHEMICAL grounded to CHEBI:17234
-  predicate: enables                   # RO:0002327
-  object: <some_trait>
-  description: Glucose serves as the carbon source for <trait>.
-```
+`uses electron donor` (`METPO:2000009`) and `uses electron acceptor`
+(`METPO:2000008`) are gated on this: their `subject_types` in
+`mappings/predicate_grounding.tsv` is `NONE`, so
+`ground_causal_predicates.py` will refuse to ground them onto any
+edge and will report them as `blocked_by_node_type` (#295). No corpus
+edge currently carries either label, so the gate is a forward guard —
+do not expect a row for them in
+`reports/predicate_grounding_residual.tsv`. The other 64 predicates
+in this family are **not** gated yet; #301 tracks the 366 edges that
+still carry them.
 
 The organism-subject form stays valid at the *assertion* site —
 `<organism> METPO:2000006 CHEBI:17234` — which is exactly what the
 OBJECT_PROPERTY records' `domain:` describes. It is only the
 causal-graph reuse that is wrong.
 
-`uses electron donor` (`METPO:2000009`) and `uses electron acceptor`
-(`METPO:2000008`) are gated on this: their `subject_types` in
-`mappings/predicate_grounding.tsv` is `NONE`, so
-`ground_causal_predicates.py` refuses to ground them onto any edge
-and reports them as `blocked_by_node_type` (#295). The other 64
-predicates in this family are not yet gated — see #301.
+**What to use instead is not settled — do not assume `enables`.**
+The 15 electron edges were moved to `<chemical> enables <trait>`
+(`RO:0002327`) in #300 because that shape already existed in the
+corpus. But biolink defines `enables` with
+`range: biological process or activity`
+(`data/raw/biolink-model.yaml:5099`), and a TRAIT is a disposition,
+not a process — so that form carries its own false entailment, and
+164 corpus edges already do this. #302 tracks the decision (repoint
+to a process node vs. mint a chemical→trait relation in METPO, for
+which `proposals/metpo_traitmech_v2/proposal.md:71` is precedent);
+#303 tracks the fact that collapsing both electron predicates onto
+one relation loses the donor/acceptor distinction.
+
+Until #302 lands, prefer pointing the chemical at the graph's
+**process** node, which is range-correct today:
+
+```yaml
+edges:
+- subject: glucose                     # CHEMICAL grounded to CHEBI:17234
+  predicate: enables                   # RO:0002327
+  object: central_carbon_metabolism    # BIOLOGICAL_PROCESS, not the trait
+  description: Glucose is the carbon source oxidised by <process>.
+```
 
 ## File-level structure
 

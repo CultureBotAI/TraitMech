@@ -199,3 +199,18 @@ curation_history:
     than lifted from the deep-research report, whose evidence text is paraphrase (issue 247).
     Resolves this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.'
   llm_assisted: true
+- timestamp: '2026-08-05T12:00:00Z'
+  curator: claude
+  action: REVERSE_CAUSAL_EDGE_DIRECTION
+  changes: 'Reversed 2 causal edges from dir_trait uses electron acceptor <chemical>
+    to <chemical> enables dir_trait (predicate_id METPO:2000008 -> RO:0002327), issue
+    295. This supersedes the 2026-08-05T00:00:00Z ENRICH_CAUSAL_GRAPH entry above,
+    which describes those two edges in their original direction and grounding: METPO:2000008
+    is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so the trait-subject form entailed that dir_trait is a microbe. Graph connectivity
+    from issue 183 is preserved - the edges still join the Fe(III)-pool component
+    to the trait, just in the other direction. Evidence unchanged. Note RO:0002327
+    has range ''biological process or activity'', so the new form is not fully range-correct
+    either, and both acceptor edges now share a predicate with the donor convention
+    - tracked in issues 302 and 303.'
+  llm_assisted: true

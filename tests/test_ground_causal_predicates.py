@@ -253,6 +253,28 @@ def test_none_sentinel_blocks_every_subject_type(node_type):
     assert grounded == 0 and sum(blocked.values()) == 1
 
 
+def test_sentinel_colliding_with_a_real_node_type_is_fatal(tmp_path, monkeypatch):
+    """A schema gaining a NONE member would let the sentinel shadow it silently."""
+    import ground_causal_predicates as gcp
+
+    schema = tmp_path / "schema.yaml"
+    schema.write_text(
+        "enums:\n"
+        "  CausalNodeTypeEnum:\n"
+        "    permissible_values:\n"
+        "      TRAIT:\n"
+        "      NONE:\n"
+    )
+    monkeypatch.setattr(gcp, "SCHEMA_PATH", schema)
+    p = tmp_path / "m.tsv"
+    _write_tsv(p, [
+        "label\ttarget_curie\ttarget_label\tsource\tconfidence\tsubject_types\tobject_types\tnotes",
+        "x\tRO:1\tx\tRO\thigh\tTRAIT\t*\t",
+    ])
+    with pytest.raises(ValueError, match="collides with the sentinel"):
+        gcp.load_mapping(p)
+
+
 def test_unknown_node_type_name_is_fatal(tmp_path):
     """A typo in the constraint would silently block everything or nothing.
 
