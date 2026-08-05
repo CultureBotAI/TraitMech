@@ -233,6 +233,48 @@ def test_load_mapping_parses_type_columns(tmp_path):
     assert m["loose"] == ("RO:0002327", "RO", None, None)
 
 
+def test_none_sentinel_parses_to_the_empty_set(tmp_path):
+    """`NONE` is distinct from `*`/empty — no node type satisfies the domain."""
+    p = tmp_path / "m.tsv"
+    _write_tsv(p, [
+        "label\ttarget_curie\ttarget_label\tsource\tconfidence\tsubject_types\tobject_types\tnotes",
+        "uses electron donor\tMETPO:2000009\tuses as electron donor\tMETPO\thigh\tNONE\t*\t",
+    ])
+    m = load_mapping(p)
+    assert m["uses electron donor"] == ("METPO:2000009", "METPO", frozenset(), None)
+
+
+@pytest.mark.parametrize("node_type", ["TRAIT", "CHEMICAL", "BIOLOGICAL_PROCESS"])
+def test_none_sentinel_blocks_every_subject_type(node_type):
+    """METPO:2000009 needs an organism subject and no such node type exists (#295)."""
+    doc = _typed_doc(node_type, "CHEMICAL", predicate="uses electron donor")
+    grounded, _per, _res, blocked = ground_edges_in_doc(
+        doc, {"uses electron donor": ("METPO:2000009", "METPO", frozenset(), None)})
+    assert grounded == 0 and sum(blocked.values()) == 1
+
+
+def test_sentinel_colliding_with_a_real_node_type_is_fatal(tmp_path, monkeypatch):
+    """A schema gaining a NONE member would let the sentinel shadow it silently."""
+    import ground_causal_predicates as gcp
+
+    schema = tmp_path / "schema.yaml"
+    schema.write_text(
+        "enums:\n"
+        "  CausalNodeTypeEnum:\n"
+        "    permissible_values:\n"
+        "      TRAIT:\n"
+        "      NONE:\n"
+    )
+    monkeypatch.setattr(gcp, "SCHEMA_PATH", schema)
+    p = tmp_path / "m.tsv"
+    _write_tsv(p, [
+        "label\ttarget_curie\ttarget_label\tsource\tconfidence\tsubject_types\tobject_types\tnotes",
+        "x\tRO:1\tx\tRO\thigh\tTRAIT\t*\t",
+    ])
+    with pytest.raises(ValueError, match="collides with the sentinel"):
+        gcp.load_mapping(p)
+
+
 def test_unknown_node_type_name_is_fatal(tmp_path):
     """A typo in the constraint would silently block everything or nothing.
 

@@ -90,15 +90,15 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Availability of organic carbon substrates in the environment.
   edges:
-  - subject: organotrophic_trait
-    predicate: uses electron donor
-    object: organic_compound
-    description: Organotrophy uses organic compounds as electron donors.
+  - subject: organic_compound
+    predicate: enables
+    object: organotrophic_trait
+    description: Organic compounds serve as the electron donors for organotrophy.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports use and assimilation of organic compounds in microbial growth.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: glucose
     predicate: example of
     object: organic_compound
@@ -261,4 +261,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1, METPO:2007403×1, METPO:2007402×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T12:00:00Z'
+  curator: claude
+  action: REVERSE_CAUSAL_EDGE_DIRECTION
+  changes: Reversed 1 causal edge from <trait> uses electron donor <chemical> to <chemical>
+    enables <trait> (predicate_id METPO:2000009 -> RO:0002327), issue 295. METPO:2000009
+    is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so the trait-subject form entailed that this TRAIT node is a microbe; CausalNodeTypeEnum
+    has no organism member, so no causal-graph edge can satisfy that domain. Evidence
+    unchanged; only subject/predicate/object/predicate_id and the edge description
+    moved. Note RO:0002327 has range 'biological process or activity', so the new
+    form is not fully range-correct either - tracked in issue 302.
   llm_assisted: true

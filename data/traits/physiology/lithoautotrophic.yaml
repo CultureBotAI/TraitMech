@@ -105,15 +105,15 @@ causal_graphs:
     description: DIC transporters and carbonic anhydrase enzymes that supply inorganic
       carbon to fixation.
   edges:
-  - subject: lithoautotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithoautotrophy uses inorganic compounds as electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: lithoautotrophic_trait
+    description: Inorganic compounds serve as the electron donors for lithoautotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: inorganic atoms or molecules as a growth-supporting reductant
       notes: Supports inorganic electron donors for lithotrophic growth.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: inorganic_electron_donor
     predicate: enables
     object: respiratory_energy_conservation
@@ -290,4 +290,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0022900×1, GO:0006754×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T12:00:00Z'
+  curator: claude
+  action: REVERSE_CAUSAL_EDGE_DIRECTION
+  changes: Reversed 1 causal edge from <trait> uses electron donor <chemical> to <chemical>
+    enables <trait> (predicate_id METPO:2000009 -> RO:0002327), issue 295. METPO:2000009
+    is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so the trait-subject form entailed that this TRAIT node is a microbe; CausalNodeTypeEnum
+    has no organism member, so no causal-graph edge can satisfy that domain. Evidence
+    unchanged; only subject/predicate/object/predicate_id and the edge description
+    moved. Note RO:0002327 has range 'biological process or activity', so the new
+    form is not fully range-correct either - tracked in issue 302.
   llm_assisted: true

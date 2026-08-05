@@ -113,15 +113,16 @@ causal_graphs:
       snippet: light as an energy source
       notes: Supports light as the energy source for photoferrotrophic photolithotrophy.
     predicate_id: METPO:2000010
-  - subject: photolithotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithotrophic phototrophs use inorganic electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: photolithotrophic_trait
+    description: Inorganic electron donors supply the electrons lithotrophic phototrophs
+      use.
     evidence:
     - reference: DOI:10.3390/antiox10060829
       snippet: oxidizes reduced sulfur compounds
       notes: Supports inorganic reduced sulfur compounds as electron donors.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: hydrogen_sulfide
     predicate: example of
     object: inorganic_electron_donor
@@ -296,4 +297,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:26833×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T12:00:00Z'
+  curator: claude
+  action: REVERSE_CAUSAL_EDGE_DIRECTION
+  changes: Reversed 1 causal edge from <trait> uses electron donor <chemical> to <chemical>
+    enables <trait> (predicate_id METPO:2000009 -> RO:0002327), issue 295. METPO:2000009
+    is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so the trait-subject form entailed that this TRAIT node is a microbe; CausalNodeTypeEnum
+    has no organism member, so no causal-graph edge can satisfy that domain. Evidence
+    unchanged; only subject/predicate/object/predicate_id and the edge description
+    moved. Note RO:0002327 has range 'biological process or activity', so the new
+    form is not fully range-correct either - tracked in issue 302.
   llm_assisted: true

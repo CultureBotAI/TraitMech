@@ -109,16 +109,15 @@ causal_graphs:
     description: Amino acid and carboxylic acid import systems mediating organic carbon
       uptake.
   edges:
-  - subject: chemolithoheterotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_chemical_donor
-    description: Chemolithoheterotrophy uses inorganic chemical compounds as electron
-      donors.
+  - subject: inorganic_chemical_donor
+    predicate: enables
+    object: chemolithoheterotrophic_trait
+    description: Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical donors in chemolithotrophic metabolism.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_chemical_donor
@@ -311,4 +310,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16094×1, CHEBI:16189×1, CHEBI:26833×1).
+  llm_assisted: true
+- timestamp: '2026-08-05T12:00:00Z'
+  curator: claude
+  action: REVERSE_CAUSAL_EDGE_DIRECTION
+  changes: Reversed 1 causal edge from <trait> uses electron donor <chemical> to <chemical>
+    enables <trait> (predicate_id METPO:2000009 -> RO:0002327), issue 295. METPO:2000009
+    is rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so the trait-subject form entailed that this TRAIT node is a microbe; CausalNodeTypeEnum
+    has no organism member, so no causal-graph edge can satisfy that domain. Evidence
+    unchanged; only subject/predicate/object/predicate_id and the edge description
+    moved. Note RO:0002327 has range 'biological process or activity', so the new
+    form is not fully range-correct either - tracked in issue 302.
   llm_assisted: true

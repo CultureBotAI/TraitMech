@@ -48,6 +48,8 @@ DEFAULT_MAPPING = REPO_ROOT / "mappings/predicate_grounding.tsv"
 DEFAULT_RESIDUAL = REPO_ROOT / "reports/predicate_grounding_residual.tsv"
 TARGET_CLASS = "TraitRecord"
 CURATION_ACTION = "GROUND_CAUSAL_PREDICATES"
+# subject_types/object_types sentinel: no node type satisfies this domain.
+NO_NODE_TYPE = "NONE"
 
 
 def _node_type_values(schema_path: Path) -> frozenset[str]:
@@ -65,12 +67,18 @@ def _node_type_values(schema_path: Path) -> frozenset[str]:
 def _types(raw: str | None, valid: frozenset[str] | None = None) -> frozenset[str] | None:
     """Parse a ``subject_types``/``object_types`` cell.
 
-    ``*`` or empty means "any node type" and returns None. Anything else is a
-    ``|``-separated set of CausalNodeTypeEnum names.
+    ``*`` or empty means "any node type" and returns None. ``NONE`` means no
+    node type can satisfy the term's domain, so every edge is refused — needed
+    when an ontology's domain has no CausalNodeTypeEnum counterpart at all
+    (METPO:2000008/2000009 require an organism subject; there is no organism
+    node type, #295). Anything else is a ``|``-separated set of
+    CausalNodeTypeEnum names.
     """
     cell = (raw or "*").strip()
     if not cell or cell == "*":
         return None
+    if cell == NO_NODE_TYPE:
+        return frozenset()
     names = frozenset(t.strip() for t in cell.split("|") if t.strip())
     if valid is not None:
         unknown = sorted(names - valid)
@@ -101,6 +109,14 @@ def load_mapping(path: Path) -> dict[str, tuple[str, str, frozenset | None, froz
     if not path.exists():
         raise FileNotFoundError(f"mapping file not found: {path}")
     valid = _node_type_values(SCHEMA_PATH) if SCHEMA_PATH.exists() else None
+    if valid is not None and NO_NODE_TYPE in valid:
+        # The sentinel would silently shadow a real node type, turning a
+        # legitimate constraint into "block everything" — the same class of
+        # invisible constraint that _types() refuses to tolerate for typos.
+        raise ValueError(
+            f"CausalNodeTypeEnum defines {NO_NODE_TYPE!r}, which collides with the "
+            "sentinel meaning 'no node type qualifies'; rename one of them"
+        )
     out: dict[str, tuple[str, str, frozenset | None, frozenset | None]] = {}
     with path.open() as fh:
         reader = csv.DictReader(fh, delimiter="\t")
