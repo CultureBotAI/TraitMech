@@ -34,7 +34,25 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-HISTORY_DIR = REPO_ROOT / "history" / "records"
+HISTORY_ROOT = REPO_ROOT / "history"
+
+# The layout is history/<kind-dir>/<slug>/, not history/records/<slug>/ for
+# everything — history/infrastructure/curation-history/ is a live example. The
+# schema does not constrain the path, so writing to the wrong directory
+# validates clean and nothing downstream notices (#296 review).
+KIND_DIRS = {"record": "records", "schema": "schema", "mapping": "mappings",
+             "report": "reports", "infrastructure": "infrastructure",
+             "other": "other"}
+
+# Claw's placeholder, byte-for-byte. It has to be this exact string: the vendored
+# schema carries `pattern: '^(?!TODO: replace this placeholder)'` specifically so
+# a plain linkml-validate catches an unfilled record, and any OTHER wording — a
+# near-miss like "TODO: fill in..." — slips past the negative lookahead and makes
+# an unfilled record permanently committable.
+CLAW_PLACEHOLDER = (
+    "TODO: replace this placeholder before committing.\n"
+    "What was done, what evidence or provider was used, how it was validated, "
+    "and anything deliberately left undone.")
 SCHEMA = REPO_ROOT / "src" / "traitmech" / "schema" / "history.yaml"
 REPO_URL = "https://github.com/CultureBotAI/TraitMech"
 
@@ -96,9 +114,11 @@ def build(args: argparse.Namespace, timestamp: str) -> tuple[dict, Path]:
             "type": args.event,
             "outcome": args.outcome,
             "summary": args.summary,
-            # claw writes a TODO placeholder rather than refusing, because the
-            # record is meant to be scaffolded then edited. Matching that.
-            "details": args.details or "TODO: fill in the substance of this change.",
+            # Claw writes a placeholder rather than refusing, because a record is
+            # scaffolded then edited. Matching it exactly, so the record FAILS
+            # `just validate-history` until filled — which is what
+            # history/README promises and what a near-miss string would break.
+            "details": args.details or CLAW_PLACEHOLDER,
         }],
     }
     if args.slug:
@@ -119,7 +139,8 @@ def build(args: argparse.Namespace, timestamp: str) -> tuple[dict, Path]:
                   "target": record["target"], "session": record["session"],
                   "links": links, "events": record["events"]}
 
-    out_dir = Path(args.history_root) / (args.slug or Path(target_path).stem)
+    out_dir = (Path(args.history_root) / KIND_DIRS[args.kind]
+               / (args.slug or Path(target_path).stem))
     return record, out_dir / f"{sid}.yaml"
 
 
@@ -135,7 +156,7 @@ def validate(path: Path) -> None:
          "--target-class", "HistoryRecord", str(path)],
         cwd=REPO_ROOT, capture_output=True, text=True)
     if result.returncode != 0:
-        path.unlink(missing_ok=True)
+        path.unlink(missing_ok=True)  # the temp file, never the target
         print(result.stdout or result.stderr, file=sys.stderr)
         raise SystemExit(
             f"error: generated record failed validation; not written ({path.name})")
@@ -171,7 +192,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--issue", action="append", default=[])
     ap.add_argument("--pr", action="append", default=[])
     ap.add_argument("--url", action="append", default=[])
-    ap.add_argument("--history-root", default=str(HISTORY_DIR))
+    ap.add_argument("--history-root", default=str(HISTORY_ROOT))
     ap.add_argument("--force", action="store_true",
                     help="overwrite an existing record; records are append-only, "
                          "so this is for correcting a mis-scaffolded one")
@@ -189,9 +210,25 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit(f"error: {out_path} already exists; records are append-only")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(yaml.safe_dump(record, sort_keys=False, allow_unicode=True,
-                                       default_flow_style=False, width=88))
-    validate(out_path)
+    text = yaml.safe_dump(record, sort_keys=False, allow_unicode=True,
+                          default_flow_style=False, width=88)
+
+    # Validate a TEMP file, then move into place. Writing first and unlinking on
+    # failure destroys whatever --force was overwriting, in a directory whose
+    # entire policy is append-only (#296 review).
+    # Keeps the .yaml suffix: linkml-validate picks its loader from the
+    # extension and refuses a .tmp outright.
+    scratch = out_path.with_name(f".{out_path.stem}.scratch.yaml")
+    scratch.write_text(text)
+    if args.details:
+        validate(scratch)
+    else:
+        # The placeholder is SUPPOSED to fail the schema until edited, so
+        # validating here would delete the very record the caller asked for.
+        print("note: --details omitted, so a placeholder was written. "
+              "`just validate-history` will fail until you replace it.",
+              file=sys.stderr)
+    scratch.replace(out_path)
     # Path last on stdout, which is the contract `just new-history` documents.
     # Repo-relative when it can be, absolute otherwise: --history-root may point
     # outside the repo (the parity harness does), and relative_to() raises there.

@@ -127,13 +127,21 @@ records apart from the id's hash suffix and one deliberate difference: a bare
 string through. Check that parity rather than trusting this paragraph:
 
 ```bash
-ARGS=(--kind record --slug cellulolysis --target-root data/traits/metabolism \
+# Exercise a non-`record` kind too: the layout is history/<kind-dir>/<slug>/,
+# and a fallback that hardcodes `records/` writes to the wrong place while still
+# validating, because the schema does not constrain the path.
+ARGS=(--kind infrastructure --slug curation-history --path docs/x.md \
       --summary "parity" --details "check" --issue 296)
 PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" \
   uv run python -m kg_microbe_history new "${ARGS[@]}" --history-root /tmp/h_claw
 uv run python scripts/new_history_record.py "${ARGS[@]}" --history-root /tmp/h_local
-diff <(cat /tmp/h_claw/*/*.yaml) <(cat /tmp/h_local/*/*.yaml)
+diff <(cat /tmp/h_claw/*/*/*.yaml) <(cat /tmp/h_local/*/*/*.yaml)
 ```
+
+Omitting `--details` writes claw's placeholder **byte-for-byte**, so the record
+fails `just validate-history` until you replace it — which is the promise two
+paragraphs up, and which a near-miss wording would quietly break, since the
+schema pattern is a negative lookahead on that exact string.
 
 Changing the schema means changing the canonical copy and re-vendoring here — the
 same hub-and-spoke rule as `mech_shared.yaml`. This copy is **not** on the

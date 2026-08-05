@@ -19,7 +19,15 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from new_history_record import _link, main, session_id  # noqa: E402
+from new_history_record import (  # noqa: E402
+    CLAW_PLACEHOLDER,
+    KIND_DIRS,
+    _link,
+    main,
+    session_id,
+)
+
+KINDS_FROM_SCHEMA = {"record", "schema", "mapping", "report", "infrastructure", "other"}
 
 BASE = ["--kind", "record", "--slug", "cellulolysis",
         "--target-root", "data/traits/metabolism",
@@ -32,6 +40,28 @@ def _run(tmp_path, *extra):
     written = sorted(tmp_path.rglob("*.yaml"))
     assert len(written) == 1, written
     return yaml.safe_load(written[0].read_text()), written[0]
+
+
+def test_the_record_lands_under_its_kind_directory(tmp_path):
+    """history/<kind-dir>/<slug>/, not history/records/<slug>/ for every kind —
+    history/infrastructure/curation-history/ is a live example. The schema does
+    not constrain the path, so the wrong directory validates clean (#296)."""
+    main(["--kind", "infrastructure", "--slug", "curation-history",
+          "--path", "docs/x.md", "--summary", "s", "--details", "d",
+          "--history-root", str(tmp_path), "--timestamp", "2026-08-05T12:00:00Z"])
+    written = next(tmp_path.rglob("*.yaml"))
+    assert written.parent.parent.name == "infrastructure"
+    assert written.parent.name == "curation-history"
+
+
+def test_every_kind_has_a_directory():
+    """A missing entry would KeyError at write time rather than at parse time."""
+    assert set(KIND_DIRS) == set(KINDS_FROM_SCHEMA)
+
+
+def test_no_scratch_file_survives(tmp_path):
+    _run(tmp_path)
+    assert list(tmp_path.rglob("*scratch*")) == []
 
 
 def test_writes_a_record_under_the_slug(tmp_path):
@@ -92,12 +122,53 @@ def test_bare_issue_numbers_become_uris(given, expected):
     assert _link(given, "issues") == expected
 
 
-def test_details_defaults_to_a_placeholder_like_claw(tmp_path):
+def test_the_placeholder_is_claw_s_exact_string(tmp_path):
+    """Byte-for-byte, not merely TODO-ish.
+
+    The vendored schema carries `pattern: '^(?!TODO: replace this placeholder)'`
+    so a plain linkml-validate catches an unfilled record. A near-miss wording
+    slips past the negative lookahead and makes an unfilled record permanently
+    committable, which is what the first version of this script did (#296).
+    """
     main(["--kind", "record", "--slug", "x", "--target-root", "data/traits/metabolism",
           "--summary", "s", "--history-root", str(tmp_path),
           "--timestamp", "2026-08-05T12:00:00Z"])
     doc = yaml.safe_load(next(tmp_path.rglob("*.yaml")).read_text())
-    assert doc["events"][0]["details"].startswith("TODO")
+    assert doc["events"][0]["details"] == CLAW_PLACEHOLDER
+
+
+def test_a_placeholder_record_fails_the_schema_as_the_readme_promises(tmp_path):
+    """history/README: "an unfilled record cannot slip through"."""
+    main(["--kind", "record", "--slug", "x", "--target-root", "data/traits/metabolism",
+          "--summary", "s", "--history-root", str(tmp_path),
+          "--timestamp", "2026-08-05T12:00:00Z"])
+    path = next(tmp_path.rglob("*.yaml"))
+    result = subprocess.run(
+        ["uv", "run", "linkml-validate", "--schema",
+         str(REPO_ROOT / "src/traitmech/schema/history.yaml"),
+         "--target-class", "HistoryRecord", str(path)],
+        cwd=REPO_ROOT, capture_output=True, text=True)
+    assert result.returncode != 0, "placeholder record validated; the guard is dead"
+
+
+def test_a_failed_force_rewrite_does_not_destroy_the_original(tmp_path, monkeypatch):
+    """Append-only: validate a scratch file, then move. Writing first and
+    unlinking on failure loses the record --force was correcting (#296)."""
+    import new_history_record as m
+    _, path = _run(tmp_path)
+    before = path.read_text()
+    real = m.build
+
+    def broken(args, ts):
+        rec, out = real(args, ts)
+        rec["events"][0]["outcome"] = "NOT_AN_OUTCOME"
+        return rec, out
+
+    monkeypatch.setattr(m, "build", broken)
+    with pytest.raises(SystemExit, match="failed validation"):
+        m.main(BASE + ["--history-root", str(tmp_path), "--force"])
+    assert path.read_text() == before
+    assert list(tmp_path.rglob("*scratch*")) == []
 
 
 def test_kind_and_summary_are_required_like_claw():
