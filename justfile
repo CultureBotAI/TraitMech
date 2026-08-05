@@ -514,7 +514,7 @@ audit-derived-reports:
       # excluded by the renderer, so an untracked one changes nothing about the
       # render, and claiming otherwise would make the message false (#258).
       untracked_research="$(git ls-files --others --exclude-standard research/traits 2>/dev/null \
-        | grep -- '-deep-research-' | grep -v '\.citations\.md$' | head -3 || true)"
+        | grep -- '-deep-research-' | grep -Ev '[-.]citations\.md$' | head -3 || true)"
       if [ -z "$(git ls-files research/traits | head -1)" ]; then
         echo "  ERROR a research block is rendered, but research/traits is not" >&2
         echo "        tracked — CI renders no block and pages/ can never match" >&2

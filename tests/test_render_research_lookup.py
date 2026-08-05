@@ -181,3 +181,18 @@ def test_a_quoted_marker_in_the_answer_does_not_truncate_it():
     assert body[0] == "# The answer"
     assert "First finding." in body
     assert "Last finding." in body
+
+
+@pytest.mark.parametrize("sidecar", [
+    # The deep-research-client pipeline's form, and the only one in the tree today.
+    "x-deep-research-zeta.md.citations.md",
+    # _edison_capture's form. It sorts AHEAD of `x-deep-research-zeta.md`, since
+    # '-' (0x2D) < '.' (0x2E), so a dot-only exclusion would render the
+    # bibliography as the report for an unrecognised provider (#259).
+    "x-deep-research-zeta-citations.md",
+])
+def test_neither_sidecar_convention_can_shadow_a_report(research_dir, sidecar):
+    report = research_dir / "x-deep-research-zeta.md"
+    report.write_text("the report")
+    (research_dir / sidecar).write_text("references")
+    assert research_report("ecology", "x") == report

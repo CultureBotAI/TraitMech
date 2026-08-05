@@ -241,9 +241,14 @@ def research_report(category_dir: str, slug: str) -> Path | None:
     candidates = [
         path
         for path in RESEARCH_DIR.glob(f"{category_dir}/{slug}-deep-research-*.md")
-        # The sidecar matches the same glob (`<report>.md.citations.md`) and is a
-        # reference list, not a report.
-        if not path.name.endswith(".citations.md")
+        # Sidecars match the same glob and are reference lists, not reports.
+        # Both separators, because the tree spells this two ways: the pipeline
+        # writes `<report>.md.citations.md`, while _edison_capture bundles use
+        # `<stem>-citations.md`. Only the dot form can occur here today, but the
+        # hyphen form would fail silently rather than loudly — it survives a
+        # dot-only exclusion, and for an unrecognised provider sorts ahead of its
+        # own report ('-' < '.'), so the page would render the bibliography (#259).
+        if not re.search(r"[-.]citations\.md$", path.name)
     ]
     if not candidates:
         return None
