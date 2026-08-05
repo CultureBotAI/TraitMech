@@ -46,7 +46,27 @@ names the right tag needs network and is Dependabot's job.
 
 `astral-sh/setup-uv` also forced the question: it **stopped publishing floating
 major tags after v7**, so `@v8` will not exist and the next upgrade has to name
-a version or a SHA regardless (#224).
+a version or a SHA regardless (#224). Still true as of the v9.0.0 bump (#280) —
+re-checked against the tag list, which floats `v2`..`v7` and nothing above. The
+gap between "newest floating major tag" (v7) and "newest release" (v9.x) is now
+two majors wide, which is exactly why pins here name a SHA and never a tag.
+
+**Never pin a version number into prose.** `pr-shepherd.yml` carried a comment
+reading "v7 matches every other workflow here and is the newest major tag" three
+lines above its `uses:`. Dependabot bumps the SHA and the trailing `#` comment;
+it never touches surrounding prose, so that sentence went stale the moment
+v9.0.0 landed, and `ACTION_UNPINNED` cannot see it — it checks the SHA only.
+Write the *invariant* ("this pin matches every other setup-uv call site here")
+rather than the value.
+
+**`setup-uv` cache pruning: the new default is accepted deliberately.** v9.0.0's
+breaking change is `prune-cache` defaulting to `false`, to ease load on PyPI.
+Upstream warns it can mean more Actions cache usage. Taken here rather than
+pinned back to `true`, because: this repo is public, so Actions cache and
+minutes are unbilled; and all eight call sites set `enable-cache: true` with no
+`cache-suffix`, so they share one key rather than filling eight entries against
+the 10 GB per-repo LRU limit. Revisit if cache misses start showing up — they
+degrade quietly and will not appear as a red check.
 
 ## Concurrency
 
