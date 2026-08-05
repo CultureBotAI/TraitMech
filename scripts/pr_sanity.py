@@ -21,7 +21,11 @@ Checks:
                       ``paths:`` filter. This is the #200 invariant itself: if
                       the last unfiltered workflow ever gains a filter, some PRs
                       go back to being unverified. Self-referential on purpose —
-                      this script is what keeps its own guarantee true.
+                      this script is what keeps its own guarantee true. A
+                      workflow whose EVERY job carries an ``if:`` does not count
+                      toward the floor: it is unfiltered by ``on:`` but can
+                      still produce no job at all, so counting it would let the
+                      invariant be held up by a check that cannot run (#307).
   ACTION_UNPINNED     a ``uses:`` naming a third-party action by tag or branch
                       rather than a 40-hex commit SHA. A tag is a pointer its
                       owner can move, so a compromised upstream reaches CI
@@ -348,6 +352,40 @@ def check_action_pins(root: Path) -> list[dict[str, str]]:
     return findings
 
 
+def every_job_is_gated(jobs: object) -> bool:
+    """True when no job in ``jobs`` is guaranteed to run (#307).
+
+    A job is gated if it carries an ``if:`` — or if every job it ``needs:`` is
+    gated, because GitHub skips a dependent when its dependency is skipped. That
+    second clause is not hypothetical tidiness: without it, a workflow of one
+    gated job plus one ungated job that ``needs:`` it produces zero jobs on the
+    gated PR class while still counting toward the floor, which is the exact
+    hole this function exists to close.
+
+    Expressions are never evaluated. "Has an ``if:``" is the conservative
+    reading: it can only shrink the set of workflows counted toward the floor,
+    so a wrong answer here fails loudly rather than passing quietly.
+    """
+    if not isinstance(jobs, dict) or not jobs:
+        return False
+    gated = {name for name, job in jobs.items()
+             if isinstance(job, dict) and "if" in job}
+    # Fixpoint: `needs:` can chain, so one pass is not enough.
+    changed = True
+    while changed:
+        changed = False
+        for name, job in jobs.items():
+            if name in gated or not isinstance(job, dict):
+                continue
+            needs = job.get("needs")
+            if isinstance(needs, str):
+                needs = [needs]
+            if isinstance(needs, list) and needs and all(n in gated for n in needs):
+                gated.add(name)
+                changed = True
+    return len(gated) == len(jobs)
+
+
 def check_workflows(root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     wf_dir = root / WORKFLOW_DIR
@@ -361,6 +399,7 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
         }]
 
     unfiltered: list[str] = []
+    conditional: list[str] = []
     for path in sorted(wf_dir.iterdir()):
         if path.suffix not in {".yml", ".yaml"}:
             continue
@@ -407,16 +446,40 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
         if "pull_request" in trigger_names(triggers):
             pr = triggers.get("pull_request") if isinstance(triggers, dict) else None
             if pr is None or (isinstance(pr, dict) and not pr.get("paths")):
-                unfiltered.append(rel)
+                # A `paths:` filter is not the only way a workflow can decline to
+                # run. If EVERY job carries an `if:`, the workflow can produce no
+                # job at all for some class of PR, so counting it toward the
+                # floor would let the invariant be satisfied by a check that
+                # cannot run — the same false-green shape as #182/#184/#215.
+                # #293 is the live case: claude-code-review's only job is gated
+                # on `github.actor != 'dependabot[bot]'`, so it runs on no
+                # Dependabot PR while still having no `paths:` filter (#307).
+                #
+                # Deliberately not evaluating the expression: GitHub expression
+                # semantics are not worth reimplementing, and "has an `if:`" is
+                # the conservative reading — it can only shrink the counted set,
+                # never inflate it.
+                jobs = doc.get("jobs")
+                if every_job_is_gated(jobs):
+                    conditional.append(rel)
+                else:
+                    unfiltered.append(rel)
 
         findings.extend(check_workflow_concurrency(rel, doc, triggers))
 
     if not unfiltered:
+        extra = ""
+        if conditional:
+            # Naming them matters: without this the failure reads as "you have no
+            # unfiltered workflow" when in fact you have one whose every job is
+            # conditional, which is a different fix.
+            extra = (" — " + ", ".join(conditional) + " would qualify but every "
+                     "job is gated on an `if:`, so they can run nothing (#307)")
         findings.append({
             "check": "NO_UNFILTERED_CI", "file": str(WORKFLOW_DIR),
             "detail": ("no workflow runs on pull_request without a `paths:` filter, "
                        "so a PR touching only unlisted paths would run no checks "
-                       "at all (#200)"),
+                       "at all (#200)" + extra),
         })
     return findings
 
