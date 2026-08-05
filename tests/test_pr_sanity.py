@@ -13,6 +13,7 @@ import sys
 import textwrap
 from pathlib import Path
 
+import pytest
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -22,6 +23,7 @@ from pr_sanity import (  # noqa: E402
     CONFLICT_RE,
     check_conflict_markers,
     check_markdown_links,
+    check_action_pins,
     check_workflow_concurrency,
     check_workflows,
     prose_lines,
@@ -712,3 +714,95 @@ def test_a_relative_path_is_still_checked_alongside_schemes(tmp_path):
     md.write_text("[ok](artifact:x)\n[bad](does/not/exist.md)\n")
     _commit(root)
     assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+# --- action pinning (#273) --------------------------------------------------
+
+SHA = "11d5960a326750d5838078e36cf38b85af677262"
+
+
+def _wf_with_uses(root, uses: str) -> None:
+    (root / ".github/workflows/a.yaml").write_text(textwrap.dedent(f"""\
+        name: a
+        on:
+          pull_request:
+        jobs:
+          j:
+            runs-on: ubuntu-latest
+            steps:
+              - uses: {uses}
+        """))
+
+
+def test_a_sha_pinned_action_is_clean(tmp_path):
+    root = _repo(tmp_path)
+    _wf_with_uses(root, f"actions/checkout@{SHA} # v4.4.0")
+    assert check_action_pins(root) == []
+
+
+def test_a_floating_major_tag_is_flagged(tmp_path):
+    root = _repo(tmp_path)
+    _wf_with_uses(root, "actions/checkout@v4")
+    findings = check_action_pins(root)
+    assert _checks(findings) == {"ACTION_UNPINNED"}
+    assert "v4" in findings[0]["detail"]
+    assert findings[0]["file"].endswith(":8"), findings[0]["file"]
+
+
+@pytest.mark.parametrize("ref", [
+    "actions/checkout@main",            # a branch moves every push
+    "actions/checkout@v4.4.0",          # a version tag is still movable
+    "actions/checkout@11d5960",         # abbreviated SHAs are not immutable enough
+    "actions/checkout",                 # no ref at all
+])
+def test_every_movable_ref_shape_is_flagged(tmp_path, ref):
+    root = _repo(tmp_path)
+    _wf_with_uses(root, ref)
+    assert _checks(check_action_pins(root)) == {"ACTION_UNPINNED"}
+
+
+@pytest.mark.parametrize("ref", [
+    "./.github/actions/local-composite",   # resolves inside this repo
+    "docker://alpine:3.20",                # not a GitHub Action reference
+])
+def test_local_and_container_uses_are_exempt(tmp_path, ref):
+    root = _repo(tmp_path)
+    _wf_with_uses(root, ref)
+    assert check_action_pins(root) == []
+
+
+def test_the_real_workflows_are_all_pinned():
+    """The gate is only a gate if the tree it guards actually satisfies it."""
+    assert check_action_pins(REPO_ROOT) == []
+
+
+def test_a_local_composite_action_is_scanned_too(tmp_path):
+    """The ./ exemption is only safe if in-repo actions are checked (#276)."""
+    root = _repo(tmp_path)
+    _wf_with_uses(root, f"./.github/actions/local # composite")
+    composite = root / ".github/actions/local"
+    composite.mkdir(parents=True)
+    (composite / "action.yml").write_text(textwrap.dedent("""\
+        name: local
+        runs:
+          using: composite
+          steps:
+            - uses: actions/checkout@v4
+        """))
+    findings = check_action_pins(root)
+    assert _checks(findings) == {"ACTION_UNPINNED"}
+    assert findings[0]["file"].startswith(".github/actions/local/action.yml")
+
+
+def test_a_pinned_composite_action_is_clean(tmp_path):
+    root = _repo(tmp_path)
+    composite = root / ".github/actions/local"
+    composite.mkdir(parents=True)
+    (composite / "action.yml").write_text(textwrap.dedent(f"""\
+        name: local
+        runs:
+          using: composite
+          steps:
+            - uses: actions/checkout@{SHA} # v4.4.0
+        """))
+    assert check_action_pins(root) == []

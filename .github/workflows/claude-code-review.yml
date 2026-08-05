@@ -1,3 +1,4 @@
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: Claude Code Review
 
 # Adopted from monarch-initiative/dismech. TraitMech is the pilot, matching
@@ -107,7 +108,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
@@ -146,7 +147,7 @@ jobs:
         run: gh pr checkout ${{ env.PR_NUMBER }}
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7.6.0
         with:
           enable-cache: true
 
@@ -170,7 +171,7 @@ jobs:
         # No continue-on-error. Falling back to github.token would silently
         # restore the self-approval hole the split exists to close, and it would
         # look identical in the logs.
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
         with:
           app-id: ${{ secrets.REVIEWER_APP_ID }}
           private-key: ${{ secrets.REVIEWER_APP_PRIVATE_KEY }}
@@ -200,7 +201,7 @@ jobs:
 
       - name: Review
         id: claude-review
-        uses: anthropics/claude-code-action@44423bdec74b97d67543eb16c110546762c110b2 # v1
+        uses: anthropics/claude-code-action@44423bdec74b97d67543eb16c110546762c110b2 # v1.0.181
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ steps.reviewer-token.outputs.token }}

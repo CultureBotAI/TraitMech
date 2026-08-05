@@ -1,3 +1,4 @@
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: vendored-sync
 
 # Cross-repo durability guard. Several files here are vendored byte-identical
@@ -42,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # Retried here rather than inside check_vendored_sync.sh: that script is
       # byte-identical to CommunityMech's copy and has no canonical copy in the

@@ -94,13 +94,13 @@ Mint a short-lived token per run:
 ```yaml
 - name: Generate writer token
   id: writer
-  uses: actions/create-github-app-token@v1
+  uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
   with:
     app-id: ${{ secrets.AGENT_APP_ID }}
     private-key: ${{ secrets.AGENT_APP_PRIVATE_KEY }}
 
 - name: Checkout
-  uses: actions/checkout@v4
+  uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
   with:
     token: ${{ steps.writer.outputs.token }}
     persist-credentials: false   # serve the token via the gh credential helper
