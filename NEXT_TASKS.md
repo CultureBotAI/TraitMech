@@ -5,39 +5,50 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-03. Everything merged in this repo through **#216**
-(2026-08-03) — which now includes the whole CI/agent-workflow thread (#194, #196,
-#201, #206, #207, #210, #216, section 7) that was absent from this file — plus the
-claw-side architecture decisions through 2026-07-25.
+Last reconciled: 2026-08-05. Everything merged in this repo through **#272**.
 
-Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
-this PR is the first one it reviews post-merge — which is the real test of that
-fix, since every check before it ran on a branch carrying its own copy.
+Since the last reconcile (2026-08-03) the **research-artifact thread closed out
+end to end**: the paid Edison sweep landed (#240, #241 — 353 reports, 17 MB, now
+tracked), the per-trait research block finally renders (#253), the CURIEs those
+reports suggest are resolved against OAK (#260), evidence snippets are audited
+(#267), and every GitHub Action is SHA-pinned behind a gate (#272).
 
-Open issues, 15 of them — four of them (#214, #217, #218, #220) filed by this
-reconcile and by the #216 / #213 reviews; #215 came from the same pass and is
-already closed, on the line below the table:
+Open PRs: **none**.
+
+Open issues, 17. Eight of the fifteen listed at the last reconcile are now closed
+(#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
+come from the reviews of the five PRs above, which is the review loop working as
+intended.
 
 | # | what | section |
 |---|---|---|
 | #151 | web design review — 2 residual front-end items | 6 |
-| #183 | causal-graph fragmentation — detection landed, **backfill is what remains** | 5 |
+| #183 | causal-graph fragmentation — detection done, **backfill is what remains** | 5 |
 | #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
-| #192 | justfile: the claw-module guard is implemented twice | 7 |
-| #193 | QC dashboard embeds a generation timestamp, so staleness can't be rechecked | 7 |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
-| #198 | **cross-Mech**: spokes now fixed — only the CultureMech `label-correspondence` half may remain | 2 |
-| #203 | three major versions of `astral-sh/setup-uv` across workflows (v3/v5/v7) | 7 |
-| #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
-| #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
+| #198 | **cross-Mech**: `vendored-sync` paths filter omits 4 vendored files | 2 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #214 | grounding residual reports drift with nothing to catch it — **fix open, `audit-derived-reports`** | 9 |
-| #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
-| #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
-| #220 | `audit-graphs` is blind to a graph splitting into two **trait-bearing** components | 5 |
+| #217 | conventions page exists now (#272) but is TraitMech-local; **cross-Mech placement open** | 7 |
+| #244 | `trait-graph-sweep --verify` checks report existence only | 8 |
+| #245 | `cellulolysis` has a second, codex-provider report with no manifest row | 8 |
+| #246 | two `-edison-literature-meta.yaml` files, and nothing in the repo writes them | 8 |
+| #248 | absolute `/Users/marcin/...` path in 342 committed reports | 8 |
+| #249 | citation sidecars are a broken extraction — 353/353 malformed | 8 |
+| #252 | nothing checks that `qc.yaml`'s paths filter covers what `qc` reads — **3rd recurrence** | 7 |
+| #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
+| #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
+| #275 | conventions page duplicates the workflow header comments it restates | 7 |
+| #283 | this file's reconciles touch headers but not the section bodies they label | — |
 
-Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
-**#202** (by #207), **#204** (by #206), **#215** (by #216).
+**Recommended next: #252.** It is the third recurrence of one bug class (#184,
+#200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
+work, and `docs/WORKFLOW_CONVENTIONS.md` currently has to say "nothing checks
+this invariant". #270 is the runner-up — it is ratchet rot in a mechanism landed
+three days ago.
+
+**Not actionable as "next":** #183's backfill is per-trait research curation,
+not a single PR — it is the largest remaining item and wants its own campaign.
+#191/#197/#198/#209/#217 are cross-Mech and want the hub, not this repo.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -262,37 +273,40 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION MOSTLY DONE (#220); BACKFILL PENDING (corpus-wide)
+## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 done, 220 remain
 
-**The `audit-graphs` gate does not catch graph fragmentation.**
-`scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
-does not exist) and `ORPHAN_NODE` (a node no edge references at all). Neither
-fires when every node has at least one edge but the graph still splits into
-several mutually unreachable components — which is the common case, because a
-node picks up an edge to a neighbour long before it is wired back to the trait
-node.
+**The gap this section opened with, for the record: `audit-graphs` used to miss
+fragmentation entirely.** It flagged `DANGLING_EDGE` (an edge naming a node that
+does not exist) and `ORPHAN_NODE` (a node no edge references at all), and
+neither fires when every node has at least one edge but the graph still splits
+into mutually unreachable components — the common case, because a node picks up
+an edge to a neighbour long before it is wired back to the trait node. #185 and
+#227 closed that; the detection half is done.
 
-Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes):
-**220 graphs (62%) have more than one connected component**, and **1264 nodes
+Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes), after
+`cellulolysis` had already been repaired: **220 graphs (62%) have more than one
+connected component**, and **1264 nodes
 (31%) sit outside their graph's largest component**. The worst offenders are the
 generated environment/physiology traits — e.g.
 `environment/ph_delta_mid2.yaml` (15 nodes, 7 components),
 `physiology/methanotrophic.yaml` (20 nodes, 5 components),
 `morphology/black_pigmented.yaml` (18 nodes, 6 components) — each with 11–12
 nodes unreachable from the main body. This is a content gap (missing edges), not
-a schema defect, so nothing currently reports it.
+a schema defect — which is why the original audit was blind to it, and why
+closing it needed a new defect class rather than a schema fix.
 
 Two pieces of work, independent:
 
 1. ~~**Add a connectivity defect to the audit.**~~ **DONE** — `audit-graphs` now
    emits `UNREACHABLE_FROM_TRAIT` (a node with edges but no undirected path to a
-   `TRAIT` node) and `NO_TRAIT_NODE`. The invariant chosen was the stronger
+   `TRAIT` node), `FRAGMENTED_GRAPH` (#227 — a graph in several components at
+   all, whatever each component contains) and `NO_TRAIT_NODE`. The invariant chosen was the stronger
    "every node reachable from the trait node", and reachability is **undirected**
    because curated predicates legitimately mix direction
    (`cellulase -enables-> trait` points inward, `trait -produces-> glucose`
    points outward). It landed non-blocking as required, but as a **ratchet**
    rather than a pure warning: `conf/causal_graph_audit_baseline.tsv` freezes the
-   1314 known findings and `--fail-on` defaults to `new`, so pre-existing
+   1541 known findings and `--fail-on` defaults to `new`, so pre-existing
    fragmentation never fails while any *newly introduced* island exits 1. Tighten
    with `just audit-graphs --fail-on any` once the backlog below is gone.
 
@@ -309,46 +323,62 @@ check" half is already satisfied by item 1 above — including the design questi
 posed (one-component versus reachable-from-trait), which was answered in favour of
 the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
-**Progress, re-measured 2026-08-03.** Two numbers circulate here and they are
-*not* the same measurement — quote whichever you mean, and say which:
+**Progress, re-measured 2026-08-05 against `conf/causal_graph_audit_baseline.tsv`.**
+Two numbers circulate here and they are *not* the same measurement — quote
+whichever you mean, and say which:
 
 | measure | value | source |
 |---|--:|---|
-| graphs with >1 connected component (undirected) | **220** files | recompute from `causal_graphs` |
-| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **219** files | `conf/causal_graph_audit_baseline.tsv` |
-| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's unit) | **1314** | same file |
-| nodes outside their graph's largest component | **1264** (31% of 4136) | recompute |
+| `FRAGMENTED_GRAPH` findings (one per fragmented graph) | **220** | `conf/causal_graph_audit_baseline.tsv` |
+| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **220** | same file |
+| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's per-node unit) | **1321** | same file |
+| baseline total | **1541** | `just audit-graphs` |
 
-Corpus totals are unchanged: 353 graphs, 4136 nodes. Per-category fragmented
-files: environment 85, **morphology 47**, metabolism 31, physiology 27,
-ecology 18, genomics 11, upper 1 — the baseline has morphology **46**, and that
-one-file gap is real, not arithmetic: see **#220**. `morphology/dumbbell_shaped.yaml`
-splits into two components that *each* contain a node typed `TRAIT`, so every node
-reaches *a* trait node and the audit reports it clean while 7 of its 11 nodes have
-no path to the trait the record is about.
+Corpus totals unchanged: 353 graphs, 4136 nodes. Per-category `FRAGMENTED_GRAPH`:
+environment 85, morphology 47, metabolism 31, physiology 27, ecology 18,
+genomics 11, upper 1.
 
-`cellulolysis.yaml` now verifies as a **single component**, so the #185 fix did
-land — the "1 of 220 done" framing in an earlier revision of this file was wrong
-arithmetic, not lost work: 220 is what is *still* fragmented, not the count before
-the fix.
+**#220 is closed** (#227). `FRAGMENTED_GRAPH` counts components directly rather
+than inferring them from reachability, closing a blind spot reachability has by
+construction: a graph splitting into components that *each* contain a `TRAIT`
+node satisfies "every node reaches a trait node" while still being two
+disconnected arguments.
 
-`data/traits/metabolism/cellulolysis.yaml`
-was the first instance of (2) and where the problem was found. A deep-research
-audit (Edison/PaperQA3 + Codex, independently converging) found that graph split
-into 4 components with 9 of 14 nodes unreachable from the trait node. The fix
-adds **7 evidence-backed edges** to merge it into one graph (`cellulose →
-cellobiose`, `cellobiohydrolase → cellobiose`, endoglucanase / cellobiohydrolase
-/ beta_glucosidase `part_of` cellulase, `cellulosome → enables → trait`,
-`cellulolytic_genes → encodes → cellulase`), grounds `cellobiose`
-(`CHEBI:17057`), and retypes `cellulosome` `CELLULAR_LOCALIZATION` →
-`GENE_OR_PROTEIN` (it is a complex, not a location; the `GO:0043263` grounding is
-unchanged). A `CONNECT_CAUSAL_GRAPH` entry is appended to `curation_history`.
+`morphology/dumbbell_shaped.yaml` is the real worked case, and reading it today
+is misleading unless you read `history/` with it. The record now declares one
+`TRAIT` node and carries 7 `UNREACHABLE_FROM_TRAIT` rows — which looks like
+reachability catching it fine. It is the opposite: `v_shaped_daughters` **was**
+typed `TRAIT`, so both components were reachable-from-a-trait and the graph
+reported clean, and #227 retyped it to `QUALITY` in the same change that added
+`FRAGMENTED_GRAPH`. Those 7 rows are the fix working. See
+`history/records/dumbbell_shaped/2026-08-03T230903Z-claude-code-90a277.yaml` and
+the record's own `curation_history`.
 
-Its own deferred list, worth keeping: the LPMO / CBM / transport / phosphorolysis
-branches, splitting `cellobiohydrolase` by chain end, and replacing the generic
-catabolite-repression edge with taxon-specific `cip-cel` evidence. Splitting
-`cellobiohydrolase` by chain end is **blocked**: it needs `EC:3.2.1.91` /
-`EC:3.2.1.176`, and `EC` is not declared in the LinkML prefix map.
+An earlier revision of this section retracted that example as fabricated, on the
+strength of the current node types alone, and filed #284 against the script's
+comment. Both were wrong and #284 is closed with the correction — the lesson
+being that `history/` is what explains why present data looks as it does.
+
+The shape has no *live* instance: a sweep for graphs that are fragmented, carry
+more than one `TRAIT` node, and have zero `UNREACHABLE_FROM_TRAIT` rows returns
+0, and the two measures above cover the identical 220 files. That is #227 having
+removed the one instance, not the check guarding against nothing.
+
+**Backfill progress: 1 done, 220 remaining.** Not "1 of 220" — the arithmetic
+matters here. `data/traits/metabolism/cellulolysis.yaml` was repaired *before*
+the baseline was frozen, so it has **zero** rows in
+`conf/causal_graph_audit_baseline.tsv` and the 220 there are all still to do.
+The corpus was 221 fragmented graphs; #183's own 2026-07-30 figure of 220 is the
+post-cellulolysis count, which is why it matches today's despite one file being
+fixed in between.
+
+It remains the worked example — 4 components, 9 of 14 nodes unreachable,
+repaired with 7 evidence-backed edges. Note that it is also in #267's `ECHOES_RESEARCH_REPORT`
+set (section 10), so it is simultaneously the template for the backfill and an
+example of the snippet shortcut the backfill has to avoid.
+
+After each batch, regenerate with `just audit-graphs --write-baseline` so the
+ratchet tightens; at zero, switch to `--fail-on any` and drop the baseline.
 
 ## 6. Web design review (#151) — 2 items PENDING
 
@@ -367,7 +397,7 @@ It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
 previous revision of this file called #151 "the only open issue in the repo" —
 that has not been true since 2026-07-30; see the header table.)
 
-## 7. CI + agent-workflow thread — SHIPPED; 7 small review issues PENDING
+## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#198/#209/#217/#252/#275
 
 This whole thread post-dates the last reconcile and was previously unlogged here.
 TraitMech is the fleet **pilot** for agent workflows because it is the smallest
@@ -441,46 +471,54 @@ the one it replaced: no review at all.
 Verified, not just argued: before, both `pull_request` runs on #213 were cancelled
 seconds after a `culturebot-reviewer` comment; after, both pushes to #216 gave
 `pull_request → success` with the `issue_comment` runs skipping harmlessly
-alongside. **Still unproven at the time of writing:** every one of those checks
-ran on a branch carrying its own copy of the fix. `issue_comment` runs use
-`main`'s copy, so the first genuine post-merge test is this PR.
+alongside. **Now proven post-merge**, which it was not when this was written:
+every check then had run on a branch carrying its own copy of the fix, and
+`issue_comment` runs use `main`'s copy. Since #216 merged, `claude-review` has
+run to completion on every PR through #282 without cancelling itself.
 
 `pr-shepherd.yml` was checked and is unaffected — `workflow_dispatch` only,
 `cancel-in-progress: false`, no comment trigger. `claude-code-review.yml` is the
 only workflow in the repo with an `issue_comment` trigger.
 
 Third concurrency-scoping bug here after #199 and #196's review, which produced
-two follow-ups rather than none: **#217** for the workflow-authoring conventions
-page that has nowhere to live (`docs/` has no such page, and this is fleet
-knowledge that belongs upstream rather than copied four times), and **#218** to
-*enforce* the rule instead of only documenting it. #218 is the stronger of the
-two — a docs page does not fail CI, and #215 got in past a reviewer who had
-already fixed this class of bug twice. `pr_sanity.check_workflows` already parses
-every workflow's triggers, so the guard drops in beside the existing
-`NO_UNFILTERED_CI` check: a workflow with both `pull_request` and an
-independently-firing trigger must key its concurrency group by `github.run_id`
-or `github.event_name`.
+two follow-ups. **Both have since landed.** #218 shipped in #225 —
+`pr_sanity.py` now emits `CONCURRENCY_SHARED_ACROSS_TRIGGERS`, so the rule fails
+CI rather than only being written down, which mattered because #215 got past a
+reviewer who had already fixed this class of bug twice. #217's page shipped in
+#272 as `docs/WORKFLOW_CONVENTIONS.md`, carrying the concurrency lessons plus
+the action-pinning policy and its own `ACTION_UNPINNED` gate.
+
+**#217 stays open for one question only: where the page lives.** It is fleet
+knowledge shared by all four Mech repos, and the copy that landed is
+TraitMech-local — so it is either consolidated into CultureMech or claw with the
+spokes linking to it, or it becomes the fourth copy #209 warns about. **#275** is
+the same argument at file scope: the page restates header comments still sitting
+in `pr-sanity.yaml`, `vendored-sync.yaml` and friends, which now cross-link to it
+but were not consolidated into it.
 
 **The other pending items are small, independent and fully specified**, each
 verifiable by CI, none blocking anything:
 
 | # | fix | note |
 |---|---|---|
-| #203 | unify `astral-sh/setup-uv` (v3 ×4, v5, v7) | needs a version decision, then mechanical |
-| #205 | declare PyYAML for `pr-shepherd`'s model-resolution step | same shape as #190's `matplotlib` gap |
-| #208 | skip 4-space-indented code blocks in the link check | no impact today; narrower than #202 was |
+| #191 | vendored `history.yaml` has no drift check vs claw canonical | cross-Mech; wants the hub |
+| #197 | `vendored-sync` couples every PR to CultureMech's availability | cross-Mech; wants the hub |
+| #198 | `vendored-sync` paths filter omits 4 vendored files, in every repo | cross-Mech; wants the hub |
 | #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
-| #191 | vendored `history.yaml` has no drift check vs claw canonical | |
-| #192 | justfile claw-module guard implemented twice | |
-| #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
-| #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
-| #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
+| #217 | conventions page is TraitMech-local; cross-Mech placement unsettled | the page landed in #272; #209 is the argument against a fourth copy |
+| #252 | nothing checks `qc.yaml`'s paths filter covers what `qc` reads | **3rd recurrence** (#184, #200, #250); gate machinery fresh from #272 |
+| #275 | conventions page duplicates the workflow header comments it restates | resolve with #217 — consolidate or cross-link, not both |
 
-## 8. The paid Edison sweep's output was lost — now tracked, and being re-run
+Closed since this section was written: **#192**, **#193**, **#203**, **#205**,
+**#208**, **#218** (and #199, #200, #202, #204, #215 before them). Action pinning
+and the conventions page landed in **#272**, which also added the
+`ACTION_UNPINNED` gate.
+
+## 8. The paid Edison sweep's output was lost — RE-RUN COMPLETE (#241), 353/353 tracked
 
 `reports/trait_graph_audit_manifest.tsv` recorded a 2026-07-20 sweep that
 **fully succeeded**: 353 distinct traits, every one `ok`.
-The 8 `fail:1` rows are not 8 unfinished traits — each is a `(category, slug)`
+The 13 `fail:1` rows are not 13 unfinished traits — each is a `(category, slug)`
 that also appears as `ok`, i.e. a retry that then worked. Verified by set
 difference: `fail − ok` is empty, so there are **zero outstanding failures**.
 That makes the loss below worse, not better: nothing here is a partial run that
@@ -492,36 +530,49 @@ half: 342 of 353 reports existed only on one machine, so the manifest recorded
 353 successes against 11 surviving files. The artifacts are provenance, not
 build output, and are committed.
 
-The re-run was authorised and is under way, launched through the new
-`just trait-graph-sweep` recipe. That recipe exists for the credentials, not
-for convenience: `scripts/research_trait.py` has no `load_dotenv`, so a sweep
-started outside `just` sees no `EDISON_API_KEY` and every call fails instantly.
+The re-run **completed** (#241): 353/353 reports plus citation sidecars, 17 MB,
+tracked. It was launched through the `just trait-graph-sweep` recipe, which
+exists for the credentials rather than convenience — `scripts/research_trait.py`
+has no `load_dotenv`, so a sweep started outside `just` sees no `EDISON_API_KEY`
+and every call fails instantly.
 
-Canaried before fan-out and checked on side effects rather than the exit code —
+Canaried before fan-out and checked on side effects rather than the exit code:
 one real unit produced a 50,846-byte report plus citations, `cached: false`, 57
-references, and a manifest row; 452s wall clock, so ~11 h for 341 at
-`--workers 4`.
+references, and a manifest row.
 
-**Transitional inconsistency, now machine-detectable rather than remembered.**
-The manifest is append-only and predates the tracking change, so many `ok` rows
-still point at artifacts that are not yet back in the tree. `just
-trait-graph-sweep --verify` reports exactly that set and exits 1 — free, no
-calls — and the count falls to 0 as the sweep completes:
+**The manifest reads as a spend record.** 714 rows: 700 `ok` + 13 `fail:1`,
+across five `run_id`s. All 13 failures later succeeded under a later `run_id` —
+which is the distinction that column was added to make, after
+`biofilm_formation` carried three indistinguishable rows.
+
+The transitional inconsistency is gone. `--verify` is now clean and runs in
+`just qc` as `audit-research-artifacts`:
 
 ```
 $ just trait-graph-sweep --verify
-manifest ok rows with a missing artifact: 331
+targets: 353  already-researched: 353  pending: 0
+manifest ok rows with a missing artifact: 0
+reports carrying a malformed CURIE: 0 (0 matches; scanned 707 artifacts)
 ```
 
-It is deliberately not patched into fake agreement, because the record of what
-was billed is the one thing the manifest is good for. Rows carry a `run_id` so
-a retry, a re-bill and the original are distinguishable — `biofilm_formation`
-had three indistinguishable rows before that column existed.
+The malformed-CURIE line is a scan added in #242, not an assertion — four
+reports had been regenerated for double-prefixed CURIEs, and a fifth was in
+flight during the manual grep that found them, so it was missed and needed a
+third paid pass.
 
-Four of the 331 are a different case: reports deleted on purpose because the
-template induced a malformed CURIE, after the running sweep had already passed
-them. They need a second pass once the current one finishes; `--verify` is what
-makes that a check rather than a note someone has to remember.
+### What the sweep left behind — all filed, none blocking
+
+- **#244** — `--verify` checks report *existence* only: not the citation
+  sidecars, not non-emptiness, and never disk→manifest. So the clean output
+  above is narrower than it looks, and a report on disk with no `ok` row would
+  silently suppress a call, since resume is file-existence keyed.
+- **#245** — `cellulolysis` has a second, `-codex` report with no manifest row
+  and no sidecar. #253's provider ranking stops it reaching a page.
+- **#246** — two `-edison-literature-meta.yaml` files, for 2 of 353 traits, and
+  nothing in the repo writes that filename.
+- **#248** — `template_file: /Users/marcin/...` in 342 now-tracked reports.
+- **#249** — the citation sidecars are a broken extraction: 353/353 carry
+  malformed entries, 332/353 list the same reference more than once.
 
 Cost per call is captured nowhere — `duration_seconds` is, but no USD figure —
 which is worth adding before this is ever repeated.
@@ -586,3 +637,18 @@ decisions in culturebotai-claw#7). All three of this repo's slices shipped:
   + `coverage.png`.
 
 No further TraitMech work here. Any remaining coordination is cross-Mech in claw#7.
+
+## 10. Evidence snippets (#247) — AUDIT LANDED, BACKLOG FROZEN
+
+`just audit-snippets` (#267) ratchets against `conf/evidence_snippet_baseline.tsv`.
+Frozen backlog, 2,737 findings: **2,586 MISSING_SNIPPET** (63% of evidence items
+assert a mechanism on a bare DOI), 71 UNSUPPORTIVE, 60 ELLIPTICAL (ERROR), 13
+REUSED, 7 ECHOES_RESEARCH_REPORT.
+
+The policy settled in #247: a research report is **not** a snippet source. Its
+evidence text goes in `notes:`; `snippet:` requires opening the paper. Written up
+in `docs/CURATION_PLAYBOOK.md`.
+
+Burning this down is the same work as #183's backfill, on the same edges —
+`cellulolysis` is in the ECHOES set and is #183's worked example, so it is the
+natural first target. Residual: **#270** (baseline keys on an array index).
