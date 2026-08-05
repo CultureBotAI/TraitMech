@@ -233,3 +233,59 @@ def test_the_audit_report_is_not_tracked(tmp_path):
     assert out == "", (
         "reports/evidence_snippet_audit.tsv is tracked again; either untrack it "
         "or wire it into audit-derived-reports on a `git show HEAD:` basis")
+
+
+# --- baseline identity (#270) -------------------------------------------
+
+def _row(file, locator, defect, detail=""):
+    return {"file": file, "locator": locator, "defect": defect,
+            "severity": "WARN", "detail": detail}
+
+
+def test_the_key_ignores_the_evidence_array_index():
+    """evidence[1] renumbers to evidence[0] when item 0 is deleted — an
+    improvement that used to fail qc as a new finding (#270)."""
+    from audit_evidence_snippets import _key
+    assert _key(_row("f.yaml", "evidence[1]", "MISSING_SNIPPET")) == \
+           _key(_row("f.yaml", "evidence[0]", "MISSING_SNIPPET"))
+    assert _key(_row("f.yaml", "g1:a->b[2]", "MISSING_SNIPPET")) == \
+           _key(_row("f.yaml", "g1:a->b[0]", "MISSING_SNIPPET"))
+
+
+def test_the_key_ignores_volatile_detail():
+    """detail carries the full snippet and the DOI, so retyping a still-bad
+    snippet flipped the key. audit_causal_graphs learned this first."""
+    from audit_evidence_snippets import _key
+    assert _key(_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET", "a ... b")) == \
+           _key(_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET", "c ... d"))
+
+
+def test_the_key_still_separates_files_locators_and_defects():
+    from audit_evidence_snippets import _key
+    base = _row("f.yaml", "evidence[0]", "MISSING_SNIPPET")
+    assert _key(base) != _key(_row("g.yaml", "evidence[0]", "MISSING_SNIPPET"))
+    assert _key(base) != _key(_row("f.yaml", "g1:a->b[0]", "MISSING_SNIPPET"))
+    assert _key(base) != _key(_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET"))
+
+
+def test_fewer_occurrences_than_baselined_is_an_improvement():
+    from audit_evidence_snippets import compare
+    rows = [_row("f.yaml", "evidence[0]", "MISSING_SNIPPET")]
+    baseline = {("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}
+    assert compare(rows, baseline) == []
+
+
+def test_one_more_occurrence_than_baselined_is_new():
+    """The false negative a set-membership key would have introduced: a THIRD
+    missing snippet matching a baselined pair and passing silently (#270)."""
+    from audit_evidence_snippets import compare
+    rows = [_row("f.yaml", f"evidence[{i}]", "MISSING_SNIPPET") for i in range(3)]
+    baseline = {("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}
+    new = compare(rows, baseline)
+    assert len(new) == 1
+
+
+def test_an_unbaselined_key_is_new():
+    from audit_evidence_snippets import compare
+    rows = [_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET")]
+    assert len(compare(rows, {})) == 1

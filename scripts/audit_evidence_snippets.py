@@ -272,15 +272,63 @@ def audit(check_reports: bool = True) -> list[dict[str, str]]:
     return findings
 
 
-def _key(row: dict[str, str]) -> tuple[str, str, str, str]:
-    return (row["file"], row["locator"], row["defect"], row["detail"])
+_INDEX_RE = re.compile(r"\[\d+\]$")
 
 
-def load_baseline(path: Path) -> set[tuple[str, str, str, str]]:
+def _key(row: dict[str, str]) -> tuple[str, str, str]:
+    """Baseline identity: file, locator WITHOUT its array index, and defect.
+
+    The index has to go. `evidence[1]` renumbers to `evidence[0]` when item 0 is
+    deleted, so an unchanged finding became a new one and `just qc` failed on a
+    change that strictly improved the corpus — 114 baselined findings sat at
+    index >= 1. The remedy a curator reaches for is `--write-baseline`, which
+    re-freezes anything genuinely new in the same PR. That is how a ratchet rots
+    (#270).
+
+    `detail` goes too, for the same reason at a different granularity: it
+    carries the full snippet for ELLIPTICAL/UNSUPPORTIVE and the DOI for
+    MISSING, so retyping a still-elliptical snippet or correcting the DOI on a
+    still-snippet-less reference flipped the key. audit_causal_graphs.py learned
+    this first and keys on only the leading fragment of its detail.
+
+    Dropping both collapses several findings onto one key, which is why the
+    baseline carries a COUNT rather than a set of keys — see compare().
+    """
+    return (row["file"], _INDEX_RE.sub("[]", row["locator"]), row["defect"])
+
+
+def load_baseline(path: Path) -> dict[tuple[str, str, str], int]:
+    """Baselined occurrences per key.
+
+    A count, not a set. Keying without the index means `evidence[0]` and
+    `evidence[1]` share a key, so set membership would let a THIRD missing
+    snippet at `evidence[2]` match a baselined key and pass silently — trading a
+    false positive for a false negative inside the integrity mechanism. The
+    count says "two of these were accepted"; a third is new.
+    """
+    counts: dict[tuple[str, str, str], int] = {}
     if not path.exists():
-        return set()
+        return counts
     with path.open() as fh:
-        return {_key(row) for row in csv.DictReader(fh, delimiter="\t")}
+        for row in csv.DictReader(fh, delimiter="\t"):
+            counts[_key(row)] = counts.get(_key(row), 0) + 1
+    return counts
+
+
+def compare(findings: list[dict[str, str]],
+            baseline: dict[tuple[str, str, str], int]) -> list[dict[str, str]]:
+    """Findings in excess of what the baseline accepted, per key.
+
+    Fewer occurrences than baselined is an improvement and passes; more is new.
+    """
+    seen: dict[tuple[str, str, str], int] = {}
+    new: list[dict[str, str]] = []
+    for row in findings:
+        key = _key(row)
+        seen[key] = seen.get(key, 0) + 1
+        if seen[key] > baseline.get(key, 0):
+            new.append(row)
+    return new
 
 
 def write_tsv(path: Path, rows: list[dict[str, str]]) -> None:
@@ -316,7 +364,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     baseline = load_baseline(Path(args.baseline))
-    new = [r for r in findings if _key(r) not in baseline]
+    new = compare(findings, baseline)
     if args.fail_on == "any":
         blocking = findings
     elif args.fail_on == "error":
