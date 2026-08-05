@@ -68,6 +68,29 @@ minutes are unbilled; and all eight call sites set `enable-cache: true` with no
 the 10 GB per-repo LRU limit. Revisit if cache misses start showing up — they
 degrade quietly and will not appear as a red check.
 
+## Every workflow points at this page
+
+The first line of every `.github/workflows/*.y{a,}ml` is:
+
+```yaml
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
+```
+
+This page consolidated comment blocks that had been living in individual
+workflow files — and then nothing linked to it, so it was strictly *less*
+discoverable than what it replaced. That is the same failure #272 argued
+against when it retired the old pinning policy for being "discoverable only by
+opening the one file that happened to show it" (#275).
+
+**Enforced, not merely written down.** `just pr-sanity` fails with
+`MISSING_CONVENTIONS_POINTER` on any workflow whose first line is not the
+pointer. A gate rather than a convention because 5 of the 9 workflows had
+already drifted without one by the time anyone checked.
+
+Where a workflow keeps its own explanatory comment block — several do, and
+should — the pointer makes the two read together rather than as competing
+copies.
+
 ## Concurrency
 
 **Cancellation is for superseding, not deduplication.** Key a group across runs

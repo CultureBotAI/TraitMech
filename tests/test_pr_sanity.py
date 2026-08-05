@@ -31,6 +31,7 @@ from pr_sanity import (  # noqa: E402
 )
 
 UNFILTERED_WF = """\
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: catchall
 on:
   pull_request:
@@ -41,6 +42,7 @@ jobs:
 """
 
 FILTERED_WF = """\
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: narrow
 on:
   pull_request:
@@ -75,6 +77,39 @@ def test_valid_unfiltered_workflow_is_clean(tmp_path):
     root = _repo(tmp_path)
     (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
     assert check_workflows(root) == []
+
+
+def test_workflow_without_the_conventions_pointer_is_flagged(tmp_path):
+    """#275: the page was unlinked, so it was less discoverable than the
+    per-file comments it consolidated. 5 of 9 workflows had drifted."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
+    (root / ".github/workflows/b.yaml").write_text(
+        UNFILTERED_WF.split("\n", 1)[1])  # same workflow, pointer stripped
+    findings = check_workflows(root)
+    assert [f["file"] for f in findings
+            if f["check"] == "MISSING_CONVENTIONS_POINTER"] == [
+        ".github/workflows/b.yaml"]
+
+
+def test_conventions_pointer_must_be_the_first_line(tmp_path):
+    """Buried on line 3 it is not what a reader opening the file sees."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
+    body = UNFILTERED_WF.split("\n", 1)[1]
+    (root / ".github/workflows/b.yaml").write_text(
+        "# something else\n" + UNFILTERED_WF.split("\n")[0] + "\n" + body)
+    assert "MISSING_CONVENTIONS_POINTER" in _checks(check_workflows(root))
+
+
+def test_pointer_check_is_independent_of_yaml_validity(tmp_path):
+    """An unparseable workflow still gets the pointer finding: the check reads
+    the first line, so it must not be gated behind a successful yaml parse."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
+    (root / ".github/workflows/bad.yaml").write_text("name: x\n  bad: [indent\n")
+    checks = _checks(check_workflows(root))
+    assert {"WORKFLOW_INVALID", "MISSING_CONVENTIONS_POINTER"} <= checks
 
 
 def test_unparseable_workflow_flagged(tmp_path):
@@ -131,6 +166,14 @@ def test_real_repo_satisfies_the_invariant():
     """Guards the live repo: if the last unfiltered workflow gains a paths
     filter, this fails rather than silently reducing coverage."""
     assert "NO_UNFILTERED_CI" not in _checks(check_workflows(REPO_ROOT))
+
+
+def test_real_repo_workflows_all_carry_the_pointer():
+    """Guards the live repo: a workflow added without the pointer fails here
+    as well as in CI, so the drift #275 found cannot recur silently."""
+    missing = [f["file"] for f in check_workflows(REPO_ROOT)
+               if f["check"] == "MISSING_CONVENTIONS_POINTER"]
+    assert missing == []
 
 
 # --- conflict markers -------------------------------------------------------
