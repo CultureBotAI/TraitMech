@@ -213,17 +213,18 @@ Everything above two gates is a bonus that depends on the bump's blast radius.
 State it that way wherever you copy this pattern; "seven gates cover it" would
 be false on a #277-shaped PR.
 
-One caveat this creates: `pr-sanity`'s `NO_UNFILTERED_CI` decides "unfiltered"
-from a workflow's `on:` block alone and never looks at job-level `if:`, so a
-workflow gated this way still counts toward that invariant while no longer
-running for the gated class. Harmless while `pr-sanity` and `vendored-sync` are
-themselves unfiltered; `NO_UNFILTERED_CI` fires only when *nothing* is
-unfiltered, so it would take **both** of them gaining a `paths:` filter to
-produce the false-green — at which point `claude-code-review.yml` alone would
-hold the invariant up while running on nothing. (If only `pr-sanity` gained
-one, that is a real loss — the SHA-pinning gate would stop covering exactly
-this PR class — but it is a coverage loss, not a `NO_UNFILTERED_CI`
-false-green.) Tracked in #307.
+This used to create a caveat: `NO_UNFILTERED_CI` decided "unfiltered" from a
+workflow's `on:` block alone, so a workflow gated this way still counted toward
+the floor while running on nothing. **Fixed in #307** — a workflow whose every
+job carries an `if:` no longer counts, and if that leaves nothing, the failure
+names it rather than reporting a bare "no unfiltered workflow", because those
+two need different fixes. The check does not evaluate the expression; "has an
+`if:`" is the conservative reading, and it can only shrink the counted set.
+
+Note the separate hazard that remains: if `pr-sanity` alone gained a `paths:`
+filter, `vendored-sync` would keep `NO_UNFILTERED_CI` green while the
+SHA-pinning gate stopped covering dependency PRs. That is a coverage loss, not
+an invariant failure, and no check catches it.
 
 Skipping does not make these PRs unreviewable. Comment `/review`, or use
 `workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both

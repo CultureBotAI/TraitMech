@@ -162,6 +162,57 @@ def test_missing_workflows_dir_is_a_finding_not_a_skip(tmp_path):
     assert "NO_UNFILTERED_CI" in _checks(check_workflows(tmp_path))
 
 
+GATED_WF = """\
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
+name: gated
+on:
+  pull_request:
+jobs:
+  a:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+"""
+
+
+def test_workflow_with_every_job_gated_does_not_satisfy_the_invariant(tmp_path):
+    """#307: unfiltered by `on:` but able to run nothing. Counting it would let
+    the floor be held up by a check that cannot run — #182/#184/#215's shape."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/gated.yaml").write_text(GATED_WF)
+    findings = check_workflows(root)
+    assert "NO_UNFILTERED_CI" in _checks(findings)
+
+
+def test_the_failure_names_the_conditionally_gated_workflow(tmp_path):
+    """"You have no unfiltered workflow" and "yours is all-gated" need
+    different fixes, so the detail has to distinguish them."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/gated.yaml").write_text(GATED_WF)
+    detail = [f["detail"] for f in check_workflows(root)
+              if f["check"] == "NO_UNFILTERED_CI"][0]
+    assert "gated.yaml" in detail and "#307" in detail
+
+
+def test_one_ungated_job_is_enough_to_count(tmp_path):
+    """The workflow can still produce a job unconditionally, so it counts."""
+    root = _repo(tmp_path)
+    mixed = GATED_WF + """  b:
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+"""
+    (root / ".github/workflows/mixed.yaml").write_text(mixed)
+    assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
+
+
+def test_a_gated_workflow_does_not_mask_a_real_unfiltered_one(tmp_path):
+    """The exclusion must not fire when a genuine floor exists."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/gated.yaml").write_text(GATED_WF)
+    (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
+    assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
+
+
 def test_real_repo_satisfies_the_invariant():
     """Guards the live repo: if the last unfiltered workflow gains a paths
     filter, this fails rather than silently reducing coverage."""
