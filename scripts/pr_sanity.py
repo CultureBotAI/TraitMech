@@ -352,6 +352,40 @@ def check_action_pins(root: Path) -> list[dict[str, str]]:
     return findings
 
 
+def every_job_is_gated(jobs: object) -> bool:
+    """True when no job in ``jobs`` is guaranteed to run (#307).
+
+    A job is gated if it carries an ``if:`` — or if every job it ``needs:`` is
+    gated, because GitHub skips a dependent when its dependency is skipped. That
+    second clause is not hypothetical tidiness: without it, a workflow of one
+    gated job plus one ungated job that ``needs:`` it produces zero jobs on the
+    gated PR class while still counting toward the floor, which is the exact
+    hole this function exists to close.
+
+    Expressions are never evaluated. "Has an ``if:``" is the conservative
+    reading: it can only shrink the set of workflows counted toward the floor,
+    so a wrong answer here fails loudly rather than passing quietly.
+    """
+    if not isinstance(jobs, dict) or not jobs:
+        return False
+    gated = {name for name, job in jobs.items()
+             if isinstance(job, dict) and "if" in job}
+    # Fixpoint: `needs:` can chain, so one pass is not enough.
+    changed = True
+    while changed:
+        changed = False
+        for name, job in jobs.items():
+            if name in gated or not isinstance(job, dict):
+                continue
+            needs = job.get("needs")
+            if isinstance(needs, str):
+                needs = [needs]
+            if isinstance(needs, list) and needs and all(n in gated for n in needs):
+                gated.add(name)
+                changed = True
+    return len(gated) == len(jobs)
+
+
 def check_workflows(root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     wf_dir = root / WORKFLOW_DIR
@@ -426,10 +460,7 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
                 # the conservative reading — it can only shrink the counted set,
                 # never inflate it.
                 jobs = doc.get("jobs")
-                gated = (isinstance(jobs, dict) and jobs
-                         and all(isinstance(j, dict) and "if" in j
-                                 for j in jobs.values()))
-                if gated:
+                if every_job_is_gated(jobs):
                     conditional.append(rel)
                 else:
                     unfiltered.append(rel)

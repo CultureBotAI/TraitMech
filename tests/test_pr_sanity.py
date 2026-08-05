@@ -194,14 +194,57 @@ def test_the_failure_names_the_conditionally_gated_workflow(tmp_path):
     assert "gated.yaml" in detail and "#307" in detail
 
 
-def test_one_ungated_job_is_enough_to_count(tmp_path):
-    """The workflow can still produce a job unconditionally, so it counts."""
+def test_one_ungated_job_with_no_needs_is_enough_to_count(tmp_path):
+    """It can still produce a job unconditionally, so it counts. `needs:` is
+    what makes this conditional — see the test below."""
     root = _repo(tmp_path)
     mixed = GATED_WF + """  b:
     runs-on: ubuntu-latest
     steps: [{run: "true"}]
 """
     (root / ".github/workflows/mixed.yaml").write_text(mixed)
+    assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
+
+
+def test_an_ungated_job_that_needs_a_gated_one_does_not_count(tmp_path):
+    """GitHub skips a dependent when its dependency skips, so this workflow
+    produces zero jobs on the gated PR class (#307 review)."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/chained.yaml").write_text(GATED_WF + """  b:
+    needs: a
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+""")
+    assert "NO_UNFILTERED_CI" in _checks(check_workflows(root))
+
+
+def test_needs_gating_is_transitive(tmp_path):
+    """`needs:` chains, so one pass over the jobs is not enough."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/chained.yaml").write_text(GATED_WF + """  b:
+    needs: a
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+  c:
+    needs: b
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+""")
+    assert "NO_UNFILTERED_CI" in _checks(check_workflows(root))
+
+
+def test_a_workflow_keeps_counting_when_one_job_is_plainly_ungated(tmp_path):
+    """`c` needs a gated job so it may well skip too — but `b` is guaranteed,
+    and one guaranteed job is all the floor requires."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/mixed.yaml").write_text(GATED_WF + """  b:
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+  c:
+    needs: [a, b]
+    runs-on: ubuntu-latest
+    steps: [{run: "true"}]
+""")
     assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
 
 
