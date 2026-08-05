@@ -135,6 +135,13 @@ job, whereas the PR author stays `dependabot[bot]` forever. **Re-running does
 not help** — GitHub keeps the restrictions "even if the workflow is re-run by a
 different actor", so "Re-run failed jobs" is not a workaround.
 
+Be honest about what that re-enabling costs. One commit from anyone with write
+access makes PR head's workflow file — carrying the bumped, unreviewed action
+SHAs — run holding both tokens. Nothing structural prevents it; what does is
+trust in who holds write access, plus the fork guard for everyone who doesn't.
+That is an acceptable place to land, but it is a trust boundary rather than a
+mechanism, and a doc written to be copied should say which it is.
+
 **A skipped job is not an absent check.** GitHub leaves checks *Pending* only
 when the **workflow** is filtered out by `paths:`/branch/commit-message; a
 **job** skipped by its own `if:` completes with conclusion `skipped` (grey).
@@ -166,7 +173,14 @@ read-only-token/no-secrets rule applies when the pull request's **base ref** was
 created by Dependabot — a Dependabot PR stacked on another Dependabot branch. A
 Dependabot PR onto `main` under `pull_request_target` gets a writable token and
 the Actions secrets, which is why `pull_request_target` + Dependabot is a named
-privilege-escalation pattern and why auto-merge recipes use it.
+privilege-escalation pattern rather than a dead end.
+
+The three quoted fragments above — the read-only/no-secrets pair, the base-ref
+condition, and "even if the workflow is re-run by a different actor" — are from
+[Dependabot on GitHub Actions](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-on-actions).
+Re-read it rather than trusting this summary: the claim in this section has been
+reversed twice already, which is why the refusal below is built to stand without
+it.
 
 Refuse it for the reason that actually holds: a job like `claude-review` runs
 `gh pr checkout` and then `uv sync` and the branch's `just` recipes while

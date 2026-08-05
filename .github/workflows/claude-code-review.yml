@@ -84,10 +84,11 @@ jobs:
     #    was created by Dependabot (a Dependabot PR stacked on a Dependabot
     #    branch). An ordinary Dependabot PR onto `main` under
     #    `pull_request_target` DOES get a writable token and Actions secrets —
-    #    which is why it is a named privilege-escalation pattern, not a dead
-    #    end. The reason to refuse it is the live one: this job runs
-    #    `gh pr checkout` and then `uv sync` and the branch's `just` recipes
-    #    while holding CLAUDE_CODE_OAUTH_TOKEN and the reviewer App key, so
+    #    a named privilege-escalation pattern, not a dead end. Verify that
+    #    against GitHub's "Dependabot on GitHub Actions" page rather than this
+    #    comment; the refusal below deliberately does not depend on it. This
+    #    job runs `gh pr checkout` and then `uv sync` and the branch's `just`
+    #    recipes while holding CLAUDE_CODE_OAUTH_TOKEN and the App key, so
     #    `pull_request_target` would execute PR-controlled code with secrets
     #    attached — the hazard the "Refuse fork PRs" step below exists for
     #    (#212), through a different door.
