@@ -15,7 +15,7 @@ reports suggest are resolved against OAK (#260), evidence snippets are audited
 
 Open PRs: **none**.
 
-Open issues, 18. Eight of the fifteen listed at the last reconcile are now closed
+Open issues, 17. Eight of the fifteen listed at the last reconcile are now closed
 (#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
 come from the reviews of the five PRs above, which is the review loop working as
 intended.
@@ -39,7 +39,6 @@ intended.
 | #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
 | #275 | conventions page duplicates the workflow header comments it restates | 7 |
 | #283 | this file's reconciles touch headers but not the section bodies they label | — |
-| #284 | `audit_causal_graphs.py` cites a worked example its own data contradicts | 5 |
 
 **Recommended next: #252.** It is the third recurrence of one bug class (#184,
 #200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
@@ -340,19 +339,30 @@ environment 85, morphology 47, metabolism 31, physiology 27, ecology 18,
 genomics 11, upper 1.
 
 **#220 is closed** (#227). `FRAGMENTED_GRAPH` counts components directly rather
-than inferring them from reachability, which closes a blind spot reachability
-has by construction: a graph splitting into components that *each* contain a
-`TRAIT` node satisfies "every node reaches a trait node" while still being two
+than inferring them from reachability, closing a blind spot reachability has by
+construction: a graph splitting into components that *each* contain a `TRAIT`
+node satisfies "every node reaches a trait node" while still being two
 disconnected arguments.
 
-Stated abstractly on purpose — **no record in the corpus exhibits that shape
-today.** A sweep for graphs that are fragmented, carry more than one `TRAIT`
-node, and have zero `UNREACHABLE_FROM_TRAIT` rows returns 0, and the two
-measures above cover the identical 220 files. Earlier revisions of this section
-cited `morphology/dumbbell_shaped.yaml` as the worked case; that record declares
-exactly one `TRAIT` node and carries 7 `UNREACHABLE_FROM_TRAIT` rows, so
-reachability catches it perfectly well. The wrong example came from
-`scripts/audit_causal_graphs.py`'s own comment and is tracked in **#284**.
+`morphology/dumbbell_shaped.yaml` is the real worked case, and reading it today
+is misleading unless you read `history/` with it. The record now declares one
+`TRAIT` node and carries 7 `UNREACHABLE_FROM_TRAIT` rows — which looks like
+reachability catching it fine. It is the opposite: `v_shaped_daughters` **was**
+typed `TRAIT`, so both components were reachable-from-a-trait and the graph
+reported clean, and #227 retyped it to `QUALITY` in the same change that added
+`FRAGMENTED_GRAPH`. Those 7 rows are the fix working. See
+`history/records/dumbbell_shaped/2026-08-03T230903Z-claude-code-90a277.yaml` and
+the record's own `curation_history`.
+
+An earlier revision of this section retracted that example as fabricated, on the
+strength of the current node types alone, and filed #284 against the script's
+comment. Both were wrong and #284 is closed with the correction — the lesson
+being that `history/` is what explains why present data looks as it does.
+
+The shape has no *live* instance: a sweep for graphs that are fragmented, carry
+more than one `TRAIT` node, and have zero `UNREACHABLE_FROM_TRAIT` rows returns
+0, and the two measures above cover the identical 220 files. That is #227 having
+removed the one instance, not the check guarding against nothing.
 
 **Backfill progress: 1 done, 220 remaining.** Not "1 of 220" — the arithmetic
 matters here. `data/traits/metabolism/cellulolysis.yaml` was repaired *before*
