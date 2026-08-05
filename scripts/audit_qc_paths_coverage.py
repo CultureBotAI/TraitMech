@@ -45,6 +45,12 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+# DO NOT DELETE AS UNUSED. audit() recomputes both from its `root` argument, so
+# these have no callers — but they are the only path constants this script owns,
+# and therefore the entire read-set it contributes ({justfile, .github}). Sweep
+# them away and audit-qc-paths becomes a `silent` script and fails itself, with
+# a message about constants "moving into a shared helper" that would badly
+# misdescribe what happened.
 JUSTFILE = REPO_ROOT / "justfile"
 QC_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "qc.yaml"
 
@@ -170,7 +176,21 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
     read_set: set[str] = set()
     silent: set[str] = set()
     for recipe in chain:
-        for rel in scripts_invoked(recipe_body(justfile_text, recipe)):
+        invoked = scripts_invoked(recipe_body(justfile_text, recipe))
+        if not invoked:
+            # A dependency-only recipe — the shape of `check: lint test` and of
+            # `qc:` itself — has an empty body, so it would contribute nothing
+            # and be skipped in silence. Grouping the chain
+            # (`qc: … audit-data …` with `audit-data: audit-graphs
+            # audit-snippets`) would then drop conf/data/reports/research in one
+            # edit. The ratchet catches that for directories already read; it
+            # cannot catch a NEW composite target reading a NEW directory,
+            # because there is no ratchet entry for a directory nobody has read
+            # yet. No-op today: all chain recipes invoke at least one script.
+            silent.add(f"{recipe} (no scripts/*.py in its body — dependency-only "
+                       "recipes are not followed)")
+            continue
+        for rel in invoked:
             script = root / rel
             if not script.exists():
                 continue

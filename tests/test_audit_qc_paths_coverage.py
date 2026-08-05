@@ -202,3 +202,33 @@ def test_the_real_justfile_resolves_check_to_itself():
     """
     body = recipe_body((REPO_ROOT / "justfile").read_text(), "check")
     assert body.strip() == "", f"recipe_body('check') matched another recipe: {body[:80]!r}"
+
+
+def test_a_dependency_only_chain_member_raises_rather_than_passing(tmp_path):
+    """`qc: … audit-data …` with `audit-data: audit-graphs audit-snippets`.
+
+    The composite has an empty body, so it invokes no script and would be
+    skipped in silence — the shape of `check: lint test` and of `qc:` itself.
+    The read-set ratchet cannot cover this case: a NEW composite reading a NEW
+    directory has no ratchet entry to shrink (#288).
+    """
+    root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
+    jf = root / "justfile"
+    jf.write_text(jf.read_text().replace(
+        "qc: audit-thing",
+        "audit-group: audit-thing\n\nqc: audit-group"))
+    with pytest.raises(BlindGate, match="dependency-only"):
+        audit(root)
+
+
+def test_this_scripts_own_path_constants_are_still_present():
+    """JUSTFILE/QC_WORKFLOW have no callers but are this script's whole read-set.
+
+    Deleting them as dead code would make audit-qc-paths silent about itself and
+    fail with a message describing a refactor that did not happen (#288).
+    """
+    source = (REPO_ROOT / "scripts" / "audit_qc_paths_coverage.py").read_text()
+    assert "JUSTFILE = REPO_ROOT" in source
+    assert "QC_WORKFLOW = REPO_ROOT" in source
+    reads = aqp.paths_read(REPO_ROOT / "scripts" / "audit_qc_paths_coverage.py", REPO_ROOT)
+    assert reads == {"justfile", ".github"}, reads
