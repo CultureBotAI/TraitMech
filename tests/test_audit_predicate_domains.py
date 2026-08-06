@@ -4,7 +4,7 @@ Locks in that audit() flags:
 - MICROBE_DOMAIN_ON_NONORGANISM: an edge whose predicate_id is (transitively)
   subPropertyOf METPO:2000001, whose rdfs:domain is microbe, so no causal node
   type can satisfy it (#301).
-- ENABLES_RANGE_ON_TRAIT: an enables/RO:0002327 edge pointed at a TRAIT object,
+- ENABLES_RANGE_VIOLATION: an enables/RO:0002327 edge whose object is not an activity,
   whose range is 'biological process or activity' (#302).
 - and is silent on predicates outside the microbe-domain closure and on enables
   pointed at a process.
@@ -145,7 +145,7 @@ def test_non_microbe_predicate_not_flagged(tmp_path):
     assert audit(d, owl) == []
 
 
-# --- ENABLES_RANGE_ON_TRAIT (#302) -------------------------------------------
+# --- ENABLES_RANGE_VIOLATION (#302, widened in #315) --------------------------
 
 ENABLES_ON_TRAIT = """\
 identifier: traitmech:000004
@@ -176,8 +176,53 @@ def test_enables_on_trait_flagged(tmp_path):
     owl = _write_owl(tmp_path)
     d = _write(tmp_path, "et.yaml", ENABLES_ON_TRAIT)
     findings = audit(d, owl)
-    assert [f["defect"] for f in findings] == ["ENABLES_RANGE_ON_TRAIT"]
+    assert [f["defect"] for f in findings] == ["ENABLES_RANGE_VIOLATION"]
     assert "object_type=TRAIT" in findings[0]["detail"]
+
+
+ENABLES_ON_QUALITY = """\
+identifier: traitmech:000050
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: proc, label: P, node_type: BIOLOGICAL_PROCESS}
+  - {node_id: q, label: Q, node_type: QUALITY}
+  edges:
+  - {subject: proc, predicate: enables, object: q, predicate_id: RO:0002327}
+"""
+
+
+def test_enables_on_non_activity_object_flagged(tmp_path):
+    """#315: the range is the whole 'biological process or activity', not just TRAIT.
+
+    A QUALITY object violates it exactly as a TRAIT does. The original TRAIT-only
+    test could not see the 33 corpus edges pointing at proteins, states,
+    qualities, capacities, chemicals and locations.
+    """
+    owl = _write_owl(tmp_path)
+    d = _write(tmp_path, "eq.yaml", ENABLES_ON_QUALITY)
+    findings = audit(d, owl)
+    assert [f["defect"] for f in findings] == ["ENABLES_RANGE_VIOLATION"]
+    assert "object_type=QUALITY" in findings[0]["detail"]
+
+
+def test_enables_on_pathway_and_molecular_function_not_flagged(tmp_path):
+    """PATHWAY and MOLECULAR_FUNCTION are activities and must stay clean."""
+    owl = _write_owl(tmp_path)
+    for i, nt in enumerate(("PATHWAY", "MOLECULAR_FUNCTION")):
+        d = _write(tmp_path, f"ok{i}.yaml", f"""\
+identifier: traitmech:00006{i}
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {{node_id: a, label: A, node_type: CHEMICAL}}
+  - {{node_id: b, label: B, node_type: {nt}}}
+  edges:
+  - {{subject: a, predicate: enables, object: b, predicate_id: RO:0002327}}
+""")
+    assert [f for f in audit(d, owl) if f["defect"] == "ENABLES_RANGE_VIOLATION"] == []
 
 
 def test_enables_on_process_not_flagged(tmp_path):
@@ -250,13 +295,31 @@ def test_two_edges_get_distinct_baseline_keys(tmp_path):
     assert [_key(r) for r in new] == [_key(findings[1])]
 
 
-def test_ratchet_blocks_new_warn_findings(tmp_path):
+def test_ratchet_blocks_new_findings(tmp_path):
+    """The ratchet blocks on severity-independent grounds: `new` means new."""
     owl = _write_owl(tmp_path)
     d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
     findings = audit(d, owl)
     new, blocking = partition(findings, baseline=set(), fail_on="new")
     assert len(new) == len(blocking) == len(findings) == 2
-    assert all(r["severity"] != ERROR for r in blocking)
+
+
+def test_domain_class_is_error_so_it_cannot_be_baselined(tmp_path):
+    """#315 review: the class distinction must be structural, not conventional.
+
+    MICROBE_DOMAIN_ON_NONORGANISM is burned down (#301), so it is ERROR and
+    `--write-baseline` refuses to freeze it. Without this, one `--write-baseline`
+    run intended to re-freeze the ENABLES_RANGE_VIOLATION backlog would silently
+    swallow a domain regression too.
+    """
+    owl = _write_owl(tmp_path)
+    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    assert all(f["severity"] == ERROR for f in audit(d, owl))
+    baseline = tmp_path / "b.tsv"
+    r = _run_cli(d, owl, tmp_path / "o.tsv", baseline, "--write-baseline")
+    assert r.returncode == 1
+    assert "Refusing to write baseline" in r.stderr
+    assert not baseline.exists()
 
 
 def test_ratchet_passes_when_everything_is_baselined(tmp_path):
@@ -299,7 +362,8 @@ def test_write_baseline_freezes_then_passes(tmp_path):
     passing `--fail-on new` alongside `--write-baseline`.
     """
     owl = _write_owl(tmp_path)
-    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    # A WARN-class fixture: only ENABLES_RANGE_VIOLATION is baselineable now.
+    d = _write(tmp_path, "eq.yaml", ENABLES_ON_QUALITY)
     baseline = tmp_path / "baseline.tsv"
     out = tmp_path / "out.tsv"
 
@@ -321,7 +385,7 @@ def test_default_fail_on_is_any(tmp_path):
     passed. Pinned here so the hardening cannot be undone by an argparse edit.
     """
     owl = _write_owl(tmp_path)
-    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    d = _write(tmp_path, "eq.yaml", ENABLES_ON_QUALITY)  # WARN class, baselineable
     baseline = tmp_path / "baseline.tsv"
     out = tmp_path / "out.tsv"
     _run_cli(d, owl, out, baseline, "--write-baseline")
