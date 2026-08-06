@@ -51,7 +51,7 @@ and the process range at once.
 
 | Scope | Source | # rows | Lift status |
 |---|---|---:|---|
-| A (synthetic trait classes) | `data/traits/**/*.yaml` records whose `identifier:` starts with `traitmech:` | 0 | not applicable — none in corpus |
+| A (synthetic trait classes) | `data/traits/**/*.yaml` records whose `identifier:` starts with `traitmech:` | 0 | out of scope here — 120 exist in the corpus and none are lifted by any cohort, tracked in [#319](https://github.com/CultureBotAI/TraitMech/issues/319) |
 | B (causal-graph predicates) | the 164 `RO:0002327`→TRAIT edges (#302) and the electron-role edges among them (#303) | **3 predicates / 164 edges** | included |
 | C (controlled vocabularies) | already lifted in v1 (`CausalNodeTypeEnum`) | 0 | already covered |
 
@@ -102,8 +102,32 @@ this proposal they read `<trait> --has electron donor|acceptor--> <chemical>`.
 That restores the direction METPO:2000008/2000009 expressed before their
 organism domain made them unusable here — the trait is the bearer, the chemical
 fills the role. The reversal is the point: it is what lets one relation per role
-replace a single generic relation, so `dissimilatory_iron_reduction`'s two
-acceptor edges stop being indistinguishable from its donor-shaped edge.
+replace a single generic relation.
+
+`dissimilatory_iron_reduction` is the sharpest case. All three of its Fe(III)
+species — `ferric_iron`, `solid_fe3_mineral`, `dissolved_fe3_om_complex` — are
+terminal electron acceptors, and the file's own node descriptions say so
+("Terminal electron acceptor reduced in DIR"). After PR #300 reversed two of them
+onto `enables`, **nothing in predicate terms records the acceptor role at all**;
+it survives only in free text. Under this proposal all three read
+`dir_trait --has electron acceptor--> <Fe(III) species>`, which is both
+range-correct and role-bearing.
+
+### The declared OWL range is deliberately weaker than the definitions
+
+All three rows take `domain = range = METPO:1007401` (*trait causal node*). That
+is the v1 convention and is what dodges both the microbe domain and the process
+range — but it means the object side is **unconstrained in OWL**, while the
+definitions of `has electron donor`/`has electron acceptor` say "a chemical
+species". Upstream should not read the declared range as tight.
+
+Tightening the range to a chemical class was considered and rejected for this
+cohort: `METPO:1007401`'s subclasses are the causal-node *type* vocabulary, and
+committing the range to CHEBI would re-import the cross-ontology coupling the v1
+convention exists to avoid. The constraint is instead enforced data-side, via
+`subject_types`/`object_types` on the `mappings/predicate_grounding.tsv` rows
+(see Round-trip plan), which is where the corpus's other node-type gates live and
+is machine-checked by `just ground-predicates`.
 
 ### Pairing
 
@@ -163,6 +187,72 @@ No `metpo_proposal_classes_robot.tsv`: this cohort proposes no classes.
 - Edge partition (146 + 13 + 5 = 164) computed from the corpus, and cross-checked
   against the independently-derived `ENABLES_RANGE_ON_TRAIT` count in
   `reports/predicate_domain_audit.tsv`.
+
+## Appendix — the explicit 164-edge partition
+
+Published in full so the buckets are checkable rather than inferrable from the
+counts. Regenerate by walking every `causal_graphs[].edges[]` with
+`predicate_id: RO:0002327` and a `TRAIT` object; a `CHEMICAL` subject whose label
+or edge description names an electron donor/acceptor role goes to the role-bearing
+pair, everything else to `confers`.
+
+### `METPO:2007702` has electron acceptor — all 5 edges
+
+| trait record | subject (chemical) | object (trait) |
+|---|---|---|
+| `metabolism/dissimilatory_iron_reduction.yaml` | iron(3+) | dissimilatory iron reduction |
+| `metabolism/dissimilatory_iron_reduction.yaml` | solid Fe(III) mineral | dissimilatory iron reduction |
+| `metabolism/dissimilatory_iron_reduction.yaml` | dissolved Fe(III)-organic-matter complex | dissimilatory iron reduction |
+| `metabolism/dissimilatory_manganese_reduction.yaml` | Mn(IV) oxide | dissimilatory manganese reduction |
+| `metabolism/dissimilatory_metal_reduction.yaml` | terminal electron acceptor | dissimilatory metal reduction |
+
+### `METPO:2007701` has electron donor — all 13 edges
+
+| trait record | subject (chemical) | object (trait) |
+|---|---|---|
+| `physiology/chemoautolithotrophic.yaml` | inorganic electron donor | chemoautolithotrophic |
+| `physiology/chemolithoautotrophic.yaml` | inorganic electron donor | chemolithoautotrophic |
+| `physiology/chemolithoheterotrophic.yaml` | inorganic chemical donor | chemolithoheterotrophic |
+| `physiology/chemolithotrophic.yaml` | inorganic chemical electron donor | chemolithotrophic |
+| `physiology/chemoorganoheterotrophic.yaml` | organic molecule | chemoorganoheterotrophic |
+| `physiology/hydrogenotrophic.yaml` | molecular hydrogen | hydrogenotrophic |
+| `physiology/lithoautotrophic.yaml` | inorganic electron donor | lithoautotrophic |
+| `physiology/lithoheterotrophic.yaml` | inorganic electron donor | lithoheterotrophic |
+| `physiology/lithotrophic.yaml` | inorganic electron donor | lithotrophic |
+| `physiology/organoheterotrophic.yaml` | organic compound | organoheterotrophic |
+| `physiology/organotrophic.yaml` | organic compound | organotrophic |
+| `physiology/photolithotrophic.yaml` | inorganic electron donor | photolithotrophic |
+| `physiology/photoorganoheterotrophic.yaml` | organic compound | photoorganoheterotrophic |
+
+### `METPO:2007700` confers — 146 edges by subject node type
+
+| subject `node_type` | edges |
+|---|---:|
+| BIOLOGICAL_PROCESS | 81 |
+| GENE_OR_PROTEIN | 32 |
+| ENVIRONMENTAL_FACTOR | 12 |
+| CELLULAR_LOCALIZATION | 5 |
+| QUALITY | 5 |
+| CHEMICAL | 4 |
+| PATHWAY | 4 |
+| MOLECULAR_FUNCTION | 2 |
+| STATE | 1 |
+| **total** | **146** |
+
+Grand total: 146 + 13 + 5 = 164
+
+Two classification notes a reviewer will want:
+
+- `environment/oxygen_preference.yaml#oxygen_terminal_electron_acceptor` is
+  labelled *"O2 as terminal electron acceptor"* but typed `MOLECULAR_FUNCTION`
+  (it denotes the *use* of O2, not O2 itself). It therefore lands in `confers`,
+  as one of the two MOLECULAR_FUNCTION subjects — **not** under
+  `has electron acceptor`, whose definition requires a chemical species. Retyping
+  that node to `CHEMICAL`/`CHEBI:15379` is defensible but is a corpus change, so
+  it is left for the migration PR rather than assumed here.
+- All five `has electron acceptor` edges come from three dissimilatory-reduction
+  records; all thirteen `has electron donor` edges are one-per-record across the
+  lithotrophy/organotrophy family.
 
 ## Upstream path
 
