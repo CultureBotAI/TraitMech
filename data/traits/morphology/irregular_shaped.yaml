@@ -85,7 +85,7 @@ causal_graphs:
       notes: Supports patterning loss as a driver of inconsistent shapes.
     predicate_id: RO:0002327
   - subject: stochastic_growth
-    predicate: produces
+    predicate: has output
     object: variable_geometry
     description: Stochastic growth produces variable cell geometry.
     evidence:
@@ -93,7 +93,7 @@ causal_graphs:
       snippet: coryneform morphology
       notes: Supports irregular coryneform-like morphology arising from polar/apical
         growth without strong lateral patterning.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: variable_geometry
     predicate: manifests as
     object: irregular_shaped_trait
@@ -145,7 +145,7 @@ causal_graphs:
         is associated with abnormal branching and mispatterned wall synthesis in filamentous
         bacteria.
   - subject: polar_growth_perturbation
-    predicate: produces
+    predicate: has output
     object: variable_geometry
     description: Mispatterned apical wall synthesis from disrupted polar growth produces
       irregular, branched/bulged geometry.
@@ -154,7 +154,7 @@ causal_graphs:
       notes: Partial depletion of the polar scaffold DivIVA causes hyphal bulging
         and irregular branching, an irregular-shape outcome of disorganized polar
         growth.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: wall_less_state
     predicate: manifests as
     object: irregular_shaped_trait
@@ -201,4 +201,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1, RO:0002326×1, METPO:2000202×1, METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

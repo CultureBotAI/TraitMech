@@ -97,14 +97,14 @@ causal_graphs:
       notes: Supports Crt enzymes as pathway catalysts.
     predicate_id: biolink:catalyzes
   - subject: carotenoid_biosynthesis
-    predicate: produces
+    predicate: has output
     object: pink_carotenoids
     description: Carotenoid biosynthesis can produce pink bacterial pigments.
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: pink ... pigmentation in bacteria
       notes: Supports carotenoids as one source of pink bacterial pigmentation.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: pink_carotenoids
     predicate: causes
     object: visible_pink_color
@@ -233,4 +233,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15948×1, ENVO:01001495×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

@@ -88,14 +88,14 @@ causal_graphs:
       notes: Supports PigC/RedH condensation as a key step in prodiginine biosynthesis.
     predicate_id: biolink:has_part
   - subject: pigC_redH_condensation
-    predicate: produces
+    predicate: has output
     object: prodigiosin
     description: PigC/RedH condensation produces prodigiosin or related prodiginines.
     evidence:
     - reference: DOI:10.1038/nrmicro1531
       snippet: to form prodigiosin
       notes: Supports prodigiosin as a pathway product.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: prodigiosin
     predicate: causes
     object: visible_red_color
@@ -154,7 +154,7 @@ causal_graphs:
       notes: Activated CpxA triggers a phosphorylation cascade that inhibits transcription
         of pig gene clusters and reduces PG production.
   - subject: carotenoid_biosynthesis
-    predicate: produces
+    predicate: has output
     object: lycopene
     description: Phytoene synthase condenses two GGPP to phytoene, then desaturation/isomerization
       yields the red pigment lycopene.
@@ -162,7 +162,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11122920
       notes: Two GGPP molecules condensed by phytoene synthase form phytoene, ultimately
         yielding lycopene, a red-colored pigment.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: lycopene
     predicate: causes
     object: visible_red_color
@@ -240,4 +240,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

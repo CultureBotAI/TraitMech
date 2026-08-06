@@ -89,7 +89,7 @@ causal_graphs:
       notes: Supports the operon as staphyloxanthin biosynthetic machinery.
     predicate_id: biolink:encodes
   - subject: staphyloxanthin_biosynthesis
-    predicate: produces
+    predicate: has output
     object: staphyloxanthin
     description: Staphyloxanthin biosynthesis produces the golden carotenoid pigment.
     evidence:
@@ -97,7 +97,7 @@ causal_graphs:
       snippet: Golden color imparted by carotenoid pigments
       notes: Supports the link from carotenoid biosynthesis to visible golden pigment
         in S. aureus.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: low_visible_chromophore
     predicate: results from reduced
     object: staphyloxanthin_biosynthesis
@@ -129,14 +129,14 @@ causal_graphs:
         context.
     predicate_id: METPO:2007400
   - subject: melanin_biosynthesis
-    predicate: produces
+    predicate: has output
     object: melanin
     description: PKS-mediated melanin biosynthesis produces the melanin chromophore.
     evidence:
     - reference: DOI:10.1007/s00792-024-01354-2
       notes: pks1 mutation abolishes melanization / decreased DHN melanin accumulation,
         establishing the PKS biosynthetic route to melanin.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: reduced_melanin
     predicate: results from reduced
     object: melanin_biosynthesis
@@ -252,4 +252,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

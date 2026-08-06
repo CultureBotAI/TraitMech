@@ -131,14 +131,14 @@ causal_graphs:
       notes: Supports CO as a substrate for acetogenic acetyl-CoA synthesis.
     predicate_id: biolink:participates_in
   - subject: wood_ljungdahl_pathway
-    predicate: produces
+    predicate: has output
     object: acetyl_coa
     description: The Wood-Ljungdahl pathway synthesizes acetyl-CoA.
     evidence:
     - reference: DOI:10.1196/annals.1419.015
       snippet: convert carbon dioxide and CO into acetyl-CoA
       notes: Supports acetyl-CoA as pathway product.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: acetyl_coa
     predicate: precursor of
     object: acetate
@@ -289,4 +289,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15350×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

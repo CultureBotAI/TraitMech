@@ -111,7 +111,7 @@ causal_graphs:
     grounding: GO:0006113
   edges:
   - subject: heterotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: organic_molecule
     description: Heterotrophy uses organic compounds as carbon sources instead of
       CO2.
@@ -119,7 +119,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: organic compounds as the primary sources of carbon
       notes: Supports organic compounds as heterotrophic carbon sources.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: organic_molecule
     predicate: imported by
     object: nutrient_uptake
@@ -137,14 +137,14 @@ causal_graphs:
       snippet: breakdown of nutrients
       notes: Supports catabolic processing of organic nutrients.
   - subject: catabolism
-    predicate: produces
+    predicate: has output
     object: precursor_metabolites
     description: Catabolism generates central intermediates for biosynthesis.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: precursor compounds for anabolism
       notes: Supports nutrient breakdown to biosynthetic precursors.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: precursor_metabolites
     predicate: used by
     object: anabolism
@@ -154,14 +154,14 @@ causal_graphs:
       snippet: anabolism
       notes: Supports biosynthetic use of catabolic precursors.
   - subject: anabolism
-    predicate: produces
+    predicate: has output
     object: biomass
     description: Anabolism incorporates organic carbon into biomass.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of compounds into cell material.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: organic_molecule
     predicate: causally enables
     object: heterotrophic_trait
@@ -181,7 +181,7 @@ causal_graphs:
       notes: Glucose catabolism proceeds via Embden-Meyerhof glycolysis and the pentose
         phosphate pathway; general central-metabolism support.
   - subject: tca_cycle
-    predicate: produces
+    predicate: has output
     object: precursor_metabolites
     description: The TCA cycle oxidizes imported organic carbon and supplies biosynthetic
       precursors.
@@ -189,7 +189,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1441865
       notes: Genomes encode complete glycolysis, gluconeogenesis and TCA cycle enzymes
         oxidizing imported organic carbon for precursor generation.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: glyoxylate_cycle
     predicate: enhances
     object: biomass
@@ -287,4 +287,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009058×1, GO:0006099×1, GO:0006097×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 4 causal edge(s) off microbe-domain METPO predicates (1 to has carbon
+    source, 3 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -79,7 +79,7 @@ causal_graphs:
     description: Stabilization of proteins/enzymes under salt/osmotic stress.
   edges:
   - subject: salt_in_physiology
-    predicate: produces
+    predicate: confers
     object: nacl_range_high_trait
     description: Salt-in physiology yields a growth range extending above 8% NaCl.
     evidence:
@@ -87,7 +87,7 @@ causal_graphs:
       snippet: KCl accumulating Halobacterium salinarum
       notes: Supports salt-in physiology as the basis of extreme-halophile growth
         ranges.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: nacl_range_high_trait
     predicate: is a
     object: nacl_range
@@ -172,4 +172,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, RO:0002502×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

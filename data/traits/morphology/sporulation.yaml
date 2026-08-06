@@ -159,14 +159,14 @@ causal_graphs:
       notes: Supports sigma-factor cascades as drivers of compartmental development.
     predicate_id: RO:0002211
   - subject: forespore_maturation
-    predicate: produces
+    predicate: has output
     object: endospore
     description: Forespore maturation produces a dormant endospore.
     evidence:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: within which a spore is produced
       notes: Supports the developmental endpoint of sporulation.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: endospore
     predicate: manifests as
     object: sporulation_trait
@@ -177,14 +177,14 @@ causal_graphs:
       notes: Supports endospore production as the trait outcome.
     predicate_id: METPO:2007400
   - subject: asymmetric_septation
-    predicate: produces
+    predicate: has output
     object: mother_cell_forespore
     description: Asymmetric division produces distinct mother-cell and forespore compartments.
     evidence:
     - reference: DOI:10.1038/s41467-024-51654-6
       notes: via an asymmetric division into a forespore and mother cell (central
         defining morphogenesis edge).
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: spoiiie_translocase
     predicate: mediates
     object: chromosome_translocation
@@ -307,4 +307,16 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

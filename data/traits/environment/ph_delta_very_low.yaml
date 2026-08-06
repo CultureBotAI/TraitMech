@@ -85,7 +85,7 @@ causal_graphs:
     description: Consumption of cytoplasmic protons buffering internal acidification.
   edges:
   - subject: very_limited_ph_homeostasis
-    predicate: produces
+    predicate: confers
     object: ph_delta_very_low_trait
     description: Very limited pH-homeostasis flexibility yields a narrow pH-delta
       breadth.
@@ -94,7 +94,7 @@ causal_graphs:
       snippet: pH homeostasis
       notes: Supports very limited pH-homeostasis flexibility as the basis of stenotopic
         breadth.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: ph_delta_very_low_trait
     predicate: is a
     object: ph_delta
@@ -181,4 +181,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, RO:0002213×1, biolink:consumes×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

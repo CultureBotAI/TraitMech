@@ -136,7 +136,7 @@ causal_graphs:
       snippet: retention of a crystal violet:iodine complex
       notes: Supports retention during the Gram reaction.
   - subject: crystal_violet_iodine_complex
-    predicate: produces
+    predicate: confers
     object: gram_positive_trait
     description: Retained dye complex produces the observed Gram-positive staining
       phenotype.
@@ -144,7 +144,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.156.2.837-845.1983
       snippet: crystal violet-iodine complex
       notes: Supports the dye complex as the chemical basis of staining.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: iodine_mordant
     predicate: causes
     object: cv_iodine_complex_formation
@@ -155,7 +155,7 @@ causal_graphs:
       notes: When iodine is added, it interacts with CV+ to form large complexes.
     predicate_id: biolink:causes
   - subject: cv_iodine_complex_formation
-    predicate: produces
+    predicate: has output
     object: crystal_violet_iodine_complex
     description: Formation of the crystal violet-iodine complex retained within the
       peptidoglycan mesh.
@@ -163,7 +163,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-026-10072-8
       notes: The Gram stain relies on retention of crystal violet-iodine complexes
         within the peptidoglycan mesh.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: peptidoglycan_mesh_low_porosity
     predicate: increases
     object: crystal_violet_iodine_complex
@@ -248,4 +248,17 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2, biolink:causes×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (1 to confers,
+    1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

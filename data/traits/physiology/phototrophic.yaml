@@ -109,14 +109,14 @@ causal_graphs:
       for energy conservation.
   edges:
   - subject: phototrophic_trait
-    predicate: uses energy source
+    predicate: has energy source
     object: light
     description: Phototrophic growth uses light as the energy input.
     evidence:
     - reference: DOI:10.3389/fmicb.2011.00165
       snippet: use light as the energy source
       notes: Supports light as the defining energy source for phototrophic bacteria.
-    predicate_id: METPO:2000010
+    predicate_id: METPO:2007807
   - subject: bacteriochlorophyll
     predicate: part of
     object: photosynthetic_reaction_center
@@ -144,23 +144,23 @@ causal_graphs:
       snippet: light-induced electron transport
       notes: Supports reaction-center-driven photosynthetic electron transport.
   - subject: photosynthetic_electron_transport
-    predicate: produces
+    predicate: has output
     object: atp
     description: Photosynthetic electron transport produces ATP.
     evidence:
     - reference: DOI:10.3389/fmicb.2011.00165
       snippet: produce phosphate bond energy (ATP)
       notes: Supports ATP as a product of phototrophic electron transport.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: photosynthetic_electron_transport
-    predicate: produces
+    predicate: has output
     object: reducing_power
     description: Photosynthetic electron transport generates reducing equivalents.
     evidence:
     - reference: DOI:10.3389/fmicb.2011.00165
       snippet: reductants [e.g., NAD(P)H and reduced ferredoxin]
       notes: Supports reductant production by photosynthetic electron transport.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: carotenoid
     predicate: transfers excitation energy to
     object: bacteriochlorophyll
@@ -281,4 +281,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A059ZUX4×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (1 to has energy
+    source, 2 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

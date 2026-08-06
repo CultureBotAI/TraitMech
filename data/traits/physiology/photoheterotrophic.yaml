@@ -121,14 +121,14 @@ causal_graphs:
       primarily rely.
   edges:
   - subject: photoheterotrophic_trait
-    predicate: uses energy source
+    predicate: has energy source
     object: light
     description: Photoheterotrophic growth uses light as the energy input.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: light and reduced organic compounds
       notes: Supports light as the energy source in photoheterotrophy.
-    predicate_id: METPO:2000010
+    predicate_id: METPO:2007807
   - subject: bacteriochlorophyll
     predicate: part of
     object: photosynthetic_reaction_center
@@ -156,23 +156,23 @@ causal_graphs:
       snippet: light-induced redox chemistry
       notes: Supports reaction-center photochemistry leading to electron transfer.
   - subject: photosynthetic_electron_transport
-    predicate: produces
+    predicate: has output
     object: atp
     description: Photosynthetic electron transport conserves light energy as ATP.
     evidence:
     - reference: DOI:10.1016/B978-0-12-809633-8.20672-9
       snippet: can be used to produce ATP
       notes: Supports ATP production downstream of phototrophic electron transfer.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: photoheterotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: organic_carbon
     description: Photoheterotrophs require organic compounds as the carbon source.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: reduced organic compounds
       notes: Supports reduced organic compounds as the carbon source in photoheterotrophy.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: organic_carbon
     predicate: assimilated into
     object: biomass
@@ -225,14 +225,14 @@ causal_graphs:
       notes: AAPs are facultative photoheterotrophs that harvest light energy and
         generate ATP by photophosphorylation
   - subject: photophosphorylation
-    predicate: produces
+    predicate: has output
     object: atp
     description: Photophosphorylation conserves light energy as ATP.
     evidence:
     - reference: DOI:10.1186/s40793-024-00573-6
       notes: generate ATP by photophosphorylation using a unique type of bacteriochlorophyll-a-containing
         reaction center
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: aerobic_anoxygenic_phototrophs
     predicate: relies primarily on
     object: dissolved_organic_matter
@@ -306,4 +306,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A1D7QWW9×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 4 causal edge(s) off microbe-domain METPO predicates (1 to has energy
+    source, 2 to has output, 1 to has carbon source), issue 301. The previous predicates are
+    transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe),
+    so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has
+    no organism member, so no such edge could ever satisfy the domain. Edge directions are
+    unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where
+    the subject is an activity, since biolink gives it the domain 'biological process or activity';
+    the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder
+    ids until METPO mints them.
   llm_assisted: true

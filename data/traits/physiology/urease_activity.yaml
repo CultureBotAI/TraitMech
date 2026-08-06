@@ -102,13 +102,13 @@ causal_graphs:
       notes: Supports urea as the hydrolysis substrate.
     predicate_id: biolink:consumes
   - subject: urease_function
-    predicate: produces
+    predicate: has output
     object: ammonia
     description: Urea hydrolysis produces ammonia.
     evidence:
     - reference: DOI:10.1128/mr.53.1.85-108.1989
       notes: Mobley & Hausinger support ammonia release from urea hydrolysis.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: urease_function
     predicate: manifests as
     object: urease_activity_trait
@@ -120,21 +120,21 @@ causal_graphs:
         assayable phenotype used to score urease-positive organisms.
     predicate_id: METPO:2007400
   - subject: urease_function
-    predicate: produces
+    predicate: has output
     object: hydroxide
     description: Urea hydrolysis produces hydroxide, mechanistically explaining alkalinization.
     evidence:
     - reference: DOI:10.24263/2304-974x-2024-13-2-10
       notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: urease_function
-    predicate: produces
+    predicate: has output
     object: carbon_dioxide
     description: Urea hydrolysis produces carbon dioxide.
     evidence:
     - reference: DOI:10.24263/2304-974x-2024-13-2-10
       notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: urease_function
     predicate: increases
     object: ph_quality
@@ -230,4 +230,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009039×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (3 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

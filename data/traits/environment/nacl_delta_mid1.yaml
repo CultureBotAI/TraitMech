@@ -80,7 +80,7 @@ causal_graphs:
     description: Influx and biosynthesis of physiologically compatible organic osmolytes.
   edges:
   - subject: modest_osmoadaptive_flexibility
-    predicate: produces
+    predicate: confers
     object: nacl_delta_mid1_trait
     description: Modest osmoadaptive flexibility yields a 1–3% NaCl-delta breadth.
     evidence:
@@ -88,7 +88,7 @@ causal_graphs:
       snippet: salinity range
       notes: Supports modest osmoadaptive flexibility as the basis of an intermediate
         breadth.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: nacl_delta_mid1_trait
     predicate: is a
     object: nacl_delta
@@ -135,13 +135,13 @@ causal_graphs:
       notes: Bacteria commonly use compatible solutes - notably glycine betaine, proline,
         trehalose, ectoine and carnitine - to support osmoadaptation.
   - subject: ectoine_biosynthesis
-    predicate: produces
+    predicate: has output
     object: ectoine
     description: The EctB/EctA/EctC pathway synthesizes the compatible solute ectoine.
     evidence:
     - reference: DOI:10.3389/fmicb.2019.02811
       notes: Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: ectoine
     predicate: contributes to
     object: compatible_solute_accumulation
@@ -203,4 +203,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:1990573×1, CHEBI:27592×1, CHEBI:71578×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (1 to confers,
+    1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

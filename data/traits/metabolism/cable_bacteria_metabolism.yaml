@@ -138,7 +138,7 @@ causal_graphs:
       snippet: Electrogenic Sulfur Oxidation
       notes: Supports sulfide oxidation as the anodic process.
   - subject: electrogenic_sulfur_oxidation
-    predicate: produces
+    predicate: has output
     object: sulfate
     description: Sulfide oxidation can yield sulfate.
     evidence:
@@ -146,7 +146,7 @@ causal_graphs:
       snippet: sulfide
       notes: Source supports electrogenic sulfide oxidation; sulfate is the oxidized
         sulfur end product in the modeled sulfur oxidation route.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: conductive_fiber_network
     predicate: mediates
     object: long_distance_electron_transport
@@ -271,4 +271,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0030313×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
