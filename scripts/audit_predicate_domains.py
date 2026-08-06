@@ -18,14 +18,17 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   — every one of these is a false entailment.
                                   (#301, generalising #295)                [WARN]
 
-  ENABLES_RANGE_ON_TRAIT          an edge with ``predicate_id: RO:0002327``
-                                  (enables) whose object node is a ``TRAIT``.
-                                  biolink gives enables range 'biological process
-                                  or activity' (data/raw/biolink-model.yaml), and
-                                  a TRAIT is a disposition, not a process, so the
-                                  edge entails ``trait ⊑ BiologicalProcessOrActivity``
-                                  — the same shape as the RO:0002411 defect in
-                                  #235.                                     (#302) [WARN]
+  ENABLES_RANGE_VIOLATION         an edge with ``predicate_id: RO:0002327``
+                                  (enables) whose object node is NOT a
+                                  'biological process or activity'. biolink
+                                  declares that range
+                                  (data/raw/biolink-model.yaml), and only
+                                  BIOLOGICAL_PROCESS, PATHWAY and
+                                  MOLECULAR_FUNCTION satisfy it, so any other
+                                  object entails a false type. Began as a
+                                  TRAIT-only test (#302, 164 edges, since
+                                  migrated); widened to the full range in #315,
+                                  which surfaced 33 more.                    [WARN]
 
 Both classes are now BURNED DOWN and the check runs as a hard gate. It shipped
 as a ratchet over 530 known findings (#314), because neither was fixable without
@@ -79,9 +82,16 @@ DEFAULT_BASELINE = REPO_ROOT / "conf" / "predicate_domain_audit_baseline.tsv"
 # The microbe-domain root. Every object property transitively subPropertyOf this
 # inherits its rdfs:domain of METPO:1000525 (microbe). See #295/#301.
 MICROBE_DOMAIN_ROOT = "METPO:2000001"
-# enables: biolink range is 'biological process or activity'; a TRAIT object is
-# a disposition, not a process. See #302.
+# enables: biolink gives it range 'biological process or activity'
+# (data/raw/biolink-model.yaml). ANY object that is not an activity violates it.
+# This began as a TRAIT-only check (#302) because a trait is a disposition and
+# that was the 164-edge case; generalising it to the whole range (#315) surfaced
+# 33 further edges pointing at proteins, states, qualities, capacities,
+# chemicals and locations, which the narrower test could never see.
 ENABLES = "RO:0002327"
+# The CausalNodeTypeEnum members that ARE a 'biological process or activity'.
+# Everything else fails the range.
+ACTIVITY_NODE_TYPES = frozenset({"BIOLOGICAL_PROCESS", "PATHWAY", "MOLECULAR_FUNCTION"})
 
 ERROR = "ERROR"
 WARN = "WARN"
@@ -91,7 +101,7 @@ WARN = "WARN"
 # just run that family with --fail-on any.
 SEVERITY = {
     "MICROBE_DOMAIN_ON_NONORGANISM": WARN,
-    "ENABLES_RANGE_ON_TRAIT": WARN,
+    "ENABLES_RANGE_VIOLATION": WARN,
 }
 
 FIELDNAMES = ["file", "graph_id", "defect", "severity", "detail"]
@@ -179,14 +189,16 @@ def audit(traits_dir: Path, owl_path: Path = METPO_OWL) -> list[dict[str, str]]:
                                    f"⊑ microbe (METPO:1000525) via {MICROBE_DOMAIN_ROOT}"),
                     })
 
-                if pid == ENABLES and node_type.get(obj) == "TRAIT":
+                ot = node_type.get(obj)
+                if pid == ENABLES and ot is not None and ot not in ACTIVITY_NODE_TYPES:
                     findings.append({
                         "file": rel, "graph_id": gid,
-                        "defect": "ENABLES_RANGE_ON_TRAIT",
-                        "severity": SEVERITY["ENABLES_RANGE_ON_TRAIT"],
-                        "detail": (f"{edge_key} object_type=TRAIT — enables range is "
-                                   "'biological process or activity'; a disposition "
-                                   "cannot satisfy it"),
+                        "defect": "ENABLES_RANGE_VIOLATION",
+                        "severity": SEVERITY["ENABLES_RANGE_VIOLATION"],
+                        "detail": (f"{edge_key} object_type={ot} — enables range is "
+                                   "'biological process or activity', which only "
+                                   "BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION "
+                                   "satisfy"),
                     })
     return findings
 

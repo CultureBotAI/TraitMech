@@ -98,18 +98,25 @@ audit-graphs *args:
 # TRAIT object when its range is 'biological process or activity' (#302, 164).
 # Emits reports/predicate_domain_audit.tsv.
 #
-# BURNED DOWN, AND NOW A HARD GATE. This shipped as a ratchet over 530 known
-# findings (#314) because neither class was fixable without a per-family
-# biological/ontology decision. Those decisions landed — #302/#303 via the v8
-# predicates (#320, #323) and #301 via v9 (#326, #328, #329), with the last edge
-# re-grounded to RO:0001001 (derives into) in #327 — so the count is 0 and `--fail-on any` is
-# passed explicitly. There is no baseline file any more: every finding fails,
-# including one that a `--write-baseline` run would otherwise have frozen.
+# THE ORIGINAL TWO CLASSES ARE BURNED DOWN. This shipped as a ratchet over 530
+# findings (#314); those decisions landed — #302/#303 via the v8 predicates
+# (#320, #323) and #301 via v9 (#326, #328, #329), with the last edge re-grounded
+# to RO:0001001 in #327 — so MICROBE_DOMAIN_ON_NONORGANISM is 0 and stays 0.
 #
-# Do NOT reintroduce a baseline to make a new violation pass. The whole point of
-# reaching zero is that the next one is a bug to fix, not a backlog to inherit.
+# `--fail-on new` is back, but NOT to excuse those. #315 widened the enables
+# check from its original TRAIT-only test to the full biolink range, which
+# surfaced 33 edges pointing at proteins, states, qualities, capacities,
+# chemicals and locations — a class nothing could see before. They need per-edge
+# biological judgement, so they are baselined and tracked for burn-down; the
+# ratchet machinery was kept in the script for exactly this case.
+#
+# The distinction that matters: MICROBE_DOMAIN_ON_NONORGANISM has ZERO rows in
+# the baseline, so any regression there is `new` and still fails. A baseline is
+# for a class that has never been clean, never for one that has.
+#
+# Do NOT add rows to the baseline to make a regression pass.
 audit-predicate-domains *args:
-    uv run python scripts/audit_predicate_domains.py --fail-on any {{args}}
+    uv run python scripts/audit_predicate_domains.py --fail-on new {{args}}
 
 # Structural audit of evidence snippets: EvidenceItem.snippet is specified as a
 # VERBATIM quote and docs/CURATION_PLAYBOOK.md sharpens that to contiguous, no
