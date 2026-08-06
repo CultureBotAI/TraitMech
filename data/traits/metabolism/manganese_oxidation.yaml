@@ -83,16 +83,16 @@ causal_graphs:
       notes: Tebo et al. characterize the formation and properties of bacterially
         produced Mn(III/IV) oxides.
     predicate_id: METPO:2000202
-  - subject: molecular_oxygen
-    predicate: confers
-    object: manganese_oxidation_trait
+  - subject: manganese_oxidation_trait
+    predicate: has electron acceptor
+    object: molecular_oxygen
     description: O2 serves as the direct oxidant enabling multicopper-oxidase-mediated
       Mn(II) oxidation.
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
       notes: Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes
         for Mn(II) oxidation.
-    predicate_id: METPO:2007700
+    predicate_id: METPO:2007702
   - subject: manganese_oxidation_trait
     predicate: produces
     object: mn_iii_oh_mn_iii_intermediate
@@ -161,9 +161,12 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to
+    has electron acceptor), issue 302. RO:0002327 has range 'biological process or
+    activity', which a trait (a disposition) cannot satisfy. The O2 edge was also
+    reversed back to trait -> chemical, because the node describes O2 as the terminal
+    oxidant and that names the terminal-electron-acceptor role; grounding it to the
+    generic confers relation would drop exactly the role issue 303 exists to preserve.
+    Predicate is proposed in proposals/metpo_traitmech_v8 and is a placeholder id until
+    METPO mints it.
   llm_assisted: true

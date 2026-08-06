@@ -53,8 +53,15 @@ CONFERS = ("confers", "METPO:2007700")
 DONOR = ("has electron donor", "METPO:2007701")
 ACCEPTOR = ("has electron acceptor", "METPO:2007702")
 
-ACCEPTOR_RE = re.compile(r"electron acceptor|terminal electron", re.I)
-DONOR_RE = re.compile(r"electron donor|donors? for|reducing equivalent", re.I)
+# Role wording, not just the phrase "electron acceptor": manganese_oxidation
+# describes O2 as the "terminal oxidant"/"direct oxidant", which names the
+# terminal-acceptor role exactly as much as "terminal electron acceptor" does.
+# Matching only the latter dropped that edge to the `confers` catch-all, which is
+# not false but is strictly weaker — the precise loss #303 exists to stop.
+# `reductant` is included for symmetry on the donor side.
+ACCEPTOR_RE = re.compile(r"electron acceptor|terminal electron|\boxidant\b", re.I)
+DONOR_RE = re.compile(
+    r"electron donor|donors? for|reducing equivalent|\breductant\b", re.I)
 
 
 def classify(subject_type: str | None, subject_label: str, description: str) -> tuple[str, str]:
