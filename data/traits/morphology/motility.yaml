@@ -111,14 +111,14 @@ causal_graphs:
       notes: Supports gliding as an active bacterial movement mechanism.
     predicate_id: METPO:2007700
   - subject: ion_motive_force
-    predicate: enables
+    predicate: contributes to
     object: flagellar_motor
     description: Ion motive force powers rotation of many bacterial flagellar motors.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
       notes: Supports ion motive force powering the bacterial flagellar motor.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002326
   - subject: chemotaxis_signaling
     predicate: regulates
     object: motility_trait
@@ -265,4 +265,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to (RO:0002326),
+    issue 334. biolink declares enables range ''biological process or activity'', which only
+    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
+    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
+    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
+    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
+    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+    removed.'
   llm_assisted: true

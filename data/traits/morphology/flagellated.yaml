@@ -132,14 +132,14 @@ causal_graphs:
       snippet: reversible rotary motor
       notes: Supports basal body motor rotation of flagella.
   - subject: ion_motive_force
-    predicate: enables
+    predicate: contributes to
     object: stator_complex
     description: Ion flux through stator complexes powers torque generation.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
       notes: Supports ion motive force coupling to flagellar motor function.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002326
   - subject: chemotaxis_signaling
     predicate: regulates
     object: flagellated_trait
@@ -162,7 +162,7 @@ causal_graphs:
         tip where assembly occurs"'
     predicate_id: METPO:2007804
   - subject: flii_atpase_complex
-    predicate: enables
+    predicate: part of
     object: ft3ss_export_system
     description: The FliH-FliI-FliJ ATPase complex powers flagellar protein export
       by the fT3SS.
@@ -170,7 +170,7 @@ causal_graphs:
     - reference: DOI:10.1128/ecosalplus.esp-0011-2023
       notes: '"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis
         for export"'
-    predicate_id: RO:0002327
+    predicate_id: biolink:part_of
   - subject: fld_filament_cap
     predicate: enables
     object: filament_polymerization
@@ -301,4 +301,16 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is unchanged
     and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto part of (biolink:part_of)
+    and contributes to (RO:0002326), issue 334. biolink declares enables range ''biological
+    process or activity'', which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy,
+    so an edge pointing at a GENE_OR_PROTEIN entailed a false type. The replacements are chosen
+    per idiom rather than swept: a gene cluster ENCODES its product, a subunit is PART OF
+    the complex it belongs to, and an energy source or acquired repertoire CONTRIBUTES TO
+    the machine it powers or composes. All three declare no rdfs:domain or rdfs:range, so
+    none can reintroduce the class of defect being removed.'
   llm_assisted: true

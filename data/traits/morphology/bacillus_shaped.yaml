@@ -96,14 +96,14 @@ causal_graphs:
       of rod-shape determinants.
   edges:
   - subject: mreB
-    predicate: enables
+    predicate: part of
     object: rod_complex
     description: MreB organizes rod-shape elongation machinery.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-010521-010834
       snippet: MreB filaments interact with Rod complexes
       notes: Supports MreB-Rod complex interaction in rod-shape regulation.
-    predicate_id: RO:0002327
+    predicate_id: biolink:part_of
   - subject: rod_complex
     predicate: directs
     object: peptidoglycan_synthesis
@@ -287,4 +287,16 @@ curation_history:
     RO:0002234 (has output) is used where the subject is an activity, since biolink gives
     it the domain 'biological process or activity'; the METPO replacements are proposed in
     proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto part of (biolink:part_of),
+    issue 334. biolink declares enables range ''biological process or activity'', which only
+    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
+    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
+    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
+    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
+    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+    removed.'
   llm_assisted: true

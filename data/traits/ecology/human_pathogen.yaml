@@ -164,7 +164,7 @@ causal_graphs:
         with gain of genes facilitating host tropism and virulence factors.
     predicate_id: RO:0002327
   - subject: virulence_gene_acquisition
-    predicate: enables
+    predicate: contributes to
     object: human_virulence_factors
     description: Acquired genes contribute the human-adapted virulence factor repertoire
       underlying human pathogenicity.
@@ -172,7 +172,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Gene acquisition facilitates changes in host species tropism, including
         virulence factors enabling human-pathogenic lineages.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002326
   - subject: within_host_genetic_diversification
     predicate: enables
     object: within_host_adaptation
@@ -283,4 +283,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0043684×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to (RO:0002326),
+    issue 334. biolink declares enables range ''biological process or activity'', which only
+    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
+    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
+    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
+    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
+    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+    removed.'
   llm_assisted: true
