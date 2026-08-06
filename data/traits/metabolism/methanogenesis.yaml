@@ -292,3 +292,18 @@ curation_history:
     declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
     removed.'
   llm_assisted: true
+- timestamp: '2026-08-06T09:30:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Correction to the REGROUND_CAUSAL_EDGE event above, issue 334 review. That event
+    claimed "All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class
+    of defect being removed". For biolink:encodes that justification was vacuous: the term
+    is ABSENT from the pinned biolink 4.4.0 model, so it trivially declares nothing, and the
+    check used could not distinguish absent from unconstrained. reports/biolink_coverage.tsv
+    already recorded it as the only applied biolink: CURIE with no backing slot. The grounding
+    is retained because a gene CLUSTER to protein COMPLEX edge does not fit `has gene product`''s
+    range of gene product mixin, so repointing would trade a missing term for a wrong range;
+    mappings/predicate_grounding.tsv now states plainly that it is a local coinage. Tracked
+    in issue 342. The edge itself is unchanged and is still an improvement on enables, whose
+    declared range it genuinely violated.'
+  llm_assisted: true

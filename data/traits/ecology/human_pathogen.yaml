@@ -296,3 +296,17 @@ curation_history:
     declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
     removed.'
   llm_assisted: true
+- timestamp: '2026-08-06T09:30:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Correction to the REGROUND_CAUSAL_EDGE event above, issue 334 review. That event
+    enumerated three idioms and asserted that all three targets declare no rdfs:domain or
+    rdfs:range. Two parts are now known to be wrong, though neither affects this record''s
+    own edge. The biolink:encodes half rested on a vacuous check - that term is absent from
+    the pinned biolink model, tracked in issue 342. The "energy source ... the machine it
+    powers" half was retracted: those four motive-force edges were reverted to enables and
+    re-deferred, because biolink defines contributes to as contributing to the occurrence
+    or GENERATION of the object, which a motive force does not do to a motor. This record''s
+    surviving edge, acquired genes contributing to the virulence factor repertoire, does fit
+    that definition and is unchanged.'
+  llm_assisted: true
