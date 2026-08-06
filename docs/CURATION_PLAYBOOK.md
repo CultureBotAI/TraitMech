@@ -123,8 +123,9 @@ check: writing
 
 makes a reasoner conclude the trait node is an organism. `predicate_id`
 is an unbound string, so `validate-strict` cannot see it — but
-`just audit-predicate-domains` **does**, and since #327 it runs
-`--fail-on any` inside `just qc`. Writing one of these now fails CI.
+`just audit-predicate-domains` **does**, and it runs inside `just qc`.
+That class is at zero and is `ERROR` severity, so a new one fails CI and
+cannot be baselined away.
 
 `CausalNodeTypeEnum` has no organism member — causal-graph nodes are
 deliberately taxon-agnostic — so **no causal-graph edge can satisfy
@@ -145,6 +146,31 @@ row in `mappings/predicate_grounding.tsv` is now gated to the node types
 it actually admits. The count is **0** and the audit hard-fails on a new
 one, so this section describes a mistake the tooling now prevents rather
 than a backlog to work around.
+
+### `enables` needs a process-or-activity object
+
+Separately from the domain rule above, `enables` (`RO:0002327`) has a
+**range**: biolink declares it `biological process or activity`. Of the
+`CausalNodeTypeEnum` members, only these three satisfy it:
+
+`BIOLOGICAL_PROCESS`, `PATHWAY`, `MOLECULAR_FUNCTION`
+
+Any other object type is a range violation, flagged as
+`ENABLES_RANGE_VIOLATION`. **33 pre-existing edges** are baselined and
+tracked in #334; a *new* one fails `just qc`. What to write instead:
+
+| you want to say | object type | write |
+|---|---|---|
+| X makes the organism able to exhibit a trait | `TRAIT` | `confers` — `METPO:2007700` |
+| a process yields a chemical/entity | any | `has output` — `RO:0002234` |
+| one chemical becomes another | `CHEMICAL` | `derives into` — `RO:0001001` |
+| X reduces some quantity | any | `decreases` — `RO:0002212` |
+| a gene/protein complex is assembled or activated | `GENE_OR_PROTEIN` | not settled — see #334 |
+| X enables a tolerance or capability | `STATE`, `CAPACITY` | not settled — see #334 |
+
+If none fits, point `enables` at the graph's **process** node rather than
+at the entity: `<gene> enables <the process it drives>` is almost always
+both true and range-correct.
 
 The organism-subject form stays valid at the *assertion* site —
 `<organism> METPO:2000006 CHEBI:17234` — which is exactly what the

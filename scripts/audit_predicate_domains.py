@@ -30,18 +30,24 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   migrated); widened to the full range in #315,
                                   which surfaced 33 more.                    [WARN]
 
-Both classes are now BURNED DOWN and the check runs as a hard gate. It shipped
-as a ratchet over 530 known findings (#314), because neither was fixable without
-a per-family biological decision (#301) or an ontology decision on the enables
-range (#302, #303). Those landed — the v8 predicates for #302/#303 (#320, #323)
-and v9 for #301 (#326, #328, #329), with the final edge re-grounded to
-RO:0001001 in #327 — so the count is 0 and ``just audit-predicate-domains``
-passes ``--fail-on any``. No baseline file is tracked any more.
+The two classes are at different stages, and the configuration reflects that.
 
-The ratchet machinery below is deliberately KEPT rather than deleted: it is what
-makes a future class of violation landable without blocking unrelated work, the
-same way this one was. But do not reintroduce a baseline to make a new violation
-pass — reaching zero is what makes the next one a bug rather than a backlog.
+MICROBE_DOMAIN_ON_NONORGANISM is **burned down**: 530 findings shipped as a
+ratchet in #314 because nothing was fixable without decisions that had not been
+made; those landed (v8 for #302/#303 in #320/#323, v9 for #301 in #326/#328/#329,
+final edge in #327) and the count is **0**. It is therefore ERROR severity, which
+makes ``--write-baseline`` REFUSE to freeze one — a regression cannot be
+baselined away, even by accident, while re-freezing the other class.
+
+ENABLES_RANGE_VIOLATION is **not** burned down: widening the enables test from
+TRAIT-only to the full biolink range (#315) surfaced 33 pre-existing edges that
+need per-edge biological judgement (#334). They are baselined, and
+``just audit-predicate-domains`` passes ``--fail-on new`` so they do not block
+while any NEW violation of either class does.
+
+The rule this encodes: **a baseline is for a class that has never been clean,
+never for one that has.** Do not add rows to excuse a regression; for the domain
+class the severity now stops you.
 
 The microbe-domain predicate set is derived at run time by walking the
 ``subPropertyOf`` closure to METPO:2000001 in ``data/raw/metpo.owl`` — NOT from
@@ -51,17 +57,22 @@ vendored, the same reasoning audit-qc-paths uses for its read-set.
 Writes ``reports/predicate_domain_audit.tsv``. Exit code is governed by
 ``--fail-on``:
 
-  any    (DEFAULT since #327) every finding fails and the baseline is ignored.
-  new    any finding NOT in the baseline fails — the ratchet. Use when
-         reintroducing this check over a NEW class of violation, together with
-         ``--write-baseline``; not for excusing a regression in a class that
-         has already reached zero.
-  error  only new ERROR-severity findings fail.
+  any    (argparse DEFAULT) every finding fails and the baseline is ignored. A
+         bare invocation therefore exits 1 while the 33 #334 edges stand — that
+         is intentional, so a stray baseline file can never weaken an ad-hoc run
+         (#327). The justfile recipe passes ``--fail-on new`` explicitly.
+  new    any finding NOT in the baseline fails — the ratchet, and what `just
+         audit-predicate-domains` uses today. For a class that has never been
+         clean; not for excusing a regression in one that has.
+  error  only new ERROR-severity findings fail — i.e. only the burned-down
+         domain class.
 
 Usage:
-    python scripts/audit_predicate_domains.py
-    python scripts/audit_predicate_domains.py --write-baseline   # freeze today
-    python scripts/audit_predicate_domains.py --fail-on any      # once burned down
+    just audit-predicate-domains                                 # --fail-on new
+    python scripts/audit_predicate_domains.py --fail-on new      # same, directly
+    python scripts/audit_predicate_domains.py                    # strict; exits 1
+                                                                 # while #334 stands
+    python scripts/audit_predicate_domains.py --write-baseline   # refuses on ERROR
 """
 from __future__ import annotations
 
@@ -96,11 +107,18 @@ ACTIVITY_NODE_TYPES = frozenset({"BIOLOGICAL_PROCESS", "PATHWAY", "MOLECULAR_FUN
 ERROR = "ERROR"
 WARN = "WARN"
 
-# Both WARN: pre-existing at scale, so they must be baselineable (write-baseline
-# refuses to freeze an ERROR). Promote to ERROR once a family is burned down, or
-# just run that family with --fail-on any.
+# MICROBE_DOMAIN_ON_NONORGANISM is ERROR because it is BURNED DOWN (#301): there
+# are zero of them and there must stay zero. `--write-baseline` refuses to freeze
+# an ERROR, so a regression cannot be silently baselined away by someone running
+# it to re-freeze the other class. That makes "a baseline is only for a class
+# that has never been clean" a structural guarantee rather than a convention
+# nobody enforces (#315 review).
+#
+# ENABLES_RANGE_VIOLATION stays WARN: 33 pre-existing edges need per-edge
+# biological judgement (#334), so the class must remain baselineable until it is
+# burned down. Promote it to ERROR then, exactly as this one was.
 SEVERITY = {
-    "MICROBE_DOMAIN_ON_NONORGANISM": WARN,
+    "MICROBE_DOMAIN_ON_NONORGANISM": ERROR,
     "ENABLES_RANGE_VIOLATION": WARN,
 }
 

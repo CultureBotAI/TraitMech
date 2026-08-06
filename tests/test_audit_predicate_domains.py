@@ -295,13 +295,31 @@ def test_two_edges_get_distinct_baseline_keys(tmp_path):
     assert [_key(r) for r in new] == [_key(findings[1])]
 
 
-def test_ratchet_blocks_new_warn_findings(tmp_path):
+def test_ratchet_blocks_new_findings(tmp_path):
+    """The ratchet blocks on severity-independent grounds: `new` means new."""
     owl = _write_owl(tmp_path)
     d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
     findings = audit(d, owl)
     new, blocking = partition(findings, baseline=set(), fail_on="new")
     assert len(new) == len(blocking) == len(findings) == 2
-    assert all(r["severity"] != ERROR for r in blocking)
+
+
+def test_domain_class_is_error_so_it_cannot_be_baselined(tmp_path):
+    """#315 review: the class distinction must be structural, not conventional.
+
+    MICROBE_DOMAIN_ON_NONORGANISM is burned down (#301), so it is ERROR and
+    `--write-baseline` refuses to freeze it. Without this, one `--write-baseline`
+    run intended to re-freeze the ENABLES_RANGE_VIOLATION backlog would silently
+    swallow a domain regression too.
+    """
+    owl = _write_owl(tmp_path)
+    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    assert all(f["severity"] == ERROR for f in audit(d, owl))
+    baseline = tmp_path / "b.tsv"
+    r = _run_cli(d, owl, tmp_path / "o.tsv", baseline, "--write-baseline")
+    assert r.returncode == 1
+    assert "Refusing to write baseline" in r.stderr
+    assert not baseline.exists()
 
 
 def test_ratchet_passes_when_everything_is_baselined(tmp_path):
@@ -344,7 +362,8 @@ def test_write_baseline_freezes_then_passes(tmp_path):
     passing `--fail-on new` alongside `--write-baseline`.
     """
     owl = _write_owl(tmp_path)
-    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    # A WARN-class fixture: only ENABLES_RANGE_VIOLATION is baselineable now.
+    d = _write(tmp_path, "eq.yaml", ENABLES_ON_QUALITY)
     baseline = tmp_path / "baseline.tsv"
     out = tmp_path / "out.tsv"
 
@@ -366,7 +385,7 @@ def test_default_fail_on_is_any(tmp_path):
     passed. Pinned here so the hardening cannot be undone by an argparse edit.
     """
     owl = _write_owl(tmp_path)
-    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    d = _write(tmp_path, "eq.yaml", ENABLES_ON_QUALITY)  # WARN class, baselineable
     baseline = tmp_path / "baseline.tsv"
     out = tmp_path / "out.tsv"
     _run_cli(d, owl, out, baseline, "--write-baseline")
