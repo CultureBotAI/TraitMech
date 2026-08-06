@@ -6,9 +6,13 @@
 
 ## Required reading
 
-Before generating a proposal, read:
+Before generating a proposal, read the following. Sibling repos are named
+rather than given an absolute path — they are separate checkouts whose location
+is the reader's, not the author's (#310). The repo layout these assume is
+sibling directories under one parent, the same assumption `CLAW_SRC` encodes in
+the justfile.
 
-1. **`/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/.claude/skills/metpo-proposal/SKILL.md`** —
+1. **`kg-microbe`: `.claude/skills/metpo-proposal/SKILL.md`** —
    the upstream metpo-proposal skill. Defines:
    - Aristotelian definition style (`<genus>: <differentia>`).
    - `definition_source` citation forms (PMID, DOI, BacDive, `TODO:add_citation`).
@@ -16,15 +20,15 @@ Before generating a proposal, read:
    - Parent-class selection (audit for siblings before falling back to `METPO:1000000`).
    - The 12-point pre-submission checklist.
    - Paired predicate convention (`does not <stem>` + shared related-synonym).
-2. **`/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/metpo_proposal_classes_robot.tsv`** —
+2. **`kg-microbe`: `mappings/metpo_proposal_classes_robot.tsv`** —
    the canonical 11-column class template. Copy the two-row header verbatim.
-3. **`/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/metpo_proposal_properties_robot.tsv`** —
+3. **`kg-microbe`: `mappings/metpo_proposal_properties_robot.tsv`** —
    the canonical 12-column property template.
-4. **`/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/CommunityMech/CommunityMech/proposals/metpo_communitymech_v1/`** —
+4. **`CommunityMech`: `proposals/metpo_communitymech_v1/`** —
    the most recent worked example. Read all three files end-to-end before
    writing a new cohort; the TraitMech v1 cohort follows the same conventions
    with a different ID block and subset tag.
-5. **`TraitMech/.claude/skills/manage-identifiers/SKILL.md`** — the
+5. **`TraitMech`: `.claude/skills/manage-identifiers/SKILL.md`** — the
    `traitmech:NNNNNN` allocation policy. Scope-A proposals are the upstream
    half of that fallback workflow.
 

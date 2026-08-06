@@ -48,6 +48,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import sys
 from collections import defaultdict
@@ -57,10 +58,33 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 RESIDUAL_TSV = REPO_ROOT / "reports/node_grounding_residual.tsv"
 MAPPING_TSV = REPO_ROOT / "mappings/node_grounding.tsv"
 CANDIDATES_TSV = REPO_ROOT / "reports/uniprot_match_candidates.tsv"
-KG_UNIPROT_NODES = Path(
-    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/"
-    "kg-microbe/merged-kg_uniprot_nodes.tsv"
-)
+# The UniProt node dump lives in the sibling kg-microbe checkout, which has no
+# repo-relative form from here. Located the same way the justfile locates claw
+# (CLAW_SRC): an env var with a sibling-directory default, so the layout is a
+# convention rather than one machine's absolute path (#310). The previous value
+# was hardcoded to a single developer's home directory and could not resolve
+# anywhere else, including CI.
+def _default_kg_microbe_dir() -> Path:
+    """First sibling-ish directory named kg-microbe, else the flat-sibling guess.
+
+    Tries one level further out than the obvious guess because a nested checkout
+    (TraitMech inside a workspace dir that is itself beside kg-microbe) is a real
+    layout, and there the flat guess never resolves (#337 review). Falls back to
+    the flat form so the not-found message names a plausible location rather than
+    the last thing tried.
+    """
+    for base in (REPO_ROOT.parent, REPO_ROOT.parent.parent):
+        candidate = base / "kg-microbe"
+        if candidate.is_dir():
+            return candidate
+    return REPO_ROOT.parent / "kg-microbe"
+
+
+# `or`, not a get() default: KG_MICROBE_DIR= (set but empty) would otherwise
+# become Path("."), and the not-found message would then print a bare filename
+# with no hint of where it looked. Matches the idiom in robot_validate_proposal.
+KG_MICROBE_DIR = Path(os.environ.get("KG_MICROBE_DIR") or _default_kg_microbe_dir())
+KG_UNIPROT_NODES = KG_MICROBE_DIR / "merged-kg_uniprot_nodes.tsv"
 
 # Per-label cap to avoid overly-generic matches dominating the index.
 # Set higher than the typical exact-match volume so the exact-match
@@ -126,7 +150,14 @@ def stream_uniprot_matches(
 ) -> dict[str, list[tuple[str, str]]]:
     """Walk the kg-microbe UniProt nodes file, return label → [(curie, name)]."""
     if not KG_UNIPROT_NODES.exists():
-        raise FileNotFoundError(KG_UNIPROT_NODES)
+        # Name the knob, not just the missing path: the default is a guess about
+        # the caller's directory layout, and a bare FileNotFoundError does not
+        # say that it is overridable.
+        raise SystemExit(
+            f"error: {KG_UNIPROT_NODES} not found.\n"
+            f"Set KG_MICROBE_DIR to a kg-microbe checkout containing "
+            f"merged-kg_uniprot_nodes.tsv (looked in: {KG_MICROBE_DIR})."
+        )
 
     regex = build_regex(labels)
     label_set = set(labels)
