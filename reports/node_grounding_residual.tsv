@@ -1260,6 +1260,7 @@ homologous recombination between is copies	BIOLOGICAL_PROCESS	1	data/traits/geno
 10-formyl-tetrahydrofolate	CHEMICAL	1	data/traits/metabolism/acetogenesis.yaml
 5,10-methylene-tetrahydrofolate	CHEMICAL	1	data/traits/metabolism/acetogenesis.yaml
 5-methyl-tetrahydrofolate	CHEMICAL	1	data/traits/metabolism/acetogenesis.yaml
+acetate kinase step	BIOLOGICAL_PROCESS	1	data/traits/metabolism/acetogenesis.yaml
 reverse methanogenesis	PATHWAY	1	data/traits/metabolism/anaerobic_oxidation_of_methane.yaml
 direct interspecies electron transfer (diet)	BIOLOGICAL_PROCESS	1	data/traits/metabolism/anaerobic_oxidation_of_methane.yaml
 anaerobic or microaerophilic condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/anaerobic_respiration.yaml
