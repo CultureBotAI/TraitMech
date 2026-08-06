@@ -2588,7 +2588,7 @@ data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:hi
 data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:low_nutrient_environment->high_affinity_sbp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-024-07924-w has no snippet
 data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:low_nutrient_environment->streamlined_genome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-023-36988-x has no snippet
 data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:oligotrophic_trait->small_cell_volume[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-48591-9 has no snippet
-data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:streamlined_genome->reduced_metabolic_redundancy[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-024-07924-w has no snippet
+data/traits/physiology/oligotrophic.yaml	oligotrophic_low_nutrient_efficiency:streamlined_genome->metabolic_redundancy[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-024-07924-w has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:cytochrome_bc1_complex->oxidative_phosphorylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:glycolysis->central_carbon_metabolism[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:nadh_dehydrogenase_complex_i->oxidative_phosphorylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet

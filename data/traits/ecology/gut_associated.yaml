@@ -150,7 +150,7 @@ causal_graphs:
         bacteria in the small intestine (Muramatsu & Winter, 2024).
     predicate_id: RO:0002212
   - subject: peristalsis
-    predicate: reduces
+    predicate: decreases
     object: duodenal_retention
     description: Strong peristalsis (plus bile/antimicrobials) makes the duodenum
       hostile to retention.
@@ -158,7 +158,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12051026
       notes: The duodenum is hostile to retention due to bile, antimicrobials, and
         strong peristalsis (Lin et al., 2024).
-    predicate_id: METPO:2007802
+    predicate_id: RO:0002212
   - subject: luminal_oxygen_limitation
     predicate: enables
     object: primary_fermenter_community
@@ -214,6 +214,18 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is unchanged
     and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from
+    METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses
+    under the single label `reduces` - genuine electron donation, and a lessens/decreases
+    sense - and METPO:2007802 is defined as donating electrons to the object and lowering
+    its oxidation state, which this edge does not assert. The two senses could not be separated
+    mechanically because the label was identical, so they migrated together in issue 329 and
+    were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range,
+    so this introduces no entailment of the kind issue 301 removed.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3
