@@ -122,8 +122,22 @@ def write_validated_trait(
     errors = validate_trait(doc, target_class=target_class, schema_path=schema_path)
     if errors:
         raise ValidationFailedError(path, errors)
-    # Match the repo's existing yaml emission convention so re-running the
-    # helper over an existing file produces a byte-identical diff.
+    # Matches the repo's schema-side emission convention. It does NOT guarantee a
+    # byte-identical round-trip, which this comment used to claim (#322): loading
+    # and immediately re-writing an UNMODIFIED trait file reformats 350 of the
+    # 477 in data/traits/, because safe_dump re-wraps long strings at its own
+    # width and drops hand-written quoting. Only 127 currently survive untouched.
+    #
+    # That matters for BULK scripts. Touching N files through this helper buries
+    # the real change in reflow churn across every long string in them, which is
+    # the difference between a reviewable migration and an unreviewable one --
+    # #323's 164-edge migration and #328's 185-edge one both edit raw lines
+    # instead, for exactly this reason. For a single record, or for a file this
+    # helper already owns, the reformatting is harmless.
+    #
+    # Making the claim true would mean normalising all 477 files once and gating
+    # it with a round-trip test; that is a large one-time reformat and is still
+    # open on #322.
     opts = {
         "default_flow_style": False,
         "sort_keys": False,
