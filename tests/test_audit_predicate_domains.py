@@ -189,6 +189,9 @@ def test_enables_on_process_not_flagged(tmp_path):
 
 # --- clean corpus ------------------------------------------------------------
 
+# Genuinely clean: enables points at a process (satisfies its range), and the
+# second edge's predicate is outside the microbe-domain closure. Neither defect
+# fires, so audit() must return [] with no filtering.
 CLEAN = """\
 identifier: traitmech:000006
 label: t
@@ -197,30 +200,17 @@ causal_graphs:
   nodes:
   - {node_id: tr, label: T, node_type: TRAIT}
   - {node_id: proc, label: P, node_type: BIOLOGICAL_PROCESS}
+  - {node_id: chem, label: C, node_type: CHEMICAL}
   edges:
-  - {subject: proc, predicate: enables, object: tr, predicate_id: RO:0002327}
+  - {subject: chem, predicate: enables, object: proc, predicate_id: RO:0002327}
   - {subject: proc, predicate: y, object: tr, predicate_id: METPO:3000000}
 """
 
 
 def test_clean_graph_has_no_findings(tmp_path):
-    # enables->TRAIT here WOULD flag, so use a process object plus a non-domain
-    # predicate; both are range/domain-clean.
     owl = _write_owl(tmp_path)
-    d = _write(tmp_path, "clean.yaml", textwrap.dedent("""\
-        identifier: traitmech:000099
-        label: t
-        causal_graphs:
-        - graph_id: g
-          nodes:
-          - {node_id: tr, label: T, node_type: TRAIT}
-          - {node_id: proc, label: P, node_type: BIOLOGICAL_PROCESS}
-          edges:
-          - {subject: proc, predicate: enables, object: tr, predicate_id: RO:0002327}
-        """))
-    # enables->TRAIT flags; drop it and confirm the rest is clean.
-    findings = [f for f in audit(d, owl) if f["defect"] != "ENABLES_RANGE_ON_TRAIT"]
-    assert findings == []
+    d = _write(tmp_path, "clean.yaml", CLEAN)
+    assert audit(d, owl) == []
 
 
 def test_severity_assigned(tmp_path):
