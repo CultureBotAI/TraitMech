@@ -91,6 +91,29 @@ def test_no_qc_recipe_yields_no_chain():
     assert qc_chain("build:\n    echo hi\n") == []
 
 
+def test_tops_named_directly_finds_real_directories(tmp_path):
+    """#312: `lint` runs `ruff check src/ scripts/ tests/` and drives no
+    script, so its read-set is knowable only from the recipe body."""
+    for name in ("src", "scripts", "tests"):
+        (tmp_path / name).mkdir()
+    body = "uv run ruff check src/ scripts/ tests/"
+    assert aqp.tops_named_directly(body, tmp_path) == {"src", "scripts", "tests"}
+
+
+def test_tops_named_directly_ignores_non_directories(tmp_path):
+    """A flag or a package name must not masquerade as coverage."""
+    (tmp_path / "src").mkdir()
+    body = "uv run ruff check --fix src/ --output-format=concise nonexistent/"
+    assert aqp.tops_named_directly(body, tmp_path) == {"src"}
+
+
+def test_a_recipe_naming_directories_directly_is_not_blind(tmp_path):
+    """It contributes its read-set instead of raising BlindGate."""
+    assert aqp.tops_named_directly("uv run ruff check src/", tmp_path) == set()
+    (tmp_path / "src").mkdir()
+    assert aqp.tops_named_directly("uv run ruff check src/", tmp_path) == {"src"}
+
+
 def test_scripts_are_extracted_from_a_recipe_body():
     body = "    uv run python scripts/a_b.py --flag\n    uv run python scripts/c.py\n"
     assert scripts_invoked(body) == ["scripts/a_b.py", "scripts/c.py"]

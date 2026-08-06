@@ -8,6 +8,11 @@ on:
       - "src/traitmech/schema/**"
       - "src/traitmech/**.py"
       - "scripts/**.py"
+      # `lint` joined the qc chain in #312 and runs ruff over tests/ as well,
+      # so a tests-only PR now changes what qc verifies. audit-qc-paths caught
+      # this the moment lint was added — a filter narrower than what the job
+      # checks is exactly #184/#200.
+      - "tests/**.py"
       - "justfile"
       - "pyproject.toml"
       - ".github/workflows/qc.yaml"

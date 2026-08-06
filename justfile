@@ -376,6 +376,10 @@ test-cov:
 format:
     uv run ruff format src/ scripts/ tests/
 
+# Runs inside `qc`, so a new violation fails CI rather than accumulating.
+# It was NOT in qc until #312, and had been failing on main with nobody
+# noticing — which meant it gave no signal at all, and telling whether a branch
+# added anything required diffing failing-file lists against main by hand.
 lint:
     uv run ruff check src/ scripts/ tests/
 
@@ -697,7 +701,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

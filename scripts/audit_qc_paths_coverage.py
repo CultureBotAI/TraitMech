@@ -87,6 +87,27 @@ def scripts_invoked(body: str) -> list[str]:
     return sorted(set(re.findall(r"(scripts/\w+\.py)", body)))
 
 
+def tops_named_directly(body: str, root: Path) -> set[str]:
+    """Top-level repo directories a recipe body names as bare arguments.
+
+    Not every qc-chain recipe drives a `scripts/*.py`. `lint` runs
+    `ruff check src/ scripts/ tests/`, naming its read-set directly in the
+    justfile, so `scripts_invoked` finds nothing and the recipe would be
+    reported as blind (#312) even though its coverage is fully knowable.
+
+    Only tokens that ARE an existing top-level directory count. Matching
+    anything path-shaped would let a flag or a package name masquerade as
+    coverage, which is the failure mode `paths_read`'s ast parsing exists to
+    avoid on the script side.
+    """
+    tops: set[str] = set()
+    for token in re.findall(r"[\w./-]+", body):
+        head = token.strip("./").split("/")[0]
+        if head and (root / head).is_dir():
+            tops.add(head)
+    return tops
+
+
 def paths_read(script: Path, root: Path) -> set[str]:
     """Top-level repo entries a script names as a path constant.
 
@@ -176,8 +197,19 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
     read_set: set[str] = set()
     silent: set[str] = set()
     for recipe in chain:
-        invoked = scripts_invoked(recipe_body(justfile_text, recipe))
+        body = recipe_body(justfile_text, recipe)
+        invoked = scripts_invoked(body)
         if not invoked:
+            # Before declaring the recipe blind, check whether it names its
+            # read-set directly — `lint` does (#312).
+            direct = tops_named_directly(body, root)
+            if direct:
+                for top in direct:
+                    read_set.add(top)
+                    if top in IGNORED_TOPS or top in covered:
+                        continue
+                    seen.setdefault(top, set()).add(f"{recipe} → (named directly)")
+                continue
             # A dependency-only recipe — the shape of `check: lint test` and of
             # `qc:` itself — has an empty body, so it would contribute nothing
             # and be skipped in silence. Grouping the chain
