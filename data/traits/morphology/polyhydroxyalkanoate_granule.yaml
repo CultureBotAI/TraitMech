@@ -26,7 +26,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:106590
   taxon_label: Cupriavidus necator
-  note: "Model PHA/PHB accumulator (strain H16; formerly Ralstonia eutropha / Alcaligenes eutrophus)."
+  note: Model PHA/PHB accumulator (strain H16; formerly Ralstonia eutropha / Alcaligenes
+    eutrophus).
   reference: PMID:16964242
 causal_graphs:
 - graph_id: pha_granule_carbon_energy_storage

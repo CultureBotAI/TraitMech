@@ -25,7 +25,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
-  note: "Model obligate anaerobe (ABE fermentation; oxygen-sensitive)."
+  note: Model obligate anaerobe (ABE fermentation; oxygen-sensitive).
   reference: PMID:11466286
 causal_graphs:
 - graph_id: obligate_anaerobe_oxygen_toxicity

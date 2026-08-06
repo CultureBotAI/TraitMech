@@ -4,7 +4,8 @@ Its comment claimed a byte-identical round-trip. That is false for most of the
 corpus, and believing it is how a bulk script ends up rewriting every long
 string in every file it touches.
 
-These tests bind to the helper itself, not to a re-declared copy of its options.
+Since #322 normalised the corpus the claim is true and these tests ENFORCE it.
+They bind to the helper itself, not to a re-declared copy of its options.
 The first cut asserted on ``yaml.safe_dump`` with a duplicated ``DUMP_OPTS``
 dict, which meant adding e.g. ``width=4096`` to the real options would have
 stopped the re-wrapping, falsified the comment's stated cause and its counts,
@@ -51,22 +52,18 @@ def _split() -> tuple[tuple[Path, ...], tuple[Path, ...]]:
     return tuple(same), tuple(changed)
 
 
-def test_a_hand_edited_corpus_file_is_reformatted_by_the_helper(tmp_path):
+def test_a_corpus_file_round_trips_byte_identically(tmp_path):
     """End to end through write_validated_trait, not through safe_dump.
 
-    Demonstrates the behaviour on a real record. It is NOT the test that carries
-    the guarantee: injecting width=4096 into EMIT_OPTS leaves it passing, because
-    dropped quoting alone still reformats some files. The corpus-split test below
-    is what fails in that case, and measuring which one bites was the point of
-    canarying rather than assuming.
+    Since #322's normalisation the claim in write_validated.py is TRUE, so this
+    asserts it directly rather than demonstrating its failure. Change EMIT_OPTS
+    or how they are composed and this breaks on a real record.
     """
-    _same, changed = _split()
-    assert changed, "expected some corpus files to be reformatted"
-    source = changed[0]
+    source = TRAITS[0]
     doc = yaml.safe_load(source.read_text())
     out = tmp_path / source.name
     write_validated_trait(doc, out)
-    assert out.read_bytes() != source.read_bytes()
+    assert out.read_bytes() == source.read_bytes()
 
 
 def test_the_helpers_own_output_round_trips(tmp_path):
@@ -84,15 +81,18 @@ def test_the_helpers_own_output_round_trips(tmp_path):
     assert first.read_bytes() == second.read_bytes()
 
 
-def test_the_documented_corpus_split_is_still_true():
-    """Keeps the numbers in write_validated.py honest rather than a snapshot.
+def test_the_whole_corpus_round_trips():
+    """The claim is now ENFORCED, not merely corrected (#322).
 
-    The original claim misled precisely because it was frozen prose nobody
-    rechecked. This fails loudly on the day #322's normalisation lands, which is
-    the correct time to update the comment.
+    Before normalisation this asserted a 127/350 split, i.e. it documented how
+    false the claim was. The corpus was normalised so the claim became true, and
+    this is what keeps it true: any record hand-edited back into a form
+    safe_dump would not emit fails here, and so does any change to EMIT_OPTS or
+    to how they are composed.
     """
-    same, changed = _split()
-    assert (len(same), len(changed)) == (127, 350), (
-        f"round-trip split moved to {len(same)} identical / {len(changed)} "
-        f"reformatted; update the counts in write_validated.py's comment"
+    _same, changed = _split()
+    assert not changed, (
+        f"{len(changed)} record(s) no longer round-trip through "
+        f"write_validated_trait; first few: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in changed[:5]]}"
     )

@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1308
   taxon_label: Streptococcus thermophilus
-  note: "Organism in which CRISPR-Cas adaptive immunity was experimentally demonstrated (Barrangou et al. 2007); dairy model for CRISPR biology."
+  note: Organism in which CRISPR-Cas adaptive immunity was experimentally demonstrated
+    (Barrangou et al. 2007); dairy model for CRISPR biology.
   reference: PMID:17379808
 causal_graphs:
 - graph_id: crispr_adaptive_immunity
@@ -169,21 +170,22 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true
 - timestamp: '2026-08-06T01:00:00Z'
   curator: claude
   action: MIGRATE_MICROBE_DOMAIN_EDGES
-  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
-    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
-    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
-    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
-    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
-    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
-    it the domain 'biological process or activity'; the METPO replacements are proposed in
-    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to
+    has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph
+    subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism
+    member, so no such edge could ever satisfy the domain. Edge directions are unchanged
+    - this pass only relabels and re-grounds. RO:0002234 (has output) is used where
+    the subject is an activity, since biolink gives it the domain 'biological process
+    or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
+    and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

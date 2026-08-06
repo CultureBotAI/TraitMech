@@ -24,11 +24,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
-  note: "comma/curved rod"
+  note: comma/curved rod
   reference: DOI:10.1111/j.1574-6968.2001.tb10629.x
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
-  note: "curved (vibrioid) cell"
+  note: curved (vibrioid) cell
   reference: PMID:19383443
 causal_graphs:
 - graph_id: curved_shaped_scaffolded_curvature
@@ -195,12 +195,13 @@ curation_history:
 - timestamp: '2026-08-06T01:00:00Z'
   curator: claude
   action: MIGRATE_MICROBE_DOMAIN_EDGES
-  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
-    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
-    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
-    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
-    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
-    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
-    it the domain 'biological process or activity'; the METPO replacements are proposed in
-    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to
+    confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph
+    subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism
+    member, so no such edge could ever satisfy the domain. Edge directions are unchanged
+    - this pass only relabels and re-grounds. RO:0002234 (has output) is used where
+    the subject is an activity, since biolink gives it the domain 'biological process
+    or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
+    and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

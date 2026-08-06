@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
-  note: "Canonical type-IV-pilus twitching-motility model. Neisseria gonorrhoeae is a parallel model."
+  note: Canonical type-IV-pilus twitching-motility model. Neisseria gonorrhoeae is
+    a parallel model.
   reference: PMID:22746331
 causal_graphs:
 - graph_id: twitching_type_iv_pilus_retraction
@@ -181,9 +182,9 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

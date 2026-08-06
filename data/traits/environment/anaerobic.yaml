@@ -25,11 +25,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
-  note: "obligate anaerobe"
+  note: obligate anaerobe
   reference: PMID:18430081
 - taxon_id: NCBITaxon:817
   taxon_label: Bacteroides fragilis
-  note: "aerotolerant gut anaerobe"
+  note: aerotolerant gut anaerobe
   reference: PMID:22778399
 causal_graphs:
 - graph_id: anaerobic_trait_oxygen_exclusion
@@ -240,9 +240,9 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

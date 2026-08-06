@@ -145,21 +145,19 @@ def write_validated_trait(
     errors = validate_trait(doc, target_class=target_class, schema_path=schema_path)
     if errors:
         raise ValidationFailedError(path, errors)
-    # Matches the repo's schema-side emission convention. It does NOT guarantee a
-    # byte-identical round-trip, which this comment used to claim (#322): loading
-    # and immediately re-writing an UNMODIFIED trait file reformats 350 of the
-    # 477 in data/traits/, because safe_dump re-wraps long strings at its own
-    # width and drops hand-written quoting. Only 127 currently survive untouched.
+    # Re-running this helper over an existing trait file IS byte-identical, and
+    # that is enforced rather than asserted: test_write_validated_round_trip.py
+    # writes every record in data/traits/ through it and fails on any that comes
+    # back different.
     #
-    # That matters for BULK scripts. Touching N files through this helper buries
-    # the real change in reflow churn across every long string in them, which is
-    # the difference between a reviewable migration and an unreviewable one --
-    # #323's 164-edge migration and #328's 185-edge one both edit raw lines
-    # instead, for exactly this reason. For a single record, or for a file this
-    # helper already owns, the reformatting is harmless.
+    # It was NOT true until #322. safe_dump re-wraps long strings at its own
+    # width and drops hand-written quoting, which reformatted 350 of the 477
+    # records — so a bulk script using this helper buried its real change in
+    # reflow churn across every long string it touched, and #323, #328 and #341
+    # all hand-rolled raw-line editors to avoid it. #322 normalised the corpus so
+    # the property holds, which makes this helper safe for bulk rewrites again.
     #
-    # Making the claim true would mean normalising all 477 files once and gating
-    # it with a round-trip test; that is a large one-time reformat and is still
-    # open on #322.
+    # Editing a record by hand into a shape safe_dump would not emit breaks that
+    # test. Reformat it through this helper rather than loosening the test.
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(emit_trait_yaml(doc, yaml_kwargs), encoding="utf-8")

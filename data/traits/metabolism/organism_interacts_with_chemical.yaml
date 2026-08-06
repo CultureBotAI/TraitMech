@@ -39,15 +39,15 @@ curation_history:
 - timestamp: '2026-05-17T10:00:00-07:00'
   curator: claude
   action: ADDED_EXTERNAL_PREDICATE_XREF
-  changes: 'Added xrefs [''MICRO:0000975''] to record an external equivalence predicate.'
+  changes: Added xrefs ['MICRO:0000975'] to record an external equivalence predicate.
   llm_assisted: true
 - timestamp: '2026-05-17T15:00:00-07:00'
   curator: claude
   action: REVERTED_NON_EQUIVALENT_XREF
-  changes: 'Removed MICRO:0000975 xref per Copilot review of PR #56. This record
-    is the root for ALL organism-to-chemical interactions (produces, uses-as-X,
-    ferments, etc.), while MICRO:0000975 "uses chemical entity" is narrower (use
-    relations only). Encoding it as an xrefs equivalence would mismap downstream
-    consumers. No other ontology has a sufficiently broad organism-to-chemical
-    root predicate, so xrefs left empty.'
+  changes: 'Removed MICRO:0000975 xref per Copilot review of PR #56. This record is
+    the root for ALL organism-to-chemical interactions (produces, uses-as-X, ferments,
+    etc.), while MICRO:0000975 "uses chemical entity" is narrower (use relations only).
+    Encoding it as an xrefs equivalence would mismap downstream consumers. No other
+    ontology has a sufficiently broad organism-to-chemical root predicate, so xrefs
+    left empty.'
   llm_assisted: true

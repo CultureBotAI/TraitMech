@@ -25,11 +25,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "does not form spores"
+  note: does not form spores
   reference: https://www.ncbi.nlm.nih.gov/books/NBK8035/
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "non-spore-forming"
+  note: non-spore-forming
   reference: PMID:24628867
 causal_graphs:
 - graph_id: non_spore_forming_absent_spo0a_cascade

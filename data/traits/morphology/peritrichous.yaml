@@ -18,7 +18,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
-  note: "Peritrichous flagellation (flagella over the whole cell surface); classic enteric motility/chemotaxis model."
+  note: Peritrichous flagellation (flagella over the whole cell surface); classic
+    enteric motility/chemotaxis model.
   reference: PMID:33859630
 causal_graphs:
 - graph_id: peritrichous_surface_distributed_flagella

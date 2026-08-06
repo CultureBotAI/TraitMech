@@ -25,11 +25,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:691
   taxon_label: Vibrio natriegens
-  note: "fast-growing copiotroph"
+  note: fast-growing copiotroph
   reference: PMID:27571549
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "nutrient-rich copiotroph"
+  note: nutrient-rich copiotroph
   reference: PMID:38762599
 causal_graphs:
 - graph_id: copiotrophic_high_nutrient_fast_growth
