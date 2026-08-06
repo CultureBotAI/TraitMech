@@ -37,7 +37,7 @@ class (`METPO:1007401` *trait causal node*).
 ### Only 200 of the 366 need new terms
 
 The 366 were triaged against what already exists before anything was minted.
-Two thirds of the residual has an existing home:
+165 of them (45%) already have a home, and only the remainder is proposed here:
 
 | Family | Edges | Target | New term? |
 |---|---:|---|---|
