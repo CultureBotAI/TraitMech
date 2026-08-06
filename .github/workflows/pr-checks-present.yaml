@@ -32,8 +32,13 @@ permissions:
   actions: read
 
 concurrency:
-  group: pr-checks-present-${{ github.ref }}
-  # On main, cancelling would leave the report unmade for that commit.
+  # Unique per run, per WORKFLOW_CONVENTIONS.md: this only ever runs on main or by
+  # dispatch, so nothing here supersedes anything. A shared key would not cancel
+  # (we must not — see below) but WOULD queue, making a manual dispatch wait
+  # behind an in-flight push run for no benefit (#346 review).
+  group: pr-checks-present-${{ github.run_id }}
+  # Never cancel: on main, cancelling would leave the report unmade for that
+  # commit, which is the state this workflow exists to make visible.
   cancel-in-progress: false
 
 jobs:

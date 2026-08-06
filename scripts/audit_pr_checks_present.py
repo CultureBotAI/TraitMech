@@ -12,9 +12,20 @@ This audit therefore detects the SILENCE rather than any one cause of it. It
 asks a question that stays meaningful however the runs went missing: does this
 open PR have at least one check that was triggered by the pull request itself?
 
-Runs triggered by ``workflow_dispatch`` are deliberately NOT counted. Dispatching
-by hand is exactly what someone does after noticing the problem, so counting
-those would make the check pass on precisely the PRs it exists to find.
+Evidence is an ALLOWLIST, not "anything but dispatch". A denylist would let a
+trigger type added later silently start counting; this fails closed instead.
+``workflow_dispatch`` in particular must never count — dispatching by hand is
+exactly what someone does *after* noticing the problem, so counting it would
+make the check pass on precisely the PRs it exists to find.
+
+WHAT THIS DOES NOT CATCH. ``claude-code-review.yml`` fires on ``pull_request``
+with no ``paths:`` filter, and records a run even when its ``if:`` gates skip the
+job. So essentially every PR here gets at least one ``pull_request`` run from the
+reviewer bot, and this audit can only detect TOTAL event silence — #344's shape.
+A PARTIAL silence (``qc``/``pytest``/``validate-strict`` mute while the reviewer
+bot fires) passes. Do not read a green ``audit-pr-checks`` as "the gating
+workflows ran". The stronger property needs a named set of REQUIRED workflows
+checked by name, which is a different rule, not a tweak to this one.
 
 Fetching is kept out of ``offenders`` so the rule is testable without network or
 a GitHub token; ``main`` shells out to ``gh`` and hands the parsed result in.
@@ -27,23 +38,36 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+from datetime import datetime, timezone
 
-# A run whose event is in here does not count as evidence the PR was evaluated.
-NON_EVIDENCE_EVENTS = frozenset({"workflow_dispatch", "schedule"})
+# Events that count as "the pull request itself triggered this". An ALLOWLIST so
+# a trigger type added later fails closed rather than silently becoming evidence
+# (#346 review). `push` is deliberately absent: every workflow here is
+# `push: branches: [main]`, so a push run against a PR head would not mean the PR
+# was evaluated.
+EVIDENCE_EVENTS = frozenset({"pull_request", "pull_request_target"})
+
+# A PR opened seconds before this runs has no runs yet through no fault of its
+# own. Below this age it is skipped rather than reported (#346 review).
+MIN_AGE_MINUTES = 10
 
 
 def offenders(prs: list[dict]) -> list[dict]:
     """PRs with no run triggered by the pull request itself.
 
-    ``prs`` entries are ``{"number": int, "title": str, "events": [str, ...]}``
-    where ``events`` are the ``event`` fields of that PR head's workflow runs.
+    ``prs`` entries are ``{"number", "title", "events", "age_minutes"}`` where
+    ``events`` are the ``event`` fields of that PR head's workflow runs. A PR
+    younger than ``MIN_AGE_MINUTES`` is skipped; ``age_minutes`` may be omitted,
+    in which case age is not considered.
     """
     out = []
     for pr in prs:
-        events = set(pr.get("events") or ())
-        if not (events - NON_EVIDENCE_EVENTS):
+        if pr.get("age_minutes") is not None and pr["age_minutes"] < MIN_AGE_MINUTES:
+            continue
+        if not (set(pr.get("events") or ()) & EVIDENCE_EVENTS):
             out.append(pr)
     return out
 
@@ -58,21 +82,33 @@ def _gh_json(args: list[str]) -> object:
 
 def collect(repo: str) -> list[dict]:
     """Fetch open PRs and the trigger events of each head SHA's runs."""
-    prs = _gh_json(["pr", "list", "--repo", repo, "--state", "open",
-                    "--json", "number,title,headRefOid"])
+    # --limit is EXPLICIT, not inherited: gh pr list defaults to 30, so past 30
+    # open PRs the rest are never fetched and this prints a clean bill of health
+    # for a set it never looked at — the exact failure #345 is about, reproduced
+    # inside the detector (#346 review).
+    prs = _gh_json(["pr", "list", "--repo", repo, "--state", "open", "--limit", "500",
+                    "--json", "number,title,headRefOid,createdAt"])
+    now = datetime.now(timezone.utc)
     collected = []
     for pr in prs:  # type: ignore[union-attr]
+        # per_page likewise explicit: the API defaults to 30, and a PR with many
+        # hand-dispatched runs can push a genuine pull_request run off page one.
         runs = _gh_json(["api",
-                         f"repos/{repo}/actions/runs?head_sha={pr['headRefOid']}",
+                         f"repos/{repo}/actions/runs"
+                         f"?head_sha={pr['headRefOid']}&per_page=100",
                          "-q", "[.workflow_runs[].event]"])
+        created = datetime.fromisoformat(pr["createdAt"].replace("Z", "+00:00"))
         collected.append({"number": pr["number"], "title": pr["title"],
-                          "events": runs})
+                          "events": runs,
+                          "age_minutes": (now - created).total_seconds() / 60})
     return collected
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--repo", default="CultureBotAI/TraitMech")
+    # GITHUB_REPOSITORY is set in Actions; the literal is only a local convenience.
+    ap.add_argument("--repo",
+                    default=os.environ.get("GITHUB_REPOSITORY", "CultureBotAI/TraitMech"))
     ap.add_argument("--json", help="pre-fetched PR list, for testing offline")
     args = ap.parse_args()
 
