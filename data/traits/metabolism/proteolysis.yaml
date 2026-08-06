@@ -89,7 +89,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuab046
       notes: Bacillus protease review covers extracellular protease activities.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: proteolysis_trait
     predicate: produces
     object: peptides
@@ -98,7 +98,7 @@ causal_graphs:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"protein to oligopeptides" / "producing peptides of roughly 4-30 amino
         acids"; extracellular proteolytic enzymes produce peptides.'
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: peptide_transport_systems
     predicate: imports
     object: peptides
@@ -107,7 +107,7 @@ causal_graphs:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: 'Peptides "taken up by dedicated transporters: oligopeptide permease
         (Opp, an ATP-driven system)", DtpT and ABC transporter Dpp.'
-    predicate_id: METPO:2000208
+    predicate_id: METPO:2007805
   - subject: intracellular_peptidases
     predicate: hydrolyzes
     object: peptides
@@ -115,7 +115,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"Inside the cell, multiple peptidases... further hydrolyze peptides".'
-    predicate_id: METPO:2000013
+    predicate_id: METPO:2007808
   - subject: intracellular_peptidases
     predicate: produces
     object: amino_acids
@@ -123,7 +123,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"further hydrolyze peptides to free amino acids used for growth".'
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: large_proteins
     predicate: necessitates
     object: proteolysis_trait
@@ -180,4 +180,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T02:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES_PART2
+  changes: Re-grounded 5 causal edge(s) off microbe-domain METPO predicates onto their causal-graph
+    counterparts (1 to hydrolyzes, 1 to imports, 3 to produces), issue 301 part 2. The previous
+    predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525
+    (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum
+    has no organism member, so no such edge could ever satisfy the domain. Each replacement
+    is a 1:1 mirror of its source predicate that changes only the domain, so the claim each
+    edge makes is unchanged and directions are unchanged. The replacements are proposed in
+    proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

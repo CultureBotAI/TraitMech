@@ -2305,7 +2305,7 @@ gene product	GENE_OR_PROTEIN	1	data/traits/upper/biological_process.yaml
 chemical input entity	CHEMICAL	1	data/traits/upper/biological_process.yaml
 chemical output entity	CHEMICAL	1	data/traits/upper/biological_process.yaml
 downstream molecular function	MOLECULAR_FUNCTION	1	data/traits/upper/biological_process.yaml
-assay or measurement process	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
+assay or measurement process	BIOLOGICAL_PROCESS	1	data/traits/upper/observation.yaml
 data item	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
 geographic location	ENVIRONMENTAL_FACTOR	1	data/traits/upper/observation.yaml
 material entity with evaluant role	TRAIT	1	data/traits/upper/observation.yaml

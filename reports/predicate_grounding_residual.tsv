@@ -86,7 +86,6 @@ hydrolyzes to	3	unmapped		data/traits/metabolism/chitinolysis.yaml
 translocates	3	unmapped		data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml
 feeds into	3	unmapped		data/traits/metabolism/fermentation.yaml|data/traits/morphology/cell_length_medium.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 converted to	3	unmapped		data/traits/metabolism/homoacetogenesis.yaml|data/traits/morphology/brown_pigmented.yaml|data/traits/physiology/lithoheterotrophic.yaml
-has output	3	blocked_by_node_type	RO:0002234	data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/upper/observation.yaml
 transfers electron to	3	unmapped		data/traits/metabolism/nitrogen_fixation.yaml
 has quality	3	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/traits/physiology/carboxydotrophic.yaml
 feed into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
@@ -155,6 +154,7 @@ affects	2	unmapped		data/traits/metabolism/fermentative_hydrogen_production.yaml
 supports formation of	2	unmapped		data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemolithoheterotrophic.yaml
 supports growth in	2	unmapped		data/traits/metabolism/iron_oxidation.yaml
 serves as substrate for	2	unmapped		data/traits/metabolism/methanogenesis.yaml
+has output	2	blocked_by_node_type	RO:0002234	data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
 is oxidized by	2	unmapped		data/traits/metabolism/oxidative_phosphorylation.yaml
 electron donor for	2	unmapped		data/traits/metabolism/reductive_tca_cycle.yaml
 generates ATP via	2	unmapped		data/traits/metabolism/substrate_level_phosphorylation.yaml|data/traits/physiology/chemoorganotrophic.yaml
