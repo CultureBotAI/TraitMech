@@ -79,10 +79,11 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Uptake of dissolved substrates at picomolar-nanomolar environmental
       concentrations.
-  - node_id: reduced_metabolic_redundancy
-    label: reduced metabolic redundancy
+  - node_id: metabolic_redundancy
+    label: metabolic redundancy
     node_type: BIOLOGICAL_PROCESS
-    description: Loss of non-essential genes and metabolic redundancy under streamlining.
+    description: Non-essential genes and duplicated metabolic capability, which streamlining
+      removes.
   - node_id: small_cell_volume
     label: small cell volume
     node_type: QUALITY
@@ -175,7 +176,7 @@ causal_graphs:
     predicate_id: RO:0002213
   - subject: streamlined_genome
     predicate: decreases
-    object: reduced_metabolic_redundancy
+    object: metabolic_redundancy
     description: Genome streamlining removes non-essential genes and metabolic redundancy.
     evidence:
     - reference: DOI:10.1038/s41586-024-07924-w
@@ -271,4 +272,17 @@ curation_history:
     mechanically because the label was identical, so they migrated together in issue 329 and
     were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range,
     so this introduces no entailment of the kind issue 301 removed.
+  llm_assisted: true
+- timestamp: '2026-08-06T06:30:00Z'
+  curator: claude
+  action: RENAME_CAUSAL_NODE
+  changes: 'Renamed causal node reduced_metabolic_redundancy to metabolic_redundancy (label
+    and description updated to match), issue 330. The node named a NEGATED quantity - the
+    loss of redundancy - which was harmless while its in-edge was grounded to METPO:2007802
+    and simply wrong, but became a well-formed backwards claim once that edge was regrounded
+    to RO:0002212 (negatively regulates): streamlining would have been asserted to prevent
+    the loss of redundancy, the opposite of the edge''s own description and of the cited Clifton
+    et al. 2024 evidence. Naming the unnegated quantity makes `streamlined_genome decreases
+    metabolic_redundancy` read correctly. The node is a leaf with one in-edge, so the rename
+    is contained.'
   llm_assisted: true
