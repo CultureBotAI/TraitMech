@@ -90,7 +90,7 @@ kind of thing the subject is.
 | `confers` | `RO:0002327` enables | Range is 'biological process or activity'; a trait is a disposition. This is the violation being fixed (#302), so reusing it is circular. |
 | `confers` | `RO:0002200` has phenotype | Domain is an organism; the subject here is a causal-graph node (a protein, a process, a condition), not the organism. |
 | `confers` | `biolink:contributes_to` | Too weak — states participation without asserting the subject is what makes the trait realizable. |
-| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 114 of these 145 subjects are proteins, processes, or environmental conditions, which do not "manifest as" a trait. Kept distinct rather than widened. |
+| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 125 of these 145 subjects are proteins, processes, or environmental conditions (81 BIOLOGICAL_PROCESS + 32 GENE_OR_PROTEIN + 12 ENVIRONMENTAL_FACTOR), which do not "manifest as" a trait. Kept distinct rather than widened. |
 | `has electron donor` / `has electron acceptor` | `METPO:2000009` / `METPO:2000008` | Exactly the right sense, but their inherited `rdfs:domain` is microbe (#301), so a causal-graph subject entails `⊑ microbe`. Recorded as `skos:closeMatch` in the SSSOM file. |
 | `has electron donor` / `has electron acceptor` | `METPO:2007603` serves as electron donor and acceptor (v6) | Deliberately the *combined* disproportionation case (one species in both roles). It cannot express the distinction #303 is about. |
 
