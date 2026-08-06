@@ -111,14 +111,14 @@ causal_graphs:
       notes: Supports gliding as an active bacterial movement mechanism.
     predicate_id: METPO:2007700
   - subject: ion_motive_force
-    predicate: contributes to
+    predicate: enables
     object: flagellar_motor
     description: Ion motive force powers rotation of many bacterial flagellar motors.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
       notes: Supports ion motive force powering the bacterial flagellar motor.
-    predicate_id: RO:0002326
+    predicate_id: RO:0002327
   - subject: chemotaxis_signaling
     predicate: regulates
     object: motility_trait
@@ -277,4 +277,16 @@ curation_history:
     source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
     declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
     removed.'
+  llm_assisted: true
+- timestamp: '2026-08-06T09:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Reverted the motive-force edge from contributes to back to enables/RO:0002327,
+    issue 334 review. biolink defines contributes to as holding where one entity contributes
+    to the occurrence or GENERATION of the other. A motive force does not generate the motor
+    or machinery - it powers rotation, which is what the edge description says. That is the
+    same energy-powers-a-machine idiom this work deferred for molecular_oxygen and cytoplasmic_na,
+    so deferring it here too is the consistent call. The edge stays baselined under issue
+    334 until it is modelled as an input to the machine or pointed at the rotation process,
+    either of which is range-correct.
   llm_assisted: true
