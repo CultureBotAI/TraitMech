@@ -122,14 +122,14 @@ causal_graphs:
       notes: Review supports homoviscous membrane adaptation as temperature decreases.
     predicate_id: RO:0002211
   - subject: cold_adapted_enzymes
-    predicate: enables
+    predicate: confers
     object: psychrophilic_trait
     description: Cold-active enzymes support catalysis at low temperature.
     evidence:
     - reference: DOI:10.1016/j.tim.2010.05.002
       snippet: genes involved in cold adaptation
       notes: Review connects psychrophile omics signatures with cold-adaptation mechanisms.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cold_shock_proteins
     predicate: contributes to
     object: psychrophilic_trait
@@ -296,4 +296,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:26523×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

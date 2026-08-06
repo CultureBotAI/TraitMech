@@ -87,15 +87,15 @@ causal_graphs:
       notes: Lovley establishes Fe(III) reduction coupled to organic-matter oxidation
         as energy-conserving anaerobic respiration.
     predicate_id: METPO:2007405
-  - subject: ferric_iron
-    predicate: enables
-    object: dir_trait
+  - subject: dir_trait
+    predicate: has electron acceptor
+    object: ferric_iron
     description: Fe(III) acts as terminal electron acceptor enabling DIR.
     evidence:
     - reference: PMID:7826009
       notes: Nealson & Saffarini support Fe(III) as a terminal electron acceptor competitive
         with nitrate.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007702
   - subject: dir_trait
     predicate: is a
     object: anaerobic_respiration
@@ -130,9 +130,9 @@ causal_graphs:
     - reference: DOI:10.1007/s10533-024-01186-4
       notes: The reduction rates of dissolved Fe(III)-OM complexes are significantly
         higher than those observed for solid Fe(III) minerals.
-  - subject: solid_fe3_mineral
-    predicate: enables
-    object: dir_trait
+  - subject: dir_trait
+    predicate: has electron acceptor
+    object: solid_fe3_mineral
     description: Insoluble Fe(III) oxides are the environmentally dominant terminal
       electron acceptor for DIR, which is why the trait requires extracellular electron
       transfer.
@@ -144,10 +144,10 @@ causal_graphs:
       notes: Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent
         environmental form of the acceptor, which is what ties the solid-mineral pool
         to the trait rather than leaving it a free-standing geochemical observation.
-    predicate_id: RO:0002327
-  - subject: dissolved_fe3_om_complex
-    predicate: enables
-    object: dir_trait
+    predicate_id: METPO:2007702
+  - subject: dir_trait
+    predicate: has electron acceptor
+    object: dissolved_fe3_om_complex
     description: Solubilised Fe(III) is a second terminal electron acceptor pool,
       reachable without direct contact with the mineral surface.
     evidence:
@@ -161,7 +161,7 @@ causal_graphs:
         Scope caveat kept explicit (issue 297) - the quote is about chelators the
         organism itself secretes, whereas this node is ambient Fe(III)-organic-matter
         complex, so it supports the existence of the pool rather than its origin.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007702
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -213,4 +213,17 @@ curation_history:
     has range ''biological process or activity'', so the new form is not fully range-correct
     either, and both acceptor edges now share a predicate with the donor convention
     - tracked in issues 302 and 303.'
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to has
+    electron acceptor), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a
+    BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them. 3 electron edge(s) were also reversed
+    back to trait -> chemical, restoring the donor/acceptor role that PR 300 collapsed onto
+    enables (issue 303); the organism-subject problem that forced that collapse does not arise
+    here because these predicates take a causal-node domain rather than METPO:2000001's microbe
+    domain (issue 301).
   llm_assisted: true

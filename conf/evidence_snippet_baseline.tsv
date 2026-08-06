@@ -1365,16 +1365,16 @@ data/traits/metabolism/disproportionation.yaml	sulfur_disproportionation_redox_s
 data/traits/metabolism/disproportionation.yaml	sulfur_disproportionation_redox_split:tsda_thiosulfate_dehydrogenase->tetrathionate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1426584 has no snippet
 data/traits/metabolism/disproportionation.yaml	sulfur_disproportionation_redox_split:tsda_thiosulfate_dehydrogenase->thiosulfate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1426584 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:dir_trait->anaerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
+data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:dir_trait->ferric_iron[0]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:dissolved_fe3_om_complex->solid_fe3_mineral[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s10533-024-01186-4 has no snippet
-data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:ferric_iron->dir_trait[0]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:ferric_iron->ferrous_iron[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:hydrogen_oxidation->ferric_iron[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	dir_ferric_iron_respiration:organic_matter_oxidation->ferric_iron[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_iron_reduction.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:anoxia->dmr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
+data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:dmr_trait->mn_iv_oxide[0]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:hydrogen->dmr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:methane_oxidation->dmr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5194/egusphere-2024-1829 has no snippet
-data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:mn_iv_oxide->dmr_trait[0]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:mn_iv_oxide->mn_ii[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	dmr_mn_oxide_respiration:organic_matter->dmr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_manganese_reduction.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
@@ -1384,7 +1384,7 @@ data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaero
 data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:flavin_shuttle->extracellular_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/fermentation11070381 has no snippet
 data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:insoluble_metal_substrate->metal_reduction_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00044-24 has no snippet
 data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:metal_reduction_trait->anaerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=PMID:7826009 has no snippet
-data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:metal_terminal_acceptor->metal_reduction_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
+data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:metal_reduction_trait->metal_terminal_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.55.2.259-287.1991 has no snippet
 data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:mtrcab_complex->extracellular_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00044-24 has no snippet
 data/traits/metabolism/dissimilatory_metal_reduction.yaml	metal_reduction_anaerobic_respiration:organic_matter_oxidation->fe3_reduction[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s11783-019-1173-9 has no snippet
 data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml	dnra_nitrate_to_ammonium:anaerobic_conditions->dnra_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00292-25 has no snippet
@@ -1510,10 +1510,10 @@ data/traits/metabolism/manganese_oxidation.yaml	evidence[0]	MISSING_SNIPPET	WARN
 data/traits/metabolism/manganese_oxidation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.earth.32.101802.120213 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:manganese_oxidation_trait->mn_iii_oh_mn_iii_intermediate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:manganese_oxidation_trait->mn_oxides[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.earth.32.101802.120213 has no snippet
+data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:manganese_oxidation_trait->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:mn_iii_oh_mn_iii_intermediate->mn_iv_o_mn_iv_intermediate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:mn_iv_o_mn_iv_intermediate->mno2_nanoparticles[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:mno2_nanoparticles->mn_oxides[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
-data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:molecular_oxygen->manganese_oxidation_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/jacs.3c06537 has no snippet
 data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase:multicopper_oxidase->manganese_oxidation_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2005.07.009 has no snippet
 data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:*	REUSED_SNIPPET	WARN	3 evidence items share one snippet: 'energy and microbial life'
 data/traits/metabolism/metabolism.yaml	metabolism_substrate_to_growth:atp_synthase->atp_production[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.heliyon.2023.e22459 has no snippet
@@ -2164,8 +2164,8 @@ data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.54.4.450-472.1990 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:carbon_starvation->phb_degradation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
-data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:nutrient_limitation_high_cn->pha_accumulation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.jbc.2024.107523 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:nutrient_limitation_high_cn->pha_accumulation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/molecules29102293 has no snippet
+data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:nutrient_limitation_high_cn->pha_accumulation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.jbc.2024.107523 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:pha_depolymerase_phaz->phb_mobilization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:pha_granule_trait->carbon_energy_storage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:pha_synthase_phac->polyhydroxyalkanoate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
@@ -2458,8 +2458,8 @@ data/traits/physiology/chemolithotrophic.yaml	chemolithotrophic_inorganic_oxidat
 data/traits/physiology/chemolithotrophic.yaml	chemolithotrophic_inorganic_oxidation:acidification->nitrous_oxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-023-37104-9 has no snippet
 data/traits/physiology/chemolithotrophic.yaml	chemolithotrophic_inorganic_oxidation:calvin_benson_bassham_cycle->carbon_dioxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12030590 has no snippet
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:chemoorganoheterotrophic_trait->organic_molecule[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... energy source'
+data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:chemoorganoheterotrophic_trait->organic_molecule[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:extracellular_cazymes->complex_polysaccharides[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40793-024-00572-7 has no snippet
-data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:organic_molecule->chemoorganoheterotrophic_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:organic_molecule->energy_metabolism[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/gcb.16925 has no snippet
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:organic_molecule->reducing_power_nadph[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acsomega.3c02205 has no snippet
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:substrate_transport_system->chemoorganoheterotrophic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acsomega.3c02205 has no snippet
@@ -2593,7 +2593,7 @@ data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_dono
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:glycolysis->central_carbon_metabolism[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:nadh_dehydrogenase_complex_i->oxidative_phosphorylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:organic_compound->central_carbon_metabolism[0]	UNSUPPORTIVE_SNIPPET	WARN	10 chars, supports nothing specific: 'catabolism'
-data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:organic_compound->organoheterotrophic_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
+data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:organoheterotrophic_trait->organic_compound[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:oxidative_phosphorylation->atp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organoheterotrophic.yaml	organoheterotrophic_organic_donor_carbon:tca_cycle->central_carbon_metabolism[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.04110-22 has no snippet
 data/traits/physiology/organotrophic.yaml	organotrophic_organic_compound_oxidation:catabolism->reduced_electron_carriers[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s13213-024-01761-y has no snippet
@@ -2653,7 +2653,7 @@ data/traits/physiology/photolithotrophic.yaml	photolithotrophic_inorganic_electr
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:diurnal_cycle->rhythmic_transcription[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00334-5 has no snippet
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:light->photosynthetic_reaction_center[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'chlorophyll ... reaction center proteins'
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:light->rc_charge_separation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biom14030311 has no snippet
-data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:organic_compound->photoorganoheterotrophic_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
+data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:photoorganoheterotrophic_trait->organic_compound[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... electron source'
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:photoorganoheterotrophic_trait->organic_compound[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... carbon source'
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:photosynthesis_gene_cluster->bchl_photoheterotrophy[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.01112-23 has no snippet
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons:photosynthetic_electron_transport->proton_motive_force[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'produce stable reductants ... proton motive force'

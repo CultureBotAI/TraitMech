@@ -84,14 +84,14 @@ causal_graphs:
     description: A gut microbial community dominated by anaerobic primary fermenters.
   edges:
   - subject: gastrointestinal_habitat
-    predicate: enables
+    predicate: confers
     object: gut_associated_trait
     description: The intestinal environment supports persistent residency.
     evidence:
     - reference: DOI:10.1126/science.1104816
       notes: Bäckhed et al. characterize the distal intestine as a dense microbial
         habitat.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: gut_associated_trait
     predicate: contributes to
     object: host_metabolic_contribution
@@ -193,6 +193,15 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×2, RO:0002212×2, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3

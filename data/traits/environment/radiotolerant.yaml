@@ -101,23 +101,23 @@ causal_graphs:
         radiation, UV, desiccation, and oxidizing agents.
     predicate_id: METPO:2007406
   - subject: dna_damage_repair
-    predicate: enables
+    predicate: confers
     object: radiotolerant_trait
     description: Efficient repair of radiation-induced DNA lesions enables survival.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: Review of extreme radiation resistance highlights efficient DNA repair
         as a core radiotolerance mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: mn_antioxidant_protection
-    predicate: enables
+    predicate: confers
     object: radiotolerant_trait
     description: Mn-antioxidant protection of the proteome preserves repair capacity
       under irradiation.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: radiation_exposure
     predicate: causes
     object: reactive_oxygen_species
@@ -221,4 +221,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0035825×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

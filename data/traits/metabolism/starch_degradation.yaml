@@ -61,14 +61,14 @@ causal_graphs:
     description: Exo-acting glycoside hydrolase that releases glucose from maltooligosaccharides.
   edges:
   - subject: amylase
-    predicate: enables
+    predicate: confers
     object: starch_degradation_trait
     description: Amylases hydrolyze starch's alpha-1,4 and alpha-1,6 linkages.
     evidence:
     - reference: DOI:10.1016/S0168-1656(01)00407-2
       notes: van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze
         starch.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: starch_degradation_trait
     predicate: produces
     object: glucose
@@ -157,4 +157,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000013×1, METPO:2000007×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

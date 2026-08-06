@@ -102,14 +102,14 @@ causal_graphs:
         O2-evolving) with anoxygenic phototrophy.
     predicate_id: METPO:2007405
   - subject: photosynthetic_etc
-    predicate: enables
+    predicate: confers
     object: oxygenic_photosynthesis_trait
     description: Two linked photosystems power electron flow from water to NADP+.
     evidence:
     - reference: DOI:10.1146/annurev-earth-060313-054810
       notes: Fischer et al. support water-oxidizing, O2-evolving photosynthesis as
         a cyanobacterial innovation.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: photosystem_ii
     predicate: oxidizes
     object: water
@@ -231,4 +231,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009523×1, GO:0009512×1, GO:0009522×1, GO:0004324×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

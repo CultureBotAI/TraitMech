@@ -70,13 +70,13 @@ causal_graphs:
       notes: Setlow reviews germinant-triggered spore germination.
     predicate_id: biolink:causes
   - subject: spore_germination_process
-    predicate: enables
+    predicate: confers
     object: spore_germination_trait
     description: The germination process realizes the spore-germination trait.
     evidence:
     - reference: DOI:10.1038/nrmicro2504
       notes: Lennon & Jones frame germination as resuscitation from dormancy.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: spore_germination_process
     predicate: causes
     object: cadpa_release
@@ -109,7 +109,7 @@ causal_graphs:
         supported across endospore formers.
     predicate_id: biolink:causes
   - subject: core_rehydration_outgrowth
-    predicate: enables
+    predicate: confers
     object: spore_germination_trait
     description: Core rehydration and outgrowth complete realization of the spore-germination
       trait.
@@ -117,7 +117,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02220-23
       notes: Core rehydration following cortex hydrolysis allows full metabolic capabilities
         and initiation of outgrowth, completing germination.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -144,4 +144,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2, RO:0002213×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

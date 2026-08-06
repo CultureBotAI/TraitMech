@@ -86,7 +86,7 @@ causal_graphs:
     description: Availability of iron, a cofactor for nitrogenase and leghemoglobin.
   edges:
   - subject: symbiotic_signalling
-    predicate: enables
+    predicate: confers
     object: n2_fix_symbiosis_trait
     description: Nod-factor signalling between rhizobia and legume hosts establishes
       the symbiosis.
@@ -94,7 +94,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2990
       notes: Oldroyd reviews symbiotic signalling establishing nitrogen-fixing plant-microbe
         associations.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: n2_fix_symbiosis_trait
     predicate: enables
     object: nitrogen_fixation
@@ -208,4 +208,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0016610×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

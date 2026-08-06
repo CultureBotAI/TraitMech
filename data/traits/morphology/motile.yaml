@@ -147,23 +147,23 @@ causal_graphs:
       notes: Review directly addresses ion motive force powering flagellar motors.
     predicate_id: RO:0002327
   - subject: flagellar_motor
-    predicate: enables
+    predicate: confers
     object: motile_trait
     description: Flagellar rotation enables independent bacterial movement.
     evidence:
     - reference: DOI:10.3390/biom9070279
       snippet: responsible for motility
       notes: Supports flagella-driven motility.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: type_iv_pilus
-    predicate: enables
+    predicate: confers
     object: motile_trait
     description: Type IV pilus extension and retraction enable surface motility.
     evidence:
     - reference: DOI:10.1038/s41579-019-0195-4
       snippet: enable T4P to perform
       notes: Supports pilus-mediated twitching and related motility functions.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: chemotaxis_signaling
     predicate: directs
     object: motile_trait
@@ -270,14 +270,14 @@ causal_graphs:
         power surface movement
     predicate_id: RO:0002327
   - subject: twitching_motility
-    predicate: enables
+    predicate: confers
     object: motile_trait
     description: Twitching motility is a form of independent surface movement.
     evidence:
     - reference: DOI:10.1128/msphere.00390-24
       notes: recurrent cycles of T4P assembly and disassembly power surface movement
         (twitching motility)
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: sprb_adhesin_movement
     predicate: drives
     object: gliding_motility
@@ -288,13 +288,13 @@ causal_graphs:
       notes: gliding... is driven by the surface movement of adhesins (notably SprB)
         along the outer membrane
   - subject: gliding_motility
-    predicate: enables
+    predicate: confers
     object: motile_trait
     description: Gliding motility is a non-flagellar mechanism of independent movement.
     evidence:
     - reference: DOI:10.1128/jb.00068-24
       notes: gliding is a form of surface motility driven by adhesin movement
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905197+00:00'
   curator: seed_from_metpo
@@ -396,4 +396,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0044096×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 4 causal edge(s) off enables/RO:0002327 with a TRAIT object (4 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

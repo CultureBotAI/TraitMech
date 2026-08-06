@@ -60,14 +60,14 @@ causal_graphs:
         the S-layer.
     predicate_id: RO:0002327
   - subject: s_layer_assembly
-    predicate: enables
+    predicate: confers
     object: s_layer_trait
     description: Completed 2D assembly realizes the S-layer surface coating.
     evidence:
     - reference: DOI:10.1038/s41579-025-01258-8
       notes: Review of assembly, architecture, and functional roles of microbial surface
         layers.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: s_layer_subunits
     predicate: self-assembles into
     object: s_layer_2d_lattice
@@ -95,4 +95,13 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 1 evidence-backed generic edges (1 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

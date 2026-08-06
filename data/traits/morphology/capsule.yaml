@@ -102,13 +102,13 @@ causal_graphs:
         polysaccharide polymer.
     predicate_id: biolink:produces
   - subject: capsule_assembly
-    predicate: enables
+    predicate: confers
     object: capsule_trait
     description: Surface assembly of capsule polymers realizes the capsulated phenotype.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.75.103004.142545
       notes: Whitfield reviews biosynthesis and assembly of capsular polysaccharides.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: capsule_trait
     predicate: contributes to
     object: immune_evasion
@@ -212,4 +212,13 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -122,7 +122,7 @@ causal_graphs:
       notes: Supports cation/proton antiporters as pH-homeostasis transporters.
     predicate_id: RO:0002326
   - subject: cytoplasmic_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: alkalotolerant_trait
     description: Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline
       exposure.
@@ -130,7 +130,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cell-wide physiological process
       notes: Supports pH homeostasis as a broad enabling process.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: alkaline_external_ph
     predicate: increases importance of
     object: electrogenic_na_h_antiport
@@ -235,4 +235,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16234×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

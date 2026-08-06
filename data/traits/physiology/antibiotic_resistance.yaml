@@ -91,13 +91,13 @@ causal_graphs:
     grounding: CHEBI:25105
   edges:
   - subject: efflux_pump
-    predicate: enables
+    predicate: confers
     object: antibiotic_resistance_trait
     description: Drug efflux is one determinant enabling resistance.
     evidence:
     - reference: DOI:10.1038/nrmicro3380
       notes: Blair et al. review efflux among resistance mechanisms.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: antibiotic_resistance_trait
     predicate: participates in
     object: antibiotic_response_process
@@ -214,4 +214,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0008800×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

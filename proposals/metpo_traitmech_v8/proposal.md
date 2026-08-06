@@ -63,14 +63,14 @@ verified by walking every `causal_graphs[].edges[]` in the corpus:
 
 | Proposed | Edges | Trait records | Shape |
 |---|---:|---:|---|
-| `METPO:2007700` confers | 146 | 114 | any causal node → trait |
+| `METPO:2007700` confers | 145 | 114 | any causal node → trait |
 | `METPO:2007701` has electron donor | 13 | 13 | trait → chemical acting as donor |
-| `METPO:2007702` has electron acceptor | 5 | 3 | trait → chemical acting as acceptor |
+| `METPO:2007702` has electron acceptor | 6 | 4 | trait → chemical acting as acceptor |
 | **total** | **164** | | |
 
 `confers` subject types, as observed: BIOLOGICAL_PROCESS 81, GENE_OR_PROTEIN 32,
 ENVIRONMENTAL_FACTOR 12, QUALITY 5, CELLULAR_LOCALIZATION 5, PATHWAY 4,
-CHEMICAL 4, MOLECULAR_FUNCTION 2, STATE 1. The spread across nine node types is
+CHEMICAL 3, MOLECULAR_FUNCTION 2, STATE 1. The spread across nine node types is
 the argument for one general relation rather than a per-type family: what the
 edges have in common is that the subject is the *basis* of the trait, not what
 kind of thing the subject is.
@@ -90,13 +90,13 @@ kind of thing the subject is.
 | `confers` | `RO:0002327` enables | Range is 'biological process or activity'; a trait is a disposition. This is the violation being fixed (#302), so reusing it is circular. |
 | `confers` | `RO:0002200` has phenotype | Domain is an organism; the subject here is a causal-graph node (a protein, a process, a condition), not the organism. |
 | `confers` | `biolink:contributes_to` | Too weak — states participation without asserting the subject is what makes the trait realizable. |
-| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 114 of these 146 subjects are proteins, processes, or environmental conditions, which do not "manifest as" a trait. Kept distinct rather than widened. |
+| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 125 of these 145 subjects are proteins, processes, or environmental conditions (81 BIOLOGICAL_PROCESS + 32 GENE_OR_PROTEIN + 12 ENVIRONMENTAL_FACTOR), which do not "manifest as" a trait. Kept distinct rather than widened. |
 | `has electron donor` / `has electron acceptor` | `METPO:2000009` / `METPO:2000008` | Exactly the right sense, but their inherited `rdfs:domain` is microbe (#301), so a causal-graph subject entails `⊑ microbe`. Recorded as `skos:closeMatch` in the SSSOM file. |
 | `has electron donor` / `has electron acceptor` | `METPO:2007603` serves as electron donor and acceptor (v6) | Deliberately the *combined* disproportionation case (one species in both roles). It cannot express the distinction #303 is about. |
 
 ### Direction, and why it is reversed relative to the current edges
 
-The 18 electron edges currently read `<chemical> --enables--> <trait>`. Under
+The 19 electron edges currently read `<chemical> --enables--> <trait>`. Under
 this proposal they read `<trait> --has electron donor|acceptor--> <chemical>`.
 
 That restores the direction METPO:2000008/2000009 expressed before their
@@ -184,7 +184,7 @@ No `metpo_proposal_classes_robot.tsv`: this cohort proposes no classes.
   (`TraitMech:data/traits/...#<graph_id>`), each anchor verified to be a real
   `graph_id` in that file. Cross-ontology alignments appear only in `xrefs` and
   the SSSOM file, never in column 4.
-- Edge partition (146 + 13 + 5 = 164) computed from the corpus, and cross-checked
+- Edge partition (145 + 13 + 6 = 164) computed from the corpus, and cross-checked
   against the independently-derived `ENABLES_RANGE_ON_TRAIT` count in
   `reports/predicate_domain_audit.tsv`.
 
@@ -196,35 +196,36 @@ counts. Regenerate by walking every `causal_graphs[].edges[]` with
 or edge description names an electron donor/acceptor role goes to the role-bearing
 pair, everything else to `confers`.
 
-### `METPO:2007702` has electron acceptor — all 5 edges
+### `METPO:2007702` has electron acceptor — all 6 edges
 
-| trait record | subject (chemical) | object (trait) |
+| trait record | subject (trait) | object (chemical) |
 |---|---|---|
-| `metabolism/dissimilatory_iron_reduction.yaml` | iron(3+) | dissimilatory iron reduction |
-| `metabolism/dissimilatory_iron_reduction.yaml` | solid Fe(III) mineral | dissimilatory iron reduction |
-| `metabolism/dissimilatory_iron_reduction.yaml` | dissolved Fe(III)-organic-matter complex | dissimilatory iron reduction |
-| `metabolism/dissimilatory_manganese_reduction.yaml` | Mn(IV) oxide | dissimilatory manganese reduction |
-| `metabolism/dissimilatory_metal_reduction.yaml` | terminal electron acceptor | dissimilatory metal reduction |
+| `metabolism/dissimilatory_iron_reduction.yaml` | dissimilatory iron reduction | iron(3+) |
+| `metabolism/dissimilatory_iron_reduction.yaml` | dissimilatory iron reduction | solid Fe(III) mineral |
+| `metabolism/dissimilatory_iron_reduction.yaml` | dissimilatory iron reduction | dissolved Fe(III)-organic-matter complex |
+| `metabolism/dissimilatory_manganese_reduction.yaml` | dissimilatory manganese reduction | Mn(IV) oxide |
+| `metabolism/dissimilatory_metal_reduction.yaml` | dissimilatory metal reduction | terminal electron acceptor |
+| `metabolism/manganese_oxidation.yaml` | manganese oxidation | molecular oxygen (O2) |
 
 ### `METPO:2007701` has electron donor — all 13 edges
 
-| trait record | subject (chemical) | object (trait) |
+| trait record | subject (trait) | object (chemical) |
 |---|---|---|
-| `physiology/chemoautolithotrophic.yaml` | inorganic electron donor | chemoautolithotrophic |
-| `physiology/chemolithoautotrophic.yaml` | inorganic electron donor | chemolithoautotrophic |
-| `physiology/chemolithoheterotrophic.yaml` | inorganic chemical donor | chemolithoheterotrophic |
-| `physiology/chemolithotrophic.yaml` | inorganic chemical electron donor | chemolithotrophic |
-| `physiology/chemoorganoheterotrophic.yaml` | organic molecule | chemoorganoheterotrophic |
-| `physiology/hydrogenotrophic.yaml` | molecular hydrogen | hydrogenotrophic |
-| `physiology/lithoautotrophic.yaml` | inorganic electron donor | lithoautotrophic |
-| `physiology/lithoheterotrophic.yaml` | inorganic electron donor | lithoheterotrophic |
-| `physiology/lithotrophic.yaml` | inorganic electron donor | lithotrophic |
-| `physiology/organoheterotrophic.yaml` | organic compound | organoheterotrophic |
-| `physiology/organotrophic.yaml` | organic compound | organotrophic |
-| `physiology/photolithotrophic.yaml` | inorganic electron donor | photolithotrophic |
-| `physiology/photoorganoheterotrophic.yaml` | organic compound | photoorganoheterotrophic |
+| `physiology/chemoautolithotrophic.yaml` | chemoautolithotrophic | inorganic electron donor |
+| `physiology/chemolithoautotrophic.yaml` | chemolithoautotrophic | inorganic electron donor |
+| `physiology/chemolithoheterotrophic.yaml` | chemolithoheterotrophic | inorganic chemical donor |
+| `physiology/chemolithotrophic.yaml` | chemolithotrophic | inorganic chemical electron donor |
+| `physiology/chemoorganoheterotrophic.yaml` | chemoorganoheterotrophic | organic molecule |
+| `physiology/hydrogenotrophic.yaml` | hydrogenotrophic | molecular hydrogen |
+| `physiology/lithoautotrophic.yaml` | lithoautotrophic | inorganic electron donor |
+| `physiology/lithoheterotrophic.yaml` | lithoheterotrophic | inorganic electron donor |
+| `physiology/lithotrophic.yaml` | lithotrophic | inorganic electron donor |
+| `physiology/organoheterotrophic.yaml` | organoheterotrophic | organic compound |
+| `physiology/organotrophic.yaml` | organotrophic | organic compound |
+| `physiology/photolithotrophic.yaml` | photolithotrophic | inorganic electron donor |
+| `physiology/photoorganoheterotrophic.yaml` | photoorganoheterotrophic | organic compound |
 
-### `METPO:2007700` confers — 146 edges by subject node type
+### `METPO:2007700` confers — 145 edges by subject node type
 
 | subject `node_type` | edges |
 |---|---:|
@@ -233,26 +234,39 @@ pair, everything else to `confers`.
 | ENVIRONMENTAL_FACTOR | 12 |
 | CELLULAR_LOCALIZATION | 5 |
 | QUALITY | 5 |
-| CHEMICAL | 4 |
 | PATHWAY | 4 |
+| CHEMICAL | 3 |
 | MOLECULAR_FUNCTION | 2 |
 | STATE | 1 |
-| **total** | **146** |
+| **total** | **145** |
 
-Grand total: 146 + 13 + 5 = 164
+Grand total: 145 + 13 + 6 = 164
 
-Two classification notes a reviewer will want:
+Three classification notes a reviewer will want:
 
+- **The role test is on wording that names the role, not on the exact phrase
+  "electron acceptor".** `metabolism/manganese_oxidation.yaml` describes O2 as the
+  *"terminal oxidant"*, which names the terminal-acceptor role just as much; the
+  first cut of the rule matched only `electron acceptor|terminal electron` and
+  dropped that edge to `confers`, which is not false but is strictly weaker — the
+  exact loss #303 exists to stop. Caught in review of the migration PR (#323); the
+  rule now also matches `oxidant`/`reductant`. This moved the partition from
+  146/13/5 to **145/13/6**.
 - `environment/oxygen_preference.yaml#oxygen_terminal_electron_acceptor` is
   labelled *"O2 as terminal electron acceptor"* but typed `MOLECULAR_FUNCTION`
   (it denotes the *use* of O2, not O2 itself). It therefore lands in `confers`,
   as one of the two MOLECULAR_FUNCTION subjects — **not** under
-  `has electron acceptor`, whose definition requires a chemical species. Retyping
-  that node to `CHEMICAL`/`CHEBI:15379` is defensible but is a corpus change, so
-  it is left for the migration PR rather than assumed here.
-- All five `has electron acceptor` edges come from three dissimilatory-reduction
-  records; all thirteen `has electron donor` edges are one-per-record across the
-  lithotrophy/organotrophy family.
+  `has electron acceptor`, whose definition requires a chemical species.
+  **Resolved, not deferred:** the migration (#323) deliberately left the node
+  typed as-is and grounded the edge to `confers`, and
+  `mappings/predicate_grounding.tsv` gates the electron pair to `object_types=CHEMICAL`
+  so the node cannot drift onto it later. Retyping it to `CHEMICAL`/`CHEBI:15379`
+  remains defensible but would be a modelling change to what the node *means*, not a
+  fix to this migration.
+- All six `has electron acceptor` edges come from four records (three
+  dissimilatory-reduction traits plus manganese oxidation); all thirteen
+  `has electron donor` edges are one-per-record across the lithotrophy/organotrophy
+  family.
 
 ## Upstream path
 
@@ -271,7 +285,7 @@ whole thing at once would be unreviewable):
 1. Add the three predicates to `mappings/predicate_grounding.tsv` with
    `subject_types`/`object_types` gated to the node types each actually admits,
    so the grounding tool enforces the new shapes.
-2. Repoint the 146 `confers` edges (direction unchanged) and reverse the 18
+2. Repoint the 145 `confers` edges (direction unchanged) and reverse the 19
    electron edges onto the role-bearing pair.
 3. Regenerate `reports/predicate_domain_audit.tsv` and rewrite
    `conf/predicate_domain_audit_baseline.tsv`: `ENABLES_RANGE_ON_TRAIT` should

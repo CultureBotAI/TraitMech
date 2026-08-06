@@ -88,13 +88,13 @@ causal_graphs:
       notes: Lennon & Jones review entry/exit from dormancy (seed banks).
     predicate_id: biolink:causes
   - subject: dormancy_process
-    predicate: enables
+    predicate: confers
     object: dormancy_trait
     description: The dormancy process realizes the dormancy trait.
     evidence:
     - reference: DOI:10.1038/nrmicro1557
       notes: Lewis links dormancy to long-term survival.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: nutrient_heat_stress
     predicate: activates
     object: ppgpp_stringent_response
@@ -177,4 +177,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006412×1, GO:0005840×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

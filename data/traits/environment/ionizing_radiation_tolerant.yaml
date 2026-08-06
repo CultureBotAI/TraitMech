@@ -74,23 +74,23 @@ causal_graphs:
       notes: Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.
     predicate_id: METPO:2007406
   - subject: dsb_repair
-    predicate: enables
+    predicate: confers
     object: ionizing_tolerant_trait
     description: Efficient DSB repair restores chromosomal integrity after ionizing-radiation
       damage.
     evidence:
     - reference: DOI:10.3390/genes14091803
       notes: D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: mn_antioxidant_protection
-    predicate: enables
+    predicate: confers
     object: ionizing_tolerant_trait
     description: Mn-antioxidant proteome protection preserves repair capacity under
       irradiation.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: gamma_radiation
     predicate: causes
     object: dsb_clustered_lesions
@@ -153,4 +153,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

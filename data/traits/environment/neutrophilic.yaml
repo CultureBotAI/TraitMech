@@ -90,16 +90,16 @@ causal_graphs:
     description: ATP-dependent proton transporter contributing to pH restoration.
   edges:
   - subject: near_neutral_external_ph
-    predicate: enables
+    predicate: confers
     object: neutrophilic_trait
     description: Neutrophiles grow optimally when external pH is near neutrality.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH values outside the cytoplasmic pH
       notes: Review supports growth constraints around cytoplasmic pH compatibility.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cytoplasmic_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: neutrophilic_trait
     description: Growth near neutral pH still requires active maintenance of internal
       pH.
@@ -107,7 +107,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: bacterial pH homeostasis is a cell-wide physiological process
       notes: Supports pH homeostasis as central to bacterial growth.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: proton_motive_force
     predicate: interacts with
     object: cytoplasmic_ph_homeostasis
@@ -266,4 +266,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×4, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

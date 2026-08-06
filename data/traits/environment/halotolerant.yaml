@@ -132,14 +132,14 @@ causal_graphs:
         mechanism is shared with halotolerance.
     predicate_id: RO:0002326
   - subject: stress_protection
-    predicate: enables
+    predicate: confers
     object: halotolerant_trait
     description: Stress-protection mechanisms allow tolerance of salt exposure.
     evidence:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: allows microorganisms to cope with high salinities
       notes: Supports osmoadaptation as a mechanism for growth under salt stress.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: osmotic_stress
     predicate: increases
     object: compatible_solute_accumulation
@@ -276,4 +276,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0019491×1, GO:0031456×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

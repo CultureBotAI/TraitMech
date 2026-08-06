@@ -79,14 +79,14 @@ causal_graphs:
         the absence of oxygen production.
     predicate_id: METPO:2007402
   - subject: photosynthetic_etc
-    predicate: enables
+    predicate: confers
     object: anoxygenic_photosynthesis_trait
     description: Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.
     evidence:
     - reference: DOI:10.1016/j.tim.2006.09.001
       notes: Bryant & Frigaard describe anoxygenic photosynthesis across five prokaryotic
         phyla using bacteriochlorophyll and a single photosystem.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: bacteriochlorophyll
     predicate: absorbs
     object: light_energy
@@ -106,7 +106,7 @@ causal_graphs:
       notes: Light energy captured by bacteriochlorophyll powers single-photosystem
         electron flow in anoxygenic phototrophs.
   - subject: type_i_reaction_center
-    predicate: enables
+    predicate: confers
     object: anoxygenic_photosynthesis_trait
     description: A homodimeric Type I reaction-center photosystem mediates anoxygenic
       photosynthesis across diverse phyla.
@@ -115,7 +115,7 @@ causal_graphs:
       notes: 'Niederman: diverse homodimeric Type I reaction-center photosystems underpin
         anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y
         showing Chloroflexota use a Type I RC.'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: type_i_reaction_center
     predicate: part of
     object: photosynthetic_etc
@@ -167,4 +167,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:38201×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -70,7 +70,7 @@ causal_graphs:
       oxidoreductase (PFOR) and pyruvate formate lyase (PFL).
   edges:
   - subject: anoxic_condition
-    predicate: enables
+    predicate: confers
     object: strictly_anaerobic_trait
     description: Strict anaerobes require oxygen-excluding conditions for growth.
     evidence:
@@ -78,7 +78,7 @@ causal_graphs:
       snippet: hypoxic or anoxic conditions
       notes: Review supports anoxic environments as the ecological context for anaerobe
         growth.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: molecular_oxygen
     predicate: inhibits
     object: strictly_anaerobic_trait
@@ -189,4 +189,13 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

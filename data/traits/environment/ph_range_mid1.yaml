@@ -77,14 +77,14 @@ causal_graphs:
     description: Exposure to alkaline external pH above the neutrophilic optimum.
   edges:
   - subject: baseline_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: ph_range_mid1_trait
     description: Baseline pH-homeostasis enables growth across pH 6–7.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
       notes: Supports baseline pH-homeostasis as the neutrophilic range mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: ph_range_mid1_trait
     predicate: is a
     object: ph_range
@@ -104,14 +104,14 @@ causal_graphs:
         ability to maintain pH.'
     predicate_id: RO:0002327
   - subject: cytoplasmic_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: ph_range_mid1_trait
     description: Maintaining near-neutral cytoplasmic pH supports the neutrophilic
       pH 6-7 growth range.
     evidence:
     - reference: DOI:10.1103/PRXLife.2.043015
       notes: Cytoplasmic pH held near neutral underlies the neutralophile growth range.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cation_proton_antiporters
     predicate: determines
     object: cytoplasmic_ph_homeostasis
@@ -192,4 +192,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

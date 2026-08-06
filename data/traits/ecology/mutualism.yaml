@@ -92,14 +92,14 @@ causal_graphs:
         mutualism.
     predicate_id: biolink:causes
   - subject: reciprocal_benefit
-    predicate: enables
+    predicate: confers
     object: mutualism_trait
     description: Sustained mutual benefit realizes the mutualistic lifestyle.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
       notes: McFall-Ngai et al. document mutually beneficial host-microbe associations
         across animals.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: host_control_mechanisms
     predicate: selects for
     object: host_beneficial_microbial_traits
@@ -111,7 +111,7 @@ causal_graphs:
         generate natural selection for microbial traits that benefit the host.'
     predicate_id: METPO:2007401
   - subject: host_beneficial_microbial_traits
-    predicate: enables
+    predicate: confers
     object: mutualism_trait
     description: Selection for host-beneficial microbial traits sustains the mutualistic
       relationship.
@@ -119,7 +119,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adi3338
       notes: Host control selecting for host-beneficial microbial traits underpins
         stable host-microbe mutualism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cross_feeding_architecture
     predicate: creates
     object: obligate_mutualism_syntrophy
@@ -132,7 +132,7 @@ causal_graphs:
         mutualism.'
     predicate_id: biolink:produces
   - subject: micronutrient_exchange
-    predicate: enables
+    predicate: confers
     object: mutualism_trait
     description: Exchange of N-sources, vitamins, and micronutrients supports mutualistic
       associations.
@@ -140,7 +140,7 @@ causal_graphs:
     - reference: DOI:10.3390/plants13060829
       notes: 'Burgunter-Delamare et al. 2024: mutualistic benefits are framed as provision
         of metabolites (N-sources, vitamins, micronutrients).'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: metabolite_secretion_profile
     predicate: determines
     object: interaction_outcome_state
@@ -173,4 +173,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×2, METPO:2007401×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

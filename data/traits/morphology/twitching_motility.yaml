@@ -87,21 +87,21 @@ causal_graphs:
       type IV pilus.
   edges:
   - subject: type_iv_pilus
-    predicate: enables
+    predicate: confers
     object: twitching_trait
     description: Type IV pili are the molecular engines of twitching motility.
     evidence:
     - reference: DOI:10.1146/annurev.micro.56.012302.160938
       notes: Mattick describes twitching as type-IV-pilus-driven surface translocation.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: pilus_assembly
-    predicate: enables
+    predicate: confers
     object: twitching_trait
     description: Extension–attachment–retraction cycles pull the cell across the surface.
     evidence:
     - reference: DOI:10.1146/annurev.micro.57.030502.091014
       notes: Harshey treats twitching as a distinct surface-translocation strategy.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: pilb_extension_atpase
     predicate: drives
     object: pilus_extension
@@ -119,7 +119,7 @@ causal_graphs:
       notes: 'Roberge & Burrows 2024: "Retraction is driven by PilT, which engages
         with PilC within the same cytoplasmic socket."'
   - subject: pilus_retraction
-    predicate: enables
+    predicate: confers
     object: twitching_trait
     description: Pilus retraction pulls the cell across the surface, producing twitching
       translocation.
@@ -127,7 +127,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00442-23
       notes: 'Geiger et al. 2024: twitching is movement that pulls the cell across
         a surface through cooperative binding, pulling, and unbinding.'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: pilq_secretin
     predicate: enables surface exposure of
     object: pilus_filament_surface_exposure
@@ -177,4 +177,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

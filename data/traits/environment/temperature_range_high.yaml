@@ -79,14 +79,14 @@ causal_graphs:
       at elevated temperature.
   edges:
   - subject: thermophile_thermostability
-    predicate: enables
+    predicate: confers
     object: temperature_range_high_trait
     description: Thermophile thermostability enables growth at > 40 °C.
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: resistant to irreversible inactivation at high temperatures
       notes: Supports thermostability as the range mechanism for thermophile physiology.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: temperature_range_high_trait
     predicate: is a
     object: temperature_range
@@ -115,7 +115,7 @@ causal_graphs:
         general for reverse-gyrase-bearing thermophiles.
     predicate_id: RO:0002212
   - subject: reverse_gyrase
-    predicate: enables
+    predicate: confers
     object: temperature_range_high_trait
     description: Reverse gyrase activity supports growth at high temperature via genome
       stabilization.
@@ -123,7 +123,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02174-23
       notes: Reverse gyrase reported as essential for growth at very high temperature,
         maintaining DNA stability.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: dnak_dnaj
     predicate: assists
     object: protein_folding
@@ -149,13 +149,13 @@ causal_graphs:
       notes: refolding/degradation systems counter protein denaturation, aggregation
         and loss of function during heat shock.
   - subject: proteostasis_high_temp
-    predicate: enables
+    predicate: confers
     object: temperature_range_high_trait
     description: Proteostasis at high temperature supports growth above 40 C.
     evidence:
     - reference: DOI:10.1128/mbio.02174-23
       notes: proteostasis machinery supports thermophile survival/growth at high temperature.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825852+00:00'
   curator: seed_from_metpo
@@ -209,4 +209,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0160097×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

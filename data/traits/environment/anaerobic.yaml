@@ -88,14 +88,14 @@ causal_graphs:
     grounding: GO:0009061
   edges:
   - subject: anoxic_condition
-    predicate: enables
+    predicate: confers
     object: anaerobic_trait
     description: Anaerobic growth is favored in low-oxygen environments.
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: hypoxic environments in which these organisms dwell
       notes: Review links anaerobe ecology to hypoxic environments.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: molecular_oxygen
     predicate: inhibits
     object: anaerobic_trait
@@ -170,7 +170,7 @@ causal_graphs:
         for anaerobic respiration.
     predicate_id: RO:0002327
   - subject: anaerobic_respiration
-    predicate: enables
+    predicate: confers
     object: anaerobic_trait
     description: Use of alternative terminal electron acceptors supports growth without
       molecular oxygen.
@@ -178,7 +178,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01560-2
       notes: Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic
         respiration, enabling growth without O2.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849856+00:00'
   curator: seed_from_metpo
@@ -236,4 +236,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009061×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

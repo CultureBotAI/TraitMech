@@ -129,7 +129,7 @@ causal_graphs:
       snippet: reversed membrane potential
       notes: Supports reversed membrane potential as a shared acidophile feature.
   - subject: cytoplasmic_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: acidophilic_trait
     description: Acidophilic growth requires maintaining cytoplasmic pH compatible
       with biomolecular function.
@@ -137,7 +137,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports cytoplasmic pH homeostasis during growth at low external pH.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: primary_proton_pumps
     predicate: catalyzes active transport of
     object: proton
@@ -257,4 +257,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

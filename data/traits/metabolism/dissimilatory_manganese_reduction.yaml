@@ -72,15 +72,15 @@ causal_graphs:
       notes: Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation
         as energy-conserving anaerobic respiration.
     predicate_id: METPO:2007405
-  - subject: mn_iv_oxide
-    predicate: enables
-    object: dmr_trait
+  - subject: dmr_trait
+    predicate: has electron acceptor
+    object: mn_iv_oxide
     description: Mn(IV) acts as terminal electron acceptor enabling DMR.
     evidence:
     - reference: PMID:7826009
       notes: Nealson & Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic
         respiration.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007702
   - subject: organic_matter
     predicate: is oxidized coupled to
     object: dmr_trait
@@ -99,14 +99,14 @@ causal_graphs:
         oxidize hydrogen.'
     predicate_id: METPO:2007403
   - subject: anoxia
-    predicate: enables
+    predicate: confers
     object: dmr_trait
     description: Anoxic conditions enable anaerobic Mn(IV) respiration.
     evidence:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments,
         soils, and groundwater under anaerobic conditions.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: methane_oxidation
     predicate: is coupled to
     object: dmr_trait
@@ -152,4 +152,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:18276×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has
+    electron acceptor, 1 to confers), issue 302. RO:0002327 has range 'biological process
+    or activity', which a trait (a disposition) cannot satisfy, so the previous form entailed
+    trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them. 1 electron edge(s) were also reversed
+    back to trait -> chemical, restoring the donor/acceptor role that PR 300 collapsed onto
+    enables (issue 303); the organism-subject problem that forced that collapse does not arise
+    here because these predicates take a causal-node domain rather than METPO:2000001's microbe
+    domain (issue 301).
   llm_assisted: true

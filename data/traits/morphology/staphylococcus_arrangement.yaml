@@ -83,14 +83,14 @@ causal_graphs:
         of three-dimensional coccal clusters.
     predicate_id: biolink:causes
   - subject: cell_division
-    predicate: enables
+    predicate: confers
     object: staphylococcus_trait
     description: Bacterial cell division underlies coccal cluster formation.
     evidence:
     - reference: DOI:10.1128/MMBR.00001-06
       notes: Young treats clustered coccal arrangement as a division-plane- determined
         heritable morphology.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: facz
     predicate: prevents aberrant placement of
     object: ftsz_ring
@@ -178,4 +178,13 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

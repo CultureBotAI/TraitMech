@@ -144,29 +144,53 @@ The organism-subject form stays valid at the *assertion* site —
 OBJECT_PROPERTY records' `domain:` describes. It is only the
 causal-graph reuse that is wrong.
 
-**What to use instead is not settled — do not assume `enables`.**
-The 15 electron edges were moved to `<chemical> enables <trait>`
-(`RO:0002327`) in #300 because that shape already existed in the
-corpus. But biolink defines `enables` with
+**Do not use `enables` for a TRAIT object.** biolink defines it with
 `range: biological process or activity`
 (`data/raw/biolink-model.yaml:5099`), and a TRAIT is a disposition,
-not a process — so that form carries its own false entailment, and
-164 corpus edges already do this. #302 tracks the decision (repoint
-to a process node vs. mint a chemical→trait relation in METPO, for
-which `proposals/metpo_traitmech_v2/proposal.md:71` is precedent);
-#303 tracks the fact that collapsing both electron predicates onto
-one relation loses the donor/acceptor distinction.
+not a process, so that form carries its own false entailment. #300
+moved 15 electron edges onto `<chemical> enables <trait>` as an
+interim shape; #302 and #303 settled the question and #323 migrated
+all 164 such edges off it. **The count is now 0, and the audit
+(`just audit-predicate-domains`) fails any new one.**
 
-Until #302 lands, prefer pointing the chemical at the graph's
-**process** node, which is range-correct today:
+Use the `metpo_traitmech_v8` predicates instead. They take a
+causal-node domain, so they avoid both the microbe domain above and
+the process range:
+
+| Shape | Predicate | `predicate_id` |
+|---|---|---|
+| any causal node → trait | `confers` | `METPO:2007700` |
+| trait → chemical acting as electron donor | `has electron donor` | `METPO:2007701` |
+| trait → chemical acting as electron acceptor | `has electron acceptor` | `METPO:2007702` |
+
+Note the electron pair runs **trait → chemical**, which is the
+direction `METPO:2000008/2000009` expressed before their inherited
+microbe domain made them unusable here. That is what keeps the
+donor/acceptor role machine-readable (#303) instead of collapsing
+both onto one relation.
 
 ```yaml
 edges:
-- subject: glucose                     # CHEMICAL grounded to CHEBI:17234
-  predicate: enables                   # RO:0002327
-  object: central_carbon_metabolism    # BIOLOGICAL_PROCESS, not the trait
-  description: Glucose is the carbon source oxidised by <process>.
+- subject: glucose_oxidation           # any causal node
+  predicate: confers                   # METPO:2007700
+  object: chemoorganotrophy_trait      # the TRAIT
+  description: <what makes the organism able to exhibit the trait>.
+- subject: lithotrophic_trait          # the TRAIT is the subject here
+  predicate: has electron donor        # METPO:2007701
+  object: inorganic_electron_donor     # CHEMICAL
+  description: <which chemical fills the donor role>.
 ```
+
+`mappings/predicate_grounding.tsv` gates all three by node type, so
+`just ground-predicates` refuses a `confers` edge whose object is not
+a TRAIT, or an electron edge whose object is not a CHEMICAL. A node
+that names a *function* rather than a substance — such as
+`oxygen_preference`'s "O2 as terminal electron acceptor", typed
+`MOLECULAR_FUNCTION` — is therefore not eligible for the electron
+pair and takes `confers`.
+
+These three ids are **placeholders** until METPO mints the real ones;
+see `proposals/metpo_traitmech_v8/proposal.md` for the round-trip plan.
 
 ## File-level structure
 

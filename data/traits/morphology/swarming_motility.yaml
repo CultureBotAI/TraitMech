@@ -65,21 +65,21 @@ causal_graphs:
     description: Outward dendritic spreading of a multicellular swarm across a surface.
   edges:
   - subject: bacterial_flagellum
-    predicate: enables
+    predicate: confers
     object: swarming_trait
     description: Hyperflagellation provides the propulsive machinery for swarming.
     evidence:
     - reference: DOI:10.1038/nrmicro2405
       notes: Kearns defines swarming via increased flagella per cell.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: surfactant
-    predicate: enables
+    predicate: confers
     object: swarming_trait
     description: Secreted wetting surfactant supports multicellular surface spreading.
     evidence:
     - reference: DOI:10.1038/nrmicro2405
       notes: Kearns defines swarming via surfactant secretion accompanying hyperflagellation.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: swarming_trait
     predicate: participates in
     object: flagellar_motility
@@ -149,4 +149,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×3).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

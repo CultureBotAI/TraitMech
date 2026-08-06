@@ -97,14 +97,14 @@ causal_graphs:
     description: Regulator maintaining heterocyst spacing pattern.
   edges:
   - subject: cell_differentiation
-    predicate: enables
+    predicate: confers
     object: heterocyst_trait
     description: Cyanobacterial cell differentiation realizes the thick-walled heterocyst.
     evidence:
     - reference: DOI:10.1093/femsre/fuw029
       notes: Herrero et al. describe heterocysts within the multicellular filament
         of heterocyst-forming cyanobacteria.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: heterocyst_trait
     predicate: causes
     object: microoxic_interior
@@ -222,4 +222,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×2, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

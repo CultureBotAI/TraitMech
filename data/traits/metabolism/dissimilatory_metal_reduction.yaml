@@ -81,16 +81,16 @@ causal_graphs:
     description: Anaerobic subsurface where Fe(III) is present as insoluble/crystalline
       forms.
   edges:
-  - subject: metal_terminal_acceptor
-    predicate: enables
-    object: metal_reduction_trait
+  - subject: metal_reduction_trait
+    predicate: has electron acceptor
+    object: metal_terminal_acceptor
     description: Metal-ion acceptors enable energy-conserving anaerobic respiration
       on metals.
     evidence:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: Lovley establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction as
         energy-conserving anaerobic respiration.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007702
   - subject: metal_reduction_trait
     predicate: participates in
     object: anaerobic_respiration
@@ -175,4 +175,17 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×2).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has
+    electron acceptor), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a
+    BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them. 1 electron edge(s) were also reversed
+    back to trait -> chemical, restoring the donor/acceptor role that PR 300 collapsed onto
+    enables (issue 303); the organism-subject problem that forced that collapse does not arise
+    here because these predicates take a causal-node domain rather than METPO:2000001's microbe
+    domain (issue 301).
   llm_assisted: true

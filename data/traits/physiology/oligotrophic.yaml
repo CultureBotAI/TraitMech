@@ -134,7 +134,7 @@ causal_graphs:
       notes: Supports slow growth as a characteristic of oligotrophic strategy.
     predicate_id: biolink:associated_with
   - subject: efficient_nutrient_use
-    predicate: enables
+    predicate: confers
     object: oligotrophic_trait
     description: Efficient nutrient use enables persistence and growth in nutrient-poor
       environments.
@@ -142,7 +142,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: molecular mechanisms of adaptation
       notes: Supports genomic mechanisms underlying oligotrophic adaptation.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: low_nutrient_environment
     predicate: selects for
     object: streamlined_genome
@@ -238,4 +238,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1, RO:0002213×1, METPO:2000017×1, biolink:associated_with×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

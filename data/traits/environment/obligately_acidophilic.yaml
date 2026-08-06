@@ -148,7 +148,7 @@ causal_graphs:
       notes: Supports transporter-mediated acid resistance mechanisms.
     predicate_id: RO:0002326
   - subject: cytoplasmic_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: obligately_acidophilic_trait
     description: Obligate acidophilic growth requires maintaining cytoplasmic pH despite
       acidic external pH.
@@ -156,7 +156,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports intracellular pH control during extreme acidophilic growth.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: k_uptake_system_kdp_kef
     predicate: increases
     object: reversed_membrane_potential
@@ -298,4 +298,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2, RO:0002212×2, RO:0002326×1, METPO:2000209×1, biolink:consumes×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

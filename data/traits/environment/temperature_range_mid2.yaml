@@ -86,14 +86,14 @@ causal_graphs:
     description: Organisms growing at moderate temperatures (~20-45 °C).
   edges:
   - subject: baseline_mesophile_adaptation
-    predicate: enables
+    predicate: confers
     object: temperature_range_mid2_trait
     description: Baseline mesophile adaptation enables growth across 27–30 °C.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
       notes: Supports baseline mesophile homeoviscous adaptation as the range mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: temperature_range_mid2_trait
     predicate: is a
     object: temperature_range
@@ -131,7 +131,7 @@ causal_graphs:
         broad membrane-modulator edge.
     predicate_id: RO:0002211
   - subject: membrane_fluidity
-    predicate: enables
+    predicate: confers
     object: temperature_range_mid2_trait
     description: Maintained membrane fluidity enables growth across the mid2 temperature
       range.
@@ -139,7 +139,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: Functional membrane fluidity underlies homeoviscous adaptation supporting
         the mesophile range.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: elevated_temperature
     predicate: opens
     object: rna_thermometer
@@ -210,4 +210,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

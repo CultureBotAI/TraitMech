@@ -75,14 +75,14 @@ causal_graphs:
     grounding: CHEBI:17579
   edges:
   - subject: proteorhodopsin
-    predicate: enables
+    predicate: confers
     object: proteorhodopsin_trait
     description: The retinal-binding pump realizes proteorhodopsin phototrophy.
     evidence:
     - reference: DOI:10.1126/science.289.5486.1902
       notes: Béjà et al. identified proteorhodopsin as a retinal-binding light-driven
         proton pump.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: proteorhodopsin_trait
     predicate: enables
     object: proton_motive_force
@@ -181,4 +181,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000222×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true
