@@ -27,13 +27,18 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   — the same shape as the RO:0002411 defect in
                                   #235.                                     (#302) [WARN]
 
-Neither is machine-fixable without a biological decision per predicate family
-(#301) or an ontology decision on the enables range (#302, #303), so a blocking
-check would be un-landable today: 366 + 164 edges already carry these shapes.
-This is therefore a **ratchet**, identical in mechanics to audit-graphs and
-audit-snippets: ``--write-baseline`` freezes the known set, pre-existing
-violations stay non-blocking, and any *new* violation fails the build. Burn the
-baseline down family by family, then tighten to ``--fail-on any``.
+Both classes are now BURNED DOWN and the check runs as a hard gate. It shipped
+as a ratchet over 530 known findings (#314), because neither was fixable without
+a per-family biological decision (#301) or an ontology decision on the enables
+range (#302, #303). Those landed — the v8 predicates for #302/#303 (#320, #323)
+and v9 for #301 (#326, #328, #329), with the final edge re-grounded to
+RO:0001001 in #327 — so the count is 0 and ``just audit-predicate-domains``
+passes ``--fail-on any``. No baseline file is tracked any more.
+
+The ratchet machinery below is deliberately KEPT rather than deleted: it is what
+makes a future class of violation landable without blocking unrelated work, the
+same way this one was. But do not reintroduce a baseline to make a new violation
+pass — reaching zero is what makes the next one a bug rather than a backlog.
 
 The microbe-domain predicate set is derived at run time by walking the
 ``subPropertyOf`` closure to METPO:2000001 in ``data/raw/metpo.owl`` — NOT from

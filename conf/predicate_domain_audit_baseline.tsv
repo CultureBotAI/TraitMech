@@ -1,2 +1,0 @@
-file	graph_id	defect	severity	detail
-data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems	MICROBE_DOMAIN_ON_NONORGANISM	WARN	cellulose--METPO:2000013-->cellobiose subject_type=CHEMICAL predicate='is hydrolyzed to' — subject entails ⊑ microbe (METPO:1000525) via METPO:2000001

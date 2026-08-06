@@ -97,14 +97,19 @@ audit-graphs *args:
 # non-organism subject (#301, 366 edges), and enables/RO:0002327 pointed at a
 # TRAIT object when its range is 'biological process or activity' (#302, 164).
 # Emits reports/predicate_domain_audit.tsv.
-# Same ratchet as audit-graphs: conf/predicate_domain_audit_baseline.tsv freezes
-# the 530 known findings so it lands green, while any NEW violation fails —
-# neither class is fixable without a per-family biological/ontology decision
-# (#301, #302, #303), so this makes the backlog visible and non-growing until
-# those land. Burn it down per family, then `just audit-predicate-domains
-# --fail-on any`.
+#
+# BURNED DOWN, AND NOW A HARD GATE. This shipped as a ratchet over 530 known
+# findings (#314) because neither class was fixable without a per-family
+# biological/ontology decision. Those decisions landed — #302/#303 via the v8
+# predicates (#320, #323) and #301 via v9 (#326, #328, #329), with the last edge
+# re-grounded to RO:0002234 in #327 — so the count is 0 and `--fail-on any` is
+# passed explicitly. There is no baseline file any more: every finding fails,
+# including one that a `--write-baseline` run would otherwise have frozen.
+#
+# Do NOT reintroduce a baseline to make a new violation pass. The whole point of
+# reaching zero is that the next one is a bug to fix, not a backlog to inherit.
 audit-predicate-domains *args:
-    uv run python scripts/audit_predicate_domains.py {{args}}
+    uv run python scripts/audit_predicate_domains.py --fail-on any {{args}}
 
 # Structural audit of evidence snippets: EvidenceItem.snippet is specified as a
 # VERBATIM quote and docs/CURATION_PLAYBOOK.md sharpens that to contiguous, no
