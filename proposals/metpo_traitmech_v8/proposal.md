@@ -90,13 +90,13 @@ kind of thing the subject is.
 | `confers` | `RO:0002327` enables | Range is 'biological process or activity'; a trait is a disposition. This is the violation being fixed (#302), so reusing it is circular. |
 | `confers` | `RO:0002200` has phenotype | Domain is an organism; the subject here is a causal-graph node (a protein, a process, a condition), not the organism. |
 | `confers` | `biolink:contributes_to` | Too weak — states participation without asserting the subject is what makes the trait realizable. |
-| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 114 of these 146 subjects are proteins, processes, or environmental conditions, which do not "manifest as" a trait. Kept distinct rather than widened. |
+| `confers` | `METPO:2007400` manifests as (v2) | Closest existing proposal, but scoped to *physiological state → observable trait*. 114 of these 145 subjects are proteins, processes, or environmental conditions, which do not "manifest as" a trait. Kept distinct rather than widened. |
 | `has electron donor` / `has electron acceptor` | `METPO:2000009` / `METPO:2000008` | Exactly the right sense, but their inherited `rdfs:domain` is microbe (#301), so a causal-graph subject entails `⊑ microbe`. Recorded as `skos:closeMatch` in the SSSOM file. |
 | `has electron donor` / `has electron acceptor` | `METPO:2007603` serves as electron donor and acceptor (v6) | Deliberately the *combined* disproportionation case (one species in both roles). It cannot express the distinction #303 is about. |
 
 ### Direction, and why it is reversed relative to the current edges
 
-The 18 electron edges currently read `<chemical> --enables--> <trait>`. Under
+The 19 electron edges currently read `<chemical> --enables--> <trait>`. Under
 this proposal they read `<trait> --has electron donor|acceptor--> <chemical>`.
 
 That restores the direction METPO:2000008/2000009 expressed before their
@@ -184,7 +184,7 @@ No `metpo_proposal_classes_robot.tsv`: this cohort proposes no classes.
   (`TraitMech:data/traits/...#<graph_id>`), each anchor verified to be a real
   `graph_id` in that file. Cross-ontology alignments appear only in `xrefs` and
   the SSSOM file, never in column 4.
-- Edge partition (146 + 13 + 5 = 164) computed from the corpus, and cross-checked
+- Edge partition (145 + 13 + 6 = 164) computed from the corpus, and cross-checked
   against the independently-derived `ENABLES_RANGE_ON_TRAIT` count in
   `reports/predicate_domain_audit.tsv`.
 
@@ -285,7 +285,7 @@ whole thing at once would be unreviewable):
 1. Add the three predicates to `mappings/predicate_grounding.tsv` with
    `subject_types`/`object_types` gated to the node types each actually admits,
    so the grounding tool enforces the new shapes.
-2. Repoint the 146 `confers` edges (direction unchanged) and reverse the 18
+2. Repoint the 145 `confers` edges (direction unchanged) and reverse the 19
    electron edges onto the role-bearing pair.
 3. Regenerate `reports/predicate_domain_audit.tsv` and rewrite
    `conf/predicate_domain_audit_baseline.tsv`: `ENABLES_RANGE_ON_TRAIT` should
