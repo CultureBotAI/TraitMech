@@ -341,5 +341,14 @@ curation_history:
     test. The process the edge description already named was simply not in the graph; both
     new edges are range-correct and the step is wired on both sides so nothing is orphaned.
     This was the last CHEMICAL-subject produces edge, which let METPO:2007800's subject_types
-    gate drop CHEMICAL.
+    gate drop CHEMICAL. Two modelling choices are recorded here as decisions rather than
+    left as omissions (issue 331 review). The node is typed BIOLOGICAL_PROCESS rather than
+    MOLECULAR_FUNCTION, which would have grounded to GO:0008776 (acetate kinase activity)
+    via mappings/node_grounding.tsv - this trait's own research report asks for a process
+    label plus explicit reaction edges for the substrate-level phosphorylation step, and
+    that is what this is. And the step carries has-output atp but deliberately not
+    has-output acetate, because the existing acetyl_phosphate is-converted-to acetate edge
+    already states that half of the reaction on the chemical chain; asserting it again at
+    the process level is the duplication at two levels of description that issue 303
+    criticised in dissimilatory_iron_reduction.
   llm_assisted: true

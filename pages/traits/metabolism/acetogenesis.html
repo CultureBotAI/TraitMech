@@ -607,7 +607,7 @@ Identifiers below are conservative suggestions. Labels without a verified stable
         <li>
           <time>2026-08-06T07:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Modelled the acetate kinase step as an explicit BIOLOGICAL_PROCESS node and split `acetyl_phosphate produces atp` into `acetate_kinase_step has input acetyl_phosphate` (RO:0002233) and `acetate_kinase_step has output atp` (RO:0002234), issue 331. The old edge had a CHEMICAL subject on METPO:2007800, whose definition is that the activity or state of the subject brings the object into existence - a chemical has neither in that sense. RO:0001001 (derives into) did not fit either, because ATP&#39;s matter comes mostly from ADP and only the phosphoryl group transfers, failing that relation&#39;s inherits-the-significant-portion-of-the-matter test. The process the edge description already named was simply not in the graph; both new edges are range-correct and the step is wired on both sides so nothing is orphaned. This was the last CHEMICAL-subject produces edge, which let METPO:2007800&#39;s subject_types gate drop CHEMICAL.</p>
+          <p class="changes">Modelled the acetate kinase step as an explicit BIOLOGICAL_PROCESS node and split `acetyl_phosphate produces atp` into `acetate_kinase_step has input acetyl_phosphate` (RO:0002233) and `acetate_kinase_step has output atp` (RO:0002234), issue 331. The old edge had a CHEMICAL subject on METPO:2007800, whose definition is that the activity or state of the subject brings the object into existence - a chemical has neither in that sense. RO:0001001 (derives into) did not fit either, because ATP&#39;s matter comes mostly from ADP and only the phosphoryl group transfers, failing that relation&#39;s inherits-the-significant-portion-of-the-matter test. The process the edge description already named was simply not in the graph; both new edges are range-correct and the step is wired on both sides so nothing is orphaned. This was the last CHEMICAL-subject produces edge, which let METPO:2007800&#39;s subject_types gate drop CHEMICAL. Two modelling choices are recorded here as decisions rather than left as omissions (issue 331 review). The node is typed BIOLOGICAL_PROCESS rather than MOLECULAR_FUNCTION, which would have grounded to GO:0008776 (acetate kinase activity) via mappings/node_grounding.tsv - this trait&#39;s own research report asks for a process label plus explicit reaction edges for the substrate-level phosphorylation step, and that is what this is. And the step carries has-output atp but deliberately not has-output acetate, because the existing acetyl_phosphate is-converted-to acetate edge already states that half of the reaction on the chemical chain; asserting it again at the process level is the duplication at two levels of description that issue 303 criticised in dissimilatory_iron_reduction.</p>
         </li>
         
       </ol>
@@ -990,7 +990,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Corpus as of 2026-08-06 07:00 UTC from
+      Corpus as of 2026-08-06 09:03 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
