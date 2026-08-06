@@ -151,6 +151,32 @@ def corpus_timestamp(traits: list[tuple[Path, dict]]) -> str:
     return latest.strftime("%Y-%m-%d %H:%M UTC") if latest else ""
 
 
+def record_timestamp(doc: dict) -> str:
+    """The latest ``curation_history`` timestamp for ONE record.
+
+    Trait pages carry this rather than the corpus-wide stamp (#304). The
+    corpus value is genuinely global, so storing 477 copies of it meant every
+    PR that appended a curation event — i.e. every data PR, since the playbook
+    requires one — rewrote all 477 pages. PR #300 changed 14 trait files and
+    produced a 508-file diff, 477 of them nothing but a footer timestamp, which
+    buries the real change and makes `pages/` conflict spuriously between
+    concurrent data PRs.
+
+    A per-record stamp fixes that without losing information: it changes only
+    when that record changes, and "when was THIS trait last curated" is the more
+    useful question on a trait page anyway. The corpus-wide stamp still appears
+    on the aggregate pages, where it is a property of the thing being shown.
+    """
+    latest: datetime | None = None
+    for entry in (doc.get("curation_history") or []):
+        parsed = _as_utc(entry.get("timestamp"))
+        if parsed is None:
+            continue
+        if latest is None or parsed > latest:
+            latest = parsed
+    return latest.strftime("%Y-%m-%d %H:%M UTC") if latest else ""
+
+
 def _as_utc(raw: object) -> datetime | None:
     """Coerce a curation_history timestamp to an aware UTC datetime.
 
@@ -421,7 +447,8 @@ def render_pages(args: argparse.Namespace) -> int:
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
             yaml_raw_url=f"{GH_RAW_BASE}/{yaml_rel}",
             yaml_edit_url=f"{GH_EDIT_BASE}/{yaml_rel}",
-            generated_at=corpus_stamp,
+            generated_at=record_timestamp(doc),
+            stamp_scope="Record",
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
