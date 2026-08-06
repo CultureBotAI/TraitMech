@@ -11,7 +11,9 @@ Runs every pre-submission check the `metpo-proposal` skill specifies:
      `metpo_traitmech_<YYYY>_<MM>` value.
   5. Scope-A coverage — every `traitmech:NNNNNN` ID found in `data/traits/`
      appears in at least one `definition_source` cell, or the operator opts
-     out with `--skip-scope-a`.
+     out with `--skip-scope-a`. Skipped entirely for a cohort that ships no
+     classes template, since such a cohort proposes no classes and so is not
+     doing Scope A at all (#318).
   6. Scope-C enum coverage — every `CausalNodeTypeEnum` permissible value
      appears as a leaf, or the operator opts out with `--skip-scope-c`.
 
@@ -118,6 +120,19 @@ def check_subset(rows: list[list[str]], col_idx: int, label: str, failures: list
 
 def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not TRAITS_DIR.exists():
+        return
+    # A cohort with no classes template proposes no classes, so it is not doing
+    # Scope A and cannot be judged against it. Without this, class_tsv_text is ""
+    # and EVERY traitmech: id in the corpus reads as uncited, so every
+    # predicate-only cohort fails the moment the corpus gains its first synthetic
+    # id — which is what v2, v4 and v6 all do today. main() already announces
+    # "Scope C/A check will skip" for this case and check_scope_c already honours
+    # it; only this check did not.
+    #
+    # Lifting the corpus's synthetic ids is a real obligation, but it belongs to
+    # a Scope-A cohort, not to every cohort of any scope.
+    if not class_tsv_text:
+        print("  scope-A: no classes template in this cohort (skip)", file=sys.stderr)
         return
     ids: set[str] = set()
     for p in TRAITS_DIR.rglob("*.yaml"):
