@@ -28,13 +28,13 @@ relation whose *subject* is a causal-graph node.
 | Scope | Source | # rows | Lift status |
 |---|---|---:|---|
 | A (synthetic trait classes) | records whose `identifier:` starts with `traitmech:` | 0 | out of scope — 120 exist, tracked in [#319](https://github.com/CultureBotAI/TraitMech/issues/319) |
-| B (causal-graph predicates) | the 366 microbe-domain edges (#301) | **13 predicates / 201 edges** | included |
+| B (causal-graph predicates) | the 366 microbe-domain edges (#301) | **13 predicates / 200 edges** | included |
 | C (controlled vocabularies) | already lifted in v1 (`CausalNodeTypeEnum`) | 0 | already covered |
 
-Total property rows in v9: **13**. No class rows; v1 already proposed the domain
+Total property rows in v9: **13**, covering **200** of the 366 edges. No class rows; v1 already proposed the domain
 class (`METPO:1007401` *trait causal node*).
 
-### Only 201 of the 366 need new terms
+### Only 200 of the 366 need new terms
 
 The 366 were triaged against what already exists before anything was minted.
 Two thirds of the residual has an existing home:
@@ -43,7 +43,8 @@ Two thirds of the residual has an existing home:
 |---|---:|---|---|
 | A — any subject → **TRAIT** object | 62 | `METPO:2007700` *confers* (v8) | no — already proposed |
 | B — **activity** subject `produces` X | 103 | `RO:0002234` *has output* | no — upstream, domain-correct |
-| C+D+E — everything else | **201** | this cohort | **yes, 13 terms** |
+| C+D+E — everything else | **200** | this cohort | **yes, 13 terms** |
+| — one inverse-direction edge, deliberately uncovered | 1 | needs its own decision ([#327](https://github.com/CultureBotAI/TraitMech/issues/327)) | no |
 | | **366** | | |
 
 **Family B is the important negative result.** biolink gives `has output`
@@ -69,12 +70,12 @@ convention that sidesteps the microbe domain.
 | `METPO:2007805` | imports | 12 | `METPO:2000208` |
 | `METPO:2007806` | has carbon source | 12 | `METPO:2000006` |
 | `METPO:2007807` | has energy source | 8 | `METPO:2000010` |
-| `METPO:2007808` | hydrolyzes | 7 | `METPO:2000013` |
+| `METPO:2007808` | hydrolyzes | 6 | `METPO:2000013` |
 | `METPO:2007809` | degrades | 6 | `METPO:2000007` |
 | `METPO:2007810` | accumulates | 3 | `METPO:2000210` |
 | `METPO:2007811` | disproportionates | 2 | `METPO:2000200` |
 | `METPO:2007812` | transports | 1 | `METPO:2000207` |
-| | | **201** | |
+| | | **200** | |
 
 ### Why mirror rather than collapse
 
@@ -151,11 +152,13 @@ cannot express it.
 - Column counts 12/12 on every properties row, 9/9 on every SSSOM row.
 - `definition_source` hygiene ([#83](https://github.com/CultureBotAI/TraitMech/issues/83)):
   all 13 cite a TraitMech curation event, and **each anchor was checked to be a
-  real `graph_id` carrying a real edge of that predicate with a non-activity
-  subject**. Cross-ontology alignment lives in `xrefs` + the SSSOM file as
+  real `graph_id` carrying a real edge of that predicate**. Note the claim is not
+  that every anchor has a *non-activity* subject: `METPO:2007812` (transports) has
+  exactly one corpus edge and its subject is a `PATHWAY`. The term is still needed —
+  `RO:0002234` is a production relation and covers no transport sense at all. Cross-ontology alignment lives in `xrefs` + the SSSOM file as
   `skos:closeMatch`, never in column 4.
 - Edge counts computed by walking the `subPropertyOf` closure to `METPO:2000001`
-  in `data/raw/metpo.owl` and matching against the corpus; the 62/103/201 split
+  in `data/raw/metpo.owl` and matching against the corpus; the 62/103/200/1 split
   sums to the 366 independently reported by
   `reports/predicate_domain_audit.tsv`.
 
@@ -171,13 +174,14 @@ The corpus migration follows as **two** PRs, deliberately not one — #301 warns
 single 366-edge sweep would be unreviewable, and the 164-edge v8 migration needed
 three review rounds:
 
-1. **Mechanical first (178 edges)** — family A (62 → `confers`, already minted),
+1. **Mechanical first (185 edges)** — family A (62 → `confers`, already minted),
    family B (103 → `RO:0002234`), and the two role predicates
-   (`has carbon source`/`has energy source`, 20). Targets already decided or
-   upstream. Expected: `MICROBE_DOMAIN_ON_NONORGANISM` **366 → 188**.
-2. **Then the rest (188 edges)** — the enzyme, transport and remaining `produces`
-   families onto the other 11 terms here. Expected: **188 → 0**, retiring the
-   defect class.
+   (`has carbon source` 12 + `has energy source` 8 = 20). Targets already decided or
+   upstream. Expected: `MICROBE_DOMAIN_ON_NONORGANISM` **366 → 181**.
+2. **Then the rest (181 edges)** — the enzyme, transport and remaining `produces`
+   families onto the other 11 terms here (180 edges, = 200 − 20), plus the single
+   inverse-direction `is hydrolyzed to` edge once #327 decides its direction.
+   Expected: **181 → 0**, retiring the defect class.
 
 Gate each with `subject_types`/`object_types` on the
 `mappings/predicate_grounding.tsv` rows, as v8 did, so the grounding tool refuses
@@ -189,6 +193,6 @@ placeholder CURIEs in `mappings/predicate_grounding.tsv` and `data/traits/**`.
 ## Change log
 
 - v9, 2026-08: propose 13 causal-graph counterparts of the `METPO:2000001`
-  subtree (`METPO:2007800`–`METPO:2007812`), covering 201 of the 366 edges in
+  subtree (`METPO:2007800`–`METPO:2007812`), covering 200 of the 366 edges in
   #301. The other 165 are routed to `METPO:2007700` (v8) and `RO:0002234` rather
   than to new terms. No corpus edges migrated in this cohort.
