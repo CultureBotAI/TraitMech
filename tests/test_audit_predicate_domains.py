@@ -291,13 +291,39 @@ def _run_cli(traits_dir, owl, out, baseline, *extra):
 
 
 def test_write_baseline_freezes_then_passes(tmp_path):
+    """The ratchet still works, but now only when asked for explicitly (#327).
+
+    `--fail-on` defaults to `any` since the backlog reached zero, so a baseline
+    no longer forgives anything by default — that is the whole point of the
+    hardening. Reintroducing the ratchet for a NEW class of violation means
+    passing `--fail-on new` alongside `--write-baseline`.
+    """
     owl = _write_owl(tmp_path)
     d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
     baseline = tmp_path / "baseline.tsv"
     out = tmp_path / "out.tsv"
 
-    assert _run_cli(d, owl, out, baseline).returncode == 1  # new violations block
+    assert _run_cli(d, owl, out, baseline).returncode == 1  # violations block
     assert _run_cli(d, owl, out, baseline, "--write-baseline").returncode == 0
     assert baseline.exists()
-    assert _run_cli(d, owl, out, baseline).returncode == 0  # now forgiven
+    # Explicit ratchet mode forgives the frozen set...
+    assert _run_cli(d, owl, out, baseline, "--fail-on", "new").returncode == 0
+    # ...but the DEFAULT does not, even with that baseline sitting there.
+    assert _run_cli(d, owl, out, baseline).returncode == 1
     assert _run_cli(d, owl, out, baseline, "--fail-on", "any").returncode == 1
+
+
+def test_default_fail_on_is_any(tmp_path):
+    """#327: a stray baseline file must not silently weaken a default run.
+
+    The 🔵 raised in review — `--write-baseline` can still recreate the deleted
+    file, and before this change a non-recipe invocation would have loaded it and
+    passed. Pinned here so the hardening cannot be undone by an argparse edit.
+    """
+    owl = _write_owl(tmp_path)
+    d = _write(tmp_path, "two.yaml", TWO_MICROBE_EDGES)
+    baseline = tmp_path / "baseline.tsv"
+    out = tmp_path / "out.tsv"
+    _run_cli(d, owl, out, baseline, "--write-baseline")
+    assert baseline.exists()
+    assert _run_cli(d, owl, out, baseline).returncode == 1

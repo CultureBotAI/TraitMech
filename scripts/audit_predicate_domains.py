@@ -48,10 +48,12 @@ vendored, the same reasoning audit-qc-paths uses for its read-set.
 Writes ``reports/predicate_domain_audit.tsv``. Exit code is governed by
 ``--fail-on``:
 
-  new    (default) any finding NOT in the baseline fails. The ratchet.
-  error  only new ERROR-severity findings fail (there are none today; both
-         defects are WARN until their families are resolved).
-  any    every finding fails and the baseline is ignored. Use post-burndown.
+  any    (DEFAULT since #327) every finding fails and the baseline is ignored.
+  new    any finding NOT in the baseline fails — the ratchet. Use when
+         reintroducing this check over a NEW class of violation, together with
+         ``--write-baseline``; not for excusing a regression in a class that
+         has already reached zero.
+  error  only new ERROR-severity findings fail.
 
 Usage:
     python scripts/audit_predicate_domains.py
@@ -244,10 +246,12 @@ def main() -> int:
     ap.add_argument("--write-baseline", action="store_true",
                     help="Freeze current WARN findings into --baseline and exit 0. "
                          "Refuses if any ERROR-severity finding exists.")
-    ap.add_argument("--fail-on", choices=["new", "error", "any"], default="new",
-                    help="new (default): any finding not in the baseline fails — the "
-                         "ratchet. error: only new ERROR-severity findings fail. "
-                         "any: every finding fails, baseline ignored (post-burndown).")
+    ap.add_argument("--fail-on", choices=["new", "error", "any"], default="any",
+                    help="any (default, post-burndown): every finding fails and the "
+                         "baseline is ignored. new: only findings not in the baseline "
+                         "fail — the ratchet, for reintroducing this check over a NEW "
+                         "class of violation. error: only new ERROR-severity findings "
+                         "fail.")
     args = ap.parse_args()
 
     findings = audit(args.traits_dir, args.owl)

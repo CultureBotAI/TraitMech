@@ -121,8 +121,10 @@ check: writing
   object: glucose
 ```
 
-makes a reasoner conclude the trait node is an organism. Nothing in
-`just qc` catches it, because `predicate_id` is an unbound string.
+makes a reasoner conclude the trait node is an organism. `predicate_id`
+is an unbound string, so `validate-strict` cannot see it — but
+`just audit-predicate-domains` **does**, and since #327 it runs
+`--fail-on any` inside `just qc`. Writing one of these now fails CI.
 
 `CausalNodeTypeEnum` has no organism member — causal-graph nodes are
 deliberately taxon-agnostic — so **no causal-graph edge can satisfy
@@ -136,8 +138,13 @@ edge and will report them as `blocked_by_node_type` (#295). No corpus
 edge currently carries either label, so the gate is a forward guard —
 do not expect a row for them in
 `reports/predicate_grounding_residual.tsv`. The other 64 predicates
-in this family are **not** gated yet; #301 tracks the 366 edges that
-still carry them.
+in this family were the subject of #301, which is **closed**: all 366
+edges that carried them have been migrated to causal-graph counterparts
+(`METPO:2007800`–`2007812`, proposals v9) or to upstream terms, and each
+row in `mappings/predicate_grounding.tsv` is now gated to the node types
+it actually admits. The count is **0** and the audit hard-fails on a new
+one, so this section describes a mistake the tooling now prevents rather
+than a backlog to work around.
 
 The organism-subject form stays valid at the *assertion* site —
 `<organism> METPO:2000006 CHEBI:17234` — which is exactly what the

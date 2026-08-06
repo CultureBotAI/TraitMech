@@ -102,7 +102,7 @@ audit-graphs *args:
 # findings (#314) because neither class was fixable without a per-family
 # biological/ontology decision. Those decisions landed — #302/#303 via the v8
 # predicates (#320, #323) and #301 via v9 (#326, #328, #329), with the last edge
-# re-grounded to RO:0002234 in #327 — so the count is 0 and `--fail-on any` is
+# re-grounded to RO:0001001 (derives into) in #327 — so the count is 0 and `--fail-on any` is
 # passed explicitly. There is no baseline file any more: every finding fails,
 # including one that a `--write-baseline` run would otherwise have frozen.
 #
