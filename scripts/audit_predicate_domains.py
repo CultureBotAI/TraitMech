@@ -27,13 +27,18 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   — the same shape as the RO:0002411 defect in
                                   #235.                                     (#302) [WARN]
 
-Neither is machine-fixable without a biological decision per predicate family
-(#301) or an ontology decision on the enables range (#302, #303), so a blocking
-check would be un-landable today: 366 + 164 edges already carry these shapes.
-This is therefore a **ratchet**, identical in mechanics to audit-graphs and
-audit-snippets: ``--write-baseline`` freezes the known set, pre-existing
-violations stay non-blocking, and any *new* violation fails the build. Burn the
-baseline down family by family, then tighten to ``--fail-on any``.
+Both classes are now BURNED DOWN and the check runs as a hard gate. It shipped
+as a ratchet over 530 known findings (#314), because neither was fixable without
+a per-family biological decision (#301) or an ontology decision on the enables
+range (#302, #303). Those landed — the v8 predicates for #302/#303 (#320, #323)
+and v9 for #301 (#326, #328, #329), with the final edge re-grounded to
+RO:0001001 in #327 — so the count is 0 and ``just audit-predicate-domains``
+passes ``--fail-on any``. No baseline file is tracked any more.
+
+The ratchet machinery below is deliberately KEPT rather than deleted: it is what
+makes a future class of violation landable without blocking unrelated work, the
+same way this one was. But do not reintroduce a baseline to make a new violation
+pass — reaching zero is what makes the next one a bug rather than a backlog.
 
 The microbe-domain predicate set is derived at run time by walking the
 ``subPropertyOf`` closure to METPO:2000001 in ``data/raw/metpo.owl`` — NOT from
@@ -43,10 +48,12 @@ vendored, the same reasoning audit-qc-paths uses for its read-set.
 Writes ``reports/predicate_domain_audit.tsv``. Exit code is governed by
 ``--fail-on``:
 
-  new    (default) any finding NOT in the baseline fails. The ratchet.
-  error  only new ERROR-severity findings fail (there are none today; both
-         defects are WARN until their families are resolved).
-  any    every finding fails and the baseline is ignored. Use post-burndown.
+  any    (DEFAULT since #327) every finding fails and the baseline is ignored.
+  new    any finding NOT in the baseline fails — the ratchet. Use when
+         reintroducing this check over a NEW class of violation, together with
+         ``--write-baseline``; not for excusing a regression in a class that
+         has already reached zero.
+  error  only new ERROR-severity findings fail.
 
 Usage:
     python scripts/audit_predicate_domains.py
@@ -239,10 +246,12 @@ def main() -> int:
     ap.add_argument("--write-baseline", action="store_true",
                     help="Freeze current WARN findings into --baseline and exit 0. "
                          "Refuses if any ERROR-severity finding exists.")
-    ap.add_argument("--fail-on", choices=["new", "error", "any"], default="new",
-                    help="new (default): any finding not in the baseline fails — the "
-                         "ratchet. error: only new ERROR-severity findings fail. "
-                         "any: every finding fails, baseline ignored (post-burndown).")
+    ap.add_argument("--fail-on", choices=["new", "error", "any"], default="any",
+                    help="any (default, post-burndown): every finding fails and the "
+                         "baseline is ignored. new: only findings not in the baseline "
+                         "fail — the ratchet, for reintroducing this check over a NEW "
+                         "class of violation. error: only new ERROR-severity findings "
+                         "fail.")
     args = ap.parse_args()
 
     findings = audit(args.traits_dir, args.owl)

@@ -192,7 +192,7 @@ causal_graphs:
       snippet: cleave off cellobiose
       notes: Substrate-product step of the catalytic cascade; cellobiose is the dominant
         but not the only soluble product (cellodextrins of higher DP also occur).
-    predicate_id: METPO:2000013
+    predicate_id: RO:0001001
   - subject: cellobiohydrolase
     predicate: produces
     object: cellobiose
@@ -359,4 +359,16 @@ curation_history:
     is a 1:1 mirror of its source predicate that changes only the domain, so the claim each
     edge makes is unchanged and directions are unchanged. The replacements are proposed in
     proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T05:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Re-grounded the cellulose is-hydrolyzed-to cellobiose edge from METPO:2000013 to
+    RO:0001001 (derives into), issue 327. METPO:2000013 reads agent-to-substrate, so grounding
+    a substrate-to-product edge to it asserted that cellulose hydrolyses cellobiose; it also
+    inherits rdfs:domain METPO:1000525 (microbe) via METPO:2000001, which no causal node type
+    can satisfy (issue 301). RO:0001001 holds between an old and a new material entity where
+    the new inherits the significant portion of the old's matter, which is exactly what depolymerisation
+    does, and it declares no domain. The label is kept because it names the mechanism, which
+    the general relation does not. This was the last of the 366 edges in issue 301.
   llm_assisted: true

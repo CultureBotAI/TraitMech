@@ -165,23 +165,23 @@ causal_graphs:
       notes: Supports the proposed pathway mechanism for some isolates.
     predicate_id: biolink:participates_in
   - subject: thiosulfate
-    predicate: produces
+    predicate: derives into
     object: sulfate
     description: Thiosulfate disproportionation yields sulfate as the oxidized product.
     evidence:
     - reference: DOI:10.1128/msystems.00954-22
       notes: Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O
         -> SO4(2-) + HS- + H+.
-    predicate_id: METPO:2007800
+    predicate_id: RO:0001001
   - subject: thiosulfate
-    predicate: produces
+    predicate: derives into
     object: sulfide
     description: Thiosulfate disproportionation yields sulfide as the reduced product.
     evidence:
     - reference: DOI:10.1128/msystems.00954-22
       notes: Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O
         -> SO4(2-) + HS- + H+.
-    predicate_id: METPO:2007800
+    predicate_id: RO:0001001
   - subject: tsda_thiosulfate_dehydrogenase
     predicate: catalyzes oxidation of
     object: thiosulfate
@@ -339,4 +339,15 @@ curation_history:
     is a 1:1 mirror of its source predicate that changes only the domain, so the claim each
     edge makes is unchanged and directions are unchanged. The replacements are proposed in
     proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T05:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Relabelled the two thiosulfate edges from produces to derives into and re-grounded
+    them from METPO:2007800 to RO:0001001, issue 327. Both have a CHEMICAL subject, and a
+    chemical does not bring another chemical into existence the way an agent does; RO:0001001
+    is the substrate-to-product relation and fits disproportionation directly. METPO:2007405
+    (oxidized to, proposals v2) was considered for the sulfate half and rejected because it
+    fits only the oxidised half, which would split a matched pair from one reaction, and because
+    it is an unminted placeholder where RO:0001001 is real.
   llm_assisted: true
