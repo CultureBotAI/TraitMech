@@ -48,6 +48,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import sys
 from collections import defaultdict
@@ -57,10 +58,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 RESIDUAL_TSV = REPO_ROOT / "reports/node_grounding_residual.tsv"
 MAPPING_TSV = REPO_ROOT / "mappings/node_grounding.tsv"
 CANDIDATES_TSV = REPO_ROOT / "reports/uniprot_match_candidates.tsv"
-KG_UNIPROT_NODES = Path(
-    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/"
-    "kg-microbe/merged-kg_uniprot_nodes.tsv"
+# The UniProt node dump lives in the sibling kg-microbe checkout, which has no
+# repo-relative form from here. Located the same way the justfile locates claw
+# (CLAW_SRC): an env var with a sibling-directory default, so the layout is a
+# convention rather than one machine's absolute path (#310). The previous value
+# was hardcoded to a single developer's home directory and could not resolve
+# anywhere else, including CI.
+KG_MICROBE_DIR = Path(
+    os.environ.get("KG_MICROBE_DIR", REPO_ROOT.parent / "kg-microbe")
 )
+KG_UNIPROT_NODES = KG_MICROBE_DIR / "merged-kg_uniprot_nodes.tsv"
 
 # Per-label cap to avoid overly-generic matches dominating the index.
 # Set higher than the typical exact-match volume so the exact-match
@@ -126,7 +133,14 @@ def stream_uniprot_matches(
 ) -> dict[str, list[tuple[str, str]]]:
     """Walk the kg-microbe UniProt nodes file, return label → [(curie, name)]."""
     if not KG_UNIPROT_NODES.exists():
-        raise FileNotFoundError(KG_UNIPROT_NODES)
+        # Name the knob, not just the missing path: the default is a guess about
+        # the caller's directory layout, and a bare FileNotFoundError does not
+        # say that it is overridable.
+        raise SystemExit(
+            f"error: {KG_UNIPROT_NODES} not found.\n"
+            f"Set KG_MICROBE_DIR to a kg-microbe checkout containing "
+            f"merged-kg_uniprot_nodes.tsv (default: {REPO_ROOT.parent / 'kg-microbe'})."
+        )
 
     regex = build_regex(labels)
     label_set = set(labels)

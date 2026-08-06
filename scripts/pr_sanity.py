@@ -55,6 +55,8 @@ Checks:
                       A gate rather than a convention because 5 of 9 workflows
                       had already drifted without it by the time anyone looked.
   ABSOLUTE_REPO_PATH  a tracked file embedding this repo's own absolute path.
+  SIBLING_ABSOLUTE_PATH  code or a skill doc embedding a home-directory path,
+                      typically at a sibling checkout (#310).
                       Anything inside the repo has a repo-relative form, so an
                       absolute one is correct for exactly one machine — #248
                       baked a home directory into 342 tracked reports via a
@@ -526,6 +528,57 @@ def check_absolute_repo_paths(files: list[Path], root: Path) -> list[dict[str, s
     return findings
 
 
+# Where a hardcoded home-directory path is a defect rather than prose. Scoped to
+# code and to skill instructions, deliberately NOT to docs or tests: NEXT_TASKS.md
+# legitimately quotes such a path when describing the #248 bug, and
+# test_render_research_lookup.py uses one as the fixture for that regression.
+# Widening this to every tracked file would fight prose and get switched off,
+# which is worse than not having it.
+#
+# Note this module is itself in scope, so the patterns below are built from
+# fragments rather than written out — a check that trips on its own explanation
+# is a check someone deletes.
+HOME_PATH_DIRS = ("scripts/", "src/", ".claude/skills/")
+_HOME_PATH_RE = re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/")
+
+
+def check_sibling_absolute_paths(files: list[Path], root: Path) -> list[dict[str, str]]:
+    """Flag a home-directory absolute path in code or skill docs (#310).
+
+    ABSOLUTE_REPO_PATH above is keyed on THIS repo's root, so a path pointing at
+    a SIBLING checkout is a prefix of it and slips through by design. That is
+    how #310 happened after #248 supposedly settled the class:
+    ``match_uniprot_to_proteins.py`` resolved on exactly one machine, and a
+    skill reference doc named four files only its author could find.
+
+    Sibling checkouts have no repo-relative form, so the fix is a configurable
+    location (an env var with a sibling-directory default, as `CLAW_SRC` does)
+    or naming the repo and letting the reader locate it — never a literal home
+    directory.
+    """
+    findings: list[dict[str, str]] = []
+    for path in files:
+        if path.suffix not in TEXT_SUFFIXES or not path.is_file():
+            continue
+        rel = str(path.relative_to(root))
+        if not rel.startswith(HOME_PATH_DIRS):
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        for lineno, line in enumerate(text.splitlines(), 1):
+            m = _HOME_PATH_RE.search(line)
+            if m:
+                findings.append({
+                    "check": "SIBLING_ABSOLUTE_PATH",
+                    "file": f"{rel}:{lineno}",
+                    "detail": (f"embeds the absolute path {m.group(0)!r}; make the "
+                               "location configurable or name the repo instead (#310)"),
+                })
+    return findings
+
+
 def check_conflict_markers(files: list[Path], root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     for path in files:
@@ -721,6 +774,7 @@ def sanity(root: Path) -> list[dict[str, str]]:
             + check_action_pins(root)
             + check_conflict_markers(files, root)
             + check_absolute_repo_paths(files, root)
+            + check_sibling_absolute_paths(files, root)
             + check_markdown_links(files, root))
 
 
