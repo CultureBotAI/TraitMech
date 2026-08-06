@@ -64,9 +64,6 @@ CANDIDATES_TSV = REPO_ROOT / "reports/uniprot_match_candidates.tsv"
 # convention rather than one machine's absolute path (#310). The previous value
 # was hardcoded to a single developer's home directory and could not resolve
 # anywhere else, including CI.
-# `or`, not a get() default: KG_MICROBE_DIR= (set but empty) would otherwise
-# become Path("."), and the not-found message would then print a bare filename
-# with no hint of where it looked. Matches the idiom in robot_validate_proposal.
 def _default_kg_microbe_dir() -> Path:
     """First sibling-ish directory named kg-microbe, else the flat-sibling guess.
 
@@ -83,6 +80,9 @@ def _default_kg_microbe_dir() -> Path:
     return REPO_ROOT.parent / "kg-microbe"
 
 
+# `or`, not a get() default: KG_MICROBE_DIR= (set but empty) would otherwise
+# become Path("."), and the not-found message would then print a bare filename
+# with no hint of where it looked. Matches the idiom in robot_validate_proposal.
 KG_MICROBE_DIR = Path(os.environ.get("KG_MICROBE_DIR") or _default_kg_microbe_dir())
 KG_UNIPROT_NODES = KG_MICROBE_DIR / "merged-kg_uniprot_nodes.tsv"
 
@@ -156,7 +156,7 @@ def stream_uniprot_matches(
         raise SystemExit(
             f"error: {KG_UNIPROT_NODES} not found.\n"
             f"Set KG_MICROBE_DIR to a kg-microbe checkout containing "
-            f"merged-kg_uniprot_nodes.tsv (default: {REPO_ROOT.parent / 'kg-microbe'})."
+            f"merged-kg_uniprot_nodes.tsv (looked in: {KG_MICROBE_DIR})."
         )
 
     regex = build_regex(labels)

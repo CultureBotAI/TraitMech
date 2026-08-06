@@ -300,13 +300,20 @@ def test_a_sibling_checkout_path_is_not_flagged_by_the_repo_root_check(tmp_path)
 
 
 # --- sibling absolute paths (#310) ------------------------------------------
+#
+# Fixture paths are assembled from fragments rather than written out. The check
+# under test scans tests/ too, and pr_sanity.py solves the same self-reference
+# in its own patterns the same way — exempting this file wholesale would be the
+# `tests/`-exclusion mistake again, one file smaller (#337 review).
+_HOME = "/" + "Users"
+_HOME_ALT = "/" + "home"
 
 
 def test_home_path_in_a_script_is_flagged(tmp_path):
     root = _repo(tmp_path)
     (root / "scripts").mkdir(exist_ok=True)
     f = root / "scripts" / "x.py"
-    f.write_text('NODES = Path("/Users/someone/KG-Microbe/kg-microbe/n.tsv")\n')
+    f.write_text(f'NODES = Path("{_HOME}/someone/KG-Microbe/kg-microbe/n.tsv")\n')
     found = check_sibling_absolute_paths([f], root)
     assert [x["check"] for x in found] == ["SIBLING_ABSOLUTE_PATH"]
     assert found[0]["file"] == "scripts/x.py:1"
@@ -317,7 +324,7 @@ def test_home_path_in_a_skill_doc_is_flagged(tmp_path):
     d = root / ".claude" / "skills" / "s"
     d.mkdir(parents=True, exist_ok=True)
     f = d / "ref.md"
-    f.write_text("read /home/someone/kg-microbe/mappings/x.tsv\n")
+    f.write_text(f"read {_HOME_ALT}/someone/kg-microbe/mappings/x.tsv\n")
     assert [x["check"] for x in check_sibling_absolute_paths([f], root)] == [
         "SIBLING_ABSOLUTE_PATH"]
 
@@ -329,7 +336,7 @@ def test_home_path_outside_the_scoped_dirs_is_ignored(tmp_path):
     root = _repo(tmp_path)
     (root / "docs").mkdir(exist_ok=True)
     f = root / "docs" / "notes.md"
-    f.write_text("the bug wrote /Users/someone/TraitMech/x into 342 reports\n")
+    f.write_text(f"the bug wrote {_HOME}/someone/TraitMech/x into 342 reports\n")
     assert check_sibling_absolute_paths([f], root) == []
 
 
@@ -511,7 +518,7 @@ def test_sanity_aggregates_all_checks(tmp_path):
     # In scope for SIBLING_ABSOLUTE_PATH (#310). Without a file under one of
     # HOME_PATH_DIRS the fixture cannot exercise it, and the exact-set assertion
     # below would keep passing while the check was absent from sanity().
-    (root / "scripts" / "s.py").write_text('P = "/Users/someone/kg-microbe/n.tsv"\n')
+    (root / "scripts" / "s.py").write_text(f'P = "{_HOME}/someone/kg-microbe/n.tsv"\n')
     _commit(root)
     assert _checks(sanity(root)) == {
         "NO_UNFILTERED_CI", "CONFLICT_MARKER", "BROKEN_LINK",

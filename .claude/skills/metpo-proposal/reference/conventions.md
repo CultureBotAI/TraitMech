@@ -24,11 +24,11 @@ the justfile.
    the canonical 11-column class template. Copy the two-row header verbatim.
 3. **`kg-microbe`: `mappings/metpo_proposal_properties_robot.tsv`** —
    the canonical 12-column property template.
-4. **`CommunityMech`: `CommunityMech/proposals/metpo_communitymech_v1/`** —
+4. **`CommunityMech`: `proposals/metpo_communitymech_v1/`** —
    the most recent worked example. Read all three files end-to-end before
    writing a new cohort; the TraitMech v1 cohort follows the same conventions
    with a different ID block and subset tag.
-5. **`TraitMech/.claude/skills/manage-identifiers/SKILL.md`** — the
+5. **`TraitMech`: `.claude/skills/manage-identifiers/SKILL.md`** — the
    `traitmech:NNNNNN` allocation policy. Scope-A proposals are the upstream
    half of that fallback workflow.
 

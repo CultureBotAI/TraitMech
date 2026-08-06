@@ -55,15 +55,21 @@ Checks:
                       A gate rather than a convention because 5 of 9 workflows
                       had already drifted without it by the time anyone looked.
   ABSOLUTE_REPO_PATH  a tracked file embedding this repo's own absolute path.
-  SIBLING_ABSOLUTE_PATH  code or a skill doc embedding a home-directory path,
-                      typically at a sibling checkout (#310).
                       Anything inside the repo has a repo-relative form, so an
                       absolute one is correct for exactly one machine — #248
                       baked a home directory into 342 tracked reports via a
                       tool that copies its ``--template`` argument verbatim.
-                      Keyed on the repo root, not a generic ``/Users/`` pattern:
-                      sibling-checkout paths have no repo-relative form and are
-                      a separate problem (#310).
+                      Keyed on the repo root, not a generic ``/Users/`` pattern,
+                      so it cannot rot into a check for one person's username.
+  SIBLING_ABSOLUTE_PATH
+                      code or a skill doc embedding a home-directory path,
+                      typically at a SIBLING checkout. Those have no
+                      repo-relative form, so they are a prefix of the repo root
+                      and slip past ABSOLUTE_REPO_PATH by design — which is how
+                      #310 happened after #248 supposedly settled the class. The
+                      fix is a configurable location (an env var with a
+                      sibling-directory default, as ``CLAW_SRC`` does) or naming
+                      the repo and letting the reader locate it (#310).
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
                       exist. Links inside fenced code blocks, indented code
@@ -560,10 +566,6 @@ HOME_PATH_EXEMPT = frozenset({
     # assertion is that the renderer does NOT leak it, so the string has to be
     # present for the test to mean anything.
     "tests/test_render_research_lookup.py",
-    # The tests for THIS check. Its positive cases must contain the very
-    # patterns it looks for, so it flags its own fixtures otherwise — the same
-    # self-reference that made the first cut flag its own docstring.
-    "tests/test_pr_sanity.py",
 })
 _HOME_PATH_RE = re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/")
 

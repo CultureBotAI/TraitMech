@@ -47,4 +47,4 @@ equivalence claims, contiguous ID blocks per logical group, single subset
 tag, flat hierarchy under the enum-parent — is exactly what subsequent
 cohorts should follow. A cross-Mech reference for a heavier proposal (9
 enums + 14 predicates) is
-`CommunityMech/CommunityMech/proposals/metpo_communitymech_v1/`.
+`CommunityMech`: `proposals/metpo_communitymech_v1/`.
