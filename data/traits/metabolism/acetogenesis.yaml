@@ -88,6 +88,11 @@ causal_graphs:
     node_type: CHEMICAL
     description: Activated acetyl intermediate from phosphotransacetylase.
     grounding: CHEBI:15350
+  - node_id: acetate_kinase_step
+    label: acetate kinase step
+    node_type: BIOLOGICAL_PROCESS
+    description: Substrate-level phosphorylation step in which acetate kinase converts
+      acetyl phosphate to acetate, yielding ATP.
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -210,14 +215,23 @@ causal_graphs:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: ACK (acetate kinase) converts acetyl-phosphate to acetate, yielding ATP
         via SLP; trait-defining end-product step.
-  - subject: acetyl_phosphate
-    predicate: produces
+  - subject: acetate_kinase_step
+    predicate: has input
+    object: acetyl_phosphate
+    description: Acetate kinase consumes acetyl phosphate in the substrate-level
+      phosphorylation step.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: ACK convert acetyl-phosphate to acetate, yielding ATP via SLP.
+    predicate_id: RO:0002233
+  - subject: acetate_kinase_step
+    predicate: has output
     object: atp
     description: The acetate kinase step generates ATP via substrate-level phosphorylation.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: ACK convert acetyl-phosphate to acetate, yielding ATP via SLP.
-    predicate_id: METPO:2007800
+    predicate_id: RO:0002234
 curation_history:
 - timestamp: '2026-05-05T01:35:46.915402+00:00'
   curator: seed_from_metpo
@@ -313,4 +327,28 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is unchanged
     and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T07:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Modelled the acetate kinase step as an explicit BIOLOGICAL_PROCESS node and split
+    `acetyl_phosphate produces atp` into `acetate_kinase_step has input acetyl_phosphate`
+    (RO:0002233) and `acetate_kinase_step has output atp` (RO:0002234), issue 331. The old
+    edge had a CHEMICAL subject on METPO:2007800, whose definition is that the activity or
+    state of the subject brings the object into existence - a chemical has neither in that
+    sense. RO:0001001 (derives into) did not fit either, because ATP's matter comes mostly
+    from ADP and only the phosphoryl group transfers, failing that relation's inherits-the-significant-portion-of-the-matter
+    test. The process the edge description already named was simply not in the graph; both
+    new edges are range-correct and the step is wired on both sides so nothing is orphaned.
+    This was the last CHEMICAL-subject produces edge, which let METPO:2007800's subject_types
+    gate drop CHEMICAL. Two modelling choices are recorded here as decisions rather than
+    left as omissions (issue 331 review). The node is typed BIOLOGICAL_PROCESS rather than
+    MOLECULAR_FUNCTION, which would have grounded to GO:0008776 (acetate kinase activity)
+    via mappings/node_grounding.tsv - this trait's own research report asks for a process
+    label plus explicit reaction edges for the substrate-level phosphorylation step, and
+    that is what this is. And the step carries has-output atp but deliberately not
+    has-output acetate, because the existing acetyl_phosphate is-converted-to acetate edge
+    already states that half of the reaction on the chemical chain; asserting it again at
+    the process level is the duplication at two levels of description that issue 303
+    criticised in dissimilatory_iron_reduction.
   llm_assisted: true

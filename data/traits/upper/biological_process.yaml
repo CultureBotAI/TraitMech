@@ -126,6 +126,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40708-023-00208-5
       notes: Has input [RO:0002233]
+    predicate_id: RO:0002233
   - subject: molecular_function
     predicate: has output
     object: chemical_output
@@ -191,4 +192,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002234×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T09:03:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002233×1).
   llm_assisted: true

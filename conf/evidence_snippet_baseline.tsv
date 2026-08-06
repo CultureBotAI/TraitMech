@@ -1226,9 +1226,10 @@ data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:te
 data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:te_trait->dna_transposition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1574-6976.12067 has no snippet
 data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:te_trait->transposase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00119-22 has no snippet
 data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:transposase->dna_transposition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00119-22 has no snippet
+data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:acetate_kinase_step->acetyl_phosphate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
+data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:acetate_kinase_step->atp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:acetyl_coa->acetyl_phosphate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:acetyl_phosphate->acetate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
-data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:acetyl_phosphate->atp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:carbon_dioxide->carbon_monoxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.34726/hss.2024.114566 has no snippet
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:carbon_dioxide->formate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl:formate->formyl_thf[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fbioe.2024.1395540 has no snippet
