@@ -125,14 +125,37 @@ SEVERITY = {
 FIELDNAMES = ["file", "graph_id", "defect", "severity", "detail"]
 
 _METPO_IRI = "https://w3id.org/metpo/"
+_OBO_PURL = "http://purl.obolibrary.org/obo/"
 _RDF = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
 _RDFS = "{http://www.w3.org/2000/01/rdf-schema#}"
 _OWL = "{http://www.w3.org/2002/07/owl#}"
 
 
 def _curie(iri: str | None) -> str | None:
-    if iri and iri.startswith(_METPO_IRI):
+    """Normalise an ontology IRI to the CURIE form the corpus writes.
+
+    Both METPO's w3id IRIs and OBO PURLs are handled. The OBO case is not
+    reachable today — every ObjectProperty in the vendored metpo.owl is a w3id
+    METPO IRI — but it is the exact scenario the subPropertyOf walk advertises
+    support for: if METPO ever asserts an RO or BFO property under
+    METPO:2000001, the closure would hold
+    ``http://purl.obolibrary.org/obo/RO_0002327`` and never match the corpus's
+    ``RO:0002327``, silently under-reporting a class that is now ERROR severity
+    and must stay at zero (#316).
+
+    Anything else is returned unchanged rather than guessed at, so an
+    unrecognised namespace fails to match loudly rather than matching wrongly.
+    """
+    if not iri:
+        return iri
+    if iri.startswith(_METPO_IRI):
         return "METPO:" + iri.rsplit("/", 1)[1]
+    if iri.startswith(_OBO_PURL):
+        # OBO PURLs are <prefix>_<local>, e.g. RO_0002327 -> RO:0002327.
+        local = iri[len(_OBO_PURL):]
+        prefix, sep, rest = local.partition("_")
+        if sep and prefix.isalnum():
+            return f"{prefix}:{rest}"
     return iri
 
 
