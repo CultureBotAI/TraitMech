@@ -145,7 +145,7 @@ causal_graphs:
       notes: Plasmid carriage imposes fitness costs (additional material and energy
         consumption).
   - subject: compensatory_mutation
-    predicate: reduces
+    predicate: decreases
     object: fitness_cost
     description: Compensatory evolution of chromosomes and plasmids counteracts plasmid
       fitness cost.
@@ -153,7 +153,7 @@ causal_graphs:
     - reference: DOI:10.1002/ece3.70121
       notes: Compensatory evolution of chromosomes and plasmids counteracts the plasmid
         fitness cost.
-    predicate_id: METPO:2007802
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -190,4 +190,16 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is unchanged
     and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from
+    METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses
+    under the single label `reduces` - genuine electron donation, and a lessens/decreases
+    sense - and METPO:2007802 is defined as donating electrons to the object and lowering
+    its oxidation state, which this edge does not assert. The two senses could not be separated
+    mechanically because the label was identical, so they migrated together in issue 329 and
+    were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range,
+    so this introduces no entailment of the kind issue 301 removed.
   llm_assisted: true
