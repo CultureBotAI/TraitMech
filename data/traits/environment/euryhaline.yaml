@@ -175,14 +175,14 @@ causal_graphs:
         niche breadth.
     predicate_id: RO:0002326
   - subject: glycine_betaine_biosynthesis
-    predicate: produces
+    predicate: has output
     object: glycine_betaine
     description: Choline is oxidized to glycine betaine in two steps by BetA and BetB.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Choline is transformed into glycine betaine in two oxidative steps carried
         out by BetA (K00108) and BetB (K00130).
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: choline
     predicate: is precursor of
     object: glycine_betaine
@@ -201,14 +201,14 @@ causal_graphs:
         strategy.
     predicate_id: METPO:2007407
   - subject: ectoine_biosynthesis
-    predicate: produces
+    predicate: has output
     object: ectoine
     description: Ectoine is synthesized from L-aspartate in five steps (lysC/asd/ectB/ectA/ectC).
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Ectoine is obtained from L-aspartate in five steps mediated by lysC,
         asd, ectB, ectA, and ectC.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: ectoine
     predicate: mitigates
     object: osmotic_imbalance
@@ -343,4 +343,16 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

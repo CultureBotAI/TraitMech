@@ -159,14 +159,14 @@ causal_graphs:
       notes: Supports CO2 assimilation into cellular carbon.
     predicate_id: METPO:2007404
   - subject: autotrophic_co2_fixation
-    predicate: produces
+    predicate: has output
     object: cellular_carbon
     description: Carbon fixation converts CO2 into cell carbon.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: CO2 ... into cellular carbon
       notes: Supports the carbon-assimilation output.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: h2_oxidation
     predicate: generates
     object: proton_motive_force
@@ -331,4 +331,16 @@ curation_history:
     restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
     organism-subject problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

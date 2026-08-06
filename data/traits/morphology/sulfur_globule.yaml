@@ -70,7 +70,7 @@ causal_graphs:
     description: Oxidation product of glutathione persulfide via PDO.
   edges:
   - subject: oxidative_sulfur_metabolism
-    predicate: produces
+    predicate: has output
     object: elemental_sulfur
     description: Oxidation of reduced sulfur compounds generates elemental sulfur
       as an intermediate.
@@ -78,7 +78,7 @@ causal_graphs:
     - reference: DOI:10.1016/S0065-2911(08)00002-7
       notes: Frigaard & Dahl describe sulfur globules as sulfur-storage intermediates
         formed during oxidative sulfur metabolism.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: elemental_sulfur
     predicate: located in
     object: sulfur_globule_trait
@@ -189,4 +189,16 @@ curation_history:
     participates in oxidative_sulfur_metabolism, grounded biolink:participates_in. The
     snippet is verbatim from PMID:35653932, checked against the PubMed abstract. Resolves
     this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.'
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

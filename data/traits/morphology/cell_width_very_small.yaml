@@ -84,14 +84,14 @@ causal_graphs:
       notes: Supports oligotrophic regimes as drivers of cell-width reduction.
     predicate_id: RO:0002211
   - subject: streamlining_selection
-    predicate: produces
+    predicate: confers
     object: cell_width_very_small_trait
     description: Streamlining selection produces very narrow rods.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: small cells
       notes: Supports very narrow width as an outcome of streamlining selection.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: cell_width_very_small_trait
     predicate: is a
     object: cell_width_trait
@@ -192,4 +192,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2, biolink:associated_with×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

@@ -96,14 +96,14 @@ causal_graphs:
       notes: Supports differential growth mechanics as a curvature mechanism.
     predicate_id: biolink:produces
   - subject: crescent_cell_curvature
-    predicate: produces
+    predicate: confers
     object: crescent_shaped_trait
     description: Curved cell-body geometry produces the crescent-shaped trait.
     evidence:
     - reference: DOI:10.1016/S0092-8674(03)00935-8
       snippet: required for the ... shapes of Caulobacter
       notes: Supports crescentin-dependent curved morphology as the trait endpoint.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: crescentin
     predicate: decreases rate of
     object: pg_insertion_inner_curvature
@@ -124,7 +124,7 @@ causal_graphs:
       notes: would also generate a gradient of increasing peptidoglycan growth rates
     predicate_id: RO:0002326
   - subject: differential_pg_insertion
-    predicate: produces
+    predicate: confers
     object: crescent_shaped_trait
     description: Differential peptidoglycan insertion rates around the cell circumference
       produce cell curvature.
@@ -132,7 +132,7 @@ causal_graphs:
     - reference: DOI:10.1038/emboj.2009.61
       notes: the crescentin structure caused differential peptidoglycan insertion
         rates around the cell circumference to produce cell curvature
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: crescentin_envelope_association
     predicate: required for
     object: crescent_shaped_trait
@@ -201,4 +201,16 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

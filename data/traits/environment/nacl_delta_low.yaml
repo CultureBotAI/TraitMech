@@ -69,7 +69,7 @@ causal_graphs:
     description: Capacity to grow across a range of ambient NaCl concentrations.
   edges:
   - subject: limited_osmoadaptive_flexibility
-    predicate: produces
+    predicate: confers
     object: nacl_delta_low_trait
     description: Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.
     evidence:
@@ -77,7 +77,7 @@ causal_graphs:
       snippet: salinity range
       notes: Supports limited osmoadaptive flexibility as the basis of stenohaline
         breadth.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: nacl_delta_low_trait
     predicate: is a
     object: nacl_delta
@@ -174,4 +174,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

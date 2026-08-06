@@ -103,23 +103,23 @@ causal_graphs:
     description: Low light availability limiting phototrophic energy capture.
   edges:
   - subject: mixotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: organic_carbon
     description: Mixotrophs can use organic carbon as a carbon source.
     evidence:
     - reference: DOI:10.1073/pnas.1305998110
       snippet: organic carbon (C) for their C needs
       notes: Supports organic carbon use as part of mixotrophic metabolism.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: mixotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: carbon_dioxide
     description: Mixotrophy can include inorganic carbon acquisition by CO2 fixation.
     evidence:
     - reference: DOI:10.1073/pnas.1305998110
       snippet: obtain its energy and carbon
       notes: Supports combining autotrophic and heterotrophic carbon-acquisition modes.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: dissolved_organic_matter
     predicate: supplies
     object: organic_carbon
@@ -301,4 +301,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR033966×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has carbon
+    source), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

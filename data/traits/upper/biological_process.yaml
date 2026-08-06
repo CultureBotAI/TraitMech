@@ -133,6 +133,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40708-023-00208-5
       notes: Has output [RO:0002234]
+    predicate_id: RO:0002234
   - subject: molecular_function
     predicate: causally upstream of or within
     object: molecular_function_downstream
@@ -184,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0005575×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T03:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002234×1).
   llm_assisted: true

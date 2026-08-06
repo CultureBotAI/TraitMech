@@ -103,14 +103,14 @@ causal_graphs:
         categories.
     predicate_id: METPO:2007701
   - subject: organoheterotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: organic_compound
     description: Heterotrophy uses organic compounds as carbon sources.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: organic compounds as the primary sources of carbon
       notes: Supports organic compounds as the carbon source for heterotrophic growth.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: organic_compound
     predicate: metabolized by
     object: central_carbon_metabolism
@@ -139,14 +139,14 @@ causal_graphs:
       notes: Supports oxidation of nutrients to provide energy for biosynthesis and
         maintenance.
   - subject: respiratory_chain
-    predicate: produces
+    predicate: has output
     object: atp
     description: Respiratory electron transfer conserves energy as ATP.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: organic_compound
     predicate: assimilated into
     object: biomass
@@ -196,14 +196,14 @@ causal_graphs:
         bc1 (petABC).
     predicate_id: RO:0002326
   - subject: oxidative_phosphorylation
-    predicate: produces
+    predicate: has output
     object: atp
     description: Oxidative phosphorylation conserves respiratory energy as ATP.
     evidence:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: A complete oxidative phosphorylation pathway is encoded, coupling electron
         transfer to ATP synthesis.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883809+00:00'
   curator: seed_from_metpo
@@ -293,4 +293,17 @@ curation_history:
     restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
     organism-subject problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (1 to has carbon
+    source, 2 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

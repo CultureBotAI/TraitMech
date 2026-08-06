@@ -133,23 +133,23 @@ causal_graphs:
       notes: Supports energy conservation from redox reactions in respiratory systems.
     predicate_id: RO:0002327
   - subject: respiratory_energy_conservation
-    predicate: produces
+    predicate: has output
     object: atp
     description: Energy conservation produces ATP for biosynthesis.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: respiratory_energy_conservation
-    predicate: produces
+    predicate: has output
     object: nadph
     description: Chemoautotrophic electron flow supplies reducing equivalents.
     evidence:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: NADH, or ... NADPH
       notes: Supports reduced redox cofactors in chemolithoautotrophic metabolism.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: carbon_dioxide
     predicate: fixed by
     object: calvin_benson_cycle
@@ -187,14 +187,14 @@ causal_graphs:
       notes: Supports NAD(P)H-like reductant use in carbon fixation.
     predicate_id: RO:0002327
   - subject: calvin_benson_cycle
-    predicate: produces
+    predicate: has output
     object: cellular_biomass
     description: Fixed carbon is incorporated into cellular biomass.
     evidence:
     - reference: DOI:10.1146/annurev.micro.52.1.191
       snippet: physiology, ecology, and molecular biology
       notes: Review scope supports chemoautotrophic bacterial growth from fixed carbon.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: carboxysome
     predicate: encapsulates
     object: rubisco
@@ -361,4 +361,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR033966×1, InterPro:IPR001765×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (3 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

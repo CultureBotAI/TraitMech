@@ -82,14 +82,14 @@ causal_graphs:
       notes: Supports MreB-organized PG synthesis under standard conditions.
     predicate_id: RO:0002327
   - subject: rod_complex_pg
-    predicate: produces
+    predicate: confers
     object: cell_width_medium_trait
     description: Rod-complex PG synthesis sustains a typical rod radius.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: rod-shape is maintained
       notes: Supports lateral PG assembly as the producer of typical rod radius.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: cell_width_medium_trait
     predicate: is a
     object: cell_width_trait
@@ -111,7 +111,7 @@ causal_graphs:
         is essential in vivo.
     predicate_id: RO:0002213
   - subject: pg_polymerization_crosslinking
-    predicate: produces
+    predicate: has output
     object: rod_complex_pg
     description: Elongasome polymerization/crosslinking constitutes the Rod-complex
       lateral peptidoglycan synthesis that sets rod radius.
@@ -119,7 +119,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Activation of polymerization and crosslinking is the elongation activity
         underlying Rod-complex lateral wall synthesis.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: mrec_protein
     predicate: activates
     object: pbp2_protein
@@ -218,4 +218,17 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (1 to confers,
+    1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -54,7 +54,6 @@ reduced to	4	unmapped		data/traits/metabolism/aerobic_respiration.yaml|data/trai
 contains	4	unmapped		data/traits/metabolism/calvin_benson_bassham_cycle.yaml|data/traits/metabolism/cellulolysis.yaml|data/traits/physiology/autotrophic.yaml
 uses substrate	4	unmapped		data/traits/metabolism/carbon_fixation.yaml|data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/methanotrophic.yaml
 realizes	4	unmapped		data/traits/metabolism/metabolism.yaml|data/traits/morphology/axially_filamented.yaml|data/traits/morphology/gliding.yaml
-has output	4	unmapped		data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/upper/biological_process.yaml
 has part	4	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/traits/morphology/red_pigmented.yaml|data/traits/physiology/photolithoautotrophic.yaml
 stimulates GTPase activity of	4	unmapped		data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 organizes	4	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/magnetosome.yaml
@@ -87,6 +86,7 @@ hydrolyzes to	3	unmapped		data/traits/metabolism/chitinolysis.yaml
 translocates	3	unmapped		data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml
 feeds into	3	unmapped		data/traits/metabolism/fermentation.yaml|data/traits/morphology/cell_length_medium.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 converted to	3	unmapped		data/traits/metabolism/homoacetogenesis.yaml|data/traits/morphology/brown_pigmented.yaml|data/traits/physiology/lithoheterotrophic.yaml
+has output	3	blocked_by_node_type	RO:0002234	data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/upper/observation.yaml
 transfers electron to	3	unmapped		data/traits/metabolism/nitrogen_fixation.yaml
 has quality	3	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/traits/physiology/carboxydotrophic.yaml
 feed into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml

@@ -111,14 +111,14 @@ causal_graphs:
     description: Maintenance of viability during nutrient-limited stationary phase.
   edges:
   - subject: photoorganoheterotrophic_trait
-    predicate: uses energy source
+    predicate: has energy source
     object: light
     description: Photoorganoheterotrophy uses light as the energy source.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: use of light
       notes: Supports light as the energy source in photoheterotrophy categories.
-    predicate_id: METPO:2000010
+    predicate_id: METPO:2007807
   - subject: photoorganoheterotrophic_trait
     predicate: has electron donor
     object: organic_compound
@@ -131,7 +131,7 @@ causal_graphs:
         growth.
     predicate_id: METPO:2007701
   - subject: photoorganoheterotrophic_trait
-    predicate: uses carbon source
+    predicate: has carbon source
     object: organic_compound
     description: The heterotrophic component uses organic molecules as carbon sources.
     evidence:
@@ -139,7 +139,7 @@ causal_graphs:
       snippet: organic molecules ... carbon source
       notes: Supports organic molecules as the carbon source in photoorganoheterotrophic
         growth.
-    predicate_id: METPO:2000006
+    predicate_id: METPO:2007806
   - subject: light
     predicate: captured by
     object: photosynthetic_reaction_center
@@ -321,4 +321,17 @@ curation_history:
     restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
     organism-subject problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (1 to has energy
+    source, 1 to has carbon source), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

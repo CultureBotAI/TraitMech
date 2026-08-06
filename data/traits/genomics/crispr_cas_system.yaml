@@ -106,14 +106,14 @@ causal_graphs:
       notes: Cas1-Cas2 complexes function as molecular recorders to integrate spacers;
         core adaptation edge, broad across canonical CRISPR-Cas systems.
   - subject: crispr_array_transcription
-    predicate: produces
+    predicate: has output
     object: crrna
     description: Transcription and processing of the CRISPR array yields mature crRNAs.
     evidence:
     - reference: DOI:10.1016/j.heliyon.2024.e39538
       notes: CRISPR arrays are transcribed and processed into crRNAs; general edge
         across systems.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: crrna
     predicate: guides
     object: crrna_effector_complex
@@ -174,4 +174,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

@@ -116,7 +116,7 @@ causal_graphs:
       notes: Supports cold habitats as the context for psychrophile machinery.
     predicate_id: METPO:2007401
   - subject: psychrophile_machinery
-    predicate: produces
+    predicate: confers
     object: temperature_optimum_very_low_trait
     description: Psychrophile cold-adapted machinery yields a very-low temperature
       optimum.
@@ -125,7 +125,7 @@ causal_graphs:
       snippet: more unsaturated fatty acids
       notes: Supports homoviscous adaptation as the mechanism setting the psychrophile
         optimum.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: temperature_optimum_very_low_trait
     predicate: is a
     object: temperature_optimum
@@ -250,4 +250,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:27208×1, CHEBI:17750×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

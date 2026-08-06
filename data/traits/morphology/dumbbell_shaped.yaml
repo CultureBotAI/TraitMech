@@ -82,7 +82,7 @@ causal_graphs:
       septum.
   edges:
   - subject: midcell_constriction
-    predicate: produces
+    predicate: has output
     object: dumbbell_intermediate
     description: Strong midcell constriction creates a two-lobe pre-division morphology.
     evidence:
@@ -90,7 +90,7 @@ causal_graphs:
       snippet: snapping cell division
       notes: Supports midcell constriction as the proximate event preceding dumbbell
         intermediates.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: snapping_division
     predicate: stabilizes
     object: dumbbell_intermediate
@@ -140,7 +140,7 @@ causal_graphs:
         mechanical rupture.
     predicate_id: RO:0002213
   - subject: mechanical_snapping_separation
-    predicate: produces
+    predicate: has output
     object: v_shaped_daughters
     description: Uneven rupture of intertwined outer envelope layers produces V-shaped
       attached daughters.
@@ -148,7 +148,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00028-07
       notes: Uneven rupturing produces the V-shape; snapping division produces angular
         daughter arrangements.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: septal_hydrolases
     predicate: mediates
     object: septal_pg_hydrolysis
@@ -219,4 +219,16 @@ curation_history:
     non-spherical morphology, cell curvature); STATE is reserved for conditions.
     Surfaced by issue 220: the second TRAIT node made this graph 7-node component
     reachable-from-a-trait, hiding it from UNREACHABLE_FROM_TRAIT.'
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

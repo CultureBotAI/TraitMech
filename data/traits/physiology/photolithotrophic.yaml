@@ -105,14 +105,14 @@ causal_graphs:
     description: Photolithotrophic subtype oxidizing Fe(II) via anoxygenic photosynthesis.
   edges:
   - subject: photolithotrophic_trait
-    predicate: uses energy source
+    predicate: has energy source
     object: light
     description: Photolithotrophic growth is powered by light.
     evidence:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: light as an energy source
       notes: Supports light as the energy source for photoferrotrophic photolithotrophy.
-    predicate_id: METPO:2000010
+    predicate_id: METPO:2007807
   - subject: photolithotrophic_trait
     predicate: has electron donor
     object: inorganic_electron_donor
@@ -168,14 +168,14 @@ causal_graphs:
       snippet: carbon dioxide
       notes: Supports CO2 use with inorganic substrate conversion to organic matter.
   - subject: anoxygenic_photosynthesis
-    predicate: produces
+    predicate: has output
     object: biomass
     description: Fixed carbon supports biomass formation.
     evidence:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: inorganic carbon is fixed into organic matter
       notes: Supports organic matter formation from inorganic carbon in photoferrotrophy.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: light
     predicate: provides energy to
     object: photosynthetic_reaction_center
@@ -194,13 +194,13 @@ causal_graphs:
       notes: In anoxygenic photosynthesis, hydrogen sulfide (H2S) is used as the main
         electron donor.
   - subject: hydrogen_sulfide_oxidation
-    predicate: produces
+    predicate: has output
     object: elemental_sulfur
     description: Phototrophic oxidation of H2S yields elemental sulfur.
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1417714
       notes: GSB oxidize H2S to elemental sulfur.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: inorganic_electron_donor
     predicate: supports
     object: co2_fixation
@@ -321,4 +321,17 @@ curation_history:
     restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
     organism-subject problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (1 to has energy
+    source, 2 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject
+    entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so
+    no such edge could ever satisfy the domain. Edge directions are unchanged - this pass
+    only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an
+    activity, since biolink gives it the domain 'biological process or activity'; the METPO
+    replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

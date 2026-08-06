@@ -97,7 +97,7 @@ causal_graphs:
       notes: Supports adder control under typical growth regimes.
     predicate_id: RO:0002327
   - subject: adder_principle
-    predicate: produces
+    predicate: confers
     object: cell_length_small_trait
     description: Adder homeostasis under standard conditions yields a narrow length
       distribution in the small range.
@@ -105,7 +105,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2014.11.022
       snippet: cells grow by a fixed amount between divisions
       notes: Supports small length as a typical adder-controlled outcome.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007700
   - subject: cell_length_small_trait
     predicate: is a
     object: cell_length_trait
@@ -221,4 +221,16 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true

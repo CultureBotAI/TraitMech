@@ -178,15 +178,15 @@ causal_graphs:
         canonical pathway edge, broadly applicable.
     predicate_id: RO:0002327
   - subject: ectoine_biosynthesis
-    predicate: produces
+    predicate: has output
     object: compatible_solutes
     description: Ectoine biosynthesis yields a compatible solute supporting salt tolerance.
     evidence:
     - reference: DOI:10.58088/07hg-r941
       notes: Ectoine is a compatible solute synthesized de novo via the ectABC operon.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
   - subject: glycine_betaine_biosynthesis
-    predicate: produces
+    predicate: has output
     object: compatible_solutes
     description: Glycine betaine biosynthesis yields a compatible solute supporting
       salt tolerance.
@@ -194,7 +194,7 @@ causal_graphs:
     - reference: DOI:10.58088/07hg-r941
       notes: Glycine betaine is produced from environmental choline and acts as a
         compatible solute.
-    predicate_id: METPO:2000202
+    predicate_id: RO:0002234
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861954+00:00'
   curator: seed_from_metpo
@@ -285,4 +285,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T01:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES
+  changes: Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output),
+    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
+    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
+    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
+    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
+    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
+    it the domain 'biological process or activity'; the METPO replacements are proposed in
+    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
