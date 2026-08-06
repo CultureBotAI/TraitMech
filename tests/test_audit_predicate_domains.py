@@ -79,6 +79,50 @@ def test_closure_excludes_unrelated_property(tmp_path):
     assert "METPO:3000000" not in microbe_domain_predicates(owl)
 
 
+MIXED_NS_OWL = """\
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+  <owl:ObjectProperty rdf:about="https://w3id.org/metpo/2000001"/>
+  <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002327">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/metpo/2000001"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+"""
+
+
+def test_obo_purl_child_is_normalised_to_a_curie(tmp_path):
+    """#316: an OBO-IRI property under the root must match the corpus's CURIE.
+
+    The closure would otherwise hold the raw PURL and never match `RO:0002327`
+    as written in a trait YAML — a silent under-report of a class that is ERROR
+    severity and must stay at zero.
+    """
+    owl = tmp_path / "mixed.owl"
+    owl.write_text(MIXED_NS_OWL)
+    assert microbe_domain_predicates(owl) == {"METPO:2000001", "RO:0002327"}
+
+
+def test_obo_purl_child_is_actually_flagged_in_the_corpus(tmp_path):
+    """End to end: normalisation is useless if audit() still misses the edge."""
+    owl = tmp_path / "mixed.owl"
+    owl.write_text(MIXED_NS_OWL)
+    d = _write(tmp_path, "obo.yaml", """\
+identifier: traitmech:000070
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: proc, label: P, node_type: BIOLOGICAL_PROCESS}
+  - {node_id: chem, label: C, node_type: CHEMICAL}
+  edges:
+  - {subject: proc, predicate: x, object: chem, predicate_id: RO:0002327}
+""")
+    defects = [f["defect"] for f in audit(d, owl)]
+    assert "MICROBE_DOMAIN_ON_NONORGANISM" in defects
+
+
 def test_unreadable_owl_falls_back_to_root(tmp_path):
     """A missing OWL must fail safe: only the root, never a crash."""
     assert microbe_domain_predicates(tmp_path / "does_not_exist.owl") == {"METPO:2000001"}
