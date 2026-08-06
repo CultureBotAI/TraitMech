@@ -1,0 +1,14 @@
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	mapping_source	comment
+METPO:2007800	produces	skos:closeMatch	METPO:2000202	produces	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same production sense; differs only in domain - METPO:2000202 inherits rdfs:domain METPO:1000525 (microbe) via METPO:2000001, whereas this term's subject is a trait causal node.
+METPO:2007801	does not produce	skos:closeMatch	METPO:2000222	does not produce	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same negated production sense; differs only in domain, as METPO:2007800 does from METPO:2000202.
+METPO:2007802	reduces	skos:closeMatch	METPO:2000017	reduces	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same electron-donation sense; differs only in domain.
+METPO:2007803	oxidizes	skos:closeMatch	METPO:2000016	oxidizes	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same electron-removal sense; differs only in domain.
+METPO:2007804	exports	skos:closeMatch	METPO:2000209	exports	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same efflux sense; differs only in domain.
+METPO:2007805	imports	skos:closeMatch	METPO:2000208	imports	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same uptake sense; differs only in domain.
+METPO:2007806	has carbon source	skos:closeMatch	METPO:2000006	uses as carbon source	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same carbon-source role. Not exactMatch: the subject is the trait rather than the organism, so the relation is stated from the disposition's side.
+METPO:2007807	has energy source	skos:closeMatch	METPO:2000010	uses as energy source	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same energy-source role; subject is the trait rather than the organism, and the range is wider (admits ENVIRONMENTAL_FACTOR such as light).
+METPO:2007808	hydrolyzes	skos:closeMatch	METPO:2000013	hydrolyzes	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same hydrolytic-cleavage sense; differs only in domain.
+METPO:2007809	degrades	skos:closeMatch	METPO:2000007	degrades	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same breakdown sense; differs only in domain, and the range additionally admits a cellular structure.
+METPO:2007810	accumulates	skos:closeMatch	METPO:2000210	accumulates	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same accumulation sense; differs only in domain.
+METPO:2007811	disproportionates	skos:closeMatch	METPO:2000200	disproportionates	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same disproportionation sense; differs only in domain.
+METPO:2007812	transports	skos:closeMatch	METPO:2000207	transports	semapv:ManualMappingCuration	high	metpo_traitmech_v9	Same direction-neutral transport sense; differs only in domain.
