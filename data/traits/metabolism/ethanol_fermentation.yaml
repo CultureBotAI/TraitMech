@@ -98,7 +98,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: Classical-fermentation review describes pyruvate decarboxylation and
         reduction to ethanol.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: pyruvate
     predicate: is substrate for
     object: pyruvate_decarboxylase
@@ -116,7 +116,7 @@ causal_graphs:
     - reference: DOI:10.5376/be.2024.14.0025
       notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
         (PDC).
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: pyruvate_decarboxylase
     predicate: produces
     object: carbon_dioxide
@@ -125,7 +125,7 @@ causal_graphs:
     - reference: DOI:10.5376/be.2024.14.0025
       notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
         (PDC), releasing CO2.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: acetaldehyde
     predicate: is substrate for
     object: alcohol_dehydrogenase
@@ -140,7 +140,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
       notes: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: alcohol_dehydrogenase
     predicate: consumes
     object: nadh
@@ -157,7 +157,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
       notes: Regenerating NAD+ from NADH to sustain glycolysis.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -219,4 +219,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004737×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T02:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES_PART2
+  changes: Re-grounded 5 causal edge(s) off microbe-domain METPO predicates onto their causal-graph
+    counterparts (5 to produces), issue 301 part 2. The previous predicates are transitively
+    rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph
+    subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member,
+    so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its
+    source predicate that changes only the domain, so the claim each edge makes is unchanged
+    and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

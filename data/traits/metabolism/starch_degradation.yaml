@@ -77,7 +77,7 @@ causal_graphs:
     - reference: DOI:10.1093/nar/gkt1178
       notes: CAZy review classifies glycoside hydrolases (including amylases) used
         to degrade starch and other polysaccharides.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
   - subject: starch
     predicate: is hydrolyzed to
     object: maltooligosaccharides
@@ -95,7 +95,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00018-023-04812-w
       notes: An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic
         alpha-amylase (EC 3.2.1.1) chemistry.
-    predicate_id: METPO:2000013
+    predicate_id: METPO:2007808
   - subject: alpha_glucosidase
     predicate: degrades
     object: maltooligosaccharides
@@ -105,7 +105,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01506-24
       notes: Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose;
         generic terminal exo-hydrolysis step.
-    predicate_id: METPO:2000007
+    predicate_id: METPO:2007809
   - subject: alpha_glucosidase
     predicate: produces
     object: glucose
@@ -114,7 +114,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01506-24
       notes: Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose,
         the terminal assimilable sugar.
-    predicate_id: METPO:2000202
+    predicate_id: METPO:2007800
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -166,4 +166,16 @@ curation_history:
     cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
     The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
     until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T02:00:00Z'
+  curator: claude
+  action: MIGRATE_MICROBE_DOMAIN_EDGES_PART2
+  changes: Re-grounded 4 causal edge(s) off microbe-domain METPO predicates onto their causal-graph
+    counterparts (1 to degrades, 1 to hydrolyzes, 2 to produces), issue 301 part 2. The previous
+    predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525
+    (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum
+    has no organism member, so no such edge could ever satisfy the domain. Each replacement
+    is a 1:1 mirror of its source predicate that changes only the domain, so the claim each
+    edge makes is unchanged and directions are unchanged. The replacements are proposed in
+    proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
