@@ -533,7 +533,13 @@ def check_absolute_repo_paths(files: list[Path], root: Path) -> list[dict[str, s
 # legitimately quotes such a path when describing the #248 bug, and
 # test_render_research_lookup.py uses one as the fixture for that regression.
 # Widening this to every tracked file would fight prose and get switched off,
-# which is worse than not having it.
+# which is worse than not having it: NEXT_TASKS.md and docs/ quote such paths
+# when describing #248, which is reporting, not a defect.
+#
+# .github/workflows/ is also out of scope, and that is a weaker call than the
+# others: a home path in a workflow fails loudly on the runner rather than
+# silently, so the gate adds little. Listed here so the omission reads as a
+# decision rather than an oversight.
 #
 # The justfile is NOT covered, which is worth stating since it is where the
 # CLAW_SRC convention this check points people at actually lives. It is
@@ -544,7 +550,21 @@ def check_absolute_repo_paths(files: list[Path], root: Path) -> list[dict[str, s
 # Note this module is itself in scope, so the patterns below are built from
 # fragments rather than written out — a check that trips on its own explanation
 # is a check someone deletes.
-HOME_PATH_DIRS = ("scripts/", "src/", ".claude/skills/")
+HOME_PATH_DIRS = ("scripts/", "src/", ".claude/skills/", "tests/")
+# Exempt by PATH, not by directory. tests/ was excluded wholesale in the first
+# cut on account of a single fixture, which left every future test permanently
+# ungated against the same latent-CI-failure class this check exists for
+# (#337 review). Name the one file instead.
+HOME_PATH_EXEMPT = frozenset({
+    # Uses a literal home path as the fixture for the #248 regression: the
+    # assertion is that the renderer does NOT leak it, so the string has to be
+    # present for the test to mean anything.
+    "tests/test_render_research_lookup.py",
+    # The tests for THIS check. Its positive cases must contain the very
+    # patterns it looks for, so it flags its own fixtures otherwise — the same
+    # self-reference that made the first cut flag its own docstring.
+    "tests/test_pr_sanity.py",
+})
 _HOME_PATH_RE = re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/")
 
 
@@ -567,7 +587,7 @@ def check_sibling_absolute_paths(files: list[Path], root: Path) -> list[dict[str
         if path.suffix not in TEXT_SUFFIXES or not path.is_file():
             continue
         rel = str(path.relative_to(root))
-        if not rel.startswith(HOME_PATH_DIRS):
+        if not rel.startswith(HOME_PATH_DIRS) or rel in HOME_PATH_EXEMPT:
             continue
         try:
             text = path.read_text(encoding="utf-8")

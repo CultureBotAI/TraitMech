@@ -67,9 +67,23 @@ CANDIDATES_TSV = REPO_ROOT / "reports/uniprot_match_candidates.tsv"
 # `or`, not a get() default: KG_MICROBE_DIR= (set but empty) would otherwise
 # become Path("."), and the not-found message would then print a bare filename
 # with no hint of where it looked. Matches the idiom in robot_validate_proposal.
-KG_MICROBE_DIR = Path(
-    os.environ.get("KG_MICROBE_DIR") or REPO_ROOT.parent / "kg-microbe"
-)
+def _default_kg_microbe_dir() -> Path:
+    """First sibling-ish directory named kg-microbe, else the flat-sibling guess.
+
+    Tries one level further out than the obvious guess because a nested checkout
+    (TraitMech inside a workspace dir that is itself beside kg-microbe) is a real
+    layout, and there the flat guess never resolves (#337 review). Falls back to
+    the flat form so the not-found message names a plausible location rather than
+    the last thing tried.
+    """
+    for base in (REPO_ROOT.parent, REPO_ROOT.parent.parent):
+        candidate = base / "kg-microbe"
+        if candidate.is_dir():
+            return candidate
+    return REPO_ROOT.parent / "kg-microbe"
+
+
+KG_MICROBE_DIR = Path(os.environ.get("KG_MICROBE_DIR") or _default_kg_microbe_dir())
 KG_UNIPROT_NODES = KG_MICROBE_DIR / "merged-kg_uniprot_nodes.tsv"
 
 # Per-label cap to avoid overly-generic matches dominating the index.
