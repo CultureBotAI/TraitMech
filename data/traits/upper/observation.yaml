@@ -212,7 +212,7 @@ curation_history:
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002234×1).
   llm_assisted: true
-- timestamp: '2026-08-06T02:30:00Z'
+- timestamp: '2026-08-06T04:35:00Z'
   curator: claude
   action: RETYPE_CAUSAL_NODE
   changes: Retyped assay_measurement from EXPERIMENTAL_FACTOR to BIOLOGICAL_PROCESS and moved
