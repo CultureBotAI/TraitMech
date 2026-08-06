@@ -24,7 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from traitmech.validation.write_validated import (  # noqa: E402
-    EMIT_OPTS,
+    emit_trait_yaml,
     write_validated_trait,
 )
 
@@ -47,15 +47,18 @@ def _split() -> tuple[tuple[Path, ...], tuple[Path, ...]]:
             continue
         if not isinstance(doc, dict):
             continue
-        (same if yaml.safe_dump(doc, **EMIT_OPTS) == before else changed).append(path)
+        (same if emit_trait_yaml(doc) == before else changed).append(path)
     return tuple(same), tuple(changed)
 
 
 def test_a_hand_edited_corpus_file_is_reformatted_by_the_helper(tmp_path):
     """End to end through write_validated_trait, not through safe_dump.
 
-    This is the assertion that binds to the real options: change them so the
-    reformatting stops and this fails.
+    Demonstrates the behaviour on a real record. It is NOT the test that carries
+    the guarantee: injecting width=4096 into EMIT_OPTS leaves it passing, because
+    dropped quoting alone still reformats some files. The corpus-split test below
+    is what fails in that case, and measuring which one bites was the point of
+    canarying rather than assuming.
     """
     _same, changed = _split()
     assert changed, "expected some corpus files to be reformatted"

@@ -116,6 +116,18 @@ EMIT_OPTS = {
 }
 
 
+def emit_trait_yaml(doc: dict[str, Any], yaml_kwargs: dict[str, Any] | None = None) -> str:
+    """Serialise ``doc`` exactly as :func:`write_validated_trait` writes it.
+
+    Split out so nothing has to re-implement the emit path to reason about it.
+    A test that rebuilt ``safe_dump(doc, **EMIT_OPTS)`` itself would bind to the
+    options but not to how they are composed, so a change to the composition
+    would go unnoticed -- a smaller version of the duplicated-options problem in
+    #322's review.
+    """
+    return yaml.safe_dump(doc, **{**EMIT_OPTS, **(yaml_kwargs or {})})
+
+
 def write_validated_trait(
     doc: dict[str, Any],
     path: Path,
@@ -149,6 +161,5 @@ def write_validated_trait(
     # Making the claim true would mean normalising all 477 files once and gating
     # it with a round-trip test; that is a large one-time reformat and is still
     # open on #322.
-    opts = {**EMIT_OPTS, **(yaml_kwargs or {})}
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(yaml.safe_dump(doc, **opts), encoding="utf-8")
+    path.write_text(emit_trait_yaml(doc, yaml_kwargs), encoding="utf-8")
