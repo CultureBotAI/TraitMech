@@ -118,6 +118,22 @@ audit-graphs *args:
 audit-predicate-domains *args:
     uv run python scripts/audit_predicate_domains.py --fail-on new {{args}}
 
+# Flag open PRs that received NO CI at all (#345). PR #344 produced zero
+# pull_request workflow runs -- not failures, not skips -- while `gh pr checks`
+# said "no checks reported" and mergeStateStatus said CLEAN. Two of the
+# workflows that failed to fire carry no `paths:` filter at all, so the usual
+# filter explanations do not apply and the mechanism is still unidentified.
+#
+# This therefore detects the SILENCE rather than any one cause of it, and stays
+# meaningful however the runs go missing. Runs triggered by workflow_dispatch do
+# NOT count: dispatching by hand is what you do AFTER noticing, so counting it
+# would make the check green on exactly the PRs it exists to find.
+#
+# Needs network and gh auth, so it is NOT in `qc`; it runs from
+# pr-checks-present.yaml on pushes to main, where triggering demonstrably works.
+audit-pr-checks *args:
+    uv run python scripts/audit_pr_checks_present.py {{args}}
+
 # Structural audit of evidence snippets: EvidenceItem.snippet is specified as a
 # VERBATIM quote and docs/CURATION_PLAYBOOK.md sharpens that to contiguous, no
 # ellipsis, no paraphrase, diversified across edges — and until #247 nothing
