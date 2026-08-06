@@ -221,7 +221,9 @@ def partition(
 def load_baseline(path: Path) -> set[tuple[str, str, str, str]]:
     if not path.exists():
         return set()
-    with path.open(newline="") as f:
+    # encoding pinned: the detail column carries a non-ASCII '⊑', so the default
+    # (locale) encoding would crash reading the baseline on a non-UTF-8 locale.
+    with path.open(newline="", encoding="utf-8") as f:
         return {_key(r) for r in csv.DictReader(f, delimiter="\t")}
 
 
@@ -245,7 +247,8 @@ def main() -> int:
 
     findings = audit(args.traits_dir, args.owl)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    with args.out.open("w", newline="") as f:
+    # encoding pinned: details carry a non-ASCII '⊑' — see load_baseline.
+    with args.out.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDNAMES, delimiter="\t",
                            lineterminator="\n")
         w.writeheader()
@@ -263,7 +266,7 @@ def main() -> int:
             return 1
         warns = [r for r in findings if r["severity"] != ERROR]
         args.baseline.parent.mkdir(parents=True, exist_ok=True)
-        with args.baseline.open("w", newline="") as f:
+        with args.baseline.open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=FIELDNAMES, delimiter="\t",
                                lineterminator="\n")
             w.writeheader()
