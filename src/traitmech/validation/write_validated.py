@@ -105,6 +105,17 @@ def validate_trait(
     return [r for r in report.results if r.severity == Severity.ERROR]
 
 
+# The emission options, at module scope so a test can import THEM rather than
+# re-declaring a copy. A duplicated dict in the test file would let someone add
+# e.g. width=4096 here -- stopping the re-wrapping described below -- while the
+# test kept passing against PyYAML's defaults (#322 review).
+EMIT_OPTS = {
+    "default_flow_style": False,
+    "sort_keys": False,
+    "allow_unicode": True,
+}
+
+
 def write_validated_trait(
     doc: dict[str, Any],
     path: Path,
@@ -138,11 +149,6 @@ def write_validated_trait(
     # Making the claim true would mean normalising all 477 files once and gating
     # it with a round-trip test; that is a large one-time reformat and is still
     # open on #322.
-    opts = {
-        "default_flow_style": False,
-        "sort_keys": False,
-        "allow_unicode": True,
-        **(yaml_kwargs or {}),
-    }
+    opts = {**EMIT_OPTS, **(yaml_kwargs or {})}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(yaml.safe_dump(doc, **opts), encoding="utf-8")
