@@ -141,7 +141,15 @@ def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not ids:
         print("  scope-A: no traitmech:NNNNNN ids in corpus (nothing to cover)", file=sys.stderr)
         return
-    missing = sorted(i for i in ids if i not in class_tsv_text)
+    # Exact token match, not a substring scan of the raw text. `i not in text`
+    # treats `traitmech:000001` as covered by a cell containing
+    # `traitmech:0000010`, so a longer id silently satisfies a shorter one and
+    # the check can report full coverage while a term is genuinely un-lifted
+    # (#321). Not reachable while every corpus id is 6 digits, but the
+    # manage-identifiers policy permits crossing to 7, and this is a coverage
+    # gate — the failure mode is passing when it should fail.
+    cited = set(re.findall(r"traitmech:\d+", class_tsv_text))
+    missing = sorted(i for i in ids if i not in cited)
     if missing:
         _emit(failures, f"scope-A: {len(missing)} traitmech ids in corpus not cited in proposal: {missing[:5]}{' ...' if len(missing) > 5 else ''}")
     else:

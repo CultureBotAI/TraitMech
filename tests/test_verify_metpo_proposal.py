@@ -56,6 +56,21 @@ def test_scope_a_passes_when_the_id_is_cited(tmp_path, monkeypatch):
     assert failures == []
 
 
+def test_a_longer_id_does_not_satisfy_a_shorter_one(tmp_path, monkeypatch):
+    """#321: the coverage test must match whole ids, not substrings.
+
+    `traitmech:000001 not in "...traitmech:0000010..."` is False, so the shorter
+    id read as covered and the check could report full Scope-A coverage while
+    that term was genuinely un-lifted. A coverage gate that passes when it should
+    fail is worse than no gate.
+    """
+    monkeypatch.setattr(vmp, "TRAITS_DIR", _corpus(tmp_path, "traitmech:000001"))
+    failures: list[str] = []
+    vmp.check_scope_a("METPO:1007400\tc\tdef\tTraitMech:traitmech:0000010\n", failures)
+    assert len(failures) == 1
+    assert "traitmech:000001" in failures[0]
+
+
 def test_scope_a_is_silent_on_an_empty_corpus(tmp_path, monkeypatch):
     """No synthetic ids at all — nothing to cover, whatever the cohort ships."""
     monkeypatch.setattr(vmp, "TRAITS_DIR", _corpus(tmp_path))
