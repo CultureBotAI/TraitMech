@@ -105,6 +105,29 @@ def validate_trait(
     return [r for r in report.results if r.severity == Severity.ERROR]
 
 
+# The emission options, at module scope so a test can import THEM rather than
+# re-declaring a copy. A duplicated dict in the test file would let someone add
+# e.g. width=4096 here -- stopping the re-wrapping described below -- while the
+# test kept passing against PyYAML's defaults (#322 review).
+EMIT_OPTS = {
+    "default_flow_style": False,
+    "sort_keys": False,
+    "allow_unicode": True,
+}
+
+
+def emit_trait_yaml(doc: dict[str, Any], yaml_kwargs: dict[str, Any] | None = None) -> str:
+    """Serialise ``doc`` exactly as :func:`write_validated_trait` writes it.
+
+    Split out so nothing has to re-implement the emit path to reason about it.
+    A test that rebuilt ``safe_dump(doc, **EMIT_OPTS)`` itself would bind to the
+    options but not to how they are composed, so a change to the composition
+    would go unnoticed -- a smaller version of the duplicated-options problem in
+    #322's review.
+    """
+    return yaml.safe_dump(doc, **{**EMIT_OPTS, **(yaml_kwargs or {})})
+
+
 def write_validated_trait(
     doc: dict[str, Any],
     path: Path,
@@ -122,13 +145,21 @@ def write_validated_trait(
     errors = validate_trait(doc, target_class=target_class, schema_path=schema_path)
     if errors:
         raise ValidationFailedError(path, errors)
-    # Match the repo's existing yaml emission convention so re-running the
-    # helper over an existing file produces a byte-identical diff.
-    opts = {
-        "default_flow_style": False,
-        "sort_keys": False,
-        "allow_unicode": True,
-        **(yaml_kwargs or {}),
-    }
+    # Matches the repo's schema-side emission convention. It does NOT guarantee a
+    # byte-identical round-trip, which this comment used to claim (#322): loading
+    # and immediately re-writing an UNMODIFIED trait file reformats 350 of the
+    # 477 in data/traits/, because safe_dump re-wraps long strings at its own
+    # width and drops hand-written quoting. Only 127 currently survive untouched.
+    #
+    # That matters for BULK scripts. Touching N files through this helper buries
+    # the real change in reflow churn across every long string in them, which is
+    # the difference between a reviewable migration and an unreviewable one --
+    # #323's 164-edge migration and #328's 185-edge one both edit raw lines
+    # instead, for exactly this reason. For a single record, or for a file this
+    # helper already owns, the reformatting is harmless.
+    #
+    # Making the claim true would mean normalising all 477 files once and gating
+    # it with a round-trip test; that is a large one-time reformat and is still
+    # open on #322.
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(yaml.safe_dump(doc, **opts), encoding="utf-8")
+    path.write_text(emit_trait_yaml(doc, yaml_kwargs), encoding="utf-8")
