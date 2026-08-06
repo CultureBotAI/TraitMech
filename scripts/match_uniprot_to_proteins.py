@@ -64,8 +64,11 @@ CANDIDATES_TSV = REPO_ROOT / "reports/uniprot_match_candidates.tsv"
 # convention rather than one machine's absolute path (#310). The previous value
 # was hardcoded to a single developer's home directory and could not resolve
 # anywhere else, including CI.
+# `or`, not a get() default: KG_MICROBE_DIR= (set but empty) would otherwise
+# become Path("."), and the not-found message would then print a bare filename
+# with no hint of where it looked. Matches the idiom in robot_validate_proposal.
 KG_MICROBE_DIR = Path(
-    os.environ.get("KG_MICROBE_DIR", REPO_ROOT.parent / "kg-microbe")
+    os.environ.get("KG_MICROBE_DIR") or REPO_ROOT.parent / "kg-microbe"
 )
 KG_UNIPROT_NODES = KG_MICROBE_DIR / "merged-kg_uniprot_nodes.tsv"
 

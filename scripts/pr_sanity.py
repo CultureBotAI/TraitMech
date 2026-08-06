@@ -535,6 +535,12 @@ def check_absolute_repo_paths(files: list[Path], root: Path) -> list[dict[str, s
 # Widening this to every tracked file would fight prose and get switched off,
 # which is worse than not having it.
 #
+# The justfile is NOT covered, which is worth stating since it is where the
+# CLAW_SRC convention this check points people at actually lives. It is
+# extensionless, so TEXT_SUFFIXES skips it regardless of this list; its sibling
+# references are already repo-relative (`../kg-microbe/...`), which is the form
+# being asked for.
+#
 # Note this module is itself in scope, so the patterns below are built from
 # fragments rather than written out — a check that trips on its own explanation
 # is a check someone deletes.
