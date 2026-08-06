@@ -98,14 +98,14 @@ causal_graphs:
       glycan hoops.
   edges:
   - subject: mreB
-    predicate: enables
+    predicate: interacts with
     object: rod_complex
-    description: MreB organizes rod-shape elongation machinery.
+    description: MreB filaments interact with the Rod complex that elongates the cell wall.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-010521-010834
       snippet: MreB filaments interact with Rod complexes
       notes: Supports MreB-Rod complex interaction in rod-shape regulation.
-    predicate_id: RO:0002327
+    predicate_id: biolink:interacts_with
   - subject: rod_complex
     predicate: directs
     object: peptidoglycan_synthesis
@@ -307,4 +307,28 @@ curation_history:
     RO:0002234 (has output) is used where the subject is an activity, since biolink gives
     it the domain 'biological process or activity'; the METPO replacements are proposed in
     proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto part of (biolink:part_of),
+    issue 334. biolink declares enables range ''biological process or activity'', which only
+    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
+    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
+    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
+    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
+    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+    removed.'
+  llm_assisted: true
+- timestamp: '2026-08-06T09:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Corrected the mreB edge from part of to interacts with (biolink:interacts_with),
+    issue 334 review. The first pass over-claimed: the edge''s own snippet says MreB filaments
+    INTERACT WITH Rod complexes, and the target node is described as machinery associated
+    with MreB, so parthood is not what the evidence supports. The corpus is also split on
+    it - cell_shape.yaml types rod_complex a PATHWAY with MreB inside it, while this file
+    types it GENE_OR_PROTEIN with MreB outside - which makes parthood exactly the kind of
+    modelling decision this work defers elsewhere. interacts with says what the quoted sentence
+    says and needs no such decision. The edge description was rephrased to match the predicate.'
   llm_assisted: true

@@ -547,6 +547,18 @@ Identifiers below are limited to mappings that can be stated confidently. Label-
           <p class="changes">Migrated 4 causal edge(s) off enables/RO:0002327 with a TRAIT object (4 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
         
+        <li>
+          <time>2026-08-06T08:00:00Z</time> ·
+          <strong>REGROUND_CAUSAL_EDGE</strong> · claude
+          <p class="changes">Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to (RO:0002326), issue 334. biolink declares enables range &#39;biological process or activity&#39;, which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN entailed a false type. The replacements are chosen per idiom rather than swept: a gene cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being removed.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-06T09:00:00Z</time> ·
+          <strong>REGROUND_CAUSAL_EDGE</strong> · claude
+          <p class="changes">Reverted the motive-force edge from contributes to back to enables/RO:0002327, issue 334 review. biolink defines contributes to as holding where one entity contributes to the occurrence or GENERATION of the other. A motive force does not generate the motor or machinery - it powers rotation, which is what the edge description says. That is the same energy-powers-a-machine idiom this work deferred for molecular_oxygen and cytoplasmic_na, so deferring it here too is the consistent call. The edge stays baselined under issue 334 until it is modelled as an input to the machine or pointed at the rotation process, either of which is range-correct.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -927,7 +939,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-06 09:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

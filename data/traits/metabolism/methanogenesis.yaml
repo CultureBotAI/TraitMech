@@ -156,13 +156,13 @@ causal_graphs:
       notes: Supports methane as the reduced product of hydrogenotrophic methanogenesis.
     predicate_id: METPO:2007800
   - subject: mcr_gene_cluster
-    predicate: enables
+    predicate: encodes
     object: methyl_coenzyme_m_reductase
     description: The mcrABG gene cluster encodes the methyl-coenzyme M reductase complex.
     evidence:
     - reference: DOI:10.1128/mmbr.00024-22
       notes: A key genetic requirement across these pathways is the presence of mcrABG.
-    predicate_id: RO:0002327
+    predicate_id: biolink:encodes
   - subject: acetate
     predicate: serves as substrate for
     object: acetoclastic_methanogenesis
@@ -279,4 +279,31 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is unchanged
     and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-06T08:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto encodes (biolink:encodes),
+    issue 334. biolink declares enables range ''biological process or activity'', which only
+    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
+    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
+    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
+    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
+    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+    removed.'
+  llm_assisted: true
+- timestamp: '2026-08-06T09:30:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Correction to the REGROUND_CAUSAL_EDGE event above, issue 334 review. That event
+    claimed "All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class
+    of defect being removed". For biolink:encodes that justification was vacuous: the term
+    is ABSENT from the pinned biolink 4.4.0 model, so it trivially declares nothing, and the
+    check used could not distinguish absent from unconstrained. reports/biolink_coverage.tsv
+    already recorded it as the only applied biolink: CURIE with no backing slot. The grounding
+    is retained because a gene CLUSTER to protein COMPLEX edge does not fit `has gene product`''s
+    range of gene product mixin, so repointing would trade a missing term for a wrong range;
+    mappings/predicate_grounding.tsv now states plainly that it is a local coinage. Tracked
+    in issue 342. The edge itself is unchanged and is still an improvement on enables, whose
+    declared range it genuinely violated.'
   llm_assisted: true
