@@ -98,13 +98,13 @@ causal_graphs:
       aerial escape.
   edges:
   - subject: hyphal_extension
-    predicate: enables
+    predicate: confers
     object: mycelial_growth_trait
     description: Sustained apical extension and branching realize mycelial growth.
     evidence:
     - reference: DOI:10.1038/nrmicro1968
       notes: Flärdh & Buttner describe Streptomyces growth as a branching hyphal mycelium.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: mycelial_growth_trait
     predicate: develops into
     object: aerial_hyphae_differentiation
@@ -206,4 +206,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, biolink:causes×1, biolink:located_in×1, RO:0002327×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

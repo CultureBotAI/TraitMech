@@ -74,14 +74,14 @@ causal_graphs:
       secreted extracellular proteases.
   edges:
   - subject: extracellular_protease
-    predicate: enables
+    predicate: confers
     object: proteolysis_trait
     description: Secreted proteases drive extracellular protein hydrolysis.
     evidence:
     - reference: DOI:10.1128/mmbr.62.3.597-635.1998
       notes: Rao et al. review microbial proteases and their depolymerizing nutritional
         role.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: proteolysis_trait
     predicate: produces
     object: amino_acids
@@ -171,4 +171,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000013×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

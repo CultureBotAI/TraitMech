@@ -82,14 +82,14 @@ causal_graphs:
     description: NADPH/NAD(P)H reducing equivalents produced by the light reactions.
   edges:
   - subject: photosynthesis_process
-    predicate: enables
+    predicate: confers
     object: photosynthesis_trait
     description: Reaction-center photochemistry underlies the photosynthetic trait.
     evidence:
     - reference: DOI:10.1016/j.tim.2006.09.001
       notes: Bryant & Frigaard treat reaction-center photosynthesis as encompassing
         both oxygenic and anoxygenic forms.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: photosynthesis_trait
     predicate: contributes to
     object: carbon_fixation
@@ -193,4 +193,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006754×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

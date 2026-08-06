@@ -94,14 +94,14 @@ causal_graphs:
     description: Calpha-Cbeta carbon-carbon bond in lignin beta-O-4 units.
   edges:
   - subject: oxidative_enzymes
-    predicate: enables
+    predicate: confers
     object: lignin_degradation_trait
     description: Peroxidases and laccases drive oxidative lignin breakdown.
     evidence:
     - reference: DOI:10.1039/c1np00042j
       notes: Bugg et al. review pathways for degradation of lignin in bacteria and
         fungi.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: lignin_degradation_trait
     predicate: produces
     object: aromatic_monomers
@@ -220,4 +220,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR017761×1, GO:0016689×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

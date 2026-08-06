@@ -96,7 +96,7 @@ causal_graphs:
     description: Protons (hydrons) within the cytoplasm.
   edges:
   - subject: acidophile_homeostasis
-    predicate: enables
+    predicate: confers
     object: ph_range_low_trait
     description: Acidophile pH-homeostasis enables growth across pH 4–6.
     evidence:
@@ -104,7 +104,7 @@ causal_graphs:
       snippet: cytoplasmic pH
       notes: Supports acidophile cytoplasmic pH homeostasis as the moderately-acidic
         growth-range mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: ph_range_low_trait
     predicate: is a
     object: ph_range
@@ -202,4 +202,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1, METPO:2000209×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

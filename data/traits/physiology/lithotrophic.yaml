@@ -132,9 +132,9 @@ causal_graphs:
     description: Oxidation of reduced sulfur compounds for energy conservation.
     grounding: GO:0019417
   edges:
-  - subject: inorganic_electron_donor
-    predicate: enables
-    object: lithotrophic_trait
+  - subject: lithotrophic_trait
+    predicate: has electron donor
+    object: inorganic_electron_donor
     description: Inorganic compounds serve as the electron donors lithotrophic organisms
       use.
     evidence:
@@ -142,7 +142,7 @@ causal_graphs:
       snippet: inorganic atoms or molecules as a growth-supporting reductant
       notes: Supports inorganic electron donors as the defining lithotrophic substrate
         class.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007701
   - subject: hydrogen
     predicate: example of
     object: inorganic_electron_donor
@@ -328,4 +328,16 @@ curation_history:
     unchanged; only subject/predicate/object/predicate_id and the edge description
     moved. Note RO:0002327 has range 'biological process or activity', so the new
     form is not fully range-correct either - tracked in issue 302.
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has
+    electron donor), issue 302. RO:0002327 has range 'biological process or activity', which
+    a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them. 1 electron edge(s) were also reversed back to trait -> chemical,
+    restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
+    organism-subject problem that forced that collapse does not arise here because these predicates
+    take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
   llm_assisted: true

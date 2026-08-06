@@ -67,13 +67,13 @@ causal_graphs:
       notes: Imlay reviews ROS damage and induced defenses.
     predicate_id: biolink:causes
   - subject: oxidative_stress_process
-    predicate: enables
+    predicate: confers
     object: oxidative_stress_response_trait
     description: The induced defense realizes the oxidative-stress-response trait.
     evidence:
     - reference: DOI:10.1007/s00018-003-3206-5
       notes: Chelikani et al. support catalases as core oxidative-stress enzymes.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: oxyr_regulator
     predicate: positively regulates
     object: oxidative_stress_process
@@ -134,4 +134,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

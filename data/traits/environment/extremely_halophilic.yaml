@@ -98,7 +98,7 @@ causal_graphs:
       snippet: KCl accumulating Halobacterium salinarum
       notes: Supports KCl accumulation as a model salt-in strategy.
   - subject: salt_in_strategy
-    predicate: enables
+    predicate: confers
     object: extremely_halophilic_trait
     description: Maintaining high intracellular salt supports growth at extreme external
       salinity.
@@ -107,9 +107,9 @@ causal_graphs:
       snippet: Salt-in strategy
       notes: Haloarchaeal salinity-stress study describes salt-in adaptation in extreme
         halophiles.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: acidic_halophilic_proteins
-    predicate: enables
+    predicate: confers
     object: extremely_halophilic_trait
     description: Acidic proteins remain soluble and functional in high salt.
     evidence:
@@ -117,7 +117,7 @@ causal_graphs:
       snippet: negatively charged due to an excess of acidic over basic residues
       notes: Review supports acidic proteomes as a molecular adaptation to hypersaline
         cytoplasm.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: salt_in_strategy
     predicate: requires adaptation of
     object: acidic_halophilic_proteins
@@ -241,4 +241,13 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -123,7 +123,7 @@ causal_graphs:
       notes: Sulfate-coupled AOM is performed by consortia of ANME in obligate syntrophic
         partnership with sulfate-reducing bacteria.
   - subject: diet
-    predicate: enables
+    predicate: confers
     object: aom_trait
     description: DIET via conserved ANME-to-SRB outer-membrane complexes enables sulfate-coupled
       AOM syntrophy.
@@ -131,7 +131,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3002292
       notes: Protein complexes involved in direct interspecies electron transfer (DIET)
         from ANME to the SRB outer membrane are conserved.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: nitrate
     predicate: serves as terminal electron acceptor for
     object: aom_trait
@@ -181,4 +181,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0044674×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

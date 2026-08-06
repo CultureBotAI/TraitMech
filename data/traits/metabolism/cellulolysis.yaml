@@ -98,14 +98,14 @@ causal_graphs:
     description: Genes encoding cellulose-degrading enzymes.
   edges:
   - subject: cellulase
-    predicate: enables
+    predicate: confers
     object: cellulolysis_trait
     description: Cellulase systems hydrolyze cellulose extracellularly.
     evidence:
     - reference: DOI:10.1128/MMBR.66.3.506-577.2002
       notes: Lynd et al. review microbial cellulose utilization and the cellulase
         systems involved.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cellulolysis_trait
     predicate: produces
     object: glucose
@@ -242,7 +242,7 @@ causal_graphs:
         system rather than independent actors.
     predicate_id: biolink:part_of
   - subject: cellulosome
-    predicate: enables
+    predicate: confers
     object: cellulolysis_trait
     description: Cellulosomes are one of the alternative cellulase-system architectures
       that confer cellulolysis; they are taxonomically restricted, not universal.
@@ -252,7 +252,7 @@ causal_graphs:
       notes: Lynd et al. distinguish noncomplexed (free-enzyme) from complexed (cellulosomal)
         systems as alternative implementations of cellulose utilization. Cellulosomes
         occur only in restricted lineages; this edge must not be read as a requirement.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: cellulolytic_genes
     predicate: encodes
     object: cellulase
@@ -338,4 +338,13 @@ curation_history:
     (a complex, not a location; GO:0043263 grounding retained). Deferred to a follow-up
     pass: LPMO/CBM/transport/phosphorolysis branches, splitting cellobiohydrolase by
     chain end, and replacing the generic CCR edge with taxon-specific cip-cel evidence.'
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

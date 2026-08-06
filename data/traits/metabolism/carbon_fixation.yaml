@@ -116,14 +116,14 @@ causal_graphs:
       notes: Berg reviews the distribution of autotrophic CO2-fixation pathways.
     predicate_id: METPO:2007404
   - subject: carbon_fixation_process
-    predicate: enables
+    predicate: confers
     object: carbon_fixation_trait
     description: The autotrophic carbon-fixation process realizes the trait.
     evidence:
     - reference: DOI:10.1146/annurev-marine-120709-142712
       notes: Hügler & Sievert support multiple autotrophic carbon-fixation pathways
         operating among ocean microorganisms.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: carbonic_anhydrase
     predicate: accelerates interconversion of
     object: carbon_dioxide
@@ -260,4 +260,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR001765×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

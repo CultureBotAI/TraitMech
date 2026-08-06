@@ -64,7 +64,7 @@ favors	4	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/physiolog
 can proceed through	4	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 assimilated into	4	unmapped		data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
 requires containment level	3	unmapped		data/traits/ecology/biosafety_level_4.yaml
-confers	3	unmapped		data/traits/ecology/commensalism.yaml|data/traits/morphology/spirochete_shaped.yaml|data/traits/morphology/sporulation.yaml
+confers	3	blocked_by_node_type	METPO:2007700	data/traits/ecology/commensalism.yaml|data/traits/morphology/spirochete_shaped.yaml|data/traits/morphology/sporulation.yaml
 leads to	3	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/morphology/spore_shaped.yaml|data/traits/physiology/chemoorganotrophic.yaml
 delivers	3	unmapped		data/traits/ecology/pathogenic_to_host.yaml|data/traits/ecology/plant_pathogen.yaml
 depolymerizes	3	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/metabolism/biopolymer_degradation.yaml

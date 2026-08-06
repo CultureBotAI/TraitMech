@@ -99,23 +99,23 @@ causal_graphs:
       notes: Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.
     predicate_id: METPO:2007406
   - subject: nucleotide_excision_repair
-    predicate: enables
+    predicate: confers
     object: uv_tolerant_trait
     description: NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.
     evidence:
     - reference: DOI:10.3390/genes14091803
       notes: D. radiodurans tolerates lethal UV-C doses via excision-based repair
         of UV photoproducts.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: photoreactivation
-    predicate: enables
+    predicate: confers
     object: uv_tolerant_trait
     description: Photolyase-mediated dimer reversal complements excision repair.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: D. radiodurans is the reference organism for extreme UV and ionizing
         radiation resistance.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: uv_radiation
     predicate: causes
     object: cyclobutane_pyrimidine_dimer
@@ -224,4 +224,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004096×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

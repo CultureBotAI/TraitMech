@@ -96,7 +96,7 @@ causal_graphs:
     description: Shift of dissolved inorganic carbon toward carbonate at high pH.
   edges:
   - subject: extreme_alkaliphile_antiport
-    predicate: enables
+    predicate: confers
     object: ph_range_high_trait
     description: Robust Na+/H+ antiport enables growth at pH > 10.
     evidence:
@@ -104,7 +104,7 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports antiporter-driven proton re-import as the extreme-alkaliphile
         mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: ph_range_high_trait
     predicate: is a
     object: ph_range
@@ -115,7 +115,7 @@ causal_graphs:
       notes: Supports the pH 10–14 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
   - subject: mrp_antiporter_complex
-    predicate: enables
+    predicate: confers
     object: ph_range_high_trait
     description: The hetero-oligomeric Mrp antiporter has an indispensable role in
       growth at high pH.
@@ -123,7 +123,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: The unusual hetero-oligomeric Mrp antiporter has an indispensable role
         at high pH.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: mrp_operon
     predicate: encodes
     object: mrp_antiporter_complex
@@ -173,7 +173,7 @@ causal_graphs:
         contributes to alkaliphile pH homeostasis.
     predicate_id: RO:0002326
   - subject: alkaline_ph_homeostasis
-    predicate: enables
+    predicate: confers
     object: ph_range_high_trait
     description: Maintenance of cytoplasmic pH homeostasis enables growth at strongly
       alkaline external pH.
@@ -181,7 +181,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH
         10.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: external_ph_high
     predicate: shifts speciation toward
     object: carbonate_speciation
@@ -219,4 +219,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×3, biolink:encodes×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

@@ -82,7 +82,7 @@ causal_graphs:
       flagellum.
   edges:
   - subject: flagellar_motor
-    predicate: enables
+    predicate: confers
     object: motility_trait
     description: Rotary flagellar motors enable bacterial swimming and related motility
       modes.
@@ -90,9 +90,9 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00626-4
       snippet: allow bacteria to move around
       notes: Review summarizes flagellar machinery as a major bacterial motility mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: type_iv_pilus
-    predicate: enables
+    predicate: confers
     object: motility_trait
     description: Type IV pili enable twitching motility through extension, adhesion,
       and retraction.
@@ -100,16 +100,16 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-019-0195-4
       snippet: Cycles of pilus extension, binding and retraction
       notes: Supports type IV pili as motility appendages.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: gliding_motility_machinery
-    predicate: enables
+    predicate: confers
     object: motility_trait
     description: Gliding machinery allows surface movement without external flagella.
     evidence:
     - reference: DOI:10.1146/annurev.micro.55.1.49
       snippet: move actively over surfaces
       notes: Supports gliding as an active bacterial movement mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: ion_motive_force
     predicate: enables
     object: flagellar_motor
@@ -171,14 +171,14 @@ causal_graphs:
         -> motility edge).
     predicate_id: RO:0002212
   - subject: archaellum
-    predicate: enables
+    predicate: confers
     object: motility_trait
     description: The archaellum enables swimming motility in archaea, analogous to
       the bacterial flagellum.
     evidence:
     - reference: DOI:10.1038/s41467-024-50277-1
       notes: The archaellum enables cell motility in archaea.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.904440+00:00'
   curator: seed_from_metpo
@@ -256,4 +256,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0044096×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 4 causal edge(s) off enables/RO:0002327 with a TRAIT object (4 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

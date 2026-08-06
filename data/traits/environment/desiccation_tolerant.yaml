@@ -109,22 +109,22 @@ causal_graphs:
         state upon water loss.
     predicate_id: biolink:causes
   - subject: anhydrobiosis_state
-    predicate: enables
+    predicate: confers
     object: desiccation_tolerant_trait
     description: Reversible anhydrobiosis is the basis of desiccation survival.
     evidence:
     - reference: DOI:10.3390/microorganisms10020432
       notes: Anhydrobiosis enables reversible survival of near-complete water loss.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: dsb_repair
-    predicate: enables
+    predicate: confers
     object: desiccation_tolerant_trait
     description: Efficient DNA double-strand-break repair restores integrity on rehydration.
     evidence:
     - reference: DOI:10.3390/genes14091803
       notes: Deinococcus radiodurans shares DNA-repair machinery between radiation
         and desiccation tolerance.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: water_loss
     predicate: causes
     object: oxidative_stress
@@ -233,4 +233,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×3).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

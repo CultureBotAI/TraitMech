@@ -92,14 +92,14 @@ causal_graphs:
         continuum.
     predicate_id: biolink:causes
   - subject: host_fitness_cost
-    predicate: enables
+    predicate: confers
     object: parasitism_trait
     description: Chronic host fitness cost realizes the parasitic lifestyle.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
       notes: McFall-Ngai et al. support host-exploitative associations as one outcome
         of the shared host-colonization toolkit.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: bacterial_adhesin_activity
     predicate: promotes
     object: host_colonization
@@ -210,4 +210,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 8 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×4, biolink:part_of×2, RO:0002327×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true

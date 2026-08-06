@@ -92,16 +92,16 @@ causal_graphs:
     description: Respiratory complex III transferring electrons from quinol to cytochrome
       c.
   edges:
-  - subject: organic_compound
-    predicate: enables
-    object: organoheterotrophic_trait
+  - subject: organoheterotrophic_trait
+    predicate: has electron donor
+    object: organic_compound
     description: Organic compounds serve as the electron donors for organoheterotrophy.
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
       notes: Supports organic molecules as electron sources in organoheterotrophic
         categories.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007701
   - subject: organoheterotrophic_trait
     predicate: uses carbon source
     object: organic_compound
@@ -281,4 +281,16 @@ curation_history:
     unchanged; only subject/predicate/object/predicate_id and the edge description
     moved. Note RO:0002327 has range 'biological process or activity', so the new
     form is not fully range-correct either - tracked in issue 302.
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has
+    electron donor), issue 302. RO:0002327 has range 'biological process or activity', which
+    a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them. 1 electron edge(s) were also reversed back to trait -> chemical,
+    restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the
+    organism-subject problem that forced that collapse does not arise here because these predicates
+    take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
   llm_assisted: true

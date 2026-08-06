@@ -66,14 +66,14 @@ causal_graphs:
     description: Insoluble MnO2 nanoparticles released as the final biomineral product.
   edges:
   - subject: multicopper_oxidase
-    predicate: enables
+    predicate: confers
     object: manganese_oxidation_trait
     description: Multicopper oxidases catalyze the Mn(II) → Mn(III/IV) oxidation step.
     evidence:
     - reference: DOI:10.1016/j.tim.2005.07.009
       notes: Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase
         mechanism.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: manganese_oxidation_trait
     predicate: produces
     object: mn_oxides
@@ -84,7 +84,7 @@ causal_graphs:
         produced Mn(III/IV) oxides.
     predicate_id: METPO:2000202
   - subject: molecular_oxygen
-    predicate: enables
+    predicate: confers
     object: manganese_oxidation_trait
     description: O2 serves as the direct oxidant enabling multicopper-oxidase-mediated
       Mn(II) oxidation.
@@ -92,7 +92,7 @@ causal_graphs:
     - reference: DOI:10.1021/jacs.3c06537
       notes: Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes
         for Mn(II) oxidation.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: manganese_oxidation_trait
     predicate: produces
     object: mn_iii_oh_mn_iii_intermediate
@@ -157,4 +157,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-08-06T00:00:00Z'
+  curator: claude
+  action: MIGRATE_ENABLES_TRAIT_EDGES
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
+    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
+    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
+    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
+    until METPO mints them.
   llm_assisted: true
