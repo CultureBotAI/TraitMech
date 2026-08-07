@@ -264,7 +264,7 @@ causal_graphs:
       notes: Connects the regulatory branch to the enzymes whose expression is repressed.
         The gene-set node remains broader than cellulose-specific; see curation note
         on replacing it with a taxon-specific operon.
-    predicate_id: biolink:encodes
+    predicate_id: METPO:2007813
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -373,4 +373,19 @@ curation_history:
     the old's matter, which is exactly what depolymerisation does, and it declares
     no domain. The label is kept because it names the mechanism, which the general
     relation does not. This was the last of the 366 edges in issue 301.
+  llm_assisted: true
+- timestamp: '2026-08-07T04:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813,
+    issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so
+    the CURIE resolved to nothing upstream while looking like an upstream term to
+    anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv,
+    which is not read at the point of use. RO:0002205 (has gene product) is the nearest
+    real term but relates a GENE to a gene product, whereas these edges relate a gene
+    cluster or operon to a protein complex or a biosynthetic process, which its range
+    does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed
+    in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
+    which puts it in the same state as the rest of that cohort rather than in a category
+    of its own.
   llm_assisted: true
