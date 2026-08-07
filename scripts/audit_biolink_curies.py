@@ -18,10 +18,11 @@ all ground to ``biolink:produces``), and demanding otherwise would flag correct
 rows. It requires only that the CURIE names a real slot, converting
 ``biolink:has_gene_product`` to ``has gene product`` the way the model spells it.
 
-A local coinage is legitimate when nothing upstream fits — ``encodes`` is kept
-precisely because a gene CLUSTER to protein COMPLEX edge does not fit
-``has gene product``'s range. What is not legitimate is claiming it came from
-biolink, so such rows must say ``source=local`` and are exempt here.
+A coinage is legitimate when nothing upstream fits. What is not legitimate is
+spelling it as a ``biolink:`` CURIE, because that is what gets written into trait
+records and it reads as an upstream term there. #342's coinage was therefore
+minted as ``METPO:2007813`` rather than exempted, and ``ALLOWED_UNBACKED`` is
+empty: an exemption is a code change someone reviews, not a cell edit.
 
 Usage:
     just audit-biolink-curies
@@ -39,9 +40,19 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_MAPPING = REPO_ROOT / "mappings" / "predicate_grounding.tsv"
 DEFAULT_MODEL = REPO_ROOT / "data" / "raw" / "biolink-model.yaml"
 
-# A row may ground to a biolink: CURIE that does not exist upstream ONLY if it
-# declares itself local. That keeps the coinage possible and the claim honest.
-LOCAL_SOURCE = "local"
+# CURIEs allowed to have no backing slot. EMPTY, and keyed to the CURIE rather
+# than to a free-text column value (#350 review).
+#
+# The first cut exempted any row whose `source` said "local", which meant a
+# future unbacked CURIE could be silenced by typing five characters into a TSV
+# cell -- the same shape of failure this gate exists to catch, one level up. The
+# repo's other blocking gate keys its escapes to specific identifiers
+# (`exceptions:` in conf/id_label_targets.yaml), and this now follows it.
+#
+# It is empty because #342's only coinage was minted as METPO:2007813 instead.
+# Adding an entry is deliberately a code change, so a second coinage is an
+# explicit decision someone reviews rather than a cell edit.
+ALLOWED_UNBACKED: frozenset[str] = frozenset()
 
 
 def slot_names(model_path: Path) -> set[str]:
@@ -55,7 +66,7 @@ def curie_to_slot(curie: str) -> str:
 
 
 def unbacked(mapping_path: Path, model_path: Path) -> list[dict[str, str]]:
-    """Rows grounding to a biolink CURIE with no slot, not marked local."""
+    """Rows grounding to a biolink CURIE with no slot in the pinned model."""
     slots = slot_names(model_path)
     out: list[dict[str, str]] = []
     with mapping_path.open(newline="") as f:
@@ -63,7 +74,7 @@ def unbacked(mapping_path: Path, model_path: Path) -> list[dict[str, str]]:
             curie = (row.get("target_curie") or "").strip()
             if not curie.startswith("biolink:"):
                 continue
-            if (row.get("source") or "").strip() == LOCAL_SOURCE:
+            if curie in ALLOWED_UNBACKED:
                 continue
             if curie_to_slot(curie) not in slots:
                 out.append({"label": row.get("label", ""), "curie": curie,

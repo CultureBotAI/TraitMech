@@ -55,10 +55,23 @@ def test_a_curie_with_no_slot_is_flagged(tmp_path):
     assert [r["curie"] for r in got] == ["biolink:encodes"]
 
 
-def test_a_local_coinage_is_exempt(tmp_path):
-    """The coinage stays legitimate; claiming biolink provenance does not."""
+def test_source_local_alone_does_not_exempt(tmp_path):
+    """#350 review: the escape must not be a free-text cell.
+
+    Exempting on `source=local` meant a future unbacked CURIE could be silenced
+    by typing five characters into a TSV -- the failure this gate exists to
+    catch, one level up.
+    """
     m, b = _files(tmp_path, [_row("encodes", "biolink:encodes", "local")])
-    assert unbacked(m, b) == []
+    assert [r["curie"] for r in unbacked(m, b)] == ["biolink:encodes"]
+
+
+def test_an_explicitly_allowed_curie_is_exempt(tmp_path, monkeypatch):
+    """The escape exists, but adding to it is a code change, not a cell edit."""
+    import audit_biolink_curies as mod
+    monkeypatch.setattr(mod, "ALLOWED_UNBACKED", frozenset({"biolink:encodes"}))
+    m, b = _files(tmp_path, [_row("encodes", "biolink:encodes", "biolink")])
+    assert mod.unbacked(m, b) == []
 
 
 def test_non_biolink_curies_are_ignored(tmp_path):
