@@ -1,0 +1,66 @@
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
+name: pr-checks-present
+
+# Catches the failure where a PR receives NO CI at all (#345).
+#
+# PR #344 produced zero `pull_request` workflow runs. Not failures, not skips —
+# nothing. `gh pr checks` printed "no checks reported", `mergeStateStatus` stayed
+# `CLEAN`, and the PR looked mergeable. Two of the workflows that failed to fire
+# (pr-sanity, vendored-sync) carry no `paths:` filter at all, deliberately per
+# #184/#200, so the usual filter explanations do not apply. The mechanism is
+# still unidentified — which is exactly why this detects the SILENCE rather than
+# guarding against one particular cause.
+#
+# TRIGGERED ON PUSH TO MAIN, NOT ON pull_request. That is the whole point: a
+# workflow that runs on `pull_request` cannot detect a PR where `pull_request`
+# events are not arriving. Pushes to main demonstrably do fire — every merge in
+# this repo produces runs — so this reports on the open PRs from a vantage point
+# that works.
+#
+# NO `schedule:` trigger. culturebotai-claw's cron-profiles.yaml is the fleet
+# kill switch and pr-shepherd.yml explains why shipping a cron here would make it
+# a lie. Run by hand between merges if a PR is sitting a long time.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+
+concurrency:
+  # Unique per run, per WORKFLOW_CONVENTIONS.md: this only ever runs on main or by
+  # dispatch, so nothing here supersedes anything. A shared key would not cancel
+  # (we must not — see below) but WOULD queue, making a manual dispatch wait
+  # behind an in-flight push run for no benefit (#346 review).
+  group: pr-checks-present-${{ github.run_id }}
+  # Never cancel: on main, cancelling would leave the report unmade for that
+  # commit, which is the state this workflow exists to make visible.
+  cancel-in-progress: false
+
+jobs:
+  pr-checks-present:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Report open PRs with no pull-request-triggered checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: just audit-pr-checks
