@@ -31,7 +31,17 @@ structural defects the schema cannot catch:
                           #330, #331), and #334 retyped six on exactly this
                           evidence; the ones left behind survived only because
                           their in-edges happened not to violate a range, which
-                          is an unrelated fact (#352).         [WARN]
+                          is an unrelated fact (#352).
+
+                          QUALITY is deliberately NOT scanned, though it carries
+                          the same phrasing in places: carboxydotrophic.yaml's
+                          `oxygen_tolerance` is "Ability of an ENZYME to function
+                          in the presence of O2", which is a property of a
+                          protein rather than something an organism can do. The
+                          same node_id typed CAPACITY in oxygen_preference.yaml
+                          IS organism-scoped and is flagged. Widening to QUALITY
+                          would need the organism/enzyme distinction, which this
+                          heuristic does not make (#353 review).  [WARN]
   UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
@@ -142,12 +152,25 @@ def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[
     return sorted(out, key=len, reverse=True)
 
 
-# "capacity of a cell to", "ability to", "tolerance of" -- deliberately anchored
-# on the phrasing a curator writes, not on the label, because the label is often
-# just the concept name ("buoyancy") while the description is where the
-# disposition shows.
+# Matched against the DESCRIPTION only, never the label: the label is usually
+# just the concept name ("buoyancy", "salt tolerance") while the description is
+# where the curator says what it IS.
+#
+# The capacity/ability arm requires the capacity to be ORGANISM-scoped -- bare
+# ("Capacity to grow...") or of a cell/organism. That is deliberate, not a
+# tightening for its own sake: ph_optimum.yaml has "Capacity of cytoplasmic
+# buffers (e.g. ...) to absorb pH fluctuations", which is a genuine reservoir
+# CAPACITY and must not flag. A looser `capacity[^.]{0,30}?to` let it through
+# only because the dots in "e.g." happened to stop the character class -- a
+# correct verdict for an accidental reason, which an unrelated cleanup would
+# silently reverse (#353 review).
 _DISPOSITION_RE = re.compile(
-    r"\b(capacit(?:y|ies)\b[^.]{0,30}?\bto|ability to|able to|tolerance (?:of|to))\b",
+    r"\b(?:"
+    r"capacit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|microbe)s?)?\s+to"
+    r"|abilit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|microbe)s?)?\s+to"
+    r"|able\s+to"
+    r"|tolerance\s+(?:of|to)"
+    r")\b",
     re.IGNORECASE)
 
 
@@ -222,6 +245,39 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
                                f"{'/'.join(trait_nodes)}"),
                 })
 
+            # Two nodes with the same grounding are one concept modelled twice.
+            by_grounding: dict[str, list[str]] = defaultdict(list)
+            for n in nodes:
+                g = (n.get("grounding") or "").strip()
+                if g:
+                    by_grounding[g].append(n.get("node_id"))
+            for g, ids in sorted(by_grounding.items()):
+                if len(ids) > 1:
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DUPLICATE_GROUNDING",
+                        "severity": SEVERITY["DUPLICATE_GROUNDING"],
+                        # Detail MUST lead with the node count. _key takes the
+                        # leading whitespace-delimited token as the baseline
+                        # discriminator, so leading with the CURIE would keep the
+                        # key stable when a THIRD node joins the same grounding --
+                        # baselining two would silently forgive three. Same
+                        # reasoning FRAGMENTED_GRAPH records below (#353 review).
+                        "detail": (f"nodes={len(ids)} share grounding={g}: "
+                                   f"{', '.join(sorted(i for i in ids if i))}"),
+                    })
+
+            for n in nodes:
+                if n.get("node_type") not in ("CAPACITY", "STATE"):
+                    continue
+                if _DISPOSITION_RE.search(n.get("description") or ""):
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DISPOSITION_MISTYPED",
+                        "severity": SEVERITY["DISPOSITION_MISTYPED"],
+                        "detail": (f"node_id={n.get('node_id')!r} "
+                                   f"type={n.get('node_type')} — description reads as a "
+                                   f"disposition, which is a TRAIT"),
+                    })
+
             # UNREACHABLE_FROM_TRAIT anchors on ANY node typed TRAIT, and that is
             # correct: 85 of 353 graphs legitimately carry more than one, because
             # a record links its parent and child traits as nodes
@@ -241,34 +297,6 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
             # a clearer remedy — counting it here would raise a second finding
             # for one defect, which is the same reason UNREACHABLE_FROM_TRAIT
             # skips unreferenced nodes above.
-            # Two nodes with the same grounding are one concept modelled twice.
-            by_grounding: dict[str, list[str]] = defaultdict(list)
-            for n in nodes:
-                g = (n.get("grounding") or "").strip()
-                if g:
-                    by_grounding[g].append(n.get("node_id"))
-            for g, ids in sorted(by_grounding.items()):
-                if len(ids) > 1:
-                    findings.append({
-                        "file": rel, "graph_id": gid, "defect": "DUPLICATE_GROUNDING",
-                        "severity": SEVERITY["DUPLICATE_GROUNDING"],
-                        "detail": (f"grounding={g} on {len(ids)} nodes: "
-                                   f"{', '.join(sorted(i for i in ids if i))}"),
-                    })
-
-            for n in nodes:
-                if n.get("node_type") not in ("CAPACITY", "STATE"):
-                    continue
-                blob = f"{n.get('label') or ''} {n.get('description') or ''}"
-                if _DISPOSITION_RE.search(blob):
-                    findings.append({
-                        "file": rel, "graph_id": gid, "defect": "DISPOSITION_MISTYPED",
-                        "severity": SEVERITY["DISPOSITION_MISTYPED"],
-                        "detail": (f"node_id={n.get('node_id')!r} "
-                                   f"type={n.get('node_type')} — description reads as a "
-                                   f"disposition, which is a TRAIT"),
-                    })
-
             components = _components(node_set & referenced, adjacency)
             if len(components) > 1:
                 sizes = ", ".join(str(len(c)) for c in components)
