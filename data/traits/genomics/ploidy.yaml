@@ -104,7 +104,7 @@ causal_graphs:
   - subject: genome_copy_number
     predicate: confers
     object: growth_without_phosphate
-    description: Consuming extra genome copies as a phosphate source enables growth
+    description: Consuming extra genome copies as a phosphate source confers growth
       in the absence of external phosphate; monoploid E. coli cannot.
     evidence:
     - reference: DOI:10.3390/microorganisms11092267

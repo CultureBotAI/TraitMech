@@ -78,6 +78,7 @@ causal_graphs:
   - node_id: growth_external_ph_5_5_9
     label: growth across external pH 5.5-9.0
     node_type: TRAIT
+    grounding: METPO:1000478
     description: Growth supported across the neutralophile external pH range ~5.5-9.0.
   - node_id: constant_pmf
     label: constant proton motive force

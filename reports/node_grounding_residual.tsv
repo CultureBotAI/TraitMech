@@ -757,7 +757,6 @@ low-ph tolerance	CAPACITY	1	data/traits/environment/ph_delta.yaml
 maximal ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 respiratory proton-pumping enzymes	GENE_OR_PROTEIN	1	data/traits/environment/ph_delta_high.yaml
 near-neutral cytoplasmic ph	QUALITY	1	data/traits/environment/ph_delta_high.yaml
-growth across external ph 5.5-9.0	TRAIT	1	data/traits/environment/ph_delta_high.yaml
 constant proton motive force	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 membrane lipid/porin composition changes	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_low.yaml
@@ -904,7 +903,6 @@ high-pressure respiratory energy conservation	BIOLOGICAL_PROCESS	1	data/traits/e
 minimum and maximum growth pressure bounds	QUALITY	1	data/traits/environment/pressure_delta.yaml
 intracellular cation concentration	STATE	1	data/traits/environment/pressure_optimum.yaml
 intracellular osmotic pressure	STATE	1	data/traits/environment/pressure_optimum.yaml
-high hydrostatic pressure tolerance	TRAIT	1	data/traits/environment/pressure_optimum.yaml
 protein stabilization by preferential hydration	BIOLOGICAL_PROCESS	1	data/traits/environment/pressure_optimum.yaml
 growth-permissive pressure span	QUALITY	1	data/traits/environment/pressure_range.yaml
 membrane fluidity under high hydrostatic pressure	QUALITY	1	data/traits/environment/pressure_range.yaml

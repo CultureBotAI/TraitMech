@@ -56,6 +56,7 @@ causal_graphs:
   - node_id: hhp_tolerance
     label: high hydrostatic pressure tolerance
     node_type: TRAIT
+    grounding: traitmech:000003
     description: Capacity of an organism to grow and survive under high hydrostatic
       pressure.
   - node_id: compatible_solute_accumulation
@@ -92,7 +93,7 @@ causal_graphs:
   - subject: membrane_unsaturated_fatty_acids
     predicate: confers
     object: pressure_optimum_trait
-    description: Increased membrane unsaturated/PUFA content enables growth at elevated
+    description: Increased membrane unsaturated/PUFA content confers growth at elevated
       hydrostatic pressure, shaping the pressure optimum.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
@@ -111,7 +112,7 @@ causal_graphs:
   - subject: intracellular_osmotic_pressure
     predicate: confers
     object: hhp_tolerance
-    description: Elevated intracellular osmotic pressure enables high hydrostatic
+    description: Elevated intracellular osmotic pressure confers high hydrostatic
       pressure tolerance.
     evidence:
     - reference: DOI:10.1128/mbio.00958-23
@@ -131,7 +132,7 @@ causal_graphs:
   - subject: compatible_solute_accumulation
     predicate: confers
     object: hhp_tolerance
-    description: Compatible-solute (piezolyte) accumulation enables pressure tolerance.
+    description: Compatible-solute (piezolyte) accumulation confers pressure tolerance.
     evidence:
     - reference: DOI:10.1007/s00253-023-12906-5
       notes: Osmolyte-based protection (proline, glutamate, betaine, beta-hydroxybutyrate,
