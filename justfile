@@ -90,6 +90,20 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Every biolink: CURIE we ground to must name a real slot in the pinned model
+# (#342). `encodes` grounded to biolink:encodes with source=biolink and a note
+# claiming an exact label match; the model has no such slot. The signal was
+# already in reports/biolink_coverage.tsv as the only applied biolink: CURIE with
+# both backing columns empty -- and nothing read it, which is the actual defect:
+# a report nobody consults is not a check.
+#
+# Does NOT require the LABEL to match a slot name: most labels are synonyms
+# (generates, yields and seven others all ground to biolink:produces). A local
+# coinage stays legitimate when nothing upstream fits, provided the row says
+# source=local rather than claiming biolink provenance.
+audit-biolink-curies:
+    uv run python scripts/audit_biolink_curies.py
+
 # Cross-cohort Scope-A coverage: every traitmech:NNNNNN id in the corpus is
 # lifted by SOME proposal cohort (#319). Per-cohort verification cannot assert
 # this -- v5 lifts the synthetic traits, v1/v3/v7 lift other things -- and
@@ -792,7 +806,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-graphs audit-predicate-domains audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

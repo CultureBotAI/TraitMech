@@ -1,6 +1,6 @@
 source	label	current_curie	biolink_via_label	biolink_via_exact_mapping	edge_count
-applied	produces	METPO:2000202	biolink:produces		
-applied	oxidizes	METPO:2000016			
+applied	produces	METPO:2007800	biolink:produces		
+applied	oxidizes	METPO:2007803			
 applied	uses carbon source	METPO:2000006			
 applied	uses electron donor	METPO:2000009			
 applied	uses electron acceptor	METPO:2000008			
@@ -37,111 +37,435 @@ applied	fixed by	METPO:2007404
 applied	oxidized to	METPO:2007405			
 applied	challenges	METPO:2007406			
 applied	mitigates	METPO:2007407			
-residual	defines				14
-residual	influences				7
+applied	defines	METPO:2007500			
+applied	organism interacts with chemical	METPO:2000001			
+applied	ferments	METPO:2000011			
+applied	does not ferment	METPO:2000037			
+applied	uses for growth	METPO:2000012			
+applied	uses for respiration	METPO:2000019			
+applied	uses for aerobic growth	METPO:2000043			
+applied	does not use for aerobic growth	METPO:2000022			
+applied	uses for aerobic catabolization	METPO:2000032			
+applied	does not use for aerobic catabolization	METPO:2000021			
+applied	uses for anaerobic growth	METPO:2000049			
+applied	does not use for anaerobic growth	METPO:2000024			
+applied	uses for anaerobic growth in the dark	METPO:2000050			
+applied	does not use for anaerobic growth in the dark	METPO:2000025			
+applied	uses for anaerobic growth with light	METPO:2000051			
+applied	does not use for anaerobic growth with light	METPO:2000026			
+applied	uses for anaerobic catabolization	METPO:2000048			
+applied	does not use for anaerobic catabolization	METPO:2000023			
+applied	inhibits	RO:0002212			
+applied	suppresses	RO:0002212			
+applied	prevents	RO:0002212	biolink:preventative_for_condition		
+applied	decreases	RO:0002212			
+applied	limits	RO:0002212			
+applied	promotes	RO:0002213			
+applied	activates	RO:0002213			
+applied	increases	RO:0002213			
+applied	modulates	RO:0002211			
+applied	drives production of	biolink:produces			
+applied	drives synthesis of	biolink:produces			
+applied	drives formation of	biolink:produces			
+applied	causes formation of	biolink:produces			
+applied	forms	biolink:produces			
+applied	yields	biolink:produces			
+applied	creates	biolink:produces			
+applied	builds	biolink:produces			
+applied	catalyzes formation of	biolink:catalyzes			
+applied	includes	biolink:has_part			
+applied	incorporated into	biolink:part_of			
+applied	embedded in	biolink:located_in			
+applied	can participate in	biolink:participates_in			
+applied	interact with	biolink:interacts_with			
+applied	has function	RO:0000085			
+applied	transfers electrons via	METPO:2007600			
+applied	increases gradient of	METPO:2007601			
+applied	imposes gradient of	METPO:2007601			
+applied	couples electron flow to	METPO:2007602			
+applied	serves as electron donor and acceptor	METPO:2007603			
+applied	donates electrons to	METPO:2007403			
+applied	provides electrons to	METPO:2007403			
+applied	provides electrons for	METPO:2007402			
+applied	imports	METPO:2007805			
+applied	exports	METPO:2007804			
+applied	accumulates	METPO:2007810			
+applied	reduces	METPO:2007802			
+applied	degrades	METPO:2007809			
+applied	hydrolyzes	METPO:2007808			
+applied	disproportionates	METPO:2007811			
+applied	does not produce	METPO:2007801			
+applied	transports	METPO:2007812			
+applied	positively regulates	RO:0002213			
+applied	negatively regulates	RO:0002212			
+applied	causally upstream of	RO:0002411			
+applied	confers	METPO:2007700			
+applied	has electron donor	METPO:2007701			
+applied	has electron acceptor	METPO:2007702			
+applied	has output	RO:0002234	biolink:has_output	biolink:has_output	
+applied	has carbon source	METPO:2007806			
+applied	has energy source	METPO:2007807			
+applied	derives into	RO:0001001	biolink:derives_into	biolink:derives_into	
+applied	is hydrolyzed to	RO:0001001		biolink:derives_into	
+applied	has input	RO:0002233	biolink:has_input	biolink:has_input	
+residual	supports				37
+residual	induces				34
+residual	required for				30
+residual	drives				29
+residual	maintains				29
+residual	mediates				27
+residual	stabilizes				19
+residual	converts				19
+residual	protects against				15
+residual	requires				13
+residual	causally upstream of				13
+residual	is converted to				11
+residual	binds		biolink:binds		11
+residual	represses				10
+residual	uses				10
+residual	is required for				8
+residual	determines				8
+residual	inactivates				8
+residual	precursor of				8
+residual	recruits				8
+residual	oxidized by				8
+residual	upregulates				7
 residual	engages				7
-residual	determines				6
-residual	sets				6
-residual	constrains				6
-residual	input to				6
+residual	positively influences				7
 residual	powers				6
-residual	organizes				6
-residual	imports				5
-residual	occurs under				5
-residual	incorporated into				5
-residual	drives production of				5
-residual	requires				4
-residual	decreases				4
-residual	triggers				4
-residual	prevents		biolink:preventative_for_condition		4
-residual	initiates				4
+residual	cleaves				6
+residual	increases abundance of				6
+residual	is substrate for				6
+residual	triggers				5
+residual	activates transcription of				5
+residual	protects				5
+residual	provides				5
+residual	results in				5
+residual	enhances				5
+residual	guides				5
+residual	catalyzes conversion of				5
+residual	initiates				5
+residual	positions				5
+residual	coupled to reduction of				5
+residual	removes				4
+residual	acts as				4
+residual	detoxifies				4
+residual	damages				4
+residual	activates expression of				4
+residual	induces accumulation of				4
+residual	has characteristic				4
+residual	supplies				4
+residual	phosphorylates				4
+residual	causally promotes				4
+residual	shapes				4
+residual	positively associated with				4
+residual	reduced to				4
+residual	contains				4
+residual	uses substrate				4
+residual	realizes				4
+residual	has part		biolink:has_part		4
+residual	stimulates GTPase activity of				4
+residual	organizes				4
+residual	establishes				4
+residual	synthesizes				4
+residual	favors				4
 residual	can proceed through				4
 residual	assimilated into				4
-residual	increases gradient of				3
-residual	includes				3
-residual	inhibits				3
-residual	damages				3
-residual	uses				3
+residual	requires containment level				3
+residual	confers				3
+residual	leads to				3
+residual	delivers				3
+residual	depolymerizes				3
+residual	predicts				3
+residual	limits influx of				3
 residual	has alternative process				3
-residual	accumulates				3
+residual	positively correlates with				3
+residual	scavenges				3
+residual	imposes				3
+residual	characterizes				3
+residual	alters				3
+residual	counteracts				3
+residual	lowers				3
+residual	restricts				3
+residual	influences				3
+residual	negatively associated with				3
 residual	has mechanistic pathway				3
-residual	realizes				3
+residual	serves as terminal electron acceptor for				3
+residual	hydrolyzes to				3
+residual	translocates				3
+residual	feeds into				3
+residual	converted to				3
+residual	transfers electron to				3
+residual	has quality				3
 residual	feed into				3
-residual	positions				3
-residual	builds				3
+residual	polymerizes into				3
+residual	disrupts		biolink:disrupts		3
+residual	reduced in				3
+residual	carries out				3
+residual	scaffolds				3
+residual	encapsulates				3
+residual	broken down by				3
 residual	captured by				3
-residual	delivers				2
-residual	limits influx of				2
-residual	removes				2
-residual	acts as				2
+residual	is input to				2
+residual	qualifies for				2
+residual	influences selection of				2
+residual	necessitates use of				2
+residual	necessitates				2
+residual	implemented by				2
+residual	structures				2
+residual	enriches				2
+residual	buffers				2
+residual	sensed by				2
+residual	catalyzes active transport of				2
 residual	can generate				2
-residual	protects against				2
+residual	helps maintain				2
+residual	confers resistance to				2
+residual	is precursor of				2
+residual	responds to				2
+residual	changes				2
 residual	is compatible with				2
-residual	exports				2
-residual	provides				2
+residual	expels				2
+residual	oxidizes/inactivates				2
+residual	enable				2
+residual	can use				2
+residual	biosynthesizes				2
 residual	tolerated by				2
-residual	imposes				2
-residual	reduces				2
-residual	increases				2
-residual	reduced to				2
+residual	repairs				2
+residual	defined as				2
+residual	opens				2
+residual	distinct from				2
+residual	enables biosynthesis of				2
+residual	positively contributes to				2
+residual	increases amount of				2
+residual	perturbs				2
+residual	binds to				2
+residual	constrains				2
+residual	shifts				2
+residual	indicates				2
+residual	refolds				2
+residual	restores				2
+residual	melts				2
+residual	introduces				2
+residual	assists				2
+residual	acts on				2
+residual	absorbs				2
+residual	carries				2
+residual	opposes				2
+residual	biases estimate of				2
+residual	promotes autocleavage of				2
+residual	methylates				2
 residual	oxidized during				2
-residual	converted to				2
+residual	substrate of				2
+residual	is cosubstrate for				2
+residual	coupled to				2
+residual	stimulates				2
+residual	affects		biolink:affects		2
 residual	supports formation of				2
-residual	catalyzes formation of				2
-residual	transfers electrons via				2
+residual	supports growth in				2
+residual	serves as substrate for				2
+residual	has output		biolink:has_output		2
+residual	is oxidized by				2
+residual	electron donor for				2
+residual	generates ATP via				2
 residual	rotates				2
 residual	coordinates with				2
-residual	recruits				2
-residual	reduced in				2
-residual	promotes				2
+residual	gives rise to				2
+residual	localizes				2
+residual	polymerizes to				2
+residual	attaches				2
+residual	incomplete separation yields				2
 residual	combines with				2
-residual	establishes				2
+residual	dephosphorylates				2
+residual	has component				2
+residual	provides precursor for				2
+residual	polymerizes to form				2
+residual	represses transcription of				2
+residual	facilitates				2
+residual	self-assembles into				2
 residual	builds layer of				2
+residual	required for assembly of				2
+residual	results from reduced				2
+residual	supplies substrate to				2
 residual	uses energy substrate				2
-residual	broken down by				2
-residual	drives synthesis of				2
 residual	imported by				2
 residual	uses chemical energy source				2
-residual	oxidized by				2
-residual	supplies				2
-residual	uses substrate				2
+residual	contributes to generation of				2
+residual	couples to				2
 residual	assimilated by				2
+residual	oxidizes to				2
+residual	requires cofactor				2
+residual	promotes switching to				2
+residual	has cofactor				2
+residual	has specified input				2
+residual	attaches to				1
+residual	nucleates				1
 residual	mandates				1
+residual	guides selection of				1
+residual	informs				1
+residual	increases requirement for				1
+residual	supports classification at				1
+residual	enables containment at				1
+residual	is good microbiological practice supporting				1
+residual	determine				1
+residual	assigns				1
+residual	supports assignment to				1
+residual	mitigates risk in				1
+residual	verified by				1
+residual	utilizes				1
 residual	motivates				1
-residual	suppresses				1
+residual	provides resources for				1
+residual	operationalizes				1
+residual	prerequisite for				1
+residual	exerts antimicrobial pressure on				1
+residual	serves as nutrient source for				1
+residual	provides nutrient source for				1
+residual	induces production of				1
+residual	progresses to under host susceptibility				1
+residual	exacerbates		biolink:exacerbates_condition		1
+residual	seals				1
+residual	provides environment for				1
+residual	converts insoluble organic matter into				1
+residual	oxidizes and depolymerizes				1
+residual	catalyzes H2O2-dependent oxidation of				1
+residual	enriches for				1
+residual	increases prevalence of				1
 residual	mitigates influx of				1
+residual	reduces influx of				1
 residual	increases influx pressure of				1
 residual	has mechanistic process				1
+residual	increases importance of				1
+residual	adsorbs				1
+residual	repels				1
 residual	exchanges				1
 residual	generates stress via				1
+residual	enables utilization of				1
+residual	relieves repression by				1
+residual	maintained across				1
+residual	synergizes with				1
+residual	introduces positive supercoils into				1
+residual	decreases risk of				1
 residual	requires adaptation of				1
-residual	responds to				1
 residual	controls adaptation to				1
 residual	is tolerated by				1
 residual	supports optimum of				1
+residual	destabilizes				1
+residual	necessitates maintenance of				1
 residual	regulates switch between				1
+residual	has high affinity for				1
+residual	attracts				1
 residual	activates in absence of oxygen				1
+residual	is part of				1
+residual	involves biosynthesis of				1
+residual	relies on				1
+residual	increases thermostability of				1
+residual	increases production of				1
+residual	senses				1
 residual	enables use of				1
-residual	has function				1
 residual	does not require				1
 residual	compatible with				1
+residual	maximizes growth of				1
+residual	enables function of				1
+residual	creates selection for				1
+residual	predominates in				1
+residual	supports survival in				1
+residual	precedes/replaced by				1
+residual	reduces demand for				1
+residual	corresponds to				1
+residual	rapidly balances				1
+residual	provides early osmotic buffering for				1
 residual	enables tolerance of				1
+residual	requires counterion balancing by				1
+residual	promotes replacement by				1
 residual	suppresses influx of				1
-residual	is required for				1
+residual	interrupts flux through				1
+residual	increases attraction to				1
 residual	poisons				1
-residual	imposes gradient of				1
+residual	serves as				1
+residual	increases reliance on				1
+residual	contribute to				1
+residual	imposes energetic cost on				1
+residual	compensates for				1
+residual	extends				1
+residual	alkalinizes				1
+residual	shifts speciation toward				1
+residual	undergoes				1
+residual	permits maintenance of				1
+residual	acidifies				1
+residual	remains relatively constant across				1
+residual	couples				1
+residual	maintain				1
+residual	enables observation of				1
+residual	is evidence for				1
+residual	enables maintenance of				1
+residual	diffuse into				1
+residual	cause				1
+residual	causes increase in				1
+residual	induces transcription of				1
+residual	expands				1
+residual	has capability				1
+residual	acts as antioxidant against				1
 residual	exceeds tolerance of				1
-residual	causes formation of				1
-residual	limits				1
-residual	carries				1
-residual	precursor of				1
+residual	resists				1
+residual	positively regulates expression of				1
+residual	decreased by reduced unsaturated fatty acids				1
+residual	promotes accumulation of				1
+residual	is sensed as input to				1
+residual	remodels toward increased				1
+residual	serve as precursors for				1
+residual	subclass of		biolink:subclass_of		1
+residual	rigidifies				1
+residual	occludes				1
+residual	controls abundance of				1
+residual	permits translation of				1
+residual	precursor for				1
+residual	exposes				1
+residual	introduces double bonds into				1
+residual	preserves				1
+residual	quenches				1
+residual	strengthens selection for				1
+residual	integrates spacers via				1
+residual	shifts toward				1
+residual	positively correlated with		biolink:positively_correlated_with		1
+residual	strongly correlated with				1
+residual	may increase				1
+residual	negatively influences				1
+residual	can distort measurement of				1
+residual	increases dependence on				1
+residual	disseminates by				1
+residual	nicks/unwinds at				1
+residual	recruits substrate to				1
+residual	promotes retention of				1
+residual	integrates into				1
+residual	increases capacity for				1
+residual	has participant		biolink:has_participant		1
+residual	has core pathway				1
+residual	catalyzes initial step of				1
 residual	conserves				1
 residual	exemplified by				1
+residual	increases activity of				1
+residual	catalyzes reduction of				1
 residual	provides electron donor				1
 residual	provides electron acceptor				1
-residual	mediates				1
 residual	reduced during				1
-residual	serves as electron donor and acceptor				1
+residual	component of				1
+residual	concentrates				1
+residual	can cause				1
+residual	accelerates interconversion of				1
+residual	fixes CO2 to produce				1
+residual	has backbone component				1
+residual	oxidatively cleaves				1
+residual	part_of				1
+residual	is converted via beta-oxidation to				1
+residual	catalyzes oxidation of				1
+residual	reduced faster than				1
+residual	is oxidized coupled to				1
+residual	is coupled to				1
+residual	facilitates electron transfer to				1
+residual	serves as respiratory substrate for				1
+residual	provides condition for				1
+residual	permits				1
+residual	activated by				1
+residual	marker for				1
 residual	transfers electrons from				1
 residual	mediates transfer between				1
 residual	performs				1
@@ -150,67 +474,205 @@ residual	uses protein				1
 residual	oxidation reduces				1
 residual	reoxidized by				1
 residual	conserves energy by				1
-residual	provides electrons for				1
+residual	excludes				1
+residual	transfers electrons from reduced ferredoxin to				1
+residual	reduced by enzyme to				1
+residual	converted by enzyme to				1
+residual	converges with				1
+residual	is fermented via				1
+residual	is converted by				1
+residual	acts as oxidant for				1
+residual	disproportionates to form				1
+residual	condenses into				1
 residual	feeds				1
 residual	reduced with electron donor				1
 residual	has prosthetic group				1
+residual	carries methyl group in				1
+residual	induces synthesis of				1
 residual	uses pathway				1
+residual	used in				1
+residual	supplies electrons to				1
+residual	has major pathway				1
+residual	cofactor for				1
+residual	has byproduct				1
+residual	controls expression of				1
+residual	cleaved to produce				1
+residual	alternative to				1
 residual	uses electron flow from				1
-residual	couples electron flow to				1
+residual	subtype of				1
 residual	donates phosphoryl group to				1
 residual	substrate for				1
+residual	produces ATP via				1
+residual	allows ATP production via				1
+residual	reacts to form				1
 residual	requires partner interaction				1
-residual	creates				1
+residual	bypasses				1
+residual	forms intermediate				1
+residual	is reduced to				1
+residual	dehydrates				1
+residual	regenerates				1
+residual	is required by				1
+residual	mediates carboxylation in				1
+residual	transfers methyl to				1
+residual	functions as C1 carrier in				1
+residual	directly interacts with				1
+residual	forms ring around				1
+residual	causally upstream of, negative effect				1
+residual	required cofactor for				1
+residual	synthesizes precursor for				1
 residual	marks				1
-residual	polymerizes to				1
+residual	auto-oxidizes to				1
+residual	flips				1
+residual	polymerizes				1
+residual	prevents loss of				1
+residual	permits passage of				1
+residual	elevates local concentration of				1
+residual	form				1
 residual	assembles at				1
 residual	resets				1
-residual	feeds into				1
+residual	inhibits assembly of				1
+residual	delays				1
+residual	balances with PG synthesis to maintain				1
+residual	rate_limiting_for				1
+residual	enhances fitness in				1
 residual	balances				1
-residual	shifts				1
-residual	yields				1
-residual	guides				1
-residual	forms				1
+residual	orients				1
+residual	modulates activity of				1
+residual	adapted to				1
+residual	coordinates				1
+residual	decreases rate of				1
+residual	occurs via				1
+residual	optimized for				1
 residual	splits				1
-residual	incomplete separation yields				1
-residual	stabilizes				1
+residual	interconverts with				1
+residual	combined with				1
+residual	aggravates				1
+residual	preferentially required for				1
+residual	directs to cell pole				1
+residual	engages / recruits				1
+residual	occurs at				1
 residual	connects				1
+residual	results in formation of				1
+residual	strengthens				1
 residual	enables context for				1
 residual	transmit force for				1
 residual	fails to retain				1
+residual	occupies				1
+residual	inserts				1
+residual	safeguards				1
 residual	retains				1
-residual	embedded in				1
 residual	fails to remove				1
+residual	neutralizes				1
 residual	reacts with				1
 residual	is retained by				1
-residual	modulates				1
+residual	modifies				1
+residual	binds promoter of				1
+residual	reduces diffusion of				1
+residual	provides mechanical support to				1
+residual	increases accumulation of				1
+residual	localizes to and promotes assembly at				1
+residual	captures				1
+residual	sufficient for				1
+residual	promotes localization of				1
+residual	regulates number of				1
+residual	hinders interaction of				1
+residual	drives extension of				1
+residual	drives retraction of				1
+residual	decreases activation of				1
+residual	has material basis in				1
+residual	assembles as				1
+residual	distinguished from				1
+residual	positively influences (saturating)				1
+residual	inversely correlates with				1
+residual	prevents accumulation of				1
+residual	feeds from				1
 residual	relaxes				1
-residual	interact with				1
-residual	confers				1
-residual	protects				1
-residual	activates				1
-residual	self-assembles into				1
+residual	causes transition to				1
+residual	drives proliferation of				1
+residual	limits or kills				1
+residual	composes				1
+residual	correlates with				1
+residual	spatially regulates				1
+residual	skews				1
+residual	attaches Z ring to				1
+residual	cooperate in				1
+residual	degrade				1
+residual	degradation triggers				1
+residual	biases				1
+residual	distorts				1
+residual	distort and push				1
+residual	mislocalizes				1
+residual	anchors				1
+residual	causes when lost				1
+residual	prevents aberrant placement of				1
+residual	antagonizes				1
+residual	promotes lateral interactions between				1
+residual	precedes		biolink:precedes		1
+residual	confers rigidity to				1
+residual	does not shape				1
+residual	enables surface exposure of				1
 residual	patterns				1
-residual	results from reduced				1
+residual	colocalizes with		biolink:colocalizes_with		1
+residual	translated into				1
+residual	catalyzes conversion to				1
+residual	causes or contributes to				1
+residual	decreases binding of				1
 residual	alternative inorganic carbon source for				1
+residual	determines speciation of				1
+residual	provides reductant for				1
 residual	enzyme class for				1
-residual	drives formation of				1
+residual	decomposes				1
+residual	favors scavenging by				1
+residual	imports and phosphorylates				1
 residual	supports generation of				1
+residual	facilitates supply of				1
+residual	increases availability of				1
+residual	drives reverse electron transport for				1
+residual	produces intermediate				1
+residual	mediates fixation of				1
+residual	stimulates generation of				1
+residual	primarily supplies				1
+residual	produces reduced cofactor				1
+residual	demethylates				1
+residual	can be built by				1
+residual	couples electron transport to				1
 residual	uses substrate pool				1
 residual	characteristic of				1
+residual	turns off				1
 residual	used by				1
-residual	donates electrons to				1
+residual	causally enables				1
+residual	proceeds via				1
+residual	can support				1
+residual	oxidized in				1
+residual	serves as terminal acceptor for				1
 residual	uses oxidant				1
 residual	can use energy capture route				1
-residual	favors				1
+residual	fixes				1
+residual	mediates transfer to				1
+residual	negatively correlates with				1
 residual	metabolized by				1
 residual	oxidizes carbon to				1
-residual	provides electrons to				1
+residual	characterized by				1
+residual	diffuses into				1
+residual	cannot generate				1
+residual	perform				1
+residual	relies primarily on				1
+residual	interconverts				1
 residual	fixed during				1
-residual	carries out				1
+residual	provides energy to				1
+residual	acts as electron donor for				1
+residual	transfers excitation energy to				1
+residual	extends light absorption into				1
+residual	pumps				1
+residual	enables detection by				1
+residual	synthesizes/hydrolyzes				1
+residual	is substrate of		biolink:is_substrate_of		1
+residual	enabled by		biolink:enabled_by		1
+residual	causally upstream of or within				1
 residual	can bear				1
 residual	can be about				1
-residual	can participate in				1
 residual	records				1
 residual	is about				1
-residual	characterizes				1
+residual	has context				1
+residual	recorded in				1
+residual	requires metadata				1
