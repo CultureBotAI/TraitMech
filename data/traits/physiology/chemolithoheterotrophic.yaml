@@ -191,7 +191,7 @@ causal_graphs:
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of organic compounds into biomass.
   - subject: sox_pathway
-    predicate: enables
+    predicate: has output
     object: sulfate
     description: The conserved soxCDYZAXB gene cluster enables complete oxidation
       of thiosulfate to sulfate without free intermediates.
@@ -199,7 +199,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41396-021-01163-x
       notes: Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete
         oxidation of thiosulfate to sulfate, without free intermediates.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002234
   - subject: thiosulfate
     predicate: oxidized by
     object: sox_pathway
@@ -348,4 +348,16 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge sox_pathway -> sulfate in graph chemolithoheterotrophic_inorganic_energy_organic_carbon:
+    re-grounded it from enables/RO:0002327 to has output/RO:0002234. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. The subject IS an activity (PATHWAY), which
+    is the documented dividing line: activity subjects take RO:0002234, whose domain
+    ''biological process or activity'' they satisfy, rather than the METPO term minted
+    for the subjects RO cannot cover.'
   llm_assisted: true

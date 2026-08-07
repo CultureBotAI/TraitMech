@@ -37,7 +37,7 @@ causal_graphs:
     description: Intracellular gas-filled proteinaceous flotation structure.
   - node_id: buoyancy
     label: cellular buoyancy
-    node_type: QUALITY
+    node_type: TRAIT
     description: Reduced effective cell density permitting vertical positioning.
   - node_id: water_column_positioning
     label: water-column positioning
@@ -91,14 +91,14 @@ causal_graphs:
     description: Scattering of ultrasound waves due to gas/aqueous density contrast.
   edges:
   - subject: gas_vesicle_trait
-    predicate: enables
+    predicate: confers
     object: buoyancy
     description: Internal gas-filled vesicles lower effective density and provide
       buoyancy.
     evidence:
     - reference: DOI:10.1038/nrmicro2834
       notes: Pfeifer describes gas vesicles as gas-filled flotation structures.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: buoyancy
     predicate: enables
     object: water_column_positioning
@@ -211,4 +211,18 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge gas_vesicle_trait -> buoyancy in graph gas_vesicle_buoyancy: re-grounded
+    it from enables/RO:0002327 to confers/METPO:2007700; retyped buoyancy to TRAIT.
+    Issue 334. biolink declares enables range ''biological process or activity'',
+    which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION
+    satisfy, so this edge entailed a false type on its object. The corpus already
+    types this concept BOTH ways: buoyancy is TRAIT in intracellular_inclusion.yaml,
+    where gas_vesicle -confers-> buoyancy, and QUALITY here. That is a typing inconsistency
+    (#352''s shape), and the TRAIT reading is the right one -- ''reduced effective
+    cell density permitting vertical positioning'' is a disposition. Needs TRAIT added
+    to `confers`'' subject_types, recorded there as a decision.'
   llm_assisted: true

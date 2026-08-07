@@ -156,22 +156,42 @@ Separately from the domain rule above, `enables` (`RO:0002327`) has a
 `BIOLOGICAL_PROCESS`, `PATHWAY`, `MOLECULAR_FUNCTION`
 
 Any other object type is a range violation, flagged as
-`ENABLES_RANGE_VIOLATION`. **16 pre-existing edges** are baselined and
-tracked in #334; a *new* one fails `just qc`. What to write instead:
+`ENABLES_RANGE_VIOLATION`. The corpus is now at **zero** (#334 closed the
+last 16), so **any** occurrence fails `just qc` — there is nothing
+baselined here to hide behind. What to write instead:
 
 | you want to say | object type | write |
 |---|---|---|
 | X makes the organism able to exhibit a trait | `TRAIT` | `confers` — `METPO:2007700` |
 | a process yields a chemical/entity | any | `has output` — `RO:0002234` |
+| a protein or operon makes a chemical | `CHEMICAL` | `produces` — `METPO:2007800`. The split from `has output` is by SUBJECT: an activity subject takes RO, everything else takes the METPO term |
 | one chemical becomes another | `CHEMICAL` | `derives into` — `RO:0001001` |
 | X reduces some quantity | any | `decreases` — `RO:0002212` |
-| a gene/protein complex is assembled or activated | `GENE_OR_PROTEIN` | not settled — see #334 |
+| a protein moves its substrate | `CHEMICAL` | `transports` — `METPO:2007812`. A flippase, pump or carrier *moves* its substrate; it does not enable it (#334) |
+| a protein is a component of a structure | any | `part of` — `biolink:part_of`. Mereology, not causation |
+| X increases the amount or activity of a protein | `GENE_OR_PROTEIN` | `promotes` — `RO:0002213` |
+| **an energetic driver operates a molecular machine** | `GENE_OR_PROTEIN` | `powers` — `METPO:2007900`. An ion motive force, a proton motive force or torque generation, driving a motor or complex. RO has no term for this: it models energetics at the process level (#334) |
 | X enables a tolerance or capability | `TRAIT` | **check the node type first.** A node described as a *capacity to*, an *ability to*, or a *tolerance of* is a disposition, i.e. a `TRAIT` — retype it and use `confers`. Ground it, like any TRAIT row (#334) |
-| X generates a gradient, a state, an internal environment | `STATE` | `contributes to` — `RO:0002326`. Only where the subject really does contribute to the object's *occurrence or generation*; a subject that merely **powers** something it does not generate does not qualify (#341) |
+| X generates a gradient, a state, an internal environment | `STATE` | `contributes to` — `RO:0002326`. Only where the subject really does contribute to the object's *occurrence or generation*; a subject that merely **powers** something it does not generate does not qualify (#341) — that case is `powers`, above |
 
-If none fits, point `enables` at the graph's **process** node rather than
-at the entity: `<gene> enables <the process it drives>` is almost always
-both true and range-correct.
+**Check the node type before you change the predicate.** In #334 five of
+the sixteen edges had the right predicate and the wrong *node type*: an
+object labelled like a quality but described as a process (*"evenly
+distributed insertion of peptidoglycan"*) or as a disposition
+(*"tolerance to antimicrobial treatment"*). Retyping the node fixed
+those; rewriting the predicate would have preserved the error and hidden
+it. The same was true in #331, #330 and #351.
+
+**Read the record's own prose.** Twice in #334 the edge was simply
+backwards, and the node description said so — *"high-affinity terminal
+oxidase **enabling** oxygen respiration"* was written as *oxygen enables
+the oxidase*. Reversing it was both the true statement and the
+range-correct one.
+
+If none of the rows fits, point `enables` at the graph's **process** node
+rather than at the entity: `<gene> enables <the process it drives>` is
+almost always both true and range-correct. Often that node is already in
+the graph — four of #334's sixteen needed only repointing.
 
 The organism-subject form stays valid at the *assertion* site —
 `<organism> METPO:2000006 CHEBI:17234` — which is exactly what the

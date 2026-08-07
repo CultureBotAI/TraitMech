@@ -107,14 +107,14 @@ causal_graphs:
       notes: Supports linkage between type IX secretion and gliding machinery.
     predicate_id: RO:0002326
   - subject: proton_motive_force
-    predicate: enables
+    predicate: powers
     object: gliding_motility_machinery
     description: Proton motive force can power gliding motility motors.
     evidence:
     - reference: DOI:10.1038/s41579-021-00626-4
       snippet: proton-driven motor that powers type 9 secretion and gliding motility
       notes: Supports proton-driven gliding machinery in reviewed systems.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007900
   - subject: helical_track
     predicate: guides
     object: surface_adhesins
@@ -254,4 +254,14 @@ curation_history:
     and cytoplasmic_na, so deferring it here too is the consistent call. The edge
     stays baselined under issue 334 until it is modelled as an input to the machine
     or pointed at the rotation process, either of which is range-correct.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge proton_motive_force -> gliding_motility_machinery in graph gliding_surface_motility:
+    re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''Proton motive force can POWER gliding motility
+    motors.'''
   llm_assisted: true

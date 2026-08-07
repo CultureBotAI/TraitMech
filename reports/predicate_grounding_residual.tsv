@@ -23,7 +23,6 @@ oxidized by	8	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data
 upregulates	7	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/oxygen_preference.yaml
 engages	7	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 positively influences	7	unmapped		data/traits/genomics/gc_mid2.yaml|data/traits/morphology/oval_shaped.yaml
-powers	6	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml
 cleaves	6	unmapped		data/traits/environment/mercury_tolerant.yaml|data/traits/genomics/crispr_cas_system.yaml|data/traits/genomics/restriction_modification_system.yaml
 increases abundance of	6	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
 is substrate for	6	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/physiology/bioluminescence.yaml
@@ -40,6 +39,7 @@ positions	5	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
 removes	4	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml|data/traits/genomics/genome_streamlining.yaml
 acts as	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/temperature_optimum_very_low.yaml|data/traits/metabolism/anaerobic_respiration.yaml
+powers	4	blocked_by_node_type	METPO:2007900	data/traits/environment/aerobic.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 detoxifies	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/anaerobic.yaml|data/traits/environment/microaerophilic.yaml
 damages	4	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
 activates expression of	4	unmapped		data/traits/environment/mesophilic.yaml|data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml|data/traits/physiology/bioluminescence.yaml

@@ -108,6 +108,7 @@ applied	has energy source	METPO:2007807
 applied	derives into	RO:0001001	biolink:derives_into	biolink:derives_into	
 applied	is hydrolyzed to	RO:0001001		biolink:derives_into	
 applied	has input	RO:0002233	biolink:has_input	biolink:has_input	
+applied	powers	METPO:2007900			
 residual	supports				37
 residual	induces				34
 residual	required for				30
@@ -132,7 +133,6 @@ residual	oxidized by				8
 residual	upregulates				7
 residual	engages				7
 residual	positively influences				7
-residual	powers				6
 residual	cleaves				6
 residual	increases abundance of				6
 residual	is substrate for				6
@@ -149,6 +149,7 @@ residual	positions				5
 residual	coupled to reduction of				5
 residual	removes				4
 residual	acts as				4
+residual	powers				4
 residual	detoxifies				4
 residual	damages				4
 residual	activates expression of				4

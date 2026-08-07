@@ -91,13 +91,13 @@ causal_graphs:
     description: Intracellular elemental sulfur (S0) storage inclusion.
   edges:
   - subject: inclusion_trait
-    predicate: enables
+    predicate: manifests as
     object: cytoplasmic_compartmentalization
     description: Inclusions partition activities within the prokaryotic cytoplasm.
     evidence:
     - reference: DOI:10.1038/s41579-020-0413-0
       notes: Greening & Lithgow review formation and function of bacterial organelles/inclusions.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007400
   - subject: bacterial_microcompartment
     predicate: example of
     object: inclusion_trait
@@ -246,4 +246,16 @@ curation_history:
     the node type, not the predicate, which is the third time in this issue's neighbourhood
     that has been true (compare issue 331's acetate kinase step and issue 330's negated
     node name). With the object correctly a TRAIT, confers applies unchanged.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge inclusion_trait -> cytoplasmic_compartmentalization in graph inclusion_compartmentalization:
+    re-grounded it from enables/RO:0002327 to manifests as/METPO:2007400. Issue 334.
+    biolink declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. Unlike buoyancy, compartmentalization is
+    not a disposition the inclusion confers -- it is how the inclusion PRESENTS: ''spatial
+    segregation of material or activity within the cytoplasm''. That is what `manifests
+    as` is for, and its gate is already open.'
   llm_assisted: true

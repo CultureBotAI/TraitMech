@@ -107,7 +107,7 @@ causal_graphs:
       notes: Supports DivIVA as a polarity determinant in Streptomyces.
     predicate_id: biolink:located_in
   - subject: scy
-    predicate: enables
+    predicate: part of
     object: apical_polarisome
     description: Scy is a component of the tip-organizing center controlling polar
       growth.
@@ -115,7 +115,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1002423
       snippet: tip organizing center
       notes: Supports Scy/DivIVA assemblies in Streptomyces polarized growth.
-    predicate_id: RO:0002327
+    predicate_id: biolink:part_of
   - subject: apical_polarisome
     predicate: recruits
     object: apical_peptidoglycan_synthesis
@@ -286,4 +286,15 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge scy -> apical_polarisome in graph filament_shaped_streptomyces_polar_growth:
+    re-grounded it from enables/RO:0002327 to part of/biolink:part_of. Issue 334.
+    biolink declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''Scy is a COMPONENT of the tip-organizing
+    center.'' Mereology, not causation. The corpus already uses `part of` this way
+    (flii_atpase_complex part of ft3ss_export_system).'
   llm_assisted: true

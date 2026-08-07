@@ -154,7 +154,7 @@ causal_graphs:
         alkaliphile antiport activity is met by numerous Na+/solute symporters.
   - subject: cytoplasmic_na
     predicate: enables
-    object: mrp_antiporter_complex
+    object: extreme_alkaliphile_antiport
     description: Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile
       antiport activity.
     evidence:
@@ -243,4 +243,15 @@ curation_history:
     in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge cytoplasmic_na -> mrp_antiporter_complex in graph ph_range_high_extreme_alkaliphile:
+    repointed it to cytoplasmic_na -> extreme_alkaliphile_antiport. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. The record already says it: ''Cytoplasmic
+    Na+ is the substrate that sustains high levels of alkaliphile antiport activity.''
+    The ANTIPORT is what the Na+ pool sustains, and that node is in the same graph.'
   llm_assisted: true

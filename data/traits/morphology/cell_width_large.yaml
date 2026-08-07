@@ -77,7 +77,7 @@ causal_graphs:
     description: Rotation of the Rod complex perpendicular to the long cell axis.
   - node_id: even_pg_distribution
     label: even peptidoglycan distribution
-    node_type: QUALITY
+    node_type: BIOLOGICAL_PROCESS
     description: Evenly distributed insertion of peptidoglycan in the cell-surface
       layer.
   - node_id: mrec_mred_balance
@@ -239,4 +239,16 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge rod_complex_rotation -> even_pg_distribution in graph cell_width_large_setpoint_increase:
+    retyped even_pg_distribution to BIOLOGICAL_PROCESS. Issue 334. biolink declares
+    enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. The label reads like a quality but the description
+    does not: ''Evenly distributed INSERTION of peptidoglycan in the cell-surface
+    layer.'' Insertion is a process, so `enables` is already the right relation and
+    only the node type was wrong.'
   llm_assisted: true

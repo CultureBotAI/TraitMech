@@ -118,14 +118,14 @@ causal_graphs:
         fatty acids rises with increasing HHP.
     predicate_id: RO:0002213
   - subject: pfa_operon
-    predicate: enables
+    predicate: produces
     object: omega3_pufa
     description: The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase
       enabling PUFA production.
     evidence:
     - reference: DOI:10.3390/microorganisms11071629
       notes: The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007800
   - subject: high_hydrostatic_pressure
     predicate: increases
     object: omega3_pufa
@@ -208,4 +208,16 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge pfa_operon -> omega3_pufa in graph piezophilic_hhp_membrane_adaptation:
+    re-grounded it from enables/RO:0002327 to produces/METPO:2007800. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. A GENE_OR_PROTEIN subject bringing a CHEMICAL
+    into existence, which is exactly `produces`'' declared gate. NOT `encodes`: the
+    operon encodes a SYNTHASE, and the synthase makes the PUFA -- `encodes` does not
+    admit a CHEMICAL object, correctly.'
   llm_assisted: true

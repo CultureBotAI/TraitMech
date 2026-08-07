@@ -130,12 +130,11 @@ causal_graphs:
       notes: '"addition of nitrate as a TEA promotes anaerobic respiration"; broadly
         relevant across facultative species with nitrate reductases.'
     predicate_id: RO:0002213
-  - subject: molecular_oxygen
+  - subject: terminal_oxidase_cytochrome_bd
     predicate: enables
-    object: terminal_oxidase_cytochrome_bd
-    description: Trace/available oxygen lets cells use cytochrome bd as terminal oxidase;
-      active terminal enzyme depends on which final electron acceptor (oxygen vs fumarate)
-      is available.
+    object: aerobic_respiration
+    description: Cytochrome bd is a high-affinity terminal oxidase, sustaining aerobic
+      respiration at the low O2 tensions where low-affinity oxidases cannot operate.
     evidence:
     - reference: DOI:10.1128/jb.00389-22
       notes: '"which of these terminal enzymes is active in electron transfer depends
@@ -177,4 +176,18 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17632×1).
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge molecular_oxygen -> terminal_oxidase_cytochrome_bd in graph facultative_oxygen_preference_switching:
+    repointed it to terminal_oxidase_cytochrome_bd -> aerobic_respiration. Issue 334.
+    biolink declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. The node description already reads ''High-affinity
+    terminal oxidase ENABLING oxygen respiration at low O2 tensions'' -- protein enables
+    process, which is both domain- and range-correct. Written the other way round
+    it claimed O2 enables a protein. The graph''s existing molecular_oxygen -enables->
+    aerobic_respiration edge already carries the O2-availability link, so nothing
+    is lost.'
   llm_assisted: true

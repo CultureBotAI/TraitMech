@@ -111,14 +111,14 @@ causal_graphs:
       notes: Supports gliding as an active bacterial movement mechanism.
     predicate_id: METPO:2007700
   - subject: ion_motive_force
-    predicate: enables
+    predicate: powers
     object: flagellar_motor
     description: Ion motive force powers rotation of many bacterial flagellar motors.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
       notes: Supports ion motive force powering the bacterial flagellar motor.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007900
   - subject: chemotaxis_signaling
     predicate: regulates
     object: motility_trait
@@ -290,4 +290,14 @@ curation_history:
     and cytoplasmic_na, so deferring it here too is the consistent call. The edge
     stays baselined under issue 334 until it is modelled as an input to the machine
     or pointed at the rotation process, either of which is range-correct.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge ion_motive_force -> flagellar_motor in graph motility_locomotion_machinery:
+    re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''Ion motive force POWERS rotation of many
+    bacterial flagellar motors.'''
   llm_assisted: true

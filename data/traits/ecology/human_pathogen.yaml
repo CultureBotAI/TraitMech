@@ -92,7 +92,7 @@ causal_graphs:
     grounding: GO:0042710
   - node_id: treatment_resistance_persistence
     label: treatment resistance and persistence
-    node_type: QUALITY
+    node_type: TRAIT
     description: Tolerance to antimicrobial treatment and persistent infection.
   edges:
   - subject: human_virulence_factors
@@ -194,14 +194,14 @@ causal_graphs:
         persistence in the host.
     predicate_id: RO:0002327
   - subject: biofilm_formation
-    predicate: enables
+    predicate: confers
     object: treatment_resistance_persistence
     description: Biofilm formation makes bacteria resistant to treatment and supports
       persistence.
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1370818
       notes: Bacteria can form biofilms, making them resistant to treatment.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: treatment_resistance_persistence
     predicate: enables
     object: human_disease
@@ -310,4 +310,17 @@ curation_history:
     to as contributing to the occurrence or GENERATION of the object, which a motive
     force does not do to a motor. This record''s surviving edge, acquired genes contributing
     to the virulence factor repertoire, does fit that definition and is unchanged.'
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge biofilm_formation -> treatment_resistance_persistence in graph human_pathogen_anthropoid_adaptation:
+    re-grounded it from enables/RO:0002327 to confers/METPO:2007700; retyped treatment_resistance_persistence
+    to TRAIT. Issue 334. biolink declares enables range ''biological process or activity'',
+    which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION
+    satisfy, so this edge entailed a false type on its object. ''Tolerance to antimicrobial
+    treatment and persistent infection'' is a DISPOSITION -- what the organism would
+    do under treatment -- not a quality it displays. Retyped to TRAIT, which makes
+    this the same shape #302 solved for 164 edges, and `confers` already admits a
+    BIOLOGICAL_PROCESS subject.'
   llm_assisted: true

@@ -148,13 +148,13 @@ causal_graphs:
       notes: RpoS-dependent gene expression leads to general stress resistance of
         cells.
   - subject: hfq
-    predicate: enables
+    predicate: promotes
     object: rpos
     description: Hfq enables sRNA-dependent translation of RpoS.
     evidence:
     - reference: DOI:10.1128/mmbr.00151-22
       notes: Hfq is needed for sRNA-dependent RpoS translation.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002213
   - subject: general_stress_resistance
     predicate: confers
     object: stress_response_trait
@@ -216,4 +216,16 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge hfq -> rpos in graph stress_response_induction: re-grounded it from
+    enables/RO:0002327 to promotes/RO:0002213. Issue 334. biolink declares enables
+    range ''biological process or activity'', which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on
+    its object. ''Hfq enables sRNA-dependent TRANSLATION of RpoS'' -- the object is
+    the sigma factor, not the translation, so what the edge actually asserts about
+    RpoS is that Hfq increases it. The graph already reads ppgpp -positively regulates->
+    rpos alongside it.'
   llm_assisted: true
