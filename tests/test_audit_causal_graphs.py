@@ -582,3 +582,17 @@ def test_a_third_node_joining_a_grounding_re_keys(tmp_path):
         "  - {node_id: c, label: C, node_type: TRAIT, grounding: 'METPO:1000478'}\n  edges:"))
     k3 = {_key(f) for f in audit(three) if f["defect"] == "DUPLICATE_GROUNDING"}
     assert k2 and k3 and k2 != k3
+
+
+def test_two_groundings_of_equal_size_do_not_collide(tmp_path):
+    """#353 review round 2: the mirror of the above. Leading the detail with the
+    COUNT alone would key two different 2-node groundings identically, so
+    freezing one would forgive the other. Both parts must vary."""
+    d = _write(tmp_path, "g.yaml", DUPLICATE_GROUNDING_YAML.replace(
+        "  edges:",
+        "  - {node_id: c, label: C, node_type: TRAIT, grounding: 'METPO:1000999'}\n"
+        "  - {node_id: d, label: D, node_type: TRAIT, grounding: 'METPO:1000999'}\n"
+        "  edges:"))
+    dupes = [f for f in audit(d) if f["defect"] == "DUPLICATE_GROUNDING"]
+    assert len(dupes) == 2
+    assert len({_key(f) for f in dupes}) == 2

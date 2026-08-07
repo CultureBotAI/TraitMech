@@ -166,8 +166,8 @@ def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[
 # silently reverse (#353 review).
 _DISPOSITION_RE = re.compile(
     r"\b(?:"
-    r"capacit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|microbe)s?)?\s+to"
-    r"|abilit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|microbe)s?)?\s+to"
+    r"capacit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|archae\w+|microbe|strain|species|isolate)s?)?\s+to"
+    r"|abilit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|archae\w+|microbe|strain|species|isolate)s?)?\s+to"
     r"|able\s+to"
     r"|tolerance\s+(?:of|to)"
     r")\b",
@@ -256,14 +256,16 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
                     findings.append({
                         "file": rel, "graph_id": gid, "defect": "DUPLICATE_GROUNDING",
                         "severity": SEVERITY["DUPLICATE_GROUNDING"],
-                        # Detail MUST lead with the node count. _key takes the
-                        # leading whitespace-delimited token as the baseline
-                        # discriminator, so leading with the CURIE would keep the
-                        # key stable when a THIRD node joins the same grounding --
-                        # baselining two would silently forgive three. Same
-                        # reasoning FRAGMENTED_GRAPH records below (#353 review).
-                        "detail": (f"nodes={len(ids)} share grounding={g}: "
-                                   f"{', '.join(sorted(i for i in ids if i))}"),
+                        # The leading whitespace-free token is _key's baseline
+                        # discriminator, and it must carry BOTH the count and the
+                        # CURIE. Leading with the CURIE alone kept the key stable
+                        # when a THIRD node joined, so freezing two forgave three.
+                        # Leading with the count alone opened the mirror of that:
+                        # two DIFFERENT groundings each on 2 nodes in one graph
+                        # would collide on `nodes=2` and freezing one would
+                        # forgive the other (#353 review). Both vary here.
+                        "detail": (f"nodes={len(ids)};grounding={g} "
+                                   f"({', '.join(sorted(i for i in ids if i))})"),
                     })
 
             for n in nodes:
