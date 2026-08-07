@@ -60,7 +60,7 @@ causal_graphs:
     description: Use of genomic DNA copies as an intracellular phosphate reservoir.
   - node_id: growth_without_phosphate
     label: growth in absence of environmental phosphate
-    node_type: CAPACITY
+    node_type: TRAIT
     description: Ability to grow when external phosphate is unavailable.
   - node_id: segregational_drift
     label: segregational drift
@@ -102,16 +102,16 @@ causal_graphs:
         phosphate by reducing genome copy numbers.
     predicate_id: RO:0002212
   - subject: genome_copy_number
-    predicate: enables
+    predicate: confers
     object: growth_without_phosphate
-    description: Consuming extra genome copies as a phosphate source enables growth
+    description: Consuming extra genome copies as a phosphate source confers growth
       in the absence of external phosphate; monoploid E. coli cannot.
     evidence:
     - reference: DOI:10.3390/microorganisms11092267
       notes: Multiple polyploid prokaryotes grow without external phosphate by reducing
         intracellular genome copy number; monoploid E. coli showed no growth without
         phosphate.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: genome_copy_number
     predicate: has function
     object: dna_phosphate_storage
@@ -165,4 +165,18 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1, RO:0002327×1, RO:0000085×1, RO:0002213×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its
+    in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink
+    declares enables range 'biological process or activity', which only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy. The node's own description gives it away
+    as a disposition rather than a state - phrasings like "Capacity of an organism
+    to grow and survive under...", "Ability to grow when..." and "tolerance of..."
+    describe what an organism CAN do, which is what a TRAIT is. So the defect was
+    the node type, not the predicate, which is the third time in this issue's neighbourhood
+    that has been true (compare issue 331's acetate kinase step and issue 330's negated
+    node name). With the object correctly a TRAIT, confers applies unchanged.
   llm_assisted: true

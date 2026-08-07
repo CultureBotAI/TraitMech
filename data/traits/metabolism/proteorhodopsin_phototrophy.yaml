@@ -86,14 +86,14 @@ causal_graphs:
         proton pump.
     predicate_id: METPO:2007700
   - subject: proteorhodopsin_trait
-    predicate: enables
+    predicate: contributes to
     object: proton_motive_force
     description: Light-driven proton pumping by proteorhodopsin generates PMF.
     evidence:
     - reference: DOI:10.1038/35081051
       notes: Béjà et al. support proteorhodopsin as a widespread light-energy capture
         system in marine bacteria.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002326
   - subject: proton_pumping
     predicate: generates
     object: proton_motive_force
@@ -205,4 +205,18 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Re-grounded the edge from enables/RO:0002327 to RO:0002326 (contributes
+    to), issue 334. biolink declares enables range 'biological process or activity'
+    and the object is a STATE, which does not satisfy it. Unlike the tolerance/capacity
+    nodes in this same pass, this object is a genuine state rather than a mis-typed
+    disposition - a gradient, a community composition, an internal environment - so
+    retyping it to TRAIT would be wrong. contributes to fits because the subject genuinely
+    contributes to the OCCURRENCE OR GENERATION of the object, which is biolink's
+    definition; that is the same test the motive-force edges FAILED in issue 341,
+    where the subject powers a machine it does not generate. RO:0002326 declares no
+    rdfs:domain or rdfs:range.
   llm_assisted: true

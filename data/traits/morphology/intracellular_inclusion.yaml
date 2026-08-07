@@ -74,7 +74,7 @@ causal_graphs:
     grounding: GO:0031411
   - node_id: buoyancy
     label: buoyancy
-    node_type: CAPACITY
+    node_type: TRAIT
     description: Capacity for vertical positioning in the water column.
   - node_id: bmc_metabolic_cargo
     label: encapsulated metabolic enzymes
@@ -142,13 +142,13 @@ causal_graphs:
         definitional edge.'
     predicate_id: METPO:2007813
   - subject: gas_vesicle
-    predicate: enables
+    predicate: confers
     object: buoyancy
     description: Gas vesicles confer buoyancy enabling positioning in the water column.
     evidence:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: '"enabling buoyancy for microbes"; core phenotype/function edge.'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: bacterial_microcompartment
     predicate: encapsulates
     object: bmc_metabolic_cargo
@@ -232,4 +232,18 @@ curation_history:
     in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its
+    in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink
+    declares enables range 'biological process or activity', which only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy. The node's own description gives it away
+    as a disposition rather than a state - phrasings like "Capacity of an organism
+    to grow and survive under...", "Ability to grow when..." and "tolerance of..."
+    describe what an organism CAN do, which is what a TRAIT is. So the defect was
+    the node type, not the predicate, which is the third time in this issue's neighbourhood
+    that has been true (compare issue 331's acetate kinase step and issue 330's negated
+    node name). With the object correctly a TRAIT, confers applies unchanged.
   llm_assisted: true

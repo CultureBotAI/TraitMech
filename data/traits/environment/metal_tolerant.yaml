@@ -78,7 +78,7 @@ causal_graphs:
     description: arsC reductase plus arsB/acr3 arsenite efflux determinant cluster.
   - node_id: arsenic_tolerance
     label: arsenic tolerance
-    node_type: STATE
+    node_type: TRAIT
     description: Detoxification-mediated tolerance of arsenic oxyanions.
   edges:
   - subject: heavy_metal_ion
@@ -127,7 +127,7 @@ causal_graphs:
     - reference: DOI:10.52700/jmmg.v5i1.155
       notes: 'Review: ArsC converts As(V) to As(III) followed by extrusion.'
   - subject: ars_operon
-    predicate: enables
+    predicate: confers
     object: arsenic_tolerance
     description: The arsC + arsB/acr3 ars operon mediates arsenate reduction and arsenite
       extrusion conferring arsenic tolerance.
@@ -135,7 +135,7 @@ causal_graphs:
     - reference: DOI:10.7717/peerj.18383
       notes: '"a cooperative mechanism involving detoxification through arsenate reduction"
         via arsC/arsA/arsB/acr3 genes across mixed soil taxa.'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: arsenic_tolerance
     predicate: is a
     object: metal_tolerant_trait
@@ -202,4 +202,18 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its
+    in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink
+    declares enables range 'biological process or activity', which only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy. The node's own description gives it away
+    as a disposition rather than a state - phrasings like "Capacity of an organism
+    to grow and survive under...", "Ability to grow when..." and "tolerance of..."
+    describe what an organism CAN do, which is what a TRAIT is. So the defect was
+    the node type, not the predicate, which is the third time in this issue's neighbourhood
+    that has been true (compare issue 331's acetate kinase step and issue 330's negated
+    node name). With the object correctly a TRAIT, confers applies unchanged.
   llm_assisted: true

@@ -156,7 +156,7 @@ Separately from the domain rule above, `enables` (`RO:0002327`) has a
 `BIOLOGICAL_PROCESS`, `PATHWAY`, `MOLECULAR_FUNCTION`
 
 Any other object type is a range violation, flagged as
-`ENABLES_RANGE_VIOLATION`. **33 pre-existing edges** are baselined and
+`ENABLES_RANGE_VIOLATION`. **16 pre-existing edges** are baselined and
 tracked in #334; a *new* one fails `just qc`. What to write instead:
 
 | you want to say | object type | write |
@@ -166,7 +166,8 @@ tracked in #334; a *new* one fails `just qc`. What to write instead:
 | one chemical becomes another | `CHEMICAL` | `derives into` — `RO:0001001` |
 | X reduces some quantity | any | `decreases` — `RO:0002212` |
 | a gene/protein complex is assembled or activated | `GENE_OR_PROTEIN` | not settled — see #334 |
-| X enables a tolerance or capability | `STATE`, `CAPACITY` | not settled — see #334 |
+| X enables a tolerance or capability | `TRAIT` | **check the node type first.** A node described as a *capacity to*, an *ability to*, or a *tolerance of* is a disposition, i.e. a `TRAIT` — retype it and use `confers`. Ground it, like any TRAIT row (#334) |
+| X generates a gradient, a state, an internal environment | `STATE` | `contributes to` — `RO:0002326`. Only where the subject really does contribute to the object's *occurrence or generation*; a subject that merely **powers** something it does not generate does not qualify (#341) |
 
 If none fits, point `enables` at the graph's **process** node rather than
 at the entity: `<gene> enables <the process it drives>` is almost always

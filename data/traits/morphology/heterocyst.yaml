@@ -157,7 +157,7 @@ causal_graphs:
       notes: '"the outer heterocyst envelope polysaccharide layer (HEP) provides mechanical
         support to the HGL".'
   - subject: het_envelope
-    predicate: enables
+    predicate: contributes to
     object: microoxic_interior
     description: The Hgl/Hep envelope contributes to creating the microoxic heterocyst
       interior.
@@ -165,7 +165,7 @@ causal_graphs:
     - reference: DOI:10.1093/pcp/pcae011
       notes: '"These oxygen protection mechanisms create hypoxic environments in the
         heterocysts so that nitrogenase can operate".'
-    predicate_id: RO:0002327
+    predicate_id: RO:0002326
   - subject: pats_peptide
     predicate: negatively regulates
     object: het_diff_process
@@ -231,4 +231,18 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: Re-grounded the edge from enables/RO:0002327 to RO:0002326 (contributes
+    to), issue 334. biolink declares enables range 'biological process or activity'
+    and the object is a STATE, which does not satisfy it. Unlike the tolerance/capacity
+    nodes in this same pass, this object is a genuine state rather than a mis-typed
+    disposition - a gradient, a community composition, an internal environment - so
+    retyping it to TRAIT would be wrong. contributes to fits because the subject genuinely
+    contributes to the OCCURRENCE OR GENERATION of the object, which is biolink's
+    definition; that is the same test the motive-force edges FAILED in issue 341,
+    where the subject powers a machine it does not generate. RO:0002326 declares no
+    rdfs:domain or rdfs:range.
   llm_assisted: true

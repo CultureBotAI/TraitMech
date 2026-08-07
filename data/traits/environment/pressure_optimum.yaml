@@ -55,7 +55,8 @@ causal_graphs:
       accumulation.
   - node_id: hhp_tolerance
     label: high hydrostatic pressure tolerance
-    node_type: CAPACITY
+    node_type: TRAIT
+    grounding: traitmech:000003
     description: Capacity of an organism to grow and survive under high hydrostatic
       pressure.
   - node_id: compatible_solute_accumulation
@@ -92,7 +93,7 @@ causal_graphs:
   - subject: membrane_unsaturated_fatty_acids
     predicate: confers
     object: pressure_optimum_trait
-    description: Increased membrane unsaturated/PUFA content enables growth at elevated
+    description: Increased membrane unsaturated/PUFA content confers growth at elevated
       hydrostatic pressure, shaping the pressure optimum.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
@@ -109,15 +110,15 @@ causal_graphs:
         pressure under HHP.
     predicate_id: RO:0002213
   - subject: intracellular_osmotic_pressure
-    predicate: enables
+    predicate: confers
     object: hhp_tolerance
-    description: Elevated intracellular osmotic pressure enables high hydrostatic
+    description: Elevated intracellular osmotic pressure confers high hydrostatic
       pressure tolerance.
     evidence:
     - reference: DOI:10.1128/mbio.00958-23
       notes: 'Proposed HHP-tolerance model: importing cations to raise intracellular
         osmotic pressure.'
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: compatible_solute_accumulation
     predicate: promotes
     object: protein_stabilization_preferential_hydration
@@ -129,14 +130,14 @@ causal_graphs:
         hydration; glutamate/betaine/beta-hydroxybutyrate detected at 20-30 MPa.
     predicate_id: RO:0002213
   - subject: compatible_solute_accumulation
-    predicate: enables
+    predicate: confers
     object: hhp_tolerance
-    description: Compatible-solute (piezolyte) accumulation enables pressure tolerance.
+    description: Compatible-solute (piezolyte) accumulation confers pressure tolerance.
     evidence:
     - reference: DOI:10.1007/s00253-023-12906-5
       notes: Osmolyte-based protection (proline, glutamate, betaine, beta-hydroxybutyrate,
         TMAO) supports pressure tolerance across taxa.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -177,4 +178,31 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its
+    in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink
+    declares enables range 'biological process or activity', which only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy. The node's own description gives it away
+    as a disposition rather than a state - phrasings like "Capacity of an organism
+    to grow and survive under...", "Ability to grow when..." and "tolerance of..."
+    describe what an organism CAN do, which is what a TRAIT is. So the defect was
+    the node type, not the predicate, which is the third time in this issue's neighbourhood
+    that has been true (compare issue 331's acetate kinase step and issue 330's negated
+    node name). With the object correctly a TRAIT, confers applies unchanged.
+  llm_assisted: true
+- timestamp: '2026-08-07T06:00:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: 'Grounded the retyped TRAIT node, issue 334 review. docs/CURATION_PLAYBOOK.md
+    requires every TRAIT row to carry a grounding, and 462 of 482 TRAIT nodes in the
+    corpus do, so leaving a newly retyped one ungrounded was the exception rather
+    than the norm. It also mattered more than hygiene: an ungrounded TRAIT node still
+    counts as a reachability anchor for audit-graphs, so it made UNREACHABLE_FROM_TRAIT
+    fall on this graph without any edge changing -- the island is unchanged and FRAGMENTED_GRAPH
+    still reports it. Grounding it makes the duplication legible instead of leaving
+    two unrelated-looking anchors. hhp_tolerance IS piezotolerant, already in the
+    corpus as traitmech:000003.'
   llm_assisted: true
