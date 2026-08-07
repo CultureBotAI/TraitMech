@@ -28,10 +28,12 @@ relation whose *subject* is a causal-graph node.
 | Scope | Source | # rows | Lift status |
 |---|---|---:|---|
 | A (synthetic trait classes) | records whose `identifier:` starts with `traitmech:` | 0 | out of scope — 120 exist, tracked in [#319](https://github.com/CultureBotAI/TraitMech/issues/319) |
-| B (causal-graph predicates) | the 366 microbe-domain edges (#301) | **13 predicates / 200 edges** | included |
+| B (causal-graph predicates) | the 366 microbe-domain edges (#301) | **14 predicates / 210 edges** | included |
 | C (controlled vocabularies) | already lifted in v1 (`CausalNodeTypeEnum`) | 0 | already covered |
 
-Total property rows in v9: **13**, covering **200** of the 366 edges. No class rows; v1 already proposed the domain
+Total property rows in v9: **14**. Thirteen cover 200 of the 366 edges in #301; the
+fourteenth (`encodes`) is unrelated to #301 and replaces a local coinage on 10 further
+edges (#342). No class rows; v1 already proposed the domain
 class (`METPO:1007401` *trait causal node*).
 
 ### Only 200 of the 366 need new terms
@@ -75,7 +77,8 @@ convention that sidesteps the microbe domain.
 | `METPO:2007810` | accumulates | 3 | `METPO:2000210` |
 | `METPO:2007811` | disproportionates | 2 | `METPO:2000200` |
 | `METPO:2007812` | transports | 1 | `METPO:2000207` |
-| | | **200** | |
+| `METPO:2007813` | encodes | 10 | — (replaces the local coinage `biolink:encodes`) |
+| | | **210** | |
 
 ### Why mirror rather than collapse
 
@@ -128,7 +131,7 @@ cannot express it.
 
 ## ID space and subset
 
-- Predicates: **`METPO:2007800`–`METPO:2007812`**. Block verified free: v2 holds
+- Predicates: **`METPO:2007800`–`METPO:2007813`**. Block verified free: v2 holds
   `2007400`–`2007407`, v4 `2007500`, v6 `2007600`–`2007603`, v8
   `2007700`–`2007702`, and `grep` finds no `METPO:20078` in any other cohort or
   in `data/raw/metpo.owl` (highest real minted property: `METPO:2000516`).
