@@ -1,10 +1,10 @@
 """Pins what write_validated_trait actually does to formatting (#322).
 
-Its comment claimed a byte-identical round-trip. That is false for most of the
-corpus, and believing it is how a bulk script ends up rewriting every long
-string in every file it touches.
+The helper's comment claims a byte-identical round-trip. Before #322 that was
+false for 350 of 477 records, and believing it is how a bulk script ends up
+rewriting every long string in every file it touches. #322 normalised the corpus
+so the claim holds, and these tests ENFORCE it rather than merely describing it.
 
-Since #322 normalised the corpus the claim is true and these tests ENFORCE it.
 They bind to the helper itself, not to a re-declared copy of its options.
 The first cut asserted on ``yaml.safe_dump`` with a duplicated ``DUMP_OPTS``
 dict, which meant adding e.g. ``width=4096`` to the real options would have
@@ -67,10 +67,11 @@ def test_a_corpus_file_round_trips_byte_identically(tmp_path):
 
 
 def test_the_helpers_own_output_round_trips(tmp_path):
-    """The claim is wrong for HAND-EDITED files, not in general.
+    """Idempotence: writing the helper's own output again changes nothing.
 
-    A file the helper already owns comes back byte-identical, which is why it is
-    safe for a single record and unsafe for a bulk rewrite.
+    Distinct from the corpus test above, which asserts the CORPUS is in that
+    form. This asserts the property of the emitter itself, so it still holds if
+    a record is ever legitimately excluded.
     """
     same, _changed = _split()
     doc = yaml.safe_load((same or TRAITS)[0].read_text())
@@ -90,9 +91,17 @@ def test_the_whole_corpus_round_trips():
     safe_dump would not emit fails here, and so does any change to EMIT_OPTS or
     to how they are composed.
     """
-    _same, changed = _split()
+    same, changed = _split()
     assert not changed, (
         f"{len(changed)} record(s) no longer round-trip through "
         f"write_validated_trait; first few: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in changed[:5]]}"
+    )
+    # _split() skips anything that will not parse. The old assertion pinned the
+    # total at 127+350=477, so a skipped record failed it; `not changed` alone
+    # passes vacuously for one. Pin the total too, or a record edited into
+    # invalid YAML silently drops out of the guard (#344 review).
+    assert len(same) == len(TRAITS), (
+        f"{len(TRAITS) - len(same)} record(s) did not parse and were skipped, "
+        f"so they are not covered by the round-trip guard"
     )
