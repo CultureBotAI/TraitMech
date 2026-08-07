@@ -1,7 +1,9 @@
 # Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: pr-checks-present
 
-# Catches the failure where a PR receives NO CI at all (#345).
+# Catches two failures a green checks tab cannot distinguish from health:
+# a PR that receives NO CI at all (#345), and a PR where some workflows ran
+# while others that should have ran did not (#348).
 #
 # PR #344 produced zero `pull_request` workflow runs. Not failures, not skips —
 # nothing. `gh pr checks` printed "no checks reported", `mergeStateStatus` stayed
@@ -10,6 +12,13 @@ name: pr-checks-present
 # #184/#200, so the usual filter explanations do not apply. The mechanism is
 # still unidentified — which is exactly why this detects the SILENCE rather than
 # guarding against one particular cause.
+#
+# audit-required-workflows is the second, stronger step. The first can only see
+# TOTAL silence, because claude-code-review.yml fires on every PR and records a
+# run even when its `if:` gates skip the job — so qc, pytest and validate-strict
+# could all be mute and it would still pass. The second checks each PR-triggered
+# workflow by name, with `paths:` filters evaluated against the PR's own changed
+# files so a legitimately filtered-out workflow is not reported.
 #
 # TRIGGERED ON PUSH TO MAIN, NOT ON pull_request. That is the whole point: a
 # workflow that runs on `pull_request` cannot detect a PR where `pull_request`
@@ -64,3 +73,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: just audit-pr-checks
+
+      # `if: always()` so a TOTAL silence does not hide the PARTIAL-silence
+      # report. Without it, the step above failing would skip this one, and the
+      # two answer different questions -- an outage that mutes one PR entirely
+      # would leave every other PR's per-workflow coverage unreported (#348).
+      - name: Report open PRs missing a workflow that should have run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: just audit-required-workflows
