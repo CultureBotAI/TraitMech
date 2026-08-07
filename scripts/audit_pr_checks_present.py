@@ -65,10 +65,15 @@ def partition(prs: list[dict]) -> tuple[list[dict], list[dict]]:
     """
     bad, young = [], []
     for pr in prs:
+        # Evidence FIRST: a young PR that already has runs is simply fine, and
+        # reporting it as "skipped (too new)" would understate the coverage the
+        # run actually achieved (#346 review). Youth only excuses an ABSENCE.
+        if set(pr.get("events") or ()) & EVIDENCE_EVENTS:
+            continue
         age = pr.get("age_minutes")
         if age is not None and age < MIN_AGE_MINUTES:
             young.append(pr)
-        elif not (set(pr.get("events") or ()) & EVIDENCE_EVENTS):
+        else:
             bad.append(pr)
     return bad, young
 
@@ -94,12 +99,48 @@ def _gh_text(args: list[str]) -> str:
     return proc.stdout.strip()
 
 
+def _gh_text_opt(args: list[str]) -> str | None:
+    """Raw stdout, or None if gh failed or produced no usable value.
+
+    Distinct from _gh_text on purpose. This is used for the head-commit date,
+    where a transient failure (rate limit, 5xx, a SHA the commits API will not
+    resolve) must DEGRADE to the createdAt fallback rather than terminate the
+    report — the run's whole job is to report on other PRs (#346 review).
+
+    `gh api -q` prints the literal string "null" for a missing field, which is
+    truthy and would reach datetime.fromisoformat() as "null", so that is
+    filtered here rather than trusted to an `or`.
+    """
+    proc = subprocess.run(["gh", *args], capture_output=True, text=True)
+    if proc.returncode != 0:
+        print(f"  warning: gh {' '.join(args)} failed, falling back "
+              f"({proc.stderr.strip()[:80]})", file=sys.stderr)
+        return None
+    out = proc.stdout.strip()
+    return None if out in ("", "null") else out
+
+
 def _gh_json(args: list[str]) -> object:
     proc = subprocess.run(["gh", *args], capture_output=True, text=True)
     if proc.returncode != 0:
         print(f"gh {' '.join(args)} failed: {proc.stderr.strip()}", file=sys.stderr)
         raise SystemExit(2)
     return json.loads(proc.stdout or "[]")
+
+
+def _age_minutes(iso: str, now: datetime) -> float | None:
+    """Minutes since ``iso``, or None if it cannot be parsed.
+
+    None means "age unknown", which partition() treats as "do not skip" — the
+    safe direction, since skipping is what suppresses a report.
+    """
+    try:
+        when = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+    except ValueError:
+        print(f"  warning: unparseable timestamp {iso!r}; not applying the age gate",
+              file=sys.stderr)
+        return None
+    return (now - when).total_seconds() / 60
 
 
 def collect(repo: str) -> list[dict]:
@@ -134,11 +175,11 @@ def collect(repo: str) -> list[dict]:
             # The HEAD COMMIT's clock, not the PR's. A PR opened last week and
             # pushed twenty seconds ago has a brand-new SHA with no runs yet, and
             # push is far more frequent than open, so createdAt covered the rarer
-            # case. Falls back to createdAt if the commit lookup fails.
-            iso = _gh_text(["api", f"repos/{repo}/commits/{sha}",
-                            "-q", ".commit.committer.date"]) or pr["createdAt"]
-            when = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
-            age = (now - when).total_seconds() / 60
+            # case. Degrades to createdAt rather than aborting: a transient
+            # failure here must not discard the report on every OTHER PR.
+            iso = _gh_text_opt(["api", f"repos/{repo}/commits/{sha}",
+                                "-q", ".commit.committer.date"]) or pr["createdAt"]
+            age = _age_minutes(iso, now)
         collected.append({"number": pr["number"], "title": pr["title"],
                           "events": found, "age_minutes": age})
     return collected

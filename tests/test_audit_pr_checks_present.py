@@ -106,3 +106,59 @@ def test_a_long_open_pr_with_a_freshly_pushed_head_is_skipped():
     Push is far more frequent than open, so createdAt covered the rarer case.
     """
     assert offenders([_pr(3, [], age_minutes=0.5)]) == []
+
+
+# --- collect(): the seam that has bitten twice (#346 review) -----------------
+#
+# Both real defects in this file were in collect(), not in the rule: json.loads
+# on a bare scalar, then a documented createdAt fallback that could not fire.
+# The separation that makes the rule testable left the fetching uncovered, and
+# only a live run found either. These stub the gh boundary instead.
+
+import audit_pr_checks_present as mod  # noqa: E402
+
+
+def _fake_gh(monkeypatch, *, runs_total=0, commit_date="", commit_fails=False):
+    monkeypatch.setattr(mod, "_gh_json", lambda args: (
+        [{"number": 1, "title": "t", "headRefOid": "abc",
+          "createdAt": "2020-01-01T00:00:00Z"}]
+        if args[0] == "pr" else runs_total))
+    monkeypatch.setattr(
+        mod, "_gh_text_opt",
+        lambda args: None if commit_fails else (commit_date or None))
+
+
+def test_collect_uses_the_head_commit_date_when_available(monkeypatch):
+    _fake_gh(monkeypatch, commit_date="2020-06-01T00:00:00Z")
+    (pr,) = mod.collect("o/r")
+    assert pr["events"] == []
+    # Measured from the 2020-06 commit, not the 2020-01 PR open date.
+    assert pr["age_minutes"] > 0
+
+
+def test_collect_falls_back_to_created_at_when_the_commit_lookup_fails(monkeypatch):
+    """The 🟡: this used to SystemExit(2) and discard the whole report."""
+    _fake_gh(monkeypatch, commit_fails=True)
+    (pr,) = mod.collect("o/r")
+    assert pr["age_minutes"] is not None and pr["age_minutes"] > 0
+
+
+def test_collect_survives_an_unparseable_timestamp(monkeypatch):
+    """`gh api -q` prints the literal "null" for a missing field."""
+    _fake_gh(monkeypatch, commit_date="null")
+    (pr,) = mod.collect("o/r")
+    # "null" is filtered by _gh_text_opt, so createdAt is used; either way the
+    # run must not raise.
+    assert pr["number"] == 1
+
+
+def test_collect_short_circuits_once_evidence_is_found(monkeypatch):
+    _fake_gh(monkeypatch, runs_total=3)
+    (pr,) = mod.collect("o/r")
+    assert pr["events"] and pr["age_minutes"] is None
+
+
+def test_a_young_pr_that_already_has_runs_is_not_reported_as_skipped():
+    """Evidence before youth: it is fine, not skipped (#346 review)."""
+    bad, young = mod.partition([_pr(1, ["pull_request"], age_minutes=1)])
+    assert bad == [] and young == []
