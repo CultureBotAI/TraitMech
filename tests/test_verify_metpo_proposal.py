@@ -38,14 +38,31 @@ def test_scope_a_skips_when_cohort_has_no_classes_template(tmp_path, monkeypatch
     assert failures == []
 
 
-def test_scope_a_still_fires_for_a_classes_cohort(tmp_path, monkeypatch):
-    """The fix must not disarm the check where it genuinely applies."""
+def test_not_citing_every_corpus_id_is_not_a_failure(tmp_path, monkeypatch):
+    """#319: whole-corpus coverage is a CROSS-cohort property.
+
+    v1/v3/v7 lift causal-graph scaffolding, not synthetic traits, and failed
+    permanently over a backlog they never took on. Cohort v5 carries all 120,
+    so the coverage exists -- just not in every cohort.
+    """
     monkeypatch.setattr(vmp, "TRAITS_DIR", _corpus(tmp_path, "traitmech:000001"))
     failures: list[str] = []
-    # Non-empty classes text that does NOT cite the corpus id.
     vmp.check_scope_a("METPO:1007400\tsome class\t...\n", failures)
+    assert failures == []
+
+
+def test_a_phantom_citation_fails(tmp_path, monkeypatch):
+    """The property that IS per-cohort: a cited id must resolve.
+
+    Catches a typo, or a citation left behind after a record was renamed or
+    removed -- which the old whole-corpus rule could not see, since it only
+    looked for absences in the other direction.
+    """
+    monkeypatch.setattr(vmp, "TRAITS_DIR", _corpus(tmp_path, "traitmech:000001"))
+    failures: list[str] = []
+    vmp.check_scope_a("METPO:1007400\tc\tdef\tTraitMech:traitmech:999999\n", failures)
     assert len(failures) == 1
-    assert "traitmech:000001" in failures[0]
+    assert "traitmech:999999" in failures[0]
 
 
 def test_scope_a_passes_when_the_id_is_cited(tmp_path, monkeypatch):
@@ -56,7 +73,7 @@ def test_scope_a_passes_when_the_id_is_cited(tmp_path, monkeypatch):
     assert failures == []
 
 
-def test_a_longer_id_does_not_satisfy_a_shorter_one(tmp_path, monkeypatch):
+def test_a_longer_cited_id_is_not_confused_with_a_shorter_real_one(tmp_path, monkeypatch):
     """#321: the coverage test must match whole ids, not substrings.
 
     `traitmech:000001 not in "...traitmech:0000010..."` is False, so the shorter
@@ -66,9 +83,11 @@ def test_a_longer_id_does_not_satisfy_a_shorter_one(tmp_path, monkeypatch):
     """
     monkeypatch.setattr(vmp, "TRAITS_DIR", _corpus(tmp_path, "traitmech:000001"))
     failures: list[str] = []
+    # traitmech:0000010 is cited but does not exist; a substring scan would have
+    # matched it against the real traitmech:000001 and reported nothing (#321).
     vmp.check_scope_a("METPO:1007400\tc\tdef\tTraitMech:traitmech:0000010\n", failures)
     assert len(failures) == 1
-    assert "traitmech:000001" in failures[0]
+    assert "traitmech:0000010" in failures[0]
 
 
 def test_scope_a_is_silent_on_an_empty_corpus(tmp_path, monkeypatch):
