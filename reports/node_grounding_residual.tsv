@@ -585,7 +585,7 @@ metal efflux pump	GENE_OR_PROTEIN	1	data/traits/environment/metal_tolerant.yaml
 arsenate as(v)	CHEMICAL	1	data/traits/environment/metal_tolerant.yaml
 arsenite as(iii)	CHEMICAL	1	data/traits/environment/metal_tolerant.yaml
 ars operon	GENE_OR_PROTEIN	1	data/traits/environment/metal_tolerant.yaml
-arsenic tolerance	STATE	1	data/traits/environment/metal_tolerant.yaml
+arsenic tolerance	TRAIT	1	data/traits/environment/metal_tolerant.yaml
 microoxic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/microaerophilic.yaml
 high-affinity terminal oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
 cytochrome cbb3 oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
@@ -757,7 +757,7 @@ low-ph tolerance	CAPACITY	1	data/traits/environment/ph_delta.yaml
 maximal ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 respiratory proton-pumping enzymes	GENE_OR_PROTEIN	1	data/traits/environment/ph_delta_high.yaml
 near-neutral cytoplasmic ph	QUALITY	1	data/traits/environment/ph_delta_high.yaml
-growth across external ph 5.5-9.0	STATE	1	data/traits/environment/ph_delta_high.yaml
+growth across external ph 5.5-9.0	TRAIT	1	data/traits/environment/ph_delta_high.yaml
 constant proton motive force	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 membrane lipid/porin composition changes	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_low.yaml
@@ -904,7 +904,7 @@ high-pressure respiratory energy conservation	BIOLOGICAL_PROCESS	1	data/traits/e
 minimum and maximum growth pressure bounds	QUALITY	1	data/traits/environment/pressure_delta.yaml
 intracellular cation concentration	STATE	1	data/traits/environment/pressure_optimum.yaml
 intracellular osmotic pressure	STATE	1	data/traits/environment/pressure_optimum.yaml
-high hydrostatic pressure tolerance	CAPACITY	1	data/traits/environment/pressure_optimum.yaml
+high hydrostatic pressure tolerance	TRAIT	1	data/traits/environment/pressure_optimum.yaml
 protein stabilization by preferential hydration	BIOLOGICAL_PROCESS	1	data/traits/environment/pressure_optimum.yaml
 growth-permissive pressure span	QUALITY	1	data/traits/environment/pressure_range.yaml
 membrane fluidity under high hydrostatic pressure	QUALITY	1	data/traits/environment/pressure_range.yaml
@@ -1227,7 +1227,7 @@ compensatory mutation	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage
 long-term survival	QUALITY	1	data/traits/genomics/ploidy.yaml
 genome copy number per cell	QUALITY	1	data/traits/genomics/ploidy.yaml
 genomic dna as phosphate storage polymer	MOLECULAR_FUNCTION	1	data/traits/genomics/ploidy.yaml
-growth in absence of environmental phosphate	CAPACITY	1	data/traits/genomics/ploidy.yaml
+growth in absence of environmental phosphate	TRAIT	1	data/traits/genomics/ploidy.yaml
 segregational drift	BIOLOGICAL_PROCESS	1	data/traits/genomics/ploidy.yaml
 loss of beneficial resistance alleles	BIOLOGICAL_PROCESS	1	data/traits/genomics/ploidy.yaml
 lysogeny	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
@@ -1785,7 +1785,7 @@ phaa/phab/phac pathway	PATHWAY	1	data/traits/morphology/intracellular_inclusion.
 nitrogen depletion	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/intracellular_inclusion.yaml
 polyphosphate granule	CELLULAR_LOCALIZATION	1	data/traits/morphology/intracellular_inclusion.yaml
 gas vesicle gene cluster	GENE_OR_PROTEIN	1	data/traits/morphology/intracellular_inclusion.yaml
-buoyancy	CAPACITY	1	data/traits/morphology/intracellular_inclusion.yaml
+buoyancy	TRAIT	1	data/traits/morphology/intracellular_inclusion.yaml
 encapsulated metabolic enzymes	GENE_OR_PROTEIN	1	data/traits/morphology/intracellular_inclusion.yaml
 intracellular sulfur globule	CELLULAR_LOCALIZATION	1	data/traits/morphology/intracellular_inclusion.yaml
 reduced cell-wall patterning	BIOLOGICAL_PROCESS	1	data/traits/morphology/irregular_shaped.yaml

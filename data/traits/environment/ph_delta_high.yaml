@@ -77,7 +77,7 @@ causal_graphs:
     description: Internal pH maintained near 7.5 while external pH varies.
   - node_id: growth_external_ph_5_5_9
     label: growth across external pH 5.5-9.0
-    node_type: STATE
+    node_type: TRAIT
     description: Growth supported across the neutralophile external pH range ~5.5-9.0.
   - node_id: constant_pmf
     label: constant proton motive force
@@ -154,7 +154,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Internal pH kept ~7.0-7.5 as buffers absorb fluctuations.
   - subject: near_neutral_cytoplasmic_ph
-    predicate: enables
+    predicate: confers
     object: growth_external_ph_5_5_9
     description: Neutralophiles maintain narrow internal pH while growing over a broad
       external range.
@@ -162,7 +162,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Neutralophiles grow at external pH ~5.5-9.0 while maintaining cytoplasmic
         pH ~7.5-7.7.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007700
   - subject: constant_pmf
     predicate: supports
     object: ph_delta_high_trait
@@ -256,4 +256,18 @@ curation_history:
     so they migrated together in issue 329 and were split here by reading each edge.
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
+  llm_assisted: true
+- timestamp: '2026-08-07T05:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its
+    in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink
+    declares enables range 'biological process or activity', which only BIOLOGICAL_PROCESS,
+    PATHWAY and MOLECULAR_FUNCTION satisfy. The node's own description gives it away
+    as a disposition rather than a state - phrasings like "Capacity of an organism
+    to grow and survive under...", "Ability to grow when..." and "tolerance of..."
+    describe what an organism CAN do, which is what a TRAIT is. So the defect was
+    the node type, not the predicate, which is the third time in this issue's neighbourhood
+    that has been true (compare issue 331's acetate kinase step and issue 330's negated
+    node name). With the object correctly a TRAIT, confers applies unchanged.
   llm_assisted: true
