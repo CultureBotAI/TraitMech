@@ -27,20 +27,15 @@ missing = [v for v in values if f'CausalNodeTypeEnum.{v}' not in tsv]
 print('Missing leaves:', missing or 'none')
 "
 
-# Scope-A coverage — every traitmech:NNNNNN in the corpus is either in the
-# proposal or in a deliberately-deferred list.
-uv run python -c "
-import re, pathlib
-ids = set()
-for p in pathlib.Path('data/traits').rglob('*.yaml'):
-    for m in re.finditer(r'^identifier:\s*(traitmech:\d+)', p.read_text(), re.MULTILINE):
-        ids.add(m.group(1))
-tsv = open('proposals/<cohort>/metpo_proposal_classes_robot.tsv').read()
-covered = {i for i in ids if i in tsv}  # cited in definition_source
-print('Corpus traitmech IDs:', len(ids))
-print('Covered by proposal: ', len(covered))
-print('Not covered:         ', sorted(ids - covered))
-"
+# Scope-A citations — every traitmech:NNNNNN a cohort CITES resolves to a real
+# record. Whole-corpus coverage is NOT a per-cohort property: v5 lifts the
+# synthetic traits, v1/v3/v7 lift other things, and demanding it of every cohort
+# failed three of them permanently over work they never took on (#319).
+just verify-proposal <cohort>          # per-cohort: citations resolve
+
+# The cross-cohort property, asserted once over the union of all cohorts and
+# part of `just qc`:
+just audit-proposal-coverage           # every corpus id is lifted by SOME cohort
 
 # definition_source hygiene (issue #83) — column 4 must be a citation, never
 # a cross-ontology equivalence IRI. This must print nothing.
@@ -120,7 +115,8 @@ robot reason --reasoner ELK --input /tmp/merged.owl \
 | ELK reports unsatisfiable class | Intermediate parent created with conflicting `SC %` axioms | Inspect the parent chain — usually a copy-paste error in the `parent` column |
 | Copilot flags "schema lifted incorrectly" | The leaf's definition doesn't match the schema enum's description verbatim | Copy the schema description into the `definition` column, *then* edit only for Aristotelian form. Reword more freely in the proposal narrative. |
 | Reviewer asks for an existing METPO ID | The lifted concept already exists in METPO under a different label | Use the existing IRI; remove the row from the proposal; record the alias in the next seeder run so the `traitmech:` ID gets retired. |
-| `traitmech:` ID appears in `data/traits/` but not in the proposal TSV | Coverage gap — Scope-A enumeration drifted between cohorts | Re-run the Scope-A coverage check; either add the missing row or document why it was deferred to a later cohort. |
+| `traitmech:` ID in `data/traits/` is in NO cohort's TSV | Coverage gap — the id has no METPO home, so it cannot be cross-referenced from kg-microbe | `just audit-proposal-coverage` names it; add a row to a Scope-A cohort (v5 is the existing one). Not a per-cohort failure (#319). |
+| A cohort cites a `traitmech:` ID that no record has | Typo, or a citation left behind after a record was renamed or removed | `just verify-proposal <cohort>` names it; fix the citation. |
 | An ontology IRI (`OMP:`, `PATO:`, `GO:`, …) sits in `definition_source` (col 4) | Cross-ontology equivalence mistaken for definition provenance (issue #83) | Move it: lightweight hint → `xrefs` (`hasDbXref`); semantic alignment → `metpo_proposal_mappings.sssom.tsv` with a `skos:*Match`. Keep col 4 for citations only. Catch with the `definition_source` hygiene check in step 5. |
 | `CausalNodeTypeEnum` value renamed but proposal still cites old name | Schema drift after proposal was drafted | Use Path C (new cohort version) if v1 is merged; Path A otherwise. |
 

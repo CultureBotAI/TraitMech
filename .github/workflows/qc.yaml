@@ -13,6 +13,12 @@ on:
       # this the moment lint was added — a filter narrower than what the job
       # checks is exactly #184/#200.
       - "tests/**.py"
+      # audit-proposal-coverage joined the qc chain in #319 and reads
+      # proposals/*/metpo_proposal_classes_robot.tsv, so a proposals-only PR now
+      # changes what qc verifies. audit-qc-paths caught this the moment the
+      # recipe was added — a filter narrower than what the job reads is exactly
+      # #184/#200/#250/#252.
+      - "proposals/**"
       - "justfile"
       - "pyproject.toml"
       - ".github/workflows/qc.yaml"

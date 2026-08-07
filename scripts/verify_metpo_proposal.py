@@ -119,6 +119,27 @@ def check_subset(rows: list[list[str]], col_idx: int, label: str, failures: list
     return next(iter(tags), None) if len(tags) == 1 else None
 
 
+def _corpus_traitmech_ids() -> set[str]:
+    """Every traitmech id the corpus knows, from `identifier:` OR `synonyms:`."""
+    ids: set[str] = set()
+    for p in TRAITS_DIR.rglob("*.yaml"):
+        ids |= set(re.findall(r"traitmech:\d+", p.read_text()))
+    return ids
+
+
+def cohort_coverage(proposals_dir: Path) -> tuple[set[str], set[str]]:
+    """(all ids cited across every cohort, corpus ids none of them cite).
+
+    The CROSS-cohort property #319's per-cohort rule was standing in for. No
+    single cohort owns it — v5 lifts the synthetic traits, v1/v3/v7 lift other
+    things — so it is asserted here, once, over the union (#349 review).
+    """
+    cited: set[str] = set()
+    for tsv in sorted(proposals_dir.glob("*/metpo_proposal_classes_robot.tsv")):
+        cited |= set(re.findall(r"traitmech:\d+", tsv.read_text()))
+    return cited, _corpus_traitmech_ids() - cited
+
+
 def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not TRAITS_DIR.exists():
         return
@@ -135,10 +156,14 @@ def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not class_tsv_text:
         print("  scope-A: no classes template in this cohort (skip)", file=sys.stderr)
         return
-    ids: set[str] = set()
-    for p in TRAITS_DIR.rglob("*.yaml"):
-        for m in re.finditer(r"^identifier:\s*(traitmech:\d+)", p.read_text(), re.MULTILINE):
-            ids.add(m.group(1))
+    # Anywhere a traitmech id can legitimately live in a record, not just
+    # `identifier:`. The skill's Round-trip plan says that once upstream mints a
+    # real METPO id the migration swaps `identifier:` to the METPO CURIE and
+    # PRESERVES the old one in `synonyms:`. Reading only `identifier:` would make
+    # a PARTIAL mint produce phantom failures against an already-submitted cohort
+    # that still cites all of them — the same pathology #319 describes, pointed
+    # the other way (#349 review).
+    ids = _corpus_traitmech_ids()
     if not ids:
         print("  scope-A: no traitmech:NNNNNN ids in corpus (nothing to cover)", file=sys.stderr)
         return
@@ -203,11 +228,34 @@ def check_scope_c(class_tsv_text: str, failures: list[str]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("cohort_dir", type=Path, help="proposals/metpo_traitmech_v<N>/ directory")
+    # Optional so --coverage, which is corpus-level, needs no cohort. main()
+    # rejects an omitted cohort in every other mode.
+    ap.add_argument("cohort_dir", type=Path, nargs="?",
+                    help="proposals/metpo_traitmech_v<N>/ directory")
+    ap.add_argument("--coverage", action="store_true",
+                    help="Corpus-level: assert every traitmech id is lifted by SOME "
+                         "cohort. Cross-cohort, so it takes no <cohort> argument.")
     ap.add_argument("--skip-scope-a", action="store_true", help="Don't check that every traitmech: id is cited.")
     ap.add_argument("--skip-scope-c", action="store_true", help="Don't check that every CausalNodeTypeEnum value is lifted.")
     args = ap.parse_args()
 
+    if args.coverage:
+        cited, uncovered = cohort_coverage(REPO_ROOT / "proposals")
+        print("=== cross-cohort Scope-A coverage ===", file=sys.stderr)
+        print(f"  cited across all cohorts: {len(cited)}", file=sys.stderr)
+        print(f"  corpus ids not lifted:    {len(uncovered)}", file=sys.stderr)
+        for i in sorted(uncovered)[:20]:
+            print(f"    {i}", file=sys.stderr)
+        if uncovered:
+            print("\nThese have no METPO home, so they cannot be cross-referenced from\n"
+                  "kg-microbe. Add them to a Scope-A cohort (v5 is the existing one).",
+                  file=sys.stderr)
+            return 1
+        print("  every traitmech id is lifted by some cohort", file=sys.stderr)
+        return 0
+
+    if args.cohort_dir is None:
+        ap.error("a cohort directory is required unless --coverage is given")
     cohort_dir = args.cohort_dir
     if not cohort_dir.is_dir():
         print(f"error: not a directory: {cohort_dir}", file=sys.stderr)

@@ -282,7 +282,7 @@ just robot-validate-proposal <cohort>  # full ROBOT template+merge+ELK reasoning
 ```
 
 Both must pass clean (exit zero, no `UNSAT`). The complete manual check suite —
-column-count, Scope-C enum coverage, Scope-A corpus coverage, `definition_source` hygiene
+column-count, Scope-C enum coverage, Scope-A citation resolution (whole-corpus coverage moved to `just audit-proposal-coverage`, #319), `definition_source` hygiene
 (issue #83), parent integrity, and the raw ROBOT/ELK invocation with prefixes — is in
 [`reference/verification-and-pitfalls.md`](reference/verification-and-pitfalls.md), which
 also lists the common pitfalls and their fixes.
