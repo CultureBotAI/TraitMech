@@ -167,6 +167,26 @@ audit-predicate-domains *args:
 audit-pr-checks *args:
     uv run python scripts/audit_pr_checks_present.py {{args}}
 
+# The stronger companion to audit-pr-checks: not "did ANY check fire" but "did
+# every check that SHOULD have fired, fire" (#348).
+#
+# audit-pr-checks can only see TOTAL silence. claude-code-review.yml runs on
+# pull_request with no `paths:` filter and records a run even when its `if:`
+# gates skip the job, so nearly every PR here has at least one qualifying event
+# -- meaning qc, pytest and validate-strict could all be mute and it would still
+# pass. This checks each PR-triggered workflow by name instead.
+#
+# The required set is DERIVED from .github/workflows (every workflow with a
+# pull_request trigger), not declared, for the reason #252 gave when it rejected
+# a hand-maintained list: a declaration drifts the moment someone adds a
+# workflow. Path filters are evaluated against the PR's own changed files, so a
+# legitimately filtered-out workflow is not reported.
+#
+# Needs network and gh auth, so it is NOT in `qc`; same vantage point as
+# audit-pr-checks -- pushes to main, where triggering demonstrably works.
+audit-required-workflows *args:
+    uv run python scripts/audit_required_workflows.py {{args}}
+
 # Structural audit of evidence snippets: EvidenceItem.snippet is specified as a
 # VERBATIM quote and docs/CURATION_PLAYBOOK.md sharpens that to contiguous, no
 # ellipsis, no paraphrase, diversified across edges — and until #247 nothing
