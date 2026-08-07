@@ -78,3 +78,35 @@ def test_non_biolink_curies_are_ignored(tmp_path):
     m, b = _files(tmp_path, [_row("reduces", "METPO:2007802", "METPO"),
                              _row("has output", "RO:0002234", "RO")])
     assert unbacked(m, b) == []
+
+
+# --- the corpus half (#350 review) -------------------------------------------
+#
+# The mapping table is not the only way a CURIE reaches a record: a curator can
+# type a predicate_id directly, and #342's point is that the CURIE in the RECORD
+# is what a reader believes.
+
+from audit_biolink_curies import corpus_biolink_curies  # noqa: E402
+
+
+def _traits(tmp_path, body):
+    d = tmp_path / "traits"
+    d.mkdir(exist_ok=True)
+    (d / "t.yaml").write_text(body)
+    return d
+
+
+def test_a_curie_typed_into_a_record_is_found(tmp_path):
+    d = _traits(tmp_path, "edges:\n- predicate_id: biolink:not_a_slot\n")
+    assert set(corpus_biolink_curies(d)) == {"biolink:not_a_slot"}
+
+
+def test_non_biolink_predicate_ids_are_ignored(tmp_path):
+    d = _traits(tmp_path, "edges:\n- predicate_id: METPO:2007813\n"
+                          "- predicate_id: RO:0002234\n")
+    assert corpus_biolink_curies(d) == {}
+
+
+def test_the_example_file_is_reported_so_it_can_be_found(tmp_path):
+    d = _traits(tmp_path, "edges:\n- predicate_id: biolink:produces\n")
+    assert corpus_biolink_curies(d)["biolink:produces"].endswith("t.yaml")
