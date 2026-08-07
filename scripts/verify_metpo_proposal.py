@@ -235,7 +235,10 @@ def main() -> int:
     ap.add_argument("--coverage", action="store_true",
                     help="Corpus-level: assert every traitmech id is lifted by SOME "
                          "cohort. Cross-cohort, so it takes no <cohort> argument.")
-    ap.add_argument("--skip-scope-a", action="store_true", help="Don't check that every traitmech: id is cited.")
+    ap.add_argument("--skip-scope-a", action="store_true", help="Don't check that a cohort's cited traitmech: ids resolve. "
+                         "NOTE this now disables a CORRECTNESS check (a cited id that "
+                         "no record has), not the old whole-corpus coverage rule it "
+                         "used to suppress as expected noise (#319).")
     ap.add_argument("--skip-scope-c", action="store_true", help="Don't check that every CausalNodeTypeEnum value is lifted.")
     args = ap.parse_args()
 
