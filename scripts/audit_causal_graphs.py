@@ -17,6 +17,21 @@ structural defects the schema cannot catch:
                           a split where each side happens to contain a node typed
                           TRAIT, so every node reaches *a* trait but not the one
                           the record is about (#220).
+  DUPLICATE_GROUNDING     two nodes in one graph carrying the same ``grounding``.
+                          The machine-readable signature of one concept modelled
+                          twice — #351 grounded `growth_external_ph_5_5_9` to the
+                          same METPO CURIE its own record's trait node already
+                          had, which made the duplication legible but which
+                          nothing detected (#352).            [WARN]
+  DISPOSITION_MISTYPED    a CAPACITY or STATE node whose own description reads as
+                          a disposition — "capacity to", "ability to",
+                          "tolerance of". Those describe what an organism CAN do,
+                          i.e. a TRAIT. Three separate defects this session were
+                          a mis-typed node rather than a wrong predicate (#328,
+                          #330, #331), and #334 retyped six on exactly this
+                          evidence; the ones left behind survived only because
+                          their in-edges happened not to violate a range, which
+                          is an unrelated fact (#352).         [WARN]
   UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
@@ -65,6 +80,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from collections import defaultdict, deque
 from pathlib import Path
@@ -82,6 +98,8 @@ WARN = "WARN"
 # Severity per defect. Promote UNREACHABLE_FROM_TRAIT to ERROR once the
 # backlog is burned down (or just run with --fail-on any).
 SEVERITY = {
+    "DUPLICATE_GROUNDING": WARN,
+    "DISPOSITION_MISTYPED": WARN,
     "DANGLING_EDGE": ERROR,
     "ORPHAN_NODE": ERROR,
     "NO_TRAIT_NODE": ERROR,
@@ -122,6 +140,15 @@ def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[
         seen |= component
         out.append(component)
     return sorted(out, key=len, reverse=True)
+
+
+# "capacity of a cell to", "ability to", "tolerance of" -- deliberately anchored
+# on the phrasing a curator writes, not on the label, because the label is often
+# just the concept name ("buoyancy") while the description is where the
+# disposition shows.
+_DISPOSITION_RE = re.compile(
+    r"\b(capacit(?:y|ies)\b[^.]{0,30}?\bto|ability to|able to|tolerance (?:of|to))\b",
+    re.IGNORECASE)
 
 
 def audit(traits_dir: Path) -> list[dict[str, str]]:
@@ -214,6 +241,34 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
             # a clearer remedy — counting it here would raise a second finding
             # for one defect, which is the same reason UNREACHABLE_FROM_TRAIT
             # skips unreferenced nodes above.
+            # Two nodes with the same grounding are one concept modelled twice.
+            by_grounding: dict[str, list[str]] = defaultdict(list)
+            for n in nodes:
+                g = (n.get("grounding") or "").strip()
+                if g:
+                    by_grounding[g].append(n.get("node_id"))
+            for g, ids in sorted(by_grounding.items()):
+                if len(ids) > 1:
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DUPLICATE_GROUNDING",
+                        "severity": SEVERITY["DUPLICATE_GROUNDING"],
+                        "detail": (f"grounding={g} on {len(ids)} nodes: "
+                                   f"{', '.join(sorted(i for i in ids if i))}"),
+                    })
+
+            for n in nodes:
+                if n.get("node_type") not in ("CAPACITY", "STATE"):
+                    continue
+                blob = f"{n.get('label') or ''} {n.get('description') or ''}"
+                if _DISPOSITION_RE.search(blob):
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DISPOSITION_MISTYPED",
+                        "severity": SEVERITY["DISPOSITION_MISTYPED"],
+                        "detail": (f"node_id={n.get('node_id')!r} "
+                                   f"type={n.get('node_type')} — description reads as a "
+                                   f"disposition, which is a TRAIT"),
+                    })
+
             components = _components(node_set & referenced, adjacency)
             if len(components) > 1:
                 sizes = ", ".join(str(len(c)) for c in components)
