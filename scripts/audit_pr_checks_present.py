@@ -55,6 +55,24 @@ EVIDENCE_EVENTS = frozenset({"pull_request", "pull_request_target"})
 MIN_AGE_MINUTES = 10
 
 
+def partition(prs: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Split into (offenders, skipped-for-youth).
+
+    Returned separately rather than dropped, so main() can NAME the skipped ones.
+    A PR that vanished from both counts would make the output read as full
+    coverage of a set it did not fully check — the same silent-omission shape
+    this tool exists to catch, one level down (#346 review).
+    """
+    bad, young = [], []
+    for pr in prs:
+        age = pr.get("age_minutes")
+        if age is not None and age < MIN_AGE_MINUTES:
+            young.append(pr)
+        elif not (set(pr.get("events") or ()) & EVIDENCE_EVENTS):
+            bad.append(pr)
+    return bad, young
+
+
 def offenders(prs: list[dict]) -> list[dict]:
     """PRs with no run triggered by the pull request itself.
 
@@ -63,13 +81,17 @@ def offenders(prs: list[dict]) -> list[dict]:
     younger than ``MIN_AGE_MINUTES`` is skipped; ``age_minutes`` may be omitted,
     in which case age is not considered.
     """
-    out = []
-    for pr in prs:
-        if pr.get("age_minutes") is not None and pr["age_minutes"] < MIN_AGE_MINUTES:
-            continue
-        if not (set(pr.get("events") or ()) & EVIDENCE_EVENTS):
-            out.append(pr)
-    return out
+    return partition(prs)[0]
+
+
+def _gh_text(args: list[str]) -> str:
+    """Raw stdout from gh. `-q` unwraps to a bare scalar, which is NOT valid JSON
+    for a string value -- `json.loads("2026-08-06T21:47:27Z")` raises."""
+    proc = subprocess.run(["gh", *args], capture_output=True, text=True)
+    if proc.returncode != 0:
+        print(f"gh {' '.join(args)} failed: {proc.stderr.strip()}", file=sys.stderr)
+        raise SystemExit(2)
+    return proc.stdout.strip()
 
 
 def _gh_json(args: list[str]) -> object:
@@ -91,16 +113,34 @@ def collect(repo: str) -> list[dict]:
     now = datetime.now(timezone.utc)
     collected = []
     for pr in prs:  # type: ignore[union-attr]
-        # per_page likewise explicit: the API defaults to 30, and a PR with many
-        # hand-dispatched runs can push a genuine pull_request run off page one.
-        runs = _gh_json(["api",
-                         f"repos/{repo}/actions/runs"
-                         f"?head_sha={pr['headRefOid']}&per_page=100",
-                         "-q", "[.workflow_runs[].event]"])
-        created = datetime.fromisoformat(pr["createdAt"].replace("Z", "+00:00"))
+        sha = pr["headRefOid"]
+        # Filter SERVER-SIDE rather than paginating. per_page=100 was a bigger
+        # ceiling, not the absence of one — hand-dispatched runs could still
+        # crowd a genuine run off page one. `event=` cannot (#346 review).
+        found = []
+        for event in sorted(EVIDENCE_EVENTS):
+            n = _gh_json(["api",
+                          f"repos/{repo}/actions/runs"
+                          f"?head_sha={sha}&event={event}&per_page=1",
+                          "-q", ".total_count"])
+            if n:
+                found.append(event)
+                break  # one is enough; skips a call on the healthy path
+        # Age is only consulted for a PR that would otherwise be reported, so the
+        # extra request costs nothing on the healthy path — which also keeps the
+        # per-PR call count from compounding at --limit scale (#346 review).
+        age = None
+        if not found:
+            # The HEAD COMMIT's clock, not the PR's. A PR opened last week and
+            # pushed twenty seconds ago has a brand-new SHA with no runs yet, and
+            # push is far more frequent than open, so createdAt covered the rarer
+            # case. Falls back to createdAt if the commit lookup fails.
+            iso = _gh_text(["api", f"repos/{repo}/commits/{sha}",
+                            "-q", ".commit.committer.date"]) or pr["createdAt"]
+            when = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+            age = (now - when).total_seconds() / 60
         collected.append({"number": pr["number"], "title": pr["title"],
-                          "events": runs,
-                          "age_minutes": (now - created).total_seconds() / 60})
+                          "events": found, "age_minutes": age})
     return collected
 
 
@@ -113,11 +153,15 @@ def main() -> int:
     args = ap.parse_args()
 
     prs = json.loads(args.json) if args.json else collect(args.repo)
-    bad = offenders(prs)
+    bad, young = partition(prs)
 
     print("=== open PRs with no pull-request-triggered checks ===", file=sys.stderr)
     print(f"  open PRs:   {len(prs)}", file=sys.stderr)
     print(f"  unchecked:  {len(bad)}", file=sys.stderr)
+    print(f"  skipped:    {len(young)} (head pushed < {MIN_AGE_MINUTES} min ago)",
+          file=sys.stderr)
+    for pr in young:
+        print(f"  skipped (too new): #{pr['number']}  {pr['title']}", file=sys.stderr)
     for pr in bad:
         print(f"  #{pr['number']}  {pr['title']}", file=sys.stderr)
     if bad:

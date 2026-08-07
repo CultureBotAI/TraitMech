@@ -82,3 +82,27 @@ def test_an_old_pr_with_no_runs_is_still_flagged():
 def test_age_is_optional():
     """offenders() stays usable without age data, e.g. from --json fixtures."""
     assert [p["number"] for p in offenders([{"number": 10, "title": "t", "events": []}])] == [10]
+
+
+def test_skipped_prs_are_returned_not_dropped():
+    """#346 review: a PR excluded for youth must stay visible.
+
+    Dropping it made `open PRs: N` read as full coverage of N when one was never
+    checked -- the silent-omission shape this tool exists to catch, one level
+    down.
+    """
+    from audit_pr_checks_present import partition
+
+    bad, young = partition([_pr(1, []), _pr(2, [], age_minutes=1)])
+    assert [p["number"] for p in bad] == [1]
+    assert [p["number"] for p in young] == [2]
+
+
+def test_a_long_open_pr_with_a_freshly_pushed_head_is_skipped():
+    """The age gate must measure the HEAD COMMIT, not the PR's open date.
+
+    collect() supplies age from the head commit for exactly this case: a PR
+    opened last week and pushed seconds ago has a brand-new SHA with no runs yet.
+    Push is far more frequent than open, so createdAt covered the rarer case.
+    """
+    assert offenders([_pr(3, [], age_minutes=0.5)]) == []
