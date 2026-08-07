@@ -150,7 +150,8 @@ causal_graphs:
   - subject: hfq
     predicate: promotes
     object: rpos
-    description: Hfq enables sRNA-dependent translation of RpoS.
+    description: Hfq is required for sRNA-dependent translation of RpoS, and so raises
+      the amount of RpoS available.
     evidence:
     - reference: DOI:10.1128/mmbr.00151-22
       notes: Hfq is needed for sRNA-dependent RpoS translation.
