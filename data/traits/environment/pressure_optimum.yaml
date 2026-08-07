@@ -193,3 +193,16 @@ curation_history:
     that has been true (compare issue 331's acetate kinase step and issue 330's negated
     node name). With the object correctly a TRAIT, confers applies unchanged.
   llm_assisted: true
+- timestamp: '2026-08-07T06:00:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: 'Grounded the retyped TRAIT node, issue 334 review. docs/CURATION_PLAYBOOK.md
+    requires every TRAIT row to carry a grounding, and 462 of 482 TRAIT nodes in the
+    corpus do, so leaving a newly retyped one ungrounded was the exception rather
+    than the norm. It also mattered more than hygiene: an ungrounded TRAIT node still
+    counts as a reachability anchor for audit-graphs, so it made UNREACHABLE_FROM_TRAIT
+    fall on this graph without any edge changing -- the island is unchanged and FRAGMENTED_GRAPH
+    still reports it. Grounding it makes the duplication legible instead of leaving
+    two unrelated-looking anchors. hhp_tolerance IS piezotolerant, already in the
+    corpus as traitmech:000003.'
+  llm_assisted: true

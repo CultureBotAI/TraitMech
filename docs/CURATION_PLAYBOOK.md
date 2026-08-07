@@ -156,7 +156,7 @@ Separately from the domain rule above, `enables` (`RO:0002327`) has a
 `BIOLOGICAL_PROCESS`, `PATHWAY`, `MOLECULAR_FUNCTION`
 
 Any other object type is a range violation, flagged as
-`ENABLES_RANGE_VIOLATION`. **33 pre-existing edges** are baselined and
+`ENABLES_RANGE_VIOLATION`. **16 pre-existing edges** are baselined and
 tracked in #334; a *new* one fails `just qc`. What to write instead:
 
 | you want to say | object type | write |

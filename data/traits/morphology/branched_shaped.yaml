@@ -192,8 +192,8 @@ causal_graphs:
   - subject: stlp_membrane_microdomains
     predicate: contributes to
     object: proper_polar_growth_branch_spacing
-    description: StlP membrane microdomain formation contributes to proper powth and
-      normal branch spacing.
+    description: StlP membrane microdomain formation contributes to proper polar growth
+      and normal branch spacing.
     evidence:
     - reference: DOI:10.1038/s41467-025-58093-x
       notes: Loss of StlP leads to branching of filaments; constitutive stlP expression
