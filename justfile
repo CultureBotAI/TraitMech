@@ -98,9 +98,15 @@ audit-graphs *args:
 # a report nobody consults is not a check.
 #
 # Does NOT require the LABEL to match a slot name: most labels are synonyms
-# (generates, yields and seven others all ground to biolink:produces). A local
-# coinage stays legitimate when nothing upstream fits, provided the row says
-# source=local rather than claiming biolink provenance.
+# (generates, yields and seven others all ground to biolink:produces). Checks
+# the CORPUS as well as the mapping table, because a curator can type a
+# predicate_id straight into a record and the CURIE in the record is what a
+# reader believes.
+#
+# A coinage stays legitimate when nothing upstream fits -- but MINT it, as #342
+# did for `encodes` (METPO:2007813). Setting source=local does not exempt
+# anything; the escape is ALLOWED_UNBACKED in the script, keyed to the CURIE, so
+# adding one is a reviewed change rather than a cell edit.
 audit-biolink-curies:
     uv run python scripts/audit_biolink_curies.py
 

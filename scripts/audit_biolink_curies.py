@@ -31,7 +31,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import re
 import sys
 from pathlib import Path
 
@@ -100,8 +99,21 @@ def corpus_biolink_curies(traits_dir: Path) -> dict[str, str]:
             # A traits dir outside the repo (a test fixture). Same guard
             # audit_causal_graphs uses; reporting an absolute path beats raising.
             rel = str(path)
-        for m in re.finditer(r"predicate_id:\s*(biolink:\S+)", path.read_text()):
-            found.setdefault(m.group(1).strip(), rel)
+        try:
+            doc = yaml.safe_load(path.read_text())
+        except yaml.YAMLError:
+            continue
+        if not isinstance(doc, dict):
+            continue
+        # Parsed, not regexed. This module already loads YAML for the model, and
+        # a text scan would match a CURIE quoted inside curation_history prose --
+        # which several records now contain, precisely because they describe this
+        # issue (#350 review).
+        for graph in (doc.get("causal_graphs") or []):
+            for edge in (graph.get("edges") or []):
+                curie = str(edge.get("predicate_id") or "")
+                if curie.startswith("biolink:"):
+                    found.setdefault(curie, rel)
     return found
 
 

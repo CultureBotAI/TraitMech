@@ -89,24 +89,43 @@ def test_non_biolink_curies_are_ignored(tmp_path):
 from audit_biolink_curies import corpus_biolink_curies  # noqa: E402
 
 
-def _traits(tmp_path, body):
+def _traits(tmp_path, *predicate_ids):
+    """A record in the real shape: causal_graphs[].edges[].predicate_id.
+
+    Deliberately the real structure -- the sweep parses rather than regexes, so a
+    flat `edges:` fixture would pass through it unseen and prove nothing.
+    """
     d = tmp_path / "traits"
     d.mkdir(exist_ok=True)
-    (d / "t.yaml").write_text(body)
+    edges = "\n".join(f"  - subject: a\n    object: b\n    predicate_id: {p}"
+                      for p in predicate_ids)
+    (d / "t.yaml").write_text(
+        "identifier: traitmech:000001\ncausal_graphs:\n- graph_id: g\n  edges:\n" + edges + "\n")
     return d
 
 
 def test_a_curie_typed_into_a_record_is_found(tmp_path):
-    d = _traits(tmp_path, "edges:\n- predicate_id: biolink:not_a_slot\n")
+    d = _traits(tmp_path, "biolink:not_a_slot")
     assert set(corpus_biolink_curies(d)) == {"biolink:not_a_slot"}
 
 
 def test_non_biolink_predicate_ids_are_ignored(tmp_path):
-    d = _traits(tmp_path, "edges:\n- predicate_id: METPO:2007813\n"
-                          "- predicate_id: RO:0002234\n")
+    d = _traits(tmp_path, "METPO:2007813", "RO:0002234")
     assert corpus_biolink_curies(d) == {}
 
 
 def test_the_example_file_is_reported_so_it_can_be_found(tmp_path):
-    d = _traits(tmp_path, "edges:\n- predicate_id: biolink:produces\n")
+    d = _traits(tmp_path, "biolink:produces")
     assert corpus_biolink_curies(d)["biolink:produces"].endswith("t.yaml")
+
+
+def test_a_curie_only_mentioned_in_prose_is_not_flagged(tmp_path):
+    """Why parsing beats a text scan: several records now DESCRIBE this issue in
+    their curation_history, and a regex would flag those as live groundings."""
+    d = tmp_path / "traits"
+    d.mkdir(exist_ok=True)
+    (d / "t.yaml").write_text(
+        "identifier: traitmech:000002\n"
+        "curation_history:\n"
+        "- changes: 'Re-grounded off predicate_id: biolink:encodes to METPO:2007813.'\n")
+    assert corpus_biolink_curies(d) == {}
