@@ -17,6 +17,31 @@ structural defects the schema cannot catch:
                           a split where each side happens to contain a node typed
                           TRAIT, so every node reaches *a* trait but not the one
                           the record is about (#220).
+  DUPLICATE_GROUNDING     two nodes in one graph carrying the same ``grounding``.
+                          The machine-readable signature of one concept modelled
+                          twice — #351 grounded `growth_external_ph_5_5_9` to the
+                          same METPO CURIE its own record's trait node already
+                          had, which made the duplication legible but which
+                          nothing detected (#352).            [WARN]
+  DISPOSITION_MISTYPED    a CAPACITY or STATE node whose own description reads as
+                          a disposition — "capacity to", "ability to",
+                          "tolerance of". Those describe what an organism CAN do,
+                          i.e. a TRAIT. Three separate defects this session were
+                          a mis-typed node rather than a wrong predicate (#328,
+                          #330, #331), and #334 retyped six on exactly this
+                          evidence; the ones left behind survived only because
+                          their in-edges happened not to violate a range, which
+                          is an unrelated fact (#352).
+
+                          QUALITY is deliberately NOT scanned, though it carries
+                          the same phrasing in places: carboxydotrophic.yaml's
+                          `oxygen_tolerance` is "Ability of an ENZYME to function
+                          in the presence of O2", which is a property of a
+                          protein rather than something an organism can do. The
+                          same node_id typed CAPACITY in oxygen_preference.yaml
+                          IS organism-scoped and is flagged. Widening to QUALITY
+                          would need the organism/enzyme distinction, which this
+                          heuristic does not make (#353 review).  [WARN]
   UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
@@ -65,6 +90,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from collections import defaultdict, deque
 from pathlib import Path
@@ -82,6 +108,8 @@ WARN = "WARN"
 # Severity per defect. Promote UNREACHABLE_FROM_TRAIT to ERROR once the
 # backlog is burned down (or just run with --fail-on any).
 SEVERITY = {
+    "DUPLICATE_GROUNDING": WARN,
+    "DISPOSITION_MISTYPED": WARN,
     "DANGLING_EDGE": ERROR,
     "ORPHAN_NODE": ERROR,
     "NO_TRAIT_NODE": ERROR,
@@ -122,6 +150,28 @@ def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[
         seen |= component
         out.append(component)
     return sorted(out, key=len, reverse=True)
+
+
+# Matched against the DESCRIPTION only, never the label: the label is usually
+# just the concept name ("buoyancy", "salt tolerance") while the description is
+# where the curator says what it IS.
+#
+# The capacity/ability arm requires the capacity to be ORGANISM-scoped -- bare
+# ("Capacity to grow...") or of a cell/organism. That is deliberate, not a
+# tightening for its own sake: ph_optimum.yaml has "Capacity of cytoplasmic
+# buffers (e.g. ...) to absorb pH fluctuations", which is a genuine reservoir
+# CAPACITY and must not flag. A looser `capacity[^.]{0,30}?to` let it through
+# only because the dots in "e.g." happened to stop the character class -- a
+# correct verdict for an accidental reason, which an unrelated cleanup would
+# silently reverse (#353 review).
+_DISPOSITION_RE = re.compile(
+    r"\b(?:"
+    r"capacit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|archae\w+|microbe|strain|species|isolate)s?)?\s+to"
+    r"|abilit(?:y|ies)(?:\s+of\s+(?:a|an|the)?\s*(?:cell|organism|bacteri\w+|archae\w+|microbe|strain|species|isolate)s?)?\s+to"
+    r"|able\s+to"
+    r"|tolerance\s+(?:of|to)"
+    r")\b",
+    re.IGNORECASE)
 
 
 def audit(traits_dir: Path) -> list[dict[str, str]]:
@@ -194,6 +244,41 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
                                f"type={n.get('node_type')} — in an island with no path to "
                                f"{'/'.join(trait_nodes)}"),
                 })
+
+            # Two nodes with the same grounding are one concept modelled twice.
+            by_grounding: dict[str, list[str]] = defaultdict(list)
+            for n in nodes:
+                g = (n.get("grounding") or "").strip()
+                if g:
+                    by_grounding[g].append(n.get("node_id"))
+            for g, ids in sorted(by_grounding.items()):
+                if len(ids) > 1:
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DUPLICATE_GROUNDING",
+                        "severity": SEVERITY["DUPLICATE_GROUNDING"],
+                        # The leading whitespace-free token is _key's baseline
+                        # discriminator, and it must carry BOTH the count and the
+                        # CURIE. Leading with the CURIE alone kept the key stable
+                        # when a THIRD node joined, so freezing two forgave three.
+                        # Leading with the count alone opened the mirror of that:
+                        # two DIFFERENT groundings each on 2 nodes in one graph
+                        # would collide on `nodes=2` and freezing one would
+                        # forgive the other (#353 review). Both vary here.
+                        "detail": (f"nodes={len(ids)};grounding={g} "
+                                   f"({', '.join(sorted(i for i in ids if i))})"),
+                    })
+
+            for n in nodes:
+                if n.get("node_type") not in ("CAPACITY", "STATE"):
+                    continue
+                if _DISPOSITION_RE.search(n.get("description") or ""):
+                    findings.append({
+                        "file": rel, "graph_id": gid, "defect": "DISPOSITION_MISTYPED",
+                        "severity": SEVERITY["DISPOSITION_MISTYPED"],
+                        "detail": (f"node_id={n.get('node_id')!r} "
+                                   f"type={n.get('node_type')} — description reads as a "
+                                   f"disposition, which is a TRAIT"),
+                    })
 
             # UNREACHABLE_FROM_TRAIT anchors on ANY node typed TRAIT, and that is
             # correct: 85 of 353 graphs legitimately carry more than one, because
