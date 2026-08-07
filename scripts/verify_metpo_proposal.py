@@ -9,11 +9,12 @@ Runs every pre-submission check the `metpo-proposal` skill specifies:
      `METPO:<n>`.
   4. Subset tag consistency — every row in both TSVs carries the same
      `metpo_traitmech_<YYYY>_<MM>` value.
-  5. Scope-A coverage — every `traitmech:NNNNNN` ID found in `data/traits/`
-     appears in at least one `definition_source` cell, or the operator opts
-     out with `--skip-scope-a`. Skipped entirely for a cohort that ships no
-     classes template, since such a cohort proposes no classes and so is not
-     doing Scope A at all (#318).
+  5. Scope-A citations — every `traitmech:NNNNNN` ID a cohort CITES resolves to
+     a real record. Whole-corpus coverage is reported but not asserted: it is a
+     cross-cohort property that cohort v5 already satisfies, and demanding it of
+     every cohort failed v1/v3/v7 permanently over work they never took on
+     (#319). Skipped entirely for a cohort with no classes template (#318), or
+     with `--skip-scope-a`.
   6. Scope-C enum coverage — every `CausalNodeTypeEnum` permissible value
      appears as a leaf, or the operator opts out with `--skip-scope-c`.
 
@@ -118,6 +119,27 @@ def check_subset(rows: list[list[str]], col_idx: int, label: str, failures: list
     return next(iter(tags), None) if len(tags) == 1 else None
 
 
+def _corpus_traitmech_ids() -> set[str]:
+    """Every traitmech id the corpus knows, from `identifier:` OR `synonyms:`."""
+    ids: set[str] = set()
+    for p in TRAITS_DIR.rglob("*.yaml"):
+        ids |= set(re.findall(r"traitmech:\d+", p.read_text()))
+    return ids
+
+
+def cohort_coverage(proposals_dir: Path) -> tuple[set[str], set[str]]:
+    """(all ids cited across every cohort, corpus ids none of them cite).
+
+    The CROSS-cohort property #319's per-cohort rule was standing in for. No
+    single cohort owns it — v5 lifts the synthetic traits, v1/v3/v7 lift other
+    things — so it is asserted here, once, over the union (#349 review).
+    """
+    cited: set[str] = set()
+    for tsv in sorted(proposals_dir.glob("*/metpo_proposal_classes_robot.tsv")):
+        cited |= set(re.findall(r"traitmech:\d+", tsv.read_text()))
+    return cited, _corpus_traitmech_ids() - cited
+
+
 def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not TRAITS_DIR.exists():
         return
@@ -134,26 +156,55 @@ def check_scope_a(class_tsv_text: str, failures: list[str]) -> None:
     if not class_tsv_text:
         print("  scope-A: no classes template in this cohort (skip)", file=sys.stderr)
         return
-    ids: set[str] = set()
-    for p in TRAITS_DIR.rglob("*.yaml"):
-        for m in re.finditer(r"^identifier:\s*(traitmech:\d+)", p.read_text(), re.MULTILINE):
-            ids.add(m.group(1))
+    # Anywhere a traitmech id can legitimately live in a record, not just
+    # `identifier:`. The skill's Round-trip plan says that once upstream mints a
+    # real METPO id the migration swaps `identifier:` to the METPO CURIE and
+    # PRESERVES the old one in `synonyms:`. Reading only `identifier:` would make
+    # a PARTIAL mint produce phantom failures against an already-submitted cohort
+    # that still cites all of them — the same pathology #319 describes, pointed
+    # the other way (#349 review).
+    ids = _corpus_traitmech_ids()
     if not ids:
         print("  scope-A: no traitmech:NNNNNN ids in corpus (nothing to cover)", file=sys.stderr)
         return
-    # Exact token match, not a substring scan of the raw text. `i not in text`
-    # treats `traitmech:000001` as covered by a cell containing
-    # `traitmech:0000010`, so a longer id silently satisfies a shorter one and
-    # the check can report full coverage while a term is genuinely un-lifted
-    # (#321). Not reachable while every corpus id is 6 digits, but the
-    # manage-identifiers policy permits crossing to 7, and this is a coverage
-    # gate — the failure mode is passing when it should fail.
+
+    # Exact token match, not a substring scan: `i not in text` would treat
+    # `traitmech:000001` as covered by a cell containing `traitmech:0000010`
+    # (#321).
     cited = set(re.findall(r"traitmech:\d+", class_tsv_text))
-    missing = sorted(i for i in ids if i not in cited)
-    if missing:
-        _emit(failures, f"scope-A: {len(missing)} traitmech ids in corpus not cited in proposal: {missing[:5]}{' ...' if len(missing) > 5 else ''}")
+
+    # WHAT THIS ASSERTS, AND WHY IT CHANGED (#319).
+    #
+    # It used to demand that EVERY corpus id appear in EVERY cohort carrying a
+    # classes template. That is not a per-cohort property: v1 lifts causal-graph
+    # scaffolding, v3 and v7 lift other things, and none of them undertook the
+    # synthetic-trait lift. They failed permanently over a backlog they never
+    # took on, which is how a check trains people to ignore it.
+    #
+    # The synthetic-trait lift IS done -- cohort v5 carries all 120 as class rows
+    # and passes. So whole-corpus coverage is a CROSS-cohort property; it is
+    # reported here and asserted by nobody, because no single cohort owns it.
+    #
+    # What IS a per-cohort property, and what this now checks: every id a cohort
+    # CITES must resolve to a real record. That catches a typo or a citation left
+    # behind after a record was renamed or removed -- a failure the old rule could
+    # not see, because it only ever looked for absences in the other direction.
+    phantom = sorted(c for c in cited if c not in ids)
+    if phantom:
+        _emit(failures,
+              f"scope-A: {len(phantom)} cited traitmech id(s) do not exist in the "
+              f"corpus: {phantom[:5]}{' ...' if len(phantom) > 5 else ''}")
+    elif cited:
+        print(f"  scope-A: all {len(cited)} cited traitmech ids resolve", file=sys.stderr)
     else:
-        print(f"  scope-A: all {len(ids)} traitmech ids covered", file=sys.stderr)
+        print("  scope-A: this cohort lifts no traitmech ids (not a Scope-A cohort)",
+              file=sys.stderr)
+
+    uncovered = len(ids - cited)
+    if uncovered:
+        print(f"  scope-A: FYI {uncovered} of {len(ids)} corpus ids are not in THIS "
+              f"cohort (cross-cohort coverage is not a per-cohort gate; see v5)",
+              file=sys.stderr)
 
 
 def check_scope_c(class_tsv_text: str, failures: list[str]) -> None:
@@ -177,11 +228,37 @@ def check_scope_c(class_tsv_text: str, failures: list[str]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("cohort_dir", type=Path, help="proposals/metpo_traitmech_v<N>/ directory")
-    ap.add_argument("--skip-scope-a", action="store_true", help="Don't check that every traitmech: id is cited.")
+    # Optional so --coverage, which is corpus-level, needs no cohort. main()
+    # rejects an omitted cohort in every other mode.
+    ap.add_argument("cohort_dir", type=Path, nargs="?",
+                    help="proposals/metpo_traitmech_v<N>/ directory")
+    ap.add_argument("--coverage", action="store_true",
+                    help="Corpus-level: assert every traitmech id is lifted by SOME "
+                         "cohort. Cross-cohort, so it takes no <cohort> argument.")
+    ap.add_argument("--skip-scope-a", action="store_true", help="Don't check that a cohort's cited traitmech: ids resolve. "
+                         "NOTE this now disables a CORRECTNESS check (a cited id that "
+                         "no record has), not the old whole-corpus coverage rule it "
+                         "used to suppress as expected noise (#319).")
     ap.add_argument("--skip-scope-c", action="store_true", help="Don't check that every CausalNodeTypeEnum value is lifted.")
     args = ap.parse_args()
 
+    if args.coverage:
+        cited, uncovered = cohort_coverage(REPO_ROOT / "proposals")
+        print("=== cross-cohort Scope-A coverage ===", file=sys.stderr)
+        print(f"  cited across all cohorts: {len(cited)}", file=sys.stderr)
+        print(f"  corpus ids not lifted:    {len(uncovered)}", file=sys.stderr)
+        for i in sorted(uncovered)[:20]:
+            print(f"    {i}", file=sys.stderr)
+        if uncovered:
+            print("\nThese have no METPO home, so they cannot be cross-referenced from\n"
+                  "kg-microbe. Add them to a Scope-A cohort (v5 is the existing one).",
+                  file=sys.stderr)
+            return 1
+        print("  every traitmech id is lifted by some cohort", file=sys.stderr)
+        return 0
+
+    if args.cohort_dir is None:
+        ap.error("a cohort directory is required unless --coverage is given")
     cohort_dir = args.cohort_dir
     if not cohort_dir.is_dir():
         print(f"error: not a directory: {cohort_dir}", file=sys.stderr)

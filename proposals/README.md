@@ -48,7 +48,7 @@ C. **Schema-side controlled vocabularies** — currently only
 just verify-proposal metpo_traitmech_v1
 ```
 
-Runs column-count checks, parent-integrity check, Scope-A corpus coverage,
+Runs column-count checks, parent-integrity check, Scope-A citation resolution
 and Scope-C enum coverage. Exits non-zero on any failure. See the skill for
 the underlying scripts.
 

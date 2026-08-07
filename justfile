@@ -90,6 +90,19 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Cross-cohort Scope-A coverage: every traitmech:NNNNNN id in the corpus is
+# lifted by SOME proposal cohort (#319). Per-cohort verification cannot assert
+# this -- v5 lifts the synthetic traits, v1/v3/v7 lift other things -- and
+# demanding it of every cohort failed three of them permanently over work they
+# never took on, which is how a check gets ignored.
+#
+# In qc because it is offline and instant, and because the obligation it tracks
+# (an unlifted id has no METPO home and cannot be cross-referenced from
+# kg-microbe) accrues silently otherwise: mint traitmech:000121 and nothing
+# would notice.
+audit-proposal-coverage:
+    uv run python scripts/verify_metpo_proposal.py --coverage
+
 # Predicate domain/range audit: `validate-strict` sees predicate_id as a bare
 # string, so a CURIE whose ontological domain/range no causal node type can
 # satisfy is a false type entailment that passes every other gate. Flags edges
@@ -779,7 +792,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-predicate-domains audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-graphs audit-predicate-domains audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
