@@ -20,11 +20,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "BSL-2 pathogen"
+  note: BSL-2 pathogen
   reference: PMID:23408135
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
-  note: "BSL-2 pathogen"
+  note: BSL-2 pathogen
   reference: PMID:32731970
 causal_graphs:
 - graph_id: biosafety_level_2_moderate_hazard
@@ -179,41 +179,52 @@ curation_history:
 - timestamp: '2026-08-06T01:00:00Z'
   curator: claude
   action: MIGRATE_MICROBE_DOMAIN_EDGES
-  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers),
-    issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001,
-    whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that
-    the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could
-    ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds.
-    RO:0002234 (has output) is used where the subject is an activity, since biolink gives
-    it the domain 'biological process or activity'; the METPO replacements are proposed in
-    proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.
+  changes: Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to
+    confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf
+    METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph
+    subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism
+    member, so no such edge could ever satisfy the domain. Edge directions are unchanged
+    - this pass only relabels and re-grounds. RO:0002234 (has output) is used where
+    the subject is an activity, since biolink gives it the domain 'biological process
+    or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
+    and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-066a51aacfb6
-  prompt: 'Knowledge gap for biosafety level 2: Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).'
+  prompt: 'Knowledge gap for biosafety level 2: Background : Untargeted microbiome
+    modulation has achieved conflicting results in post-infectious irritable bowel
+    syndrome (PI-IBS).'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
+    future_work, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:41683313
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).'
+    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting
+      results in post-infectious irritable bowel syndrome (PI-IBS).'
     explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
   - reference: PMID:41413233
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Recently, the gut microbiota (GM) has gained attention for its potential involvement in blood pressure regulation; however, polyamine metabolism involvement remains poorly understood.
+    snippet: Recently, the gut microbiota (GM) has gained attention for its potential
+      involvement in blood pressure regulation; however, polyamine metabolism involvement
+      remains poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:41640410
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, their clinical translation is hampered by challenges within the harsh gastrointestinal milieu, including low viability, poor colonization, and insufficient target specificity.
+    snippet: However, their clinical translation is hampered by challenges within
+      the harsh gastrointestinal milieu, including low viability, poor colonization,
+      and insufficient target specificity.
     explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
   - reference: PMID:41490313
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, how these core strains interact with each other and with other gut microbes is largely unknown.
+    snippet: However, how these core strains interact with each other and with other
+      gut microbes is largely unknown.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   posed_by: kg-microbe-kgscan

@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:691
   taxon_label: Vibrio natriegens
-  note: "high rRNA-operon copy number (fast growth)"
+  note: high rRNA-operon copy number (fast growth)
   reference: PMID:23969053
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "seven rRNA operons"
+  note: seven rRNA operons
   reference: PMID:15528533
 causal_graphs:
 - graph_id: rrn_copy_growth_rate

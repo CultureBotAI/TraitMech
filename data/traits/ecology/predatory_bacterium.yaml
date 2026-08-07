@@ -22,7 +22,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:959
   taxon_label: Bdellovibrio bacteriovorus
-  note: "Model predatory bacterium; invades the periplasm of Gram-negative prey (strain HD100)."
+  note: Model predatory bacterium; invades the periplasm of Gram-negative prey (strain
+    HD100).
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1913455/
 causal_graphs:
 - graph_id: predatory_bacterium_prey_killing

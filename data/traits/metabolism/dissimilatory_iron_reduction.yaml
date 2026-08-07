@@ -30,7 +30,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:35554
   taxon_label: Geobacter sulfurreducens
-  note: "Textbook Fe(III)-reducer; oxidizes acetate coupled to metal reduction (type strain PCA)."
+  note: Textbook Fe(III)-reducer; oxidizes acetate coupled to metal reduction (type
+    strain PCA).
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC201883/
 causal_graphs:
 - graph_id: dir_ferric_iron_respiration
@@ -153,9 +154,9 @@ causal_graphs:
     evidence:
     - reference: PMID:15518832
       snippet: In contrast, Shewanella and Geothrix species produce chelators that
-        solubilize Fe(III) and release electron-shuttling compounds that transfer electrons
-        from the cell surface to the surface of Fe(III) oxides not in direct contact
-        with the cells.
+        solubilize Fe(III) and release electron-shuttling compounds that transfer
+        electrons from the cell surface to the surface of Fe(III) oxides not in direct
+        contact with the cells.
       notes: Establishes that a solubilised, non-contact Fe(III) pool is respired,
         which is what attaches the dissolved-vs-solid rate comparison to the trait.
         Scope caveat kept explicit (issue 297) - the quote is about chelators the
@@ -192,12 +193,13 @@ curation_history:
   curator: claude
   action: ENRICH_CAUSAL_GRAPH
   changes: 'Added 2 evidence-backed edges connecting the stranded Fe(III)-pool component
-    to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral, and
-    dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008
+    to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral,
+    and dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008
     to match the established uses-electron-donor convention. Both carry verbatim snippets
-    from PMID:15518832, checked character-for-character against the PubMed abstract rather
-    than lifted from the deep-research report, whose evidence text is paraphrase (issue 247).
-    Resolves this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.'
+    from PMID:15518832, checked character-for-character against the PubMed abstract
+    rather than lifted from the deep-research report, whose evidence text is paraphrase
+    (issue 247). Resolves this graph''s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT
+    findings.'
   llm_assisted: true
 - timestamp: '2026-08-05T12:00:00Z'
   curator: claude
@@ -217,13 +219,13 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3 to has
-    electron acceptor), issue 302. RO:0002327 has range 'biological process or activity',
-    which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a
-    BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
-    and are placeholder ids until METPO mints them. 3 electron edge(s) were also reversed
-    back to trait -> chemical, restoring the donor/acceptor role that PR 300 collapsed onto
-    enables (issue 303); the organism-subject problem that forced that collapse does not arise
-    here because these predicates take a causal-node domain rather than METPO:2000001's microbe
-    domain (issue 301).
+  changes: Migrated 3 causal edge(s) off enables/RO:0002327 with a TRAIT object (3
+    to has electron acceptor), issue 302. RO:0002327 has range 'biological process
+    or activity', which a trait (a disposition) cannot satisfy, so the previous form
+    entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed
+    in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.
+    3 electron edge(s) were also reversed back to trait -> chemical, restoring the
+    donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject
+    problem that forced that collapse does not arise here because these predicates
+    take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
   llm_assisted: true

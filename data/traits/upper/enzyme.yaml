@@ -1,11 +1,10 @@
 identifier: METPO:1000527
 label: enzyme
-definition: A biological macromolecule (typically a protein, occasionally a
-  catalytic RNA) that catalyses a specific biochemical reaction. This class is
-  the material-entity sense of "enzyme" (the molecule itself), matching
-  METPO:1000527's placement as a subclass of METPO:1000186 (material entity).
-  Used as the range class for METPO enzyme-related OBJECT_PROPERTYs
-  (shows_activity_of, enzyme_activity_analyzed, does_not_show_activity_of).
+definition: A biological macromolecule (typically a protein, occasionally a catalytic
+  RNA) that catalyses a specific biochemical reaction. This class is the material-entity
+  sense of "enzyme" (the molecule itself), matching METPO:1000527's placement as a
+  subclass of METPO:1000186 (material entity). Used as the range class for METPO enzyme-related
+  OBJECT_PROPERTYs (shows_activity_of, enzyme_activity_analyzed, does_not_show_activity_of).
 definition_source: DOI:10.1093/nar/gku1003
 trait_category: UPPER
 term_kind: CLASS
@@ -15,34 +14,32 @@ parent_traits:
 evidence:
 - reference: DOI:10.1093/nar/gku1003
   snippet: ENZYME nomenclature
-  notes: ENZYME / EC nomenclature provides the canonical external vocabulary
-    for enzymes named by the catalytic reaction they perform; supports
-    'enzyme' as a recognised material-entity class.
+  notes: ENZYME / EC nomenclature provides the canonical external vocabulary for enzymes
+    named by the catalytic reaction they perform; supports 'enzyme' as a recognised
+    material-entity class.
 - reference: PMID:21413255
   snippet: enzymes
-  notes: Medical Microbiology chapter uses 'enzyme' in the material-entity
-    sense (the biocatalyst protein) throughout its physiology and metabolism
-    discussion; consistent with this record's scope.
+  notes: Medical Microbiology chapter uses 'enzyme' in the material-entity sense (the
+    biocatalyst protein) throughout its physiology and metabolism discussion; consistent
+    with this record's scope.
 curation_history:
 - timestamp: '2026-05-16T09:30:00-07:00'
   curator: claude
   action: CREATED_UPPER_CLASS_RECORD
-  changes: Created upper-ontology CLASS record for METPO:1000527 (enzyme) so
-    that the range of un-deprecated activity-assay OBJECT_PROPERTYs
-    (shows_activity_of, enzyme_activity_analyzed, and their negation
-    companions) resolves to a curated TraitMech record.
+  changes: Created upper-ontology CLASS record for METPO:1000527 (enzyme) so that
+    the range of un-deprecated activity-assay OBJECT_PROPERTYs (shows_activity_of,
+    enzyme_activity_analyzed, and their negation companions) resolves to a curated
+    TraitMech record.
   llm_assisted: true
 - timestamp: '2026-05-16T09:45:00-07:00'
   curator: claude
   action: REMOVED_NON_EQUIVALENT_XREFS_AND_TIGHTENED_DEFINITION
-  changes: 'Per Copilot review of PR #55, removed xrefs to GO:0003824
-    (catalytic activity) and CHEBI:23357 (catalyst). Neither is an
-    equivalence mapping: GO:0003824 is an activity/process class and
-    CHEBI:23357 is a role, while this record represents the enzyme
-    material entity. The definition was rewritten to be strictly about
-    the enzyme molecule itself, removing the earlier wording that
-    conflated material entity with catalytic activity. No clean
-    cross-ontology equivalent for the material-entity "enzyme" class
-    is available (CHEBI does not have a single enzyme class; PR is too
-    broad as "protein"), so xrefs is left empty.'
+  changes: 'Per Copilot review of PR #55, removed xrefs to GO:0003824 (catalytic activity)
+    and CHEBI:23357 (catalyst). Neither is an equivalence mapping: GO:0003824 is an
+    activity/process class and CHEBI:23357 is a role, while this record represents
+    the enzyme material entity. The definition was rewritten to be strictly about
+    the enzyme molecule itself, removing the earlier wording that conflated material
+    entity with catalytic activity. No clean cross-ontology equivalent for the material-entity
+    "enzyme" class is available (CHEBI does not have a single enzyme class; PR is
+    too broad as "protein"), so xrefs is left empty.'
   llm_assisted: true

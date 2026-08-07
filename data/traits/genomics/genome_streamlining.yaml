@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1219
   taxon_label: Prochlorococcus marinus
-  note: "Paradigm of genome streamlining: the most abundant photoautotroph, with one of the smallest genomes of any free-living phototroph."
+  note: 'Paradigm of genome streamlining: the most abundant photoautotroph, with one
+    of the smallest genomes of any free-living phototroph.'
   reference: PMID:12917486
 causal_graphs:
 - graph_id: streamlining_oligotrophic_selection

@@ -15,7 +15,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:34
   taxon_label: Myxococcus xanthus
-  note: "Primary model for bacterial gliding motility and multicellular development. Flavobacterium johnsoniae is a secondary model."
+  note: Primary model for bacterial gliding motility and multicellular development.
+    Flavobacterium johnsoniae is a secondary model.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC103748/
 causal_graphs:
 - graph_id: gliding_surface_motility
@@ -223,22 +224,23 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true
 - timestamp: '2026-08-06T08:00:00Z'
   curator: claude
   action: REGROUND_CAUSAL_EDGE
-  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to (RO:0002326),
-    issue 334. biolink declares enables range ''biological process or activity'', which only
-    BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN
-    entailed a false type. The replacements are chosen per idiom rather than swept: a gene
-    cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy
-    source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three
-    declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
+  changes: 'Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to
+    (RO:0002326), issue 334. biolink declares enables range ''biological process or
+    activity'', which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy,
+    so an edge pointing at a GENE_OR_PROTEIN entailed a false type. The replacements
+    are chosen per idiom rather than swept: a gene cluster ENCODES its product, a
+    subunit is PART OF the complex it belongs to, and an energy source or acquired
+    repertoire CONTRIBUTES TO the machine it powers or composes. All three declare
+    no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being
     removed.'
   llm_assisted: true
 - timestamp: '2026-08-06T09:00:00Z'
@@ -246,10 +248,10 @@ curation_history:
   action: REGROUND_CAUSAL_EDGE
   changes: Reverted the motive-force edge from contributes to back to enables/RO:0002327,
     issue 334 review. biolink defines contributes to as holding where one entity contributes
-    to the occurrence or GENERATION of the other. A motive force does not generate the motor
-    or machinery - it powers rotation, which is what the edge description says. That is the
-    same energy-powers-a-machine idiom this work deferred for molecular_oxygen and cytoplasmic_na,
-    so deferring it here too is the consistent call. The edge stays baselined under issue
-    334 until it is modelled as an input to the machine or pointed at the rotation process,
-    either of which is range-correct.
+    to the occurrence or GENERATION of the other. A motive force does not generate
+    the motor or machinery - it powers rotation, which is what the edge description
+    says. That is the same energy-powers-a-machine idiom this work deferred for molecular_oxygen
+    and cytoplasmic_na, so deferring it here too is the consistent call. The edge
+    stays baselined under issue 334 until it is modelled as an input to the machine
+    or pointed at the rotation process, either of which is range-correct.
   llm_assisted: true

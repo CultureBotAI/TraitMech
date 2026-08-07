@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:70863
   taxon_label: Shewanella oneidensis
-  note: "Model dissimilatory metal reducer (strain MR-1 = Manganese Reducer 1); respires Mn(IV)/Fe(III) via extracellular electron transfer."
+  note: Model dissimilatory metal reducer (strain MR-1 = Manganese Reducer 1); respires
+    Mn(IV)/Fe(III) via extracellular electron transfer.
   reference: PMID:12368813
 causal_graphs:
 - graph_id: dmr_mn_oxide_respiration
@@ -156,13 +157,13 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has
-    electron acceptor, 1 to confers), issue 302. RO:0002327 has range 'biological process
-    or activity', which a trait (a disposition) cannot satisfy, so the previous form entailed
-    trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
-    and are placeholder ids until METPO mints them. 1 electron edge(s) were also reversed
-    back to trait -> chemical, restoring the donor/acceptor role that PR 300 collapsed onto
-    enables (issue 303); the organism-subject problem that forced that collapse does not arise
-    here because these predicates take a causal-node domain rather than METPO:2000001's microbe
-    domain (issue 301).
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (1
+    to has electron acceptor, 1 to confers), issue 302. RO:0002327 has range 'biological
+    process or activity', which a trait (a disposition) cannot satisfy, so the previous
+    form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed
+    in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.
+    1 electron edge(s) were also reversed back to trait -> chemical, restoring the
+    donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject
+    problem that forced that collapse does not arise here because these predicates
+    take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
   llm_assisted: true

@@ -25,7 +25,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1513592
   taxon_label: Colwellia marinimaniae
-  note: "Most piezophilic organism described; optimum ~120 MPa (Mariana Trench). Photobacterium profundum SS9 is the classic genetic model."
+  note: Most piezophilic organism described; optimum ~120 MPa (Mariana Trench). Photobacterium
+    profundum SS9 is the classic genetic model.
   reference: https://pubmed.ncbi.nlm.nih.gov/27902293/
 causal_graphs:
 - graph_id: obligate_piezophily_high_pressure_requirement
@@ -148,9 +149,9 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

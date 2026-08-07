@@ -27,11 +27,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:54298
   taxon_label: Chroococcidiopsis
-  note: "desiccation/aridity-tolerant cyanobacterium"
+  note: desiccation/aridity-tolerant cyanobacterium
   reference: PMID:11244070
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
-  note: "desiccation tolerant"
+  note: desiccation tolerant
   reference: PMID:8550493
 causal_graphs:
 - graph_id: xerophilic_low_water_activity_growth

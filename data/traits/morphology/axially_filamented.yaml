@@ -20,7 +20,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:173
   taxon_label: Leptospira interrogans
-  note: "Spirochete with axial filaments (periplasmic endoflagella within the periplasm driving corkscrew motility)."
+  note: Spirochete with axial filaments (periplasmic endoflagella within the periplasm
+    driving corkscrew motility).
   reference: PMID:32157997
 causal_graphs:
 - graph_id: axially_filamented_periplasmic_flagella

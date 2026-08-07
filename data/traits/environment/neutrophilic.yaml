@@ -26,11 +26,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "grows optimally near pH 7"
+  note: grows optimally near pH 7
   reference: DOI:10.1111/1574-6976.12076
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
-  note: "neutralophile"
+  note: neutralophile
   reference: PMID:24898062
 causal_graphs:
 - graph_id: neutrophilic_neutral_ph_homeostasis
@@ -270,9 +270,9 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

@@ -215,12 +215,13 @@ curation_history:
 - timestamp: '2026-08-06T04:35:00Z'
   curator: claude
   action: RETYPE_CAUSAL_NODE
-  changes: Retyped assay_measurement from EXPERIMENTAL_FACTOR to BIOLOGICAL_PROCESS and moved
-    its data_item edge from produces to has output (RO:0002234), issue 301. The node's own
-    description calls it an investigation process and the record already carried a second
-    has-output edge from it, so the EXPERIMENTAL_FACTOR typing was inconsistent with both.
-    While it stood, the edge routed around the produces/has-output split - that split is spelled
-    as node types, and the exclusion named only the three activity types - and landed on METPO:2007800,
-    whose definition is about producing a chemical entity. Retyping also let the previously
-    blocked measurement_datum has-output edge ground.
+  changes: Retyped assay_measurement from EXPERIMENTAL_FACTOR to BIOLOGICAL_PROCESS
+    and moved its data_item edge from produces to has output (RO:0002234), issue 301.
+    The node's own description calls it an investigation process and the record already
+    carried a second has-output edge from it, so the EXPERIMENTAL_FACTOR typing was
+    inconsistent with both. While it stood, the edge routed around the produces/has-output
+    split - that split is spelled as node types, and the exclusion named only the
+    three activity types - and landed on METPO:2007800, whose definition is about
+    producing a chemical entity. Retyping also let the previously blocked measurement_datum
+    has-output edge ground.
   llm_assisted: true

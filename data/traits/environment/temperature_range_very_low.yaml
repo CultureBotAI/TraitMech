@@ -208,9 +208,9 @@ curation_history:
 - timestamp: '2026-08-06T00:00:00Z'
   curator: claude
   action: MIGRATE_ENABLES_TRAIT_EDGES
-  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers),
-    issue 302. RO:0002327 has range 'biological process or activity', which a trait (a disposition)
-    cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity.
-    The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids
-    until METPO mints them.
+  changes: Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1
+    to confers), issue 302. RO:0002327 has range 'biological process or activity',
+    which a trait (a disposition) cannot satisfy, so the previous form entailed trait
+    is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
+    and are placeholder ids until METPO mints them.
   llm_assisted: true

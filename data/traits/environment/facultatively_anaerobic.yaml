@@ -25,11 +25,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "grows aerobically or by fermentation/anaerobic respiration"
+  note: grows aerobically or by fermentation/anaerobic respiration
   reference: PMID:7747938
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "facultative anaerobe"
+  note: facultative anaerobe
   reference: PMID:24628867
 causal_graphs:
 - graph_id: facultative_anaerobe_oxygen_switch

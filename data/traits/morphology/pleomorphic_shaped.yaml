@@ -30,7 +30,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:2093
   taxon_label: Mycoplasma
-  note: "Cell-wall-less, pleomorphic bacteria; the textbook genus for variable cell shape."
+  note: Cell-wall-less, pleomorphic bacteria; the textbook genus for variable cell
+    shape.
   reference: PMID:9841667
 causal_graphs:
 - graph_id: pleomorphic_shaped_relaxed_shape_control
