@@ -10,6 +10,7 @@ Locks in the three properties that make this check meaningful:
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -22,7 +23,9 @@ from audit_required_workflows import (  # noqa: E402
     MIN_AGE_MINUTES,
     PATHS_FILTER_FILE_LIMIT,
     _glob_to_regex,
+    flatten_pages,
     offenders,
+    parse_workflow,
     partition,
     pr_workflows,
     should_run,
@@ -35,6 +38,10 @@ on:
     paths:
       - 'data/traits/**'
       - 'scripts/**.py'
+      # Self-referencing, as every filtered workflow in this repo is. It is what
+      # makes the head-vs-main bug bite: a PR DELETING this file matches the
+      # filter, so main's copy expects a run GitHub correctly never made.
+      - '.github/workflows/qc.yaml'
 jobs:
   qc:
     runs-on: ubuntu-latest
@@ -65,7 +72,7 @@ jobs:
 
 def _wf_dir(tmp_path: Path, **files: str) -> Path:
     d = tmp_path / "workflows"
-    d.mkdir(exist_ok=True)
+    d.mkdir(parents=True, exist_ok=True)
     for name, body in files.items():
         (d / name.replace("__", ".")).write_text(body)
     return d
@@ -235,6 +242,73 @@ def test_no_pr_is_lost_between_the_two_buckets(tmp_path):
     assert {pr["number"] for pr in skipped} == {2}
     # 3 and 4 are clean, so 1+2+3+4 are all accounted for.
     assert len(bad) + len(skipped) + 2 == len(prs)
+
+
+# --- #354 review ------------------------------------------------------------
+
+
+def test_paginated_file_lists_are_flattened_not_json_loaded():
+    """`gh api --paginate -q` applies the jq filter to EACH PAGE and
+    concatenates, so a 31-file PR (default per_page=30) yields two documents
+    back to back and json.loads raises "Extra data" -- killing collect() for
+    every OTHER PR too, and making the >300-file skip branch unreachable
+    because the fetch dies at 31. --slurp wraps the pages in one array."""
+    two_pages = json.dumps([[{"filename": "a.yaml"}, {"filename": "b.yaml"}],
+                            [{"filename": "c.yaml"}]])
+    assert flatten_pages(two_pages) == ["a.yaml", "b.yaml", "c.yaml"]
+    assert flatten_pages("") == []
+    # The shape that used to arrive, and why it could not be parsed.
+    with pytest.raises(json.JSONDecodeError):
+        json.loads('["a.yaml"]\n["b.yaml"]\n')
+
+
+def test_a_pr_deleting_a_workflow_is_not_a_false_offender(tmp_path):
+    """GitHub dispatches from the PR HEAD's workflow files; this process has
+    main's. A PR that deletes qc.yaml changes a file qc's own `paths:` lists,
+    so judging against main would expect a run GitHub correctly never made."""
+    main_wfs = pr_workflows(_wf_dir(tmp_path, qc__yaml=FILTERED))
+    head_wfs = pr_workflows(_wf_dir(tmp_path / "head"))  # qc.yaml deleted at head
+    pr = _prs(changed_files=[".github/workflows/qc.yaml"])[0]
+    # Against main's copy this is the false offender the review described...
+    assert offenders([{**pr, "workflows": main_wfs}], main_wfs)
+    # ...and against the head's copy it is clean.
+    assert offenders([{**pr, "workflows": head_wfs}], main_wfs) == []
+
+
+def test_an_unreadable_head_is_skipped_rather_than_judged_against_main(tmp_path):
+    """A fetch failure must not fall back to main: that would silently
+    reintroduce the very bug the head fetch exists to prevent."""
+    wfs = pr_workflows(_wf_dir(tmp_path, qc__yaml=FILTERED))
+    bad, skipped = partition([{**_prs()[0], "workflows": None}], wfs)
+    assert bad == []
+    assert "PR head" in skipped[0]["reason"]
+
+
+def test_branch_filters_are_declined_not_ignored(tmp_path):
+    """`branches:` restricts which base a PR must target, and this audit never
+    reads the base -- unmodelled it would make every PR against another base a
+    false offender."""
+    d = _wf_dir(tmp_path, s__yaml=UNFILTERED.replace(
+        "  pull_request:\n", "  pull_request:\n    branches: [main]\n"))
+    assert pr_workflows(d)[0]["unsupported"] == ["branches: ['main']"]
+
+
+def test_types_are_declined_only_when_they_miss_a_head(tmp_path):
+    """Every PR head arrives via `opened` (the first) or `synchronize` (any
+    later push), so a `types:` containing both is predictable and one that does
+    not is declined."""
+    def wf(types):
+        return pr_workflows(_wf_dir(tmp_path, s__yaml=UNFILTERED.replace(
+            "  pull_request:\n", f"  pull_request:\n    types: {types}\n")))[0]
+    assert wf("[opened, synchronize]")["unsupported"] == []
+    assert wf("[labeled]")["unsupported"] == ["types: ['labeled']"]
+
+
+def test_an_unparseable_workflow_is_named_not_dropped(tmp_path):
+    """Silently skipping it would shrink the required set invisibly, where every
+    other refusal in this module is reported."""
+    wf = parse_workflow("broken.yaml", "on: [pull_request\n  bad: : :")
+    assert wf is not None and "unparseable" in wf["unsupported"][0]
 
 
 def test_the_repos_own_workflows_parse(tmp_path):

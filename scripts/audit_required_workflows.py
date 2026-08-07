@@ -55,6 +55,7 @@ import re
 import subprocess
 import sys
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -75,8 +76,12 @@ MIN_AGE_MINUTES = 10
 PATHS_FILTER_FILE_LIMIT = 300
 
 
+@lru_cache(maxsize=None)
 def _glob_to_regex(pattern: str) -> re.Pattern[str]:
     """GitHub filter-pattern semantics, which are NOT fnmatch's.
+
+    Cached: re.compile is memoized for the module-level re.* helpers but not for
+    an explicit call, and this runs once per (pattern, changed file) pair.
 
     ``*`` matches any run of characters except ``/``; ``**`` matches any run
     INCLUDING ``/``. fnmatch's ``*`` crosses ``/``, so using it would make
@@ -109,48 +114,79 @@ def _glob_to_regex(pattern: str) -> re.Pattern[str]:
 _UNSUPPORTED = re.compile(r"[\[\]!+?]")
 
 
-def _matches_any(patterns: list[str], path: str) -> bool:
+def _matches_any(patterns: tuple[str, ...] | list[str], path: str) -> bool:
     return any(_glob_to_regex(p).fullmatch(path) for p in patterns)
 
 
-def pr_workflows(workflow_dir: Path) -> list[dict]:
-    """Every workflow with a ``pull_request`` trigger, with its path filters.
+# `types:` values that between them cover every possible head. GitHub's default
+# is opened/synchronize/reopened, and every PR head arrives via `opened` (the
+# first) or `synchronize` (any later push). A workflow narrowing `types:` to a
+# subset that still contains both is therefore predictable; one that does not --
+# `types: [labeled]`, say -- fires on a schedule this audit cannot model.
+_TYPES_COVERING_EVERY_HEAD = frozenset({"opened", "synchronize"})
+
+
+def parse_workflow(filename: str, text: str) -> dict | None:
+    """One workflow's PR-trigger config, or None if it has no ``pull_request``.
+
+    Split out from ``pr_workflows`` so the same parser serves both a local
+    directory and files fetched at a PR head (#354 review).
 
     ``pull_request_target`` is deliberately NOT included: it runs against the
     base rather than the head, so its absence does not mean the head went
     unevaluated, which is the question this audit asks.
     """
-    out: list[dict] = []
-    for path in sorted(workflow_dir.glob("*.y*ml")):
-        try:
-            doc = yaml.safe_load(path.read_text()) or {}
-        except yaml.YAMLError:
-            continue
-        if not isinstance(doc, dict):
-            continue
-        # PyYAML parses the unquoted key `on:` as the BOOLEAN True (YAML 1.1),
-        # so doc["on"] is absent in every workflow here. Reading only "on" would
-        # make this audit find zero required workflows and pass, loudly and
-        # wrongly, which is the same shape of vacuous green it exists to catch.
-        on = doc.get("on", doc.get(True))
-        if isinstance(on, str):
-            on = {on: None}
-        elif isinstance(on, list):
-            on = {k: None for k in on}
-        if not isinstance(on, dict) or "pull_request" not in on:
-            continue
-        cfg = on.get("pull_request") or {}
-        cfg = cfg if isinstance(cfg, dict) else {}
-        paths = list(cfg.get("paths") or [])
-        ignore = list(cfg.get("paths-ignore") or [])
-        out.append({
-            "file": f".github/workflows/{path.name}",
-            "name": str(doc.get("name") or path.stem),
-            "paths": paths,
-            "paths_ignore": ignore,
-            "unsupported": [p for p in paths + ignore if _UNSUPPORTED.search(p)],
-        })
-    return out
+    entry = {"file": f".github/workflows/{filename}",
+             "name": Path(filename).stem, "paths": [], "paths_ignore": []}
+    try:
+        doc = yaml.safe_load(text) or {}
+    except yaml.YAMLError as exc:
+        # NAMED, not silently skipped. Everything else this module declines to
+        # predict is reported; a workflow that vanishes because it did not parse
+        # would shrink the required set invisibly (#354 review).
+        return {**entry, "unsupported": [f"unparseable YAML: {str(exc)[:60]}"]}
+    if not isinstance(doc, dict):
+        return None
+    # PyYAML parses the unquoted key `on:` as the BOOLEAN True (YAML 1.1), so
+    # doc["on"] is absent in every workflow here. Reading only "on" would make
+    # this audit find zero required workflows and pass, loudly and wrongly,
+    # which is the same shape of vacuous green it exists to catch.
+    on = doc.get("on", doc.get(True))
+    if isinstance(on, str):
+        on = {on: None}
+    elif isinstance(on, list):
+        on = {k: None for k in on}
+    if not isinstance(on, dict) or "pull_request" not in on:
+        return None
+    cfg = on.get("pull_request") or {}
+    cfg = cfg if isinstance(cfg, dict) else {}
+    paths = list(cfg.get("paths") or [])
+    ignore = list(cfg.get("paths-ignore") or [])
+    unsupported = [p for p in paths + ignore if _UNSUPPORTED.search(p)]
+    # `branches:`/`branches-ignore:` restrict which BASE a PR must target, and
+    # this audit does not read the base. Left unmodelled they would make every
+    # PR against another base a false offender, so they are declined by the same
+    # escape hatch as unsupported glob syntax (#354 review).
+    for key in ("branches", "branches-ignore"):
+        if cfg.get(key):
+            unsupported.append(f"{key}: {cfg[key]}")
+    types = cfg.get("types")
+    if types is not None and not _TYPES_COVERING_EVERY_HEAD <= set(types):
+        unsupported.append(f"types: {types}")
+    return {**entry, "name": str(doc.get("name") or entry["name"]),
+            "paths": paths, "paths_ignore": ignore, "unsupported": unsupported}
+
+
+def pr_workflows(workflow_dir: Path) -> list[dict]:
+    """Every workflow in a directory with a ``pull_request`` trigger."""
+    return workflows_from_texts({p.name: p.read_text()
+                                 for p in sorted(workflow_dir.glob("*.y*ml"))})
+
+
+def workflows_from_texts(texts: dict[str, str]) -> list[dict]:
+    """Same, from ``{filename: contents}`` — used for the PR-head fetch."""
+    out = [parse_workflow(name, text) for name, text in sorted(texts.items())]
+    return [w for w in out if w is not None]
 
 
 def should_run(wf: dict, changed: list[str]) -> bool:
@@ -179,12 +215,34 @@ def partition(prs: list[dict], workflows: list[dict]) -> tuple[list[dict], list[
     and a required workflow that silently drops out of the required set when
     someone retitles it is the failure mode this check exists to prevent.
 
-    Skipped, with a reason, when the head is too young or when the changed-file
-    count puts the PR past GitHub's path-filter evaluation limit.
+    A PR may carry its own ``workflows``, which OVERRIDE the passed-in set.
+    GitHub dispatches ``pull_request`` events using the workflow files at the PR
+    HEAD, while this process has whatever ref it was checked out at -- ``main``,
+    since pr-checks-present.yaml runs on push. The two disagree exactly when a PR
+    touches .github/workflows, which is routine here (#184, #200, #250, #252 and
+    #354 itself all do). Reading main's copy would report a PR that DELETES a
+    workflow as missing that workflow's run, since the deletion matches the
+    filter listing the workflow's own file -- a false "expected, did not run",
+    which is precisely what makes this check stop meaning anything (#354 review).
+    ``collect`` fetches the head copy; a PR whose fetch failed carries
+    ``workflows: None`` and is skipped rather than judged against the wrong ref.
+
+    Skipped, with a reason, when the head is too young, when the changed-file
+    count puts the PR past GitHub's path-filter evaluation limit, or when the
+    head's workflow files could not be read.
     """
-    supported = [w for w in workflows if not w["unsupported"]]
     bad, skipped = [], []
     for pr in prs:
+        if "workflows" in pr and pr["workflows"] is None:
+            skipped.append({**pr, "reason": "could not read .github/workflows at the "
+                                            "PR head; refusing to judge against main"})
+            continue
+        # `in`, not `or`: a head that legitimately has NO pull_request
+        # workflows yields [], which is falsy, and `or` would fall back to the
+        # checked-out ref -- reporting every workflow as missing on a PR that
+        # deleted them all. Exactly the bug the head fetch exists to prevent.
+        head = pr["workflows"] if "workflows" in pr else workflows
+        supported = [w for w in head if not w["unsupported"]]
         changed = list(pr.get("changed_files") or [])
         ran = set(pr.get("ran") or ())
         missing = [w for w in supported
@@ -245,6 +303,58 @@ def _age_minutes(iso: str, now: datetime) -> float | None:
     return (now - when).total_seconds() / 60
 
 
+def flatten_pages(stdout: str) -> list[str]:
+    """Filenames from ``gh api --paginate --slurp`` output.
+
+    --slurp is required. `gh api --paginate -q` applies the jq filter to EACH
+    PAGE and concatenates the outputs, so a 31-file PR (GitHub's default
+    per_page is 30) yields two `[...]` documents back to back and json.loads
+    raises "Extra data" -- taking down collect() for every OTHER open PR too,
+    and making the >300-file skip branch unreachable because the fetch dies at
+    31. A corpus seeding pass touching hundreds of data/traits files is not an
+    exotic input here (#354 review). gh 2.97 refuses --slurp together with
+    --jq, so the extraction happens in Python.
+    """
+    pages = json.loads(stdout or "[]")
+    return [f["filename"] for page in pages for f in page]
+
+
+def changed_files(repo: str, number: int) -> list[str]:
+    proc = subprocess.run(
+        ["gh", "api", f"repos/{repo}/pulls/{number}/files", "--paginate", "--slurp"],
+        capture_output=True, text=True)
+    if proc.returncode != 0:
+        print(f"gh pulls/{number}/files failed: {proc.stderr.strip()}", file=sys.stderr)
+        raise SystemExit(2)
+    return flatten_pages(proc.stdout)
+
+
+def workflows_at_ref(repo: str, sha: str) -> list[dict] | None:
+    """Parse .github/workflows AS OF ``sha``, or None if it could not be read.
+
+    GitHub dispatches ``pull_request`` events using the HEAD's workflow files,
+    not the checked-out ref's, and reading the wrong one manufactures offenders
+    on any PR that touches the directory (#354 review). None is a refusal, and
+    partition() skips-and-names such a PR rather than falling back to main --
+    a fallback would silently reintroduce the bug it is guarding against.
+    """
+    listing = _gh_text_opt(["api", f"repos/{repo}/contents/.github/workflows?ref={sha}",
+                            "-q", "[.[] | select(.type==\"file\") | .name] | @tsv"])
+    if listing is None:
+        return None
+    texts: dict[str, str] = {}
+    for name in listing.split("\t"):
+        if not name.endswith((".yml", ".yaml")):
+            continue
+        body = _gh_text_opt(["api", f"repos/{repo}/contents/.github/workflows/{name}"
+                                    f"?ref={sha}",
+                             "-H", "Accept: application/vnd.github.raw"])
+        if body is None:
+            return None
+        texts[name] = body
+    return workflows_from_texts(texts)
+
+
 def collect(repo: str) -> list[dict]:
     """Fetch open PRs, their changed files, and which workflows ran on the head."""
     # --limit EXPLICIT: gh pr list defaults to 30, so past 30 open PRs the rest
@@ -256,8 +366,7 @@ def collect(repo: str) -> list[dict]:
     collected = []
     for pr in prs:  # type: ignore[union-attr]
         sha = pr["headRefOid"]
-        files = _gh_json(["api", f"repos/{repo}/pulls/{pr['number']}/files",
-                          "--paginate", "-q", "[.[].filename]"])
+        files = changed_files(repo, pr["number"])
         runs = _gh_json(["api",
                          f"repos/{repo}/actions/runs"
                          f"?head_sha={sha}&event=pull_request&per_page=100",
@@ -266,6 +375,7 @@ def collect(repo: str) -> list[dict]:
                             "-q", ".commit.committer.date"]) or pr["createdAt"]
         collected.append({"number": pr["number"], "title": pr["title"],
                           "changed_files": files, "ran": sorted(set(runs)),  # type: ignore[arg-type]
+                          "workflows": workflows_at_ref(repo, sha),
                           "age_minutes": _age_minutes(iso, now)})
     return collected
 
@@ -278,19 +388,27 @@ def main() -> int:
     ap.add_argument("--json", help="pre-fetched PR list, for testing offline")
     args = ap.parse_args()
 
+    # The local directory is only a FALLBACK, used for --json and if a head
+    # fetch is unavailable. collect() attaches each PR's own head workflows,
+    # which is what GitHub actually dispatched from.
     workflows = pr_workflows(args.workflows)
     prs = json.loads(args.json) if args.json else collect(args.repo)
     bad, skipped = partition(prs, workflows)
 
     print("=== required workflows that did not run ===", file=sys.stderr)
-    print(f"  pull_request workflows: {len(workflows)}", file=sys.stderr)
+    print(f"  pull_request workflows: {len(workflows)} (at {args.workflows.name}; each "
+          f"PR is judged against its own head)", file=sys.stderr)
     print(f"  open PRs:               {len(prs)}", file=sys.stderr)
     print(f"  with a missing run:     {len(bad)}", file=sys.stderr)
     print(f"  skipped:                {len(skipped)}", file=sys.stderr)
-    for w in workflows:
-        if w["unsupported"]:
-            print(f"  not predicted: {w['file']} uses unsupported filter syntax "
-                  f"{w['unsupported']}", file=sys.stderr)
+    # Reported per PR, since each PR is judged against its OWN head's workflows
+    # and a construct this cannot model may exist on one head and not another.
+    for pr in prs:
+        for w in (pr["workflows"] if pr.get("workflows") is not None
+                  else workflows):
+            if w["unsupported"]:
+                print(f"  not predicted on #{pr['number']}: {w['file']} -- "
+                      f"{w['unsupported']}", file=sys.stderr)
     for pr in skipped:
         print(f"  skipped: #{pr['number']}  {pr['title']} -- {pr['reason']}",
               file=sys.stderr)
