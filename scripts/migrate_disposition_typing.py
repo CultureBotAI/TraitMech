@@ -123,7 +123,10 @@ MERGE: dict[tuple[str, str], dict] = {
                "already in the trait's component via osmoprotectant_transport -> "
                "compatible_solutes -> osmotic_stress, so merging leaves the graph at 2 "
                "components and is a correctness fix, not a structural one. METPO has no "
-               "generic salt-tolerance disposition to reground to -- filed as a proposal.",
+               "generic salt-tolerance disposition to reground to: halotolerant and "
+               "acidotolerant are the only candidate labels and each already anchors its "
+               "own record. Recorded as issue #364, which proposes a tolerance axis "
+               "distinct from the preference axis; nothing under proposals/ yet.",
     },
     ("environment/ph_delta.yaml", "low_ph_tolerance"): {
         "into": "ph_delta_trait",

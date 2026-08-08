@@ -156,10 +156,15 @@ node's **description** reads as an organism disposition. The count is at
 The distinction is not "does the word *capacity* appear". Of the corpus's
 24 `CAPACITY` nodes, #352 merged 8 and deliberately left 16:
 
-| sense | examples | type |
+| sense | examples | what to do |
 |---|---|---|
-| an organism's **disposition** — what it can do | *"Capacity of a cell to survive exposure to molecular oxygen"*, *"Ability to grow at 4 C"* | **`TRAIT`** |
-| a **reservoir or quantity** | `reducing_power` (a pool of reductants), `cytoplasmic_buffering_capacity` (*"Capacity of cytoplasmic buffers to absorb pH fluctuations"*), `swimming_velocity`, `metabolic_versatility` | **`CAPACITY`** |
+| an organism's **disposition** — what it can do | every one of #352's eight: *"Capacity of a cell to survive exposure to molecular oxygen"*, *"Ability to grow at 4 C"*, *"Capacity to grow and survive under elevated salinity"* | **try to ground it — then see below** |
+| a **reservoir or quantity** | `reducing_power` (a pool of reductants), `cytoplasmic_buffering_capacity` (*"Capacity of cytoplasmic buffers to absorb pH fluctuations"*), `swimming_velocity`, `metabolic_versatility` | **leave it `CAPACITY`** |
+
+The left column decides only whether the node is *a candidate*. Note that none
+of the disposition examples above still exists: all three were merged or
+dropped by #352, because none of them survived the grounding step. A
+disposition reading is necessary for a retype and nowhere near sufficient.
 
 A buffer has a capacity; so does a battery. Neither is something an
 organism *can do*. That is why the check is organism-scoped — *capacity of
@@ -189,11 +194,14 @@ difference.
 
 `FRAGMENTED_GRAPH`'s *count* cannot either: it reports one finding per split
 graph however many pieces that graph is in, so it sat flat at 218 through all
-of it. What separates them is component **structure**, now measured per graph
-in `reports/causal_graph_connectivity.tsv` (#359). Retyping changed it in
-**zero** of #352's eight graphs; merging improved three (`oxygen_preference`
-3 components → 2, `ph_delta` 3 → 2, `ph_delta_low` 5 → 4) and left five
-unchanged as pure deduplication. Quote that table, not the finding counts.
+of it. What separates them is component **structure**: retyping changed it in
+**zero** of #352's eight graphs, while merging improved three
+(`oxygen_preference` 3 components → 2, `ph_delta` 3 → 2, `ph_delta_low`
+5 → 4) and left five unchanged as pure deduplication.
+
+Those numbers came from measuring the graphs by hand. #359 makes it routine —
+`reports/causal_graph_connectivity.tsv`, one row per graph, arriving with
+**#363**. Once it lands, quote that table rather than the finding counts.
 
 ### `enables` needs a process-or-activity object
 
