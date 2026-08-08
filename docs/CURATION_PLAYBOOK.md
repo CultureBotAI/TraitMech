@@ -147,6 +147,40 @@ it actually admits. The count is **0** and the audit hard-fails on a new
 one, so this section describes a mistake the tooling now prevents rather
 than a backlog to work around.
 
+### `CAPACITY` holds two senses — only one of them is a trait
+
+`audit-graphs` flags `DISPOSITION_MISTYPED` when a `CAPACITY` or `STATE`
+node's **description** reads as an organism disposition. The count is at
+**zero** (#352), so a new one fails `just qc`.
+
+The distinction is not "does the word *capacity* appear". Of the corpus's
+24 `CAPACITY` nodes, #352 retyped or merged 8 and deliberately left 16:
+
+| sense | examples | type |
+|---|---|---|
+| an organism's **disposition** — what it can do | *"Capacity to grow and survive under elevated salinity"*, *"Ability to grow at 4 C"* | **`TRAIT`** |
+| a **reservoir or quantity** | `reducing_power` (a pool of reductants), `cytoplasmic_buffering_capacity` (*"Capacity of cytoplasmic buffers to absorb pH fluctuations"*), `swimming_velocity`, `metabolic_versatility` | **`CAPACITY`** |
+
+A buffer has a capacity; so does a battery. Neither is something an
+organism *can do*. That is why the check is organism-scoped — *capacity of
+a cell / organism / bacterium / strain to …* — rather than matching bare
+*capacity to*.
+
+**Ground it, and ground it to something the graph does not already have.**
+Every `TRAIT` node in the corpus is grounded, so a retype owes a grounding.
+Requiring one is also the test that catches the commonest mistake here: if
+the only correct grounding is the term the record itself carries, the node
+is **restating its anchor**, not mistyped. Four of #352's eight were exactly
+that, and three of those had the node they restate sitting in the same
+graph, already correctly typed — they were merged, not retyped.
+
+**Do not read a fall in `UNREACHABLE_FROM_TRAIT` as connectivity.** A
+retype creates a new anchor, so every node in that island stops being
+reported while the island stays exactly as disconnected as before. #352's
+retypes moved it 1303 → 1296 with `FRAGMENTED_GRAPH` flat at 218 — all
+anchor effect, no connectivity. `FRAGMENTED_GRAPH` is the honest metric
+(#359).
+
 ### `enables` needs a process-or-activity object
 
 Separately from the domain rule above, `enables` (`RO:0002327`) has a

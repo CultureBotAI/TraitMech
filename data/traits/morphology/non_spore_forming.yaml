@@ -70,10 +70,6 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Reduced or absent activity of the Spo0A master regulator of endospore
       formation.
-  - node_id: loss_sporulation_capacity
-    label: loss of sporulation capacity
-    node_type: CAPACITY
-    description: Loss of the capacity to undergo sporulation.
   - node_id: rap_phosphatases
     label: Rap phosphatases
     node_type: GENE_OR_PROTEIN
@@ -143,22 +139,13 @@ causal_graphs:
     predicate_id: biolink:causes
   - subject: low_spo0a_activity
     predicate: causes
-    object: loss_sporulation_capacity
+    object: non_spore_forming_trait
     description: Low or absent Spo0A activity abolishes sporulation capacity.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.630573
       notes: Spo0A is the master regulator of endospore formation; elevated Spo0A~P
         is required to trigger sporulation.
     predicate_id: biolink:causes
-  - subject: loss_sporulation_capacity
-    predicate: manifests as
-    object: non_spore_forming_trait
-    description: Loss of sporulation capacity manifests the non-spore-forming phenotype.
-    evidence:
-    - reference: DOI:10.3389/fmicb.2021.630573
-      notes: Failure to produce/activate Spo0A prevents sporulation, yielding the
-        non-spore-forming trait.
-    predicate_id: METPO:2007400
   - subject: rap_phosphatases
     predicate: dephosphorylates
     object: spo0f_dephosphorylation
@@ -234,4 +221,15 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2, METPO:2007400×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-08T02:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Merged node loss_sporulation_capacity into non_spore_forming_trait. Issue
+    352. 'Loss of the capacity to undergo sporulation' IS the record's own trait (METPO:1000872,
+    non-spore forming), so the only correct grounding duplicates the anchor. Collapsing
+    leaves low_spo0a_activity -causes-> non_spore_forming_trait, which is the shape
+    loss_sporulation_genes already uses in this graph. Every TRAIT node in the corpus
+    is grounded, so requiring a grounding is what separates a real mistyped disposition
+    from a node that merely restates its anchor.
   llm_assisted: true

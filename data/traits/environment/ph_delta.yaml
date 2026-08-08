@@ -72,8 +72,9 @@ causal_graphs:
       amines under acid stress.
   - node_id: low_ph_tolerance
     label: low-pH tolerance
-    node_type: CAPACITY
+    node_type: TRAIT
     description: Capacity to grow and survive under acidic external pH.
+    grounding: METPO:1003008
   - node_id: oxidative_phosphorylation
     label: oxidative phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -215,4 +216,13 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T02:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped node low_ph_tolerance from CAPACITY to TRAIT and grounded it METPO:1003008.
+    Issue 352. 'Capacity to grow and survive under acidic external pH' is acidotolerance.
+    The record is METPO:1000232 (pH delta), so no collision. Every TRAIT node in the
+    corpus is grounded, so requiring a grounding is what separates a real mistyped
+    disposition from a node that merely restates its anchor.
   llm_assisted: true

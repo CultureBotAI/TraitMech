@@ -98,8 +98,9 @@ causal_graphs:
     grounding: GO:0004784
   - node_id: oxygen_tolerance
     label: oxygen tolerance
-    node_type: CAPACITY
+    node_type: TRAIT
     description: Capacity of a cell to survive exposure to molecular oxygen.
+    grounding: METPO:1000609
   edges:
   - subject: ambient_oxygen
     predicate: defines
@@ -299,4 +300,16 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-08T02:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped node oxygen_tolerance from CAPACITY to TRAIT and grounded it METPO:1000609.
+    Issue 352. 'Capacity of a cell to survive exposure to molecular oxygen' is aerotolerance.
+    Distinct from all five phenotype nodes in the graph (METPO:1000601/2/3/4/612).
+    NOTE this is the organism-scoped sense; carboxydotrophic.yaml's same-named node
+    reads 'Ability of an ENZYME to function in the presence of O2' and is correctly
+    NOT a trait (#353). Every TRAIT node in the corpus is grounded, so requiring a
+    grounding is what separates a real mistyped disposition from a node that merely
+    restates its anchor.
   llm_assisted: true

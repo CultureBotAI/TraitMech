@@ -65,8 +65,9 @@ causal_graphs:
       at higher NaCl.
   - node_id: salt_tolerance_breadth
     label: salt-tolerance breadth
-    node_type: CAPACITY
+    node_type: TRAIT
     description: Capacity to grow across a range of ambient NaCl concentrations.
+    grounding: METPO:1000622
   edges:
   - subject: limited_osmoadaptive_flexibility
     predicate: confers
@@ -187,4 +188,14 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T02:00:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODE
+  changes: Retyped node salt_tolerance_breadth from CAPACITY to TRAIT and grounded
+    it METPO:1000622. Issue 352. 'Capacity to grow across a range of ambient NaCl
+    concentrations.' Already behaves as a trait -- it carries `is a -> nacl_delta`
+    (METPO:1000335) -- and the record is METPO:1000479, so 1000622 collides with neither.
+    Every TRAIT node in the corpus is grounded, so requiring a grounding is what separates
+    a real mistyped disposition from a node that merely restates its anchor.
   llm_assisted: true
