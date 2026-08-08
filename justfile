@@ -167,6 +167,26 @@ audit-predicate-domains *args:
 audit-pr-checks *args:
     uv run python scripts/audit_pr_checks_present.py {{args}}
 
+# Fail a PR that changes trait records and records no provenance (#325).
+#
+# history/README.md describes a per-session record as the thing that captures
+# WHICH MODEL, USING WHICH TOOL, changed what, why, and under which issue. The
+# per-file `curation_history:` block has no slot for any of those, and because it
+# hangs off an edit it cannot record a session that changed NOTHING -- an AUDIT
+# that checked a trait and correctly found nothing wrong is invisible without a
+# record here.
+#
+# Presence was advisory until #325. Of the 134 commits that modified trait
+# records, 2 added a history record; meanwhile 275 records grew an issue number
+# hand-typed into a `changes` string, which is the same provenance in a form
+# nothing can query.
+#
+# ONE record per CHANGE, not one per changed file -- that granularity fix is what
+# makes this reasonable to block on. Needs a base ref to diff against, so it is
+# NOT in `qc`; it runs from curation-history.yaml on pull_request.
+audit-history-records *args:
+    uv run python scripts/audit_history_records.py {{args}}
+
 # The stronger companion to audit-pr-checks: not "did ANY check fire" but "did
 # every check that SHOULD have fired, fire" (#348).
 #

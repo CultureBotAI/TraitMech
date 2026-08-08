@@ -1,0 +1,73 @@
+"""Unit tests for scripts/audit_history_records.py (#325).
+
+The rule is three lines, so what these pin is mostly the edges that would make it
+silently permissive: an empty history list, a MODIFIED record standing in for an
+added one, and a no-trait-change PR being clean rather than blocked.
+"""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from audit_history_records import missing_record  # noqa: E402
+
+TRAIT = "data/traits/morphology/motile.yaml"
+RECORD = "history/records/motile/2026-08-07T000000Z-claude-code-abc123.yaml"
+
+
+def test_trait_change_without_a_record_is_blocked():
+    assert missing_record([TRAIT], []) is True
+
+
+def test_one_record_covers_many_changed_traits():
+    """The granularity fix, and the reason the gate is impose-able at all.
+
+    Under the literal 'one record per session per target' reading, a 128-file
+    migration owed 128 records. This asserts the opposite: ONE is enough for a
+    whole migration, so the cost is one file per PR rather than one per record.
+    """
+    many = [f"data/traits/morphology/t{i}.yaml" for i in range(128)]
+    assert missing_record(many, [RECORD]) is False
+
+
+def test_no_trait_change_is_clean_not_blocked():
+    """A PR touching only history/, the schema or the workflow owes nothing."""
+    assert missing_record([], []) is False
+    assert missing_record([], [RECORD]) is False
+
+
+def test_a_modified_record_does_not_count_as_an_added_one():
+    """Records are append-only: written once, never edited, corrections go in a
+    NEW record referencing the old one. `collect` passes only --diff-filter=A
+    files, so an edit to an existing record reaches this as an empty list --
+    which must still block, or the gate accepts the one thing the append-only
+    design forbids."""
+    assert missing_record([TRAIT], []) is True
+
+
+def test_the_scripts_own_cli_agrees_with_the_rule():
+    """End-to-end through argparse, since the workflow calls the CLI and not the
+    function -- a wiring error there would leave the rule correct and unused."""
+    def run(changed, added):
+        return subprocess.run(
+            [sys.executable, str(REPO_ROOT / "scripts" / "audit_history_records.py"),
+             "--changed", *changed, "--added", *added],
+            capture_output=True, text=True)
+
+    bad = run([TRAIT], [])
+    assert bad.returncode == 1
+    assert "adds no history record" in bad.stderr
+    # The remediation must name the ONE-record rule, since the whole reason this
+    # is blocking is that the per-file reading was unreasonable.
+    assert "not one per file" in bad.stderr
+
+    good = run([TRAIT], [RECORD])
+    assert good.returncode == 0
+
+    nothing = run([], [])
+    assert nothing.returncode == 0
