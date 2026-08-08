@@ -73,15 +73,59 @@ wall was so the next session does not rediscover it.
 `kind`: `record` · `schema` · `mapping` · `report` · `infrastructure` · `other`
 (`other` requires an explicit `--path`).
 
+## One record per CHANGE, not per file
+
+"One record per session per target" is the rule for **hand curation**, where the
+session and the target coincide: someone reasons about one trait and writes down
+what they concluded. The three records under `records/` are exactly that, and the
+`sulfur_globule` one is what a good record looks like.
+
+A **bulk change is a different animal** and the same rule read literally gives the
+wrong answer. #302 touched 128 trait records mechanically; #334 touched 15. Writing
+one record per file would produce 128 near-identical stubs and bury the handful of
+substantive records this directory exists for — destroying the signal in the name
+of provenance.
+
+So for a change that edits many records under one decision, write **one** record:
+
+| the change is | `kind` | `path` |
+|---|---|---|
+| one trait, curated | `record` | that trait's YAML |
+| a migration driven by a script | `infrastructure` | the migration script |
+| a bulk change with no single script | `other` | the file that best explains it |
+
+Name the scope in `events[].details` — how many records, which issue, and what the
+selection rule was. The migration script is usually the honest target: it *is* the
+artifact that says what drove the change, and it is reviewable in a way that 128
+copies of the same sentence are not.
+
+The per-file `curation_history:` block still records what changed in each file.
+The two are not redundant: that block has no slot for the model, the tool, or the
+issue, and — because it hangs off an edit — **it cannot record a session that
+changed nothing.** An `AUDIT` that checked a trait and correctly found nothing
+wrong is invisible without a record here. That is what `outcome: no_change` is for.
+
 ## How strictly this is enforced
 
-Deliberately split:
+- **Presence blocks** (#325). A PR that changes `data/traits/**/*.yaml` and adds no
+  new history record fails CI.
 
-- **Presence is advisory.** CI warns when a trait record changes without a
-  matching history record. It does not block. A hard gate on provenance blocks
-  legitimate work at inconvenient moments and trains people to route around it.
-- **Validity is not.** If you write a record it must be schema-valid, and
-  `just validate-history` fails like any other validation error.
+  This was advisory until #325, on the reasoning that a hard gate "trains people to
+  route around it". The measurement disagreed: of **134 commits** that modified
+  trait records, **2** added a history record — 1.5%. Nobody routed around the
+  gate, because there was no gate; the convention simply did not happen. Meanwhile
+  **275 trait records** carry an issue number hand-typed into a `changes` string,
+  which is the same information in a form nothing can query. An unenforced
+  convention here drifts exactly as #182, #184 and #215 drifted.
+
+  The cost is now one file per PR rather than one per changed record, which is what
+  makes the gate reasonable to impose at all — the granularity fix above had to come
+  first.
+
+- **Validity blocks too.** If you write a record it must be schema-valid, and
+  `just validate-history` fails like any other validation error. It also fails while
+  the `--details` TODO placeholder is unfilled, so scaffolding an empty record to
+  satisfy the presence gate does not work.
 
 ## Where the schema lives
 
