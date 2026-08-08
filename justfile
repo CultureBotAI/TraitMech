@@ -584,7 +584,13 @@ audit-derived-reports:
     # more fragmented" with "the committed report is out of date". So the status
     # is deliberately ignored and only missing output is fatal.
     cga=causal_graph_audit.tsv
+    cgc=causal_graph_connectivity.tsv
+    # --connectivity-out is NOT optional here. Omitting it would let this
+    # check write the connectivity report to its default path in the working
+    # tree -- a staleness check that mutates the file it is judging, which is
+    # the failure this recipe's header warns about.
     uv run python scripts/audit_causal_graphs.py --out "$tmp/$cga" \
+      --connectivity-out "$tmp/$cgc" \
       > "$tmp/gen.log" 2>&1 || true
     if [ ! -s "$tmp/$cga" ]; then
       echo "ERROR: audit_causal_graphs.py produced no report. Its output:" >&2
@@ -611,6 +617,31 @@ audit-derived-reports:
       # cause the evidence does not establish.
       echo "  --- audit-graphs output for this run ---" >&2
       sed -n '1,15p' "$tmp/gen.log" >&2 || true
+      stale_cga=1
+      fail=1
+    fi
+
+    # --- causal_graph_connectivity.tsv, compared against git (#359) ----------
+    # Written by the same generator invocation above, so it needs no second
+    # run. It carries no ratchet of its own: it is a MEASUREMENT of component
+    # structure, and the whole point of #359 is that a number which cannot be
+    # gamed by retyping is worth having even when nothing gates on it. Staleness
+    # still matters -- an out-of-date copy would misreport whether a PR actually
+    # connected anything, which is the one question it exists to answer.
+    if [ ! -s "$tmp/$cgc" ]; then
+      echo "ERROR: audit_causal_graphs.py produced no connectivity report. Its output:" >&2
+      cat "$tmp/gen.log" >&2
+      exit 1
+    fi
+    if ! git show "HEAD:reports/$cgc" > "$tmp/committed_$cgc" 2>/dev/null; then
+      echo "  MISSING reports/$cgc is not in git at HEAD" >&2
+      stale_cga=1
+      fail=1
+    elif diff -q "$tmp/committed_$cgc" "$tmp/$cgc" >/dev/null; then
+      echo "  OK    reports/$cgc (vs git)"
+    else
+      echo "  STALE reports/$cgc — the COMMITTED copy is not what audit-graphs produces:" >&2
+      { diff -u "$tmp/committed_$cgc" "$tmp/$cgc" | sed -n '1,20p' >&2; } || true
       stale_cga=1
       fail=1
     fi

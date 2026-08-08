@@ -100,7 +100,10 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 DEFAULT_OUT = REPO_ROOT / "reports" / "causal_graph_audit.tsv"
+DEFAULT_CONNECTIVITY = REPO_ROOT / "reports" / "causal_graph_connectivity.tsv"
 DEFAULT_BASELINE = REPO_ROOT / "conf" / "causal_graph_audit_baseline.tsv"
+CONNECTIVITY_FIELDS = ("file", "graph_id", "wired_nodes", "components",
+                       "largest_component", "component_sizes")
 
 ERROR = "ERROR"
 WARN = "WARN"
@@ -152,6 +155,83 @@ def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[
     return sorted(out, key=len, reverse=True)
 
 
+def _topology(graph: dict) -> tuple[set, set, dict[str, set[str]]]:
+    """``(declared node ids, edge-referenced ids, undirected adjacency)``.
+
+    Shared by :func:`audit` and :func:`connectivity_rows` so the ratchet and
+    the metric can never disagree about what "connected" means. Only edges
+    whose BOTH ends are declared are wired, so a dangling edge cannot
+    fabricate reachability through a phantom node — the audit reports that
+    separately as DANGLING_EDGE.
+    """
+    node_set = {n.get("node_id") for n in (graph.get("nodes") or [])}
+    referenced: set = set()
+    adjacency: dict[str, set[str]] = defaultdict(set)
+    for e in (graph.get("edges") or []):
+        subj, obj = e.get("subject"), e.get("object")
+        referenced.add(subj)
+        referenced.add(obj)
+        if subj in node_set and obj in node_set:
+            adjacency[subj].add(obj)
+            adjacency[obj].add(subj)
+    return node_set, referenced, adjacency
+
+
+def connectivity_rows(traits_dir: Path) -> list[dict[str, str]]:
+    """Per-graph connectivity, the metric #359 asked for.
+
+    Neither headline count can tell a real connectivity gain from an anchor
+    added inside an island. #352 is the worked example: `oxygen_tolerance`
+    could be RETYPED to TRAIT (wrong -- the grounding contradicted the graph)
+    or MERGED into `oxygen_preference_trait` (right), and
+    UNREACHABLE_FROM_TRAIT lands on 1296 either way, because retyping simply
+    added an anchor the island's nodes could already reach. FRAGMENTED_GRAPH's
+    *count* is equally blind: it reports one finding per split graph however
+    many pieces it is in, so 3 components -> 2 does not move it.
+
+    What separates them is the component structure itself:
+
+        retyped:  components=3 of 14  (sizes: 8, 4, 2)   <- island still an island
+        merged:   components=2 of 13  (sizes: 11, 2)     <- island attached
+
+    So this reports, per graph, the component count and the share of nodes in
+    the largest one. Both are anchor-free, for the reason :func:`_components`
+    documents: they ask "is this one graph?" without needing to know which
+    node the record is about, so no amount of retyping or renaming moves them.
+    Scoped to edge-referenced nodes, matching FRAGMENTED_GRAPH — an unwired
+    node is ORPHAN_NODE's business and counting it here would let one defect
+    depress two metrics.
+    """
+    rows: list[dict[str, str]] = []
+    for path in sorted(traits_dir.rglob("*.yaml")):
+        try:
+            doc = yaml.safe_load(path.read_text())
+        except yaml.YAMLError:
+            continue
+        if not isinstance(doc, dict):
+            continue
+        try:
+            rel = str(path.relative_to(REPO_ROOT))
+        except ValueError:
+            rel = str(path)
+        for graph in (doc.get("causal_graphs") or []):
+            node_set, referenced, adjacency = _topology(graph)
+            wired = node_set & referenced
+            if not wired:
+                continue
+            components = _components(wired, adjacency)
+            largest = len(components[0])
+            rows.append({
+                "file": rel,
+                "graph_id": graph.get("graph_id", ""),
+                "wired_nodes": str(len(wired)),
+                "components": str(len(components)),
+                "largest_component": str(largest),
+                "component_sizes": ",".join(str(len(c)) for c in components),
+            })
+    return rows
+
+
 # Matched against the DESCRIPTION only, never the label: the label is usually
 # just the concept name ("buoyancy", "salt tolerance") while the description is
 # where the curator says what it IS.
@@ -190,25 +270,21 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
         for graph in (doc.get("causal_graphs") or []):
             gid = graph.get("graph_id", "")
             nodes = graph.get("nodes") or []
-            node_set = {n.get("node_id") for n in nodes}
-            referenced: set = set()
-            adjacency: dict[str, set[str]] = defaultdict(set)
+            # Topology comes from the shared helper so this ratchet and
+            # connectivity_rows() cannot drift apart on what "connected" means;
+            # the DANGLING_EDGE pass below stays here because it is a finding,
+            # not topology.
+            node_set, referenced, adjacency = _topology(graph)
 
             for e in (graph.get("edges") or []):
                 subj, obj = e.get("subject"), e.get("object")
                 for end, ref in (("subject", subj), ("object", obj)):
-                    referenced.add(ref)
                     if ref not in node_set:
                         findings.append({
                             "file": rel, "graph_id": gid, "defect": "DANGLING_EDGE",
                             "severity": SEVERITY["DANGLING_EDGE"],
                             "detail": f"{end}={ref!r} ({subj} -[{e.get('predicate')}]-> {obj})",
                         })
-                # Only wire up edges whose ends both exist, so a dangling edge
-                # cannot fabricate reachability through a phantom node.
-                if subj in node_set and obj in node_set:
-                    adjacency[subj].add(obj)
-                    adjacency[obj].add(subj)
 
             for n in nodes:
                 if n.get("node_id") not in referenced:
@@ -371,6 +447,11 @@ def load_baseline(path: Path) -> set[tuple[str, str, str, str]]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    ap.add_argument("--connectivity-out", type=Path, default=None,
+                    help="per-graph connectivity TSV (#359). Written on every run; "
+                         "it is a measurement, not a verdict, and never affects the "
+                         "exit code. Defaults NEXT TO --out rather than to a fixed "
+                         "repo path, so redirecting the report redirects this too.")
     ap.add_argument("--traits-dir", type=Path, default=TRAITS_DIR)
     ap.add_argument("--baseline", type=Path, default=DEFAULT_BASELINE,
                     help="TSV of known findings to suppress from the exit code.")
@@ -393,6 +474,23 @@ def main() -> int:
                            lineterminator="\n")
         w.writeheader()
         w.writerows(findings)
+
+    # Derived from --out, not a fixed repo path. A caller that redirects the
+    # report to a temp dir -- every test that runs this via subprocess, and the
+    # staleness check in audit-derived-reports -- would otherwise still write
+    # THIS file into the working tree. That is not hypothetical: it clobbered
+    # the committed report with a single row naming a pytest tmpdir, and the
+    # staleness gate is what caught it.
+    if args.connectivity_out is None:
+        args.connectivity_out = args.out.parent / DEFAULT_CONNECTIVITY.name
+
+    conn = connectivity_rows(args.traits_dir)
+    args.connectivity_out.parent.mkdir(parents=True, exist_ok=True)
+    with args.connectivity_out.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=CONNECTIVITY_FIELDS, delimiter="\t",
+                           lineterminator="\n")
+        w.writeheader()
+        w.writerows(conn)
 
     if args.write_baseline:
         # The baseline parks the known WARN backlog so the check can run
@@ -431,6 +529,24 @@ def main() -> int:
     for d, n in sorted(by_defect.items()):
         print(f"    {d:<22} {n:>5}  [{SEVERITY.get(d, WARN)}]", file=sys.stderr)
     print(f"  TSV: {args.out}", file=sys.stderr)
+
+    # Reported alongside, never folded into the finding counts: this measures
+    # the corpus, it does not judge it (#359). `attached` is the share of wired
+    # nodes sitting in their graph's largest component -- the number that moves
+    # when an island is genuinely joined and stays flat when a node is merely
+    # retyped into an anchor.
+    total_wired = sum(int(r["wired_nodes"]) for r in conn)
+    total_components = sum(int(r["components"]) for r in conn)
+    total_largest = sum(int(r["largest_component"]) for r in conn)
+    if total_wired:
+        pct = 100.0 * total_largest / total_wired
+        print(f"  connectivity: {len(conn)} graph(s), {total_components} component(s) "
+              f"over {total_wired} wired node(s); attached "
+              f"{total_largest}/{total_wired} ({pct:.1f}%)", file=sys.stderr)
+    else:
+        print("  connectivity: no wired nodes", file=sys.stderr)
+    print(f"  connectivity TSV: {args.connectivity_out}", file=sys.stderr)
+
     for r in (blocking or new)[:20]:
         print(f"  {r['severity']}  {r['defect']}  {r['file']} [{r['graph_id']}]"
               f"  {r['detail']}", file=sys.stderr)
