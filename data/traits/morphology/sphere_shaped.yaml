@@ -166,14 +166,14 @@ causal_graphs:
         the PG synthases forming the septum
     predicate_id: RO:0002211
   - subject: ftsW_flippase
-    predicate: enables
+    predicate: transports
     object: lipid_ii
     description: FtsW flips lipid II to the outer septal face for PG synthesis.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       notes: lipid II is flipped to the outside by the septally localized flippase
         FtsW
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007812
   - subject: lipid_ii
     predicate: enables
     object: septal_peptidoglycan_synthesis
@@ -242,4 +242,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:27692×1).
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge ftsW_flippase -> lipid_ii in graph sphere_shaped_septal_peptidoglycan:
+    re-grounded it from enables/RO:0002327 to transports/METPO:2007812. Issue 334.
+    biolink declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''FtsW FLIPS lipid II to the outer septal
+    face'' -- a flippase moves its substrate across the membrane, which is transport,
+    not enablement. Needs GENE_OR_PROTEIN added to `transports`'' subject_types, which
+    is a deliberate widening recorded there.'
   llm_assisted: true

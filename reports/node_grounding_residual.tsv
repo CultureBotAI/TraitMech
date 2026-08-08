@@ -326,7 +326,7 @@ host cell manipulation	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.y
 acquisition of virulence/host-adaptation genes	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
 within-host genetic diversification	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
 within-host adaptation and chronic infection	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
-treatment resistance and persistence	QUALITY	1	data/traits/ecology/human_pathogen.yaml
+treatment resistance and persistence	TRAIT	1	data/traits/ecology/human_pathogen.yaml
 nutrient and service exchange	BIOLOGICAL_PROCESS	1	data/traits/ecology/mutualism.yaml
 reciprocal fitness benefit	QUALITY	1	data/traits/ecology/mutualism.yaml
 host control mechanisms	BIOLOGICAL_PROCESS	1	data/traits/ecology/mutualism.yaml
@@ -1606,7 +1606,7 @@ lateral sidewall peptidoglycan insertion	BIOLOGICAL_PROCESS	1	data/traits/morpho
 mreb cytoskeletal filaments	GENE_OR_PROTEIN	1	data/traits/morphology/cell_width_large.yaml
 circumferential peptidoglycan insertion	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_width_large.yaml
 rod-complex circumferential rotation	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_width_large.yaml
-even peptidoglycan distribution	QUALITY	1	data/traits/morphology/cell_width_large.yaml
+even peptidoglycan distribution	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_width_large.yaml
 mrec-mred balance	GENE_OR_PROTEIN	1	data/traits/morphology/cell_width_large.yaml
 mred	GENE_OR_PROTEIN	1	data/traits/morphology/cell_width_medium.yaml
 class a penicillin-binding proteins (apbps)	GENE_OR_PROTEIN	1	data/traits/morphology/cell_width_medium.yaml
@@ -1710,7 +1710,7 @@ mreb polymer localization/assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/f
 elongasome complex	CELLULAR_LOCALIZATION	1	data/traits/morphology/fusiform_shaped.yaml
 ftsw	GENE_OR_PROTEIN	1	data/traits/morphology/fusiform_shaped.yaml
 septal peptidoglycan incorporation	BIOLOGICAL_PROCESS	1	data/traits/morphology/fusiform_shaped.yaml
-cellular buoyancy	QUALITY	1	data/traits/morphology/gas_vesicle.yaml
+cellular buoyancy	TRAIT	1	data/traits/morphology/gas_vesicle.yaml
 water-column positioning	BIOLOGICAL_PROCESS	1	data/traits/morphology/gas_vesicle.yaml
 gvpa	GENE_OR_PROTEIN	1	data/traits/morphology/gas_vesicle.yaml
 gvpc	GENE_OR_PROTEIN	1	data/traits/morphology/gas_vesicle.yaml

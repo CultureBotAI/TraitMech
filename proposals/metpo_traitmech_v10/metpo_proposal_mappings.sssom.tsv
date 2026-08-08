@@ -1,0 +1,2 @@
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	mapping_source	comment
+METPO:2007900	powers	skos:closeMatch	RO:0002327	enables	semapv:ManualMappingCuration	high	metpo_traitmech_v10	Same energetic-realization sense, and these five edges were written as RO:0002327 until TraitMech#334. closeMatch rather than exactMatch because RO:0002327's range is 'biological process or activity' while this term's object is the molecular machine itself, which is the whole reason it exists; the two are not interchangeable in either direction.

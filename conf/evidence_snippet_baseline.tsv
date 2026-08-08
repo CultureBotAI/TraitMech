@@ -361,10 +361,10 @@ data/traits/environment/extremely_halophilic.yaml	extreme_halophile_salt_in_acid
 data/traits/environment/extremely_halophilic.yaml	extreme_halophile_salt_in_acidic_proteome:na_h_antiporter->sodium_efflux[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12081738 has no snippet
 data/traits/environment/extremely_halophilic.yaml	extreme_halophile_salt_in_acidic_proteome:osmotic_stress->potassium_ion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12934-024-02358-5 has no snippet
 data/traits/environment/extremely_halophilic.yaml	extreme_halophile_salt_in_acidic_proteome:s_layer_n_glycosylation->s_layer_stability[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/v15071469 has no snippet
-data/traits/environment/facultative_oxygen_preference.yaml	facultative_oxygen_preference_switching:molecular_oxygen->terminal_oxidase_cytochrome_bd[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00389-22 has no snippet
 data/traits/environment/facultative_oxygen_preference.yaml	facultative_oxygen_preference_switching:nitrate_electron_acceptor->anaerobic_respiration_or_fermentation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/msphere.00774-23 has no snippet
 data/traits/environment/facultative_oxygen_preference.yaml	facultative_oxygen_preference_switching:oxygen_sensing_regulation->aerobic_energy_pathways[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01491-23 has no snippet
 data/traits/environment/facultative_oxygen_preference.yaml	facultative_oxygen_preference_switching:oxygen_sensing_regulation->anaerobic_metabolism_genes[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01491-23 has no snippet
+data/traits/environment/facultative_oxygen_preference.yaml	facultative_oxygen_preference_switching:terminal_oxidase_cytochrome_bd->aerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00389-22 has no snippet
 data/traits/environment/facultative_psychrophilic.yaml	facultative_psychrophilic_cold_tolerance:cold_shock_proteins->rna_secondary_structure[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s42770-023-01057-4 has no snippet
 data/traits/environment/facultative_psychrophilic.yaml	facultative_psychrophilic_cold_tolerance:compatible_solutes->facultative_psychrophilic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2023.1197797 has no snippet
 data/traits/environment/facultative_psychrophilic.yaml	facultative_psychrophilic_cold_tolerance:exopolysaccharides->freeze_thaw_cycles[0]	MISSING_SNIPPET	WARN	reference=DOI:10.37256/amtt.5220244537 has no snippet
@@ -737,7 +737,7 @@ data/traits/environment/ph_range.yaml	ph_range_bounded_homeostasis:membrane_prot
 data/traits/environment/ph_range.yaml	ph_range_bounded_homeostasis:mrp_antiporter_activity->alkaline_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_range.yaml	ph_range_bounded_homeostasis:ph_gradient->bounded_growth_window[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:alkaline_ph_homeostasis->ph_range_high_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
-data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:cytoplasmic_na->mrp_antiporter_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
+data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:cytoplasmic_na->extreme_alkaliphile_antiport[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:external_ph_high->carbonate_speciation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.01557-23 has no snippet
 data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:f1fo_atp_synthase->alkaline_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_range_high.yaml	ph_range_high_extreme_alkaliphile:membrane_potential->mrp_antiporter_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet

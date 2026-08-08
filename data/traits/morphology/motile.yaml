@@ -138,14 +138,14 @@ causal_graphs:
       notes: Supports energy transduction from ion gradients into motor function.
     predicate_id: biolink:produces
   - subject: ion_motive_force
-    predicate: enables
+    predicate: powers
     object: flagellar_motor
     description: Ion motive force powers rotation of the flagellar motor.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: The Dynamic Ion Motive Force Powering
       notes: Review directly addresses ion motive force powering flagellar motors.
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007900
   - subject: flagellar_motor
     predicate: confers
     object: motile_trait
@@ -201,14 +201,14 @@ causal_graphs:
       notes: electrostatic interactions between MotA and FliG generate torque on the
         rotor
   - subject: motor_torque
-    predicate: enables
+    predicate: powers
     object: flagellar_motor
     description: Torque generation drives rotation of the flagellar motor.
     evidence:
     - reference: DOI:10.3390/biom14121488
       notes: a membrane-embedded rotary motor fueled by an ion motive force across
         the cytoplasmic membrane
-    predicate_id: RO:0002327
+    predicate_id: METPO:2007900
   - subject: chea_kinase
     predicate: phosphorylates
     object: chey_response_regulator
@@ -430,4 +430,24 @@ curation_history:
     and cytoplasmic_na, so deferring it here too is the consistent call. The edge
     stays baselined under issue 334 until it is modelled as an input to the machine
     or pointed at the rotation process, either of which is range-correct.
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge ion_motive_force -> flagellar_motor in graph motile_energy_dependent_locomotion:
+    re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''Ion motive force POWERS rotation of the
+    flagellar motor.'''
+  llm_assisted: true
+- timestamp: '2026-08-07T18:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_EDGE
+  changes: 'Edge motor_torque -> flagellar_motor in graph motile_energy_dependent_locomotion:
+    re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink
+    declares enables range ''biological process or activity'', which of CausalNodeTypeEnum
+    only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
+    entailed a false type on its object. ''Torque generation drives rotation of the
+    flagellar motor.'''
   llm_assisted: true
