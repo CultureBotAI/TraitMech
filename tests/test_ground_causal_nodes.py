@@ -228,9 +228,35 @@ def test_ground_nodes_declines_curie_already_in_graph():
     assert per_curie == Counter()
     assert grounded_keys == Counter()
     assert declined == Counter({("catalase", "GENE_OR_PROTEIN", "GO:0004096"): 1})
-    # Still ungrounded on disk, so it belongs in the residual report.
-    assert residual == Counter({("catalase", "GENE_OR_PROTEIN"): 1})
     assert "grounding" not in doc["causal_graphs"][0]["nodes"][1]
+    # NOT residual -- see the next test for why that distinction is load-bearing.
+    assert residual == Counter()
+
+
+def test_declined_nodes_stay_out_of_residual():
+    """The residual TSV is a WORK QUEUE, not a census (#362 review).
+
+    match_uniprot_to_proteins.py's load_target_labels() takes every
+    GENE_OR_PROTEIN row from reports/node_grounding_residual.tsv and, under
+    --apply, appends a UniProtKB row to mappings/node_grounding.tsv with no
+    existing-row check. A declined node listed there would earn `catalase` a
+    second mapping row conflicting with its GO one, and load_mapping() raises
+    on exactly that -- taking out `just ground-nodes` and the freshness check.
+    A declined node is not awaiting a grounding; it has one, withheld.
+    """
+    doc = _doc_with_nodes([
+        {"node_id": "fn", "label": "catalase activity",
+         "node_type": "MOLECULAR_FUNCTION", "grounding": "GO:0004096"},
+        {"node_id": "prot", "label": "catalase", "node_type": "GENE_OR_PROTEIN"},
+        {"node_id": "other", "label": "genuinely unmapped", "node_type": "GENE_OR_PROTEIN"},
+    ])
+    mapping = {("catalase", "GENE_OR_PROTEIN"): ("GO:0004096", "GO")}
+    _, _, residual, _, declined = ground_nodes_in_doc(doc, mapping)
+
+    # Only the genuinely unmapped label is a target for the UniProt matcher.
+    assert residual == Counter({("genuinely unmapped", "GENE_OR_PROTEIN"): 1})
+    assert ("catalase", "GENE_OR_PROTEIN") not in residual
+    assert declined == Counter({("catalase", "GENE_OR_PROTEIN", "GO:0004096"): 1})
 
 
 def test_ground_nodes_declines_second_node_mapping_to_same_curie():

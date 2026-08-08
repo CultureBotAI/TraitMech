@@ -116,9 +116,18 @@ def ground_nodes_in_doc(
     says the same thing is. Without this guard the next ``--apply`` re-created
     both duplicates (#361).
 
-    Declined nodes stay ungrounded on disk, so they are also counted into
-    ``residual`` -- the residual TSV describes what the corpus actually looks
-    like, and an ungrounded node belongs there however it got that way.
+    A declined node is NOT counted into ``residual``, and that is deliberate.
+    The residual TSV reads like a census of ungrounded nodes but its consumers
+    treat it as a WORK QUEUE of labels still needing a mapping:
+    match_uniprot_to_proteins.py's ``load_target_labels`` takes every
+    GENE_OR_PROTEIN row from it and, under ``--apply``, appends a UniProtKB row
+    to mappings/node_grounding.tsv with no existing-row check. Listing
+    `catalase` there would earn it a second, conflicting mapping row, and
+    ``load_mapping`` raises on exactly that -- taking out ``just ground-nodes``
+    and the freshness check with it (#362 review). A declined node is not
+    awaiting a grounding; it has one, deliberately withheld. Proposing a
+    UniProt accession for it would be actively wrong. It is reported through
+    ``declined`` instead, which is what that counter is for.
 
     Returns
     -------
@@ -127,8 +136,8 @@ def ground_nodes_in_doc(
     per_curie : Counter
         Map from target CURIE → grounded-node count.
     residual : Counter
-        (label, node_type) → count of nodes left ungrounded, whether because
-        no mapping entry exists or because the mapped CURIE was declined.
+        (label, node_type) → count of nodes that had no mapping entry.
+        Declined nodes are excluded; see above.
     grounded_keys : Counter
         (label, node_type) → count of nodes that **were** grounded.
         Caller needs this to re-classify them as residual if a later
@@ -163,7 +172,6 @@ def ground_nodes_in_doc(
                 curie, _src = mapping[key]
                 if curie in taken:
                     declined[(label.lower(), node_type, curie)] += 1
-                    residual[key] += 1
                     continue
                 node["grounding"] = curie
                 taken.add(curie)
