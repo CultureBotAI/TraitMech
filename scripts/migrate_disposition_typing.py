@@ -3,30 +3,52 @@
 
 #353 shipped the detection and baselined what it found. This is the burn-down.
 
-THE HEADLINE IS THAT ONLY A QUARTER OF THEM WERE RETYPES. #352 framed the fix as
-"sweep CAPACITY nodes matching the disposition pattern and retype them", and for
-two nodes that is exactly right. For the other six, retyping would have been
-wrong in a way that only shows up once you look for the grounding:
+THE HEADLINE IS THAT NONE OF THEM WERE RETYPES. #352 framed the fix as "sweep
+CAPACITY nodes matching the disposition pattern and retype them". Not one of the
+eight survived the attempt, and the thing that killed each one is the grounding:
 
-    every TRAIT node in the corpus is grounded, and the obvious grounding for
-    each of those six is either the term its OWN record already carries, or a
-    term that collides with a node sitting in the same graph.
+    every TRAIT node in the corpus is grounded, so retyping a node forces you to
+    name the term it IS -- and for all eight, the only available term restates
+    the record, contradicts it, or is narrower than the node it labels.
 
-Grounding them that way trades a DISPOSITION_MISTYPED for a DUPLICATE_GROUNDING
-and calls it progress. What it actually means is that the node RESTATES its
-anchor, and in five of the six cases the node it restates is sitting in the
-same graph already correctly typed and grounded. Those get merged, not retyped.
+Grounding them anyway trades a DISPOSITION_MISTYPED for a DUPLICATE_GROUNDING,
+or for a false claim, and calls it progress. Requiring a grounding is what
+exposes that, which is #352's own third bullet read strictly.
 
-The first pass of this migration called four of them retypes. Review (#360)
-found two of those four -- salt_tolerance_breadth and oxygen_tolerance -- to be
-restatements as well, each caught by the SAME test the other four failed: the
-grounding chosen for them contradicted an edge or a definition the graph
-already had. See their entries in MERGE.
+It took three rounds to get here, and the count went 4 -> 2 -> 0:
 
-That is #352's own third bullet read strictly: "retype in one pass, GROUNDING
+  round 1  called four retypes and four restatements.
+  round 2  (#360 review) salt_tolerance_breadth was grounded METPO:1000622 while
+           keeping `is a -> nacl_delta`, asserting halotolerant sub NaCl-delta;
+           oxygen_tolerance was grounded METPO:1000609, sub the record's own
+           METPO:1000601 and false of the obligate aerobes it covers.
+  round 3  (#360 review) salt_tolerance was grounded METPO:1000622, a DIRECT
+           SIBLING of the record's METPO:1000625 asserting the negation of it
+           ("does not require salt" vs "requires salt"); low_ph_tolerance was
+           grounded METPO:1003008, whose definition excludes the acidophiles
+           the generic pH-delta record covers.
+
+The lesson worth keeping: "is this term distinct from the record's own?" is the
+WRONG test, and it passed all four of the nodes that later failed. The right
+test is whether the term is COMPATIBLE with the record and no NARROWER than the
+node -- a sibling term is maximally distinct and still wrong.
+
+MEASURED, NOT ASSERTED: retyping changed the component structure of ZERO of the
+eight graphs -- it only ever added an anchor inside what was already there.
+Merging improves three of them (oxygen_preference 3 components -> 2, ph_delta
+3 -> 2, ph_delta_low 5 -> 4); the other five are pure deduplication and leave
+the component count where it was. Both facts are invisible in
+UNREACHABLE_FROM_TRAIT, which reads 1296 either way, and that is why #359
+exists. Saying "eight merges, three of them structural" is the honest claim;
+saying "merging attaches the islands" would be this migration making exactly
+the kind of overclaim it was written to catch.
+
+#352's third bullet is what made this findable: "retype in one pass, GROUNDING
 EACH -- an ungrounded new TRAIT node silently becomes a reachability anchor and
 makes UNREACHABLE_FROM_TRAIT fall without the graph actually becoming more
-connected." Requiring a grounding is what exposes the restatements.
+connected." It warns about the anchor effect and suggests requiring a grounding
+as the remedy. Requiring one did something better than prevent the anchor: it
+made every retype in the sweep fail out loud.
 
 CAPACITY IS NOT VESTIGIAL, which the issue left open. 24 nodes carry it; these 8
 leave 16, and the survivors are a different sense entirely -- `reducing_power`
@@ -59,12 +81,12 @@ TRAITS = REPO_ROOT / "data" / "traits"
 # Fixed rather than wall-clock, because pages/ derives its "Corpus as of" stamp
 # from the latest curation_history entry (#228) and a clock would make every
 # re-run of this migration produce a different 477-page diff.
-TIMESTAMP = "2026-08-08T03:00:00Z"
+TIMESTAMP = "2026-08-08T05:00:00Z"
 
 # The first pass logged all eleven events as RETYPE_CAUSAL_NODE, including the
-# seven that were merges or regroundings. An audit trail that calls a merge a
-# retype cannot answer the question it exists to answer, so each kind now gets
-# its own label.
+# seven that were not retypes at all. An audit trail that calls a merge a retype
+# cannot answer the question it exists to answer, so each kind gets its own
+# label. RETYPE_CAUSAL_NODE now goes unused, which is the honest outcome.
 ACTIONS = {
     "retype": "RETYPE_CAUSAL_NODE",
     "merge": "MERGE_CAUSAL_NODE",
@@ -73,27 +95,49 @@ ACTIONS = {
     "unground": "UNGROUND_CAUSAL_NODE",
 }
 
-# --- the two that really are mistyped dispositions --------------------------
-# Retyped to TRAIT and grounded to a term that is NOT the record's own, which is
-# what distinguishes these from the restatements below.
+# --- no retypes -------------------------------------------------------------
+# THIS TABLE IS EMPTY, AND THAT IS THE FINDING. #352 framed the whole issue as
+# a retype sweep; three rounds of review took the retype count 4 -> 2 -> 0. Each
+# round failed the same test: the grounding a node needs in order to BE a trait
+# turned out to restate, contradict, or narrow the record it sits in. Kept as an
+# empty table rather than deleted, because "we looked and there were none" and
+# "we never modelled retypes" are different claims and only one is true.
 RETYPE: dict[tuple[str, str], dict] = {
-    ("environment/slightly_halophilic.yaml", "salt_tolerance"): {
-        "grounding": "METPO:1000622",  # halotolerant
-        "why": "'Capacity to grow and survive under elevated salinity' is halotolerance. "
-               "The record is METPO:1000625 (slightly halophilic), so this is a distinct "
-               "term rather than a restatement of the anchor.",
-    },
-    ("environment/ph_delta.yaml", "low_ph_tolerance"): {
-        "grounding": "METPO:1003008",  # acidotolerant
-        "why": "'Capacity to grow and survive under acidic external pH' is acidotolerance. "
-               "The record is METPO:1000232 (pH delta), so no collision.",
-    },
 }
 
-# --- the six restatements ---------------------------------------------------
+# --- the eight restatements --------------------------------------------------
 # `into` repoints the node's edges onto an existing node and drops it; `drop`
 # removes a leaf outright.
 MERGE: dict[tuple[str, str], dict] = {
+    ("environment/slightly_halophilic.yaml", "salt_tolerance"): {
+        "into": "slightly_halophilic_trait",
+        "why": "A SEVENTH restatement, caught in the third review round (#360). I had "
+               "grounded it METPO:1000622 (halotolerant), reasoning that the record is "
+               "METPO:1000625 (slightly halophilic) so the term is 'distinct'. It is "
+               "distinct in the worst way: 1000622 and 1000625 are DIRECT SIBLINGS under "
+               "1000629 (halophily preference), and 1000622 means 'tolerates high salt "
+               "but DOES NOT REQUIRE it for growth' while 1000625 means the organism "
+               "'REQUIRES low to moderate salt for optimal growth'. So the node asserted "
+               "of this record the negation of what the record's own term says. Distinct "
+               "is not the test; compatible is. NO CONNECTIVITY CLAIM HERE: the node was "
+               "already in the trait's component via osmoprotectant_transport -> "
+               "compatible_solutes -> osmotic_stress, so merging leaves the graph at 2 "
+               "components and is a correctness fix, not a structural one. METPO has no "
+               "generic salt-tolerance disposition to reground to -- filed as a proposal.",
+    },
+    ("environment/ph_delta.yaml", "low_ph_tolerance"): {
+        "into": "ph_delta_trait",
+        "why": "An EIGHTH restatement (#360). I had grounded it METPO:1003008 "
+               "(acidotolerant) and claimed 'no collision' with the record's "
+               "METPO:1000232 (pH delta). No collision, but the wrong SCOPE: 1003008 is "
+               "defined as tolerating acid 'WHILE MAINTAINING OPTIMAL GROWTH NEAR NEUTRAL "
+               "pH', which excludes the acidophiles this generic pH-delta record covers. "
+               "A grounding narrower than the node it labels is a false claim about every "
+               "organism in the excluded part. Also a pure sink. Merging repoints "
+               "amino_acid_decarboxylase_acid_resistance onto ph_delta_trait, which reads "
+               "correctly: an acid-resistance system widens the growth-supporting pH "
+               "range, and a pH delta IS that range.",
+    },
     ("environment/nacl_delta_low.yaml", "salt_tolerance_breadth"): {
         "into": "nacl_delta",
         "why": "A FIFTH restatement, caught in review (#360). 'Capacity to grow across a "

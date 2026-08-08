@@ -286,7 +286,7 @@ curation_history:
     this record''s own ph_delta_high_trait, so it takes the same METPO:1000478; merging
     the two nodes is tracked in issue 352.'
   llm_assisted: true
-- timestamp: '2026-08-08T03:00:00Z'
+- timestamp: '2026-08-08T05:00:00Z'
   curator: claude
   action: REGROUND_CAUSAL_NODE
   changes: 'Regrounded node growth_external_ph_5_5_9 from METPO:1000478 to METPO:1000332.

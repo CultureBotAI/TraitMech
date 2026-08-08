@@ -269,7 +269,7 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
-- timestamp: '2026-08-08T03:00:00Z'
+- timestamp: '2026-08-08T05:00:00Z'
   curator: claude
   action: DROP_CAUSAL_NODE
   changes: Dropped node growth_at_4c and its edges. Issue 352. 'Ability to grow at

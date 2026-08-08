@@ -636,7 +636,7 @@ data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:oxygen_terminal_electron_acceptor->aerobic_phenotype[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012084 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:reactive_oxygen_species_stress->detoxifying_enzyme_expression[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:superoxide_dismutase->oxygen_preference_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
-data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:amino_acid_decarboxylase_acid_resistance->low_ph_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
+data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:amino_acid_decarboxylase_acid_resistance->ph_delta_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:cation_proton_antiporter_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00569-24 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:f0f1_atpase_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:membrane_lipid_remodeling->proton_permeability[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2022.1034164 has no snippet
@@ -846,10 +846,10 @@ data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_p
 data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_phenotype_numerical_axis:salt_out_compatible_solute_strategy->intracellular_osmotic_balance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/frmbi.2023.1329925 has no snippet
 data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_phenotype_numerical_axis:water_activity->salinity_phenotype_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41559-024-02505-6 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ect_gene_cluster->ectoine_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
-data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine->salt_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
+data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine->slightly_halophilic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine_biosynthesis->ectoine[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:na_k_transcription->ion_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s42003-022-04319-3 has no snippet
-data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:osmoprotectant_transport->salt_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy026 has no snippet
+data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:osmoprotectant_transport->slightly_halophilic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy026 has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:aquaporin_water_channel->facilitated_water_diffusion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-024-01817-w has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:c_di_amp->k_import_systems[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:c_di_amp->opua_importer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet

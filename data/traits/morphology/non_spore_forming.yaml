@@ -222,7 +222,7 @@ curation_history:
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2, METPO:2007400×2, RO:0002212×1).
   llm_assisted: true
-- timestamp: '2026-08-08T03:00:00Z'
+- timestamp: '2026-08-08T05:00:00Z'
   curator: claude
   action: MERGE_CAUSAL_NODE
   changes: Merged node loss_sporulation_capacity into non_spore_forming_trait and

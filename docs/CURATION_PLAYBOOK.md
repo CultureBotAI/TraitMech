@@ -154,11 +154,11 @@ node's **description** reads as an organism disposition. The count is at
 **zero** (#352), so a new one fails `just qc`.
 
 The distinction is not "does the word *capacity* appear". Of the corpus's
-24 `CAPACITY` nodes, #352 retyped or merged 8 and deliberately left 16:
+24 `CAPACITY` nodes, #352 merged 8 and deliberately left 16:
 
 | sense | examples | type |
 |---|---|---|
-| an organism's **disposition** — what it can do | *"Capacity to grow and survive under elevated salinity"*, *"Ability to grow at 4 C"* | **`TRAIT`** |
+| an organism's **disposition** — what it can do | *"Capacity of a cell to survive exposure to molecular oxygen"*, *"Ability to grow at 4 C"* | **`TRAIT`** |
 | a **reservoir or quantity** | `reducing_power` (a pool of reductants), `cytoplasmic_buffering_capacity` (*"Capacity of cytoplasmic buffers to absorb pH fluctuations"*), `swimming_velocity`, `metabolic_versatility` | **`CAPACITY`** |
 
 A buffer has a capacity; so does a battery. Neither is something an
@@ -168,18 +168,32 @@ a cell / organism / bacterium / strain to …* — rather than matching bare
 
 **Ground it, and ground it to something the graph does not already have.**
 Every `TRAIT` node in the corpus is grounded, so a retype owes a grounding.
-Requiring one is also the test that catches the commonest mistake here: if
-the only correct grounding is the term the record itself carries, the node
-is **restating its anchor**, not mistyped. Four of #352's eight were exactly
-that, and three of those had the node they restate sitting in the same
-graph, already correctly typed — they were merged, not retyped.
+Requiring one is also the test that catches the commonest mistake here, and
+it caught **all eight** of #352's: every one of them needed a grounding that
+either restated the record, contradicted it, or was narrower than the node.
+#352 retyped **nothing** in the end; all eight were merged.
+
+Note what the test is NOT. "Is this term distinct from the record's own?"
+passed four nodes that later failed — `salt_tolerance` was grounded
+`METPO:1000622`, a *direct sibling* of its record's `METPO:1000625` under
+`METPO:1000629`, which is maximally distinct and asserts the negation of the
+record ("does not require salt" against "requires salt"). Ask instead whether
+the term is **compatible** with the record and **no narrower** than the node.
 
 **Do not read a fall in `UNREACHABLE_FROM_TRAIT` as connectivity.** A
 retype creates a new anchor, so every node in that island stops being
-reported while the island stays exactly as disconnected as before. #352's
-retypes moved it 1303 → 1296 with `FRAGMENTED_GRAPH` flat at 218 — all
-anchor effect, no connectivity. `FRAGMENTED_GRAPH` is the honest metric
-(#359).
+reported while the island stays exactly as disconnected as before. #352
+moved it 1303 → 1296, and moved it there **identically** whether its nodes
+were retyped or merged — which is what proves the count cannot see the
+difference.
+
+`FRAGMENTED_GRAPH`'s *count* cannot either: it reports one finding per split
+graph however many pieces that graph is in, so it sat flat at 218 through all
+of it. What separates them is component **structure**, now measured per graph
+in `reports/causal_graph_connectivity.tsv` (#359). Retyping changed it in
+**zero** of #352's eight graphs; merging improved three (`oxygen_preference`
+3 components → 2, `ph_delta` 3 → 2, `ph_delta_low` 5 → 4) and left five
+unchanged as pure deduplication. Quote that table, not the finding counts.
 
 ### `enables` needs a process-or-activity object
 
