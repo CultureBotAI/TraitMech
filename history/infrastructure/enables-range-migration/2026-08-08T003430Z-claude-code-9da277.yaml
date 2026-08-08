@@ -23,10 +23,11 @@ events:
   - causal_graphs
   - grounding
   summary: Repair the last 16 enables edges whose object cannot satisfy RO:0002327's range
-  details: 'Repaired 16 edges across 15 trait records. Six idioms: 4 repointed at a process
+  details: 'Repaired 16 edges across 15 trait records. Seven idioms: 1 repointed at a process
     already in the graph, 1 reversed onto the direction the node description stated, 3 retyped
     (the node type was wrong, not the predicate), 3 moved to produces/has output/transports,
-    2 to part of/promotes, and 5 onto a new term METPO:2007900 powers (proposals/metpo_traitmech_v10).
+    2 to part of/promotes, 1 to manifests
+    as, and 5 onto a new term METPO:2007900 powers (proposals/metpo_traitmech_v10).
     Selection rule: every edge reported by audit-predicate-domains as ENABLES_RANGE_VIOLATION.
     Verified by re-running that audit (16 to 0), audit-graphs (unchanged at 1533 findings,
     so no node was stranded), and the full qc chain.'

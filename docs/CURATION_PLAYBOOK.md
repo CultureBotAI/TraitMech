@@ -191,7 +191,8 @@ range-correct one.
 If none of the rows fits, point `enables` at the graph's **process** node
 rather than at the entity: `<gene> enables <the process it drives>` is
 almost always both true and range-correct. Often that node is already in
-the graph — four of #334's sixteen needed only repointing.
+the graph — one of #334's sixteen needed only that, and a second was fixed by
+reversing it onto a node already present.
 
 The organism-subject form stays valid at the *assertion* site —
 `<organism> METPO:2000006 CHEBI:17234` — which is exactly what the
