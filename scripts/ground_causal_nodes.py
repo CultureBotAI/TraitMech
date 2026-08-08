@@ -101,8 +101,33 @@ def load_mapping(path: Path) -> dict[MappingKey, tuple[str, str]]:
 def ground_nodes_in_doc(
     doc: dict[str, Any],
     mapping: dict[MappingKey, tuple[str, str]],
-) -> tuple[int, Counter, Counter, Counter]:
+) -> tuple[int, Counter, Counter, Counter, Counter]:
     """Mutate ``doc`` in place, grounding empty grounding slots.
+
+    A candidate CURIE already carried by another node in the SAME graph is
+    declined rather than written, because ``audit-graphs`` reports exactly
+    that shape as DUPLICATE_GROUNDING -- so writing it would mean this script
+    manufacturing a finding the audit then reports against us. #352 burned
+    down three such duplicates by hand; two of them (`catalase` GO:0004096,
+    `urease` GO:0009039) are still live rows in the mapping table, because the
+    protein-to-GO-activity shorthand is correct wherever the graph does NOT
+    also model the function as its own node -- 72 GENE_OR_PROTEIN nodes rely
+    on it. The row is not the defect; writing it into a graph that already
+    says the same thing is. Without this guard the next ``--apply`` re-created
+    both duplicates (#361).
+
+    A declined node is NOT counted into ``residual``, and that is deliberate.
+    The residual TSV reads like a census of ungrounded nodes but its consumers
+    treat it as a WORK QUEUE of labels still needing a mapping:
+    match_uniprot_to_proteins.py's ``load_target_labels`` takes every
+    GENE_OR_PROTEIN row from it and, under ``--apply``, appends a UniProtKB row
+    to mappings/node_grounding.tsv with no existing-row check. Listing
+    `catalase` there would earn it a second, conflicting mapping row, and
+    ``load_mapping`` raises on exactly that -- taking out ``just ground-nodes``
+    and the freshness check with it (#362 review). A declined node is not
+    awaiting a grounding; it has one, deliberately withheld. Proposing a
+    UniProt accession for it would be actively wrong. It is reported through
+    ``declined`` instead, which is what that counter is for.
 
     Returns
     -------
@@ -112,16 +137,28 @@ def ground_nodes_in_doc(
         Map from target CURIE → grounded-node count.
     residual : Counter
         (label, node_type) → count of nodes that had no mapping entry.
+        Declined nodes are excluded; see above.
     grounded_keys : Counter
         (label, node_type) → count of nodes that **were** grounded.
         Caller needs this to re-classify them as residual if a later
         validation step rejects the file.
+    declined : Counter
+        (label, node_type, curie) → count of nodes whose mapped CURIE was
+        withheld because the graph already carried it.
     """
     grounded = 0
     per_curie: Counter = Counter()
     residual: Counter = Counter()
     grounded_keys: Counter = Counter()
+    declined: Counter = Counter()
     for graph in (doc.get("causal_graphs") or []):
+        # Seeded from what the graph already carries, then updated as we go,
+        # so two ungrounded nodes mapping to one CURIE cannot both take it.
+        taken = {
+            (n.get("grounding") or "").strip()
+            for n in (graph.get("nodes") or [])
+            if (n.get("grounding") or "").strip()
+        }
         for node in (graph.get("nodes") or []):
             label = (node.get("label") or "").strip()
             node_type = (node.get("node_type") or "").strip()
@@ -133,13 +170,17 @@ def ground_nodes_in_doc(
             key = (label.lower(), node_type)
             if key in mapping:
                 curie, _src = mapping[key]
+                if curie in taken:
+                    declined[(label.lower(), node_type, curie)] += 1
+                    continue
                 node["grounding"] = curie
+                taken.add(curie)
                 grounded += 1
                 per_curie[curie] += 1
                 grounded_keys[key] += 1
             else:
                 residual[key] += 1
-    return grounded, per_curie, residual, grounded_keys
+    return grounded, per_curie, residual, grounded_keys, declined
 
 
 def main() -> int:
@@ -166,6 +207,8 @@ def main() -> int:
     per_curie_total: Counter = Counter()
     residual_total: Counter = Counter()
     residual_examples: dict[MappingKey, list[str]] = defaultdict(list)
+    declined_total: Counter = Counter()
+    declined_examples: dict[tuple[str, str, str], list[str]] = defaultdict(list)
 
     for path in files:
         try:
@@ -176,13 +219,20 @@ def main() -> int:
         if not isinstance(doc, dict):
             continue
 
-        grounded, per_curie, residual, grounded_keys = ground_nodes_in_doc(doc, mapping)
+        grounded, per_curie, residual, grounded_keys, declined = ground_nodes_in_doc(doc, mapping)
 
         def _record_residual(keys_counter: Counter) -> None:
             for key, n in keys_counter.items():
                 residual_total[key] += n
                 if len(residual_examples[key]) < 3:
                     residual_examples[key].append(str(path.relative_to(REPO_ROOT)))
+
+        # Recorded regardless of whether the file is written: a declined
+        # grounding is a fact about the corpus, not about this run's mode.
+        for dkey, n in declined.items():
+            declined_total[dkey] += n
+            if len(declined_examples[dkey]) < 3:
+                declined_examples[dkey].append(str(path.relative_to(REPO_ROOT)))
 
         if grounded == 0:
             _record_residual(residual)
@@ -249,6 +299,14 @@ def main() -> int:
         print("  by target CURIE:", file=sys.stderr)
         for curie, n in per_curie_total.most_common():
             print(f"    {curie:30s} {n:>6d}", file=sys.stderr)
+    if declined_total:
+        print(f"  declined (already in graph): {sum(declined_total.values())}", file=sys.stderr)
+        print("    withheld because another node in the same graph already carries the CURIE,",
+              file=sys.stderr)
+        print("    which audit-graphs would report as DUPLICATE_GROUNDING (#361):", file=sys.stderr)
+        for (label, node_type, curie), n in declined_total.most_common():
+            examples = ", ".join(declined_examples[(label, node_type, curie)])
+            print(f"    {label} ({node_type}) -> {curie}  ×{n}  [{examples}]", file=sys.stderr)
     if not args.apply and files_modified:
         print("", file=sys.stderr)
         print("  Re-run with --apply to write the changes.", file=sys.stderr)
