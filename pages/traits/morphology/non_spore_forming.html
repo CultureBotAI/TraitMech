@@ -480,9 +480,9 @@ After commitment, SigF and SigG act sequentially in the forespore, while SigE an
         </li>
         
         <li>
-          <time>2026-08-08T02:00:00Z</time> ·
-          <strong>RETYPE_CAUSAL_NODE</strong> · claude
-          <p class="changes">Merged node loss_sporulation_capacity into non_spore_forming_trait. Issue 352. &#39;Loss of the capacity to undergo sporulation&#39; IS the record&#39;s own trait (METPO:1000872, non-spore forming), so the only correct grounding duplicates the anchor. Collapsing leaves low_spo0a_activity -causes-&gt; non_spore_forming_trait, which is the shape loss_sporulation_genes already uses in this graph. Every TRAIT node in the corpus is grounded, so requiring a grounding is what separates a real mistyped disposition from a node that merely restates its anchor.</p>
+          <time>2026-08-08T03:00:00Z</time> ·
+          <strong>MERGE_CAUSAL_NODE</strong> · claude
+          <p class="changes">Merged node loss_sporulation_capacity into non_spore_forming_trait and repointed its edges. Issue 352. &#39;Loss of the capacity to undergo sporulation&#39; IS the record&#39;s own trait (METPO:1000872, non-spore forming), so the only correct grounding duplicates the anchor. Collapsing leaves low_spo0a_activity -causes-&gt; non_spore_forming_trait, which is the shape loss_sporulation_genes already uses in this graph.</p>
         </li>
         
       </ol>
@@ -865,7 +865,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-08 02:00 UTC from
+      Record as of 2026-08-08 03:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

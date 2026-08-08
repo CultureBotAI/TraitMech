@@ -3,18 +3,25 @@
 
 #353 shipped the detection and baselined what it found. This is the burn-down.
 
-THE HEADLINE IS THAT ONLY HALF OF THEM WERE RETYPES. #352 framed the fix as
+THE HEADLINE IS THAT ONLY A QUARTER OF THEM WERE RETYPES. #352 framed the fix as
 "sweep CAPACITY nodes matching the disposition pattern and retype them", and for
-four nodes that is exactly right. For the other four, retyping would have been
+two nodes that is exactly right. For the other six, retyping would have been
 wrong in a way that only shows up once you look for the grounding:
 
     every TRAIT node in the corpus is grounded, and the obvious grounding for
-    each of those four is the term its OWN record already carries.
+    each of those six is either the term its OWN record already carries, or a
+    term that collides with a node sitting in the same graph.
 
 Grounding them that way trades a DISPOSITION_MISTYPED for a DUPLICATE_GROUNDING
 and calls it progress. What it actually means is that the node RESTATES its
-anchor, and in three of the four cases the node it restates is sitting in the
+anchor, and in five of the six cases the node it restates is sitting in the
 same graph already correctly typed and grounded. Those get merged, not retyped.
+
+The first pass of this migration called four of them retypes. Review (#360)
+found two of those four -- salt_tolerance_breadth and oxygen_tolerance -- to be
+restatements as well, each caught by the SAME test the other four failed: the
+grounding chosen for them contradicted an edge or a definition the graph
+already had. See their entries in MERGE.
 
 That is #352's own third bullet read strictly: "retype in one pass, GROUNDING
 EACH -- an ungrounded new TRAIT node silently becomes a reachability anchor and
@@ -44,11 +51,29 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
 from traitmech.validation.write_validated import emit_trait_yaml  # noqa: E402
 
 TRAITS = REPO_ROOT / "data" / "traits"
 
-# --- the four that really are mistyped dispositions --------------------------
+# Fixed rather than wall-clock, because pages/ derives its "Corpus as of" stamp
+# from the latest curation_history entry (#228) and a clock would make every
+# re-run of this migration produce a different 477-page diff.
+TIMESTAMP = "2026-08-08T03:00:00Z"
+
+# The first pass logged all eleven events as RETYPE_CAUSAL_NODE, including the
+# seven that were merges or regroundings. An audit trail that calls a merge a
+# retype cannot answer the question it exists to answer, so each kind now gets
+# its own label.
+ACTIONS = {
+    "retype": "RETYPE_CAUSAL_NODE",
+    "merge": "MERGE_CAUSAL_NODE",
+    "drop": "DROP_CAUSAL_NODE",
+    "reground": "REGROUND_CAUSAL_NODE",
+    "unground": "UNGROUND_CAUSAL_NODE",
+}
+
+# --- the two that really are mistyped dispositions --------------------------
 # Retyped to TRAIT and grounded to a term that is NOT the record's own, which is
 # what distinguishes these from the restatements below.
 RETYPE: dict[tuple[str, str], dict] = {
@@ -58,20 +83,6 @@ RETYPE: dict[tuple[str, str], dict] = {
                "The record is METPO:1000625 (slightly halophilic), so this is a distinct "
                "term rather than a restatement of the anchor.",
     },
-    ("environment/nacl_delta_low.yaml", "salt_tolerance_breadth"): {
-        "grounding": "METPO:1000622",  # halotolerant
-        "why": "'Capacity to grow across a range of ambient NaCl concentrations.' Already "
-               "behaves as a trait -- it carries `is a -> nacl_delta` (METPO:1000335) -- "
-               "and the record is METPO:1000479, so 1000622 collides with neither.",
-    },
-    ("environment/oxygen_preference.yaml", "oxygen_tolerance"): {
-        "grounding": "METPO:1000609",  # aerotolerant
-        "why": "'Capacity of a cell to survive exposure to molecular oxygen' is "
-               "aerotolerance. Distinct from all five phenotype nodes in the graph "
-               "(METPO:1000601/2/3/4/612). NOTE this is the organism-scoped sense; "
-               "carboxydotrophic.yaml's same-named node reads 'Ability of an ENZYME to "
-               "function in the presence of O2' and is correctly NOT a trait (#353).",
-    },
     ("environment/ph_delta.yaml", "low_ph_tolerance"): {
         "grounding": "METPO:1003008",  # acidotolerant
         "why": "'Capacity to grow and survive under acidic external pH' is acidotolerance. "
@@ -79,10 +90,38 @@ RETYPE: dict[tuple[str, str], dict] = {
     },
 }
 
-# --- the four restatements ---------------------------------------------------
+# --- the six restatements ---------------------------------------------------
 # `into` repoints the node's edges onto an existing node and drops it; `drop`
 # removes a leaf outright.
 MERGE: dict[tuple[str, str], dict] = {
+    ("environment/nacl_delta_low.yaml", "salt_tolerance_breadth"): {
+        "into": "nacl_delta",
+        "why": "A FIFTH restatement, caught in review (#360). 'Capacity to grow across a "
+               "range of ambient NaCl concentrations' against nacl_delta's 'Breadth of the "
+               "growth-supporting NaCl range' -- the same claim, and nacl_delta is in the "
+               "same graph already TRAIT and already grounded METPO:1000335. I had "
+               "retyped it and grounded it METPO:1000622 (halotolerant), which is a "
+               "DEGREE of tolerance, not a breadth: 1000622 is a halophily preference "
+               "(sub 1000629) while 1000335 is a delta (sub 1000532/1000534), so the "
+               "node's existing `is a -> nacl_delta` edge asserted halotolerant sub NaCl "
+               "delta, a subsumption METPO does not have. The absolute-vs-breadth "
+               "distinction this migration insists on for pH, missed for salt.",
+    },
+    ("environment/oxygen_preference.yaml", "oxygen_tolerance"): {
+        "into": "oxygen_preference_trait",
+        "why": "A SIXTH restatement (#360). METPO:1000601's own definition is 'an "
+               "organism's oxygen requirements OR TOLERANCE for growth', so 'capacity of "
+               "a cell to survive exposure to molecular oxygen' is part of what the "
+               "anchor already says. I had grounded it METPO:1000609 (aerotolerant), "
+               "which METPO defines as 'does NOT USE O2 for growth but tolerates its "
+               "presence' -- the aerotolerant-anaerobe phenotype, false of the obligate "
+               "aerobes this node also covers -- and which is itself sub METPO:1000601, "
+               "making it a sixth child phenotype in a graph that wires the other four "
+               "in with `is a` and left this one unlinked. aerotolerant.yaml, the record "
+               "FOR 1000609, has no such node at all: it models the same biology as "
+               "detoxification processes. Merging attaches the ROS-defence island to the "
+               "trait, which unlike a retype is a real connectivity gain.",
+    },
     ("environment/ph_delta_low.yaml", "ph_homeostasis_capacity"): {
         "into": "cytoplasmic_ph_homeostasis",
         "why": "'Capacity to balance and maintain cytoplasmic pH under pH stress' is "
@@ -150,6 +189,7 @@ def apply(dry_run: bool = False) -> int:
     for rel, actions in sorted(files.items()):
         path = TRAITS / rel
         doc = yaml.safe_load(path.read_text())
+        events: list[tuple[str, str]] = []
         for kind, node_id, spec in actions:
             graph = next((g for g in doc.get("causal_graphs") or []
                           if any(n.get("node_id") == node_id for n in g.get("nodes") or [])),
@@ -161,17 +201,26 @@ def apply(dry_run: bool = False) -> int:
             node = next(n for n in nodes if n["node_id"] == node_id)
 
             if kind == "retype":
+                was = node.get("node_type")
                 node["node_type"] = "TRAIT"
                 node["grounding"] = spec["grounding"]
                 print(f"  retype  {rel} {node_id} -> TRAIT {spec['grounding']}")
+                events.append(("retype", f"Retyped node {node_id} from {was} to TRAIT and "
+                                         f"grounded it {spec['grounding']}. Issue 352. "
+                                         f"{spec['why']}"))
 
             elif kind == "reground":
                 if spec["grounding"] is None:
-                    node.pop("grounding", None)
+                    was_grounding = node.pop("grounding", None)
                     print(f"  unground {rel} {node_id}")
+                    events.append(("unground", f"Dropped the grounding {was_grounding} from node "
+                                               f"{node_id}. Issue 352. {spec['why']}"))
                 else:
+                    was_grounding = node.get("grounding")
                     node["grounding"] = spec["grounding"]
                     print(f"  reground {rel} {node_id} -> {spec['grounding']}")
+                    events.append(("reground", f"Regrounded node {node_id} from {was_grounding} to "
+                                               f"{spec['grounding']}. Issue 352. {spec['why']}"))
 
             else:  # merge
                 target = spec.get("into")
@@ -197,6 +246,16 @@ def apply(dry_run: bool = False) -> int:
                 graph["edges"] = kept
                 graph["nodes"] = [n for n in nodes if n["node_id"] != node_id]
                 print(f"  merge   {rel} {node_id} -> {target or '(dropped)'}")
+                if target:
+                    events.append(("merge", f"Merged node {node_id} into {target} and repointed its "
+                                            f"edges. Issue 352. {spec['why']}"))
+                else:
+                    events.append(("drop", f"Dropped node {node_id} and its edges. Issue 352. "
+                                           f"{spec['why']}"))
+
+        for key, changes in events:
+            record_curation_event(doc, curator="claude", action=ACTIONS[key],
+                                  changes=changes, llm_assisted=True, timestamp=TIMESTAMP)
 
         if not dry_run:
             path.write_text(emit_trait_yaml(doc))

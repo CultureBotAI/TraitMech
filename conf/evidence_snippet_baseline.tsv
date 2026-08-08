@@ -499,11 +499,10 @@ data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:
 data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:salinity_transition->proteome_reorganization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/sciadv.adg2059 has no snippet
 data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:salt_in_osmoadaptation->acidic_proteome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41559-024-02505-6 has no snippet
 data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:compatible_solute_transporters->limited_osmoadaptive_flexibility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:ectoine_biosynthesis->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:intracellular_proline->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01195-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:nhac_antiporter->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:salt_tolerance_breadth->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy009 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:trkh_k_uptake->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:ectoine_biosynthesis->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:intracellular_proline->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01195-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:nhac_antiporter->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:trkh_k_uptake->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:c_di_amp->k_import[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00181-23 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:c_di_amp->organic_osmolyte_influx_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/JB.00190-24 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:compatible_solute_accumulation->osmoadaptation_under_nacl[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuaf020 has no snippet
@@ -632,11 +631,11 @@ data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	optimum_phe
 data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	optimum_phenotype_descriptor:opua_transporter->intracellular_glycine_betaine[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:aerobic_phenotype->oxygen_preference_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'aerobic ... respiration capacities'
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:catalase->hydrogen_peroxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
-data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:detoxifying_enzyme_expression->oxygen_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
+data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:detoxifying_enzyme_expression->oxygen_preference_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:molecular_oxygen->oxygen_terminal_electron_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012084 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:oxygen_terminal_electron_acceptor->aerobic_phenotype[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012084 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:reactive_oxygen_species_stress->detoxifying_enzyme_expression[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
-data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:superoxide_dismutase->oxygen_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
+data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:superoxide_dismutase->oxygen_preference_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:amino_acid_decarboxylase_acid_resistance->low_ph_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:cation_proton_antiporter_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00569-24 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:f0f1_atpase_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet

@@ -269,14 +269,13 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
-- timestamp: '2026-08-08T02:00:00Z'
+- timestamp: '2026-08-08T03:00:00Z'
   curator: claude
-  action: RETYPE_CAUSAL_NODE
-  changes: Dropped node growth_at_4c. Issue 352. 'Ability to grow at refrigeration-range
-    low temperature (4 C)' IS METPO:1000618 (psychrotolerant), the record's own term
-    and the grounding of psychrotolerant_trait, which is the node it hangs off. A
-    leaf restating its own parent. The parent keeps two other in-edges (cold_shock_response
-    confers, facultative_lipid_remodeling manifests as), so nothing is stranded. Every
-    TRAIT node in the corpus is grounded, so requiring a grounding is what separates
-    a real mistyped disposition from a node that merely restates its anchor.
+  action: DROP_CAUSAL_NODE
+  changes: Dropped node growth_at_4c and its edges. Issue 352. 'Ability to grow at
+    refrigeration-range low temperature (4 C)' IS METPO:1000618 (psychrotolerant),
+    the record's own term and the grounding of psychrotolerant_trait, which is the
+    node it hangs off. A leaf restating its own parent. The parent keeps two other
+    in-edges (cold_shock_response confers, facultative_lipid_remodeling manifests
+    as), so nothing is stranded.
   llm_assisted: true

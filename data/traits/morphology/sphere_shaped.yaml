@@ -243,13 +243,11 @@ curation_history:
     not enablement. Needs GENE_OR_PROTEIN added to `transports`'' subject_types, which
     is a deliberate widening recorded there.'
   llm_assisted: true
-- timestamp: '2026-08-08T02:00:00Z'
+- timestamp: '2026-08-08T03:00:00Z'
   curator: claude
-  action: RETYPE_CAUSAL_NODE
-  changes: Merged node elongation_capacity into lateral_elongation. Issue 352. 'Capacity
-    of a cell to elongate into a rod via sidewall growth' against lateral_elongation's
-    'Sidewall growth mode that lengthens rods' -- the same claim twice, and both already
-    carried `reduced in -> sphere_shaped_trait`. Every TRAIT node in the corpus is
-    grounded, so requiring a grounding is what separates a real mistyped disposition
-    from a node that merely restates its anchor.
+  action: MERGE_CAUSAL_NODE
+  changes: Merged node elongation_capacity into lateral_elongation and repointed its
+    edges. Issue 352. 'Capacity of a cell to elongate into a rod via sidewall growth'
+    against lateral_elongation's 'Sidewall growth mode that lengthens rods' -- the
+    same claim twice, and both already carried `reduced in -> sphere_shaped_trait`.
   llm_assisted: true

@@ -217,12 +217,10 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
-- timestamp: '2026-08-08T02:00:00Z'
+- timestamp: '2026-08-08T03:00:00Z'
   curator: claude
   action: RETYPE_CAUSAL_NODE
   changes: Retyped node low_ph_tolerance from CAPACITY to TRAIT and grounded it METPO:1003008.
     Issue 352. 'Capacity to grow and survive under acidic external pH' is acidotolerance.
-    The record is METPO:1000232 (pH delta), so no collision. Every TRAIT node in the
-    corpus is grounded, so requiring a grounding is what separates a real mistyped
-    disposition from a node that merely restates its anchor.
+    The record is METPO:1000232 (pH delta), so no collision.
   llm_assisted: true
