@@ -174,15 +174,17 @@ baselined here to hide behind. What to write instead:
 | X enables a tolerance or capability | `TRAIT` | **check the node type first.** A node described as a *capacity to*, an *ability to*, or a *tolerance of* is a disposition, i.e. a `TRAIT` — retype it and use `confers`. Ground it, like any TRAIT row (#334) |
 | X generates a gradient, a state, an internal environment | `STATE` | `contributes to` — `RO:0002326`. Only where the subject really does contribute to the object's *occurrence or generation*; a subject that merely **powers** something it does not generate does not qualify (#341) — that case is `powers`, above |
 
-**Check the node type before you change the predicate.** In #334 five of
-the sixteen edges had the right predicate and the wrong *node type*: an
-object labelled like a quality but described as a process (*"evenly
-distributed insertion of peptidoglycan"*) or as a disposition
-(*"tolerance to antimicrobial treatment"*). Retyping the node fixed
-those; rewriting the predicate would have preserved the error and hidden
-it. The same was true in #331, #330 and #351.
+**Check the node type before you change the predicate.** In #334 three of
+the sixteen edges had the wrong *node type* — an object labelled like a
+quality but described as a process (*"evenly distributed insertion of
+peptidoglycan"*) or as a disposition (*"tolerance to antimicrobial
+treatment"*). For **one** of those the predicate was already right, and
+retyping the node was the entire fix; the other two needed `confers` as
+well. Either way the node type is what you check first, because rewriting
+the predicate around a mistyped node preserves the error and hides it. The
+same was true in #331, #330 and #351.
 
-**Read the record's own prose.** Twice in #334 the edge was simply
+**Read the record's own prose.** Once in #334 the edge was simply
 backwards, and the node description said so — *"high-affinity terminal
 oxidase **enabling** oxygen respiration"* was written as *oxygen enables
 the oxidase*. Reversing it was both the true statement and the
