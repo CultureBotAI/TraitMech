@@ -27,9 +27,12 @@ WHAT THIS DELIBERATELY DOES NOT CHECK. That the record is *about* the change. A
 record added for an unrelated reason satisfies it. Checking the correspondence
 would mean parsing intent, and the cheap proxies (does `target.path` name a
 changed file?) are wrong for the migration case, where the honest target is the
-script rather than any of the records it edited. The gate against an empty record
-is `validate-history`, which fails while the `--details` TODO placeholder is
-unfilled -- so the cheapest way to game this one does not work.
+script rather than any of the records it edited. The only guard against a
+contentless record is `validate-history`, whose schema pattern rejects the
+literal `TODO: replace this placeholder` prefix and nothing else -- ``--details
+'see PR'`` passes. That is the design, not an oversight: this gate asks whether
+provenance was recorded, not whether it was recorded well. Do not rely on it to
+judge substance.
 
 The rule is kept out of the workflow YAML so it is testable without a repo, a
 network, or a PR; ``main`` shells out to git and hands the file lists in.
@@ -44,8 +47,16 @@ import argparse
 import subprocess
 import sys
 
-TRAIT_GLOB = "data/traits/**/*.yaml"
-HISTORY_GLOB = "history/**/*.yaml"
+# NO `**/`. A git pathspec is not a shell glob: git's `*` already crosses `/`,
+# so `data/traits/**/*.yaml` still has to consume the literal slash in `**/` and
+# therefore requires AT LEAST ONE intervening directory. It misses a trait added
+# directly under data/traits/. The workflow's own trigger is
+# `paths: data/traits/**`, which is GitHub Actions semantics and DOES match that
+# file -- so the job would start and then clear the gate reporting "0 trait
+# records changed" (#357 review). `data/traits/*.yaml` is strictly more
+# inclusive and matches the same 477 files today.
+TRAIT_GLOB = "data/traits/*.yaml"
+HISTORY_GLOB = "history/*.yaml"
 
 
 def missing_record(changed_traits: list[str], added_history: list[str]) -> bool:

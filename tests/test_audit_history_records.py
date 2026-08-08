@@ -71,3 +71,75 @@ def test_the_scripts_own_cli_agrees_with_the_rule():
 
     nothing = run([], [])
     assert nothing.returncode == 0
+
+
+# --- #357 review: the pathspec itself, which missing_record() cannot see -------
+
+
+def _git(cwd, *args):
+    subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True)
+
+
+def _repo(tmp_path: Path) -> Path:
+    _git(tmp_path, "init", "-q", "-b", "main")
+    _git(tmp_path, "config", "user.email", "t@t")
+    _git(tmp_path, "config", "user.name", "t")
+    (tmp_path / "README").write_text("base\n")
+    _git(tmp_path, "add", "-A")
+    _git(tmp_path, "commit", "-qm", "base")
+    return tmp_path
+
+
+def test_collect_sees_a_trait_directly_under_data_traits(tmp_path):
+    """A git pathspec is NOT a shell glob.
+
+    git's `*` already crosses `/`, so `data/traits/**/*.yaml` must still consume
+    the literal slash in `**/` and therefore needs at least one intervening
+    directory -- it misses `data/traits/x.yaml`. The workflow's trigger is
+    `paths: data/traits/**`, which is GitHub Actions semantics and DOES match
+    that file, so the job would start and then clear the gate at "0 changed".
+    Silently permissive, and invisible to missing_record().
+    """
+    repo = _repo(tmp_path)
+    for rel in ["data/traits/toplevel.yaml", "data/traits/morphology/nested.yaml"]:
+        p = repo / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text("identifier: x\n")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "traits")
+
+    import audit_history_records as m
+    cwd = Path.cwd()
+    try:
+        import os
+        os.chdir(repo)
+        changed, added = m.collect("main~1")
+    finally:
+        os.chdir(cwd)
+    assert sorted(changed) == ["data/traits/morphology/nested.yaml",
+                               "data/traits/toplevel.yaml"]
+
+
+def test_collect_counts_a_history_record_at_any_depth(tmp_path):
+    """Same bug on the other side: a record not nested under a slug dir would
+    not have counted toward presence."""
+    repo = _repo(tmp_path)
+    for rel in ["history/flat.yaml", "history/records/slug/deep.yaml"]:
+        p = repo / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text("history_version: 1\n")
+    (repo / "data/traits").mkdir(parents=True)
+    (repo / "data/traits/t.yaml").write_text("identifier: x\n")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "records")
+
+    import audit_history_records as m
+    import os
+    cwd = Path.cwd()
+    try:
+        os.chdir(repo)
+        changed, added = m.collect("main~1")
+    finally:
+        os.chdir(cwd)
+    assert sorted(added) == ["history/flat.yaml", "history/records/slug/deep.yaml"]
+    assert m.missing_record(changed, added) is False

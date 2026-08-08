@@ -342,8 +342,10 @@ knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
 
 # ============== Curation history (append-only provenance) ==============
 # Records which model, using which tool, changed what, why, and under which
-# issue. One file per session per target under history/; never edited after
-# write. See history/README.md. Schema + scaffolder live in claw.
+# issue. ONE record per change under history/ -- per target for hand curation,
+# per migration for a bulk edit (#325) -- never edited after write. Required:
+# a PR that changes data/traits and adds no record fails CI. See
+# history/README.md. Schema + scaffolder live in claw.
 
 # Scaffold a history record. Prints the path as its last stdout line.
 #   just new-history --kind record --slug cellulolysis \

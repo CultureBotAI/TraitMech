@@ -6,8 +6,10 @@ name: Curation history
 #   * VALIDITY. A malformed history record fails like any other validation error,
 #     including one still carrying the `--details` TODO placeholder -- so
 #     scaffolding an empty record to satisfy the presence gate does not work.
-#   * PRESENCE. A PR that changes data/traits/**/*.yaml and adds no new history
-#     record fails.
+#   * PRESENCE. A PR that changes any .yaml under data/traits/ and adds no new
+#     history record fails. Spelled that way deliberately: the pathspec is
+#     `data/traits/*.yaml`, because a git `*` already crosses `/` and the `**/`
+#     form would MISS a trait added at the top level (#357 review).
 #
 # Presence was advisory until #325, on the reasoning that a hard gate trains
 # people to route around it. The measurement disagreed: of 134 commits that

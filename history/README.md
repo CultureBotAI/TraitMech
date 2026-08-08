@@ -1,8 +1,9 @@
 # Curation history
 
-Append-only provenance for curation sessions. One record per session per target,
-written once and **never edited afterwards**. Corrections go in a new record that
-references the old one in its `details`.
+Append-only provenance for curation sessions. **One record per change** — per
+target for hand curation, per *migration* for a bulk edit (see "One record per
+CHANGE" below). Written once and **never edited afterwards**; corrections go in a
+new record that references the old one in its `details`.
 
 ```
 history/<kind-dir>/<slug>/<TIMESTAMP>-<actor>-<shortid>.yaml
@@ -107,8 +108,8 @@ wrong is invisible without a record here. That is what `outcome: no_change` is f
 
 ## How strictly this is enforced
 
-- **Presence blocks** (#325). A PR that changes `data/traits/**/*.yaml` and adds no
-  new history record fails CI.
+- **Presence blocks** (#325). A PR that changes any `.yaml` under `data/traits/`
+  and adds no new history record fails CI.
 
   This was advisory until #325, on the reasoning that a hard gate "trains people to
   route around it". The measurement disagreed: of **134 commits** that modified
@@ -126,6 +127,21 @@ wrong is invisible without a record here. That is what `outcome: no_change` is f
   `just validate-history` fails like any other validation error. It also fails while
   the `--details` TODO placeholder is unfilled, so scaffolding an empty record to
   satisfy the presence gate does not work.
+
+## The vendored schema still states the old policy
+
+`src/traitmech/schema/history.yaml` describes presence as *advisory* and states
+"one record per session per target" unqualified. Both are superseded by #325 and
+**neither is edited here on purpose**: that file is vendored byte-identical from
+claw, which is private and unreachable from this repo's CI, so a one-copy edit
+would create drift that nothing detects — `src/traitmech/schema/history.yaml` is
+NOT in `scripts/check_vendored_sync.sh`'s checked set, which is the gap #209
+tracks. The canonical copy has to change in claw first and be re-vendored;
+tracked in #358.
+
+Until then this README and the `curation-history` workflow are the operative
+statements of the policy, and the schema's prose is stale by design rather than
+by neglect.
 
 ## Where the schema lives
 
