@@ -78,7 +78,7 @@ causal_graphs:
   - node_id: growth_external_ph_5_5_9
     label: growth across external pH 5.5-9.0
     node_type: TRAIT
-    grounding: METPO:1000478
+    grounding: METPO:1000332
     description: Growth supported across the neutralophile external pH range ~5.5-9.0.
   - node_id: constant_pmf
     label: constant proton motive force
@@ -285,4 +285,13 @@ curation_history:
     two unrelated-looking anchors. growth_external_ph_5_5_9 is the same concept as
     this record''s own ph_delta_high_trait, so it takes the same METPO:1000478; merging
     the two nodes is tracked in issue 352.'
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODE
+  changes: 'Regrounded node growth_external_ph_5_5_9 from METPO:1000478 to METPO:1000332.
+    Issue 352. Shared METPO:1000478 with ph_delta_high_trait, but the two say different
+    things: this node is an ABSOLUTE external range (''~5.5-9.0''), while ph_delta_high_trait
+    is a BREADTH (''approximately 5-9 pH units''), which is what a pH DELTA is. 1000478
+    belongs to the delta; this is a pH range (METPO:1000332).'
   llm_assisted: true

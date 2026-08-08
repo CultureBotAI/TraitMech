@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_disposition_typing.py
+  slug: disposition-typing-burndown
+session:
+  id: 2026-08-08T030032Z-claude-code-d72d86
+  timestamp: '2026-08-08T03:00:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/352
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/360
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Correct two of the four claimed retypes to merges after review (#360)
+  details: 'Review of the first burn-down pass found that 2 of the 4 nodes it retyped were
+    restatements, by the same test the other restatements failed: the grounding chosen for
+    each contradicted an edge or definition the graph already had. salt_tolerance_breadth
+    was retyped and grounded METPO:1000622 (halotolerant) while keeping its ''is a -> nacl_delta''
+    edge, and nacl_delta is METPO:1000335 (a delta, sub 1000532/1000534) whereas 1000622 is
+    a halophily preference (sub 1000629), so the graph asserted halotolerant sub NaCl-delta,
+    a subsumption METPO does not have. It is the absolute-vs-breadth distinction this migration
+    already insists on for pH, missed for salt; merged into nacl_delta. oxygen_tolerance was
+    grounded METPO:1000609 (aerotolerant), which METPO defines as ''does not use O2 for growth
+    but tolerates its presence'' - false of the obligate aerobes the node also covers - and
+    which is itself sub METPO:1000601, making it a sixth child phenotype in a graph that wires
+    the other four in with ''is a'' and left this one unlinked; merged into oxygen_preference_trait.
+    The migration is now 2 retypes, 6 merges, 3 regroundings. Unlike the retype, the merge
+    is a real connectivity gain: oxygen_preference FRAGMENTED_GRAPH goes components=3 of 14
+    (sizes 8,4,2) to components=2 of 13 (sizes 11,2), because the ROS-defence island now attaches
+    to the trait instead of merely sitting beside a new anchor. UNREACHABLE_FROM_TRAIT is
+    1296 either way, which is why the count alone could not tell the two apart (issue 359).
+    Also fixed the audit trail itself: the first pass logged all 11 events as RETYPE_CAUSAL_NODE
+    including the 7 merges and regroundings, so the script now emits MERGE/DROP/REGROUND/UNGROUND_CAUSAL_NODE
+    and appends the curation_history entry itself rather than leaving it to be hand-written.
+    519 tests pass; audit-graphs and audit-snippets both 0 new.'

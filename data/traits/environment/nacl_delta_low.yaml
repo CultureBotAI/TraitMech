@@ -63,10 +63,6 @@ causal_graphs:
     node_type: CHEMICAL
     description: Accumulation of proline as a compatible solute supporting growth
       at higher NaCl.
-  - node_id: salt_tolerance_breadth
-    label: salt-tolerance breadth
-    node_type: CAPACITY
-    description: Capacity to grow across a range of ambient NaCl concentrations.
   edges:
   - subject: limited_osmoadaptive_flexibility
     predicate: confers
@@ -89,7 +85,7 @@ causal_graphs:
     predicate_id: rdfs:subClassOf
   - subject: ectoine_biosynthesis
     predicate: supports
-    object: salt_tolerance_breadth
+    object: nacl_delta
     description: Ectoine biosynthesis capacity broadens NaCl tolerance; its loss narrows
       the growth range.
     evidence:
@@ -108,7 +104,7 @@ causal_graphs:
         (opuAC, proX/proV/proW) supporting osmoadaptation.
   - subject: trkh_k_uptake
     predicate: supports
-    object: salt_tolerance_breadth
+    object: nacl_delta
     description: TrkH K+ uptake supports intracellular K+ homeostasis enabling salt
       tolerance; its absence may contribute to narrow breadth.
     evidence:
@@ -117,7 +113,7 @@ causal_graphs:
         of compatible solutes and K+ supports salt adaptation.
   - subject: nhac_antiporter
     predicate: supports
-    object: salt_tolerance_breadth
+    object: nacl_delta
     description: NhaC Na+/H+ antiporters support ion homeostasis under salt stress;
       a candidate breadth-expanding mechanism whose absence may contribute to NaCl
       delta low.
@@ -127,7 +123,7 @@ causal_graphs:
         (~3.27 and 3.22-fold).
   - subject: intracellular_proline
     predicate: supports
-    object: salt_tolerance_breadth
+    object: nacl_delta
     description: Increased intracellular proline as a compatible solute supports growth
       at higher NaCl, broadening tolerance.
     evidence:
@@ -135,16 +131,6 @@ causal_graphs:
       notes: Engineered proline biosynthesis with blocked catabolism increased intracellular
         proline and restored growth at 8% NaCl; supports osmolyte role of proline
         in salt-tolerance breadth.
-  - subject: salt_tolerance_breadth
-    predicate: is a
-    object: nacl_delta
-    description: Salt-tolerance breadth is the capacity quantified by the NaCl-delta
-      phenotype.
-    evidence:
-    - reference: DOI:10.1093/femsre/fuy009
-      notes: Osmoadaptation review frames salinity tolerance breadth as the basis
-        of the NaCl-delta (stenohaline vs euryhaline) distinction.
-    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840753+00:00'
   curator: seed_from_metpo
@@ -187,4 +173,18 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: MERGE_CAUSAL_NODE
+  changes: 'Merged node salt_tolerance_breadth into nacl_delta and repointed its edges.
+    Issue 352. A FIFTH restatement, caught in review (#360). ''Capacity to grow across
+    a range of ambient NaCl concentrations'' against nacl_delta''s ''Breadth of the
+    growth-supporting NaCl range'' -- the same claim, and nacl_delta is in the same
+    graph already TRAIT and already grounded METPO:1000335. I had retyped it and grounded
+    it METPO:1000622 (halotolerant), which is a DEGREE of tolerance, not a breadth:
+    1000622 is a halophily preference (sub 1000629) while 1000335 is a delta (sub
+    1000532/1000534), so the node''s existing `is a -> nacl_delta` edge asserted halotolerant
+    sub NaCl delta, a subsumption METPO does not have. The absolute-vs-breadth distinction
+    this migration insists on for pH, missed for salt.'
   llm_assisted: true

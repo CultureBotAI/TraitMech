@@ -91,7 +91,6 @@ has quality	3	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/
 feed into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
 polymerizes into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/magnetosome.yaml
 disrupts	3	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/irregular_shaped.yaml
-reduced in	3	unmapped		data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/sphere_shaped.yaml
 carries out	3	unmapped		data/traits/morphology/ellipsoidal.yaml|data/traits/upper/biological_process.yaml
 scaffolds	3	unmapped		data/traits/morphology/fusiform_shaped.yaml|data/traits/morphology/tetrad_arrangement.yaml|data/traits/physiology/chemotaxis.yaml
 encapsulates	3	unmapped		data/traits/morphology/intracellular_inclusion.yaml|data/traits/physiology/chemoautotrophic.yaml
@@ -164,6 +163,7 @@ gives rise to	2	unmapped		data/traits/morphology/bacillus_shaped.yaml|data/trait
 localizes	2	unmapped		data/traits/morphology/branched_shaped.yaml|data/traits/morphology/star_shaped.yaml
 polymerizes to	2	unmapped		data/traits/morphology/brown_pigmented.yaml
 attaches	2	unmapped		data/traits/morphology/cell_length.yaml|data/traits/morphology/sarcina_arrangement.yaml
+reduced in	2	unmapped		data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/sphere_shaped.yaml
 incomplete separation yields	2	unmapped		data/traits/morphology/diplococcus_shaped.yaml
 combines with	2	unmapped		data/traits/morphology/flask_shaped.yaml|data/traits/morphology/oval_shaped.yaml
 dephosphorylates	2	unmapped		data/traits/morphology/non_spore_forming.yaml|data/traits/physiology/chemotaxis.yaml
@@ -293,7 +293,6 @@ cause	1	unmapped		data/traits/environment/ph_range_very_low.yaml
 causes increase in	1	unmapped		data/traits/environment/piezotolerant.yaml
 induces transcription of	1	unmapped		data/traits/environment/piezotolerant.yaml
 expands	1	unmapped		data/traits/environment/pressure_range.yaml
-has capability	1	unmapped		data/traits/environment/psychrotolerant.yaml
 acts as antioxidant against	1	unmapped		data/traits/environment/radiotolerant.yaml
 exceeds tolerance of	1	unmapped		data/traits/environment/stenohaline.yaml
 resists	1	unmapped		data/traits/environment/temperature_delta_high.yaml

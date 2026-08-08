@@ -96,10 +96,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that dismutates superoxide; key oxidative-stress defense.
     grounding: GO:0004784
-  - node_id: oxygen_tolerance
-    label: oxygen tolerance
-    node_type: CAPACITY
-    description: Capacity of a cell to survive exposure to molecular oxygen.
   edges:
   - subject: ambient_oxygen
     predicate: defines
@@ -180,7 +176,7 @@ causal_graphs:
         to O2 or H2O2 stress.
   - subject: detoxifying_enzyme_expression
     predicate: increases
-    object: oxygen_tolerance
+    object: oxygen_preference_trait
     description: A larger detoxifying-enzyme repertoire increases survival under oxygen
       exposure.
     evidence:
@@ -199,7 +195,7 @@ causal_graphs:
     predicate_id: METPO:2007809
   - subject: superoxide_dismutase
     predicate: increases
-    object: oxygen_tolerance
+    object: oxygen_preference_trait
     description: Higher superoxide dismutase activity is associated with higher oxygen
       tolerance.
     evidence:
@@ -299,4 +295,20 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: MERGE_CAUSAL_NODE
+  changes: 'Merged node oxygen_tolerance into oxygen_preference_trait and repointed
+    its edges. Issue 352. A SIXTH restatement (#360). METPO:1000601''s own definition
+    is ''an organism''s oxygen requirements OR TOLERANCE for growth'', so ''capacity
+    of a cell to survive exposure to molecular oxygen'' is part of what the anchor
+    already says. I had grounded it METPO:1000609 (aerotolerant), which METPO defines
+    as ''does NOT USE O2 for growth but tolerates its presence'' -- the aerotolerant-anaerobe
+    phenotype, false of the obligate aerobes this node also covers -- and which is
+    itself sub METPO:1000601, making it a sixth child phenotype in a graph that wires
+    the other four in with `is a` and left this one unlinked. aerotolerant.yaml, the
+    record FOR 1000609, has no such node at all: it models the same biology as detoxification
+    processes. Merging attaches the ROS-defence island to the trait, which unlike
+    a retype is a real connectivity gain.'
   llm_assisted: true

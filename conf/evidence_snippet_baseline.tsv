@@ -499,11 +499,10 @@ data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:
 data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:salinity_transition->proteome_reorganization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/sciadv.adg2059 has no snippet
 data/traits/environment/nacl_delta_high.yaml	nacl_delta_high_extreme_euryhaline:salt_in_osmoadaptation->acidic_proteome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41559-024-02505-6 has no snippet
 data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:compatible_solute_transporters->limited_osmoadaptive_flexibility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:ectoine_biosynthesis->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:intracellular_proline->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01195-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:nhac_antiporter->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:salt_tolerance_breadth->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy009 has no snippet
-data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:trkh_k_uptake->salt_tolerance_breadth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:ectoine_biosynthesis->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:intracellular_proline->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01195-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:nhac_antiporter->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
+data/traits/environment/nacl_delta_low.yaml	nacl_delta_low_stenohaline:trkh_k_uptake->nacl_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00145-24 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:c_di_amp->k_import[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00181-23 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:c_di_amp->organic_osmolyte_influx_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/JB.00190-24 has no snippet
 data/traits/environment/nacl_delta_mid1.yaml	nacl_delta_mid1_modest_breadth:compatible_solute_accumulation->osmoadaptation_under_nacl[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuaf020 has no snippet
@@ -632,12 +631,12 @@ data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	optimum_phe
 data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	optimum_phenotype_descriptor:opua_transporter->intracellular_glycine_betaine[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:aerobic_phenotype->oxygen_preference_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'aerobic ... respiration capacities'
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:catalase->hydrogen_peroxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
-data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:detoxifying_enzyme_expression->oxygen_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
+data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:detoxifying_enzyme_expression->oxygen_preference_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:molecular_oxygen->oxygen_terminal_electron_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012084 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:oxygen_terminal_electron_acceptor->aerobic_phenotype[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012084 has no snippet
 data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:reactive_oxygen_species_stress->detoxifying_enzyme_expression[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00606-23 has no snippet
-data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:superoxide_dismutase->oxygen_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
-data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:amino_acid_decarboxylase_acid_resistance->low_ph_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
+data/traits/environment/oxygen_preference.yaml	oxygen_preference_o2_availability_axis:superoxide_dismutase->oxygen_preference_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s43705-023-00251-7 has no snippet
+data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:amino_acid_decarboxylase_acid_resistance->ph_delta_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:cation_proton_antiporter_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00569-24 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:f0f1_atpase_activity->ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_delta.yaml	ph_delta_homeostasis_flexibility:membrane_lipid_remodeling->proton_permeability[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2022.1034164 has no snippet
@@ -655,7 +654,7 @@ data/traits/environment/ph_delta_high.yaml	ph_delta_high_euryphilic_breadth:resp
 data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:electrogenic_na_h_antiport->alkaline_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:external_ph_stress->cytoplasmic_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:f1fo_atpase->cytoplasmic_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
-data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:pmf_architecture->ph_homeostasis_capacity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
+data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:pmf_architecture->cytoplasmic_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_low.yaml	ph_delta_low_limited_breadth:weak_organic_acids->delta_ph[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_mid1.yaml	ph_delta_mid1_moderate_breadth:cytoplasmic_ph_homeostasis->moderate_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
 data/traits/environment/ph_delta_mid1.yaml	ph_delta_mid1_moderate_breadth:f0f1_atpase->cytoplasmic_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12091774 has no snippet
@@ -828,7 +827,6 @@ data/traits/environment/psychrotolerant.yaml	psychrotolerant_facultative_cold_ad
 data/traits/environment/psychrotolerant.yaml	psychrotolerant_facultative_cold_adaptation:extracellular_polymeric_substances->freeze_thaw_cryoprotection[0]	MISSING_SNIPPET	WARN	reference=DOI:10.37256/amtt.5220244537 has no snippet
 data/traits/environment/psychrotolerant.yaml	psychrotolerant_facultative_cold_adaptation:low_temperature->membrane_rigidification[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.03925-23 has no snippet
 data/traits/environment/psychrotolerant.yaml	psychrotolerant_facultative_cold_adaptation:low_temperature->unsaturated_hopanoids[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s42770-023-01057-4 has no snippet
-data/traits/environment/psychrotolerant.yaml	psychrotolerant_facultative_cold_adaptation:psychrotolerant_trait->growth_at_4c[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s42770-023-01057-4 has no snippet
 data/traits/environment/radiotolerant.yaml	radiotolerance_repair_antioxidant:carotenoid_pigments->reactive_oxygen_species[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/su17177864 has no snippet
 data/traits/environment/radiotolerant.yaml	radiotolerance_repair_antioxidant:dna_damage_repair->radiotolerant_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/cshperspect.a012765 has no snippet
 data/traits/environment/radiotolerant.yaml	radiotolerance_repair_antioxidant:fe2_ion->reactive_oxygen_species[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.03838-23 has no snippet
@@ -848,10 +846,10 @@ data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_p
 data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_phenotype_numerical_axis:salt_out_compatible_solute_strategy->intracellular_osmotic_balance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/frmbi.2023.1329925 has no snippet
 data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	salinity_phenotype_numerical_axis:water_activity->salinity_phenotype_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41559-024-02505-6 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ect_gene_cluster->ectoine_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
-data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine->salt_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
+data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine->slightly_halophilic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:ectoine_biosynthesis->ectoine[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01905-23 has no snippet
 data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:na_k_transcription->ion_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s42003-022-04319-3 has no snippet
-data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:osmoprotectant_transport->salt_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy026 has no snippet
+data/traits/environment/slightly_halophilic.yaml	slight_halophile_low_salt_osmoadaptation:osmoprotectant_transport->slightly_halophilic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuy026 has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:aquaporin_water_channel->facilitated_water_diffusion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-024-01817-w has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:c_di_amp->k_import_systems[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet
 data/traits/environment/stenohaline.yaml	stenohaline_narrow_salinity_tolerance:c_di_amp->opua_importer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00181-23 has no snippet
@@ -2095,9 +2093,8 @@ data/traits/morphology/non_motile.yaml	non_motile_absent_motility_apparatus:flhd
 data/traits/morphology/non_motile.yaml	non_motile_absent_motility_apparatus:reduced_motility_state->non_motile_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01548-23 has no snippet
 data/traits/morphology/non_motile.yaml	non_motile_absent_motility_apparatus:wspr_dgc->c_di_gmp_high[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01548-23 has no snippet
 data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:absent_spo0a_gene->non_spore_forming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00079-22 has no snippet
-data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:loss_sporulation_capacity->non_spore_forming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.630573 has no snippet
 data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:loss_sporulation_genes->non_spore_forming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1462-2920.16145 has no snippet
-data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:low_spo0a_activity->loss_sporulation_capacity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.630573 has no snippet
+data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:low_spo0a_activity->non_spore_forming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.630573 has no snippet
 data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:no_sporulation_entry->non_spore_forming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11081928 has no snippet
 data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:phosphorelay_disruption->no_sporulation_entry[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11081928 has no snippet
 data/traits/morphology/non_spore_forming.yaml	non_spore_forming_absent_spo0a_cascade:rap_phosphatases->spo0f_dephosphorylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41522-024-00594-6 has no snippet
@@ -2226,12 +2223,11 @@ data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_pac
 data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_packet:pg_hydrolases->peripheral_pg_bridge[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1002/mbo3.1338 has no snippet
 data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_packet:pg_synthetases_hydrolases->septal_pg_remodeling[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1002/mbo3.1338 has no snippet
 data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_packet:three_plane_perpendicular_division->sarcina_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/ncomms4842 has no snippet
-data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:elongation_capacity->sphere_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:ftsW_flippase->lipid_ii[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:ftsZ_division_ring->divisome_pbps[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:ftsZ_treadmilling->septal_peptidoglycan_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1042/bsr20221664 has no snippet
 data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:lipid_ii->septal_peptidoglycan_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
-data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:mreB_elongation_machinery->elongation_capacity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
+data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:mreB_elongation_machinery->lateral_elongation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/sphere_shaped.yaml	sphere_shaped_septal_peptidoglycan:septal_peptidoglycan_synthesis->sphere_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3088 has no snippet
 data/traits/morphology/spindle_shaped.yaml	spindle_shaped_symmetric_taper:localized_pg_insertion->non_spherical_morphology[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2017.01264 has no snippet
 data/traits/morphology/spindle_shaped.yaml	spindle_shaped_symmetric_taper:localized_pg_insertion->symmetric_polar_pg[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2017.01264 has no snippet

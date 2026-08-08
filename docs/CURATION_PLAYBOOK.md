@@ -147,6 +147,62 @@ it actually admits. The count is **0** and the audit hard-fails on a new
 one, so this section describes a mistake the tooling now prevents rather
 than a backlog to work around.
 
+### `CAPACITY` holds two senses — only one of them is a trait
+
+`audit-graphs` flags `DISPOSITION_MISTYPED` when a `CAPACITY` or `STATE`
+node's **description** reads as an organism disposition. The count is at
+**zero** (#352), so a new one fails `just qc`.
+
+The distinction is not "does the word *capacity* appear". Of the corpus's
+24 `CAPACITY` nodes, #352 merged 8 and deliberately left 16:
+
+| sense | examples | what to do |
+|---|---|---|
+| an organism's **disposition** — what it can do | every one of #352's eight: *"Capacity of a cell to survive exposure to molecular oxygen"*, *"Ability to grow at 4 C"*, *"Capacity to grow and survive under elevated salinity"* | **try to ground it — then see below** |
+| a **reservoir or quantity** | `reducing_power` (a pool of reductants), `cytoplasmic_buffering_capacity` (*"Capacity of cytoplasmic buffers to absorb pH fluctuations"*), `swimming_velocity`, `metabolic_versatility` | **leave it `CAPACITY`** |
+
+The left column decides only whether the node is *a candidate*. Note that none
+of the disposition examples above still exists: all three were merged or
+dropped by #352, because none of them survived the grounding step. A
+disposition reading is necessary for a retype and nowhere near sufficient.
+
+A buffer has a capacity; so does a battery. Neither is something an
+organism *can do*. That is why the check is organism-scoped — *capacity of
+a cell / organism / bacterium / strain to …* — rather than matching bare
+*capacity to*.
+
+**Ground it, and ground it to something the graph does not already have.**
+Every `TRAIT` node in the corpus is grounded, so a retype owes a grounding.
+Requiring one is also the test that catches the commonest mistake here, and
+it caught **all eight** of #352's: every one of them needed a grounding that
+either restated the record, contradicted it, or was narrower than the node.
+#352 retyped **nothing** in the end; all eight were merged.
+
+Note what the test is NOT. "Is this term distinct from the record's own?"
+passed four nodes that later failed — `salt_tolerance` was grounded
+`METPO:1000622`, a *direct sibling* of its record's `METPO:1000625` under
+`METPO:1000629`, which is maximally distinct and asserts the negation of the
+record ("does not require salt" against "requires salt"). Ask instead whether
+the term is **compatible** with the record and **no narrower** than the node.
+
+**Do not read a fall in `UNREACHABLE_FROM_TRAIT` as connectivity.** A
+retype creates a new anchor, so every node in that island stops being
+reported while the island stays exactly as disconnected as before. #352
+moved it 1303 → 1296, and moved it there **identically** whether its nodes
+were retyped or merged — which is what proves the count cannot see the
+difference.
+
+`FRAGMENTED_GRAPH`'s *count* cannot either: it reports one finding per split
+graph however many pieces that graph is in, so it sat flat at 218 through all
+of it. What separates them is component **structure**: retyping changed it in
+**zero** of #352's eight graphs, while merging improved three
+(`oxygen_preference` 3 components → 2, `ph_delta` 3 → 2, `ph_delta_low`
+5 → 4) and left five unchanged as pure deduplication.
+
+Those numbers came from measuring the graphs by hand. #359 makes it routine —
+`reports/causal_graph_connectivity.tsv`, one row per graph, arriving with
+**#363**. Once it lands, quote that table rather than the finding counts.
+
 ### `enables` needs a process-or-activity object
 
 Separately from the domain rule above, `enables` (`RO:0002327`) has a

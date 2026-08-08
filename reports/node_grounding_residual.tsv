@@ -625,7 +625,6 @@ compatible-solute transporters (opu/prou)	GENE_OR_PROTEIN	1	data/traits/environm
 trkh potassium uptake system	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_low.yaml
 nhac-family na+/h+ antiporter	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_low.yaml
 intracellular proline accumulation	CHEMICAL	1	data/traits/environment/nacl_delta_low.yaml
-salt-tolerance breadth	CAPACITY	1	data/traits/environment/nacl_delta_low.yaml
 modest osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid1.yaml
 osmoadaptation / growth under nacl stress	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid1.yaml
 ectoine biosynthesis (ectb/ecta/ectc)	PATHWAY	1	data/traits/environment/nacl_delta_mid1.yaml
@@ -745,7 +744,6 @@ ambient molecular oxygen	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_p
 o2 as terminal electron acceptor	MOLECULAR_FUNCTION	1	data/traits/environment/oxygen_preference.yaml
 oxygen / reactive oxygen species stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_preference.yaml
 detoxifying-enzyme gene expression	BIOLOGICAL_PROCESS	1	data/traits/environment/oxygen_preference.yaml
-oxygen tolerance	CAPACITY	1	data/traits/environment/oxygen_preference.yaml
 ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
 ph tolerance breadth	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
 external ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
@@ -753,7 +751,6 @@ f0f1-atpase activity	MOLECULAR_FUNCTION	1	data/traits/environment/ph_delta.yaml
 monovalent cation:h+ antiporter activity	MOLECULAR_FUNCTION	1	data/traits/environment/ph_delta.yaml
 saturated membrane fatty acid remodeling	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
 amino-acid decarboxylase acid-resistance system	PATHWAY	1	data/traits/environment/ph_delta.yaml
-low-ph tolerance	CAPACITY	1	data/traits/environment/ph_delta.yaml
 maximal ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 respiratory proton-pumping enzymes	GENE_OR_PROTEIN	1	data/traits/environment/ph_delta_high.yaml
 near-neutral cytoplasmic ph	QUALITY	1	data/traits/environment/ph_delta_high.yaml
@@ -761,7 +758,6 @@ constant proton motive force	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_del
 membrane lipid/porin composition changes	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
 limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_low.yaml
 proton motive force architecture	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_low.yaml
-ph homeostasis capacity	CAPACITY	1	data/traits/environment/ph_delta_low.yaml
 weak organic acids	CHEMICAL	1	data/traits/environment/ph_delta_low.yaml
 delta ph / cytoplasmic ph	STATE	1	data/traits/environment/ph_delta_low.yaml
 moderate ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid1.yaml
@@ -919,7 +915,6 @@ membrane rigidification and thickening	QUALITY	1	data/traits/environment/psychro
 unsaturated hopanoids	CHEMICAL	1	data/traits/environment/psychrotolerant.yaml
 protein and membrane stability under cold stress	QUALITY	1	data/traits/environment/psychrotolerant.yaml
 cryoprotection against freeze-thaw cycles	BIOLOGICAL_PROCESS	1	data/traits/environment/psychrotolerant.yaml
-growth at 4 degrees c	CAPACITY	1	data/traits/environment/psychrotolerant.yaml
 ionizing or uv radiation exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/radiotolerant.yaml
 manganese-antioxidant proteome protection	BIOLOGICAL_PROCESS	1	data/traits/environment/radiotolerant.yaml
 reactive oxygen species (ros)	CHEMICAL	1	data/traits/environment/radiotolerant.yaml
@@ -937,7 +932,6 @@ chaotropic ions (mg/ca/li/fe salts)	CHEMICAL	1	data/traits/environment/salinity_
 water activity	ENVIRONMENTAL_FACTOR	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 low to moderate nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/slightly_halophilic.yaml
 osmoprotectant transport	MOLECULAR_FUNCTION	1	data/traits/environment/slightly_halophilic.yaml
-salt tolerance	CAPACITY	1	data/traits/environment/slightly_halophilic.yaml
 ectabc/ectbacd gene cluster	GENE_OR_PROTEIN	1	data/traits/environment/slightly_halophilic.yaml
 ion homeostasis during salt stress	BIOLOGICAL_PROCESS	1	data/traits/environment/slightly_halophilic.yaml
 na+/k+ transcriptional induction	BIOLOGICAL_PROCESS	1	data/traits/environment/slightly_halophilic.yaml
@@ -1850,7 +1844,6 @@ no endospore formation	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_for
 absence of spo0a gene	GENE_OR_PROTEIN	1	data/traits/morphology/non_spore_forming.yaml
 loss of sporulation genes	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
 low or absent spo0a activity	MOLECULAR_FUNCTION	1	data/traits/morphology/non_spore_forming.yaml
-loss of sporulation capacity	CAPACITY	1	data/traits/morphology/non_spore_forming.yaml
 rap phosphatases	GENE_OR_PROTEIN	1	data/traits/morphology/non_spore_forming.yaml
 dephosphorylation of spo0f	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
 spo0a phosphorelay disruption	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
@@ -1956,7 +1949,6 @@ peptidoglycan synthetases and hydrolases	GENE_OR_PROTEIN	1	data/traits/morpholog
 cell wall synthesis at division site	BIOLOGICAL_PROCESS	1	data/traits/morphology/sarcina_arrangement.yaml
 peripheral peptidoglycan bridge	CELLULAR_LOCALIZATION	1	data/traits/morphology/sarcina_arrangement.yaml
 mreb-mediated elongation machinery	GENE_OR_PROTEIN	1	data/traits/morphology/sphere_shaped.yaml
-elongation capacity	CAPACITY	1	data/traits/morphology/sphere_shaped.yaml
 divisome and pbps	GENE_OR_PROTEIN	1	data/traits/morphology/sphere_shaped.yaml
 ftsw lipid ii flippase	GENE_OR_PROTEIN	1	data/traits/morphology/sphere_shaped.yaml
 symmetric polar peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/spindle_shaped.yaml
