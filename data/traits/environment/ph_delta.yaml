@@ -70,10 +70,6 @@ causal_graphs:
     node_type: PATHWAY
     description: Decarboxylase systems that consume intracellular protons and export
       amines under acid stress.
-  - node_id: low_ph_tolerance
-    label: low-pH tolerance
-    node_type: CAPACITY
-    description: Capacity to grow and survive under acidic external pH.
   - node_id: oxidative_phosphorylation
     label: oxidative phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -148,7 +144,7 @@ causal_graphs:
     predicate_id: RO:0002212
   - subject: amino_acid_decarboxylase_acid_resistance
     predicate: increases
-    object: low_ph_tolerance
+    object: ph_delta_trait
     description: Amino-acid decarboxylase acid-resistance systems increase low-pH
       tolerance.
     evidence:
@@ -215,4 +211,18 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: MERGE_CAUSAL_NODE
+  changes: 'Merged node low_ph_tolerance into ph_delta_trait and repointed its edges.
+    Issue 352. An EIGHTH restatement (#360). I had grounded it METPO:1003008 (acidotolerant)
+    and claimed ''no collision'' with the record''s METPO:1000232 (pH delta). No collision,
+    but the wrong SCOPE: 1003008 is defined as tolerating acid ''WHILE MAINTAINING
+    OPTIMAL GROWTH NEAR NEUTRAL pH'', which excludes the acidophiles this generic
+    pH-delta record covers. A grounding narrower than the node it labels is a false
+    claim about every organism in the excluded part. Also a pure sink. Merging repoints
+    amino_acid_decarboxylase_acid_resistance onto ph_delta_trait, which reads correctly:
+    an acid-resistance system widens the growth-supporting pH range, and a pH delta
+    IS that range.'
   llm_assisted: true

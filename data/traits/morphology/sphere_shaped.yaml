@@ -62,10 +62,6 @@ causal_graphs:
     label: MreB-mediated elongation machinery
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB cytoskeleton directing lateral (rod) elongation.
-  - node_id: elongation_capacity
-    label: elongation capacity
-    node_type: CAPACITY
-    description: Capacity of a cell to elongate into a rod via sidewall growth.
   - node_id: divisome_pbps
     label: divisome and PBPs
     node_type: GENE_OR_PROTEIN
@@ -133,21 +129,13 @@ causal_graphs:
     predicate_id: RO:0002326
   - subject: mreB_elongation_machinery
     predicate: causally upstream of
-    object: elongation_capacity
+    object: lateral_elongation
     description: Loss of the MreB cytoskeleton removes the elongation capacity that
       lengthens rods.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       notes: loss of the MreB cytoskeleton is the main factor that prevents cocci
         from elongating into rods
-  - subject: elongation_capacity
-    predicate: reduced in
-    object: sphere_shaped_trait
-    description: Loss of elongation capacity prevents cocci from elongating into rods,
-      favoring a sphere.
-    evidence:
-    - reference: DOI:10.1038/nrmicro3088
-      notes: prevents cocci from elongating into rods
   - subject: ftsZ_division_ring
     predicate: recruits
     object: divisome_pbps
@@ -254,4 +242,12 @@ curation_history:
     face'' -- a flippase moves its substrate across the membrane, which is transport,
     not enablement. Needs GENE_OR_PROTEIN added to `transports`'' subject_types, which
     is a deliberate widening recorded there.'
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: MERGE_CAUSAL_NODE
+  changes: Merged node elongation_capacity into lateral_elongation and repointed its
+    edges. Issue 352. 'Capacity of a cell to elongate into a rod via sidewall growth'
+    against lateral_elongation's 'Sidewall growth mode that lengthens rods' -- the
+    same claim twice, and both already carried `reduced in -> sphere_shaped_trait`.
   llm_assisted: true

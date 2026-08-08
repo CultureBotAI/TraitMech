@@ -1,0 +1,47 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_disposition_typing.py
+  slug: disposition-typing-burndown
+session:
+  id: 2026-08-08T060908Z-claude-code-f802c8
+  timestamp: '2026-08-08T06:09:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/352
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/360
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: 'Third review round takes the retype count to zero: all eight were restatements'
+  details: 'Review found the last two retypes mis-grounded as well, so the migration is now
+    0 retypes, 8 merges, 3 regroundings. salt_tolerance had been grounded METPO:1000622 (halotolerant)
+    on the reasoning that the record''s own METPO:1000625 (slightly halophilic) makes it distinct;
+    verified against data/raw/metpo.owl, 1000622 and 1000625 are DIRECT SIBLINGS under 1000629,
+    and 1000622 means tolerates high salt but does not require it while 1000625 means requires
+    low to moderate salt for optimal growth - so the node asserted of the record the negation
+    of the record''s own term. Distinct is not the test, compatible is, and that wrong test
+    passed all four nodes that later failed. Merged into slightly_halophilic_trait. low_ph_tolerance
+    had been grounded METPO:1003008 (acidotolerant), whose definition is tolerating acid WHILE
+    MAINTAINING OPTIMAL GROWTH NEAR NEUTRAL pH, which excludes the acidophiles the generic
+    pH-delta record covers; a grounding narrower than the node it labels is a false claim
+    about every organism in the excluded part. Merged into ph_delta_trait. Corrected an overclaim
+    of my own in the same pass: I had written that merging salt_tolerance attaches the ectoine
+    island, and measurement showed the node was already in the trait''s component via osmoprotectant_transport
+    to compatible_solutes to osmotic_stress, so that merge is a correctness fix with no structural
+    effect. Measured all eight rather than asserting: retyping changed component structure
+    in ZERO of the eight graphs; merging improves three (oxygen_preference 3 components to
+    2, ph_delta 3 to 2, ph_delta_low 5 to 4) and leaves five unchanged as pure deduplication.
+    UNREACHABLE_FROM_TRAIT reads 1296 under either fix, which is why issue 359 exists and
+    why the playbook now points at reports/causal_graph_connectivity.tsv instead of the finding
+    counts. Playbook updated: its canonical disposition example was salt_tolerance''s own
+    description, which this pass merges away. RETYPE table kept but empty, because we looked
+    and found none is a different claim from we never modelled retypes. 519 tests pass, qc
+    green.'

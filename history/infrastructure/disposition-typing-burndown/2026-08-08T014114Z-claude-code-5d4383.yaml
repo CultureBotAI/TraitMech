@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_disposition_typing.py
+  slug: disposition-typing-burndown
+session:
+  id: 2026-08-08T014114Z-claude-code-5d4383
+  timestamp: '2026-08-08T01:41:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/352
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Burn down the 11 baselined DISPOSITION_MISTYPED and DUPLICATE_GROUNDING findings
+  details: 'Resolved 11 findings across 11 trait records. Only 4 were retypes: CAPACITY nodes
+    whose descriptions are organism dispositions, retyped to TRAIT and grounded to METPO:1000622/1000609/1003008
+    - terms distinct from the records'' own. The other 4 flagged nodes were RESTATEMENTS,
+    not mistypes: the only correct grounding for each was the term its own record already
+    carries, and for three of them the node being restated sat in the same graph already correctly
+    typed, so they were merged (ph_homeostasis_capacity into cytoplasmic_ph_homeostasis, elongation_capacity
+    into lateral_elongation, loss_sporulation_capacity collapsed onto non_spore_forming_trait)
+    and one leaf dropped (growth_at_4c). The 3 DUPLICATE_GROUNDING cases: growth_external_ph_5_5_9
+    regrounded METPO:1000478 to METPO:1000332 (it states an absolute range, not a delta),
+    and catalase/urease had their GO ACTIVITY terms removed from the protein node and kept
+    on the function node they enable. Verified by re-running audit-graphs (both classes 8+3
+    to 0) and audit-predicate-domains (stays 0). NOT an improvement in connectivity: UNREACHABLE_FROM_TRAIT
+    fell 1303 to 1296 purely because retyping added anchors inside existing islands, with
+    FRAGMENTED_GRAPH flat at 218 - filed as issue 359.'

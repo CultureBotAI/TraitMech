@@ -43,10 +43,6 @@ causal_graphs:
     label: osmoprotectant transport
     node_type: MOLECULAR_FUNCTION
     description: Uptake of compatible solutes such as glycine betaine.
-  - node_id: salt_tolerance
-    label: salt tolerance
-    node_type: CAPACITY
-    description: Capacity to grow and survive under elevated salinity / salt stress.
   - node_id: ectoine_biosynthesis
     label: ectoine biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -131,7 +127,7 @@ causal_graphs:
     predicate_id: RO:0002234
   - subject: ectoine
     predicate: increases
-    object: salt_tolerance
+    object: slightly_halophilic_trait
     description: Accumulation of ectoine as a compatible solute increases salt tolerance.
     evidence:
     - reference: DOI:10.1128/aem.01905-23
@@ -140,7 +136,7 @@ causal_graphs:
     predicate_id: RO:0002213
   - subject: osmoprotectant_transport
     predicate: increases
-    object: salt_tolerance
+    object: slightly_halophilic_trait
     description: Uptake of compatible solutes is a general salt-out osmoadaptation
       strategy that raises salt tolerance.
     evidence:
@@ -273,4 +269,24 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: MERGE_CAUSAL_NODE
+  changes: 'Merged node salt_tolerance into slightly_halophilic_trait and repointed
+    its edges. Issue 352. A SEVENTH restatement, caught in the third review round
+    (#360). I had grounded it METPO:1000622 (halotolerant), reasoning that the record
+    is METPO:1000625 (slightly halophilic) so the term is ''distinct''. It is distinct
+    in the worst way: 1000622 and 1000625 are DIRECT SIBLINGS under 1000629 (halophily
+    preference), and 1000622 means ''tolerates high salt but DOES NOT REQUIRE it for
+    growth'' while 1000625 means the organism ''REQUIRES low to moderate salt for
+    optimal growth''. So the node asserted of this record the negation of what the
+    record''s own term says. Distinct is not the test; compatible is. NO CONNECTIVITY
+    CLAIM HERE: the node was already in the trait''s component via osmoprotectant_transport
+    -> compatible_solutes -> osmotic_stress, so merging leaves the graph at 2 components
+    and is a correctness fix, not a structural one. METPO has no generic salt-tolerance
+    disposition to reground to: halotolerant and acidotolerant are the only candidate
+    labels and each already anchors its own record. Recorded as issue #364, which
+    proposes a tolerance axis distinct from the preference axis; nothing under proposals/
+    yet.'
   llm_assisted: true

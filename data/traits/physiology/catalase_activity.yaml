@@ -44,7 +44,6 @@ causal_graphs:
     label: catalase
     node_type: GENE_OR_PROTEIN
     description: Heme enzyme that dismutates hydrogen peroxide.
-    grounding: GO:0004096
   - node_id: catalase_function
     label: catalase activity
     node_type: MOLECULAR_FUNCTION
@@ -263,4 +262,12 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: UNGROUND_CAUSAL_NODE
+  changes: 'Dropped the grounding GO:0004096 from node catalase. Issue 352. GO:0004096
+    is ''catalase ACTIVITY'' -- a molecular function, which is what catalase_function
+    is. A protein is not its activity, and the graph already says so correctly: catalase
+    -enables-> catalase_function. Dropped from the protein, kept on the function.'
   llm_assisted: true

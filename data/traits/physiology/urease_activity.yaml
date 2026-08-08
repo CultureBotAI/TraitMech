@@ -40,7 +40,6 @@ causal_graphs:
     label: urease
     node_type: GENE_OR_PROTEIN
     description: Nickel metalloenzyme hydrolyzing urea.
-    grounding: GO:0009039
   - node_id: urease_function
     label: urease activity
     node_type: MOLECULAR_FUNCTION
@@ -243,4 +242,11 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: UNGROUND_CAUSAL_NODE
+  changes: 'Dropped the grounding GO:0009039 from node urease. Issue 352. GO:0009039
+    is ''urease ACTIVITY''. Same as catalase: kept on urease_function, dropped from
+    the protein that enables it.'
   llm_assisted: true

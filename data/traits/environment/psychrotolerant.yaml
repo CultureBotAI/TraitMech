@@ -85,10 +85,6 @@ causal_graphs:
     label: cryoprotection against freeze-thaw cycles
     node_type: BIOLOGICAL_PROCESS
     description: Protection of cells from damage during freeze-thaw cycling.
-  - node_id: growth_at_4c
-    label: growth at 4 degrees C
-    node_type: CAPACITY
-    description: Ability to grow at refrigeration-range low temperature (4 C).
   edges:
   - subject: low_temperature
     predicate: decreases
@@ -169,15 +165,6 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: EPS surrounding cells play a critical role in cold adaptation by providing
         protection against freeze-thaw cycles and acting as cryoprotectants.
-  - subject: psychrotolerant_trait
-    predicate: has capability
-    object: growth_at_4c
-    description: The psychrotolerant trait entails the capacity to grow at low temperatures
-      such as 4 C while retaining higher optimal temperatures.
-    evidence:
-    - reference: DOI:10.1007/s42770-023-01057-4
-      notes: Psychrotolerant/psychrotroph microbes can grow at 4 C and have optimal
-        growth temperatures above 20 C.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.859611+00:00'
   curator: seed_from_metpo
@@ -281,4 +268,14 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-08T05:00:00Z'
+  curator: claude
+  action: DROP_CAUSAL_NODE
+  changes: Dropped node growth_at_4c and its edges. Issue 352. 'Ability to grow at
+    refrigeration-range low temperature (4 C)' IS METPO:1000618 (psychrotolerant),
+    the record's own term and the grounding of psychrotolerant_trait, which is the
+    node it hangs off. A leaf restating its own parent. The parent keeps two other
+    in-edges (cold_shock_response confers, facultative_lipid_remodeling manifests
+    as), so nothing is stranded.
   llm_assisted: true
