@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/ground_causal_nodes.py
+  slug: ground-nodes-duplicate-guard
+session:
+  id: 2026-08-08T043349Z-claude-code-d0a8f5
+  timestamp: '2026-08-08T04:33:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/361
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Decline a node grounding the graph already carries, instead of writing the duplicate
+  details: 'ground_causal_nodes.py wrote any mapped CURIE into any ungrounded node, including
+    one another node in the same graph already carried - which is exactly the shape audit-graphs
+    reports as DUPLICATE_GROUNDING. The writer manufactured findings the auditor then reported.
+    Concretely: #352 removed GO:0004096 from the catalase node and GO:0009039 from urease,
+    but mappings/node_grounding.tsv still maps both proteins to those GO ACTIVITY terms, so
+    the next ''just ground-nodes --apply'' re-created both duplicates (verified: 2 files modifiable,
+    2 nodes grounded, exactly the two that had been ungrounded). Deleting the mapping rows
+    would over-correct, because protein -> GO-activity is the corpus''s accepted shorthand
+    wherever the graph does not also model the function as its own node, and 72 GENE_OR_PROTEIN
+    nodes rely on it. So the guard lives in the writer: ground_nodes_in_doc now tracks the
+    CURIEs already present in each graph, seeded from existing groundings and updated as it
+    writes, and declines a candidate that collides. Declined nodes stay ungrounded so they
+    are counted into residual as well, and the summary prints what was withheld and why. Scoped
+    per graph rather than per record, since DUPLICATE_GROUNDING is a within-graph defect.
+    Verified against the fix/352 branch state in memory: grounded 2 -> 0, declined 2. On main
+    the corpus is unaffected - 0 modifiable, residual TSV byte-identical. ground_causal_predicates.py
+    has no analogous gap: nothing flags a duplicate predicate_id and nothing should, since
+    many edges legitimately share a predicate. 523 tests pass (4 new), qc green.'
