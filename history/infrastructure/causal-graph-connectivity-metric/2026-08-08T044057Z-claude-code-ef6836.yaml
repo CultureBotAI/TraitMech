@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_causal_graphs.py
+  slug: causal-graph-connectivity-metric
+session:
+  id: 2026-08-08T044057Z-claude-code-ef6836
+  timestamp: '2026-08-08T04:40:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/359
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Measure component structure, the connectivity number retyping cannot move
+  details: 'Issue 359 observed that UNREACHABLE_FROM_TRAIT falls when a node is retyped into
+    a TRAIT anchor inside an existing island, without the graph becoming more connected. Neither
+    headline count can tell that apart from a real gain: FRAGMENTED_GRAPH reports one finding
+    per split graph however many pieces it is in, so 3 components to 2 does not move it either.
+    Added connectivity_rows(), emitting reports/causal_graph_connectivity.tsv with one row
+    per graph carrying wired_nodes, components, largest_component and the component sizes,
+    plus a corpus summary line on the audit. Measured on the worked example from 352, oxygen_preference.yaml:
+    main and the RETYPED version are bit-for-bit identical at components=3 largest=8 attached=57.1
+    percent, while the MERGED version is components=2 largest=11 attached=84.6 percent - and
+    UNREACHABLE_FROM_TRAIT is 1296 for both fixes, which is exactly the blindness 359 describes.
+    Corpus baseline: 353 graphs, 864 components over 4137 wired nodes, attached 69.5 percent.
+    The metric is anchor-free for the same reason _components is, so no amount of retyping
+    or renaming moves it. Scoped to edge-referenced nodes to match FRAGMENTED_GRAPH, since
+    an unwired node is ORPHAN_NODE''s business and counting it here would let one defect depress
+    two metrics. Topology extraction is now a shared _topology() helper used by both audit()
+    and the metric so the ratchet and the measurement cannot drift on what connected means;
+    verified behaviour-preserving by diffing regenerated causal_graph_audit.tsv against the
+    committed copy - identical. Carries no ratchet of its own: it is a measurement, not a
+    verdict, and never affects the exit code. Wired into audit-derived-reports for staleness,
+    passing --connectivity-out to the temp dir, because omitting it would have made a staleness
+    check write the file it was judging. 524 tests pass (5 new), qc green.'

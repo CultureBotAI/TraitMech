@@ -27,6 +27,7 @@ from audit_causal_graphs import (  # noqa: E402
     SEVERITY,
     _key,
     audit,
+    connectivity_rows,
     partition,
 )
 
@@ -596,3 +597,144 @@ def test_two_groundings_of_equal_size_do_not_collide(tmp_path):
     dupes = [f for f in audit(d) if f["defect"] == "DUPLICATE_GROUNDING"]
     assert len(dupes) == 2
     assert len({_key(f) for f in dupes}) == 2
+
+
+# ------------------------------------------------- connectivity metric (#359)
+#
+# The property under test is the one #359 was filed for: a node RETYPED into a
+# TRAIT anchor inside an existing island moves UNREACHABLE_FROM_TRAIT without
+# connecting anything, while MERGING that node attaches the island for real.
+# The fixtures below are the shape of oxygen_preference.yaml reduced to its
+# essentials -- a trait with one wired-in phenotype, plus a detached two-node
+# island whose member is the candidate.
+
+ISLAND_BEFORE = """\
+identifier: traitmech:000900
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: trait, label: trait, node_type: TRAIT}
+  - {node_id: pheno, label: pheno, node_type: TRAIT}
+  - {node_id: tolerance, label: tolerance, node_type: CAPACITY}
+  - {node_id: enzyme, label: enzyme, node_type: GENE_OR_PROTEIN}
+  edges:
+  - {subject: pheno, object: trait, predicate: is a}
+  - {subject: enzyme, object: tolerance, predicate: increases}
+"""
+
+# The wrong fix: `tolerance` becomes a TRAIT. Nothing is rewired.
+ISLAND_RETYPED = ISLAND_BEFORE.replace(
+    "{node_id: tolerance, label: tolerance, node_type: CAPACITY}",
+    "{node_id: tolerance, label: tolerance, node_type: TRAIT}")
+
+# The right fix: `tolerance` is merged away and its edge repointed at `trait`.
+ISLAND_MERGED = """\
+identifier: traitmech:000900
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: trait, label: trait, node_type: TRAIT}
+  - {node_id: pheno, label: pheno, node_type: TRAIT}
+  - {node_id: enzyme, label: enzyme, node_type: GENE_OR_PROTEIN}
+  edges:
+  - {subject: pheno, object: trait, predicate: is a}
+  - {subject: enzyme, object: trait, predicate: increases}
+"""
+
+
+def _isolated(tmp_path: Path, sub: str, body: str) -> Path:
+    """A corpus dir of its own.
+
+    ``_write`` reuses one directory, so two fixtures in a single test would
+    land in the same corpus and every walk would see both.
+    """
+    d = tmp_path / sub / "traits"
+    d.mkdir(parents=True)
+    (d / "rec.yaml").write_text(textwrap.dedent(body))
+    return d
+
+
+def _conn(tmp_path: Path, sub: str, body: str) -> dict:
+    row, = connectivity_rows(_isolated(tmp_path, sub, body))
+    return row
+
+
+def test_connectivity_reports_components_and_largest(tmp_path):
+    row = _conn(tmp_path, "before", ISLAND_BEFORE)
+    assert row["wired_nodes"] == "4"
+    assert row["components"] == "2"
+    assert row["largest_component"] == "2"
+    assert row["component_sizes"] == "2,2"
+
+
+def test_retyping_into_an_anchor_does_not_move_connectivity(tmp_path):
+    """#359's whole point. The retype silences UNREACHABLE_FROM_TRAIT for the
+    island -- and leaves the connectivity metric bit-for-bit unchanged,
+    because nothing was actually joined."""
+    before = _conn(tmp_path, "before", ISLAND_BEFORE)
+    after = _conn(tmp_path, "after", ISLAND_RETYPED)
+
+    assert {k: v for k, v in after.items() if k != "file"} == \
+           {k: v for k, v in before.items() if k != "file"}
+
+    # ... while the finding count DOES move, which is the trap.
+    unreachable_before = [f for f in audit(_isolated(tmp_path, "b2", ISLAND_BEFORE))
+                          if f["defect"] == "UNREACHABLE_FROM_TRAIT"]
+    unreachable_after = [f for f in audit(_isolated(tmp_path, "a2", ISLAND_RETYPED))
+                         if f["defect"] == "UNREACHABLE_FROM_TRAIT"]
+    assert len(unreachable_before) > len(unreachable_after)
+
+
+def test_merging_the_node_does_move_connectivity(tmp_path):
+    before = _conn(tmp_path, "before", ISLAND_BEFORE)
+    after = _conn(tmp_path, "after", ISLAND_MERGED)
+    assert before["components"] == "2" and after["components"] == "1"
+    assert before["largest_component"] == "2" and after["largest_component"] == "3"
+
+
+def test_connectivity_skips_unwired_nodes(tmp_path):
+    """An edgeless node is ORPHAN_NODE's business; counting it here would let
+    one defect depress two metrics."""
+    body = ISLAND_BEFORE.replace(
+        "  edges:",
+        "  - {node_id: lonely, label: lonely, node_type: CHEMICAL}\n  edges:", 1)
+    row = _conn(tmp_path, "orphan", body)
+    assert row["wired_nodes"] == "4"
+    assert row["component_sizes"] == "2,2"
+
+
+def test_connectivity_row_per_graph_not_per_file(tmp_path):
+    two = ISLAND_BEFORE + textwrap.dedent("""\
+        - graph_id: g2
+          nodes:
+          - {node_id: t2, label: t2, node_type: TRAIT}
+          - {node_id: x2, label: x2, node_type: CHEMICAL}
+          edges:
+          - {subject: x2, object: t2, predicate: affects}
+        """)
+    rows = connectivity_rows(_isolated(tmp_path, "two", two))
+    assert [r["graph_id"] for r in rows] == ["g", "g2"]
+    assert [r["components"] for r in rows] == ["2", "1"]
+
+
+def test_connectivity_out_defaults_next_to_out_not_into_the_repo(tmp_path):
+    """Regression: the connectivity report must follow --out.
+
+    With a fixed repo default, every subprocess test that redirected --out to a
+    tmpdir still wrote this file into the working tree -- one of them clobbered
+    the committed report with a single row naming a pytest tmpdir, and only the
+    staleness gate noticed. A side effect that ignores --out is a side effect
+    that lands in the repo.
+    """
+    d = _isolated(tmp_path, "corpus", ISLAND_BEFORE)
+    out = tmp_path / "elsewhere" / "audit.tsv"
+    subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "audit_causal_graphs.py"),
+         "--traits-dir", str(d), "--out", str(out), "--no-baseline"],
+        check=False, capture_output=True,
+    )
+    assert (out.parent / "causal_graph_connectivity.tsv").exists()
+    assert not (REPO_ROOT / "reports" / "causal_graph_connectivity.tsv").samefile(
+        out.parent / "causal_graph_connectivity.tsv")
