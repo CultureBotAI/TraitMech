@@ -167,6 +167,26 @@ audit-predicate-domains *args:
 audit-pr-checks *args:
     uv run python scripts/audit_pr_checks_present.py {{args}}
 
+# Fail a PR that changes trait records and records no provenance (#325).
+#
+# history/README.md describes a per-session record as the thing that captures
+# WHICH MODEL, USING WHICH TOOL, changed what, why, and under which issue. The
+# per-file `curation_history:` block has no slot for any of those, and because it
+# hangs off an edit it cannot record a session that changed NOTHING -- an AUDIT
+# that checked a trait and correctly found nothing wrong is invisible without a
+# record here.
+#
+# Presence was advisory until #325. Of the 134 commits that modified trait
+# records, 2 added a history record; meanwhile 275 records grew an issue number
+# hand-typed into a `changes` string, which is the same provenance in a form
+# nothing can query.
+#
+# ONE record per CHANGE, not one per changed file -- that granularity fix is what
+# makes this reasonable to block on. Needs a base ref to diff against, so it is
+# NOT in `qc`; it runs from curation-history.yaml on pull_request.
+audit-history-records *args:
+    uv run python scripts/audit_history_records.py {{args}}
+
 # The stronger companion to audit-pr-checks: not "did ANY check fire" but "did
 # every check that SHOULD have fired, fire" (#348).
 #
@@ -322,8 +342,10 @@ knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
 
 # ============== Curation history (append-only provenance) ==============
 # Records which model, using which tool, changed what, why, and under which
-# issue. One file per session per target under history/; never edited after
-# write. See history/README.md. Schema + scaffolder live in claw.
+# issue. ONE record per change under history/ -- per target for hand curation,
+# per migration for a bulk edit (#325) -- never edited after write. Required:
+# a PR that changes data/traits and adds no record fails CI. See
+# history/README.md. Schema + scaffolder live in claw.
 
 # Scaffold a history record. Prints the path as its last stdout line.
 #   just new-history --kind record --slug cellulolysis \
