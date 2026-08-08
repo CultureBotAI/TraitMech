@@ -18,21 +18,28 @@ events:
   sections:
   - grounding
   summary: Decline a node grounding the graph already carries, instead of writing the duplicate
-  details: 'ground_causal_nodes.py wrote any mapped CURIE into any ungrounded node, including
-    one another node in the same graph already carried - which is exactly the shape audit-graphs
-    reports as DUPLICATE_GROUNDING. The writer manufactured findings the auditor then reported.
-    Concretely: #352 removed GO:0004096 from the catalase node and GO:0009039 from urease,
-    but mappings/node_grounding.tsv still maps both proteins to those GO ACTIVITY terms, so
-    the next ''just ground-nodes --apply'' re-created both duplicates (verified: 2 files modifiable,
-    2 nodes grounded, exactly the two that had been ungrounded). Deleting the mapping rows
-    would over-correct, because protein -> GO-activity is the corpus''s accepted shorthand
-    wherever the graph does not also model the function as its own node, and 72 GENE_OR_PROTEIN
-    nodes rely on it. So the guard lives in the writer: ground_nodes_in_doc now tracks the
-    CURIEs already present in each graph, seeded from existing groundings and updated as it
-    writes, and declines a candidate that collides. Declined nodes stay ungrounded so they
-    are counted into residual as well, and the summary prints what was withheld and why. Scoped
-    per graph rather than per record, since DUPLICATE_GROUNDING is a within-graph defect.
-    Verified against the fix/352 branch state in memory: grounded 2 -> 0, declined 2. On main
-    the corpus is unaffected - 0 modifiable, residual TSV byte-identical. ground_causal_predicates.py
-    has no analogous gap: nothing flags a duplicate predicate_id and nothing should, since
-    many edges legitimately share a predicate. 523 tests pass (4 new), qc green.'
+  details: 'ground_causal_nodes.py wrote any mapped CURIE into any ungrounded node, including one another
+    node in the same graph already carried - which is exactly the shape audit-graphs reports as DUPLICATE_GROUNDING.
+    The writer manufactured findings the auditor then reported. Concretely: #352 removed GO:0004096 from
+    the catalase node and GO:0009039 from urease, but mappings/node_grounding.tsv still maps both proteins
+    to those GO ACTIVITY terms, so the next ''just ground-nodes --apply'' re-created both duplicates (verified:
+    2 files modifiable, 2 nodes grounded, exactly the two that had been ungrounded). Deleting the mapping
+    rows would over-correct, because protein -> GO-activity is the corpus''s accepted shorthand wherever
+    the graph does not also model the function as its own node, and 72 GENE_OR_PROTEIN nodes rely on it.
+    So the guard lives in the writer: ground_nodes_in_doc now tracks the CURIEs already present in each
+    graph, seeded from existing groundings and updated as it writes, and declines a candidate that collides.
+    Declined nodes are reported ONLY through the declined counter and are deliberately kept OUT of residual:
+    the residual TSV reads like a census of ungrounded nodes but its consumers treat it as a work queue
+    of labels still needing a mapping. match_uniprot_to_proteins.py''s load_target_labels takes every
+    GENE_OR_PROTEIN row from it and under --apply appends a UniProtKB row to mappings/node_grounding.tsv
+    with no existing-row check, so listing catalase there would earn it a second mapping row conflicting
+    with its GO one, and load_mapping raises on exactly that - taking out just ground-nodes and the derived-reports
+    freshness check with it (caught in review of PR 362). The semantics settle it independently of the
+    breakage: a declined node is not awaiting a grounding, it has one that was deliberately withheld,
+    so proposing a UniProt accession for it would be wrong even if nothing downstream broke. A consequence
+    worth stating: the residual TSV is byte-identical to before in every case, so no consumer is perturbed
+    at all. The summary prints what was withheld and why. Scoped per graph rather than per record, since
+    DUPLICATE_GROUNDING is a within-graph defect. Verified against the fix/352 branch state in memory:
+    grounded 2 -> 0, declined 2. On main the corpus is unaffected - 0 modifiable, residual TSV byte-identical.
+    ground_causal_predicates.py has no analogous gap: nothing flags a duplicate predicate_id and nothing
+    should, since many edges legitimately share a predicate. 524 tests pass (5 new), qc green.'
