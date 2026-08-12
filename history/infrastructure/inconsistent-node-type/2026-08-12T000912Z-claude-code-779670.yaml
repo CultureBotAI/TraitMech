@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_causal_graphs.py
+  slug: inconsistent-node-type
+session:
+  id: 2026-08-12T000912Z-claude-code-779670
+  timestamp: '2026-08-12T00:09:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/356
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Detect one node_id carrying several node_types across records
+  details: 'Every other check in audit_causal_graphs.py is scoped to one graph. This defect
+    is not: two records disagree about what a node IS, and neither is wrong read alone, which
+    is why nothing caught it. Added node_type_index() plus an INCONSISTENT_NODE_TYPE finding,
+    baselined at 294 occurrences across 63 node_ids. The issue understated the scale by about
+    7x: it reports proton_motive_force typed four ways across 9 records; measured, it is 35
+    records (STATE 18, BIOLOGICAL_PROCESS 13, CHEMICAL 2, CAPACITY 2), and 63 node_ids disagree
+    with themselves corpus-wide including membrane_potential at four types. It stopped being
+    cosmetic when 355 minted powers (METPO:2007900) gated to subject_types BIOLOGICAL_PROCESS
+    or STATE: carboxydotrophic.yaml''s proton_motive_force (STATE) grounds while phototrophic.yaml''s
+    (CAPACITY) is blocked_by_node_type, for byte-identical assertions. Reported per occurrence
+    rather than on a presumed-wrong minority, because nothing here knows which type is right
+    - proton_motive_force splits 18 STATE to 13 BIOLOGICAL_PROCESS and the gradient genuinely
+    is a state while generating it is a process, so the majority is an observation and not
+    a verdict; per-occurrence rows also mean a family clears together the moment it is normalised.
+    The detail leads with node_id so _key discriminates by node within a graph, deliberately
+    NOT with the type set, since a family part-way through a burn-down would otherwise re-key
+    on every step and un-suppress rows nobody has reached yet. A test pins that. Documented
+    that not every hit is a defect: terminal electron acceptor is deliberately both CHEMICAL
+    and MOLECULAR_FUNCTION and node_grounding.tsv carries a row for each saying one METPO
+    class covers both senses, the same two-senses shape as reduces (330/333). Where a family
+    really means two things the fix is two node_ids rather than one type, which is written
+    into the playbook as a decision table. Detection only - no data changed, and the burn-down
+    is the next step. 534 tests pass (4 new), ruff clean.'

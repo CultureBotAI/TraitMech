@@ -203,6 +203,50 @@ Those numbers came from measuring the graphs by hand. #359 makes it routine —
 `reports/causal_graph_connectivity.tsv`, one row per graph, arriving with
 **#363**. Once it lands, quote that table rather than the finding counts.
 
+### One `node_id` means one thing — across the whole corpus
+
+`audit-graphs` flags `INCONSISTENT_NODE_TYPE` when one `node_id` carries
+different `node_type`s in different records (#356). It is the only
+**cross-record** check here, and that is exactly why the defect survived: read
+alone, neither record is wrong.
+
+Baselined at **294 occurrences across 63 `node_id`s**. The worst is
+`proton_motive_force` — `STATE`×18, `BIOLOGICAL_PROCESS`×13, `CHEMICAL`×2,
+`CAPACITY`×2, for one concept.
+
+**Why it stopped being cosmetic.** #355 minted `powers` (`METPO:2007900`) gated
+to `subject_types = BIOLOGICAL_PROCESS|STATE`. Two byte-identical assertions now
+behave differently purely by subject typing:
+
+```
+physiology/carboxydotrophic.yaml   proton_motive_force (STATE)     -> atp_synthase   grounds
+physiology/phototrophic.yaml       proton_motive_force (CAPACITY)  -> atp_synthase   blocked_by_node_type
+```
+
+Typing decides groundings now. A disagreement is no longer just untidy.
+
+**A hit is not automatically a defect.** `terminal electron acceptor` is
+deliberately both `CHEMICAL` and `MOLECULAR_FUNCTION`; `mappings/node_grounding.tsv`
+carries a row for each, noting that one METPO class covers both senses and the
+`MOLECULAR_FUNCTION` typing "surfaces the role-of interpretation". Same
+two-senses shape as `reduces` (#330/#333) and the `CAPACITY` table above.
+
+So ask **does this id mean one thing?**
+
+| answer | fix |
+|---|---|
+| yes, and one type is right | normalise the outliers to it |
+| yes, but the right type is arguable (`STATE` vs `BIOLOGICAL_PROCESS`) | decide once, record why, normalise |
+| **no — it means two things** | **split into two `node_id`s**, not one type |
+
+The gradient *is* a state; generating and maintaining it *is* a process. If a
+record means the second, it should not be reusing the id for the first.
+
+**Do not repeat #352's mistake.** The test is not "is this type defensible in
+isolation" — it is "is it compatible with what the record and its predicates
+already assert". #352 spent three review rounds learning that on the
+neighbouring `DISPOSITION_MISTYPED` family, and the grounding is what settles it.
+
 ### `enables` needs a process-or-activity object
 
 Separately from the domain rule above, `enables` (`RO:0002327`) has a

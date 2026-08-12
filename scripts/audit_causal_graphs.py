@@ -42,6 +42,30 @@ structural defects the schema cannot catch:
                           IS organism-scoped and is flagged. Widening to QUALITY
                           would need the organism/enzyme distinction, which this
                           heuristic does not make (#353 review).  [WARN]
+  INCONSISTENT_NODE_TYPE  one ``node_id`` carrying different ``node_type``s in
+                          different records. The only CROSS-RECORD check here —
+                          neither record is wrong read alone, which is why
+                          nothing caught it. `proton_motive_force` is typed four
+                          ways across 35 records; 63 node_ids disagree with
+                          themselves corpus-wide. #355 made it consequential by
+                          minting `powers` (METPO:2007900) gated on
+                          ``subject_types``, so two byte-identical assertions now
+                          ground or not purely by how the subject is typed
+                          (#356).
+
+                          NOT EVERY HIT IS A DEFECT, and the baseline is where
+                          that gets decided rather than here. `terminal
+                          electron acceptor` is typed both CHEMICAL and
+                          MOLECULAR_FUNCTION on purpose — mappings/node_grounding.tsv
+                          carries a row for each, saying "same proposed METPO
+                          class covers both senses; MOLECULAR_FUNCTION typing
+                          surfaces the role-of interpretation". Same two-senses
+                          shape as `reduces` (#330/#333) and the CAPACITY table
+                          in the playbook. Where a family really does mean two
+                          things, the fix is TWO node_ids, not one type: this
+                          check asks whether one id means one thing, and a
+                          curator answering "no, two" resolves it by splitting.
+                                                                         [WARN]
   UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
@@ -113,6 +137,7 @@ WARN = "WARN"
 SEVERITY = {
     "DUPLICATE_GROUNDING": WARN,
     "DISPOSITION_MISTYPED": WARN,
+    "INCONSISTENT_NODE_TYPE": WARN,
     "DANGLING_EDGE": ERROR,
     "ORPHAN_NODE": ERROR,
     "NO_TRAIT_NODE": ERROR,
@@ -254,8 +279,36 @@ _DISPOSITION_RE = re.compile(
     re.IGNORECASE)
 
 
+def node_type_index(traits_dir: Path) -> dict[str, dict[str, int]]:
+    """``node_id`` → ``{node_type: number of records using it}``, corpus-wide.
+
+    Every other check in this file is scoped to one graph. This one cannot be:
+    the defect is that two RECORDS disagree, and neither record is wrong when
+    read alone. #355 is what made it consequential — it minted `METPO:2007900`
+    (`powers`) gated to ``subject_types = BIOLOGICAL_PROCESS|STATE``, so two
+    byte-identical assertions now ground or not purely by how their subject is
+    typed: `carboxydotrophic.yaml`'s `proton_motive_force` (STATE) grounds,
+    `phototrophic.yaml`'s (CAPACITY) is `blocked_by_node_type` (#356).
+    """
+    index: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for path in sorted(traits_dir.rglob("*.yaml")):
+        try:
+            doc = yaml.safe_load(path.read_text())
+        except yaml.YAMLError:
+            continue
+        if not isinstance(doc, dict):
+            continue
+        for graph in (doc.get("causal_graphs") or []):
+            for node in (graph.get("nodes") or []):
+                nid, ntype = node.get("node_id"), node.get("node_type")
+                if nid and ntype:
+                    index[nid][ntype] += 1
+    return {k: dict(v) for k, v in index.items()}
+
+
 def audit(traits_dir: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
+    type_index = node_type_index(traits_dir)
     for path in sorted(traits_dir.rglob("*.yaml")):
         try:
             doc = yaml.safe_load(path.read_text())
@@ -319,6 +372,34 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
                     "detail": (f"node_id={nid!r} label={n.get('label')!r} "
                                f"type={n.get('node_type')} — in an island with no path to "
                                f"{'/'.join(trait_nodes)}"),
+                })
+
+            # One node_id, several node_types across the corpus (#356). Reported
+            # on EVERY occurrence rather than on a presumed-wrong minority,
+            # because nothing here knows which type is right — `proton_motive_force`
+            # splits 18 STATE / 13 BIOLOGICAL_PROCESS and the gradient genuinely
+            # is a state while generating it is a process, so the majority is an
+            # observation, not a verdict. Per-occurrence rows also mean a family
+            # clears together the moment it is normalised.
+            #
+            # The detail leads with node_id, so `_key` discriminates by node
+            # within a graph. Deliberately NOT led with the type set: a family
+            # part-way through a burn-down would re-key on every step and
+            # un-suppress rows nobody has reached yet, which is the failure
+            # FRAGMENTED_GRAPH's comment describes from the other direction.
+            for n in nodes:
+                nid = n.get("node_id")
+                ntype = n.get("node_type")
+                types = type_index.get(nid or "", {})
+                if not nid or not ntype or len(types) < 2:
+                    continue
+                others = ", ".join(f"{t}×{c}" for t, c in sorted(types.items())
+                                   if t != ntype)
+                findings.append({
+                    "file": rel, "graph_id": gid, "defect": "INCONSISTENT_NODE_TYPE",
+                    "severity": SEVERITY["INCONSISTENT_NODE_TYPE"],
+                    "detail": (f"node_id={nid!r} type={ntype} here — also {others} "
+                               f"elsewhere in the corpus"),
                 })
 
             # Two nodes with the same grounding are one concept modelled twice.
