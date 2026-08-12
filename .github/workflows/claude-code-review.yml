@@ -241,7 +241,7 @@ jobs:
         # No continue-on-error. Falling back to github.token would silently
         # restore the self-approval hole the split exists to close, and it would
         # look identical in the logs.
-        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         with:
           app-id: ${{ secrets.REVIEWER_APP_ID }}
           private-key: ${{ secrets.REVIEWER_APP_PRIVATE_KEY }}
