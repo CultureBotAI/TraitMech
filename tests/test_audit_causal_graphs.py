@@ -28,6 +28,7 @@ from audit_causal_graphs import (  # noqa: E402
     _key,
     audit,
     connectivity_rows,
+    node_type_index,
     partition,
 )
 
@@ -738,3 +739,114 @@ def test_connectivity_out_defaults_next_to_out_not_into_the_repo(tmp_path):
     assert (out.parent / "causal_graph_connectivity.tsv").exists()
     assert not (REPO_ROOT / "reports" / "causal_graph_connectivity.tsv").samefile(
         out.parent / "causal_graph_connectivity.tsv")
+
+
+# --------------------------------------------- INCONSISTENT_NODE_TYPE (#356)
+
+TYPED_STATE = """\
+identifier: traitmech:000910
+label: a
+causal_graphs:
+- graph_id: ga
+  nodes:
+  - {node_id: trait_a, label: a, node_type: TRAIT}
+  - {node_id: proton_motive_force, label: pmf, node_type: STATE}
+  edges:
+  - {subject: proton_motive_force, object: trait_a, predicate: confers}
+"""
+
+TYPED_CAPACITY = TYPED_STATE.replace("traitmech:000910", "traitmech:000911") \
+                            .replace("graph_id: ga", "graph_id: gb") \
+                            .replace("node_type: STATE", "node_type: CAPACITY")
+
+
+def _multi_record(tmp_path: Path, *bodies: str) -> Path:
+    d = tmp_path / "traits"
+    d.mkdir(exist_ok=True)
+    for i, body in enumerate(bodies):
+        (d / f"rec{i}.yaml").write_text(textwrap.dedent(body))
+    return d
+
+
+def test_inconsistent_node_type_is_cross_record(tmp_path):
+    """Neither record is wrong read alone — which is why nothing caught this
+    before. Each occurrence is reported, so the family clears together."""
+    d = _multi_record(tmp_path, TYPED_STATE, TYPED_CAPACITY)
+    hits = [f for f in audit(d) if f["defect"] == "INCONSISTENT_NODE_TYPE"]
+
+    assert len(hits) == 2
+    assert {f["file"].split("/")[-1] for f in hits} == {"rec0.yaml", "rec1.yaml"}
+    for f in hits:
+        assert f["detail"].startswith("node_id='proton_motive_force'")
+        assert f["severity"] == SEVERITY["INCONSISTENT_NODE_TYPE"]
+    # Each row names the OTHER typing, so a row is actionable on its own.
+    assert "CAPACITY×1" in next(f["detail"] for f in hits if f["file"].endswith("rec0.yaml"))
+    assert "STATE×1" in next(f["detail"] for f in hits if f["file"].endswith("rec1.yaml"))
+
+
+def test_consistent_node_type_across_records_is_silent(tmp_path):
+    """One id used in twenty records with one type is not a finding — the
+    check is about disagreement, not about reuse."""
+    d = _multi_record(tmp_path, TYPED_STATE,
+                      TYPED_STATE.replace("traitmech:000910", "traitmech:000912")
+                                 .replace("graph_id: ga", "graph_id: gc"))
+    assert [f for f in audit(d) if f["defect"] == "INCONSISTENT_NODE_TYPE"] == []
+
+
+def test_inconsistent_node_type_keys_on_node_id_not_the_type_set(tmp_path):
+    """The baseline discriminator must be the node_id.
+
+    Leading with the type set would re-key every row of a family each time one
+    member is fixed, un-suppressing rows nobody has reached yet — a burn-down
+    that fights itself.
+    """
+    d = _multi_record(tmp_path, TYPED_STATE, TYPED_CAPACITY)
+    before = {_key(f) for f in audit(d) if f["defect"] == "INCONSISTENT_NODE_TYPE"}
+
+    # A third record joins with yet another type: the type SET changes, so the
+    # detail text changes, but the existing rows must keep their identity.
+    third = TYPED_STATE.replace("traitmech:000910", "traitmech:000913") \
+                       .replace("graph_id: ga", "graph_id: gd") \
+                       .replace("node_type: STATE", "node_type: CHEMICAL")
+    (tmp_path / "traits" / "rec2.yaml").write_text(textwrap.dedent(third))
+    after = {_key(f) for f in audit(d) if f["defect"] == "INCONSISTENT_NODE_TYPE"}
+
+    assert before < after          # old keys survive verbatim
+    assert len(after) == len(before) + 1
+
+
+def test_node_type_index_counts_occurrences_per_type(tmp_path):
+    d = _multi_record(tmp_path, TYPED_STATE, TYPED_CAPACITY)
+    idx = node_type_index(d)
+    assert idx["proton_motive_force"] == {"STATE": 1, "CAPACITY": 1}
+    assert idx["trait_a"] == {"TRAIT": 2}
+
+
+def test_node_type_index_counts_occurrences_not_records(tmp_path):
+    """Pins the distinction the old fixtures could not see (#374).
+
+    Every fixture above has one graph per record, so occurrence-counting and
+    record-counting agree and either implementation passes. This record carries
+    the same node_id in TWO graphs, which is where they diverge — and the count
+    is quoted into the finding text, so it has to mean what it says.
+    """
+    two_graphs = """\
+        identifier: traitmech:000920
+        label: a
+        causal_graphs:
+        - graph_id: g1
+          nodes:
+          - {node_id: t1, label: t1, node_type: TRAIT}
+          - {node_id: pmf, label: pmf, node_type: STATE}
+          edges:
+          - {subject: pmf, object: t1, predicate: confers}
+        - graph_id: g2
+          nodes:
+          - {node_id: t2, label: t2, node_type: TRAIT}
+          - {node_id: pmf, label: pmf, node_type: STATE}
+          edges:
+          - {subject: pmf, object: t2, predicate: confers}
+        """
+    idx = node_type_index(_isolated(tmp_path, "two_graphs", two_graphs))
+    # One RECORD, two OCCURRENCES.
+    assert idx["pmf"] == {"STATE": 2}
