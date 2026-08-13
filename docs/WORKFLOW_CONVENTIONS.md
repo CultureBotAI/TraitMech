@@ -204,9 +204,12 @@ across #277-#281 ranged from **two** functional gates (#277, bumping
 (#281, bumping `actions/checkout`, which appears in nearly all of them).
 
 The floor is `pr-sanity` and `vendored-sync` — the only two *functional gates*
-with no `paths:` filter. `claude-code-review.yml` has no `paths:` filter
-either, but since #307 it no longer counts toward the floor: its only job is
-gated on an `if:`, so it can run nothing on a Dependabot PR. That floor is the reassuring part:
+with no `paths:` filter. `claude-code-review.yml` used to be unfiltered too but
+never counted toward the floor (since #307: its only job is gated on an `if:`,
+so it can run nothing on a Dependabot PR), and as of 2026-08-13Z it no longer
+runs on `pull_request` at all — automatic review is off while
+`CLAUDE_CODE_OAUTH_TOKEN` has no quota, so it was turning every PR red without
+saying anything about the PR. `/review` and manual dispatch still work. That floor is the reassuring part:
 **`pr-sanity` is the gate that enforces SHA pinning** (see "Action pinning"
 above), so the check that actually validates *this* class of change is exactly
 the one immune to the filters.
