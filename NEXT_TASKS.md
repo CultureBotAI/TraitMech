@@ -5,20 +5,34 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-05. Everything merged in this repo through **#272**.
+Last reconciled: 2026-08-08. Everything merged in this repo through **#363**.
 
-Since the last reconcile (2026-08-03) the **research-artifact thread closed out
-end to end**: the paid Edison sweep landed (#240, #241 — 353 reports, 17 MB, now
-tracked), the per-trait research block finally renders (#253), the CURIEs those
-reports suggest are resolved against OAK (#260), evidence snippets are audited
-(#267), and every GitHub Action is SHA-pinned behind a gate (#272).
+Since the last reconcile (2026-08-05) **41 PRs merged** — the largest stretch yet,
+and almost all of it one thread: *the corpus does not agree with itself about
+types and predicates, and the gates could not see it.* In order, it ran
+detection → proposal → migration → burn-down, repeatedly:
+
+- **predicate domain/range** (#301, #302): ratcheted audit (#314), METPO
+  proposals v8 (#320) and v9 (#326), then the migrations (#323, #328, #329, #332,
+  #335, #341, #355). Both original classes are now **0 and gated at 0**.
+- **node typing** (#334, #352): six dispositions retyped and six states routed
+  (#351), detection landed and baselined (#353), then the burn-down (#360) —
+  which found that **none of the eight were retypes**; every one needed a
+  grounding that restated, contradicted, or narrowed its record. All eight merged.
+- **the gates themselves**: `just lint` inside qc (#313), qc paths-filter gate
+  (#285), snippet baseline re-keyed off array index (#290), history record
+  required (#357), CI-received-no-checks detector (#346), workflow-ran detector
+  (#354), round-trip formatting made enforceable (#344).
+- **#361 / #359** (2026-08-08): `ground-nodes` would have re-created the
+  duplicates #352 had just removed — guard added (#362); and
+  `reports/causal_graph_connectivity.tsv` now measures component structure,
+  the number retyping cannot move (#363).
 
 Open PRs: **none**.
 
-Open issues, 17. Eight of the fifteen listed at the last reconcile are now closed
-(#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
-come from the reviews of the five PRs above, which is the review loop working as
-intended.
+Open issues, 15. Seven of the seventeen listed at the last reconcile are closed
+(**#198, #217, #248 → #311, #252 → #285, #270 → #290, #275 → #308, #283**); five
+are newly filed (#289, #292, #356, #358, #364).
 
 | # | what | section |
 |---|---|---|
@@ -26,29 +40,38 @@ intended.
 | #183 | causal-graph fragmentation — detection done, **backfill is what remains** | 5 |
 | #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
-| #198 | **cross-Mech**: `vendored-sync` paths filter omits 4 vendored files | 2 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #217 | conventions page exists now (#272) but is TraitMech-local; **cross-Mech placement open** | 7 |
 | #244 | `trait-graph-sweep --verify` checks report existence only | 8 |
 | #245 | `cellulolysis` has a second, codex-provider report with no manifest row | 8 |
 | #246 | two `-edison-literature-meta.yaml` files, and nothing in the repo writes them | 8 |
-| #248 | absolute `/Users/marcin/...` path in 342 committed reports | 8 |
 | #249 | citation sidecars are a broken extraction — 353/353 malformed | 8 |
-| #252 | nothing checks that `qc.yaml`'s paths filter covers what `qc` reads — **3rd recurrence** | 7 |
 | #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
-| #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
-| #275 | conventions page duplicates the workflow header comments it restates | 7 |
-| #283 | this file's reconciles touch headers but not the section bodies they label | — |
+| #289 | `audit-qc-paths` misses a chain recipe's own dependencies when it also has a body | 7 |
+| #292 | editing a `REUSED_SNIPPET`'s shared text reads as a new finding | 10 |
+| #356 | one `node_id`, several `node_type`s — 63 of them; **detected in #366, burn-down open** | 11 |
+| #358 | vendored `history.yaml` states the pre-#325 enforcement policy | 7 |
+| #364 | METPO has no generic salt-tolerance / low-pH-tolerance disposition | 11 |
 
-**Recommended next: #252.** It is the third recurrence of one bug class (#184,
-#200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
-work, and `docs/WORKFLOW_CONVENTIONS.md` currently has to say "nothing checks
-this invariant". #270 is the runner-up — it is ratchet rot in a mechanism landed
-three days ago.
+**Recommended next: #356's burn-down** — step 2, not step 1. Detection landed
+in **#366** (`INCONSISTENT_NODE_TYPE`, baselined at 294 occurrences), so the
+open part is deciding a type per family and normalising. It is the same shape as
+#352/#353, and the machinery is fresh from three consecutive successes at
+exactly this (detect → baseline → burn down).
 
-**Not actionable as "next":** #183's backfill is per-trait research curation,
-not a single PR — it is the largest remaining item and wants its own campaign.
-#191/#197/#198/#209/#217 are cross-Mech and want the hub, not this repo.
+The issue **understates the scale ~7x**: measured 2026-08-08,
+`proton_motive_force` carries four types across **35** records (the issue says
+9), and **63 node_ids** carry more than one `node_type` corpus-wide.
+
+**Runner-up: #358**, and it is the one with a real ordering constraint — see
+section 7. `../culturebotai-claw` IS checked out locally, so step 1 (fix the
+canonical `shared/history/history.yaml`) is actionable today; step 2 (add it to
+`check_vendored_sync.sh`) still waits on #209's hub-reachability question.
+
+**Not actionable as "next":** #183's backfill is per-trait research curation, not
+a single PR — it wants its own campaign, and #363 finally gives it a metric that
+cannot be gamed. #364 is upstream (METPO); its actionable form is a
+`metpo-proposal`, not curation here. #191/#197/#209 are cross-Mech and want the
+hub.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -273,7 +296,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 done, 220 remain
+## 5. Causal-graph connectivity (#183) — DETECTION DONE; MEASUREMENT DONE (#363); BACKFILL 218 remain
 
 **The gap this section opened with, for the record: `audit-graphs` used to miss
 fragmentation entirely.** It flagged `DANGLING_EDGE` (an edge naming a node that
@@ -286,7 +309,15 @@ an edge to a neighbour long before it is wired back to the trait node. #185 and
 Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes), after
 `cellulolysis` had already been repaired: **220 graphs (62%) have more than one
 connected component**, and **1264 nodes
-(31%) sit outside their graph's largest component**. The worst offenders are the
+(31%) sit outside their graph's largest component**.
+
+**Re-measured 2026-08-08** (after #294, #300, #351, #360): **218 graphs** still
+split, **1296** `UNREACHABLE_FROM_TRAIT`. The headline number barely moved in
+five weeks, and #359/#363 explain why it *cannot* be read as progress — see
+section 11. The metric to use from now on is
+`reports/causal_graph_connectivity.tsv`: **353 graphs, 861 components over 4129
+wired nodes, 69.7% of wired nodes in their graph's largest component.** That is
+the number a backfill has to move. The worst offenders are the
 generated environment/physiology traits — e.g.
 `environment/ph_delta_mid2.yaml` (15 nodes, 7 components),
 `physiology/methanotrophic.yaml` (20 nodes, 5 components),
@@ -397,7 +428,42 @@ It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
 previous revision of this file called #151 "the only open issue in the repo" —
 that has not been true since 2026-07-30; see the header table.)
 
-## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#198/#209/#217/#252/#275
+## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#209/#289/#358
+
+Update (2026-08-08): **#198, #217, #252 (→ #285) and #275 (→ #308) are closed.**
+Two new residuals joined: **#289** (`audit-qc-paths` does not follow a chain
+recipe's own dependencies when the recipe also has a body) and **#358**.
+
+Update (2026-08-13): **automatic `claude-review` is OFF** (#371) while
+`CLAUDE_CODE_OAUTH_TOKEN` has no quota — an exhausted account turned every PR
+red without saying anything about the PR. `/review` and manual dispatch still
+work. Note the method: the trigger was removed from the FILE, because
+`audit_required_workflows.py` derives its required set from the files and
+`gh workflow disable` would have left the audit expecting a run that can never
+happen (#372). Re-enable by restoring two commented lines in `on:`.
+
+**#358 has an ordering constraint worth reading before starting it.**
+`src/traitmech/schema/history.yaml` line 9 and lines 20-23 still state the
+pre-#325 policy — "one record per session per target" and "presence of a record
+is *advisory* — CI warns, it does not block". #357 made it blocking, so the
+second is now false, and it is verbatim the argument #325 refuted *with
+measurement* (of 134 commits touching trait records, 2 carried a history record;
+nobody routed around a gate that did not exist).
+
+#357 did not fix it because the file is vendored byte-identical from claw and
+**nothing would detect the drift** — it sits outside `check_vendored_sync.sh`'s
+checked set, which is the gap #209 tracks. So:
+
+1. `../culturebotai-claw` **is checked out locally**, so fixing the canonical
+   `shared/history/history.yaml` and re-vendoring into the four Mech repos is
+   actionable today. Land it in claw first — a one-copy edit here is exactly the
+   failure `vendored-sync` exists to prevent.
+2. Adding `history.yaml` to `check_vendored_sync.sh` waits on #209 (the canonical
+   hub for this file is private, so CI cannot reach it to diff).
+
+`history/README.md` and `.github/workflows/curation-history.yaml` carry the
+operative policy meanwhile, and say the schema prose is stale by design rather
+than neglect.
 
 This whole thread post-dates the last reconcile and was previously unlogged here.
 TraitMech is the fleet **pilot** for agent workflows because it is the smallest
@@ -652,3 +718,69 @@ in `docs/CURATION_PLAYBOOK.md`.
 Burning this down is the same work as #183's backfill, on the same edges —
 `cellulolysis` is in the ECHOES set and is #183's worked example, so it is the
 natural first target. Residual: **#270** (baseline keys on an array index).
+
+## 11. Corpus self-consistency in typing (#356, #364) — PENDING, and the strongest next item
+
+The thread #352/#334 closed was one instance of a general problem: **the corpus
+disagrees with itself about what a thing is, and the gates only catch it where a
+predicate happens to have a domain or range.**
+
+`audit-graphs` now flags `DISPOSITION_MISTYPED` (a `CAPACITY`/`STATE` node whose
+description reads as a disposition) and `DUPLICATE_GROUNDING` (two nodes in one
+graph on the same CURIE), both at 0 and gated. Neither looks *across* records.
+
+**Measured 2026-08-08 — the issue understates this by 7x.** #356 reports
+`proton_motive_force` typed four ways across 9 records. Actually:
+
+| node_type | records |
+|---|---|
+| `STATE` | 18 |
+| `BIOLOGICAL_PROCESS` | 13 |
+| `CHEMICAL` | 2 |
+| `CAPACITY` | 2 |
+
+**35 records**, one concept. And it is not alone — **63 `node_id`s carry more
+than one `node_type` across the corpus**, including `membrane_potential` (4
+types), `membrane_lipid_composition` (3), and pairs like
+`terminal_electron_acceptor` (`CHEMICAL`/`MOLECULAR_FUNCTION`) and
+`superoxide_dismutase` (`GENE_OR_PROTEIN`/`MOLECULAR_FUNCTION`) where both
+readings are defensible and the corpus should still pick one per record *and say
+why*.
+
+**Why it now has consequences.** #355 minted `METPO:2007900` (`powers`) gated to
+`subject_types = BIOLOGICAL_PROCESS|STATE`. Two byte-identical assertions behave
+differently purely by subject typing — `carboxydotrophic.yaml`'s
+`proton_motive_force` (`STATE`) grounds, `phototrophic.yaml`'s (`CAPACITY`) is
+`blocked_by_node_type`. Visible in `reports/predicate_grounding_residual.tsv`.
+Three of those four blocks are *correct*; one is only the disagreement.
+
+**The shape of the work** — the same one that has now succeeded three times
+(#314 → migrations; #353 → #360):
+
+1. **Detect — DONE (2026-08-13, PR #366).** `INCONSISTENT_NODE_TYPE`, keyed on
+   `node_id` and baselined at **294 occurrences across 63 node_ids**. It is
+   cross-record, so it does not fit the per-graph loop: `node_type_index()`
+   pre-walks the corpus. Findings are emitted per OCCURRENCE rather than on a
+   presumed-wrong minority, because nothing knows which type is right; and the
+   detail leads with `node_id` rather than the type set, so a family part-way
+   through a burn-down does not re-key and un-suppress rows nobody has reached.
+   Left open by it: **#373** (the check is a third full corpus walk, 7.9s → 12.4s).
+2. **Decide, then normalise.** `CHEMICAL` is clearly wrong for a gradient.
+   `STATE` vs `BIOLOGICAL_PROCESS` is a real question (the gradient is a state;
+   generating it is a process) and different records may legitimately mean
+   different things — which is an argument for *two* node_ids, not one type.
+   `CAPACITY` is the outlier, and #360's lesson applies: the grounding decides.
+3. **Burn down**, per family, smallest first.
+
+**Do not repeat #352's mistake.** The test is not "is this type distinct/defensible
+in isolation" but "is it compatible with what the record and its predicates
+already assert". #360 spent three review rounds learning that; `docs/CURATION_PLAYBOOK.md`
+now carries it.
+
+**#364 is the upstream residual of the same thread.** #360 merged away
+`salt_tolerance` and `low_ph_tolerance` because METPO models only a *preference*
+axis (`METPO:1000629` halophily preference, `METPO:1003000` pH growth
+preference) and has no *tolerance* axis — `halotolerant`/`acidotolerant` are
+phenotypes that each already anchor their own record. Actionable form is a
+`metpo-proposal`, not curation here. Filed so the concepts are recorded rather
+than silently lost in a merge.
