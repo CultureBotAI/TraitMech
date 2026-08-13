@@ -206,7 +206,7 @@ across #277-#281 ranged from **two** functional gates (#277, bumping
 The floor is `pr-sanity` and `vendored-sync` — the only two *functional gates*
 with no `paths:` filter. `claude-code-review.yml` used to be unfiltered too but
 never counted toward the floor (since #307: its only job is gated on an `if:`,
-so it can run nothing on a Dependabot PR), and as of 2026-08-12 it no longer
+so it can run nothing on a Dependabot PR), and as of 2026-08-13Z it no longer
 runs on `pull_request` at all — automatic review is off while
 `CLAUDE_CODE_OAUTH_TOKEN` has no quota, so it was turning every PR red without
 saying anything about the PR. `/review` and manual dispatch still work. That floor is the reassuring part:

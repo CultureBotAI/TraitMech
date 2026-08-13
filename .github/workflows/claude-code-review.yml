@@ -11,11 +11,17 @@ name: Claude Code Review
 #
 # NOT MANAGED BY cron-profiles.yaml, and that is a real gap worth stating rather
 # than hiding: the kill switch only rewrites `schedule:` blocks, and this is
-# event-triggered. To stop it you disable the workflow in the Actions tab or
-# revert it. See docs/AGENT_IDENTITY.md.
+# event-triggered.
+#
+# TO STOP IT, EDIT THE `on:` BLOCK BELOW — do NOT disable the workflow in the
+# Actions tab. That advice used to be here and was true when written; #348/#354
+# made it wrong. scripts/audit_required_workflows.py derives its required set
+# from the FILES, so the Actions toggle leaves the `pull_request:` trigger in
+# place and the audit reports every open PR as "expected, did not run" (#372).
+# See docs/AGENT_IDENTITY.md.
 
 on:
-  # AUTOMATIC REVIEW IS OFF (2026-08-12). The `pull_request:` trigger is
+  # AUTOMATIC REVIEW IS OFF (2026-08-13Z). The `pull_request:` trigger is
   # removed; `/review` and manual dispatch still work.
   #
   # WHY: CLAUDE_CODE_OAUTH_TOKEN is out of quota, and the failure mode is not
