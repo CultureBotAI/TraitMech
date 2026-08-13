@@ -48,18 +48,19 @@ are newly filed (#289, #292, #356, #358, #364).
 | #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
 | #289 | `audit-qc-paths` misses a chain recipe's own dependencies when it also has a body | 7 |
 | #292 | editing a `REUSED_SNIPPET`'s shared text reads as a new finding | 10 |
-| #356 | **one `node_id`, several `node_type`s — 63 of them, and nothing detects it** | 11 |
+| #356 | one `node_id`, several `node_type`s — 63 of them; **detected in #366, burn-down open** | 11 |
 | #358 | vendored `history.yaml` states the pre-#325 enforcement policy | 7 |
 | #364 | METPO has no generic salt-tolerance / low-pH-tolerance disposition | 11 |
 
-**Recommended next: #356.** It is the same shape as #352/#353 — an inconsistency
-the gates cannot see — and the machinery to gate it is fresh from three
-consecutive successes at exactly this (detect → baseline → burn down). It is also
-**far bigger than the issue says**: measured 2026-08-08, `proton_motive_force`
-carries four types across **35** records (the issue says 9), and **63 node_ids**
-carry more than one `node_type` corpus-wide. #356 itself names the missing check
-— "a check that flags one `node_id` carrying multiple `node_type`s across
-records would catch this whole family, and does not exist yet".
+**Recommended next: #356's burn-down** — step 2, not step 1. Detection landed
+in **#366** (`INCONSISTENT_NODE_TYPE`, baselined at 294 occurrences), so the
+open part is deciding a type per family and normalising. It is the same shape as
+#352/#353, and the machinery is fresh from three consecutive successes at
+exactly this (detect → baseline → burn down).
+
+The issue **understates the scale ~7x**: measured 2026-08-08,
+`proton_motive_force` carries four types across **35** records (the issue says
+9), and **63 node_ids** carry more than one `node_type` corpus-wide.
 
 **Runner-up: #358**, and it is the one with a real ordering constraint — see
 section 7. `../culturebotai-claw` IS checked out locally, so step 1 (fix the
@@ -433,6 +434,14 @@ Update (2026-08-08): **#198, #217, #252 (→ #285) and #275 (→ #308) are close
 Two new residuals joined: **#289** (`audit-qc-paths` does not follow a chain
 recipe's own dependencies when the recipe also has a body) and **#358**.
 
+Update (2026-08-13): **automatic `claude-review` is OFF** (#371) while
+`CLAUDE_CODE_OAUTH_TOKEN` has no quota — an exhausted account turned every PR
+red without saying anything about the PR. `/review` and manual dispatch still
+work. Note the method: the trigger was removed from the FILE, because
+`audit_required_workflows.py` derives its required set from the files and
+`gh workflow disable` would have left the audit expecting a run that can never
+happen (#372). Re-enable by restoring two commented lines in `on:`.
+
 **#358 has an ordering constraint worth reading before starting it.**
 `src/traitmech/schema/history.yaml` line 9 and lines 20-23 still state the
 pre-#325 policy — "one record per session per target" and "presence of a record
@@ -748,11 +757,14 @@ Three of those four blocks are *correct*; one is only the disagreement.
 **The shape of the work** — the same one that has now succeeded three times
 (#314 → migrations; #353 → #360):
 
-1. **Detect.** Add an `INCONSISTENT_NODE_TYPE` check keyed on `node_id` across
-   records. Note it is cross-record, so it does not fit `audit_causal_graphs.py`'s
-   per-graph loop as-is; and `_key`'s discriminator convention (leading
-   whitespace-delimited token of `detail`) has to carry the `node_id`.
-   Baseline it — 63 keys is a backlog, not a PR.
+1. **Detect — DONE (2026-08-13, PR #366).** `INCONSISTENT_NODE_TYPE`, keyed on
+   `node_id` and baselined at **294 occurrences across 63 node_ids**. It is
+   cross-record, so it does not fit the per-graph loop: `node_type_index()`
+   pre-walks the corpus. Findings are emitted per OCCURRENCE rather than on a
+   presumed-wrong minority, because nothing knows which type is right; and the
+   detail leads with `node_id` rather than the type set, so a family part-way
+   through a burn-down does not re-key and un-suppress rows nobody has reached.
+   Left open by it: **#373** (the check is a third full corpus walk, 7.9s → 12.4s).
 2. **Decide, then normalise.** `CHEMICAL` is clearly wrong for a gradient.
    `STATE` vs `BIOLOGICAL_PROCESS` is a real question (the gradient is a state;
    generating it is a process) and different records may legitimately mean
