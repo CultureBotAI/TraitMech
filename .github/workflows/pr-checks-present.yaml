@@ -14,9 +14,12 @@ name: pr-checks-present
 # guarding against one particular cause.
 #
 # audit-required-workflows is the second, stronger step. The first can only see
-# TOTAL silence, because claude-code-review.yml fires on every PR and records a
-# run even when its `if:` gates skip the job — so qc, pytest and validate-strict
-# could all be mute and it would still pass. The second checks each PR-triggered
+# TOTAL silence, because pr-sanity.yaml and vendored-sync.yaml carry no `paths:`
+# filter and so record a run on every PR — so qc, pytest and validate-strict
+# could all be mute and it would still pass. (claude-code-review.yml used to be
+# the example here; it stopped running on `pull_request` on 2026-08-12 while its
+# token has no quota. Total-silence detection is unaffected — it needs SOME
+# unfiltered PR-triggered workflow, and those two remain.) The second checks each PR-triggered
 # workflow by name, with `paths:` filters evaluated against the PR's own changed
 # files so a legitimately filtered-out workflow is not reported.
 #

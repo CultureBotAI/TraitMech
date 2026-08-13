@@ -4,9 +4,8 @@
 ``audit_pr_checks_present`` catches TOTAL silence — a PR with no
 pull-request-triggered runs at all, which is the shape the Actions outage
 produced in #345. It cannot catch a PARTIAL silence, and for a structural
-reason: ``claude-code-review.yml`` fires on ``pull_request`` with no ``paths:``
-filter and records a run even when its ``if:`` gates skip the job, so nearly
-every PR here has at least one qualifying event. ``qc``, ``pytest`` and
+reason: ``pr-sanity.yaml`` and ``vendored-sync.yaml`` carry no ``paths:``
+filter and so record a run on every PR. ``qc``, ``pytest`` and
 ``validate-strict`` could all be mute and that check would still pass.
 
 This is the stronger property: every workflow that should have run, ran. It is
@@ -19,9 +18,9 @@ the moment someone adds one — which is exactly the argument #252 used to rejec
 a declared list for ``audit-qc-paths``, and it applies here unchanged. Adding a
 workflow adds it to the required set with no second edit.
 
-A ``paths:`` FILTER IS NOT A MISSING RUN. Five of the eight PR-triggered
-workflows here are filtered (the unfiltered three are claude-code-review,
-pr-sanity and vendored-sync), and a filtered workflow legitimately does not run
+A ``paths:`` FILTER IS NOT A MISSING RUN. Five of the seven PR-triggered
+workflows here are filtered (the unfiltered two are pr-sanity and
+vendored-sync), and a filtered workflow legitimately does not run
 on an unrelated PR. So the filters are evaluated against the PR's own changed files
 and only an unfiltered-or-matching workflow is expected. That evaluation is the
 hard part of this check, and it is also the payoff: a ``paths:`` regression --

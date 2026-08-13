@@ -15,8 +15,33 @@ name: Claude Code Review
 # revert it. See docs/AGENT_IDENTITY.md.
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  # AUTOMATIC REVIEW IS OFF (2026-08-12). The `pull_request:` trigger is
+  # removed; `/review` and manual dispatch still work.
+  #
+  # WHY: CLAUDE_CODE_OAUTH_TOKEN is out of quota, and the failure mode is not
+  # "no review" — it is a RED CHECK ON EVERY PR that says nothing about the PR.
+  # The "Verify the review agent actually ran" step below is deliberately
+  # fail-loud (a review bot that fails open is worse), so an exhausted account
+  # turns every PR red until the reset. Reds that mean nothing are the thing
+  # #293 removed for Dependabot, for the same reason: they train people to
+  # ignore reds.
+  #
+  # WHY REMOVE THE TRIGGER RATHER THAN `gh workflow disable`: the required set
+  # in scripts/audit_required_workflows.py is DERIVED, not declared — "every
+  # workflow in .github/workflows with a `pull_request:` trigger", read from the
+  # files. Disabling via the Actions API leaves the trigger in the file, so the
+  # audit would keep expecting a run that can never happen and report every open
+  # PR as "expected, did not run". The file is the switch here; the API toggle
+  # is not.
+  #
+  # TO RE-ENABLE: restore the two lines below. Nothing else needs changing —
+  # the job's `if:`, its concurrency key and `track_progress` all still carry
+  # their `pull_request` branches, deliberately left intact so that turning this
+  # back on does not require re-deriving the fork/Dependabot/self-cancellation
+  # reasoning documented on them (#212, #215, #293).
+  #
+  #   pull_request:
+  #     types: [opened, synchronize]
   issue_comment:
     types: [created]
   workflow_dispatch:
