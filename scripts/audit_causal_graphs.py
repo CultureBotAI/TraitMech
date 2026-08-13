@@ -280,7 +280,14 @@ _DISPOSITION_RE = re.compile(
 
 
 def node_type_index(traits_dir: Path) -> dict[str, dict[str, int]]:
-    """``node_id`` → ``{node_type: number of records using it}``, corpus-wide.
+    """``node_id`` → ``{node_type: number of NODE OCCURRENCES}``, corpus-wide.
+
+    Occurrences, not records, and the distinction is currently invisible: no
+    ``node_id`` appears twice in one graph, and none appears in two graphs of
+    one record, so the two counts are equal everywhere today. Nothing enforces
+    that, though, and the count is quoted straight into the finding text
+    ("STATE×18") whose whole job is to size the disagreement — so it says which
+    it means rather than relying on the corpus staying shaped this way (#374).
 
     Every other check in this file is scoped to one graph. This one cannot be:
     the defect is that two RECORDS disagree, and neither record is wrong when

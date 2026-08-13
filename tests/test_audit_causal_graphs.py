@@ -815,8 +815,38 @@ def test_inconsistent_node_type_keys_on_node_id_not_the_type_set(tmp_path):
     assert len(after) == len(before) + 1
 
 
-def test_node_type_index_counts_records_per_type(tmp_path):
+def test_node_type_index_counts_occurrences_per_type(tmp_path):
     d = _multi_record(tmp_path, TYPED_STATE, TYPED_CAPACITY)
     idx = node_type_index(d)
     assert idx["proton_motive_force"] == {"STATE": 1, "CAPACITY": 1}
     assert idx["trait_a"] == {"TRAIT": 2}
+
+
+def test_node_type_index_counts_occurrences_not_records(tmp_path):
+    """Pins the distinction the old fixtures could not see (#374).
+
+    Every fixture above has one graph per record, so occurrence-counting and
+    record-counting agree and either implementation passes. This record carries
+    the same node_id in TWO graphs, which is where they diverge — and the count
+    is quoted into the finding text, so it has to mean what it says.
+    """
+    two_graphs = """\
+        identifier: traitmech:000920
+        label: a
+        causal_graphs:
+        - graph_id: g1
+          nodes:
+          - {node_id: t1, label: t1, node_type: TRAIT}
+          - {node_id: pmf, label: pmf, node_type: STATE}
+          edges:
+          - {subject: pmf, object: t1, predicate: confers}
+        - graph_id: g2
+          nodes:
+          - {node_id: t2, label: t2, node_type: TRAIT}
+          - {node_id: pmf, label: pmf, node_type: STATE}
+          edges:
+          - {subject: pmf, object: t2, predicate: confers}
+        """
+    idx = node_type_index(_isolated(tmp_path, "two_graphs", two_graphs))
+    # One RECORD, two OCCURRENCES.
+    assert idx["pmf"] == {"STATE": 2}
