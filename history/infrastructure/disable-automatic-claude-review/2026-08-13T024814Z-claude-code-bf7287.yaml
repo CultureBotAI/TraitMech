@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .github/workflows/claude-code-review.yml
+  slug: disable-automatic-claude-review
+session:
+  id: 2026-08-13T024814Z-claude-code-bf7287
+  timestamp: '2026-08-13T02:48:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflows
+  summary: Turn off automatic claude-review while its token has no quota
+  details: 'CLAUDE_CODE_OAUTH_TOKEN is out of quota. The failure mode is not no review, it
+    is a RED CHECK ON EVERY PR that says nothing about the PR: the Verify the review agent
+    actually ran step is deliberately fail-loud because a review bot that fails open is worse,
+    so an exhausted account turns every PR red until the reset. That is the same reason 293
+    skipped Dependabot PRs rather than letting them fail - reds that mean nothing train people
+    to ignore reds. Removed the pull_request trigger; issue_comment /review and workflow_dispatch
+    still work, so the reviewer is opt-in rather than gone. IMPORTANT, the method matters
+    here: gh workflow disable would have been WRONG. scripts/audit_required_workflows.py derives
+    its required set from the FILES - every workflow in .github/workflows with a pull_request
+    trigger - so the Actions API toggle would leave the trigger in place and the audit would
+    expect a run that can never happen, reporting every open PR as expected, did not run.
+    The file is the switch in this repo. Verified: the derived set drops 8 to 7 PR-triggered
+    workflows with 0 missing runs, and audit-pr-checks still reports 0 unchecked because total-silence
+    detection needs only SOME unfiltered PR-triggered workflow and pr-sanity plus vendored-sync
+    remain. Updated the three places whose prose would otherwise have become false: audit_required_workflows.py
+    called claude-code-review one of the unfiltered three and used it as the worked example
+    for why partial silence is undetectable, pr-checks-present.yaml used the same example,
+    and WORKFLOW_CONVENTIONS.md described it as unfiltered in the Dependabot gate-coverage
+    discussion. The job if, its concurrency key and track_progress all keep their pull_request
+    branches deliberately, so re-enabling is restoring two commented lines rather than re-deriving
+    the fork, Dependabot and self-cancellation reasoning from 212, 215 and 293. Scope check:
+    org wide turned out to mean this repo only. Every other CultureBotAI repo uses GitHub
+    Copilot''s copilot-pull-request-reviewer, a different product that does not touch the
+    Anthropic quota, and TraitMech''s other Claude workflow, pr-shepherd.yml, is workflow_dispatch
+    only so it never fires automatically. qc green.'
