@@ -5,34 +5,39 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-08. Everything merged in this repo through **#363**.
+Last reconciled: 2026-08-15. Everything merged in this repo through **#378**;
+**#382 open** (first #356 burn-down tranche, CLEAN).
 
-Since the last reconcile (2026-08-05) **41 PRs merged** — the largest stretch yet,
-and almost all of it one thread: *the corpus does not agree with itself about
-types and predicates, and the gates could not see it.* In order, it ran
-detection → proposal → migration → burn-down, repeatedly:
+Since the 2026-08-08 reconcile the **#356 thread ran end to end for the first
+time in one stretch** — detect, then measure the cost of detecting, then burn
+down:
 
-- **predicate domain/range** (#301, #302): ratcheted audit (#314), METPO
-  proposals v8 (#320) and v9 (#326), then the migrations (#323, #328, #329, #332,
-  #335, #341, #355). Both original classes are now **0 and gated at 0**.
-- **node typing** (#334, #352): six dispositions retyped and six states routed
-  (#351), detection landed and baselined (#353), then the burn-down (#360) —
-  which found that **none of the eight were retypes**; every one needed a
-  grounding that restated, contradicted, or narrowed its record. All eight merged.
-- **the gates themselves**: `just lint` inside qc (#313), qc paths-filter gate
-  (#285), snippet baseline re-keyed off array index (#290), history record
-  required (#357), CI-received-no-checks detector (#346), workflow-ran detector
-  (#354), round-trip formatting made enforceable (#344).
-- **#361 / #359** (2026-08-08): `ground-nodes` would have re-created the
-  duplicates #352 had just removed — guard added (#362); and
-  `reports/causal_graph_connectivity.tsv` now measures component structure,
-  the number retyping cannot move (#363).
+- **#366** shipped `INCONSISTENT_NODE_TYPE`, the first CROSS-RECORD check here,
+  baselined at **294 occurrences across 63 node_ids**. Two records disagreeing
+  about what a node *is* was invisible to every per-graph check.
+- **#378** (closes #373) then fixed what #366 cost: the three passes each
+  re-walked the corpus, **1431 `yaml.safe_load` calls for 477 records**, now 477.
+  Done before the burn-down on purpose — that campaign runs the audit on every
+  iteration.
+- **#382** is the first burn-down tranche and needed no new judgement:
+  `CausalNodeTypeEnum` names `proton_motive_force`, `membrane_fluidity` and
+  `reducing power` as its own canonical examples of STATE / QUALITY / CAPACITY,
+  so the corpus disagreed with its own schema in the schema's own examples.
+  **294 → 223**, and the edge #356 was filed for now grounds.
 
-Open PRs: **none**.
+Also landed: **#371** turned OFF automatic `claude-review` — its subscription
+token has no quota, and the fail-loud verification step meant an exhausted
+account turned *every* PR red while saying nothing about the PR. `/review` and
+manual dispatch still work. Four Dependabot bumps merged (#367–#370), three of
+them majors; `setup-python` 5→7 and `cache` 4→6 are verified green on main,
+`create-github-app-token` 1→3 is **unexercised** because the only workflow using
+it is the one we just stopped running.
 
-Open issues, 15. Seven of the seventeen listed at the last reconcile are closed
-(**#198, #217, #248 → #311, #252 → #285, #270 → #290, #275 → #308, #283**); five
-are newly filed (#289, #292, #356, #358, #364).
+Open PRs: **#382**.
+
+Open issues, 16. Eight closed since the last reconcile (#372–#376 and #379–#381,
+all review findings on the PRs that introduced them, plus **#373** via #378).
+One newly filed: **#377**.
 
 | # | what | section |
 |---|---|---|
@@ -48,30 +53,25 @@ are newly filed (#289, #292, #356, #358, #364).
 | #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
 | #289 | `audit-qc-paths` misses a chain recipe's own dependencies when it also has a body | 7 |
 | #292 | editing a `REUSED_SNIPPET`'s shared text reads as a new finding | 10 |
-| #356 | one `node_id`, several `node_type`s — 63 of them; **detected in #366, burn-down open** | 11 |
+| #356 | one `node_id`, several `node_type`s — **detected (#366), 223 of 294 remain** | 11 |
 | #358 | vendored `history.yaml` states the pre-#325 enforcement policy | 7 |
 | #364 | METPO has no generic salt-tolerance / low-pH-tolerance disposition | 11 |
+| #377 | two files still say claw is private; it is public | 7 |
 
-**Recommended next: #356's burn-down** — step 2, not step 1. Detection landed
-in **#366** (`INCONSISTENT_NODE_TYPE`, baselined at 294 occurrences), so the
-open part is deciding a type per family and normalising. It is the same shape as
-#352/#353, and the machinery is fresh from three consecutive successes at
-exactly this (detect → baseline → burn down).
+**Recommended next: #356 tranche 2** — `GENE_OR_PROTEIN` / `MOLECULAR_FUNCTION`
+(6 families, 24 occurrences: `catalase`, `superoxide_dismutase`,
+`na_h_antiporter`, `cation_proton_antiporter`, …). It is the next-most-decided
+group, because **#352 already settled the rule** — "a protein is not its
+activity", which is why `catalase`/`urease` were ungrounded from their GO
+ACTIVITY terms and why `catalase -enables-> catalase_function` is the correct
+shape. Expect some of these to be the two-ids case rather than one type.
 
-The issue **understates the scale ~7x**: measured 2026-08-08,
-`proton_motive_force` carries four types across **35** records (the issue says
-9), and **63 node_ids** carry more than one `node_type` corpus-wide.
+**Runner-up: #377**, which is two comment edits and makes #191/#358 legible.
 
-**Runner-up: #358**, and it is the one with a real ordering constraint — see
-section 7. `../culturebotai-claw` IS checked out locally, so step 1 (fix the
-canonical `shared/history/history.yaml`) is actionable today; step 2 (add it to
-`check_vendored_sync.sh`) still waits on #209's hub-reachability question.
-
-**Not actionable as "next":** #183's backfill is per-trait research curation, not
-a single PR — it wants its own campaign, and #363 finally gives it a metric that
-cannot be gamed. #364 is upstream (METPO); its actionable form is a
-`metpo-proposal`, not curation here. #191/#197/#209 are cross-Mech and want the
-hub.
+**Not actionable as "next":** #183's backfill wants its own campaign (it now has
+a metric that cannot be gamed — see section 5). #364 is upstream METPO.
+#191/#197/#209 are cross-Mech and want the hub — though see #377, which voids
+the reason two of them were parked.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -434,6 +434,18 @@ Update (2026-08-08): **#198, #217, #252 (→ #285) and #275 (→ #308) are close
 Two new residuals joined: **#289** (`audit-qc-paths` does not follow a chain
 recipe's own dependencies when the recipe also has a body) and **#358**.
 
+Update (2026-08-15): **#377** — `scripts/check_vendored_sync.sh:9` and this
+file's own section 2 still say `culturebotai-claw` is private. It is **public**.
+That does NOT revive the repoint (see section 2 — abandoned on architectural
+grounds, claw#22 reverted claw#21), but it voids the stated blocker on **#191**
+and **#358 step 2**, both of which were parked on "the canonical hub for this
+file is private". Two comment edits; both issues are smaller than they read.
+
+Also #372 (fixed in #371): the workflow header told readers to stop it via the
+Actions tab, which #348/#354 had silently made wrong — the required set is
+derived from the files, so the API toggle leaves the audit expecting a run that
+can never happen.
+
 Update (2026-08-13): **automatic `claude-review` is OFF** (#371) while
 `CLAUDE_CODE_OAUTH_TOKEN` has no quota — an exhausted account turned every PR
 red without saying anything about the PR. `/review` and manual dispatch still
@@ -764,13 +776,41 @@ Three of those four blocks are *correct*; one is only the disagreement.
    presumed-wrong minority, because nothing knows which type is right; and the
    detail leads with `node_id` rather than the type set, so a family part-way
    through a burn-down does not re-key and un-suppress rows nobody has reached.
-   Left open by it: **#373** (the check is a third full corpus walk, 7.9s → 12.4s).
-2. **Decide, then normalise.** `CHEMICAL` is clearly wrong for a gradient.
-   `STATE` vs `BIOLOGICAL_PROCESS` is a real question (the gradient is a state;
-   generating it is a process) and different records may legitimately mean
-   different things — which is an argument for *two* node_ids, not one type.
-   `CAPACITY` is the outlier, and #360's lesson applies: the grounding decides.
-3. **Burn down**, per family, smallest first.
+   Left open by it: #373, the third full corpus walk — **DONE (2026-08-15, PR
+   #378)**: one shared `load_corpus()`, 1431 → 477 parses.
+2. **Decide, then normalise — TRANCHE 1 IN FLIGHT (PR #382, open/CLEAN), 294 → 223.**
+   The `STATE` vs `BIOLOGICAL_PROCESS` question turned out **not** to be a
+   judgement call: `CausalNodeTypeEnum` names `proton_motive_force`,
+   `membrane_fluidity` and `reducing power` as its own canonical examples of
+   STATE / QUALITY / CAPACITY, and says a state is "the gradient / steady-value,
+   **not its establishment**". The corpus disagreed with its own schema in the
+   schema's own examples. Five families normalised, 21 nodes, 20 records; the
+   `powers` edge #356 was filed for now grounds (blocked 4 → 3, groundable
+   2 → 3).
+
+   Read every description before retyping — #352's lesson, and it bit twice
+   here. `membrane_fluidity`'s lone BIOLOGICAL_PROCESS node *described*
+   "Maintenance of optimal membrane fluidity" (a process, arguing for a rename)
+   while its *edges* used it as the property, like all 24 peers. Three signals
+   against one: the description was the defect.
+
+3. **Burn down the rest.** Measured on #382's branch, i.e. what is left *once
+   that lands*: **223 occurrences across 58 families**. In decreasing order of
+   how decided they already are:
+
+   | signature | fam | occ | note |
+   |---|---|---|---|
+   | `GENE_OR_PROTEIN`/`MOLECULAR_FUNCTION` | 6 | 24 | **Next.** #352 settled the rule: a protein is not its activity |
+   | `BIOLOGICAL_PROCESS`/`PATHWAY` | 10 | 51 | needs a stated rule; the schema only says "a pathway or pathway-like mechanism", which does not decide `ectoine_biosynthesis` |
+   | `CHEMICAL`/`ENVIRONMENTAL_FACTOR` | 3 | 36 | genuine two-senses (O2 the molecule vs ambient O2) — likely **two ids**, not one type |
+   | `BIOLOGICAL_PROCESS`/`QUALITY` | 8 | 26 | `maximal_growth_rate`, `membrane_rigidification`, `immune_evasion`; the QUALITY definition should carry most |
+   | `GENE_OR_PROTEIN`/`PATHWAY` | 5 | 14 | `rod_complex`, `glutamate_decarboxylase_system` — complexes vs the pathways they run |
+   | `BIOLOGICAL_PROCESS`/`MOLECULAR_FUNCTION` | 3 | 9 | `na_h_antiport` vs `na_h_antiporter` — see the row above |
+   | long tail | 26 | ~63 | 2–9 occurrences each |
+
+   Separate but adjacent: **`molecular_oxygen` (21) and `oxygen` (13) are two
+   ids for one thing.** Fixing the typing without merging the ids leaves the
+   duplication in place, so do them together.
 
 **Do not repeat #352's mistake.** The test is not "is this type distinct/defensible
 in isolation" but "is it compatible with what the record and its predicates
