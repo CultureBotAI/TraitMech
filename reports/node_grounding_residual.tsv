@@ -1,5 +1,4 @@
 node_label	node_type	node_count	example_files
-proton motive force	BIOLOGICAL_PROCESS	12	data/traits/environment/aerobic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_delta_mid1.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 homeoviscous adaptation	BIOLOGICAL_PROCESS	7	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_optimum.yaml|data/traits/environment/temperature_optimum_mid1.yaml
@@ -23,6 +22,7 @@ membrane proton permeability	QUALITY	4	data/traits/environment/facultatively_aci
 compatible-solute accumulation	BIOLOGICAL_PROCESS	4	data/traits/environment/nacl_delta_high.yaml|data/traits/environment/nacl_optimum.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/traits/environment/nacl_optimum.yaml|data/traits/environment/nacl_optimum_high.yaml
 maximal growth rate	BIOLOGICAL_PROCESS	4	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/pressure_optimum.yaml
+cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -43,7 +43,6 @@ ectabc operon	GENE_OR_PROTEIN	3	data/traits/environment/halophilic.yaml|data/tra
 water flux across cytoplasmic membrane	BIOLOGICAL_PROCESS	3	data/traits/environment/halophily_preference.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
 osmotic upshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/nacl_delta_mid1.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
 l-proline	CHEMICAL	3	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
-cytoplasmic buffering capacity	CAPACITY	3	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 intracellular ph homeostasis	BIOLOGICAL_PROCESS	3	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/ph_range_mid3.yaml
 metabolite decarboxylation pathways	PATHWAY	3	data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/ph_optimum_mid2.yaml
 external ph stress	ENVIRONMENTAL_FACTOR	3	data/traits/environment/ph_delta_low.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
@@ -112,6 +111,7 @@ internal ph	STATE	2	data/traits/environment/ph_optimum.yaml|data/traits/environm
 membrane lipid adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/piezophilic.yaml|data/traits/environment/piezotolerant.yaml
 unsaturated membrane fatty acids	CHEMICAL	2	data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_preference.yaml
 cold-adapted enzymes	GENE_OR_PROTEIN	2	data/traits/environment/psychrophilic.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml
+membrane fluidity homeostasis	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_delta_high.yaml|data/traits/environment/temperature_optimum_mid4.yaml
 lipid desaturase activity	MOLECULAR_FUNCTION	2	data/traits/environment/temperature_delta_high.yaml|data/traits/environment/temperature_range.yaml
 two-component cold signaling	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_delta_mid1.yaml|data/traits/environment/temperature_range_very_low.yaml
 ambient temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_optimum.yaml|data/traits/environment/temperature_range.yaml
@@ -150,7 +150,6 @@ nadh	CHEMICAL	2	data/traits/metabolism/ethanol_fermentation.yaml|data/traits/met
 substrate-level phosphorylation	BIOLOGICAL_PROCESS	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemoorganotrophic.yaml
 microaerobic conditions	ENVIRONMENTAL_FACTOR	2	data/traits/metabolism/iron_oxidation.yaml|data/traits/physiology/lithoheterotrophic.yaml
 multiheme c-type cytochromes	GENE_OR_PROTEIN	2	data/traits/metabolism/iron_oxidation.yaml|data/traits/metabolism/syntrophy.yaml
-proton motive force	CHEMICAL	2	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/oxygenic_photosynthesis.yaml
 acetate	CHEMICAL	2	data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/propionic_acid_fermentation.yaml
 succinate	CHEMICAL	2	data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/metabolism/propionic_acid_fermentation.yaml
 succinyl-coa	CHEMICAL	2	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml
@@ -202,7 +201,6 @@ respiratory energy conservation	BIOLOGICAL_PROCESS	2	data/traits/physiology/chem
 dissolved inorganic carbon transporter	GENE_OR_PROTEIN	2	data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml
 reduced sulfur compound	CHEMICAL	2	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/lithotrophic.yaml
 cellular carbon	BIOLOGICAL_PROCESS	2	data/traits/physiology/hydrogenotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
-proton motive force	CAPACITY	2	data/traits/physiology/lithoautotrophic.yaml|data/traits/physiology/phototrophic.yaml
 fe(ii) oxidation	BIOLOGICAL_PROCESS	2	data/traits/physiology/lithoheterotrophic.yaml|data/traits/physiology/photolithotrophic.yaml
 methanol dehydrogenase	GENE_OR_PROTEIN	2	data/traits/physiology/methanotrophic.yaml|data/traits/physiology/methylotrophic.yaml
 dissolved organic matter	CHEMICAL	2	data/traits/physiology/mixotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
@@ -820,11 +818,10 @@ ammonia (nh3)	CHEMICAL	1	data/traits/environment/ph_optimum_mid1.yaml
 ammonium (nh4+)	CHEMICAL	1	data/traits/environment/ph_optimum_mid1.yaml
 slightly alkaline external ph	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_optimum_mid2.yaml
 modest alkaline ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid2.yaml
-cytoplasmic buffering capacity	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid2.yaml
 proton-pumping respiratory chain components	PATHWAY	1	data/traits/environment/ph_optimum_mid2.yaml
 f0f1-atp synthase	GENE_OR_PROTEIN	1	data/traits/environment/ph_optimum_mid2.yaml
 external ph axis	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
-proton motive force across cell envelope	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+proton motive force across cell envelope	STATE	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
 f0f1-atpase / atp synthase	GENE_OR_PROTEIN	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
 atp synthesis from proton motive force	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
 k+/h+ antiporter activity	MOLECULAR_FUNCTION	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
@@ -956,7 +953,6 @@ membrane function and growth at low temperature	BIOLOGICAL_PROCESS	1	data/traits
 maximal thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
 decreased growth temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_delta_high.yaml
 homoviscous adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
-membrane fluidity homeostasis	STATE	1	data/traits/environment/temperature_delta_high.yaml
 decreased membrane fluidity	STATE	1	data/traits/environment/temperature_delta_high.yaml
 membrane viscosity at higher temperature	QUALITY	1	data/traits/environment/temperature_delta_high.yaml
 increased short-/branched-/unsaturated fatty acids	CHEMICAL	1	data/traits/environment/temperature_delta_high.yaml
@@ -974,7 +970,7 @@ thermal niche / temperature breadth	QUALITY	1	data/traits/environment/temperatur
 tmin and tmax growth boundaries	QUALITY	1	data/traits/environment/temperature_delta_mid1.yaml
 broad thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
 acyl-lipid desaturase (des)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_delta_mid2.yaml
-membrane fluidity / homeoviscous adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
+membrane fluidity / homeoviscous adaptation	QUALITY	1	data/traits/environment/temperature_delta_mid2.yaml
 rpos sigma factor (sigma-s)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_delta_mid2.yaml
 otsab trehalose biosynthesis operon	PATHWAY	1	data/traits/environment/temperature_delta_mid2.yaml
 cold / cold-shock tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
@@ -1015,7 +1011,6 @@ molecular chaperone network	GENE_OR_PROTEIN	1	data/traits/environment/temperatur
 proteostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_mid3.yaml
 warm host-associated environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid4.yaml
 unsaturated fatty acid proportion	CHEMICAL	1	data/traits/environment/temperature_optimum_mid4.yaml
-membrane fluidity homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_mid4.yaml
 unsaturated fatty acid biosynthesis response	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_mid4.yaml
 rna thermometer hairpin	GENE_OR_PROTEIN	1	data/traits/environment/temperature_optimum_mid4.yaml
 shine-dalgarno / aug ribosome binding site	GENE_OR_PROTEIN	1	data/traits/environment/temperature_optimum_mid4.yaml
@@ -1430,7 +1425,7 @@ light harvesting / excitation transfer	BIOLOGICAL_PROCESS	1	data/traits/metaboli
 reaction-center charge separation	BIOLOGICAL_PROCESS	1	data/traits/metabolism/photosynthesis.yaml
 photosynthetic electron transport	BIOLOGICAL_PROCESS	1	data/traits/metabolism/photosynthesis.yaml
 transmembrane electrochemical proton gradient	STATE	1	data/traits/metabolism/photosynthesis.yaml
-reducing power (nad(p)h)	CHEMICAL	1	data/traits/metabolism/photosynthesis.yaml
+reducing power (nad(p)h)	CAPACITY	1	data/traits/metabolism/photosynthesis.yaml
 microbial rhodopsin	GENE_OR_PROTEIN	1	data/traits/metabolism/phototrophy.yaml
 rhodopsin photocycle	BIOLOGICAL_PROCESS	1	data/traits/metabolism/phototrophy.yaml
 high light intensity	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/phototrophy.yaml
