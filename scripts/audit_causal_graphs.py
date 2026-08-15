@@ -202,7 +202,52 @@ def _topology(graph: dict) -> tuple[set, set, dict[str, set[str]]]:
     return node_set, referenced, adjacency
 
 
-def connectivity_rows(traits_dir: Path) -> list[dict[str, str]]:
+Corpus = list[tuple[str, dict]]
+
+
+def load_corpus(traits_dir: Path) -> Corpus:
+    """Parse every trait YAML once, as ``[(repo-relative path, doc), ...]``.
+
+    The three passes below each used to re-walk and re-parse the whole corpus
+    for a different projection — 477 records read three times, 7.9s to 12.4s as
+    checks were added (#373), doubled again because ``qc`` runs this script and
+    then runs it a second time inside ``audit-derived-reports`` to diff against
+    git.
+
+    Consolidating is not only about speed. Each pass carried its own copy of the
+    rglob / safe_load / isinstance guard, so "which files does this audit see?"
+    was answered in three places that could drift apart — the same argument
+    ``_topology`` settled one level down for "what does connected mean" (#363).
+    An unparseable YAML is skipped exactly once, here, and every projection now
+    sees the identical file set by construction.
+    """
+    corpus: Corpus = []
+    for path in sorted(traits_dir.rglob("*.yaml")):
+        try:
+            doc = yaml.safe_load(path.read_text())
+        except yaml.YAMLError:
+            continue
+        if not isinstance(doc, dict):
+            continue
+        try:
+            rel = str(path.relative_to(REPO_ROOT))
+        except ValueError:
+            rel = str(path)
+        corpus.append((rel, doc))
+    return corpus
+
+
+def _as_corpus(source: Path | Corpus) -> Corpus:
+    """Accept a directory or an already-parsed corpus.
+
+    ``main`` loads once and passes the list to all three passes; the tests call
+    them with a ``tmp_path`` directory, which is the more readable fixture. Both
+    stay supported rather than forcing every caller through a loader.
+    """
+    return load_corpus(source) if isinstance(source, Path) else source
+
+
+def connectivity_rows(traits_dir: Path | Corpus) -> list[dict[str, str]]:
     """Per-graph connectivity, the metric #359 asked for.
 
     Neither headline count can tell a real connectivity gain from an anchor
@@ -228,17 +273,7 @@ def connectivity_rows(traits_dir: Path) -> list[dict[str, str]]:
     depress two metrics.
     """
     rows: list[dict[str, str]] = []
-    for path in sorted(traits_dir.rglob("*.yaml")):
-        try:
-            doc = yaml.safe_load(path.read_text())
-        except yaml.YAMLError:
-            continue
-        if not isinstance(doc, dict):
-            continue
-        try:
-            rel = str(path.relative_to(REPO_ROOT))
-        except ValueError:
-            rel = str(path)
+    for rel, doc in _as_corpus(traits_dir):
         for graph in (doc.get("causal_graphs") or []):
             node_set, referenced, adjacency = _topology(graph)
             wired = node_set & referenced
@@ -279,7 +314,7 @@ _DISPOSITION_RE = re.compile(
     re.IGNORECASE)
 
 
-def node_type_index(traits_dir: Path) -> dict[str, dict[str, int]]:
+def node_type_index(traits_dir: Path | Corpus) -> dict[str, dict[str, int]]:
     """``node_id`` → ``{node_type: number of NODE OCCURRENCES}``, corpus-wide.
 
     Occurrences, not records, and the distinction is currently invisible: no
@@ -298,13 +333,7 @@ def node_type_index(traits_dir: Path) -> dict[str, dict[str, int]]:
     `phototrophic.yaml`'s (CAPACITY) is `blocked_by_node_type` (#356).
     """
     index: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    for path in sorted(traits_dir.rglob("*.yaml")):
-        try:
-            doc = yaml.safe_load(path.read_text())
-        except yaml.YAMLError:
-            continue
-        if not isinstance(doc, dict):
-            continue
+    for _rel, doc in _as_corpus(traits_dir):
         for graph in (doc.get("causal_graphs") or []):
             for node in (graph.get("nodes") or []):
                 nid, ntype = node.get("node_id"), node.get("node_type")
@@ -313,20 +342,14 @@ def node_type_index(traits_dir: Path) -> dict[str, dict[str, int]]:
     return {k: dict(v) for k, v in index.items()}
 
 
-def audit(traits_dir: Path) -> list[dict[str, str]]:
+def audit(traits_dir: Path | Corpus) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
-    type_index = node_type_index(traits_dir)
-    for path in sorted(traits_dir.rglob("*.yaml")):
-        try:
-            doc = yaml.safe_load(path.read_text())
-        except yaml.YAMLError:
-            continue
-        if not isinstance(doc, dict):
-            continue
-        try:
-            rel = str(path.relative_to(REPO_ROOT))
-        except ValueError:
-            rel = str(path)
+    # Normalised once: INCONSISTENT_NODE_TYPE needs a corpus-wide pre-pass, and
+    # handing it the already-parsed corpus keeps a Path caller (the tests) to a
+    # single walk rather than one per projection.
+    corpus = _as_corpus(traits_dir)
+    type_index = node_type_index(corpus)
+    for rel, doc in corpus:
         for graph in (doc.get("causal_graphs") or []):
             gid = graph.get("graph_id", "")
             nodes = graph.get("nodes") or []
@@ -555,7 +578,10 @@ def main() -> int:
                          "any: every finding fails, baseline ignored (post-burndown).")
     args = ap.parse_args()
 
-    findings = audit(args.traits_dir)
+    # Parsed once and shared by all three passes (#373). Every projection then
+    # sees the same file set by construction, not by three guards agreeing.
+    corpus = load_corpus(args.traits_dir)
+    findings = audit(corpus)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDNAMES, delimiter="\t",
@@ -572,7 +598,7 @@ def main() -> int:
     if args.connectivity_out is None:
         args.connectivity_out = args.out.parent / DEFAULT_CONNECTIVITY.name
 
-    conn = connectivity_rows(args.traits_dir)
+    conn = connectivity_rows(corpus)
     args.connectivity_out.parent.mkdir(parents=True, exist_ok=True)
     with args.connectivity_out.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CONNECTIVITY_FIELDS, delimiter="\t",

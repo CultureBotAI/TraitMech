@@ -28,6 +28,7 @@ from audit_causal_graphs import (  # noqa: E402
     _key,
     audit,
     connectivity_rows,
+    load_corpus,
     node_type_index,
     partition,
 )
@@ -850,3 +851,51 @@ def test_node_type_index_counts_occurrences_not_records(tmp_path):
     idx = node_type_index(_isolated(tmp_path, "two_graphs", two_graphs))
     # One RECORD, two OCCURRENCES.
     assert idx["pmf"] == {"STATE": 2}
+
+
+# ------------------------------------------------- one corpus walk (#373)
+
+
+def test_load_corpus_returns_relative_path_and_doc(tmp_path):
+    d = _isolated(tmp_path, "c", ISLAND_BEFORE)
+    corpus = load_corpus(d)
+    assert len(corpus) == 1
+    rel, doc = corpus[0]
+    assert rel.endswith("rec.yaml")
+    assert doc["identifier"] == "traitmech:000900"
+
+
+def test_load_corpus_skips_unparseable_and_non_mapping(tmp_path):
+    """The skip lived in three places before; it lives here now, so every
+    projection sees the same file set by construction."""
+    d = _isolated(tmp_path, "c", ISLAND_BEFORE)
+    (d / "broken.yaml").write_text("nodes: [unclosed\n")
+    (d / "scalar.yaml").write_text("just a string\n")
+    rels = [rel for rel, _ in load_corpus(d)]
+    assert len(rels) == 1
+    assert rels[0].endswith("rec.yaml")
+
+
+def test_passes_accept_a_preloaded_corpus_and_agree_with_the_path_form(tmp_path):
+    """The whole point of #373: main() parses once and hands the same list to
+    all three passes, so they must give identical answers either way."""
+    d = _isolated(tmp_path, "c", ISLAND_BEFORE)
+    corpus = load_corpus(d)
+
+    assert audit(corpus) == audit(d)
+    assert connectivity_rows(corpus) == connectivity_rows(d)
+    assert node_type_index(corpus) == node_type_index(d)
+
+
+def test_audit_does_not_reparse_when_given_a_corpus(tmp_path, monkeypatch):
+    """audit() runs the INCONSISTENT_NODE_TYPE pre-pass internally. Handed a
+    corpus it must reuse it rather than walking again — otherwise the caller's
+    single load is undone one level down."""
+    import audit_causal_graphs as mod
+    d = _isolated(tmp_path, "c", ISLAND_BEFORE)
+    corpus = load_corpus(d)
+
+    calls = []
+    monkeypatch.setattr(mod, "load_corpus", lambda p: calls.append(p) or [])
+    mod.audit(corpus)
+    assert calls == []
