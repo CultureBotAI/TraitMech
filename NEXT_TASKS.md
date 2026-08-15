@@ -5,8 +5,7 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-15. Everything merged in this repo through **#378**;
-**#382 open** (first #356 burn-down tranche, CLEAN).
+Last reconciled: 2026-08-15. Everything merged in this repo through **#382**.
 
 Since the 2026-08-08 reconcile the **#356 thread ran end to end for the first
 time in one stretch** — detect, then measure the cost of detecting, then burn
@@ -19,7 +18,7 @@ down:
   re-walked the corpus, **1431 `yaml.safe_load` calls for 477 records**, now 477.
   Done before the burn-down on purpose — that campaign runs the audit on every
   iteration.
-- **#382** is the first burn-down tranche and needed no new judgement:
+- **#382** was the first burn-down tranche and needed no new judgement:
   `CausalNodeTypeEnum` names `proton_motive_force`, `membrane_fluidity` and
   `reducing power` as its own canonical examples of STATE / QUALITY / CAPACITY,
   so the corpus disagreed with its own schema in the schema's own examples.
@@ -33,7 +32,7 @@ them majors; `setup-python` 5→7 and `cache` 4→6 are verified green on main,
 `create-github-app-token` 1→3 is **unexercised** because the only workflow using
 it is the one we just stopped running.
 
-Open PRs: **#382**.
+Open PRs: **none** (beyond this reconcile).
 
 Open issues, 16. Eight closed since the last reconcile (#372–#376 and #379–#381,
 all review findings on the PRs that introduced them, plus **#373** via #378).
@@ -778,7 +777,7 @@ Three of those four blocks are *correct*; one is only the disagreement.
    through a burn-down does not re-key and un-suppress rows nobody has reached.
    Left open by it: #373, the third full corpus walk — **DONE (2026-08-15, PR
    #378)**: one shared `load_corpus()`, 1431 → 477 parses.
-2. **Decide, then normalise — TRANCHE 1 IN FLIGHT (PR #382, open/CLEAN), 294 → 223.**
+2. **Decide, then normalise — TRANCHE 1 DONE (2026-08-15, PR #382), 294 → 223.**
    The `STATE` vs `BIOLOGICAL_PROCESS` question turned out **not** to be a
    judgement call: `CausalNodeTypeEnum` names `proton_motive_force`,
    `membrane_fluidity` and `reducing power` as its own canonical examples of
@@ -794,9 +793,8 @@ Three of those four blocks are *correct*; one is only the disagreement.
    while its *edges* used it as the property, like all 24 peers. Three signals
    against one: the description was the defect.
 
-3. **Burn down the rest.** Measured on #382's branch, i.e. what is left *once
-   that lands*: **223 occurrences across 58 families**. In decreasing order of
-   how decided they already are:
+3. **Burn down the rest.** Measured on `main` after #382: **223 occurrences
+   across 58 families**. In decreasing order of how decided they already are:
 
    | signature | fam | occ | note |
    |---|---|---|---|
