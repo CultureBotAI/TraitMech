@@ -899,3 +899,11 @@ def test_audit_does_not_reparse_when_given_a_corpus(tmp_path, monkeypatch):
     monkeypatch.setattr(mod, "load_corpus", lambda p: calls.append(p) or [])
     mod.audit(corpus)
     assert calls == []
+
+
+def test_as_corpus_rejects_a_str_path_by_name(tmp_path):
+    """A str path used to die unpacking one character into (rel, doc), from
+    inside a loop, naming neither the argument nor its type (#380)."""
+    import pytest
+    with pytest.raises(TypeError, match="got str"):
+        audit("data/traits")

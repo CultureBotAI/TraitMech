@@ -209,10 +209,15 @@ def load_corpus(traits_dir: Path) -> Corpus:
     """Parse every trait YAML once, as ``[(repo-relative path, doc), ...]``.
 
     The three passes below each used to re-walk and re-parse the whole corpus
-    for a different projection — 477 records read three times, 7.9s to 12.4s as
-    checks were added (#373), doubled again because ``qc`` runs this script and
+    for a different projection: **1431 ``yaml.safe_load`` calls for 477 records**,
+    exactly three per file, doubled again because ``qc`` runs this script and
     then runs it a second time inside ``audit-derived-reports`` to diff against
-    git.
+    git. It is now 477 (#373).
+
+    The parse count rather than a wall-clock figure on purpose. Timings taken
+    while developing this ranged from 15.5s to 29.9s for identical code, and one
+    measurement of the fix came out slower than the baseline it beats — quoting
+    seconds here would hand the next person a number they cannot reproduce.
 
     Consolidating is not only about speed. Each pass carried its own copy of the
     rglob / safe_load / isinstance guard, so "which files does this audit see?"
@@ -244,10 +249,21 @@ def _as_corpus(source: Path | Corpus) -> Corpus:
     them with a ``tmp_path`` directory, which is the more readable fixture. Both
     stay supported rather than forcing every caller through a loader.
     """
-    return load_corpus(source) if isinstance(source, Path) else source
+    if isinstance(source, Path):
+        return load_corpus(source)
+    if isinstance(source, list):
+        return source
+    # A str path is the plausible wrong argument — every other path-taking
+    # helper here accepts one. Without this it iterates the string and dies
+    # unpacking a single character into (rel, doc), from inside a loop, with a
+    # message naming neither the argument nor the type (#380).
+    raise TypeError(
+        f"expected a Path to a traits directory or an already-parsed corpus "
+        f"(list of (path, doc) pairs), got {type(source).__name__}: {source!r}"
+    )
 
 
-def connectivity_rows(traits_dir: Path | Corpus) -> list[dict[str, str]]:
+def connectivity_rows(source: Path | Corpus) -> list[dict[str, str]]:
     """Per-graph connectivity, the metric #359 asked for.
 
     Neither headline count can tell a real connectivity gain from an anchor
@@ -273,7 +289,7 @@ def connectivity_rows(traits_dir: Path | Corpus) -> list[dict[str, str]]:
     depress two metrics.
     """
     rows: list[dict[str, str]] = []
-    for rel, doc in _as_corpus(traits_dir):
+    for rel, doc in _as_corpus(source):
         for graph in (doc.get("causal_graphs") or []):
             node_set, referenced, adjacency = _topology(graph)
             wired = node_set & referenced
@@ -314,7 +330,7 @@ _DISPOSITION_RE = re.compile(
     re.IGNORECASE)
 
 
-def node_type_index(traits_dir: Path | Corpus) -> dict[str, dict[str, int]]:
+def node_type_index(source: Path | Corpus) -> dict[str, dict[str, int]]:
     """``node_id`` → ``{node_type: number of NODE OCCURRENCES}``, corpus-wide.
 
     Occurrences, not records, and the distinction is currently invisible: no
@@ -333,7 +349,7 @@ def node_type_index(traits_dir: Path | Corpus) -> dict[str, dict[str, int]]:
     `phototrophic.yaml`'s (CAPACITY) is `blocked_by_node_type` (#356).
     """
     index: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    for _rel, doc in _as_corpus(traits_dir):
+    for _rel, doc in _as_corpus(source):
         for graph in (doc.get("causal_graphs") or []):
             for node in (graph.get("nodes") or []):
                 nid, ntype = node.get("node_id"), node.get("node_type")
@@ -342,12 +358,12 @@ def node_type_index(traits_dir: Path | Corpus) -> dict[str, dict[str, int]]:
     return {k: dict(v) for k, v in index.items()}
 
 
-def audit(traits_dir: Path | Corpus) -> list[dict[str, str]]:
+def audit(source: Path | Corpus) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     # Normalised once: INCONSISTENT_NODE_TYPE needs a corpus-wide pre-pass, and
     # handing it the already-parsed corpus keeps a Path caller (the tests) to a
     # single walk rather than one per projection.
-    corpus = _as_corpus(traits_dir)
+    corpus = _as_corpus(source)
     type_index = node_type_index(corpus)
     for rel, doc in corpus:
         for graph in (doc.get("causal_graphs") or []):
