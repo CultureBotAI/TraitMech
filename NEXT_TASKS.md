@@ -174,8 +174,24 @@ Two directions are covered, both nightly:
   2026-07-25) added the nightly schedule that fixes it.
 
 Changing a vendored file still means: PR into CultureMech → merge → bump
-`.vendored_canon_ref` in each spoke. Claw remains private, and that is fine — it
-blocks nothing now that the repoint plan is gone.
+`.vendored_canon_ref` in each spoke.
+
+**Correction (2026-08-15, #377): claw is PUBLIC**, and has been for some time —
+`gh repo view CultureBotAI/culturebotai-claw --json visibility` returns `PUBLIC`.
+This paragraph used to say "Claw remains private, and that is fine". The
+conclusion still holds, but not for the reason given: the repoint stays
+abandoned because claw is a **mirror, not the fleet enforcer** (claw#22 reverted
+claw#21), which was never a visibility argument. What visibility *does* change
+is that "the canonical hub for this file is private" is no longer a valid
+blocker — which is the entire blocker on **#191** and **#358 step 2**.
+
+**And a fifth de-facto shared file, found checking the above (#377, extends
+#209).** `scripts/check_vendored_sync.sh` is byte-identical across TraitMech,
+MediaIngredientMech and CommunityMech, does **not** exist in CultureMech, and is
+**not in its own `FILES` list** — so nothing detects drift in it. The drift
+checker is the one shared file with no drift protection. Editing its comments in
+one repo silently diverges the other two, which is why #377's script half is
+cross-repo work and only its `NEXT_TASKS.md` half landed here.
 
 Health as of 2026-07-30: CultureMech's `vendored-fleet-audit` has been green
 nightly through today, claw's `id-label canonical` and `Cross-repo validation`
