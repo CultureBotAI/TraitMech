@@ -61,7 +61,7 @@ causal_graphs:
     label: ATP synthesis from proton motive force
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of ATP driven by the transmembrane proton gradient.
-  - node_id: na_h_antiporter
+  - node_id: na_h_antiport_activity
     label: Na+/H+ antiporter activity
     node_type: MOLECULAR_FUNCTION
     description: Cation/proton antiport activity regulating internal pH and PMF.
@@ -147,7 +147,7 @@ causal_graphs:
       notes: F0F1-ATP synthase typically uses 3-5 protons per ATP, linking PMF to
         ATP synthesis and pH homeostasis.
     predicate_id: RO:0002327
-  - subject: na_h_antiporter
+  - subject: na_h_antiport_activity
     predicate: regulates
     object: internal_ph_pmf
     description: Na+/H+ antiporter activity regulates internal pH and PMF.
@@ -236,4 +236,14 @@ curation_history:
     mean the process already use a separate id (proton_motive_force_generation in
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
+  llm_assisted: true
+- timestamp: '2026-08-15T06:00:00Z'
+  curator: claude
+  action: SPLIT_PROTEIN_FROM_ACTIVITY
+  changes: 'Separated the protein sense from the activity sense so one node_id means
+    one thing (issue 356): renamed na_h_antiporter -> na_h_antiport_activity (MOLECULAR_FUNCTION
+    sense). Described as ''Cation/proton antiport ACTIVITY regulating internal pH
+    and PMF'', while the six GENE_OR_PROTEIN occurrences describe the transporter
+    (''Membrane antiporter that exports sodium from the cytoplasm in exchange for
+    protons''). na_h_antiport_activity already exists corpus-wide as MOLECULAR_FUNCTION.'
   llm_assisted: true

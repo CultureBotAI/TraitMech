@@ -59,7 +59,7 @@ causal_graphs:
     description: Stable transmission of a plasmid to daughter cells across generations.
   - node_id: plasmid_methylase
     label: plasmid-encoded methylase
-    node_type: MOLECULAR_FUNCTION
+    node_type: GENE_OR_PROTEIN
     description: Plasmid-borne methyltransferase shielding plasmid DNA from restriction.
   - node_id: restriction_of_plasmid_dna
     label: restriction of incoming plasmid DNA
@@ -204,4 +204,15 @@ curation_history:
     so they migrated together in issue 329 and were split here by reading each edge.
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
+  llm_assisted: true
+- timestamp: '2026-08-15T06:00:00Z'
+  curator: claude
+  action: SPLIT_PROTEIN_FROM_ACTIVITY
+  changes: 'Separated the protein sense from the activity sense so one node_id means
+    one thing (issue 356): retyped plasmid_methylase: MOLECULAR_FUNCTION -> GENE_OR_PROTEIN.
+    The exception in this tranche. Both occurrences describe the ENZYME -- ''Methyltransferase
+    encoded by a mobile element that pre-methylates its DNA'' (GENE_OR_PROTEIN) and
+    ''Plasmid-borne methyltransferase shielding plasmid DNA from restriction'' (MOLECULAR_FUNCTION).
+    Neither names an activity, so there is one concept here and it is a protein. A
+    rename would have invented a distinction the corpus does not draw.'
   llm_assisted: true
