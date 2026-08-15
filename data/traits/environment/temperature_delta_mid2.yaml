@@ -52,8 +52,9 @@ causal_graphs:
     grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity / homeoviscous adaptation
-    node_type: BIOLOGICAL_PROCESS
-    description: Maintenance of optimal membrane fluidity across temperatures.
+    node_type: QUALITY
+    description: Physical state of the lipid bilayer that must be maintained across
+      temperatures for transport and growth.
   - node_id: rpos_sigma_factor
     label: RpoS sigma factor (sigma-S)
     node_type: GENE_OR_PROTEIN
@@ -191,4 +192,21 @@ curation_history:
     is used where the subject is an activity, since biolink gives it the domain 'biological
     process or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-15T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_TYPE
+  changes: 'Normalised causal-node type(s) so one node_id means one thing corpus-wide
+    (issue 356): membrane_fluidity: BIOLOGICAL_PROCESS -> QUALITY; membrane_fluidity:
+    description aligned with its 24 peers. The schema''s OWN example of QUALITY: ''a
+    quality or measurable attribute of a cellular component (e.g. membrane fluidity
+    ...)''. 24 of 25 occurrences are already QUALITY and describe ''the physical state
+    of the lipid bilayer''. The lone BIOLOGICAL_PROCESS one (temperature_delta_mid2.yaml)
+    is the interesting case: its DESCRIPTION said ''Maintenance of optimal membrane
+    fluidity'', which is a process and would argue for a rename rather than a retype
+    -- but its EDGES read the other way, ''unsaturated_fatty_acids -increases-> membrane_fluidity
+    -enables-> broad_thermal_adaptation'', which is the homeoviscous-adaptation cascade
+    acting on the PROPERTY, and matches how the other 24 are wired. Three signals
+    (schema, 24 peers, its own edges) against one (its description), so the description
+    is what was wrong; it is corrected here rather than the node being renamed.'
   llm_assisted: true

@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_node_type_consistency.py
+  slug: node-type-consistency
+session:
+  id: 2026-08-15T014631Z-claude-code-9d7f4d
+  timestamp: '2026-08-15T01:46:31Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/356
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Burn down the five INCONSISTENT_NODE_TYPE families the schema itself settles
+  details: 'First burn-down tranche after 366 detected the class (294 occurrences, 63 node_ids).
+    Deliberately the tranche needing no new judgement: CausalNodeTypeEnum in the schema names
+    three of these very nodes as its canonical examples, so the corpus disagreed with its
+    own schema in the schema''s own examples. STATE is defined as ''a bioenergetic or molecular
+    state of the cell (e.g. PROTON MOTIVE FORCE ...) ... the state is the gradient / steady-value,
+    not its establishment''; QUALITY as ''a quality or measurable attribute of a cellular
+    component (e.g. MEMBRANE FLUIDITY, GC content, motility speed)''; CAPACITY as ''an electron-donating
+    pool, ATP charge, or other reservoir-of-X notion ... Examples include REDUCING POWER (NADH/NADPH
+    pool)''. Normalised proton_motive_force to STATE (17 occurrences retyped of 35), membrane_fluidity
+    to QUALITY (1 of 25), membrane_fluidity_homeostasis to BIOLOGICAL_PROCESS (1 of 2), reducing_power
+    to CAPACITY (1 of 5), cytoplasmic_buffering_capacity to CAPACITY (1 of 4). 21 nodes across
+    20 records. Every description was read before retyping because 352''s lesson is that a
+    retype can mask a rename, and two families turned on exactly that. proton_motive_force
+    needed no rename: all 35 descriptions say gradient, including the 13 typed BIOLOGICAL_PROCESS
+    which name the gradient and its provenance rather than the generating process, and records
+    meaning the process already use a separate id, proton_motive_force_generation. membrane_fluidity
+    was the hard one: its lone BIOLOGICAL_PROCESS occurrence DESCRIBED ''Maintenance of optimal
+    membrane fluidity'', which is a process and would argue for a rename, but its EDGES read
+    unsaturated_fatty_acids increases membrane_fluidity enables broad_thermal_adaptation,
+    the homeoviscous cascade acting on the PROPERTY, matching how the other 24 are wired.
+    Three signals against one, so the description was what was wrong and it was corrected
+    rather than the node renamed. The counterpart id membrane_fluidity_homeostasis already
+    exists for the process sense, which is why no rename was needed. Measured payoff: INCONSISTENT_NODE_TYPE
+    294 to 223, exactly the 71 predicted, with zero new findings; and the one edge 356 was
+    filed for now grounds - powers (METPO:2007900) is gated to subject_types BIOLOGICAL_PROCESS
+    or STATE, phototrophic.yaml''s proton_motive_force was CAPACITY and blocked, so blocked_by_node_type
+    falls 4 to 3 and groundable edges rise 2 to 3. The remaining 3 are blocked correctly,
+    their objects being processes that belong on enables. 540 tests pass, qc green.'

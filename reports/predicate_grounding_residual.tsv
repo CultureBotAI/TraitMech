@@ -39,7 +39,6 @@ positions	5	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
 removes	4	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml|data/traits/genomics/genome_streamlining.yaml
 acts as	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/temperature_optimum_very_low.yaml|data/traits/metabolism/anaerobic_respiration.yaml
-powers	4	blocked_by_node_type	METPO:2007900	data/traits/environment/aerobic.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 detoxifies	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/anaerobic.yaml|data/traits/environment/microaerophilic.yaml
 damages	4	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
 activates expression of	4	unmapped		data/traits/environment/mesophilic.yaml|data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml|data/traits/physiology/bioluminescence.yaml
@@ -69,6 +68,7 @@ delivers	3	unmapped		data/traits/ecology/pathogenic_to_host.yaml|data/traits/eco
 depolymerizes	3	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/metabolism/biopolymer_degradation.yaml
 predicts	3	unmapped		data/traits/ecology/soil_dwelling.yaml|data/traits/morphology/gliding.yaml|data/traits/morphology/non_spore_forming.yaml
 limits influx of	3	unmapped		data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml|data/traits/morphology/carboxysome.yaml
+powers	3	blocked_by_node_type	METPO:2007900	data/traits/environment/aerobic.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 has alternative process	3	unmapped		data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
 positively correlates with	3	unmapped		data/traits/environment/ionizing_radiation_tolerant.yaml|data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/nutrient_adaptation.yaml
 scavenges	3	unmapped		data/traits/environment/microaerophilic.yaml|data/traits/environment/radiotolerant.yaml|data/traits/metabolism/disproportionation.yaml

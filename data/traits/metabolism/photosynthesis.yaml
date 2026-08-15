@@ -78,7 +78,7 @@ causal_graphs:
     grounding: GO:0006754
   - node_id: reducing_power
     label: reducing power (NAD(P)H)
-    node_type: CHEMICAL
+    node_type: CAPACITY
     description: NADPH/NAD(P)H reducing equivalents produced by the light reactions.
   edges:
   - subject: photosynthesis_process
@@ -215,4 +215,16 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-15T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_TYPE
+  changes: 'Normalised causal-node type(s) so one node_id means one thing corpus-wide
+    (issue 356): reducing_power: CHEMICAL -> CAPACITY. The schema''s OWN example of
+    CAPACITY: ''an electron-donating pool, ATP charge, or other reservoir-of-X notion
+    ... Examples include reducing power (NADH/NADPH pool)''. The lone CHEMICAL occurrence
+    (metabolism/photosynthesis.yaml) describes ''NADPH/NAD(P)H reducing equivalents'',
+    i.e. the pool, not a single species -- which is the very distinction CAPACITY
+    exists to draw, and the one docs/CURATION_PLAYBOOK.md records as the reservoir
+    sense that must NOT be retyped to TRAIT (#352).'
   llm_assisted: true
