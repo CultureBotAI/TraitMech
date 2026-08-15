@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_causal_graphs.py
+  slug: single-corpus-walk
+session:
+  id: 2026-08-15T010002Z-claude-code-8f92a7
+  timestamp: '2026-08-15T01:00:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/373
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Parse the corpus once and share it across all three audit passes
+  details: 'audit(), connectivity_rows() and node_type_index() each re-walked and re-parsed
+    every trait YAML for a different projection. Added load_corpus() returning [(repo-relative
+    path, doc)] and a _as_corpus() shim so each pass takes either a directory or an already-parsed
+    corpus; main() loads once and hands the same list to all three. Measured deterministically
+    by counting yaml.safe_load calls, because wall-clock on this machine was too noisy to
+    quote honestly - main ranged 15.5 to 29.9 seconds across interleaved trials: parses drop
+    1431 to 477, exactly 3x to 1x, one per record. Wall-clock in the same run fell 31.1 to
+    11.1 seconds, and the branch won all three interleaved pairs, but the parse count is the
+    reproducible number and the structural guarantee. It compounds because qc runs this script
+    and then runs it again inside audit-derived-reports to diff against git. Not only speed:
+    each pass carried its own copy of the rglob, safe_load and isinstance guard, so which
+    files does this audit see was answered in three places that could drift - the same argument
+    _topology settled one level down for what does connected mean (363). An unparseable YAML
+    is now skipped exactly once. Behaviour-preserving, verified: regenerated causal_graph_audit.tsv
+    and causal_graph_connectivity.tsv are both byte-identical to the committed copies. Four
+    new tests, including one asserting the Path and corpus forms give identical answers for
+    all three passes, and one asserting audit() does not re-walk when handed a corpus - the
+    internal INCONSISTENT_NODE_TYPE pre-pass would otherwise undo the caller''s single load
+    one level down. 539 tests pass, qc green.'
