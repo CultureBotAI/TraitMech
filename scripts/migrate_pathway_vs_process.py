@@ -114,10 +114,23 @@ TARGET: dict[str, tuple[str, str]] = {
         "inorganic ions'. There is no step list to enumerate -- which is exactly the "
         "distinction this rule draws. Already 7 BIOLOGICAL_PROCESS to 1.",
     ),
+    "aa_decarboxylation": (
+        "BIOLOGICAL_PROCESS",
+        "The same concept as amino_acid_decarboxylation under a shorter id, with a "
+        "BYTE-IDENTICAL label ('amino-acid decarboxylation pathways') and a "
+        "reaction-class description ('Decarboxylation pathways that consume protons "
+        "and store energy as PMF'). Caught in review (#394): both this table and "
+        "INCONSISTENT_NODE_TYPE key on node_id, so retyping the long-named one would "
+        "have created a fresh split between two ids nothing compares. Included here "
+        "rather than left, because this tranche is what would have caused it.",
+    ),
     "amino_acid_decarboxylation": (
         "BIOLOGICAL_PROCESS",
-        "A REACTION CLASS, not a route: 'Enzyme-catalyzed decarboxylation reaction that "
-        "consumes cytoplasmic protons'. Named systems that implement it (Gad) would be "
+        "A REACTION CLASS, not a route. The corpus describes it that way in "
+        "acidotolerant.yaml -- 'Enzyme-catalyzed decarboxylation reaction that "
+        "consumes cytoplasmic protons' -- and the wording varies by record, so read that "
+        "as the family's sense rather than as this record's own text. Named systems "
+        "that implement it (Gad) would be "
         "pathways; the reaction class is not. Already 4 BIOLOGICAL_PROCESS to 2.",
     ),
     "fermentation": (
