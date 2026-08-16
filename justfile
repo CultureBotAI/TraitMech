@@ -906,7 +906,10 @@ audit-derived-reports:
     echo "=== derived reports: all current ==="
 
 # Integrity gate for the tracked sweep artifacts: every manifest `ok` row's
-# report is on disk, and no artifact carries a malformed CURIE. Deliberately
+# report is on disk AND above a 1 KiB floor (existence is not non-emptiness), no
+# report in the resume namespace lacks an `ok` row (the disk-to-manifest
+# direction, which a missing-artifact check cannot see), and no artifact carries
+# a malformed CURIE (#244). Deliberately
 # credential-free and network-free (see run_trait_graph_audit.py --verify), so it
 # runs on a fresh clone and in CI — the two places where a lost artifact is
 # actually noticed. Plain `uv run`, no `--extra dev`: --verify makes no calls and

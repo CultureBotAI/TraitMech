@@ -163,16 +163,23 @@ def test_report_with_no_ok_row_is_an_orphan(tmp_path):
     research.mkdir(parents=True)
     (research / "stray-deep-research-falcon.md").write_text("x")
     recorded = {"research/traits/ecology/known-deep-research-falcon.md": "r1"}
-    found = orphan_reports(tmp_path / "research" / "traits", tmp_path, recorded, known=set())
+    found = orphan_reports(tmp_path / "research" / "traits", tmp_path, recorded)
     assert found == ["research/traits/ecology/stray-deep-research-falcon.md"]
 
 
-def test_known_orphans_are_excluded_by_name(tmp_path):
+def test_other_providers_are_outside_the_resume_namespace(tmp_path):
+    """The gate must match its own invariant. Resume keys on
+    `{slug}-deep-research-{default provider}.md`, so a report from another
+    provider cannot suppress a call — and blocking on one would turn qc red on
+    the documented `--provider openai` and `research-trait-edison` paths, fixable
+    only by adding a filename to a constant (#396 review)."""
     research = tmp_path / "research" / "traits" / "metabolism"
     research.mkdir(parents=True)
-    rel = "research/traits/metabolism/cellulolysis-deep-research-codex.md"
-    (research / "cellulolysis-deep-research-codex.md").write_text("x")
-    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, known={rel}) == []
+    for name in ("cellulolysis-deep-research-codex.md",
+                 "cellulolysis-deep-research-openai.md",
+                 "cellulolysis-edison-literature.md"):
+        (research / name).write_text("x")
+    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}) == []
 
 
 def test_dry_run_meta_yaml_is_not_counted_as_a_report(tmp_path):
@@ -182,4 +189,4 @@ def test_dry_run_meta_yaml_is_not_counted_as_a_report(tmp_path):
     research = tmp_path / "research" / "traits" / "environment"
     research.mkdir(parents=True)
     (research / "psychrotolerant-edison-literature-meta.yaml").write_text("status: dry-run\n")
-    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, known=set()) == []
+    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}) == []

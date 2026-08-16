@@ -112,17 +112,21 @@ MALFORMED_CURIE_PATTERNS: tuple[tuple[str, "re.Pattern[str]"], ...] = (
 MIN_ARTIFACT_BYTES = 1024
 
 # A report on disk with no `ok` manifest row SUPPRESSES A CALL THAT WAS NEVER
-# PAID FOR OR RECORDED, because resume keys on the file existing (`pending`
-# below). Blocking from the start, with the one known exception named here
-# rather than silently tolerated — the same escape idiom as
-# audit_biolink_curies.py's ALLOWED_UNBACKED, so adding one is a reviewed change.
-KNOWN_ORPHAN_ARTIFACTS = {
-    # Tracked, from a codex-provider run that never wrote a manifest row (#245).
-    # Harmless only because its `-codex` suffix is not the `-falcon` name resume
-    # looks for; that is luck, not design, which is why it is listed and not
-    # ignored.
-    "research/traits/metabolism/cellulolysis-deep-research-codex.md",
-}
+# PAID FOR OR RECORDED — but only if resume would have looked for that name.
+# Resume keys on `output_path()`, i.e. `{slug}-deep-research-{provider}.md` for
+# the DEFAULT provider, so the gate is scoped to exactly that namespace (#244).
+#
+# The wide version of this check (every `*.md` under research/traits) was the
+# review's finding on #396, and it was wrong for the reason the exception list
+# itself gave: `cellulolysis-deep-research-codex.md` is harmless BECAUSE `-codex`
+# is not the name resume looks for. That generalises. `just research-trait
+# --provider openai` (README) writes `{slug}-deep-research-openai.md` and
+# `just research-trait-edison` writes `{slug}-edison-{job}.md`; neither can
+# suppress anything, and blocking on them would have turned `just qc` red on the
+# first documented non-falcon run, remediable only by adding a filename to a
+# constant — which is precisely how the `-codex` file came to need one.
+#
+# Scoping to the resume namespace means there is no exception list at all.
 
 
 def ok_outputs(manifest: Path) -> dict[str, str]:
@@ -167,20 +171,27 @@ def undersized_artifacts(recorded: dict[str, str], repo_root: Path,
 
 
 def orphan_reports(research_dir: Path, repo_root: Path, recorded: dict[str, str],
-                   known: set[str] = frozenset(KNOWN_ORPHAN_ARTIFACTS)) -> list[str]:
-    """Reports on disk with no ``ok`` row -- the disk-to-manifest direction (#244).
+                   provider: str = DEFAULT_PROVIDER) -> list[str]:
+    """Reports in the RESUME NAMESPACE with no ``ok`` row (#244).
 
-    Such a file SUPPRESSES A CALL THAT WAS NEVER PAID FOR OR RECORDED, because
-    resume keys on the artifact existing.
+    Such a file suppresses a call that was never paid for or recorded, because
+    the `pending` filter skips a target whose ``output_path()`` exists.
 
-    ``.md`` only, deliberately: a ``-meta.yaml`` written by ``--dry-run`` also
-    lives under research/traits and represents NO research (``status: dry-run``,
-    ``cost: None``, ``task_id: None`` -- #246), so counting it would let a plan
-    nobody paid for satisfy an existence check.
+    Scoped to ``*-deep-research-{provider}.md`` rather than every ``*.md``,
+    because that is the only name resume consults -- see the note above the
+    MIN_ARTIFACT_BYTES/namespace commentary. A report from another provider is untidy and
+    may well be a defect (#245), but it cannot cause the harm this gate exists
+    to prevent, and failing on it would block documented workflows.
+
+    ``.md`` only: a ``-meta.yaml`` written by ``--dry-run`` also lives here and
+    represents NO research (``status: dry-run``, ``cost: None``, ``task_id:
+    None`` -- #246), so counting it would let a plan nobody paid for satisfy an
+    existence check.
     """
+    pattern = f"*-deep-research-{resolve_provider(provider)}.md"
     return sorted(
-        rel for rel in (str(p.relative_to(repo_root)) for p in research_dir.rglob("*.md"))
-        if rel not in recorded and rel not in known
+        rel for rel in (str(p.relative_to(repo_root)) for p in research_dir.rglob(pattern))
+        if rel not in recorded
     )
 
 
@@ -259,7 +270,7 @@ def main() -> int:
         recorded = ok_outputs(MANIFEST)
 
         missing = missing_artifacts(recorded, REPO_ROOT)
-        print(f"manifest ok rows with a missing artifact: {len(missing)}", file=sys.stderr)
+        print(f"ok artifacts missing from disk: {len(missing)}", file=sys.stderr)
         for run_id, out in missing[:20]:
             print(f"  {run_id}  {out}", file=sys.stderr)
         if len(missing) > 20:
@@ -270,12 +281,16 @@ def main() -> int:
               file=sys.stderr)
         for run_id, out, size in undersized[:20]:
             print(f"  {run_id}  {out}  ({size} bytes)", file=sys.stderr)
+        if len(undersized) > 20:
+            print(f"  ... and {len(undersized) - 20} more", file=sys.stderr)
 
-        orphans = orphan_reports(RESEARCH_DIR, REPO_ROOT, recorded)
-        print(f"reports on disk with no ok manifest row: {len(orphans)}"
-              f" ({len(KNOWN_ORPHAN_ARTIFACTS)} known, excluded)", file=sys.stderr)
+        orphans = orphan_reports(RESEARCH_DIR, REPO_ROOT, recorded, provider)
+        print(f"resume-namespace reports with no ok manifest row: {len(orphans)}",
+              file=sys.stderr)
         for rel in orphans[:20]:
             print(f"  {rel}", file=sys.stderr)
+        if len(orphans) > 20:
+            print(f"  ... and {len(orphans) - 20} more", file=sys.stderr)
 
         # Scanned over every .md under research/. This used to mean reports AND
         # their citation sidecars, justified by the sidecar echoing the rendered
