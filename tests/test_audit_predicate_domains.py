@@ -27,10 +27,12 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from audit_predicate_domains import (  # noqa: E402
     ERROR,
     SEVERITY,
+    _gate_admits,
     _key,
     audit,
     microbe_domain_predicates,
     partition,
+    predicate_gates,
 )
 
 # A minimal METPO OWL: 2000001 is the microbe-domain root; 2000202 is a direct
@@ -435,3 +437,74 @@ def test_default_fail_on_is_any(tmp_path):
     _run_cli(d, owl, out, baseline, "--write-baseline")
     assert baseline.exists()
     assert _run_cli(d, owl, out, baseline).returncode == 1
+
+
+# ------------------------------------------- PREDICATE_GATE_VIOLATION (#393)
+#
+# The corpus re-tested against a rule this repo sets itself in
+# mappings/predicate_grounding.tsv. ground_causal_predicates consults those
+# columns only when it FIRST grounds an edge, so a later retype can move a
+# grounded edge out of range with nothing looking. Two migrations did exactly
+# that (#382 shipped one to main; #392's was caught by hand in review).
+
+
+def test_gate_admits_treats_star_as_a_wildcard():
+    """The first hand-run of this check reported 3385 violations against a
+    corpus that had one, because `*` was compared as a literal type name. A
+    gate that cries wolf on every wildcard row is one nobody runs twice."""
+    assert _gate_admits("*", "ANYTHING") is True
+    assert _gate_admits("", "ANYTHING") is True
+    assert _gate_admits("GENE_OR_PROTEIN", None) is True          # unknown node
+    assert _gate_admits("GENE_OR_PROTEIN|STATE", "STATE") is True
+    assert _gate_admits("GENE_OR_PROTEIN|STATE", "QUALITY") is False
+
+
+def test_predicate_gates_reads_both_columns(tmp_path):
+    m = tmp_path / "predicate_grounding.tsv"
+    m.write_text(
+        "label\ttarget_curie\tsubject_types\tobject_types\n"
+        "produces\tMETPO:2007800\tGENE_OR_PROTEIN|STATE\tBIOLOGICAL_PROCESS|CHEMICAL\n"
+        "affects\tMETPO:9999999\t*\t*\n"
+    )
+    gates = predicate_gates(m)
+    assert gates["METPO:2007800"] == ("GENE_OR_PROTEIN|STATE", "BIOLOGICAL_PROCESS|CHEMICAL")
+    assert gates["METPO:9999999"] == ("*", "*")
+
+
+def _graph(tmp_path: Path, subj_type: str, obj_type: str) -> Path:
+    d = tmp_path / "traits"
+    d.mkdir(exist_ok=True)
+    (d / "rec.yaml").write_text(textwrap.dedent(f"""\
+        identifier: traitmech:000950
+        label: t
+        causal_graphs:
+        - graph_id: g
+          nodes:
+          - {{node_id: s, label: s, node_type: {subj_type}}}
+          - {{node_id: o, label: o, node_type: {obj_type}}}
+          edges:
+          - {{subject: s, object: o, predicate: produces, predicate_id: METPO:2007800}}
+        """))
+    return d
+
+
+def test_object_out_of_range_is_flagged(tmp_path):
+    findings = [f for f in audit(_graph(tmp_path, "GENE_OR_PROTEIN", "QUALITY"))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert len(findings) == 1
+    assert "object_type=QUALITY" in findings[0]["detail"]
+    assert findings[0]["severity"] == SEVERITY["PREDICATE_GATE_VIOLATION"]
+
+
+def test_subject_out_of_range_is_flagged_too(tmp_path):
+    """A retype can move either end; the #392 review had to check both by hand."""
+    findings = [f for f in audit(_graph(tmp_path, "QUALITY", "CHEMICAL"))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert len(findings) == 1
+    assert "subject_type=QUALITY" in findings[0]["detail"]
+
+
+def test_an_in_range_edge_is_silent(tmp_path):
+    findings = [f for f in audit(_graph(tmp_path, "GENE_OR_PROTEIN", "CHEMICAL"))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert findings == []

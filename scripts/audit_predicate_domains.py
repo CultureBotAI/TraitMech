@@ -18,6 +18,24 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   — every one of these is a false entailment.
                                   (#301, generalising #295)                [WARN]
 
+  PREDICATE_GATE_VIOLATION        a GROUNDED edge whose subject or object node
+                                  type is not admitted by its predicate's
+                                  ``subject_types``/``object_types`` in
+                                  mappings/predicate_grounding.tsv.
+                                  ``ground_causal_predicates`` consults those
+                                  columns only when it FIRST grounds an edge --
+                                  it returns early on any edge that already has
+                                  a ``predicate_id`` -- so the gate was a
+                                  write-time check with no read-time
+                                  counterpart, and every retyping migration
+                                  since #351 could move an edge out of range
+                                  silently. Two did: #382 shipped one to main
+                                  undetected, #392's was caught by hand in
+                                  review. ERROR, because the table is a rule
+                                  this repo sets itself, so a violation is the
+                                  corpus disagreeing with us rather than a
+                                  judgement call. (#393)                  [ERROR]
+
   ENABLES_RANGE_VIOLATION         an edge with ``predicate_id: RO:0002327``
                                   (enables) whose object node is NOT a
                                   'biological process or activity'. biolink
@@ -89,6 +107,7 @@ TRAITS_DIR = REPO_ROOT / "data" / "traits"
 METPO_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
 DEFAULT_OUT = REPO_ROOT / "reports" / "predicate_domain_audit.tsv"
 DEFAULT_BASELINE = REPO_ROOT / "conf" / "predicate_domain_audit_baseline.tsv"
+PREDICATE_MAPPING = REPO_ROOT / "mappings" / "predicate_grounding.tsv"
 
 # The microbe-domain root. Every object property transitively subPropertyOf this
 # inherits its rdfs:domain of METPO:1000525 (microbe). See #295/#301.
@@ -117,9 +136,15 @@ WARN = "WARN"
 # ENABLES_RANGE_VIOLATION stays WARN: 33 pre-existing edges need per-edge
 # biological judgement (#334), so the class must remain baselineable until it is
 # burned down. Promote it to ERROR then, exactly as this one was.
+# PREDICATE_GATE_VIOLATION is ERROR for the same reason as the first: it is
+# clean today (#396 fixed the last one) and must stay clean. It is also the only
+# class here whose authority is LOCAL — mappings/predicate_grounding.tsv is a
+# table this repo writes, so a violation means the corpus disagrees with a rule
+# we set ourselves, which is never a judgement call needing a baseline.
 SEVERITY = {
     "MICROBE_DOMAIN_ON_NONORGANISM": ERROR,
     "ENABLES_RANGE_VIOLATION": WARN,
+    "PREDICATE_GATE_VIOLATION": ERROR,
 }
 
 FIELDNAMES = ["file", "graph_id", "defect", "severity", "detail"]
@@ -193,8 +218,46 @@ def microbe_domain_predicates(owl_path: Path, root: str = MICROBE_DOMAIN_ROOT) -
     return {c for c in parent if reaches(c, set())} | {root}
 
 
+def predicate_gates(mapping_path: Path = PREDICATE_MAPPING) -> dict[str, tuple[str, str]]:
+    """``{target CURIE: (subject_types, object_types)}`` from the grounding table.
+
+    ``ground_causal_predicates`` consults these columns when it FIRST grounds an
+    edge, and never again: it returns early on any edge that already carries a
+    ``predicate_id`` (#393). So the gate is a write-time check with no read-time
+    counterpart, and every retyping migration since #351 has been able to move a
+    grounded edge out of range silently.
+
+    Two did. #382 retyped ``proton_motive_force`` to STATE, putting
+    ``terminal_oxidases -produces-> proton_motive_force`` outside METPO:2007800;
+    it shipped to main undetected. #392 retyped ``phenazine_biosynthesis`` to
+    PATHWAY, putting an ``encodes`` edge outside METPO:2007813; that one was
+    caught in review, by hand. This function is what makes the hand-check
+    unnecessary.
+    """
+    gates: dict[str, tuple[str, str]] = {}
+    with mapping_path.open() as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            curie = (row.get("target_curie") or "").strip()
+            if curie:
+                gates[curie] = ((row.get("subject_types") or "").strip(),
+                                (row.get("object_types") or "").strip())
+    return gates
+
+
+def _gate_admits(allowed: str, actual: str | None) -> bool:
+    """``*`` is a WILDCARD, not a type name.
+
+    Worth its own function because comparing it literally is the obvious mistake
+    and it fails loudly in the wrong direction: the first hand-run of this check
+    reported 3385 violations against a corpus that had one. A gate that cries
+    wolf on every wildcard row is a gate nobody runs twice.
+    """
+    return (not allowed) or allowed == "*" or actual is None or actual in allowed.split("|")
+
+
 def audit(traits_dir: Path, owl_path: Path = METPO_OWL) -> list[dict[str, str]]:
     microbe_domain = microbe_domain_predicates(owl_path)
+    gates = predicate_gates()
     findings: list[dict[str, str]] = []
     for path in sorted(traits_dir.rglob("*.yaml")):
         try:
@@ -229,6 +292,22 @@ def audit(traits_dir: Path, owl_path: Path = METPO_OWL) -> list[dict[str, str]]:
                                    f"predicate={e.get('predicate')!r} — subject entails "
                                    f"⊑ microbe (METPO:1000525) via {MICROBE_DOMAIN_ROOT}"),
                     })
+
+                # The corpus against a rule this repo set itself, re-tested at
+                # read time. Both ends, because a retype can move either.
+                if pid in gates:
+                    subj_ok, obj_ok = gates[pid]
+                    for end, allowed, actual in (("subject", subj_ok, node_type.get(subj)),
+                                                 ("object", obj_ok, node_type.get(obj))):
+                        if not _gate_admits(allowed, actual):
+                            findings.append({
+                                "file": rel, "graph_id": gid,
+                                "defect": "PREDICATE_GATE_VIOLATION",
+                                "severity": SEVERITY["PREDICATE_GATE_VIOLATION"],
+                                "detail": (f"{edge_key} {end}_type={actual} — "
+                                           f"mappings/predicate_grounding.tsv gates "
+                                           f"{pid} to {end}_types={allowed}"),
+                            })
 
                 ot = node_type.get(obj)
                 if pid == ENABLES and ot is not None and ot not in ACTIVITY_NODE_TYPES:
