@@ -5,7 +5,7 @@
 that the CURIE's ontological *domain* and *range* are satisfiable by the node
 types on either end of the edge. `predicate_id` is an unbound string in the
 schema, so a false type entailment sails through every other gate. This audit
-walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
+walks every ``data/traits/**/*.yaml`` causal graph and flags three such classes:
 
   MICROBE_DOMAIN_ON_NONORGANISM   an edge whose ``predicate_id`` is (transitively)
                                   ``rdfs:subPropertyOf METPO:2000001`` — whose
@@ -48,7 +48,7 @@ walks every ``data/traits/**/*.yaml`` causal graph and flags two such classes:
                                   migrated); widened to the full range in #315,
                                   which surfaced 33 more.                    [WARN]
 
-The two classes are at different stages, and the configuration reflects that.
+The three classes are at different stages, and the configuration reflects that.
 
 MICROBE_DOMAIN_ON_NONORGANISM is **burned down**: 530 findings shipped as a
 ratchet in #314 because nothing was fixable without decisions that had not been
@@ -57,11 +57,14 @@ final edge in #327) and the count is **0**. It is therefore ERROR severity, whic
 makes ``--write-baseline`` REFUSE to freeze one — a regression cannot be
 baselined away, even by accident, while re-freezing the other class.
 
-ENABLES_RANGE_VIOLATION is **not** burned down: widening the enables test from
-TRAIT-only to the full biolink range (#315) surfaced 33 pre-existing edges that
-need per-edge biological judgement (#334). They are baselined, and
-``just audit-predicate-domains`` passes ``--fail-on new`` so they do not block
-while any NEW violation of either class does.
+ENABLES_RANGE_VIOLATION IS NOW BURNED DOWN TOO. Widening the enables test from
+TRAIT-only to the full biolink range (#315) surfaced 33 pre-existing edges
+needing per-edge biological judgement (#334); #341 and #355 repaired the last of
+them, so the class is at 0 and the baseline is header-only. It stays WARN and
+baselineable rather than being promoted, because unlike the two ERROR classes its
+authority is an UPSTREAM range (biolink's) that can widen under us — but the
+condition for promotion is now met, and doing so is a deliberate decision rather
+than a pending chore.
 
 The rule this encodes: **a baseline is for a class that has never been clean,
 never for one that has.** Do not add rows to excuse a regression; for the domain
@@ -76,9 +79,10 @@ Writes ``reports/predicate_domain_audit.tsv``. Exit code is governed by
 ``--fail-on``:
 
   any    (argparse DEFAULT) every finding fails and the baseline is ignored. A
-         bare invocation therefore exits 1 while the 33 #334 edges stand — that
-         is intentional, so a stray baseline file can never weaken an ad-hoc run
-         (#327). The justfile recipe passes ``--fail-on new`` explicitly.
+         bare invocation is exit 0 today because all three classes are at 0;
+         it would exit 1 on any finding, baselined or not, so a stray baseline
+         file can never weaken an ad-hoc run (#327). The justfile recipe passes
+         ``--fail-on new`` explicitly.
   new    any finding NOT in the baseline fails — the ratchet, and what `just
          audit-predicate-domains` uses today. For a class that has never been
          clean; not for excusing a regression in one that has.
@@ -102,12 +106,23 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from ground_causal_predicates import (  # noqa: E402
+    SCHEMA_PATH as _GCP_SCHEMA_PATH,
+    _node_type_values,
+    _types,
+)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 METPO_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
 DEFAULT_OUT = REPO_ROOT / "reports" / "predicate_domain_audit.tsv"
 DEFAULT_BASELINE = REPO_ROOT / "conf" / "predicate_domain_audit_baseline.tsv"
 PREDICATE_MAPPING = REPO_ROOT / "mappings" / "predicate_grounding.tsv"
+# Read from the schema, not hardcoded, for the reason _node_type_values gives:
+# a schema change must not leave this file silently disagreeing with it.
+VALID_NODE_TYPES = _node_type_values(_GCP_SCHEMA_PATH)
 
 # The microbe-domain root. Every object property transitively subPropertyOf this
 # inherits its rdfs:domain of METPO:1000525 (microbe). See #295/#301.
@@ -133,11 +148,14 @@ WARN = "WARN"
 # that has never been clean" a structural guarantee rather than a convention
 # nobody enforces (#315 review).
 #
-# ENABLES_RANGE_VIOLATION stays WARN: 33 pre-existing edges need per-edge
-# biological judgement (#334), so the class must remain baselineable until it is
-# burned down. Promote it to ERROR then, exactly as this one was.
+# ENABLES_RANGE_VIOLATION stays WARN even though #341/#355 burned its 33 edges
+# (#334) down to 0. Not an oversight: its authority is biolink's range, which is
+# UPSTREAM and can widen under us, so a regression there may be someone else's
+# change rather than ours. The two ERROR classes are both locally authored — a
+# METPO domain we mint, and a gate table we write.
 # PREDICATE_GATE_VIOLATION is ERROR for the same reason as the first: it is
-# clean today (#396 fixed the last one) and must stay clean. It is also the only
+# clean today (#392 cleared the last one, by adding STATE to METPO:2007800's
+# object_types) and must stay clean. It is also the only
 # class here whose authority is LOCAL — mappings/predicate_grounding.tsv is a
 # table this repo writes, so a violation means the corpus disagrees with a rule
 # we set ourselves, which is never a judgement call needing a baseline.
@@ -218,7 +236,8 @@ def microbe_domain_predicates(owl_path: Path, root: str = MICROBE_DOMAIN_ROOT) -
     return {c for c in parent if reaches(c, set())} | {root}
 
 
-def predicate_gates(mapping_path: Path = PREDICATE_MAPPING) -> dict[str, tuple[str, str]]:
+def predicate_gates(mapping_path: Path = PREDICATE_MAPPING
+                    ) -> dict[str, tuple[frozenset | None, frozenset | None]]:
     """``{target CURIE: (subject_types, object_types)}`` from the grounding table.
 
     ``ground_causal_predicates`` consults these columns when it FIRST grounds an
@@ -234,30 +253,62 @@ def predicate_gates(mapping_path: Path = PREDICATE_MAPPING) -> dict[str, tuple[s
     caught in review, by hand. This function is what makes the hand-check
     unnecessary.
     """
-    gates: dict[str, tuple[str, str]] = {}
+    gates: dict[str, tuple[frozenset | None, frozenset | None]] = {}
     with mapping_path.open() as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
             curie = (row.get("target_curie") or "").strip()
-            if curie:
-                gates[curie] = ((row.get("subject_types") or "").strip(),
-                                (row.get("object_types") or "").strip())
+            if not curie:
+                continue
+            # Parsed by the WRITER's own function, not a second implementation.
+            # Parity kept by duplication drifts, and the two had already diverged
+            # in review: `NONE` (METPO:2000008/2000009, "no node type can satisfy
+            # this") worked here only by accident, because "NONE" happens not to
+            # be a CausalNodeTypeEnum member. `_types` returns None for `*`/empty
+            # and an EMPTY SET for NONE, which are opposite meanings that a
+            # string compare cannot tell apart.
+            gate = (_types(row.get("subject_types"), VALID_NODE_TYPES),
+                    _types(row.get("object_types"), VALID_NODE_TYPES))
+            # 110 rows collapse to 76 CURIEs — the table is keyed by LABEL and
+            # 14 CURIEs carry several rows. Identical gates are fine; disagreeing
+            # ones are not, and the last row would silently win. This class is
+            # ERROR and unbaselineable, so the wrong gate would hard-block CI on
+            # a legitimate edge. load_mapping raises on the mirror-image conflict
+            # (one label, two CURIEs); this is the same guard (#398 review).
+            if curie in gates and gates[curie] != gate:
+                raise ValueError(
+                    f"conflicting gates for {curie} in {mapping_path}: "
+                    f"{gates[curie]} vs {gate}"
+                )
+            gates[curie] = gate
     return gates
 
 
-def _gate_admits(allowed: str, actual: str | None) -> bool:
-    """``*`` is a WILDCARD, not a type name.
+def _gate_admits(allowed: frozenset | None, actual: str | None) -> bool:
+    """Does a parsed gate cell admit ``actual``?
 
-    Worth its own function because comparing it literally is the obvious mistake
-    and it fails loudly in the wrong direction: the first hand-run of this check
-    reported 3385 violations against a corpus that had one. A gate that cries
-    wolf on every wildcard row is a gate nobody runs twice.
+    ``None`` means the cell was ``*`` or empty — any type. An EMPTY SET means the
+    cell was ``NONE``: nothing satisfies it, so every edge is refused. Those are
+    opposite meanings, which is why the cell is parsed by the writer's ``_types``
+    rather than string-compared here — the first hand-run of this check compared
+    ``*`` as a literal type name and reported 3385 violations against a corpus
+    that had one.
+
+    An untyped node (``actual is None``) is admitted, and the writer REFUSES it.
+    The asymmetry is deliberate: ``node_type`` is required by the schema and
+    DANGLING_EDGE is at 0, so it is unreachable — and if it ever became
+    reachable, this audit should not be the thing that reports it.
     """
-    return (not allowed) or allowed == "*" or actual is None or actual in allowed.split("|")
+    if allowed is None:
+        return True
+    if actual is None:
+        return True
+    return actual in allowed
 
 
-def audit(traits_dir: Path, owl_path: Path = METPO_OWL) -> list[dict[str, str]]:
+def audit(traits_dir: Path, owl_path: Path = METPO_OWL,
+          mapping_path: Path = PREDICATE_MAPPING) -> list[dict[str, str]]:
     microbe_domain = microbe_domain_predicates(owl_path)
-    gates = predicate_gates()
+    gates = predicate_gates(mapping_path)
     findings: list[dict[str, str]] = []
     for path in sorted(traits_dir.rglob("*.yaml")):
         try:
@@ -306,7 +357,8 @@ def audit(traits_dir: Path, owl_path: Path = METPO_OWL) -> list[dict[str, str]]:
                                 "severity": SEVERITY["PREDICATE_GATE_VIOLATION"],
                                 "detail": (f"{edge_key} {end}_type={actual} — "
                                            f"mappings/predicate_grounding.tsv gates "
-                                           f"{pid} to {end}_types={allowed}"),
+                                           f"{pid} to {end}_types="
+                                           f"{'|'.join(sorted(allowed)) if allowed else '*'}"),
                             })
 
                 ot = node_type.get(obj)
@@ -371,6 +423,8 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--traits-dir", type=Path, default=TRAITS_DIR)
     ap.add_argument("--owl", type=Path, default=METPO_OWL)
+    ap.add_argument("--mapping", type=Path, default=PREDICATE_MAPPING,
+                    help="predicate gate table (default: mappings/predicate_grounding.tsv)")
     ap.add_argument("--baseline", type=Path, default=DEFAULT_BASELINE,
                     help="TSV of known findings to suppress from the exit code.")
     ap.add_argument("--no-baseline", action="store_true",
@@ -386,7 +440,7 @@ def main() -> int:
                          "fail.")
     args = ap.parse_args()
 
-    findings = audit(args.traits_dir, args.owl)
+    findings = audit(args.traits_dir, args.owl, args.mapping)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     # encoding pinned: details carry a non-ASCII '⊑' — see load_baseline.
     with args.out.open("w", newline="", encoding="utf-8") as f:
