@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/research_trait.py
+  slug: drop-citation-sidecars
+session:
+  id: 2026-08-16T003916Z-claude-code-2362d3
+  timestamp: '2026-08-16T00:39:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/249
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - research
+  summary: Stop requesting the citation sidecar and delete the 353 broken ones
+  details: '249 measured that every one of the 353 <report>.md.citations.md sidecars was malformed:
+    194 broken markdown-link tails, 2770 stray trailing commas, and 332 of 353 listing the
+    same reference two or three times over, plus entries that are PaperQA internal keys resolving
+    to nothing outside the provider. All 353 also re-emitted the roughly 55-line rendered
+    prompt, already stored in the report''s own template_variables front matter. 1.6 MB. The
+    issue offered two fixes and recommended dropping the sidecar; taken. IMPORTANT FINDING
+    WHILE SCOPING: the broken extractor is not in this repo. research_trait.py only passes
+    --separate-citations to the external deep-research-client, so TraitMech''s only choice
+    is whether to ask for the file at all. Removing the flag is the whole fix on this side.
+    Checked what consumes them before deleting. render_trait_pages.py does not read sidecars,
+    it EXCLUDES them from its report glob (259) so pages are unaffected. The manifest does
+    not reference them. The one real dependency was run_trait_graph_audit.py --verify, whose
+    malformed-CURIE scan globs every .md under research/ and whose comment justified including
+    sidecars because the sidecar echoes the rendered prompt so a bad identifier in the trait''s
+    front matter shows up there too. That rationale was itself the redundancy 249 complains
+    of, and it was verified rather than assumed: across every sidecar, ZERO CURIE-shaped tokens
+    appear that are not also present in their report. Scan coverage is therefore unchanged
+    and the artifact count simply halves, 707 to 354, which the run confirms. Also corrected
+    two comments that the change made false: run_trait_graph_audit.py''s sidecar rationale,
+    and render_trait_pages.py''s claim that only the dot form can occur today. The exclusion
+    in render_trait_pages stays because _edison_capture can still emit the hyphen form <stem>-citations.md,
+    which is a properly parsed reference list rather than a regex over prose and is not affected
+    by this change. Note for 244, which proposed making --verify assert sidecar existence:
+    that part is now moot, as 249 predicted. 540 tests pass, qc green.'

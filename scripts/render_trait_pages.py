@@ -269,9 +269,12 @@ def research_report(category_dir: str, slug: str) -> Path | None:
         for path in RESEARCH_DIR.glob(f"{category_dir}/{slug}-deep-research-*.md")
         # Sidecars match the same glob and are reference lists, not reports.
         # Both separators, because the tree spells this two ways: the pipeline
-        # writes `<report>.md.citations.md`, while _edison_capture bundles use
-        # `<stem>-citations.md`. Only the dot form can occur here today, but the
-        # hyphen form would fail silently rather than loudly — it survives a
+        # wrote `<report>.md.citations.md` until #249 stopped requesting it,
+        # while _edison_capture bundles use `<stem>-citations.md`. Neither form
+        # is produced for these reports today and the 353 dot-form files are
+        # deleted, so this exclusion currently matches nothing — it stays
+        # because _edison_capture can still emit the hyphen form, which would
+        # fail silently rather than loudly: it survives a
         # dot-only exclusion, and for an unrecognised provider sorts ahead of its
         # own report ('-' < '.'), so the page would render the bibliography (#259).
         if not re.search(r"[-.]citations\.md$", path.name)
