@@ -79,8 +79,12 @@ TARGET: dict[str, tuple[str, str]] = {
     ),
     "carotenoid_biosynthesis": (
         "PATHWAY",
-        "A named biosynthetic route; every description calls it one, including the "
-        "BIOLOGICAL_PROCESS ones ('Enzymatic pathway producing carotenoid pigments'). "
+        "A named biosynthetic route. Most descriptions call it one outright, including "
+        "BIOLOGICAL_PROCESS-typed ones ('Enzymatic pathway producing carotenoid "
+        "pigments'); red_pigmented.yaml instead ENUMERATES the steps -- 'Phytoene "
+        "synthase condenses two GGPP to phytoene, then desaturation/isomerization yields "
+        "lycopene' -- which is the rule's own test for PATHWAY met explicitly rather than "
+        "by naming. "
         "Against the majority, which was 5 BIOLOGICAL_PROCESS to 1.",
     ),
     "pufa_biosynthesis": (
@@ -110,8 +114,10 @@ TARGET: dict[str, tuple[str, str]] = {
     ),
     "salt_in_strategy": (
         "BIOLOGICAL_PROCESS",
-        "A STRATEGY, not a route: 'Osmoadaptation by intracellular accumulation of "
-        "inorganic ions'. There is no step list to enumerate -- which is exactly the "
+        "A STRATEGY, not a route. The family is described as osmoadaptation by "
+        "accumulating intracellular inorganic ions -- haloalkaliphilic.yaml puts it as "
+        "'Osmoadaptation by intracellular accumulation of inorganic ions (e.g. K+)', and "
+        "the wording varies by record. There is no step list to enumerate, which is exactly the "
         "distinction this rule draws. Already 7 BIOLOGICAL_PROCESS to 1.",
     ),
     "aa_decarboxylation": (
@@ -127,7 +133,7 @@ TARGET: dict[str, tuple[str, str]] = {
     "amino_acid_decarboxylation": (
         "BIOLOGICAL_PROCESS",
         "A REACTION CLASS, not a route. The corpus describes it that way in "
-        "acidotolerant.yaml -- 'Enzyme-catalyzed decarboxylation reaction that "
+        "neutrophilic.yaml -- 'Enzyme-catalyzed decarboxylation reaction that "
         "consumes cytoplasmic protons' -- and the wording varies by record, so read that "
         "as the family's sense rather than as this record's own text. Named systems "
         "that implement it (Gad) would be "

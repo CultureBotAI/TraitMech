@@ -261,7 +261,10 @@ curation_history:
   changes: 'Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id means one
     thing (issue 356): carotenoid_biosynthesis: BIOLOGICAL_PROCESS -> PATHWAY. PATHWAY
     is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is
-    everything else. A named biosynthetic route; every description calls it one, including
-    the BIOLOGICAL_PROCESS ones (''Enzymatic pathway producing carotenoid pigments'').
+    everything else. A named biosynthetic route. Most descriptions call it one outright,
+    including BIOLOGICAL_PROCESS-typed ones (''Enzymatic pathway producing carotenoid
+    pigments''); red_pigmented.yaml instead ENUMERATES the steps -- ''Phytoene synthase
+    condenses two GGPP to phytoene, then desaturation/isomerization yields lycopene''
+    -- which is the rule''s own test for PATHWAY met explicitly rather than by naming.
     Against the majority, which was 5 BIOLOGICAL_PROCESS to 1.'
   llm_assisted: true

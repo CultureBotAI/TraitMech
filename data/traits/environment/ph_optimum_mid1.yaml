@@ -233,8 +233,10 @@ curation_history:
   changes: 'Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id means one
     thing (issue 356): amino_acid_decarboxylation: PATHWAY -> BIOLOGICAL_PROCESS.
     PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS
-    is everything else. A REACTION CLASS, not a route: ''Enzyme-catalyzed decarboxylation
-    reaction that consumes cytoplasmic protons''. Named systems that implement it
-    (Gad) would be pathways; the reaction class is not. Already 4 BIOLOGICAL_PROCESS
+    is everything else. A REACTION CLASS, not a route. The corpus describes it that
+    way in neutrophilic.yaml -- ''Enzyme-catalyzed decarboxylation reaction that consumes
+    cytoplasmic protons'' -- and the wording varies by record, so read that as the
+    family''s sense rather than as this record''s own text. Named systems that implement
+    it (Gad) would be pathways; the reaction class is not. Already 4 BIOLOGICAL_PROCESS
     to 2.'
   llm_assisted: true
