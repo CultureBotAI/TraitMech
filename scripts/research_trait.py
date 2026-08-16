@@ -117,8 +117,11 @@ DEFAULT_PROVIDER = "edison"
 # and previously-researched traits still count as done.
 #
 # SCOPE: this reaches Edison *through deep-research-client*, so it inherits that
-# client's surface and nothing more — one research call, a markdown answer, and a
-# citations sidecar. It exposes no Edison job selection (PaperQA3 vs its
+# client's surface and nothing more — one research call and a markdown answer.
+# (The client can also emit a citations sidecar; #249 stopped requesting it,
+# because every one of the 353 it produced was a malformed regex over the report
+# prose and the report's own References section is strictly better.) It exposes
+# no Edison job selection (PaperQA3 vs its
 # high-read variant vs precedent vs synthesis) and captures no run provenance
 # (task id, cost, status, agent state). Driving the edison-client SDK directly is
 # a separate concern and belongs in its own entry point; do not grow those
@@ -193,7 +196,6 @@ def build_command(
     provider: str,
     template: Path,
     output_file: Path,
-    citations_file: Path,
     variables: dict[str, str],
     passthrough_args: list[str],
     client_command: str = "deep-research-client",
@@ -214,8 +216,19 @@ def build_command(
             # create one directory and the child write into another.
             "--output",
             str(output_file.resolve()),
-            "--separate-citations",
-            str(citations_file.resolve()),
+            # NO --separate-citations. The client's sidecar is a regex over the
+            # report prose, and every one of the 353 it produced was malformed:
+            # 194 broken markdown-link tails, 2,770 stray trailing commas, and
+            # 332 of 353 listing the same reference two or three times over
+            # (#249). It also re-emitted the ~55-line rendered prompt, already
+            # stored in the report's own `template_variables` front matter.
+            #
+            # The report's References section maps PaperQA keys to DOIs and is
+            # what a curator actually reads, so this drops a broken duplicate
+            # rather than a source. Verified before removing: across every
+            # sidecar, ZERO CURIE-shaped tokens appear that are not also in
+            # their report — so `run_trait_graph_audit --verify`'s malformed-CURIE
+            # scan loses no coverage.
         ]
     )
     command.extend(passthrough_args)
@@ -256,13 +269,11 @@ def main(argv: list[str] | None = None) -> int:
 
     output_dir = args.research_dir / "traits" / category_slug
     output_file = output_dir / f"{args.slug}-deep-research-{provider}.md"
-    citations_file = output_file.with_suffix(output_file.suffix + ".citations.md")
     variables = template_vars(doc, category_slug, args.slug)
     command = build_command(
         provider=provider,
         template=args.template,
         output_file=output_file,
-        citations_file=citations_file,
         variables=variables,
         passthrough_args=args.passthrough_args,
         client_command=args.client_command,

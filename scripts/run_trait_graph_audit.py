@@ -191,9 +191,14 @@ def main() -> int:
         if len(missing) > 20:
             print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
 
-        # Scanned over reports AND their citation sidecars: the sidecar echoes
-        # the rendered prompt, so a bad identifier in the trait's own front
-        # matter shows up there too.
+        # Scanned over every .md under research/. This used to mean reports AND
+        # their citation sidecars, justified by the sidecar echoing the rendered
+        # prompt — but #249 dropped the sidecars as a broken duplicate, and that
+        # rationale was itself the redundancy it complained of: the same
+        # identifiers live in the report's own `template_variables` front matter.
+        # Checked before removing them: ZERO CURIE-shaped tokens appeared in a
+        # sidecar that were not also in its report, so coverage is unchanged and
+        # the artifact count simply halves.
         artifacts = sorted(RESEARCH_DIR.rglob("*.md"))
         bad_curies = scan_malformed_curies(artifacts)
         # Reported per-report, because that is how the invariant is phrased —

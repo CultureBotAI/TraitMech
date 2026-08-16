@@ -44,7 +44,6 @@ def test_build_command_for_falcon_research():
         provider="falcon",
         template=Path("templates/trait_causal_graph_research.md"),
         output_file=Path("research/traits/physiology/autotrophic-deep-research-falcon.md"),
-        citations_file=Path("research/traits/physiology/autotrophic-deep-research-falcon.md.citations.md"),
         variables={"trait_label": "autotrophic", "trait_identifier": "METPO:1000632"},
         passthrough_args=["--max-cost", "1"],
     )
@@ -56,7 +55,9 @@ def test_build_command_for_falcon_research():
     ]
     assert "--provider" in command
     assert "falcon" in command
-    assert "--separate-citations" in command
+    # No --separate-citations: the client's sidecar was a broken regex over
+    # the report prose and is no longer requested (#249).
+    assert "--separate-citations" not in command
     assert command[-2:] == ["--max-cost", "1"]
 
 
@@ -70,7 +71,6 @@ def test_build_command_makes_an_absolute_template_repo_relative():
         provider="falcon",
         template=REPO_ROOT / "templates" / "trait_causal_graph_research.md",
         output_file=Path("out.md"),
-        citations_file=Path("out.md.citations.md"),
         variables={},
         passthrough_args=[],
     )
@@ -84,7 +84,6 @@ def test_build_command_keeps_a_template_outside_the_repo_absolute():
         provider="falcon",
         template=Path("/tmp/elsewhere/custom.md"),
         output_file=Path("out.md"),
-        citations_file=Path("out.md.citations.md"),
         variables={},
         passthrough_args=[],
     )
@@ -106,7 +105,6 @@ def test_a_relative_template_outside_the_repo_is_resolved(monkeypatch, tmp_path)
         provider="falcon",
         template=Path("custom.md"),
         output_file=Path("out.md"),
-        citations_file=Path("out.md.citations.md"),
         variables={},
         passthrough_args=[],
     )
@@ -121,7 +119,6 @@ def test_output_paths_are_resolved_against_the_callers_cwd(monkeypatch, tmp_path
         provider="falcon",
         template=Path("templates/trait_causal_graph_research.md"),
         output_file=Path("out/report.md"),
-        citations_file=Path("out/report.md.citations.md"),
         variables={},
         passthrough_args=[],
     )
