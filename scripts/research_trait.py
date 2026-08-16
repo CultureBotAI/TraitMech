@@ -117,8 +117,11 @@ DEFAULT_PROVIDER = "edison"
 # and previously-researched traits still count as done.
 #
 # SCOPE: this reaches Edison *through deep-research-client*, so it inherits that
-# client's surface and nothing more — one research call, a markdown answer, and a
-# citations sidecar. It exposes no Edison job selection (PaperQA3 vs its
+# client's surface and nothing more — one research call and a markdown answer.
+# (The client can also emit a citations sidecar; #249 stopped requesting it,
+# because every one of the 353 it produced was a malformed regex over the report
+# prose and the report's own References section is strictly better.) It exposes
+# no Edison job selection (PaperQA3 vs its
 # high-read variant vs precedent vs synthesis) and captures no run provenance
 # (task id, cost, status, agent state). Driving the edison-client SDK directly is
 # a separate concern and belongs in its own entry point; do not grow those
