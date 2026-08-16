@@ -56,7 +56,7 @@ causal_graphs:
     node_type: QUALITY
     description: Maintained membrane fluidity sustaining transport and function in
       the cold.
-  - node_id: fatty_acid_desaturase
+  - node_id: fatty_acid_desaturase_activity
     label: fatty acid desaturase activity
     node_type: MOLECULAR_FUNCTION
     description: Desaturase activity introducing double bonds into fatty acyl chains.
@@ -136,7 +136,7 @@ causal_graphs:
       snippet: growing well at temperatures around the freezing point of water
       notes: Supports a ≤10 °C optimum as a value within the temperature-optimum distribution.
     predicate_id: rdfs:subClassOf
-  - subject: fatty_acid_desaturase
+  - subject: fatty_acid_desaturase_activity
     predicate: increases abundance of
     object: unsaturated_fatty_acids
     description: Fatty acid desaturase activity increases unsaturated acyl chains.
@@ -263,4 +263,14 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-15T06:00:00Z'
+  curator: claude
+  action: SPLIT_PROTEIN_FROM_ACTIVITY
+  changes: 'Separated the protein sense from the activity sense so one node_id means
+    one thing (issue 356): renamed fatty_acid_desaturase -> fatty_acid_desaturase_activity
+    (MOLECULAR_FUNCTION sense). Described as ''Desaturase ACTIVITY introducing double
+    bonds into fatty acyl chains'', against ''Desaturase enzyme (e.g., Des) that introduces
+    double bonds'' for the protein occurrences. fatty_acid_desaturase_activity already
+    exists corpus-wide as MOLECULAR_FUNCTION.'
   llm_assisted: true

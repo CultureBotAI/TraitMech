@@ -55,7 +55,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Homeostatic maintenance of cytoplasmic pH (~7.0-7.5) across a range
       of external pH values.
-  - node_id: cation_proton_antiporter
+  - node_id: cation_proton_antiporter_activity
     label: K+/H+ or Na+/H+ antiporter activity
     node_type: MOLECULAR_FUNCTION
     description: Ion/H+ antiporter activity that exports K+ or Na+ in exchange for
@@ -150,7 +150,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external
         pH of about 5-8 to sustain growth.
-  - subject: cation_proton_antiporter
+  - subject: cation_proton_antiporter_activity
     predicate: contributes to
     object: cytoplasm_acidification
     description: K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting
@@ -269,4 +269,14 @@ curation_history:
     definition; that is the same test the motive-force edges FAILED in issue 341,
     where the subject powers a machine it does not generate. RO:0002326 declares no
     rdfs:domain or rdfs:range.
+  llm_assisted: true
+- timestamp: '2026-08-15T06:00:00Z'
+  curator: claude
+  action: SPLIT_PROTEIN_FROM_ACTIVITY
+  changes: 'Separated the protein sense from the activity sense so one node_id means
+    one thing (issue 356): renamed cation_proton_antiporter -> cation_proton_antiporter_activity
+    (MOLECULAR_FUNCTION sense). Described as ''Ion/H+ antiporter ACTIVITY that exports
+    K+ or Na+ in exchange for protons'', against ''Antiporter exchanging cations for
+    protons during pH stress'' for the protein occurrences. cation_proton_antiporter_activity
+    already exists corpus-wide as MOLECULAR_FUNCTION.'
   llm_assisted: true

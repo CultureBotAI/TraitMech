@@ -132,6 +132,7 @@ dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
+plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
 light energy	ENVIRONMENTAL_FACTOR	2	data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
@@ -1206,7 +1207,6 @@ annotation error	EXPERIMENTAL_FACTOR	1	data/traits/genomics/pangenome_openness.y
 apparent pangenome openness	QUALITY	1	data/traits/genomics/pangenome_openness.yaml
 toxin-antitoxin system	GENE_OR_PROTEIN	1	data/traits/genomics/plasmid_carriage.yaml
 plasmid vertical inheritance	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml
-plasmid-encoded methylase	MOLECULAR_FUNCTION	1	data/traits/genomics/plasmid_carriage.yaml
 restriction of incoming plasmid dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml
 plasmid-encoded anti-restriction genes	GENE_OR_PROTEIN	1	data/traits/genomics/plasmid_carriage.yaml
 plasmid fitness cost	QUALITY	1	data/traits/genomics/plasmid_carriage.yaml
@@ -1234,7 +1234,6 @@ restriction endonuclease	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modi
 restriction endonuclease cleavage	MOLECULAR_FUNCTION	1	data/traits/genomics/restriction_modification_system.yaml
 type iv restriction enzyme	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 methylated dna motif	CHEMICAL	1	data/traits/genomics/restriction_modification_system.yaml
-plasmid-encoded methylase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 phage-encoded dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 maximal growth rate	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
