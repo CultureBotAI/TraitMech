@@ -1,0 +1,57 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_predicate_domains.py
+  slug: predicate-gate-audit
+session:
+  id: 2026-08-16T074719Z-claude-code-84d88d
+  timestamp: '2026-08-16T07:47:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/393
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Re-test grounded edges against the predicate gate at read time
+  details: 'mappings/predicate_grounding.tsv declares subject_types and object_types per predicate, and
+    ground_causal_predicates consults them only when it FIRST grounds an edge - it returns early on any
+    edge that already carries a predicate_id. So the gate was a write-time check with no read-time counterpart,
+    and every retyping migration since 351 could move a grounded edge out of range silently. Two did.
+    382 retyped proton_motive_force to STATE, putting ph_optimum_high.yaml''s terminal_oxidases-produces-proton_motive_force
+    outside METPO:2007800, and it shipped to main undetected until I ran the check by hand while fixing
+    392. 392 retyped phenazine_biosynthesis to PATHWAY, putting an encodes edge outside METPO:2007813,
+    caught in review by hand. Added PREDICATE_GATE_VIOLATION to audit_predicate_domains.py, which is already
+    the predicate-versus-node-type audit and carries the ratchet, baseline and severity machinery. ERROR
+    rather than WARN, because unlike the other two classes the authority here is LOCAL: the table is a
+    rule this repo sets itself, so a violation means the corpus disagrees with us rather than posing a
+    judgement call that needs baselining. Both ends are checked, because a retype can move either, which
+    the 392 review had to verify by hand across produces, encodes, reduces, powers and transports. The
+    wildcard is handled in its own small function with its own test, because comparing the asterisk as
+    a literal type name is the obvious mistake and it fails in the worst direction: my first hand-run
+    reported 3385 violations against a corpus that had one, and a gate that cries wolf on every wildcard
+    row is one nobody runs twice. Probed before trusting: temporarily retyping proton_motive_force to
+    QUALITY produced exactly one blocking ERROR naming the edge, the offending type and the gate, and
+    the tree was restored. Five new tests, each making the gate fire or proving it silent on an in-range
+    edge. Corpus is clean at zero, as is ENABLES_RANGE_VIOLATION now that 341 and 355 burned it down.
+    553 tests pass, qc green. ADDENDUM after the dispatched review. Five findings, all taken. The severity
+    comment cited 396 as having cleared the last violation; it was 392, which added STATE to METPO:2007800''s
+    object_types - and that comment is the entire justification for ERROR severity, so it is the one line
+    a future reader follows. audit() hard-wired predicate_gates() with no parameter while owl, traits-dir,
+    baseline and out were all injectable, which meant three new tests read the PRODUCTION gate table and
+    asserted against a row this repo has repointed once (329) and widened once (392); mapping_path is
+    now threaded through audit() with a --mapping flag for symmetry, and those tests build their own table.
+    The check also reimplemented the writer''s cell parser instead of importing it, and the two had already
+    diverged: the NONE sentinel (METPO:2000008/2000009, meaning no node type satisfies this) passed only
+    because the string NONE is not a CausalNodeTypeEnum member, and asterisk versus NONE are opposite
+    meanings a raw string compare cannot distinguish. It now imports _types and validates against CausalNodeTypeEnum
+    read from the schema, so writer and reader agree by construction; filed as 399. Added a conflict guard
+    because the table is keyed by label - 110 rows collapse to 76 CURIEs and 14 CURIEs carry several rows,
+    so a future disagreement would let the last row silently win on an ERROR class that cannot be baselined.
+    Finally corrected doc drift the PR was already rewriting: the module said two classes where there
+    are three, and still described ENABLES_RANGE_VIOLATION as 33 baselined edges when 341 and 355 burned
+    it to zero, so a bare invocation now exits 0 rather than 1.'

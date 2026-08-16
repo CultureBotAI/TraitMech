@@ -21,16 +21,21 @@ import sys
 import textwrap
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from audit_predicate_domains import (  # noqa: E402
     ERROR,
     SEVERITY,
+    _gate_admits,
+    _types,
     _key,
     audit,
     microbe_domain_predicates,
     partition,
+    predicate_gates,
 )
 
 # A minimal METPO OWL: 2000001 is the microbe-domain root; 2000202 is a direct
@@ -435,3 +440,125 @@ def test_default_fail_on_is_any(tmp_path):
     _run_cli(d, owl, out, baseline, "--write-baseline")
     assert baseline.exists()
     assert _run_cli(d, owl, out, baseline).returncode == 1
+
+
+# ------------------------------------------- PREDICATE_GATE_VIOLATION (#393)
+#
+# The corpus re-tested against a rule this repo sets itself in
+# mappings/predicate_grounding.tsv. ground_causal_predicates consults those
+# columns only when it FIRST grounds an edge, so a later retype can move a
+# grounded edge out of range with nothing looking. Two migrations did exactly
+# that (#382 shipped one to main; #392's was caught by hand in review).
+
+
+def test_gate_admits_distinguishes_wildcard_from_nothing_satisfies():
+    """`*` (any) and `NONE` (nothing) are OPPOSITE meanings that a string
+    compare cannot tell apart — the first hand-run of this check compared `*`
+    as a literal type name and reported 3385 violations against a corpus that
+    had one. The cell is parsed by the writer's `_types`, which returns None for
+    `*`/empty and an EMPTY SET for `NONE`."""
+    assert _gate_admits(_types("*"), "ANYTHING") is True
+    assert _gate_admits(_types(""), "ANYTHING") is True
+    assert _gate_admits(_types("NONE"), "ANYTHING") is False      # nothing satisfies
+    assert _gate_admits(_types("GENE_OR_PROTEIN|STATE"), "STATE") is True
+    assert _gate_admits(_types("GENE_OR_PROTEIN|STATE"), "QUALITY") is False
+    # An untyped node is admitted here and REFUSED by the writer; deliberate,
+    # and unreachable while node_type is required and DANGLING_EDGE is 0.
+    assert _gate_admits(_types("GENE_OR_PROTEIN"), None) is True
+
+
+def test_predicate_gates_reads_both_columns(tmp_path):
+    m = tmp_path / "predicate_grounding.tsv"
+    m.write_text(
+        "label\ttarget_curie\tsubject_types\tobject_types\n"
+        "produces\tMETPO:2007800\tGENE_OR_PROTEIN|STATE\tBIOLOGICAL_PROCESS|CHEMICAL\n"
+        "affects\tMETPO:9999999\t*\t*\n"
+    )
+    gates = predicate_gates(m)
+    assert gates["METPO:2007800"] == (frozenset({"GENE_OR_PROTEIN", "STATE"}),
+                                      frozenset({"BIOLOGICAL_PROCESS", "CHEMICAL"}))
+    assert gates["METPO:9999999"] == (None, None)      # `*` is any, not a type
+
+
+def test_conflicting_gates_for_one_curie_are_fatal(tmp_path):
+    """The table is keyed by LABEL: 110 rows collapse to 76 CURIEs, and 14
+    CURIEs carry several rows. Identical gates are fine, disagreeing ones would
+    let the last row silently win — and this class is ERROR and unbaselineable,
+    so the wrong gate would hard-block CI on a legitimate edge (#398 review)."""
+    m = tmp_path / "predicate_grounding.tsv"
+    m.write_text(
+        "label\ttarget_curie\tsubject_types\tobject_types\n"
+        "produces\tMETPO:2007800\tGENE_OR_PROTEIN\tCHEMICAL\n"
+        "generates\tMETPO:2007800\tSTATE\tCHEMICAL\n"
+    )
+    with pytest.raises(ValueError, match="conflicting gates"):
+        predicate_gates(m)
+
+
+def test_identical_rows_for_one_curie_are_fine(tmp_path):
+    m = tmp_path / "predicate_grounding.tsv"
+    m.write_text(
+        "label\ttarget_curie\tsubject_types\tobject_types\n"
+        "produces\tMETPO:2007800\tGENE_OR_PROTEIN\tCHEMICAL\n"
+        "generates\tMETPO:2007800\tGENE_OR_PROTEIN\tCHEMICAL\n"
+    )
+    assert predicate_gates(m)["METPO:2007800"] == (frozenset({"GENE_OR_PROTEIN"}),
+                                                   frozenset({"CHEMICAL"}))
+
+
+def _gate_table(tmp_path: Path) -> Path:
+    """Its own table, not production's.
+
+    Every other test here builds a fixture and passes it. Reading the live
+    mappings/predicate_grounding.tsv would tie these assertions to a row the
+    repo has already repointed once (#329) and widened once (#392) — the next
+    edit to it would fail tests about unrelated code (#398 review).
+    """
+    m = tmp_path / "predicate_grounding.tsv"
+    m.write_text(
+        "label\ttarget_curie\tsubject_types\tobject_types\n"
+        "produces\tMETPO:2007800\tGENE_OR_PROTEIN|STATE\tBIOLOGICAL_PROCESS|CHEMICAL\n"
+    )
+    return m
+
+
+def _graph(tmp_path: Path, subj_type: str, obj_type: str) -> Path:
+    d = tmp_path / "traits"
+    d.mkdir(exist_ok=True)
+    (d / "rec.yaml").write_text(textwrap.dedent(f"""\
+        identifier: traitmech:000950
+        label: t
+        causal_graphs:
+        - graph_id: g
+          nodes:
+          - {{node_id: s, label: s, node_type: {subj_type}}}
+          - {{node_id: o, label: o, node_type: {obj_type}}}
+          edges:
+          - {{subject: s, object: o, predicate: produces, predicate_id: METPO:2007800}}
+        """))
+    return d
+
+
+def test_object_out_of_range_is_flagged(tmp_path):
+    findings = [f for f in audit(_graph(tmp_path, "GENE_OR_PROTEIN", "QUALITY"),
+                                 _write_owl(tmp_path), _gate_table(tmp_path))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert len(findings) == 1
+    assert "object_type=QUALITY" in findings[0]["detail"]
+    assert findings[0]["severity"] == SEVERITY["PREDICATE_GATE_VIOLATION"]
+
+
+def test_subject_out_of_range_is_flagged_too(tmp_path):
+    """A retype can move either end; the #392 review had to check both by hand."""
+    findings = [f for f in audit(_graph(tmp_path, "QUALITY", "CHEMICAL"),
+                                 _write_owl(tmp_path), _gate_table(tmp_path))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert len(findings) == 1
+    assert "subject_type=QUALITY" in findings[0]["detail"]
+
+
+def test_an_in_range_edge_is_silent(tmp_path):
+    findings = [f for f in audit(_graph(tmp_path, "GENE_OR_PROTEIN", "CHEMICAL"),
+                                 _write_owl(tmp_path), _gate_table(tmp_path))
+                if f["defect"] == "PREDICATE_GATE_VIOLATION"]
+    assert findings == []
