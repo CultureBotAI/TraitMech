@@ -65,6 +65,7 @@ def record_curation_event(
     llm_assisted: bool = False,
     timestamp: str | None = None,
     skip_if_recent: bool = False,
+    upsert: bool = False,
 ) -> dict[str, Any]:
     """Append a CurationEvent to ``doc['curation_history']``.
 
@@ -91,6 +92,18 @@ def record_curation_event(
             ``(curator, action)`` pair. Useful when refactoring a script
             into the helper without producing duplicate trail entries
             during a re-run.
+        upsert: When True, REPLACE an existing entry carrying the same
+            ``(curator, action, timestamp)`` instead of appending a
+            second one. For a migration with a fixed ``timestamp``, this
+            makes the audit trail idempotent: editing the rationale and
+            re-running refreshes what shipped, rather than leaving the
+            script and the records silently divergent (#395).
+
+            Without it, a migration appends only to files it CHANGES, so
+            once the data is correct a re-run writes nothing and a
+            corrected rationale never reaches the corpus. That divergence
+            shipped twice before it was noticed, and recovering meant
+            restoring 22 trait files and re-running.
 
     Returns:
         The appended event dict (or the most recent matching one if
@@ -109,8 +122,9 @@ def record_curation_event(
         ):
             return last
 
+    stamp = timestamp or now_iso()
     event: dict[str, Any] = {
-        "timestamp": timestamp or now_iso(),
+        "timestamp": stamp,
         "curator": curator,
         "action": action,
     }
@@ -118,6 +132,18 @@ def record_curation_event(
         event["changes"] = changes
     if llm_assisted:
         event["llm_assisted"] = True
+
+    if upsert:
+        for i, existing in enumerate(history):
+            if (isinstance(existing, dict)
+                    and existing.get("curator") == curator
+                    and existing.get("action") == action
+                    and existing.get("timestamp") == stamp):
+                # In place, so the entry keeps its position in an
+                # append-only trail rather than jumping to the end on
+                # every correction.
+                history[i] = event
+                return event
 
     history.append(event)
     return event

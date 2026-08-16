@@ -163,25 +163,42 @@ def apply(dry_run: bool = False) -> int:
             continue
         rel = str(path.relative_to(TRAITS))
         notes: list[str] = []
+        # IN SCOPE means the file contains a targeted node, whether or not its
+        # type still needs changing. The event is recorded for all of them, and
+        # upserted, so editing a rationale and re-running refreshes what shipped.
+        # Recording only on CHANGE is what let the script and the corpus diverge
+        # in #392: the fix landed in the table and never reached the data, and
+        # recovering meant restoring 22 files and re-running (#395).
+        in_scope: list[str] = []
         for graph in (doc.get("causal_graphs") or []):
             for node in (graph.get("nodes") or []):
                 nid = node.get("node_id")
                 if nid not in TARGET:
                     continue
+                in_scope.append(nid)
                 target, _why = TARGET[nid]
                 if node.get("node_type") != target:
                     was = node.get("node_type")
                     node["node_type"] = target
                     notes.append(f"{nid}: {was} -> {target}")
                     print(f"  {rel:56s} {nid} {was} -> {target}")
-        if notes:
-            touched = list(dict.fromkeys(n.split(":")[0] for n in notes))
+        if in_scope:
+            touched = list(dict.fromkeys(in_scope))
             rationale = " ".join(TARGET[n][1] for n in touched if n in TARGET)
+            # STATE THE DECISION, NOT THE DELTA. An upserted event is rewritten
+            # on every re-run, so anything transient in it gets overwritten with
+            # whatever this run happened to do -- the first version of this said
+            # "no change needed here" on a re-run and erased the record of the
+            # change it had made. What is permanently true is the decision: this
+            # node is typed T in this record, under this rule, for this reason.
+            # The before-and-after belongs in the commit diff, which is where
+            # git already keeps it accurately.
+            settled = ", ".join(f"{nid} is typed {TARGET[nid][0]}" for nid in touched)
             record_curation_event(
                 doc, curator="claude", action=ACTION, llm_assisted=True,
-                timestamp=TIMESTAMP,
-                changes=("Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id "
-                         f"means one thing (issue 356): {'; '.join(notes)}. PATHWAY is a "
+                timestamp=TIMESTAMP, upsert=True,
+                changes=("Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means "
+                         f"one thing corpus-wide (issue 356): {settled}. PATHWAY is a "
                          "named, conventionally enumerable multi-step route; "
                          f"BIOLOGICAL_PROCESS is everything else. {rationale}"),
             )
