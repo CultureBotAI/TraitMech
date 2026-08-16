@@ -466,6 +466,12 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
         
+        <li>
+          <time>2026-08-16T02:00:00Z</time> ·
+          <strong>NORMALISE_NODE_TYPE</strong> · claude
+          <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): ectoine_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route, enumerated two ways and both of them enumerations. environment/euryhaline.yaml counts five steps from L-aspartate (lysC/asd/ectB/ectA/ectC); environment/nacl_delta_mid1.yaml counts the three ectABC enzymes proper. Naming the file matters because the two differ and a bare quote would put euryhaline&#39;s wording into nacl_delta_mid1&#39;s record (#400 review). Either way the steps can be listed, which is the test. Applied AGAINST the majority, which was 4 BIOLOGICAL_PROCESS to 2 before this tranche.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -846,7 +852,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-16 02:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

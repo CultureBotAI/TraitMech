@@ -203,6 +203,35 @@ Those numbers came from measuring the graphs by hand. #359 makes it routine —
 `reports/causal_graph_connectivity.tsv`, one row per graph, arriving with
 **#363**. Once it lands, quote that table rather than the finding counts.
 
+### A migration's `curation_history` must survive being re-run
+
+A type-normalisation migration writes a rationale into every record it touches.
+Two rules, both learned the hard way (#395):
+
+**Record on SCOPE, not on CHANGE, and upsert.** A migration that appends only to
+files it modifies writes nothing on a re-run — so editing a rationale and
+re-running leaves the script and the shipped records silently divergent. That
+happened twice before it was caught, and recovering meant restoring 22 trait
+files to `main` and re-running. `record_curation_event(..., upsert=True)` with a
+fixed `timestamp` replaces the matching entry in place, so re-running refreshes
+what shipped instead of duplicating or ignoring it.
+
+**State the decision, not the delta.** An upserted entry is rewritten on every
+run, so anything transient in it gets overwritten by whatever that run happened
+to do. The first version of this wrote *"no change needed here"* on a re-run and
+**erased the record of the change it had made**. Write what is permanently true —
+*"`X` is typed `PATHWAY` in this record, under this rule, because …"* — and leave
+the before-and-after to the commit diff, which is where git already keeps it
+accurately.
+
+**Quote the record you are writing into, or name whose words they are.** A
+family-keyed rationale is written into many records whose own wording differs, so
+a bare quotation reads as that record's own text and usually is not. Attribute it
+(*"`haloalkaliphilic.yaml` puts it as …"*) or describe the family's sense in your
+own words. File-keyed rationales — one per `(file, node_id)`, as in #387 — avoid
+this by construction and are the better shape where the decision really is
+per-record.
+
 ### One `node_id` means one thing — across the whole corpus
 
 `audit-graphs` flags `INCONSISTENT_NODE_TYPE` when one `node_id` carries

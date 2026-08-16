@@ -1,0 +1,59 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/traitmech/curate/curation_event.py
+  slug: migration-history-idempotency
+session:
+  id: 2026-08-16T190120Z-claude-code-49ec94
+  timestamp: '2026-08-16T19:01:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/395
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Make a migration's own audit trail survive being re-run
+  details: '395 recorded two defects in how the type-normalisation migrations write curation_history.
+    The rationales quote one record''s description into every record of a family, so a bare quotation
+    reads as the host record''s own text when it usually is not; and more seriously the migrations are
+    not idempotent for their own audit trail, because they append an event only to files they CHANGE.
+    Once the data is correct a re-run writes nothing, so editing a rationale never reaches the corpus
+    - the script and the shipped records diverge silently. That happened twice and was caught only in
+    review of 392, where recovering meant restoring 22 trait files to main and re-running. Added an upsert
+    option to record_curation_event: with a fixed timestamp it replaces the entry carrying the same curator,
+    action and timestamp, in place so a correction does not shuffle an append-only trail to the end. Then
+    changed the tranche-3 migration to record on SCOPE rather than on CHANGE - every file containing a
+    targeted node gets the event whether or not its type still needs changing - so re-running refreshes
+    all of them. FOUND WHILE TESTING THAT, and the reason the design changed: an upserted entry is rewritten
+    on every run, so anything transient in it is overwritten by whatever that run happened to do. My first
+    version wrote no change needed here on the second run and ERASED the record of the change it had made
+    on the first. The event text now states the decision, which is permanently true - this node is typed
+    T in this record under this rule for this reason - and the before-and-after is left to the commit
+    diff, which is where git keeps it accurately. Verified idempotent: two consecutive runs produce identical
+    output across 51 files and exactly one event per record, and an edited rationale propagates on re-run
+    with no type change. Four new tests on the helper covering replacement, in-place position, the three-part
+    match key, and that the default append behaviour is untouched. Recorded all three rules in docs/CURATION_PLAYBOOK.md,
+    including that file-keyed rationales as used in 387 avoid the quoting problem by construction. Tranches
+    1 and 2 predate the pattern and are one-shot migrations already applied, so their data is left alone.
+    559 tests pass, qc green. ADDENDUM after the dispatched review (issue 401). Two rationales still did
+    the thing 395 was filed about, and recording on scope rather than change had just widened their reach.
+    photosynthetic_electron_transport quoted metabolism/phototrophy.yaml unattributed - electron flow
+    from water through PSII, cytochrome b6f and PSI - which is OXYGENIC photosynthesis, into five records
+    including photoheterotrophic.yaml and photoorganoheterotrophic.yaml, which cover anoxygenic phototrophy
+    with one reaction centre, cyclic flow and no water oxidation, and whose own descriptions say the neutral
+    thing precisely because they are not the oxygenic case. So the audit trail offered biology those records
+    specifically do not claim as the reason for their typing. Rewritten to name phototrophy.yaml as the
+    oxygenic enumeration and to say that the anoxygenic records describe a different named route, both
+    of which satisfy the rule. ectoine_biosynthesis quoted euryhaline.yaml''s five-step framing while
+    nacl_delta_mid1.yaml counts the three ectABC enzymes proper; both are correct at different scopes,
+    so the rationale now names both files. oxidative_phosphorylation got the same one-word attribution
+    to ph_delta_mid1.yaml. Also past-tensed the pre-migration tallies, which are transient state that
+    this PR''s own new rule says to leave to the diff and which recording on scope had put into 51 records
+    rather than 22, and documented two things on the helper: skip_if_recent returns before the upsert
+    branch so passing both silently drops the refresh, and the Returns clause now names replacement in
+    place as a third outcome.'
