@@ -299,6 +299,6 @@ curation_history:
     BIOLOGICAL_PROCESS-typed ones (''Enzymatic pathway producing carotenoid pigments'');
     red_pigmented.yaml instead ENUMERATES the steps -- ''Phytoene synthase condenses
     two GGPP to phytoene, then desaturation/isomerization yields lycopene'' -- which
-    is the rule''s own test for PATHWAY met explicitly rather than by naming. Against
-    the majority, which was 5 BIOLOGICAL_PROCESS to 1.'
+    is the rule''s own test for PATHWAY met explicitly rather than by naming. Applied
+    AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.'
   llm_assisted: true

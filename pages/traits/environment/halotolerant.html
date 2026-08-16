@@ -565,7 +565,7 @@ A 2024 multi-omics study of the extremely halophilic alkalithermophile *Natranae
         <li>
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
-          <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): ectoine_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route with its steps enumerated in the corpus&#39;s own description: &#39;Five-step biosynthesis of ectoine from L-aspartate (lysC/asd/ectB/ectA/ectC)&#39;. Against the majority, which was 4 BIOLOGICAL_PROCESS to 2.</p>
+          <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): ectoine_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route, enumerated two ways and both of them enumerations. environment/euryhaline.yaml counts five steps from L-aspartate (lysC/asd/ectB/ectA/ectC); environment/nacl_delta_mid1.yaml counts the three ectABC enzymes proper. Naming the file matters because the two differ and a bare quote would put euryhaline&#39;s wording into nacl_delta_mid1&#39;s record (#400 review). Either way the steps can be listed, which is the test. Applied AGAINST the majority, which was 4 BIOLOGICAL_PROCESS to 2 before this tranche.</p>
         </li>
         
       </ol>

@@ -301,7 +301,7 @@ curation_history:
     producing carotenoid pigments''); red_pigmented.yaml instead ENUMERATES the steps
     -- ''Phytoene synthase condenses two GGPP to phytoene, then desaturation/isomerization
     yields lycopene'' -- which is the rule''s own test for PATHWAY met explicitly
-    rather than by naming. Against the majority, which was 5 BIOLOGICAL_PROCESS to
-    1. A named biosynthetic route; both typings say ''Biosynthetic pathway producing
-    phenazine pigments''. The rule breaks the 1-1 tie.'
+    rather than by naming. Applied AGAINST the majority, which was 5 BIOLOGICAL_PROCESS
+    to 1 before this tranche. A named biosynthetic route; both typings say ''Biosynthetic
+    pathway producing phenazine pigments''. The rule breaks the 1-1 tie.'
   llm_assisted: true

@@ -105,9 +105,16 @@ def record_curation_event(
             shipped twice before it was noticed, and recovering meant
             restoring 22 trait files and re-running.
 
+            Ignored when ``skip_if_recent`` short-circuits: that check
+            runs first and returns, so passing both silently drops the
+            refresh. Nothing passes both today; they answer opposite
+            questions ("do not write a duplicate" vs "rewrite the one
+            that is there").
+
     Returns:
-        The appended event dict (or the most recent matching one if
-        ``skip_if_recent`` short-circuited).
+        The event dict — appended, or REPLACED IN PLACE when ``upsert``
+        matched an existing ``(curator, action, timestamp)``, or the most
+        recent matching one if ``skip_if_recent`` short-circuited.
     """
     history = doc.setdefault("curation_history", [])
     if history is None:

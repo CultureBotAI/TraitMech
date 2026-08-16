@@ -73,9 +73,13 @@ ACTION = "NORMALISE_NODE_TYPE"
 TARGET: dict[str, tuple[str, str]] = {
     "ectoine_biosynthesis": (
         "PATHWAY",
-        "A named route with its steps enumerated in the corpus's own description: "
-        "'Five-step biosynthesis of ectoine from L-aspartate (lysC/asd/ectB/ectA/ectC)'. "
-        "Against the majority, which was 4 BIOLOGICAL_PROCESS to 2.",
+        "A named route, enumerated two ways and both of them enumerations. "
+        "environment/euryhaline.yaml counts five steps from L-aspartate "
+        "(lysC/asd/ectB/ectA/ectC); environment/nacl_delta_mid1.yaml counts the three "
+        "ectABC enzymes proper. Naming the file matters because the two differ and a "
+        "bare quote would put euryhaline's wording into nacl_delta_mid1's record (#400 "
+        "review). Either way the steps can be listed, which is the test. Applied "
+        "AGAINST the majority, which was 4 BIOLOGICAL_PROCESS to 2 before this tranche.",
     ),
     "carotenoid_biosynthesis": (
         "PATHWAY",
@@ -85,7 +89,7 @@ TARGET: dict[str, tuple[str, str]] = {
         "synthase condenses two GGPP to phytoene, then desaturation/isomerization yields "
         "lycopene' -- which is the rule's own test for PATHWAY met explicitly rather than "
         "by naming. "
-        "Against the majority, which was 5 BIOLOGICAL_PROCESS to 1.",
+        "Applied AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.",
     ),
     "pufa_biosynthesis": (
         "PATHWAY",
@@ -100,17 +104,27 @@ TARGET: dict[str, tuple[str, str]] = {
     ),
     "electron_transport_chain": (
         "PATHWAY",
-        "A named route through enumerable complexes. Already 4 PATHWAY to 2.",
+        "A named route through enumerable complexes. Was 4 PATHWAY to 2 before "
+        "this tranche.",
     ),
     "photosynthetic_electron_transport": (
         "PATHWAY",
-        "A named route with its steps listed: 'Electron flow from water through PSII, "
-        "cytochrome b6f and PSI'. Already 5 PATHWAY to 1.",
+        "A named route in every record that carries it, though NOT THE SAME ROUTE, "
+        "which is why no single step list belongs in this rationale. "
+        "metabolism/phototrophy.yaml enumerates the oxygenic form ('Electron flow from "
+        "water through PSII, cytochrome b6f and PSI'); photoheterotrophic.yaml and "
+        "photoorganoheterotrophic.yaml cover ANOXYGENIC phototrophy -- one reaction "
+        "centre, cyclic flow, no water oxidation -- and say the neutral thing on "
+        "purpose. Quoting the oxygenic steps at them would assert biology they "
+        "specifically do not claim (#400 review). Both forms are named routes whose "
+        "steps a curator could list, which is the test. Was 5 PATHWAY to 1 before this "
+        "tranche.",
     ),
     "oxidative_phosphorylation": (
         "PATHWAY",
-        "A named route through enumerable complexes, named in the corpus's own "
-        "description (nuo, cyo, ndh, sdh). The rule breaks the 2-2 tie.",
+        "A named route through enumerable complexes -- environment/ph_delta_mid1.yaml "
+        "lists them (nuo, cyo, ndh, sdh). The rule breaks what was a 2-2 tie before "
+        "this tranche.",
     ),
     "salt_in_strategy": (
         "BIOLOGICAL_PROCESS",
@@ -118,7 +132,8 @@ TARGET: dict[str, tuple[str, str]] = {
         "accumulating intracellular inorganic ions -- haloalkaliphilic.yaml puts it as "
         "'Osmoadaptation by intracellular accumulation of inorganic ions (e.g. K+)', and "
         "the wording varies by record. There is no step list to enumerate, which is exactly the "
-        "distinction this rule draws. Already 7 BIOLOGICAL_PROCESS to 1.",
+        "distinction this rule draws. Was 7 BIOLOGICAL_PROCESS to 1 before this "
+        "tranche.",
     ),
     "aa_decarboxylation": (
         "BIOLOGICAL_PROCESS",
@@ -137,13 +152,13 @@ TARGET: dict[str, tuple[str, str]] = {
         "consumes cytoplasmic protons' -- and the wording varies by record, so read that "
         "as the family's sense rather than as this record's own text. Named systems "
         "that implement it (Gad) would be "
-        "pathways; the reaction class is not. Already 4 BIOLOGICAL_PROCESS to 2.",
+        "pathways; the reaction class is not. Was 4 BIOLOGICAL_PROCESS to 2 before this tranche.",
     ),
     "fermentation": (
         "BIOLOGICAL_PROCESS",
         "A CLASS of routes rather than one route -- fermentation names a mode of energy "
         "conservation with many distinct implementations, so its steps cannot be "
-        "enumerated without picking one. Already 3 BIOLOGICAL_PROCESS to 2. NOTE its "
+        "enumerated without picking one. Was 3 BIOLOGICAL_PROCESS to 2 before this tranche. NOTE its "
         "groundings disagree with each other (GO:0006113 x3, METPO:1002005, and "
         "METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and "
         "deliberately NOT touched here, because retyping a node while carrying a wrong "
