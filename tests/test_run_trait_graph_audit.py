@@ -3,7 +3,8 @@
 The scan exists because the sweep produced double-prefixed CURIEs twice, and the
 second time the manual grep for them raced a report still being generated. It is
 wired into `--verify` and therefore into `just qc`, where it currently reports
-zero hits across all 707 tracked artifacts.
+zero hits across all 354 tracked artifacts (707 before #388 dropped the
+citation sidecars).
 
 A gate whose corpus is already clean is exactly the kind that can be silently
 broken — a mistyped pattern would keep reporting zero forever. These tests are
@@ -20,7 +21,14 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from run_trait_graph_audit import scan_malformed_curies  # noqa: E402
+from run_trait_graph_audit import (  # noqa: E402
+    MIN_ARTIFACT_BYTES,
+    missing_artifacts,
+    ok_outputs,
+    orphan_reports,
+    scan_malformed_curies,
+    undersized_artifacts,
+)
 
 
 def _scan(tmp_path: Path, text: str):
@@ -97,3 +105,81 @@ def test_the_tracked_corpus_is_clean():
     assert artifacts, "no research artifacts found — research/ should be tracked"
     hits = scan_malformed_curies(artifacts)
     assert hits == [], f"malformed CURIEs in tracked artifacts: {hits[:5]}"
+
+
+# ------------------------------------------------ artifact integrity (#244)
+#
+# Same argument as the CURIE scan above: these gates report zero on a clean
+# corpus, so without tests "found nothing" and "cannot find anything" look
+# identical. Each one below is made to FIRE.
+
+
+def _manifest(tmp_path: Path, rows: list[tuple[str, str, str]]) -> Path:
+    path = tmp_path / "manifest.tsv"
+    lines = ["run_id\tcategory\tslug\tstatus\toutput"]
+    for run_id, status, out in rows:
+        lines.append(f"{run_id}\tcat\tslug\t{status}\t{out}")
+    path.write_text("\n".join(lines) + "\n")
+    return path
+
+
+def test_ok_outputs_keeps_one_entry_per_artifact(tmp_path):
+    m = _manifest(tmp_path, [
+        ("r1", "ok", "research/a.md"),
+        ("r2", "ok", "research/a.md"),      # the re-run
+        ("r3", "error", "research/b.md"),   # not ok
+    ])
+    recorded = ok_outputs(m)
+    assert recorded == {"research/a.md": "r1"}
+
+
+def test_missing_artifact_is_reported_once_not_per_row(tmp_path):
+    m = _manifest(tmp_path, [("r1", "ok", "gone.md"), ("r2", "ok", "gone.md")])
+    assert missing_artifacts(ok_outputs(m), tmp_path) == [("r1", "gone.md")]
+
+
+def test_zero_byte_artifact_is_caught_though_it_exists(tmp_path):
+    """`.exists()` passes for a truncated write; that is the whole point."""
+    (tmp_path / "empty.md").write_text("")
+    m = _manifest(tmp_path, [("r1", "ok", "empty.md")])
+    found = undersized_artifacts(ok_outputs(m), tmp_path)
+    assert found == [("r1", "empty.md", 0)]
+
+
+def test_a_real_sized_artifact_passes(tmp_path):
+    (tmp_path / "full.md").write_text("x" * (MIN_ARTIFACT_BYTES + 1))
+    m = _manifest(tmp_path, [("r1", "ok", "full.md")])
+    assert undersized_artifacts(ok_outputs(m), tmp_path) == []
+
+
+def test_floor_is_far_below_the_smallest_real_report():
+    """Set from the corpus, not guessed: the smallest real report is 20,785
+    bytes, so the floor must leave room rather than track it."""
+    assert MIN_ARTIFACT_BYTES < 20_785 / 10
+
+
+def test_report_with_no_ok_row_is_an_orphan(tmp_path):
+    research = tmp_path / "research" / "traits" / "ecology"
+    research.mkdir(parents=True)
+    (research / "stray-deep-research-falcon.md").write_text("x")
+    recorded = {"research/traits/ecology/known-deep-research-falcon.md": "r1"}
+    found = orphan_reports(tmp_path / "research" / "traits", tmp_path, recorded, known=set())
+    assert found == ["research/traits/ecology/stray-deep-research-falcon.md"]
+
+
+def test_known_orphans_are_excluded_by_name(tmp_path):
+    research = tmp_path / "research" / "traits" / "metabolism"
+    research.mkdir(parents=True)
+    rel = "research/traits/metabolism/cellulolysis-deep-research-codex.md"
+    (research / "cellulolysis-deep-research-codex.md").write_text("x")
+    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, known={rel}) == []
+
+
+def test_dry_run_meta_yaml_is_not_counted_as_a_report(tmp_path):
+    """A --dry-run writes <stem>-meta.yaml with status: dry-run, cost: None and
+    task_id: None (#246). Counting it would let a plan nobody paid for satisfy
+    an existence check."""
+    research = tmp_path / "research" / "traits" / "environment"
+    research.mkdir(parents=True)
+    (research / "psychrotolerant-edison-literature-meta.yaml").write_text("status: dry-run\n")
+    assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, known=set()) == []

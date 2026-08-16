@@ -1,0 +1,47 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/run_trait_graph_audit.py
+  slug: verify-artifact-integrity
+session:
+  id: 2026-08-16T042348Z-claude-code-0e825f
+  timestamp: '2026-08-16T04:23:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/244
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - research
+  summary: Make --verify check emptiness and walk disk-to-manifest, not just existence
+  details: '244 named three gaps in --verify beyond the manifest-to-disk existence check.
+    One is now moot: it asked that the citation sidecar be asserted alongside each artifact,
+    and 388 deleted all 353 sidecars as a broken regex over report prose, exactly as 249 predicted
+    when it said to decide that issue first. The other two are implemented. EXISTENCE IS NOT
+    NON-EMPTINESS: .exists() passes for a zero-byte file, so a truncated write, a process
+    killed mid-flush, or a provider returning an empty body all read as success. Floor set
+    from the corpus rather than guessed - the smallest real report is 20785 bytes (ecology/biosafety_level_4),
+    so 1 KiB leaves a 20x margin and cannot fail on real data. DISK TO MANIFEST: a report
+    with no ok row was invisible, while still suppressing the call that would have produced
+    it, because resume keys on the artifact existing. Blocking from the start with one named
+    exception, cellulolysis-deep-research-codex.md, using the same escape idiom as audit_biolink_curies.py''s
+    ALLOWED_UNBACKED so adding one is a reviewed change; it is harmless today only because
+    its -codex suffix is not the -falcon name resume looks for, which is luck rather than
+    design. Scoped to .md deliberately: a -meta.yaml written by --dry-run also lives under
+    research/traits and represents no research at all (status dry-run, cost None, task id
+    None, see 246), so counting it would let a plan nobody paid for satisfy an existence check.
+    FOUND WHILE PROBING: the counters were per ROW, and the manifest is append-only with 342
+    of 353 artifacts carrying two ok rows apiece - the original sweep and the re-run after
+    its output was lost - so 700 rows describe 353 files and a single truncated report was
+    reported as two. Both counters now dedupe per artifact, which is how the invariants are
+    phrased and how the adjacent CURIE scan already reported. Extracted ok_outputs, missing_artifacts,
+    undersized_artifacts and orphan_reports as pure functions so the gates are testable, in
+    the same style as scan_malformed_curies. Eight new tests, each making a gate FIRE, on
+    the argument the existing test file already states: a gate whose corpus is clean is the
+    kind that can be silently broken, and tests are what distinguish found nothing from cannot
+    find anything. Verified by probe before the tests existed: an injected orphan and a truncated
+    artifact were both caught, and the tree was restored clean. 548 tests pass, qc green.'

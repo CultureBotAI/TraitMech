@@ -104,6 +104,86 @@ MALFORMED_CURIE_PATTERNS: tuple[tuple[str, "re.Pattern[str]"], ...] = (
 )
 
 
+# A report below this is a truncated write, a killed process mid-flush, or a
+# provider returning an empty body — all of which satisfy `.exists()` (#244).
+# The floor is set from the corpus rather than guessed: the smallest real report
+# is 20,785 bytes (ecology/biosafety_level_4), so 1 KiB leaves a 20x margin and
+# cannot fail on real data while still catching an artifact with nothing in it.
+MIN_ARTIFACT_BYTES = 1024
+
+# A report on disk with no `ok` manifest row SUPPRESSES A CALL THAT WAS NEVER
+# PAID FOR OR RECORDED, because resume keys on the file existing (`pending`
+# below). Blocking from the start, with the one known exception named here
+# rather than silently tolerated — the same escape idiom as
+# audit_biolink_curies.py's ALLOWED_UNBACKED, so adding one is a reviewed change.
+KNOWN_ORPHAN_ARTIFACTS = {
+    # Tracked, from a codex-provider run that never wrote a manifest row (#245).
+    # Harmless only because its `-codex` suffix is not the `-falcon` name resume
+    # looks for; that is luck, not design, which is why it is listed and not
+    # ignored.
+    "research/traits/metabolism/cellulolysis-deep-research-codex.md",
+}
+
+
+def ok_outputs(manifest: Path) -> dict[str, str]:
+    """``{output path: first run_id}`` over the manifest's ``ok`` rows.
+
+    Deduplicated per artifact on purpose. The manifest is append-only and 342 of
+    the 353 artifacts carry two ``ok`` rows apiece -- the original sweep and the
+    re-run after its output was lost -- so 700 rows describe 353 files. Every
+    count derived from it is about artifacts, which is how the invariants are
+    phrased and how the CURIE scan below already reports.
+    """
+    out: dict[str, str] = {}
+    with manifest.open() as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            if row.get("status") != "ok":
+                continue
+            rel = (row.get("output") or "").strip()
+            if rel:
+                out.setdefault(rel, row.get("run_id", "?"))
+    return out
+
+
+def missing_artifacts(recorded: dict[str, str], repo_root: Path) -> list[tuple[str, str]]:
+    """``ok`` rows whose artifact is gone -- a call paid for and unresumable."""
+    return [(run_id, rel) for rel, run_id in sorted(recorded.items())
+            if not (repo_root / rel).exists()]
+
+
+def undersized_artifacts(recorded: dict[str, str], repo_root: Path,
+                         floor: int = MIN_ARTIFACT_BYTES) -> list[tuple[str, str, int]]:
+    """``ok`` artifacts that exist but are below ``floor`` bytes (#244).
+
+    ``.exists()`` passes for a zero-byte file, so a truncated write, a process
+    killed mid-flush, or a provider returning an empty body all read as success.
+    """
+    out = []
+    for rel, run_id in sorted(recorded.items()):
+        path = repo_root / rel
+        if path.exists() and path.stat().st_size < floor:
+            out.append((run_id, rel, path.stat().st_size))
+    return out
+
+
+def orphan_reports(research_dir: Path, repo_root: Path, recorded: dict[str, str],
+                   known: set[str] = frozenset(KNOWN_ORPHAN_ARTIFACTS)) -> list[str]:
+    """Reports on disk with no ``ok`` row -- the disk-to-manifest direction (#244).
+
+    Such a file SUPPRESSES A CALL THAT WAS NEVER PAID FOR OR RECORDED, because
+    resume keys on the artifact existing.
+
+    ``.md`` only, deliberately: a ``-meta.yaml`` written by ``--dry-run`` also
+    lives under research/traits and represents NO research (``status: dry-run``,
+    ``cost: None``, ``task_id: None`` -- #246), so counting it would let a plan
+    nobody paid for satisfy an existence check.
+    """
+    return sorted(
+        rel for rel in (str(p.relative_to(repo_root)) for p in research_dir.rglob("*.md"))
+        if rel not in recorded and rel not in known
+    )
+
+
 def scan_malformed_curies(paths: list[Path]) -> list[tuple[Path, int, str, str]]:
     """Return (path, line_no, pattern_name, matched_text) for every bad CURIE."""
     bad: list[tuple[Path, int, str, str]] = []
@@ -176,20 +256,26 @@ def main() -> int:
         # 342 rows were in that state before research/ was tracked, and four
         # more were created by deleting reports the running sweep had already
         # passed. Relying on someone remembering is how the first 342 were lost.
-        missing = []
-        with MANIFEST.open() as fh:
-            for row in csv.DictReader(fh, delimiter="\t"):
-                if row.get("status") != "ok":
-                    continue
-                out = (row.get("output") or "").strip()
-                if out and not (REPO_ROOT / out).exists():
-                    missing.append((row.get("run_id", "?"), out))
-        print(f"manifest ok rows with a missing artifact: {len(missing)}",
-              file=sys.stderr)
+        recorded = ok_outputs(MANIFEST)
+
+        missing = missing_artifacts(recorded, REPO_ROOT)
+        print(f"manifest ok rows with a missing artifact: {len(missing)}", file=sys.stderr)
         for run_id, out in missing[:20]:
             print(f"  {run_id}  {out}", file=sys.stderr)
         if len(missing) > 20:
             print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
+
+        undersized = undersized_artifacts(recorded, REPO_ROOT)
+        print(f"ok artifacts below {MIN_ARTIFACT_BYTES} bytes: {len(undersized)}",
+              file=sys.stderr)
+        for run_id, out, size in undersized[:20]:
+            print(f"  {run_id}  {out}  ({size} bytes)", file=sys.stderr)
+
+        orphans = orphan_reports(RESEARCH_DIR, REPO_ROOT, recorded)
+        print(f"reports on disk with no ok manifest row: {len(orphans)}"
+              f" ({len(KNOWN_ORPHAN_ARTIFACTS)} known, excluded)", file=sys.stderr)
+        for rel in orphans[:20]:
+            print(f"  {rel}", file=sys.stderr)
 
         # Scanned over every .md under research/. This used to mean reports AND
         # their citation sidecars, justified by the sidecar echoing the rendered
@@ -214,7 +300,7 @@ def main() -> int:
         if len(bad_curies) > 20:
             print(f"  ... and {len(bad_curies) - 20} more", file=sys.stderr)
 
-        return 1 if (missing or bad_curies) else 0
+        return 1 if (missing or undersized or orphans or bad_curies) else 0
 
     # One id for every row this invocation writes. The manifest is append-only
     # and a trait can legitimately appear more than once — a failure and its
