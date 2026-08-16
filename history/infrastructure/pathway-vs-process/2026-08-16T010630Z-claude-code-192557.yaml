@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_pathway_vs_process.py
+  slug: pathway-vs-process
+session:
+  id: 2026-08-16T010630Z-claude-code-192557
+  timestamp: '2026-08-16T01:06:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/356
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: State the PATHWAY vs BIOLOGICAL_PROCESS rule, then apply it to 10 families
+  details: 'Third 356 burn-down tranche, and the first needing a rule rather than a lookup.
+    Tranche 1 was decided by the schema naming the nodes as its own examples and tranche 2
+    by 352''s already-settled protein-is-not-its-activity; this one had neither. The schema
+    says PATHWAY is a pathway or pathway-like mechanism and BIOLOGICAL_PROCESS is a biological
+    process, which decides nothing. The descriptions did not decide it either, unlike tranche
+    2 where the two typings visibly described different things: here they describe the same
+    thing in the same words, with carotenoid_biosynthesis called an Enzymatic pathway producing
+    carotenoid pigments under BIOLOGICAL_PROCESS and a Biosynthetic pathway producing carotenoid
+    pigments under PATHWAY. THE GROUNDING COULD NOT DECIDE IT, which is the finding worth
+    keeping, because this repo''s standing doctrine is that the grounding settles typing arguments.
+    GO HAS NO PATHWAY BRANCH. Every one of the ten families grounds to a GO biological_process
+    - GO:0019491, GO:0022900, GO:0009767, GO:0016117, GO:0006113, GO:0006119, GO:0006636,
+    GO:0002047 - and five carry the identical CURIE under both typings; even the METPO groundings
+    sit under METPO:1000060 metabolism, itself defined as a biological process that maintain
+    life in an organism. Read literally the grounding says all of these are processes and
+    PATHWAY should not exist. But PATHWAY is not vestigial, the same shape as the CAPACITY
+    finding in 352: twelve CURIEs corpus-wide are typed PATHWAY and never BIOLOGICAL_PROCESS,
+    and they are the canonical named routes including GO:0006099 tricarboxylic acid cycle,
+    GO:0006097 glyoxylate cycle and GO:0019253 reductive pentose-phosphate cycle. So the rule
+    is a stated convention rather than an inference, and it is written into docs/CURATION_PLAYBOOK.md
+    because an unwritten convention simply re-splits: PATHWAY is a named route whose steps
+    a curator could enumerate, BIOLOGICAL_PROCESS is everything else - a strategy, a reaction
+    class, or a process with no canonical step list. The rule earns its keep by disagreeing
+    with the majority twice, typing ectoine_biosynthesis and carotenoid_biosynthesis as PATHWAY
+    against 4-to-2 and 5-to-1 majorities, both being named biosynthetic routes with their
+    enzymes listed in the corpus''s own descriptions. INCONSISTENT_NODE_TYPE 199 to 148, the
+    51 predicted, zero new findings. Also found and filed rather than fixed: fermentation
+    in chemoorganoheterotrophic.yaml is grounded METPO:1000845 which is Acetogenesis, a different
+    concept, filed as 391 and deliberately left alone because retyping a node while carrying
+    a wrong CURIE along unchanged would make it look reviewed. 540 tests pass, qc green.'

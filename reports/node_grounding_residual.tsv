@@ -104,7 +104,6 @@ proton motive force generation	BIOLOGICAL_PROCESS	2	data/traits/environment/ph_d
 electrogenic na+/h+ antiport	BIOLOGICAL_PROCESS	2	data/traits/environment/ph_delta_low.yaml|data/traits/environment/ph_delta_mid3.yaml
 f1fo-atpase	GENE_OR_PROTEIN	2	data/traits/environment/ph_delta_low.yaml|data/traits/environment/ph_delta_mid2.yaml
 intracellular h+	CHEMICAL	2	data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_phenotype_with_numerical_limits.yaml
-amino-acid decarboxylation pathways	PATHWAY	2	data/traits/environment/ph_delta_mid3.yaml|data/traits/environment/ph_optimum_mid1.yaml
 environmental ph	ENVIRONMENTAL_FACTOR	2	data/traits/environment/ph_growth_preference.yaml|data/traits/physiology/autotrophic.yaml
 external ph	ENVIRONMENTAL_FACTOR	2	data/traits/environment/ph_optimum.yaml|data/traits/environment/ph_range.yaml
 internal ph	STATE	2	data/traits/environment/ph_optimum.yaml|data/traits/environment/ph_phenotype_with_numerical_limits.yaml
@@ -428,7 +427,7 @@ proton exclusion	BIOLOGICAL_PROCESS	1	data/traits/environment/acidophilic.yaml
 bipolar tetraether lipids (gdnt/gdgt)	CHEMICAL	1	data/traits/environment/acidophilic.yaml
 acidic exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/acidotolerant.yaml
 proton efflux transport	MOLECULAR_FUNCTION	1	data/traits/environment/acidotolerant.yaml
-amino-acid decarboxylase system	PATHWAY	1	data/traits/environment/acidotolerant.yaml
+amino-acid decarboxylase system	BIOLOGICAL_PROCESS	1	data/traits/environment/acidotolerant.yaml
 membrane lipid remodeling	BIOLOGICAL_PROCESS	1	data/traits/environment/acidotolerant.yaml
 cation/h+ antiport	MOLECULAR_FUNCTION	1	data/traits/environment/acidotolerant.yaml
 substrate dehydrogenases	GENE_OR_PROTEIN	1	data/traits/environment/aerobic.yaml
@@ -619,7 +618,7 @@ fluctuating salinity environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/
 hypersaline environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_delta_high.yaml
 halophilic osmoadaptation strategies	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_high.yaml
 limited osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_low.yaml
-ectoine biosynthesis capacity	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_low.yaml
+ectoine biosynthesis capacity	PATHWAY	1	data/traits/environment/nacl_delta_low.yaml
 compatible-solute transporters (opu/prou)	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_low.yaml
 trkh potassium uptake system	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_low.yaml
 nhac-family na+/h+ antiporter	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_low.yaml
@@ -778,6 +777,7 @@ regulation of membrane potential and ph gradient	BIOLOGICAL_PROCESS	1	data/trait
 cytoplasmic ph maintenance	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid3.yaml
 cytoplasmic phosphate buffering capacity	QUALITY	1	data/traits/environment/ph_delta_mid3.yaml
 intracellular ph stability	STATE	1	data/traits/environment/ph_delta_mid3.yaml
+amino-acid decarboxylation pathways	PATHWAY	1	data/traits/environment/ph_delta_mid3.yaml
 membrane lipid composition shifts	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid3.yaml
 very limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_very_low.yaml
 pmf partitioning (delta-ph / delta-psi)	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_very_low.yaml
@@ -814,6 +814,7 @@ rigid proton-impermeable membrane	CELLULAR_LOCALIZATION	1	data/traits/environmen
 passive proton permeability	QUALITY	1	data/traits/environment/ph_optimum_low.yaml
 minimal ph-homeostasis load	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid1.yaml
 proton (h+)	CHEMICAL	1	data/traits/environment/ph_optimum_mid1.yaml
+amino-acid decarboxylation pathways	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid1.yaml
 glutamate decarboxylation / gaba pathway	PATHWAY	1	data/traits/environment/ph_optimum_mid1.yaml
 ammonia (nh3)	CHEMICAL	1	data/traits/environment/ph_optimum_mid1.yaml
 ammonium (nh4+)	CHEMICAL	1	data/traits/environment/ph_optimum_mid1.yaml
@@ -924,7 +925,6 @@ carotenoid pigments	CHEMICAL	1	data/traits/environment/radiotolerant.yaml
 nacl concentration axis	ENVIRONMENTAL_FACTOR	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 intracellular osmotic balance across salinity	BIOLOGICAL_PROCESS	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 compatible-solute (salt-out) strategy	PATHWAY	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
-salt-in strategy	PATHWAY	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 prob/proa/proc proline biosynthesis pathway	PATHWAY	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 chaotropic ions (mg/ca/li/fe salts)	CHEMICAL	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 water activity	ENVIRONMENTAL_FACTOR	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
@@ -1916,7 +1916,7 @@ visible red color	MOLECULAR_FUNCTION	1	data/traits/morphology/red_pigmented.yaml
 prodiginine biosynthetic gene cluster (pig/red)	GENE_OR_PROTEIN	1	data/traits/morphology/red_pigmented.yaml
 pigc ligase	GENE_OR_PROTEIN	1	data/traits/morphology/red_pigmented.yaml
 cpxa/cpxr two-component system	GENE_OR_PROTEIN	1	data/traits/morphology/red_pigmented.yaml
-carotenoid biosynthesis (phytoene synthase pathway)	BIOLOGICAL_PROCESS	1	data/traits/morphology/red_pigmented.yaml
+carotenoid biosynthesis (phytoene synthase pathway)	PATHWAY	1	data/traits/morphology/red_pigmented.yaml
 strongly curved peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
 pole-to-pole closure	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
 toroidal geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml

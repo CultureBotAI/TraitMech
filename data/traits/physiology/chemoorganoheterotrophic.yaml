@@ -55,7 +55,7 @@ causal_graphs:
     description: Electron-transport metabolism using terminal electron acceptors.
   - node_id: fermentation
     label: fermentation
-    node_type: PATHWAY
+    node_type: BIOLOGICAL_PROCESS
     grounding: METPO:1000845
     description: Energy metabolism using organic electron acceptors and substrate-level
       phosphorylation.
@@ -338,4 +338,18 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-16T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_TYPE
+  changes: 'Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id means one
+    thing (issue 356): fermentation: PATHWAY -> BIOLOGICAL_PROCESS. PATHWAY is a named,
+    conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else.
+    A CLASS of routes rather than one route -- fermentation names a mode of energy
+    conservation with many distinct implementations, so its steps cannot be enumerated
+    without picking one. Already 3 BIOLOGICAL_PROCESS to 2. NOTE its groundings disagree
+    with each other (GO:0006113 x3, METPO:1002005, and METPO:1000845 which is ACETOGENESIS,
+    a different concept) -- filed as #391 and deliberately NOT touched here, because
+    retyping a node while carrying a wrong CURIE along unchanged would make it look
+    reviewed.'
   llm_assisted: true
