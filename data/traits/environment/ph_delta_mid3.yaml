@@ -80,7 +80,7 @@ causal_graphs:
     description: Stabilized intracellular pH within a narrow viable range.
   - node_id: aa_decarboxylation
     label: amino-acid decarboxylation pathways
-    node_type: PATHWAY
+    node_type: BIOLOGICAL_PROCESS
     description: Decarboxylation pathways that consume protons and store energy as
       PMF.
   - node_id: membrane_lipid_remodeling
@@ -259,4 +259,18 @@ curation_history:
     mean the process already use a separate id (proton_motive_force_generation in
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
+  llm_assisted: true
+- timestamp: '2026-08-16T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_TYPE
+  changes: 'Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id means one
+    thing (issue 356): aa_decarboxylation: PATHWAY -> BIOLOGICAL_PROCESS. PATHWAY
+    is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is
+    everything else. The same concept as amino_acid_decarboxylation under a shorter
+    id, with a BYTE-IDENTICAL label (''amino-acid decarboxylation pathways'') and
+    a reaction-class description (''Decarboxylation pathways that consume protons
+    and store energy as PMF''). Caught in review (#394): both this table and INCONSISTENT_NODE_TYPE
+    key on node_id, so retyping the long-named one would have created a fresh split
+    between two ids nothing compares. Included here rather than left, because this
+    tranche is what would have caused it.'
   llm_assisted: true

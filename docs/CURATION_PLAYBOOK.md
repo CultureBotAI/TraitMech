@@ -247,6 +247,48 @@ isolation" — it is "is it compatible with what the record and its predicates
 already assert". #352 spent three review rounds learning that on the
 neighbouring `DISPOSITION_MISTYPED` family, and the grounding is what settles it.
 
+### `PATHWAY` vs `BIOLOGICAL_PROCESS` — a convention, because nothing else decides
+
+`PATHWAY` is *"a pathway or pathway-like mechanism"* and `BIOLOGICAL_PROCESS` is
+*"a biological process"*. Neither decides `ectoine_biosynthesis`, and #356 found
+10 families split across both — 51 occurrences of one concept typed two ways.
+
+**The grounding cannot settle this one**, which is worth stating because
+everywhere else in this playbook it can (#352, #360, #382). **GO has no pathway
+branch.** Every one of those families grounds to a GO *biological_process* —
+`GO:0019491`, `GO:0022900`, `GO:0016117`, `GO:0006119` — and five carried the
+*identical* CURIE under both typings. Even the METPO groundings sit under
+`METPO:1000060` "metabolism", itself defined as *"A biological process that
+maintain life in an organism"*. Read literally, the grounding says all of these
+are processes and `PATHWAY` should not exist.
+
+**But `PATHWAY` is not vestigial** — the same shape as the `CAPACITY` table
+above. Twelve CURIEs corpus-wide are typed `PATHWAY` and never
+`BIOLOGICAL_PROCESS`, and they are the canonical named routes: `GO:0006099`
+(TCA cycle), `GO:0006097` (glyoxylate cycle), `GO:0019253` (Calvin cycle).
+There is a real distinction; GO just doesn't draw it.
+
+So it is a stated convention:
+
+| type | test | examples |
+|---|---|---|
+| **`PATHWAY`** | a **named** route whose steps you could **enumerate** | TCA cycle, Calvin cycle, ectoine biosynthesis (lysC/asd/ectB/ectA/ectC), the respiratory chain (nuo, cyo, ndh, sdh) |
+| **`BIOLOGICAL_PROCESS`** | everything else — a strategy, a reaction class, or a process with no canonical step list | `salt_in_strategy` ("osmoadaptation by accumulating ions"), `amino_acid_decarboxylation` (a reaction class), `fermentation` (a *class* of routes) |
+
+Ask: **could a curator list the steps, and does it have a proper name?** Both, or
+it is a process.
+
+Two consequences worth knowing:
+
+- **The majority is not the rule.** #356's tranche 3 typed `ectoine_biosynthesis`
+  and `carotenoid_biosynthesis` as `PATHWAY` *against* their majorities (4:2 and
+  5:1). A convention that only ratified whichever typing was commoner would not
+  be one.
+- **Named systems inside a reaction class are still pathways.** The Gad
+  glutamate-decarboxylase system is a pathway; `amino_acid_decarboxylation`, the
+  reaction class it implements, is not. If you need both, that is two node_ids
+  — see the decision table above.
+
 ### `enables` needs a process-or-activity object
 
 Separately from the domain rule above, `enables` (`RO:0002327`) has a

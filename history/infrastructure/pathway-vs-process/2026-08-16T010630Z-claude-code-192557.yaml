@@ -1,0 +1,62 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_pathway_vs_process.py
+  slug: pathway-vs-process
+session:
+  id: 2026-08-16T010630Z-claude-code-192557
+  timestamp: '2026-08-16T01:06:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/356
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: State the PATHWAY vs BIOLOGICAL_PROCESS rule, then apply it to 10 families
+  details: 'Third 356 burn-down tranche, and the first needing a rule rather than a lookup. Tranche 1
+    was decided by the schema naming the nodes as its own examples and tranche 2 by 352''s already-settled
+    protein-is-not-its-activity; this one had neither. The schema says PATHWAY is a pathway or pathway-like
+    mechanism and BIOLOGICAL_PROCESS is a biological process, which decides nothing. The descriptions
+    did not decide it either, unlike tranche 2 where the two typings visibly described different things:
+    here they describe the same thing in the same words, with carotenoid_biosynthesis called an Enzymatic
+    pathway producing carotenoid pigments under BIOLOGICAL_PROCESS and a Biosynthetic pathway producing
+    carotenoid pigments under PATHWAY. THE GROUNDING COULD NOT DECIDE IT, which is the finding worth keeping,
+    because this repo''s standing doctrine is that the grounding settles typing arguments. GO HAS NO PATHWAY
+    BRANCH. Every one of the ten families grounds to a GO biological_process - GO:0019491, GO:0022900,
+    GO:0009767, GO:0016117, GO:0006113, GO:0006119, GO:0006636, GO:0002047 - and five carry the identical
+    CURIE under both typings; even the METPO groundings sit under METPO:1000060 metabolism, itself defined
+    as a biological process that maintain life in an organism. Read literally the grounding says all of
+    these are processes and PATHWAY should not exist. But PATHWAY is not vestigial, the same shape as
+    the CAPACITY finding in 352: twelve CURIEs corpus-wide are typed PATHWAY and never BIOLOGICAL_PROCESS,
+    and they are the canonical named routes including GO:0006099 tricarboxylic acid cycle, GO:0006097
+    glyoxylate cycle and GO:0019253 reductive pentose-phosphate cycle. So the rule is a stated convention
+    rather than an inference, and it is written into docs/CURATION_PLAYBOOK.md because an unwritten convention
+    simply re-splits: PATHWAY is a named route whose steps a curator could enumerate, BIOLOGICAL_PROCESS
+    is everything else - a strategy, a reaction class, or a process with no canonical step list. The rule
+    earns its keep by disagreeing with the majority twice, typing ectoine_biosynthesis and carotenoid_biosynthesis
+    as PATHWAY against 4-to-2 and 5-to-1 majorities, both being named biosynthetic routes with their enzymes
+    listed in the corpus''s own descriptions. INCONSISTENT_NODE_TYPE 199 to 148, the 51 predicted, zero
+    new findings. Also found and filed rather than fixed: fermentation in chemoorganoheterotrophic.yaml
+    is grounded METPO:1000845 which is Acetogenesis, a different concept, filed as 391 and deliberately
+    left alone because retyping a node while carrying a wrong CURIE along unchanged would make it look
+    reviewed. 540 tests pass, qc green. ADDENDUM after the dispatched review. Two predicate gates were
+    widened, because retyping moved grounded edges outside their own predicate''s declared types and nothing
+    re-tests that: ground_causal_predicates skips edges that already carry a predicate_id, so the gate
+    is consulted only at first grounding (issue 393). encodes METPO:2007813 gained PATHWAY for the phz_operons-encodes-phenazine_biosynthesis
+    edge, and produces METPO:2007800 gained STATE for ph_optimum_high.yaml''s terminal_oxidases-produces-proton_motive_force,
+    which tranche 1 (PR 382) had already shipped outside the gate undetected. Corpus-wide the check now
+    reports zero violations, down from one; my first run of it said 3385 because I compared the asterisk
+    wildcard as a literal type name, caught before believing it. Verified the widenings are restorative
+    rather than permissive: the residual report is byte-identical to main and zero ungrounded edges become
+    newly admissible. Also added aa_decarboxylation, which carries a byte-identical label to amino_acid_decarboxylation
+    under a shorter id, so the node_id-keyed table had missed it (issue 394). Finally, three curation_history
+    rationales quoted another record''s description as if it were the host record''s, and one asserted
+    that every description calls carotenoid biosynthesis a pathway when red_pigmented.yaml instead enumerates
+    its steps; all three are corrected, and the trait files were restored to main and re-run so the shipped
+    records match the script -- the migration only appends an event to files it changes, so re-running
+    alone would not have refreshed them.'

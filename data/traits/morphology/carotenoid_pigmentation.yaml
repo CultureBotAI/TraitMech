@@ -44,7 +44,7 @@ causal_graphs:
     description: Bacterial carotenoid biosynthetic enzymes encoded by crt genes.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis
-    node_type: BIOLOGICAL_PROCESS
+    node_type: PATHWAY
     description: Enzymatic pathway producing carotenoid pigments.
     grounding: GO:0016117
   - node_id: conjugated_carotenoids
@@ -273,4 +273,17 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-16T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_TYPE
+  changes: 'Applied the PATHWAY-vs-BIOLOGICAL_PROCESS rule so one node_id means one
+    thing (issue 356): carotenoid_biosynthesis: BIOLOGICAL_PROCESS -> PATHWAY. PATHWAY
+    is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is
+    everything else. A named biosynthetic route. Most descriptions call it one outright,
+    including BIOLOGICAL_PROCESS-typed ones (''Enzymatic pathway producing carotenoid
+    pigments''); red_pigmented.yaml instead ENUMERATES the steps -- ''Phytoene synthase
+    condenses two GGPP to phytoene, then desaturation/isomerization yields lycopene''
+    -- which is the rule''s own test for PATHWAY met explicitly rather than by naming.
+    Against the majority, which was 5 BIOLOGICAL_PROCESS to 1.'
   llm_assisted: true
