@@ -1,7 +1,7 @@
 history_version: 1
 target:
-  kind: record
-  path: curate-knowledge-gaps.yaml
+  kind: infrastructure
+  path: scripts/curate_knowledge_gaps.py
   slug: curate-knowledge-gaps
 session:
   id: 2026-08-17T214933Z-claude-code-9c4af0
@@ -9,11 +9,13 @@ session:
   actors:
   - type: ai_agent
     name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
 links:
   issues:
-  - '409'
+  - https://github.com/CultureBotAI/TraitMech/issues/409
   prs:
-  - '410'
+  - https://github.com/CultureBotAI/TraitMech/pull/410
 events:
 - type: EDIT
   outcome: changed

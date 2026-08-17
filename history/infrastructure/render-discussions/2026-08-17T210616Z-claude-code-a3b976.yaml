@@ -9,9 +9,13 @@ session:
   actors:
   - type: ai_agent
     name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
 links:
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/409
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/410
 events:
 - type: EDIT
   outcome: changed

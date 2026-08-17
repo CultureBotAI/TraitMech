@@ -280,19 +280,18 @@ discussions:
     it was filed under. The prompt above was authored instead from this record''s
     own causal graph, and none of these references are carried as its evidence, because
     they support the scraped sentence rather than the question. The scan attached
-    three further references whose snippets concern neither that sentence nor this
-    trait; all four are reproduced here so nothing it produced is lost: PMID:40945860
-    ''MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional
-    gene regulation in both animal and plant. miRNAs derived from edible plants, referred
-    to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian
-    gene expression.''; PMID:42278360 ''By integrating microbiological, immunological,
-    and clinical perspectives, this review highlights key knowledge gaps and outlines
-    future research directions aimed at harnessing the gut microbiome as a novel therapeutic
-    avenue in HIV management and eradication.''; PMID:41808832 ''Given its promising
-    anti-inflammatory properties, further research is warranted.''; PMID:42197356
-    ''Examining the existing literature may identify knowledge gaps regarding precise
-    mechanisms through which the development of GM influences the maturation of the
-    immune system.''.'
+    3 further references whose snippets concern neither that sentence nor this trait;
+    all 4 are reproduced here so nothing it produced is lost: PMID:40945860 ''MicroRNAs
+    (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation
+    in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs,
+    are proposed to cross-kingdom barriers and to modulate mammalian gene expression.'';
+    PMID:42278360 ''By integrating microbiological, immunological, and clinical perspectives,
+    this review highlights key knowledge gaps and outlines future research directions
+    aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management
+    and eradication.''; PMID:41808832 ''Given its promising anti-inflammatory properties,
+    further research is warranted.''; PMID:42197356 ''Examining the existing literature
+    may identify knowledge gaps regarding precise mechanisms through which the development
+    of GM influences the maturation of the immune system.''.'
   proposed_experiments:
   - experiment_id: x-gut-oxygen-causal-direction
     name: Oxygen microprofiling during staged gnotobiotic colonisation

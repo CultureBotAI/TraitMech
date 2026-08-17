@@ -902,9 +902,10 @@ def scan_note(discussion_id: str, topic: str) -> str:
     ]
     if others:
         note.append(
-            "The scan attached three further references whose snippets concern "
-            "neither that sentence nor this trait; all four are reproduced here "
-            "so nothing it produced is lost: "
+            f"The scan attached {len(others)} further reference"
+            f"{'' if len(others) == 1 else 's'} whose snippets concern neither "
+            f"that sentence nor this trait; all {len(refs)} are reproduced here "
+            f"so nothing it produced is lost: "
             + "; ".join(f"{ref} {snippet!r}" for ref, snippet in refs)
             + "."
         )

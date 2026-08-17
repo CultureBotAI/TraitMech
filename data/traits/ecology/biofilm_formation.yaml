@@ -258,18 +258,17 @@ discussions:
     the gap was about the trait it was filed under. The prompt above was authored
     instead from this record''s own causal graph, and none of these references are
     carried as its evidence, because they support the scraped sentence rather than
-    the question. The scan attached three further references whose snippets concern
-    neither that sentence nor this trait; all four are reproduced here so nothing
-    it produced is lost: PMID:42039744 ''How immune homeostasis is maintained in this
-    constantly challenged environment remains however a central and largely unanswered
-    question.''; PMID:41245847 ''We present a research agenda identifying key research
-    gaps and organizing them into priority areas to guide future investigations in
-    this high-risk population.''; PMID:41661098 ''Finally, we identify major knowledge
-    gaps and research priorities necessary to advance a more integrated understanding
-    of maternal microbial influences on reproductive and neonatal health.''; PMID:42125129
-    "However, contradictions persist regarding pH''s effect on microbial diversity,
-    with unresolved questions about how specific environmental conditions regulate
-    microbial taxa.".'
+    the question. The scan attached 3 further references whose snippets concern neither
+    that sentence nor this trait; all 4 are reproduced here so nothing it produced
+    is lost: PMID:42039744 ''How immune homeostasis is maintained in this constantly
+    challenged environment remains however a central and largely unanswered question.'';
+    PMID:41245847 ''We present a research agenda identifying key research gaps and
+    organizing them into priority areas to guide future investigations in this high-risk
+    population.''; PMID:41661098 ''Finally, we identify major knowledge gaps and research
+    priorities necessary to advance a more integrated understanding of maternal microbial
+    influences on reproductive and neonatal health.''; PMID:42125129 "However, contradictions
+    persist regarding pH''s effect on microbial diversity, with unresolved questions
+    about how specific environmental conditions regulate microbial taxa.".'
   proposed_experiments:
   - experiment_id: x-biofilm-no-dispersal-bypass
     name: NO challenge against a c-di-GMP-clamped biofilm
