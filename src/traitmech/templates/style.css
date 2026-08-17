@@ -176,6 +176,46 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 }
 .research-card { border-left: 4px solid var(--accent); }
 
+/* Discussions and Knowledge Gaps (#409). Built from the existing custom
+   properties rather than new colours, so the section inherits the light/dark
+   themes at the foot of this file without a second set of overrides. */
+.discussion {
+  border-top: 1px solid var(--border);
+  padding-top: 0.9rem;
+  margin-top: 0.9rem;
+}
+.discussion:first-of-type { border-top: 0; padding-top: 0; margin-top: 0.4rem; }
+.discussion-prompt { font-weight: 600; margin: 0 0 0.35rem; }
+.discussion h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0.8rem 0 0.3rem;
+}
+.badge {
+  display: inline-block;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.75rem;
+  margin-right: 0.3rem;
+}
+/* An unanchored gap is a curation TODO, not an error — muted and italic rather
+   than the .graph-warning tint, which this page reserves for "the content below
+   may be wrong". */
+.discussion-unanchored { font-style: italic; }
+.experiments, .discussion-evidence { margin: 0.2rem 0 0 1.1rem; padding: 0; }
+.experiments li, .discussion-evidence li { margin-bottom: 0.5rem; }
+.discussion-evidence blockquote {
+  margin: 0.25rem 0;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--border);
+  color: var(--muted);
+}
+.discussion-evidence .meta, .experiments .meta { display: block; }
+
 /* The research caveat reuses .graph-warning rather than defining its own tint.
    A bespoke rule using --accent-soft looked like ordinary chrome — that variable
    is already the background of table headers, hover rows and .research-card

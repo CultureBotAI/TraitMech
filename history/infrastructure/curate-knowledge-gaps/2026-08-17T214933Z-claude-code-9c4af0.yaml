@@ -1,0 +1,115 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_knowledge_gaps.py
+  slug: curate-knowledge-gaps
+session:
+  id: 2026-08-17T214933Z-claude-code-9c4af0
+  timestamp: '2026-08-17T21:49:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/409
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/410
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Replace ten scraped sentences with anchored, answerable knowledge gaps. The kg-microbe-kgscan
+    pass filed ten discussions whose prompts were gap-shaped sentences lifted from retrieved
+    papers but not about the traits they were filed under: commensalism and gut_associated
+    shared a sentence about plant xenomiRs, biosafety_level and biosafety_level_3 shared contentless
+    review boilerplate, animal_pathogen got plastisphere prokaryotes. Each prompt was rewritten
+    as a research question authored from that record''s own causal graph, anchored via attaches_to
+    to the nodes it concerns, and given a ProposedExperiment with a decision_criterion. The
+    scan''s sentence and all four references, each with its own snippet, are preserved
+    verbatim in each discussion''s notes and were NOT carried as evidence, since they support the scraped sentence rather than the authored
+    question. Also adds audit_discussion_anchors.py to qc so the anchors cannot silently rot.'
+  details: |-
+    Ten discussions across ten ecology records, applied by
+    scripts/curate_knowledge_gaps.py keyed on discussion_id (not file position,
+    so a later scan pass appending another discussion cannot shift the plan onto
+    the wrong object).
+
+    WHY THE PROMPTS WERE NOT MERELY REWORDED. Read together, the ten scraped
+    sentences were not gaps about the ten traits. Two pairs were duplicates --
+    commensalism and gut_associated both got a sentence about plant-derived
+    xenomiRs, biosafety_level and biosafety_level_3 both got "it identifies
+    ongoing challenges and critical knowledge gaps for future research", which
+    asserts a gap without naming one. animal_pathogen got marine plastisphere
+    prokaryotes; free_living got protozoan infection of the gut. The scan
+    matched the hedging vocabulary of a gap statement ("remain poorly
+    understood", "unknown to date") in papers retrieved for the trait, with
+    nothing checking that the sentence was a gap ABOUT the trait. Rewording
+    those into research questions, as #409 step 4 proposed, would have laundered
+    off-topic scraped text into curated-looking content.
+
+    WHAT WAS WRITTEN INSTEAD. Each question was authored from the record's own
+    causal graph, so the gap is a tension or untested assumption already encoded
+    in its EDGES -- two independent routes drawn into one node without saying
+    whether either is sufficient (animal_pathogen immune_evasion); a bare
+    `induces` edge from nitric oxide straight to dispersal, with c_di_gmp
+    present in the graph but wired only to sessile_state (biofilm_formation); a
+    one-way edge that may be half of a loop (gut_associated luminal oxygen ->
+    fermenter community, with the return arm unasserted); a third
+    compatible-solute system wired to a node with no outgoing edge, so nothing
+    downstream depends on it (free_living trehalose); a definitional node
+    attached by the weakest predicate available, `associated with`, rather than
+    observed (commensalism neutral_host_fitness). Eight are KNOWLEDGE_GAP;
+    endosymbiosis is CONTROVERSY, because the record asserts drift and selection
+    at different resolutions -- drift bundled into a trait-level edge as the
+    parenthetical `with small Ne`, selection spelled out as a two-step path --
+    while transmission_bottleneck and limited_recombination attach to neither,
+    so the drift claim has no mechanism under it; biosafety_level is CURATION_TODO, because its graph
+    carries `bsl5 --is a--> biosafety_level_trait` and no current national
+    framework assigns a fifth containment level -- that one may end in a
+    retraction rather than an answer.
+
+    CORRECTED AFTER REVIEW. Four of the ten (biofilm_formation, gut_associated,
+    free_living, endosymbiosis) were wrong on the first pass, filed as #413-#416
+    by the adversarial review of PR #410. They had been written from the graphs'
+    node LISTS without reading the EDGES, so each described structure that was
+    not there. Node names imply a graph; only the edges are the graph. In three
+    of the four the true structure yielded the better question. The anchor audit
+    added here cannot catch this class -- it checks that a node exists, not that
+    the prose about it is true (#415).
+
+    Each carries one ProposedExperiment with a decision_criterion plus
+    would_support / would_refute, so the sketch is decidable rather than a wish.
+
+    PROVENANCE. posed_by claude, posed_date 2026-08-17, llm_assisted true on the
+    curation event. The scan's sentence and ALL FOUR of its references, each
+    with its own snippet, are preserved verbatim in each discussion's `notes`,
+    and were NOT carried into `evidence`: they support the scraped sentence, not
+    the authored question, and splitting them would have left the PMIDs looking
+    like support for content they were never retrieved for. Only the FIRST
+    reference is the sentence's source; the other three were retrieved alongside
+    it and carry unrelated passages, so the note names the one source rather
+    than listing four as if the sentence came from all of them. No citation was
+    invented for any authored question -- the ten discussions now carry no
+    evidence block at all, which is honest rather than complete.
+
+    THREE ROUNDS OF REVIEW, and largely one defect class each time: prose
+    asserting graph structure the edges do not have (#413-#416, then #419, then
+    the endosymbiosis premise above), plus a provenance note built from live
+    record state that destroyed on its second run exactly what it claimed to
+    preserve (#417). Both are the same failure -- describing something instead
+    of reading it. Recorded here rather than smoothed over, because a history
+    record that preserves a refuted claim as fact is worse than no record.
+
+    VALIDATED BY. scripts/audit_discussion_anchors.py, added in the same change
+    and wired into `qc`: 0 errors, 0 warnings over the corpus. It is the reason
+    it was safe to anchor to node ids -- `attaches_to` is free-form so the
+    schema cannot check it, and before this a migration renaming a node would
+    have orphaned an anchor silently. Rendering confirmed on the generated
+    pages: 10 of 477 carry the section, 0 still render as unanchored, and the
+    experiment fields appear with their values. Full `just qc` green.
+
+    LEFT UNDONE. Coverage stays at 10 of 477 (2.1%) by the maintainer's
+    decision -- fix the quality of what exists before scanning more. The scan's
+    precision problem is upstream in the kg_microbe_kgscan package and is filed
+    separately; it cannot be fixed from this repo.

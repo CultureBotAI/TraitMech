@@ -267,40 +267,68 @@ curation_history:
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-93e87bc8aba3
-  prompt: 'Knowledge gap for biosafety level: Additionally, it identifies ongoing
-    challenges and critical knowledge gaps for future research.'
-  kind: KNOWLEDGE_GAP
+  prompt: This record's graph enumerates bsl1 through bsl5, but BSL-5 is not an assigned
+    containment level in any current national framework -- it appears in proposals
+    for hypothetical agents beyond BSL-4. Is the bsl5 node a real classification this
+    record should carry, or a seeded artefact to retract?
+  kind: CURATION_TODO
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
-    explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review
-    required: set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:41494000
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Additionally, it identifies ongoing challenges and critical knowledge
-      gaps for future research.
-    explanation: Gap-signal sentence (explicit_gap, future_work, limitations_barriers)
-      from the cited abstract.
-  - reference: PMID:41556562
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: This review outlines the possibilities, as well as the limitations of
-      their use in food production.
-    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
-  - reference: PMID:41647993
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Given the knowledge gap on the characteristics and significance of microbiome
-      in early-onset pancreatic ductal adenocarcinoma (eoPDAC, age 50 years).
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  - reference: PMID:41683313
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting
-      results in post-infectious irritable bowel syndrome (PI-IBS).'
-    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: 'A containment level that does not exist in regulation is not a value
+    the trait can take, and anything downstream that enumerates levels from this graph
+    -- a risk-assessment form, an ontology mapping, a facility-capability query --
+    would inherit a level with no requirements attached to it. Note what the resolution
+    is NOT: the node is already labelled a proposal and grounded to METPO:1001106,
+    which the corpus carries as its own seeded record at ecology/biosafety_level_5.yaml,
+    so deleting it here would desynchronise this graph from an upstream-seeded record
+    rather than fix anything. A METPO class is not a citable proposal, so the question
+    stands -- but it is answered by finding the source behind METPO:1001106, and any
+    retraction belongs upstream in METPO, not in this graph.'
+  attaches_to:
+  - causal_graphs#bsl5
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for biosafety level: Additionally, it identifies
+    ongoing challenges and critical knowledge gaps for future research.'', whose sentence
+    came from PMID:41494000. That sentence is about a review''s boilerplate statement
+    that gaps exist, not about this trait: the scan matched the hedging vocabulary
+    of a gap statement without checking that the gap was about the trait it was filed
+    under. The prompt above was authored instead from this record''s own causal graph,
+    and none of these references are carried as its evidence, because they support
+    the scraped sentence rather than the question. The scan attached 3 further references
+    whose snippets concern neither that sentence nor this trait; all 4 are reproduced
+    here so nothing it produced is lost: PMID:41494000 ''Additionally, it identifies
+    ongoing challenges and critical knowledge gaps for future research.''; PMID:41556562
+    ''This review outlines the possibilities, as well as the limitations of their
+    use in food production.''; PMID:41647993 ''Given the knowledge gap on the characteristics
+    and significance of microbiome in early-onset pancreatic ductal adenocarcinoma
+    (eoPDAC, age 50 years).''; PMID:41683313 ''Background : Untargeted microbiome
+    modulation has achieved conflicting results in post-infectious irritable bowel
+    syndrome (PI-IBS).''.'
+  proposed_experiments:
+  - experiment_id: x-bsl5-provenance-check
+    name: Regulatory provenance check for the BSL-5 designation
+    approach: documentary review of containment frameworks
+    model_systems:
+    - WHO Laboratory Biosafety Manual
+    - US CDC/NIH Biosafety in Microbiological and Biomedical Laboratories
+    - national biosafety regulations with assigned containment levels
+    readouts:
+    - presence of an assigned BSL-5 level in each framework
+    - any peer-reviewed proposal defining BSL-5 requirements
+    decision_criterion: whether any binding framework assigns agents to a fifth level
+    would_support: a framework or a citable proposal defines it -- keep the node and
+      cite that source on it, alongside the METPO grounding
+    would_refute: no framework or proposal defines it -- raise the retraction against
+      METPO:1001106 upstream, so this graph and ecology/biosafety_level_5.yaml change
+      together
+  posed_date: '2026-08-17'

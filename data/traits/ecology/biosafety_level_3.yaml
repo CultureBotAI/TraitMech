@@ -199,41 +199,69 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-2ee31ba13f9c
-  prompt: 'Knowledge gap for biosafety level 3: Additionally, it identifies ongoing
-    challenges and critical knowledge gaps for future research.'
+  prompt: BSL-3 boundary integrity is verified by pressure-decay testing of the room
+    envelope. Does passing a pressure-decay test predict containment of an airborne
+    agent under real operating conditions, with doors cycling and equipment running?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
-    future_work, limitations_barriers, unclear_unknown). Curator review required:
-    set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:41494000
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Additionally, it identifies ongoing challenges and critical knowledge
-      gaps for future research.
-    explanation: Gap-signal sentence (explicit_gap, future_work, limitations_barriers)
-      from the cited abstract.
-  - reference: PMID:40514544
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Although T cells are essential for immunity to TB, the mechanisms that
-      provide protective immunity are poorly understood.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:41552424
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: In the field of microbiological diagnosis, HTS provides a complementary
-      or alternative approach to traditional diagnostic tests, particularly in cases
-      with non-specific symptoms or when the etiology is unknown.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:41917383
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: While its virulence genes critically regulate intracellular survival
-      and replication, the molecular mechanisms underlying pathogenesis remain elusive.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: 'The graph routes verification the other way round from the claim it
+    supports: bsl3_trait is `verified by` boundary_integrity_testing, which `utilizes`
+    pressure_decay_testing. So the decay test stands in for containment without any
+    node asserting that containment holds. The test is also performed on a sealed,
+    static room, and the room only matters when it is occupied and in use. If the
+    two diverge, facilities are certified against a condition they never operate in.'
+  attaches_to:
+  - causal_graphs#boundary_integrity_testing
+  - causal_graphs#pressure_decay_testing
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for biosafety level 3: Additionally, it identifies
+    ongoing challenges and critical knowledge gaps for future research.'', whose sentence
+    came from PMID:41494000. That sentence is about a review''s boilerplate statement
+    that gaps exist, not about this trait: the scan matched the hedging vocabulary
+    of a gap statement without checking that the gap was about the trait it was filed
+    under. The prompt above was authored instead from this record''s own causal graph,
+    and none of these references are carried as its evidence, because they support
+    the scraped sentence rather than the question. The scan attached 3 further references
+    whose snippets concern neither that sentence nor this trait; all 4 are reproduced
+    here so nothing it produced is lost: PMID:41494000 ''Additionally, it identifies
+    ongoing challenges and critical knowledge gaps for future research.''; PMID:40514544
+    ''Although T cells are essential for immunity to TB, the mechanisms that provide
+    protective immunity are poorly understood.''; PMID:41552424 ''In the field of
+    microbiological diagnosis, HTS provides a complementary or alternative approach
+    to traditional diagnostic tests, particularly in cases with non-specific symptoms
+    or when the etiology is unknown.''; PMID:41917383 ''While its virulence genes
+    critically regulate intracellular survival and replication, the molecular mechanisms
+    underlying pathogenesis remain elusive.''.'
+  proposed_experiments:
+  - experiment_id: x-bsl3-decay-vs-tracer
+    name: Tracer-gas containment under operation versus decay-test result
+    approach: paired tracer-gas release and envelope pressure-decay testing
+    model_systems:
+    - commissioned BSL-3 suites spanning a range of decay results
+    - SF6 or equivalent inert tracer with anteroom sampling
+    perturbations:
+    - static sealed room, as in the certification test
+    - normal operation with personnel entry and exit
+    - a single HEPA-filtered exhaust fan taken offline
+    readouts:
+    - tracer concentration outside the containment boundary
+    - directional airflow at the door plane
+    - measured envelope leakage rate
+    decision_criterion: whether tracer escape under operation correlates with the
+      static decay-test result across suites
+    would_support: suites with better decay results leak less tracer in operation
+      -- the test predicts what it is used to certify
+    would_refute: escape under operation is uncorrelated with decay result -- passing
+      certifies the sealed room and not the working one
+  posed_date: '2026-08-17'

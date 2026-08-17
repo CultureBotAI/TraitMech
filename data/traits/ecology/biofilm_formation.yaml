@@ -220,42 +220,75 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-aa46cc9b34ab
-  prompt: 'Knowledge gap for biofilm formation: How immune homeostasis is maintained
-    in this constantly challenged environment remains however a central and largely
-    unanswered question.'
+  prompt: This record draws nitric oxide straight to biofilm dispersal with nothing
+    in between, while c-di-GMP sits in the same graph wired only to the sessile state.
+    Is the NO effect on dispersal mediated by lowering c-di-GMP, and should that intermediate
+    be on the edge?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
-    future_work, limitations_barriers, unclear_unknown). Curator review required:
-    set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:42039744
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: How immune homeostasis is maintained in this constantly challenged environment
-      remains however a central and largely unanswered question.
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  - reference: PMID:41245847
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: We present a research agenda identifying key research gaps and organizing
-      them into priority areas to guide future investigations in this high-risk population.
-    explanation: Gap-signal sentence (explicit_gap, future_work) from the cited abstract.
-  - reference: PMID:41661098
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Finally, we identify major knowledge gaps and research priorities necessary
-      to advance a more integrated understanding of maternal microbial influences
-      on reproductive and neonatal health.
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  - reference: PMID:42125129
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, contradictions persist regarding pH's effect on microbial diversity,
-      with unresolved questions about how specific environmental conditions regulate
-      microbial taxa.
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: 'A bare `induces` edge from a diffusible signal to a community-scale
+    outcome is a placeholder where a mechanism should be. The graph already carries
+    c_di_gmp, but only as a promoter of sessile_state, so it cannot currently express
+    the route most often proposed for this effect. The distinction is not academic:
+    if dispersal runs through the c-di-GMP pool, then strains holding that pool high
+    are intrinsically refractory to the NO-releasing antibiofilm agents now in development
+    -- a resistance mechanism this graph has no way to represent while the edge stays
+    bare.'
+  attaches_to:
+  - causal_graphs#biofilm_dispersal
+  - causal_graphs#nitric_oxide
+  - causal_graphs#c_di_gmp
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for biofilm formation: How immune homeostasis
+    is maintained in this constantly challenged environment remains however a central
+    and largely unanswered question.'', whose sentence came from PMID:42039744. That
+    sentence is about immune homeostasis at the gut mucosa, not about this trait:
+    the scan matched the hedging vocabulary of a gap statement without checking that
+    the gap was about the trait it was filed under. The prompt above was authored
+    instead from this record''s own causal graph, and none of these references are
+    carried as its evidence, because they support the scraped sentence rather than
+    the question. The scan attached 3 further references whose snippets concern neither
+    that sentence nor this trait; all 4 are reproduced here so nothing it produced
+    is lost: PMID:42039744 ''How immune homeostasis is maintained in this constantly
+    challenged environment remains however a central and largely unanswered question.'';
+    PMID:41245847 ''We present a research agenda identifying key research gaps and
+    organizing them into priority areas to guide future investigations in this high-risk
+    population.''; PMID:41661098 ''Finally, we identify major knowledge gaps and research
+    priorities necessary to advance a more integrated understanding of maternal microbial
+    influences on reproductive and neonatal health.''; PMID:42125129 "However, contradictions
+    persist regarding pH''s effect on microbial diversity, with unresolved questions
+    about how specific environmental conditions regulate microbial taxa.".'
+  proposed_experiments:
+  - experiment_id: x-biofilm-no-dispersal-bypass
+    name: NO challenge against a c-di-GMP-clamped biofilm
+    approach: flow-cell biofilm with an inducible c-di-GMP clamp
+    model_systems:
+    - flow-cell biofilm of a c-di-GMP-signalling model organism
+    - isogenic strain carrying an inducible diguanylate cyclase
+    perturbations:
+    - NO donor at an established dispersal-competent dose
+    - induction of the constitutive diguanylate cyclase
+    - phosphodiesterase deletion background
+    readouts:
+    - biomass loss by confocal image analysis
+    - cell counts released into the effluent
+    - intracellular c-di-GMP by LC-MS/MS
+    - a c-di-GMP-responsive transcriptional reporter
+    decision_criterion: whether NO still releases cells when the measured c-di-GMP
+      pool is held high
+    would_support: the clamped biofilm does not disperse -- c-di-GMP is the necessary
+      intermediate and the bare edge should be replaced by the two-step route
+    would_refute: the clamped biofilm disperses anyway -- the effect is c-di-GMP-independent
+      and the direct edge as drawn is right
+  posed_date: '2026-08-17'

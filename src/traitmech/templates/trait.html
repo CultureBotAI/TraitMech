@@ -91,42 +91,6 @@
   </section>
   {% endif %}
 
-  {% if trait.discussions %}
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">({{ trait.discussions|length }})</span></h2>
-      {% for d in trait.discussions %}
-      <div class="discussion">
-        <h3>{% if d.kind %}<code>{{ d.kind }}</code>{% endif %} {% if d.status %}<code>{{ d.status }}</code>{% endif %} {{ d.prompt }}</h3>
-        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
-        {% if d.attaches_to %}<p class="meta">Attaches to: {% for a in d.attaches_to %}<code>{{ a }}</code>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-        {% if d.proposed_experiments %}
-        <details>
-          <summary class="meta">{{ d.proposed_experiments|length }} proposed experiment(s)</summary>
-          {% for exp in d.proposed_experiments %}
-          <div class="meta"><strong>{{ exp.name or exp.experiment_id or 'Experiment ' ~ loop.index }}</strong>{% if exp.approach %} — {{ exp.approach }}{% endif %}{% if exp.decision_criterion %} (decision: {{ exp.decision_criterion }}){% endif %}</div>
-          {% endfor %}
-        </details>
-        {% endif %}
-        {% if d.evidence %}
-        <details>
-          <summary class="meta">{{ d.evidence|length }} evidence item(s)</summary>
-          {% for ev in d.evidence %}
-          <div class="edge-evidence">
-            {% if ev.supports %}<code>{{ ev.supports }}</code>{% endif %}
-            {% if ev.reference %}{% set ref = ev.reference %}{% if ref.startswith('PMID:') %}<a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/" rel="nofollow noreferrer">{{ ref }}</a>{% else %}{{ ref }}{% endif %}{% endif %}
-            {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
-            {% if ev.explanation %}<span class="meta">{{ ev.explanation }}</span>{% endif %}
-          </div>
-          {% endfor %}
-        </details>
-        {% endif %}
-        {% if d.resolution_note %}<p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>{% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
 
   <section class="grid">
     <div class="card">
@@ -237,6 +201,103 @@
         run's front matter and the prompt it was given —
         <a href="{{ research_blob_url }}" target="_blank" rel="noopener">read the full report</a>.</p>
       {% endif %}
+    </div>
+    {% endif %}
+
+    {% if trait.discussions %}
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">({{ trait.discussions|length }})</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="{{ root }}../app/discussions/index.html">the corpus-wide index</a>.</p>
+      {% for d in trait.discussions %}
+      {# The id the corpus-wide index deep-links to: app/discussions/data.js
+         emits page_url ".../<trait>.html#<discussion_id>" for every row, so
+         without this every link from the index lands at the top of the page. #}
+      <div class="discussion" id="{{ d.discussion_id }}">
+        <p class="discussion-prompt">{{ d.prompt }}</p>
+        <p class="meta">
+          <span class="badge">{{ (d.kind or 'DISCUSSION')|replace('_', ' ') }}</span>
+          <span class="badge">{{ d.status or 'OPEN' }}</span>
+          <code>{{ d.discussion_id }}</code>
+          {% if d.posed_by %}· raised by {{ d.posed_by }}{% endif %}
+          {% if d.posed_date %}· {{ d.posed_date }}{% endif %}
+        </p>
+
+        {% if d.attaches_to %}
+        <p class="meta">Attached to
+          {% for a in d.attaches_to %}<code>{{ a }}</code>{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+        {% else %}
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+        {% endif %}
+
+        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
+
+        {% if d.proposed_experiments %}
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          {% for x in d.proposed_experiments %}
+          <li>
+            {% if x.name %}<strong>{{ x.name }}</strong>{% endif %}
+            {% if x.approach %}<span class="badge">{{ x.approach }}</span>{% endif %}
+            {% if x.description %}<span class="meta">{{ x.description }}</span>{% endif %}
+            {% if x.model_systems %}<span class="meta">Model systems:
+              {{ x.model_systems|join(', ') }}</span>{% endif %}
+            {% if x.perturbations %}<span class="meta">Perturbations:
+              {{ x.perturbations|join(', ') }}</span>{% endif %}
+            {% if x.readouts %}<span class="meta">Readouts:
+              {{ x.readouts|join(', ') }}</span>{% endif %}
+            {# The field that makes a sketch decidable rather than a wish — the
+               schema calls it "the observation that would settle the question". #}
+            {% if x.decision_criterion %}<span class="meta">Decides it:
+              {{ x.decision_criterion }}</span>{% endif %}
+            {% if x.would_support %}<span class="meta">Supports if:
+              {{ x.would_support }}</span>{% endif %}
+            {% if x.would_refute %}<span class="meta">Refutes if:
+              {{ x.would_refute }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if d.evidence %}
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+          {% for e in d.evidence %}
+          <li>
+            {% set ref = e.reference %}
+            {% if ref and ref.startswith('PMID:') %}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/"
+               rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+            {% else %}<code>{{ ref }}</code>{% endif %}
+            {% if e.supports %}<span class="badge">{{ e.supports|replace('_', ' ') }}</span>{% endif %}
+            {% if e.snippet %}<blockquote>{{ e.snippet }}</blockquote>{% endif %}
+            {% if e.explanation %}<span class="meta">{{ e.explanation }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if d.resolution_note %}
+        <p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>
+        {% endif %}
+
+        {# Provenance for a discussion that was raised one way and curated
+           another -- for the ten kgscan gaps this holds the sentence the
+           scan lifted and the PMIDs it came from, which are deliberately
+           not carried as `evidence` for the curated question (#409). #}
+        {% if d.notes %}
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">{{ d.notes }}</p>
+        </details>
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
     {% endif %}
 

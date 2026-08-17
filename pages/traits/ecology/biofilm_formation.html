@@ -236,56 +236,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.</h3>
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
-        
-        
-        
-        <details>
-          <summary class="meta">4 evidence item(s)</summary>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42039744/" rel="nofollow noreferrer">PMID:42039744</a>
-            <span class="evidence-snippet">How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41245847/" rel="nofollow noreferrer">PMID:41245847</a>
-            <span class="evidence-snippet">We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap, future_work) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41661098/" rel="nofollow noreferrer">PMID:41661098</a>
-            <span class="evidence-snippet">Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42125129/" rel="nofollow noreferrer">PMID:42125129</a>
-            <span class="evidence-snippet">However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-        </details>
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -480,6 +430,74 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
     
 
     
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+      
+      
+      <div class="discussion" id="kgscan-aa46cc9b34ab">
+        <p class="discussion-prompt">This record draws nitric oxide straight to biofilm dispersal with nothing in between, while c-di-GMP sits in the same graph wired only to the sessile state. Is the NO effect on dispersal mediated by lowering c-di-GMP, and should that intermediate be on the edge?</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>kgscan-aa46cc9b34ab</code>
+          · raised by claude
+          · 2026-08-17
+        </p>
+
+        
+        <p class="meta">Attached to
+          <code>causal_graphs#biofilm_dispersal</code>, <code>causal_graphs#nitric_oxide</code>, <code>causal_graphs#c_di_gmp</code>
+        </p>
+        
+
+        <p>A bare `induces` edge from a diffusible signal to a community-scale outcome is a placeholder where a mechanism should be. The graph already carries c_di_gmp, but only as a promoter of sessile_state, so it cannot currently express the route most often proposed for this effect. The distinction is not academic: if dispersal runs through the c-di-GMP pool, then strains holding that pool high are intrinsically refractory to the NO-releasing antibiofilm agents now in development -- a resistance mechanism this graph has no way to represent while the edge stays bare.</p>
+
+        
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          
+          <li>
+            <strong>NO challenge against a c-di-GMP-clamped biofilm</strong>
+            <span class="badge">flow-cell biofilm with an inducible c-di-GMP clamp</span>
+            
+            <span class="meta">Model systems:
+              flow-cell biofilm of a c-di-GMP-signalling model organism, isogenic strain carrying an inducible diguanylate cyclase</span>
+            <span class="meta">Perturbations:
+              NO donor at an established dispersal-competent dose, induction of the constitutive diguanylate cyclase, phosphodiesterase deletion background</span>
+            <span class="meta">Readouts:
+              biomass loss by confocal image analysis, cell counts released into the effluent, intracellular c-di-GMP by LC-MS/MS, a c-di-GMP-responsive transcriptional reporter</span>
+            
+            <span class="meta">Decides it:
+              whether NO still releases cells when the measured c-di-GMP pool is held high</span>
+            <span class="meta">Supports if:
+              the clamped biofilm does not disperse -- c-di-GMP is the necessary intermediate and the bare edge should be replaced by the two-step route</span>
+            <span class="meta">Refutes if:
+              the clamped biofilm disperses anyway -- the effect is c-di-GMP-independent and the direct edge as drawn is right</span>
+          </li>
+          
+        </ul>
+        
+
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;, whose sentence came from PMID:42039744. That sentence is about immune homeostasis at the gut mucosa, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:42039744 &#39;How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;; PMID:41245847 &#39;We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.&#39;; PMID:41661098 &#39;Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.&#39;; PMID:42125129 &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
+        </details>
+        
+      </div>
+      
+    </div>
+    
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -518,6 +536,12 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-17T22:14:03Z</time> ·
+          <strong>CURATE_KNOWLEDGE_GAPS</strong> · claude
+          <p class="changes">Replaced the scan&#39;s off-topic scraped sentence with a research question authored from this record&#39;s causal graph, anchored it via attaches_to, and sketched an experiment with a decision criterion. The scan&#39;s sentence and PMIDs are preserved in the discussion&#39;s notes.</p>
         </li>
         
       </ol>
@@ -900,7 +924,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-17 22:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

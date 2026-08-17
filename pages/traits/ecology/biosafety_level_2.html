@@ -202,56 +202,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Knowledge gap for biosafety level 2: Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).</h3>
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
-        
-        
-        
-        <details>
-          <summary class="meta">4 evidence item(s)</summary>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41683313/" rel="nofollow noreferrer">PMID:41683313</a>
-            <span class="evidence-snippet">Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).</span>
-            <span class="meta">Gap-signal sentence (controversy_conflict) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41413233/" rel="nofollow noreferrer">PMID:41413233</a>
-            <span class="evidence-snippet">Recently, the gut microbiota (GM) has gained attention for its potential involvement in blood pressure regulation; however, polyamine metabolism involvement remains poorly understood.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41640410/" rel="nofollow noreferrer">PMID:41640410</a>
-            <span class="evidence-snippet">However, their clinical translation is hampered by challenges within the harsh gastrointestinal milieu, including low viability, poor colonization, and insufficient target specificity.</span>
-            <span class="meta">Gap-signal sentence (limitations_barriers) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41490313/" rel="nofollow noreferrer">PMID:41490313</a>
-            <span class="evidence-snippet">However, how these core strains interact with each other and with other gut microbes is largely unknown.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-        </details>
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -446,6 +396,74 @@ Classification frameworks evaluate virulence, mode of transmission and host rang
     
 
     
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+      
+      
+      <div class="discussion" id="kgscan-066a51aacfb6">
+        <p class="discussion-prompt">BSL-2 requires a biosafety cabinet specifically for procedures with aerosol or splash potential, while other work may go on the open bench. Which procedures actually generate an infectious dose at the breathing zone, and does the current procedure list match them?</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>kgscan-066a51aacfb6</code>
+          · raised by claude
+          · 2026-08-17
+        </p>
+
+        
+        <p class="meta">Attached to
+          <code>causal_graphs#aerosol_splash_procedure</code>, <code>causal_graphs#biosafety_cabinet</code>
+        </p>
+        
+
+        <p>The bench/cabinet boundary is the single control that most BSL-2 work turns on, and it is drawn from procedure lists that long predate quantitative aerosol measurement. A procedure that is on the open bench but does generate respirable particles is an unrecognised exposure; one needlessly in the cabinet costs throughput. Either way the edge into biosafety_cabinet is asserting something measurable that has not been measured.</p>
+
+        
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          
+          <li>
+            <strong>Surrogate-tracer aerosol survey of routine BSL-2 procedures</strong>
+            <span class="badge">non-infectious tracer release with breathing-zone sampling</span>
+            
+            <span class="meta">Model systems:
+              bacteriophage or fluorescent-bead surrogate at defined titre, a working BSL-2 laboratory, breathing-zone and area impingers</span>
+            <span class="meta">Perturbations:
+              each routine procedure performed on the open bench, the same procedure performed inside a class II cabinet, deliberate worst-case variants such as a dropped tube</span>
+            <span class="meta">Readouts:
+              tracer recovered at the breathing zone per procedure, particle size distribution in the respirable fraction, surface deposition beyond the immediate work area</span>
+            
+            <span class="meta">Decides it:
+              whether any open-bench procedure exceeds the breathing-zone tracer recovery of cabinet-required procedures</span>
+            <span class="meta">Supports if:
+              recovery tracks the existing list -- the procedure boundary is drawn where the aerosol actually is</span>
+            <span class="meta">Refutes if:
+              an off-list procedure matches or exceeds a listed one -- the control boundary is misplaced</span>
+          </li>
+          
+        </ul>
+        
+
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 2: Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).&#39;, whose sentence came from PMID:41683313. That sentence is about microbiome modulation in post-infectious IBS, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:41683313 &#39;Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).&#39;; PMID:41413233 &#39;Recently, the gut microbiota (GM) has gained attention for its potential involvement in blood pressure regulation; however, polyamine metabolism involvement remains poorly understood.&#39;; PMID:41640410 &#39;However, their clinical translation is hampered by challenges within the harsh gastrointestinal milieu, including low viability, poor colonization, and insufficient target specificity.&#39;; PMID:41490313 &#39;However, how these core strains interact with each other and with other gut microbes is largely unknown.&#39;.</p>
+        </details>
+        
+      </div>
+      
+    </div>
+    
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -478,6 +496,12 @@ Classification frameworks evaluate virulence, mode of transmission and host rang
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-17T22:14:03Z</time> ·
+          <strong>CURATE_KNOWLEDGE_GAPS</strong> · claude
+          <p class="changes">Replaced the scan&#39;s off-topic scraped sentence with a research question authored from this record&#39;s causal graph, anchored it via attaches_to, and sketched an experiment with a decision criterion. The scan&#39;s sentence and PMIDs are preserved in the discussion&#39;s notes.</p>
         </li>
         
       </ol>
@@ -860,7 +884,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 01:00 UTC from
+      Record as of 2026-08-17 22:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

@@ -219,56 +219,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.</h3>
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
-        
-        
-        
-        <details>
-          <summary class="meta">4 evidence item(s)</summary>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/40945860/" rel="nofollow noreferrer">PMID:40945860</a>
-            <span class="evidence-snippet">MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.</span>
-            <span class="meta">Gap-signal sentence (limitations_barriers) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42278360/" rel="nofollow noreferrer">PMID:42278360</a>
-            <span class="evidence-snippet">By integrating microbiological, immunological, and clinical perspectives, this review highlights key knowledge gaps and outlines future research directions aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management and eradication.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap, future_work) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41808832/" rel="nofollow noreferrer">PMID:41808832</a>
-            <span class="evidence-snippet">Given its promising anti-inflammatory properties, further research is warranted.</span>
-            <span class="meta">Gap-signal sentence (future_work) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42197356/" rel="nofollow noreferrer">PMID:42197356</a>
-            <span class="evidence-snippet">Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-        </details>
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -463,6 +413,74 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
     
 
     
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+      
+      
+      <div class="discussion" id="kgscan-4fc1a06fa1e3">
+        <p class="discussion-prompt">This record commits to luminal oxygen limitation contributing to the primary fermenter community. Does the reverse arm hold too -- do the fermenters and the epithelium maintain the anoxia -- making this a feedback loop rather than the one-way edge drawn?</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>kgscan-4fc1a06fa1e3</code>
+          · raised by claude
+          · 2026-08-17
+        </p>
+
+        
+        <p class="meta">Attached to
+          <code>causal_graphs#luminal_oxygen_limitation</code>, <code>causal_graphs#primary_fermenter_community</code>
+        </p>
+        
+
+        <p>The existing edge is not wrong so much as half: it says the anoxic lumen permits the fermenters, and stops. If the return arm also holds, the two nodes are a self-reinforcing loop, and losing the fermenters raises luminal oxygen and admits facultative pathogens -- the collapse that follows antibiotic depletion. That is the clinically load-bearing half, and a graph of one-way edges can only carry it if someone draws it.</p>
+
+        
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          
+          <li>
+            <strong>Oxygen microprofiling during staged gnotobiotic colonisation</strong>
+            <span class="badge">staged gnotobiotic colonisation with in situ oxygen microsensing</span>
+            
+            <span class="meta">Model systems:
+              germ-free animals colonised in defined stages, a defined community with and without obligate anaerobe fermenters, oxygen microelectrodes at the mucosal surface and mid-lumen</span>
+            <span class="meta">Perturbations:
+              colonisation with facultative organisms alone, subsequent addition of obligate anaerobe fermenters, butyrate supplementation without the producing community, antibiotic depletion of an established fermenter community</span>
+            <span class="meta">Readouts:
+              luminal and mucosal oxygen partial pressure over time, community composition by shotgun sequencing, short-chain fatty acid concentration, epithelial hypoxia by pimonidazole staining</span>
+            
+            <span class="meta">Decides it:
+              whether luminal oxygen rises when an established fermenter community is depleted, with colonisation order held constant</span>
+            <span class="meta">Supports if:
+              oxygen rises on depletion and falls again on re-colonisation -- the return arm is real and the pair is a loop</span>
+            <span class="meta">Refutes if:
+              oxygen is unchanged by depletion -- the habitat sets the anoxia and the single existing edge is the whole story</span>
+          </li>
+          
+        </ul>
+        
+
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.&#39;, whose sentence came from PMID:40945860. That sentence is about plant-derived xenomiRs crossing kingdom barriers, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:40945860 &#39;MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.&#39;; PMID:42278360 &#39;By integrating microbiological, immunological, and clinical perspectives, this review highlights key knowledge gaps and outlines future research directions aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management and eradication.&#39;; PMID:41808832 &#39;Given its promising anti-inflammatory properties, further research is warranted.&#39;; PMID:42197356 &#39;Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.&#39;.</p>
+        </details>
+        
+      </div>
+      
+    </div>
+    
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -513,6 +531,12 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
           <time>2026-08-07T05:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the edge from enables/RO:0002327 to RO:0002326 (contributes to), issue 334. biolink declares enables range &#39;biological process or activity&#39; and the object is a STATE, which does not satisfy it. Unlike the tolerance/capacity nodes in this same pass, this object is a genuine state rather than a mis-typed disposition - a gradient, a community composition, an internal environment - so retyping it to TRAIT would be wrong. contributes to fits because the subject genuinely contributes to the OCCURRENCE OR GENERATION of the object, which is biolink&#39;s definition; that is the same test the motive-force edges FAILED in issue 341, where the subject powers a machine it does not generate. RO:0002326 declares no rdfs:domain or rdfs:range.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-17T22:14:03Z</time> ·
+          <strong>CURATE_KNOWLEDGE_GAPS</strong> · claude
+          <p class="changes">Replaced the scan&#39;s off-topic scraped sentence with a research question authored from this record&#39;s causal graph, anchored it via attaches_to, and sketched an experiment with a decision criterion. The scan&#39;s sentence and PMIDs are preserved in the discussion&#39;s notes.</p>
         </li>
         
       </ol>
@@ -895,7 +919,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 05:00 UTC from
+      Record as of 2026-08-17 22:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

@@ -197,56 +197,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.</h3>
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
-        
-        
-        
-        <details>
-          <summary class="meta">4 evidence item(s)</summary>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41989588/" rel="nofollow noreferrer">PMID:41989588</a>
-            <span class="evidence-snippet">Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42039802/" rel="nofollow noreferrer">PMID:42039802</a>
-            <span class="evidence-snippet">Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.</span>
-            <span class="meta">Gap-signal sentence (limitations_barriers) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41943163/" rel="nofollow noreferrer">PMID:41943163</a>
-            <span class="evidence-snippet">OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/42125129/" rel="nofollow noreferrer">PMID:42125129</a>
-            <span class="evidence-snippet">However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-        </details>
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -432,6 +382,74 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
     
 
     
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+      
+      
+      <div class="discussion" id="kgscan-d5aefedf82bb">
+        <p class="discussion-prompt">Ectoine and glycine betaine both enable osmotic stress tolerance here, but trehalose is wired instead to environmental stress tolerance -- a node with no outgoing edge. Is that split a real distinction, or does trehalose belong on the osmotic route too?</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>kgscan-d5aefedf82bb</code>
+          · raised by claude
+          · 2026-08-17
+        </p>
+
+        
+        <p class="meta">Attached to
+          <code>causal_graphs#osmotic_stress_tolerance</code>, <code>causal_graphs#environmental_stress_tolerance</code>, <code>causal_graphs#ectoine_biosynthesis</code>, <code>causal_graphs#glycine_betaine_system</code>, <code>causal_graphs#trehalose_biosynthesis</code>
+        </p>
+        
+
+        <p>Because environmental_stress_tolerance has no outgoing edge, nothing downstream depends on trehalose at all: this record currently predicts the trait&#39;s osmotolerance from two systems and leaves the third dangling. Either reading has a consequence. If trehalose does serve osmotic tolerance, a genome carrying only trehalose scores as non-osmotolerant when it is not, which is exactly the inference anything reading habitat range off gene content would make. If the split is real -- trehalose for desiccation and thermal stress rather than osmolarity -- then the dangling node needs its own edge onward to the trait. The second question, whether the two routes that do converge are redundant or condition-partitioned, rides along on the same experiment: their costs differ sharply, since de novo ectoine synthesis is carbon-expensive where betaine uptake is cheap given a precursor.</p>
+
+        
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          
+          <li>
+            <strong>Combinatorial solute-pathway knockouts across an environmental matrix</strong>
+            <span class="badge">combinatorial knockout panel with matrix growth phenotyping</span>
+            
+            <span class="meta">Model systems:
+              a free-living halotolerant isolate carrying all three systems, single, double, and triple pathway knockouts</span>
+            <span class="meta">Perturbations:
+              an osmolarity gradient spanning the growth range, low and high temperature at each osmolarity, carbon-replete versus carbon-limited medium, betaine precursor present or absent</span>
+            <span class="meta">Readouts:
+              growth rate and final yield across the matrix, intracellular solute pools by NMR or LC-MS, the osmolarity limit for each genotype</span>
+            
+            <span class="meta">Decides it:
+              whether the trehalose knockout loses growth at high osmolarity specifically, with temperature and water activity held constant</span>
+            <span class="meta">Supports if:
+              trehalose loss costs nothing osmotically and only shows under desiccation or heat -- the split in the graph is real and environmental_stress_tolerance needs its own edge onward</span>
+            <span class="meta">Refutes if:
+              the trehalose knockout is osmotically impaired -- it belongs on the osmotic route with the other two</span>
+          </li>
+          
+        </ul>
+        
+
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;, whose sentence came from PMID:41989588. That sentence is about protozoan infection and gut microbial diversity, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:41989588 &#39;Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;; PMID:42039802 &#39;Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.&#39;; PMID:41943163 &#39;OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.&#39;; PMID:42125129 &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
+        </details>
+        
+      </div>
+      
+    </div>
+    
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -470,6 +488,12 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): ectoine_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route, enumerated two ways and both of them enumerations. environment/euryhaline.yaml counts five steps from L-aspartate (lysC/asd/ectB/ectA/ectC); environment/nacl_delta_mid1.yaml counts the three ectABC enzymes proper. Naming the file matters because the two differ and a bare quote would put euryhaline&#39;s wording into nacl_delta_mid1&#39;s record (#400 review). Either way the steps can be listed, which is the test. Applied AGAINST the majority, which was 4 BIOLOGICAL_PROCESS to 2 before this tranche.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-17T22:14:03Z</time> ·
+          <strong>CURATE_KNOWLEDGE_GAPS</strong> · claude
+          <p class="changes">Replaced the scan&#39;s off-topic scraped sentence with a research question authored from this record&#39;s causal graph, anchored it via attaches_to, and sketched an experiment with a decision criterion. The scan&#39;s sentence and PMIDs are preserved in the discussion&#39;s notes.</p>
         </li>
         
       </ol>
@@ -852,7 +876,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-16 02:00 UTC from
+      Record as of 2026-08-17 22:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

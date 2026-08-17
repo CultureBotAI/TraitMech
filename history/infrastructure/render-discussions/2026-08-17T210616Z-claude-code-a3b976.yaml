@@ -1,0 +1,57 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/traitmech/templates/trait.html
+  slug: render-discussions
+session:
+  id: 2026-08-17T210616Z-claude-code-a3b976
+  timestamp: '2026-08-17T21:06:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/409
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/410
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Render Discussions and Knowledge Gaps on the trait page
+  details: '409 step 1. TraitMech has had the discussion layer since claw#7 - Discussion in
+    the shared Mech schema, just knowledge-gap-scan to seed it, just gen-discussions-data
+    to build a standalone app - and this record originally claimed render_trait_pages.py contained zero references to
+    discussions, so a gap was visible only to someone reading YAML. THAT WAS WRONG, and the
+    adversarial review of PR #410 caught it as issue #412: the claim was true of the .py file
+    and false of the template. trait.html already emitted a Knowledge gaps and discussions (N)
+    section, and git show main:pages/traits/ecology/animal_pathogen.html renders it at line 327.
+    The gap had been measured by grepping the renderer, and the rendering lives in Jinja. So
+    this change did not add a missing section; it replaced a thin one, and for one commit it
+    shipped BOTH, rendering every gap twice on all ten pages. Added a Discussions and Knowledge Gaps section
+    to trait.html, the heading taken verbatim from the DisMech disorder page this was compared
+    against, with id=discussions so the URL shape matches too. Renders every field the reference
+    shows and the schema already supports: prompt, kind and status and discussion_id as badges,
+    posed_by and posed_date, attaches_to, rationale, proposed_experiments, and evidence with
+    reference, supports, snippet and explanation. The first pass rendered experiment_type and
+    title, NEITHER of which exists on ProposedExperiment - the DisMech page shows an experiment
+    type and this schema is domain-neutral, modelling the sketch instead: approach,
+    model_systems, perturbations, readouts, and the three that make it decidable -
+    decision_criterion, would_support, would_refute. Corrected in f9a66c48 by reading the class
+    rather than a rendered page, since no record had an experiment yet for it to render wrong.
+    The superseded section was removed in the same PR, with the three things only it had - the
+    (N) count, PMID linkification and resolution_note - folded into the surviving card, plus
+    notes, which neither rendered and which now carries the scan provenance. No renderer change was
+    needed because trait=doc is already passed to the template, the same way curation_history
+    is reached. Where attaches_to is empty - all ten today - the section says so and names
+    what a curator would set, rather than rendering a blank field, because an unanchored gap
+    is a curation TODO rather than an error. Styles are built from the existing custom properties
+    rather than new colours, so the section inherits the light and dark themes at the foot
+    of style.css without a second set of overrides, and the unanchored note is muted italic
+    rather than the graph-warning tint, which this page reserves for the content below may
+    be wrong. Verified: exactly ten of 477 pages carry the section, matching the ten records
+    with discussions; the cross-link to the corpus-wide index resolves to app/discussions/index.html,
+    which exists. 569 tests pass, qc green.'

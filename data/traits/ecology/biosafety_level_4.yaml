@@ -194,45 +194,81 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-e770cf01677c
-  prompt: 'Knowledge gap for biosafety level 4: Finally, this review examines the
-    largely unknown microbiology and infection implications of celestial body habitation
-    with an emphasis placed on Mars.'
+  prompt: Every BSL-4 control this record requires assumes terrestrial gravity and
+    somewhere to put contaminated air, water and waste -- suit overpressure, airlocks,
+    chemical showers, specialized waste disposal. Which still contain an agent in
+    a closed-loop habitat that recycles all three?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
-    future_work, limitations_barriers, unclear_unknown). Curator review required:
-    set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:37362850
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Finally, this review examines the largely unknown microbiology and infection
-      implications of celestial body habitation with an emphasis placed on Mars.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:41914886
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase
-      signaling to establish infection, though the molecular mechanisms remain incompletely
-      understood.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:40044492
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, the comparatively low scientific commitment of countries that
-      are usually among the major players in global scientific publications and the
-      declining scientific interest in NiV research combined with the prevailing knowledge
-      gaps in NiV infectiology in conjunction with the risk of NiV spreading to other
-      areas is extremely threatening.
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  - reference: PMID:39682751
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: The COVID-19 pandemic has underscored the limitations of focusing solely
-      on the pathogen-killing strategies of immunology and microbiology to address
-      complex, multisystemic infectious diseases.
-    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: Sample-return and crewed-habitat missions need containment for agents
+    with no countermeasure, which is exactly what BSL-4 is for. But every control
+    edge runs outward from bsl4_trait to a piece of equipment -- `requires` an airlock,
+    a decontamination shower, specialized waste disposal; `necessitates use of` a
+    positive pressure suit -- so the controls are named as hardware rather than as
+    the physics they rely on, and it is the physics that does or does not transfer.
+    Sedimentation-dependent controls behave differently in microgravity, and a shower
+    and a waste stream that both feed a recycling loop are not disposal. As written
+    the record cannot distinguish a control that survives the move from one that does
+    not, because it never says what any of them do.
+  attaches_to:
+  - causal_graphs#positive_pressure_suit
+  - causal_graphs#airlock
+  - causal_graphs#decontamination_shower
+  - causal_graphs#specialized_waste_disposal
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for biosafety level 4: Finally, this review examines
+    the largely unknown microbiology and infection implications of celestial body
+    habitation with an emphasis placed on Mars.'', whose sentence came from PMID:37362850.
+    That sentence is about microbiology and infection during celestial body habitation,
+    not about this trait: the scan matched the hedging vocabulary of a gap statement
+    without checking that the gap was about the trait it was filed under. The prompt
+    above was authored instead from this record''s own causal graph, and none of these
+    references are carried as its evidence, because they support the scraped sentence
+    rather than the question. The scan attached 3 further references whose snippets
+    concern neither that sentence nor this trait; all 4 are reproduced here so nothing
+    it produced is lost: PMID:37362850 ''Finally, this review examines the largely
+    unknown microbiology and infection implications of celestial body habitation with
+    an emphasis placed on Mars.''; PMID:41914886 ''Both Old World arenaviruses LASV
+    and LCMV exploit host tyrosine kinase signaling to establish infection, though
+    the molecular mechanisms remain incompletely understood.''; PMID:40044492 ''However,
+    the comparatively low scientific commitment of countries that are usually among
+    the major players in global scientific publications and the declining scientific
+    interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology
+    in conjunction with the risk of NiV spreading to other areas is extremely threatening.'';
+    PMID:39682751 ''The COVID-19 pandemic has underscored the limitations of focusing
+    solely on the pathogen-killing strategies of immunology and microbiology to address
+    complex, multisystemic infectious diseases.''.'
+  proposed_experiments:
+  - experiment_id: x-bsl4-closed-loop-transfer
+    name: Control-by-control containment audit in a closed-loop analogue
+    approach: analogue-habitat tracer study with parabolic-flight aerosol runs
+    model_systems:
+    - sealed closed-loop habitat analogue with recycled atmosphere
+    - parabolic flight or drop-tower reduced-gravity segments
+    - non-infectious spore and fluorescent-particle tracers
+    perturbations:
+    - suit breach at defined overpressure
+    - airlock cycling with no atmospheric exhaust available
+    - chemical shower under water-recovery constraints
+    readouts:
+    - tracer crossing the containment boundary per control
+    - settling versus suspension time in reduced gravity
+    - tracer persisting in the atmospheric recycling loop
+    decision_criterion: which controls hold tracer escape at terrestrial levels once
+      gravity and exhaust assumptions are removed
+    would_support: overpressure-based controls transfer intact -- they depend on pressure
+      differential, not on settling or exhaust
+    would_refute: escape rises for controls that passed on the ground -- the BSL-4
+      set does not transfer and needs habitat-specific equivalents
+  posed_date: '2026-08-17'

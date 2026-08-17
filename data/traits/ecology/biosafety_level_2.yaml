@@ -189,42 +189,72 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-066a51aacfb6
-  prompt: 'Knowledge gap for biosafety level 2: Background : Untargeted microbiome
-    modulation has achieved conflicting results in post-infectious irritable bowel
-    syndrome (PI-IBS).'
+  prompt: BSL-2 requires a biosafety cabinet specifically for procedures with aerosol
+    or splash potential, while other work may go on the open bench. Which procedures
+    actually generate an infectious dose at the breathing zone, and does the current
+    procedure list match them?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
-    future_work, limitations_barriers, unclear_unknown). Curator review required:
-    set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:41683313
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting
-      results in post-infectious irritable bowel syndrome (PI-IBS).'
-    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
-  - reference: PMID:41413233
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Recently, the gut microbiota (GM) has gained attention for its potential
-      involvement in blood pressure regulation; however, polyamine metabolism involvement
-      remains poorly understood.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:41640410
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, their clinical translation is hampered by challenges within
-      the harsh gastrointestinal milieu, including low viability, poor colonization,
-      and insufficient target specificity.
-    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
-  - reference: PMID:41490313
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, how these core strains interact with each other and with other
-      gut microbes is largely unknown.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: The bench/cabinet boundary is the single control that most BSL-2 work
+    turns on, and it is drawn from procedure lists that long predate quantitative
+    aerosol measurement. A procedure that is on the open bench but does generate respirable
+    particles is an unrecognised exposure; one needlessly in the cabinet costs throughput.
+    Either way the edge into biosafety_cabinet is asserting something measurable that
+    has not been measured.
+  attaches_to:
+  - causal_graphs#aerosol_splash_procedure
+  - causal_graphs#biosafety_cabinet
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for biosafety level 2: Background : Untargeted
+    microbiome modulation has achieved conflicting results in post-infectious irritable
+    bowel syndrome (PI-IBS).'', whose sentence came from PMID:41683313. That sentence
+    is about microbiome modulation in post-infectious IBS, not about this trait: the
+    scan matched the hedging vocabulary of a gap statement without checking that the
+    gap was about the trait it was filed under. The prompt above was authored instead
+    from this record''s own causal graph, and none of these references are carried
+    as its evidence, because they support the scraped sentence rather than the question.
+    The scan attached 3 further references whose snippets concern neither that sentence
+    nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:41683313
+    ''Background : Untargeted microbiome modulation has achieved conflicting results
+    in post-infectious irritable bowel syndrome (PI-IBS).''; PMID:41413233 ''Recently,
+    the gut microbiota (GM) has gained attention for its potential involvement in
+    blood pressure regulation; however, polyamine metabolism involvement remains poorly
+    understood.''; PMID:41640410 ''However, their clinical translation is hampered
+    by challenges within the harsh gastrointestinal milieu, including low viability,
+    poor colonization, and insufficient target specificity.''; PMID:41490313 ''However,
+    how these core strains interact with each other and with other gut microbes is
+    largely unknown.''.'
+  proposed_experiments:
+  - experiment_id: x-bsl2-aerosol-tracer
+    name: Surrogate-tracer aerosol survey of routine BSL-2 procedures
+    approach: non-infectious tracer release with breathing-zone sampling
+    model_systems:
+    - bacteriophage or fluorescent-bead surrogate at defined titre
+    - a working BSL-2 laboratory
+    - breathing-zone and area impingers
+    perturbations:
+    - each routine procedure performed on the open bench
+    - the same procedure performed inside a class II cabinet
+    - deliberate worst-case variants such as a dropped tube
+    readouts:
+    - tracer recovered at the breathing zone per procedure
+    - particle size distribution in the respirable fraction
+    - surface deposition beyond the immediate work area
+    decision_criterion: whether any open-bench procedure exceeds the breathing-zone
+      tracer recovery of cabinet-required procedures
+    would_support: recovery tracks the existing list -- the procedure boundary is
+      drawn where the aerosol actually is
+    would_refute: an off-list procedure matches or exceeds a listed one -- the control
+      boundary is misplaced
+  posed_date: '2026-08-17'
