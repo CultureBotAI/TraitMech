@@ -202,30 +202,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> BSL-3 boundary integrity is verified by pressure-decay testing of the room envelope. Does passing a pressure-decay test predict containment of an airborne agent under real operating conditions, with doors cycling and equipment running?</h3>
-        <p>The graph treats the decay test as evidence of containment, but the test is performed on a sealed, static room, and the room only matters when it is occupied and in use. If the two diverge, facilities are certified against a condition they never operate in, and the edge from pressure_decay_testing to containment is weaker than the record implies.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#boundary_integrity_testing</code>, <code>causal_graphs#pressure_decay_testing</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Tracer-gas containment under operation versus decay-test result</strong> — paired tracer-gas release and envelope pressure-decay testing (decision: whether tracer escape under operation correlates with the static decay-test result across suites)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -423,7 +399,7 @@ This distinction is important because the same agent may be handled under differ
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -472,6 +448,16 @@ This distinction is important because the same agent may be handled under differ
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;BSL-3 boundary integrity is verified by pressure-decay testing of the room envelope. Does passing a pressure-decay test predict containment of an airborne agent under real operating conditions, with doors cycling and equipment running?&#39;, retrieved from . That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

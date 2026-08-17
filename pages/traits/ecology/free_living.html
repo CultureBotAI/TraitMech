@@ -197,30 +197,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Three compatible-solute systems -- ectoine, glycine betaine, and trehalose -- all feed osmotic stress tolerance in this record. Are they redundant backups, or does each cover a distinct range of osmolarity, temperature, and carbon availability?</h3>
-        <p>Three parallel edges into one node is the graph&#39;s way of saying the routes are interchangeable, which is a strong claim given their costs differ -- de novo ectoine synthesis is carbon-expensive where betaine uptake is cheap when a precursor is available. If they are actually condition-partitioned, a genome carrying only one is osmotolerant over a narrower envelope than the record predicts, and that matters for anything inferring habitat range from gene content.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#osmotic_stress_tolerance</code>, <code>causal_graphs#ectoine_biosynthesis</code>, <code>causal_graphs#glycine_betaine_system</code>, <code>causal_graphs#trehalose_biosynthesis</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Combinatorial solute-pathway knockouts across an environmental matrix</strong> — combinatorial knockout panel with matrix growth phenotyping (decision: whether any single knockout loses growth in a region of the matrix where the others are sufficient)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -407,13 +383,13 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
       <div class="discussion">
-        <p class="discussion-prompt">Three compatible-solute systems -- ectoine, glycine betaine, and trehalose -- all feed osmotic stress tolerance in this record. Are they redundant backups, or does each cover a distinct range of osmolarity, temperature, and carbon availability?</p>
+        <p class="discussion-prompt">Ectoine and glycine betaine both enable osmotic stress tolerance here, but trehalose is wired instead to environmental stress tolerance -- a node with no outgoing edge. Is that split a real distinction, or does trehalose belong on the osmotic route too?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -424,11 +400,11 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
 
         
         <p class="meta">Attached to
-          <code>causal_graphs#osmotic_stress_tolerance</code>, <code>causal_graphs#ectoine_biosynthesis</code>, <code>causal_graphs#glycine_betaine_system</code>, <code>causal_graphs#trehalose_biosynthesis</code>
+          <code>causal_graphs#osmotic_stress_tolerance</code>, <code>causal_graphs#environmental_stress_tolerance</code>, <code>causal_graphs#ectoine_biosynthesis</code>, <code>causal_graphs#glycine_betaine_system</code>, <code>causal_graphs#trehalose_biosynthesis</code>
         </p>
         
 
-        <p>Three parallel edges into one node is the graph&#39;s way of saying the routes are interchangeable, which is a strong claim given their costs differ -- de novo ectoine synthesis is carbon-expensive where betaine uptake is cheap when a precursor is available. If they are actually condition-partitioned, a genome carrying only one is osmotolerant over a narrower envelope than the record predicts, and that matters for anything inferring habitat range from gene content.</p>
+        <p>Because environmental_stress_tolerance has no outgoing edge, nothing downstream depends on trehalose at all: this record currently predicts the trait&#39;s osmotolerance from two systems and leaves the third dangling. Either reading has a consequence. If trehalose does serve osmotic tolerance, a genome carrying only trehalose scores as non-osmotolerant when it is not, which is exactly the inference anything reading habitat range off gene content would make. If the split is real -- trehalose for desiccation and thermal stress rather than osmolarity -- then the dangling node needs its own edge onward to the trait. The second question, whether the two routes that do converge are redundant or condition-partitioned, rides along on the same experiment: their costs differ sharply, since de novo ectoine synthesis is carbon-expensive where betaine uptake is cheap given a precursor.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -446,16 +422,26 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
               growth rate and final yield across the matrix, intracellular solute pools by NMR or LC-MS, the osmolarity limit for each genotype</span>
             
             <span class="meta">Decides it:
-              whether any single knockout loses growth in a region of the matrix where the others are sufficient</span>
+              whether the trehalose knockout loses growth at high osmolarity specifically, with temperature and water activity held constant</span>
             <span class="meta">Supports if:
-              single knockouts match wild type wherever another system is usable -- the routes are redundant as drawn</span>
+              trehalose loss costs nothing osmotically and only shows under desiccation or heat -- the split in the graph is real and environmental_stress_tolerance needs its own edge onward</span>
             <span class="meta">Refutes if:
-              each single knockout fails in its own region -- the routes are partitioned and the parallel edges need conditions</span>
+              the trehalose knockout is osmotically impaired -- it belongs on the osmotic route with the other two</span>
           </li>
           
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Three compatible-solute systems -- ectoine, glycine betaine, and trehalose -- all feed osmotic stress tolerance in this record. Are they redundant backups, or does each cover a distinct range of osmolarity, temperature, and carbon availability?&#39;, retrieved from . That sentence is about protozoan infection and gut microbial diversity, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

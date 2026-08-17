@@ -219,30 +219,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Luminal oxygen limitation and the primary fermenter community appear here as separate features of the gut habitat. Which establishes which -- does the anoxic lumen permit the fermenters, or do the fermenters and the host epithelium create the anoxia?</h3>
-        <p>The record presents both as given properties of the habitat, which leaves the causal direction unstated and therefore unusable. It is the direction that matters clinically: if the community maintains the anoxia, then losing the fermenters raises luminal oxygen and opens the door to facultative pathogens -- a self-reinforcing loop the current graph cannot represent, because a loop needs the arrow to point somewhere.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#luminal_oxygen_limitation</code>, <code>causal_graphs#primary_fermenter_community</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Oxygen microprofiling during staged gnotobiotic colonisation</strong> — staged gnotobiotic colonisation with in situ oxygen microsensing (decision: whether luminal oxygen falls before or only after the fermenters establish)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -438,13 +414,13 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
       <div class="discussion">
-        <p class="discussion-prompt">Luminal oxygen limitation and the primary fermenter community appear here as separate features of the gut habitat. Which establishes which -- does the anoxic lumen permit the fermenters, or do the fermenters and the host epithelium create the anoxia?</p>
+        <p class="discussion-prompt">This record commits to luminal oxygen limitation contributing to the primary fermenter community. Does the reverse arm hold too -- do the fermenters and the epithelium maintain the anoxia -- making this a feedback loop rather than the one-way edge drawn?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -459,7 +435,7 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
         </p>
         
 
-        <p>The record presents both as given properties of the habitat, which leaves the causal direction unstated and therefore unusable. It is the direction that matters clinically: if the community maintains the anoxia, then losing the fermenters raises luminal oxygen and opens the door to facultative pathogens -- a self-reinforcing loop the current graph cannot represent, because a loop needs the arrow to point somewhere.</p>
+        <p>The existing edge is not wrong so much as half: it says the anoxic lumen permits the fermenters, and stops. If the return arm also holds, the two nodes are a self-reinforcing loop, and losing the fermenters raises luminal oxygen and admits facultative pathogens -- the collapse that follows antibiotic depletion. That is the clinically load-bearing half, and a graph of one-way edges can only carry it if someone draws it.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -477,16 +453,26 @@ Current expert reviews emphasize that establishment is **species- and strain-spe
               luminal and mucosal oxygen partial pressure over time, community composition by shotgun sequencing, short-chain fatty acid concentration, epithelial hypoxia by pimonidazole staining</span>
             
             <span class="meta">Decides it:
-              whether luminal oxygen falls before or only after the fermenters establish</span>
+              whether luminal oxygen rises when an established fermenter community is depleted, with colonisation order held constant</span>
             <span class="meta">Supports if:
-              oxygen falls only after fermenter establishment and rises on their depletion -- the community creates the anoxia</span>
+              oxygen rises on depletion and falls again on re-colonisation -- the return arm is real and the pair is a loop</span>
             <span class="meta">Refutes if:
-              the lumen is already anoxic before fermenters arrive -- the habitat permits them and the arrow points the other way</span>
+              oxygen is unchanged by depletion -- the habitat sets the anoxia and the single existing edge is the whole story</span>
           </li>
           
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Luminal oxygen limitation and the primary fermenter community appear here as separate features of the gut habitat. Which establishes which -- does the anoxic lumen permit the fermenters, or do the fermenters and the host epithelium create the anoxia?&#39;, retrieved from . That sentence is about plant-derived xenomiRs crossing kingdom barriers, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

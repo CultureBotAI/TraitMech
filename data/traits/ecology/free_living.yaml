@@ -202,31 +202,36 @@ curation_history:
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-d5aefedf82bb
-  prompt: Three compatible-solute systems -- ectoine, glycine betaine, and trehalose
-    -- all feed osmotic stress tolerance in this record. Are they redundant backups,
-    or does each cover a distinct range of osmolarity, temperature, and carbon availability?
+  prompt: Ectoine and glycine betaine both enable osmotic stress tolerance here, but
+    trehalose is wired instead to environmental stress tolerance -- a node with no
+    outgoing edge. Is that split a real distinction, or does trehalose belong on the
+    osmotic route too?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Three parallel edges into one node is the graph's way of saying the routes
-    are interchangeable, which is a strong claim given their costs differ -- de novo
-    ectoine synthesis is carbon-expensive where betaine uptake is cheap when a precursor
-    is available. If they are actually condition-partitioned, a genome carrying only
-    one is osmotolerant over a narrower envelope than the record predicts, and that
-    matters for anything inferring habitat range from gene content.
+  rationale: 'Because environmental_stress_tolerance has no outgoing edge, nothing
+    downstream depends on trehalose at all: this record currently predicts the trait''s
+    osmotolerance from two systems and leaves the third dangling. Either reading has
+    a consequence. If trehalose does serve osmotic tolerance, a genome carrying only
+    trehalose scores as non-osmotolerant when it is not, which is exactly the inference
+    anything reading habitat range off gene content would make. If the split is real
+    -- trehalose for desiccation and thermal stress rather than osmolarity -- then
+    the dangling node needs its own edge onward to the trait. The second question,
+    whether the two routes that do converge are redundant or condition-partitioned,
+    rides along on the same experiment: their costs differ sharply, since de novo
+    ectoine synthesis is carbon-expensive where betaine uptake is cheap given a precursor.'
   attaches_to:
   - causal_graphs#osmotic_stress_tolerance
+  - causal_graphs#environmental_stress_tolerance
   - causal_graphs#ectoine_biosynthesis
   - causal_graphs#glycine_betaine_system
   - causal_graphs#trehalose_biosynthesis
   posed_by: claude
   notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
-    with the prompt ''Knowledge gap for free-living: Interactions between parasites
-    and the gut microbiota play a key role in immune responses and susceptibility
-    to zoonotic diseases; however, many aspects of how protozoan infections alter
-    microbial diversity and how these changes influence parasite pathogenicity and
-    host defense remain poorly understood.'', retrieved from PMID:41989588, PMID:42039802,
-    PMID:41943163, PMID:42125129. That sentence is about protozoan infection and gut
-    microbial diversity, not about this trait: the scan matched the hedging vocabulary
+    with the prompt ''Three compatible-solute systems -- ectoine, glycine betaine,
+    and trehalose -- all feed osmotic stress tolerance in this record. Are they redundant
+    backups, or does each cover a distinct range of osmolarity, temperature, and carbon
+    availability?'', retrieved from . That sentence is about protozoan infection and
+    gut microbial diversity, not about this trait: the scan matched the hedging vocabulary
     of a gap statement without checking that the gap was about the trait it was filed
     under. The prompt above was authored instead from this record''s own causal graph,
     and those PMIDs are not carried as its evidence because they support the scraped
@@ -248,10 +253,11 @@ discussions:
     - growth rate and final yield across the matrix
     - intracellular solute pools by NMR or LC-MS
     - the osmolarity limit for each genotype
-    decision_criterion: whether any single knockout loses growth in a region of the
-      matrix where the others are sufficient
-    would_support: single knockouts match wild type wherever another system is usable
-      -- the routes are redundant as drawn
-    would_refute: each single knockout fails in its own region -- the routes are partitioned
-      and the parallel edges need conditions
+    decision_criterion: whether the trehalose knockout loses growth at high osmolarity
+      specifically, with temperature and water activity held constant
+    would_support: trehalose loss costs nothing osmotically and only shows under desiccation
+      or heat -- the split in the graph is real and environmental_stress_tolerance
+      needs its own edge onward
+    would_refute: the trehalose knockout is osmotically impaired -- it belongs on
+      the osmotic route with the other two
   posed_date: '2026-08-17'

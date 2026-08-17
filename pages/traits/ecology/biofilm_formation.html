@@ -236,30 +236,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Nitric oxide triggers biofilm dispersal in this record by way of falling c-di-GMP. Is lowered c-di-GMP the only route from NO to dispersal, or can NO disperse a biofilm whose c-di-GMP pool is held high?</h3>
-        <p>The record encodes NO -&gt; c-di-GMP -&gt; dispersal as a single chain, which makes c-di-GMP the necessary intermediate. NO-releasing dispersal agents are being developed as antibiofilm adjuncts; if the chain is the whole story, strains with constitutively high c-di-GMP are intrinsically refractory to them, and that is a resistance mechanism the graph currently cannot express.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#biofilm_dispersal</code>, <code>causal_graphs#c_di_gmp</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>NO challenge against a c-di-GMP-clamped biofilm</strong> — flow-cell biofilm with an inducible c-di-GMP clamp (decision: whether NO still releases cells when measured c-di-GMP does not fall)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -455,13 +431,13 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
       <div class="discussion">
-        <p class="discussion-prompt">Nitric oxide triggers biofilm dispersal in this record by way of falling c-di-GMP. Is lowered c-di-GMP the only route from NO to dispersal, or can NO disperse a biofilm whose c-di-GMP pool is held high?</p>
+        <p class="discussion-prompt">This record draws nitric oxide straight to biofilm dispersal with nothing in between, while c-di-GMP sits in the same graph wired only to the sessile state. Is the NO effect on dispersal mediated by lowering c-di-GMP, and should that intermediate be on the edge?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -472,11 +448,11 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
 
         
         <p class="meta">Attached to
-          <code>causal_graphs#biofilm_dispersal</code>, <code>causal_graphs#c_di_gmp</code>
+          <code>causal_graphs#biofilm_dispersal</code>, <code>causal_graphs#nitric_oxide</code>, <code>causal_graphs#c_di_gmp</code>
         </p>
         
 
-        <p>The record encodes NO -&gt; c-di-GMP -&gt; dispersal as a single chain, which makes c-di-GMP the necessary intermediate. NO-releasing dispersal agents are being developed as antibiofilm adjuncts; if the chain is the whole story, strains with constitutively high c-di-GMP are intrinsically refractory to them, and that is a resistance mechanism the graph currently cannot express.</p>
+        <p>A bare `induces` edge from a diffusible signal to a community-scale outcome is a placeholder where a mechanism should be. The graph already carries c_di_gmp, but only as a promoter of sessile_state, so it cannot currently express the route most often proposed for this effect. The distinction is not academic: if dispersal runs through the c-di-GMP pool, then strains holding that pool high are intrinsically refractory to the NO-releasing antibiofilm agents now in development -- a resistance mechanism this graph has no way to represent while the edge stays bare.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -494,16 +470,26 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
               biomass loss by confocal image analysis, cell counts released into the effluent, intracellular c-di-GMP by LC-MS/MS, a c-di-GMP-responsive transcriptional reporter</span>
             
             <span class="meta">Decides it:
-              whether NO still releases cells when measured c-di-GMP does not fall</span>
+              whether NO still releases cells when the measured c-di-GMP pool is held high</span>
             <span class="meta">Supports if:
-              the clamped biofilm does not disperse -- c-di-GMP is the necessary intermediate and the single chain is correct</span>
+              the clamped biofilm does not disperse -- c-di-GMP is the necessary intermediate and the bare edge should be replaced by the two-step route</span>
             <span class="meta">Refutes if:
-              the clamped biofilm disperses anyway -- a c-di-GMP-independent route exists and the graph needs a second edge</span>
+              the clamped biofilm disperses anyway -- the effect is c-di-GMP-independent and the direct edge as drawn is right</span>
           </li>
           
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Nitric oxide triggers biofilm dispersal in this record by way of falling c-di-GMP. Is lowered c-di-GMP the only route from NO to dispersal, or can NO disperse a biofilm whose c-di-GMP pool is held high?&#39;, retrieved from . That sentence is about immune homeostasis at the gut mucosa, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

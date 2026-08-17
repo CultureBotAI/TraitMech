@@ -31,6 +31,22 @@ The upstream precision problem is filed separately; the scan lives in the
 
 Every question is anchored to a node_id that exists in that record's graph --
 `audit_discussion_anchors.py` now enforces that, so these cannot rot silently.
+
+FOUR OF THESE WERE WRONG ON THE FIRST PASS, and the way they were wrong is worth
+recording. They were written from the graphs' NODE LISTS without reading the
+EDGES, so they described structure that was not there: a NO -> c-di-GMP ->
+dispersal chain in biofilm_formation (no such edges; NO goes straight to
+dispersal), an "unstated" causal direction in gut_associated (stated, on a
+pre-existing edge), three convergent compatible-solute edges in free_living
+(two -- trehalose goes to a different node), and a drift arm routed into genome
+reduction in endosymbiosis (disconnected). Node names imply a graph; only the
+edges are the graph. Each was rewritten against the edges that exist, and in
+three cases the true structure gave the BETTER question -- a bare edge where a
+mechanism belongs, a one-way edge that should be a loop, a node dangling with no
+path to the trait.
+
+The anchor audit cannot catch this class: it checks that a node exists, not that
+the prose about it is true. That gap is filed as #415.
 """
 
 from __future__ import annotations
@@ -107,22 +123,26 @@ PLAN: dict[str, dict] = {
     "kgscan-aa46cc9b34ab": {
         "file": "ecology/biofilm_formation.yaml",
         "prompt": (
-            "Nitric oxide triggers biofilm dispersal in this record by way of "
-            "falling c-di-GMP. Is lowered c-di-GMP the only route from NO to "
-            "dispersal, or can NO disperse a biofilm whose c-di-GMP pool is "
-            "held high?"
+            "This record draws nitric oxide straight to biofilm dispersal with "
+            "nothing in between, while c-di-GMP sits in the same graph wired "
+            "only to the sessile state. Is the NO effect on dispersal mediated "
+            "by lowering c-di-GMP, and should that intermediate be on the edge?"
         ),
         "attaches_to": [
             "causal_graphs#biofilm_dispersal",
+            "causal_graphs#nitric_oxide",
             "causal_graphs#c_di_gmp",
         ],
         "rationale": (
-            "The record encodes NO -> c-di-GMP -> dispersal as a single chain, "
-            "which makes c-di-GMP the necessary intermediate. NO-releasing "
-            "dispersal agents are being developed as antibiofilm adjuncts; if "
-            "the chain is the whole story, strains with constitutively high "
-            "c-di-GMP are intrinsically refractory to them, and that is a "
-            "resistance mechanism the graph currently cannot express."
+            "A bare `induces` edge from a diffusible signal to a "
+            "community-scale outcome is a placeholder where a mechanism should "
+            "be. The graph already carries c_di_gmp, but only as a promoter of "
+            "sessile_state, so it cannot currently express the route most often "
+            "proposed for this effect. The distinction is not academic: if "
+            "dispersal runs through the c-di-GMP pool, then strains holding "
+            "that pool high are intrinsically refractory to the NO-releasing "
+            "antibiofilm agents now in development -- a resistance mechanism "
+            "this graph has no way to represent while the edge stays bare."
         ),
         "experiment": {
             "experiment_id": "x-biofilm-no-dispersal-bypass",
@@ -144,16 +164,17 @@ PLAN: dict[str, dict] = {
                 "a c-di-GMP-responsive transcriptional reporter",
             ],
             "decision_criterion": (
-                "whether NO still releases cells when measured c-di-GMP does "
-                "not fall"
+                "whether NO still releases cells when the measured c-di-GMP "
+                "pool is held high"
             ),
             "would_support": (
                 "the clamped biofilm does not disperse -- c-di-GMP is the "
-                "necessary intermediate and the single chain is correct"
+                "necessary intermediate and the bare edge should be replaced "
+                "by the two-step route"
             ),
             "would_refute": (
-                "the clamped biofilm disperses anyway -- a c-di-GMP-independent "
-                "route exists and the graph needs a second edge"
+                "the clamped biofilm disperses anyway -- the effect is "
+                "c-di-GMP-independent and the direct edge as drawn is right"
             ),
         },
         "scan_topic": "immune homeostasis at the gut mucosa",
@@ -427,24 +448,28 @@ PLAN: dict[str, dict] = {
         "file": "ecology/endosymbiosis.yaml",
         "kind": "CONTROVERSY",
         "prompt": (
-            "This record routes genome reduction through both drift-like causes "
-            "(transmission bottlenecks, limited recombination) and "
-            "selection-like ones (metabolic gene loss compensated by the host). "
-            "Which dominates, and does the balance shift as an association ages?"
+            "Only the selection-like arm reaches genome reduction in this "
+            "record -- confined habitat drives metabolic gene loss, which "
+            "contributes to reduction. Transmission bottleneck and limited "
+            "recombination sit as a disconnected pair. Does drift under "
+            "bottlenecks cause reduction here, warranting an edge?"
         ),
         "attaches_to": [
             "causal_graphs#reductive_genome_evolution",
             "causal_graphs#transmission_bottleneck",
+            "causal_graphs#limited_recombination",
             "causal_graphs#metabolic_gene_loss",
         ],
         "rationale": (
-            "The two mechanisms predict opposite things about which genes go "
-            "first: drift under a bottleneck removes genes roughly regardless of "
+            "By attaching one arm and leaving the other dangling, the record "
+            "takes a side on a contested question through omission rather than "
+            "assertion -- which is the hardest kind of claim to notice or "
+            "argue with. The two mechanisms predict opposite loss spectra: "
+            "drift under a bottleneck removes genes roughly regardless of "
             "function, while host compensation removes exactly the genes whose "
-            "products the host supplies. Because the record encodes both without "
-            "weighting them, it cannot be used to predict what a newly sequenced "
-            "symbiont will have lost -- which is most of what a reduction model "
-            "is for."
+            "products the host supplies. As drawn, the graph predicts only the "
+            "second, so it cannot say what a newly sequenced symbiont will have "
+            "lost -- which is most of what a reduction model is for."
         ),
         "experiment": {
             "experiment_id": "x-endosymbiont-drift-vs-selection",
@@ -462,16 +487,18 @@ PLAN: dict[str, dict] = {
                 "pseudogene load as a marker of ongoing reduction",
             ],
             "decision_criterion": (
-                "whether host-complemented functions are lost preferentially "
-                "once effective population size is controlled for"
+                "whether genome size still tracks bottleneck severity once "
+                "host complementation of the lost functions is controlled for"
             ),
             "would_support": (
-                "loss is enriched for host-complemented functions beyond the "
-                "drift expectation -- compensation drives the loss spectrum"
+                "reduction tracks bottleneck severity independently of "
+                "complementation -- the drift arm is causal and the graph is "
+                "missing an edge into reductive_genome_evolution"
             ),
             "would_refute": (
-                "loss tracks effective population size with no functional "
-                "enrichment -- drift dominates and compensation is a consequence"
+                "loss is enriched for host-complemented functions with no "
+                "residual bottleneck effect -- the omission is correct and the "
+                "dangling pair is context rather than cause"
             ),
         },
         "scan_topic": "growth anomalies in corals",
@@ -479,25 +506,33 @@ PLAN: dict[str, dict] = {
     "kgscan-d5aefedf82bb": {
         "file": "ecology/free_living.yaml",
         "prompt": (
-            "Three compatible-solute systems -- ectoine, glycine betaine, and "
-            "trehalose -- all feed osmotic stress tolerance in this record. Are "
-            "they redundant backups, or does each cover a distinct range of "
-            "osmolarity, temperature, and carbon availability?"
+            "Ectoine and glycine betaine both enable osmotic stress tolerance "
+            "here, but trehalose is wired instead to environmental stress "
+            "tolerance -- a node with no outgoing edge. Is that split a real "
+            "distinction, or does trehalose belong on the osmotic route too?"
         ),
         "attaches_to": [
             "causal_graphs#osmotic_stress_tolerance",
+            "causal_graphs#environmental_stress_tolerance",
             "causal_graphs#ectoine_biosynthesis",
             "causal_graphs#glycine_betaine_system",
             "causal_graphs#trehalose_biosynthesis",
         ],
         "rationale": (
-            "Three parallel edges into one node is the graph's way of saying "
-            "the routes are interchangeable, which is a strong claim given their "
-            "costs differ -- de novo ectoine synthesis is carbon-expensive where "
-            "betaine uptake is cheap when a precursor is available. If they are "
-            "actually condition-partitioned, a genome carrying only one is "
-            "osmotolerant over a narrower envelope than the record predicts, and "
-            "that matters for anything inferring habitat range from gene content."
+            "Because environmental_stress_tolerance has no outgoing edge, "
+            "nothing downstream depends on trehalose at all: this record "
+            "currently predicts the trait's osmotolerance from two systems and "
+            "leaves the third dangling. Either reading has a consequence. If "
+            "trehalose does serve osmotic tolerance, a genome carrying only "
+            "trehalose scores as non-osmotolerant when it is not, which is "
+            "exactly the inference anything reading habitat range off gene "
+            "content would make. If the split is real -- trehalose for "
+            "desiccation and thermal stress rather than osmolarity -- then the "
+            "dangling node needs its own edge onward to the trait. The second "
+            "question, whether the two routes that do converge are redundant or "
+            "condition-partitioned, rides along on the same experiment: their "
+            "costs differ sharply, since de novo ectoine synthesis is "
+            "carbon-expensive where betaine uptake is cheap given a precursor."
         ),
         "experiment": {
             "experiment_id": "x-compatible-solute-partitioning",
@@ -519,16 +554,17 @@ PLAN: dict[str, dict] = {
                 "the osmolarity limit for each genotype",
             ],
             "decision_criterion": (
-                "whether any single knockout loses growth in a region of the "
-                "matrix where the others are sufficient"
+                "whether the trehalose knockout loses growth at high osmolarity "
+                "specifically, with temperature and water activity held constant"
             ),
             "would_support": (
-                "single knockouts match wild type wherever another system is "
-                "usable -- the routes are redundant as drawn"
+                "trehalose loss costs nothing osmotically and only shows under "
+                "desiccation or heat -- the split in the graph is real and "
+                "environmental_stress_tolerance needs its own edge onward"
             ),
             "would_refute": (
-                "each single knockout fails in its own region -- the routes are "
-                "partitioned and the parallel edges need conditions"
+                "the trehalose knockout is osmotically impaired -- it belongs "
+                "on the osmotic route with the other two"
             ),
         },
         "scan_topic": "protozoan infection and gut microbial diversity",
@@ -536,23 +572,23 @@ PLAN: dict[str, dict] = {
     "kgscan-4fc1a06fa1e3": {
         "file": "ecology/gut_associated.yaml",
         "prompt": (
-            "Luminal oxygen limitation and the primary fermenter community "
-            "appear here as separate features of the gut habitat. Which "
-            "establishes which -- does the anoxic lumen permit the fermenters, "
-            "or do the fermenters and the host epithelium create the anoxia?"
+            "This record commits to luminal oxygen limitation contributing to "
+            "the primary fermenter community. Does the reverse arm hold too -- "
+            "do the fermenters and the epithelium maintain the anoxia -- making "
+            "this a feedback loop rather than the one-way edge drawn?"
         ),
         "attaches_to": [
             "causal_graphs#luminal_oxygen_limitation",
             "causal_graphs#primary_fermenter_community",
         ],
         "rationale": (
-            "The record presents both as given properties of the habitat, which "
-            "leaves the causal direction unstated and therefore unusable. It is "
-            "the direction that matters clinically: if the community maintains "
-            "the anoxia, then losing the fermenters raises luminal oxygen and "
-            "opens the door to facultative pathogens -- a self-reinforcing loop "
-            "the current graph cannot represent, because a loop needs the arrow "
-            "to point somewhere."
+            "The existing edge is not wrong so much as half: it says the anoxic "
+            "lumen permits the fermenters, and stops. If the return arm also "
+            "holds, the two nodes are a self-reinforcing loop, and losing the "
+            "fermenters raises luminal oxygen and admits facultative pathogens "
+            "-- the collapse that follows antibiotic depletion. That is the "
+            "clinically load-bearing half, and a graph of one-way edges can "
+            "only carry it if someone draws it."
         ),
         "experiment": {
             "experiment_id": "x-gut-oxygen-causal-direction",
@@ -576,16 +612,16 @@ PLAN: dict[str, dict] = {
                 "epithelial hypoxia by pimonidazole staining",
             ],
             "decision_criterion": (
-                "whether luminal oxygen falls before or only after the "
-                "fermenters establish"
+                "whether luminal oxygen rises when an established fermenter "
+                "community is depleted, with colonisation order held constant"
             ),
             "would_support": (
-                "oxygen falls only after fermenter establishment and rises on "
-                "their depletion -- the community creates the anoxia"
+                "oxygen rises on depletion and falls again on re-colonisation "
+                "-- the return arm is real and the pair is a loop"
             ),
             "would_refute": (
-                "the lumen is already anoxic before fermenters arrive -- the "
-                "habitat permits them and the arrow points the other way"
+                "oxygen is unchanged by depletion -- the habitat sets the "
+                "anoxia and the single existing edge is the whole story"
             ),
         },
         "scan_topic": "plant-derived xenomiRs crossing kingdom barriers",

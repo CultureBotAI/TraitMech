@@ -202,30 +202,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> BSL-2 requires a biosafety cabinet specifically for procedures with aerosol or splash potential, while other work may go on the open bench. Which procedures actually generate an infectious dose at the breathing zone, and does the current procedure list match them?</h3>
-        <p>The bench/cabinet boundary is the single control that most BSL-2 work turns on, and it is drawn from procedure lists that long predate quantitative aerosol measurement. A procedure that is on the open bench but does generate respirable particles is an unrecognised exposure; one needlessly in the cabinet costs throughput. Either way the edge into biosafety_cabinet is asserting something measurable that has not been measured.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#aerosol_splash_procedure</code>, <code>causal_graphs#biosafety_cabinet</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Surrogate-tracer aerosol survey of routine BSL-2 procedures</strong> — non-infectious tracer release with breathing-zone sampling (decision: whether any open-bench procedure exceeds the breathing-zone tracer recovery of cabinet-required procedures)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -421,7 +397,7 @@ Classification frameworks evaluate virulence, mode of transmission and host rang
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -470,6 +446,16 @@ Classification frameworks evaluate virulence, mode of transmission and host rang
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;BSL-2 requires a biosafety cabinet specifically for procedures with aerosol or splash potential, while other work may go on the open bench. Which procedures actually generate an infectious dose at the breathing zone, and does the current procedure list match them?&#39;, retrieved from . That sentence is about microbiome modulation in post-infectious IBS, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

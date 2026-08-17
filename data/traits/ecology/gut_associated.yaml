@@ -253,34 +253,33 @@ curation_history:
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3
-  prompt: Luminal oxygen limitation and the primary fermenter community appear here
-    as separate features of the gut habitat. Which establishes which -- does the anoxic
-    lumen permit the fermenters, or do the fermenters and the host epithelium create
-    the anoxia?
+  prompt: This record commits to luminal oxygen limitation contributing to the primary
+    fermenter community. Does the reverse arm hold too -- do the fermenters and the
+    epithelium maintain the anoxia -- making this a feedback loop rather than the
+    one-way edge drawn?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'The record presents both as given properties of the habitat, which leaves
-    the causal direction unstated and therefore unusable. It is the direction that
-    matters clinically: if the community maintains the anoxia, then losing the fermenters
-    raises luminal oxygen and opens the door to facultative pathogens -- a self-reinforcing
-    loop the current graph cannot represent, because a loop needs the arrow to point
-    somewhere.'
+  rationale: 'The existing edge is not wrong so much as half: it says the anoxic lumen
+    permits the fermenters, and stops. If the return arm also holds, the two nodes
+    are a self-reinforcing loop, and losing the fermenters raises luminal oxygen and
+    admits facultative pathogens -- the collapse that follows antibiotic depletion.
+    That is the clinically load-bearing half, and a graph of one-way edges can only
+    carry it if someone draws it.'
   attaches_to:
   - causal_graphs#luminal_oxygen_limitation
   - causal_graphs#primary_fermenter_community
   posed_by: claude
   notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
-    with the prompt ''Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small,
-    noncoding RNAs involved in posttranscriptional gene regulation in both animal
-    and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed
-    to cross-kingdom barriers and to modulate mammalian gene expression.'', retrieved
-    from PMID:40945860, PMID:42278360, PMID:41808832, PMID:42197356. That sentence
-    is about plant-derived xenomiRs crossing kingdom barriers, not about this trait:
-    the scan matched the hedging vocabulary of a gap statement without checking that
-    the gap was about the trait it was filed under. The prompt above was authored
-    instead from this record''s own causal graph, and those PMIDs are not carried
-    as its evidence because they support the scraped sentence rather than the question.
-    Both are kept here so nothing the scan produced is lost.'
+    with the prompt ''Luminal oxygen limitation and the primary fermenter community
+    appear here as separate features of the gut habitat. Which establishes which --
+    does the anoxic lumen permit the fermenters, or do the fermenters and the host
+    epithelium create the anoxia?'', retrieved from . That sentence is about plant-derived
+    xenomiRs crossing kingdom barriers, not about this trait: the scan matched the
+    hedging vocabulary of a gap statement without checking that the gap was about
+    the trait it was filed under. The prompt above was authored instead from this
+    record''s own causal graph, and those PMIDs are not carried as its evidence because
+    they support the scraped sentence rather than the question. Both are kept here
+    so nothing the scan produced is lost.'
   proposed_experiments:
   - experiment_id: x-gut-oxygen-causal-direction
     name: Oxygen microprofiling during staged gnotobiotic colonisation
@@ -299,10 +298,10 @@ discussions:
     - community composition by shotgun sequencing
     - short-chain fatty acid concentration
     - epithelial hypoxia by pimonidazole staining
-    decision_criterion: whether luminal oxygen falls before or only after the fermenters
-      establish
-    would_support: oxygen falls only after fermenter establishment and rises on their
-      depletion -- the community creates the anoxia
-    would_refute: the lumen is already anoxic before fermenters arrive -- the habitat
-      permits them and the arrow points the other way
+    decision_criterion: whether luminal oxygen rises when an established fermenter
+      community is depleted, with colonisation order held constant
+    would_support: oxygen rises on depletion and falls again on re-colonisation --
+      the return arm is real and the pair is a loop
+    would_refute: oxygen is unchanged by depletion -- the habitat sets the anoxia
+      and the single existing edge is the whole story
   posed_date: '2026-08-17'

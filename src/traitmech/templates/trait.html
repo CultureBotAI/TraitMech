@@ -91,42 +91,6 @@
   </section>
   {% endif %}
 
-  {% if trait.discussions %}
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">({{ trait.discussions|length }})</span></h2>
-      {% for d in trait.discussions %}
-      <div class="discussion">
-        <h3>{% if d.kind %}<code>{{ d.kind }}</code>{% endif %} {% if d.status %}<code>{{ d.status }}</code>{% endif %} {{ d.prompt }}</h3>
-        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
-        {% if d.attaches_to %}<p class="meta">Attaches to: {% for a in d.attaches_to %}<code>{{ a }}</code>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-        {% if d.proposed_experiments %}
-        <details>
-          <summary class="meta">{{ d.proposed_experiments|length }} proposed experiment(s)</summary>
-          {% for exp in d.proposed_experiments %}
-          <div class="meta"><strong>{{ exp.name or exp.experiment_id or 'Experiment ' ~ loop.index }}</strong>{% if exp.approach %} — {{ exp.approach }}{% endif %}{% if exp.decision_criterion %} (decision: {{ exp.decision_criterion }}){% endif %}</div>
-          {% endfor %}
-        </details>
-        {% endif %}
-        {% if d.evidence %}
-        <details>
-          <summary class="meta">{{ d.evidence|length }} evidence item(s)</summary>
-          {% for ev in d.evidence %}
-          <div class="edge-evidence">
-            {% if ev.supports %}<code>{{ ev.supports }}</code>{% endif %}
-            {% if ev.reference %}{% set ref = ev.reference %}{% if ref.startswith('PMID:') %}<a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/" rel="nofollow noreferrer">{{ ref }}</a>{% else %}{{ ref }}{% endif %}{% endif %}
-            {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
-            {% if ev.explanation %}<span class="meta">{{ ev.explanation }}</span>{% endif %}
-          </div>
-          {% endfor %}
-        </details>
-        {% endif %}
-        {% if d.resolution_note %}<p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>{% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
 
   <section class="grid">
     <div class="card">
@@ -242,7 +206,7 @@
 
     {% if trait.discussions %}
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">({{ trait.discussions|length }})</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="{{ root }}../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -302,13 +266,32 @@
         <ul class="discussion-evidence">
           {% for e in d.evidence %}
           <li>
-            <code>{{ e.reference }}</code>
+            {% set ref = e.reference %}
+            {% if ref and ref.startswith('PMID:') %}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/"
+               rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+            {% else %}<code>{{ ref }}</code>{% endif %}
             {% if e.supports %}<span class="badge">{{ e.supports|replace('_', ' ') }}</span>{% endif %}
             {% if e.snippet %}<blockquote>{{ e.snippet }}</blockquote>{% endif %}
             {% if e.explanation %}<span class="meta">{{ e.explanation }}</span>{% endif %}
           </li>
           {% endfor %}
         </ul>
+        {% endif %}
+
+        {% if d.resolution_note %}
+        <p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>
+        {% endif %}
+
+        {# Provenance for a discussion that was raised one way and curated
+           another -- for the ten kgscan gaps this holds the sentence the
+           scan lifted and the PMIDs it came from, which are deliberately
+           not carried as `evidence` for the curated question (#409). #}
+        {% if d.notes %}
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">{{ d.notes }}</p>
+        </details>
         {% endif %}
       </div>
       {% endfor %}

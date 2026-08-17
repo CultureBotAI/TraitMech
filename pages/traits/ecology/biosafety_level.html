@@ -287,30 +287,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>CURATION_TODO</code> <code>OPEN</code> This record&#39;s graph enumerates bsl1 through bsl5, but BSL-5 is not an assigned containment level in any current national framework -- it appears in proposals for hypothetical agents beyond BSL-4. Is the bsl5 node a real classification this record should carry, or a seeded artefact to retract?</h3>
-        <p>A containment level that does not exist in regulation is not a value the trait can take, and anything downstream that enumerates levels from this graph -- a risk-assessment form, an ontology mapping, a facility-capability query -- would inherit a level with no requirements attached to it. Either the node is grounded in a published proposal and labelled as one, or it comes out.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#bsl5</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Regulatory provenance check for the BSL-5 designation</strong> — documentary review of containment frameworks (decision: whether any binding framework assigns agents to a fifth level)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -523,7 +499,7 @@ Identifiers below are conservative. Labels are preferable where a precise stable
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -571,6 +547,16 @@ Identifiers below are conservative. Labels are preferable where a precise stable
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#34;This record&#39;s graph enumerates bsl1 through bsl5, but BSL-5 is not an assigned containment level in any current national framework -- it appears in proposals for hypothetical agents beyond BSL-4. Is the bsl5 node a real classification this record should carry, or a seeded artefact to retract?&#34;, retrieved from . That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

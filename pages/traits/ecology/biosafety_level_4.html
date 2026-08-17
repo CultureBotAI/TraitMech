@@ -237,30 +237,6 @@
 
   
 
-  
-  <section class="discussions">
-    <div class="card">
-      <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
-      
-      <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?</h3>
-        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for, but the controls are specified as equipment rather than as the physics they rely on. Sedimentation-dependent controls behave differently in microgravity and a closed atmosphere has nowhere to exhaust; the record cannot currently distinguish a control that transfers from one that does not.</p>
-        <p class="meta">Attaches to: <code>causal_graphs#positive_pressure_suit</code>, <code>causal_graphs#airlock</code>, <code>causal_graphs#decontamination_shower</code></p>
-        
-        <details>
-          <summary class="meta">1 proposed experiment(s)</summary>
-          
-          <div class="meta"><strong>Control-by-control containment audit in a closed-loop analogue</strong> — analogue-habitat tracer study with parabolic-flight aerosol runs (decision: which controls hold tracer escape at terrestrial levels once gravity and exhaust assumptions are removed)</div>
-          
-        </details>
-        
-        
-        
-      </div>
-      
-    </div>
-  </section>
-  
 
   <section class="grid">
     <div class="card">
@@ -456,7 +432,7 @@ References
 
     
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps</h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -505,6 +481,16 @@ References
         </ul>
         
 
+        
+
+        
+
+        
+        
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?&#39;, retrieved from . That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+        </details>
         
       </div>
       

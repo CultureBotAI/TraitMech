@@ -48,18 +48,31 @@ events:
 
     WHAT WAS WRITTEN INSTEAD. Each question was authored from the record's own
     causal graph, so the gap is a tension or untested assumption already encoded
-    in its nodes -- two independent routes drawn into one node without saying
-    whether either is sufficient (animal_pathogen immune_evasion); a single
-    chain that makes an intermediate necessary (biofilm NO -> c-di-GMP ->
-    dispersal); two habitat properties whose causal direction is unstated
-    (gut_associated luminal oxygen vs the fermenter community); three parallel
-    edges asserting redundancy between routes of unequal cost (free_living
-    compatible solutes); a definitional node stated rather than observed
-    (commensalism neutral_host_fitness). Eight are KNOWLEDGE_GAP; endosymbiosis
-    is CONTROVERSY (drift vs host compensation predict opposite loss spectra);
-    biosafety_level is CURATION_TODO, because its graph enumerates a bsl5 node
-    and no current national framework assigns a fifth containment level -- that
-    one may end in a retraction rather than an answer.
+    in its EDGES -- two independent routes drawn into one node without saying
+    whether either is sufficient (animal_pathogen immune_evasion); a bare
+    `induces` edge from nitric oxide straight to dispersal, with c_di_gmp
+    present in the graph but wired only to sessile_state (biofilm_formation); a
+    one-way edge that may be half of a loop (gut_associated luminal oxygen ->
+    fermenter community, with the return arm unasserted); a third
+    compatible-solute system wired to a node with no outgoing edge, so nothing
+    downstream depends on it (free_living trehalose); a definitional node
+    attached by the weakest predicate available, `associated with`, rather than
+    observed (commensalism neutral_host_fitness). Eight are KNOWLEDGE_GAP;
+    endosymbiosis is CONTROVERSY, because only the selection arm reaches
+    reductive_genome_evolution while the drift pair dangles -- the record takes
+    a side by omission; biosafety_level is CURATION_TODO, because its graph
+    carries `bsl5 --is a--> biosafety_level_trait` and no current national
+    framework assigns a fifth containment level -- that one may end in a
+    retraction rather than an answer.
+
+    CORRECTED AFTER REVIEW. Four of the ten (biofilm_formation, gut_associated,
+    free_living, endosymbiosis) were wrong on the first pass, filed as #413-#416
+    by the adversarial review of PR #410. They had been written from the graphs'
+    node LISTS without reading the EDGES, so each described structure that was
+    not there. Node names imply a graph; only the edges are the graph. In three
+    of the four the true structure yielded the better question. The anchor audit
+    added here cannot catch this class -- it checks that a node exists, not that
+    the prose about it is true (#415).
 
     Each carries one ProposedExperiment with a decision_criterion plus
     would_support / would_refute, so the sketch is decidable rather than a wish.
