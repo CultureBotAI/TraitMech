@@ -25,6 +25,7 @@ from audit_qc_paths_coverage import (  # noqa: E402
     filter_tops,
     qc_chain,
     recipe_body,
+    recipe_deps,
     scripts_invoked,
 )
 
@@ -255,3 +256,59 @@ def test_this_scripts_own_path_constants_are_still_present():
     assert "QC_WORKFLOW = REPO_ROOT" in source
     reads = aqp.paths_read(REPO_ROOT / "scripts" / "audit_qc_paths_coverage.py", REPO_ROOT)
     assert reads == {"justfile", ".github"}, reads
+
+
+# ------------------------------------------- transitive chain resolution (#289)
+#
+# The `not invoked` guard catches a PURE dependency-only recipe, because its body
+# is empty. A recipe with dependencies AND a body makes `invoked` non-empty,
+# takes the normal path, and its dependencies were never followed — partial
+# coverage that reads as full. These make that path fire; it is inert on the
+# current justfile, where no chain member declares a dependency.
+
+
+def test_recipe_deps_reads_the_tail_not_the_parameters():
+    """just puts parameters BEFORE the colon and dependencies after."""
+    text = "audit-snippets *args:\n    uv run python scripts/x.py\n"
+    assert recipe_deps(text, "audit-snippets") == []
+
+
+def test_recipe_deps_takes_the_name_from_a_parameterised_dependency():
+    """`(dep "arg")` — the name is a recipe, the argument is a value."""
+    text = 'gen-qc-dashboard: (_require-claw "kg_microbe_qc")\n    uv run python scripts/x.py\n'
+    assert recipe_deps(text, "gen-qc-dashboard") == ["_require-claw"]
+
+
+def test_chain_follows_a_dependency_of_a_recipe_that_also_has_a_body():
+    """The #289 shape: deps AND a body, so the old code took the normal path
+    and never looked at `helper`."""
+    text = (
+        "qc: first\n"
+        "\n"
+        "first: helper\n"
+        "    uv run python scripts/a.py\n"
+        "\n"
+        "helper:\n"
+        "    uv run python scripts/b.py\n"
+    )
+    assert qc_chain(text) == ["first", "helper"]
+
+
+def test_chain_is_cycle_guarded():
+    """just permits a graph rather than a tree; a cycle must not hang the gate."""
+    text = (
+        "qc: a\n"
+        "\n"
+        "a: b\n"
+        "    uv run python scripts/a.py\n"
+        "\n"
+        "b: a\n"
+        "    uv run python scripts/b.py\n"
+    )
+    assert qc_chain(text) == ["a", "b"]
+
+
+def test_chain_is_empty_when_qc_is_absent():
+    """Preserved from before: an absent qc: must raise BlindGate in audit(),
+    not silently inspect nothing."""
+    assert qc_chain("something-else: lint\n") == []

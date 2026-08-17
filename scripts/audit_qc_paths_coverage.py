@@ -66,10 +66,53 @@ IGNORED_TOPS = {"uv.lock", ".venv"}
 AUDIT_READ_SET: set[str] = set()
 
 
+def recipe_deps(justfile_text: str, name: str) -> list[str]:
+    """Recipe names this recipe DEPENDS ON, from its header line.
+
+    just puts parameters before the colon and dependencies after it, so only the
+    tail is read. A parameterised dependency is written ``(dep "arg")`` — the
+    name is taken and the arguments dropped, since an argument is a value rather
+    than another recipe.
+    """
+    match = re.search(rf"^{re.escape(name)}(?=[ \t:])[^\n:]*:(.*)$", justfile_text, re.M)
+    if not match:
+        return []
+    tail = match.group(1)
+    # `(dep "arg")` first, then bare names outside parentheses.
+    parened = re.findall(r"\(\s*([A-Za-z_][\w-]*)", tail)
+    bare = re.findall(r"(?<![\w(\"'-])([A-Za-z_][\w-]*)(?![\w-]*\s*=)", re.sub(r"\([^)]*\)", " ", tail))
+    return list(dict.fromkeys(parened + bare))
+
+
 def qc_chain(justfile_text: str) -> list[str]:
-    """Recipe names in the `qc:` dependency list."""
-    match = re.search(r"^qc:(.*)$", justfile_text, re.M)
-    return match.group(1).split() if match else []
+    """Recipe names reachable from `qc:`, TRANSITIVELY.
+
+    The `not invoked` guard below catches a PURE dependency-only recipe, because
+    its body is empty. A recipe with dependencies AND a script body makes
+    ``invoked`` non-empty, takes the normal path, and its dependencies were never
+    followed — no `silent` entry, no BlindGate, just partial coverage that reads
+    as full (#289). That shape already exists here: `gen-qc-dashboard` and
+    `knowledge-gap-scan` both carry a dependency and a body.
+
+    Resolving transitively closes it. Cycle-guarded, because just permits a
+    dependency graph rather than a tree and a cycle here would hang the gate
+    rather than fail it.
+    """
+    order: list[str] = []
+    seen: set[str] = set()
+
+    def walk(name: str) -> None:
+        for dep in recipe_deps(justfile_text, name):
+            if dep in seen:
+                continue
+            seen.add(dep)
+            order.append(dep)
+            walk(dep)
+
+    if not re.search(r"^qc:", justfile_text, re.M):
+        return []
+    walk("qc")
+    return order
 
 
 def recipe_body(justfile_text: str, name: str) -> str:
