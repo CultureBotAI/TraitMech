@@ -98,11 +98,10 @@ causal_graphs:
     description: Respiratory metabolism using inorganic acceptors such as nitrate
       or nitrite.
     grounding: GO:0009061
-  - node_id: oxygen
-    label: oxygen
+  - node_id: ambient_oxygen
+    label: ambient molecular oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Molecular oxygen acting as terminal electron acceptor when present.
-    grounding: ENVO:01001495
   - node_id: nitrate_nitrite
     label: nitrate/nitrite
     node_type: ENVIRONMENTAL_FACTOR
@@ -212,7 +211,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: Quinol oxidases pass electrons from ubiquinols/menaquinones to oxygen.
     predicate_id: METPO:2007403
-  - subject: oxygen
+  - subject: ambient_oxygen
     predicate: enables
     object: aerobic_respiration
     description: Presence of oxygen enables aerobic respiratory chemoorganotrophy.
@@ -363,4 +362,13 @@ curation_history:
     METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and
     deliberately NOT touched here, because retyping a node while carrying a wrong
     CURIE along unchanged would make it look reviewed.'
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): ambient_oxygen is the chemical
+    sense here. Already the ambient sense. Listed so a re-run still normalises the
+    label and still retracts ENVO:01001495 if it has been re-applied — the grounder
+    keys on (label, node_type), so an un-normalised label is what lets the retracted
+    CURIE come back.'
   llm_assisted: true

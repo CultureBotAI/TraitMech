@@ -24,6 +24,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 maximal growth rate	BIOLOGICAL_PROCESS	4	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/pressure_optimum.yaml
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
+ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -314,7 +315,7 @@ mucin o-glycans	CHEMICAL	1	data/traits/ecology/host_associated.yaml
 cell appendages and adhesins	GENE_OR_PROTEIN	1	data/traits/ecology/host_associated.yaml
 attachment to host surfaces	BIOLOGICAL_PROCESS	1	data/traits/ecology/host_associated.yaml
 c-di-gmp and camp second messengers	CHEMICAL	1	data/traits/ecology/host_associated.yaml
-plant root exudates	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/host_associated.yaml
+plant root exudates	CHEMICAL	1	data/traits/ecology/host_associated.yaml
 chemotaxis toward host	BIOLOGICAL_PROCESS	1	data/traits/ecology/host_associated.yaml
 mucus layer niches	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/host_associated.yaml
 human-adapted virulence factors	GENE_OR_PROTEIN	1	data/traits/ecology/human_pathogen.yaml
@@ -739,7 +740,6 @@ f1f0-atp synthase	GENE_OR_PROTEIN	1	data/traits/environment/optimum_phenotype_wi
 opua compatible-solute transporter	GENE_OR_PROTEIN	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 intracellular glycine betaine	CHEMICAL	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 hyperosmotic stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
-ambient molecular oxygen	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_preference.yaml
 o2 as terminal electron acceptor	MOLECULAR_FUNCTION	1	data/traits/environment/oxygen_preference.yaml
 oxygen / reactive oxygen species stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_preference.yaml
 detoxifying-enzyme gene expression	BIOLOGICAL_PROCESS	1	data/traits/environment/oxygen_preference.yaml
@@ -1406,7 +1406,6 @@ pyruvate formate lyase (pflb)	GENE_OR_PROTEIN	1	data/traits/metabolism/mixed_aci
 phosphotransacetylase / acetate kinase (pta/acka)	GENE_OR_PROTEIN	1	data/traits/metabolism/mixed_acid_fermentation.yaml
 formate hydrogenlyase complex (fhl)	GENE_OR_PROTEIN	1	data/traits/metabolism/mixed_acid_fermentation.yaml
 acidic conditions	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/mixed_acid_fermentation.yaml
-molecular oxygen	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/mixed_acid_fermentation.yaml
 cytoplasmic ph	QUALITY	1	data/traits/metabolism/mixed_acid_fermentation.yaml
 ferredoxin/flavodoxin	GENE_OR_PROTEIN	1	data/traits/metabolism/nitrogen_fixation.yaml
 nifh (fe-protein)	GENE_OR_PROTEIN	1	data/traits/metabolism/nitrogen_fixation.yaml

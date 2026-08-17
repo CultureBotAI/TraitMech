@@ -79,7 +79,7 @@ causal_graphs:
     label: heterocyst envelope polysaccharide layer (HEP)
     node_type: CELLULAR_LOCALIZATION
     description: Outer envelope polysaccharide layer providing mechanical support.
-  - node_id: oxygen
+  - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
     description: Molecular oxygen (O2).
@@ -141,7 +141,7 @@ causal_graphs:
         the hetR promoter.
   - subject: glycolipid_layer
     predicate: reduces diffusion of
-    object: oxygen
+    object: molecular_oxygen
     description: The inner glycolipid layer reduces O2 gas diffusion into the heterocyst.
     evidence:
     - reference: DOI:10.1101/2023.10.04.560878
@@ -245,4 +245,13 @@ curation_history:
     definition; that is the same test the motive-force edges FAILED in issue 341,
     where the subject powers a machine it does not generate. RO:0002326 declares no
     rdfs:domain or rdfs:range.
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical
+    sense here. The molecule, not the condition — the dioxygen participating in the
+    reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
+    chemical occurrences already use, so one id means one sense corpus-wide (issues
+    356, 384).'
   llm_assisted: true

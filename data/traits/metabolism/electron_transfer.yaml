@@ -104,7 +104,7 @@ causal_graphs:
     description: Terminal respiratory oxidase (Complex IV) that reduces the final
       acceptor.
     grounding: UniProtKB:A0A2U9ILE5
-  - node_id: oxygen
+  - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
     description: Molecular oxygen, terminal electron acceptor in aerobic respiration.
@@ -222,7 +222,7 @@ causal_graphs:
     predicate_id: METPO:2007403
   - subject: terminal_oxidase
     predicate: reduces
-    object: oxygen
+    object: molecular_oxygen
     description: The terminal oxidase reduces molecular oxygen to water in aerobic
       respiration.
     evidence:
@@ -331,4 +331,13 @@ curation_history:
     mean the process already use a separate id (proton_motive_force_generation in
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical
+    sense here. The molecule, not the condition — the dioxygen participating in the
+    reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
+    chemical occurrences already use, so one id means one sense corpus-wide (issues
+    356, 384).'
   llm_assisted: true
