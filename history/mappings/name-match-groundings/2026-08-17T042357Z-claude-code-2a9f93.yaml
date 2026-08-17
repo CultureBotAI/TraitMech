@@ -1,0 +1,63 @@
+history_version: 1
+target:
+  kind: mapping
+  path: mappings/node_grounding.tsv
+  slug: name-match-groundings
+session:
+  id: 2026-08-17T042357Z-claude-code-2a9f93
+  timestamp: '2026-08-17T04:23:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/402
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Repair three more wrong CURIEs from the kg-microbe name-match pass
+  details: '402 asked whether the pass that produced ENVO:01001495, dioxygen dissolved in marine water,
+    for generic environmental oxygen had produced others. It had. Swept the 136 rows in mappings/node_grounding.tsv
+    whose notes read exact name match via kg-microbe index on two heuristics - the ontology term markedly
+    more specific than the node label, and the term sharing no content word with it - and triaged the
+    34 hits by hand. Three were wrong and all three are the same shape: a right-sounding name match onto
+    a term from the wrong organism or mechanism, in a bacterial trait knowledge base. flagellar_motility
+    in soil_dwelling.yaml, described as flagellum-dependent cell motility, was grounded GO:0003341 cilium
+    movement - bacteria have flagella, not cilia. hydrogen_peroxide_detoxification in aerotolerant.yaml,
+    enzymatic removal of hydrogen peroxide, was grounded GO:0033355 ascorbate glutathione cycle, a plant
+    antioxidant pathway, where bacteria use catalase and peroxidases. plant_tissue_colonization in plant_pathogen.yaml,
+    establishment of microbial growth in plant tissues, was grounded GO:0140649 symbiont-mediated cell-to-cell
+    migration by invasive hypha, and invasive hyphae are fungal. Each is skos:exactMatch at confidence
+    high, so each asserts the node IS that term, and none would be caught by validate-products or label-correspondence
+    because those check that a CURIE''s label matches the term and never that the term matches the node
+    - the gap 391 named. TWO REPLACED, ONE RETRACTED, and the difference is whether a replacement could
+    be verified rather than remembered: GO:0071973 bacterial-type flagellum-dependent cell motility and
+    GO:0042744 hydrogen peroxide catabolic process were both resolved through this repo''s own OAK adapter
+    before being written, and validate-products re-checks both label pairs in CI, which it now does cleanly
+    at 314 OK_CANONICAL. For plant tissue colonization nothing verified fits - GO:0044409 is symbiont
+    ENTRY into host rather than establishment of growth, and GO:0051701 and GO:0044403 are the generic
+    interaction parents - so it is retracted, following 403''s precedent with the ENVO term, because guessing
+    a plausible replacement is the very act that produced these. The mapping rows moved in the same pass
+    as the records, per docs/GROUNDING_POLICY.md and the 352 retraction: the grounder keys on label and
+    node_type, so a row left behind restores exactly what was removed. Confirmed none of the three CURIEs
+    appears in the grounder''s plan afterwards. Worth recording that the heuristics are triage rather
+    than a gate - they flagged 34 rows to find 3, the rest being legitimate canonical forms like oxaloacetate
+    to oxaloacetate(2-) and periplasm to periplasmic space. 559 tests pass, qc green. ADDENDUM after the
+    dispatched review, which approved and found a FOURTH instance the sweep missed. cell_body in spiral_shaped.yaml,
+    described as the bacterial cell body or protoplasmic cylinder, was grounded GO:0044297 cell body,
+    whose GO definition is the portion of a cell bearing surface projections such as axons, dendrites,
+    cilia or flagella THAT INCLUDES THE NUCLEUS - so the term excludes prokaryotes by definition. It matters
+    beyond the fix because BOTH sweep heuristics miss it: the labels match exactly and the term is not
+    more specific, so only reading the DEFINITION catches it, which bounds what the heuristics can find
+    and is worth knowing before anyone treats a clean sweep as proof. Retracted rather than replaced,
+    since GO:0005623 is obsolete, GO:0005737 cytoplasm excludes the envelope a protoplasmic cylinder includes,
+    and GO:0071944 cell periphery is the wrong part. Also fixed a side effect of my own write: rewriting
+    the mapping table through csv.DictWriter re-quoted an unrelated rhodopsin row, because QUOTE_MINIMAL
+    wraps any field containing a quote character and that row''s notes mention Rhodopsin - introducing
+    CSV quoting into a table that has none and that match_uniprot_to_proteins.py appends to as raw tab-joined
+    text. The mapping edit is now line-based, touching only the targeted rows and preserving every other
+    byte; verified the rhodopsin row no longer appears in the diff. The corrected rows keep their original
+    notes prefix, so they stay inside the 136-row cohort a future sweep selects on, with the CORRECTED
+    clause appended making the provenance recoverable.'

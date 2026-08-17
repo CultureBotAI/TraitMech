@@ -80,7 +80,7 @@ causal_graphs:
     label: flagellar motility
     node_type: BIOLOGICAL_PROCESS
     description: Flagellum-dependent cell motility.
-    grounding: GO:0003341
+    grounding: GO:0071973
   - node_id: climate_extreme_event
     label: extreme climatic event
     node_type: ENVIRONMENTAL_FACTOR
@@ -212,4 +212,14 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-17T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODES
+  changes: 'Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402):
+    flagellar_motility: GO:0003341 -> GO:0071973. Was GO:0003341 ''cilium movement''.
+    Bacteria have flagella, not cilia, and the node says ''Flagellum-dependent cell
+    motility'' — the match was on the word ''motility'' via the kg-microbe index (#402).
+    Replaced with the term GO actually provides for this, resolved through the repo''s
+    own OAK adapter before being written rather than recalled.'
   llm_assisted: true

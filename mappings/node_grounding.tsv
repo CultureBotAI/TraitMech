@@ -171,11 +171,10 @@ spore coat	CELLULAR_LOCALIZATION	GO:0031160	spore wall	skos:exactMatch	GO	high	e
 extracellular matrix	CELLULAR_LOCALIZATION	GO:0031012	extracellular matrix	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 nitric oxide	CHEMICAL	CHEBI:16480	nitric oxide	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 organic acids	CHEMICAL	CHEBI:64709	organic acid	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
-plant tissue colonization	BIOLOGICAL_PROCESS	GO:0140649	cell-to-cell migration by invasive hypha	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 plant cell wall	CELLULAR_LOCALIZATION	GO:0009505	plant-type cell wall	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 hemicellulose	CHEMICAL	CHEBI:61266	hemicellulose	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
-flagellar motility	BIOLOGICAL_PROCESS	GO:0003341	cilium movement	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
-hydrogen peroxide detoxification	BIOLOGICAL_PROCESS	GO:0033355	ascorbate glutathione cycle	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
+flagellar motility	BIOLOGICAL_PROCESS	GO:0071973	bacterial-type flagellum-dependent cell motility	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass) CORRECTED in TraitMech#405: the kg-microbe name match returned a term from the wrong organism; replacement verified via OAK before being written (#402).
+hydrogen peroxide detoxification	BIOLOGICAL_PROCESS	GO:0042744	hydrogen peroxide catabolic process	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass) CORRECTED in TraitMech#405: the kg-microbe name match returned a term from the wrong organism; replacement verified via OAK before being written (#402).
 hydroxide ion	CHEMICAL	CHEBI:16234	hydroxide	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 arsenate(3-)	CHEMICAL	CHEBI:29125	arsenate(3-)	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 zinc(2+) ion	CHEMICAL	CHEBI:29105	zinc(2+)	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
@@ -239,7 +238,6 @@ shikimate pathway	PATHWAY	GO:0009423	chorismate biosynthetic process	skos:exactM
 beta-carotene biosynthesis	PATHWAY	GO:1901812	beta-carotene biosynthetic process	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 homogentisate	CHEMICAL	CHEBI:16169	homogentisate	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 division septum formation	BIOLOGICAL_PROCESS	GO:0000917	division septum assembly	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
-cell body	CELLULAR_LOCALIZATION	GO:0044297	cell body	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 lipoteichoic acid	CHEMICAL	CHEBI:28640	lipoteichoic acid	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 division septum assembly	BIOLOGICAL_PROCESS	GO:0000917	division septum assembly	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 melanin	CHEMICAL	CHEBI:89634	Melanin	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)

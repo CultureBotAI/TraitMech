@@ -374,6 +374,7 @@ polysaccharide capsule	CELLULAR_LOCALIZATION	1	data/traits/ecology/pathogenic_to
 plant-cell-wall-degrading enzymes	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
 t3ss effector proteins	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
 plant immune suppression	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
+plant tissue colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
 plant disease	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
 exopolysaccharide production	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
 er-golgi apoplastic effector secretion	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
@@ -1953,6 +1954,7 @@ viscous motility environment	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/spira
 peptidoglycan crosslinking relaxation	BIOLOGICAL_PROCESS	1	data/traits/morphology/spiral_shaped.yaml
 biased outer-curve peptidoglycan biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/spiral_shaped.yaml
 elongasome entrapment	BIOLOGICAL_PROCESS	1	data/traits/morphology/spiral_shaped.yaml
+cell body	CELLULAR_LOCALIZATION	1	data/traits/morphology/spiral_shaped.yaml
 cell cylinder	CELLULAR_LOCALIZATION	1	data/traits/morphology/spirochete_shaped.yaml
 flat-wave morphology	BIOLOGICAL_PROCESS	1	data/traits/morphology/spirochete_shaped.yaml
 cell body deformation	BIOLOGICAL_PROCESS	1	data/traits/morphology/spirochete_shaped.yaml

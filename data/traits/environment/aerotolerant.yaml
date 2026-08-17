@@ -68,7 +68,7 @@ causal_graphs:
     label: hydrogen peroxide detoxification
     node_type: BIOLOGICAL_PROCESS
     description: Enzymatic removal of hydrogen peroxide to limit oxidative damage.
-    grounding: GO:0033355
+    grounding: GO:0042744
   - node_id: catalase
     label: catalase
     node_type: GENE_OR_PROTEIN
@@ -254,4 +254,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004784×1, GO:0004096×1, InterPro:IPR052364×1, GO:0016692×1, GO:0050137×1).
+  llm_assisted: true
+- timestamp: '2026-08-17T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODES
+  changes: 'Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402):
+    hydrogen_peroxide_detoxification: GO:0033355 -> GO:0042744. Was GO:0033355 ''ascorbate
+    glutathione cycle'', a plant antioxidant pathway; bacteria detoxify H2O2 with
+    catalase and peroxidases, which is what this node describes. Replaced with the
+    generic catabolic term, resolved through the OAK adapter before being written.'
   llm_assisted: true
