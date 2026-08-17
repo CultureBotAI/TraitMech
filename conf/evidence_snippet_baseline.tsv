@@ -1273,7 +1273,7 @@ data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distan
 data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:long_distance_electron_transport->cytochrome_redox_gradient[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1800367115 has no snippet
 data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:nickel_cofactor->conductive_fiber_network[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12864-024-10594-7 has no snippet
 data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:nickel_cofactor->long_distance_electron_transport[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1208033 has no snippet
-data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:oxic_sediment_zone->oxygen[0]	UNSUPPORTIVE_SNIPPET	WARN	9 chars, supports nothing specific: 'oxic zone'
+data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:oxic_sediment_zone->molecular_oxygen[0]	UNSUPPORTIVE_SNIPPET	WARN	9 chars, supports nothing specific: 'oxic zone'
 data/traits/metabolism/cable_bacteria_metabolism.yaml	cable_bacteria_long_distance_electron_transport:sulfur_oxidation_pathway->electrogenic_sulfur_oxidation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12864-024-10594-7 has no snippet
 data/traits/metabolism/calvin_benson_bassham_cycle.yaml	cbb_rubisco_co2_fixation:bicarbonate->carboxysomal_ca[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/sciadv.adk7283 has no snippet
 data/traits/metabolism/calvin_benson_bassham_cycle.yaml	cbb_rubisco_co2_fixation:carbon_dioxide->cbb_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.02473-10 has no snippet
@@ -1331,13 +1331,13 @@ data/traits/metabolism/compartmentalizes.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	W
 data/traits/metabolism/degrades.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'degradation'
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:denitrification_modularity->transient_intermediate_accumulation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-51688-w has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:denitrification_trait->anaerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.9 has no snippet
+data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:molecular_oxygen->denitrification_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-51688-w has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:narghi->nitrate_reduction_to_nitrite[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40793-024-00643-9 has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:nirs->nitrite_reduction_to_no[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/ismeco/ycae020 has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:nitrate->dinitrogen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.61.4.533-616.1997 has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:nor->no_reduction_to_n2o[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2023.1218207 has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:nosz->denitrification_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1407573 has no snippet
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:nosz->n2o_reduction_to_n2[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2023.1218207 has no snippet
-data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2:oxygen->denitrification_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-51688-w has no snippet
 data/traits/metabolism/denitrification.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.61.4.533-616.1997 has no snippet
 data/traits/metabolism/denitrification.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.9 has no snippet
 data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml	dc_four_hb_anaerobic_archaeal_co2_fixation:bicarbonate->pep_carboxylase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1002/9783527629916 has no snippet
@@ -1428,7 +1428,7 @@ data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:c
 data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:cytochrome_bc1->cytochrome_c[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2307093120 has no snippet
 data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:cytochrome_c->terminal_oxidase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2307093120 has no snippet
 data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:redox_protein->electron_donor[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'molecular mechanisms ... exchange electrons'
-data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:terminal_oxidase->oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2307093120 has no snippet
+data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:terminal_oxidase->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2307093120 has no snippet
 data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers:ubiquinol->cytochrome_bc1[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2307093120 has no snippet
 data/traits/metabolism/ethanol_fermentation.yaml	ethanol_fermentation_pyruvate_to_ethanol:acetaldehyde->alcohol_dehydrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5376/be.2024.14.0025 has no snippet
 data/traits/metabolism/ethanol_fermentation.yaml	ethanol_fermentation_pyruvate_to_ethanol:alcohol_dehydrogenase->ethanol[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5376/be.2024.14.0025 has no snippet
@@ -1529,6 +1529,7 @@ data/traits/metabolism/methanogenesis.yaml	methanogenesis_c1_reduction:methylate
 data/traits/metabolism/mixed_acid_fermentation.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.703525 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/molecules31020333 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:acidic_conditions->fhl_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.35812/cellulosechemtechnol.2024.58.90 has no snippet
+data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:ambient_oxygen->hydrogen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.35812/cellulosechemtechnol.2024.58.90 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:fhl_complex->co2[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01472-24 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:fhl_complex->hydrogen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01472-24 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:formate->fhl_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01472-24 has no snippet
@@ -1536,7 +1537,6 @@ data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_ente
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:mixed_acid_fermentation_trait->fermentation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.703525 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:mixed_acid_fermentation_trait->mixed_acid_products[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/molecules31020333 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:mixed_acid_fermentation_trait->pyruvate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.35812/cellulosechemtechnol.2024.58.90 has no snippet
-data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:molecular_oxygen->hydrogen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.35812/cellulosechemtechnol.2024.58.90 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:pta_acka->acetate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/iai.00176-23 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:pyruvate_formate_lyase->acetyl_coa[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.703525 has no snippet
 data/traits/metabolism/mixed_acid_fermentation.yaml	mixed_acid_fermentation_enterobacterial:pyruvate_formate_lyase->formate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/iai.00176-23 has no snippet
@@ -1545,13 +1545,13 @@ data/traits/metabolism/nitrogen_fixation.yaml	evidence[0]	MISSING_SNIPPET	WARN	r
 data/traits/metabolism/nitrogen_fixation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro954 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:femo_cofactor->nitrogen_fixation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.34133/bdr.0005 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:ferredoxin_flavodoxin->nifh_fe_protein[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00378-23 has no snippet
+data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:molecular_oxygen->nitrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00378-23 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nifh_fe_protein->atp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.34133/bdr.0005 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nifh_fe_protein->p_cluster[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00378-23 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nitrogen_fixation_process->ammonia[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro954 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nitrogen_fixation_process->dinitrogen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.9 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nitrogen_fixation_trait->nitrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro954 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:nitrogenase->nitrogen_fixation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro954 has no snippet
-data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:oxygen->nitrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00378-23 has no snippet
 data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase:p_cluster->femo_cofactor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00378-23 has no snippet
 data/traits/metabolism/organism_interacts_with_chemical.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'interaction'
 data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:complex_i->proton[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms252413421 has no snippet
@@ -1560,7 +1560,7 @@ data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_
 data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:nadh->complex_i[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms252413421 has no snippet
 data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:proton_translocation->proton_motive_force[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms252413421 has no snippet
 data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:succinate->succinate_dehydrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s10863-024-10041-y has no snippet
-data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:terminal_oxidase->oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms25021277 has no snippet
+data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling:terminal_oxidase->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms25021277 has no snippet
 data/traits/metabolism/oxidizes.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	9 chars, supports nothing specific: 'oxidation'
 data/traits/metabolism/oxygenic_photosynthesis.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2006.09.001 has no snippet
 data/traits/metabolism/oxygenic_photosynthesis.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-earth-060313-054810 has no snippet
@@ -1783,7 +1783,7 @@ data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carbonic_a
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carbonic_anhydrase->carbon_dioxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/plphys/kiae438 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_shell->bicarbonate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/plphys/kiae438 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_shell->carbon_dioxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
-data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_shell->oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/plphys/kiae438 has no snippet
+data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_shell->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/plphys/kiae438 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_trait->bacterial_microcompartment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1913 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_trait->carbon_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
 data/traits/morphology/carboxysome.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
@@ -1996,7 +1996,7 @@ data/traits/morphology/heterocyst.yaml	evidence[0]	MISSING_SNIPPET	WARN	referenc
 data/traits/morphology/heterocyst.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuw029 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:cell_differentiation->heterocyst_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuw029 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:furc_perr->hetr_promoter[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pone.0289761 has no snippet
-data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:glycolipid_layer->oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
+data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:glycolipid_layer->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:het_envelope->microoxic_interior[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/pcp/pcae011 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:heterocyst_trait->microoxic_interior[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/cshperspect.a000315 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:hetn_regulator->het_diff_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
@@ -2144,13 +2144,13 @@ data/traits/morphology/pigmentation.yaml	pigmentation_biosynthetic_colorants:mep
 data/traits/morphology/pigmentation.yaml	pigmentation_biosynthetic_colorants:mva_pathway->carotenoid_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11122920 has no snippet
 data/traits/morphology/pigmentation.yaml	pigmentation_biosynthetic_colorants:pigment_biosynthesis->chromophore_metabolites[0]	ECHOES_RESEARCH_REPORT	WARN	also appears in this trait's research report, whose evidence text may be paraphrase — verify against DOI:10.1016/j.procbio.2013.06.006
 data/traits/morphology/pigmentation.yaml	pigmentation_biosynthetic_colorants:shikimate_pathway->phenazine_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11122920 has no snippet
+data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:ambient_oxygen->crt_operon[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:carotenoid_biosynthesis->lycopene[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:carotenoid_biosynthesis->pink_carotenoids[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'pink ... pigmentation in bacteria'
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:crt_enzymes->carotenoid_biosynthesis[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'crt genes ... reactions they catalyze'
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:crt_enzymes->photosynthesis_gene_cluster[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:crt_operon->carotenoid_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:lycopene->pink_carotenoids[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
-data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:oxygen->crt_operon[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:photosynthesis_gene_cluster->visible_pink_color[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology12101346 has no snippet
 data/traits/morphology/pink_pigmented.yaml	pink_pigmented_carotenoid_color:visible_pink_color->pink_pigmented_trait[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'pink ... pigmentation in bacteria'
 data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_control:excess_membrane_synthesis->blebbing_scission_proliferation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1042/bst20160435 has no snippet
@@ -2401,7 +2401,7 @@ data/traits/physiology/bioluminescence.yaml	evidence[1]	MISSING_SNIPPET	WARN	ref
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:coo_operon->nife_codh[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00332-22 has no snippet
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:cooa_regulator->coo_operon[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00332-22 has no snippet
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:cox_operon->molybdenum_hydroxylase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00332-22 has no snippet
-data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:molybdenum_hydroxylase->dioxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.01.17.524042 has no snippet
+data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:molybdenum_hydroxylase->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.01.17.524042 has no snippet
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:molybdenum_hydroxylase->oxygen_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00332-22 has no snippet
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:nife_codh->oxygen_sensitivity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00332-22 has no snippet
 data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation:proton_motive_force->atp_synthase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40643-023-00705-9 has no snippet
@@ -2462,10 +2462,10 @@ data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_or
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:substrate_transport_system->chemoorganoheterotrophic_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acsomega.3c02205 has no snippet
 data/traits/physiology/chemoorganoheterotrophic.yaml	chemoorganoheterotrophic_organic_energy_carbon:substrate_transport_system->energy_metabolism[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40793-024-00572-7 has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:acceptor_absence->fermentation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2166/9781789062304_0009 has no snippet
+data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:ambient_oxygen->aerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2166/9781789062304_0009 has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:fermentation->substrate_level_phosphorylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae016 has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:nitrate_nitrite->anaerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2166/9781789062304_0009 has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:organic_compound->substrate_oxidation[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'oxidation of a reduced ... organic compound'
-data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:oxygen->aerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2166/9781789062304_0009 has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:quinone_pool->terminal_electron_acceptor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s13213-024-01761-y has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:reduced_cofactor->quinone_pool[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s13213-024-01761-y has no snippet
 data/traits/physiology/chemoorganotrophic.yaml	chemoorganotrophic_organic_oxidation_energy:substrate_level_phosphorylation->atp[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae016 has no snippet
@@ -2515,8 +2515,8 @@ data/traits/physiology/heterotrophic.yaml	heterotrophic_organic_carbon_assimilat
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:autotrophic_co2_fixation->cellular_carbon[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'CO2 ... into cellular carbon'
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->autotrophic_co2_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1751-7915.14300 has no snippet
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->carbon_dioxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms7020053 has no snippet
+data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->nitrate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
-data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->proton_motive_force[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:h2_oxidation->sulfate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
 data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation:o2_sensitivity->hydrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.2138/gselements.16.1.39 has no snippet
@@ -2538,8 +2538,8 @@ data/traits/physiology/lithoheterotrophic.yaml	lithoheterotrophic_inorganic_ener
 data/traits/physiology/lithoheterotrophic.yaml	lithoheterotrophic_inorganic_energy_organic_carbon:thiosulfate->inorganic_electron_donor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-025-56588-1 has no snippet
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:ammonia->ammonia_monooxygenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-025-02290-9 has no snippet
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:hydroxylamine->hydroxylamine_oxidoreductase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-025-02290-9 has no snippet
+data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:molecular_oxygen->sulfur_oxidation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-024-01104-3 has no snippet
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:nitrite->nitrite_oxidoreductase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mbio.00749-25 has no snippet
-data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:oxygen->sulfur_oxidation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-024-01104-3 has no snippet
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:proton_motive_force->atp[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'gradient ... drives ATP synthesis'
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:sulfite->soeabc_sulfite_dehydrogenase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11061436 has no snippet
 data/traits/physiology/lithotrophic.yaml	lithotrophic_inorganic_donor_energy:thiosulfate->sox_multienzyme_system[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11061436 has no snippet

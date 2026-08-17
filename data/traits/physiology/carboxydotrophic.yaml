@@ -103,7 +103,7 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion motive force.
-  - node_id: dioxygen
+  - node_id: molecular_oxygen
     label: dioxygen
     node_type: CHEMICAL
     description: Terminal electron acceptor in aerobic CO oxidation.
@@ -239,7 +239,7 @@ causal_graphs:
       notes: Generates an ion motive force that drives ATP synthesis.
   - subject: molybdenum_hydroxylase
     predicate: coupled to reduction of
-    object: dioxygen
+    object: molecular_oxygen
     description: Mo-CODH-mediated CO oxidation is coupled to O2 reduction aerobically.
     evidence:
     - reference: DOI:10.1101/2023.01.17.524042
@@ -379,4 +379,12 @@ curation_history:
     in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical
+    sense here. A third id for the same molecule, grounded CHEBI:15379 like the rest.
+    Folded into molecular_oxygen: #384 reported two ids for oxygen, and there were
+    four.'
   llm_assisted: true

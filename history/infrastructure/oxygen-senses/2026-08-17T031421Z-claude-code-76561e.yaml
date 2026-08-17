@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_oxygen_senses.py
+  slug: oxygen-senses
+session:
+  id: 2026-08-17T031421Z-claude-code-76561e
+  timestamp: '2026-08-17T03:14:21Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/384
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: One node_id per sense for oxygen, and drop a marine-water CURIE
+  details: 'Tranche 4 of the 356 burn-down, and the first whose answer is two ids rather than
+    one type. The corpus already drew the distinction with two ontologies: the molecule grounds
+    to CHEBI:15379 and the ambient condition to an ENVO term, so normalising to a single type
+    would have erased a distinction the curators made correctly. 384 reported two ids for
+    one molecule; there were FOUR - molecular_oxygen 21, oxygen 13, dioxygen 1 and ambient_oxygen
+    1, thirty-six occurrences in total. Normalised on sense rather than type: every chemical
+    occurrence became molecular_oxygen and every ambient one became ambient_oxygen. NO OXYGEN
+    NODE WAS RETYPED - the curators'' types were right and the ids were not. oxygen_preference.yaml
+    turned out to be the model rather than a collision, already carrying ambient_oxygen and
+    molecular_oxygen in one graph, which is the shape the rest of the corpus is now brought
+    to. A WRONG CURIE CAME WITH IT: the two ENVIRONMENTAL_FACTOR oxygen nodes were grounded
+    ENVO:01001495, whose label is dioxygen dissolved in marine water, matched by an exact
+    name match via the kg-microbe index; neither record is about marine water, one being carotenoid
+    gene expression and the other aerobic respiration. Dropped rather than replaced, because
+    no generic environmental-oxygen term has been verified and guessing would repeat the mistake
+    that produced it; the mapping row that would re-apply it is filed as 402. root_exudates
+    rode along as the third family: both occurrences describe the substance, and rhizosphere_association.yaml
+    settles it by modelling root_exudates as CHEMICAL causing rhizosphere_habitat as ENVIRONMENTAL_FACTOR,
+    the same two-ids shape. CORRECTED MY OWN FIRST ATTEMPT: the plan was keyed by file with
+    a hand-enumerated list and missed nine of the thirteen oxygen occurrences, so it is now
+    keyed by node_id and node_type, which is the actual rule and cannot under-apply. INCONSISTENT_NODE_TYPE
+    148 to 112, the 36 predicted, and the predicate-gate audit added in 393 reports zero on
+    its first real tranche, which is the check verifying a migration instead of a hand-check.
+    Five findings looked new and were re-keyed UNREACHABLE_FROM_TRAIT rows following the renames;
+    total unchanged at 1296 either side. 559 tests pass, qc green.'

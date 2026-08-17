@@ -67,12 +67,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Genomic module that co-localizes crt carotenoid genes with photosynthesis
       genes in phototrophs.
-  - node_id: oxygen
+  - node_id: ambient_oxygen
     label: oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Environmental oxygen level regulating carotenoid biosynthetic gene
       expression.
-    grounding: ENVO:01001495
   - node_id: crt_operon
     label: crtI-crtB operon
     node_type: GENE_OR_PROTEIN
@@ -161,7 +160,7 @@ causal_graphs:
       notes: '"The pigmentation of purple bacteria is caused by a combination of bacteriochlorophylls
         and carotenoids" with crt genes in PGCs.'
     predicate_id: RO:0002326
-  - subject: oxygen
+  - subject: ambient_oxygen
     predicate: upregulates
     object: crt_operon
     description: Oxygen availability upregulates the carotenoid biosynthetic operon,
@@ -259,4 +258,17 @@ curation_history:
     two GGPP to phytoene, then desaturation/isomerization yields lycopene'' -- which
     is the rule''s own test for PATHWAY met explicitly rather than by naming. Applied
     AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): ambient_oxygen is the ambient
+    sense here. The condition, not the molecule, and typed ENVIRONMENTAL_FACTOR accordingly
+    — moved to ambient_oxygen. ITS GROUNDING IS ALSO WRONG AND IS DROPPED: ENVO:01001495
+    is ''dioxygen dissolved in marine water'' (mappings/node_grounding.tsv, matched
+    by an exact NAME match via the kg-microbe index), and neither record carrying
+    it is about marine water — one is carotenoid gene expression, the other aerobic
+    respiration. Dropped rather than replaced, because no generic environmental-oxygen
+    term has been verified here and guessing one would repeat the mistake that produced
+    this.'
   llm_assisted: true

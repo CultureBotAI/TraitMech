@@ -67,7 +67,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: HCO3- accumulated in cytoplasm and imported into the carboxysome.
     grounding: CHEBI:17544
-  - node_id: oxygen
+  - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
     description: O2; competing substrate of RuBisCO whose influx the shell limits.
@@ -135,7 +135,7 @@ causal_graphs:
         and RuBP passage."'
   - subject: carboxysome_shell
     predicate: limits influx of
-    object: oxygen
+    object: molecular_oxygen
     description: The carboxysome shell restricts O2 influx, reducing unproductive
       RuBisCO oxygenation.
     evidence:
@@ -209,4 +209,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR001765×1).
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical
+    sense here. The molecule, not the condition — the dioxygen participating in the
+    reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
+    chemical occurrences already use, so one id means one sense corpus-wide (issues
+    356, 384).'
   llm_assisted: true

@@ -85,7 +85,7 @@ causal_graphs:
     label: acidic conditions
     node_type: ENVIRONMENTAL_FACTOR
     description: Low-pH environment favoring formate cleavage by FHL.
-  - node_id: molecular_oxygen
+  - node_id: ambient_oxygen
     label: molecular oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Oxygen, which suppresses fermentative hydrogen production.
@@ -177,7 +177,7 @@ causal_graphs:
       notes: The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under
         acidic conditions into H2 and CO2.
     predicate_id: RO:0002213
-  - subject: molecular_oxygen
+  - subject: ambient_oxygen
     predicate: inhibits
     object: hydrogen
     description: Oxygen prevents fermentative hydrogen generation.
@@ -262,4 +262,12 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-17T02:00:00Z'
+  curator: claude
+  action: NORMALISE_NODE_SENSE
+  changes: 'One node_id per SENSE (issues 356, 384): ambient_oxygen is the ambient
+    sense here. The condition, not the molecule — ambient O2 acting on the cell, which
+    is why it is typed ENVIRONMENTAL_FACTOR. The type was right and the id was not,
+    so the chemical id stops carrying both senses.'
   llm_assisted: true
