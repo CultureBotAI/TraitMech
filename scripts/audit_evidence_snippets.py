@@ -408,12 +408,46 @@ def compare(findings: list[dict[str, str]],
         seen[key] = seen.get(key, 0) + 1
         if seen[key] > baseline.counts.get(key, 0):
             new.append(row)
-        elif _magnitude(row) > baseline.magnitudes.get(_magnitude_key(row), 0):
+        elif _magnitude(row) > _baselined_magnitude(row, baseline):
             # Same key, same occurrence count, but worse — a graph going from 3
             # shared snippets to 9 is one REUSED_SNIPPET finding either way
             # (#291).
             new.append(row)
     return new
+
+
+def _baselined_magnitude(row: dict[str, str], baseline: "Baseline") -> int:
+    """The magnitude this row is ratcheted against, tolerating a reworded snippet.
+
+    The exact magnitude key folds the snippet TEXT in, because two reuse groups
+    in one graph share a ``_key()`` and keying on the graph alone would let the
+    smaller grow up to the larger unnoticed (#291). The cost was that EDITING a
+    shared snippet — rewording it, not diversifying it — produced an unseen key,
+    so its baselined magnitude read as 0, any count beat it, and a curator was
+    told something got worse when nothing had. The remedy they reach for is
+    ``--write-baseline``, which is the rot #270 was about (#292).
+
+    #292 rejected falling back to the graph's per-key MAX, correctly: with two
+    baselined groups of 4 and 2, the 2 could be reworded and grown to 4 while
+    the max sheltered it.
+
+    That objection needs two groups. When the graph has exactly ONE baselined
+    magnitude under this key there is nothing smaller to grow into something
+    larger, so the fallback is safe by construction rather than by luck —
+    a reworded snippet is compared against the only magnitude it could be.
+    Measured on the current baseline: 13 REUSED_SNIPPET rows across 12 graphs,
+    and one graph (trophic_type, the case #291 was written about) carries two.
+    So this covers eleven of twelve and leaves the twelfth failing closed
+    exactly as today.
+    """
+    mkey = _magnitude_key(row)
+    if mkey is None:
+        return 0
+    if mkey in baseline.magnitudes:
+        return baseline.magnitudes[mkey]
+    key = _key(row)
+    siblings = [m for k, m in baseline.magnitudes.items() if k[:len(key)] == key]
+    return siblings[0] if len(siblings) == 1 else 0
 
 
 def write_tsv(path: Path, rows: list[dict[str, str]]) -> None:
