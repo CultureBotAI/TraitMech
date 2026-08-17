@@ -62,6 +62,14 @@ ACTION = "NORMALISE_NODE_SENSE"
 
 CHEMICAL_ID = "molecular_oxygen"
 AMBIENT_ID = "ambient_oxygen"
+# The grounder keys on (label, node_type), NOT node_id, so normalising ids alone
+# leaves the field that actually matches untouched — which is half of why the
+# retracted CURIE could come back (#403 review). Also a correctness fix in its
+# own right: `molecular oxygen` on an ENVIRONMENTAL_FACTOR node reads as the
+# molecule sitting on the condition node, which is the distinction this tranche
+# exists to draw. `ambient molecular oxygen` is oxygen_preference.yaml's wording,
+# the record this tranche treats as the model.
+AMBIENT_LABEL = "ambient molecular oxygen"
 
 # Keyed by (node_id, node_type) — by SENSE, which is the actual rule and cannot
 # under-apply. A first version hardcoded a per-file list and missed NINE of the
@@ -102,6 +110,17 @@ PLAN: dict[tuple[str, str], tuple[str | None, str | None, bool, str]] = {
         "is carotenoid gene expression, the other aerobic respiration. Dropped rather "
         "than replaced, because no generic environmental-oxygen term has been verified "
         "here and guessing one would repeat the mistake that produced this.",
+    ),
+    # Already-normalised, so the migration is idempotent from its OWN output and
+    # not only from the pre-migration state: after a rename the node's key is the
+    # NEW id, which the entries above no longer match (#395's lesson applied to
+    # the plan itself).
+    ("ambient_oxygen", "ENVIRONMENTAL_FACTOR"): (
+        None, None, True,
+        "Already the ambient sense. Listed so a re-run still normalises the label and "
+        "still retracts ENVO:01001495 if it has been re-applied — the grounder keys on "
+        "(label, node_type), so an un-normalised label is what lets the retracted CURIE "
+        "come back.",
     ),
     ("root_exudates", "ENVIRONMENTAL_FACTOR"): (
         None, "CHEMICAL", False,
@@ -150,6 +169,12 @@ def apply(dry_run: bool = False) -> int:
                     node["node_type"] = new_type
                     notes.append(f"{old_id} typed {new_type}")
                     print(f"  retype  {rel:50s} {old_id} -> {new_type}")
+                if (new_id or node.get("node_id")) == AMBIENT_ID \
+                        and node.get("label") != AMBIENT_LABEL:
+                    was_label = node.get("label")
+                    node["label"] = AMBIENT_LABEL
+                    notes.append(f"label {was_label!r} -> {AMBIENT_LABEL!r}")
+                    print(f"  relabel {rel:50s} {was_label!r} -> {AMBIENT_LABEL!r}")
                 if drop_g and node.get("grounding"):
                     gone = node.pop("grounding")
                     notes.append(f"dropped grounding {gone}")
