@@ -13,8 +13,17 @@ nothing detects it: ``check_vendored_sync.sh``'s FILES list covers the id-label
 validator, ``chem_formula.py`` and the three ``test_id_label_*.py``, not this.
 Measured 2026-08-17 against each sibling's ``main``:
 
-    CommunityMech         160 differing lines (92 ignoring whitespace)
+    CultureMech (hub)      32 differing lines
     MediaIngredientMech    32 differing lines
+    CommunityMech         160 differing lines (92 ignoring whitespace)
+
+The HUB is in the table deliberately: check_vendored_sync.sh sets
+CANON_REPO=CultureBotAI/CultureMech, so under this fleet's hub-and-spoke model
+it is the copy that decides which way repair runs, and omitting it would leave
+the claim asserted against everyone except the arbiter (#404 review). It also
+looks like the origin — this file's own example stem is
+``archaeoglobus_medium_dsm_399-edison-literature``, a MEDIUM slug rather than a
+trait one.
 
 TRAITMECH IS AHEAD, WHICH IS WHY THIS MATTERS AND WHY THE FIX IS NOT "COPY THEIRS".
 The divergence is one unpropagated bug fix, in ``_existing_sidecars``: the stem is
@@ -316,7 +325,15 @@ def load_batch_targets(batch_path: Path) -> list[str]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
+    # RawDescriptionHelpFormatter, because the default one runs __doc__ through
+    # _fill_text, which collapses all whitespace before wrapping — the drift
+    # table above renders as run-on prose without it. The docstring already
+    # leaked into --help before the table existed; the table is the first part
+    # of it that depends on alignment (#404 review).
+    ap = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     src = ap.add_mutually_exclusive_group(required=True)
     src.add_argument("--target", help="category/slug, a bare slug, or a path to a trait YAML.")
     src.add_argument("--batch", type=Path, help="Path to a JSON list of targets.")
