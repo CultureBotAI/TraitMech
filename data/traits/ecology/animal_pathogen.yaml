@@ -315,39 +315,59 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0043684×1).
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0
-  prompt: 'Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are
-    unknown to date.'
+  prompt: This record routes two independent paths to immune evasion -- complement-regulator
+    binding by surface proteins, and effector delivery through the T3SS. In a given
+    host, is either route sufficient on its own, or does established infection require
+    both?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
-    explicit_gap, limitations_barriers, unclear_unknown). Curator review required:
-    set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:40891913
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Prokaryotes in such plastispheres are unknown to date.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:42279816
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, in South America, their use is still limited because of complicated
-      regulations and inconsistent evidence requirements.
-    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
-  - reference: PMID:41639266
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: However, the interacting effects of climate factors and seasonal variations
-      in nutritional components on PMCs remain poorly understood.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:42197358
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: While plant growth-promoting bacteria (PGPB) are known to alleviate heavy
-      metal toxicity, their role under MP-HM co-contamination and the differential
-      responses of rhizosphere microbial communities remain unclear.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: The graph draws both arrows into the same node without saying whether
+    they are alternatives or partners. If either is sufficient, single-target antivirulence
+    strategies are viable; if evasion needs both, only combination approaches will
+    work, and the two edges should carry that dependency rather than reading as parallel
+    routes.
+  attaches_to:
+  - causal_graphs#immune_evasion
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for animal pathogen: Prokaryotes in such plastispheres
+    are unknown to date.'', retrieved from PMID:40891913, PMID:42279816, PMID:41639266,
+    PMID:42197358. That sentence is about prokaryotes of marine plastispheres, not
+    about this trait: the scan matched the hedging vocabulary of a gap statement without
+    checking that the gap was about the trait it was filed under. The prompt above
+    was authored instead from this record''s own causal graph, and those PMIDs are
+    not carried as its evidence because they support the scraped sentence rather than
+    the question. Both are kept here so nothing the scan produced is lost.'
+  proposed_experiments:
+  - experiment_id: x-animal-pathogen-evasion-epistasis
+    name: Isogenic single- and double-mutant serum and phagocyte survival
+    approach: isogenic mutant panel with ex vivo killing assays
+    model_systems:
+    - isolate of a T3SS-bearing animal pathogen
+    - naive host serum
+    - primary phagocytes from the same host species
+    perturbations:
+    - deletion of the complement-regulator binding protein
+    - deletion of the T3SS structural apparatus
+    - the double deletion
+    readouts:
+    - survival in non-heat-inactivated serum
+    - intracellular survival after phagocyte challenge
+    - surface-bound complement regulator by flow cytometry
+    decision_criterion: whether either single mutant is attenuated to the same degree
+      as the double mutant
+    would_support: single mutants retain near-wild-type survival and only the double
+      is attenuated -- the routes are independently sufficient
+    would_refute: either single mutant is attenuated as severely as the double --
+      the routes are not redundant and evasion requires both
+  posed_date: '2026-08-17'

@@ -217,44 +217,64 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-17T22:14:03Z'
+  curator: claude
+  action: CURATE_KNOWLEDGE_GAPS
+  changes: Replaced the scan's off-topic scraped sentence with a research question
+    authored from this record's causal graph, anchored it via attaches_to, and sketched
+    an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
+    in the discussion's notes.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-3606bdcc991b
-  prompt: 'Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, noncoding
-    RNAs involved in posttranscriptional gene regulation in both animal and plant.
-    miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom
-    barriers and to modulate mammalian gene expression.'
+  prompt: Commensalism is defined in this record by a neutral effect on host fitness.
+    Has neutrality ever been measured for these associations, or is it inferred from
+    the absence of visible disease -- and does it hold when the host is stressed,
+    starved, or co-infected?
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
-    explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review
-    required: set attaches_to, refine the prompt, and weigh the cited evidence.'
-  attaches_to: []
-  evidence:
-  - reference: PMID:40945860
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional
-      gene regulation in both animal and plant. miRNAs derived from edible plants,
-      referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate
-      mammalian gene expression.
-    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
-  - reference: PMID:40574831
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Emerging evidence suggests the gut microbiota plays a role in immune
-      regulation, yet its impact on ITP remains unclear.
-    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
-  - reference: PMID:42197356
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Examining the existing literature may identify knowledge gaps regarding
-      precise mechanisms through which the development of GM influences the maturation
-      of the immune system.
-    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
-  - reference: PMID:41808832
-    supports: NO_EVIDENCE
-    evidence_source: abstract
-    snippet: Given its promising anti-inflammatory properties, further research is
-      warranted.
-    explanation: Gap-signal sentence (future_work) from the cited abstract.
-  posed_by: kg-microbe-kgscan
+  rationale: Neutral_host_fitness is the node that makes this trait different from
+    mutualism and parasitism, and it is the one node stated as a definition rather
+    than an observation. If neutrality is only ever the null result of an underpowered
+    comparison in an unstressed host, then commensalism is a measurement category
+    rather than a biological one, and records assigned to it are provisional in a
+    way the corpus does not currently mark.
+  attaches_to:
+  - causal_graphs#neutral_host_fitness
+  posed_by: claude
+  notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
+    with the prompt ''Knowledge gap for commensalism: MicroRNAs (miRNAs) are small,
+    noncoding RNAs involved in posttranscriptional gene regulation in both animal
+    and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed
+    to cross-kingdom barriers and to modulate mammalian gene expression.'', retrieved
+    from PMID:40945860, PMID:40574831, PMID:42197356, PMID:41808832. That sentence
+    is about plant-derived xenomiRs crossing kingdom barriers, not about this trait:
+    the scan matched the hedging vocabulary of a gap statement without checking that
+    the gap was about the trait it was filed under. The prompt above was authored
+    instead from this record''s own causal graph, and those PMIDs are not carried
+    as its evidence because they support the scraped sentence rather than the question.
+    Both are kept here so nothing the scan produced is lost.'
+  proposed_experiments:
+  - experiment_id: x-commensal-fitness-neutrality
+    name: Gnotobiotic mono-association host fitness across stressors
+    approach: gnotobiotic mono-association with quantitative fitness readouts
+    model_systems:
+    - germ-free animal model
+    - mono-association with a designated commensal isolate
+    - germ-free controls held under identical conditions
+    perturbations:
+    - protein or caloric restriction
+    - thermal or osmotic stress
+    - co-infection with a defined enteric pathogen
+    readouts:
+    - lifetime reproductive output
+    - growth rate and body condition
+    - survival under each stressor
+    - the effect size the design could have detected
+    decision_criterion: whether an adequately powered comparison detects a fitness
+      difference under any stressor
+    would_support: no difference under any condition at a stated detectable effect
+      size -- neutrality is measured, not assumed
+    would_refute: a fitness effect appears under stress -- neutrality was a condition-dependent
+      artefact and the assignment should change
+  posed_date: '2026-08-17'

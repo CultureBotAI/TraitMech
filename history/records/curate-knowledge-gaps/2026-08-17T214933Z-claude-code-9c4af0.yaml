@@ -1,0 +1,87 @@
+history_version: 1
+target:
+  kind: record
+  path: curate-knowledge-gaps.yaml
+  slug: curate-knowledge-gaps
+session:
+  id: 2026-08-17T214933Z-claude-code-9c4af0
+  timestamp: '2026-08-17T21:49:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - '409'
+  prs:
+  - '410'
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Replace ten scraped sentences with anchored, answerable knowledge gaps. The kg-microbe-kgscan
+    pass filed ten discussions whose prompts were gap-shaped sentences lifted from retrieved
+    papers but not about the traits they were filed under: commensalism and gut_associated
+    shared a sentence about plant xenomiRs, biosafety_level and biosafety_level_3 shared contentless
+    review boilerplate, animal_pathogen got plastisphere prokaryotes. Each prompt was rewritten
+    as a research question authored from that record''s own causal graph, anchored via attaches_to
+    to the nodes it concerns, and given a ProposedExperiment with a decision_criterion. The
+    scan''s sentence and PMIDs are preserved verbatim in each discussion''s notes and were
+    NOT carried as evidence, since they support the scraped sentence rather than the authored
+    question. Also adds audit_discussion_anchors.py to qc so the anchors cannot silently rot.'
+  details: |-
+    Ten discussions across ten ecology records, applied by
+    scripts/curate_knowledge_gaps.py keyed on discussion_id (not file position,
+    so a later scan pass appending another discussion cannot shift the plan onto
+    the wrong object).
+
+    WHY THE PROMPTS WERE NOT MERELY REWORDED. Read together, the ten scraped
+    sentences were not gaps about the ten traits. Two pairs were duplicates --
+    commensalism and gut_associated both got a sentence about plant-derived
+    xenomiRs, biosafety_level and biosafety_level_3 both got "it identifies
+    ongoing challenges and critical knowledge gaps for future research", which
+    asserts a gap without naming one. animal_pathogen got marine plastisphere
+    prokaryotes; free_living got protozoan infection of the gut. The scan
+    matched the hedging vocabulary of a gap statement ("remain poorly
+    understood", "unknown to date") in papers retrieved for the trait, with
+    nothing checking that the sentence was a gap ABOUT the trait. Rewording
+    those into research questions, as #409 step 4 proposed, would have laundered
+    off-topic scraped text into curated-looking content.
+
+    WHAT WAS WRITTEN INSTEAD. Each question was authored from the record's own
+    causal graph, so the gap is a tension or untested assumption already encoded
+    in its nodes -- two independent routes drawn into one node without saying
+    whether either is sufficient (animal_pathogen immune_evasion); a single
+    chain that makes an intermediate necessary (biofilm NO -> c-di-GMP ->
+    dispersal); two habitat properties whose causal direction is unstated
+    (gut_associated luminal oxygen vs the fermenter community); three parallel
+    edges asserting redundancy between routes of unequal cost (free_living
+    compatible solutes); a definitional node stated rather than observed
+    (commensalism neutral_host_fitness). Eight are KNOWLEDGE_GAP; endosymbiosis
+    is CONTROVERSY (drift vs host compensation predict opposite loss spectra);
+    biosafety_level is CURATION_TODO, because its graph enumerates a bsl5 node
+    and no current national framework assigns a fifth containment level -- that
+    one may end in a retraction rather than an answer.
+
+    Each carries one ProposedExperiment with a decision_criterion plus
+    would_support / would_refute, so the sketch is decidable rather than a wish.
+
+    PROVENANCE. posed_by claude, posed_date 2026-08-17, llm_assisted true on the
+    curation event. The scan's sentence and its PMIDs are preserved verbatim in
+    each discussion's `notes`, together, and were NOT carried into `evidence`:
+    they support the scraped sentence, not the authored question, and splitting
+    them would have left the PMIDs looking like support for content they were
+    never retrieved for. No citation was invented for any authored question --
+    the ten discussions now carry no evidence block at all, which is honest
+    rather than complete.
+
+    VALIDATED BY. scripts/audit_discussion_anchors.py, added in the same change
+    and wired into `qc`: 0 errors, 0 warnings over the corpus. It is the reason
+    it was safe to anchor to node ids -- `attaches_to` is free-form so the
+    schema cannot check it, and before this a migration renaming a node would
+    have orphaned an anchor silently. Rendering confirmed on the generated
+    pages: 10 of 477 carry the section, 0 still render as unanchored, and the
+    experiment fields appear with their values. Full `just qc` green.
+
+    LEFT UNDONE. Coverage stays at 10 of 477 (2.1%) by the maintainer's
+    decision -- fix the quality of what exists before scanning more. The scan's
+    precision problem is upstream in the kg_microbe_kgscan package and is filed
+    separately; it cannot be fixed from this repo.

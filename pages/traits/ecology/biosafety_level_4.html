@@ -243,43 +243,17 @@
       <h2>Knowledge gaps &amp; discussions <span class="meta">(1)</span></h2>
       
       <div class="discussion">
-        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.</h3>
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
-        
-        
+        <h3><code>KNOWLEDGE_GAP</code> <code>OPEN</code> Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?</h3>
+        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for, but the controls are specified as equipment rather than as the physics they rely on. Sedimentation-dependent controls behave differently in microgravity and a closed atmosphere has nowhere to exhaust; the record cannot currently distinguish a control that transfers from one that does not.</p>
+        <p class="meta">Attaches to: <code>causal_graphs#positive_pressure_suit</code>, <code>causal_graphs#airlock</code>, <code>causal_graphs#decontamination_shower</code></p>
         
         <details>
-          <summary class="meta">4 evidence item(s)</summary>
+          <summary class="meta">1 proposed experiment(s)</summary>
           
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/37362850/" rel="nofollow noreferrer">PMID:37362850</a>
-            <span class="evidence-snippet">Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/41914886/" rel="nofollow noreferrer">PMID:41914886</a>
-            <span class="evidence-snippet">Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.</span>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/40044492/" rel="nofollow noreferrer">PMID:40044492</a>
-            <span class="evidence-snippet">However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.</span>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </div>
-          
-          <div class="edge-evidence">
-            <code>NO_EVIDENCE</code>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/39682751/" rel="nofollow noreferrer">PMID:39682751</a>
-            <span class="evidence-snippet">The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.</span>
-            <span class="meta">Gap-signal sentence (limitations_barriers) from the cited abstract.</span>
-          </div>
+          <div class="meta"><strong>Control-by-control containment audit in a closed-loop analogue</strong> — analogue-habitat tracer study with parabolic-flight aerosol runs (decision: which controls hold tracer escape at terrestrial levels once gravity and exhaust assumptions are removed)</div>
           
         </details>
+        
         
         
       </div>
@@ -488,59 +462,49 @@ References
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
       <div class="discussion">
-        <p class="discussion-prompt">Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.</p>
+        <p class="discussion-prompt">Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
           <code>kgscan-e770cf01677c</code>
-          · raised by kg-microbe-kgscan
-          
+          · raised by claude
+          · 2026-08-17
         </p>
 
         
-        <p class="meta discussion-unanchored">Not yet attached to a section of this
-          record — a curator sets <code>attaches_to</code> (e.g.
-          <code>causal_graphs#some_edge</code>) so the gap shows beside the
-          mechanism it concerns.</p>
+        <p class="meta">Attached to
+          <code>causal_graphs#positive_pressure_suit</code>, <code>causal_graphs#airlock</code>, <code>causal_graphs#decontamination_shower</code>
+        </p>
         
 
-        <p>Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.</p>
+        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for, but the controls are specified as equipment rather than as the physics they rely on. Sedimentation-dependent controls behave differently in microgravity and a closed atmosphere has nowhere to exhaust; the record cannot currently distinguish a control that transfers from one that does not.</p>
 
         
-
-        
-        <h3>Evidence</h3>
-        <ul class="discussion-evidence">
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
           
           <li>
-            <code>PMID:37362850</code>
-            <span class="badge">NO EVIDENCE</span>
-            <blockquote>Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.</blockquote>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </li>
-          
-          <li>
-            <code>PMID:41914886</code>
-            <span class="badge">NO EVIDENCE</span>
-            <blockquote>Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.</blockquote>
-            <span class="meta">Gap-signal sentence (unclear_unknown) from the cited abstract.</span>
-          </li>
-          
-          <li>
-            <code>PMID:40044492</code>
-            <span class="badge">NO EVIDENCE</span>
-            <blockquote>However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.</blockquote>
-            <span class="meta">Gap-signal sentence (explicit_gap) from the cited abstract.</span>
-          </li>
-          
-          <li>
-            <code>PMID:39682751</code>
-            <span class="badge">NO EVIDENCE</span>
-            <blockquote>The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.</blockquote>
-            <span class="meta">Gap-signal sentence (limitations_barriers) from the cited abstract.</span>
+            <strong>Control-by-control containment audit in a closed-loop analogue</strong>
+            <span class="badge">analogue-habitat tracer study with parabolic-flight aerosol runs</span>
+            
+            <span class="meta">Model systems:
+              sealed closed-loop habitat analogue with recycled atmosphere, parabolic flight or drop-tower reduced-gravity segments, non-infectious spore and fluorescent-particle tracers</span>
+            <span class="meta">Perturbations:
+              suit breach at defined overpressure, airlock cycling with no atmospheric exhaust available, chemical shower under water-recovery constraints</span>
+            <span class="meta">Readouts:
+              tracer crossing the containment boundary per control, settling versus suspension time in reduced gravity, tracer persisting in the atmospheric recycling loop</span>
+            
+            <span class="meta">Decides it:
+              which controls hold tracer escape at terrestrial levels once gravity and exhaust assumptions are removed</span>
+            <span class="meta">Supports if:
+              overpressure-based controls transfer intact -- they depend on pressure differential, not on settling or exhaust</span>
+            <span class="meta">Refutes if:
+              escape rises for controls that passed on the ground -- the BSL-4 set does not transfer and needs habitat-specific equivalents</span>
           </li>
           
         </ul>
+        
+
         
       </div>
       
@@ -580,6 +544,12 @@ References
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-17T22:14:03Z</time> ·
+          <strong>CURATE_KNOWLEDGE_GAPS</strong> · claude
+          <p class="changes">Replaced the scan&#39;s off-topic scraped sentence with a research question authored from this record&#39;s causal graph, anchored it via attaches_to, and sketched an experiment with a decision criterion. The scan&#39;s sentence and PMIDs are preserved in the discussion&#39;s notes.</p>
         </li>
         
       </ol>
@@ -962,7 +932,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 01:00 UTC from
+      Record as of 2026-08-17 22:14 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

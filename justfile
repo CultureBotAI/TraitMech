@@ -151,6 +151,15 @@ audit-proposal-coverage:
 audit-predicate-domains *args:
     uv run python scripts/audit_predicate_domains.py --fail-on new {{args}}
 
+# Check that every `discussions[].attaches_to` anchor resolves (#409).
+# `attaches_to` is free-form so the schema cannot check it, which made the
+# anchors decorative: rename a node in a migration and the discussion silently
+# points at nothing. ERROR on an anchor into a section this record has that
+# lacks the id; WARN (not ERROR) on a section this audit does not know, because
+# the slot is free-form by design and a Mech may anchor somewhere unseen.
+audit-discussion-anchors *args:
+    uv run python scripts/audit_discussion_anchors.py {{args}}
+
 # Flag open PRs that received NO CI at all (#345). PR #344 produced zero
 # pull_request workflow runs -- not failures, not skips -- while `gh pr checks`
 # said "no checks reported" and mergeStateStatus said CLEAN. Two of the
@@ -920,7 +929,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
