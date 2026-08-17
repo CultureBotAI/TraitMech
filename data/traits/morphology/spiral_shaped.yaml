@@ -88,7 +88,6 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: The bacterial cell body (protoplasmic cylinder) whose shape is mechanically
       constrained.
-    grounding: GO:0044297
   edges:
   - subject: curvature_scaffold
     predicate: regulates
@@ -250,4 +249,18 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-17T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODES
+  changes: 'Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402):
+    cell_body: GO:0044297 retracted. Was GO:0044297 ''cell body'', whose GO definition
+    is ''the portion of a cell bearing surface projections such as axons, dendrites,
+    cilia, or flagella THAT INCLUDES THE NUCLEUS'' — so the term excludes prokaryotes
+    by definition, and the node reads ''The bacterial cell body (protoplasmic cylinder)''.
+    Found by the #405 review, and notable because BOTH sweep heuristics miss it: the
+    labels match exactly and the term is not more specific, so only reading the DEFINITION
+    catches it. Retracted rather than replaced — GO:0005623 is obsolete, GO:0005737
+    ''cytoplasm'' excludes the envelope the protoplasmic cylinder includes, and GO:0071944
+    ''cell periphery'' is the wrong part.'
   llm_assisted: true

@@ -49,7 +49,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import csv
 import sys
 from pathlib import Path
 
@@ -82,6 +81,18 @@ FIX: dict[str, tuple[str, str | None, str | None, str]] = {
         "bacteria detoxify H2O2 with catalase and peroxidases, which is what this node "
         "describes. Replaced with the generic catabolic term, resolved through the OAK "
         "adapter before being written.",
+    ),
+    "cell_body": (
+        "GO:0044297", None, None,
+        "Was GO:0044297 'cell body', whose GO definition is 'the portion of a cell "
+        "bearing surface projections such as axons, dendrites, cilia, or flagella THAT "
+        "INCLUDES THE NUCLEUS' — so the term excludes prokaryotes by definition, and "
+        "the node reads 'The bacterial cell body (protoplasmic cylinder)'. Found by the "
+        "#405 review, and notable because BOTH sweep heuristics miss it: the labels "
+        "match exactly and the term is not more specific, so only reading the "
+        "DEFINITION catches it. Retracted rather than replaced — GO:0005623 is "
+        "obsolete, GO:0005737 'cytoplasm' excludes the envelope the protoplasmic "
+        "cylinder includes, and GO:0071944 'cell periphery' is the wrong part.",
     ),
     "plant_tissue_colonization": (
         "GO:0140649", None, None,
@@ -135,32 +146,38 @@ def apply(dry_run: bool = False) -> int:
                 path.write_text(emit_trait_yaml(doc))
 
     # The mapping rows, in the same pass — see the module docstring.
-    rows = list(csv.DictReader(MAPPING.open(), delimiter="\t"))
-    fields = rows[0].keys()
+    # LINE-BASED, not a csv round-trip. DictWriter's default QUOTE_MINIMAL
+    # re-quotes any field containing a quote character, so writing the whole file
+    # back rewrote an unrelated `rhodopsin` row whose notes mention "Rhodopsin" —
+    # introducing CSV quoting into a table that has none and that
+    # match_uniprot_to_proteins.py appends to as raw tab-joined text (#405
+    # review). Only the targeted lines are touched; every other byte is preserved.
     drop_curies = {old for old, new, _l, _w in FIX.values() if new is None}
     remap = {old: (new, lab) for old, new, lab, _w in FIX.values() if new}
-    kept = []
-    for r in rows:
-        cur = (r.get("target_curie") or "").strip()
+    lines = MAPPING.read_text().splitlines(keepends=True)
+    header, body = lines[0], lines[1:]
+    kept = [header]
+    dropped = 0
+    for ln in body:
+        cols = ln.rstrip("\n").split("\t")
+        cur = cols[2].strip() if len(cols) > 2 else ""
         if cur in drop_curies:
-            print(f"  drop row {r.get('label')!r} -> {cur}")
+            print(f"  drop row {cols[0]!r} -> {cur}")
+            dropped += 1
             continue
         if cur in remap:
             new, lab = remap[cur]
-            print(f"  remap row {r.get('label')!r} {cur} -> {new}")
-            r["target_curie"], r["target_label"] = new, lab
-            r["notes"] = (r.get("notes") or "") + \
-                " CORRECTED in TraitMech#405: the kg-microbe name match returned a" \
-                " term from the wrong organism; replacement verified via OAK before" \
-                " being written (#402)."
-        kept.append(r)
+            print(f"  remap row {cols[0]!r} {cur} -> {new}")
+            cols[2], cols[3] = new, lab
+            cols[-1] = (cols[-1] +
+                        " CORRECTED in TraitMech#405: the kg-microbe name match returned"
+                        " a term from the wrong organism; replacement verified via OAK"
+                        " before being written (#402).")
+            ln = "\t".join(cols) + "\n"
+        kept.append(ln)
     if not dry_run:
-        with MAPPING.open("w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(fields), delimiter="\t",
-                               lineterminator="\n")
-            w.writeheader()
-            w.writerows(kept)
-    print(f"\n{touched} node(s), {len(rows) - len(kept)} row(s) dropped"
+        MAPPING.write_text("".join(kept))
+    print(f"\n{touched} node(s), {dropped} row(s) dropped"
           f"{' (dry run)' if dry_run else ''}", file=sys.stderr)
     return 0
 
