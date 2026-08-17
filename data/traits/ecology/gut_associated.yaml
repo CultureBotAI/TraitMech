@@ -270,16 +270,17 @@ discussions:
   - causal_graphs#primary_fermenter_community
   posed_by: claude
   notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
-    with the prompt ''Luminal oxygen limitation and the primary fermenter community
-    appear here as separate features of the gut habitat. Which establishes which --
-    does the anoxic lumen permit the fermenters, or do the fermenters and the host
-    epithelium create the anoxia?'', retrieved from . That sentence is about plant-derived
-    xenomiRs crossing kingdom barriers, not about this trait: the scan matched the
-    hedging vocabulary of a gap statement without checking that the gap was about
-    the trait it was filed under. The prompt above was authored instead from this
-    record''s own causal graph, and those PMIDs are not carried as its evidence because
-    they support the scraped sentence rather than the question. Both are kept here
-    so nothing the scan produced is lost.'
+    with the prompt ''Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small,
+    noncoding RNAs involved in posttranscriptional gene regulation in both animal
+    and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed
+    to cross-kingdom barriers and to modulate mammalian gene expression.'', retrieved
+    from PMID:40945860, PMID:42278360, PMID:41808832, PMID:42197356. That sentence
+    is about plant-derived xenomiRs crossing kingdom barriers, not about this trait:
+    the scan matched the hedging vocabulary of a gap statement without checking that
+    the gap was about the trait it was filed under. The prompt above was authored
+    instead from this record''s own causal graph, and those PMIDs are not carried
+    as its evidence because they support the scraped sentence rather than the question.
+    Both are kept here so nothing the scan produced is lost.'
   proposed_experiments:
   - experiment_id: x-gut-oxygen-causal-direction
     name: Oxygen microprofiling during staged gnotobiotic colonisation

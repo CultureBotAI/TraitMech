@@ -420,7 +420,7 @@ This distinction is important because the same agent may be handled under differ
         </p>
         
 
-        <p>The graph treats the decay test as evidence of containment, but the test is performed on a sealed, static room, and the room only matters when it is occupied and in use. If the two diverge, facilities are certified against a condition they never operate in, and the edge from pressure_decay_testing to containment is weaker than the record implies.</p>
+        <p>The graph routes verification the other way round from the claim it supports: bsl3_trait is `verified by` boundary_integrity_testing, which `utilizes` pressure_decay_testing. So the decay test stands in for containment without any node asserting that containment holds. The test is also performed on a sealed, static room, and the room only matters when it is occupied and in use. If the two diverge, facilities are certified against a condition they never operate in.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -456,7 +456,7 @@ This distinction is important because the same agent may be handled under differ
         
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;BSL-3 boundary integrity is verified by pressure-decay testing of the room envelope. Does passing a pressure-decay test predict containment of an airborne agent under real operating conditions, with doors cycling and equipment running?&#39;, retrieved from . That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 3: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.&#39;, retrieved from PMID:41494000, PMID:40514544, PMID:41552424, PMID:41917383. That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
         </details>
         
       </div>

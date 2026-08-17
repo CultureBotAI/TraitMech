@@ -438,7 +438,7 @@ References
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
       <div class="discussion">
-        <p class="discussion-prompt">Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?</p>
+        <p class="discussion-prompt">Every BSL-4 control this record requires assumes terrestrial gravity and somewhere to put contaminated air, water and waste -- suit overpressure, airlocks, chemical showers, specialized waste disposal. Which still contain an agent in a closed-loop habitat that recycles all three?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -453,7 +453,7 @@ References
         </p>
         
 
-        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for, but the controls are specified as equipment rather than as the physics they rely on. Sedimentation-dependent controls behave differently in microgravity and a closed atmosphere has nowhere to exhaust; the record cannot currently distinguish a control that transfers from one that does not.</p>
+        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for. But every edge here is bsl4_trait `requires` a piece of equipment, so the controls are named as hardware rather than as the physics they rely on -- and it is the physics that does or does not transfer. Sedimentation-dependent controls behave differently in microgravity, and a shower and a waste stream that both feed a recycling loop are not disposal. As written the record cannot distinguish a control that survives the move from one that does not, because it never says what any of them do.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -489,7 +489,7 @@ References
         
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Every BSL-4 engineering control in this record assumes terrestrial gravity and an atmosphere that can be exhausted -- suit overpressure, directional airflow, airlocks, chemical showers. Which of them still contain an agent in a closed-loop habitat with no outside air to exhaust to?&#39;, retrieved from . That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;, retrieved from PMID:37362850, PMID:41914886, PMID:40044492, PMID:39682751. That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
         </details>
         
       </div>

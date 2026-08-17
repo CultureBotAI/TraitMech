@@ -250,15 +250,15 @@ discussions:
   - causal_graphs#c_di_gmp
   posed_by: claude
   notes: 'Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion
-    with the prompt ''Nitric oxide triggers biofilm dispersal in this record by way
-    of falling c-di-GMP. Is lowered c-di-GMP the only route from NO to dispersal,
-    or can NO disperse a biofilm whose c-di-GMP pool is held high?'', retrieved from
-    . That sentence is about immune homeostasis at the gut mucosa, not about this
-    trait: the scan matched the hedging vocabulary of a gap statement without checking
-    that the gap was about the trait it was filed under. The prompt above was authored
-    instead from this record''s own causal graph, and those PMIDs are not carried
-    as its evidence because they support the scraped sentence rather than the question.
-    Both are kept here so nothing the scan produced is lost.'
+    with the prompt ''Knowledge gap for biofilm formation: How immune homeostasis
+    is maintained in this constantly challenged environment remains however a central
+    and largely unanswered question.'', retrieved from PMID:42039744, PMID:41245847,
+    PMID:41661098, PMID:42125129. That sentence is about immune homeostasis at the
+    gut mucosa, not about this trait: the scan matched the hedging vocabulary of a
+    gap statement without checking that the gap was about the trait it was filed under.
+    The prompt above was authored instead from this record''s own causal graph, and
+    those PMIDs are not carried as its evidence because they support the scraped sentence
+    rather than the question. Both are kept here so nothing the scan produced is lost.'
   proposed_experiments:
   - experiment_id: x-biofilm-no-dispersal-bypass
     name: NO challenge against a c-di-GMP-clamped biofilm

@@ -66,6 +66,83 @@ TIMESTAMP = "2026-08-17T22:14:03Z"
 POSED_DATE = "2026-08-17"
 CURATOR = "claude"
 
+# The scan's ORIGINAL output, as literals recovered from `main`.
+#
+# These were first built at runtime from the record's live `prompt` and
+# `evidence`, which was correct exactly once -- on a first run against
+# un-curated data. The second run then quoted the AUTHORED question as the
+# sentence the scan raised, and an already-popped `evidence` list as its
+# empty source. A provenance note that is only true on the first run is not
+# provenance; it is a claim that decays silently, and it is the one claim
+# here nothing downstream can check. Frozen as literals so a rerun is inert.
+SCAN_OUTPUT: dict[str, tuple[str, list[str]]] = {
+    "kgscan-30bcdf4a32b0": (
+        "Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.",
+        ["PMID:40891913", "PMID:42279816", "PMID:41639266", "PMID:42197358"],
+    ),
+    "kgscan-aa46cc9b34ab": (
+        "Knowledge gap for biofilm formation: How immune homeostasis is "
+        "maintained in this constantly challenged environment remains "
+        "however a central and largely unanswered question.",
+        ["PMID:42039744", "PMID:41245847", "PMID:41661098", "PMID:42125129"],
+    ),
+    "kgscan-93e87bc8aba3": (
+        "Knowledge gap for biosafety level: Additionally, it identifies "
+        "ongoing challenges and critical knowledge gaps for future "
+        "research.",
+        ["PMID:41494000", "PMID:41556562", "PMID:41647993", "PMID:41683313"],
+    ),
+    "kgscan-066a51aacfb6": (
+        "Knowledge gap for biosafety level 2: Background : Untargeted "
+        "microbiome modulation has achieved conflicting results in "
+        "post-infectious irritable bowel syndrome (PI-IBS).",
+        ["PMID:41683313", "PMID:41413233", "PMID:41640410", "PMID:41490313"],
+    ),
+    "kgscan-2ee31ba13f9c": (
+        "Knowledge gap for biosafety level 3: Additionally, it identifies "
+        "ongoing challenges and critical knowledge gaps for future "
+        "research.",
+        ["PMID:41494000", "PMID:40514544", "PMID:41552424", "PMID:41917383"],
+    ),
+    "kgscan-e770cf01677c": (
+        "Knowledge gap for biosafety level 4: Finally, this review examines "
+        "the largely unknown microbiology and infection implications of "
+        "celestial body habitation with an emphasis placed on Mars.",
+        ["PMID:37362850", "PMID:41914886", "PMID:40044492", "PMID:39682751"],
+    ),
+    "kgscan-3606bdcc991b": (
+        "Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, "
+        "noncoding RNAs involved in posttranscriptional gene regulation in "
+        "both animal and plant. miRNAs derived from edible plants, referred "
+        "to as xenomiRs, are proposed to cross-kingdom barriers and to "
+        "modulate mammalian gene expression.",
+        ["PMID:40945860", "PMID:40574831", "PMID:42197356", "PMID:41808832"],
+    ),
+    "kgscan-a6758e26f5a6": (
+        "Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral "
+        "diseases characterised by tumour-like skeletal lesions reported "
+        "globally, yet their causes remain poorly understood.",
+        ["PMID:42130304", "PMID:41612704", "PMID:40831140", "PMID:41764142"],
+    ),
+    "kgscan-d5aefedf82bb": (
+        "Knowledge gap for free-living: Interactions between parasites and "
+        "the gut microbiota play a key role in immune responses and "
+        "susceptibility to zoonotic diseases; however, many aspects of how "
+        "protozoan infections alter microbial diversity and how these "
+        "changes influence parasite pathogenicity and host defense remain "
+        "poorly understood.",
+        ["PMID:41989588", "PMID:42039802", "PMID:41943163", "PMID:42125129"],
+    ),
+    "kgscan-4fc1a06fa1e3": (
+        "Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, "
+        "noncoding RNAs involved in posttranscriptional gene regulation in "
+        "both animal and plant. miRNAs derived from edible plants, referred "
+        "to as xenomiRs, are proposed to cross-kingdom barriers and to "
+        "modulate mammalian gene expression.",
+        ["PMID:40945860", "PMID:42278360", "PMID:41808832", "PMID:42197356"],
+    ),
+}
+
 # Keyed by discussion_id so the plan binds to the discussion the scan wrote and
 # not to a file position -- a second scan pass appending another discussion must
 # not silently shift these onto the wrong object.
@@ -106,8 +183,7 @@ PLAN: dict[str, dict] = {
                 "surface-bound complement regulator by flow cytometry",
             ],
             "decision_criterion": (
-                "whether either single mutant is attenuated to the same degree "
-                "as the double mutant"
+                "whether either single mutant is attenuated to the same degree as the double mutant"
             ),
             "would_support": (
                 "single mutants retain near-wild-type survival and only the "
@@ -164,8 +240,7 @@ PLAN: dict[str, dict] = {
                 "a c-di-GMP-responsive transcriptional reporter",
             ],
             "decision_criterion": (
-                "whether NO still releases cells when the measured c-di-GMP "
-                "pool is held high"
+                "whether NO still releases cells when the measured c-di-GMP pool is held high"
             ),
             "would_support": (
                 "the clamped biofilm does not disperse -- c-di-GMP is the "
@@ -211,9 +286,7 @@ PLAN: dict[str, dict] = {
                 "presence of an assigned BSL-5 level in each framework",
                 "any peer-reviewed proposal defining BSL-5 requirements",
             ],
-            "decision_criterion": (
-                "whether any binding framework assigns agents to a fifth level"
-            ),
+            "decision_criterion": ("whether any binding framework assigns agents to a fifth level"),
             "would_support": (
                 "a framework or a citable proposal defines it -- keep the node "
                 "and ground it to that source"
@@ -293,12 +366,13 @@ PLAN: dict[str, dict] = {
             "causal_graphs#pressure_decay_testing",
         ],
         "rationale": (
-            "The graph treats the decay test as evidence of containment, but the "
-            "test is performed on a sealed, static room, and the room only "
-            "matters when it is occupied and in use. If the two diverge, "
-            "facilities are certified against a condition they never operate in, "
-            "and the edge from pressure_decay_testing to containment is weaker "
-            "than the record implies."
+            "The graph routes verification the other way round from the claim "
+            "it supports: bsl3_trait is `verified by` boundary_integrity_testing, "
+            "which `utilizes` pressure_decay_testing. So the decay test stands in "
+            "for containment without any node asserting that containment holds. "
+            "The test is also performed on a sealed, static room, and the room "
+            "only matters when it is occupied and in use. If the two diverge, "
+            "facilities are certified against a condition they never operate in."
         ),
         "experiment": {
             "experiment_id": "x-bsl3-decay-vs-tracer",
@@ -336,11 +410,11 @@ PLAN: dict[str, dict] = {
     "kgscan-e770cf01677c": {
         "file": "ecology/biosafety_level_4.yaml",
         "prompt": (
-            "Every BSL-4 engineering control in this record assumes terrestrial "
-            "gravity and an atmosphere that can be exhausted -- suit "
-            "overpressure, directional airflow, airlocks, chemical showers. "
-            "Which of them still contain an agent in a closed-loop habitat with "
-            "no outside air to exhaust to?"
+            "Every BSL-4 control this record requires assumes terrestrial "
+            "gravity and somewhere to put contaminated air, water and waste -- "
+            "suit overpressure, airlocks, chemical showers, specialized waste "
+            "disposal. Which still contain an agent in a closed-loop habitat "
+            "that recycles all three?"
         ),
         "attaches_to": [
             "causal_graphs#positive_pressure_suit",
@@ -349,12 +423,15 @@ PLAN: dict[str, dict] = {
         ],
         "rationale": (
             "Sample-return and crewed-habitat missions need containment for "
-            "agents with no countermeasure, which is exactly what BSL-4 is for, "
-            "but the controls are specified as equipment rather than as the "
-            "physics they rely on. Sedimentation-dependent controls behave "
-            "differently in microgravity and a closed atmosphere has nowhere to "
-            "exhaust; the record cannot currently distinguish a control that "
-            "transfers from one that does not."
+            "agents with no countermeasure, which is exactly what BSL-4 is for. "
+            "But every edge here is bsl4_trait `requires` a piece of equipment, "
+            "so the controls are named as hardware rather than as the physics "
+            "they rely on -- and it is the physics that does or does not "
+            "transfer. Sedimentation-dependent controls behave differently in "
+            "microgravity, and a shower and a waste stream that both feed a "
+            "recycling loop are not disposal. As written the record cannot "
+            "distinguish a control that survives the move from one that does "
+            "not, because it never says what any of them do."
         ),
         "experiment": {
             "experiment_id": "x-bsl4-closed-loop-transfer",
@@ -629,24 +706,27 @@ PLAN: dict[str, dict] = {
 }
 
 
-def scan_note(disc: dict, topic: str) -> str:
+def scan_note(discussion_id: str, topic: str) -> str:
     """Preserve the scan's output verbatim, and say why it is not the prompt.
 
-    The sentence and the PMIDs move here together. Splitting them would leave
-    the PMIDs looking like support for the authored question, which is exactly
-    the false provenance this migration exists to avoid.
+    Reads the frozen SCAN_OUTPUT table, never the record's current state, so
+    running this script twice cannot make the note describe the curated question
+    instead of the scraped one. The sentence and the PMIDs stay together:
+    splitting them would leave the PMIDs looking like support for the authored
+    question, which is exactly the false provenance this migration exists to
+    avoid.
     """
-    refs = ", ".join(e["reference"] for e in (disc.get("evidence") or []))
+    prompt, refs = SCAN_OUTPUT[discussion_id]
     return (
         f"Scan provenance (#409). The kg-microbe-kgscan pass raised this "
-        f"discussion with the prompt {disc['prompt']!r}, retrieved from "
-        f"{refs}. That sentence is about {topic}, not about this trait: the scan "
-        f"matched the hedging vocabulary of a gap statement without checking "
-        f"that the gap was about the trait it was filed under. The prompt above "
-        f"was authored instead from this record's own causal graph, and those "
-        f"PMIDs are not carried as its evidence because they support the "
-        f"scraped sentence rather than the question. Both are kept here so "
-        f"nothing the scan produced is lost."
+        f"discussion with the prompt {prompt!r}, retrieved from "
+        f"{', '.join(refs)}. That sentence is about {topic}, not about this "
+        f"trait: the scan matched the hedging vocabulary of a gap statement "
+        f"without checking that the gap was about the trait it was filed under. "
+        f"The prompt above was authored instead from this record's own causal "
+        f"graph, and those PMIDs are not carried as its evidence because they "
+        f"support the scraped sentence rather than the question. Both are kept "
+        f"here so nothing the scan produced is lost."
     )
 
 
@@ -657,7 +737,7 @@ def apply(path: Path, plan_by_id: dict[str, dict]) -> list[str]:
         plan = plan_by_id.get(disc.get("discussion_id"))
         if plan is None:
             continue
-        disc["notes"] = scan_note(disc, plan["scan_topic"])
+        disc["notes"] = scan_note(disc["discussion_id"], plan["scan_topic"])
         disc["prompt"] = plan["prompt"]
         disc["kind"] = plan.get("kind", "KNOWLEDGE_GAP")
         disc["status"] = "OPEN"
