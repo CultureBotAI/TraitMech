@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/research_trait_edison.py
+  slug: edison-capture-vendoring-claim
+session:
+  id: 2026-08-17T035449Z-claude-code-94c15a
+  timestamp: '2026-08-17T03:54:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/389
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - research
+  summary: Stop claiming _edison_capture.py is byte-identical, and say which way the drift
+    runs
+  details: 'research_trait_edison.py asserted that the response-capture plumbing _edison_capture.py
+    is vendored byte-identical across the Mech repos. Measured against each sibling''s main
+    on 2026-08-17 it is not: CommunityMech differs by 160 lines, 92 ignoring whitespace, and
+    MediaIngredientMech by 32. Nothing detects it, because check_vendored_sync.sh''s FILES
+    list covers the id-label validator, chem_formula.py and the three test_id_label tests,
+    not this file - the same unprotected-shared-file class as 209 and 377. CHARACTERISED THE
+    DRIFT RATHER THAN JUST FLAGGING IT, and it changes what the fix is. TraitMech is AHEAD.
+    The divergence is one unpropagated bug fix in _existing_sidecars: the stem is deterministic,
+    slug-edison-job, so a re-run finds the previous run''s files already on disk, and reporting
+    a plain exists() snapshot attributed a PRIOR task''s trace to the NEW task_id whenever
+    the new run failed to fetch one. This copy tracks what the invocation actually wrote -
+    15 references to the written set against 5 in both siblings - while both siblings still
+    snapshot. CommunityMech''s extra bulk over that is formatting; its render_citations_md
+    differs only by a line wrap. So the direction of repair runs outward and the fix is emphatically
+    not to edit this copy toward theirs, which would drop the provenance fix. Recorded that
+    warning in the docstring beside the measurement. Only the claim is corrected here: research_trait_edison.py
+    is TraitMech-specific and absent from both siblings, verified, so editing it carries no
+    drift risk, whereas editing _edison_capture.py in one repo is exactly the failure the
+    shared-ness is supposed to prevent. Propagation stays a cross-repo change on 389. 559
+    tests pass, qc green.'
