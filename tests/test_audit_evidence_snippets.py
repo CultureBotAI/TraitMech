@@ -354,3 +354,64 @@ def test_two_reused_snippets_in_one_graph_get_separate_magnitudes():
     worse_a = dict(a, detail="7 evidence items share one snippet: 'carbon source'")
     assert len(compare([worse_a, b], baseline)) == 1, \
         "the smaller snippet grew to below the larger's magnitude and passed"
+
+
+# ------------------------------------------------- reworded shared snippet (#292)
+#
+# The magnitude key folds the snippet TEXT in, because two reuse groups in one
+# graph share a _key() and keying on the graph alone lets the smaller grow up to
+# the larger unnoticed (#291). The cost was that REWORDING a shared snippet
+# produced an unseen key, its baselined magnitude read as 0, and a curator was
+# told something got worse when nothing had — pushing them at --write-baseline,
+# which is the rot #270 was about.
+
+
+def _reworded(n, graph="g1:*", file="f.yaml"):
+    """Same group, same count — only the quoted text differs."""
+    return _row(file, graph, "REUSED_SNIPPET",
+                f"{n} evidence items share one snippet: 'virulence factors of the pathogen'")
+
+
+def test_rewording_the_only_shared_snippet_is_not_new():
+    """One baselined magnitude under this key means there is nothing smaller to
+    grow into something larger, so comparing against it is safe by construction."""
+    from audit_evidence_snippets import (
+        Baseline, _key, _magnitude_key, compare)
+    baseline = Baseline({_key(_reused(3)): 1}, {_magnitude_key(_reused(3)): 3})
+    assert compare([_reworded(3)], baseline) == []
+
+
+def test_rewording_does_not_let_the_count_grow():
+    """The fallback must still ratchet: same group, reworded, but WORSE."""
+    from audit_evidence_snippets import (
+        Baseline, _key, _magnitude_key, compare)
+    baseline = Baseline({_key(_reused(3)): 1}, {_magnitude_key(_reused(3)): 3})
+    assert len(compare([_reworded(9)], baseline)) == 1
+
+
+def test_a_graph_with_two_reuse_groups_still_fails_closed():
+    """#292 rejected a per-key MAX fallback because with groups of 4 and 2 the
+    2 could be reworded and grown to 4 while the max sheltered it. With more
+    than one baselined magnitude the fallback declines, so that cannot happen."""
+    from audit_evidence_snippets import (
+        Baseline, _key, _magnitude_key, compare)
+    baseline = Baseline(
+        {_key(_reused(4)): 2},
+        {_magnitude_key(_reused(4)): 4,
+         _magnitude_key(_row("f.yaml", "g1:*", "REUSED_SNIPPET",
+                             "2 evidence items share one snippet: 'energy source'")): 2},
+    )
+    # the smaller group, reworded and grown to the larger's magnitude
+    grown = _row("f.yaml", "g1:*", "REUSED_SNIPPET",
+                 "4 evidence items share one snippet: 'energy source used'")
+    assert len(compare([grown], baseline)) == 1
+
+
+def test_an_unrelated_graph_is_not_borrowed_from():
+    """The fallback is scoped by _key(), so a different graph's magnitude cannot
+    shelter this one."""
+    from audit_evidence_snippets import (
+        Baseline, _key, _magnitude_key, compare)
+    baseline = Baseline({_key(_reused(3)): 1},
+                        {_magnitude_key(_reused(9, graph="other:*")): 9})
+    assert len(compare([_reworded(3)], baseline)) == 1
