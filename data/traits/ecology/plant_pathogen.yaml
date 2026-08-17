@@ -56,7 +56,6 @@ causal_graphs:
     label: plant tissue colonization
     node_type: BIOLOGICAL_PROCESS
     description: Establishment of microbial growth in plant tissues.
-    grounding: GO:0140649
   - node_id: plant_disease
     label: plant disease
     node_type: BIOLOGICAL_PROCESS
@@ -304,4 +303,16 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-17T06:00:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODES
+  changes: 'Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402):
+    plant_tissue_colonization: GO:0140649 retracted. Was GO:0140649 ''symbiont-mediated
+    cell-to-cell migration by invasive hypha''. Invasive hyphae are FUNGAL and this
+    is a bacterial record. RETRACTED RATHER THAN REPLACED: nothing verified fits —
+    GO:0044409 is ''symbiont entry into host'', which is entry rather than establishment
+    of growth, and GO:0051701 / GO:0044403 are the generic interaction parents. Guessing
+    a plausible replacement is precisely the act that produced this grounding (#402,
+    #403).'
   llm_assisted: true

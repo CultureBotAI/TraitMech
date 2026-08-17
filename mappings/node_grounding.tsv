@@ -171,11 +171,10 @@ spore coat	CELLULAR_LOCALIZATION	GO:0031160	spore wall	skos:exactMatch	GO	high	e
 extracellular matrix	CELLULAR_LOCALIZATION	GO:0031012	extracellular matrix	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 nitric oxide	CHEMICAL	CHEBI:16480	nitric oxide	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 organic acids	CHEMICAL	CHEBI:64709	organic acid	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
-plant tissue colonization	BIOLOGICAL_PROCESS	GO:0140649	cell-to-cell migration by invasive hypha	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 plant cell wall	CELLULAR_LOCALIZATION	GO:0009505	plant-type cell wall	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
 hemicellulose	CHEMICAL	CHEBI:61266	hemicellulose	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
-flagellar motility	BIOLOGICAL_PROCESS	GO:0003341	cilium movement	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
-hydrogen peroxide detoxification	BIOLOGICAL_PROCESS	GO:0033355	ascorbate glutathione cycle	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)
+flagellar motility	BIOLOGICAL_PROCESS	GO:0071973	bacterial-type flagellum-dependent cell motility	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass) CORRECTED in TraitMech#405: the kg-microbe name match returned a term from the wrong organism; replacement verified via OAK before being written (#402).
+hydrogen peroxide detoxification	BIOLOGICAL_PROCESS	GO:0042744	hydrogen peroxide catabolic process	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass) CORRECTED in TraitMech#405: the kg-microbe name match returned a term from the wrong organism; replacement verified via OAK before being written (#402).
 hydroxide ion	CHEMICAL	CHEBI:16234	hydroxide	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 arsenate(3-)	CHEMICAL	CHEBI:29125	arsenate(3-)	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 zinc(2+) ion	CHEMICAL	CHEBI:29105	zinc(2+)	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
@@ -314,7 +313,7 @@ glms	GENE_OR_PROTEIN	UniProtKB:I6LB50	GlmS	skos:closeMatch	UniProt	high	represen
 beta-lactamase	GENE_OR_PROTEIN	GO:0008800	beta-lactamase activity	skos:closeMatch	GO	high	replaces organism-specific UniProt accession; taxon-agnostic term per docs/GROUNDING_POLICY.md
 cooa	GENE_OR_PROTEIN	UniProtKB:A0A1D7QXJ2	Carbon monoxide-responsive transcriptional activator CooA	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 perr	GENE_OR_PROTEIN	UniProtKB:A0A097ASJ8	Transcriptional regulator PerR	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-rhodopsin	GENE_OR_PROTEIN	InterPro:IPR001425	Archaeal/bacterial/fungal rhodopsins	skos:closeMatch	InterPro	high	curator-selected microbial family: InterPro's plain "Rhodopsin" (IPR000732) is the animal visual opsin
+rhodopsin	GENE_OR_PROTEIN	InterPro:IPR001425	Archaeal/bacterial/fungal rhodopsins	skos:closeMatch	InterPro	high	"curator-selected microbial family: InterPro's plain ""Rhodopsin"" (IPR000732) is the animal visual opsin"
 quorum-quenching enzyme	GENE_OR_PROTEIN	UniProtKB:G2JHL6	Quorum-quenching protein AidA (Quorum-quenching enzyme) (QQ enzyme)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 type IV secretion system	GENE_OR_PROTEIN	GO:0043684	type IV secretion system complex	skos:exactMatch	GO	high	taxon-agnostic term, exact label match (docs/GROUNDING_POLICY.md)
 nitrogenase complex	GENE_OR_PROTEIN	GO:0016610	nitrogenase complex	skos:exactMatch	GO	high	taxon-agnostic term, exact label match (docs/GROUNDING_POLICY.md)
