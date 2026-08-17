@@ -18,22 +18,35 @@ events:
   sections:
   - evidence
   summary: Let a reworded shared snippet compare against the magnitude it could only be
-  details: '292 recorded the cost of 291''s magnitude key: it folds the snippet TEXT in, so
-    editing a shared snippet - rewording it, not diversifying it - produced an unseen key,
-    its baselined magnitude read as 0, any count beat it, and a curator was told something
-    got worse when nothing had. The remedy they reach for is --write-baseline, which is the
-    rot 270 was about. 292 rejected the obvious repair, falling back to the graph''s per-key
-    MAX, and it was right to: with two baselined groups of 4 and 2, the 2 could be reworded
-    and grown to 4 while the max sheltered it, restoring exactly what 291 removed. THAT OBJECTION
-    NEEDS TWO GROUPS. When a graph has exactly ONE baselined magnitude under this key there
-    is nothing smaller to grow into something larger, so comparing a reworded snippet against
-    the only magnitude it could be is safe by construction rather than by luck. Measured before
-    writing it: 13 REUSED_SNIPPET rows across 12 graphs, and one graph - trophic_type, the
-    case 291 was written about - carries two. So the fallback covers eleven of twelve and
-    leaves the twelfth failing closed exactly as today. Probed on real data rather than trusting
-    the reasoning. Rewording the shared snippet in animal_pathogen.yaml, a single-group graph,
-    previously read as new and now yields zero new findings. Rewording carbon source in trophic_type.yaml,
-    the two-group graph, still yields one new blocking finding, so the sheltering 292 warned
-    about cannot occur. Four tests pin both halves plus two adjacent traps: that the fallback
-    still ratchets when a reworded group also GROWS, and that it is scoped by _key so a different
-    graph''s magnitude cannot shelter this one. 569 tests pass, qc green.'
+  details: '292 recorded the cost of 291''s magnitude key: it folds the snippet TEXT in, so editing a
+    shared snippet - rewording it, not diversifying it - produced an unseen key, its baselined magnitude
+    read as 0, any count beat it, and a curator was told something got worse when nothing had. The remedy
+    they reach for is --write-baseline, which is the rot 270 was about. 292 rejected the obvious repair,
+    falling back to the graph''s per-key MAX, and it was right to: with two baselined groups of 4 and
+    2, the 2 could be reworded and grown to 4 while the max sheltered it, restoring exactly what 291 removed.
+    THAT OBJECTION NEEDS TWO GROUPS. When a graph has exactly ONE baselined magnitude under this key there
+    is nothing smaller to grow into something larger, so comparing a reworded snippet against the only
+    magnitude it could be is safe by construction rather than by luck. Measured before writing it: 13
+    REUSED_SNIPPET rows across 12 graphs, and one graph - trophic_type, the case 291 was written about
+    - carries two. So the fallback covers eleven of twelve and leaves the twelfth failing closed exactly
+    as today. Probed on real data rather than trusting the reasoning. Rewording the shared snippet in
+    animal_pathogen.yaml, a single-group graph, previously read as new and now yields zero new findings.
+    Rewording carbon source in trophic_type.yaml, the two-group graph, still yields one new blocking finding,
+    so the sheltering 292 warned about cannot occur. Four tests pin both halves plus two adjacent traps:
+    that the fallback still ratchets when a reworded group also GROWS, and that it is scoped by _key so
+    a different graph''s magnitude cannot shelter this one. 569 tests pass, qc green. ADDENDUM after the
+    dispatched review, which approved the logic on data and asked for two docstring corrections. _magnitude_key''s
+    own docstring still described 292''s cost as unmitigated and ended so it fails closed instead, which
+    after this change is true only where a graph carries two baselined magnitudes. It also sat about ninety
+    lines above _baselined_magnitude and never pointed at it, so a future reader would have been told
+    the cost stands and invited to re-litigate a decision just settled - the same comment-outlives-the-change
+    class as 372, 379 and 407. It now redirects to the resolver and scopes the fails-closed sentence to
+    the two-group case, naming trophic_type_classification_axes as the only such graph. Second, _baselined_magnitude
+    read as though the tolerance were rewording only; without content matching a reworded snippet is indistinguishable
+    from a REPLACEMENT, where the baselined group diversified away and a genuinely different snippet is
+    reused at or below the same magnitude. Both are accepted and both satisfy the ratchet''s contract
+    that nothing got worse, so that is now stated rather than left for someone to file as a hole; growth
+    is still caught on magnitude, and a new group is caught earlier by the occurrence count in compare.
+    Recorded also that the independent review could not run for two attempts because GitHub''s GraphQL
+    endpoint was returning 503s, failing gh pr checkout inside the workflow; the third dispatch succeeded
+    once the endpoint recovered.'

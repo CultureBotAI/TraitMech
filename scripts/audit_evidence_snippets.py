@@ -325,10 +325,17 @@ def _magnitude_key(row: dict[str, str]) -> tuple[str, str, str, str] | None:
     itself is the discriminator (#291).
 
     Cost of that choice, tracked in #292: editing the shared snippet's TEXT
-    produces an unseen key, so its baselined magnitude reads as 0 and any count
-    beats it — a reworded quote is reported as new when nothing got worse.
-    Falling back to the graph's per-key max would fix that and restore the
-    sheltering this key exists to remove, so it fails closed instead.
+    produces an unseen key here. That is no longer the end of the story —
+    :func:`_baselined_magnitude` resolves an unseen key against the graph's ONLY
+    baselined magnitude where there is exactly one, which is safe because there
+    is then nothing smaller to grow into something larger. Read that function
+    before concluding this key is unmitigated.
+
+    It still fails closed where the graph carries MORE than one baselined
+    magnitude — `trophic_type_classification_axes:*` is the only such graph
+    today, and the case this key was written for: falling back to a per-key max
+    there would let the smaller group be reworded and grown to the larger's
+    magnitude, restoring exactly the sheltering this key removes.
     """
     if row.get("defect") not in MAGNITUDE_DEFECTS:
         return None
@@ -435,6 +442,14 @@ def _baselined_magnitude(row: dict[str, str], baseline: "Baseline") -> int:
     magnitude under this key there is nothing smaller to grow into something
     larger, so the fallback is safe by construction rather than by luck —
     a reworded snippet is compared against the only magnitude it could be.
+
+    NOT ONLY A REWORDING, and that is deliberate rather than a hole. Without
+    content matching, a reworded snippet is indistinguishable from a REPLACEMENT
+    — the baselined group diversified away and a genuinely different snippet
+    reused at or below the same magnitude. Both are accepted, and both satisfy
+    the ratchet's contract: nothing got worse. Growth is still caught, because
+    the comparison is on magnitude, and a NEW group in the graph is caught
+    earlier by the occurrence count in :func:`compare`.
     Measured on the current baseline: 13 REUSED_SNIPPET rows across 12 graphs,
     and one graph (trophic_type, the case #291 was written about) carries two.
     So this covers eleven of twelve and leaves the twelfth failing closed
