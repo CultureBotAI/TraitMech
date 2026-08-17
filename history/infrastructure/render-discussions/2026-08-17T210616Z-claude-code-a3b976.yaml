@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/traitmech/templates/trait.html
+  slug: render-discussions
+session:
+  id: 2026-08-17T210616Z-claude-code-a3b976
+  timestamp: '2026-08-17T21:06:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/409
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Render Discussions and Knowledge Gaps on the trait page
+  details: '409 step 1. TraitMech has had the discussion layer since claw#7 - Discussion in
+    the shared Mech schema, just knowledge-gap-scan to seed it, just gen-discussions-data
+    to build a standalone app - but render_trait_pages.py contained zero references to discussions,
+    so a knowledge gap was visible only to someone reading YAML. ecology/animal_pathogen.yaml
+    carried one and its page did not show it. Added a Discussions and Knowledge Gaps section
+    to trait.html, the heading taken verbatim from the DisMech disorder page this was compared
+    against, with id=discussions so the URL shape matches too. Renders every field the reference
+    shows and the schema already supports: prompt, kind and status and discussion_id as badges,
+    posed_by and posed_date, attaches_to, rationale, proposed_experiments with experiment_type,
+    and evidence with reference, supports, snippet and explanation. No renderer change was
+    needed because trait=doc is already passed to the template, the same way curation_history
+    is reached. Where attaches_to is empty - all ten today - the section says so and names
+    what a curator would set, rather than rendering a blank field, because an unanchored gap
+    is a curation TODO rather than an error. Styles are built from the existing custom properties
+    rather than new colours, so the section inherits the light and dark themes at the foot
+    of style.css without a second set of overrides, and the unanchored note is muted italic
+    rather than the graph-warning tint, which this page reserves for the content below may
+    be wrong. Verified: exactly ten of 477 pages carry the section, matching the ten records
+    with discussions; the cross-link to the corpus-wide index resolves to app/discussions/index.html,
+    which exists. 569 tests pass, qc green.'

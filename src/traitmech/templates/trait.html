@@ -240,6 +240,67 @@
     </div>
     {% endif %}
 
+    {% if trait.discussions %}
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps</h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="{{ root }}../app/discussions/index.html">the corpus-wide index</a>.</p>
+      {% for d in trait.discussions %}
+      <div class="discussion">
+        <p class="discussion-prompt">{{ d.prompt }}</p>
+        <p class="meta">
+          <span class="badge">{{ (d.kind or 'DISCUSSION')|replace('_', ' ') }}</span>
+          <span class="badge">{{ d.status or 'OPEN' }}</span>
+          <code>{{ d.discussion_id }}</code>
+          {% if d.posed_by %}· raised by {{ d.posed_by }}{% endif %}
+          {% if d.posed_date %}· {{ d.posed_date }}{% endif %}
+        </p>
+
+        {% if d.attaches_to %}
+        <p class="meta">Attached to
+          {% for a in d.attaches_to %}<code>{{ a }}</code>{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+        {% else %}
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+        {% endif %}
+
+        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
+
+        {% if d.proposed_experiments %}
+        <h3>Proposed experiments</h3>
+        <ul class="experiments">
+          {% for x in d.proposed_experiments %}
+          <li>
+            {% if x.experiment_type %}<span class="badge">{{ x.experiment_type|replace('_', ' ') }}</span>{% endif %}
+            {{ x.description or x.title or '' }}
+            {% if x.expected_outcome %}<span class="meta">Expected: {{ x.expected_outcome }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if d.evidence %}
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+          {% for e in d.evidence %}
+          <li>
+            <code>{{ e.reference }}</code>
+            {% if e.supports %}<span class="badge">{{ e.supports|replace('_', ' ') }}</span>{% endif %}
+            {% if e.snippet %}<blockquote>{{ e.snippet }}</blockquote>{% endif %}
+            {% if e.explanation %}<span class="meta">{{ e.explanation }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if trait.curation_history %}
     <div class="card">
       <h2>Curation history</h2>
