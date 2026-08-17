@@ -275,9 +275,23 @@
         <ul class="experiments">
           {% for x in d.proposed_experiments %}
           <li>
-            {% if x.experiment_type %}<span class="badge">{{ x.experiment_type|replace('_', ' ') }}</span>{% endif %}
-            {{ x.description or x.title or '' }}
-            {% if x.expected_outcome %}<span class="meta">Expected: {{ x.expected_outcome }}</span>{% endif %}
+            {% if x.name %}<strong>{{ x.name }}</strong>{% endif %}
+            {% if x.approach %}<span class="badge">{{ x.approach }}</span>{% endif %}
+            {% if x.description %}<span class="meta">{{ x.description }}</span>{% endif %}
+            {% if x.model_systems %}<span class="meta">Model systems:
+              {{ x.model_systems|join(', ') }}</span>{% endif %}
+            {% if x.perturbations %}<span class="meta">Perturbations:
+              {{ x.perturbations|join(', ') }}</span>{% endif %}
+            {% if x.readouts %}<span class="meta">Readouts:
+              {{ x.readouts|join(', ') }}</span>{% endif %}
+            {# The field that makes a sketch decidable rather than a wish — the
+               schema calls it "the observation that would settle the question". #}
+            {% if x.decision_criterion %}<span class="meta">Decides it:
+              {{ x.decision_criterion }}</span>{% endif %}
+            {% if x.would_support %}<span class="meta">Supports if:
+              {{ x.would_support }}</span>{% endif %}
+            {% if x.would_refute %}<span class="meta">Refutes if:
+              {{ x.would_refute }}</span>{% endif %}
           </li>
           {% endfor %}
         </ul>
