@@ -228,21 +228,27 @@ def test_the_real_justfile_resolves_check_to_itself():
     assert body.strip() == "", f"recipe_body('check') matched another recipe: {body[:80]!r}"
 
 
-def test_a_dependency_only_chain_member_raises_rather_than_passing(tmp_path):
-    """`qc: … audit-data …` with `audit-data: audit-graphs audit-snippets`.
+def test_a_composite_chain_member_is_followed_not_flagged(tmp_path):
+    """`qc: … audit-group …` with `audit-group: audit-thing`.
 
-    The composite has an empty body, so it invokes no script and would be
-    skipped in silence — the shape of `check: lint test` and of `qc:` itself.
-    The read-set ratchet cannot cover this case: a NEW composite reading a NEW
-    directory has no ratchet entry to shrink (#288).
+    This test used to assert the OPPOSITE — that the composite raised BlindGate
+    — because nothing followed dependencies, so grouping the chain silently
+    dropped whatever the group's members read (#288). #289 made the walk
+    transitive, so `audit-thing` is now in the chain in its own right and
+    contributes its reads.
+
+    Flagging it now would hard-fail `just qc` on exactly the refactor the
+    transitive walk was added to make safe, with a message claiming its
+    dependencies were not followed at the moment they are (#406 review).
     """
     root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
     jf = root / "justfile"
     jf.write_text(jf.read_text().replace(
         "qc: audit-thing",
         "audit-group: audit-thing\n\nqc: audit-group"))
-    with pytest.raises(BlindGate, match="dependency-only"):
-        audit(root)
+
+    assert audit(root) == []              # no BlindGate, no findings
+    assert "data" in AUDIT_READ_SET       # the member's reads were collected
 
 
 def test_this_scripts_own_path_constants_are_still_present():
@@ -312,3 +318,16 @@ def test_chain_is_empty_when_qc_is_absent():
     """Preserved from before: an absent qc: must raise BlindGate in audit(),
     not silently inspect nothing."""
     assert qc_chain("something-else: lint\n") == []
+
+
+def test_a_truly_blind_recipe_still_trips_the_gate(tmp_path):
+    """The half of the guard that survives #289: no body, no directly-named
+    reads, AND no dependencies to have followed. That recipe contributes
+    nothing and nothing explains why, which is what the gate is for."""
+    root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
+    jf = root / "justfile"
+    jf.write_text(jf.read_text() + "\nnothing:\n")
+    jf.write_text(jf.read_text().replace("qc: audit-thing", "qc: audit-thing nothing"))
+
+    with pytest.raises(BlindGate, match="no dependencies to follow"):
+        audit(root)

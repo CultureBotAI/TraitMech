@@ -253,17 +253,29 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
                         continue
                     seen.setdefault(top, set()).add(f"{recipe} → (named directly)")
                 continue
-            # A dependency-only recipe — the shape of `check: lint test` and of
-            # `qc:` itself — has an empty body, so it would contribute nothing
-            # and be skipped in silence. Grouping the chain
-            # (`qc: … audit-data …` with `audit-data: audit-graphs
-            # audit-snippets`) would then drop conf/data/reports/research in one
-            # edit. The ratchet catches that for directories already read; it
-            # cannot catch a NEW composite target reading a NEW directory,
-            # because there is no ratchet entry for a directory nobody has read
-            # yet. No-op today: all chain recipes invoke at least one script.
-            silent.add(f"{recipe} (no scripts/*.py in its body — dependency-only "
-                       "recipes are not followed)")
+            # A recipe with no body and no directly-named reads. Whether that is
+            # a problem now depends on whether its dependencies were walked.
+            #
+            # Before #289 it always was: nothing followed dependencies, so
+            # grouping the chain (`qc: … audit-data …` with
+            # `audit-data: audit-graphs audit-snippets`) silently dropped
+            # conf/data/reports/research in one edit, and the ratchet could not
+            # catch it — there is no ratchet entry for a directory nobody has
+            # read yet.
+            #
+            # Now the walk follows them, so a composite recipe's members are in
+            # `chain` in their own right and contribute their own reads. Flagging
+            # it would hard-fail `just qc` on exactly the refactor this audit was
+            # extended to make safe, with a message saying its dependencies were
+            # not followed at the moment they are (#406 review).
+            #
+            # What still deserves the flag is a recipe that is blind for real:
+            # no body, no direct reads, AND no dependencies to have followed.
+            if recipe_deps(justfile_text, recipe):
+                continue
+            silent.add(f"{recipe} (no scripts/*.py in its body, no directly-named "
+                       "reads, and no dependencies to follow — it contributes "
+                       "nothing and nothing explains why)")
             continue
         for rel in invoked:
             script = root / rel
