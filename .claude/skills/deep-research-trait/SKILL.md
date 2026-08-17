@@ -14,7 +14,7 @@ version: 1.0.0
 Drives the Edison Scientific `edison-client` SDK directly against a TraitMech
 `TraitRecord`, so you get Edison's job selection and a complete provenance
 bundle. This is the TraitMech port of CommunityMech's `deep-research-community`;
-`scripts/_edison_capture.py` is vendored byte-identical across the Mech repos.
+`scripts/_edison_capture.py` is *intended* shared across the Mech repos but has **diverged**, and nothing detects it (#389). TraitMech is AHEAD by a provenance fix in `_existing_sidecars`. Do not sync this copy toward a sibling's.
 
 **Why not `just research-trait`?** That recipe goes through
 `deep-research-client`, whose `falcon` provider *is* Edison — but it exposes no
@@ -143,8 +143,15 @@ nests output per category, unlike the flat layout in the sibling Mechs.
 - `scripts/research_trait_edison.py` — this runner
 - `scripts/research_trait.py` — the deep-research-client path (`--provider falcon`)
 - `scripts/enrich_edison_response.py` — retroactive provenance backfill
-- `scripts/_edison_capture.py` — vendored byte-identical across the Mech repos;
-  fix it in one place and sync to all
+- `scripts/_edison_capture.py` — *intended* shared across the Mech repos, but
+  **it has diverged and nothing checks it** (#389). `check_vendored_sync.sh`'s
+  `FILES` list does not include it. Measured 2026-08-17, TraitMech is AHEAD of
+  all three siblings — CultureMech (the hub) and MediaIngredientMech by 32 lines
+  each, CommunityMech by 160 (92 ignoring whitespace) — by one unpropagated fix
+  in `_existing_sidecars`, which stops a re-run attributing a PRIOR task's trace
+  to the NEW `task_id`. **Do not "fix it in one place and sync to all" by
+  editing this copy toward theirs**: that drops the fix. Propagation runs
+  outward and is a cross-repo change.
 - CommunityMech `deep-research-community`, MIM `deep-research-ingredient`,
   CultureMech `deep-research-medium` — the sibling skills
 

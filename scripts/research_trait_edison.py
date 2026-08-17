@@ -5,8 +5,38 @@ Uses the ``edison-client`` SDK directly. The companion ``research_trait.py``
 wraps ``deep-research-client``, which reaches Edison through its ``falcon``
 provider — but that path exposes none of Edison's job selection and none of the
 response provenance. This is the TraitMech port of CommunityMech's
-``research_community_edison.py``; the response-capture plumbing
-(``_edison_capture.py``) is vendored byte-identical across the Mech repos.
+``research_community_edison.py``.
+
+THE RESPONSE-CAPTURE PLUMBING IS NOT BYTE-IDENTICAL, though this docstring said
+so until #389. ``_edison_capture.py`` is *intended* shared and has diverged, and
+nothing detects it: ``check_vendored_sync.sh``'s FILES list covers the id-label
+validator, ``chem_formula.py`` and the three ``test_id_label_*.py``, not this.
+Measured 2026-08-17 against each sibling's ``main``:
+
+    CultureMech (hub)      32 differing lines
+    MediaIngredientMech    32 differing lines
+    CommunityMech         160 differing lines (92 ignoring whitespace)
+
+The HUB is in the table deliberately: check_vendored_sync.sh sets
+CANON_REPO=CultureBotAI/CultureMech, so under this fleet's hub-and-spoke model
+it is the copy that decides which way repair runs, and omitting it would leave
+the claim asserted against everyone except the arbiter (#404 review). It also
+looks like the origin — this file's own example stem is
+``archaeoglobus_medium_dsm_399-edison-literature``, a MEDIUM slug rather than a
+trait one.
+
+TRAITMECH IS AHEAD, WHICH IS WHY THIS MATTERS AND WHY THE FIX IS NOT "COPY THEIRS".
+The divergence is one unpropagated bug fix, in ``_existing_sidecars``: the stem is
+deterministic (``{slug}-edison-{job}``), so a re-run finds the previous run's
+files on disk, and reporting a plain ``.exists()`` snapshot attributes a PRIOR
+task's trace to the NEW ``task_id`` whenever the new run fails to fetch one. This
+copy tracks what the invocation actually wrote; both siblings still snapshot.
+CommunityMech's extra bulk over that is formatting — its ``render_citations_md``
+differs only by a line wrap.
+
+So the shared-ness is a claim, not a fact, and the direction of repair runs
+outward. Propagating is a cross-repo change (#389); do not "fix" it by editing
+this copy toward theirs, which would drop the provenance fix.
 
 The default job is LITERATURE (== ``job-futurehouse-paperqa3``), the PaperQA
 agent — the best fit for "what mechanisms produce this trait, what conditions
@@ -295,7 +325,15 @@ def load_batch_targets(batch_path: Path) -> list[str]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
+    # RawDescriptionHelpFormatter, because the default one runs __doc__ through
+    # _fill_text, which collapses all whitespace before wrapping — the drift
+    # table above renders as run-on prose without it. The docstring already
+    # leaked into --help before the table existed; the table is the first part
+    # of it that depends on alignment (#404 review).
+    ap = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     src = ap.add_mutually_exclusive_group(required=True)
     src.add_argument("--target", help="category/slug, a bare slug, or a path to a trait YAML.")
     src.add_argument("--batch", type=Path, help="Path to a JSON list of targets.")
