@@ -209,10 +209,10 @@ discussions:
   rationale: The record asserts both mechanisms but at different resolutions, which
     is what makes them impossible to weigh. Drift arrives bundled into a trait-level
     edge as a parenthetical -- `with small Ne` inside a description -- while selection
-    is spelled out as a two-step path through metabolic_gene_loss. Neither transmission_bottleneck
-    nor limited_recombination attaches to anything, so the drift claim has no mechanism
-    under it, and host_symbiont_aa_complementarity -> nutritional_compensation is
-    likewise its own disconnected pair, so compensation is not wired into reduction
+    is spelled out as a two-step path through metabolic_gene_loss. transmission_bottleneck
+    and limited_recombination attach to each other and to nothing else, so the drift
+    claim has no mechanism under it, and host_symbiont_aa_complementarity -> nutritional_compensation
+    is likewise its own disconnected pair, so compensation is not wired into reduction
     either. The two predict opposite loss spectra -- drift removes genes roughly regardless
     of function, compensation removes exactly the genes whose products the host supplies
     -- so until they are stated at the same resolution the graph cannot say what a

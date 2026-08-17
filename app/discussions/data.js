@@ -51,7 +51,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#bsl5"
   ],
-  "rationale": "A containment level that does not exist in regulation is not a value the trait can take, and anything downstream that enumerates levels from this graph -- a risk-assessment form, an ontology mapping, a facility-capability query -- would inherit a level with no requirements attached to it. Either the node is grounded in a published proposal and labelled as one, or it comes out.",
+  "rationale": "A containment level that does not exist in regulation is not a value the trait can take, and anything downstream that enumerates levels from this graph -- a risk-assessment form, an ontology mapping, a facility-capability query -- would inherit a level with no requirements attached to it. Note what the resolution is NOT: the node is already labelled a proposal and grounded to METPO:1001106, which the corpus carries as its own seeded record at ecology/biosafety_level_5.yaml, so deleting it here would desynchronise this graph from an upstream-seeded record rather than fix anything. A METPO class is not a citable proposal, so the question stands -- but it is answered by finding the source behind METPO:1001106, and any retraction belongs upstream in METPO, not in this graph.",
   "num_experiments": 1,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -154,7 +154,7 @@ window.searchData = [
    "causal_graphs#limited_recombination",
    "causal_graphs#metabolic_gene_loss"
   ],
-  "rationale": "The record asserts both mechanisms but at different resolutions, which is what makes them impossible to weigh. Drift arrives bundled into a trait-level edge as a parenthetical -- `with small Ne` inside a description -- while selection is spelled out as a two-step path through metabolic_gene_loss. Neither transmission_bottleneck nor limited_recombination attaches to anything, so the drift claim has no mechanism under it, and host_symbiont_aa_complementarity -> nutritional_compensation is likewise its own disconnected pair, so compensation is not wired into reduction either. The two predict opposite loss spectra -- drift removes genes roughly regardless of function, compensation removes exactly the genes whose products the host supplies -- so until they are stated at the same resolution the graph cannot say what a newly sequenced symbiont will have lost, which is most of what a reduction model is for.",
+  "rationale": "The record asserts both mechanisms but at different resolutions, which is what makes them impossible to weigh. Drift arrives bundled into a trait-level edge as a parenthetical -- `with small Ne` inside a description -- while selection is spelled out as a two-step path through metabolic_gene_loss. transmission_bottleneck and limited_recombination attach to each other and to nothing else, so the drift claim has no mechanism under it, and host_symbiont_aa_complementarity -> nutritional_compensation is likewise its own disconnected pair, so compensation is not wired into reduction either. The two predict opposite loss spectra -- drift removes genes roughly regardless of function, compensation removes exactly the genes whose products the host supplies -- so until they are stated at the same resolution the graph cannot say what a newly sequenced symbiont will have lost, which is most of what a reduction model is for.",
   "num_experiments": 1,
   "num_evidence": 0,
   "evidence_refs": [],

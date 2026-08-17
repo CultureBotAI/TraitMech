@@ -419,8 +419,15 @@ PLAN: dict[str, dict] = {
             "value the trait can take, and anything downstream that enumerates "
             "levels from this graph -- a risk-assessment form, an ontology "
             "mapping, a facility-capability query -- would inherit a level with "
-            "no requirements attached to it. Either the node is grounded in a "
-            "published proposal and labelled as one, or it comes out."
+            "no requirements attached to it. Note what the resolution is NOT: "
+            "the node is already labelled a proposal and grounded to "
+            "METPO:1001106, which the corpus carries as its own seeded record "
+            "at ecology/biosafety_level_5.yaml, so deleting it here would "
+            "desynchronise this graph from an upstream-seeded record rather "
+            "than fix anything. A METPO class is not a citable proposal, so the "
+            "question stands -- but it is answered by finding the source behind "
+            "METPO:1001106, and any retraction belongs upstream in METPO, not "
+            "in this graph."
         ),
         "experiment": {
             "experiment_id": "x-bsl5-provenance-check",
@@ -438,11 +445,12 @@ PLAN: dict[str, dict] = {
             "decision_criterion": ("whether any binding framework assigns agents to a fifth level"),
             "would_support": (
                 "a framework or a citable proposal defines it -- keep the node "
-                "and ground it to that source"
+                "and cite that source on it, alongside the METPO grounding"
             ),
             "would_refute": (
-                "no framework or proposal defines it -- retract the node under "
-                "the grounding-retraction rule"
+                "no framework or proposal defines it -- raise the retraction "
+                "against METPO:1001106 upstream, so this graph and "
+                "ecology/biosafety_level_5.yaml change together"
             ),
         },
         "scan_topic": "a review's boilerplate statement that gaps exist",
@@ -695,9 +703,10 @@ PLAN: dict[str, dict] = {
             "which is what makes them impossible to weigh. Drift arrives "
             "bundled into a trait-level edge as a parenthetical -- `with small "
             "Ne` inside a description -- while selection is spelled out as a "
-            "two-step path through metabolic_gene_loss. Neither "
-            "transmission_bottleneck nor limited_recombination attaches to "
-            "anything, so the drift claim has no mechanism under it, and "
+            "two-step path through metabolic_gene_loss. "
+            "transmission_bottleneck and limited_recombination attach to each "
+            "other and to nothing else, so the drift claim has no mechanism "
+            "under it, and "
             "host_symbiont_aa_complementarity -> nutritional_compensation is "
             "likewise its own disconnected pair, so compensation is not wired "
             "into reduction either. The two predict opposite loss spectra -- "

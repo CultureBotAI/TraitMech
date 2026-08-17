@@ -521,7 +521,7 @@ Identifiers below are conservative. Labels are preferable where a precise stable
         </p>
         
 
-        <p>A containment level that does not exist in regulation is not a value the trait can take, and anything downstream that enumerates levels from this graph -- a risk-assessment form, an ontology mapping, a facility-capability query -- would inherit a level with no requirements attached to it. Either the node is grounded in a published proposal and labelled as one, or it comes out.</p>
+        <p>A containment level that does not exist in regulation is not a value the trait can take, and anything downstream that enumerates levels from this graph -- a risk-assessment form, an ontology mapping, a facility-capability query -- would inherit a level with no requirements attached to it. Note what the resolution is NOT: the node is already labelled a proposal and grounded to METPO:1001106, which the corpus carries as its own seeded record at ecology/biosafety_level_5.yaml, so deleting it here would desynchronise this graph from an upstream-seeded record rather than fix anything. A METPO class is not a citable proposal, so the question stands -- but it is answered by finding the source behind METPO:1001106, and any retraction belongs upstream in METPO, not in this graph.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -540,9 +540,9 @@ Identifiers below are conservative. Labels are preferable where a precise stable
             <span class="meta">Decides it:
               whether any binding framework assigns agents to a fifth level</span>
             <span class="meta">Supports if:
-              a framework or a citable proposal defines it -- keep the node and ground it to that source</span>
+              a framework or a citable proposal defines it -- keep the node and cite that source on it, alongside the METPO grounding</span>
             <span class="meta">Refutes if:
-              no framework or proposal defines it -- retract the node under the grounding-retraction rule</span>
+              no framework or proposal defines it -- raise the retraction against METPO:1001106 upstream, so this graph and ecology/biosafety_level_5.yaml change together</span>
           </li>
           
         </ul>
