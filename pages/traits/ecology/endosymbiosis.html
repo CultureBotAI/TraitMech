@@ -385,8 +385,9 @@ Identifiers below are conservative suggestions. Taxon-specific proteins are left
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
-      <div class="discussion">
-        <p class="discussion-prompt">Only the selection-like arm reaches genome reduction in this record -- confined habitat drives metabolic gene loss, which contributes to reduction. Transmission bottleneck and limited recombination sit as a disconnected pair. Does drift under bottlenecks cause reduction here, warranting an edge?</p>
+      
+      <div class="discussion" id="kgscan-a6758e26f5a6">
+        <p class="discussion-prompt">Two edges reach genome reduction here: confined habitat through metabolic gene loss, and the trait itself, whose description bundles drift in as `with small Ne`. The nodes that would give drift a mechanism -- transmission bottleneck, limited recombination -- connect to neither. Should they feed the drift edge, and which mechanism dominates?</p>
         <p class="meta">
           <span class="badge">CONTROVERSY</span>
           <span class="badge">OPEN</span>
@@ -401,7 +402,7 @@ Identifiers below are conservative suggestions. Taxon-specific proteins are left
         </p>
         
 
-        <p>By attaching one arm and leaving the other dangling, the record takes a side on a contested question through omission rather than assertion -- which is the hardest kind of claim to notice or argue with. The two mechanisms predict opposite loss spectra: drift under a bottleneck removes genes roughly regardless of function, while host compensation removes exactly the genes whose products the host supplies. As drawn, the graph predicts only the second, so it cannot say what a newly sequenced symbiont will have lost -- which is most of what a reduction model is for.</p>
+        <p>The record asserts both mechanisms but at different resolutions, which is what makes them impossible to weigh. Drift arrives bundled into a trait-level edge as a parenthetical -- `with small Ne` inside a description -- while selection is spelled out as a two-step path through metabolic_gene_loss. Neither transmission_bottleneck nor limited_recombination attaches to anything, so the drift claim has no mechanism under it, and host_symbiont_aa_complementarity -&gt; nutritional_compensation is likewise its own disconnected pair, so compensation is not wired into reduction either. The two predict opposite loss spectra -- drift removes genes roughly regardless of function, compensation removes exactly the genes whose products the host supplies -- so until they are stated at the same resolution the graph cannot say what a newly sequenced symbiont will have lost, which is most of what a reduction model is for.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -420,9 +421,9 @@ Identifiers below are conservative suggestions. Taxon-specific proteins are left
             <span class="meta">Decides it:
               whether genome size still tracks bottleneck severity once host complementation of the lost functions is controlled for</span>
             <span class="meta">Supports if:
-              reduction tracks bottleneck severity independently of complementation -- the drift arm is causal and the graph is missing an edge into reductive_genome_evolution</span>
+              reduction tracks bottleneck severity independently of complementation -- the bottleneck pair belongs under the trait-level drift edge, as its mechanism</span>
             <span class="meta">Refutes if:
-              loss is enriched for host-complemented functions with no residual bottleneck effect -- the omission is correct and the dangling pair is context rather than cause</span>
+              loss is enriched for host-complemented functions with no residual bottleneck effect -- selection dominates, and the dangling pair is context rather than cause</span>
           </li>
           
         </ul>
@@ -436,7 +437,7 @@ Identifiers below are conservative suggestions. Taxon-specific proteins are left
         
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.&#39;, retrieved from PMID:42130304, PMID:41612704, PMID:40831140, PMID:41764142. That sentence is about growth anomalies in corals, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.&#39;, whose sentence came from PMID:42130304. That sentence is about growth anomalies in corals, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached three further references whose snippets concern neither that sentence nor this trait; all four are reproduced here so nothing it produced is lost: PMID:42130304 &#39;Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.&#39;; PMID:41612704 &#39;Disrupting this obligate symbiosis represents a promising pest control strategy, yet the molecular mechanisms maintaining host-symbiont homeostasis remain poorly understood.&#39;; PMID:40831140 &#39;This review explores the origin and evolution of plastids, their protein-import machinery, compartmentalization, and interactions with other cellular compartments, and highlights key unanswered questions in these areas.&#39;; PMID:41764142 &#39;Detritivorous E. murphyi larvae can increase soil nitrogen levels by up to five times compared with similar uncolonized substrates, although the mechanisms involved remain unknown.&#39;.</p>
         </details>
         
       </div>

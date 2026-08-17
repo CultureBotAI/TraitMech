@@ -16,7 +16,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/animal_pathogen.html#kgscan-30bcdf4a32b0"
+  "page_url": "../../pages/traits/ecology/animal_pathogen.html#kgscan-30bcdf4a32b0"
  },
  {
   "discussion_id": "kgscan-aa46cc9b34ab",
@@ -37,7 +37,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/biofilm_formation.html#kgscan-aa46cc9b34ab"
+  "page_url": "../../pages/traits/ecology/biofilm_formation.html#kgscan-aa46cc9b34ab"
  },
  {
   "discussion_id": "kgscan-93e87bc8aba3",
@@ -56,7 +56,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/biosafety_level.html#kgscan-93e87bc8aba3"
+  "page_url": "../../pages/traits/ecology/biosafety_level.html#kgscan-93e87bc8aba3"
  },
  {
   "discussion_id": "kgscan-066a51aacfb6",
@@ -76,7 +76,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/biosafety_level_2.html#kgscan-066a51aacfb6"
+  "page_url": "../../pages/traits/ecology/biosafety_level_2.html#kgscan-066a51aacfb6"
  },
  {
   "discussion_id": "kgscan-2ee31ba13f9c",
@@ -96,7 +96,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/biosafety_level_3.html#kgscan-2ee31ba13f9c"
+  "page_url": "../../pages/traits/ecology/biosafety_level_3.html#kgscan-2ee31ba13f9c"
  },
  {
   "discussion_id": "kgscan-e770cf01677c",
@@ -110,14 +110,15 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#positive_pressure_suit",
    "causal_graphs#airlock",
-   "causal_graphs#decontamination_shower"
+   "causal_graphs#decontamination_shower",
+   "causal_graphs#specialized_waste_disposal"
   ],
-  "rationale": "Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for. But every edge here is bsl4_trait `requires` a piece of equipment, so the controls are named as hardware rather than as the physics they rely on -- and it is the physics that does or does not transfer. Sedimentation-dependent controls behave differently in microgravity, and a shower and a waste stream that both feed a recycling loop are not disposal. As written the record cannot distinguish a control that survives the move from one that does not, because it never says what any of them do.",
+  "rationale": "Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for. But every control edge runs outward from bsl4_trait to a piece of equipment -- `requires` an airlock, a decontamination shower, specialized waste disposal; `necessitates use of` a positive pressure suit -- so the controls are named as hardware rather than as the physics they rely on, and it is the physics that does or does not transfer. Sedimentation-dependent controls behave differently in microgravity, and a shower and a waste stream that both feed a recycling loop are not disposal. As written the record cannot distinguish a control that survives the move from one that does not, because it never says what any of them do.",
   "num_experiments": 1,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/biosafety_level_4.html#kgscan-e770cf01677c"
+  "page_url": "../../pages/traits/ecology/biosafety_level_4.html#kgscan-e770cf01677c"
  },
  {
   "discussion_id": "kgscan-3606bdcc991b",
@@ -136,11 +137,11 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/commensalism.html#kgscan-3606bdcc991b"
+  "page_url": "../../pages/traits/ecology/commensalism.html#kgscan-3606bdcc991b"
  },
  {
   "discussion_id": "kgscan-a6758e26f5a6",
-  "prompt": "Only the selection-like arm reaches genome reduction in this record -- confined habitat drives metabolic gene loss, which contributes to reduction. Transmission bottleneck and limited recombination sit as a disconnected pair. Does drift under bottlenecks cause reduction here, warranting an edge?",
+  "prompt": "Two edges reach genome reduction here: confined habitat through metabolic gene loss, and the trait itself, whose description bundles drift in as `with small Ne`. The nodes that would give drift a mechanism -- transmission bottleneck, limited recombination -- connect to neither. Should they feed the drift edge, and which mechanism dominates?",
   "kind": "CONTROVERSY",
   "status": "OPEN",
   "is_gap": "Other discussion",
@@ -153,12 +154,12 @@ window.searchData = [
    "causal_graphs#limited_recombination",
    "causal_graphs#metabolic_gene_loss"
   ],
-  "rationale": "By attaching one arm and leaving the other dangling, the record takes a side on a contested question through omission rather than assertion -- which is the hardest kind of claim to notice or argue with. The two mechanisms predict opposite loss spectra: drift under a bottleneck removes genes roughly regardless of function, while host compensation removes exactly the genes whose products the host supplies. As drawn, the graph predicts only the second, so it cannot say what a newly sequenced symbiont will have lost -- which is most of what a reduction model is for.",
+  "rationale": "The record asserts both mechanisms but at different resolutions, which is what makes them impossible to weigh. Drift arrives bundled into a trait-level edge as a parenthetical -- `with small Ne` inside a description -- while selection is spelled out as a two-step path through metabolic_gene_loss. Neither transmission_bottleneck nor limited_recombination attaches to anything, so the drift claim has no mechanism under it, and host_symbiont_aa_complementarity -> nutritional_compensation is likewise its own disconnected pair, so compensation is not wired into reduction either. The two predict opposite loss spectra -- drift removes genes roughly regardless of function, compensation removes exactly the genes whose products the host supplies -- so until they are stated at the same resolution the graph cannot say what a newly sequenced symbiont will have lost, which is most of what a reduction model is for.",
   "num_experiments": 1,
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/endosymbiosis.html#kgscan-a6758e26f5a6"
+  "page_url": "../../pages/traits/ecology/endosymbiosis.html#kgscan-a6758e26f5a6"
  },
  {
   "discussion_id": "kgscan-d5aefedf82bb",
@@ -181,7 +182,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/free_living.html#kgscan-d5aefedf82bb"
+  "page_url": "../../pages/traits/ecology/free_living.html#kgscan-d5aefedf82bb"
  },
  {
   "discussion_id": "kgscan-4fc1a06fa1e3",
@@ -201,7 +202,7 @@ window.searchData = [
   "num_evidence": 0,
   "evidence_refs": [],
   "posed_by": "claude",
-  "page_url": "../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
+  "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  }
 ];
 window.searchMetrics = {

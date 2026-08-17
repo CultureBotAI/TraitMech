@@ -48,10 +48,28 @@ def test_prompts_are_the_scan_format_not_the_authored_question():
         assert prompt.startswith("Knowledge gap for "), f"{did}: not the scan's format"
 
 
-def test_every_entry_kept_its_references():
+def test_every_entry_kept_its_references_and_snippets():
+    """Snippets too: freezing bare PMIDs lost thirty passages across the ten."""
     for did, (_, refs) in SCAN_OUTPUT.items():
-        assert refs, f"{did}: lost its PMIDs"
-        assert all(re.fullmatch(r"PMID:\d+", r) for r in refs), f"{did}: malformed reference"
+        assert refs, f"{did}: lost its references"
+        for ref, snippet in refs:
+            assert re.fullmatch(r"PMID:\d+", ref), f"{did}: malformed reference {ref!r}"
+            assert snippet.strip(), f"{did}: {ref} lost its snippet"
+
+
+def test_the_prompt_sentence_comes_from_the_first_reference():
+    """The note names one source, so the first entry must be that source.
+
+    The other three were retrieved alongside and carry unrelated passages --
+    listing all four after "retrieved from" implied a sentence drawn from four
+    papers, which is the wording this ordering replaced.
+    """
+    for did, (prompt, refs) in SCAN_OUTPUT.items():
+        sentence = prompt.split(": ", 1)[1]
+        first_snippet = refs[0][1]
+        assert sentence.startswith(first_snippet[:40]) or first_snippet.startswith(
+            sentence[:40]
+        ), f"{did}: the prompt sentence does not come from {refs[0][0]}"
 
 
 def test_note_quotes_the_scraped_sentence_and_all_its_pmids():
@@ -59,8 +77,9 @@ def test_note_quotes_the_scraped_sentence_and_all_its_pmids():
     prompt, refs = SCAN_OUTPUT[did]
     note = scan_note(did, PLAN[did]["scan_topic"])
     assert prompt in note
-    for ref in refs:
-        assert ref in note
+    for ref, snippet in refs:
+        assert ref in note, f"{ref} missing from the note"
+        assert snippet in note, f"the snippet for {ref} missing from the note"
     assert "retrieved from ." not in note, "empty reference list rendered into the note"
 
 
@@ -80,6 +99,7 @@ def test_corpus_notes_still_hold_the_scan_sentences():
         disc = next(d for d in doc["discussions"] if d["discussion_id"] == did)
         prompt, refs = SCAN_OUTPUT[did]
         assert prompt in disc["notes"], f"{did}: scraped sentence missing from the record"
-        for ref in refs:
+        for ref, snippet in refs:
             assert ref in disc["notes"], f"{did}: {ref} missing from the record"
+            assert snippet in disc["notes"], f"{did}: the snippet for {ref} missing"
         assert "evidence" not in disc, f"{did}: scan PMIDs re-pointed at the authored question"

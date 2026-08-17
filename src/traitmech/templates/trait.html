@@ -211,7 +211,10 @@
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="{{ root }}../app/discussions/index.html">the corpus-wide index</a>.</p>
       {% for d in trait.discussions %}
-      <div class="discussion">
+      {# The id the corpus-wide index deep-links to: app/discussions/data.js
+         emits page_url ".../<trait>.html#<discussion_id>" for every row, so
+         without this every link from the index lands at the top of the page. #}
+      <div class="discussion" id="{{ d.discussion_id }}">
         <p class="discussion-prompt">{{ d.prompt }}</p>
         <p class="meta">
           <span class="badge">{{ (d.kind or 'DISCUSSION')|replace('_', ' ') }}</span>

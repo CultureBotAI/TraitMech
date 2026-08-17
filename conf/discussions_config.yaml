@@ -4,4 +4,7 @@ record_glob: ../data/traits/**/*.yaml
 name_fields: [label, preferred_term, name]
 id_field: identifier
 discussions_field: discussions
-page_url_template: "../pages/traits/{category}/{stem}.html#{discussion_id}"
+# Relative to app/discussions/index.html, which is TWO levels below the repo
+# root -- `../pages/...` resolved to app/pages/..., so every row in the index
+# linked to a page that does not exist (#409).
+page_url_template: "../../pages/traits/{category}/{stem}.html#{discussion_id}"

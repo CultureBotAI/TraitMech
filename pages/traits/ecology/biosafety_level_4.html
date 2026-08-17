@@ -437,7 +437,8 @@ References
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
       
-      <div class="discussion">
+      
+      <div class="discussion" id="kgscan-e770cf01677c">
         <p class="discussion-prompt">Every BSL-4 control this record requires assumes terrestrial gravity and somewhere to put contaminated air, water and waste -- suit overpressure, airlocks, chemical showers, specialized waste disposal. Which still contain an agent in a closed-loop habitat that recycles all three?</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
@@ -449,11 +450,11 @@ References
 
         
         <p class="meta">Attached to
-          <code>causal_graphs#positive_pressure_suit</code>, <code>causal_graphs#airlock</code>, <code>causal_graphs#decontamination_shower</code>
+          <code>causal_graphs#positive_pressure_suit</code>, <code>causal_graphs#airlock</code>, <code>causal_graphs#decontamination_shower</code>, <code>causal_graphs#specialized_waste_disposal</code>
         </p>
         
 
-        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for. But every edge here is bsl4_trait `requires` a piece of equipment, so the controls are named as hardware rather than as the physics they rely on -- and it is the physics that does or does not transfer. Sedimentation-dependent controls behave differently in microgravity, and a shower and a waste stream that both feed a recycling loop are not disposal. As written the record cannot distinguish a control that survives the move from one that does not, because it never says what any of them do.</p>
+        <p>Sample-return and crewed-habitat missions need containment for agents with no countermeasure, which is exactly what BSL-4 is for. But every control edge runs outward from bsl4_trait to a piece of equipment -- `requires` an airlock, a decontamination shower, specialized waste disposal; `necessitates use of` a positive pressure suit -- so the controls are named as hardware rather than as the physics they rely on, and it is the physics that does or does not transfer. Sedimentation-dependent controls behave differently in microgravity, and a shower and a waste stream that both feed a recycling loop are not disposal. As written the record cannot distinguish a control that survives the move from one that does not, because it never says what any of them do.</p>
 
         
         <h3>Proposed experiments</h3>
@@ -489,7 +490,7 @@ References
         
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;, retrieved from PMID:37362850, PMID:41914886, PMID:40044492, PMID:39682751. That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and those PMIDs are not carried as its evidence because they support the scraped sentence rather than the question. Both are kept here so nothing the scan produced is lost.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;, whose sentence came from PMID:37362850. That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached three further references whose snippets concern neither that sentence nor this trait; all four are reproduced here so nothing it produced is lost: PMID:37362850 &#39;Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;; PMID:41914886 &#39;Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.&#39;; PMID:40044492 &#39;However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.&#39;; PMID:39682751 &#39;The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.&#39;.</p>
         </details>
         
       </div>

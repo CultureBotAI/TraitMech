@@ -24,8 +24,8 @@ events:
     review boilerplate, animal_pathogen got plastisphere prokaryotes. Each prompt was rewritten
     as a research question authored from that record''s own causal graph, anchored via attaches_to
     to the nodes it concerns, and given a ProposedExperiment with a decision_criterion. The
-    scan''s sentence and PMIDs are preserved verbatim in each discussion''s notes and were
-    NOT carried as evidence, since they support the scraped sentence rather than the authored
+    scan''s sentence and all four references, each with its own snippet, are preserved
+    verbatim in each discussion''s notes and were NOT carried as evidence, since they support the scraped sentence rather than the authored
     question. Also adds audit_discussion_anchors.py to qc so the anchors cannot silently rot.'
   details: |-
     Ten discussions across ten ecology records, applied by
@@ -58,9 +58,11 @@ events:
     downstream depends on it (free_living trehalose); a definitional node
     attached by the weakest predicate available, `associated with`, rather than
     observed (commensalism neutral_host_fitness). Eight are KNOWLEDGE_GAP;
-    endosymbiosis is CONTROVERSY, because only the selection arm reaches
-    reductive_genome_evolution while the drift pair dangles -- the record takes
-    a side by omission; biosafety_level is CURATION_TODO, because its graph
+    endosymbiosis is CONTROVERSY, because the record asserts drift and selection
+    at different resolutions -- drift bundled into a trait-level edge as the
+    parenthetical `with small Ne`, selection spelled out as a two-step path --
+    while transmission_bottleneck and limited_recombination attach to neither,
+    so the drift claim has no mechanism under it; biosafety_level is CURATION_TODO, because its graph
     carries `bsl5 --is a--> biosafety_level_trait` and no current national
     framework assigns a fifth containment level -- that one may end in a
     retraction rather than an answer.
@@ -78,13 +80,24 @@ events:
     would_support / would_refute, so the sketch is decidable rather than a wish.
 
     PROVENANCE. posed_by claude, posed_date 2026-08-17, llm_assisted true on the
-    curation event. The scan's sentence and its PMIDs are preserved verbatim in
-    each discussion's `notes`, together, and were NOT carried into `evidence`:
-    they support the scraped sentence, not the authored question, and splitting
-    them would have left the PMIDs looking like support for content they were
-    never retrieved for. No citation was invented for any authored question --
-    the ten discussions now carry no evidence block at all, which is honest
-    rather than complete.
+    curation event. The scan's sentence and ALL FOUR of its references, each
+    with its own snippet, are preserved verbatim in each discussion's `notes`,
+    and were NOT carried into `evidence`: they support the scraped sentence, not
+    the authored question, and splitting them would have left the PMIDs looking
+    like support for content they were never retrieved for. Only the FIRST
+    reference is the sentence's source; the other three were retrieved alongside
+    it and carry unrelated passages, so the note names the one source rather
+    than listing four as if the sentence came from all of them. No citation was
+    invented for any authored question -- the ten discussions now carry no
+    evidence block at all, which is honest rather than complete.
+
+    THREE ROUNDS OF REVIEW, and largely one defect class each time: prose
+    asserting graph structure the edges do not have (#413-#416, then #419, then
+    the endosymbiosis premise above), plus a provenance note built from live
+    record state that destroyed on its second run exactly what it claimed to
+    preserve (#417). Both are the same failure -- describing something instead
+    of reading it. Recorded here rather than smoothed over, because a history
+    record that preserves a refuted claim as fact is worse than no record.
 
     VALIDATED BY. scripts/audit_discussion_anchors.py, added in the same change
     and wired into `qc`: 0 errors, 0 warnings over the corpus. It is the reason
