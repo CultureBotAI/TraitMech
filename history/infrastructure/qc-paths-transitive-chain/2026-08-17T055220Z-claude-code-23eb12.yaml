@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_qc_paths_coverage.py
+  slug: qc-paths-transitive-chain
+session:
+  id: 2026-08-17T055220Z-claude-code-23eb12
+  timestamp: '2026-08-17T05:52:20Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/289
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflows
+  summary: Resolve the qc chain transitively, so a recipe with deps and a body is followed
+  details: '289 was deferred from the fifth review pass of 285. The not invoked guard catches a PURE dependency-only
+    recipe because its body is empty, but a recipe with dependencies AND a script body makes invoked non-empty,
+    takes the normal path, and its dependencies were never followed - no silent entry, no BlindGate, just
+    partial coverage that reads as full. That shape already exists in this justfile: gen-qc-dashboard
+    and knowledge-gap-scan both carry a dependency and a body, neither in the qc chain today. Added recipe_deps,
+    which reads the header tail because just puts parameters before the colon and dependencies after it,
+    and takes the name from a parameterised dependency of the form (dep arg) while dropping the argument
+    since an argument is a value rather than a recipe. qc_chain now walks transitively from qc with a
+    cycle guard, because just permits a dependency graph rather than a tree and a cycle would hang the
+    gate rather than fail it. NO-OP ON THE CURRENT TREE, exactly as the issue predicted - the chain still
+    resolves to the same fifteen recipes and the inferred read-set is unchanged, because no chain member
+    declares a dependency. That is precisely why it needed tests that make the new path fire rather than
+    a green run: five of them, covering the deps-and-body shape the issue names, the cycle guard, the
+    parameterised dependency form, that parameters before the colon are not mistaken for dependencies,
+    and that an absent qc still yields an empty chain so audit raises BlindGate rather than silently inspecting
+    nothing. 564 tests pass, qc green. ADDENDUM after the dispatched review (issue 407). The BlindGate
+    for dependency-only recipes outlived its reason and now contradicted the walk it sits downstream of.
+    Its message said dependency-only recipes are not followed, which was true and load-bearing before
+    this change but is the opposite of what the transitive walk does: a composite''s members are now in
+    the chain in their own right and contribute their reads, while the composite itself still landed in
+    silent because its body is empty and it names no reads. So the first person to write that composite
+    would have got a hard qc failure telling them their dependencies were not followed at the moment they
+    are - the refactor this PR exists to make safe would have been the one it blocked. The guard now skips
+    a recipe whose dependencies were walked and keeps the half that still holds, a recipe with no body,
+    no direct reads and no dependencies to have followed, with a message saying that instead. Two test
+    changes matter more than the code. A PRE-EXISTING test asserted the old behaviour, that a composite
+    raises, so the suite would have defended the wrong answer; it is inverted with the reason recorded.
+    And the five tests added in the first pass all exercised qc_chain and recipe_deps IN ISOLATION, while
+    this defect lives between the walk and the guard - only an audit-level test with a composite in the
+    chain surfaces it, which is now there alongside one proving a genuinely blind recipe still trips.
+    565 tests pass, qc green.'
