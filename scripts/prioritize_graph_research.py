@@ -165,11 +165,19 @@ def family_of(slug: str) -> str | None:
     return None
 
 
-def _read_tsv(path: Path, key: str) -> dict[str, dict[str, str]]:
+def _read_tsv(path: Path, *keys: str) -> dict[tuple[str, ...], dict[str, str]]:
+    """Index a TSV by a COMPOSITE key.
+
+    Keying the completeness report by `slug` alone collapsed any two categories
+    that name a trait the same way, losing one verdict silently -- and a lost
+    verdict reads as `missing_modules = 0`, pushing that trait DOWN a weakness
+    ranking, which is the wrong direction for a triage tool. The report carries a
+    `category` column for exactly this reason (#428).
+    """
     if not path.exists():
         return {}
     with path.open() as handle:
-        return {row[key]: row for row in csv.DictReader(handle, delimiter="\t")}
+        return {tuple(row[k] for k in keys): row for row in csv.DictReader(handle, delimiter="\t")}
 
 
 def researched_slugs(research_dir: Path = DEFAULT_RESEARCH) -> set[tuple[str, str]]:
@@ -210,13 +218,16 @@ def rank(
 ) -> tuple[list[dict], dict[str, int]]:
     """Return (ranked rows, counts of what was set aside and why)."""
     conn = _read_tsv(Path(connectivity), "file")
-    comp = {
-        (row["category"], row["slug"]): row for row in _read_tsv(Path(completeness), "slug").values()
-    }
+    comp = _read_tsv(Path(completeness), "category", "slug")
     researched = researched_slugs(Path(research_dir))
 
     rows: list[dict] = []
-    counts = {"non_mechanism": 0, "no_graph_mechanism": 0, "families_collapsed": 0}
+    counts = {
+        "non_mechanism": 0,
+        "no_graph_mechanism": 0,
+        "families_collapsed": 0,
+        "no_connectivity_row": 0,
+    }
 
     for rel, doc in _as_corpus(source):
         path = Path(rel)
@@ -235,8 +246,17 @@ def rank(
         if mechanism and not graphs:
             counts["no_graph_mechanism"] += 1
 
-        c = conn.get(rel, {})
-        components = int(c.get("components") or (1 if edges else 0))
+        c = conn.get((rel,), {})
+        if c:
+            components = int(c["components"])
+        else:
+            # Assuming "fully connected" is the OPTIMISTIC direction: it
+            # understates fragmentation and pushes the trait down the ranking.
+            # Counted so an incomplete join is visible rather than assumed
+            # benign (#431).
+            components = 1 if edges else 0
+            if edges:
+                counts["no_connectivity_row"] += 1
         wired = int(c.get("wired_nodes") or 0)
         v = comp.get((category, slug), {})
         missing = int(v.get("missing_modules") or 0)
@@ -307,6 +327,7 @@ def main() -> int:
     ap.add_argument("--json", dest="as_json", action="store_true")
     args = ap.parse_args()
 
+    connectivity_note = DEFAULT_CONNECTIVITY
     rows, counts = rank(
         args.traits_dir,
         include_nonmechanism=args.include_nonmechanism,
@@ -324,6 +345,15 @@ def main() -> int:
         print(json.dumps({"counts": counts, "rows": shown}, indent=2))
         return 0
 
+    sort_meaning = {
+        "score": "worst graph overall -- usually resolves to CURATION work",
+        "missing": "biggest CONTENT gap -- the right sort for choosing what to RESEARCH",
+        "fragmentation": "biggest CONNECTIVE gap -- curation, not research",
+    }[args.sort]
+    # Without this line a pasted ranking is ambiguous between two questions whose
+    # answers differ, and reading it the wrong way is what spends money on a
+    # report describing what is already on disk (#430).
+    print(f"sorted by {args.sort}: {sort_meaning}\n")
     print(f"{'score':>5} {'edg':>3} {'nod':>3} {'cmp':>3} {'orph':>4} {'miss':>4} {'res':>3}  trait")
     for r in shown:
         fam = f"  [+{r['family_members'] - 1} sibling bins]" if r.get("family_members", 1) > 1 else ""
@@ -345,6 +375,12 @@ def main() -> int:
         f"mechanism graph ({breakdown}); "
         f"collapsed {counts['families_collapsed']} sibling bin(s) into their family"
     )
+    if counts["no_connectivity_row"]:
+        print(
+            f"WARNING: {counts['no_connectivity_row']} graphed trait(s) are absent from "
+            f"{connectivity_note} and were scored as fully connected, which understates "
+            f"their weakness. Run `just audit-graphs` to refresh it."
+        )
     unresearched = sum(1 for r in rows if not r["researched"])
     print(
         f"of the ranked candidates, {unresearched} have no deep-research artifact; "

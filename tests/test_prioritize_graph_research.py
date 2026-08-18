@@ -81,7 +81,6 @@ def test_no_object_property_survives_the_filter_on_the_real_corpus():
         if key in ranked and non_mechanism_reason(path.parent.name, doc):
             leaked.append("/".join(key))
     assert not leaked, f"non-mechanism records ranked as research candidates: {leaked}"
-    assert counts["non_mechanism"] == 129, counts
 
 
 # --- family collapsing ---
@@ -101,10 +100,15 @@ def test_standalone_traits_have_no_family():
 
 def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
     corpus = [
-        (f"data/traits/environment/ph_delta_{bin}.yaml", {"term_kind": "CLASS", "causal_graphs": []})
+        (
+            f"data/traits/environment/ph_delta_{bin}.yaml",
+            {"term_kind": "CLASS", "causal_graphs": []},
+        )
         for bin in ("low", "mid2", "high")
     ]
-    rows, counts = rank(corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent"))
+    rows, counts = rank(
+        corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent")
+    )
     assert len(rows) == 1, "three bins of one family should collapse to one row"
     assert rows[0]["family"] == "ph_delta"
     assert rows[0]["family_members"] == 3
@@ -113,7 +117,10 @@ def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
 
 def test_no_collapse_keeps_every_bin():
     corpus = [
-        (f"data/traits/environment/ph_delta_{bin}.yaml", {"term_kind": "CLASS", "causal_graphs": []})
+        (
+            f"data/traits/environment/ph_delta_{bin}.yaml",
+            {"term_kind": "CLASS", "causal_graphs": []},
+        )
         for bin in ("low", "mid2", "high")
     ]
     rows, _ = rank(
@@ -207,3 +214,49 @@ def test_real_corpus_has_both_shapes_at_the_top():
     assert connective["components"] > content["components"]
     assert content["missing_modules"] > connective["missing_modules"]
     assert content["components"] == 1 and content["orphans"] == 0
+
+
+# --- the numbers the skill states in prose ---
+
+# .claude/skills/prioritize-graph-research/SKILL.md quotes each of these as fact.
+# Prose that preserves a stale measurement is worse than prose that points at the
+# command, and nothing else fails when the corpus moves -- so this test is the
+# mechanism that keeps the skill honest, and its failure message has to say so
+# (#429). Same defect class as the #410 history record that kept asserting a
+# premise the review had already refuted.
+SKILL_DOC = Path(".claude/skills/prioritize-graph-research/SKILL.md")
+EXPECTED_COMPOSITION = {
+    "object_property": 94,
+    "datatype_property": 7,
+    "deprecated": 20,
+    "upper_ontology": 8,
+    "non_mechanism": 129,
+    "families_collapsed": 44,
+}
+
+
+def test_corpus_composition_matches_what_the_skill_claims():
+    _, counts = rank()
+    # Totals are top-level keys; per-reason counts are prefixed `excluded_`.
+    direct = {"non_mechanism", "families_collapsed"}
+    actual = {
+        k: counts[k] if k in direct else counts.get(f"excluded_{k}", 0)
+        for k in EXPECTED_COMPOSITION
+    }
+    drifted = {
+        k: (EXPECTED_COMPOSITION[k], v) for k, v in actual.items() if v != EXPECTED_COMPOSITION[k]
+    }
+    assert not drifted, (
+        f"corpus composition changed (expected, actual): {drifted}. "
+        f"Update EXPECTED_COMPOSITION here AND the prose in {SKILL_DOC}, which "
+        f"quotes these counts as fact -- the module docstring of "
+        f"scripts/prioritize_graph_research.py quotes them too."
+    )
+
+
+def test_the_skill_doc_exists_and_names_the_recipe_it_documents():
+    """A skill that cites a recipe name is only useful while the recipe exists."""
+    assert SKILL_DOC.exists()
+    text = SKILL_DOC.read_text()
+    assert "just prioritize-research" in text
+    assert "prioritize-research" in Path("justfile").read_text()
