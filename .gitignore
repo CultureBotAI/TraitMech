@@ -24,7 +24,17 @@ build/
 .DS_Store
 .vscode/
 .idea/
-.claude/
+
+# .claude/ holds BOTH local noise (settings.local.json, transcripts) and
+# committed project assets (skills, commands). It was ignored wholesale, and the
+# eleven tracked skills only survive because someone force-added each one -- so a
+# NEW skill is silently not committed, which is how the prioritize-graph-research
+# skill reached CI as a test failure rather than as a file. Ignore the directory
+# but un-ignore the assets, so `git add -A` does the right thing by default.
+.claude/*
+!.claude/skills/
+!.claude/commands/
+!.claude/agents/
 
 # Workspace / runtime
 workspace/
