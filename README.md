@@ -120,8 +120,6 @@ literally named `edison`; see `.claude/skills/research-causal-graphs/SKILL.md`.
 ```bash
 export EDISON_API_KEY=...        # Edison platform credential; also what falcon needs
 just research-provider falcon
-just deep-research-providers causal_mechanism
-just deep-research-provider asta definition_grounding
 just research-trait physiology autotrophic            # Edison (default provider)
 just research-trait physiology autotrophic --dry-run
 just research-trait physiology autotrophic --provider openai   # override
@@ -130,11 +128,6 @@ just research-trait physiology autotrophic --provider openai   # override
 Reports are written under `research/traits/<category>/` with separate citation
 files. The API key is read from the environment and is never written by the
 TraitMech tooling.
-
-`deep-research-providers` performs TraitMech-specific triage across discovery,
-mechanistic synthesis, and independent edge/identifier verification. Use
-`definition_grounding` when the target is scope, synonyms, parents, or ontology
-mapping rather than a causal graph.
 
 ## Cross-repo integration
 

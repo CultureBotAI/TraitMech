@@ -495,17 +495,6 @@ research-providers:
 research-provider provider:
     uv run --extra dev deep-research-client providers --provider {{provider}}
 
-# Rank providers for TraitMech causal-mechanism or definition-grounding work.
-deep-research-providers focus="causal_mechanism" *args="":
-    uv run --extra dev python scripts/deep_research_provider.py \
-      --config conf/deep_research_provider.yaml --focus {{focus}} {{args}}
-
-# Show one provider's focus-specific fit, capabilities, and availability.
-deep-research-provider provider focus="causal_mechanism" *args="":
-    uv run --extra dev python scripts/deep_research_provider.py \
-      --config conf/deep_research_provider.yaml --provider {{provider}} \
-      --focus {{focus}} {{args}}
-
 # Composite: refresh METPO → seed → build embeddings → render pages.
 gen-site: seed-apply build-embeddings gen-pages
 
