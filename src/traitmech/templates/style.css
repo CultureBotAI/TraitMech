@@ -510,3 +510,16 @@ label.facet-opt .cnt {
     scroll-behavior: auto !important;
   }
 }
+
+/* Canonical examples: trait -> organism links (#444). Built from the existing
+   custom properties so light and dark themes are inherited rather than
+   re-specified, the same way .discussion is. */
+.canonical-examples { list-style: none; padding-left: 0; }
+.canonical-examples li {
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 0.4rem;
+  border-left: 3px solid var(--accent);
+  background: var(--card-alt, transparent);
+}
+.canonical-examples li em { font-weight: 600; }
+.canonical-examples li .meta { display: block; margin-top: 0.25rem; }

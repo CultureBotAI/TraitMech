@@ -1,0 +1,88 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_canonical_examples.py
+  slug: canonical-examples
+session:
+  id: 2026-08-19T183734Z-claude-code-44a170
+  timestamp: '2026-08-19T18:37:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: CREATE
+  outcome: changed
+  summary: Render canonical_examples, audit their taxon ids against NCBITaxon, and backfill
+    one record as a canary. 226 records carried 315 trait-to-organism links that no template
+    rendered and nothing validated.
+  details: |-
+    Content work on the trait catalog, chosen after the two larger content
+    options both turned out to be already done.
+
+    HOW THIS TARGET WAS ARRIVED AT, because three prior hypotheses collapsed and
+    the eliminations are the useful part. (1) "Apply the 122 drafted trait
+    proposals": all 122 across the 8 reports are already in the corpus, and all
+    357 METPO classes are already records -- the catalog is saturated against both
+    its sources. (2) "Apply the 351-trait enrichment backlog": 347 of its 353
+    graphs have grown since it was written, edges 1264 -> 3379, and every one of
+    the six edges it proposes for ecology/biofilm_formation is already present --
+    filed as #443, which also flags that scripts/prioritize_graph_research.py
+    weights that report's missing_modules DOUBLE and so ranks on stale data.
+    (3) "Source exemplar organisms from the research artifacts": 353 of 354
+    artifacts mention NCBITaxon, but only because the prompt template listing
+    candidate prefixes is echoed into every report. Each of the three was a
+    report or a regex believed instead of the corpus.
+
+    WHAT WAS ACTUALLY MISSING. canonical_examples -- taxon_id, taxon_label,
+    reference, note -- is the slot that ties a trait to real organisms and the
+    reason this catalog is usable from KG-Microbe. 131 CLASS records carry none.
+    That number is a live corpus measurement, not a report.
+
+    TWO DEFECTS FOUND IN THE SLOT ITSELF. It was never rendered: 226 records held
+    315 examples and no template referenced the field at all (#444). I nearly
+    missed this the same way as everything else above -- grepping the generated
+    page for "Pyrococcus furiosus" MATCHED, but from the embedded deep-research
+    prose rather than the curated slot. And nothing validated it (#445), so one
+    drift had gone unnoticed: morphology/heterocyst stores NCBITaxon:103690 as
+    "Nostoc sp. PCC 7120" where NCBITaxon now says "Nostoc sp. PCC 7120 =
+    FACHB-418".
+
+    WHAT LANDED. A Canonical examples card on the trait page with the taxon label,
+    the id linked to the NCBI taxonomy browser, the reference linked to doi.org or
+    PubMed, and the note -- 226 of 477 pages now show it, matching the 226 records
+    exactly. scripts/audit_canonical_examples.py plus `just
+    audit-canonical-examples`: ERROR on malformed, missing or unresolvable ids;
+    WARN on label drift, deliberately, because NCBI relabels nodes for its own
+    reasons and a curator-chosen display label is not wrong merely because
+    upstream added a strain synonym -- failing those would make every upstream
+    rename a build break. Kept OUT of `qc`, following validate-products, since
+    resolution needs the 13 GB OAK NCBITaxon build that a bare runner may lack;
+    with no adapter the id-shape checks still run and resolution prints SKIPPED,
+    with a test pinning that the zero cannot be faked.
+
+    THE CANARY. environment/temperature_range_high (METPO:1000454, thermophile,
+    range above ~40 C) gained three exemplars: Pyrococcus furiosus
+    (NCBITaxon:2261), Sulfolobus acidocaldarius (NCBITaxon:2285), Saccharolobus
+    islandicus (NCBITaxon:43080). Every id was resolved and label-checked against
+    the local NCBITaxon build rather than recalled, and every reference was taken
+    from this trait's own paid-for research artifact -- the Pyrococcus note
+    records that a reverse-gyrase deletion abolishes growth at 95-100 C while
+    lower temperatures stay permissive (DOI:10.1007/s00792-017-0929-z).
+
+    Escherichia coli and Pseudomonas putida are named in the same artifact and
+    were deliberately EXCLUDED: they appear there as contrast cases for a >40 C
+    range, not as exemplars of it. The artifact supplies leads, not answers,
+    which is why this campaign is per-record curation and not a bulk apply.
+
+    VALIDATED BY. 621 tests (10 new), just lint, full just qc green,
+    audit-canonical-examples reporting 315 examples across 226 records with 0
+    errors and 1 warning, all 315 resolved against NCBITaxon.
+
+    LEFT UNDONE. 130 records still have no canonical_examples. The heterocyst
+    label drift is reported and not silently rewritten -- whether to adopt NCBI's
+    expanded label is a curator call.
