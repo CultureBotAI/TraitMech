@@ -1,0 +1,122 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/prioritize_graph_research.py
+  slug: prioritize-graph-research
+session:
+  id: 2026-08-18T073129Z-claude-code-6ffbb9
+  timestamp: '2026-08-18T07:31:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/427
+events:
+- type: CREATE
+  outcome: changed
+  summary: 'Add a free triage step before paid deep research: rank traits by causal-graph
+    weakness, exclude records that cannot carry a mechanism graph, and report whether research
+    already exists. The headline it produces is that no trait awaits a first research pass
+    -- the 353 records that can carry a mechanism graph all already do, and are exactly the
+    353 that already have an Edison artifact, so the backlog is research already paid for
+    and not yet applied.'
+  details: |-
+    Adds scripts/prioritize_graph_research.py, `just prioritize-research`, the
+    .claude/skills/prioritize-graph-research skill, and 20 tests. Nothing under
+    data/ changes; this is a triage aid and deliberately NOT in `qc`, because it
+    has no failing state.
+
+    WHAT IT MEASURED, which is not what the request assumed. The ask was to
+    prioritise a trait with a weak causal graph for deep research. Measuring
+    first showed there is no trait awaiting a FIRST research pass: the 353
+    records that can carry a mechanism graph all already do, and they are
+    EXACTLY the 353 that already have an Edison/falcon artifact. The two sets
+    are identical. So the honest output of this tool is usually "apply the
+    research you already paid for" -- reports/graph_enrichment_backlog.md holds
+    351 traits with named missing modules and DOI-backed candidate edges -- and
+    the script says so on its last line rather than leaving the reader to infer
+    a research need from a ranking.
+
+    THE EXCLUSIONS ARE THE PART THAT IS EITHER RIGHT OR WRONG. 124 of 477
+    records have no causal graph, so a naive "no graph = weakest graph" ranking
+    puts all of them first, and not one is researchable: 94 are METPO
+    OBJECT_PROPERTY records seeded into data/traits (`uses_for_growth`,
+    `degrades`, `has_phenotype`, `exports` -- relations, not traits), 7 are
+    DATATYPE_PROPERTY, 20 are DEPRECATED observation classes, 3 are
+    upper-ontology classes. There is no mechanism to research in "does not
+    assimilate".
+
+    The first implementation decided this with a hand-written list of slug
+    prefixes and matched 47 of the 94, silently ranking the other 47 as research
+    candidates. `term_kind` was a declared field in every record the whole time.
+    Rewritten to use it, plus mapping_status DEPRECATED and the `upper`
+    category. This is the third time in two days that a hand-enumerated list of
+    names missed cases a structural signal would have caught (see the
+    oxygen-senses tranche and the #410 knowledge gaps), and the test that pins
+    it runs against the real corpus deliberately -- a fixture would have passed
+    for the broken version too.
+
+    `upper` is excluded by CATEGORY rather than by emptiness because five of its
+    eight records DO have graphs, and three are thin enough to rank near the top
+    (`material_entity` and `quality` at 3 edges, `phenotype` at 4). A thin graph
+    on `quality` is not a research question.
+
+    Binned families (ph_delta_*, temperature_range_*, nacl_*, cell_length_*)
+    collapse to one row carrying the family's worst score, since one research
+    pass answers the whole family. 44 sibling bins collapse today.
+
+    A HIGH SCORE IS NOT A GOOD RESEARCH TARGET, and finding that out changed the
+    recommendation. metabolism/biopolymer_degradation scores 28 on six
+    components -- but reading its EDGES shows it names endoglucanase,
+    endochitinase and lignin_oxidative_enzymes without connecting any of them to
+    the trait or to assimilable_units. Nothing in the literature is missing; the
+    edges are. ecology/nitrogen_fixing_symbiosis scores 22 with ONE component,
+    no orphans, and the highest missing-module count in the corpus (11): the
+    graph is sound and the content is absent. So the lower-scoring trait is the
+    better research target, and `--sort missing` exists for exactly that
+    question while the default sort answers "which graph is worst", which
+    usually resolves to curation. Both cases are pinned by a test so the skill's
+    worked example cannot drift.
+
+    VALIDATED BY. 20 tests including two corpus-wide ones (no OBJECT_PROPERTY
+    leaks into the ranking; no ranked candidate is unresearched -- the second is
+    designed so that its FAILURE is the useful signal, meaning a genuinely
+    unresearched trait has appeared). `just lint`, `just test`, full `just qc`
+    green, and `audit-qc-paths` still covers every directory the chain reads.
+
+    TWO THINGS THIS PR ALMOST SHIPPED BY ACCIDENT, both caught late and both
+    worth the record.
+
+    First, the skill -- the actual deliverable -- was never committed.
+    .gitignore had `.claude/` under "Editor noise", ignoring the directory
+    wholesale, and the eleven tracked skills survive only because someone
+    force-added each one. So `git add -A` skipped the new one silently. It
+    reached CI as a test failure (assert SKILL_DOC.exists()) from a throwaway
+    check on the recipe name, which turned out to be the one test standing
+    between this PR and merging with no skill in it. Fixed at the root with
+    `.claude/*` plus negations rather than `git add -f`, so the next skill is not
+    the same story (#432).
+
+    Second, the first commit ran `git add -A` over a tree that already held
+    uncommitted work and swept ~700 lines of it in: scripts/deep_research_
+    provider.py (506 lines), its tests, a prompt, a config, two justfile
+    recipes, a README section, and a deep-research-client 0.2.4 -> 0.2.10 bump
+    with the matching uv.lock. None of it mine, none of it described in the PR,
+    and plausibly the OpenScientist work the maintainer had just asked me to
+    defer. Every CI check stayed green throughout, because the swept-in work is
+    itself valid and tested -- nothing flags a PR for containing someone else's
+    correct code. Caught only by reading `git diff main...HEAD --stat` at the
+    merge step. Removed with a normal commit so a squash merge nets to zero for
+    those paths, and restored to the working tree as the uncommitted changes it
+    was, shared-file hunks verified line by line as theirs first (#434).
+
+    NOT DONE. No deep research was run. Edison returned 402 Payment Required on
+    2026-08-17 -- the key authenticates, the account has no credit -- so a
+    canary would prove nothing about a batch, and the skill records that. The
+    OpenScientist provider the maintainer raised is out of scope here and was
+    explicitly deferred.
