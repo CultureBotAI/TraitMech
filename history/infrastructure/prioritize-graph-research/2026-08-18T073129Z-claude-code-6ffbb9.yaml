@@ -14,6 +14,8 @@ session:
 links:
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/426
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/427
 events:
 - type: CREATE
   outcome: changed
@@ -86,6 +88,32 @@ events:
     designed so that its FAILURE is the useful signal, meaning a genuinely
     unresearched trait has appeared). `just lint`, `just test`, full `just qc`
     green, and `audit-qc-paths` still covers every directory the chain reads.
+
+    TWO THINGS THIS PR ALMOST SHIPPED BY ACCIDENT, both caught late and both
+    worth the record.
+
+    First, the skill -- the actual deliverable -- was never committed.
+    .gitignore had `.claude/` under "Editor noise", ignoring the directory
+    wholesale, and the eleven tracked skills survive only because someone
+    force-added each one. So `git add -A` skipped the new one silently. It
+    reached CI as a test failure (assert SKILL_DOC.exists()) from a throwaway
+    check on the recipe name, which turned out to be the one test standing
+    between this PR and merging with no skill in it. Fixed at the root with
+    `.claude/*` plus negations rather than `git add -f`, so the next skill is not
+    the same story (#432).
+
+    Second, the first commit ran `git add -A` over a tree that already held
+    uncommitted work and swept ~700 lines of it in: scripts/deep_research_
+    provider.py (506 lines), its tests, a prompt, a config, two justfile
+    recipes, a README section, and a deep-research-client 0.2.4 -> 0.2.10 bump
+    with the matching uv.lock. None of it mine, none of it described in the PR,
+    and plausibly the OpenScientist work the maintainer had just asked me to
+    defer. Every CI check stayed green throughout, because the swept-in work is
+    itself valid and tested -- nothing flags a PR for containing someone else's
+    correct code. Caught only by reading `git diff main...HEAD --stat` at the
+    merge step. Removed with a normal commit so a squash merge nets to zero for
+    those paths, and restored to the working tree as the uncommitted changes it
+    was, shared-file hunks verified line by line as theirs first (#434).
 
     NOT DONE. No deep research was run. Edison returned 402 Payment Required on
     2026-08-17 -- the key authenticates, the account has no credit -- so a
