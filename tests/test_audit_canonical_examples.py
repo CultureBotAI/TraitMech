@@ -113,3 +113,20 @@ def test_the_real_corpus_has_no_errors():
     errors = [r for r in rows if r[1] in ERRORS]
     assert errors == [], f"malformed canonical_examples: {errors}"
     assert counts["examples"] > 300, counts
+
+
+def test_resolve_false_disables_resolution_even_with_an_adapter():
+    """The flag is authoritative (#451).
+
+    Guarding only adapter construction meant a supplied adapter resolved anyway,
+    so a test asserting "resolution was skipped" would pass for the wrong reason
+    -- the exact failure the SKIPPED reporting exists to prevent.
+    """
+    doc = [("f.yaml", _doc([{"taxon_id": "NCBITaxon:1", "taxon_label": "right"}]))]
+    rows, counts = example_rows(doc, adapter=_Adapter({"NCBITaxon:1": "WRONG"}), resolve=False)
+    assert rows == [], "resolve=False must not report drift it was told not to look for"
+    assert counts["resolution"] == 0
+    # ...and with the flag on, the same adapter does find it.
+    rows2, counts2 = example_rows(doc, adapter=_Adapter({"NCBITaxon:1": "WRONG"}), resolve=True)
+    assert [r[1] for r in rows2] == ["TAXON_LABEL_DRIFT"]
+    assert counts2["resolution"] == 1

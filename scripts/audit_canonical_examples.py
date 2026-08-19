@@ -69,7 +69,13 @@ def example_rows(
     source: Path | Corpus = DEFAULT_TRAITS, *, adapter=None, resolve: bool = True
 ) -> tuple[list[tuple[str, str, str]], dict[str, int]]:
     """Return (rows, counts) where each row is (file, defect, detail)."""
-    if resolve and adapter is None:
+    # `resolve` is authoritative. Guarding only adapter CONSTRUCTION meant
+    # resolve=False still resolved whenever a caller supplied an adapter, so the
+    # flag did not do what its name says -- and a test asserting "resolution was
+    # skipped" would have passed for the wrong reason (#451).
+    if not resolve:
+        adapter = None
+    elif adapter is None:
         adapter = _adapter()
     rows: list[tuple[str, str, str]] = []
     counts = {"examples": 0, "records": 0, "resolved": 0, "resolution": 0}
