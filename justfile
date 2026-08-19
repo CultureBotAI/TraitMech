@@ -151,6 +151,17 @@ audit-proposal-coverage:
 audit-predicate-domains *args:
     uv run python scripts/audit_predicate_domains.py --fail-on new {{args}}
 
+# Check canonical_examples taxon ids against NCBITaxon (#445).
+#
+# NOT in `qc`, following validate-products: resolution needs the OAK NCBITaxon
+# build, a large download a bare CI runner may not have. Without an adapter the
+# id-shape checks still run and resolution is reported as SKIPPED rather than
+# passing quietly. ERROR on a malformed/missing/unresolvable id; WARN on label
+# drift, since NCBI relabels nodes for its own reasons and a curator-chosen
+# display label is not wrong just because upstream added a strain synonym.
+audit-canonical-examples *args:
+    uv run python scripts/audit_canonical_examples.py {{args}}
+
 # Rank traits by causal-graph weakness, to pick the next deep-research target.
 # NOT in `qc` -- it is a triage aid, not a gate; there is no failing state.
 #

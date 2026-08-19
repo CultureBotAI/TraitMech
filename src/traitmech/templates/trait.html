@@ -204,6 +204,45 @@
     </div>
     {% endif %}
 
+    {# The trait -> organism links. 226 records carried these and NO template
+       rendered them, so the one slot that ties a trait to real taxa -- the thing
+       that makes this catalog usable from KG-Microbe -- was visible only to
+       someone reading YAML. Same shape of gap as the discussions section below
+       (#409): the data was curated, the renderer never knew about it. #}
+    {% if trait.canonical_examples %}
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">({{ trait.canonical_examples|length }})</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        {% for ex in trait.canonical_examples %}
+        <li>
+          {% if ex.taxon_label %}<em>{{ ex.taxon_label }}</em>{% endif %}
+          {% if ex.taxon_id %}
+          {% set tid = ex.taxon_id %}
+          {% if tid.startswith('NCBITaxon:') %}
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ tid|replace('NCBITaxon:','') }}"
+             rel="nofollow noreferrer"><code>{{ tid }}</code></a>
+          {% else %}<code>{{ tid }}</code>{% endif %}
+          {% endif %}
+          {% if ex.reference %}
+          {% set ref = ex.reference %}
+          {% if ref.startswith('PMID:') %}
+          <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/"
+             rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+          {% elif ref.startswith('DOI:') %}
+          <a href="https://doi.org/{{ ref|replace('DOI:','') }}"
+             rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+          {% else %}<code>{{ ref }}</code>{% endif %}
+          {% endif %}
+          {% if ex.note %}<span class="meta">{{ ex.note }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     {% if trait.discussions %}
     <div class="card" id="discussions">
       <h2>Discussions and Knowledge Gaps <span class="meta">({{ trait.discussions|length }})</span></h2>
