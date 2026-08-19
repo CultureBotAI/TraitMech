@@ -1,0 +1,104 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/deep_research_provider.py
+  slug: deep-research-providers
+session:
+  id: 2026-08-19T054801Z-claude-code-3bd15b
+  timestamp: '2026-08-19T05:48:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/435
+events:
+- type: CREATE
+  outcome: changed
+  summary: 'Land the deep-research provider triage, with five review findings fixed. The headline
+    change is that a present credential now reports ''configured'' rather than ''available'':
+    EDISON_API_KEY authenticates and the account returns 402, so the previous wording routed
+    confidently to a provider that cannot run.'
+  details: |-
+    Lands scripts/deep_research_provider.py (506 lines), conf/deep_research_
+    provider.yaml, prompts/claude_code_deep_research.md, two justfile recipes and
+    a README section. The code was written by the maintainer and was sitting
+    uncommitted; my part was to review it properly and land it, which the
+    maintainer asked for after it was accidentally swept into PR #427 and removed
+    again (#434). Nothing under data/ changes and no provider is called.
+
+    WHAT IT DOES. Scores 11 providers -- asta, falcon (Edison), openscientist,
+    claude_code, openai, perplexity, consensus, cyberian, cborg, mock, deeper_med
+    -- against a per-Mech YAML profile, separately for each of three stages
+    (discovery, synthesis, verification), and names a route plus a cross-check.
+    The profile keeps TraitMech's evidence gate, source priorities and stage
+    weights local to this KB while the provider facts mirror deep-research-client.
+    No credential value is read or printed anywhere, which the tests pin.
+
+    FIVE REVIEW FINDINGS, ALL FIXED HERE.
+
+    #435 is the one that mattered. provider_status returned ("available",
+    "credential configured") whenever an env var was merely PRESENT, and presence
+    is not usability: EDISON_API_KEY is set in .env, so falcon reported available
+    and the tool printed "Route now: falcon" -- while Edison returns 402 Payment
+    Required, measured 2026-08-17 and still true. A routing recommendation is the
+    most consequential thing this tool emits, and looking authoritative while
+    naming a provider that cannot run is worse than emitting nothing. Now four
+    explicit states -- available (a local binary or package, checkable without a
+    network call), configured (a credential exists, usability unverified),
+    unavailable, stub -- with configured still ROUTABLE but the routing line
+    saying out loud that nothing probed it and that a key can authenticate while
+    the account refuses the call.
+
+    #436 -- rank_stage called provider_status(name) with no environ, severing one
+    level below the surface the seam that provider_status deliberately offers. The
+    only test covering the empty-environment contract bypassed the report and
+    called the leaf function, so the report's availability column could not be
+    tested deterministically and a CI machine with different keys would produce a
+    different report unnoticed. environ now threads through rank_stage and
+    build_report, and the pre-existing test that monkeypatched the process
+    environment was rewritten to inject instead.
+
+    #437 -- a bad --focus or --provider raised an unhandled ValueError. The
+    messages were good, enumerating valid choices; the delivery was a stack trace
+    for a typo. Now a UsageError routed through parser.error() for a clean exit 2,
+    kept as a ValueError subclass so existing callers still behave.
+
+    #438 -- six tests for 506 lines, with nothing covering _score. The output is a
+    decision about what to spend money on, and speed_weight and cost_weight both
+    invert their scale (5 - value), exactly the expression a sign typo survives
+    while silently reordering every recommendation. Now 25 tests: each scoring
+    term in isolation, fast beating very_slow, low cost beating very_high,
+    synthesis ordering, adjustments added verbatim including negative ones, fit
+    normalisation, and the degenerate all-zero and all-negative weightings, which
+    were verified to yield fit 0 with an alphabetical tiebreak rather than a crash
+    or a negative fit.
+
+    #439 -- fit is normalised within a stage, so the top provider always scores
+    exactly 100 whether or not it suits the job: asta scores 100 for discovery
+    while its own limitation field reads "retrieval packet only; no narrative
+    synthesis". The report now prints what the scale measures.
+
+    WHAT THE TOOL SAYS ABOUT THIS REPO RIGHT NOW, worth recording because it
+    decides the next research step. Only claude_code, cyberian and cborg are
+    genuinely available; falcon is configured-but-402; asta, openscientist,
+    consensus, perplexity and openai have no credential. asta is the best
+    discovery fit (100) AND the only top-tier provider that is both low cost and
+    fast, needing just ASTA_API_KEY. openscientist is the best synthesis fit
+    (100) and OPENSCIENTIST_API_KEY is NOT in .env -- the maintainer believed it
+    was; .env carries EDISON_API_KEY alone. Those two keys are the cheapest
+    unlock available.
+
+    Also note the recipes only see .env because justfile line 3 sets
+    dotenv-load := true. Running the script directly reports falcon unavailable,
+    which is how I first mis-measured it.
+
+    VALIDATED BY. 636 tests (25 in this file), just lint, full just qc green.
+    Behaviour checked by running the recipes: bad focus and bad provider both exit
+    2 with usage text, the routing caveat prints for falcon in every stage, and
+    the fit legend appears in the header.
+
+    NOT DONE. No provider was called and no credential added. deeper_med remains
+    a stub with no public API.
