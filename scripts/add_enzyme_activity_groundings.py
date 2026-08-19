@@ -63,111 +63,126 @@ E, C = "skos:exactMatch", "skos:closeMatch"
 ROWS: list[tuple[str, str, str, str, str, str]] = [
     # --- the GO term IS the enzyme activity ---
     ("alkaline phosphatase", "GO:0004035", "alkaline phosphatase activity", E, "high",
-     "EC:3.1.3.1. API 20/32 panel enzyme."),
+     "EC:3.1.3.1 — API 20/32 panel enzyme."),
     ("acid phosphatase", "GO:0003993", "acid phosphatase activity", E, "high",
-     "EC:3.1.3.2. API 20/32 panel enzyme."),
+     "EC:3.1.3.2 — API 20/32 panel enzyme."),
     ("cytochrome oxidase", "GO:0004129", "cytochrome-c oxidase activity", E, "high",
-     "EC:7.1.1.9. The bacteriological 'oxidase test' reads cytochrome-c oxidase."),
+     "EC:7.1.1.9 — The bacteriological 'oxidase test' reads cytochrome-c oxidase."),
     ("cytochrome-c oxidase", "GO:0004129", "cytochrome-c oxidase activity", E, "high",
-     "EC:7.1.1.9. Same enzyme as the 'cytochrome oxidase' label; both source "
+     "EC:7.1.1.9 — Same enzyme as the 'cytochrome oxidase' label; both source "
      "spellings kept so each grounds without a normalisation step."),
     ("alpha-glucosidase", "GO:0090599", "alpha-glucosidase activity", E, "high",
      "GO carries no EC xref on this term."),
     ("beta-galactosidase", "GO:0004565", "beta-galactosidase activity", E, "high",
-     "EC:3.2.1.23. The ONPG test."),
+     "EC:3.2.1.23 — The ONPG test."),
     ("beta-glucosidase", "GO:0008422", "beta-glucosidase activity", E, "high",
-     "EC:3.2.1.21. Agrees with the existing GENE_OR_PROTEIN row for this label; "
+     "EC:3.2.1.21 — Agrees with the existing GENE_OR_PROTEIN row for this label; "
      "the table is keyed on (label, node_type) so both coexist."),
     ("alpha-galactosidase", "GO:0004557", "alpha-galactosidase activity", E, "high",
-     "EC:3.2.1.22."),
+     "EC:3.2.1.22"),
     ("alpha-mannosidase", "GO:0004559", "alpha-mannosidase activity", E, "high",
-     "EC:3.2.1.24."),
+     "EC:3.2.1.24"),
     ("amylase", "GO:0016160", "amylase activity", E, "high",
      "Starch hydrolysis. GO carries no EC xref on this term."),
     ("beta-glucuronidase", "GO:0004566", "beta-glucuronidase activity", E, "high",
-     "EC:3.2.1.31. The MUG test."),
+     "EC:3.2.1.31 — The MUG test."),
     ("alpha-fucosidase", "GO:0004560", "alpha-L-fucosidase activity", E, "high",
-     "EC:3.2.1.51."),
+     "EC:3.2.1.51"),
     ("lysine decarboxylase", "GO:0008923", "lysine decarboxylase activity", E, "high",
-     "EC:4.1.1.18."),
+     "EC:4.1.1.18"),
     ("ornithine decarboxylase", "GO:0004586", "ornithine decarboxylase activity", E,
-     "high", "EC:4.1.1.17."),
+     "high", "EC:4.1.1.17"),
     ("lipase", "GO:0016298", "lipase activity", E, "high",
      "GO carries no EC xref on this term."),
     ("alanine arylamidase", "GO:0016285", "alanyl aminopeptidase activity", E, "high",
-     "EC:3.4.11.2. 'Arylamidase' is API vocabulary for aminopeptidase."),
+     "EC:3.4.11.2 — 'Arylamidase' is API vocabulary for aminopeptidase."),
     ("pyrrolidonyl arylamidase", "GO:0016920", "pyroglutamyl-peptidase activity", E,
-     "high", "EC:3.4.19.3. The PYR test; pyrrolidonyl arylamidase is "
+     "high", "EC:3.4.19.3 — The PYR test; pyrrolidonyl arylamidase is "
      "pyroglutamyl-peptidase I."),
     ("pyrazinamidase", "GO:0008936", "nicotinamidase activity", E, "high",
-     "EC:3.5.1.19. Pyrazinamidase and nicotinamidase are the same enzyme (PncA), "
+     "EC:3.5.1.19 — Pyrazinamidase and nicotinamidase are the same enzyme (PncA), "
      "which is why pyrazinamide resistance tracks pncA mutations."),
-    ("esterase", "GO:0106435", "carboxylesterase activity", E, "high", "EC:3.1.1.1."),
 
     # --- GO term is broader, or names the reaction differently ---
+    ("esterase", "GO:0106435", "carboxylesterase activity", C, "high",
+     "EC:3.1.1.1 — closeMatch rather than exact (#455): the bare label names the "
+     "whole hydrolase family, of which carboxylesterase is one member, so it is "
+     "BROADER than the substrate-specific `esterase (C 4)` / `esterase lipase "
+     "(C 8)` / `tween esterase` rows and cannot be a tighter match to the same "
+     "target than they are."),
     ("leucine arylamidase", "GO:0004177", "aminopeptidase activity", C, "high",
-     "EC:3.4.11.1. GO:0004178 'leucyl aminopeptidase activity' is OBSOLETE, "
+     "EC:3.4.11.1 — GO:0004178 'leucyl aminopeptidase activity' is OBSOLETE, "
      "replaced by GO:0004177/GO:0008235 — GO retired the substrate-specificity "
      "classes, so the EC number is now the more specific identifier."),
     ("cystine arylamidase", "GO:0004177", "aminopeptidase activity", C, "medium",
-     "EC:3.4.11.-. No residue-specific GO molecular-function term survives."),
+     "EC:3.4.11.- — No residue-specific GO molecular-function term survives."),
     ("valine arylamidase", "GO:0004177", "aminopeptidase activity", C, "medium",
-     "EC:3.4.11.-. No residue-specific GO molecular-function term survives."),
+     "EC:3.4.11.- — No residue-specific GO molecular-function term survives."),
     ("L-arginine arylamidase", "GO:0004177", "aminopeptidase activity", C, "medium",
-     "EC:3.4.11.-. GO:0008451 'X-Pro aminopeptidase activity' is OBSOLETE, "
+     "EC:3.4.11.- — GO:0008451 'X-Pro aminopeptidase activity' is OBSOLETE, "
      "replaced by GO:0004177."),
     ("glycin arylamidase", "GO:0004177", "aminopeptidase activity", C, "medium",
-     "EC:3.4.11.-. Source label misspells 'glycine'; kept verbatim because the "
+     "EC:3.4.11.- — Source label misspells 'glycine'; kept verbatim because the "
      "table grounds the string the ingest actually emits."),
     ("proline-arylamidase", "GO:0004177", "aminopeptidase activity", C, "medium",
-     "EC:3.4.11.5."),
+     "EC:3.4.11.5"),
     ("Alanyl-Phenylalanyl-Proline arylamidase", "GO:0004177", "aminopeptidase activity",
-     C, "medium", "EC:3.4.11.-. Tripeptide substrate on the API strip; the readout "
+     C, "medium", "EC:3.4.11.- — Tripeptide substrate on the API strip; the readout "
      "is aminopeptidase activity, not a distinct enzyme."),
     ("leucyl glycin arylamidase", "GO:0016805", "dipeptidase activity", C, "medium",
-     "EC:3.4.13.-. Dipeptide substrate, so dipeptidase rather than aminopeptidase."),
+     "EC:3.4.13.- — Dipeptide substrate, so dipeptidase rather than aminopeptidase."),
     ("trypsin", "GO:0004252", "serine-type endopeptidase activity", C, "high",
-     "EC:3.4.21.4. GO:0004295 'trypsin activity' is OBSOLETE, replaced by "
+     "EC:3.4.21.4 — GO:0004295 'trypsin activity' is OBSOLETE, replaced by "
      "GO:0004252."),
     ("alpha-chymotrypsin", "GO:0004252", "serine-type endopeptidase activity", C,
-     "high", "EC:3.4.21.1. GO:0004263 'chymotrypsin activity' is OBSOLETE, replaced "
+     "high", "EC:3.4.21.1 — GO:0004263 'chymotrypsin activity' is OBSOLETE, replaced "
      "by GO:0004252."),
     ("gamma-glutamyltransferase", "GO:0036374", "glutathione gamma-glutamate hydrolase",
-     C, "high", "EC:3.4.19.13. GO:0003840 is OBSOLETE, replaced by GO:0036374; the "
+     C, "high", "EC:3.4.19.13 — GO:0003840 is OBSOLETE, replaced by GO:0036374; the "
      "classical EC 2.3.2.2 was reclassified to 3.4.19.13."),
     ("gelatinase", "GO:0008233", "peptidase activity", C, "medium",
-     "EC:3.4.-.-. The gelatin-hydrolysis test has no dedicated GO molecular-function "
+     "EC:3.4.-.- — The gelatin-hydrolysis test has no dedicated GO molecular-function "
      "term; MicrO models it as MICRO:0000649 'gelatinase assay'."),
     ("caseinase", "GO:0008233", "peptidase activity", C, "medium",
-     "EC:3.4.-.-. Casein hydrolysis on milk agar; no dedicated GO term."),
+     "EC:3.4.-.- — Casein hydrolysis on milk agar; no dedicated GO term."),
     ("naphthol-AS-BI-phosphohydrolase", "GO:0016791", "phosphatase activity", C,
-     "medium", "EC:3.1.3.-. Names an API chromogenic SUBSTRATE, not an enzyme; the "
+     "medium", "EC:3.1.3.- — Names an API chromogenic SUBSTRATE, not an enzyme; the "
      "readout is phosphatase activity."),
     ("arginine dihydrolase", "GO:0016990", "arginine deiminase activity", C, "high",
-     "EC:3.5.3.6. The ADH test reads the arginine dihydrolase PATHWAY, whose first "
+     "EC:3.5.3.6 — The ADH test reads the arginine dihydrolase PATHWAY, whose first "
      "and diagnostic step is arginine deiminase."),
     ("N-acetyl-beta-glucosaminidase", "GO:0004563", "beta-N-acetylhexosaminidase "
-     "activity", C, "high", "EC:3.2.1.52. Hexosaminidase is broader than the "
+     "activity", C, "high", "EC:3.2.1.52 — Hexosaminidase is broader than the "
      "glucosaminidase named by the label."),
     ("DNase", "GO:0004536", "DNA nuclease activity", C, "high",
      "The DNase agar test detects any secreted DNase, so the specific "
      "GO:0004530 'deoxyribonuclease I activity' would overclaim."),
     ("alcohol dehydrogenase", "GO:0004022", "alcohol dehydrogenase (NAD+) activity", C,
-     "high", "EC:1.1.1.1. GO names the NAD+ cofactor; the panel readout does not "
+     "high", "EC:1.1.1.1 — GO names the NAD+ cofactor; the panel readout does not "
      "distinguish cofactor."),
     ("lecithinase", "GO:0004629", "C-type glycerophospholipase activity", C, "medium",
      "Lecithinase is phospholipase C — the egg-yolk agar reaction."),
     ("tryptophan deaminase", "GO:0001716", "L-amino-acid oxidase activity", C, "medium",
-     "EC:1.4.3.2. The API TDA test; the enterobacterial enzyme is an L-amino-acid "
+     "EC:1.4.3.2 — The API TDA test; the enterobacterial enzyme is an L-amino-acid "
      "deaminase/oxidase. Lowest-confidence row here — worth a second look before "
      "anything depends on it."),
     ("tween esterase", "GO:0106435", "carboxylesterase activity", C, "medium",
-     "EC:3.1.1.1. Tween hydrolysis reads carboxylesterase/lipase activity."),
+     "EC:3.1.1.1 — Tween hydrolysis reads carboxylesterase/lipase activity."),
     ("esterase (C 4)", "GO:0106435", "carboxylesterase activity", C, "high",
-     "EC:3.1.1.1. '(C 4)' is the API strip's butyrate chain length, not part of the "
+     "EC:3.1.1.1 — '(C 4)' is the API strip's butyrate chain length, not part of the "
      "enzyme name."),
     ("esterase lipase (C 8)", "GO:0106435", "carboxylesterase activity", C, "high",
-     "EC:3.1.1.1. '(C 8)' is the caprylate chain length."),
+     "EC:3.1.1.1 — '(C 8)' is the caprylate chain length."),
+    ("lipase (C 14)", "GO:0106435", "carboxylesterase activity", C, "high",
+     "EC:3.1.1.1 — '(C 14)' is the myristate chain length. Third member of the API "
+     "strip's chain-length family; omitting it while grounding the C4 and C8 "
+     "substrates was the gap in #457."),
+    ("oxidase", "GO:0004129", "cytochrome-c oxidase activity", C, "high",
+     "EC:7.1.1.9 — the bare spelling of the same bacteriological oxidase test as "
+     "the `cytochrome oxidase` / `cytochrome-c oxidase` rows. closeMatch rather "
+     "than exact because the unqualified word names any oxidase. Added by #457: "
+     "the table is keyed on the literal label, and TraitMech's `oxidase activity` "
+     "TRAIT record does not ground a node_grounding lookup — different indexes."),
 ]
 
 NODE_TYPE = "MOLECULAR_FUNCTION"
