@@ -229,3 +229,52 @@ def test_config_must_declare_all_four_sections(tmp_path):
         assert "caps" in str(exc)
     else:
         raise AssertionError("a config missing 'caps' must be rejected")
+
+
+# --- CLI row accounting (#452) ---
+
+
+def _run(args: list[str]) -> str:
+    import contextlib
+    import io
+    import sys as _sys
+
+    from trait_priority import main
+
+    argv = _sys.argv
+    _sys.argv = ["trait_priority", *args]
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf):
+            main()
+    finally:
+        _sys.argv = argv
+    return buf.getvalue()
+
+
+def _row_count(out: str) -> int:
+    import re as _re
+
+    return len([ln for ln in out.splitlines() if _re.match(r"^ *-?[0-9]+ [A-Z_]+", ln)])
+
+
+def test_top_zero_means_all_matching_the_sibling_tool():
+    """`prioritize_graph_research.py --limit 0` means all; these must agree."""
+    out = _run(["--top", "0"])
+    assert _row_count(out) == 477
+
+
+def test_the_footer_count_equals_the_rows_actually_printed():
+    """The footer used to report the pre-slice list, so it claimed 477 and showed 0."""
+    for top in ("3", "10", "0"):
+        out = _run(["--top", top])
+        printed = _row_count(out)
+        stated = int(out.split("row(s) shown")[0].strip().split("\n")[-1])
+        assert stated == printed, f"--top {top}: footer says {stated}, printed {printed}"
+
+
+def test_action_filter_narrows_both_rows_and_the_stated_count():
+    out = _run(["--action", "ALREADY_DEEP", "--top", "0"])
+    printed = _row_count(out)
+    assert printed == 9, printed
+    assert f"{printed} row(s) shown of {printed} matching" in out

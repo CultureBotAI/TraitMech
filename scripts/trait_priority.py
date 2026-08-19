@@ -453,7 +453,10 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--traits-dir", type=Path, default=DEFAULT_TRAITS)
     ap.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
-    ap.add_argument("--top", type=int, default=25)
+    # 0 = all, matching prioritize_graph_research.py's `--limit 0`. Previously
+    # `--top 0` sliced to nothing while the footer still claimed every row was
+    # shown, so the output contradicted itself (#452).
+    ap.add_argument("--top", type=int, default=25, help="rows to show (0 = all)")
     ap.add_argument("--action", help="only rows with this recommended action")
     ap.add_argument("--format", choices=("table", "tsv", "json"), default="table")
     ap.add_argument("--dashboard", action="store_true", help="write the static dashboard")
@@ -462,7 +465,8 @@ def main() -> int:
     args = ap.parse_args()
 
     rows, meta = build_queue(args.traits_dir, load_config(args.config))
-    shown = [r for r in rows if not args.action or r["action"] == args.action]
+    matched = [r for r in rows if not args.action or r["action"] == args.action]
+    shown = matched if args.top == 0 else matched[: args.top]
 
     if args.dashboard:
         args.html_out.parent.mkdir(parents=True, exist_ok=True)
@@ -471,23 +475,25 @@ def main() -> int:
         print(f"wrote {args.html_out} and {args.json_out}")
 
     if args.format == "json":
-        print(json.dumps({"meta": meta, "rows": shown[: args.top]}, indent=2))
+        print(json.dumps({"meta": meta, "rows": shown}, indent=2))
     elif args.format == "tsv":
         print("score\taction\tcategory\tslug\tedges\tcomponents\torphans\texamples")
-        for r in shown[: args.top]:
+        for r in shown:
             print(
                 f"{r['score']:g}\t{r['action']}\t{r['category']}\t{r['slug']}\t"
                 f"{r['edges']}\t{r['components']}\t{r['orphans']}\t{r['examples']}"
             )
     else:
         print(f"{'score':>6} {'action':<26} {'edg':>3} {'ex':>3}  trait")
-        for r in shown[: args.top]:
+        for r in shown:
             print(
                 f"{r['score']:6g} {r['action']:<26} {r['edges']:3d} {r['examples']:3d}  "
                 f"{r['category']}/{r['slug']}"
             )
+        # Derived from what was actually printed, not from the pre-slice list.
         print(
-            f"\n{len(shown)} row(s) shown of {meta['records']}; "
+            f"\n{len(shown)} row(s) shown of {len(matched)} matching, "
+            f"{meta['records']} total; "
             f"{meta['excluded_non_mechanism']} non-mechanism and "
             f"{meta['excluded_deprecated']} deprecated scored to the floor, not dropped"
         )
