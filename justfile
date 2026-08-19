@@ -151,6 +151,24 @@ audit-proposal-coverage:
 audit-predicate-domains *args:
     uv run python scripts/audit_predicate_domains.py --fail-on new {{args}}
 
+# TraitMech curation-priority queue with a recommended action per record (#448).
+# Ported from DisMech's MONDO prioritiser: weighted, YAML-tunable scoring whose
+# every component is inspectable, resolving to an ACTION rather than a rank.
+#
+# One DisMech rule is deliberately inverted. It lumps subtype series into their
+# parent; TraitMech does not, because measured sibling node-label overlap across
+# the binned families is 5% -- the bins carry distinct mechanism content, so
+# lumping would discard real curation. LUMP_INTO_PARENT fires only above a
+# configured measured-overlap threshold that nothing currently reaches.
+trait-priority *args:
+    uv run python scripts/trait_priority.py {{args}}
+
+# Write the static dashboard to app/dashboard/priority.{html,json}. NOT pages/:
+# that tree must byte-match render_trait_pages.py and audit-derived-reports
+# enforces it, so a second generator writing there reads as staleness.
+gen-priority-dashboard *args:
+    uv run python scripts/trait_priority.py --dashboard --top 80 {{args}}
+
 # Rank traits by causal-graph weakness, to pick the next deep-research target.
 # NOT in `qc` -- it is a triage aid, not a gate; there is no failing state.
 #
