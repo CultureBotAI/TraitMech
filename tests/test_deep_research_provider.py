@@ -220,3 +220,32 @@ def test_the_report_states_what_fit_measures(capsys):
     out = capsys.readouterr().out
     assert "relative WITHIN this stage" in out
     assert "not an absolute score" in out
+
+
+# --- single-provider JSON stays internally consistent (#450) ---
+
+
+def test_provider_json_adds_selected_without_filtering_the_ranking():
+    """Filtering `ranking` left `recommended_available` naming an absent provider.
+
+    The routing choice is a property of the stage, not of the query, so the fix
+    is an extra key rather than a narrower payload.
+    """
+    import contextlib
+    import io
+    import json as _json
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        drp.main(["--config", str(CONFIG_PATH), "--provider", "edison", "--json"])
+    report = _json.loads(buf.getvalue())
+    for stage in report["stages"]:
+        names = [row["provider"] for row in stage["ranking"]]
+        assert names == sorted(set(names), key=names.index), "ranking must not be filtered"
+        assert len(names) == len(drp.PROVIDERS)
+        assert stage["selected"]["provider"] == "falcon", "edison resolves to falcon"
+        routed = stage["recommended_available"]
+        if routed:
+            assert routed["provider"] in names, (
+                "the routing choice must be findable in the ranking it came from"
+            )

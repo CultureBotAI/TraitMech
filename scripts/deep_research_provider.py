@@ -574,10 +574,17 @@ def _run(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     report = build_report(config, focus_name)
     if args.json:
         if provider_name:
+            # Add `selected`; do NOT filter `ranking`. The routing choice is a
+            # property of the STAGE, so filtering the ranking while keeping
+            # stage-level `recommended_available` produced a payload naming a
+            # provider absent from its own ranking (#450). Keeping the ranking
+            # whole also lets a consumer see WHERE the selected provider placed,
+            # which is the question a single-provider query is usually asking.
             for stage in report["stages"]:
-                stage["ranking"] = [
-                    row for row in stage["ranking"] if row["provider"] == provider_name
-                ]
+                stage["selected"] = next(
+                    (row for row in stage["ranking"] if row["provider"] == provider_name),
+                    None,
+                )
         print(json.dumps(report, indent=2))
     else:
         print_report(report, provider_name)
