@@ -12,6 +12,7 @@ rather than a fixture: a fixture would have passed for the broken version too.
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -23,6 +24,7 @@ from prioritize_graph_research import (  # noqa: E402
     rank,
     researched_slugs,
     score,
+    stale_fraction,
 )
 
 
@@ -83,10 +85,10 @@ def test_no_object_property_survives_the_filter_on_the_real_corpus():
     assert not leaked, f"non-mechanism records ranked as research candidates: {leaked}"
 
 
-# --- family collapsing ---
+# --- binned series: reported, not merged (#447) ---
 
 
-def test_binned_slugs_collapse_to_their_family():
+def test_binned_slugs_belong_to_their_family():
     assert family_of("ph_delta_mid2") == "ph_delta"
     assert family_of("temperature_range_very_low") == "temperature_range"
     assert family_of("nacl_optimum_high") == "nacl_optimum"
@@ -98,16 +100,43 @@ def test_standalone_traits_have_no_family():
         assert family_of(slug) is None, slug
 
 
-def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
-    corpus = [
+def test_retired_observation_records_are_not_family_members():
+    """`ph_delta_observation` is a deprecated observation class, not a bin of
+    ph_delta -- the pattern comment promises prefix-sharing alone is not enough
+    (#470 review, finding 9)."""
+    for slug in ("ph_delta_observation", "temperature_range_observation", "nacl_optimum_observation"):
+        assert family_of(slug) is None, slug
+
+
+def _ph_delta_corpus():
+    return [
         (
             f"data/traits/environment/ph_delta_{bin}.yaml",
             {"term_kind": "CLASS", "causal_graphs": []},
         )
         for bin in ("low", "mid2", "high")
     ]
+
+
+def test_default_keeps_every_bin_and_reports_the_series():
+    """The #447 fix: sibling bins share 5% of their content, so each is its own
+    work item. Membership is information on the row, not a merge."""
     rows, counts = rank(
-        corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent")
+        _ph_delta_corpus(), connectivity=Path("/nonexistent"), completeness=Path("/nonexistent")
+    )
+    assert len(rows) == 3, "bins must not merge by default"
+    assert all(r["family"] == "ph_delta" for r in rows)
+    assert all(r["series_size"] == 3 for r in rows)
+    assert counts["in_series"] == 3
+    assert counts["families_collapsed"] == 0
+
+
+def test_explicit_collapse_keeps_the_worst_member_and_counts_the_rest():
+    rows, counts = rank(
+        _ph_delta_corpus(),
+        connectivity=Path("/nonexistent"),
+        completeness=Path("/nonexistent"),
+        collapse_families=True,
     )
     assert len(rows) == 1, "three bins of one family should collapse to one row"
     assert rows[0]["family"] == "ph_delta"
@@ -115,21 +144,253 @@ def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
     assert counts["families_collapsed"] == 2
 
 
-def test_no_collapse_keeps_every_bin():
-    corpus = [
-        (
-            f"data/traits/environment/ph_delta_{bin}.yaml",
-            {"term_kind": "CLASS", "causal_graphs": []},
-        )
-        for bin in ("low", "mid2", "high")
+# --- completeness-audit staleness (#443) ---
+
+
+def _graphed_doc(edges: int) -> dict:
+    nodes = [{"node_id": f"n{i}"} for i in range(edges + 1)]
+    return {
+        "term_kind": "CLASS",
+        "causal_graphs": [
+            {
+                "nodes": nodes,
+                "edges": [
+                    {"subject": f"n{i}", "predicate": "p", "object": f"n{i + 1}"}
+                    for i in range(edges)
+                ],
+            }
+        ],
+    }
+
+
+def _completeness_tsv(tmp_path, rows: list[tuple[str, str, int, int]]) -> Path:
+    path = tmp_path / "completeness.tsv"
+    lines = ["category\tslug\tverdict\tpriority\tgraph_edges\tmissing_modules"]
+    for category, slug, graph_edges, missing in rows:
+        lines.append(f"{category}\t{slug}\tshallow\tmedium\t{graph_edges}\t{missing}")
+    path.write_text("\n".join(lines) + "\n")
+    return path
+
+
+def _connectivity_tsv(tmp_path, file: str, wired_nodes: int) -> Path:
+    path = tmp_path / "connectivity.tsv"
+    path.write_text(
+        "file\tgraph_id\twired_nodes\tcomponents\tlargest_component\tcomponent_sizes\n"
+        f"{file}\tg\t{wired_nodes}\t1\t{wired_nodes}\t{wired_nodes}\n"
+    )
+    return path
+
+
+def test_fresh_completeness_row_contributes_to_the_score(tmp_path):
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    conn = _connectivity_tsv(tmp_path, rel, wired_nodes=9)
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", 8, 3)])
+    rows, counts = rank(corpus, connectivity=conn, completeness=comp)
+    (row,) = rows
+    assert not row["completeness_stale"]
+    assert row["score"] == 6, "missing_modules*2 should be in the score"
+    assert counts["completeness_rows_stale"] == 0
+
+
+def test_stale_completeness_row_is_reported_but_not_scored(tmp_path):
+    """The graph grew since the audit ran, so the audit's verdict describes a
+    graph that no longer exists. The number stays visible; the score ignores it."""
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    conn = _connectivity_tsv(tmp_path, rel, wired_nodes=9)
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", 2, 6)])
+    rows, counts = rank(corpus, connectivity=conn, completeness=comp)
+    (row,) = rows
+    assert row["completeness_stale"]
+    assert row["missing_modules"] == 6, "still reported for the reader"
+    assert row["score"] == 0, "but excluded from the score"
+    assert counts["completeness_rows_stale"] == 1
+    assert counts["completeness_rows_matched"] == 1
+
+
+def test_stale_fraction_is_zero_when_nothing_matched():
+    assert stale_fraction({"completeness_rows_matched": 0, "completeness_rows_stale": 0}) == 0.0
+
+
+def test_every_row_carries_series_size_and_collapse_carries_family_members(tmp_path):
+    """Uniform row schema (#472): JSON consumers must not need .get() for keys
+    whose presence depends on the slug or the flags."""
+    corpus = _ph_delta_corpus() + [
+        ("data/traits/metabolism/cellulolysis.yaml", {"term_kind": "CLASS", "causal_graphs": []})
     ]
-    rows, _ = rank(
+    rows, _ = rank(corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent"))
+    assert all("series_size" in r for r in rows)
+    standalone = next(r for r in rows if r["slug"] == "cellulolysis")
+    assert standalone["series_size"] == 0
+    collapsed_rows, _ = rank(
         corpus,
         connectivity=Path("/nonexistent"),
         completeness=Path("/nonexistent"),
-        collapse_families=False,
+        collapse_families=True,
     )
-    assert len(rows) == 3
+    assert all(r["family_members"] >= 1 for r in collapsed_rows)
+
+
+def test_sort_missing_errors_when_no_completeness_row_matched(tmp_path, monkeypatch, capsys):
+    """#471: zero matched rows must error, not rank on all-zero missing_modules.
+    Runs main() against a corpus dir the on-disk audit cannot match."""
+    import prioritize_graph_research as mod
+
+    traits = tmp_path / "traits" / "nowhere"
+    traits.mkdir(parents=True)
+    (traits / "made_up_trait.yaml").write_text("term_kind: CLASS\ncausal_graphs: []\n")
+    monkeypatch.setattr(
+        sys, "argv", ["prog", "--traits-dir", str(tmp_path / "traits"), "--sort", "missing"]
+    )
+    assert mod.main() == 2
+    assert "nothing to sort on" in capsys.readouterr().err
+
+
+def test_stale_fraction_on_the_real_corpus_reflects_443():
+    """347 of 353 audit rows no longer matched the corpus when #443 was filed,
+    and the corpus only grows. If this ever drops to 0 the audit was regenerated
+    and the guard on --sort missing stops firing -- which is the goal, not a bug."""
+    _, counts = rank()
+    assert stale_fraction(counts) > 0.5
+
+
+def test_mostly_stale_audit_excludes_missing_from_fresh_scores_too(tmp_path):
+    """#470 review, finding 3: with per-row exclusion alone, the few rows whose
+    edge counts coincidentally still match would collect a double-weighted bonus
+    the rest cannot earn, turning the composite sort into 'fresh audit rows
+    first'. Above the guard threshold the term comes out of every score."""
+    corpus = [
+        ("data/traits/ecology/fresh_one.yaml", _graphed_doc(edges=8)),
+        ("data/traits/ecology/stale_one.yaml", _graphed_doc(edges=8)),
+        ("data/traits/ecology/stale_two.yaml", _graphed_doc(edges=8)),
+    ]
+    comp = _completeness_tsv(tmp_path, [
+        ("ecology", "fresh_one", 8, 5),   # matches live edges
+        ("ecology", "stale_one", 2, 5),   # does not
+        ("ecology", "stale_two", 3, 5),   # does not
+    ])
+    rows, counts = rank(corpus, connectivity=Path("/nonexistent"), completeness=comp)
+    assert counts["missing_excluded_from_all_scores"] == 1
+    by_slug = {r["slug"]: r for r in rows}
+    assert not by_slug["fresh_one"]["completeness_stale"]
+    assert by_slug["fresh_one"]["score"] == by_slug["stale_one"]["score"], (
+        "a 2/3-stale audit must not hand the one fresh row a +10 bonus"
+    )
+
+
+def test_unparseable_graph_edges_is_counted_not_crashed(tmp_path):
+    """#470 review, finding 6: `graph_edges: NA` used to raise ValueError."""
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", "NA", 6)])
+    rows, counts = rank(corpus, connectivity=Path("/nonexistent"), completeness=comp)
+    (row,) = rows
+    assert row["completeness_stale"], "unverifiable freshness must not be trusted"
+    assert counts["completeness_rows_unverifiable"] == 1
+    assert counts["completeness_rows_stale"] == 1
+
+
+def _main_fixture(tmp_path, *, traits: dict[str, str], comp_rows) -> tuple:
+    """A tiny on-disk corpus + completeness TSV for driving main()."""
+    troot = tmp_path / "traits"
+    for rel, text in traits.items():
+        p = troot / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text)
+    comp = _completeness_tsv(tmp_path, comp_rows)
+    return troot, comp
+
+
+_GRAPHED_YAML = """term_kind: CLASS
+causal_graphs:
+- nodes:
+  - node_id: a
+  - node_id: b
+  edges:
+  - {subject: a, predicate: p, object: b}
+"""
+
+
+def test_main_sort_missing_refuses_a_mostly_stale_audit(tmp_path, monkeypatch, capsys):
+    """The #443 guard, end to end through main() on a fixture (not just the
+    live corpus): exit 2, the message names the real regeneration cost, and
+    --trust-stale-completeness overrides."""
+    import prioritize_graph_research as mod
+
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={"eco/one.yaml": _GRAPHED_YAML, "eco/two.yaml": _GRAPHED_YAML},
+        comp_rows=[("eco", "one", 9, 4), ("eco", "two", 9, 2)],  # live edges = 1
+    )
+    argv = ["prog", "--traits-dir", str(troot), "--completeness", str(comp), "--sort", "missing"]
+    monkeypatch.setattr(sys, "argv", argv)
+    assert mod.main() == 2
+    err = capsys.readouterr().err
+    assert "2 of 2" in err
+    assert "Edison" in err, "the message must name the real cost, not say 'regenerate' (#480)"
+
+    monkeypatch.setattr(sys, "argv", argv + ["--trust-stale-completeness", "--json"])
+    assert mod.main() == 0
+    out = json.loads(capsys.readouterr().out)
+    slugs = [r["slug"] for r in out["rows"]]
+    assert slugs == ["one", "two"], "trusted stale values order the sort"
+
+
+def test_main_sort_missing_guard_runs_on_the_filtered_rows(tmp_path, monkeypatch, capsys):
+    """#470 review, finding 1: with --unresearched-only, the population being
+    sorted can have no audit rows while the corpus has fresh ones. The guard
+    must look at what is ranked, not at corpus-wide counts."""
+    import prioritize_graph_research as mod
+
+    # stenohaline has a real research artifact under research/traits/, so the
+    # fixture's copy reads as researched; the two new traits have neither an
+    # artifact nor an audit row.
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={
+            "environment/stenohaline.yaml": _GRAPHED_YAML,
+            "nowhere/new_trait_a.yaml": _GRAPHED_YAML,
+            "nowhere/new_trait_b.yaml": _GRAPHED_YAML,
+        },
+        comp_rows=[("environment", "stenohaline", 1, 4)],  # fresh: live edges = 1
+    )
+    monkeypatch.setattr(sys, "argv", [
+        "prog", "--traits-dir", str(troot), "--completeness", str(comp),
+        "--sort", "missing", "--unresearched-only",
+    ])
+    assert mod.main() == 2, "no ranked row has an audit row, so there is nothing to sort on"
+    assert "nothing to sort on" in capsys.readouterr().err
+
+
+def test_main_sort_missing_sinks_stale_rows_below_threshold(tmp_path, monkeypatch, capsys):
+    """#470 review, finding 2: below the refusal threshold, a stale row's
+    missing count is a lead, not a measurement -- it must not outrank fresh
+    rows unless --trust-stale-completeness says so."""
+    import prioritize_graph_research as mod
+
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={
+            "eco/fresh_small.yaml": _GRAPHED_YAML,
+            "eco/fresh_big.yaml": _GRAPHED_YAML,
+            "eco/stale_huge.yaml": _GRAPHED_YAML,
+        },
+        comp_rows=[
+            ("eco", "fresh_small", 1, 1),
+            ("eco", "fresh_big", 1, 3),
+            ("eco", "stale_huge", 9, 9),  # stale (live edges = 1), highest missing
+        ],
+    )
+    monkeypatch.setattr(sys, "argv", [
+        "prog", "--traits-dir", str(troot), "--completeness", str(comp),
+        "--sort", "missing", "--json",
+    ])
+    assert mod.main() == 0
+    out = json.loads(capsys.readouterr().out)
+    slugs = [r["slug"] for r in out["rows"]]
+    assert slugs[0] == "fresh_big", f"stale row must not lead the research sort: {slugs}"
+    assert slugs[-1] != "fresh_big"
 
 
 # --- score ---
@@ -231,14 +492,17 @@ EXPECTED_COMPOSITION = {
     "deprecated": 20,
     "upper_ontology": 8,
     "non_mechanism": 129,
-    "families_collapsed": 44,
+    # 55 rows across 11 binned series, none merged (#447). The old default
+    # collapsed them to 11 rows and reported `families_collapsed: 44`.
+    "in_series": 55,
+    "families_collapsed": 0,
 }
 
 
 def test_corpus_composition_matches_what_the_skill_claims():
     _, counts = rank()
     # Totals are top-level keys; per-reason counts are prefixed `excluded_`.
-    direct = {"non_mechanism", "families_collapsed"}
+    direct = {"non_mechanism", "families_collapsed", "in_series"}
     actual = {
         k: counts[k] if k in direct else counts.get(f"excluded_{k}", 0)
         for k in EXPECTED_COMPOSITION
