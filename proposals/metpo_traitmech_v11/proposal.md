@@ -123,30 +123,47 @@ actually asserted when they could not specify the acceptor.
 (140) name the same process from opposite ends — the electron donor and the carbon
 substrate. Proposing both would put a synonym pair in the hierarchy as siblings.
 
-### Degradation and oxidation capabilities — parent `METPO:1000630`
+### Degradation and oxidation capabilities — parent `METPO:1000060`
 
 | ID | label | parent |
 |---|---|---|
-| `METPO:1008807` | hydrocarbon degradation | `METPO:1000630` |
+| `METPO:1008807` | hydrocarbon degradation | `METPO:1000060` |
 | `METPO:1008808` | aromatic hydrocarbon degradation | `METPO:1008807` |
-| `METPO:1008809` | aromatic compound degradation | `METPO:1000630` |
-| `METPO:1008810` | xylanolysis | `METPO:1000630` |
-| `METPO:1008811` | dark hydrogen oxidation | `METPO:1000630` |
-| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1000630` |
-| `METPO:1008813` | methanol oxidation | `METPO:1000630` |
-| `METPO:1008814` | nitrate reduction | `METPO:1000630` |
+| `METPO:1008809` | aromatic compound degradation | `METPO:1000060` |
+| `METPO:1008810` | xylanolysis | `METPO:1000060` |
+| `METPO:1008811` | dark hydrogen oxidation | `METPO:1000060` |
+| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1000060` |
+| `METPO:1008813` | methanol oxidation | `METPO:1000060` |
+| `METPO:1008814` | nitrate reduction | `METPO:1000060` |
 
-`aromatic hydrocarbon degradation` is genuinely a child of **both**
-`hydrocarbon degradation` and `aromatic compound degradation` — an aromatic
-hydrocarbon is both. The ROBOT `SC %` column takes one parent, so it is asserted
-under `hydrocarbon degradation` and the second parent is left for a maintainer to add
-rather than silently dropped. Flagging it rather than pretending the hierarchy is a
-tree.
+These hang off `METPO:1000060 metabolism`, not `METPO:1000630 biological process`.
+The first draft used the latter and that was wrong (#468): `METPO:1000630` has
+exactly **one** child, `metabolism`, and every real process in METPO —
+`respiration`, `Methanogenesis`, `Acetogenesis`, `Oxidative phosphorylation`,
+`Disproportionation` — sits below it. Parenting to `1000630` would have made these
+seven siblings of `metabolism` itself, a level above the processes they belong with.
+The definitions take `metabolism` as their genus to match, which is how METPO's
+existing children of that class are written ("A metabolism in which methane is
+produced…").
 
-`nitrate reduction` is deliberately **not** a child of `nitrate respiration`. FAPROTAX
-separates them because nitrate reduction covers assimilatory reduction into biomass as
-well as respiratory reduction; making it a child would assert every nitrate reducer
-conserves energy that way.
+### Two second parents, both left for a maintainer
+
+`SC %` carries one parent. Two rows genuinely have a second, and both are recorded
+here rather than silently dropped:
+
+- **`aromatic hydrocarbon degradation`** is a child of both `hydrocarbon degradation`
+  (asserted) and `aromatic compound degradation` — an aromatic hydrocarbon is both.
+- **`nitrate respiration`** is a child of both `nitrogen respiration` (asserted, by
+  mechanism) and `nitrate reduction` (by chemistry — respiratory reduction of nitrate
+  is still reduction of nitrate). The same holds for `nitrite respiration`. This one
+  was missed in the first draft (#469), which flagged only the aromatic case and so
+  implied the nitrogen case had been considered and rejected.
+
+`nitrate reduction` is deliberately **not** placed *under* `nitrate respiration`.
+FAPROTAX separates them because nitrate reduction covers assimilatory reduction into
+biomass as well as respiratory reduction; making it a child would assert every nitrate
+reducer conserves energy that way. The relationship runs the other direction, which is
+exactly the second parent noted above.
 
 `degradation` is METPO's existing verb here — `METPO:2000007 degrades` — so the
 labels use it rather than GO's "catabolic process", with the GO form recorded as a
@@ -175,8 +192,12 @@ existing in METPO at all.
 
 ## Verification
 
+- `just verify-proposal metpo_traitmech_v11` — **PASS, 0 failures.**
 - **Collision check** — `METPO:1008800`–`1008814` are unused across `metpo.owl`,
   all ten prior cohorts, and `data/traits/`.
+- **Every parent read out of METPO's own hierarchy**, not assumed. That is what
+  caught #468 — seven rows had been hung off `biological process`, which turns out to
+  have a single child.
 - **Every GO id round-tripped by identifier**, not accepted from a keyword search.
   That caught `GO:0019439` being obsolete; the same discipline caught five obsolete
   ids in TraitMech#454.
