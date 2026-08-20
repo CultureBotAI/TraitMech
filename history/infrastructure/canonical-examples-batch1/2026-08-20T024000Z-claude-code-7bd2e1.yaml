@@ -1,0 +1,95 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/backfill_canonical_examples.py
+  slug: canonical-examples-batch1
+session:
+  id: 2026-08-20T024000Z-claude-code-7bd2e1
+  timestamp: '2026-08-20T02:40:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  summary: Backfill canonical_examples for seven records from their own deep-research
+    artifacts. Seven rather than the requested fifteen, because the artifacts name organisms
+    as contrast cases at least as often as exemplars, and two further taxa were dropped
+    by offline NCBITaxon resolution.
+  details: |-
+    Batch 1 after the single-record canary on environment/temperature_range_high.
+    13 exemplars across 7 records; 226 -> 233 records now carry trait-to-organism
+    links.
+
+    THE STANDARD, agreed with the maintainer before starting: exemplar organisms
+    come ONLY from the record's own deep-research artifact, cited to a DOI that
+    appears in that artifact, with every taxon_id resolved and label-checked
+    against the local NCBITaxon build rather than recalled. No organism and no
+    citation is supplied from memory, so there is no fabrication surface.
+    Verified after writing: all 13 references appear in their own record's
+    artifact.
+
+    WHY SEVEN AND NOT FIFTEEN. The artifacts name organisms as CONTRAST CASES at
+    least as often as exemplars, so no screen can be trusted and every candidate
+    had to be read. A first strict screen -- organism, citation and two or more
+    trait words in one sentence -- returned only 2 records, and checking it
+    against the canary showed it would have REJECTED 2 of the 3 exemplars already
+    shipped, so the screen was stricter than the standard actually in use.
+    Widening to the canary's standard gave 49 candidate records, of which roughly
+    half proposed organisms pointing the wrong way. Excluded after review, all
+    suggested by the screen:
+
+      ph_optimum_high            Bacillus subtilis, a neutrophile appearing in an
+                                 alkaliphile discussion as the comparison.
+      ph_range_low               Escherichia coli, same pattern.
+      facultative_psychrophilic  Escherichia coli -- cold-SHOCK response is not
+                                 growth at low temperature.
+      nacl_range_low             Halomonas elongata, a moderate halophile growing
+                                 past 20% NaCl, proposed for a record whose upper
+                                 bound is about 3%. It was the screen's TOP hit
+                                 for that record.
+
+    The canary hit the same thing -- Escherichia coli and Pseudomonas putida named
+    in a >40 C record as mesophile contrasts -- so this is the norm, not bad luck.
+    It is also the reason this campaign cannot be automated: the artifact supplies
+    leads, and the direction of the claim is a judgement per record.
+
+    TWO TAXA DROPPED BY OFFLINE RESOLUTION, which is why resolution beats recall.
+    Bacillus pseudofirmus, the classic alkaliphile, is absent from this NCBITaxon
+    build under any spelling -- it has moved to Alkalihalobacillus -- so it was
+    dropped rather than guessed, leaving ph_optimum_high with one exemplar rather
+    than two. Caulobacter crescentus resolves only as NCBITaxon:155892
+    "Caulobacter vibrioides", the current name, so it is recorded under that
+    label with the artifact's older name in the note, keeping the id/label audit
+    clean instead of introducing a second drift.
+
+    WHAT LANDED. facultative_oxygen_preference: Escherichia coli, Bacillus
+    subtilis. temperature_optimum_high: Pyrococcus furiosus, Thermococcus
+    kodakarensis, Saccharolobus islandicus. temperature_optimum_low: Pseudomonas
+    fragi, Pseudomonas sivasensis. facultative_psychrophilic: Psychrobacter
+    arcticus. ph_optimum_high: Bacillus aequororis. ph_range_low:
+    Acidithiobacillus ferrooxidans. cell_width: Thermus thermophilus, Caulobacter
+    vibrioides, Escherichia coli.
+
+    AN OBSERVATION, NOT A DEFECT. The same check that verified this batch found
+    24 PRE-EXISTING records whose canonical_examples cite a DOI absent from their
+    own artifact -- nitrogen_fixation, thermophilic, acidophilic, magnetosome and
+    others. That is not necessarily wrong: a curator may legitimately cite a paper
+    the artifact never retrieved. It means the artifact-only standard used here is
+    stricter than the corpus norm, which is worth knowing before anyone treats
+    artifact presence as a validation rule.
+
+    VALIDATED BY. audit-canonical-examples: 328 examples across 233 records, 0
+    errors, 1 warning (the pre-existing heterocyst label drift), all 328 resolved
+    against NCBITaxon. 677 tests, just lint and full just qc green. Rendering
+    confirmed: 233 pages carry the section, matching the 233 records, and
+    NCBITaxon:311400 appears as a live NCBI link on temperature_optimum_high.
+
+    LEFT UNDONE. 124 records still have no canonical_examples. The rate here --
+    7 usable records from 49 screened candidates -- is the number to plan the
+    next batch against, and it is judgement-bound rather than tooling-bound.

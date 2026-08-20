@@ -242,3 +242,21 @@ curation_history:
     it in near-identical words, so the split was arbitrary and the rule breaks the
     1-1 tie.'
   llm_assisted: true
+- timestamp: '2026-08-20T02:40:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 2 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:296
+  taxon_label: Pseudomonas fragi
+  reference: DOI:10.37256/amtt.5220244537
+  note: Cold-adapted organism whose best growth sits at the low end of the range,
+    cited in this trait's artifact for psychrophilic adaptation.
+- taxon_id: NCBITaxon:1880678
+  taxon_label: Pseudomonas sivasensis
+  reference: DOI:10.1007/s42770-023-01057-4
+  note: Cold-adapted isolate cited in this trait's artifact for growth at low temperature.

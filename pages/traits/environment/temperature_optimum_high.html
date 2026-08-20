@@ -433,6 +433,73 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(3)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Pyrococcus furiosus</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2261"
+             rel="nofollow noreferrer"><code>NCBITaxon:2261</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1093/nar/gkab869"
+             rel="nofollow noreferrer"><code>DOI:10.1093/nar/gkab869</code></a>
+          
+          
+          <span class="meta">Hyperthermophilic archaeon with an optimum near 100 degrees C; the reverse-gyrase supercoiling evidence in this trait&#39;s artifact is taxon-specific to it.</span>
+        </li>
+        
+        <li>
+          <em>Thermococcus kodakarensis</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=311400"
+             rel="nofollow noreferrer"><code>NCBITaxon:311400</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/JB.186.14.4829-4833.2004"
+             rel="nofollow noreferrer"><code>DOI:10.1128/JB.186.14.4829-4833.2004</code></a>
+          
+          
+          <span class="meta">Hyperthermophilic archaeon used in this trait&#39;s artifact as the genetic system for the heat-adaptation mechanism.</span>
+        </li>
+        
+        <li>
+          <em>Saccharolobus islandicus</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43080"
+             rel="nofollow noreferrer"><code>NCBITaxon:43080</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1111/1462-2920.16375"
+             rel="nofollow noreferrer"><code>DOI:10.1111/1462-2920.16375</code></a>
+          
+          
+          <span class="meta">Thermoacidophilic archaeon whose membrane-lipid response at its growth optimum is characterised in this trait&#39;s artifact.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -517,6 +584,12 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
           <time>2026-08-06T06:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses under the single label `reduces` - genuine electron donation, and a lessens/decreases sense - and METPO:2007802 is defined as donating electrons to the object and lowering its oxidation state, which this edge does not assert. The two senses could not be separated mechanically because the label was identical, so they migrated together in issue 329 and were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment of the kind issue 301 removed.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T02:40:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 3 exemplar taxon/taxa. Organisms and citations come only from this record&#39;s own deep-research artifact; every taxon id was resolved and label-checked against the local NCBITaxon build rather than recalled. Organisms the artifact names as contrast cases rather than exemplars were deliberately excluded.</p>
         </li>
         
       </ol>
@@ -899,7 +972,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 06:00 UTC from
+      Record as of 2026-08-20 02:40 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

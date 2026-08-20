@@ -397,6 +397,54 @@ FNR, ArcAB, NarXL, and particular oxidases are **exemplar mechanisms in Enteroba
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Escherichia coli</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1111/1751-7915.70051"
+             rel="nofollow noreferrer"><code>DOI:10.1111/1751-7915.70051</code></a>
+          
+          
+          <span class="meta">Respires oxygen when it is available and switches to nitrate respiration or fermentation when it is not, which is the trait as defined.</span>
+        </li>
+        
+        <li>
+          <em>Bacillus subtilis</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423"
+             rel="nofollow noreferrer"><code>NCBITaxon:1423</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3390/ijms25021277"
+             rel="nofollow noreferrer"><code>DOI:10.3390/ijms25021277</code></a>
+          
+          
+          <span class="meta">Grows aerobically and, on oxygen limitation, by nitrate respiration or fermentation under the regulation described in this record.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -445,6 +493,12 @@ FNR, ArcAB, NarXL, and particular oxidases are **exemplar mechanisms in Enteroba
           <time>2026-08-07T18:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Edge molecular_oxygen -&gt; terminal_oxidase_cytochrome_bd in graph facultative_oxygen_preference_switching: repointed it to terminal_oxidase_cytochrome_bd -&gt; aerobic_respiration. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. The node description already reads &#39;High-affinity terminal oxidase ENABLING oxygen respiration at low O2 tensions&#39; -- protein enables process, which is both domain- and range-correct. Written the other way round it claimed O2 enables a protein. The graph&#39;s existing molecular_oxygen -enables-&gt; aerobic_respiration edge already carries the O2-availability link, so nothing is lost.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T02:40:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 2 exemplar taxon/taxa. Organisms and citations come only from this record&#39;s own deep-research artifact; every taxon id was resolved and label-checked against the local NCBITaxon build rather than recalled. Organisms the artifact names as contrast cases rather than exemplars were deliberately excluded.</p>
         </li>
         
       </ol>
@@ -827,7 +881,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 18:00 UTC from
+      Record as of 2026-08-20 02:40 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

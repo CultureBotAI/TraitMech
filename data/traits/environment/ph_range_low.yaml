@@ -241,3 +241,17 @@ curation_history:
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
   llm_assisted: true
+- timestamp: '2026-08-20T02:40:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 1 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  reference: DOI:10.3390/fermentation10060298
+  note: Acidophile growing in the low-pH range this record bounds, cited in its artifact
+    for acidophile physiology.

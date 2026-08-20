@@ -295,3 +295,27 @@ curation_history:
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
   llm_assisted: true
+- timestamp: '2026-08-20T02:40:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 3 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:2261
+  taxon_label: Pyrococcus furiosus
+  reference: DOI:10.1093/nar/gkab869
+  note: Hyperthermophilic archaeon with an optimum near 100 degrees C; the reverse-gyrase
+    supercoiling evidence in this trait's artifact is taxon-specific to it.
+- taxon_id: NCBITaxon:311400
+  taxon_label: Thermococcus kodakarensis
+  reference: DOI:10.1128/JB.186.14.4829-4833.2004
+  note: Hyperthermophilic archaeon used in this trait's artifact as the genetic system
+    for the heat-adaptation mechanism.
+- taxon_id: NCBITaxon:43080
+  taxon_label: Saccharolobus islandicus
+  reference: DOI:10.1111/1462-2920.16375
+  note: Thermoacidophilic archaeon whose membrane-lipid response at its growth optimum
+    is characterised in this trait's artifact.

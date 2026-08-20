@@ -294,3 +294,17 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (InterPro:IPR012171×1).
   llm_assisted: true
+- timestamp: '2026-08-20T02:40:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 1 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:334543
+  taxon_label: Psychrobacter arcticus
+  reference: DOI:10.37256/amtt.5220244537
+  note: Grows at low temperature rather than merely surviving it, which is the distinction
+    this trait turns on.
