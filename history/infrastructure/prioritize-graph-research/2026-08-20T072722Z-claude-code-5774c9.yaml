@@ -30,8 +30,9 @@ events:
     (temperature_range_*, ph_delta_*, nacl_*, cell_length_*) into one row on
     the docstring's claim that "one research pass answers the whole family".
     Measured on the live corpus that is false: mean node-label Jaccard between
-    sibling bins is 5% (max 20%), child-vs-parent ~8%, and 18 of 3256 child
-    edges are byte-identical to a parent edge -- the numbers behind the
+    sibling bins is in the 5-7% range (max 20-25%, depending on label
+    extraction; #481), child-vs-parent ~8%, and almost no child edge is
+    byte-identical to a parent edge -- the numbers behind the
     deliberately inverted lumping rule in scripts/trait_priority.py (#448/#449).
     Collapsing hid 44 records that each need their own work. Now: nothing
     merges by default; series membership prints as information ([series
@@ -55,7 +56,7 @@ events:
 
     Docstring, .claude/skills/prioritize-graph-research/SKILL.md (whose prose
     quoted the old collapse behaviour, the unconditional double weight, and
-    stale worked-example scores) and tests updated together: 26 tests in
+    stale worked-example scores) and tests updated together: 34 tests in
     tests/test_prioritize_graph_research.py including new fixture tests for
     fresh-vs-stale rows and a corpus test pinning that the stale fraction
     currently exceeds the guard threshold. Full suite 681 passed; lint and qc

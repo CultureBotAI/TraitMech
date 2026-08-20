@@ -12,6 +12,7 @@ rather than a fixture: a fixture would have passed for the broken version too.
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -96,6 +97,14 @@ def test_binned_slugs_belong_to_their_family():
 
 def test_standalone_traits_have_no_family():
     for slug in ("biopolymer_degradation", "lithotrophic", "nitrogen_fixing_symbiosis", "ph"):
+        assert family_of(slug) is None, slug
+
+
+def test_retired_observation_records_are_not_family_members():
+    """`ph_delta_observation` is a deprecated observation class, not a bin of
+    ph_delta -- the pattern comment promises prefix-sharing alone is not enough
+    (#470 review, finding 9)."""
+    for slug in ("ph_delta_observation", "temperature_range_observation", "nacl_optimum_observation"):
         assert family_of(slug) is None, slug
 
 
@@ -244,6 +253,144 @@ def test_stale_fraction_on_the_real_corpus_reflects_443():
     and the guard on --sort missing stops firing -- which is the goal, not a bug."""
     _, counts = rank()
     assert stale_fraction(counts) > 0.5
+
+
+def test_mostly_stale_audit_excludes_missing_from_fresh_scores_too(tmp_path):
+    """#470 review, finding 3: with per-row exclusion alone, the few rows whose
+    edge counts coincidentally still match would collect a double-weighted bonus
+    the rest cannot earn, turning the composite sort into 'fresh audit rows
+    first'. Above the guard threshold the term comes out of every score."""
+    corpus = [
+        ("data/traits/ecology/fresh_one.yaml", _graphed_doc(edges=8)),
+        ("data/traits/ecology/stale_one.yaml", _graphed_doc(edges=8)),
+        ("data/traits/ecology/stale_two.yaml", _graphed_doc(edges=8)),
+    ]
+    comp = _completeness_tsv(tmp_path, [
+        ("ecology", "fresh_one", 8, 5),   # matches live edges
+        ("ecology", "stale_one", 2, 5),   # does not
+        ("ecology", "stale_two", 3, 5),   # does not
+    ])
+    rows, counts = rank(corpus, connectivity=Path("/nonexistent"), completeness=comp)
+    assert counts["missing_excluded_from_all_scores"] == 1
+    by_slug = {r["slug"]: r for r in rows}
+    assert not by_slug["fresh_one"]["completeness_stale"]
+    assert by_slug["fresh_one"]["score"] == by_slug["stale_one"]["score"], (
+        "a 2/3-stale audit must not hand the one fresh row a +10 bonus"
+    )
+
+
+def test_unparseable_graph_edges_is_counted_not_crashed(tmp_path):
+    """#470 review, finding 6: `graph_edges: NA` used to raise ValueError."""
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", "NA", 6)])
+    rows, counts = rank(corpus, connectivity=Path("/nonexistent"), completeness=comp)
+    (row,) = rows
+    assert row["completeness_stale"], "unverifiable freshness must not be trusted"
+    assert counts["completeness_rows_unverifiable"] == 1
+    assert counts["completeness_rows_stale"] == 1
+
+
+def _main_fixture(tmp_path, *, traits: dict[str, str], comp_rows) -> tuple:
+    """A tiny on-disk corpus + completeness TSV for driving main()."""
+    troot = tmp_path / "traits"
+    for rel, text in traits.items():
+        p = troot / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text)
+    comp = _completeness_tsv(tmp_path, comp_rows)
+    return troot, comp
+
+
+_GRAPHED_YAML = """term_kind: CLASS
+causal_graphs:
+- nodes:
+  - node_id: a
+  - node_id: b
+  edges:
+  - {subject: a, predicate: p, object: b}
+"""
+
+
+def test_main_sort_missing_refuses_a_mostly_stale_audit(tmp_path, monkeypatch, capsys):
+    """The #443 guard, end to end through main() on a fixture (not just the
+    live corpus): exit 2, the message names the real regeneration cost, and
+    --trust-stale-completeness overrides."""
+    import prioritize_graph_research as mod
+
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={"eco/one.yaml": _GRAPHED_YAML, "eco/two.yaml": _GRAPHED_YAML},
+        comp_rows=[("eco", "one", 9, 4), ("eco", "two", 9, 2)],  # live edges = 1
+    )
+    argv = ["prog", "--traits-dir", str(troot), "--completeness", str(comp), "--sort", "missing"]
+    monkeypatch.setattr(sys, "argv", argv)
+    assert mod.main() == 2
+    err = capsys.readouterr().err
+    assert "2 of 2" in err
+    assert "Edison" in err, "the message must name the real cost, not say 'regenerate' (#480)"
+
+    monkeypatch.setattr(sys, "argv", argv + ["--trust-stale-completeness", "--json"])
+    assert mod.main() == 0
+    out = json.loads(capsys.readouterr().out)
+    slugs = [r["slug"] for r in out["rows"]]
+    assert slugs == ["one", "two"], "trusted stale values order the sort"
+
+
+def test_main_sort_missing_guard_runs_on_the_filtered_rows(tmp_path, monkeypatch, capsys):
+    """#470 review, finding 1: with --unresearched-only, the population being
+    sorted can have no audit rows while the corpus has fresh ones. The guard
+    must look at what is ranked, not at corpus-wide counts."""
+    import prioritize_graph_research as mod
+
+    # stenohaline has a real research artifact under research/traits/, so the
+    # fixture's copy reads as researched; the two new traits have neither an
+    # artifact nor an audit row.
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={
+            "environment/stenohaline.yaml": _GRAPHED_YAML,
+            "nowhere/new_trait_a.yaml": _GRAPHED_YAML,
+            "nowhere/new_trait_b.yaml": _GRAPHED_YAML,
+        },
+        comp_rows=[("environment", "stenohaline", 1, 4)],  # fresh: live edges = 1
+    )
+    monkeypatch.setattr(sys, "argv", [
+        "prog", "--traits-dir", str(troot), "--completeness", str(comp),
+        "--sort", "missing", "--unresearched-only",
+    ])
+    assert mod.main() == 2, "no ranked row has an audit row, so there is nothing to sort on"
+    assert "nothing to sort on" in capsys.readouterr().err
+
+
+def test_main_sort_missing_sinks_stale_rows_below_threshold(tmp_path, monkeypatch, capsys):
+    """#470 review, finding 2: below the refusal threshold, a stale row's
+    missing count is a lead, not a measurement -- it must not outrank fresh
+    rows unless --trust-stale-completeness says so."""
+    import prioritize_graph_research as mod
+
+    troot, comp = _main_fixture(
+        tmp_path,
+        traits={
+            "eco/fresh_small.yaml": _GRAPHED_YAML,
+            "eco/fresh_big.yaml": _GRAPHED_YAML,
+            "eco/stale_huge.yaml": _GRAPHED_YAML,
+        },
+        comp_rows=[
+            ("eco", "fresh_small", 1, 1),
+            ("eco", "fresh_big", 1, 3),
+            ("eco", "stale_huge", 9, 9),  # stale (live edges = 1), highest missing
+        ],
+    )
+    monkeypatch.setattr(sys, "argv", [
+        "prog", "--traits-dir", str(troot), "--completeness", str(comp),
+        "--sort", "missing", "--json",
+    ])
+    assert mod.main() == 0
+    out = json.loads(capsys.readouterr().out)
+    slugs = [r["slug"] for r in out["rows"]]
+    assert slugs[0] == "fresh_big", f"stale row must not lead the research sort: {slugs}"
+    assert slugs[-1] != "fresh_big"
 
 
 # --- score ---

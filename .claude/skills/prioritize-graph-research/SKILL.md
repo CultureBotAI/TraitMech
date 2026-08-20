@@ -1,6 +1,6 @@
 ---
 name: prioritize-graph-research
-description: Pick which TraitMech trait to deep-research next, by ranking causal-graph weakness and reporting whether research already exists. Excludes records that cannot carry a mechanism graph (METPO object properties, datatype properties, deprecated observation classes, upper ontology), reports binned-series membership per row (bins share only 5% of their content, so they rank separately), and refuses to rank on a stale completeness audit. Use when asked to prioritize a weak causal graph for research, choose a canary trait for a new research provider, or decide what to research next — BEFORE running deep-research-trait or research-causal-graphs, which spend money.
+description: Pick which TraitMech trait to deep-research next, by ranking causal-graph weakness and reporting whether research already exists. Excludes records that cannot carry a mechanism graph (METPO object properties, datatype properties, deprecated observation classes, upper ontology), reports binned-series membership per row (bins share only ~5-7% of their content, so they rank separately), and refuses to rank on a stale completeness audit. Use when asked to prioritize a weak causal graph for research, choose a canary trait for a new research provider, or decide what to research next — BEFORE running deep-research-trait or research-causal-graphs, which spend money.
 ---
 
 # Choosing the next deep-research target
@@ -26,11 +26,13 @@ just prioritize-research --collapse-families     # one row per binned series
 **Use `--sort missing` when the question is what to research** — but know that it
 ranks purely on the completeness audit, and when most of that audit's rows no
 longer match the live corpus it EXITS WITH AN ERROR rather than ranking on stale
-data (#443). That is its current state: regenerate
-`reports/graph_completeness_audit.tsv` to restore it, or pass
-`--trust-stale-completeness` to override knowingly. The default sort answers
-"which graph is worst", which is a different question and usually resolves to
-curation work — see below.
+data (#443). That is its current state, and there is **no in-repo way to
+regenerate the audit** — it came from the paid 353-agent Edison sweep and
+restoring it means re-running that sweep (#480). `--trust-stale-completeness`
+overrides knowingly (and ranks on the stale values; below the error threshold,
+stale rows simply sink to the bottom of this sort instead). The default sort
+answers "which graph is worst", which is a different question and usually
+resolves to curation work — see below.
 
 ## Read the answer before you trust the ranking
 
@@ -41,17 +43,18 @@ of the ranked candidates, 0 have no deep-research artifact; the rest already
 do -- those need their existing research APPLIED, not re-run
 ```
 
-As of 2026-08-18 that number is **0**. Every trait that can carry a mechanism
-graph already has one *and* already has an Edison/falcon report. The two sets are
-identical — 353 records each. So a request to "deep-research the weakest graph"
+As of 2026-08-20 that number is **0**. Every trait that can carry a mechanism
+graph already has one *and* already has an Edison/falcon report — every one of
+the 348 ranked candidates. So a request to "deep-research the weakest graph"
 usually should not produce a new research call at all. It should produce one of:
 
 1. **Apply the research that exists.** `reports/graph_enrichment_backlog.md`
    holds 351 traits with named missing modules and DOI-backed candidate edges,
    already paid for — but it is a point-in-time sweep and **most of it has
-   already been applied**: 347 of its 353 rows no longer match the live corpus,
-   and all six edges it proposes for `biofilm_formation` are already present
-   (#443). Check the live graph before treating a backlog row as open work.
+   already been applied**: 345 of its 348 corpus-matched rows no longer match
+   the live corpus (the command prints the live figure), and all six edges it
+   proposes for `biofilm_formation` are already present (#443). Check the live
+   graph before treating a backlog row as open work.
 2. **A deliberate second pass with a different provider**, where the point is
    comparing providers rather than filling a gap. Use the ranking to pick the
    canary.
@@ -75,7 +78,11 @@ what is actually *absent* rather than what the graph's shape implies. Hence the
 double weight. It is also the only input with **no freshness guarantee** (#443):
 each report row's `graph_edges` is checked against the live count, and a row
 that no longer matches is marked stale — its `missing_modules` prints with a `*`
-and is **excluded from the score**. The `8-edges` floor exists because
+and is **excluded from the score**. When *most* rows are stale (today's state)
+the term comes out of **every** score, fresh rows included — otherwise the few
+coincidentally-matching rows would collect a double-weighted bonus the rest
+cannot, and the composite sort would quietly become "fresh audit rows first".
+The footer says which regime you are reading. The `8-edges` floor exists because
 edges-per-node cannot see thinness: 1 edge over 2 nodes scores 0.5, identical
 to 20 over 40.
 
@@ -140,12 +147,15 @@ the exclusion is by category and not by emptiness.
 `ph_delta_mid2`, `ph_delta_mid3`, `temperature_range_mid4` are METPO binning
 classes, and this script used to collapse each family into one row on the
 assumption one research pass answers the whole family. Measured, that is false
-(#447): sibling bins share a mean **5%** of their node labels (max 20%), and 18
-of 3256 child edges are byte-identical to a parent edge. Each bin is its own
+(#447): sibling bins share a mean **~5–7%** of their node labels (max 20–25%,
+depending on label extraction — #481 tracks the exact-figure discrepancy), and
+almost no child edge is byte-identical to a parent edge. Each bin is its own
 work item, so bins rank separately and rows carry `[series ph_delta, 6 bins]`
 as information. `--collapse-families` restores the merged view when you want
-family granularity; `scripts/trait_priority.py` holds the retuned rule (lump
-only above measured overlap, which nothing reaches).
+family granularity — knowing that the surviving representative is the worst
+member by *composite score* even under another `--sort` (#479);
+`scripts/trait_priority.py` holds the retuned rule (lump only above measured
+overlap, which nothing reaches).
 
 Exclusions are always counted and broken down in the output. If you report a
 ranking, report that line too: without it the table reads as "these are the
