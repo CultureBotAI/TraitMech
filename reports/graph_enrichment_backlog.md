@@ -1,5 +1,13 @@
 # Causal-graph enrichment backlog (Edison completeness audit)
 
+> **STALE — do not use for prioritisation (#443).** Regenerating this needs a
+> 353-agent Edison sweep, and Edison currently returns `402 Payment Required`.
+> Measured 2026-08-19: 347 of the 353 graphs below have grown since this ran
+> (edges 1264 -> 3379), and every edge it proposes for `ecology/biofilm_formation`
+> is already present. Its `missing_modules` column was the double-weighted term
+> in the retired `prioritize_graph_research.py`; `just trait-priority` replaces
+> that tool and reads only live corpus state.
+
 Generated from a 353-agent per-trait audit comparing each trait's existing `causal_graphs` against its Edison deep-research report. 351 traits flagged high/medium priority.
 
 **Verdicts:** {'shallow': 228, 'skeletal': 110, 'adequate': 15}  

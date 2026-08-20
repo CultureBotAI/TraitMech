@@ -278,3 +278,57 @@ def test_action_filter_narrows_both_rows_and_the_stated_count():
     printed = _row_count(out)
     assert printed == 9, printed
     assert f"{printed} row(s) shown of {printed} matching" in out
+
+
+# --- research-artifact awareness, folded in from the retired tool (#447) ---
+
+
+def test_researched_flag_strips_the_provider_suffix(tmp_path):
+    from trait_priority import researched_slugs
+
+    cat = tmp_path / "ecology"
+    cat.mkdir()
+    (cat / "biofilm_formation-deep-research-falcon.md").write_text("x")
+    (cat / "biofilm_formation-deep-research-openscientist.md").write_text("x")
+    (cat / "aerobic-edison-literature-meta.yaml").write_text("x")
+    found = researched_slugs(tmp_path)
+    assert found == {("ecology", "biofilm_formation"), ("ecology", "aerobic")}
+
+
+def test_missing_research_dir_is_empty_not_an_error():
+    from trait_priority import researched_slugs
+
+    assert researched_slugs(Path("/nonexistent")) == set()
+
+
+def test_no_mechanism_record_awaits_a_first_research_pass():
+    """The headline the retired tool existed to print.
+
+    A failure here is the useful signal: a genuinely unresearched mechanism trait
+    has appeared and belongs at the front of the queue.
+    """
+    _, meta = build_queue()
+    assert meta["unresearched_mechanism_records"] == 0, meta
+
+
+def test_the_retired_tool_and_its_skill_are_gone():
+    """#447 and #443 were not fixable by tuning, so the tool was retired.
+
+    Pinned so it cannot creep back: its collapsing hid 44 records on a rationale
+    that measured 5%, and it double-weighted a report stale for 347 of 353 traits.
+    """
+    root = Path(__file__).resolve().parent.parent
+    assert not (root / "scripts" / "prioritize_graph_research.py").exists()
+    assert not (root / ".claude" / "skills" / "prioritize-graph-research").exists()
+    assert "prioritize-research" not in (root / "justfile").read_text()
+
+
+def test_nothing_reads_the_stale_completeness_report():
+    """#443: the double-weighted stale input is gone from the live tooling."""
+    root = Path(__file__).resolve().parent.parent
+    offenders = [
+        p.name
+        for p in (root / "scripts").glob("*.py")
+        if "graph_completeness_audit" in p.read_text()
+    ]
+    assert offenders == [], offenders

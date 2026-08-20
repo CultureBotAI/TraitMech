@@ -72,6 +72,7 @@ from audit_causal_graphs import Corpus, _as_corpus  # noqa: E402
 
 DEFAULT_TRAITS = Path("data/traits")
 DEFAULT_CONFIG = Path("conf/trait_priority.yaml")
+DEFAULT_RESEARCH = Path("research/traits")
 # app/, not pages/: `pages/` must byte-match what render_trait_pages.py produces
 # and `audit-derived-reports` enforces that, so a second generator writing there
 # reads as staleness. app/ is where TraitMech already keeps generated standalone
@@ -115,6 +116,24 @@ class Record:
     has_definition_source: bool = False
     has_synonyms: bool = False
     has_evidence: bool = False
+    researched: bool = False
+
+
+def researched_slugs(research_dir: Path = DEFAULT_RESEARCH) -> set[tuple[str, str]]:
+    """(category, slug) pairs that already carry a deep-research artifact.
+
+    Folded in from the retired `prioritize_graph_research.py`, whose one unique
+    capability this was. Matches on the stem before the provider suffix so a
+    second provider's report for the same trait is not read as a different trait.
+    """
+    found: set[tuple[str, str]] = set()
+    if not research_dir.exists():
+        return found
+    for path in research_dir.rglob("*"):
+        if path.is_file():
+            stem = re.split(r"-(?:deep-research|edison)-", path.name)[0]
+            found.add((path.parent.name, stem))
+    return found
 
 
 def load_config(path: Path = DEFAULT_CONFIG) -> dict[str, Any]:
@@ -125,8 +144,11 @@ def load_config(path: Path = DEFAULT_CONFIG) -> dict[str, Any]:
     return cfg
 
 
-def read_records(source: Path | Corpus = DEFAULT_TRAITS) -> dict[str, Record]:
+def read_records(
+    source: Path | Corpus = DEFAULT_TRAITS, research_dir: Path = DEFAULT_RESEARCH
+) -> dict[str, Record]:
     out: dict[str, Record] = {}
+    researched = researched_slugs(research_dir)
     for rel, doc in _as_corpus(source):
         p = Path(rel)
         graphs = doc.get("causal_graphs") or []
@@ -152,6 +174,7 @@ def read_records(source: Path | Corpus = DEFAULT_TRAITS) -> dict[str, Record]:
             has_definition_source=bool(doc.get("definition_source")),
             has_synonyms=bool(doc.get("synonyms")),
             has_evidence=bool(doc.get("evidence")),
+            researched=(p.parent.name, p.stem) in researched,
         )
         out[rec.identifier] = rec
     return out
@@ -325,10 +348,12 @@ def recommend(
 
 
 def build_queue(
-    source: Path | Corpus = DEFAULT_TRAITS, cfg: dict[str, Any] | None = None
+    source: Path | Corpus = DEFAULT_TRAITS,
+    cfg: dict[str, Any] | None = None,
+    research_dir: Path = DEFAULT_RESEARCH,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     cfg = cfg or load_config()
-    recs = read_records(source)
+    recs = read_records(source, research_dir)
     child_count: dict[str, int] = defaultdict(int)
     for r in recs.values():
         for p in r.parents:
@@ -370,6 +395,7 @@ def build_queue(
                 "series": stem,
                 "series_size": len(fam) if stem else 0,
                 "series_overlap": round(ov, 3) if stem else None,
+                "researched": r.researched,
                 "reasons": why,
             }
         )
@@ -386,6 +412,12 @@ def build_queue(
             round(sum(overlaps.values()) / len(overlaps), 3) if overlaps else None
         ),
         "lump_threshold": cfg["thresholds"]["series_lump_min_sibling_overlap"],
+        # The headline the retired tool existed to print: no mechanism record is
+        # awaiting a FIRST research pass, so a request to "research the weakest
+        # graph" is nearly always a request to apply what is already on disk.
+        "unresearched_mechanism_records": sum(
+            1 for x in rows if not x["researched"] and not x["action"].startswith("DROP")
+        ),
         "actions": {a: sum(1 for x in rows if x["action"] == a) for a in ACTIONS},
     }
     return rows, meta
@@ -458,6 +490,12 @@ def main() -> int:
     # shown, so the output contradicted itself (#452).
     ap.add_argument("--top", type=int, default=25, help="rows to show (0 = all)")
     ap.add_argument("--action", help="only rows with this recommended action")
+    ap.add_argument(
+        "--unresearched-only",
+        action="store_true",
+        help="only records with no deep-research artifact (0 today; the failure "
+        "of that expectation is the useful signal)",
+    )
     ap.add_argument("--format", choices=("table", "tsv", "json"), default="table")
     ap.add_argument("--dashboard", action="store_true", help="write the static dashboard")
     ap.add_argument("--html-out", type=Path, default=DEFAULT_HTML)
@@ -466,6 +504,8 @@ def main() -> int:
 
     rows, meta = build_queue(args.traits_dir, load_config(args.config))
     matched = [r for r in rows if not args.action or r["action"] == args.action]
+    if args.unresearched_only:
+        matched = [r for r in matched if not r["researched"]]
     shown = matched if args.top == 0 else matched[: args.top]
 
     if args.dashboard:
@@ -496,6 +536,10 @@ def main() -> int:
             f"{meta['records']} total; "
             f"{meta['excluded_non_mechanism']} non-mechanism and "
             f"{meta['excluded_deprecated']} deprecated scored to the floor, not dropped"
+        )
+        print(
+            f"research: {meta['unresearched_mechanism_records']} mechanism record(s) "
+            f"have no artifact -- the rest need theirs APPLIED, not re-run"
         )
         print(
             f"lumping: {meta['series_families']} series, mean sibling overlap "

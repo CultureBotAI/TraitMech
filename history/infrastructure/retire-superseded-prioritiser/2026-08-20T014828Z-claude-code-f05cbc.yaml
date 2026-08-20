@@ -1,0 +1,90 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/trait_priority.py
+  slug: retire-superseded-prioritiser
+session:
+  id: 2026-08-20T014828Z-claude-code-f05cbc
+  timestamp: '2026-08-20T01:48:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/447
+  - https://github.com/CultureBotAI/TraitMech/issues/443
+  - https://github.com/CultureBotAI/TraitMech/issues/411
+events:
+- type: EDIT
+  outcome: changed
+  summary: Retire prioritize_graph_research.py rather than tune it, fold its research-artifact
+    awareness into trait_priority.py, stamp the stale enrichment backlog, and add a calibrated
+    gate that would have caught the ten off-topic scanned discussions.
+  details: |-
+    Addresses #447, #443 and the recurrence half of #411. No record content
+    changes.
+
+    #447 AND #443 WERE NOT FIXABLE BY TUNING, so the tool was retired.
+    prioritize_graph_research.py had two defects that went to its premise, not
+    its parameters. It collapsed 44 records into 10 rows on the stated rationale
+    that "one research pass answers the whole family", which measured sibling
+    node-label overlap of 5% contradicts (#447). And it read missing_modules from
+    reports/graph_completeness_audit.tsv at DOUBLE weight -- the heaviest term in
+    its score and the whole basis for its `--sort missing` -- from a report that
+    is stale for 347 of its 353 rows (#443). Retuning a weight does not fix a
+    tool whose two strongest signals are a false assumption and a stale file.
+
+    scripts/trait_priority.py, landed in #449 from the DisMech port, already does
+    the job on live corpus state and consumes neither. So: deleted the script,
+    its tests, its justfile recipe and the prioritize-graph-research skill, and
+    folded in the one capability that was genuinely unique -- research-artifact
+    awareness, which is what printed the finding that no mechanism record awaits
+    a FIRST research pass. That headline now prints from trait-priority, with
+    --unresearched-only preserved and a test asserting the count is zero so that
+    its FAILURE is the signal.
+
+    `--sort missing` was NOT ported. It is the one thing the retired tool did
+    that cannot be reproduced honestly: missing_modules needs a 353-agent Edison
+    sweep to refresh and Edison returns 402, so the choice was a stale sort or no
+    sort. Removed, and reports/graph_enrichment_backlog.md now carries a STALE
+    banner at the top with the measurement in it, because a report that reads
+    authoritative is worse than one that is absent.
+
+    Four tests pin the retirement: the script gone, the skill directory gone, the
+    recipe gone, and no script under scripts/ referencing the stale report. Left
+    unpinned it would creep back, since the tool looked reasonable.
+
+    #411 IS UPSTREAM, SO THE RECURRENCE WAS GATED INSTEAD. The scan lives in the
+    kg_microbe_kgscan package and its precision cannot be fixed from here. What
+    can be fixed is that ten off-topic gaps entered the corpus and NOTHING
+    objected. audit_discussion_relevance.py requires >= 3 content words shared
+    between a discussion prompt and the trait's own vocabulary (label,
+    definition, synonyms, causal-graph node labels), and is wired into qc as an
+    ERROR -- a heuristic that only warned would not have stopped them.
+
+    THE THRESHOLD IS CALIBRATED, NOT CHOSEN. Scored against both the ten scraped
+    sentences and the ten curated replacements: off-topic overlap ran 0,0,0,0,0,
+    0,0,1,1,2 and on-topic ran 4,4,5,5,6,6,8,8,10,11. min_overlap=1 catches 7 of
+    10, =2 catches 9, =3 catches all ten with zero false positives, and 3 sits
+    inside a two-token gap between the worst on-topic and best off-topic prompt.
+
+    A BUG FOUND BY TESTING THE GATE AGAINST THE ACTUAL FAILURE. Replaying the ten
+    original prompts flagged only 7 of 10, not the calibrated 10. The scan writes
+    "Knowledge gap for <trait label>: <sentence>", and that machine-generated
+    prefix contains the trait's own label -- so every scan-written prompt earned
+    free relevance credit for words it did not choose, while the calibration had
+    scored the sentence alone. The prefix is now stripped before scoring and the
+    replay flags 10 of 10. Curator-authored prompts are untouched, since no
+    curator writes that prefix. Had I only checked that the current corpus passes,
+    the gate would have shipped 30% weaker than advertised against precisely the
+    class it exists to catch.
+
+    VALIDATED BY. 672 tests (12 new for the gate, 5 new for the retirement), just
+    lint, full just qc green with audit-discussion-relevance in the chain, and
+    audit-qc-paths still covering every directory the chain reads.
+
+    LEFT UNDONE. The 130 records with no canonical_examples are a separate batch
+    awaiting a size decision. #411 itself stays open: this gates recurrence in
+    TraitMech but does not improve the upstream scan.

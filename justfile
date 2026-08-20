@@ -180,18 +180,18 @@ gen-priority-dashboard *args:
 audit-canonical-examples *args:
     uv run python scripts/audit_canonical_examples.py {{args}}
 
-# Rank traits by causal-graph weakness, to pick the next deep-research target.
-# NOT in `qc` -- it is a triage aid, not a gate; there is no failing state.
+# Flag a discussion whose prompt is not about the trait it is filed under (#411).
 #
-# Excludes what cannot carry a mechanism graph, by schema field rather than by
-# name: term_kind OBJECT_PROPERTY (94 METPO relations seeded into data/traits)
-# and DATATYPE_PROPERTY (7), mapping_status DEPRECATED (20), and the `upper`
-# category (8 -- five of which DO have graphs, three thin enough to rank near
-# the top, and a thin graph on `quality` is not a research question). Collapses
-# binned families (ph_delta_*, temperature_range_*) so one mechanism does not
-# fill the list. Every exclusion is counted in the output.
-prioritize-research *args:
-    uv run python scripts/prioritize_graph_research.py {{args}}
+# The kg-microbe-kgscan pass filed ten gap-shaped sentences under traits they
+# were not about and nothing objected. The scan is upstream so its precision
+# cannot be fixed here; recurrence can be. Requires >= 3 content words shared
+# between the prompt and the trait's own vocabulary (label, definition, synonyms,
+# causal-graph node labels). The threshold is calibrated against both the ten
+# scraped sentences and the ten curated replacements -- off-topic scored 0-2,
+# on-topic 4-11 -- so 3 sits in the gap. A false positive means re-run that
+# calibration, not nudge the number.
+audit-discussion-relevance *args:
+    uv run python scripts/audit_discussion_relevance.py {{args}}
 
 # Check that every `discussions[].attaches_to` anchor resolves (#409).
 # `attaches_to` is free-form so the schema cannot check it, which made the
@@ -982,7 +982,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-discussion-anchors audit-discussion-relevance audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
