@@ -435,7 +435,7 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(3)</span></h2>
+        <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -457,44 +457,6 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
           
           
           <span class="meta">Thermoacidophilic archaeon whose optimal growth temperature is reported as 76 degrees C, the one explicitly stated optimum in this trait&#39;s research artifact; the multi-omics study contrasts that optimum against 66 degrees C cold stress.</span>
-        </li>
-        
-        <li>
-          <em>Pyrococcus furiosus</em>
-          
-          
-          
-          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2261"
-             rel="nofollow noreferrer"><code>NCBITaxon:2261</code></a>
-          
-          
-          
-          
-          
-          <a href="https://doi.org/10.1128/AEM.00559-14"
-             rel="nofollow noreferrer"><code>DOI:10.1128/AEM.00559-14</code></a>
-          
-          
-          <span class="meta">Hyperthermophilic archaeon cultivated at an optimal growth temperature of 90 degrees C in this compatible-solute study, with 98 degrees C imposed as supra-optimal heat stress (final OD600 falling from 0.88 to 0.32).</span>
-        </li>
-        
-        <li>
-          <em>Thermococcus kodakarensis</em>
-          
-          
-          
-          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=311400"
-             rel="nofollow noreferrer"><code>NCBITaxon:311400</code></a>
-          
-          
-          
-          
-          
-          <a href="https://doi.org/10.1128/JB.186.14.4829-4833.2004"
-             rel="nofollow noreferrer"><code>DOI:10.1128/JB.186.14.4829-4833.2004</code></a>
-          
-          
-          <span class="meta">Hyperthermophilic archaeon whose wild-type specific growth rate peaks at 85 degrees C (mu = 0.69 per hour) across a temperature series spanning 75-93 degrees C, a growth-rate-derived optimum well inside the thermophilic bin.</span>
         </li>
         
       </ul>
@@ -589,7 +551,7 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
         <li>
           <time>2026-08-20T08:00:00Z</time> ·
           <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
-          <p class="changes">Added three exemplar taxa whose optimal growth temperature is stated in this trait&#39;s own deep-research artifact and falls inside the &gt;40 C bin (Saccharolobus islandicus 76 C, Pyrococcus furiosus 90 C, Thermococcus kodakarensis 85 C). Taxon ids resolved and label-checked against the local NCBITaxon build. Deliberately excluded - Escherichia coli and Kluyveromyces marxianus, which the artifact names only as heat-stress/thermotolerance comparators and explicitly disqualifies (E. coli &#34;remains mesophilic&#34;; the CYR1 work concerns &#34;an engineered thermotolerance phenotype rather than proof that CYR1 establishes a natural &gt;40 C optimum&#34;); and Thermococcus barophilus, Thermus thermophilus and Sulfolobus acidocaldarius, which appear in the artifact with no cited optimum-temperature measurement.</p>
+          <p class="changes">Added one exemplar taxon, Saccharolobus islandicus, whose 76 C optimal growth temperature is the one optimum this trait&#39;s own deep-research artifact explicitly states, inside the &gt;40 C bin. Taxon id resolved and label-checked against the local NCBITaxon build. Deliberately excluded - Pyrococcus furiosus (its 90 C cultivation is the study&#39;s control condition against 98 C &#39;supra-optimal&#39; heat stress; the artifact never states its optimum) and Thermococcus kodakarensis (one wild-type growth-rate measurement at 85 C; the 75 and 93 C series endpoints are delta-rgy mutant data, so no optimum is established) -- both were in the first draft of this backfill and removed on review; Escherichia coli and Kluyveromyces marxianus, which the artifact names only as heat-stress/thermotolerance comparators and explicitly disqualifies (E. coli &#34;remains mesophilic&#34;; the CYR1 work concerns &#34;an engineered thermotolerance phenotype rather than proof that CYR1 establishes a natural &gt;40 C optimum&#34;); and Thermococcus barophilus, Thermus thermophilus and Sulfolobus acidocaldarius, which appear in the artifact with no cited optimum-temperature measurement.</p>
         </li>
         
       </ol>

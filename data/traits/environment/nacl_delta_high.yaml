@@ -21,6 +21,23 @@ evidence:
   snippet: cope with the high salt concentrations
   notes: Saline-Systems review supports combined osmolyte / salt-in flexibility as
     the basis of very wide salinity tolerance.
+canonical_examples:
+- taxon_id: NCBITaxon:75750
+  taxon_label: Aspergillus sydowii
+  reference: DOI:10.3389/fmicb.2022.840408
+  note: 'The artifact''s strongest illustrative phenotype for extreme euryhalinity:
+    grows from no added NaCl up to saturated (5.13 M) NaCl, noting growth at saturation
+    is weak. The cited multi-omics study establishes growth at 1 M and at saturated
+    NaCl; even that conservatively evidenced interval spans roughly 24 percentage
+    points w/v, far above the ~8% (w/v) bin threshold.'
+- taxon_id: NCBITaxon:245174
+  taxon_label: Wallemia ichthyophaga
+  reference: DOI:10.1128/aem.02702-13
+  note: Measured NaCl growth range of 10% to saturated (~32% w/v) with a 15-20% optimum,
+    a ~22% (w/v) breadth, from the osmoadaptation study that also quantified salinity-dependent
+    glycerol accumulation. The artifact flags the high lower bound as obligate halophily,
+    which its own boundary rules permit alongside this trait when the measured interval
+    is wide enough.
 causal_graphs:
 - graph_id: nacl_delta_high_extreme_euryhaline
   title: NaCl-delta-high extreme-euryhaline breadth
@@ -215,28 +232,11 @@ curation_history:
     local NCBITaxon build; references taken from this trait's own deep-research artifact.
     Deliberately excluded, per that artifact's own boundary rules -- Natranaerobius
     thermophilus and Euplaesiobystra salpumilio (breadth reported in total Na+ / PSU,
-    which the artifact says must not be converted to NaCl w/v); Debaryomyces hansenii
-    (upper tolerance only, no measured lower bound, and tolerance is not growth);
-    Halomonas elongata and Virgibacillus dokdonensis (assay salinities and genomic
-    osmoadaptation potential, not a reported growth interval); and Hortaea werneckii
-    and Aureobasidium pullulans (wide ranges quoted, but the artifact attributes them
-    only to "the same paper" and does not disambiguate which of its two co-cited sources
-    measured them).
+    where the artifact's boundary rules require "avoiding unjustified conversion to
+    NaCl w/v"); Debaryomyces hansenii (upper tolerance only, no measured lower bound,
+    and tolerance is not growth); Halomonas elongata and Virgibacillus dokdonensis
+    (assay salinities and genomic osmoadaptation potential, not a reported growth
+    interval); and Hortaea werneckii and Aureobasidium pullulans (wide ranges quoted,
+    but the artifact attributes them only to "the same paper" and does not disambiguate
+    which of its two co-cited sources measured them).
   llm_assisted: true
-canonical_examples:
-- taxon_id: NCBITaxon:75750
-  taxon_label: Aspergillus sydowii
-  reference: DOI:10.3389/fmicb.2022.840408
-  note: Grows from no added NaCl up to saturated 5.13 M NaCl (~30% w/v), a breadth
-    far above the ~8% (w/v) bin threshold; the multi-omics study compares growing
-    cultures at 1 M and at saturated 5.13 M NaCl, establishing growth at both ends
-    of the interval. This trait's research artifact names it the strongest illustrative
-    phenotype for extreme euryhalinity, noting growth at saturation is weak.
-- taxon_id: NCBITaxon:245174
-  taxon_label: Wallemia ichthyophaga
-  reference: DOI:10.1128/aem.02702-13
-  note: Measured NaCl growth range of 10% to saturated (~32% w/v) with a 15-20% optimum,
-    a ~22% (w/v) breadth, from the osmoadaptation study that also quantified salinity-dependent
-    glycerol accumulation. The artifact flags the high lower bound as obligate halophily,
-    which its own boundary rules permit alongside this trait when the measured interval
-    is wide enough.

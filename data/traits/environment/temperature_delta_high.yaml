@@ -21,6 +21,14 @@ evidence:
   snippet: resistant to irreversible inactivation at high temperatures
   notes: Thermostable-protein review supports robust thermostability as the basis
     of extending tolerance beyond standard mesophile ranges.
+canonical_examples:
+- taxon_id: NCBITaxon:1385984
+  taxon_label: Exiguobacterium chiriqhucha
+  reference: DOI:10.3389/fmicb.2018.03189
+  note: Eurythermal firmicute whose strain RW2 was grown across 4-50 degrees C on
+    M-medium, a 46 degrees C breadth and the broadest reported for the genus; membrane
+    phospholipid composition was measured at 4, 18, 30 and 50 degrees C, confirming
+    growth at both endpoints rather than mere survival.
 causal_graphs:
 - graph_id: temperature_delta_high_eurythermal
   title: Temperature-delta-high eurythermal breadth
@@ -262,17 +270,10 @@ curation_history:
     artifact. Deliberately excluded, all named in the same artifact but as mechanism
     or contrast cases rather than instances of the bin - Shewanella frigidimarina
     (4-30 C is a 26 C delta, which the artifact says "falls below the proposed >30
-    C threshold" and "should not be used as a positive trait anchor"); Bacillus subtilis
-    (source of the DesK/DesR/des cold-end module, no breadth measured); Escherichia
-    coli, Pseudomonas putida and Saccharomyces cerevisiae (heterologous CspL hosts
-    showing warm-end growth gains only, which the artifact warns "does not demonstrate
-    >30 C breadth"); Bacillus coagulans (CspL source strain, no breadth measured).
+    C threshold" and "should not be used as a positive trait anchor" without additional
+    endpoint data); Bacillus subtilis (source of the DesK/DesR/des cold-end module,
+    no breadth measured); Escherichia coli, Pseudomonas putida and Saccharomyces cerevisiae
+    (heterologous CspL hosts showing warm-end growth gains only, which the artifact
+    warns "does not demonstrate >30 C breadth"); Bacillus coagulans (CspL source strain,
+    no breadth measured).
   llm_assisted: true
-canonical_examples:
-- taxon_id: NCBITaxon:1385984
-  taxon_label: Exiguobacterium chiriqhucha
-  reference: DOI:10.3389/fmicb.2018.03189
-  note: Eurythermal firmicute whose strain RW2 was grown across 4-50 degrees C on
-    M-medium, a 46 degrees C breadth and the broadest reported for the genus; membrane
-    phospholipid composition was measured at 4, 18, 30 and 50 degrees C, confirming
-    growth at both endpoints rather than mere survival.

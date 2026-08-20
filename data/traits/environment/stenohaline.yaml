@@ -15,6 +15,15 @@ evidence:
   snippet: narrow range of salinity
   notes: Supports stenohaline microorganisms as organisms thriving within a narrow
     salinity range.
+canonical_examples:
+- taxon_id: NCBITaxon:1979153
+  taxon_label: Synechococcus sp. YX04-3
+  reference: DOI:10.1128/msystems.01106-22
+  note: Marine clade III cyanobacterium that grew at 32 ppt but could not survive
+    at 13 ppt, while the euryhaline strain HK05 grew at both; the only culture-based
+    narrow-salinity growth evidence in this trait's research artifact. Only two salinity
+    points were assayed and the artifact states the complete tolerated interval remains
+    unknown.
 causal_graphs:
 - graph_id: stenohaline_narrow_salinity_tolerance
   title: Stenohaline narrow-salinity tolerance mechanism
@@ -291,12 +300,3 @@ curation_history:
     MAGs of Wu et al. are unnamed and classified by a >=10-fold abundance proxy that
     the artifact states is not direct proof of narrow physiological tolerance.
   llm_assisted: true
-canonical_examples:
-- taxon_id: NCBITaxon:1979153
-  taxon_label: Synechococcus sp. YX04-3
-  reference: DOI:10.1128/msystems.01106-22
-  note: Marine clade III cyanobacterium that grew at 32 ppt but could not survive
-    at 13 ppt, while the euryhaline strain HK05 grew at both; the only culture-based
-    narrow-salinity growth evidence in this trait's research artifact. Only two salinity
-    points were assayed, so the width of the tolerated interval is bounded but not
-    fully measured.

@@ -18,9 +18,10 @@ events:
 - type: EDIT
   outcome: changed
   summary: 'First canonical_examples batch after the #446 canary: 11 records from the priority
-    queue attempted, 5 filled with 8 exemplar taxa sourced from each trait''s own research
+    queue attempted, 5 filled with 6 exemplar taxa sourced from each trait''s own research
     artifact and resolved against the local NCBITaxon build, 6 skipped because their artifacts
-    establish no organism as an instance of the trait.'
+    establish no organism as an instance of the trait. Two draft exemplars were removed in
+    adversarial review for asserting optima the artifact never states.'
   details: |-
     Batch 1 of the canonical_examples backfill, run as the #446 canary
     prescribed: exemplars come only from each trait's own deep-research
@@ -34,7 +35,7 @@ events:
     queue, top of the list first. Eleven records attempted, in parallel by one
     curation agent per record after a serial canary.
 
-    FILLED (5 records, 8 examples):
+    FILLED (5 records, 6 examples after review):
     - environment/stenohaline: Synechococcus sp. YX04-3 (NCBITaxon:1979153) --
       grew at 32 ppt, could not survive 13 ppt, vs euryhaline HK05 which grew
       at both. The note records that only two salinity points were assayed.
@@ -45,13 +46,19 @@ events:
     - environment/nacl_delta_high: Aspergillus sydowii (0 to saturated 5.13 M
       NaCl) and Wallemia ichthyophaga (10-32% w/v), both far above the ~8%
       w/v breadth threshold. Na+/PSU-measured organisms excluded because the
-      artifact forbids converting those units to NaCl w/v.
+      artifact's boundary rules require avoiding unjustified conversion of
+      those units to NaCl w/v.
     - environment/nacl_optimum: Wallemia ichthyophaga, kinetically determined
       15-20% NaCl optimum -- the artifact's own worked example separating
       optimum from range.
     - environment/temperature_optimum_high: Saccharolobus islandicus (76 C),
-      Pyrococcus furiosus (90 C), Thermococcus kodakarensis (85 C, mu=0.69/h
-      across a 75-93 C series), each with the optimum stated in the artifact.
+      the one optimum the artifact explicitly states. The first draft also
+      carried Pyrococcus furiosus (90 C) and Thermococcus kodakarensis (85 C);
+      adversarial review showed 90 C is the P. furiosus study's CONTROL
+      condition against 98 C "supra-optimal" heat stress, and the
+      T. kodakarensis 75-93 C series endpoints are delta-rgy mutant data with
+      only one wild-type point at 85 C -- neither is a stated optimum, so both
+      were removed before merge.
 
     SKIPPED (6 records), each because the trait's own artifact establishes no
     organism as an instance -- most say so explicitly:
@@ -79,8 +86,11 @@ events:
       (BacDive-style species descriptions), not these mechanism-oriented
       artifacts -- filed as a follow-up issue.
 
-    Verified after assembly: all 7 distinct taxon ids re-resolved against the
-    local build by the assembling session (labels match verbatim);
-    audit-canonical-examples reports 323 examples across 231 records, 0
-    errors, 1 pre-existing warning (heterocyst label drift, #445); pages
-    regenerated; full qc and test suite green.
+    Verified after assembly and review: all 5 remaining distinct taxon ids
+    re-resolved against the local build by the assembling session (labels
+    match verbatim); audit-canonical-examples reports 321 examples across 231
+    records, 0 errors, 1 pre-existing warning (heterocyst label drift, #445);
+    canonical_examples repositioned after `evidence` in all five records plus
+    the #446 canary, matching the 225-record corpus norm instead of the
+    canary's end-of-file placement; pages regenerated; full qc and test suite
+    green.
