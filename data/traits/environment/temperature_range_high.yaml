@@ -24,6 +24,23 @@ evidence:
   snippet: resistant to irreversible inactivation at high temperatures
   notes: Thermostable-protein review supports thermostability as the mechanism extending
     growth into thermophilic temperatures.
+canonical_examples:
+- taxon_id: NCBITaxon:2261
+  taxon_label: Pyrococcus furiosus
+  reference: DOI:10.1007/s00792-017-0929-z
+  note: Hyperthermophilic archaeon growing above 90 degrees C; the strongest taxon-specific
+    evidence in this trait's research artifact, where a reverse gyrase deletion abolishes
+    growth at 95-100 degrees C while lower temperatures stay permissive.
+- taxon_id: NCBITaxon:2285
+  taxon_label: Sulfolobus acidocaldarius
+  reference: DOI:10.1128/mbio.03593-22
+  note: Thermoacidophilic crenarchaeon used as the model for the heat-shock response
+    at the upper end of the growth range.
+- taxon_id: NCBITaxon:43080
+  taxon_label: Saccharolobus islandicus
+  reference: DOI:10.1128/mbio.02174-23
+  note: Hyperthermophile whose thermal-stress regulatory network is characterised
+    by transcriptomics and proteomics.
 causal_graphs:
 - graph_id: temperature_range_high_thermophile
   title: Temperature-range-high thermophile range
@@ -228,20 +245,3 @@ curation_history:
     (Escherichia coli, Pseudomonas putida) were deliberately NOT included -- they
     appear there as contrast cases for a >40 C range, not as exemplars of it.
   llm_assisted: true
-canonical_examples:
-- taxon_id: NCBITaxon:2261
-  taxon_label: Pyrococcus furiosus
-  reference: DOI:10.1007/s00792-017-0929-z
-  note: Hyperthermophilic archaeon growing above 90 degrees C; the strongest taxon-specific
-    evidence in this trait's research artifact, where a reverse gyrase deletion abolishes
-    growth at 95-100 degrees C while lower temperatures stay permissive.
-- taxon_id: NCBITaxon:2285
-  taxon_label: Sulfolobus acidocaldarius
-  reference: DOI:10.1128/mbio.03593-22
-  note: Thermoacidophilic crenarchaeon used as the model for the heat-shock response
-    at the upper end of the growth range.
-- taxon_id: NCBITaxon:43080
-  taxon_label: Saccharolobus islandicus
-  reference: DOI:10.1128/mbio.02174-23
-  note: Hyperthermophile whose thermal-stress regulatory network is characterised
-    by transcriptomics and proteomics.

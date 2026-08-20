@@ -414,6 +414,35 @@ Identifiers below are included only where grounding is sufficiently clear. Gene 
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Exiguobacterium chiriqhucha</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1385984"
+             rel="nofollow noreferrer"><code>NCBITaxon:1385984</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2018.03189"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2018.03189</code></a>
+          
+          
+          <span class="meta">Eurythermal firmicute whose strain RW2 was grown across 4-50 degrees C on M-medium, a 46 degrees C breadth and the broadest reported for the genus; membrane phospholipid composition was measured at 4, 18, 30 and 50 degrees C, confirming growth at both endpoints rather than mere survival.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -474,6 +503,12 @@ Identifiers below are included only where grounding is sufficiently clear. Gene 
           <time>2026-08-15T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Normalised causal-node type(s) so one node_id means one thing corpus-wide (issue 356): membrane_fluidity_homeostasis: STATE -&gt; BIOLOGICAL_PROCESS. The counterpart of the above, and the reason the rename was not needed: this id already exists for the process sense. Both occurrences describe &#39;Maintenance of membrane fluidity ...&#39;, and the schema&#39;s STATE definition excludes exactly this -- &#39;the state is the gradient / steady-value, NOT ITS ESTABLISHMENT&#39;. Maintenance is establishment. So the STATE-typed one (temperature_delta_high.yaml) is retyped to match the process it describes.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T08:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added one exemplar taxon, Exiguobacterium chiriqhucha (strain RW2), the only organism this trait&#39;s deep-research artifact establishes as an instance of the &gt;30 C breadth bin -- growth measured over 4-50 C, a 46 C delta. Taxon id resolved and label-checked against the local NCBITaxon build; reference taken from the artifact. Deliberately excluded, all named in the same artifact but as mechanism or contrast cases rather than instances of the bin - Shewanella frigidimarina (4-30 C is a 26 C delta, which the artifact says &#34;falls below the proposed &gt;30 C threshold&#34; and &#34;should not be used as a positive trait anchor&#34; without additional endpoint data); Bacillus subtilis (source of the DesK/DesR/des cold-end module, no breadth measured); Escherichia coli, Pseudomonas putida and Saccharomyces cerevisiae (heterologous CspL hosts showing warm-end growth gains only, which the artifact warns &#34;does not demonstrate &gt;30 C breadth&#34;); Bacillus coagulans (CspL source strain, no breadth measured).</p>
         </li>
         
       </ol>
@@ -856,7 +891,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-15 02:00 UTC from
+      Record as of 2026-08-20 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

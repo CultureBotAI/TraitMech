@@ -1,0 +1,96 @@
+history_version: 1
+target:
+  kind: other
+  path: data/traits
+  slug: canonical-examples-batch1
+session:
+  id: 2026-08-20T074839Z-claude-code-6fb2f5
+  timestamp: '2026-08-20T07:48:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'First canonical_examples batch after the #446 canary: 11 records from the priority
+    queue attempted, 5 filled with 6 exemplar taxa sourced from each trait''s own research
+    artifact and resolved against the local NCBITaxon build, 6 skipped because their artifacts
+    establish no organism as an instance of the trait. Two draft exemplars were removed in
+    adversarial review for asserting optima the artifact never states.'
+  details: |-
+    Batch 1 of the canonical_examples backfill, run as the #446 canary
+    prescribed: exemplars come only from each trait's own deep-research
+    artifact, every taxon id is resolved and label-checked against the local
+    OAK NCBITaxon build (labels used verbatim), contrast cases are excluded by
+    name with the artifact's own disqualifying language recorded in each
+    record's curation_history entry, and a record whose artifact establishes no
+    instance is SKIPPED rather than approximately filled.
+
+    Targets came from the #449 priority dashboard's ADD_CANONICAL_EXAMPLES
+    queue, top of the list first. Eleven records attempted, in parallel by one
+    curation agent per record after a serial canary.
+
+    FILLED (5 records, 6 examples after review):
+    - environment/stenohaline: Synechococcus sp. YX04-3 (NCBITaxon:1979153) --
+      grew at 32 ppt, could not survive 13 ppt, vs euryhaline HK05 which grew
+      at both. The note records that only two salinity points were assayed.
+    - environment/temperature_delta_high: Exiguobacterium chiriqhucha
+      (NCBITaxon:1385984) -- strain RW2 grown across 4-50 C, a 46 C breadth,
+      inside the >30 C bin. Shewanella frigidimarina excluded on the
+      artifact's own words (26 C "falls below the proposed >30 C threshold").
+    - environment/nacl_delta_high: Aspergillus sydowii (0 to saturated 5.13 M
+      NaCl) and Wallemia ichthyophaga (10-32% w/v), both far above the ~8%
+      w/v breadth threshold. Na+/PSU-measured organisms excluded because the
+      artifact's boundary rules require avoiding unjustified conversion of
+      those units to NaCl w/v.
+    - environment/nacl_optimum: Wallemia ichthyophaga, kinetically determined
+      15-20% NaCl optimum -- the artifact's own worked example separating
+      optimum from range.
+    - environment/temperature_optimum_high: Saccharolobus islandicus (76 C),
+      the one optimum the artifact explicitly states. The first draft also
+      carried Pyrococcus furiosus (90 C) and Thermococcus kodakarensis (85 C);
+      adversarial review showed 90 C is the P. furiosus study's CONTROL
+      condition against 98 C "supra-optimal" heat stress, and the
+      T. kodakarensis 75-93 C series endpoints are delta-rgy mutant data with
+      only one wild-type point at 85 C -- neither is a stated optimum, so both
+      were removed before merge.
+
+    SKIPPED (6 records), each because the trait's own artifact establishes no
+    organism as an instance -- most say so explicitly:
+    - environment/temperature_delta_very_low: the artifact's named
+      psychrophiles are membrane-adaptation exemplars "not established
+      instances of METPO:1000483", and its one profiled strain (E. chiriqhucha
+      RW2, 4-50 C) is negative evidence -- the same measurement that makes RW2
+      the temperature_delta_high exemplar above. Cross-record consistency,
+      not coincidence.
+    - environment/ph_delta_mid2: "no source ... directly showing that
+      perturbing one node changes the measured breadth by 3-4 units".
+    - environment/ph_delta_mid3: "No source reviewed directly demonstrated
+      that one perturbation creates or abolishes the specific 4-5-unit growth
+      breadth".
+    - environment/ph_delta_very_low: the artifact carries an explicit
+      curation-conclusion row that none of its mechanisms "directly
+      establishes" the <=1-unit breadth.
+    - environment/ph_range_mid2: the pH bins partition contiguously, so
+      membership needs a measured range INSIDE 7-8; the closest candidate
+      (V. cholerae) straddles three bins.
+    - morphology/cell_length_large: every organism appears as a perturbation
+      host (elongation phenotypes) rather than with an unperturbed measured
+      length in the bin; the one naturally filamentous subject is never named
+      in the artifact. Filling cell-size bins needs a taxon-oriented source
+      (BacDive-style species descriptions), not these mechanism-oriented
+      artifacts -- filed as a follow-up issue.
+
+    Verified after assembly and review: all 5 remaining distinct taxon ids
+    re-resolved against the local build by the assembling session (labels
+    match verbatim); audit-canonical-examples reports 321 examples across 231
+    records, 0 errors, 1 pre-existing warning (heterocyst label drift, #445);
+    canonical_examples repositioned after `evidence` in all five records plus
+    the #446 canary, matching the 225-record corpus norm instead of the
+    canary's end-of-file placement; pages regenerated; full qc and test suite
+    green.

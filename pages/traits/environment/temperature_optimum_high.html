@@ -433,6 +433,35 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Saccharolobus islandicus</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43080"
+             rel="nofollow noreferrer"><code>NCBITaxon:43080</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2023.1219779"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2023.1219779</code></a>
+          
+          
+          <span class="meta">Thermoacidophilic archaeon whose optimal growth temperature is reported as 76 degrees C, the one explicitly stated optimum in this trait&#39;s research artifact; the multi-omics study contrasts that optimum against 66 degrees C cold stress.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -517,6 +546,12 @@ Use NCBITaxon identifiers only after strain/species verification in the source. 
           <time>2026-08-06T06:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses under the single label `reduces` - genuine electron donation, and a lessens/decreases sense - and METPO:2007802 is defined as donating electrons to the object and lowering its oxidation state, which this edge does not assert. The two senses could not be separated mechanically because the label was identical, so they migrated together in issue 329 and were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment of the kind issue 301 removed.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T08:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added one exemplar taxon, Saccharolobus islandicus, whose 76 C optimal growth temperature is the one optimum this trait&#39;s own deep-research artifact explicitly states, inside the &gt;40 C bin. Taxon id resolved and label-checked against the local NCBITaxon build. Deliberately excluded - Pyrococcus furiosus (its 90 C cultivation is the study&#39;s control condition against 98 C &#39;supra-optimal&#39; heat stress; the artifact never states its optimum) and Thermococcus kodakarensis (one wild-type growth-rate measurement at 85 C; the 75 and 93 C series endpoints are delta-rgy mutant data, so no optimum is established) -- both were in the first draft of this backfill and removed on review; Escherichia coli and Kluyveromyces marxianus, which the artifact names only as heat-stress/thermotolerance comparators and explicitly disqualifies (E. coli &#34;remains mesophilic&#34;; the CYR1 work concerns &#34;an engineered thermotolerance phenotype rather than proof that CYR1 establishes a natural &gt;40 C optimum&#34;); and Thermococcus barophilus, Thermus thermophilus and Sulfolobus acidocaldarius, which appear in the artifact with no cited optimum-temperature measurement.</p>
         </li>
         
       </ol>
@@ -899,7 +934,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 06:00 UTC from
+      Record as of 2026-08-20 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

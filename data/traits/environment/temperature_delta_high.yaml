@@ -21,6 +21,14 @@ evidence:
   snippet: resistant to irreversible inactivation at high temperatures
   notes: Thermostable-protein review supports robust thermostability as the basis
     of extending tolerance beyond standard mesophile ranges.
+canonical_examples:
+- taxon_id: NCBITaxon:1385984
+  taxon_label: Exiguobacterium chiriqhucha
+  reference: DOI:10.3389/fmicb.2018.03189
+  note: Eurythermal firmicute whose strain RW2 was grown across 4-50 degrees C on
+    M-medium, a 46 degrees C breadth and the broadest reported for the genus; membrane
+    phospholipid composition was measured at 4, 18, 30 and 50 degrees C, confirming
+    growth at both endpoints rather than mere survival.
 causal_graphs:
 - graph_id: temperature_delta_high_eurythermal
   title: Temperature-delta-high eurythermal breadth
@@ -251,4 +259,21 @@ curation_history:
     is the gradient / steady-value, NOT ITS ESTABLISHMENT''. Maintenance is establishment.
     So the STATE-typed one (temperature_delta_high.yaml) is retyped to match the process
     it describes.'
+  llm_assisted: true
+- timestamp: '2026-08-20T08:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added one exemplar taxon, Exiguobacterium chiriqhucha (strain RW2), the
+    only organism this trait's deep-research artifact establishes as an instance of
+    the >30 C breadth bin -- growth measured over 4-50 C, a 46 C delta. Taxon id resolved
+    and label-checked against the local NCBITaxon build; reference taken from the
+    artifact. Deliberately excluded, all named in the same artifact but as mechanism
+    or contrast cases rather than instances of the bin - Shewanella frigidimarina
+    (4-30 C is a 26 C delta, which the artifact says "falls below the proposed >30
+    C threshold" and "should not be used as a positive trait anchor" without additional
+    endpoint data); Bacillus subtilis (source of the DesK/DesR/des cold-end module,
+    no breadth measured); Escherichia coli, Pseudomonas putida and Saccharomyces cerevisiae
+    (heterologous CspL hosts showing warm-end growth gains only, which the artifact
+    warns "does not demonstrate >30 C breadth"); Bacillus coagulans (CspL source strain,
+    no breadth measured).
   llm_assisted: true

@@ -24,6 +24,13 @@ evidence:
   snippet: resistant to irreversible inactivation at high temperatures
   notes: Thermostable-protein review supports thermostable proteins as the mechanism
     enabling thermophile optima.
+canonical_examples:
+- taxon_id: NCBITaxon:43080
+  taxon_label: Saccharolobus islandicus
+  reference: DOI:10.3389/fmicb.2023.1219779
+  note: Thermoacidophilic archaeon whose optimal growth temperature is reported as
+    76 degrees C, the one explicitly stated optimum in this trait's research artifact;
+    the multi-omics study contrasts that optimum against 66 degrees C cold stress.
 causal_graphs:
 - graph_id: temperature_optimum_high_thermophile_setpoint
   title: Temperature-optimum-high thermophile setpoint
@@ -294,4 +301,23 @@ curation_history:
     so they migrated together in issue 329 and were split here by reading each edge.
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
+  llm_assisted: true
+- timestamp: '2026-08-20T08:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added one exemplar taxon, Saccharolobus islandicus, whose 76 C optimal
+    growth temperature is the one optimum this trait's own deep-research artifact
+    explicitly states, inside the >40 C bin. Taxon id resolved and label-checked against
+    the local NCBITaxon build. Deliberately excluded - Pyrococcus furiosus (its 90
+    C cultivation is the study's control condition against 98 C 'supra-optimal' heat
+    stress; the artifact never states its optimum) and Thermococcus kodakarensis (one
+    wild-type growth-rate measurement at 85 C; the 75 and 93 C series endpoints are
+    delta-rgy mutant data, so no optimum is established) -- both were in the first
+    draft of this backfill and removed on review; Escherichia coli and Kluyveromyces
+    marxianus, which the artifact names only as heat-stress/thermotolerance comparators
+    and explicitly disqualifies (E. coli "remains mesophilic"; the CYR1 work concerns
+    "an engineered thermotolerance phenotype rather than proof that CYR1 establishes
+    a natural >40 C optimum"); and Thermococcus barophilus, Thermus thermophilus and
+    Sulfolobus acidocaldarius, which appear in the artifact with no cited optimum-temperature
+    measurement.
   llm_assisted: true

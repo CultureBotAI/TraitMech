@@ -19,6 +19,15 @@ evidence:
   snippet: ways they cope with the high salt concentrations
   notes: Saline-Systems review supports osmotic balance at the optimal NaCl as the
     mechanistic basis of the NaCl-optimum phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:245174
+  taxon_label: Wallemia ichthyophaga
+  reference: DOI:10.1128/aem.02702-13
+  note: Extremely halophilic fungus whose NaCl optimum was determined kinetically,
+    from exponential-phase doubling times across a salinity series, giving an optimum
+    of 15-20 percent NaCl. The artifact uses it as the worked example separating optimum
+    from range, because the same organism still grows from 10 percent to saturated
+    (32 percent) NaCl.
 causal_graphs:
 - graph_id: nacl_optimum_balanced_osmoadaptation
   title: NaCl-optimum balanced osmoadaptation
@@ -304,4 +313,21 @@ curation_history:
     and the wording varies by record. There is no step list to enumerate, which is
     exactly the distinction this rule draws. Was 7 BIOLOGICAL_PROCESS to 1 before
     this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-20T08:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: 'Added one exemplar taxon, the only organism in this trait''s deep-research
+    artifact for which that artifact cites a measured NaCl growth optimum. Taxon id
+    resolved and label-checked against the local NCBITaxon build. Three sets of organisms
+    named in the same artifact were deliberately NOT included, each because the artifact
+    itself says the evidence stops short of a NaCl optimum: Halomonas elongata (the
+    engineered proline strains shift an IC50, and the artifact warns "an IC50 or improved
+    tolerance is not automatically equivalent to a rigorously re-estimated NaCl optimum");
+    Natranaerobius thermophilus (its reported 3.3-3.9 M optimum is total Na+ at pH
+    9.5, and the artifact warns "Do not merge NaCl, Na+, total salts, conductivity,
+    osmolarity, and water activity"); and the Dead Sea spring MAG taxa Prosthecochloris,
+    Flexistipes, Izemoplasma, Halomonas and Halanaerobiales (the artifact notes "MAG
+    content predicts potential; it does not establish expression, flux, or the growth
+    optimum of each organism").'
   llm_assisted: true

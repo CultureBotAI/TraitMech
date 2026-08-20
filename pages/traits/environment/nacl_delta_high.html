@@ -397,6 +397,54 @@ The latest strong mechanistic study is Xing et al. (published 5 April 2024). *Na
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Aspergillus sydowii</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=75750"
+             rel="nofollow noreferrer"><code>NCBITaxon:75750</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2022.840408"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2022.840408</code></a>
+          
+          
+          <span class="meta">The artifact&#39;s strongest illustrative phenotype for extreme euryhalinity: grows from no added NaCl up to saturated (5.13 M) NaCl, noting growth at saturation is weak. The cited multi-omics study establishes growth at 1 M and at saturated NaCl; even that conservatively evidenced interval spans roughly 24 percentage points w/v, far above the ~8% (w/v) bin threshold.</span>
+        </li>
+        
+        <li>
+          <em>Wallemia ichthyophaga</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=245174"
+             rel="nofollow noreferrer"><code>NCBITaxon:245174</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/aem.02702-13"
+             rel="nofollow noreferrer"><code>DOI:10.1128/aem.02702-13</code></a>
+          
+          
+          <span class="meta">Measured NaCl growth range of 10% to saturated (~32% w/v) with a 15-20% optimum, a ~22% (w/v) breadth, from the osmoadaptation study that also quantified salinity-dependent glycerol accumulation. The artifact flags the high lower bound as obligate halophily, which its own boundary rules permit alongside this trait when the measured interval is wide enough.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -439,6 +487,12 @@ The latest strong mechanistic study is Xing et al. (published 5 April 2024). *Na
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T08:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added two exemplar taxa whose measured NaCl growth intervals exceed the ~8% (w/v) breadth threshold. Taxon ids resolved and label-checked against the local NCBITaxon build; references taken from this trait&#39;s own deep-research artifact. Deliberately excluded, per that artifact&#39;s own boundary rules -- Natranaerobius thermophilus and Euplaesiobystra salpumilio (breadth reported in total Na+ / PSU, where the artifact&#39;s boundary rules require &#34;avoiding unjustified conversion to NaCl w/v&#34;); Debaryomyces hansenii (upper tolerance only, no measured lower bound, and tolerance is not growth); Halomonas elongata and Virgibacillus dokdonensis (assay salinities and genomic osmoadaptation potential, not a reported growth interval); and Hortaea werneckii and Aureobasidium pullulans (wide ranges quoted, but the artifact attributes them only to &#34;the same paper&#34; and does not disambiguate which of its two co-cited sources measured them).</p>
         </li>
         
       </ol>
@@ -821,7 +875,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 01:00 UTC from
+      Record as of 2026-08-20 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
