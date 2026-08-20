@@ -73,7 +73,7 @@ def main(argv: list[str] | None = None) -> int:
     if proc.returncode != 0:
         print("=== unapplied groundings ===")
         print("  ground_causal_nodes.py failed; cannot determine the backlog:")
-        print("\n".join(f"    {l}" for l in output.splitlines()[-8:]))
+        print("\n".join(f"    {ln}" for ln in output.splitlines()[-8:]))
         return 1
 
     pending = None
@@ -97,8 +97,8 @@ def main(argv: list[str] | None = None) -> int:
         print("  mappings and trait records agree")
         return 0
 
-    detail = [l for l in output.splitlines()
-              if l.strip().startswith("METPO:") or l.strip().startswith("GO:")]
+    detail = [ln for ln in output.splitlines()
+              if ln.strip().startswith("METPO:") or ln.strip().startswith("GO:")]
     for d in detail[:10]:
         print(f"   {d.strip()}")
     print(f"\n{pending} node(s) have a curated entry in mappings/node_grounding.tsv "
