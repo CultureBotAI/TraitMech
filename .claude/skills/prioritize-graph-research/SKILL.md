@@ -1,6 +1,6 @@
 ---
 name: prioritize-graph-research
-description: Pick which TraitMech trait to deep-research next, by ranking causal-graph weakness and reporting whether research already exists. Excludes records that cannot carry a mechanism graph (METPO object properties, datatype properties, deprecated observation classes, upper ontology) and collapses binned families so one mechanism does not fill the queue. Use when asked to prioritize a weak causal graph for research, choose a canary trait for a new research provider, or decide what to research next — BEFORE running deep-research-trait or research-causal-graphs, which spend money.
+description: Pick which TraitMech trait to deep-research next, by ranking causal-graph weakness and reporting whether research already exists. Excludes records that cannot carry a mechanism graph (METPO object properties, datatype properties, deprecated observation classes, upper ontology), reports binned-series membership per row (bins share only 5% of their content, so they rank separately), and refuses to rank on a stale completeness audit. Use when asked to prioritize a weak causal graph for research, choose a canary trait for a new research provider, or decide what to research next — BEFORE running deep-research-trait or research-causal-graphs, which spend money.
 ---
 
 # Choosing the next deep-research target
@@ -20,11 +20,17 @@ just prioritize-research --limit 0               # everything
 just prioritize-research --unresearched-only     # traits with no artifact at all
 just prioritize-research --json                  # for scripting
 just prioritize-research --include-nonmechanism  # show what was set aside
+just prioritize-research --collapse-families     # one row per binned series
 ```
 
-**Use `--sort missing` when the question is what to research.** The default sort
-answers "which graph is worst", which is a different question and usually
-resolves to curation work — see below.
+**Use `--sort missing` when the question is what to research** — but know that it
+ranks purely on the completeness audit, and when most of that audit's rows no
+longer match the live corpus it EXITS WITH AN ERROR rather than ranking on stale
+data (#443). That is its current state: regenerate
+`reports/graph_completeness_audit.tsv` to restore it, or pass
+`--trust-stale-completeness` to override knowingly. The default sort answers
+"which graph is worst", which is a different question and usually resolves to
+curation work — see below.
 
 ## Read the answer before you trust the ranking
 
@@ -42,8 +48,10 @@ usually should not produce a new research call at all. It should produce one of:
 
 1. **Apply the research that exists.** `reports/graph_enrichment_backlog.md`
    holds 351 traits with named missing modules and DOI-backed candidate edges,
-   already paid for. `biofilm_formation` has 2 edges and 6 proposed ones sitting
-   in that file. This is almost always the right answer.
+   already paid for — but it is a point-in-time sweep and **most of it has
+   already been applied**: 347 of its 353 rows no longer match the live corpus,
+   and all six edges it proposes for `biofilm_formation` are already present
+   (#443). Check the live graph before treating a backlog row as open work.
 2. **A deliberate second pass with a different provider**, where the point is
    comparing providers rather than filling a gap. Use the ranking to pick the
    canary.
@@ -64,8 +72,12 @@ score = missing_modules*2 + orphan_nodes + (components-1)*2 + max(0, 8-edges)
 `missing_modules` comes from the Edison completeness audit — mechanism modules
 the literature has and the graph does not — so it is the only term measuring
 what is actually *absent* rather than what the graph's shape implies. Hence the
-double weight. The `8-edges` floor exists because edges-per-node cannot see
-thinness: 1 edge over 2 nodes scores 0.5, identical to 20 over 40.
+double weight. It is also the only input with **no freshness guarantee** (#443):
+each report row's `graph_edges` is checked against the live count, and a row
+that no longer matches is marked stale — its `missing_modules` prints with a `*`
+and is **excluded from the score**. The `8-edges` floor exists because
+edges-per-node cannot see thinness: 1 edge over 2 nodes scores 0.5, identical
+to 20 over 40.
 
 It is a triage heuristic for ordering a queue, not a quality measurement.
 Disagree with it on the printed evidence, not on faith — the reasons are in the
@@ -83,17 +95,19 @@ distinction that actually decides whether to spend money:
 
 Worked example, both real:
 
-- `metabolism/biopolymer_degradation` scores **28** on six components. Its edges
+- `metabolism/biopolymer_degradation` sits on **six** components. Its edges
   name `endoglucanase`, `endochitinase` and `lignin_oxidative_enzymes` without
   connecting any of them to the trait or to `assimilable_units`. Nothing in the
   literature is missing — the *edges* are. Researching this buys a report that
   tells you what you already have.
-- `ecology/nitrogen_fixing_symbiosis` scores **22** with **one** component, no
-  orphans, and the highest missing-module count in the corpus (**11**). The graph
-  is sound; the content is absent. Only literature supplies it.
+- `ecology/nitrogen_fixing_symbiosis` has **one** component, no orphans, and the
+  highest missing-module count in the corpus (**11**) — though that count is
+  from a stale audit row (`11*` in the output), so treat it as a lead to verify
+  against the live graph, not a fact.
 
-So the lower-scoring trait is the better research target. Sorting by score alone
-would have picked the wrong one.
+So the higher-scoring trait is usually the *curation* target and the coherent,
+content-starved one the *research* target. Sorting by score alone picks the
+wrong one.
 
 ## Three traps it already handles, and why they are not obvious
 
@@ -122,12 +136,16 @@ to rank near the top. A thin graph on `quality` is not a research question; it i
 a sign the graph should probably not exist. The whole category is set aside, so
 the exclusion is by category and not by emptiness.
 
-**3. Binned siblings crowd the list.** `ph_delta_mid2`, `ph_delta_mid3`,
-`temperature_range_mid4` are METPO binning classes over one mechanism. Ranked
-individually they fill the top with the same question at different cut points.
-They collapse into one family row marked `[+N sibling bins]`, carrying the
-family's worst score — a family is *more* efficient per research call, but only
-if you run it once. `--no-collapse-families` if you need the bins separately.
+**3. Binned siblings look like one research question and are not.**
+`ph_delta_mid2`, `ph_delta_mid3`, `temperature_range_mid4` are METPO binning
+classes, and this script used to collapse each family into one row on the
+assumption one research pass answers the whole family. Measured, that is false
+(#447): sibling bins share a mean **5%** of their node labels (max 20%), and 18
+of 3256 child edges are byte-identical to a parent edge. Each bin is its own
+work item, so bins rank separately and rows carry `[series ph_delta, 6 bins]`
+as information. `--collapse-families` restores the merged view when you want
+family granularity; `scripts/trait_priority.py` holds the retuned rule (lump
+only above measured overlap, which nothing reaches).
 
 Exclusions are always counted and broken down in the output. If you report a
 ranking, report that line too: without it the table reads as "these are the
@@ -175,6 +193,7 @@ or the canary tells you nothing about the batch.
 - `research-causal-graphs` — runs the research (Edison/falcon), batch + resume
 - `deep-research-trait` — single-trait research with a full provenance bundle
 - `reports/graph_enrichment_backlog.md` — 351 traits, already-paid-for missing
-  modules with DOIs. Check here before commissioning anything.
+  modules with DOIs. Largely applied already (#443); verify against the live
+  graph before treating a row as open work.
 - `audit-graphs` / `reports/causal_graph_connectivity.tsv` — the fragmentation
   and orphan-node numbers this ranking consumes

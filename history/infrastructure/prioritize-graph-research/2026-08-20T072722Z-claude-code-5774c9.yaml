@@ -1,0 +1,62 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/prioritize_graph_research.py
+  slug: prioritize-graph-research
+session:
+  id: 2026-08-20T072722Z-claude-code-5774c9
+  timestamp: '2026-08-20T07:27:22Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/447
+  - https://github.com/CultureBotAI/TraitMech/issues/443
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Stop collapsing sibling bins by default (measured overlap is 5 percent, so each
+    bin is its own work item) and stop scoring on stale completeness-audit rows: a row whose
+    graph_edges no longer matches the live corpus is reported but excluded from the score,
+    and --sort missing refuses to run when most rows are stale.'
+  details: |-
+    Two defects in the same ranking, filed as #447 and #443, fixed together
+    because both made the queue misrepresent the work.
+
+    #447 -- SIBLING BINS NO LONGER MERGE. The script collapsed binned families
+    (temperature_range_*, ph_delta_*, nacl_*, cell_length_*) into one row on
+    the docstring's claim that "one research pass answers the whole family".
+    Measured on the live corpus that is false: mean node-label Jaccard between
+    sibling bins is 5% (max 20%), child-vs-parent ~8%, and 18 of 3256 child
+    edges are byte-identical to a parent edge -- the numbers behind the
+    deliberately inverted lumping rule in scripts/trait_priority.py (#448/#449).
+    Collapsing hid 44 records that each need their own work. Now: nothing
+    merges by default; series membership prints as information ([series
+    ph_delta, 6 bins]); --collapse-families is the explicit opt-in that
+    restores the old family-granularity view (replacing --no-collapse-families,
+    whose default it inverts). On the corpus: 348 ranked rows, 55 of them in 11
+    binned series.
+
+    #443 -- STALE COMPLETENESS ROWS NO LONGER SCORE. missing_modules comes from
+    reports/graph_completeness_audit.tsv, a point-in-time 353-agent sweep with
+    no freshness guarantee, weighted DOUBLE in the composite score and the sole
+    basis of --sort missing. The corpus has grown past it: 345 of 348 matched
+    rows record a graph_edges that no longer equals the live edge count. The
+    script now compares each row's graph_edges against the live corpus; a
+    mismatched row's missing_modules is still printed (marked *) but excluded
+    from the score, a footer WARNING counts the stale rows, and --sort missing
+    exits with an error when more than half the matched rows are stale --
+    regenerate the audit or pass --trust-stale-completeness to rank on it
+    knowingly. This is fix 1 plus the honest half of fix 2 from #443; gating
+    the report under audit-derived-reports remains open there.
+
+    Docstring, .claude/skills/prioritize-graph-research/SKILL.md (whose prose
+    quoted the old collapse behaviour, the unconditional double weight, and
+    stale worked-example scores) and tests updated together: 26 tests in
+    tests/test_prioritize_graph_research.py including new fixture tests for
+    fresh-vs-stale rows and a corpus test pinning that the stale fraction
+    currently exceeds the guard threshold. Full suite 681 passed; lint and qc
+    green.

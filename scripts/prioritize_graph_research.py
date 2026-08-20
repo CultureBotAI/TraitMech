@@ -24,13 +24,20 @@ THREE WAYS A NAIVE RANKING GETS THIS WRONG, all measured rather than assumed.
    not exist. The whole `upper` category is set aside for that reason, which is
    why the exclusion is by category and not by "has no graph".
 
-3. BINNED SIBLINGS CROWD THE LIST. `ph_delta_mid2`, `ph_delta_mid3`,
-   `temperature_range_mid4`, `nacl_range_low` are METPO binning classes over one
-   underlying mechanism. Ranked individually they fill the top of the list with
-   the same research question at different cut points. They collapse into one
-   family row carrying the family's worst score, because one research pass
-   answers the whole family -- which makes a family MORE efficient per call, not
-   less, but only if you run it once.
+3. BINNED SIBLINGS LOOK LIKE ONE QUESTION AND ARE NOT. `ph_delta_mid2`,
+   `ph_delta_mid3`, `temperature_range_mid4`, `nacl_range_low` are METPO binning
+   classes, and this script used to collapse each family into one row on the
+   assumption that one research pass answers the whole family. Measured on the
+   live corpus, that assumption is false (#447): mean node-label Jaccard between
+   sibling bins is 5% (max 20%), child-vs-parent ~8%, and 18 of 3256 child edges
+   are byte-identical to a parent edge. `temperature_range_high` and
+   `temperature_range_mid4` share almost no mechanism content, so collapsing hid
+   44 records that each need their own work. Series membership is therefore
+   reported as INFORMATION (`[series ph_delta, 7 bins]`) and nothing merges by
+   default; `--collapse-families` restores the old behaviour for reading the
+   queue at family granularity. `scripts/trait_priority.py` (#448) carries the
+   measured-overlap version of this rule: lump only above a configured overlap
+   threshold, which nothing in the corpus reaches.
 
 Exclusions are always counted and broken down in the output, never silent.
 `--include-nonmechanism` shows them.
@@ -48,7 +55,17 @@ WEAKNESS SCORE, and why each term is in it:
                         the literature has and the graph does not. The only
                         term that reflects what is actually absent rather than
                         what the shape of the graph implies, so it is weighted
-                        double.
+                        double. It is also the only input with NO FRESHNESS
+                        GUARANTEE (#443): the audit is a point-in-time sweep,
+                        the corpus keeps growing, and a verdict written against
+                        a 2-edge graph says nothing about the 17-edge graph now
+                        on disk. So each report row's `graph_edges` is compared
+                        against the live count; a row that no longer matches is
+                        marked stale, its missing_modules is REPORTED but
+                        EXCLUDED from the score, and when most rows are stale
+                        `--sort missing` refuses to run rather than rank on a
+                        report describing a corpus that no longer exists
+                        (override: --trust-stale-completeness).
   orphan_nodes          Nodes in no edge at all -- asserted and then unused.
   (components - 1) * 2  A graph in pieces cannot answer a question that crosses
                         the pieces; a trait whose own trait node is unreachable
@@ -67,19 +84,22 @@ separate them pull in opposite directions:
 
   many components, few missing modules -> a CONNECTIVE gap. The graph has the
       right pieces and never wired them together. `biopolymer_degradation`
-      scores 28 on six components, but its edges name endoglucanase,
-      endochitinase and lignin oxidative enzymes without connecting any of them
-      to the trait or to `assimilable_units`. Nothing in the literature is
-      missing; the edges are. This is curation, not research.
+      sits on six components, but its edges name endoglucanase, endochitinase
+      and lignin oxidative enzymes without connecting any of them to the trait
+      or to `assimilable_units`. Nothing in the literature is missing; the
+      edges are. This is curation, not research.
 
   few components, many missing modules -> a CONTENT gap. The graph is coherent
-      and incomplete. `nitrogen_fixing_symbiosis` scores 22 with ONE component
-      and no orphans, on the highest missing-module count in the corpus (11).
-      Only literature can supply what is absent.
+      and incomplete. `nitrogen_fixing_symbiosis` has ONE component, no
+      orphans, and the highest missing-module count in the corpus (11) -- though
+      that count comes from a stale audit row, so today it is a lead to verify
+      against the live graph, not a fact (#443).
 
 So `--sort missing` exists, and it is the right sort when the question is "what
-should we RESEARCH". The default composite sort answers "which graph is worst",
-which is a different question and usually resolves to curation work.
+should we RESEARCH" -- provided the completeness audit still describes the
+corpus. When most of its rows are stale the sort refuses to run instead of
+ranking on it silently (#443). The default composite sort answers "which graph
+is worst", which is a different question and usually resolves to curation work.
 """
 
 from __future__ import annotations
@@ -144,10 +164,11 @@ def non_mechanism_reason(category: str, doc: dict) -> str | None:
     return None
 
 
-# Binned/graded families: everything after the stem is a bin label, so one
-# research pass covers the family. Kept as explicit patterns rather than a
-# generic "split on the last underscore", which would also collapse unrelated
-# traits that merely share a prefix.
+# Binned/graded families: everything after the stem is a bin label. Membership
+# is reported per row (and drives --collapse-families); it does NOT imply shared
+# mechanism content -- measured sibling overlap is 5% (#447). Kept as explicit
+# patterns rather than a generic "split on the last underscore", which would
+# also group unrelated traits that merely share a prefix.
 FAMILY_PATTERNS = (
     re.compile(r"^(temperature_(?:range|optimum|delta))_.+$"),
     re.compile(r"^(ph_(?:range|optimum|delta))_.+$"),
@@ -214,7 +235,7 @@ def rank(
     completeness: Path = DEFAULT_COMPLETENESS,
     research_dir: Path = DEFAULT_RESEARCH,
     include_nonmechanism: bool = False,
-    collapse_families: bool = True,
+    collapse_families: bool = False,
 ) -> tuple[list[dict], dict[str, int]]:
     """Return (ranked rows, counts of what was set aside and why)."""
     conn = _read_tsv(Path(connectivity), "file")
@@ -226,7 +247,10 @@ def rank(
         "non_mechanism": 0,
         "no_graph_mechanism": 0,
         "families_collapsed": 0,
+        "in_series": 0,
         "no_connectivity_row": 0,
+        "completeness_rows_matched": 0,
+        "completeness_rows_stale": 0,
     }
 
     for rel, doc in _as_corpus(source):
@@ -261,6 +285,20 @@ def rank(
         v = comp.get((category, slug), {})
         missing = int(v.get("missing_modules") or 0)
 
+        # STALENESS (#443): the completeness audit is a point-in-time sweep with
+        # no freshness guarantee, and its verdicts were written against graphs
+        # that have since grown (347 of 353 at the time of filing). A row whose
+        # recorded edge count no longer matches the live graph is describing a
+        # graph that no longer exists, so its missing_modules is reported in the
+        # output but excluded from the score.
+        stale = False
+        if v:
+            counts["completeness_rows_matched"] += 1
+            reported_edges = int(v.get("graph_edges") or 0)
+            if reported_edges != edges:
+                stale = True
+                counts["completeness_rows_stale"] += 1
+
         rows.append(
             {
                 "category": category,
@@ -271,12 +309,28 @@ def rank(
                 "components": components,
                 "orphans": max(0, nodes - wired),
                 "missing_modules": missing,
+                "completeness_stale": stale,
                 "verdict": v.get("verdict", ""),
                 "researched": (category, slug) in researched,
                 "family": family_of(slug),
-                "score": score(missing, max(0, nodes - wired), components, edges),
+                "score": score(
+                    0 if stale else missing, max(0, nodes - wired), components, edges
+                ),
             }
         )
+
+    # Series membership is information either way (#447): sibling bins carry
+    # distinct mechanism content (measured overlap 5%), so nothing merges unless
+    # explicitly asked to.
+    series_size: dict[tuple[str, str], int] = {}
+    for row in rows:
+        if row["family"]:
+            key = (row["category"], row["family"])
+            series_size[key] = series_size.get(key, 0) + 1
+    for row in rows:
+        if row["family"]:
+            row["series_size"] = series_size[(row["category"], row["family"])]
+            counts["in_series"] += 1
 
     if collapse_families:
         rows, collapsed = _collapse(rows)
@@ -284,6 +338,14 @@ def rank(
 
     rows.sort(key=lambda r: (-r["score"], r["category"], r["slug"]))
     return rows, counts
+
+
+def stale_fraction(counts: dict[str, int]) -> float:
+    """How much of the completeness audit no longer matches the live corpus."""
+    matched = counts.get("completeness_rows_matched", 0)
+    if not matched:
+        return 0.0
+    return counts.get("completeness_rows_stale", 0) / matched
 
 
 def _collapse(rows: list[dict]) -> tuple[list[dict], int]:
@@ -314,7 +376,18 @@ def main() -> int:
         action="store_true",
         help="include predicate/upper-ontology/observation records (not researchable)",
     )
-    ap.add_argument("--no-collapse-families", action="store_true", help="rank each bin separately")
+    ap.add_argument(
+        "--collapse-families",
+        action="store_true",
+        help="merge each binned series into its worst member. Off by default: "
+        "measured sibling overlap is 5%%, so bins are distinct work items (#447)",
+    )
+    ap.add_argument(
+        "--trust-stale-completeness",
+        action="store_true",
+        help="allow --sort missing even when the completeness audit no longer "
+        "matches the live corpus (#443)",
+    )
     ap.add_argument("--unresearched-only", action="store_true", help="only traits with no artifact")
     ap.add_argument(
         "--sort",
@@ -331,11 +404,25 @@ def main() -> int:
     rows, counts = rank(
         args.traits_dir,
         include_nonmechanism=args.include_nonmechanism,
-        collapse_families=not args.no_collapse_families,
+        collapse_families=args.collapse_families,
     )
+    staleness = stale_fraction(counts)
     if args.unresearched_only:
         rows = [r for r in rows if not r["researched"]]
     if args.sort == "missing":
+        # `--sort missing` ranks PURELY on the completeness audit, so when most
+        # of that audit no longer matches the corpus the sort is not "somewhat
+        # degraded", it is an ordering of a corpus that no longer exists (#443).
+        if staleness > 0.5 and not args.trust_stale_completeness:
+            print(
+                f"ERROR: --sort missing ranks on {DEFAULT_COMPLETENESS}, but "
+                f"{counts['completeness_rows_stale']} of "
+                f"{counts['completeness_rows_matched']} of its rows no longer match "
+                f"the live corpus (graph_edges has moved). Regenerate the audit, or "
+                f"pass --trust-stale-completeness to rank on it anyway.",
+                file=sys.stderr,
+            )
+            return 2
         rows.sort(key=lambda r: (-r["missing_modules"], r["components"], r["category"], r["slug"]))
     elif args.sort == "fragmentation":
         rows.sort(key=lambda r: (-r["components"], -r["orphans"], r["category"], r["slug"]))
@@ -356,10 +443,19 @@ def main() -> int:
     print(f"sorted by {args.sort}: {sort_meaning}\n")
     print(f"{'score':>5} {'edg':>3} {'nod':>3} {'cmp':>3} {'orph':>4} {'miss':>4} {'res':>3}  trait")
     for r in shown:
-        fam = f"  [+{r['family_members'] - 1} sibling bins]" if r.get("family_members", 1) > 1 else ""
+        if r.get("family_members", 1) > 1:
+            fam = f"  [+{r['family_members'] - 1} sibling bins]"
+        elif r.get("series_size", 0) > 1:
+            fam = f"  [series {r['family']}, {r['series_size']} bins]"
+        else:
+            fam = ""
+        # A stale completeness row's missing_modules is shown for reference but
+        # did not contribute to the score; the marker keeps the two readable
+        # side by side.
+        miss = f"{r['missing_modules']:3d}*" if r["completeness_stale"] else f"{r['missing_modules']:4d}"
         print(
             f"{r['score']:5d} {r['edges']:3d} {r['nodes']:3d} {r['components']:3d} "
-            f"{r['orphans']:4d} {r['missing_modules']:4d} {'yes' if r['researched'] else 'NO ':>3}  "
+            f"{r['orphans']:4d} {miss} {'yes' if r['researched'] else 'NO ':>3}  "
             f"{r['category']}/{r['slug']}{fam}"
         )
 
@@ -369,12 +465,26 @@ def main() -> int:
     breakdown = ", ".join(
         f"{v} {k.removeprefix('excluded_')}" for k, v in sorted(counts.items()) if k.startswith("excluded_")
     )
+    if args.collapse_families:
+        series_note = f"collapsed {counts['families_collapsed']} sibling bin(s) into their family"
+    else:
+        series_note = (
+            f"{counts['in_series']} row(s) belong to a binned series "
+            f"(reported, not merged -- measured sibling overlap is 5%, #447)"
+        )
     print(
         f"\nranked {len(rows)} candidate(s); "
         f"set aside {counts['non_mechanism']} record(s) that cannot carry a "
-        f"mechanism graph ({breakdown}); "
-        f"collapsed {counts['families_collapsed']} sibling bin(s) into their family"
+        f"mechanism graph ({breakdown}); {series_note}"
     )
+    if counts["completeness_rows_stale"]:
+        print(
+            f"WARNING: {counts['completeness_rows_stale']} of "
+            f"{counts['completeness_rows_matched']} completeness-audit rows are STALE "
+            f"(reported graph_edges no longer matches the live corpus). Their "
+            f"missing_modules (marked *) were excluded from the score; regenerate "
+            f"{DEFAULT_COMPLETENESS} to restore that signal (#443)."
+        )
     if counts["no_connectivity_row"]:
         print(
             f"WARNING: {counts['no_connectivity_row']} graphed trait(s) are absent from "

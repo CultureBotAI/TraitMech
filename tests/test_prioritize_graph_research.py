@@ -23,6 +23,7 @@ from prioritize_graph_research import (  # noqa: E402
     rank,
     researched_slugs,
     score,
+    stale_fraction,
 )
 
 
@@ -83,10 +84,10 @@ def test_no_object_property_survives_the_filter_on_the_real_corpus():
     assert not leaked, f"non-mechanism records ranked as research candidates: {leaked}"
 
 
-# --- family collapsing ---
+# --- binned series: reported, not merged (#447) ---
 
 
-def test_binned_slugs_collapse_to_their_family():
+def test_binned_slugs_belong_to_their_family():
     assert family_of("ph_delta_mid2") == "ph_delta"
     assert family_of("temperature_range_very_low") == "temperature_range"
     assert family_of("nacl_optimum_high") == "nacl_optimum"
@@ -98,16 +99,35 @@ def test_standalone_traits_have_no_family():
         assert family_of(slug) is None, slug
 
 
-def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
-    corpus = [
+def _ph_delta_corpus():
+    return [
         (
             f"data/traits/environment/ph_delta_{bin}.yaml",
             {"term_kind": "CLASS", "causal_graphs": []},
         )
         for bin in ("low", "mid2", "high")
     ]
+
+
+def test_default_keeps_every_bin_and_reports_the_series():
+    """The #447 fix: sibling bins share 5% of their content, so each is its own
+    work item. Membership is information on the row, not a merge."""
     rows, counts = rank(
-        corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent")
+        _ph_delta_corpus(), connectivity=Path("/nonexistent"), completeness=Path("/nonexistent")
+    )
+    assert len(rows) == 3, "bins must not merge by default"
+    assert all(r["family"] == "ph_delta" for r in rows)
+    assert all(r["series_size"] == 3 for r in rows)
+    assert counts["in_series"] == 3
+    assert counts["families_collapsed"] == 0
+
+
+def test_explicit_collapse_keeps_the_worst_member_and_counts_the_rest():
+    rows, counts = rank(
+        _ph_delta_corpus(),
+        connectivity=Path("/nonexistent"),
+        completeness=Path("/nonexistent"),
+        collapse_families=True,
     )
     assert len(rows) == 1, "three bins of one family should collapse to one row"
     assert rows[0]["family"] == "ph_delta"
@@ -115,21 +135,81 @@ def test_collapsing_keeps_the_worst_member_and_counts_the_rest():
     assert counts["families_collapsed"] == 2
 
 
-def test_no_collapse_keeps_every_bin():
-    corpus = [
-        (
-            f"data/traits/environment/ph_delta_{bin}.yaml",
-            {"term_kind": "CLASS", "causal_graphs": []},
-        )
-        for bin in ("low", "mid2", "high")
-    ]
-    rows, _ = rank(
-        corpus,
-        connectivity=Path("/nonexistent"),
-        completeness=Path("/nonexistent"),
-        collapse_families=False,
+# --- completeness-audit staleness (#443) ---
+
+
+def _graphed_doc(edges: int) -> dict:
+    nodes = [{"node_id": f"n{i}"} for i in range(edges + 1)]
+    return {
+        "term_kind": "CLASS",
+        "causal_graphs": [
+            {
+                "nodes": nodes,
+                "edges": [
+                    {"subject": f"n{i}", "predicate": "p", "object": f"n{i + 1}"}
+                    for i in range(edges)
+                ],
+            }
+        ],
+    }
+
+
+def _completeness_tsv(tmp_path, rows: list[tuple[str, str, int, int]]) -> Path:
+    path = tmp_path / "completeness.tsv"
+    lines = ["category\tslug\tverdict\tpriority\tgraph_edges\tmissing_modules"]
+    for category, slug, graph_edges, missing in rows:
+        lines.append(f"{category}\t{slug}\tshallow\tmedium\t{graph_edges}\t{missing}")
+    path.write_text("\n".join(lines) + "\n")
+    return path
+
+
+def _connectivity_tsv(tmp_path, file: str, wired_nodes: int) -> Path:
+    path = tmp_path / "connectivity.tsv"
+    path.write_text(
+        "file\tgraph_id\twired_nodes\tcomponents\tlargest_component\tcomponent_sizes\n"
+        f"{file}\tg\t{wired_nodes}\t1\t{wired_nodes}\t{wired_nodes}\n"
     )
-    assert len(rows) == 3
+    return path
+
+
+def test_fresh_completeness_row_contributes_to_the_score(tmp_path):
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    conn = _connectivity_tsv(tmp_path, rel, wired_nodes=9)
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", 8, 3)])
+    rows, counts = rank(corpus, connectivity=conn, completeness=comp)
+    (row,) = rows
+    assert not row["completeness_stale"]
+    assert row["score"] == 6, "missing_modules*2 should be in the score"
+    assert counts["completeness_rows_stale"] == 0
+
+
+def test_stale_completeness_row_is_reported_but_not_scored(tmp_path):
+    """The graph grew since the audit ran, so the audit's verdict describes a
+    graph that no longer exists. The number stays visible; the score ignores it."""
+    rel = "data/traits/ecology/biofilm_formation.yaml"
+    corpus = [(rel, _graphed_doc(edges=8))]
+    conn = _connectivity_tsv(tmp_path, rel, wired_nodes=9)
+    comp = _completeness_tsv(tmp_path, [("ecology", "biofilm_formation", 2, 6)])
+    rows, counts = rank(corpus, connectivity=conn, completeness=comp)
+    (row,) = rows
+    assert row["completeness_stale"]
+    assert row["missing_modules"] == 6, "still reported for the reader"
+    assert row["score"] == 0, "but excluded from the score"
+    assert counts["completeness_rows_stale"] == 1
+    assert counts["completeness_rows_matched"] == 1
+
+
+def test_stale_fraction_is_zero_when_nothing_matched():
+    assert stale_fraction({"completeness_rows_matched": 0, "completeness_rows_stale": 0}) == 0.0
+
+
+def test_stale_fraction_on_the_real_corpus_reflects_443():
+    """347 of 353 audit rows no longer matched the corpus when #443 was filed,
+    and the corpus only grows. If this ever drops to 0 the audit was regenerated
+    and the guard on --sort missing stops firing -- which is the goal, not a bug."""
+    _, counts = rank()
+    assert stale_fraction(counts) > 0.5
 
 
 # --- score ---
@@ -231,14 +311,17 @@ EXPECTED_COMPOSITION = {
     "deprecated": 20,
     "upper_ontology": 8,
     "non_mechanism": 129,
-    "families_collapsed": 44,
+    # 55 rows across 11 binned series, none merged (#447). The old default
+    # collapsed them to 11 rows and reported `families_collapsed: 44`.
+    "in_series": 55,
+    "families_collapsed": 0,
 }
 
 
 def test_corpus_composition_matches_what_the_skill_claims():
     _, counts = rank()
     # Totals are top-level keys; per-reason counts are prefixed `excluded_`.
-    direct = {"non_mechanism", "families_collapsed"}
+    direct = {"non_mechanism", "families_collapsed", "in_series"}
     actual = {
         k: counts[k] if k in direct else counts.get(f"excluded_{k}", 0)
         for k in EXPECTED_COMPOSITION
