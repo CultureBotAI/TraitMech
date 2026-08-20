@@ -13,6 +13,9 @@ synonyms:
 - synonym_text: urease-positive
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1128/mr.59.3.451-480.1995
+- synonym_text: ureolysis
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1128/mr.59.3.451-480.1995
   notes: Mobley, Island & Hausinger review the molecular biology of microbial ureases
@@ -250,3 +253,12 @@ curation_history:
     is ''urease ACTIVITY''. Same as catalase: kept on urease_function, dropped from
     the protein that enables it.'
   llm_assisted: true
+- timestamp: '2026-08-19T00:00:00+00:00'
+  curator: add_faprotax_synonyms
+  action: ADDED_SYNONYM
+  changes: 'Added ''ureolysis'' (600 occurrences in microbedecoder''s unmapped labels)
+    as a RELATED_SYNONYM (#453). FAPROTAX''s ureolysis is urea hydrolysis, which this
+    record already defines as its mechanism: ''produces urease, which hydrolyzes urea
+    to ammonia and carbon dioxide''. Written with the source''s underscores because
+    that is the string a consumer must resolve.'
+  llm_assisted: false

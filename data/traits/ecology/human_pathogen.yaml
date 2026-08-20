@@ -7,6 +7,10 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
+synonyms:
+- synonym_text: human_pathogens_all
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
@@ -324,3 +328,12 @@ curation_history:
     this the same shape #302 solved for 164 edges, and `confers` already admits a
     BIOLOGICAL_PROCESS subject.'
   llm_assisted: true
+- timestamp: '2026-08-19T00:00:00+00:00'
+  curator: add_faprotax_synonyms
+  action: ADDED_SYNONYM
+  changes: Added 'human_pathogens_all' (291 occurrences in microbedecoder's unmapped
+    labels) as a RELATED_SYNONYM (#453). FAPROTAX's human_pathogens_all is the union
+    of its per-disease human pathogen groups, so it denotes the same set as 'a pathogen
+    that infects organisms of the species Homo sapiens'. Written with the source's
+    underscores because that is the string a consumer must resolve.
+  llm_assisted: false

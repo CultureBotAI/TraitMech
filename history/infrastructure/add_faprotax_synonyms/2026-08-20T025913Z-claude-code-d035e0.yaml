@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_faprotax_synonyms.py
+session:
+  id: 2026-08-20T025913Z-claude-code-d035e0
+  timestamp: '2026-08-20T02:59:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: EDIT
+  outcome: changed
+  summary: Resolve three FAPROTAX labels to existing traits via RELATED_SYNONYM (#453)
+  details: 'Added oxygenic_photoautotrophy (5,221 occurrences) to oxygenic photosynthesis
+    traitmech:000034, ureolysis (600) to urease activity traitmech:000077, and human_pathogens_all
+    (291) to human pathogen METPO:1004004 — 6,112 occurrences of microbedecoder unmapped labels
+    made resolvable with no identifiers minted. Selection rule: only labels whose target records
+    ALREADY state the phenotype in their own definition, so the synonym asserts nothing new;
+    every other FAPROTAX label in the residual needs a METPO proposal instead. Synonyms carry
+    the source underscores deliberately, because the point is to resolve the string the ingest
+    emits. RELATED not EXACT: these are FAPROTAX group names classifying organisms by inferred
+    capability, not alternative names for the phenotype. Verified by writing through validate_trait
+    + write_validated_trait (schema checked before write), a 39-insertion 0-deletion diff
+    with synonyms in its documented position, and pytest 677 passed.'

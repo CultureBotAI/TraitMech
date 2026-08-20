@@ -264,10 +264,12 @@
 
     
     <div class="card">
-      <h2>Synonyms (1)</h2>
+      <h2>Synonyms (2)</h2>
       <ul class="synonyms">
         
         <li>urease-positive <span class="meta">RELATED_SYNONYM · DOI:10.1128/mr.59.3.451-480.1995</span></li>
+        
+        <li>ureolysis <span class="meta">RELATED_SYNONYM · DOI:10.1126/science.aaf4507</span></li>
         
       </ul>
     </div>
@@ -535,6 +537,12 @@ Context-specific candidates include Ca²⁺, Mg²⁺, phosphate, calcium carbona
           <time>2026-08-08T05:00:00Z</time> ·
           <strong>UNGROUND_CAUSAL_NODE</strong> · claude
           <p class="changes">Dropped the grounding GO:0009039 from node urease. Issue 352. GO:0009039 is &#39;urease ACTIVITY&#39;. Same as catalase: kept on urease_function, dropped from the protein that enables it.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-19T00:00:00+00:00</time> ·
+          <strong>ADDED_SYNONYM</strong> · add_faprotax_synonyms
+          <p class="changes">Added &#39;ureolysis&#39; (600 occurrences in microbedecoder&#39;s unmapped labels) as a RELATED_SYNONYM (#453). FAPROTAX&#39;s ureolysis is urea hydrolysis, which this record already defines as its mechanism: &#39;produces urease, which hydrolyzes urea to ammonia and carbon dioxide&#39;. Written with the source&#39;s underscores because that is the string a consumer must resolve.</p>
         </li>
         
       </ol>
@@ -917,7 +925,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-08 05:00 UTC from
+      Record as of 2026-08-19 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
