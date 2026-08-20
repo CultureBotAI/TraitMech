@@ -593,6 +593,12 @@ check: lint test
 #
 # The two comparison bases are not a style choice — they follow from whether
 # anything else in the run mutates the file.
+# Fail when a curated node grounding was never written into the trait records.
+# audit-derived-reports checks the residual (nodes with NO mapping) is current;
+# it cannot see a mapping that exists and was never applied (#460).
+audit-unapplied-groundings:
+    uv run python scripts/audit_unapplied_groundings.py
+
 audit-derived-reports:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -982,7 +988,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-unapplied-groundings audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

@@ -65,6 +65,7 @@ causal_graphs:
     label: proton motive force
     node_type: STATE
     description: Electrochemical proton gradient (PMF) used for transport and pH regulation.
+    grounding: METPO:1007500
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
@@ -273,4 +274,10 @@ curation_history:
     key on node_id, so retyping the long-named one would have created a fresh split
     between two ids nothing compares. Included here rather than left, because this
     tranche is what would have caused it.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

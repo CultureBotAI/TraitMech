@@ -93,6 +93,7 @@ causal_graphs:
     node_type: STATE
     description: Electrochemical proton gradient across the membrane used for energy
       coupling.
+    grounding: METPO:1007500
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -259,4 +260,10 @@ curation_history:
     family''s sense rather than as this record''s own text. Named systems that implement
     it (Gad) would be pathways; the reaction class is not. Was 4 BIOLOGICAL_PROCESS
     to 2 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

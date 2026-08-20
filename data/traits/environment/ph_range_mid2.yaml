@@ -80,6 +80,7 @@ causal_graphs:
     node_type: STATE
     description: Composite electrochemical proton gradient used for energy transduction
       and transport.
+    grounding: METPO:1007500
   - node_id: external_ph_5_8
     label: external pH 5-8
     node_type: ENVIRONMENTAL_FACTOR
@@ -245,4 +246,10 @@ curation_history:
     mean the process already use a separate id (proton_motive_force_generation in
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

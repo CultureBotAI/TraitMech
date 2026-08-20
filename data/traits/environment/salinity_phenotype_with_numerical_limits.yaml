@@ -61,6 +61,7 @@ causal_graphs:
     label: salt-in strategy
     node_type: BIOLOGICAL_PROCESS
     description: Osmoadaptation by accumulating high intracellular salt, mainly potassium.
+    grounding: METPO:1007720
   - node_id: glycine_betaine
     label: glycine betaine
     node_type: CHEMICAL
@@ -257,4 +258,10 @@ curation_history:
     and the wording varies by record. There is no step list to enumerate, which is
     exactly the distinction this rule draws. Was 7 BIOLOGICAL_PROCESS to 1 before
     this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007720×1).
   llm_assisted: true
