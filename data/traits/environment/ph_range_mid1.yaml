@@ -51,6 +51,7 @@ causal_graphs:
     label: proton motive force
     node_type: STATE
     description: Electrochemical proton gradient (PMF) across the cytoplasmic membrane.
+    grounding: METPO:1007500
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -217,4 +218,10 @@ curation_history:
     mean the process already use a separate id (proton_motive_force_generation in
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_unapplied_groundings.py
+session:
+  id: 2026-08-20T073138Z-claude-code-03fa56
+  timestamp: '2026-08-20T07:31:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/460
+events:
+- type: EDIT
+  outcome: changed
+  summary: Apply the 18-node grounding backlog and gate it so it cannot rebuild (#460)
+  details: 'Applied 18 curated node groundings that had never been written into the trait
+    records (16 proton motive force -> METPO:1007500, 1 salt-in strategy -> METPO:1007720,
+    1 alcohol dehydrogenase -> GO:0004022), then added audit-unapplied-groundings to the qc
+    chain so the backlog cannot silently rebuild. Selection rule: whatever ground_causal_nodes.py
+    itself reports it would write, so the gate and the writer can never drift; the 2 it declines
+    by design (catalase, urease, DUPLICATE_GROUNDING per #361) are correctly excluded. The
+    corpus was internally contradictory, not merely incomplete - proton motive force was grounded
+    in 18 nodes and bare in 16 others. Verified by mutation: reverting one grounding takes
+    the gate from exit 0 to exit 1. That test also caught the gate reading stdout while ground_causal_nodes.py
+    writes its summary to stderr, which had made it report a clean zero unconditionally.'

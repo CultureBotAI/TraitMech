@@ -71,6 +71,7 @@ causal_graphs:
     label: alcohol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.
+    grounding: GO:0004022
   - node_id: nadh
     label: NADH
     node_type: CHEMICAL
@@ -232,4 +233,10 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004022×1).
   llm_assisted: true

@@ -85,6 +85,7 @@ causal_graphs:
     node_type: STATE
     description: Transmembrane electrochemical proton gradient supporting acid-side
       pH homeostasis.
+    grounding: METPO:1007500
   edges:
   - subject: moderate_ph_homeostasis
     predicate: confers
@@ -262,4 +263,10 @@ curation_history:
     else. A named route through enumerable complexes -- environment/ph_delta_mid1.yaml
     lists them (nuo, cyo, ndh, sdh). The rule breaks what was a 2-2 tie before this
     tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-20T07:10:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true
