@@ -9,6 +9,10 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - traitmech:000038
+synonyms:
+- synonym_text: oxygenic_photoautotrophy
+  synonym_type: RELATED_SYNONYM
+  source: FAPROTAX (via microbedecoder unmapped labels)
 evidence:
 - reference: DOI:10.1016/j.tim.2006.09.001
   notes: Bryant & Frigaard, "Prokaryotic photosynthesis and phototrophy illuminated",
@@ -270,3 +274,13 @@ curation_history:
     ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml''s
     CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.'
   llm_assisted: true
+- timestamp: '2026-08-19T00:00:00+00:00'
+  curator: add_faprotax_synonyms
+  action: ADDED_SYNONYM
+  changes: Added 'oxygenic_photoautotrophy' (5221 occurrences in microbedecoder's
+    unmapped labels) as a RELATED_SYNONYM (#453). FAPROTAX's oxygenic_photoautotrophy
+    is autotrophic growth driven by oxygenic photosynthesis — the record's own definition
+    is 'uses light energy to fix CO2, oxidizing water as the electron donor and releasing
+    molecular oxygen', which is that phenotype. Written with the source's underscores
+    because that is the string a consumer must resolve.
+  llm_assisted: false
