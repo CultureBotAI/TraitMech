@@ -295,3 +295,36 @@ curation_history:
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
   llm_assisted: true
+- timestamp: '2026-08-20T08:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added three exemplar taxa whose optimal growth temperature is stated in
+    this trait's own deep-research artifact and falls inside the >40 C bin (Saccharolobus
+    islandicus 76 C, Pyrococcus furiosus 90 C, Thermococcus kodakarensis 85 C). Taxon
+    ids resolved and label-checked against the local NCBITaxon build. Deliberately
+    excluded - Escherichia coli and Kluyveromyces marxianus, which the artifact names
+    only as heat-stress/thermotolerance comparators and explicitly disqualifies (E.
+    coli "remains mesophilic"; the CYR1 work concerns "an engineered thermotolerance
+    phenotype rather than proof that CYR1 establishes a natural >40 C optimum"); and
+    Thermococcus barophilus, Thermus thermophilus and Sulfolobus acidocaldarius, which
+    appear in the artifact with no cited optimum-temperature measurement.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:43080
+  taxon_label: Saccharolobus islandicus
+  reference: DOI:10.3389/fmicb.2023.1219779
+  note: Thermoacidophilic archaeon whose optimal growth temperature is reported as
+    76 degrees C, the one explicitly stated optimum in this trait's research artifact;
+    the multi-omics study contrasts that optimum against 66 degrees C cold stress.
+- taxon_id: NCBITaxon:2261
+  taxon_label: Pyrococcus furiosus
+  reference: DOI:10.1128/AEM.00559-14
+  note: Hyperthermophilic archaeon cultivated at an optimal growth temperature of
+    90 degrees C in this compatible-solute study, with 98 degrees C imposed as supra-optimal
+    heat stress (final OD600 falling from 0.88 to 0.32).
+- taxon_id: NCBITaxon:311400
+  taxon_label: Thermococcus kodakarensis
+  reference: DOI:10.1128/JB.186.14.4829-4833.2004
+  note: Hyperthermophilic archaeon whose wild-type specific growth rate peaks at 85
+    degrees C (mu = 0.69 per hour) across a temperature series spanning 75-93 degrees
+    C, a growth-rate-derived optimum well inside the thermophilic bin.

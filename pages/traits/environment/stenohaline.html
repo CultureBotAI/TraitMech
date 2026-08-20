@@ -439,6 +439,35 @@ In *Synechococcus*, the euryhaline CB4 lineage had more mechanosensitive-channel
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Synechococcus sp. YX04-3</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1979153"
+             rel="nofollow noreferrer"><code>NCBITaxon:1979153</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/msystems.01106-22"
+             rel="nofollow noreferrer"><code>DOI:10.1128/msystems.01106-22</code></a>
+          
+          
+          <span class="meta">Marine clade III cyanobacterium that grew at 32 ppt but could not survive at 13 ppt, while the euryhaline strain HK05 grew at both; the only culture-based narrow-salinity growth evidence in this trait&#39;s research artifact. Only two salinity points were assayed, so the width of the tolerated interval is bounded but not fully measured.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -517,6 +546,12 @@ In *Synechococcus*, the euryhaline CB4 lineage had more mechanosensitive-channel
           <time>2026-06-24T17:23:31Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:71578×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-20T08:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added one exemplar taxon, the only organism in this trait&#39;s deep-research artifact whose cited evidence is a salinity growth/survival assay showing narrow tolerance. Taxon id resolved and label-checked against the local NCBITaxon build. Deliberately excluded - Synechococcus sp. HK05 and the euryhaline CB4 lineage (named as the contrasting broad-tolerance case), Halomonas elongata and Natranaerobius thermophilus (broadly salt-tolerant; the artifact warns their ectoine/hybrid salt-in-salt-out evidence concerns breadth of tolerance, not narrow range), Pseudomonas putida KT2440 (engineered tolerance expansion), and Acidihalobacter aeolianus (ion-specific osmotic-shock response, not a narrow growth range). The estuarine stenohaline MAGs of Wu et al. are unnamed and classified by a &gt;=10-fold abundance proxy that the artifact states is not direct proof of narrow physiological tolerance.</p>
         </li>
         
       </ol>
@@ -899,7 +934,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-06-24 17:23 UTC from
+      Record as of 2026-08-20 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

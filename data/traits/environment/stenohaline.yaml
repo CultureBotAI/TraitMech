@@ -276,3 +276,27 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:71578×1).
   llm_assisted: true
+- timestamp: '2026-08-20T08:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added one exemplar taxon, the only organism in this trait's deep-research
+    artifact whose cited evidence is a salinity growth/survival assay showing narrow
+    tolerance. Taxon id resolved and label-checked against the local NCBITaxon build.
+    Deliberately excluded - Synechococcus sp. HK05 and the euryhaline CB4 lineage
+    (named as the contrasting broad-tolerance case), Halomonas elongata and Natranaerobius
+    thermophilus (broadly salt-tolerant; the artifact warns their ectoine/hybrid salt-in-salt-out
+    evidence concerns breadth of tolerance, not narrow range), Pseudomonas putida
+    KT2440 (engineered tolerance expansion), and Acidihalobacter aeolianus (ion-specific
+    osmotic-shock response, not a narrow growth range). The estuarine stenohaline
+    MAGs of Wu et al. are unnamed and classified by a >=10-fold abundance proxy that
+    the artifact states is not direct proof of narrow physiological tolerance.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:1979153
+  taxon_label: Synechococcus sp. YX04-3
+  reference: DOI:10.1128/msystems.01106-22
+  note: Marine clade III cyanobacterium that grew at 32 ppt but could not survive
+    at 13 ppt, while the euryhaline strain HK05 grew at both; the only culture-based
+    narrow-salinity growth evidence in this trait's research artifact. Only two salinity
+    points were assayed, so the width of the tolerated interval is bounded but not
+    fully measured.
