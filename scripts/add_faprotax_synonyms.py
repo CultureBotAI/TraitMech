@@ -52,7 +52,12 @@ from traitmech.validation.write_validated import (  # noqa: E402
 
 CURATOR = "add_faprotax_synonyms"
 STAMP = "2026-08-19T00:00:00+00:00"
-SOURCE = "FAPROTAX (via microbedecoder unmapped labels)"
+# The canonical FAPROTAX citation (Louca, Parfrey & Doebeli 2016, Science),
+# verified against Crossref. The corpus uses `metpo.owl` for seeded terms and a
+# `DOI:` for anything curated from literature; free prose here would be the only
+# third form in the file (#463). "via microbedecoder unmapped labels" is real
+# provenance but belongs in curation_history, which already carries it.
+SOURCE = "DOI:10.1126/science.aaf4507"
 
 # (path, synonym text, occurrences, why this trait is the right target)
 ADDITIONS = [
