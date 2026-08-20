@@ -313,6 +313,9 @@ def rank(
                 "verdict": v.get("verdict", ""),
                 "researched": (category, slug) in researched,
                 "family": family_of(slug),
+                # Overwritten below for series members; present on every row so
+                # the JSON row schema does not depend on the slug (#472).
+                "series_size": 0,
                 "score": score(
                     0 if stale else missing, max(0, nodes - wired), components, edges
                 ),
@@ -364,7 +367,10 @@ def _collapse(rows: list[dict]) -> tuple[list[dict], int]:
         else:
             incumbent["family_members"] = incumbent.get("family_members", 1) + 1
     collapsed = sum(r.get("family_members", 1) - 1 for r in best.values())
-    return standalone + list(best.values()), collapsed
+    merged = standalone + list(best.values())
+    for row in merged:
+        row.setdefault("family_members", 1)  # uniform row schema (#472)
+    return merged, collapsed
 
 
 def main() -> int:
@@ -410,9 +416,22 @@ def main() -> int:
     if args.unresearched_only:
         rows = [r for r in rows if not r["researched"]]
     if args.sort == "missing":
-        # `--sort missing` ranks PURELY on the completeness audit, so when most
-        # of that audit no longer matches the corpus the sort is not "somewhat
-        # degraded", it is an ordering of a corpus that no longer exists (#443).
+        # `--sort missing` ranks PURELY on the completeness audit. Zero matched
+        # rows means there is nothing to sort on -- every missing_modules is 0
+        # and the "ranking" would be the tie-breaker order wearing the sort's
+        # name (#471). No override for this one: trusting zero rows is not a
+        # meaningful choice.
+        if counts["completeness_rows_matched"] == 0:
+            print(
+                f"ERROR: --sort missing ranks on {DEFAULT_COMPLETENESS}, but no "
+                f"row of it matched the corpus -- every missing_modules is 0 and "
+                f"there is nothing to sort on. Regenerate the audit first.",
+                file=sys.stderr,
+            )
+            return 2
+        # And when most of the audit no longer matches the corpus the sort is
+        # not "somewhat degraded", it is an ordering of a corpus that no longer
+        # exists (#443).
         if staleness > 0.5 and not args.trust_stale_completeness:
             print(
                 f"ERROR: --sort missing ranks on {DEFAULT_COMPLETENESS}, but "

@@ -204,6 +204,40 @@ def test_stale_fraction_is_zero_when_nothing_matched():
     assert stale_fraction({"completeness_rows_matched": 0, "completeness_rows_stale": 0}) == 0.0
 
 
+def test_every_row_carries_series_size_and_collapse_carries_family_members(tmp_path):
+    """Uniform row schema (#472): JSON consumers must not need .get() for keys
+    whose presence depends on the slug or the flags."""
+    corpus = _ph_delta_corpus() + [
+        ("data/traits/metabolism/cellulolysis.yaml", {"term_kind": "CLASS", "causal_graphs": []})
+    ]
+    rows, _ = rank(corpus, connectivity=Path("/nonexistent"), completeness=Path("/nonexistent"))
+    assert all("series_size" in r for r in rows)
+    standalone = next(r for r in rows if r["slug"] == "cellulolysis")
+    assert standalone["series_size"] == 0
+    collapsed_rows, _ = rank(
+        corpus,
+        connectivity=Path("/nonexistent"),
+        completeness=Path("/nonexistent"),
+        collapse_families=True,
+    )
+    assert all(r["family_members"] >= 1 for r in collapsed_rows)
+
+
+def test_sort_missing_errors_when_no_completeness_row_matched(tmp_path, monkeypatch, capsys):
+    """#471: zero matched rows must error, not rank on all-zero missing_modules.
+    Runs main() against a corpus dir the on-disk audit cannot match."""
+    import prioritize_graph_research as mod
+
+    traits = tmp_path / "traits" / "nowhere"
+    traits.mkdir(parents=True)
+    (traits / "made_up_trait.yaml").write_text("term_kind: CLASS\ncausal_graphs: []\n")
+    monkeypatch.setattr(
+        sys, "argv", ["prog", "--traits-dir", str(tmp_path / "traits"), "--sort", "missing"]
+    )
+    assert mod.main() == 2
+    assert "nothing to sort on" in capsys.readouterr().err
+
+
 def test_stale_fraction_on_the_real_corpus_reflects_443():
     """347 of 353 audit rows no longer matched the corpus when #443 was filed,
     and the corpus only grows. If this ever drops to 0 the audit was regenerated
