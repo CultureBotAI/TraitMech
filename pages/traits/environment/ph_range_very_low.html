@@ -452,6 +452,12 @@ In bacterial acidophiles, hopanoids, branched-chain lipids, cyclopropanated fatt
           <p class="changes">Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses under the single label `reduces` - genuine electron donation, and a lessens/decreases sense - and METPO:2007802 is defined as donating electrons to the object and lowering its oxidation state, which this edge does not assert. The two senses could not be separated mechanically because the label was identical, so they migrated together in issue 329 and were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment of the kind issue 301 removed.</p>
         </li>
         
+        <li>
+          <time>2026-08-21T08:00:00Z</time> ·
+          <strong>NORMALISE_NODE_TYPE</strong> · codex
+          <p class="changes">Tranche 5 of issue 356 settles the process/quality families and merges ids that meant the same sense: reversed_membrane_potential is STATE. A reversed membrane potential is an inside-positive electrical state, not the process that establishes it. The schema names this gradient/steady-value distinction explicitly.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -832,7 +838,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 06:00 UTC from
+      Record as of 2026-08-21 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

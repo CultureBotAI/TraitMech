@@ -64,7 +64,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cyclopropane-fatty-acyl phospholipids produced by Cfa synthase that
       modify the membrane.
-  - node_id: membrane_proton_permeability
+  - node_id: proton_permeability
     label: membrane proton permeability
     node_type: QUALITY
     description: Permeability of the cell membrane to protons.
@@ -127,7 +127,7 @@ causal_graphs:
         to low-pH growth.'
   - subject: cyclopropane_fatty_acids
     predicate: decreases
-    object: membrane_proton_permeability
+    object: proton_permeability
     description: Cyclopropane fatty acid membrane modification decreases proton permeability.
     evidence:
     - reference: DOI:10.4014/jmb.2303.03009
@@ -255,6 +255,14 @@ curation_history:
     record's own deep-research artifact; every taxon id was resolved and label-checked
     against the local NCBITaxon build rather than recalled. Organisms the artifact
     names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: proton_permeability is QUALITY. Proton permeability
+    is a measurable membrane property, which is the schema''s QUALITY sense rather
+    than a biological process.'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:920

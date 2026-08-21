@@ -67,9 +67,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Steep outside-to-inside proton (delta pH) gradient maintained by
       acidophiles.
-  - node_id: inside_positive_membrane_potential
-    label: inside-positive membrane potential
-    node_type: BIOLOGICAL_PROCESS
+  - node_id: reversed_membrane_potential
+    label: inside-positive (reversed) membrane potential
+    node_type: STATE
     description: Reversed (inside-positive) membrane potential creating an electrochemical
       barrier to proton influx.
   - node_id: proton_influx
@@ -133,7 +133,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: cytoplasmic pH ~6.0 while growing at external pH <3; broad physiological
         input edge.
-  - subject: inside_positive_membrane_potential
+  - subject: reversed_membrane_potential
     predicate: counteracts
     object: proton_influx
     description: A reversed inside-positive membrane potential electrostatically opposes
@@ -224,4 +224,12 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: reversed_membrane_potential is STATE. A reversed
+    membrane potential is an inside-positive electrical state, not the process that
+    establishes it. The schema names this gradient/steady-value distinction explicitly.'
   llm_assisted: true

@@ -53,7 +53,7 @@ causal_graphs:
     description: Synthesis, export, and surface assembly of capsule polymers.
   - node_id: immune_evasion
     label: host immune evasion
-    node_type: QUALITY
+    node_type: BIOLOGICAL_PROCESS
     description: Reduced recognition and clearance by host innate immunity.
   - node_id: wzx_flippase
     label: Wzx flippase
@@ -234,4 +234,14 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: immune_evasion is BIOLOGICAL_PROCESS. Immune evasion
+    is the avoidance or subversion of host defenses. The edges treat it as an enabled
+    action that in turn enables colonization; capsule.yaml''s ''reduced recognition
+    and clearance'' is the outcome of that same process, not a separate measurable
+    axis.'
   llm_assisted: true

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_process_quality_consistency.py
+  slug: process-quality-consistency
+session:
+  id: 2026-08-21T073211Z-codex-174227
+  timestamp: '2026-08-21T07:32:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/356
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Resolve tranche 5 process-quality node-type families
+  details: 'Burned down issue 356''s BIOLOGICAL_PROCESS/QUALITY tranche by reading every description
+    and edge, then normalizing eight concept families. Four process-shaped duplicate ids were
+    merged into existing canonical senses: inside_positive_membrane_potential to reversed_membrane_potential
+    STATE, membrane_proton_permeability to proton_permeability QUALITY, membrane_rigidification
+    to membrane_rigidity QUALITY, and positive_dna_supercoiling to dna_positive_supercoiling
+    BIOLOGICAL_PROCESS. Immune evasion and phosphate buffering are processes; maximal growth
+    rate, proton permeability, membrane rigidity, and stress resistance are qualities. INCONSISTENT_NODE_TYPE
+    fell from 112 to 83, the predicted 29 findings, with graph connectivity unchanged. The
+    predicate gate then exposed four enables edges whose object became maximal-growth-rate
+    QUALITY; these were corrected to promotes / RO:0002213 rather than widening enables beyond
+    its biological-process range. Predicate-domain findings returned to zero.'

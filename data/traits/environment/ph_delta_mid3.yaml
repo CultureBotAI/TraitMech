@@ -72,8 +72,8 @@ causal_graphs:
     description: Proton-translocating ATP synthase/ATPase that can extrude protons
       under acid stress.
   - node_id: phosphate_buffering
-    label: cytoplasmic phosphate buffering capacity
-    node_type: QUALITY
+    label: cytoplasmic phosphate buffering
+    node_type: BIOLOGICAL_PROCESS
     description: Physicochemical buffering of intracellular pH by cytoplasmic phosphate.
   - node_id: intracellular_ph_stability
     label: intracellular pH stability
@@ -280,4 +280,15 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: phosphate_buffering is BIOLOGICAL_PROCESS, proton_permeability
+    is QUALITY. Both occurrences describe cytoplasmic phosphate pools buffering protons
+    and stabilizing pH: the buffering action, not the size of a buffer reservoir.
+    The distinct cytoplasmic_buffering_capacity id remains CAPACITY for that quantity
+    sense. Proton permeability is a measurable membrane property, which is the schema''s
+    QUALITY sense rather than a biological process.'
   llm_assisted: true

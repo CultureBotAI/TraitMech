@@ -321,3 +321,11 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: stress_resistance is QUALITY. Stress resistance
+    here is enhanced tolerance or resistance of a cell or mature endospore, a measurable
+    protective attribute. The nodes do not describe the general stress-response process.'
+  llm_assisted: true

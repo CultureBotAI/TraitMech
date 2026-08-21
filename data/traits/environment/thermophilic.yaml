@@ -40,9 +40,9 @@ causal_graphs:
     label: membrane lipid composition
     node_type: CELLULAR_LOCALIZATION
     description: Membrane lipid features altered during high-temperature adaptation.
-  - node_id: membrane_proton_permeability
+  - node_id: proton_permeability
     label: membrane proton permeability
-    node_type: BIOLOGICAL_PROCESS
+    node_type: QUALITY
     description: Proton leakiness of the cytoplasmic membrane at elevated temperature.
   - node_id: thermostable_proteins
     label: thermostable proteins
@@ -58,8 +58,8 @@ causal_graphs:
     description: ATP-dependent topoisomerase that introduces positive DNA supercoils,
       characteristic of thermophiles.
     grounding: GO:0160097
-  - node_id: positive_dna_supercoiling
-    label: positive DNA supercoiling
+  - node_id: dna_positive_supercoiling
+    label: DNA positive supercoiling
     node_type: BIOLOGICAL_PROCESS
     description: Introduction of positive supercoils into genomic DNA.
   - node_id: dna_melting
@@ -100,7 +100,7 @@ causal_graphs:
     predicate_id: METPO:2007401
   - subject: high_temperature
     predicate: increases
-    object: membrane_proton_permeability
+    object: proton_permeability
     description: Elevated temperature increases proton permeability of the cytoplasmic
       membrane.
     evidence:
@@ -110,7 +110,7 @@ causal_graphs:
     predicate_id: RO:0002213
   - subject: membrane_lipid_composition
     predicate: limits
-    object: membrane_proton_permeability
+    object: proton_permeability
     description: Lipid composition changes can reduce high-temperature membrane leakiness.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
@@ -139,13 +139,13 @@ causal_graphs:
     predicate_id: METPO:2007700
   - subject: reverse_gyrase
     predicate: introduces
-    object: positive_dna_supercoiling
+    object: dna_positive_supercoiling
     description: Reverse gyrase introduces positive supercoils into thermophile DNA.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
       notes: 'Takemata 2024: "reverse gyrase introduces positive supercoils" (broadly
         accepted in thermophile genomics).'
-  - subject: positive_dna_supercoiling
+  - subject: dna_positive_supercoiling
     predicate: limits
     object: dna_melting
     description: Positive DNA supercoiling limits thermal DNA melting, protecting
@@ -280,4 +280,16 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: proton_permeability is QUALITY, dna_positive_supercoiling
+    is BIOLOGICAL_PROCESS, membrane_rigidity is QUALITY. Proton permeability is a
+    measurable membrane property, which is the schema''s QUALITY sense rather than
+    a biological process. GO:0160097 denotes the process of introducing positive supercoils
+    into DNA. The general DNA-topology state remains separately modelled as dna_supercoiling.
+    Membrane rigidity is a physical attribute of the bilayer and therefore a QUALITY
+    under the schema''s membrane-fluidity example.'
   llm_assisted: true

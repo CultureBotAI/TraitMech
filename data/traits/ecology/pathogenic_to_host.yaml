@@ -267,3 +267,13 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042710×1).
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: immune_evasion is BIOLOGICAL_PROCESS. Immune evasion
+    is the avoidance or subversion of host defenses. The edges treat it as an enabled
+    action that in turn enables colonization; capsule.yaml''s ''reduced recognition
+    and clearance'' is the outcome of that same process, not a separate measurable
+    axis.'
+  llm_assisted: true

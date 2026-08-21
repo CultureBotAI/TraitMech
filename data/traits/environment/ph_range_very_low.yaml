@@ -229,3 +229,11 @@ curation_history:
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: reversed_membrane_potential is STATE. A reversed
+    membrane potential is an inside-positive electrical state, not the process that
+    establishes it. The schema names this gradient/steady-value distinction explicitly.'
+  llm_assisted: true

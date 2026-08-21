@@ -297,3 +297,11 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: membrane_rigidity is QUALITY. Membrane rigidity
+    is a physical attribute of the bilayer and therefore a QUALITY under the schema''s
+    membrane-fluidity example.'
+  llm_assisted: true
