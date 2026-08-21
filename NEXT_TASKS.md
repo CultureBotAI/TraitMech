@@ -5,38 +5,63 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-15. Everything merged in this repo through **#382**.
+Last reconciled: 2026-08-20. Everything merged in this repo through **#487**.
 
-Since the 2026-08-08 reconcile the **#356 thread ran end to end for the first
-time in one stretch** — detect, then measure the cost of detecting, then burn
-down:
+Since the 2026-08-15 reconcile, five threads ran — this was the busiest stretch
+in the file's history (~25 PRs), and four of the five threads were **new**,
+i.e. unlogged here until now:
 
-- **#366** shipped `INCONSISTENT_NODE_TYPE`, the first CROSS-RECORD check here,
-  baselined at **294 occurrences across 63 node_ids**. Two records disagreeing
-  about what a node *is* was invisible to every per-graph check.
-- **#378** (closes #373) then fixed what #366 cost: the three passes each
-  re-walked the corpus, **1431 `yaml.safe_load` calls for 477 records**, now 477.
-  Done before the burn-down on purpose — that campaign runs the audit on every
-  iteration.
-- **#382** was the first burn-down tranche and needed no new judgement:
-  `CausalNodeTypeEnum` names `proton_motive_force`, `membrane_fluidity` and
-  `reducing power` as its own canonical examples of STATE / QUALITY / CAPACITY,
-  so the corpus disagreed with its own schema in the schema's own examples.
-  **294 → 223**, and the edge #356 was filed for now grounds.
+- **#356 burn-down, tranches 2–4** (the one pre-existing thread): #387 split
+  protein from activity where one `node_id` meant both — the exact
+  `GENE_OR_PROTEIN`/`MOLECULAR_FUNCTION` tranche the last reconcile recommended;
+  #392 stated the `PATHWAY` vs `BIOLOGICAL_PROCESS` rule and applied it; #403
+  gave oxygen one `node_id` per sense (the `CHEMICAL`/`ENVIRONMENTAL_FACTOR`
+  two-ids case). **223 → 112 occurrences** in the baseline. See section 11 for
+  what remains.
+- **Research prioritization + provider triage** (new; section 12): #427 picks
+  the research target *before* paying; #440 triaged providers ("available" no
+  longer means "will work"); #449 ported DisMech's priority dashboard with the
+  lumping rule inverted; #470 made the prioritiser rank every bin and refuse a
+  stale completeness report. Headline verdict (#426): **no trait awaits a first
+  deep-research pass — 351 need already-paid-for research APPLIED.**
+- **canonical_examples** (new; section 13): #446 rendered + validated the slot
+  and ran a one-record canary; #474 applied batch 1 (5 records filled, 6 honest
+  skips, two adversarial review rounds → #476–#478). ~130-record gap remains
+  (#444).
+- **microbedecoder / FAPROTAX grounding** (new; section 14): #454 grounded 42
+  enzyme-activity labels to GO/EC, #459/#462 resolved more, #473 applied the
+  grounding backlog and gated it against rebuilding, #467 shipped METPO
+  proposal v11 (15 FAPROTAX metabolic-strategy classes). #453/#464 remain.
+- **Repository review follow-ups** (new): #487 implemented and closed
+  #482–#486 (main-safe workflow concurrency, root CLAUDE.md consolidation,
+  hermetic in-process history validation, Python 3.10–3.13 test matrix).
+  **A continuation is IN FLIGHT, uncommitted**: a README refresh (stale
+  354-record-era counts → 477, directory layout) plus a new
+  `tests/test_readme_artifacts.py` freshness test sit dirty on `main` as of
+  this reconcile — finish it on a branch or stash it deliberately.
 
-Also landed: **#371** turned OFF automatic `claude-review` — its subscription
-token has no quota, and the fail-loud verification step meant an exhausted
-account turned *every* PR red while saying nothing about the PR. `/review` and
-manual dispatch still work. Four Dependabot bumps merged (#367–#370), three of
-them majors; `setup-python` 5→7 and `cache` 4→6 are verified green on main,
-`create-github-app-token` 1→3 is **unexercised** because the only workflow using
-it is the one we just stopped running.
+Also closed since 2026-08-15: **#244** (via #396 — `--verify` now checks
+emptiness and walks disk→manifest), **#249** (via #388 — citation sidecars no
+longer requested, the 353 broken ones deleted), **#289** (via #406), **#292**
+(via #408), **#402** (via #405), plus the review findings on the PRs above.
 
-Open PRs: **none** (beyond this reconcile).
+Open PRs: **five**, and only one is simply awaiting merge:
 
-Open issues, 16. Eight closed since the last reconcile (#372–#376 and #379–#381,
-all review findings on the PRs that introduced them, plus **#373** via #378).
-One newly filed: **#377**.
+- **#492** — vendored-sync curl hardening (propagates claw#88 / CultureMech#298).
+  Green; mergeable on approval. Related issue #491 stays open (the canon ref
+  predates `history.yaml` landing in the hub).
+- **#465** and **#461** — **superseded and CONFLICTING.** Each was a parallel
+  attempt at work another branch won: #465 duplicates #474's canonical_examples
+  batch 1 (overlapping records, pre-dates the #476 "cultivation condition is
+  not an optimum" standard); #461 retires the prioritiser that #470 instead
+  fixed in place. Neither can merge as-is. Decide: close both, or salvage
+  #465's six non-overlapping records by re-validating them under the #474
+  standard in a fresh PR.
+- **#441/#442** — Dependabot bumps (`claude-code-action`, `setup-uv` major),
+  awaiting the usual verify-then-merge pass.
+
+Open issues, 40. The pre-2026-08-15 residue is unchanged (first block); the
+rest were filed by the five threads above (second block).
 
 | # | what | section |
 |---|---|---|
@@ -44,33 +69,52 @@ One newly filed: **#377**.
 | #183 | causal-graph fragmentation — detection done, **backfill is what remains** | 5 |
 | #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
-| #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #244 | `trait-graph-sweep --verify` checks report existence only | 8 |
+| #209 | `vendored-sync.yaml` is a de-facto shared file with no drift protection | 7 |
 | #245 | `cellulolysis` has a second, codex-provider report with no manifest row | 8 |
 | #246 | two `-edison-literature-meta.yaml` files, and nothing in the repo writes them | 8 |
-| #249 | citation sidecars are a broken extraction — 353/353 malformed | 8 |
 | #266 | grounding audit: merged ontology terms read as "never existed" | 9 |
-| #289 | `audit-qc-paths` misses a chain recipe's own dependencies when it also has a body | 7 |
-| #292 | editing a `REUSED_SNIPPET`'s shared text reads as a new finding | 10 |
-| #356 | one `node_id`, several `node_type`s — **detected (#366), 223 of 294 remain** | 11 |
+| #356 | one `node_id`, several `node_type`s — **112 of 294 remain** | 11 |
 | #358 | vendored `history.yaml` states the pre-#325 enforcement policy | 7 |
 | #364 | METPO has no generic salt-tolerance / low-pH-tolerance disposition | 11 |
-| #377 | two files still say claw is private; it is public | 7 |
+| #377 | claw-is-private residue — the `check_vendored_sync.sh` half is cross-repo | 7 |
 
-**Recommended next: #356 tranche 2** — `GENE_OR_PROTEIN` / `MOLECULAR_FUNCTION`
-(6 families, 24 occurrences: `catalase`, `superoxide_dismutase`,
-`na_h_antiporter`, `cation_proton_antiporter`, …). It is the next-most-decided
-group, because **#352 already settled the rule** — "a protein is not its
-activity", which is why `catalase`/`urease` were ungrounded from their GO
-ACTIVITY terms and why `catalase -enables-> catalase_function` is the correct
-shape. Expect some of these to be the two-ids case rather than one type.
+| # | what (filed since 2026-08-15) | section |
+|---|---|---|
+| #389 | `_edison_capture.py` documented as vendored byte-identical; differs everywhere | 7 |
+| #391 | `fermentation` grounded to METPO:1000845 (Acetogenesis) in one record | 9 |
+| #409 | Discussions/Knowledge Gaps rendered (#410) but only 2% populated | 12 |
+| #423 | `just new-history` writes bare-number links, violating `range: uri` | 7 |
+| #425 | `curate_knowledge_gaps.py` has no `--dry-run`/`--apply`, no justfile target | 12 |
+| #426 | **351 traits need paid-for research APPLIED** — the campaign entry point | 12 |
+| #433 | Edison sidecar-provenance fix untested; `_edison_capture.py` needs the vendored contract | 7 |
+| #435–#439 | provider-triage review findings (false "available", untested scoring, CLI tracebacks) | 12 |
+| #443 | `graph_completeness_audit.tsv` stale for 347/353 — #470 now refuses it; regeneration is #480 | 12 |
+| #444 | canonical_examples: ~130-record backfill remains | 13 |
+| #445 | nothing validates canonical_examples taxon ids in CI | 13 |
+| #448 | priority dashboard residuals after #449 | 12 |
+| #453 | 40 microbedecoder enzyme-activity traits (47k occurrences) have no TraitMech term | 14 |
+| #464 | 56 strings owned by >1 trait record — synonym lookup cannot disambiguate | 14 |
+| #471/#472/#479/#481 | prioritiser review findings (silent `--sort missing`, inconsistent keys, representative choice, irreproducible overlap figures) | 12 |
+| #475–#478 | canonical_examples review findings (cell-size bins need a taxon source, fabricated optima removed, slot placement, bin-vs-parent landing) | 13 |
+| #480 | `graph_completeness_audit.tsv` has **no regeneration path** — blocks #443 | 12 |
+| #491 | `.vendored_canon_ref` pinned before `history.yaml` existed in the hub | 7 |
 
-**Runner-up: #377**, which is two comment edits and makes #191/#358 legible.
+**Recommended next: land the in-flight README refresh.** It is half-done work
+sitting uncommitted on `main` — the one state this file's own rules say never
+to leave things in. Branch, finish, PR; everything else starts from a clean
+tree.
 
-**Not actionable as "next":** #183's backfill wants its own campaign (it now has
-a metric that cannot be gamed — see section 5). #364 is upstream METPO.
-#191/#197/#209 are cross-Mech and want the hub — though see #377, which voids
-the reason two of them were parked.
+**Runner-up: resolve #465/#461** (close as superseded, or salvage #465's six
+non-overlapping records under the #474 standard) — both PRs are conflicting
+zombies that will confuse every future reconcile until decided. Then **#356
+tranche 5** (section 11 — the `BIOLOGICAL_PROCESS`/`QUALITY` family is the
+next most-decided at 112 remaining) or **the #426 apply-campaign** (section 12
+— the largest open value, same work as #183's backfill).
+
+**Not actionable as "next":** #364 and the v1–v11 cohorts are upstream METPO
+(metpo#535, still no upstream activity). #191/#197/#209/#358 step 2/#377's
+script half/#389/#433/#491 all want the hub or claw first — cross-repo, not
+TraitMech-local. #480 blocks #443, in that order.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -443,7 +487,14 @@ It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
 previous revision of this file called #151 "the only open issue in the repo" —
 that has not been true since 2026-07-30; see the header table.)
 
-## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#209/#289/#358
+## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#209/#358 (+#389/#423/#433/#491)
+
+Update (2026-08-20): **#289 is closed** (#406 — the qc chain resolves
+transitively). New residuals since 2026-08-15: **#389/#433** (the
+`_edison_capture.py` vendoring claim was false; #404 re-stated it honestly,
+the vendored contract itself is still to do), **#423** (`new-history` link
+format), and **#491** (the canon ref pin predates `history.yaml` landing in
+the hub — filed off #492's review).
 
 Update (2026-08-08): **#198, #217, #252 (→ #285) and #275 (→ #308) are closed.**
 Two new residuals joined: **#289** (`audit-qc-paths` does not follow a chain
@@ -596,11 +647,15 @@ verifiable by CI, none blocking anything:
 |---|---|---|
 | #191 | vendored `history.yaml` has no drift check vs claw canonical | cross-Mech; wants the hub |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | cross-Mech; wants the hub |
-| #198 | `vendored-sync` paths filter omits 4 vendored files, in every repo | cross-Mech; wants the hub |
 | #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
-| #217 | conventions page is TraitMech-local; cross-Mech placement unsettled | the page landed in #272; #209 is the argument against a fourth copy |
-| #252 | nothing checks `qc.yaml`'s paths filter covers what `qc` reads | **3rd recurrence** (#184, #200, #250); gate machinery fresh from #272 |
-| #275 | conventions page duplicates the workflow header comments it restates | resolve with #217 — consolidate or cross-link, not both |
+| #389 | `_edison_capture.py` claimed byte-identical, differs in every sibling | #404 corrected the claim to say which way drift runs; contract is #433 |
+| #423 | `new-history` writes bare-number links when claw is present | violates `range: uri`; TraitMech-local, small |
+| #433 | Edison sidecar-provenance fix untested; `_edison_capture.py` unvendored | pairs with #389 |
+| #491 | `.vendored_canon_ref` predates `history.yaml` in the hub | found by #492's review; re-pin after hub catches up |
+
+Closed since the 2026-08-15 revision of this table: **#289** (via #406 —
+`audit-qc-paths` now resolves the qc chain transitively). Earlier: #198, #217,
+#252, #275 (see below).
 
 Closed since this section was written: **#192**, **#193**, **#203**, **#205**,
 **#208**, **#218** (and #199, #200, #202, #204, #215 before them). Action pinning
@@ -653,19 +708,19 @@ reports had been regenerated for double-prefixed CURIEs, and a fifth was in
 flight during the manual grep that found them, so it was missed and needed a
 third paid pass.
 
-### What the sweep left behind — all filed, none blocking
+### What the sweep left behind — two closed 2026-08-16, two remain
 
-- **#244** — `--verify` checks report *existence* only: not the citation
-  sidecars, not non-emptiness, and never disk→manifest. So the clean output
-  above is narrower than it looks, and a report on disk with no `ok` row would
-  silently suppress a call, since resume is file-existence keyed.
+- **#244** — **DONE (2026-08-16, #396)**: `--verify` now checks non-emptiness
+  and walks disk→manifest, closing the silent-suppression path where a report
+  on disk with no `ok` row blocked a call via file-existence-keyed resume.
 - **#245** — `cellulolysis` has a second, `-codex` report with no manifest row
   and no sidecar. #253's provider ranking stops it reaching a page.
 - **#246** — two `-edison-literature-meta.yaml` files, for 2 of 353 traits, and
   nothing in the repo writes that filename.
 - **#248** — `template_file: /Users/marcin/...` in 342 now-tracked reports.
-- **#249** — the citation sidecars are a broken extraction: 353/353 carry
-  malformed entries, 332/353 list the same reference more than once.
+- **#249** — **DONE (2026-08-16, #388)**: the sidecar request was removed and
+  the 353 broken sidecars deleted, rather than fixing an extraction nothing
+  consumed.
 
 Cost per call is captured nowhere — `duration_seconds` is, but no USD figure —
 which is worth adding before this is ever repeated.
@@ -746,7 +801,7 @@ Burning this down is the same work as #183's backfill, on the same edges —
 `cellulolysis` is in the ECHOES set and is #183's worked example, so it is the
 natural first target. Residual: **#270** (baseline keys on an array index).
 
-## 11. Corpus self-consistency in typing (#356, #364) — PENDING, and the strongest next item
+## 11. Corpus self-consistency in typing (#356, #364) — PENDING, 112 of 294 remain
 
 The thread #352/#334 closed was one instance of a general problem: **the corpus
 disagrees with itself about what a thing is, and the gates only catch it where a
@@ -809,8 +864,24 @@ Three of those four blocks are *correct*; one is only the disagreement.
    while its *edges* used it as the property, like all 24 peers. Three signals
    against one: the description was the defect.
 
-3. **Burn down the rest.** Measured on `main` after #382: **223 occurrences
-   across 58 families**. In decreasing order of how decided they already are:
+3. **Burn down the rest — TRANCHES 2–4 DONE (2026-08-16/17), 223 → 112.**
+   #387 took the `GENE_OR_PROTEIN`/`MOLECULAR_FUNCTION` group by splitting
+   protein from activity where one `node_id` meant both (the #352 rule,
+   applied); #392 stated the `PATHWAY` vs `BIOLOGICAL_PROCESS` rule and then
+   applied it; #403 resolved the oxygen family as the predicted two-ids case —
+   one `node_id` per sense — and dropped a marine-water CURIE with it.
+   Remaining as of this reconcile (from `conf/causal_graph_audit_baseline.tsv`):
+   **112 occurrences**, headed by `terminal_electron_acceptor` (5),
+   `rod_complex` (5), `oxidative_stress` (5), `membrane_rigidification` (5),
+   `maximal_growth_rate` (5), `membrane_potential` (4),
+   `membrane_lipid_composition` (4), `immune_evasion` (4),
+   `compatible_solute_transport` (4). The `BIOLOGICAL_PROCESS`/`QUALITY`
+   family (`maximal_growth_rate`, `membrane_rigidification`, `immune_evasion`)
+   is the next most-decided — the QUALITY definition carries most of it.
+   The table below is the 2026-08-15 plan, kept for the family-by-family
+   rationale; its `GENE_OR_PROTEIN`/`MOLECULAR_FUNCTION`,
+   `BIOLOGICAL_PROCESS`/`PATHWAY` and `CHEMICAL`/`ENVIRONMENTAL_FACTOR` rows
+   are done:
 
    | signature | fam | occ | note |
    |---|---|---|---|
@@ -822,9 +893,10 @@ Three of those four blocks are *correct*; one is only the disagreement.
    | `BIOLOGICAL_PROCESS`/`MOLECULAR_FUNCTION` | 3 | 9 | `na_h_antiport` vs `na_h_antiporter` — see the row above |
    | long tail | 26 | ~63 | 2–9 occurrences each |
 
-   Separate but adjacent: **`molecular_oxygen` (21) and `oxygen` (13) are two
-   ids for one thing.** Fixing the typing without merging the ids leaves the
-   duplication in place, so do them together.
+   Separate but adjacent: ~~`molecular_oxygen` (21) and `oxygen` (13) are two
+   ids for one thing~~ — **DONE (2026-08-17, #403)**, resolved the other way:
+   the two spellings were carrying two *senses* (the molecule vs ambient
+   oxygen), so the fix was one `node_id` per sense, not a merge.
 
 **Do not repeat #352's mistake.** The test is not "is this type distinct/defensible
 in isolation" but "is it compatible with what the record and its predicates
@@ -838,3 +910,94 @@ preference) and has no *tolerance* axis — `halotolerant`/`acidotolerant` are
 phenotypes that each already anchor their own record. Actionable form is a
 `metpo-proposal`, not curation here. Filed so the concepts are recorded rather
 than silently lost in a merge.
+
+## 12. Research prioritization: what to apply next, and with what (#426 + #435–#443, #448, #471–#481 subset) — NEW 2026-08-17..20
+
+The question this thread answers: **the paid Edison sweep is complete (section
+8), so which trait's research gets APPLIED next, and through which provider if
+more research is ever bought?** What landed:
+
+- **#427** (`prioritize-graph-research` skill + `scripts/prioritize_graph_research.py`)
+  — rank causal-graph weakness *before* spending money. Its headline finding is
+  **#426**: zero traits await a *first* research pass; **351 REVIEWED traits
+  have a tracked research report whose findings are not yet applied to the
+  YAML**. Applying is the same trait-by-trait work as #183's backfill and
+  section 10's snippet burn-down — one campaign, three metrics.
+- **#440** — provider triage; "available" now means a credential that can make
+  a call, not one that merely exists. Review findings **#435–#439** are open
+  (untested `_score`, tracebacks on unknown `--provider`, the "fit 100 is
+  relative" caveat).
+- **#449** — DisMech's priority dashboard ported (`app/`), lumping rule
+  inverted for TraitMech; residuals in **#448**.
+- **#470** — the prioritiser now ranks every bin separately (bins share only
+  ~5–7% of content — the measured refutation of the family-collapse premise)
+  and **refuses to rank on a stale `graph_completeness_audit.tsv`**. Which
+  exposed **#443/#480**: the audit is stale for 347/353 traits and *nothing in
+  the repo can regenerate it* — every consumer says "regenerate" and no recipe
+  exists. **#480 blocks #443 blocks trusting any ranking.** Review findings
+  **#471/#472/#479/#481** open.
+- **PR #461 is the superseded fork of this thread** — it retired the
+  prioritiser in favour of a new `trait_priority.py`; #470 fixed the
+  prioritiser in place instead and merged first. #461 is CONFLICTING; close or
+  salvage its `audit_discussion_relevance` recurrence gate separately.
+
+Adjacent: **#409/#410** made Discussions and Knowledge Gaps visible and
+answerable, but the corpus carries only 10 records with `discussions` (2%);
+**#425** — `curate_knowledge_gaps.py` mutates trait YAML with no
+`--dry-run`/`--apply` split, violating the safe-mutation contract.
+
+**The apply-campaign (#426) is the largest open value in the repo** and needs
+#480 → #443 fixed first if it is to be prioritised by completeness rather than
+hand-picked.
+
+## 13. canonical_examples: render, validate, backfill (#444/#445 + #475–#478) — NEW 2026-08-19..20
+
+226 records carried trait→organism links that **no page rendered and nothing
+validated** (#444/#445). What landed: **#446** rendered the slot on trait
+pages, added taxon-id validation scaffolding, and ran a one-record canary;
+**#474** applied batch 1 — 5 records filled, 6 honest skips, after two
+adversarial review rounds whose standard is now the rule:
+
+- exemplars come **only from the trait's own deep-research artifact**, cited to
+  a DOI present in that artifact;
+- every `taxon_id` resolved and label-checked against the local OAK NCBITaxon
+  build, labels verbatim;
+- **a cultivation condition is not a stated optimum** (#476 — two fabricated
+  exemplars were removed by review);
+- contrast cases excluded by name.
+
+Open residue: **#444** (~130 records still to fill), **#445** (validation not
+yet a CI gate), **#475** (cell-size bins cannot be filled from mechanism
+artifacts — needs a taxon-oriented source), **#477** (slot placement:
+the canary appended at EOF, 225 records put it after `evidence`), **#478**
+(bin-measured exemplars land on family parents while the bin stays empty).
+
+**PR #465 is the superseded fork of this thread** — a parallel batch 1 (7
+records, 13 exemplars) that pre-dates the #476 standard and now conflicts.
+Six of its seven records (`facultative_oxygen_preference`,
+`facultative_psychrophilic`, `ph_optimum_high`, `ph_range_low`,
+`temperature_optimum_low`, `cell_width` — all but `temperature_optimum_high`)
+do not overlap #474 — salvageable only by re-validating each under the #474
+standard in a fresh PR.
+
+## 14. microbedecoder / FAPROTAX residual (#453, #464) — NEW 2026-08-19..20; grounded and gated, terms still missing
+
+microbedecoder's non-chemical residual landed here: **40 enzyme-activity
+traits (47k occurrences) with no TraitMech term** (#453). What landed:
+
+- **#454** grounded 42 enzyme-activity labels to GO/EC (reverted once for a
+  review finding, re-landed same day); **#459** added the PROTEIN sense of
+  `alcohol dehydrogenase`; **#462** resolved three FAPROTAX labels to existing
+  traits.
+- **#473** applied the accumulated grounding backlog **and gated it so it
+  cannot rebuild** — the backlog reports are now freshness-checked like the
+  residual TSVs (section 9).
+- **#467** — METPO proposal v11: **15 FAPROTAX metabolic-strategy classes**,
+  extending the upstream ask (section 4; metpo#535 still shows no upstream
+  activity).
+
+Open residue: **#453** (the 40 traits themselves — blocked on METPO minting
+for the classes v11 proposes, or on a decision to mint `traitmech:` fallback
+ids per `manage-identifiers`); **#464** (56 synonym strings owned by more than
+one trait record, so reverse lookup from a microbedecoder label to a trait is
+ambiguous — needs an ownership rule before any bulk import).
