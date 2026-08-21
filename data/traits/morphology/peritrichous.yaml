@@ -45,16 +45,21 @@ causal_graphs:
     label: polar flagellar arrangement
     node_type: QUALITY
     description: Flagella localized at one or both cell poles.
-  - node_id: flhg_regulator
-    label: FlhG
-    node_type: GENE_OR_PROTEIN
-    description: MinD-type ATPase that modulates FlhF and regulates flagellar assembly
-      progression.
-    grounding: UniProtKB:Q2N2M1
-  - node_id: flagellar_assembly_progression
-    label: progression of flagellar assembly
+  - node_id: b_subtilis_flagellar_rod_assembly
+    label: B. subtilis flagellar rod assembly
     node_type: BIOLOGICAL_PROCESS
-    description: Ordered progression of flagellar biogenesis from C-ring through filament.
+    description: Polymerization of the B. subtilis flagellar rod through the peptidoglycan
+      wall.
+  - node_id: b_subtilis_basal_body_immobilization
+    label: B. subtilis basal-body immobilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Capture and immobilization of initially mobile nascent basal bodies
+      during flagellar rod assembly in B. subtilis.
+  - node_id: b_subtilis_peptidoglycan_pore_pattern
+    label: B. subtilis peptidoglycan pore pattern
+    node_type: QUALITY
+    description: Grid-like distribution of permissive peptidoglycan pores interpreted
+      during B. subtilis flagellar rod assembly.
   - node_id: flagellar_filament_number
     label: flagellar filament number
     node_type: QUALITY
@@ -64,14 +69,6 @@ causal_graphs:
     label: swimming velocity
     node_type: CAPACITY
     description: Cell swimming speed driven by flagellar rotation.
-  - node_id: carbon_limitation
-    label: carbon limitation
-    node_type: ENVIRONMENTAL_FACTOR
-    description: Growth under limited carbon availability.
-  - node_id: motility_investment
-    label: motility
-    node_type: CAPACITY
-    description: Investment in motile, flagellum-driven swimming behavior.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -93,6 +90,17 @@ causal_graphs:
       notes: Flagellum review supports multiple surface flagellar filaments as locomotory
         organelles.
     predicate_id: biolink:associated_with
+  - subject: surface_placement
+    predicate: associated with
+    object: flagellar_filament_number
+    description: Surface-distributed peritrichous flagellation is associated with
+      multiple flagella per cell, although number varies by species and condition.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      snippet: five to six flagellar filaments distributed over the cell body
+      notes: Schuhmacher et al. describe E. coli and B. subtilis as representative
+        peritrichous bacteria with multiple filaments, while warning that number varies.
+    predicate_id: biolink:associated_with
   - subject: peritrichous_trait
     predicate: distinguished from
     object: polar_placement
@@ -102,17 +110,39 @@ causal_graphs:
     - reference: DOI:10.3390/fermentation10120606
       notes: Frolov et al. 2024 contrast Pseudomonas polar flagella located at one
         pole with peritrichous flagella located throughout the cell wall.
-  - subject: flhg_regulator
-    predicate: modulates
-    object: flagellar_assembly_progression
-    description: FlhG modulates FlhF and controls FliG interactions with C-ring proteins,
-      regulating progression of flagellar assembly.
+  - subject: b_subtilis_flagellar_rod_assembly
+    predicate: causes
+    object: b_subtilis_basal_body_immobilization
+    description: In B. subtilis, flagellar rod assembly through peptidoglycan immobilizes
+      initially mobile nascent basal bodies.
     evidence:
-    - reference: DOI:10.1038/s41467-024-50274-4
-      notes: 'Dornes et al. 2024: FlhG''s modulation of FlhF controls FliG interaction
-        with FliM/FliN, thereby regulating progression of flagellar assembly; general
-        placement/number control.'
+    - reference: DOI:10.1128/mbio.00530-25
+      snippet: become immobilized when the flagellar rod transits the peptidoglycan
+      notes: Dunn et al. directly observed elevated mobility early in basal-body assembly
+        and in rod mutants, supporting rod-dependent immobilization in B. subtilis.
+    predicate_id: biolink:causes
+  - subject: b_subtilis_peptidoglycan_pore_pattern
+    predicate: regulates
+    object: b_subtilis_basal_body_immobilization
+    description: The grid-like pattern of permissive peptidoglycan pores constrains
+      where B. subtilis rod assembly can immobilize basal bodies.
+    evidence:
+    - reference: DOI:10.1128/mbio.00530-25
+      snippet: interpreting a grid-like pattern of pores, pre-existent in the PG
+      notes: Dunn et al. infer that rod polymerization interprets a pre-existing grid-like
+        peptidoglycan pore pattern; this edge is therefore taxon-scoped and inferential.
     predicate_id: RO:0002211
+  - subject: b_subtilis_basal_body_immobilization
+    predicate: contributes to
+    object: surface_placement
+    description: Rod-dependent capture of basal bodies at distributed sites contributes
+      to the peritrichous surface pattern in B. subtilis.
+    evidence:
+    - reference: DOI:10.1128/mbio.00530-25
+      snippet: rod both immobilizes basal bodies and participates in pattern formation
+      notes: Rod mutations increased random and polar basal-body placement, supporting
+        a role for immobilization in the distributed B. subtilis pattern.
+    predicate_id: RO:0002326
   - subject: flagellar_filament_number
     predicate: positively influences (saturating)
     object: swimming_velocity
@@ -123,15 +153,6 @@ causal_graphs:
       notes: 'Lisevich et al. 2025: swimming velocity increases with flagellar-gene
         expression only up to ~5 flagella, above which it saturates; functional phenotype
         of multiple peritrichous flagella.'
-  - subject: carbon_limitation
-    predicate: inversely correlates with
-    object: motility_investment
-    description: Under carbon-limited growth, motility stays below maximal and inversely
-      correlates with growth rate.
-    evidence:
-    - reference: DOI:10.1038/s41467-025-56980-x
-      notes: 'Lisevich et al. 2025: during carbon-limited growth motility remains
-        below maximal levels and inversely correlates with growth rate.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -163,4 +184,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:Q2N2M1×1).
+  llm_assisted: true
+- timestamp: '2026-08-21T16:51:38Z'
+  curator: codex
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Replaced a polar-flagellation FlhG claim and an unrelated carbon-limitation
+    island with the taxon-scoped B. subtilis rod/peptidoglycan mechanism supported
+    by DOI:10.1128/mbio.00530-25. Connected the filament-number branch with a weak
+    association rather than treating flagellar count as diagnostic; the graph is now
+    one connected component.
   llm_assisted: true

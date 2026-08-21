@@ -172,7 +172,6 @@ pbp2 transpeptidase activity	MOLECULAR_FUNCTION	2	data/traits/morphology/cell_le
 standard growth conditions	ENVIRONMENTAL_FACTOR	2	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_width_medium.yaml
 streamlining selection	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 genome streamlining	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length_very_small.yaml|data/traits/physiology/nutrient_adaptation.yaml
-carbon limitation	ENVIRONMENTAL_FACTOR	2	data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/peritrichous.yaml
 penicillin-binding proteins	GENE_OR_PROTEIN	2	data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccus_shaped.yaml
 mreb cytoskeleton	GENE_OR_PROTEIN	2	data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_small.yaml
 pbp2	GENE_OR_PROTEIN	2	data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/fusiform_shaped.yaml
@@ -1561,6 +1560,7 @@ z-ring condensation and stability	BIOLOGICAL_PROCESS	1	data/traits/morphology/ce
 ftsz proto-ring (with ftsa/zipa)	GENE_OR_PROTEIN	1	data/traits/morphology/cell_length_small.yaml
 divisome assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_small.yaml
 ftsz positioning at midcell	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_small.yaml
+carbon limitation	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/cell_length_very_small.yaml
 nitrogen limitation	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/cell_length_very_small.yaml
 reduced transcriptional regulation	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_very_small.yaml
 nutrient-poor environment	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/cell_length_very_small.yaml
@@ -1851,10 +1851,11 @@ ftsz ring	CELLULAR_LOCALIZATION	1	data/traits/morphology/ovoid_shaped.yaml
 concentric midcell rings	CELLULAR_LOCALIZATION	1	data/traits/morphology/ovoid_shaped.yaml
 surface-distributed placement	QUALITY	1	data/traits/morphology/peritrichous.yaml
 polar flagellar arrangement	QUALITY	1	data/traits/morphology/peritrichous.yaml
-progression of flagellar assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/peritrichous.yaml
+b. subtilis flagellar rod assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/peritrichous.yaml
+b. subtilis basal-body immobilization	BIOLOGICAL_PROCESS	1	data/traits/morphology/peritrichous.yaml
+b. subtilis peptidoglycan pore pattern	QUALITY	1	data/traits/morphology/peritrichous.yaml
 flagellar filament number	QUALITY	1	data/traits/morphology/peritrichous.yaml
 swimming velocity	CAPACITY	1	data/traits/morphology/peritrichous.yaml
-motility	CAPACITY	1	data/traits/morphology/peritrichous.yaml
 chromophore-containing metabolites	CHEMICAL	1	data/traits/morphology/pigmentation.yaml
 environmental regulation	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/pigmentation.yaml
 visible colony color	MOLECULAR_FUNCTION	1	data/traits/morphology/pigmentation.yaml

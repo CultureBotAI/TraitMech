@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/peritrichous.yaml
+  slug: peritrichous
+session:
+  id: 2026-08-21T165530Z-codex-21ea8d
+  timestamp: '2026-08-21T16:55:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Apply verified peritrichous graph research
+  details: Verified the historical enrichment lead against the current trait and primary sources.
+    Removed a polar-specific FlhG branch and an unrelated carbon-limitation island, added
+    the taxon-scoped Bacillus subtilis flagellar-rod and peptidoglycan-pore patterning mechanism
+    from DOI:10.1128/mbio.00530-25, and connected the filament-number branch with a deliberately
+    weak association. The graph moved from four components to one, reducing the corpus baseline
+    by one fragmented graph and six unreachable nodes without introducing predicate-domain
+    or evidence-snippet debt.
