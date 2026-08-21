@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: other
+  path: data/traits
+  slug: canonical-examples-six
+session:
+  id: 2026-08-21T065406Z-codex-a1ab82
+  timestamp: '2026-08-21T06:54:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/465
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  summary: Salvage six canonical-example backfills from superseded PR 465
+  details: Recovered the six records from PR 465 that remain without canonical_examples on
+    current main, adding 10 DOI-backed NCBITaxon exemplars taken from each record's own existing
+    deep-research artifact. Applied the additions field-by-field rather than checking out
+    the stale files, preserving newer grounding and curation-history events on ph_optimum_high
+    and ph_range_low. Excluded temperature_optimum_high because current main already gained
+    a canonical example through later work. Taxon identifiers and labels retain the resolution
+    review performed in PR 465.

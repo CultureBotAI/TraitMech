@@ -435,6 +435,54 @@ A particularly useful 2023 result is the tiered response of *Pseudomonas fragi* 
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Pseudomonas fragi</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=296"
+             rel="nofollow noreferrer"><code>NCBITaxon:296</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.37256/amtt.5220244537"
+             rel="nofollow noreferrer"><code>DOI:10.37256/amtt.5220244537</code></a>
+          
+          
+          <span class="meta">Cold-adapted organism whose best growth sits at the low end of the range, cited in this trait&#39;s artifact for psychrophilic adaptation.</span>
+        </li>
+        
+        <li>
+          <em>Pseudomonas sivasensis</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1880678"
+             rel="nofollow noreferrer"><code>NCBITaxon:1880678</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1007/s42770-023-01057-4"
+             rel="nofollow noreferrer"><code>DOI:10.1007/s42770-023-01057-4</code></a>
+          
+          
+          <span class="meta">Cold-adapted isolate cited in this trait&#39;s artifact for growth at low temperature.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -489,6 +537,12 @@ A particularly useful 2023 result is the tiered response of *Pseudomonas fragi* 
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): pufa_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named biosynthetic route to polyunsaturated fatty acids. The two typings describe it in near-identical words, so the split was arbitrary and the rule breaks the 1-1 tie.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-21T00:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 2 exemplar taxon/taxa. Organisms and citations come only from this record&#39;s own deep-research artifact; every taxon id was resolved and label-checked against the local NCBITaxon build rather than recalled. Organisms the artifact names as contrast cases rather than exemplars were deliberately excluded.</p>
         </li>
         
       </ol>
@@ -871,7 +925,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-16 02:00 UTC from
+      Record as of 2026-08-21 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
