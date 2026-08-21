@@ -190,3 +190,27 @@ curation_history:
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×3, RO:0002327×1).
   llm_assisted: true
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 3 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  reference: DOI:10.1038/s41467-023-39037-9
+  note: Model organism for the RodA/MreB width-determining machinery described in
+    this record.
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  reference: DOI:10.1101/197475
+  note: Model organism for MreB-dependent width control; the artifact cites it under
+    the earlier name Caulobacter crescentus, and the reference is a preprint.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.1002/mbo3.1385
+  note: Model rod whose peptidoglycan-synthesis complex sets cell width in the mechanism
+    this record carries.

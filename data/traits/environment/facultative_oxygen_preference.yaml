@@ -193,3 +193,22 @@ curation_history:
     aerobic_respiration edge already carries the O2-availability link, so nothing
     is lost.'
   llm_assisted: true
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 2 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.1111/1751-7915.70051
+  note: Respires oxygen when it is available and switches to nitrate respiration or
+    fermentation when it is not, which is the trait as defined.
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  reference: DOI:10.3390/ijms25021277
+  note: Grows aerobically and, on oxygen limitation, by nitrate respiration or fermentation
+    under the regulation described in this record.

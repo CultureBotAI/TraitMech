@@ -248,3 +248,17 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
   llm_assisted: true
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: claude
+  action: BACKFILL_CANONICAL_EXAMPLES
+  changes: Added 1 exemplar taxon/taxa. Organisms and citations come only from this
+    record's own deep-research artifact; every taxon id was resolved and label-checked
+    against the local NCBITaxon build rather than recalled. Organisms the artifact
+    names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  reference: DOI:10.3390/fermentation10060298
+  note: Acidophile growing in the low-pH range this record bounds, cited in its artifact
+    for acidophile physiology.

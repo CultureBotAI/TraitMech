@@ -405,6 +405,35 @@ These covariates should be retained as evidence metadata because low-pH growth i
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Acidithiobacillus ferrooxidans</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=920"
+             rel="nofollow noreferrer"><code>NCBITaxon:920</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3390/fermentation10060298"
+             rel="nofollow noreferrer"><code>DOI:10.3390/fermentation10060298</code></a>
+          
+          
+          <span class="meta">Acidophile growing in the low-pH range this record bounds, cited in its artifact for acidophile physiology.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -465,6 +494,12 @@ These covariates should be retained as evidence metadata because low-pH growth i
           <time>2026-08-20T07:10:31Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-21T00:00:00Z</time> ·
+          <strong>BACKFILL_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 1 exemplar taxon/taxa. Organisms and citations come only from this record&#39;s own deep-research artifact; every taxon id was resolved and label-checked against the local NCBITaxon build rather than recalled. Organisms the artifact names as contrast cases rather than exemplars were deliberately excluded.</p>
         </li>
         
       </ol>
@@ -847,7 +882,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-20 07:10 UTC from
+      Record as of 2026-08-21 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
