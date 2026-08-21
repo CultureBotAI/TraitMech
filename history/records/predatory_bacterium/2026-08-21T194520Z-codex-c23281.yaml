@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/predatory_bacterium.yaml
+  slug: predatory_bacterium
+session:
+  id: 2026-08-21T194520Z-codex-c23281
+  timestamp: '2026-08-21T19:45:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Connect the predatory-bacterium lifecycle graph
+  details: Verified the paid research against the current record and primary publisher text.
+    Added a taxon-scoped Bdellovibrio bacteriovorus type IV pilus plus prey-attachment and
+    prey-invasion processes, then joined attachment, invasion, intraperiplasmic growth, and
+    progeny release with six evidence-backed edges. The graph moved from four components to
+    one, reducing the corpus baseline by one fragmented graph and seven unreachable nodes
+    without new predicate-domain or evidence-snippet debt.
