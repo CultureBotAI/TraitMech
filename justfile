@@ -51,7 +51,7 @@ validate-all *args:
 
 # Strict in-process validation in *closed* mode (rejects unknown fields).
 # Emits reports/instance_validation_failures.tsv and exits 1 on any ERROR.
-# This is what `validate-all` should become once trusted in CI.
+# This is the implementation used by `validate-all` and CI.
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 

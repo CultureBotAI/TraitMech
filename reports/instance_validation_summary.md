@@ -1,32 +1,44 @@
 # Instance validation summary
 
-Run: `just validate-strict` (in-process `linkml.validator.Validator` with `JsonschemaValidationPlugin(closed=True)`).
-
-| Metric | Count |
-|---|---|
-| Files scanned (`data/traits/**/*.yaml`) | 357 |
-| Files with ERROR | **0** |
-| Total ERROR rows | **0** |
-| TSV | `reports/instance_validation_failures.tsv` |
-
-## Reading
-
-The corpus passes strict, closed-schema validation against `src/traitmech/schema/traitmech.yaml::TraitRecord`. No unknown fields, no missing required attributes, no enum/pattern violations, no parse errors.
-
-This is a stronger signal than `just validate-all` provides — that target runs the CLI in open mode and swallows non-zero exits, so it reports "success" even when records contain unknown keys. The fact that strict mode is also clean means the seeder is currently emitting records that the schema accepts as written.
-
-## What this run does not tell us
-
-- **It only validates structure, not content.** A trait can be schema-valid and still semantically wrong (e.g., wrong METPO term, wrong polarity on a causal edge). Validation guarantees nothing about correctness of references or causal claims.
-- **It will regress silently without a CI gate.** Nothing today blocks a PR that introduces a schema-breaking record. See backlog item G01.
-- **The seeder doesn't validate its output before writing.** Today this happens to be fine because the schema and the seeder template are in sync. If either drifts, the first signal will be a manual `just validate-strict` run — by which point unvalidated records have already been committed. See backlog item G03.
-
-## Reproduce
+Trait records are validated in process with
+`JsonschemaValidationPlugin(closed=True)`, so unknown fields are errors. Both
+public entry points use the same implementation:
 
 ```bash
-just validate-strict                          # full corpus
-just validate-strict --sample 20              # smoke test
-just validate-strict data/traits/physiology   # one category
+just validate-all
+just validate-strict
 ```
 
-The TSV (`reports/instance_validation_failures.tsv`) carries columns `file`, `category`, `detail`, `path`, `message`. When the corpus has errors, sort/filter on `category` to see whether the failure mode is schema-drift (`unexpected_field`), required-attribute drift (`missing_required`), or value-shape (`enum_mismatch`, `pattern_mismatch`).
+The validator discovers `data/traits/**/*.yaml` on each run and writes current
+errors to `reports/instance_validation_failures.tsv`. Use its console summary
+for the live file and error counts; this narrative intentionally does not copy
+those volatile values.
+
+## Enforcement
+
+- `.github/workflows/validate-strict.yaml` runs strict validation for relevant
+  pull requests and pushes to `main`.
+- `just qc` includes `validate-strict`.
+- Production trait writers use `write_validated_trait`, which rejects invalid
+  in-memory records before replacing files.
+
+These layers complement one another: write-time validation prevents new drift,
+while corpus validation catches hand edits, schema changes, and older records.
+
+## What structural validation does not prove
+
+A schema-valid trait can still be semantically wrong. Validation does not prove
+that an ontology identifier names the intended concept, a citation supports a
+claim, a causal edge has the correct direction, or a graph is complete. Use the
+grounding, evidence, and graph audits in `just qc`, followed by curator review.
+
+## Focused reproduction
+
+```bash
+just validate-strict --sample 20
+just validate-strict data/traits/physiology
+```
+
+The TSV columns are `file`, `category`, `detail`, `path`, and `message`. When
+errors exist, group by `category` to distinguish schema drift, missing required
+fields, and invalid value shapes.

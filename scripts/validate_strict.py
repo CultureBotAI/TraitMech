@@ -2,9 +2,9 @@
 """Strict LinkML validation harness for TraitMech instance records.
 
 Wraps the in-process linkml.validator with JsonschemaValidationPlugin(closed=True)
-so unknown fields are flagged (the default `just validate-all` target runs the
-CLI per-file in open mode and silently lets unknown fields pass). Emits a
-structured TSV of every ERROR result and exits non-zero if any are found.
+so unknown fields are flagged. This is the implementation used by both
+`just validate-strict` and `just validate-all`. Emits a structured TSV of every
+ERROR result and exits non-zero if any are found.
 
 Usage:
     python scripts/validate_strict.py [PATH ...]

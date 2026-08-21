@@ -35,6 +35,12 @@ SUSPECT_FRAGMENTS = [
 # Slot-name fragments that explicitly indicate ontology references.
 TERM_NAME_FRAGMENTS = ["term", "ontology", "curie", "_id"]
 
+BUILTIN_RANGES = {
+    "string", "integer", "boolean", "float", "double", "date", "datetime",
+    "uri", "uriorcurie", "ncname", "objectidentifier", "nodeidentifier",
+    "decimal", "time",
+}
+
 
 def class_line_index(text_lines: list[str]) -> dict[str, int]:
     """Map class name -> 1-indexed line of its declaration."""
@@ -60,6 +66,52 @@ def iter_attributes(schema: dict) -> Iterable[tuple[str, str, dict]]:
     for cname, cdef in (schema.get("classes") or {}).items():
         for aname, adef in (cdef.get("attributes") or {}).items():
             yield cname, aname, (adef or {})
+
+
+def local_imported_type_names(
+    schema_path: Path, schema: dict, seen: set[Path] | None = None
+) -> set[str]:
+    """Collect classes, enums, and types from recursively imported local YAML.
+
+    Prefix imports such as ``linkml:types`` are supplied by LinkML itself and
+    are covered by ``BUILTIN_RANGES``. Bare imports resolve beside the importing
+    schema, matching LinkML's local import convention.
+    """
+    seen = {schema_path.resolve()} if seen is None else seen
+    names: set[str] = set()
+    for imported in schema.get("imports") or []:
+        imported = str(imported)
+        if ":" in imported:
+            continue
+        candidate = schema_path.parent / imported
+        if candidate.suffix not in {".yaml", ".yml"}:
+            candidate = candidate.with_suffix(".yaml")
+        candidate = candidate.resolve()
+        if candidate in seen or not candidate.is_file():
+            continue
+        seen.add(candidate)
+        imported_schema = yaml.safe_load(candidate.read_text()) or {}
+        for section in ("classes", "enums", "types"):
+            names.update((imported_schema.get(section) or {}).keys())
+        names.update(local_imported_type_names(candidate, imported_schema, seen))
+    return names
+
+
+def undefined_range_hits(schema: dict, imported_names: set[str]) -> list[tuple[str, str, str]]:
+    """Return attributes whose ranges resolve nowhere in the schema closure."""
+    known = (
+        set(schema.get("classes") or {})
+        | set(schema.get("enums") or {})
+        | set(schema.get("types") or {})
+        | BUILTIN_RANGES
+        | imported_names
+    )
+    hits = []
+    for cname, aname, adef in iter_attributes(schema):
+        value_range = adef.get("range")
+        if isinstance(value_range, str) and value_range not in known:
+            hits.append((cname, aname, value_range))
+    return hits
 
 
 def report_section(title: str) -> None:
@@ -149,15 +201,8 @@ def main() -> int:
 
     # 6. range: refers to a name that isn't a class/enum/built-in type.
     report_section("Attributes whose `range:` is undefined in this schema")
-    builtins = {"string", "integer", "boolean", "float", "double", "date",
-                "datetime", "uri", "uriorcurie", "ncname", "objectidentifier",
-                "nodeidentifier", "decimal", "time"}
-    known = set(classes) | set(enums) | builtins
-    unknown_hits = []
-    for cname, aname, adef in iter_attributes(schema):
-        r = adef.get("range")
-        if isinstance(r, str) and r not in known:
-            unknown_hits.append((cname, aname, r))
+    imported_names = local_imported_type_names(SCHEMA_PATH, schema)
+    unknown_hits = undefined_range_hits(schema, imported_names)
     print(f"({len(unknown_hits)} hits)")
     for cname, aname, rng in unknown_hits[:40]:
         print(f"- `{cname}.{aname}` -> range: `{rng}`")

@@ -14,19 +14,33 @@ coverage; mint only when no good existing term exists anywhere.
 edge/node count ≥ 2; skip the freq-1 long tail). Examples:
 `/ground-or-propose-metpo predicates min-freq 3` · `/ground-or-propose-metpo nodes category metabolism`.
 
-## Scale (what the residual looks like — re-check before you start)
-The residual is large and skewed: a small head of high-frequency terms carries most
-of the coverage. Re-read the live counts each run; as of the last pass:
-- Predicates: ~190 labels at freq ≥ 2 (top: `supports`, `positively regulates`,
-  `induces`, `required for`, `drives`, `maintains`, `mediates`, `converts`).
-  `positively regulates`/`negatively regulates` were grounded in #235;
-  `causally upstream of` is deliberately withheld — see the skip rule below.
-- Nodes: ~215 labels at freq ≥ 2, dominated by `BIOLOGICAL_PROCESS` and
-  `GENE_OR_PROTEIN`, then `CHEMICAL`, `ENVIRONMENTAL_FACTOR`, `QUALITY`.
+## Establish live state first
 
-**Do not deep-research all ~400 one at a time.** Most of the head is bulk-groundable
-without research (see steps 2–3). Reserve `/deep-research` for the genuinely ambiguous
-remainder. Work the head first — it buys the most coverage per unit effort.
+Residual size, coverage, proposal cohorts, and reserved identifiers all change.
+Regenerate the derived reports and inspect the live inputs before planning work:
+
+```bash
+just audit-derived-reports
+python - <<'PY'
+import csv
+from pathlib import Path
+
+for path, count_column in [
+    (Path("reports/predicate_grounding_residual.tsv"), "edge_count"),
+    (Path("reports/node_grounding_residual.tsv"), "node_count"),
+]:
+    with path.open() as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    recurring = [row for row in rows if int(row[count_column]) >= 2]
+    print(path, "rows=", len(rows), "recurring=", len(recurring))
+PY
+find proposals -mindepth 1 -maxdepth 1 -type d -name 'metpo_traitmech_v*' | sort -V
+```
+
+Use the reports themselves to rank terms by frequency and type. Do not
+deep-research the long tail one item at a time: most of the high-frequency head
+is bulk-groundable without research. Reserve paid lookup for the genuinely
+ambiguous remainder.
 
 ## Inputs (read these)
 - **Residual to work:**
@@ -44,7 +58,9 @@ remainder. Work the head first — it buys the most coverage per unit effort.
 - **METPO term inventory (search FIRST):**
   - In-repo: every `data/traits/**/*.yaml` with `term_kind: OBJECT_PROPERTY` (predicates) or `term_kind: CLASS` (nodes) and an `identifier: METPO:…` — match on `label` + `synonyms`.
   - Full ontology: `data/raw/metpo.owl` (local) and the latest release `https://w3id.org/metpo/metpo.owl` (BioPortal-equivalent) for terms not yet seeded into the corpus.
-- **Where groundings/proposals go:** `mappings/predicate_grounding.tsv`, `mappings/node_grounding.tsv`; new proposal cohort under `proposals/` (latest is `metpo_traitmech_v7/`).
+- **Where groundings/proposals go:** `mappings/predicate_grounding.tsv`,
+  `mappings/node_grounding.tsv`; proposal cohorts under `proposals/`. Derive
+  the highest existing cohort with the command above.
 - **Conventions:** the `metpo-proposal` and `manage-identifiers` skills (METPO-first policy, ID reservation, ROBOT-template format, citation-vs-mapping rule).
 
 ## Procedure
@@ -145,25 +161,25 @@ on it for METPO.
   Then run the grounders to write them into the YAMLs:
   `uv run python scripts/ground_causal_predicates.py --apply` and
   `uv run python scripts/ground_causal_nodes.py --apply`.
-- **Proposals** → follow the `metpo-proposal` skill: a fresh cohort
-  `proposals/metpo_traitmech_v8/` (next after v7), ROBOT-template rows for the new
-  classes/predicates with Aristotelian definitions, parents, `definition_source` =
-  `TraitMech:data/traits/<…>` (citations only — equivalents go to `xrefs`/SSSOM, per
-  issue #83), placeholder IDs in the reserved range **above v7** (classes `1007722+`,
-  predicates `2007604+`), verified collision-free against the latest release. Then ground
-  the motivating edges/nodes to the proposed placeholder CURIEs (the documented round-trip
-  swaps them for real IDs once METPO mints). `just verify-proposal` + `just robot-validate-proposal`.
+- **Proposals** → follow the `metpo-proposal` skill. Derive the next cohort
+  version and collision-free identifier block from the current proposal tree,
+  mappings, and `data/raw/metpo.owl`; never copy either from this command's
+  prose. Add ROBOT-template rows with Aristotelian definitions, parents, and
+  `definition_source` = `TraitMech:data/traits/<…>` (citations only —
+  equivalents go to `xrefs`/SSSOM, per issue #83). Then ground the motivating
+  edges/nodes to the proposed placeholder CURIEs. Run the proposal skill's
+  current verification commands.
 
 ### 6. Verify + report
 Run the gates and fix anything they flag:
 `just validate-strict` (0 errors) · `uv run python scripts/audit_causal_graphs.py` (0 orphans/dangling) ·
 `just validate-products` (id↔label gate clean) · `just gen-pages`.
 
-Report, against the **prior** coverage (predicates were ~62%, nodes ~33% after the last pass):
+Compute the baseline from regenerated reports before editing, then report:
 - new predicate_id % and node grounding %, and the delta;
 - counts: grounded-to-METPO vs grounded-to-RO/OBO vs proposed vs skipped-non-ontological;
 - the Tier-0 bulk share vs the deep-researched share (so the effort/coverage split is visible);
-- the new proposal cohort summary.
+- the new proposal cohort summary, if one was created.
 
 ## Guardrails
 - **METPO-maximizing, not METPO-forcing:** never ground a term to a METPO CURIE whose

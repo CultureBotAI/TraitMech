@@ -26,6 +26,7 @@ from pr_sanity import (  # noqa: E402
     check_conflict_markers,
     check_markdown_links,
     check_action_pins,
+    check_main_cancellation,
     check_workflow_concurrency,
     check_workflows,
     prose_lines,
@@ -558,6 +559,11 @@ def _conc(doc_text):
     return check_workflow_concurrency("wf.yaml", doc, doc.get("on", doc.get(True)))
 
 
+def _main_conc(doc_text):
+    doc = yaml.safe_load(textwrap.dedent(doc_text))
+    return check_main_cancellation("wf.yaml", doc, doc.get("on", doc.get(True)))
+
+
 JOBS = "jobs: {a: {runs-on: ubuntu-latest}}"
 
 
@@ -692,13 +698,8 @@ def test_no_cancellation_is_clean():
     """) == []
 
 
-def test_push_alongside_pull_request_does_not_trip_it():
-    """curation-history.yaml's shape — must not false-positive.
-
-    A pull_request run and a push run get different `github.ref`
-    (refs/pull/N/merge vs refs/heads/X), so a ref-keyed group already separates
-    them. Flagging this would be the noise that gets the whole check disabled.
-    """
+def test_push_alongside_pull_request_does_not_trip_cross_trigger_check():
+    """A ref-keyed push cannot collide with the pull-request run."""
     assert _conc(f"""
         on:
           pull_request:
@@ -709,6 +710,67 @@ def test_push_alongside_pull_request_does_not_trip_it():
           cancel-in-progress: true
         {JOBS}
     """) == []
+
+
+def test_cancelling_main_push_is_flagged():
+    found = _main_conc(f"""
+        on:
+          pull_request:
+          push: {{branches: [main]}}
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_CANCELS_MAIN"]
+
+
+def test_pull_request_only_cancellation_preserves_main_runs():
+    assert _main_conc(f"""
+        on:
+          pull_request:
+          push: {{branches: [main]}}
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: ${{{{ github.event_name == 'pull_request' }}}}
+        {JOBS}
+    """) == []
+
+
+def test_push_excluding_main_is_out_of_scope():
+    assert _main_conc(f"""
+        on:
+          push: {{branches-ignore: [main]}}
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_ordered_negative_branch_pattern_excludes_main():
+    assert _main_conc(f"""
+        on:
+          push:
+            branches: ["**", "!main"]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_later_positive_branch_pattern_reincludes_main():
+    found = _main_conc(f"""
+        on:
+          push:
+            branches: ["**", "!main", "main"]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_CANCELS_MAIN"]
 
 
 def test_job_level_concurrency_is_checked_too():
@@ -756,6 +818,12 @@ def test_real_repo_has_no_shared_cancelling_group():
     """Regression guard on the repo itself, not just on fixtures."""
     found = [f for f in check_workflows(REPO_ROOT)
              if f["check"] == "CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+    assert found == [], found
+
+
+def test_real_repo_never_cancels_main_validation():
+    found = [f for f in check_workflows(REPO_ROOT)
+             if f["check"] == "CONCURRENCY_CANCELS_MAIN"]
     assert found == [], found
 
 
