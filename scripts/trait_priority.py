@@ -30,9 +30,10 @@ real curation. Series membership is therefore reported as INFORMATION, and
 `series_lump_min_sibling_overlap`. Nothing in the corpus currently reaches that
 threshold, which is the correct outcome and not a bug.
 
-This also supersedes the silent family-collapsing in
-`prioritize_graph_research.py`, whose stated rationale ("one research pass
-answers the whole family") the 5% figure contradicts (#447).
+This also replaces the retired completeness-audit prioritizer. That tool mixed
+live graph topology with a paid point-in-time `missing_modules` snapshot that
+has no local regeneration path (#443, #480); this queue reads live corpus state
+only.
 
 THREE RULES IN THE LADDER CURRENTLY NEVER FIRE, and that is the corpus rather
 than a bug. Checked, not assumed:
@@ -72,6 +73,7 @@ from audit_causal_graphs import Corpus, _as_corpus  # noqa: E402
 
 DEFAULT_TRAITS = Path("data/traits")
 DEFAULT_CONFIG = Path("conf/trait_priority.yaml")
+DEFAULT_RESEARCH = Path("research/traits")
 # app/, not pages/: `pages/` must byte-match what render_trait_pages.py produces
 # and `audit-derived-reports` enforces that, so a second generator writing there
 # reads as staleness. app/ is where TraitMech already keeps generated standalone
@@ -115,6 +117,19 @@ class Record:
     has_definition_source: bool = False
     has_synonyms: bool = False
     has_evidence: bool = False
+    researched: bool = False
+
+
+def researched_slugs(research_dir: Path = DEFAULT_RESEARCH) -> set[tuple[str, str]]:
+    """Return (category, slug) pairs with an existing research artifact."""
+    found: set[tuple[str, str]] = set()
+    if not research_dir.exists():
+        return found
+    for path in research_dir.rglob("*"):
+        if path.is_file():
+            stem = re.split(r"-(?:deep-research|edison)-", path.name)[0]
+            found.add((path.parent.name, stem))
+    return found
 
 
 def load_config(path: Path = DEFAULT_CONFIG) -> dict[str, Any]:
@@ -125,8 +140,11 @@ def load_config(path: Path = DEFAULT_CONFIG) -> dict[str, Any]:
     return cfg
 
 
-def read_records(source: Path | Corpus = DEFAULT_TRAITS) -> dict[str, Record]:
+def read_records(
+    source: Path | Corpus = DEFAULT_TRAITS, research_dir: Path = DEFAULT_RESEARCH
+) -> dict[str, Record]:
     out: dict[str, Record] = {}
+    researched = researched_slugs(research_dir)
     for rel, doc in _as_corpus(source):
         p = Path(rel)
         graphs = doc.get("causal_graphs") or []
@@ -152,6 +170,7 @@ def read_records(source: Path | Corpus = DEFAULT_TRAITS) -> dict[str, Record]:
             has_definition_source=bool(doc.get("definition_source")),
             has_synonyms=bool(doc.get("synonyms")),
             has_evidence=bool(doc.get("evidence")),
+            researched=(p.parent.name, p.stem) in researched,
         )
         out[rec.identifier] = rec
     return out
@@ -325,10 +344,12 @@ def recommend(
 
 
 def build_queue(
-    source: Path | Corpus = DEFAULT_TRAITS, cfg: dict[str, Any] | None = None
+    source: Path | Corpus = DEFAULT_TRAITS,
+    cfg: dict[str, Any] | None = None,
+    research_dir: Path = DEFAULT_RESEARCH,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     cfg = cfg or load_config()
-    recs = read_records(source)
+    recs = read_records(source, research_dir)
     child_count: dict[str, int] = defaultdict(int)
     for r in recs.values():
         for p in r.parents:
@@ -370,6 +391,7 @@ def build_queue(
                 "series": stem,
                 "series_size": len(fam) if stem else 0,
                 "series_overlap": round(ov, 3) if stem else None,
+                "researched": r.researched,
                 "reasons": why,
             }
         )
@@ -386,6 +408,9 @@ def build_queue(
             round(sum(overlaps.values()) / len(overlaps), 3) if overlaps else None
         ),
         "lump_threshold": cfg["thresholds"]["series_lump_min_sibling_overlap"],
+        "unresearched_mechanism_records": sum(
+            1 for x in rows if not x["researched"] and not x["action"].startswith("DROP")
+        ),
         "actions": {a: sum(1 for x in rows if x["action"] == a) for a in ACTIONS},
     }
     return rows, meta
@@ -424,6 +449,9 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
         f"{meta['excluded_non_mechanism']} not mechanism records, "
         f"{meta['excluded_deprecated']} deprecated &mdash; both scored to the floor "
         f"rather than dropped silently.</figcaption></figure>",
+        f"<p><strong>Research.</strong> {meta['unresearched_mechanism_records']} "
+        "mechanism record(s) have no artifact; the rest need existing research "
+        "applied, not re-run.</p>",
         f"<ul>{counts}</ul>",
         lump,
         f"<h2>Top {min(top, len(rows))}</h2>",
@@ -453,11 +481,15 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--traits-dir", type=Path, default=DEFAULT_TRAITS)
     ap.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
-    # 0 = all, matching prioritize_graph_research.py's `--limit 0`. Previously
-    # `--top 0` sliced to nothing while the footer still claimed every row was
-    # shown, so the output contradicted itself (#452).
+    # 0 = all. Previously `--top 0` sliced to nothing while the footer still
+    # claimed every row was shown, so the output contradicted itself (#452).
     ap.add_argument("--top", type=int, default=25, help="rows to show (0 = all)")
     ap.add_argument("--action", help="only rows with this recommended action")
+    ap.add_argument(
+        "--unresearched-only",
+        action="store_true",
+        help="only mechanism records with no deep-research artifact",
+    )
     ap.add_argument("--format", choices=("table", "tsv", "json"), default="table")
     ap.add_argument("--dashboard", action="store_true", help="write the static dashboard")
     ap.add_argument("--html-out", type=Path, default=DEFAULT_HTML)
@@ -466,6 +498,12 @@ def main() -> int:
 
     rows, meta = build_queue(args.traits_dir, load_config(args.config))
     matched = [r for r in rows if not args.action or r["action"] == args.action]
+    if args.unresearched_only:
+        matched = [
+            r
+            for r in matched
+            if not r["researched"] and not r["action"].startswith("DROP")
+        ]
     shown = matched if args.top == 0 else matched[: args.top]
 
     if args.dashboard:
@@ -496,6 +534,10 @@ def main() -> int:
             f"{meta['records']} total; "
             f"{meta['excluded_non_mechanism']} non-mechanism and "
             f"{meta['excluded_deprecated']} deprecated scored to the floor, not dropped"
+        )
+        print(
+            f"research: {meta['unresearched_mechanism_records']} mechanism record(s) "
+            f"have no artifact -- the rest need theirs APPLIED, not re-run"
         )
         print(
             f"lumping: {meta['series_families']} series, mean sibling overlap "

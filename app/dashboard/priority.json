@@ -6,17 +6,18 @@
     "excluded_deprecated": 20,
     "mean_series_overlap": 0.066,
     "lump_threshold": 0.6,
+    "unresearched_mechanism_records": 0,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 0,
-      "ADD_CANONICAL_EXAMPLES": 122,
+      "ADD_CANONICAL_EXAMPLES": 111,
       "BUILD_CAUSAL_GRAPH": 0,
-      "DEEPEN_CAUSAL_GRAPH": 145,
+      "DEEPEN_CAUSAL_GRAPH": 154,
       "ALREADY_DEEP": 9,
-      "CURATE_ROOT": 72
+      "CURATE_ROOT": 74
     }
   },
   "rows": [
@@ -36,6 +37,7 @@
       "series": "temperature delta",
       "series_size": 5,
       "series_overlap": 0.072,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "no canonical_examples +30",
@@ -58,75 +60,11 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "no canonical_examples +30",
         "4 components +9"
-      ]
-    },
-    {
-      "identifier": "METPO:1000626",
-      "label": "stenohaline",
-      "category": "environment",
-      "slug": "stenohaline",
-      "score": 48.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 11,
-      "nodes": 17,
-      "components": 6,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "no canonical_examples +30",
-        "6 components +15",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "METPO:1000482",
-      "label": "NaCl delta high",
-      "category": "environment",
-      "slug": "nacl_delta_high",
-      "score": 45.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 8,
-      "nodes": 14,
-      "components": 6,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "NaCl delta",
-      "series_size": 4,
-      "series_overlap": 0.054,
-      "reasons": [
-        "no canonical_examples +30",
-        "6 components +15"
-      ]
-    },
-    {
-      "identifier": "METPO:1000333",
-      "label": "NaCl optimum",
-      "category": "environment",
-      "slug": "nacl_optimum",
-      "score": 45.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 11,
-      "nodes": 16,
-      "components": 5,
-      "orphans": 0,
-      "examples": 0,
-      "children": 4,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "no canonical_examples +30",
-        "5 components +12",
-        "no synonyms +3"
       ]
     },
     {
@@ -145,6 +83,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "7 components +15"
@@ -166,6 +105,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -187,6 +127,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -208,6 +149,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12",
@@ -230,48 +172,7 @@
       "series": "pH range",
       "series_size": 6,
       "series_overlap": 0.064,
-      "reasons": [
-        "no canonical_examples +30",
-        "6 components +15"
-      ]
-    },
-    {
-      "identifier": "METPO:1000487",
-      "label": "temperature delta high",
-      "category": "environment",
-      "slug": "temperature_delta_high",
-      "score": 45.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 9,
-      "nodes": 15,
-      "components": 6,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "temperature delta",
-      "series_size": 5,
-      "series_overlap": 0.072,
-      "reasons": [
-        "no canonical_examples +30",
-        "6 components +15"
-      ]
-    },
-    {
-      "identifier": "METPO:1000447",
-      "label": "temperature optimum high",
-      "category": "environment",
-      "slug": "temperature_optimum_high",
-      "score": 45.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 10,
-      "nodes": 16,
-      "components": 6,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "temperature optimum",
-      "series_size": 7,
-      "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -293,6 +194,7 @@
       "series": "temperature optimum",
       "series_size": 7,
       "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -314,6 +216,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -335,6 +238,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -356,6 +260,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "7 components +15"
@@ -377,6 +282,7 @@
       "series": "GC",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "no canonical_examples +30",
@@ -399,6 +305,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -420,6 +327,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
         "no canonical_examples +30",
@@ -442,6 +350,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "6 components +15"
@@ -463,6 +372,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (2 edges) +12",
         "no canonical_examples +30"
@@ -484,6 +394,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
@@ -506,6 +417,7 @@
       "series": "NaCl delta",
       "series_size": 4,
       "series_overlap": 0.054,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -527,6 +439,7 @@
       "series": "NaCl range",
       "series_size": 4,
       "series_overlap": 0.05,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -548,31 +461,11 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
         "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "METPO:1000458",
-      "label": "pH optimum high",
-      "category": "environment",
-      "slug": "ph_optimum_high",
-      "score": 42.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 10,
-      "nodes": 15,
-      "components": 5,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "pH optimum",
-      "series_size": 4,
-      "series_overlap": 0.057,
-      "reasons": [
-        "no canonical_examples +30",
-        "5 components +12"
       ]
     },
     {
@@ -591,27 +484,7 @@
       "series": "pH optimum",
       "series_size": 4,
       "series_overlap": 0.057,
-      "reasons": [
-        "no canonical_examples +30",
-        "5 components +12"
-      ]
-    },
-    {
-      "identifier": "METPO:1000460",
-      "label": "pH range low",
-      "category": "environment",
-      "slug": "ph_range_low",
-      "score": 42.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 8,
-      "nodes": 13,
-      "components": 5,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "pH range",
-      "series_size": 6,
-      "series_overlap": 0.064,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -633,6 +506,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
@@ -655,6 +529,7 @@
       "series": "temperature optimum",
       "series_size": 7,
       "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -676,6 +551,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
@@ -698,6 +574,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -719,6 +596,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -740,6 +618,7 @@
       "series": "GC",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "no canonical_examples +30"
@@ -761,6 +640,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
@@ -783,6 +663,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -804,6 +685,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -825,6 +707,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "no canonical_examples +30"
@@ -846,6 +729,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
         "no canonical_examples +30"
@@ -867,6 +751,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -888,6 +773,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -909,6 +795,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9",
@@ -931,6 +818,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "5 components +12"
@@ -952,6 +840,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6",
@@ -974,6 +863,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6",
@@ -996,6 +886,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9"
@@ -1017,6 +908,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9"
@@ -1038,6 +930,7 @@
       "series": "pH delta",
       "series_size": 6,
       "series_overlap": 0.089,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9"
@@ -1059,27 +952,7 @@
       "series": "pH range",
       "series_size": 6,
       "series_overlap": 0.064,
-      "reasons": [
-        "no canonical_examples +30",
-        "4 components +9"
-      ]
-    },
-    {
-      "identifier": "METPO:1000442",
-      "label": "temperature optimum low",
-      "category": "environment",
-      "slug": "temperature_optimum_low",
-      "score": 39.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 10,
-      "nodes": 14,
-      "components": 4,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": "temperature optimum",
-      "series_size": 7,
-      "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9"
@@ -1101,6 +974,7 @@
       "series": "temperature optimum",
       "series_size": 7,
       "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "4 components +9"
@@ -1122,6 +996,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6",
@@ -1144,6 +1019,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1165,6 +1041,7 @@
       "series": "NaCl range",
       "series_size": 4,
       "series_overlap": 0.05,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1186,6 +1063,7 @@
       "series": "NaCl range",
       "series_size": 4,
       "series_overlap": 0.05,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1207,6 +1085,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1229,6 +1108,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1251,6 +1131,7 @@
       "series": "pH optimum",
       "series_size": 4,
       "series_overlap": 0.057,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1272,6 +1153,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1294,6 +1176,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1316,6 +1199,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1338,6 +1222,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1360,6 +1245,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1382,6 +1268,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1403,6 +1290,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1425,6 +1313,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1446,6 +1335,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3",
@@ -1468,6 +1358,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "3 components +6"
@@ -1489,6 +1380,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1510,6 +1402,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1531,30 +1424,10 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "METPO:1000720",
-      "label": "facultative psychrophilic",
-      "category": "environment",
-      "slug": "facultative_psychrophilic",
-      "score": 33.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 11,
-      "nodes": 13,
-      "components": 2,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "no canonical_examples +30",
-        "2 components +3"
       ]
     },
     {
@@ -1573,6 +1446,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1594,6 +1468,7 @@
       "series": "NaCl delta",
       "series_size": 4,
       "series_overlap": 0.054,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1615,6 +1490,7 @@
       "series": "NaCl optimum",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1636,6 +1512,7 @@
       "series": "NaCl optimum",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1657,6 +1534,7 @@
       "series": "NaCl optimum",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1678,6 +1556,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1699,6 +1578,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1720,6 +1600,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1741,6 +1622,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1762,6 +1644,7 @@
       "series": "pH range",
       "series_size": 6,
       "series_overlap": 0.064,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1783,6 +1666,7 @@
       "series": "pH range",
       "series_size": 6,
       "series_overlap": 0.064,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1804,6 +1688,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1825,6 +1710,7 @@
       "series": "temperature delta",
       "series_size": 5,
       "series_overlap": 0.072,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1846,6 +1732,7 @@
       "series": "temperature delta",
       "series_size": 5,
       "series_overlap": 0.072,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1867,6 +1754,7 @@
       "series": "temperature optimum",
       "series_size": 7,
       "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1888,6 +1776,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1909,6 +1798,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1930,6 +1820,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1951,6 +1842,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -1972,6 +1864,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "no synonyms +3"
@@ -1993,6 +1886,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -2014,30 +1908,10 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
-      ]
-    },
-    {
-      "identifier": "METPO:1000882",
-      "label": "cell width",
-      "category": "morphology",
-      "slug": "cell_width",
-      "score": 33.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 8,
-      "nodes": 9,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "children": 4,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "no canonical_examples +30",
-        "no synonyms +3"
       ]
     },
     {
@@ -2056,6 +1930,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -2077,6 +1952,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -2098,6 +1974,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -2119,6 +1996,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30",
         "2 components +3"
@@ -2140,26 +2018,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
-      "reasons": [
-        "no canonical_examples +30"
-      ]
-    },
-    {
-      "identifier": "METPO:1000612",
-      "label": "facultative oxygen preference",
-      "category": "environment",
-      "slug": "facultative_oxygen_preference",
-      "score": 30.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 8,
-      "nodes": 9,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2180,6 +2039,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2200,6 +2060,7 @@
       "series": "NaCl delta",
       "series_size": 4,
       "series_overlap": 0.054,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2220,6 +2081,7 @@
       "series": "NaCl optimum",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2240,6 +2102,7 @@
       "series": "NaCl range",
       "series_size": 4,
       "series_overlap": 0.05,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2260,6 +2123,7 @@
       "series": "pH optimum",
       "series_size": 4,
       "series_overlap": 0.057,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2280,6 +2144,7 @@
       "series": "pH range",
       "series_size": 6,
       "series_overlap": 0.064,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2300,6 +2165,7 @@
       "series": "temperature delta",
       "series_size": 5,
       "series_overlap": 0.072,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2320,6 +2186,7 @@
       "series": "temperature optimum",
       "series_size": 7,
       "series_overlap": 0.065,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2340,6 +2207,7 @@
       "series": "GC",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2360,6 +2228,7 @@
       "series": "GC",
       "series_size": 4,
       "series_overlap": 0.073,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2380,6 +2249,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2400,6 +2270,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2420,6 +2291,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2440,6 +2312,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2460,6 +2333,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2480,6 +2354,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2500,6 +2375,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2520,6 +2396,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2540,6 +2417,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2560,6 +2438,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2580,6 +2459,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no canonical_examples +30"
       ]
@@ -2600,6 +2480,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "4 components +9",
@@ -2622,9 +2503,32 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "4 components +9"
+      ]
+    },
+    {
+      "identifier": "METPO:1000626",
+      "label": "stenohaline",
+      "category": "environment",
+      "slug": "stenohaline",
+      "score": 18.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 11,
+      "nodes": 17,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "6 components +15",
+        "no synonyms +3"
       ]
     },
     {
@@ -2643,6 +2547,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "3 components +6"
@@ -2664,6 +2569,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
         "3 components +6"
@@ -2685,6 +2591,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "6 components +15"
       ]
@@ -2705,9 +2612,95 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12",
         "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000482",
+      "label": "NaCl delta high",
+      "category": "environment",
+      "slug": "nacl_delta_high",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 8,
+      "nodes": 14,
+      "components": 6,
+      "orphans": 0,
+      "examples": 2,
+      "children": 0,
+      "series": "NaCl delta",
+      "series_size": 4,
+      "series_overlap": 0.054,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1000333",
+      "label": "NaCl optimum",
+      "category": "environment",
+      "slug": "nacl_optimum",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 11,
+      "nodes": 16,
+      "components": 5,
+      "orphans": 0,
+      "examples": 1,
+      "children": 4,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "5 components +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000487",
+      "label": "temperature delta high",
+      "category": "environment",
+      "slug": "temperature_delta_high",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 9,
+      "nodes": 15,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": "temperature delta",
+      "series_size": 5,
+      "series_overlap": 0.072,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1000447",
+      "label": "temperature optimum high",
+      "category": "environment",
+      "slug": "temperature_optimum_high",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 10,
+      "nodes": 16,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": "temperature optimum",
+      "series_size": 7,
+      "series_overlap": 0.065,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
       ]
     },
     {
@@ -2726,6 +2719,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "2 components +3"
@@ -2747,6 +2741,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "2 components +3"
@@ -2768,6 +2763,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12",
         "2 components +3"
@@ -2789,6 +2785,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "6 components +15"
       ]
@@ -2809,6 +2806,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "6 components +15"
       ]
@@ -2829,6 +2827,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
         "no synonyms +3"
@@ -2850,6 +2849,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -2870,8 +2870,51 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "METPO:1000458",
+      "label": "pH optimum high",
+      "category": "environment",
+      "slug": "ph_optimum_high",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 10,
+      "nodes": 15,
+      "components": 5,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": "pH optimum",
+      "series_size": 4,
+      "series_overlap": 0.057,
+      "researched": true,
+      "reasons": [
+        "5 components +12"
+      ]
+    },
+    {
+      "identifier": "METPO:1000460",
+      "label": "pH range low",
+      "category": "environment",
+      "slug": "ph_range_low",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 8,
+      "nodes": 13,
+      "components": 5,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": "pH range",
+      "series_size": 6,
+      "series_overlap": 0.064,
+      "researched": true,
+      "reasons": [
+        "5 components +12"
       ]
     },
     {
@@ -2890,6 +2933,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "no synonyms +3"
@@ -2911,6 +2955,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -2931,6 +2976,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -2951,6 +2997,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -2971,6 +3018,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -2991,6 +3039,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3011,6 +3060,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "no synonyms +3"
@@ -3032,6 +3082,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3052,6 +3103,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3072,6 +3124,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3092,6 +3145,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3112,6 +3166,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3132,6 +3187,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3152,6 +3208,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3172,6 +3229,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (3 edges) +12"
       ]
@@ -3192,6 +3250,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3212,6 +3271,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (5 edges) +12"
       ]
@@ -3232,6 +3292,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3252,6 +3313,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3272,6 +3334,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3292,6 +3355,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3312,6 +3376,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "5 components +12"
       ]
@@ -3332,6 +3397,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3352,6 +3418,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
       ]
@@ -3372,6 +3439,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3392,9 +3460,31 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000442",
+      "label": "temperature optimum low",
+      "category": "environment",
+      "slug": "temperature_optimum_low",
+      "score": 9.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 10,
+      "nodes": 14,
+      "components": 4,
+      "orphans": 0,
+      "examples": 2,
+      "children": 0,
+      "series": "temperature optimum",
+      "series_size": 7,
+      "series_overlap": 0.065,
+      "researched": true,
+      "reasons": [
+        "4 components +9"
       ]
     },
     {
@@ -3413,6 +3503,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3433,6 +3524,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3453,6 +3545,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3473,6 +3566,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3493,6 +3587,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3513,29 +3608,9 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
-      ]
-    },
-    {
-      "identifier": "traitmech:000034",
-      "label": "oxygenic photosynthesis",
-      "category": "metabolism",
-      "slug": "oxygenic_photosynthesis",
-      "score": 9.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 10,
-      "nodes": 13,
-      "components": 3,
-      "orphans": 0,
-      "examples": 1,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "3 components +6",
-        "no synonyms +3"
       ]
     },
     {
@@ -3554,6 +3629,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3574,6 +3650,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "no synonyms +3"
@@ -3595,6 +3672,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3615,6 +3693,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3635,6 +3714,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3655,6 +3735,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3675,6 +3756,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3695,6 +3777,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3715,6 +3798,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3735,6 +3819,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3755,6 +3840,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3775,6 +3861,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9"
       ]
@@ -3795,6 +3882,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3815,6 +3903,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3835,6 +3924,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -3856,6 +3946,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3876,6 +3967,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3896,6 +3988,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -3917,6 +4010,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3937,6 +4031,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3957,6 +4052,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3977,6 +4073,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -3997,6 +4094,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4017,6 +4115,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4037,6 +4136,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4057,6 +4157,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4078,6 +4179,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4098,6 +4200,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4118,6 +4221,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4138,6 +4242,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4158,6 +4263,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4178,9 +4284,31 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000034",
+      "label": "oxygenic photosynthesis",
+      "category": "metabolism",
+      "slug": "oxygenic_photosynthesis",
+      "score": 6.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 10,
+      "nodes": 13,
+      "components": 3,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "3 components +6"
       ]
     },
     {
@@ -4199,6 +4327,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4220,6 +4349,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4241,6 +4371,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4262,6 +4393,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4282,6 +4414,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4303,6 +4436,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4324,6 +4458,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4344,6 +4479,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4364,6 +4500,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6"
       ]
@@ -4384,6 +4521,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3"
@@ -4405,6 +4543,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4425,6 +4564,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4445,6 +4585,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4465,6 +4606,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4485,6 +4627,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4505,6 +4648,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4525,6 +4669,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4545,6 +4690,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4565,6 +4711,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4585,6 +4732,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4605,6 +4753,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4625,6 +4774,28 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "2 components +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000720",
+      "label": "facultative psychrophilic",
+      "category": "environment",
+      "slug": "facultative_psychrophilic",
+      "score": 3.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 11,
+      "nodes": 13,
+      "components": 2,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4645,6 +4816,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4665,6 +4837,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4685,6 +4858,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4705,6 +4879,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4725,6 +4900,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4745,6 +4921,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4765,6 +4942,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4785,6 +4963,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4805,6 +4984,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4825,6 +5005,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4845,6 +5026,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4865,6 +5047,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4885,6 +5068,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4905,6 +5089,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -4925,6 +5110,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4945,6 +5131,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4965,6 +5152,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -4985,8 +5173,30 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000882",
+      "label": "cell width",
+      "category": "morphology",
+      "slug": "cell_width",
+      "score": 3.0,
+      "action": "CURATE_ROOT",
+      "edges": 8,
+      "nodes": 9,
+      "components": 1,
+      "orphans": 0,
+      "examples": 3,
+      "children": 4,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "no synonyms +3"
       ]
     },
     {
@@ -5005,6 +5215,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3"
       ]
@@ -5025,6 +5236,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5045,6 +5257,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5065,6 +5278,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5085,6 +5299,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5105,6 +5320,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5125,6 +5341,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5145,6 +5362,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5165,6 +5383,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5185,6 +5404,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5205,6 +5425,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3"
       ]
@@ -5225,6 +5446,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5243,6 +5465,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5261,6 +5484,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5279,6 +5503,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5297,6 +5522,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5315,6 +5541,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5333,6 +5560,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5351,6 +5579,26 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "METPO:1000612",
+      "label": "facultative oxygen preference",
+      "category": "environment",
+      "slug": "facultative_oxygen_preference",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 8,
+      "nodes": 9,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5369,6 +5617,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5387,6 +5636,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5405,6 +5655,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5423,6 +5674,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5441,6 +5693,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5459,6 +5712,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5477,6 +5731,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5495,6 +5750,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5513,6 +5769,7 @@
       "series": "temperature range",
       "series_size": 7,
       "series_overlap": 0.067,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5531,6 +5788,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5549,6 +5807,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5567,6 +5826,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5585,6 +5845,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5603,6 +5864,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5621,6 +5883,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5639,6 +5902,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5657,6 +5921,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5675,6 +5940,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5693,6 +5959,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5711,6 +5978,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5729,6 +5997,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5747,6 +6016,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5765,6 +6035,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5783,6 +6054,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5801,6 +6073,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5819,6 +6092,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5837,6 +6111,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5855,6 +6130,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5873,6 +6149,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5891,6 +6168,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5909,6 +6187,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5927,6 +6206,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5945,6 +6225,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5963,6 +6244,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5981,6 +6263,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -5999,6 +6282,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6017,6 +6301,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6035,6 +6320,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6053,6 +6339,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6071,6 +6358,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6089,6 +6377,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6107,6 +6396,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6125,6 +6415,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6143,6 +6434,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6161,6 +6453,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6179,6 +6472,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6197,6 +6491,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6215,6 +6510,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6233,6 +6529,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6251,6 +6548,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6269,6 +6567,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6287,6 +6586,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6305,6 +6605,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6323,6 +6624,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6341,6 +6643,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6359,6 +6662,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": []
     },
     {
@@ -6377,6 +6681,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "6 components +15",
         "already deep -20"
@@ -6398,6 +6703,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "6 components +15",
         "already deep -20"
@@ -6419,6 +6725,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "7 components +15",
         "already deep -20"
@@ -6440,6 +6747,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "no synonyms +3",
@@ -6462,6 +6770,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "no synonyms +3",
@@ -6484,6 +6793,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "no synonyms +3",
@@ -6506,6 +6816,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "no synonyms +3",
@@ -6528,6 +6839,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "already deep -20"
@@ -6549,6 +6861,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "4 components +9",
         "already deep -20"
@@ -6570,6 +6883,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3",
@@ -6592,6 +6906,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "no synonyms +3",
@@ -6614,6 +6929,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "already deep -20"
@@ -6635,6 +6951,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "already deep -20"
@@ -6656,6 +6973,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "already deep -20"
@@ -6677,6 +6995,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "already deep -20"
@@ -6698,6 +7017,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
         "already deep -20"
@@ -6719,29 +7039,9 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "3 components +6",
-        "already deep -20"
-      ]
-    },
-    {
-      "identifier": "METPO:1004004",
-      "label": "human pathogen",
-      "category": "ecology",
-      "slug": "human_pathogen",
-      "score": -17.0,
-      "action": "ALREADY_DEEP",
-      "edges": 12,
-      "nodes": 13,
-      "components": 1,
-      "orphans": 0,
-      "examples": 2,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "reasons": [
-        "no synonyms +3",
         "already deep -20"
       ]
     },
@@ -6761,6 +7061,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "already deep -20"
@@ -6782,6 +7083,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "already deep -20"
@@ -6803,6 +7105,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "already deep -20"
@@ -6824,6 +7127,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "already deep -20"
@@ -6845,6 +7149,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "no synonyms +3",
         "already deep -20"
@@ -6866,6 +7171,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
         "already deep -20"
@@ -6887,8 +7193,30 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "2 components +3",
+        "already deep -20"
+      ]
+    },
+    {
+      "identifier": "METPO:1004004",
+      "label": "human pathogen",
+      "category": "ecology",
+      "slug": "human_pathogen",
+      "score": -20.0,
+      "action": "ALREADY_DEEP",
+      "edges": 12,
+      "nodes": 13,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
         "already deep -20"
       ]
     },
@@ -6908,6 +7236,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -6928,6 +7257,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -6948,6 +7278,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -6968,6 +7299,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -6988,6 +7320,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -7008,6 +7341,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -7028,6 +7362,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "already deep -20"
       ]
@@ -7048,6 +7383,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7068,6 +7404,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7088,6 +7425,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7108,6 +7446,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7128,6 +7467,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7148,6 +7488,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7168,6 +7509,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7188,6 +7530,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7208,6 +7551,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7228,6 +7572,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7248,6 +7593,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7268,6 +7614,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7288,6 +7635,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7308,6 +7656,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7328,6 +7677,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7348,6 +7698,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7368,6 +7719,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7388,6 +7740,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7408,6 +7761,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7428,6 +7782,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7448,6 +7803,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7468,6 +7824,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7488,6 +7845,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7508,6 +7866,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7528,6 +7887,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7548,6 +7908,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7568,6 +7929,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7588,6 +7950,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7608,6 +7971,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7628,6 +7992,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7648,6 +8013,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7668,6 +8034,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7688,6 +8055,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7708,6 +8076,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7728,6 +8097,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7748,6 +8118,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7768,6 +8139,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7788,6 +8160,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7808,6 +8181,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7828,6 +8202,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7848,6 +8223,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7868,6 +8244,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7888,6 +8265,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7908,6 +8286,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7928,6 +8307,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7948,6 +8328,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7968,6 +8349,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -7988,6 +8370,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8008,6 +8391,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8028,6 +8412,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8048,6 +8433,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8068,6 +8454,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8088,6 +8475,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8108,6 +8496,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8128,6 +8517,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8148,6 +8538,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8168,6 +8559,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8188,6 +8580,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8208,6 +8601,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8228,6 +8622,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8248,6 +8643,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8268,6 +8664,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8288,6 +8685,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8308,6 +8706,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8328,6 +8727,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8348,6 +8748,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8368,6 +8769,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8388,6 +8790,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8408,6 +8811,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8428,6 +8832,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8448,6 +8853,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8468,6 +8874,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8488,6 +8895,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8508,6 +8916,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8528,6 +8937,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8548,6 +8958,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8568,6 +8979,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8588,6 +9000,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8608,6 +9021,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8628,6 +9042,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8648,6 +9063,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8668,6 +9084,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8688,6 +9105,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8708,6 +9126,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8728,6 +9147,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8748,6 +9168,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8768,6 +9189,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8788,6 +9210,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8808,6 +9231,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8828,6 +9252,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8848,6 +9273,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8868,6 +9294,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8888,6 +9315,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8908,6 +9336,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -8928,6 +9357,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -8948,6 +9378,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -8968,6 +9399,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -8988,6 +9420,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9008,6 +9441,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9028,6 +9462,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9048,6 +9483,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9068,6 +9504,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9088,6 +9525,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9108,6 +9546,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9128,6 +9567,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9148,6 +9588,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9168,6 +9609,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9188,6 +9630,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9208,6 +9651,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9228,6 +9672,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9248,6 +9693,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9268,6 +9714,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9288,6 +9735,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9308,6 +9756,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "deprecated -100"
       ]
@@ -9328,6 +9777,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9348,6 +9798,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9368,6 +9819,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9388,6 +9840,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9408,6 +9861,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9428,6 +9882,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9448,6 +9903,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9468,6 +9924,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9488,6 +9945,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9508,6 +9966,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9528,6 +9987,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9548,6 +10008,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": false,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9568,6 +10029,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9588,6 +10050,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "not a mechanism record -100"
       ]
@@ -9608,6 +10071,7 @@
       "series": null,
       "series_size": 0,
       "series_overlap": null,
+      "researched": true,
       "reasons": [
         "not a mechanism record -100"
       ]

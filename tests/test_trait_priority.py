@@ -258,8 +258,8 @@ def _row_count(out: str) -> int:
     return len([ln for ln in out.splitlines() if _re.match(r"^ *-?[0-9]+ [A-Z_]+", ln)])
 
 
-def test_top_zero_means_all_matching_the_sibling_tool():
-    """`prioritize_graph_research.py --limit 0` means all; these must agree."""
+def test_top_zero_means_all_rows():
+    """The documented zero sentinel must print the complete live queue."""
     out = _run(["--top", "0"])
     assert _row_count(out) == 477
 
@@ -278,3 +278,45 @@ def test_action_filter_narrows_both_rows_and_the_stated_count():
     printed = _row_count(out)
     assert printed == 9, printed
     assert f"{printed} row(s) shown of {printed} matching" in out
+
+
+def test_researched_flag_strips_provider_suffixes(tmp_path):
+    from trait_priority import researched_slugs
+
+    category = tmp_path / "ecology"
+    category.mkdir()
+    (category / "biofilm_formation-deep-research-falcon.md").write_text("x")
+    (category / "biofilm_formation-deep-research-openscientist.md").write_text("x")
+    (category / "aerobic-edison-literature-meta.yaml").write_text("x")
+    assert researched_slugs(tmp_path) == {
+        ("ecology", "biofilm_formation"),
+        ("ecology", "aerobic"),
+    }
+
+
+def test_missing_research_directory_is_empty_not_an_error():
+    from trait_priority import researched_slugs
+
+    assert researched_slugs(Path("/nonexistent")) == set()
+
+
+def test_no_mechanism_record_awaits_a_first_research_pass():
+    """A failure means a new trait should jump the paid-research queue."""
+    _, meta = build_queue()
+    assert meta["unresearched_mechanism_records"] == 0, meta
+
+
+def test_unresearched_filter_does_not_return_non_mechanism_records():
+    out = _run(["--unresearched-only", "--top", "0"])
+    assert _row_count(out) == 0
+    assert "0 row(s) shown of 0 matching" in out
+
+
+def test_nothing_reads_the_historical_completeness_snapshot():
+    root = Path(__file__).resolve().parent.parent
+    offenders = [
+        path.name
+        for path in (root / "scripts").glob("*.py")
+        if "graph_completeness_audit" in path.read_text()
+    ]
+    assert offenders == [], offenders

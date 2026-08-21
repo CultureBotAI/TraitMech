@@ -24,8 +24,18 @@ def test_root_claude_guidance_routes_to_canonical_workflows():
     assert "just new-history" in guidance
     assert "explicit user approval" in guidance
     assert ".claude/skills/audit-schema-gaps/SKILL.md" in guidance
+    assert ".claude/skills/trait-priority/SKILL.md" in guidance
     assert "traitmech_dataclasses.py" in guidance
     assert "live implementation" in guidance
+
+
+def test_priority_guidance_uses_only_the_live_queue():
+    guidance = read(".claude/skills/trait-priority/SKILL.md")
+    justfile = read("justfile")
+    assert "just trait-priority" in guidance
+    assert "do not rank from" in guidance.lower()
+    assert "prioritize-research" not in justfile
+    assert not (REPO_ROOT / "scripts/prioritize_graph_research.py").exists()
 
 
 def test_schema_gap_alias_has_no_duplicate_procedure_or_snapshot():
