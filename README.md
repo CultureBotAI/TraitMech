@@ -16,24 +16,24 @@ METPO source class and (optionally) to literature evidence.
 
 | Category | REVIEWED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|
-| MORPHOLOGY | 65 | 0 | 65 | 65 |
-| PHYSIOLOGY | 31 | 0 | 31 | 31 |
-| ENVIRONMENT | 103 | 0 | 103 | 103 |
-| ECOLOGY | 10 | 0 | 10 | 10 |
-| GENOMICS | 5 | 0 | 5 | 5 |
-| UPPER | 5 | 0 | 5 | 5 |
-| METABOLISM | 14 | 94 | 14 | 108 |
+| MORPHOLOGY | 88 | 0 | 88 | 88 |
+| PHYSIOLOGY | 45 | 0 | 45 | 45 |
+| ENVIRONMENT | 121 | 0 | 121 | 121 |
+| ECOLOGY | 26 | 0 | 26 | 26 |
+| GENOMICS | 19 | 0 | 19 | 19 |
+| UPPER | 8 | 0 | 5 | 8 |
+| METABOLISM | 120 | 23 | 49 | 143 |
 | OBSERVATION | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 7 | 0 | 7 |
-| **TOTAL** | **233** | **121** | **233** | **354** |
+| **TOTAL** | **427** | **50** | **353** | **477** |
 
-Every `CLASS` record is curated to `REVIEWED` with a DOI-backed
-causal graph. The 121 `DEPRECATED` records (94 metabolism, 20
-observation, 7 quantitative_property) are generic `OBJECT_PROPERTY` /
-`DATATYPE_PROPERTY` relation carriers from the upstream METPO seed
-that are not intended to carry mechanism graphs in TraitMech — they
-should be replaced by specific trait records combining the relation
-with the chemical / quality / measurement / growth context.
+All 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
+`DEPRECATED`. Of the reviewed records, 353 currently carry causal graphs. The
+50 deprecated records (23 metabolism, 20 observation, 7 quantitative_property)
+are generic relation or measurement carriers from the upstream METPO seed that
+are not intended to carry mechanism graphs in TraitMech. They are retained for
+traceability while specific trait records capture the chemical, quality,
+measurement, or growth context.
 
 (`material entity` subtree — chemicals / microbes / enzymes — is not
 seeded; those belong in MIM / CultureMech.)
@@ -64,7 +64,8 @@ just validate-all             # validate every TraitRecord YAML
   biological processes. Use ontology/database CURIEs in `grounding`
   when available; label-only draft nodes are permitted in v1.
 - **TraitSynonym / EvidenceItem / CurationEvent** — ancillary classes.
-- **TraitCategoryEnum** — the 10 buckets above.
+- **TraitCategoryEnum** — 11 schema buckets (the 9 populated buckets above,
+  plus `DETECTION` and `OTHER`).
 - **TermKindEnum** — `CLASS` / `DATATYPE_PROPERTY` /
   `OBJECT_PROPERTY` / `ANNOTATION_PROPERTY`.
 - **MappingStatusEnum** — `SEEDED` / `REVIEWED` / `DEPRECATED`.
@@ -76,11 +77,19 @@ just validate-all             # validate every TraitRecord YAML
 TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
-│   └── traits/<category>/<slug>.yaml    # 354 seeded TraitRecords
+│   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
+│   └── traits/<category>/<slug>.yaml    # 477 curated TraitRecords
+├── mappings/                                # reviewed node and predicate groundings
+├── research/traits/                         # source-finding reports and sidecars
+├── proposals/                               # upstream METPO proposal cohorts
+├── reports/                                 # audits, residuals, and curation backlogs
+├── history/                                 # append-only curation provenance
+├── pages/                                   # rendered trait browser and graph views
+├── app/                                     # priority and discussion dashboards
 ├── src/traitmech/
 │   └── schema/traitmech.yaml            # LinkML schema
 ├── scripts/
-│   └── seed_from_metpo.py               # OWL → YAML seeder
+│   └── *.py                             # seed, validate, audit, migrate, and render
 ├── tests/
 └── docs/
     ├── CURATION_PLAYBOOK.md             # how to curate a TraitRecord
@@ -88,6 +97,76 @@ TraitMech/
     ├── WORKFLOW_CONVENTIONS.md          # CI: action pinning, concurrency
     └── SCHEMA.md
 ```
+
+## Artifacts and outputs
+
+The [rendered TraitMech site](pages/index.html) is the main human-facing entry
+point. It includes the [trait browser](pages/browse.html), [causal graph
+explorer](pages/graph.html), and [UMAP view](pages/umap.html). Additional views
+are the [QC dashboard](dashboard/index.html), [research-priority
+dashboard](app/dashboard/priority.html), and [curation discussions
+dashboard](app/discussions/index.html).
+
+The complete artifact collections are:
+
+| Collection | Contents |
+|---|---|
+| [Trait records](data/traits/) | The authoritative per-trait YAML corpus, grouped by category |
+| [Schemas](src/traitmech/schema/) | TraitMech, shared Mech, and curation-history LinkML schemas |
+| [Vendored sources](data/raw/) | The pinned METPO and Biolink Model inputs |
+| [Grounding mappings](mappings/) | Reviewed node, predicate, and UniProt grounding tables |
+| [Derived embeddings](data/embeddings/) | Trait graph, DeepWalk, nearest-neighbour, and UMAP artifacts |
+| [Research artifacts](research/traits/) | Per-trait deep-research reports and citation sidecars |
+| [METPO proposals](proposals/README.md) | Upstream proposal cohorts, reviewer narratives, ROBOT tables, and SSSOM mappings |
+| [Audit and backlog reports](reports/) | Quality reports, residuals, match candidates, and curation queues |
+| [Curation history](history/README.md) | Append-only provenance for record, mapping, report, and infrastructure changes |
+| [Rendered pages](pages/) | Generated trait pages, category indexes, graph data, and static assets |
+| [Dashboards and apps](app/) | Research prioritization and discussion artifacts |
+| [QC dashboard artifacts](dashboard/) | Coverage dashboard HTML and chart |
+| [Research prompts](prompts/) | Reusable Claude Code and issue-cycle prompts |
+| [Research template](templates/trait_causal_graph_research.md) | Causal-graph research report template |
+| [Audit configuration](conf/) | Ratchet baselines, provider routing, QC, and prioritization configuration |
+| [Documentation](docs/) | Schema, curation, grounding, workflow, and integration guidance |
+| [Claude skills](.claude/skills/) and [command](.claude/commands/) | Repository-specific agent workflows and guardrails |
+
+For direct access to every committed report, see:
+
+- Graph quality: [causal graph audit](reports/causal_graph_audit.tsv),
+  [connectivity](reports/causal_graph_connectivity.tsv),
+  [completeness](reports/graph_completeness_audit.tsv),
+  [enrichment backlog](reports/graph_enrichment_backlog.md), and [audit
+  manifest](reports/trait_graph_audit_manifest.tsv).
+- Validation and pipeline quality: [instance summary](reports/instance_validation_summary.md),
+  [instance failures](reports/instance_validation_failures.tsv), [schema gap
+  audit](reports/schema_gap_audit.md), [pipeline gap
+  audit](reports/pipeline_gap_audit.md), [writer
+  audit](reports/pipeline_writers_audit.tsv), [Biolink
+  coverage](reports/biolink_coverage.tsv), and [predicate domain
+  audit](reports/predicate_domain_audit.tsv).
+- Grounding quality: [node residual](reports/node_grounding_residual.tsv),
+  [predicate residual](reports/predicate_grounding_residual.tsv), [node match
+  candidates](reports/node_match_candidates.tsv), [enriched node
+  candidates](reports/node_match_candidates_enriched.tsv), [fuzzy node
+  candidates](reports/node_fuzzy_candidates.tsv), [research grounding
+  backlog](reports/research_grounding_backlog.tsv), [research grounding
+  drift](reports/research_grounding_drift.tsv), [UniProt
+  audit](reports/uniprot_grounding_audit.tsv), [UniProt
+  candidates](reports/uniprot_match_candidates.tsv), and [label
+  drift](reports/label_drift.tsv).
+- Curation queues: [gap-fix narrative](reports/gap_fix_backlog.md), [gap-fix
+  table](reports/gap_fix_backlog.tsv), [knowledge-gap
+  narrative](reports/knowledge_gap_scan.md), [knowledge-gap
+  data](reports/knowledge_gap_scan.json), [promotion
+  review](reports/promote_reviewed_batch1.md), and [proposal citation
+  audit](reports/proposal_citation_audit.tsv).
+- Trait proposal reports: [ecology](reports/ecology_trait_proposals.md),
+  [environment](reports/environment_trait_proposals.md),
+  [genomics](reports/genomics_trait_proposals.md),
+  [metabolism](reports/metabolism_trait_proposals.md), [metabolism round
+  2](reports/metabolism_round2_trait_proposals.md),
+  [morphology](reports/morphology_trait_proposals.md),
+  [physiology](reports/physiology_trait_proposals.md), and
+  [leftovers](reports/leftover_trait_proposals.md).
 
 ## Workflow
 
