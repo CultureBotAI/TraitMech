@@ -157,9 +157,8 @@ grep -rh "^identifier:" data/traits/ \
 grep -rh "^identifier:" data/traits/ \
   | awk -F: '{print $2}' \
   | sort | uniq -c | sort -rn
-# Expected today:
-#   357  METPO
-#     0  traitmech    (target: keep low; each one means an upstream gap)
+# Interpret the live distribution. Each traitmech entry represents an
+# intentional upstream gap and should carry provenance for that decision.
 ```
 
 ## Anti-patterns
@@ -173,5 +172,7 @@ grep -rh "^identifier:" data/traits/ \
 
 - Schema: `src/traitmech/schema/traitmech.yaml` — `TraitRecord.identifier` slot.
 - Seeder: `scripts/seed_from_metpo.py` — the canonical METPO → YAML pipeline.
-- Audit skills: [`schema-gap-analysis`](../schema-gap-analysis/SKILL.md) (quick check) and [`audit-schema-gaps`](../audit-schema-gaps/SKILL.md) (deep audit). Both run `linkml-validate` over `data/traits/` and will surface any malformed identifier as `pattern_mismatch` or `missing_required` errors.
+- Schema audit: [`audit-schema-gaps`](../audit-schema-gaps/SKILL.md) is the
+  canonical procedure and surfaces malformed identifiers as
+  `pattern_mismatch` or `missing_required` errors.
 - Cross-Mech reference (for repos that *do* mint their own IDs): [CultureMech's manage-identifiers](https://github.com/CultureBotAI/CultureMech/blob/main/.claude/skills/manage-identifiers/SKILL.md) — covers single-file collection, multi-file collection, registry workflows, and batch ID assignment.

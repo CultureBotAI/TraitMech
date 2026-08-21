@@ -77,8 +77,8 @@ recommend and proceed on confirmation.
 - For **cross-Mech** items (kept in sync with CultureMech / MIM / CommunityMech),
   flag divergence — but do not edit sibling repos unless asked.
 
-Commit the reconciliation. Doc-only changes hit path-filtered workflows and may
-show "no checks reported" — that's `MERGEABLE`/`CLEAN`, not a failure.
+Commit the reconciliation. The unfiltered `pr-sanity` workflow runs on every
+pull request; additional path-filtered workflows depend on the changed files.
 
 ### Step 4 — Pick it up (only if the user says to)
 
@@ -88,12 +88,11 @@ Step 3 to record the new state.
 
 ## CI gates (what "green" actually means here)
 
-Gates, from `.github/workflows/`:
-`label-correspondence`, `validate-strict`, `qc`, `pytest`.
-
-TraitMech is the leanest of the four — there is no evidence or SSSOM workflow
-here, so nothing in CI checks research provenance. If a backlog item claims
-citations validate, verify it locally.
+Derive the active workflows from `.github/workflows/` rather than maintaining a
+fixed list here. `pr-sanity` is the unfiltered floor; other checks may be
+path-filtered. `just qc` includes the maintained research-artifact integrity
+audit, but it cannot establish that a scientific citation supports a claim.
+Review citation truth during curation.
 
 ## Conventions this skill enforces
 
@@ -115,15 +114,17 @@ citations validate, verify it locally.
   TraitMech has originated cross-repo fixes before (the `id(adapter)` cache-reuse
   fix), so a change may need to flow *out* to the hub, not just in — land it in
   CultureMech first, then re-pin the ref everywhere.
-- `.claude/` is gitignored here — a new skill or command needs `git add -f`.
+- `.claude/skills/` and `.claude/commands/` are explicitly unignored, so
+  `git add -A` includes new project guidance. Local Claude settings remain
+  ignored.
 - Without `gh` or a network, reconcile from `git log` alone and say so.
 
 ## Related
 
 - `metpo-proposal` — the actionable form of a "needs a METPO term" blocker.
-- `deep-research-trait`, `research-causal-graphs`, `manage-identifiers`,
-  `audit-schema-gaps`, `schema-gap-analysis` — the skills a chosen backlog item
-  is usually handed off to.
+- `deep-research-trait`, `research-causal-graphs`, `manage-identifiers`, and
+  `audit-schema-gaps` — the skills a chosen backlog item is usually handed off
+  to.
 
 ## Related files
 

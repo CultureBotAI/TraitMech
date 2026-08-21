@@ -27,11 +27,13 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import hashlib
-import subprocess
 import sys
 from pathlib import Path
 
 import yaml
+from linkml.validator import Validator
+from linkml.validator.plugins import JsonschemaValidationPlugin
+from linkml.validator.report import Severity
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HISTORY_ROOT = REPO_ROOT / "history"
@@ -64,6 +66,8 @@ REPO_URL = "https://github.com/CultureBotAI/TraitMech"
 EVENTS = ("GENERAL", "CREATE", "EDIT", "REVIEW", "AUDIT")
 OUTCOMES = ("changed", "no_change", "needs_followup", "blocked")
 KINDS = ("record", "schema", "mapping", "report", "infrastructure", "other")
+
+_VALIDATOR: Validator | None = None
 
 
 def session_id(timestamp: str, tool: str, seed: str) -> str:
@@ -154,6 +158,34 @@ def build(args: argparse.Namespace, timestamp: str) -> tuple[dict, Path]:
     return record, out_dir / f"{sid}.yaml"
 
 
+def _get_validator() -> Validator:
+    """Build the closed-schema validator once per scaffolder process."""
+    global _VALIDATOR
+    if _VALIDATOR is None:
+        _VALIDATOR = Validator(
+            schema=str(SCHEMA),
+            validation_plugins=[JsonschemaValidationPlugin(closed=True)],
+        )
+    return _VALIDATOR
+
+
+def history_validation_errors(path: Path) -> list[str]:
+    """Return ERROR messages for one history record, or an empty list."""
+    try:
+        instance = yaml.safe_load(path.read_text())
+    except (OSError, yaml.YAMLError) as exc:
+        return [f"{type(exc).__name__}: {exc}"]
+    if instance is None:
+        return ["record parsed as empty"]
+
+    try:
+        report = _get_validator().validate(instance, target_class="HistoryRecord")
+    except Exception as exc:  # noqa: BLE001 -- turn validator failures into refusal
+        return [f"{type(exc).__name__}: {exc}"]
+    return [result.message for result in report.results
+            if result.severity == Severity.ERROR]
+
+
 def validate(path: Path) -> None:
     """Validate before announcing success.
 
@@ -161,13 +193,13 @@ def validate(path: Path) -> None:
     validate-history would fail on a file the author believed was generated
     correctly, in a directory that is append-only by policy.
     """
-    result = subprocess.run(
-        ["uv", "run", "linkml-validate", "--schema", str(SCHEMA),
-         "--target-class", "HistoryRecord", str(path)],
-        cwd=REPO_ROOT, capture_output=True, text=True)
-    if result.returncode != 0:
+    errors = history_validation_errors(path)
+    if errors:
         path.unlink(missing_ok=True)  # the temp file, never the target
-        print(result.stdout or result.stderr, file=sys.stderr)
+        for error in errors[:10]:
+            print(f"  - {error}", file=sys.stderr)
+        if len(errors) > 10:
+            print(f"  ... + {len(errors) - 10} more", file=sys.stderr)
         raise SystemExit(
             f"error: generated record failed validation; not written ({path.name})")
 
@@ -226,10 +258,8 @@ def main(argv: list[str] | None = None) -> int:
     # Validate a TEMP file, then move into place. Writing first and unlinking on
     # failure destroys whatever --force was overwriting, in a directory whose
     # entire policy is append-only (#296 review).
-    # Keeps the .yaml suffix: linkml-validate picks its loader from the
-    # extension and refuses a .tmp outright.
-    # Keeps the .yaml suffix: linkml-validate picks its loader from the
-    # extension and refuses a .tmp outright.
+    # Keep the .yaml suffix so scratch files remain easy to inspect if the
+    # process is interrupted before cleanup.
     scratch = out_path.with_name(f".{out_path.stem}.scratch.yaml")
     try:
         scratch.write_text(text)

@@ -10,14 +10,14 @@ assess whether each trait's `causal_graphs` capture the mechanism the
 literature actually describes.
 
 This is **paid, networked work**. Every real call costs money. Always dry-run
-first, and never launch the full 343-trait sweep without the user explicitly
-asking for it.
+first, and never launch a corpus-wide sweep without the user explicitly asking
+for it. Derive the batch size from the dry-run output.
 
 ## Provider: "Edison" means `--provider falcon`
 
-There is no `edison` provider. `deep-research-client` (0.2.4) offers
-`perplexity, openai, falcon, asta, consensus, mock, cyberian, openscientist`,
-and asking it for `edison` returns `ERROR - Unknown provider: edison`.
+There is no upstream `edison` provider name. Inspect the installed client's
+provider listing for the current set; TraitMech resolves its local `edison`
+alias to `falcon`.
 
 Falcon **is** the Edison research agent. The `edison_client` SDK talks to
 `api.platform.edisonscientific.com`, and every job name it exposes is
@@ -72,13 +72,14 @@ just research-trait <category> <slug> --provider openai   # override
 ```
 
 Writes `research/traits/<category>/<slug>-deep-research-falcon.md` plus a
-`.citations.md` sidecar. `research/` is gitignored — these are inputs to
-curation, not artifacts to commit.
+`.citations.md` sidecar. `research/` is tracked provenance because recreating
+it requires paid calls. Review and commit the complete output bundle.
 
 ## Batch sweep
 
-`scripts/run_trait_graph_audit.py` enumerates every `REVIEWED` `term_kind: CLASS`
-trait that already has a causal graph (353 traits; 10 already researched).
+`scripts/run_trait_graph_audit.py` enumerates eligible `REVIEWED`
+`term_kind: CLASS` traits that already have a causal graph. Use its dry run to
+derive the current eligible, completed, and remaining sets.
 
 ```bash
 uv run python scripts/run_trait_graph_audit.py --dry-run

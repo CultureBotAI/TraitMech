@@ -45,6 +45,11 @@ Checks:
                       which is how the review workflow cancelled itself on every
                       PR (#215). Third bug of this shape after #199 and #196's
                       review, hence a gate rather than a convention (#218).
+  CONCURRENCY_CANCELS_MAIN
+                      a workflow that runs on pushes to ``main`` and permits
+                      its concurrency block to cancel an in-progress run.
+                      Validation on the protected branch must always finish;
+                      only pull-request runs may supersede older work (#482).
   MISSING_CONVENTIONS_POINTER
                       a workflow whose first line is not the
                       ``docs/WORKFLOW_CONVENTIONS.md`` pointer. The page
@@ -86,6 +91,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from fnmatch import fnmatchcase
 import os
 import re
 import subprocess
@@ -105,12 +111,11 @@ CONVENTIONS_POINTER = "Conventions for this directory: docs/WORKFLOW_CONVENTIONS
 # the progress comment's `issue_comment` run reached the same PR number through
 # the group's `||` chain.
 #
-# `push` and `schedule` are deliberately absent, and for the same reason: their
+# `push` and `schedule` are deliberately absent from this cross-trigger check,
+# and for the same reason: their
 # `github.ref` is a branch, never `refs/pull/N/merge`, and they carry no PR
-# context to key on. A ref-keyed cancelling group — `curation-history.yaml` — is
-# safe with them and flagging it would be a day-one false positive. They can
-# only collide under a constant group key, and that is equally true of `push`,
-# so singling out `schedule` would be an asymmetry with no basis.
+# context to key on. Push cancellation on main is checked separately below,
+# regardless of whether a pull-request run can share the same group.
 TRIGGERS_ON_THE_SAME_PR = (
     "issue_comment",
     "pull_request_review",
@@ -121,7 +126,7 @@ TRIGGERS_ON_THE_SAME_PR = (
 )
 
 # `github.event_name == 'x'` / `!= 'x'` inside a cancel-in-progress expression.
-# Polarity matters: `== 'pull_request'` confines cancellation to push runs and
+# Polarity matters: `== 'pull_request'` confines cancellation to PR runs and
 # is a fix, while `== 'issue_comment'` confines it to comment runs and is #215.
 EVENT_NAME_EQ = re.compile(r"github\.event_name\s*==\s*['\"]([^'\"]+)['\"]")
 EVENT_NAME_NE = re.compile(r"github\.event_name\s*!=\s*['\"]([^'\"]+)['\"]")
@@ -223,6 +228,80 @@ def can_cancel(block: dict) -> bool:
         return False
     # `true`, or an expression we cannot evaluate here — assume it can fire.
     return True
+
+
+def push_runs_on_main(triggers: object) -> bool:
+    """Whether this workflow can be triggered by a push to ``main``."""
+    if "push" not in trigger_names(triggers):
+        return False
+    if not isinstance(triggers, dict):
+        return True
+    push = triggers.get("push")
+    if not isinstance(push, dict):
+        return True
+
+    def patterns(value: object) -> list[str]:
+        if isinstance(value, str):
+            return [value]
+        if isinstance(value, list):
+            return [str(item) for item in value]
+        return []
+
+    included = patterns(push.get("branches"))
+    if included and not any(fnmatchcase("main", pattern) for pattern in included):
+        return False
+    excluded = patterns(push.get("branches-ignore"))
+    return not any(fnmatchcase("main", pattern) for pattern in excluded)
+
+
+def cancels_event(block: dict, event_name: str) -> bool:
+    """Conservatively evaluate simple event-gated cancellation expressions."""
+    cancel = block.get("cancel-in-progress")
+    if cancel is None or cancel is False:
+        return False
+    if cancel is True:
+        return True
+    if not isinstance(cancel, str):
+        return True
+
+    expression = cancel.strip()
+    if expression.startswith("${{") and expression.endswith("}}"):
+        expression = expression[3:-2].strip()
+    equal = re.fullmatch(r"github\.event_name\s*==\s*['\"]([^'\"]+)['\"]", expression)
+    if equal:
+        return event_name == equal.group(1)
+    not_equal = re.fullmatch(
+        r"github\.event_name\s*!=\s*['\"]([^'\"]+)['\"]", expression
+    )
+    if not_equal:
+        return event_name != not_equal.group(1)
+    # Unknown expressions may evaluate true, so they cannot establish safety.
+    return True
+
+
+def check_main_cancellation(rel: str, doc: dict, triggers: object) -> list[dict[str, str]]:
+    """Flag concurrency that can cancel validation for pushes to main (#482)."""
+    if not push_runs_on_main(triggers):
+        return []
+
+    findings: list[dict[str, str]] = []
+    for where, block in concurrency_blocks(doc):
+        # A per-run group cannot contain an earlier run to cancel.
+        if "github.run_id" in str(block.get("group", "")):
+            continue
+        if not cancels_event(block, "push"):
+            continue
+        findings.append({
+            "check": "CONCURRENCY_CANCELS_MAIN",
+            "file": rel,
+            "detail": (
+                f"{where} concurrency can cancel an in-progress push run on "
+                "main. Main-branch validation must finish; condition "
+                "cancel-in-progress on github.event_name == 'pull_request' "
+                "or give every run a unique group (#482)."
+            ),
+        })
+    return findings
 
 
 def discriminates_by_event(block: dict, others: list[str]) -> bool:
@@ -482,6 +561,7 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
                     unfiltered.append(rel)
 
         findings.extend(check_workflow_concurrency(rel, doc, triggers))
+        findings.extend(check_main_cancellation(rel, doc, triggers))
 
     if not unfiltered:
         extra = ""

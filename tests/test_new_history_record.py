@@ -9,7 +9,6 @@ a command that works with claw and fails without it (#296).
 
 from __future__ import annotations
 
-import subprocess
 import sys
 from pathlib import Path
 
@@ -23,6 +22,7 @@ from new_history_record import (  # noqa: E402
     CLAW_PLACEHOLDER,
     KIND_DIRS,
     _link,
+    history_validation_errors,
     main,
     session_id,
 )
@@ -159,12 +159,9 @@ def test_a_placeholder_record_fails_the_schema_as_the_readme_promises(tmp_path):
           "--summary", "s", "--history-root", str(tmp_path),
           "--timestamp", "2026-08-05T12:00:00Z"])
     path = next(tmp_path.rglob("*.yaml"))
-    result = subprocess.run(
-        ["uv", "run", "linkml-validate", "--schema",
-         str(REPO_ROOT / "src/traitmech/schema/history.yaml"),
-         "--target-class", "HistoryRecord", str(path)],
-        cwd=REPO_ROOT, capture_output=True, text=True)
-    assert result.returncode != 0, "placeholder record validated; the guard is dead"
+    assert history_validation_errors(path), (
+        "placeholder record validated; the guard is dead"
+    )
 
 
 def test_a_failed_force_rewrite_does_not_destroy_the_original(tmp_path, monkeypatch):
@@ -198,24 +195,16 @@ def test_the_generated_record_validates_against_the_vendored_schema(tmp_path):
     """main() validates before printing; this pins that the schema call is real."""
     _, path = _run(tmp_path, "--issue", "296", "--pr", "298",
                    "--sections", "a, b", "--model", "claude-opus-5")
-    result = subprocess.run(
-        ["uv", "run", "linkml-validate", "--schema",
-         str(REPO_ROOT / "src/traitmech/schema/history.yaml"),
-         "--target-class", "HistoryRecord", str(path)],
-        cwd=REPO_ROOT, capture_output=True, text=True)
-    assert result.returncode == 0, result.stdout or result.stderr
+    assert history_validation_errors(path) == []
 
 
 def test_the_committed_records_still_validate():
     """The corpus this writes into, checked the way CI checks it."""
     records = sorted((REPO_ROOT / "history" / "records").rglob("*.yaml"))
     assert records, "no history records found"
-    result = subprocess.run(
-        ["uv", "run", "linkml-validate", "--schema",
-         str(REPO_ROOT / "src/traitmech/schema/history.yaml"),
-         "--target-class", "HistoryRecord", *map(str, records)],
-        cwd=REPO_ROOT, capture_output=True, text=True)
-    assert result.returncode == 0, result.stdout or result.stderr
+    failures = {str(path): history_validation_errors(path) for path in records}
+    failures = {path: errors for path, errors in failures.items() if errors}
+    assert failures == {}
 
 
 def test_sections_sits_between_outcome_and_summary(tmp_path):
