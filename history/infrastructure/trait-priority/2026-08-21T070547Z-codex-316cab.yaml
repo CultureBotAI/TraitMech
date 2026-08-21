@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/trait_priority.py
+  slug: trait-priority
+session:
+  id: 2026-08-21T070547Z-codex-316cab
+  timestamp: '2026-08-21T07:05:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/480
+  - https://github.com/CultureBotAI/TraitMech/issues/443
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - prioritization
+  - documentation
+  summary: Retire the unrefreshable completeness-audit ranking
+  details: Removed the legacy research prioritizer and its stale missing_modules score because
+    graph_completeness_audit.tsv is a paid point-in-time artifact with no local regeneration
+    path. Preserved the audit and enrichment backlog as historical research provenance, marked
+    the Markdown backlog and README links accordingly, and routed agent guidance to just trait-priority.
+    The maintained queue derives graph and curation signals from live trait records and keeps
+    the paid backlog only as a DOI-backed lead to verify after selecting a current target.

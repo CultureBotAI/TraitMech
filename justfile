@@ -180,19 +180,6 @@ gen-priority-dashboard *args:
 audit-canonical-examples *args:
     uv run python scripts/audit_canonical_examples.py {{args}}
 
-# Rank traits by causal-graph weakness, to pick the next deep-research target.
-# NOT in `qc` -- it is a triage aid, not a gate; there is no failing state.
-#
-# Excludes what cannot carry a mechanism graph, by schema field rather than by
-# name: term_kind OBJECT_PROPERTY (94 METPO relations seeded into data/traits)
-# and DATATYPE_PROPERTY (7), mapping_status DEPRECATED (20), and the `upper`
-# category (8 -- five of which DO have graphs, three thin enough to rank near
-# the top, and a thin graph on `quality` is not a research question). Collapses
-# binned families (ph_delta_*, temperature_range_*) so one mechanism does not
-# fill the list. Every exclusion is counted in the output.
-prioritize-research *args:
-    uv run python scripts/prioritize_graph_research.py {{args}}
-
 # Check that every `discussions[].attaches_to` anchor resolves (#409).
 # `attaches_to` is free-form so the schema cannot check it, which made the
 # anchors decorative: rename a node in a migration and the discussion silently

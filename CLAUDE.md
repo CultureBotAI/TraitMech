@@ -13,7 +13,7 @@ quoted in prose; derive them again before planning or reporting.
 - Schema, instance, or writer quality: [audit-schema-gaps](.claude/skills/audit-schema-gaps/SKILL.md)
 - Identifier choice or minting: [manage-identifiers](.claude/skills/manage-identifiers/SKILL.md)
 - METPO proposals: [metpo-proposal](.claude/skills/metpo-proposal/SKILL.md)
-- Research prioritization: [prioritize-graph-research](.claude/skills/prioritize-graph-research/SKILL.md)
+- Research and curation prioritization: [trait-priority](.claude/skills/trait-priority/SKILL.md)
 - Paid trait research: [deep-research-trait](.claude/skills/deep-research-trait/SKILL.md) or [research-causal-graphs](.claude/skills/research-causal-graphs/SKILL.md)
 - Backlog reconciliation: [next-tasks](.claude/skills/next-tasks/SKILL.md)
 

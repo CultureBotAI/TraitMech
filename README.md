@@ -132,8 +132,8 @@ The complete artifact collections are:
 For direct access to every committed report, see:
 
 - Graph quality: [causal graph audit](reports/causal_graph_audit.tsv),
-  [connectivity](reports/causal_graph_connectivity.tsv),
-  [completeness](reports/graph_completeness_audit.tsv),
+  [connectivity](reports/causal_graph_connectivity.tsv), historical paid-research
+  snapshots for [completeness](reports/graph_completeness_audit.tsv) and the
   [enrichment backlog](reports/graph_enrichment_backlog.md), and [audit
   manifest](reports/trait_graph_audit_manifest.tsv).
 - Validation and pipeline quality: [instance summary](reports/instance_validation_summary.md),

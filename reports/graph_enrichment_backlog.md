@@ -1,5 +1,12 @@
 # Causal-graph enrichment backlog (Edison completeness audit)
 
+> **Historical paid-research snapshot — do not use for prioritization.** This
+> artifact has no local regeneration path, and most source graphs have changed
+> since the sweep (#443, #480). Use `just trait-priority`, which reads live
+> corpus state. After selecting a record, this backlog remains useful as a
+> DOI-backed lead, but verify every proposal against the current graph before
+> applying it.
+
 Generated from a 353-agent per-trait audit comparing each trait's existing `causal_graphs` against its Edison deep-research report. 351 traits flagged high/medium priority.
 
 **Verdicts:** {'shallow': 228, 'skeletal': 110, 'adequate': 15}  
@@ -3490,4 +3497,3 @@ Generated from a 353-agent per-trait audit comparing each trait's existing `caus
 - `molecular oxygen —inactivates→ glycyl radical enzymes`  (10.1128/IAI.00502-24 (Rose et al. 2025): Certain enzyme clas)
 - `molecular oxygen / reactive oxygen species —inactivates→ pyruvate formate-lyase (PFL) and pyruvate:ferredoxin oxidoreductase (PFOR)`  (10.1038/s43705-023-00251-7 (Okabe et al. 2023): key anaerobi)
 - _The existing graph captures the oxygen-inhibition backbone and ROS damage, but conflates distinct enzyme-specific toxicity mechanisms under a generic 'oxygen-sensitive enzymes' node; adding edges for Fe-S cluster, glycyl radical, and PFOR/PFL vulnerability would provide mechanistic depth while remaining generic across anaerobic lineages."_
-
