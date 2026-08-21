@@ -248,8 +248,19 @@ def push_runs_on_main(triggers: object) -> bool:
         return []
 
     included = patterns(push.get("branches"))
-    if included and not any(fnmatchcase("main", pattern) for pattern in included):
-        return False
+    if included:
+        # GitHub evaluates `branches` in order: a matching `!pattern` excludes
+        # the branch, and a later positive pattern can include it again.
+        # Treating the list as an unordered `any()` falsely reports workflows
+        # whose final matching pattern excludes main (#489).
+        main_included = False
+        for raw_pattern in included:
+            negated = raw_pattern.startswith("!")
+            pattern = raw_pattern[1:] if negated else raw_pattern
+            if fnmatchcase("main", pattern):
+                main_included = not negated
+        if not main_included:
+            return False
     excluded = patterns(push.get("branches-ignore"))
     return not any(fnmatchcase("main", pattern) for pattern in excluded)
 

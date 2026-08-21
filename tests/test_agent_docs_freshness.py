@@ -71,3 +71,22 @@ def test_generated_dataclass_policy_matches_gitignore():
     assert generated in guidance
     assert "do not commit it" in guidance.lower()
     assert generated in gitignore
+
+
+def test_schema_audit_reports_do_not_restore_resolved_pipeline_claims():
+    reports = "\n".join(read(path) for path in [
+        "reports/instance_validation_summary.md",
+        "reports/schema_gap_audit.md",
+        "reports/pipeline_gap_audit.md",
+        "reports/gap_fix_backlog.md",
+        "reports/gap_fix_backlog.tsv",
+    ])
+    stale_claims = [
+        "runs the CLI in open mode",
+        "nothing blocks a PR",
+        "the only real trait-YAML writer",
+        "does not validate output",
+        "Lead item is always **G01",
+    ]
+    for claim in stale_claims:
+        assert claim not in reports

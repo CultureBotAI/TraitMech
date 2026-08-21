@@ -748,6 +748,31 @@ def test_push_excluding_main_is_out_of_scope():
     """) == []
 
 
+def test_ordered_negative_branch_pattern_excludes_main():
+    assert _main_conc(f"""
+        on:
+          push:
+            branches: ["**", "!main"]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_later_positive_branch_pattern_reincludes_main():
+    found = _main_conc(f"""
+        on:
+          push:
+            branches: ["**", "!main", "main"]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_CANCELS_MAIN"]
+
+
 def test_job_level_concurrency_is_checked_too():
     """#216 moved the block onto the job; the hazard moves with it."""
     doc = yaml.safe_load(textwrap.dedent("""
