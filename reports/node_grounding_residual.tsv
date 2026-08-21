@@ -382,6 +382,8 @@ er-golgi apoplastic effector secretion	BIOLOGICAL_PROCESS	1	data/traits/ecology/
 apoplastic effectors	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
 prey bacterium	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/predatory_bacterium.yaml
 bacteriolytic killing	BIOLOGICAL_PROCESS	1	data/traits/ecology/predatory_bacterium.yaml
+b. bacteriovorus prey attachment	BIOLOGICAL_PROCESS	1	data/traits/ecology/predatory_bacterium.yaml
+b. bacteriovorus prey invasion	BIOLOGICAL_PROCESS	1	data/traits/ecology/predatory_bacterium.yaml
 prey attachment/invasion complex (portal)	CELLULAR_LOCALIZATION	1	data/traits/ecology/predatory_bacterium.yaml
 prey peptidoglycan entry pore / bdelloplast pore	CELLULAR_LOCALIZATION	1	data/traits/ecology/predatory_bacterium.yaml
 prey cell-wall modification enzymes	MOLECULAR_FUNCTION	1	data/traits/ecology/predatory_bacterium.yaml

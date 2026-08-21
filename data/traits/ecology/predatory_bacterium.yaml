@@ -44,6 +44,22 @@ causal_graphs:
     label: bacteriolytic killing
     node_type: BIOLOGICAL_PROCESS
     description: Lysis or digestion of prey bacterial cells.
+  - node_id: b_bacteriovorus_type_iv_pilus
+    label: B. bacteriovorus type IV pilus
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0044096
+    description: Type IV pilus at the invasive pole that mediates B. bacteriovorus
+      attachment to prey.
+  - node_id: prey_attachment
+    label: B. bacteriovorus prey attachment
+    node_type: BIOLOGICAL_PROCESS
+    description: Attachment of B. bacteriovorus to the surface of a Gram-negative
+      prey bacterium before invasion.
+  - node_id: prey_invasion
+    label: B. bacteriovorus prey invasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Entry of B. bacteriovorus through the prey envelope into the prey
+      periplasm.
   - node_id: invasion_portal
     label: prey attachment/invasion complex (portal)
     node_type: CELLULAR_LOCALIZATION
@@ -95,6 +111,61 @@ causal_graphs:
     - reference: DOI:10.1111/1462-2920.13171
       notes: Pérez et al. survey predatory bacteria and their prey-killing strategies.
     predicate_id: biolink:consumes
+  - subject: b_bacteriovorus_type_iv_pilus
+    predicate: contributes to
+    object: prey_attachment
+    description: Type IV pili mediate B. bacteriovorus attachment to prey before invasion.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: attachment is mediated by type IV pili (T4P)
+      notes: Kaplan et al. directly imaged T4aP extending from B. bacteriovorus to
+        the prey outer membrane; this branch is taxon-specific.
+    predicate_id: RO:0002326
+  - subject: prey_bacterium
+    predicate: participates in
+    object: prey_attachment
+    description: The living Gram-negative prey cell is the target participant in B.
+      bacteriovorus attachment.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-47412-3
+      snippet: swim rapidly to another Gram-negative bacterial prey surface and then
+        attach to it
+      notes: Tyson et al. describe attachment to the prey surface as the first physical
+        predator-prey interaction before invasion.
+    predicate_id: biolink:participates_in
+  - subject: prey_attachment
+    predicate: precedes
+    object: prey_invasion
+    description: B. bacteriovorus first attaches to prey and begins invasion only
+      after prey assessment.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: After assessment of prey quality, the process of invasion begins
+      notes: Kaplan et al. place attachment and prey assessment before invasion in
+        the endoperiplasmic predation cycle.
+    predicate_id: biolink:precedes
+  - subject: invasion_portal
+    predicate: participates in
+    object: prey_invasion
+    description: The flexible portal lines the prey entry hole and seals the outer
+      membrane around B. bacteriovorus during invasion.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: flexible portal structure lining a hole in the prey peptidoglycan
+      notes: Cryo-electron tomography directly localized the portal at the entry hole
+        during predator invasion.
+    predicate_id: biolink:participates_in
+  - subject: prey_cell_wall_modification
+    predicate: participates in
+    object: prey_invasion
+    description: Enzymatic modification of the prey cell wall permits entry into the
+      periplasm and formation of the bdelloplast.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: Prey invasion involves enzymatic modification of the prey cell wall
+      notes: Kaplan et al. describe localized prey-wall modification at the predator-prey
+        contact point as part of invasion.
+    predicate_id: biolink:participates_in
   - subject: invasion_portal
     predicate: seals
     object: prey_entry_pore
@@ -132,6 +203,17 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01401-2
       notes: After synchronous septation, progeny lyse the prey cell wall and exit.
     predicate_id: biolink:causes
+  - subject: intraperiplasmic_growth
+    predicate: precedes
+    object: progeny_release
+    description: Growth and synchronous division inside the bdelloplast occur before
+      progeny lyse the prey wall and exit.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: progeny cells reset to the attack phase, lyse the prey cell wall
+      notes: Kaplan et al. place progeny exit after consumption, intraperiplasmic
+        growth, and synchronous septation.
+    predicate_id: biolink:precedes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -156,4 +238,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2).
+  llm_assisted: true
+- timestamp: '2026-08-21T19:43:49Z'
+  curator: codex
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Applied the existing DOI-backed predation-cycle research by adding taxon-scoped
+    type IV pilus, prey-attachment, and prey-invasion nodes and six evidence-backed
+    bridge edges. The bridges preserve attachment, invasion, bdelloplast growth, and
+    exit as distinct lifecycle stages while joining the graph into one component.
   llm_assisted: true

@@ -15,9 +15,9 @@
       "CURATE_ROOT_WITH_SUBTYPES": 0,
       "ADD_CANONICAL_EXAMPLES": 111,
       "BUILD_CAUSAL_GRAPH": 0,
-      "DEEPEN_CAUSAL_GRAPH": 153,
+      "DEEPEN_CAUSAL_GRAPH": 152,
       "ALREADY_DEEP": 9,
-      "CURATE_ROOT": 75
+      "CURATE_ROOT": 76
     }
   },
   "rows": [
@@ -2462,28 +2462,6 @@
       "researched": true,
       "reasons": [
         "no canonical_examples +30"
-      ]
-    },
-    {
-      "identifier": "traitmech:000054",
-      "label": "predatory bacterium",
-      "category": "ecology",
-      "slug": "predatory_bacterium",
-      "score": 21.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 6,
-      "nodes": 10,
-      "components": 4,
-      "orphans": 0,
-      "examples": 1,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": true,
-      "reasons": [
-        "thin graph (6 edges) +12",
-        "4 components +9"
       ]
     },
     {
@@ -5494,6 +5472,25 @@
       "action": "CURATE_ROOT",
       "edges": 11,
       "nodes": 12,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "traitmech:000054",
+      "label": "predatory bacterium",
+      "category": "ecology",
+      "slug": "predatory_bacterium",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 12,
+      "nodes": 13,
       "components": 1,
       "orphans": 0,
       "examples": 1,
