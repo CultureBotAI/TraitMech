@@ -57,7 +57,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cold-shock-protein induction supporting transient low-temperature
       acclimation.
-  - node_id: membrane_rigidification
+  - node_id: membrane_rigidity
     label: membrane rigidification and thickening
     node_type: QUALITY
     description: Cold-induced increase in membrane order and bilayer thickness approaching
@@ -129,7 +129,7 @@ causal_graphs:
     predicate_id: METPO:2007400
   - subject: low_temperature
     predicate: causes
-    object: membrane_rigidification
+    object: membrane_rigidity
     description: A low-temperature shift causes membrane rigidification and thickening
       toward a gel-phase transition.
     evidence:
@@ -278,4 +278,12 @@ curation_history:
     node it hangs off. A leaf restating its own parent. The parent keeps two other
     in-edges (cold_shock_response confers, facultative_lipid_remodeling manifests
     as), so nothing is stranded.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: membrane_rigidity is QUALITY. Membrane rigidity
+    is a physical attribute of the bilayer and therefore a QUALITY under the schema''s
+    membrane-fluidity example.'
   llm_assisted: true

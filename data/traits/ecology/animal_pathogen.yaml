@@ -323,6 +323,16 @@ curation_history:
     an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
     in the discussion's notes.
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: immune_evasion is BIOLOGICAL_PROCESS. Immune evasion
+    is the avoidance or subversion of host defenses. The edges treat it as an enabled
+    action that in turn enables colonization; capsule.yaml''s ''reduced recognition
+    and clearance'' is the outcome of that same process, not a separate measurable
+    axis.'
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0
   prompt: This record routes two independent paths to immune evasion -- complement-regulator

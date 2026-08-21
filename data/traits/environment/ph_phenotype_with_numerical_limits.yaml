@@ -82,7 +82,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cytoplasmic protons whose concentration sets internal pH.
   - node_id: phosphate_buffering
-    label: cytoplasmic buffering by phosphate pools
+    label: cytoplasmic phosphate buffering
     node_type: BIOLOGICAL_PROCESS
     description: Buffering of cytoplasmic protons by intracellular phosphate pools.
   - node_id: internal_ph
@@ -246,4 +246,13 @@ curation_history:
     and PMF'', while the six GENE_OR_PROTEIN occurrences describe the transporter
     (''Membrane antiporter that exports sodium from the cytoplasm in exchange for
     protons''). na_h_antiport_activity already exists corpus-wide as MOLECULAR_FUNCTION.'
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: phosphate_buffering is BIOLOGICAL_PROCESS. Both
+    occurrences describe cytoplasmic phosphate pools buffering protons and stabilizing
+    pH: the buffering action, not the size of a buffer reservoir. The distinct cytoplasmic_buffering_capacity
+    id remains CAPACITY for that quantity sense.'
   llm_assisted: true

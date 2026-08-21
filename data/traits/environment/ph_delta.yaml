@@ -236,3 +236,11 @@ curation_history:
     lists them (nuo, cyo, ndh, sdh). The rule breaks what was a 2-2 tie before this
     tranche.'
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: proton_permeability is QUALITY. Proton permeability
+    is a measurable membrane property, which is the schema''s QUALITY sense rather
+    than a biological process.'
+  llm_assisted: true

@@ -54,7 +54,7 @@ causal_graphs:
       conservation.
   - node_id: maximal_growth_rate
     label: maximal growth rate
-    node_type: BIOLOGICAL_PROCESS
+    node_type: QUALITY
     description: Peak specific growth rate achieved at the optimal temperature.
   - node_id: homeoviscous_adaptation
     label: homeoviscous adaptation
@@ -104,16 +104,16 @@ causal_graphs:
         organisms.
     predicate_id: RO:0002211
   - subject: enzyme_kinetics
-    predicate: enables
+    predicate: promotes
     object: maximal_growth_rate
-    description: Adequately fast enzyme kinetics enable peak growth at the optimal
+    description: Adequately fast enzyme kinetics promote peak growth at the optimal
       temperature.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
       notes: Supports balanced enzyme kinetics at adapted temperature as the basis
         of peak growth.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002213
   - subject: maximal_growth_rate
     predicate: manifests as
     object: temperature_optimum_trait
@@ -135,7 +135,7 @@ causal_graphs:
         organisms alter membrane lipid composition (homeoviscous adaptation)''.'
     predicate_id: RO:0002211
   - subject: membrane_fluidity
-    predicate: enables
+    predicate: promotes
     object: maximal_growth_rate
     description: Membrane physical state (fluidity) is a proximal determinant of growth,
       constraining transport, signaling, and division required for peak growth.
@@ -143,7 +143,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Membrane fluidity maintenance via homeoviscous adaptation supports the
         cellular processes underlying growth across the temperature range.
-    predicate_id: RO:0002327
+    predicate_id: RO:0002213
   - subject: arrhenius_plot_deviation
     predicate: indicates
     object: stress_growth_regime
@@ -225,4 +225,14 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: maximal_growth_rate is QUALITY. A maximal growth
+    rate is a measured upper bound or peak specific rate. Its edges associate, enable,
+    or manifest that value; none describe the process of cell growth itself. An edge
+    cannot enable a QUALITY under RO:0002327''s biological-process range, so edges
+    that causally support the rate use promotes (RO:0002213) instead.'
   llm_assisted: true

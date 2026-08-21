@@ -629,6 +629,12 @@ Starvation is strongly supported as a trigger, but the immediate biochemical inp
           <p class="changes">Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
         
+        <li>
+          <time>2026-08-21T08:00:00Z</time> ·
+          <strong>NORMALISE_NODE_TYPE</strong> · codex
+          <p class="changes">Tranche 5 of issue 356 settles the process/quality families and merges ids that meant the same sense: stress_resistance is QUALITY. Stress resistance here is enhanced tolerance or resistance of a cell or mature endospore, a measurable protective attribute. The nodes do not describe the general stress-response process.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1009,7 +1015,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 01:00 UTC from
+      Record as of 2026-08-21 08:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

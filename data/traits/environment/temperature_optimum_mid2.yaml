@@ -49,7 +49,7 @@ causal_graphs:
     label: temperature decrease
     node_type: ENVIRONMENTAL_FACTOR
     description: A drop in ambient temperature below the growth setpoint.
-  - node_id: membrane_rigidification
+  - node_id: membrane_rigidity
     label: membrane rigidification
     node_type: QUALITY
     description: Increased bilayer order/thickness and liquid-crystalline to gel transition
@@ -100,7 +100,7 @@ causal_graphs:
     predicate_id: rdfs:subClassOf
   - subject: temperature_decrease
     predicate: causes
-    object: membrane_rigidification
+    object: membrane_rigidity
     description: A temperature drop rigidifies and thickens the cytoplasmic membrane.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
@@ -198,4 +198,12 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: membrane_rigidity is QUALITY. Membrane rigidity
+    is a physical attribute of the bilayer and therefore a QUALITY under the schema''s
+    membrane-fluidity example.'
   llm_assisted: true

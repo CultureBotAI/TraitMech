@@ -276,3 +276,11 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: dna_positive_supercoiling is BIOLOGICAL_PROCESS.
+    GO:0160097 denotes the process of introducing positive supercoils into DNA. The
+    general DNA-topology state remains separately modelled as dna_supercoiling.'
+  llm_assisted: true

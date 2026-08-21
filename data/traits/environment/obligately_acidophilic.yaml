@@ -58,8 +58,8 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Cell envelope properties that reduce inward proton leak.
   - node_id: reversed_membrane_potential
-    label: reversed membrane potential
-    node_type: BIOLOGICAL_PROCESS
+    label: inside-positive (reversed) membrane potential
+    node_type: STATE
     description: Positive-inside membrane potential that suppresses proton influx.
   - node_id: proton_export_pumps
     label: proton export pumps and antiporters
@@ -320,4 +320,12 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: reversed_membrane_potential is STATE. A reversed
+    membrane potential is an inside-positive electrical state, not the process that
+    establishes it. The schema names this gradient/steady-value distinction explicitly.'
   llm_assisted: true

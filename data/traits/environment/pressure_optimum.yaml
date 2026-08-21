@@ -36,7 +36,7 @@ causal_graphs:
     grounding: PATO:0001025
   - node_id: maximal_growth_rate
     label: maximal growth rate
-    node_type: BIOLOGICAL_PROCESS
+    node_type: QUALITY
     description: Peak specific growth rate achieved at the optimum pressure.
   - node_id: membrane_unsaturated_fatty_acids
     label: membrane unsaturated fatty acids
@@ -205,4 +205,14 @@ curation_history:
     still reports it. Grounding it makes the duplication legible instead of leaving
     two unrelated-looking anchors. hhp_tolerance IS piezotolerant, already in the
     corpus as traitmech:000003.'
+  llm_assisted: true
+- timestamp: '2026-08-21T08:00:00Z'
+  curator: codex
+  action: NORMALISE_NODE_TYPE
+  changes: 'Tranche 5 of issue 356 settles the process/quality families and merges
+    ids that meant the same sense: maximal_growth_rate is QUALITY. A maximal growth
+    rate is a measured upper bound or peak specific rate. Its edges associate, enable,
+    or manifest that value; none describe the process of cell growth itself. An edge
+    cannot enable a QUALITY under RO:0002327''s biological-process range, so edges
+    that causally support the rate use promotes (RO:0002213) instead.'
   llm_assisted: true

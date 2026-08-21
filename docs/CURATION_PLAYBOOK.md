@@ -271,6 +271,30 @@ So ask **does this id mean one thing?**
 The gradient *is* a state; generating and maintaining it *is* a process. If a
 record means the second, it should not be reusing the id for the first.
 
+### `BIOLOGICAL_PROCESS` vs `QUALITY` — read the assertion, not the noun ending
+
+Tranche 5 of #356 settled the recurring process/quality split. `QUALITY` is a
+measurable attribute or physical condition; `BIOLOGICAL_PROCESS` is an action or
+change. A name ending in *-ification* does not decide it: the
+`membrane_rigidification` nodes described reduced fluidity and increased bilayer
+order, so they were the existing `membrane_rigidity` quality under a duplicate
+id. Conversely, `phosphate_buffering` describes phosphate pools actively
+buffering protons; the reservoir quantity remains the distinct
+`cytoplasmic_buffering_capacity` node.
+
+The decisions from that tranche are useful tests for later families:
+
+| assertion | type | reason |
+|---|---|---|
+| maximal growth rate, proton permeability, membrane rigidity, stress resistance | `QUALITY` | a rate, permeability, rigidity, or resistance is an attribute that can be measured |
+| immune evasion, phosphate buffering, DNA positive supercoiling | `BIOLOGICAL_PROCESS` | an avoidance/buffering action, or the GO-grounded process that introduces positive supercoils |
+| inside-positive (reversed) membrane potential | `STATE` | the electrical gradient/steady value, not its establishment |
+
+Retyping can expose a bad predicate rather than justify widening its gate. Four
+`enables` edges targeted `maximal_growth_rate`; once the rate was correctly a
+quality, RO:0002327 could not range to it. The edges became `promotes`
+(RO:0002213). Run `just audit-predicate-domains` after every type migration.
+
 **Do not repeat #352's mistake.** The test is not "is this type defensible in
 isolation" — it is "is it compatible with what the record and its predicates
 already assert". #352 spent three review rounds learning that on the
