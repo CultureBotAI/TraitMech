@@ -5,7 +5,8 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-21. Everything merged in this repo through **#502**.
+Last reconciled: 2026-08-22 (hygiene bookkeeping on the 2026-08-21 full
+reconcile). Everything merged in this repo through **#503**.
 This reconcile supersedes PR #493, which described main at #487 and was outrun
 by a burst of parallel sessions before it could merge — nine PRs (#492,
 #494–#499, plus the Dependabot pair #441/#442) landed in under a day, and
@@ -23,7 +24,8 @@ by a burst of parallel sessions before it could merge — nine PRs (#492,
   kept as historical paid-research snapshots; the live-state
   `scripts/trait_priority.py` queue owns prioritization, extended with
   research-artifact awareness. **#480 and #443 are closed.** Consequence:
-  #471/#472/#479 are defects in the deleted script — moot, close pending.
+  #471/#472/#479 were defects in the deleted script — closed 2026-08-22
+  after verifying no successor surface.
 - **#497** ran #356 tranche 5 (process-quality families): **112 → 83
   occurrences across 30 families.**
 - **#498/#499** began the apply-campaign (#426): peritrichous and the
@@ -82,11 +84,15 @@ Open PRs: **one** — **#493**, the superseded reconcile this file replaces;
 close it unmerged. #492, the Dependabot pair, #501 and #502 merged; #461/#465
 were closed with #465's salvageable records landed via #495.
 
-Open issues, 37 — 36 once **#505** (the review findings on this reconcile,
-fixed in place) closes with its merge. Closed since the #493 snapshot: #443,
-#480 (#496), #391 (#502), #433 and #500 (#501 — #500 was the five-Mech fleet
-sweep's sidecar-reattribution defect, filed and fixed within a day), and #504
-(review finding on #502, fixed pre-merge).
+Open issues, **30** (re-derived 2026-08-22, after the hygiene closes landed).
+Closed since the #493 snapshot: #443, #480 (#496), #391 (#502), #433 and #500
+(#501 — #500 was the five-Mech fleet sweep's sidecar-reattribution defect,
+filed and fixed within a day), #504/#505 (review findings on #502/#503, fixed
+pre-merge), and the six hygiene closes — #471/#472/#479 (verified moot:
+nothing on main reads the completeness TSV, and `trait_priority.py` already
+initialises `series_size: 0` uniformly), #476/#477 (verified fixed in #474
+pre-merge), #448 (verified shipped: `app/dashboard/priority.*` + recipes).
+#444/#445 were retitled to their residue rather than closed.
 
 The pre-2026-08-15 residue is unchanged (first block); the rest were filed by
 the threads above (second block).
@@ -116,12 +122,11 @@ the threads above (second block).
 | #435–#439 | provider-triage review findings (false "available", untested scoring, CLI tracebacks) — re-check against #501, which touched provider policy | 12 |
 | #444 | canonical_examples backfill: 237 of ~353 records carry examples; render half shipped (#446) | 13 |
 | #445 | `audit-canonical-examples` exists (#446) but is **not wired into `qc`/CI** | 13 |
-| #448 | dashboard port shipped (#449, #496) — close pending unless residue is named | 12 |
 | #453 | 40 microbedecoder enzyme-activity traits (47k occurrences) have no TraitMech term | 14 |
 | #464 | 56 strings owned by >1 trait record — synonym lookup cannot disambiguate | 14 |
-| #471/#472/#479 | defects in the prioritiser **deleted by #496** — moot, close pending | 12 |
 | #481 | irreproducible overlap figures — **now live in `trait_priority.py:23-24`**, the maintained tool | 12 |
-| #475–#478 | canonical_examples review findings; #476/#477 were fixed in #474 pre-merge — close pending as records | 13 |
+| #475 | morphometric bins need a taxon-oriented source (mechanism artifacts answer *how*, not *who*) | 13 |
+| #478 | bin-measured exemplars land on family parents — policy call | 13 |
 | #491 | `.vendored_canon_ref` pinned before `history.yaml` existed in the hub — unblocked by #492's merge | 7 |
 
 **Recommended next: the #435 cluster (#436–#439)** — one file, a handful of
@@ -137,9 +142,9 @@ were closed by #501 the same day they were recommended.)
 (83 occurrences, 30 families; the decided families are thinning, the tail is
 judgement calls).
 
-**Hygiene pending explicit approval:** close #471/#472/#479 (moot via #496),
-#476/#477 (records of pre-merge fixes), #448 (shipped); retitle #444/#445 to
-their residue; close PR #493 unmerged (superseded by this reconcile).
+**Hygiene DONE (2026-08-22):** #471/#472/#479, #476/#477 and #448 closed —
+each claim verified against main before closing, with the evidence in the
+closing comment. #444/#445 retitled to their residue. PR #493 closed unmerged.
 
 **Not actionable as "next":** #364 and the v1–v11 cohorts are upstream METPO
 (metpo#535, still no upstream activity). #191/#197/#209/#358 step 2/#377's
@@ -979,8 +984,10 @@ more research is ever bought?** What landed:
   `graph_completeness_audit.tsv` and `graph_enrichment_backlog.md` stay as
   historical paid-research snapshots; the live-state `trait_priority.py` queue
   (from #449) owns prioritization, extended with research-artifact awareness.
-  #443/#480 closed. Fallout: **#471/#472/#479 are moot** (defects in deleted
-  code — close pending) and **#481 got promoted, not retired**: the
+  #443/#480 closed. Fallout: **#471/#472/#479 closed as moot** (2026-08-22,
+  verified — no consumer of the completeness TSV remains, and
+  `trait_priority.py` already keys `series_size` uniformly) and **#481 got
+  promoted, not retired**: the
   irreproducible overlap figures (5%/20%/18-of-3256) now live in
   `scripts/trait_priority.py:23-24`, the maintained tool; re-derive (an
   independent review measured 6.9%/25%/3-of-470) and correct.
@@ -1022,7 +1029,9 @@ Open residue: **#444** (~116 records still to fill), **#445**
 workflow** — wire it in), **#475** (cell-size bins cannot be filled from
 mechanism artifacts — needs a taxon-oriented source), **#478** (bin-measured
 exemplars land on family parents while the bin stays empty — policy call).
-**#476/#477 are records of findings fixed in #474 pre-merge** — close pending.
+**#476/#477 closed (2026-08-22)** — records of findings fixed in #474
+pre-merge, closure verified against the live records (one surviving
+exemplar on `temperature_optimum_high`; the canary's slot repositioned).
 
 ## 14. microbedecoder / FAPROTAX residual (#453, #464) — NEW 2026-08-19..20; grounded and gated, terms still missing
 
