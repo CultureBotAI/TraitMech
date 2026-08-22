@@ -249,3 +249,25 @@ def test_provider_json_adds_selected_without_filtering_the_ranking():
             assert routed["provider"] in names, (
                 "the routing choice must be findable in the ranking it came from"
             )
+
+def test_all_negative_scores_keep_their_relative_order():
+    """Fit may floor at zero, but routing must still prefer the least-bad score."""
+    config = drp.load_config(CONFIG_PATH)
+    focus_name = config["default_focus"]
+    stage_name = next(iter(config["focuses"][focus_name]["stages"]))
+    stage = config["focuses"][focus_name]["stages"][stage_name]
+    stage["capabilities"] = {}
+    stage["synthesis_weight"] = 0
+    stage["speed_weight"] = 0
+    stage["cost_weight"] = 0
+
+    # Deliberately make reverse-alphabetical order the raw-score order.  The
+    # old fit-only sort returned alphabetical order once every fit floored to 0.
+    expected = sorted(drp.PROVIDERS, reverse=True)
+    config["focuses"][focus_name]["provider_adjustments"] = {
+        provider: -(index + 1) for index, provider in enumerate(expected)
+    }
+
+    rows = drp.rank_stage(config, focus_name, stage_name)
+    assert all(row["fit"] == 0 for row in rows)
+    assert [row["provider"] for row in rows] == expected
