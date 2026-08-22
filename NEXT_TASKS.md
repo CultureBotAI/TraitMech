@@ -80,9 +80,11 @@ longer requested, the 353 broken ones deleted), **#289** (via #406), **#292**
 (via #408), **#402** (via #405), **#443/#480** (via #496), plus the review
 findings on the PRs above.
 
-Open PRs: **one** — **#493**, the superseded reconcile this file replaces;
-close it unmerged. #492, the Dependabot pair, #501 and #502 merged; #461/#465
-were closed with #465's salvageable records landed via #495.
+Open PRs from this thread: **none** — #493 was closed unmerged (2026-08-21,
+superseded by #503) and its branch deleted. #492, the Dependabot pair, #501
+and #502 merged; #461/#465 were closed with #465's salvageable records landed
+via #495. Parallel sessions keep their own PRs open (e.g. #506,
+review-open-issues skill) — check `gh pr list` rather than this snapshot.
 
 Open issues, **30** (re-derived 2026-08-22, after the hygiene closes landed).
 Closed since the #493 snapshot: #443, #480 (#496), #391 (#502), #433 and #500
