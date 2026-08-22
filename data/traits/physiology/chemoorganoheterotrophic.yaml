@@ -56,7 +56,7 @@ causal_graphs:
   - node_id: fermentation
     label: fermentation
     node_type: BIOLOGICAL_PROCESS
-    grounding: METPO:1000845
+    grounding: GO:0006113
     description: Energy metabolism using organic electron acceptors and substrate-level
       phosphorylation.
   - node_id: atp
@@ -352,4 +352,15 @@ curation_history:
     METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and
     deliberately NOT touched here, because retyping a node while carrying a wrong
     CURIE along unchanged would make it look reviewed.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:30:00Z'
+  curator: claude
+  action: REGROUND_CAUSAL_NODES
+  changes: 'Repaired a wrong CURIE (issue 391): fermentation: METPO:1000845 -> GO:0006113.
+    Was METPO:1000845 ''Acetogenesis'' — a Wood-Ljungdahl acetate-producing metabolism,
+    while the node describes ''Energy metabolism using organic electron acceptors
+    and substrate-level phosphorylation'', i.e. fermentation. The term''s related
+    synonym ''Acetate fermentation'' explains the mismatch. Replaced with GO:0006113,
+    the (fermentation, BIOLOGICAL_PROCESS) row mappings/node_grounding.tsv already
+    holds and the grounding six sibling records already carry.'
   llm_assisted: true
