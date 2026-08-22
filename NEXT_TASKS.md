@@ -221,8 +221,8 @@ claw-as-mirror decision, and the old "blocked on making claw public" framing was
 wrong twice over. Sequence:
 - **#181** repointed `check_vendored_sync.sh` at a *local* claw checkout
   (`$CLAW_ROOT` or sibling auto-discovery) after `culturebotai-claw#18` put a
-  canonical copy in `shared/idlabel/`. Because claw is private, the tokenless
-  `raw.githubusercontent` fetch 404s, so the network path was unavailable.
+  canonical copy in `shared/idlabel/`. That implementation assumed claw was
+  private and treated the tokenless network path as unavailable.
 - That variant **skipped and exited 0 when no claw checkout was present**, which
   is always the case in CI — so TraitMech's `vendored-sync` job was silently
   passing without checking anything.
