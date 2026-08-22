@@ -349,6 +349,10 @@ retype-causal-nodes *args:
 retype-causal-nodes-apply *args:
     uv run python scripts/retype_causal_nodes.py --apply {{args}}
 
+# Repair the fermentation grounding in chemoorganoheterotrophic.yaml (#391). Default dry-run.
+reground-fermentation-curie *args:
+    uv run python scripts/reground_fermentation_curie.py {{args}}
+
 # Refresh raw METPO copy from the local KG-Hub assays clone
 refresh-metpo:
     cp ../assays/assay-metadata/metpo.owl data/raw/metpo.owl

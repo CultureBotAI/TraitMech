@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/chemoorganoheterotrophic.yaml
+  slug: chemoorganoheterotrophic
+session:
+  id: 2026-08-22T024137Z-claude-e82064
+  timestamp: '2026-08-22T02:41:37Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/391
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reground the fermentation node from METPO:1000845 (Acetogenesis) to GO:0006113
+    (fermentation)
+  details: METPO:1000845 is Acetogenesis (Wood-Ljungdahl acetate production); the node describes
+    organic-acceptor substrate-level phosphorylation, i.e. fermentation. The term's related
+    synonym 'Acetate fermentation' explains the wrong match. Replacement is the (fermentation,
+    BIOLOGICAL_PROCESS) -> GO:0006113 row mappings/node_grounding.tsv already holds, carried
+    by eight sibling records (an earlier draft said six; corrected per review issue 504).
+    Applied via scripts/reground_fermentation_curie.py (--apply opt-in, write_validated_trait).
+    The defensible METPO:1002005 in chemoheterotrophic.yaml and the legitimate METPO:1000845
+    in acetogenesis.yaml were deliberately not touched.
