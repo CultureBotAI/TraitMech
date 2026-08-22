@@ -5,11 +5,11 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-21. Everything merged in this repo through **#499**;
-**#502** (the #391 CURIE fix) is open with CI running. This reconcile
-supersedes PR #493, which described main at #487 and was outrun by a burst of
-parallel sessions before it could merge — eight PRs (#492, #494–#499, plus the
-Dependabot pair) landed in under a day. What that burst did:
+Last reconciled: 2026-08-21. Everything merged in this repo through **#502**.
+This reconcile supersedes PR #493, which described main at #487 and was outrun
+by a burst of parallel sessions before it could merge — nine PRs (#492,
+#494–#499, plus the Dependabot pair #441/#442) landed in under a day, and
+#501/#502 followed while this replacement was in review. What the burst did:
 
 - **#494** landed the README refresh that #493 flagged as sitting uncommitted
   on `main` (stale 354-era counts → 477, directory layout, plus
@@ -29,10 +29,15 @@ Dependabot pair) landed in under a day. What that burst did:
 - **#498/#499** began the apply-campaign (#426): peritrichous and the
   predatory-bacterium lifecycle graphs — fragmentation 218 → 216 graphs,
   unreachable nodes 1296 → 1283.
-- **#502** (open) fixes #391: `fermentation` was grounded METPO:1000845
-  (Acetogenesis, via its "Acetate fermentation" synonym) in
+- **#501** closed **#433 and #500** in one governed pass: Edison enrichment
+  now invalidates a whole stale same-stem sidecar set, the capture/enrichment
+  provenance behaviour got its ten regressions, and `_edison_capture.py` and
+  friends came under the shared provider contract (with CultureMech#330).
+- **#502** (merged 2026-08-21) fixed **#391**: `fermentation` was grounded
+  METPO:1000845 (Acetogenesis, via its "Acetate fermentation" synonym) in
   `chemoorganoheterotrophic.yaml`; regrounded to GO:0006113 per the existing
-  mapping row.
+  mapping row. Its adversarial review filed and fixed **#504** (the provenance
+  text undercounted the GO:0006113 attestation: eight records, not six).
 
 The history below (through the #487 wave) is retained from the superseded
 reconcile:
@@ -73,16 +78,15 @@ longer requested, the 353 broken ones deleted), **#289** (via #406), **#292**
 (via #408), **#402** (via #405), **#443/#480** (via #496), plus the review
 findings on the PRs above.
 
-Open PRs: **two** — **#502** (the #391 fix; green pending) and **#493** (the
-superseded reconcile this file replaces — close it unmerged). #492 and the
-Dependabot pair merged; #461/#465 were closed with #465's salvageable records
-landed via #495.
+Open PRs: **one** — **#493**, the superseded reconcile this file replaces;
+close it unmerged. #492, the Dependabot pair, #501 and #502 merged; #461/#465
+were closed with #465's salvageable records landed via #495.
 
-Open issues, 39 (before the pending hygiene closes). One is new since the
-#493 snapshot: **#500** — `enrich_edison_response` can re-attribute a stale
-sidecar to a new `task_id`; filed by the five-Mech adversarial fleet sweep
-(siblings CultureMech#292 / MIM#429), fully specified with acceptance
-criteria and fixture-only tests. Pairs naturally with #433.
+Open issues, 37 — 36 once **#505** (the review findings on this reconcile,
+fixed in place) closes with its merge. Closed since the #493 snapshot: #443,
+#480 (#496), #391 (#502), #433 and #500 (#501 — #500 was the five-Mech fleet
+sweep's sidecar-reattribution defect, filed and fixed within a day), and #504
+(review finding on #502, fixed pre-merge).
 
 The pre-2026-08-15 residue is unchanged (first block); the rest were filed by
 the threads above (second block).
@@ -104,14 +108,12 @@ the threads above (second block).
 
 | # | what (filed since 2026-08-15) | section |
 |---|---|---|
-| #389 | `_edison_capture.py` documented as vendored byte-identical; differs everywhere | 7 |
-| #391 | `fermentation` grounded to Acetogenesis — **fix open as PR #502** | 9 |
+| #389 | `_edison_capture.py` documented as vendored byte-identical; differs everywhere — re-scope against #501's shared contract | 7 |
 | #409 | Discussions/Knowledge Gaps rendered (#410) but only 2% populated | 12 |
 | #423 | `just new-history` writes bare-number links, violating `range: uri` | 7 |
 | #425 | `curate_knowledge_gaps.py` has no `--dry-run`/`--apply`, no justfile target | 12 |
 | #426 | **~349 traits need paid-for research APPLIED** — campaign begun (#498/#499) | 12 |
-| #433 | Edison sidecar-provenance fix untested; `_edison_capture.py` needs the vendored contract | 7 |
-| #435–#439 | provider-triage review findings (false "available", untested scoring, CLI tracebacks) | 12 |
+| #435–#439 | provider-triage review findings (false "available", untested scoring, CLI tracebacks) — re-check against #501, which touched provider policy | 12 |
 | #444 | canonical_examples backfill: 237 of ~353 records carry examples; render half shipped (#446) | 13 |
 | #445 | `audit-canonical-examples` exists (#446) but is **not wired into `qc`/CI** | 13 |
 | #448 | dashboard port shipped (#449, #496) — close pending unless residue is named | 12 |
@@ -121,14 +123,14 @@ the threads above (second block).
 | #481 | irreproducible overlap figures — **now live in `trait_priority.py:23-24`**, the maintained tool | 12 |
 | #475–#478 | canonical_examples review findings; #476/#477 were fixed in #474 pre-merge — close pending as records | 13 |
 | #491 | `.vendored_canon_ref` pinned before `history.yaml` existed in the hub — unblocked by #492's merge | 7 |
-| #500 | `enrich_edison_response` can re-attribute a stale sidecar to a new task_id (fleet sweep; pairs with #433) | 8 |
 
-**Recommended next: #500 (+ the test half of #433)** — fully specified
-acceptance criteria, fixture-only tests, no credits, and the rest of the fleet
-is doing its siblings now, so doing it promptly keeps `_edison_capture.py`
-convergent. Then the **#435 cluster (#436–#439)** — one file, five small
-fixes, and the tool currently routes spend to a provider that 402s. Then
-**#481** — correct the figures in the maintained prioritiser.
+**Recommended next: the #435 cluster (#436–#439)** — one file, a handful of
+small fixes, and the tool's headline recommendation can still route spend to
+a provider that 402s. Check each against #501 first: it preserved the
+configured/available distinction and touched provider policy, so parts may
+already be narrowed. Then **#481** — correct the irreproducible figures in
+the maintained `trait_priority.py`. (#500/#433, the previous recommendation,
+were closed by #501 the same day they were recommended.)
 
 **Ongoing campaigns, feed continuously:** the #426/#183 apply-campaign
 (~349 remain; `trait_priority.py` is the sanctioned picker) and #356
@@ -520,13 +522,17 @@ It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
 previous revision of this file called #151 "the only open issue in the repo" —
 that has not been true since 2026-07-30; see the header table.)
 
-## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#209/#358 (+#389/#423/#433/#491)
+## 7. CI + agent-workflow thread — SHIPPED; residuals in #191/#197/#209/#358 (+#389/#423/#491)
+
+Update (2026-08-21): **#433 is closed** (#501 — ten regressions plus the
+shared provider contract). **#389 remains but should be re-scoped**: #404
+re-stated the false byte-identical claim honestly, and #501 put
+`_edison_capture.py` under a shared contract, so what remains of #389 is
+whatever that contract does not yet enforce.
 
 Update (2026-08-20): **#289 is closed** (#406 — the qc chain resolves
-transitively). New residuals since 2026-08-15: **#389/#433** (the
-`_edison_capture.py` vendoring claim was false; #404 re-stated it honestly,
-the vendored contract itself is still to do), **#423** (`new-history` link
-format), and **#491** (the canon ref pin predates `history.yaml` landing in
+transitively). Other residuals since 2026-08-15: **#423** (`new-history` link
+format) and **#491** (the canon ref pin predates `history.yaml` landing in
 the hub — filed off #492's review).
 
 Update (2026-08-08): **#198, #217, #252 (→ #285) and #275 (→ #308) are closed.**
@@ -681,9 +687,9 @@ verifiable by CI, none blocking anything:
 | #191 | vendored `history.yaml` has no drift check vs claw canonical | cross-Mech; wants the hub |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | cross-Mech; wants the hub |
 | #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
-| #389 | `_edison_capture.py` claimed byte-identical, differs in every sibling | #404 corrected the claim to say which way drift runs; contract is #433 |
+| #389 | `_edison_capture.py` claimed byte-identical, differs in every sibling | #404 corrected the claim; #501 added the shared contract — re-scope the residue |
 | #423 | `new-history` writes bare-number links when claw is present | violates `range: uri`; TraitMech-local, small |
-| #433 | Edison sidecar-provenance fix untested; `_edison_capture.py` unvendored | pairs with #389 |
+| ~~#433~~ | ~~Edison sidecar-provenance fix untested~~ | **DONE (2026-08-21, #501)** |
 | #491 | `.vendored_canon_ref` predates `history.yaml` in the hub | found by #492's review; re-pin after hub catches up |
 
 Closed since the 2026-08-15 revision of this table: **#289** (via #406 —
