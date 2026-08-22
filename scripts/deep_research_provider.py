@@ -228,6 +228,9 @@ PROVIDERS: dict[str, Provider] = {
 }
 
 ALIASES = {"edison": "falcon", "futurehouse": "falcon", "claude-code": "claude_code"}
+_ALL_CAPABILITIES = frozenset(
+    capability for provider in PROVIDERS.values() for capability in provider.capabilities
+)
 COST_VALUE = {"low": 1, "medium": 2, "high": 3, "very_high": 4}
 TIME_VALUE = {"fast": 1, "medium": 2, "slow": 3, "very_slow": 4}
 SYNTHESIS_VALUE = {"none": 0, "summary": 1, "deep": 2, "agentic": 3}
@@ -251,6 +254,7 @@ STUB = "stub"
 
 # Statuses that mean "you can try this now", in preference order for routing.
 ROUTABLE = (AVAILABLE, CONFIGURED)
+PAID_COSTS = frozenset({"high", "very_high"})
 
 
 def provider_status(
@@ -325,6 +329,50 @@ def load_config(path: Path) -> dict[str, Any]:
                 raise ValueError(
                     f"Stage {focus_name}.{stage_name}.capabilities must be a mapping"
                 )
+            unknown_caps = {str(cap) for cap in capabilities} - _ALL_CAPABILITIES
+            if unknown_caps:
+                raise ValueError(
+                    f"Stage {focus_name}.{stage_name}.capabilities names unknown "
+                    f"capability/ies {sorted(unknown_caps)}; no provider declares them"
+                )
+            for cap_name, cap_weight in capabilities.items():
+                if not isinstance(cap_weight, (int, float)) or isinstance(cap_weight, bool):
+                    raise ValueError(
+                        f"Stage {focus_name}.{stage_name}.capabilities[{cap_name!r}] "
+                        f"must be a number, got {cap_weight!r}"
+                    )
+            for weight_key in ("synthesis_weight", "speed_weight", "cost_weight"):
+                weight = stage.get(weight_key, 0)
+                if not isinstance(weight, (int, float)) or isinstance(weight, bool):
+                    raise ValueError(
+                        f"Stage {focus_name}.{stage_name}.{weight_key} must be a "
+                        f"number, got {weight!r}"
+                    )
+        adjustments = focus.get("provider_adjustments", {})
+        if not isinstance(adjustments, dict):
+            raise ValueError(
+                f"Focus {focus_name!r}.provider_adjustments must be a mapping"
+            )
+        canonical: dict[str, Any] = {}
+        for raw_name, value in adjustments.items():
+            name = canonical_provider(str(raw_name))
+            if name not in PROVIDERS:
+                raise ValueError(
+                    f"Focus {focus_name!r}.provider_adjustments names unknown "
+                    f"provider {raw_name!r} (resolved to {name!r})"
+                )
+            if name in canonical:
+                raise ValueError(
+                    f"Focus {focus_name!r}.provider_adjustments has multiple keys "
+                    f"resolving to provider {name!r}"
+                )
+            if not isinstance(value, (int, float)) or isinstance(value, bool):
+                raise ValueError(
+                    f"Focus {focus_name!r}.provider_adjustments[{raw_name!r}] "
+                    f"must be a number, got {value!r}"
+                )
+            canonical[name] = value
+        focus["provider_adjustments"] = canonical
     return data
 
 
@@ -382,26 +430,42 @@ def rank_stage(
                 "limitation": provider.limitation,
             }
         )
-    return sorted(rows, key=lambda row: (-row["fit"], row["provider"]))
+    # Preserve relative order when the absolute-zero fit floor collapses
+    # several (or all) negative raw scores to fit=0.  The public fit meaning
+    # stays unchanged; raw score is only a deterministic tie-breaker.
+    return sorted(
+        rows,
+        key=lambda row: (-row["fit"], -raw[row["provider"]], row["provider"]),
+    )
+
+
+def recommendable(
+    rows: list[dict[str, Any]], *, allow: frozenset[str] | None = None,
+    no_paid: bool = False,
+) -> list[dict[str, Any]]:
+    """Return policy-eligible rows while retaining TraitMech status semantics."""
+    out = [row for row in rows
+           if row["status"] in ROUTABLE and row["provider"] != "mock"]
+    if allow is not None:
+        out = [row for row in out if row["provider"] in allow]
+    if no_paid:
+        out = [row for row in out if row["cost"] not in PAID_COSTS]
+    return out
 
 
 def build_report(
     config: Mapping[str, Any],
     focus_name: str,
     environ: Mapping[str, str] | None = None,
+    *,
+    allow: frozenset[str] | None = None,
+    no_paid: bool = False,
 ) -> dict[str, Any]:
     focus = config["focuses"][focus_name]
     stages = []
     for stage_name, stage in focus["stages"].items():
         ranking = rank_stage(config, focus_name, stage_name, environ)
-        # ROUTABLE, not just AVAILABLE: a `configured` provider is worth routing
-        # to, but the caller has to be told the usability is unverified, which the
-        # routing line now does (#435).
-        routable = [
-            row
-            for row in ranking
-            if row["status"] in ROUTABLE and row["provider"] != "mock"
-        ]
+        routable = recommendable(ranking, allow=allow, no_paid=no_paid)
         stages.append(
             {
                 "name": stage_name,
@@ -419,6 +483,10 @@ def build_report(
         "objective": focus.get("objective", ""),
         "evidence_policy": config.get("evidence_policy", ""),
         "source_priorities": focus.get("source_priorities", []),
+        "policy": {
+            "allow": sorted(allow) if allow is not None else None,
+            "no_paid": no_paid,
+        },
         "stages": stages,
     }
 
@@ -504,6 +572,11 @@ def print_report(report: Mapping[str, Any], provider_name: str | None = None) ->
                     f"account still refuse the call (Edison returns 402 with no "
                     f"credit). Verify before batching."
                 )
+        elif recommendable(stage["ranking"]):
+            print(
+                "Route now: no provider passes the current --allow/--no-paid "
+                "filters, though at least one is otherwise routable."
+            )
         else:
             print(
                 "Route now: no real provider is currently available; configure a listed credential or CLI."
@@ -526,6 +599,14 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--json", action="store_true", help="Emit machine-readable triage JSON"
+    )
+    parser.add_argument(
+        "--allow",
+        help="Comma-separated allowlist; only these providers may be recommended",
+    )
+    parser.add_argument(
+        "--no-paid", action="store_true",
+        help=f"Never recommend a provider whose cost is {' or '.join(sorted(PAID_COSTS))}",
     )
     return parser
 
@@ -571,7 +652,19 @@ def _run(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
         raise UsageError(
             f"Unknown provider {args.provider!r}; choose one of: {', '.join(PROVIDERS)}"
         )
-    report = build_report(config, focus_name)
+    allow = (frozenset(canonical_provider(p) for p in args.allow.split(",") if p.strip())
+             if args.allow is not None else None)
+    if allow is not None:
+        if not allow:
+            raise UsageError(f"--allow {args.allow!r} did not contain provider names")
+        unknown = allow - set(PROVIDERS)
+        if unknown:
+            raise UsageError(
+                f"Unknown provider(s) in --allow: {', '.join(sorted(unknown))}"
+            )
+        if "mock" in allow:
+            raise UsageError("--allow may not include 'mock'")
+    report = build_report(config, focus_name, allow=allow, no_paid=args.no_paid)
     if args.json:
         if provider_name:
             # Add `selected`; do NOT filter `ranking`. The routing choice is a
