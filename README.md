@@ -123,7 +123,7 @@ The complete artifact collections are:
 | [Rendered pages](pages/) | Generated trait pages, category indexes, graph data, and static assets |
 | [Dashboards and apps](app/) | Research prioritization and discussion artifacts |
 | [QC dashboard artifacts](dashboard/) | Coverage dashboard HTML and chart |
-| [Research prompts](prompts/) | Reusable Claude Code and issue-cycle prompts |
+| [Research prompts](prompts/) | Reusable Claude Code and backlog-loop prompts |
 | [Research template](templates/trait_causal_graph_research.md) | Causal-graph research report template |
 | [Audit configuration](conf/) | Ratchet baselines, provider routing, QC, and prioritization configuration |
 | [Documentation](docs/) | Schema, curation, grounding, workflow, and integration guidance |

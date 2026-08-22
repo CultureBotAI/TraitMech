@@ -133,11 +133,9 @@ wrong is invisible without a record here. That is what `outcome: no_change` is f
 `src/traitmech/schema/history.yaml` describes presence as *advisory* and states
 "one record per session per target" unqualified. Both are superseded by #325 and
 **neither is edited here on purpose**: that file is vendored byte-identical from
-claw, which is private and unreachable from this repo's CI, so a one-copy edit
-would create drift that nothing detects — `src/traitmech/schema/history.yaml` is
-NOT in `scripts/check_vendored_sync.sh`'s checked set, which is the gap #209
-tracks. The canonical copy has to change in claw first and be re-vendored;
-tracked in #358.
+CultureMech, and a one-copy edit would fail `scripts/check_vendored_sync.sh`.
+The canonical policy has to change in CultureMech first and then be re-vendored;
+the remaining policy correction is tracked in #358.
 
 Until then this README and the `curation-history` workflow are the operative
 statements of the policy, and the schema's prose is stale by design rather than
@@ -147,8 +145,10 @@ by neglect.
 
 Two copies, on purpose:
 
-- **Canonical**: `culturebotai-claw/shared/history/history.yaml`, with the
-  scaffolder at `culturebotai-claw/src/kg_microbe_history/`.
+- **Canonical schema**: `CultureMech/src/culturemech/schema/history.yaml`.
+- **Scaffolder and audited packaged mirror**:
+  `culturebotai-claw/src/kg_microbe_history/` and
+  `culturebotai-claw/shared/history/history.yaml`.
 - **Vendored here**: `src/traitmech/schema/history.yaml`, byte-identical.
 
 Check that identity rather than trusting this file — with a claw checkout:
@@ -163,8 +163,8 @@ later, when the schema gained a field and the hash was not updated — which is 
 argument against writing a hash into prose at all: nothing recomputes it, so it
 decays into a confident false negative. A runnable command cannot go stale.
 
-The vendored copy exists so validation has **no dependency on claw**, which is
-private — a public repo's CI cannot check it out without a token. `just
+The vendored copy exists so validation has **no dependency on a claw checkout**.
+`just
 validate-history` and the `curation-history` workflow both use the local copy and
 work with no claw checkout at all.
 
@@ -178,8 +178,8 @@ record is no record at all.
 That fallback was added in #296, after the #294 backfill wrote two records by
 hand. The prompt for it is worth keeping: this file previously asserted that
 "anyone writing curation records has claw checked out", which is an assumption
-rather than a guarantee — it does not hold for a fresh clone, for CI (claw is
-private), or for a contributor outside the fleet. It also did not hold in
+rather than a guarantee — it does not hold for a fresh clone, for CI, or for a
+contributor outside the fleet. It also did not hold in
 practice for the reason you would expect: the recipe was *gated* on claw, so it
 was easier to hand-write than to find out whether the gate would pass.
 
@@ -207,9 +207,8 @@ fails `just validate-history` until you replace it — which is the promise two
 paragraphs up, and which a near-miss wording would quietly break, since the
 schema pattern is a negative lookahead on that exact string.
 
-Changing the schema means changing the canonical copy and re-vendoring here — the
-same hub-and-spoke rule as `mech_shared.yaml`. This copy is **not** on the
-automated vendored-fleet drift check, so nothing enforces that rule yet: tracked
-in #191, which also covers why appending it to `check_vendored_sync.sh` is not
-straightforward (the canonical copy lives in claw, which is private, and the
-existing check fetches over tokenless `raw.githubusercontent`).
+Changing the schema means changing CultureMech's canonical copy and re-vendoring
+here — the same hub-and-spoke rule as `mech_shared.yaml`.
+`scripts/check_vendored_sync.sh` includes the path-mapped `history.yaml`, and the
+single claw fleet audit supplies the nightly backstop. The gap recorded in #191
+is therefore resolved.
