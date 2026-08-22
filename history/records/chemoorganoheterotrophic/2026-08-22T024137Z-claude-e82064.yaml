@@ -23,6 +23,7 @@ events:
     organic-acceptor substrate-level phosphorylation, i.e. fermentation. The term's related
     synonym 'Acetate fermentation' explains the wrong match. Replacement is the (fermentation,
     BIOLOGICAL_PROCESS) -> GO:0006113 row mappings/node_grounding.tsv already holds, carried
-    by six sibling records. Applied via scripts/reground_fermentation_curie.py (--apply opt-in,
-    write_validated_trait). The defensible METPO:1002005 in chemoheterotrophic.yaml and the
-    legitimate METPO:1000845 in acetogenesis.yaml were deliberately not touched.
+    by eight sibling records (an earlier draft said six; corrected per the #504 review finding).
+    Applied via scripts/reground_fermentation_curie.py (--apply opt-in, write_validated_trait).
+    The defensible METPO:1002005 in chemoheterotrophic.yaml and the legitimate METPO:1000845
+    in acetogenesis.yaml were deliberately not touched.

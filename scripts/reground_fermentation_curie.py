@@ -21,7 +21,9 @@ it — the same right-sounding-name shape as the #402/#405 repairs.
 The replacement is GO:0006113 ("fermentation"), NOT a guess: it is the exact
 row `mappings/node_grounding.tsv` already holds for
 (fermentation, BIOLOGICAL_PROCESS) — skos:exactMatch, confidence high — and the
-grounding six other records already carry. `label-correspondence` re-checks the
+grounding eight other records already carry (the six metabolism fermentation
+records plus heterotrophic.yaml and chemoorganotrophic.yaml — #504 corrected an
+undercount here). `label-correspondence` re-checks the
 (id, label) pair in CI.
 
 Deliberately NOT touched:
@@ -67,7 +69,7 @@ CHANGES = (
     "acceptors and substrate-level phosphorylation', i.e. fermentation. The term's "
     "related synonym 'Acetate fermentation' explains the mismatch. Replaced with "
     "GO:0006113, the (fermentation, BIOLOGICAL_PROCESS) row mappings/"
-    "node_grounding.tsv already holds and the grounding six sibling records "
+    "node_grounding.tsv already holds and the grounding eight sibling records "
     "already carry."
 )
 
