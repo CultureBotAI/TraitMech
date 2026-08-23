@@ -54,7 +54,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: peptidoglycan_cell_wall
     label: peptidoglycan cell wall
     node_type: CELLULAR_LOCALIZATION
@@ -88,7 +88,7 @@ causal_graphs:
     label: RodZ
     node_type: GENE_OR_PROTEIN
     description: Membrane protein broadly implicated in rod-shape maintenance.
-    grounding: UniProtKB:H1XNL6
+    grounding: InterPro:IPR023690
   - node_id: spherical_morphology
     label: spherical cell morphology
     node_type: TRAIT
@@ -314,4 +314,11 @@ curation_history:
     exactly the kind of modelling decision this work defers elsewhere. interacts with
     says what the quoted sentence says and needs no such decision. The edge description
     was rephrased to match the predicate.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

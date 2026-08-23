@@ -68,7 +68,7 @@ causal_graphs:
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS peptidoglycan polymerase required for stalk elongation.
-    grounding: UniProtKB:A0A0H2X1V4
+    grounding: InterPro:IPR001182
   - node_id: phosphate_starvation
     label: phosphate starvation
     node_type: ENVIRONMENTAL_FACTOR
@@ -247,4 +247,11 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

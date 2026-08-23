@@ -49,7 +49,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like division protein that polymerizes at the division site.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: z_ring
     label: Z ring
     node_type: CELLULAR_LOCALIZATION
@@ -58,7 +58,7 @@ causal_graphs:
     label: FtsA
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein tethering the Z ring to the cytoplasmic membrane.
-    grounding: UniProtKB:A0A1M6DY20
+    grounding: InterPro:IPR020823
   - node_id: cytoplasmic_membrane
     label: cytoplasmic membrane
     node_type: CELLULAR_LOCALIZATION
@@ -223,4 +223,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

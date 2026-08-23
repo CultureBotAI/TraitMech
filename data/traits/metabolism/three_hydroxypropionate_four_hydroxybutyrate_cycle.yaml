@@ -78,7 +78,6 @@ causal_graphs:
     label: acetyl-CoA/propionyl-CoA carboxylase
     node_type: GENE_OR_PROTEIN
     description: Primary carboxylase fixing inorganic carbon in the cycle.
-    grounding: UniProtKB:A0A650CEQ7
   - node_id: four_hydroxybutyryl_coa_dehydratase
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
@@ -227,4 +226,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

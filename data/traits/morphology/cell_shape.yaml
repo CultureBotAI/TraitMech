@@ -55,7 +55,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like bacterial cell-division protein.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: crescentin
     label: crescentin
     node_type: GENE_OR_PROTEIN
@@ -274,4 +274,11 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

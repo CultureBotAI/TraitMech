@@ -44,7 +44,7 @@ causal_graphs:
     label: proteorhodopsin
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump.
-    grounding: UniProtKB:A0A1D7QWW9
+    grounding: InterPro:IPR017402
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -219,4 +219,11 @@ curation_history:
     definition; that is the same test the motive-force edges FAILED in issue 341,
     where the subject powers a machine it does not generate. RO:0002326 declares no
     rdfs:domain or rdfs:range.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

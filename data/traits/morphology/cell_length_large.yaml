@@ -60,7 +60,7 @@ causal_graphs:
     label: SulA
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.
-    grounding: UniProtKB:H8YHZ0
+    grounding: InterPro:IPR004596
   - node_id: ftsz_zring
     label: FtsZ Z-ring
     node_type: BIOLOGICAL_PROCESS
@@ -69,7 +69,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Bacterial tubulin homolog whose abundance is rate-limiting for division.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: constriction_onset
     label: onset of constriction
     node_type: BIOLOGICAL_PROCESS
@@ -170,4 +170,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:H8YHZ0×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

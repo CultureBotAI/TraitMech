@@ -62,7 +62,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MreB-associated shape protein modulating MreB localization and elongasome
       assembly.
-    grounding: UniProtKB:H1XNL6
+    grounding: InterPro:IPR023690
   - node_id: mreb_localization
     label: MreB polymer localization/assembly
     node_type: BIOLOGICAL_PROCESS
@@ -85,7 +85,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SEDS glycosyltransferase mediating lateral PG incorporation with
       PBP2.
-    grounding: UniProtKB:A0A0H2X1V4
+    grounding: InterPro:IPR001182
   - node_id: ftsw
     label: FtsW
     node_type: GENE_OR_PROTEIN
@@ -252,4 +252,11 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

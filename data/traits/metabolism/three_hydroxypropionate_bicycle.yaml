@@ -72,7 +72,6 @@ causal_graphs:
     label: malonyl-CoA reductase
     node_type: GENE_OR_PROTEIN
     description: EC 1.2.1.75; diagnostic enzyme reducing malonyl-CoA to 3-hydroxypropionate.
-    grounding: UniProtKB:Q6QQP7
   - node_id: three_hydroxypropionate
     label: 3-hydroxypropionate
     node_type: CHEMICAL
@@ -217,4 +216,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0003989×1, GO:0004658×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

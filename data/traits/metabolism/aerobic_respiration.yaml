@@ -55,7 +55,7 @@ causal_graphs:
     label: cytochrome c oxidase
     node_type: GENE_OR_PROTEIN
     description: Terminal oxidase that transfers electrons to molecular oxygen.
-    grounding: UniProtKB:A0A075NZN5
+    grounding: GO:0004129
   - node_id: molecular_oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -222,4 +222,11 @@ curation_history:
     a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything
     else. A named route through enumerable complexes. Was 4 PATHWAY to 2 before this
     tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

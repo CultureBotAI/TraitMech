@@ -45,7 +45,6 @@ causal_graphs:
     label: hydrogenase
     node_type: GENE_OR_PROTEIN
     description: Metalloenzyme catalyzing H2 oxidation or production.
-    grounding: UniProtKB:A0A059XQG3
   - node_id: protons_electrons
     label: protons and electrons
     node_type: CHEMICAL
@@ -367,4 +366,11 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

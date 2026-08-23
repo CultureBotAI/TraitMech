@@ -151,6 +151,7 @@ carbon catabolite repression	BIOLOGICAL_PROCESS	2	data/traits/metabolism/cellulo
 crotonyl-coa	CHEMICAL	2	data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml
 h2 oxidation	BIOLOGICAL_PROCESS	2	data/traits/metabolism/dissimilatory_iron_reduction.yaml|data/traits/physiology/hydrogenotrophic.yaml
 extracellular electron transfer	BIOLOGICAL_PROCESS	2	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/iron_oxidation.yaml
+terminal oxidase	GENE_OR_PROTEIN	2	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml
 nadh	CHEMICAL	2	data/traits/metabolism/ethanol_fermentation.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml
 substrate-level phosphorylation	BIOLOGICAL_PROCESS	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemoorganotrophic.yaml
 microaerobic conditions	ENVIRONMENTAL_FACTOR	2	data/traits/metabolism/iron_oxidation.yaml|data/traits/physiology/lithoheterotrophic.yaml
@@ -526,6 +527,7 @@ terminal respiratory branch choice	BIOLOGICAL_PROCESS	1	data/traits/environment/
 arcab two-component system	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_aerobic.yaml
 anaerobic metabolism genes	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_aerobic.yaml
 aerobic metabolism genes	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_aerobic.yaml
+cytochrome bd oxidase	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_aerobic.yaml
 acidic secondary cell-wall components	CELLULAR_LOCALIZATION	1	data/traits/environment/facultatively_alkaphilic.yaml
 atp production at alkaline ph	BIOLOGICAL_PROCESS	1	data/traits/environment/facultatively_alkaphilic.yaml
 fnr oxygen-responsive regulator	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_anaerobic.yaml
@@ -1343,6 +1345,7 @@ fermentation products	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
 external inorganic terminal electron acceptor	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
 glycolysis (embden-meyerhof-parnas pathway)	PATHWAY	1	data/traits/metabolism/fermentation.yaml
 pyruvate:ferredoxin oxidoreductase	GENE_OR_PROTEIN	1	data/traits/metabolism/fermentation.yaml
+ferredoxin:nad+ oxidoreductase	GENE_OR_PROTEIN	1	data/traits/metabolism/fermentation.yaml
 flavin-based electron bifurcation	BIOLOGICAL_PROCESS	1	data/traits/metabolism/fermentation.yaml
 ion-motive force	BIOLOGICAL_PROCESS	1	data/traits/metabolism/fermentation.yaml
 [fefe] hydrogenase	GENE_OR_PROTEIN	1	data/traits/metabolism/fermentative_hydrogen_production.yaml
@@ -1456,11 +1459,14 @@ hydrogen pressure inhibition	STATE	1	data/traits/metabolism/syntrophy.yaml
 conductive pili (e-pili)	CELLULAR_LOCALIZATION	1	data/traits/metabolism/syntrophy.yaml
 malonyl-coa	CHEMICAL	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
 (2s)-methylmalonyl-coa	CHEMICAL	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+malonyl-coa reductase	GENE_OR_PROTEIN	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
 propionyl-coa synthase	GENE_OR_PROTEIN	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
 mmc lyase	GENE_OR_PROTEIN	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+acetyl-coa/propionyl-coa carboxylase	GENE_OR_PROTEIN	1	data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml
 methyl branch	PATHWAY	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
 carbonyl branch	PATHWAY	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
 formyl-thf synthetase (fts/fhs)	GENE_OR_PROTEIN	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
+methyltransferase	GENE_OR_PROTEIN	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
 corrinoid iron-sulfur protein (cofesp)	GENE_OR_PROTEIN	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
 acetyl-coa synthase (acs)	GENE_OR_PROTEIN	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
 tetrahydrofolate (thf)	CHEMICAL	1	data/traits/metabolism/wood_ljungdahl_pathway.yaml
@@ -1972,6 +1978,7 @@ spo0a phosphorylation	MOLECULAR_FUNCTION	1	data/traits/morphology/spore_shaped.y
 sporulation initiation	BIOLOGICAL_PROCESS	1	data/traits/morphology/spore_shaped.yaml
 starvation	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/spore_shaped.yaml
 spoiva	GENE_OR_PROTEIN	1	data/traits/morphology/spore_shaped.yaml
+spovid	GENE_OR_PROTEIN	1	data/traits/morphology/spore_shaped.yaml
 spore encasement	BIOLOGICAL_PROCESS	1	data/traits/morphology/spore_shaped.yaml
 outer coat	CELLULAR_LOCALIZATION	1	data/traits/morphology/spore_shaped.yaml
 safa	GENE_OR_PROTEIN	1	data/traits/morphology/spore_shaped.yaml
@@ -1986,6 +1993,7 @@ spoiiie	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
 chromosome translocation	BIOLOGICAL_PROCESS	1	data/traits/morphology/sporulation.yaml
 cell-within-a-cell state	STATE	1	data/traits/morphology/sporulation.yaml
 sigma f	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
+sigma e	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
 sigma g	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
 sigma k	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
 spore dna protection	BIOLOGICAL_PROCESS	1	data/traits/morphology/sporulation.yaml
@@ -2049,6 +2057,7 @@ low visible chromophore accumulation	CHEMICAL	1	data/traits/morphology/white_pig
 visible white color	MOLECULAR_FUNCTION	1	data/traits/morphology/white_pigmented.yaml
 reduced melanin accumulation	CHEMICAL	1	data/traits/morphology/white_pigmented.yaml
 sigb (sigma factor b)	GENE_OR_PROTEIN	1	data/traits/morphology/white_pigmented.yaml
+glms	GENE_OR_PROTEIN	1	data/traits/morphology/white_pigmented.yaml
 yellow carotenoids	CHEMICAL	1	data/traits/morphology/yellow_pigmented.yaml
 visible yellow color	MOLECULAR_FUNCTION	1	data/traits/morphology/yellow_pigmented.yaml
 ipp/dmapp	CHEMICAL	1	data/traits/morphology/yellow_pigmented.yaml
@@ -2086,8 +2095,10 @@ oxygen sensitivity	QUALITY	1	data/traits/physiology/carboxydotrophic.yaml
 oxygen tolerance	QUALITY	1	data/traits/physiology/carboxydotrophic.yaml
 cox operon	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
 coo operon	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
+cooa	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
 rcom	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
 oxyr	GENE_OR_PROTEIN	1	data/traits/physiology/catalase_activity.yaml
+perr	GENE_OR_PROTEIN	1	data/traits/physiology/catalase_activity.yaml
 peroxide defense systems	BIOLOGICAL_PROCESS	1	data/traits/physiology/catalase_activity.yaml
 oxidation of reduced inorganic compounds	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoautolithotrophic.yaml
 chemo-organoheterotrophy	TRAIT	1	data/traits/physiology/chemoautolithotrophic.yaml
@@ -2150,6 +2161,7 @@ ribosome hibernation factors (rmf/hpf/raia)	GENE_OR_PROTEIN	1	data/traits/physio
 resuscitation-promoting factors (rpf)	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
 nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 glycolysis and pentose phosphate pathway	PATHWAY	1	data/traits/physiology/heterotrophic.yaml
+hydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/hydrogenotrophic.yaml
 protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml
 oxygen sensitivity	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/hydrogenotrophic.yaml
 membrane-bound (de)hydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/lithoautotrophic.yaml
@@ -2250,6 +2262,7 @@ atp synthase complex	GENE_OR_PROTEIN	1	data/traits/physiology/phototrophic.yaml
 ion transport across membrane	BIOLOGICAL_PROCESS	1	data/traits/physiology/phototrophic.yaml
 threshold autoinducer concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/quorum_sensing.yaml
 cognate signal receptor	GENE_OR_PROTEIN	1	data/traits/physiology/quorum_sensing.yaml
+quorum-quenching enzyme	GENE_OR_PROTEIN	1	data/traits/physiology/quorum_sensing.yaml
 quorum-sensing inhibitor	CHEMICAL	1	data/traits/physiology/quorum_sensing.yaml
 germinant	CHEMICAL	1	data/traits/physiology/spore_germination.yaml
 cadpa release from spore core	BIOLOGICAL_PROCESS	1	data/traits/physiology/spore_germination.yaml

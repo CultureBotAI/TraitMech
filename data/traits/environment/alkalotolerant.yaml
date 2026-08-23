@@ -53,7 +53,7 @@ causal_graphs:
     label: cation/proton antiporter
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging cations for protons during pH stress.
-    grounding: UniProtKB:A0A0H3JRG4
+    grounding: GO:0051139
   - node_id: alkaline_external_ph
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
@@ -244,4 +244,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

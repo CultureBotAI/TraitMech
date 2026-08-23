@@ -45,12 +45,12 @@ causal_graphs:
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Polarity determinant for Streptomyces apical growth.
-    grounding: UniProtKB:Q1IYG2
+    grounding: InterPro:IPR007793
   - node_id: scy
     label: Scy
     node_type: GENE_OR_PROTEIN
     description: Streptomyces cytoskeletal element associated with the polarisome.
-    grounding: UniProtKB:A0A191V3Q4
+    grounding: InterPro:IPR048240
   - node_id: apical_polarisome
     label: apical polarisome
     node_type: CELLULAR_LOCALIZATION
@@ -72,7 +72,7 @@ causal_graphs:
     label: SulA
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor that blocks FtsZ polymerization.
-    grounding: UniProtKB:H8YHZ0
+    grounding: InterPro:IPR004596
   - node_id: ftsz_polymerization
     label: FtsZ polymerization
     node_type: BIOLOGICAL_PROCESS
@@ -297,4 +297,11 @@ curation_history:
     entailed a false type on its object. ''Scy is a COMPONENT of the tip-organizing
     center.'' Mereology, not causation. The corpus already uses `part of` this way
     (flii_atpase_complex part of ft3ss_export_system).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 3 organism-specific UniProtKB grounding(s): replaced 3 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

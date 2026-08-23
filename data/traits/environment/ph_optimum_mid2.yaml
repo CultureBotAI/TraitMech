@@ -68,7 +68,7 @@ causal_graphs:
     label: K+/H+ antiporters
     node_type: GENE_OR_PROTEIN
     description: Potassium:proton antiporters regulating bacterial internal pH.
-    grounding: UniProtKB:A0A1Z4VR00
+    grounding: GO:0015386
   - node_id: respiratory_proton_pumping
     label: proton-pumping respiratory chain components
     node_type: PATHWAY
@@ -246,4 +246,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

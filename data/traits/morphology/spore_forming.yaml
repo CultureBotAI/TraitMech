@@ -69,7 +69,7 @@ causal_graphs:
     label: SpoIIM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
-    grounding: UniProtKB:A5N7K0
+    grounding: InterPro:IPR002798
   - node_id: spoIIP
     label: SpoIIP
     node_type: GENE_OR_PROTEIN
@@ -269,4 +269,11 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

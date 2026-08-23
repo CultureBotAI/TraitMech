@@ -74,7 +74,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme synthesizing tetrahydroxynaphthalene precursor of the DHN-melanin
       pathway.
-    grounding: UniProtKB:Q5Y9G5
+    grounding: GO:0016218
   - node_id: dhn_melanin
     label: DHN-melanin (allomelanin)
     node_type: CHEMICAL
@@ -297,4 +297,11 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

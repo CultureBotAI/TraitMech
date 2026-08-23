@@ -74,7 +74,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Fe-dependent peroxide-sensing transcriptional repressor inactivated
       by hydrogen peroxide.
-    grounding: UniProtKB:A0A097ASJ8
   - node_id: peroxide_defense_systems
     label: peroxide defense systems
     node_type: BIOLOGICAL_PROCESS
@@ -270,4 +269,11 @@ curation_history:
     is ''catalase ACTIVITY'' -- a molecular function, which is what catalase_function
     is. A protein is not its activity, and the graph already says so correctly: catalase
     -enables-> catalase_function. Dropped from the protein, kept on the function.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

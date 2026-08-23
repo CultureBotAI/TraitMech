@@ -62,7 +62,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MS-ring protein forming the membrane base of the flagellar basal
       body.
-    grounding: UniProtKB:A0A0H2X1L8
+    grounding: InterPro:IPR000067
   - node_id: fipa_protein
     label: FipA
     node_type: GENE_OR_PROTEIN
@@ -73,7 +73,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that regulates flagellar number by stimulating FlhF
       GTPase activity.
-    grounding: UniProtKB:Q2N2M1
+    grounding: InterPro:IPR033875
   - node_id: flagellar_number
     label: flagellar number
     node_type: QUALITY
@@ -191,4 +191,11 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

@@ -77,7 +77,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Glucosamine-6-phosphate synthase; transcriptional upregulator of
       sigB.
-    grounding: UniProtKB:I6LB50
   edges:
   - subject: crtOPQMN_operon
     predicate: encodes
@@ -280,4 +279,11 @@ curation_history:
     in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

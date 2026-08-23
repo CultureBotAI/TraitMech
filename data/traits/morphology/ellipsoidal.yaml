@@ -37,7 +37,7 @@ causal_graphs:
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein coordinating septum splitting and elongation.
-    grounding: UniProtKB:Q1IYG2
+    grounding: InterPro:IPR007793
   - node_id: septal_and_peripheral_synthesis
     label: septal and peripheral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -254,4 +254,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:1990586×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

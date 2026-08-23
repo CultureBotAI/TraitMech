@@ -94,7 +94,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.18.1.3) transferring electrons from reduced ferredoxin
       to NAD+.
-    grounding: UniProtKB:I3R731
   - node_id: nad_plus
     label: NAD+
     node_type: CHEMICAL
@@ -307,4 +306,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

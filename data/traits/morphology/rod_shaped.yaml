@@ -61,7 +61,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: rodA_pbp2_complex
     label: RodA-PBP2 complex
     node_type: GENE_OR_PROTEIN
@@ -334,4 +334,11 @@ curation_history:
     exactly the kind of modelling decision this work defers elsewhere. interacts with
     says what the quoted sentence says and needs no such decision. The edge description
     was rephrased to match the predicate.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

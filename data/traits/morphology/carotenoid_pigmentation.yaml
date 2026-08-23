@@ -67,7 +67,7 @@ causal_graphs:
     label: phytoene desaturase
     node_type: GENE_OR_PROTEIN
     description: CrtI-type enzyme desaturating phytoene toward lycopene.
-    grounding: UniProtKB:A0A060JDC8
+    grounding: InterPro:IPR014102
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -286,4 +286,11 @@ curation_history:
     two GGPP to phytoene, then desaturation/isomerization yields lycopene'' -- which
     is the rule''s own test for PATHWAY met explicitly rather than by naming. Applied
     AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

@@ -99,7 +99,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump enabling rhodopsin-based
       phototrophy.
-    grounding: UniProtKB:A0A1D7QWW9
+    grounding: InterPro:IPR017402
   - node_id: nadph_anabolic
     label: NAD(P)H for anabolic metabolism
     node_type: CHEMICAL
@@ -336,4 +336,11 @@ curation_history:
     assert biology they specifically do not claim (#400 review). Both forms are named
     routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1
     before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

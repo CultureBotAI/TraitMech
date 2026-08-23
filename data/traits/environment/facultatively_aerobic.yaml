@@ -78,7 +78,6 @@ causal_graphs:
     label: cytochrome bd oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity terminal oxidase that reduces oxygen at low O2 concentrations.
-    grounding: UniProtKB:Q6L5L4
   edges:
   - subject: molecular_oxygen
     predicate: enables
@@ -215,4 +214,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:Q6L5L4×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

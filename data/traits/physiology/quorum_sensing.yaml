@@ -62,7 +62,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Signal-degrading/inactivating enzyme (e.g., lactonase) that interrupts
       quorum sensing.
-    grounding: UniProtKB:G2JHL6
   - node_id: qs_inhibitor
     label: quorum-sensing inhibitor
     node_type: CHEMICAL
@@ -173,4 +172,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

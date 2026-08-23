@@ -1,8 +1,8 @@
 # Grounding policy for causal-graph gene/protein nodes
 
-Status: **partly applied.** The retraction and the strict re-grounding pass
-in §7 have been run against `data/traits/`. The remaining schema changes in
-§4 are still proposals.
+Status: **corpus remediation applied.** All historical UniProt instance
+groundings have been reviewed and either replaced or retracted (§7). The
+schema extensions in §4 and genome-accession enrichment remain proposals.
 
 This document covers `CausalNode` entries typed `GENE_OR_PROTEIN`, and the
 exemplar taxon / genome layer that mechanism claims should hang off. It
@@ -10,7 +10,7 @@ combines an audit of the current corpus (reproducible via
 `scripts/audit_uniprot_grounding.py`) with a literature/primary-source
 review of how comparable resources ground protein entities.
 
-## 1. What the audit found
+## 1. What the initial audit found
 
 817 `GENE_OR_PROTEIN` nodes across 353 causal graphs, 666 distinct labels.
 
@@ -177,30 +177,29 @@ None of these are applied yet.
 4. **Add a resolvability check** to CI (`scripts/audit_uniprot_grounding.py`
    exits non-zero on deleted accessions) so this cannot silently rot again.
 
-## 5. Suggested remediation sequence
+## 5. Remediation sequence
 
-1. **Retract the 162 dead groundings** — demote to label-only rather than
-   leaving CURIEs that resolve to nothing. Affects 101 files. *Needs
-   approval: it edits curated records.*
-2. **Re-ground from `mappings/uniprot_regrounding_candidates.tsv`**, one row
-   per distinct label (all 666) with a route and a blank `curator_decision`
-   column. `APPLIED_*` rows are already in the corpus; the rest are backlog:
+1. **Retract the 162 dead groundings** — completed in pass 1 (§7).
+2. **Re-ground from `mappings/uniprot_regrounding_candidates.tsv`** — the
+   strict automated candidates were applied in pass 2, and every remaining
+   live UniProt instance was manually decided in pass 3. The table retains
+   the wider label backlog and now records final decisions for those 39 labels:
 
    | route | labels |
    |---|---:|
-   | `NO_CANDIDATE` — manual curation needed | 321 |
+   | `NO_CANDIDATE` — manual curation needed | 314 |
    | `CLASS_NODE_DO_NOT_GROUND` | 94 |
-   | `CANDIDATE_InterPro` | 89 |
-   | `REVIEW_GO_SUSPECT` — top-hit failed the exactness check | 72 |
-   | `APPLIED_GO_MF` / `APPLIED_GO_CC` / `APPLIED_IPR` / `APPLIED_OVERRIDE` | 42 / 17 / 11 / 1 |
-   | `CANDIDATE_SwissProt` | 16 |
+   | `CANDIDATE_InterPro` | 74 |
+   | `REVIEW_GO_SUSPECT` — top-hit failed the exactness check | 70 |
+   | `APPLIED_GO_MF` / `APPLIED_GO_CC` / `APPLIED_IPR` | 39 / 16 / 7 |
+   | `CANDIDATE_SwissProt` | 10 |
    | `MANUAL_REVIEW` — ambiguous, curator override | 3 |
+   | `CURATED_INTERPRO` / `CURATED_GO` / `CURATED_LABEL_ONLY` | 18 / 8 / 13 |
 3. **Add genome accessions** to the 312 existing `canonical_examples`
    entries, via the UniProt → NCBI chain in §3.
 
-Only step 2's `SwissProt_exemplar` and `InterPro_family` rows are close to
-mechanical, and even those want a curator eye. The 342 `NO_CANDIDATE` labels
-are the real work and are not automatable.
+Step 3 and the broader label-only grounding backlog remain open. They require
+curation rather than another organism-blind accession-matching pass.
 
 ## 6. APIs for a batch pass
 
@@ -226,7 +225,7 @@ the TrEMBL reduction is executing now.
 
 ## 7. What has been applied
 
-Two passes have been run against `data/traits/`. Full corpus validation
+Three passes have been run against `data/traits/`. Full corpus validation
 (`just validate-strict`, 477 files) and the structural graph audit
 (`just audit-graphs`) both report zero errors afterwards.
 
@@ -262,6 +261,32 @@ Net effect on the 817 `GENE_OR_PROTEIN` nodes:
 Ungrounded went *up*, which is the intended outcome: 162 nodes that falsely
 appeared grounded are now honestly unlabelled, and 91 gained a real term.
 
+**Pass 3 — live-instance review**
+(`scripts/migrate_uniprot_instance_groundings.py --apply`). The remaining 58
+UniProt-grounded nodes used 39 accessions across 48 trait files: 38 were
+unreviewed TrEMBL entries and one was reviewed Swiss-Prot. Their source taxa
+were generally unrelated to the causal graph's canonical examples. Examples
+included a *Lacticaseibacillus casei* FtsZ reused across six morphology graphs,
+a *Paenibacillus durus* nitrogenase in the *Azotobacter vinelandii* example
+record, and an *Acinetobacter baumannii* quorum-quenching protein in a record
+whose example is *Aliivibrio fischeri*.
+
+The review replaced 44 node groundings with 34 exact InterPro family/domain
+terms and 10 GO activity/complex terms. It retracted 14 nodes to label-only
+where the available match was a subunit, domain fragment, overly broad class,
+wrong protein, or still required organism pairing. The mapping source and 39
+candidate-inventory rows were reconciled so `ground-nodes` cannot restore the
+old instances.
+
+Current audit state (818 `GENE_OR_PROTEIN` nodes):
+
+| | count |
+|---|---:|
+| GO-grounded | 81 |
+| InterPro-grounded | 54 |
+| UniProtKB-grounded | **0** |
+| Ungrounded (label only) | 683 |
+
 ### Candidate gate
 
 Only exact matches were applied — an ontology term's own label had to equal the
@@ -282,7 +307,7 @@ which is the argument for keeping the gate strict:
   (MCP)` are ambiguous between an activity and a complex, and are excluded
   pending curation.
 
-The remaining 667 ungrounded nodes are the real curation backlog. Roughly 95
+The remaining 683 ungrounded nodes are the real curation backlog. Roughly 95
 of them are functional classes ("virulence factors", "osmolyte transport and
 synthesis genes") that should never receive a protein accession at all — see
 §2 — and the rest need a curator, not another automated pass.

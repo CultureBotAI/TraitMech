@@ -44,7 +44,7 @@ causal_graphs:
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Protein involved in septum splitting and elongation in ovococci.
-    grounding: UniProtKB:Q1IYG2
+    grounding: InterPro:IPR007793
   - node_id: septum_splitting
     label: septum splitting
     node_type: BIOLOGICAL_PROCESS
@@ -233,4 +233,11 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

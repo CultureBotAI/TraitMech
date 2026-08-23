@@ -80,7 +80,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme transferring the methyl group onto the corrinoid iron-sulfur
       protein.
-    grounding: UniProtKB:A0A0C5IX96
   - node_id: cofesp
     label: corrinoid iron-sulfur protein (CoFeSP)
     node_type: GENE_OR_PROTEIN
@@ -263,4 +262,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

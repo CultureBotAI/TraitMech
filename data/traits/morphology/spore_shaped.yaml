@@ -69,12 +69,11 @@ causal_graphs:
     label: SpoVM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for spore coat encasement.
-    grounding: UniProtKB:A0A2K8N6W1
+    grounding: InterPro:IPR012609
   - node_id: spovid_protein
     label: SpoVID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for spore coat encasement.
-    grounding: UniProtKB:A0A0B5ANC0
   - node_id: spore_encasement
     label: spore encasement
     node_type: BIOLOGICAL_PROCESS
@@ -84,7 +83,7 @@ causal_graphs:
     label: CotE
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for outer coat assembly.
-    grounding: UniProtKB:D5WPR1
+    grounding: InterPro:IPR018901
   - node_id: outer_coat
     label: outer coat
     node_type: CELLULAR_LOCALIZATION
@@ -267,4 +266,11 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 3 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true
