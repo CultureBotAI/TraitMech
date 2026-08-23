@@ -16,6 +16,7 @@ quoted in prose; derive them again before planning or reporting.
 - Research and curation prioritization: [trait-priority](.claude/skills/trait-priority/SKILL.md)
 - Paid trait research: [deep-research-trait](.claude/skills/deep-research-trait/SKILL.md) or [research-causal-graphs](.claude/skills/research-causal-graphs/SKILL.md)
 - Backlog reconciliation: [next-tasks](.claude/skills/next-tasks/SKILL.md)
+- Full open-issue queue triage: [review-open-issues](.claude/skills/review-open-issues/SKILL.md)
 
 Read [the curation playbook](docs/CURATION_PLAYBOOK.md) and [grounding
 policy](docs/GROUNDING_POLICY.md) before changing curated data.
