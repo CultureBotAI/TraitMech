@@ -61,8 +61,11 @@ just validate-all             # validate every TraitRecord YAML
   mechanism graphs for trait pages. Nodes can represent traits,
   pathways, environmental factors, experimental factors, genes/proteins,
   chemicals, organelles, cellular localizations, molecular functions, or
-  biological processes. Use ontology/database CURIEs in `grounding`
-  when available; label-only draft nodes are permitted in v1.
+  biological processes. Gene/protein nodes use taxon-agnostic semantic CURIEs
+  in `grounding`; organism-specific UniProt accessions are stored as
+  taxon-paired, evidence-bearing `ProteinExample` entries.
+- **ProteinExample / CanonicalExample** — source-backed protein instances and
+  canonical organism exemplars linked by the same `NCBITaxon` identifier.
 - **TraitSynonym / EvidenceItem / CurationEvent** — ancillary classes.
 - **TraitCategoryEnum** — 11 schema buckets (the 9 populated buckets above,
   plus `DETECTION` and `OTHER`).
@@ -132,7 +135,8 @@ The complete artifact collections are:
 For direct access to every committed report, see:
 
 - Graph quality: [causal graph audit](reports/causal_graph_audit.tsv),
-  [connectivity](reports/causal_graph_connectivity.tsv), historical paid-research
+  [connectivity](reports/causal_graph_connectivity.tsv), [protein/taxon
+  coverage](reports/graph_protein_taxon_coverage.tsv), historical paid-research
   snapshots for [completeness](reports/graph_completeness_audit.tsv) and the
   [enrichment backlog](reports/graph_enrichment_backlog.md), and [audit
   manifest](reports/trait_graph_audit_manifest.tsv).

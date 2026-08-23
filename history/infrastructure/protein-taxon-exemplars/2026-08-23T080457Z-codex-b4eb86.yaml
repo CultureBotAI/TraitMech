@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/traitmech/schema/traitmech.yaml
+  slug: protein-taxon-exemplars
+session:
+  id: 2026-08-23T080457Z-codex-b4eb86
+  timestamp: '2026-08-23T08:04:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  - rendering
+  summary: Add taxon-paired UniProt protein examples
+  details: Added the ProteinExample schema, graph scope and label-only grounding dispositions,
+    offline graph protein/taxon coverage audit, taxon-aware UniProt resolution audit, HTML
+    rendering, tests, tracked reports, and QC staleness integration. The initial 353-graph
+    report identifies gaps in all 353 scope dispositions and taxon-matched protein examples,
+    116 cited canonical taxa, 81 protein-node additions, and 683 label-only grounding reviews.
+    LinkML generation, strict validation, focused tests, and lint passed; the full suite exposed
+    staging and QC path-inference integration issues, which were corrected and retested.

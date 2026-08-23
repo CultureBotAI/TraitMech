@@ -66,6 +66,7 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
                 "grounding": raw.get("grounding"),
                 "xrefs": raw.get("xrefs") or [],
                 "description": raw.get("description"),
+                "protein_examples": raw.get("protein_examples") or [],
                 "is_orphan": False,
             })
         else:
@@ -106,14 +107,30 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
             "evidence": evidence,
         })
 
+    protein_example_rows = []
+    for node in nodes:
+        if not isinstance(node, dict) or node.get("node_type") != "GENE_OR_PROTEIN":
+            continue
+        for example in node.get("protein_examples") or []:
+            if not isinstance(example, dict):
+                continue
+            protein_example_rows.append({
+                "node_id": node.get("node_id"),
+                "node_label": node.get("label") or node.get("node_id"),
+                **example,
+            })
+
     return {
         "graph_id": graph.get("graph_id") or "causal-graph",
         "title": graph.get("title") or "Causal graph",
         "description": graph.get("description"),
+        "scope_status": graph.get("scope_status"),
+        "scope_notes": graph.get("scope_notes"),
         "nodes": rendered_nodes,
         "edges": rendered_edges,
         "issues": issues,
         "evidence_rows": evidence_rows,
+        "protein_example_rows": protein_example_rows,
     }
 
 

@@ -1,8 +1,10 @@
 # Grounding policy for causal-graph gene/protein nodes
 
-Status: **corpus remediation applied.** All historical UniProt instance
-groundings have been reviewed and either replaced or retracted (§7). The
-schema extensions in §4 and genome-accession enrichment remain proposals.
+Status: **instance-grounding remediation and protein-example schema applied.**
+All historical UniProt instance groundings have been reviewed and either
+replaced or retracted (§7). The taxon-paired `protein_examples` model and
+coverage audit are implemented; corpus-wide exemplar backfill remains in
+progress.
 
 This document covers `CausalNode` entries typed `GENE_OR_PROTEIN`, and the
 exemplar taxon / genome layer that mechanism claims should hang off. It
@@ -158,24 +160,27 @@ Across all of that, `NCBITaxon:511145` ("Escherichia coli str. K-12 substr.
 MG1655") did not move. If a GTDB lineage is recorded at all it must be
 release-pinned and treated as commentary, not as the anchor.
 
-## 4. Proposed schema changes
+## 4. Applied schema and audits
 
-None of these are applied yet.
+1. **Family-level and instance-level grounding are separated.** `grounding`
+   remains the taxon-agnostic GO / InterPro / NCBIfam / complex identifier.
+   `protein_examples` carries a UniProt primary accession, its `NCBITaxon`,
+   review status, retrieval date, versions, role, and primary-source evidence.
+2. **Generic UniProt groundings are forbidden by audit.**
+   `scripts/audit_graph_protein_taxa.py` and
+   `scripts/audit_uniprot_grounding.py` both flag a `UniProtKB:` value in a
+   generic node `grounding` field.
+3. **Label-only decisions are explicit.** A protein node retained without an
+   exact semantic term uses `grounding_status: REVIEWED_LABEL_ONLY` plus a
+   reason in `grounding_notes`.
+4. **Graph scope is explicit.** `scope_status` distinguishes mechanistic
+   graphs from reviewed nonmechanistic measurement/classification contexts.
+5. **UniProt metadata is resolvable.** `just audit-uniprot` verifies primary
+   accession, entry type, protein/taxon identity, entry version, sequence
+   version, and inactive/merged state.
 
-1. **Split family-level from instance-level grounding.** The single
-   `grounding` slot conflates them. Suggested: keep `grounding` for the
-   taxon-agnostic term (GO / InterPro), and add an optional
-   `exemplar_protein` group carrying a reviewed `UniProtKB` accession plus
-   the `NCBITaxon` it came from — so an instance can never be recorded
-   without its organism.
-2. **Constrain the prefix.** `grounding` is currently any CURIE-shaped
-   string. Restrict `GENE_OR_PROTEIN` groundings to the prefixes above and
-   forbid bare TrEMBL accessions.
-3. **Add a genome slot** to `canonical_examples`: versioned `GCF_`/`GCA_`
-   accession, optional UniProt `UP…` proteome ID, optional release-pinned
-   GTDB lineage.
-4. **Add a resolvability check** to CI (`scripts/audit_uniprot_grounding.py`
-   exits non-zero on deleted accessions) so this cannot silently rot again.
+Versioned genome accessions on `canonical_examples` remain a separate future
+extension; they are not required for protein/taxon graph coverage.
 
 ## 5. Remediation sequence
 
