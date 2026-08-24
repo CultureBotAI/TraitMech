@@ -10,26 +10,13 @@ quoted in prose; derive them again before planning or reporting.
 
 ## Fact-based answers only
 
-Never state a comparison, count, status, or historical claim without having
-verified it in the current conversation via a tool call (`gh`, `git`, `grep`,
-`Read`, etc.). "I recall," "this is typically the case," or a prior summary
-are not verification -- code, records, and issue/PR state change between
-turns and across concurrent sessions.
-
-- Prefer a live check over memory: `gh api`/`gh pr view`/`gh issue view` over
-  a remembered issue list; `git log`/`git blame` over a recalled commit; a
-  fresh `Read` over trusting an earlier read of the same file.
-- This repo already has a standing case of this failure mode: the intro
-  paragraph above bans quoting record counts, proposal versions, coverage
-  percentages, or identifier ranges from prose instead of deriving them
-  live. Treat that as the canonical TraitMech example, not a separate
-  concern -- the same discipline applies to any other claim, not just
-  those four categories.
-- If a claim can't be verified this session, say so ("I did not check X" /
-  "I don't know") instead of presenting a plausible guess as fact.
-- Re-verify rather than repeat: restating an earlier claim in this same
-  conversation without re-checking it is exactly the failure mode this rule
-  exists to prevent.
+Verify any comparison, count, status, or historical claim with a live tool
+call (`gh`, `git`, `grep`, `Read`) before stating it; "I recall" or a prior
+summary in this conversation is not verification. The intro paragraph above
+is one instance of this rule (record counts, proposal versions, coverage
+percentages, identifier ranges), not a separate concern -- it applies to any
+claim. If something can't be verified this session, say so instead of
+presenting a guess as fact.
 
 ## Route work to the maintained guidance
 
