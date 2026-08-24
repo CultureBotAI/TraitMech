@@ -8,6 +8,16 @@ Use live commands and tracked files as the source of truth. Do not rely on
 record counts, proposal versions, coverage percentages, or identifier ranges
 quoted in prose; derive them again before planning or reporting.
 
+## Fact-based answers only
+
+Verify any comparison, count, status, or historical claim with a live tool
+call (`gh`, `git`, `grep`, `Read`) before stating it; "I recall" or a prior
+summary in this conversation is not verification. The intro paragraph above
+is one instance of this rule (record counts, proposal versions, coverage
+percentages, identifier ranges), not a separate concern -- it applies to any
+claim. If something can't be verified this session, say so instead of
+presenting a guess as fact.
+
 ## Route work to the maintained guidance
 
 - Schema, instance, or writer quality: [audit-schema-gaps](.claude/skills/audit-schema-gaps/SKILL.md)
