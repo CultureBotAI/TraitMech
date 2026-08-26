@@ -164,6 +164,17 @@ causal_graphs:
     - reference: DOI:10.1101/2024.11.06.622210
       notes: 'Hsin 2024: "Endoglucanases ... cleave internal beta-1,4 linkages" (strong,
         general).'
+  - subject: endoglucanase
+    predicate: contributes to
+    object: biopolymer_degradation_trait
+    description: Endoglucanase contributes the internal-chain-cleavage step of the
+      cellulose-specific branch of biopolymer degradation.
+    evidence:
+    - reference: DOI:10.1016/j.heliyon.2024.e24022
+      snippet: Endo-1,4-beta-glucanase randomly cleave and attack the amorphous part
+      notes: Datta reviews endoglucanase as one component of the synergistic cellulase
+        system; this edge is restricted to the cellulose branch of the umbrella trait.
+    predicate_id: RO:0002326
   - subject: beta_glucosidase
     predicate: converts
     object: glucose
@@ -173,6 +184,17 @@ causal_graphs:
     - reference: DOI:10.1101/2024.11.06.622210
       notes: 'Hsin 2024: "beta-glucosidases ... convert cellobiose/oligosaccharides
         to glucose" (strong, general).'
+  - subject: beta_glucosidase
+    predicate: contributes to
+    object: biopolymer_degradation_trait
+    description: Beta-glucosidase contributes terminal saccharification of cellulose-derived
+      oligomers to glucose.
+    evidence:
+    - reference: DOI:10.1016/j.heliyon.2024.e24022
+      snippet: with the release of glucose molecules
+      notes: Datta places beta-glucosidase in the synergistic cellulase system and
+        describes glucose release from endo- and exoglucanase products.
+    predicate_id: RO:0002326
   - subject: susc_transporter
     predicate: imports
     object: oligosaccharides
@@ -183,6 +205,19 @@ causal_graphs:
       notes: 'Wong 2024: "SusC is a TonB-dependent transporter that imports maltooligosaccharides
         into the periplasm" (strong).'
     predicate_id: METPO:2007805
+  - subject: susc_transporter
+    predicate: contributes to
+    object: biopolymer_degradation_trait
+    description: SusC-like uptake contributes the transport stage of a polysaccharide-utilization
+      branch after extracellular or surface depolymerization.
+    evidence:
+    - reference: DOI:10.1128/mbio.02599-23
+      snippet: activity of Sus-like systems depends on polysaccharide size, ultimately
+        impacting bacterial growth
+      notes: Wong et al. directly connect a Sus-like polysaccharide-utilization system
+        to size-dependent metabolism and growth; this is a Bacteroides branch, not
+        a universal transporter claim.
+    predicate_id: RO:0002326
   - subject: periplasmic_gh3
     predicate: converts
     object: glucose
@@ -200,6 +235,17 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.00886-24
       notes: 'Meunier 2024: "endo-chitinases EC 3.2.1.14 cleaving internally to produce
         multimers" (strong).'
+  - subject: endochitinase
+    predicate: contributes to
+    object: biopolymer_degradation_trait
+    description: Endo-chitinase contributes the internal-cleavage step of the chitin-specific
+      branch of biopolymer degradation.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00886-24
+      snippet: endo-chitinases EC 3.2.1.14 cleaving internally to produce multimers
+      notes: Meunier et al. distinguish the endo-cleavage step in chitin degradation;
+        the edge does not assert that chitinolysis always supplies growth carbon.
+    predicate_id: RO:0002326
   - subject: lignin_oxidative_enzymes
     predicate: depolymerizes
     object: lignin
@@ -209,6 +255,17 @@ causal_graphs:
     - reference: DOI:10.1101/2024.11.06.622210
       notes: 'Hsin 2024: "white-rot species deploy multiple oxidative enzymes (DyPs,
         LCMOs, LiP, MnP, LaC, VP)".'
+  - subject: lignin_oxidative_enzymes
+    predicate: contributes to
+    object: biopolymer_degradation_trait
+    description: Secreted lignin peroxidases and related oxidoreductases contribute
+      the extracellular oxidative branch of biopolymer degradation.
+    evidence:
+    - reference: DOI:10.1007/s00253-024-13371-4
+      snippet: target and break down carbon-carbon and ether linkages in lignin
+      notes: Kato et al. describe secreted LiP, MnP, and versatile peroxidases producing
+        lignin-derived aromatics in white-rot fungi; the edge is branch-specific.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -302,4 +359,13 @@ curation_history:
     so this was a replacement rather than an identifier normalisation. The pre-tranche
     citation is restored; a deliberate replacement can be made in a new event that
     says so.
+  llm_assisted: true
+- timestamp: '2026-08-26T09:54:20Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected the cellulose-cleavage, Sus-like uptake, chitin-cleavage, and
+    lignin-oxidation branches to the umbrella biopolymer-degradation trait with five
+    branch-qualified, source-supported contributes-to edges; gene and enzyme concepts
+    remain supporting YAML graph fields rather than primary records (issues 426 and
+    183).
   llm_assisted: true
