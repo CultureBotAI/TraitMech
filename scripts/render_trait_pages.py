@@ -258,6 +258,34 @@ def load_node_dim_preview(needed_nodes: set[str]) -> dict[str, str]:
     return out
 
 
+def reciprocal_neighbor_edges(
+    neighbors: dict[str, list[dict]], point_ids: set[str]
+) -> list[dict[str, str]]:
+    """Return stable undirected edges where both records name each other.
+
+    ``trait_nearest_neighbors.json`` is the committed similarity input available
+    to the page renderer. Requiring reciprocity avoids drawing every one-way
+    top-k suggestion as if it were equally strong, while still making the sfdp
+    view an actual graph rather than a second edge-free scatterplot (#151).
+    """
+    directed = {
+        source: {
+            row.get("id")
+            for row in rows
+            if isinstance(row, dict) and row.get("id") in point_ids
+        }
+        for source, rows in neighbors.items()
+        if source in point_ids
+    }
+    pairs = {
+        tuple(sorted((source, target)))
+        for source, targets in directed.items()
+        for target in targets
+        if source != target and source in directed.get(target, set())
+    }
+    return [{"source": source, "target": target} for source, target in sorted(pairs)]
+
+
 def research_report(category_dir: str, slug: str) -> Path | None:
     """Return this trait's deep-research report, or None if it has none.
 
@@ -490,15 +518,12 @@ def render_pages(args: argparse.Namespace) -> int:
         shutil.copyfile(UMAP_JSON, umap_data_dst)
         import json as _json
         umap_points = _json.loads(UMAP_JSON.read_text())
-        cats = sorted({p["category"] for p in umap_points})
         umap_html = env.get_template("umap.html").render(
             title="Trait embedding space",
             root="",
             data_url="data/trait_umap.json",
-            traits_root="traits/",
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in umap_points}),
             n_points=len(umap_points),
-            categories=cats,
             metpo_version=metpo_version,
             generated_at=corpus_stamp,
             total_traits=len(traits),
@@ -513,15 +538,17 @@ def render_pages(args: argparse.Namespace) -> int:
         shutil.copyfile(GRAPH_JSON, graph_data_dst)
         import json as _json
         graph_points = _json.loads(GRAPH_JSON.read_text())
-        cats = sorted({p["category"] for p in graph_points})
+        graph_edges = reciprocal_neighbor_edges(
+            nn_by_curie, {point["id"] for point in graph_points}
+        )
         graph_html = env.get_template("graph.html").render(
             title="Trait graph layout (sfdp)",
             root="",
             data_url="data/trait_graph.json",
-            traits_root="traits/",
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in graph_points}),
+            graph_edges=_json.dumps(graph_edges),
             n_points=len(graph_points),
-            categories=cats,
+            n_edges=len(graph_edges),
             metpo_version=metpo_version,
             generated_at=corpus_stamp,
             total_traits=len(traits),

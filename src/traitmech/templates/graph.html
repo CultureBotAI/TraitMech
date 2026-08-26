@@ -3,21 +3,14 @@
 <header>
   <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Graph layout</p>
   <h1>Trait graph layout (sfdp)</h1>
-  <p class="tagline">Graphviz <strong>sfdp</strong> force-directed layout of a mutual-kNN
-    graph over <strong>{{ n_points }}</strong> METPO trait embeddings from
-    kg-microbe's 2026-04-25 deepwalk (512-D, k=15). Hover for label, click to open
-    the trait page.</p>
+  <p class="tagline">Graphviz <strong>sfdp</strong> force-directed layout over
+    <strong>{{ n_points }}</strong> METPO trait embeddings from kg-microbe's
+    2026-04-25 deepwalk (512-D, layout k=15). The {{ n_edges }} visible links are
+    reciprocal relationships in the committed top-neighbor index. Hover for a
+    label; click to open the trait page.</p>
 </header>
 
 <section class="umap-controls">
-  <label>Filter category
-    <select id="category-filter">
-      <option value="">All categories</option>
-      {% for cat in categories %}
-      <option value="{{ cat }}">{{ cat }}</option>
-      {% endfor %}
-    </select>
-  </label>
   <label>Search
     <input type="search" id="search-input" placeholder="label or CURIE…">
   </label>
@@ -43,6 +36,7 @@
 <script src="{{ root }}d3.v7.min.js"></script>
 <script>
 const HREF_BY_ID = {{ href_by_id | safe }};  // id -> authoritative page href (built by renderer)
+const GRAPH_EDGES = {{ graph_edges | safe }};
 
 fetch("{{ data_url }}")
   .then(r => r.json())
@@ -65,6 +59,18 @@ fetch("{{ data_url }}")
     const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
 
     const tooltip = d3.select("#umap-tooltip");
+
+    const pointById = new Map(points.map(d => [d.id, d]));
+    const links = g.selectAll("line.graph-edge").data(GRAPH_EDGES).join("line")
+      .attr("class", "graph-edge")
+      .attr("x1", d => x(pointById.get(d.source).umap_x))
+      .attr("y1", d => y(pointById.get(d.source).umap_y))
+      .attr("x2", d => x(pointById.get(d.target).umap_x))
+      .attr("y2", d => y(pointById.get(d.target).umap_y))
+      .attr("stroke", "currentColor")
+      .attr("stroke-width", 0.65)
+      .attr("opacity", 0.12)
+      .style("pointer-events", "none");
 
     const dots = g.selectAll("circle").data(points).join("circle")
       .attr("cx", d => x(d.umap_x))
@@ -101,8 +107,7 @@ fetch("{{ data_url }}")
           .text(`${cat} (${points.filter(p => p.category === cat).length})`);
       });
 
-    // --- Facet panel (below the plot): live-filter points by category ---
-    // Composes with the category dropdown + search above the plot.
+    // --- Facet panel (below the plot): the single category filter ---
     const activeCategories = new Set(cats);  // all checked initially
     const facetCat = d => (d.category ?? "") === "" ? "—" : d.category;
 
@@ -135,25 +140,31 @@ fetch("{{ data_url }}")
       panel.appendChild(showing);
     }
 
-    // Filters (category dropdown + search + facet checkboxes all compose)
+    // Category facets and text search compose; links follow their endpoints.
     function update() {
-      const cat = document.getElementById("category-filter").value;
       const q = document.getElementById("search-input").value.toLowerCase().trim();
+      const passes = d => activeCategories.has(facetCat(d)) &&
+        (!q || d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q));
       let visible = 0;
       dots.each(function(d) {
-        const pass = activeCategories.has(facetCat(d)) &&
-                     (!cat || d.category === cat) &&
-                     (!q || d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q));
+        const pass = passes(d);
         if (pass) visible++;
         d3.select(this)
           .style("display", activeCategories.has(facetCat(d)) ? null : "none")
           .attr("opacity", pass ? 0.78 : 0.05);
       });
+      links.each(function(d) {
+        const source = pointById.get(d.source), target = pointById.get(d.target);
+        const categoriesVisible = activeCategories.has(facetCat(source)) &&
+          activeCategories.has(facetCat(target));
+        d3.select(this)
+          .style("display", categoriesVisible ? null : "none")
+          .attr("opacity", passes(source) && passes(target) ? 0.12 : 0.015);
+      });
       document.getElementById("visible-count").textContent = `${visible} visible`;
       const fc = document.getElementById("facet-count");
       if (fc) fc.textContent = points.filter(d => activeCategories.has(facetCat(d))).length.toLocaleString();
     }
-    document.getElementById("category-filter").addEventListener("change", update);
     document.getElementById("search-input").addEventListener("input", update);
     buildFacets();
     update();
