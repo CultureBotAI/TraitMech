@@ -161,7 +161,9 @@ For direct access to every committed report, see:
   candidates](reports/trait_exact_match_candidates.tsv), [exact-synonym
   collisions](reports/exact_synonym_collisions.tsv), [causal-grounding
   exactness](reports/causal_grounding_exactness.tsv), and the [ontology
-  snapshot manifest](reports/ontology_snapshot_manifest.tsv).
+  snapshot manifest](reports/ontology_snapshot_manifest.tsv). The [METPO
+  2026-06-12 release delta](reports/metpo_2026_06_12_release_delta.tsv) records
+  every source addition and changed field considered during that migration.
 - Curation queues: [gap-fix narrative](reports/gap_fix_backlog.md), [gap-fix
   table](reports/gap_fix_backlog.tsv), [knowledge-gap
   narrative](reports/knowledge_gap_scan.md), [knowledge-gap

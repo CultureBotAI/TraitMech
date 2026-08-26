@@ -1,5 +1,5 @@
 identifier: METPO:1003002
-label: alkaphilic
+label: alkaliphilic
 definition: A pH growth preference in which an organism grows optimally at pH values
   above 9.
 definition_source: DOI:10.1038/nrmicro2549
@@ -10,9 +10,6 @@ parent_traits:
 - METPO:1003000
 synonyms:
 - synonym_text: alkaliphile
-  synonym_type: EXACT_SYNONYM
-  source: metpo.owl
-- synonym_text: alkaliphilic
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 - synonym_text: alkalophile
@@ -45,7 +42,7 @@ causal_graphs:
     descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: alkaphilic_trait
-    label: alkaphilic
+    label: alkaliphilic
     node_type: TRAIT
     grounding: METPO:1003002
     description: Optimal growth occurs at alkaline pH.
@@ -313,3 +310,9 @@ curation_history:
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (sodium_proton_antiporter, mrp_antiporter_complex, atp_synthase_c_subunit_motifs).'
   llm_assisted: true
+- timestamp: '2026-08-26T07:35:00Z'
+  curator: migrate_metpo_2026_06_12
+  action: MIGRATE_METPO_RELEASE
+  changes: 'Migrated source-owned fields to locked METPO 2026-06-12: label ''alkaphilic''
+    -> ''alkaliphilic''; synonyms synchronized at ontology-declared scope; grounded
+    node alkaphilic_trait label synchronized'

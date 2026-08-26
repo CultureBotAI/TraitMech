@@ -140,7 +140,7 @@ def _xref_curie_or_none(text: str) -> str | None:
 
 def parse_owl(path: Path) -> dict[str, dict[str, Any]]:
     """Return {curie: {label, definition, parents, synonyms, xrefs,
-    created_by, term_kind, definition_source, range_, domain}}.
+    created_by, term_kind, definition_source, range_, domain, deprecated}}.
 
     Walks owl:Class, owl:DatatypeProperty, owl:ObjectProperty entries.
     """
@@ -164,6 +164,7 @@ def parse_owl(path: Path) -> dict[str, dict[str, Any]]:
             "term_kind": term_kind,
             "domain": None,
             "range_": None,
+            "deprecated": False,
         }
         for child in el:
             tag = child.tag.split("}", 1)[-1]
@@ -186,6 +187,8 @@ def parse_owl(path: Path) -> dict[str, dict[str, Any]]:
             elif tag == "range":
                 pres = child.get(RDF_RES, "") or text
                 rec["range_"] = pres or None
+            elif tag == "deprecated":
+                rec["deprecated"] = text.casefold() == "true"
             elif tag == "IAO_0000115":
                 rec["definition"] = text or None
             elif tag == "IAO_0000119":
@@ -240,6 +243,13 @@ def ancestors(curie: str, parents: dict[str, list[str]]) -> set[str]:
 
 def categorize(curie: str, rec: dict[str, Any], parents: dict[str, list[str]]) -> str | None:
     """Return TraitCategoryEnum value or None to skip."""
+    # A source refresh may expose the ontology's retired legacy namespace.
+    # Those terms remain useful in the pinned OWL for resolution/history, but
+    # must never be proposed as new primary TraitRecords. The 2026-06-12 release
+    # carries 1,216 of them; ignoring owl:deprecated would make a routine seed
+    # propose more obsolete records than live ones (#515).
+    if rec.get("deprecated"):
+        return None
     if rec["term_kind"] == "DATATYPE_PROPERTY":
         return "QUANTITATIVE_PROPERTY"
     if rec["term_kind"] == "OBJECT_PROPERTY":
@@ -389,7 +399,8 @@ def main() -> int:
     for curie, rec in parsed.items():
         category = categorize(curie, rec, parents)
         if category is None:
-            skipped[rec["term_kind"]] += 1
+            reason = "DEPRECATED" if rec.get("deprecated") else rec["term_kind"]
+            skipped[reason] += 1
             continue
         local = curie.split(":", 1)[1]
         base = slugify(rec["label"], local)

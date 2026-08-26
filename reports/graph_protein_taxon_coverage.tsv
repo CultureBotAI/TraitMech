@@ -30,7 +30,7 @@ data/traits/environment/acidotolerant.yaml	METPO:1003008	acidotolerant	acidotole
 data/traits/environment/aerobic.yaml	METPO:1000602	aerobic	aerobic_trait_mechanism	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/aerotolerant.yaml	METPO:1000609	aerotolerant	aerotolerant_anaerobe_ros_defense	NONMECHANISTIC	5	5	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/alkalotolerant.yaml	METPO:1003009	alkalotolerant	alkalotolerant_alkaline_stress_homeostasis	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/alkaphilic.yaml	METPO:1003002	alkaphilic	alkaliphilic_na_cycle_homeostasis	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/alkaphilic.yaml	METPO:1003002	alkaliphilic	alkaliphilic_na_cycle_homeostasis	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/anaerobic.yaml	METPO:1000603	anaerobic	anaerobic_trait_oxygen_exclusion	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/arsenic_tolerant.yaml	traitmech:000017	arsenic tolerant	arsenic_tolerance_ars_efflux	MECHANISTIC	6	0	6	3	3	1	1	PASS	0	0	-
 data/traits/environment/cadmium_tolerant.yaml	traitmech:000013	cadmium tolerant	cadmium_tolerance_czc_efflux	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
@@ -45,7 +45,7 @@ data/traits/environment/facultative_oxygen_preference.yaml	METPO:1000612	faculta
 data/traits/environment/facultative_psychrophilic.yaml	METPO:1000720	facultative psychrophilic	facultative_psychrophilic_cold_tolerance	NONMECHANISTIC	2	1	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_acidophilic.yaml	METPO:1003007	facultatively acidophilic	facultatively_acidophilic_ph_homeostasis	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_aerobic.yaml	METPO:1000608	facultatively aerobic	facultative_aerobe_oxygen_flexible_growth	NONMECHANISTIC	5	0	5	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/facultatively_alkaphilic.yaml	METPO:1003005	facultatively alkaphilic	facultatively_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/facultatively_alkaphilic.yaml	METPO:1003005	facultatively alkaliphilic	facultatively_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_anaerobic.yaml	METPO:1000605	facultatively anaerobic	facultative_anaerobe_oxygen_switch	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml	METPO:1000535	growth range phenotype with numerical limits	growth_range_phenotype_descriptor	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/haloalkaliphilic.yaml	METPO:1000621	haloalkaliphilic	haloalkaliphilic_salt_alkaline_adaptation	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -79,7 +79,7 @@ data/traits/environment/neutrophilic.yaml	METPO:1003001	neutrophilic	neutrophili
 data/traits/environment/non_halophilic.yaml	METPO:1000624	non halophilic	non_halophilic_salt_stress_response	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_acidophilic.yaml	METPO:1003006	obligately acidophilic	obligately_acidophilic_ph_homeostasis	NONMECHANISTIC	5	0	5	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_aerobic.yaml	METPO:1000606	obligately aerobic	obligate_aerobe_oxygen_respiration	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/obligately_alkaphilic.yaml	METPO:1003004	obligately alkaphilic	obligately_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/obligately_alkaphilic.yaml	METPO:1003004	obligately alkaliphilic	obligately_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_anaerobic.yaml	METPO:1000607	obligately anaerobic	obligate_anaerobe_oxygen_toxicity	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_piezophilic.yaml	traitmech:000002	obligately piezophilic	obligate_piezophily_high_pressure_requirement	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	METPO:1000536	optimum phenotype with numerical limits	optimum_phenotype_descriptor	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
