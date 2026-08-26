@@ -18,6 +18,13 @@ evidence:
   snippet: selection for efficient use of nutrients
   notes: Streamlining review links chronic nutrient regimes to genomic and cellular
     adaptation.
+canonical_examples:
+- taxon_id: NCBITaxon:335992
+  taxon_label: Candidatus Pelagibacter ubique HTCC1062
+  reference: DOI:10.1038/s41586-024-07924-w
+  note: Genome-wide experimental profiling found picomolar-to-low-nanomolar substrate-binding
+    affinities and linked their systematic increase to adaptation to low substrate
+    concentrations in the oligotrophic ocean.
 causal_graphs:
 - graph_id: nutrient_adaptation_life_history_axis
   title: Nutrient adaptation life-history axis
@@ -226,4 +233,11 @@ curation_history:
   changes: Classified the graph as nonmechanistic comparative life-history evidence
     and documented all three aggregate gene-category nodes as reviewed label-only;
     no trait record or graph was deprecated or removed.
+  llm_assisted: true
+- timestamp: '2026-08-26T11:06:05Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: Added Candidatus Pelagibacter ubique HTCC1062 as a directly characterized
+    nutrient-adaptation example from DOI:10.1038/s41586-024-07924-w; verified the
+    current strain taxon and label through NCBI Taxonomy.
   llm_assisted: true
