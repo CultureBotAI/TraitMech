@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/denitrification.yaml
+  slug: denitrification
+session:
+  id: 2026-08-26T101919Z-codex-a461f6e
+  timestamp: '2026-08-26T10:19:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the denitrification pathway spine and modularity branch
+  details: >-
+    Added six source-supported edges: nitrate input, three ordered links among the
+    four reductase-process modules, dinitrogen output, and a deliberately weak association
+    between pathway modularity and denitrification. These edges join all six existing
+    graph components without inferring complete denitrification from any individual
+    marker. Genes and protein complexes remain supporting causal-graph nodes in YAML
+    and were not promoted to primary TraitRecord entries.
