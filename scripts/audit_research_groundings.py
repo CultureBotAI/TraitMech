@@ -2,7 +2,7 @@
 """Triage report: do the CURIEs suggested in research reports mean what the
 reports say they mean?
 
-The deep-research sweep (#183, #241) produced 353 reports whose candidate-node
+The deep-research sweep (#183, #241) produced 354 reports whose candidate-node
 tables pair a human label with an ontology identifier. Nothing resolved those
 identifiers, and a sample against OLS found the long tail materially wrong —
 `CHEBI:10357` offered as "ectoine" is (-)-beta-caryophyllene, `ENVO:01000992`
@@ -41,6 +41,7 @@ import argparse
 import csv
 import re
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -50,6 +51,19 @@ BACKLOG_TSV = REPO_ROOT / "reports" / "research_grounding_backlog.tsv"
 
 # Sentinel distinguishing "the lookup could not run" from "the id is absent".
 ADAPTER_ERROR = object()
+TERM_REPLACED_BY = "IAO:0100001"
+
+
+@dataclass(frozen=True)
+class MergedTerm:
+    """An absent CURIE that its ontology explicitly redirects to successors.
+
+    This records ontology history, not semantic agreement with the report's
+    claimed label. The audit exposes the successor label so a curator can judge
+    whether substitution is appropriate.
+    """
+
+    replacements: tuple[tuple[str, str], ...]
 
 # Prefixes with an OAK sqlite adapter. Mirrors conf/id_label_targets.yaml, minus
 # RO — the reports suggest node groundings, not predicates.
@@ -131,7 +145,9 @@ class Ontologies:
 
     def __init__(self) -> None:
         self._adapters: dict[str, object] = {}
-        self._cache: dict[str, tuple[str, list[str], bool] | None] = {}
+        self._cache: dict[
+            str, tuple[str, list[str], bool] | MergedTerm | None | object
+        ] = {}
         self._empty: dict[str, bool] = {}
 
     def _adapter(self, prefix: str):
@@ -168,10 +184,30 @@ class Ontologies:
             if label:
                 synonyms = [s for s in (adapter.entity_aliases(curie) or []) if s]
                 result = (label, synonyms, self._deprecated(adapter, curie, label))
+            else:
+                result = self._merged_term(adapter, curie)
         except Exception:
             result = ADAPTER_ERROR
         self._cache[curie] = result
         return result
+
+    @staticmethod
+    def _merged_term(adapter, curie: str) -> MergedTerm | None:
+        """Return explicit ``term replaced by`` targets for an absent CURIE."""
+        replacement_ids = sorted({
+            target
+            for subject, predicate, target in adapter.obsoletes_migration_relationships(
+                [curie]
+            )
+            if subject == curie and predicate == TERM_REPLACED_BY and target
+        })
+        if not replacement_ids:
+            return None
+        replacements = tuple(
+            (replacement, adapter.label(replacement) or "")
+            for replacement in replacement_ids
+        )
+        return MergedTerm(replacements)
 
     def _is_empty(self, prefix: str, adapter) -> bool:
         """True if the adapter opened but holds no terms — a 0-byte sqlite.
@@ -227,10 +263,11 @@ class Ontologies:
 # case a label check cannot see — from sorting below every DRIFT (#264).
 VERDICT_RANK = {
     "ADAPTER_ERROR": 0,   # the tool is broken; nothing below is trustworthy
-    "UNRESOLVED": 1,      # the id does not exist
-    "OBSOLETE": 2,        # the id is deprecated
-    "DRIFT": 3,           # the id exists and means something else
-    "UNKNOWN_PREFIX": 4,  # outside the grounding policy
+    "MERGED": 1,          # substitute the ontology-declared successor
+    "UNRESOLVED": 2,      # the id does not exist
+    "OBSOLETE": 3,        # the id is deprecated
+    "DRIFT": 4,           # the id exists and means something else
+    "UNKNOWN_PREFIX": 5,  # outside the grounding policy
 }
 
 
@@ -261,12 +298,19 @@ def similarity(claimed: str, names: list[str]) -> float:
     )
 
 
-def classify(claimed: str, row: str, resolved) -> tuple[str, str, float]:
-    """Return (verdict, canonical_label, similarity)."""
+def classify(claimed: str, row: str, resolved) -> tuple[str, str, float, str]:
+    """Return (verdict, canonical_label, similarity, replacement_curie)."""
     if resolved is ADAPTER_ERROR:
-        return "ADAPTER_ERROR", "", 0.0
+        return "ADAPTER_ERROR", "", 0.0, ""
+    if isinstance(resolved, MergedTerm):
+        return (
+            "MERGED",
+            " | ".join(label for _curie, label in resolved.replacements),
+            0.0,
+            " | ".join(curie for curie, _label in resolved.replacements),
+        )
     if resolved is None:
-        return "UNRESOLVED", "", 0.0
+        return "UNRESOLVED", "", 0.0, ""
     canonical, synonyms, obsolete = resolved
     raw_names = [n for n in [canonical, *synonyms] if n]
     names = [normalize(n) for n in raw_names]
@@ -274,17 +318,17 @@ def classify(claimed: str, row: str, resolved) -> tuple[str, str, float]:
         # Similarity is meaningless here — the label often MATCHES, which is
         # exactly why a label-only check misses it. Ordering is by verdict
         # first (see VERDICT_RANK), so this value never buries the finding.
-        return "OBSOLETE", canonical, 0.0
+        return "OBSOLETE", canonical, 0.0, ""
     if any(n and (n == claimed or n in claimed or claimed in n) for n in names):
-        return "OK_LABEL", canonical, 1.0
+        return "OK_LABEL", canonical, 1.0, ""
 
     # The report may name the term correctly while using it as a comparison —
     # `| symbiosome | GO:0043663 (host cell part) is too broad | …`. Saying what
     # the id means, anywhere in the row, is not a mis-grounding.
     row_norm = normalize(row)
     if any(n and n in row_norm for n in names):
-        return "OK_IN_ROW", canonical, 1.0
-    return "DRIFT", canonical, similarity(claimed, raw_names)
+        return "OK_IN_ROW", canonical, 1.0, ""
+    return "DRIFT", canonical, similarity(claimed, raw_names), ""
 
 
 def main() -> int:
@@ -325,18 +369,20 @@ def main() -> int:
                     rows.append({
                         "file": rel, "line": str(line_no), "curie": curie,
                         "claimed_label": claimed, "ontology_label": "",
+                        "replacement_curie": "",
                         "verdict": "UNKNOWN_PREFIX", "similarity": "0.00",
                         "row": row,
                     })
                 else:
                     skipped_prefixes[prefix] = skipped_prefixes.get(prefix, 0) + 1
                 continue
-            verdict, canonical, score = classify(
+            verdict, canonical, score, replacement = classify(
                 claimed, row, ontologies.lookup(curie))
             counts[verdict] = counts.get(verdict, 0) + 1
             rows.append({
                 "file": rel, "line": str(line_no), "curie": curie,
                 "claimed_label": claimed, "ontology_label": canonical,
+                "replacement_curie": replacement,
                 "verdict": verdict, "similarity": f"{score:.2f}", "row": row,
             })
 
@@ -347,9 +393,10 @@ def main() -> int:
     # curator decides it once, so the backlog carries an occurrence count
     # rather than one line per site.
     distinct = sorted(
-        {(r["curie"], r["claimed_label"], r["ontology_label"], r["verdict"],
-          r["similarity"]) for r in actionable},
-        key=lambda t: (VERDICT_RANK.get(t[3], 9), float(t[4]), t[0], t[1]),
+        {(r["curie"], r["claimed_label"], r["ontology_label"],
+          r["replacement_curie"], r["verdict"], r["similarity"])
+         for r in actionable},
+        key=lambda t: (VERDICT_RANK.get(t[4], 9), float(t[5]), t[0], t[1]),
     )
 
     out_path = Path(args.report)
@@ -358,7 +405,8 @@ def main() -> int:
         writer = csv.DictWriter(
             fh, delimiter="\t", lineterminator="\n",
             fieldnames=["file", "line", "curie", "claimed_label",
-                        "ontology_label", "verdict", "similarity", "row"])
+                        "ontology_label", "replacement_curie", "verdict",
+                        "similarity", "row"])
         writer.writeheader()
         writer.writerows(rows)
 
@@ -386,14 +434,14 @@ def main() -> int:
                  f"{len(distinct)} distinct findings\n")
         writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
         writer.writerow(["verdict", "curie", "claimed_label", "ontology_label",
-                         "similarity", "occurrences"])
-        for curie, claimed, canonical, verdict, score in distinct:
-            writer.writerow([verdict, curie, claimed, canonical, score,
+                         "replacement_curie", "similarity", "occurrences"])
+        for curie, claimed, canonical, replacement, verdict, score in distinct:
+            writer.writerow([verdict, curie, claimed, canonical, replacement, score,
                              occurrences.get((curie, claimed), 1)])
 
     print(f"=== research grounding drift ({len(reports)} reports) ===")
     print(f"  (id, label) pairs checked against an ontology: {checked}")
-    for verdict in ("OK_LABEL", "OK_IN_ROW", "DRIFT", "OBSOLETE",
+    for verdict in ("OK_LABEL", "OK_IN_ROW", "DRIFT", "OBSOLETE", "MERGED",
                     "UNRESOLVED", "ADAPTER_ERROR", "UNKNOWN_PREFIX"):
         if counts.get(verdict):
             print(f"    {verdict:<15} {counts[verdict]:>5}")
@@ -401,9 +449,10 @@ def main() -> int:
         skipped = ", ".join(f"{p}={n}" for p, n in sorted(skipped_prefixes.items()))
         print(f"  no OAK adapter, not checked: {skipped}")
     print(f"  distinct actionable suggestions: {len(distinct)}")
-    for curie, claimed, canonical, verdict, score in distinct[:15]:
+    for curie, claimed, canonical, replacement, verdict, score in distinct[:15]:
         print(f"    {verdict:<13} {curie:<16} report says '{claimed}'"
               + (f" — ontology says '{canonical}'" if canonical else "")
+              + (f" -> {replacement}" if replacement else "")
               + (f"  [{score}]" if verdict == "DRIFT" else ""))
     if len(distinct) > 15:
         print(f"    ... and {len(distinct) - 15} more")
