@@ -23,19 +23,24 @@ evidence:
   snippet: light as an energy source and reduced iron
   notes: Review supports Fe(II) as an inorganic electron donor for photoferrotrophy.
 canonical_examples:
-- taxon_id: NCBITaxon:1148
+- taxon_id: NCBITaxon:1111708
   taxon_label: Synechocystis sp. PCC 6803
   note: oxygenic photolithotroph
-  reference: PMID:8905231
-- taxon_id: NCBITaxon:1097
-  taxon_label: Chlorobaculum tepidum
+  reference: DOI:10.1093/dnares/3.3.109
+- taxon_id: NCBITaxon:194439
+  taxon_label: Chlorobaculum tepidum TLS
   note: anoxygenic photolithotroph
-  reference: PMID:12093901
+  reference: DOI:10.1073/pnas.132181499
 causal_graphs:
 - graph_id: photolithotrophic_inorganic_electron_donors
   title: Photolithotrophic inorganic electron donor photosynthesis
   description: DOI-backed graph linking light capture, inorganic electron donors such
     as sulfide and Fe(II), anoxygenic photosynthetic electron transport, and CO2 assimilation.
+  scope_status: MECHANISTIC
+  scope_notes: The retained graph specifically represents anoxygenic sulfur- and iron-oxidizing
+    branches; the oxygenic Synechocystis example documents the broader trait but is
+    not asserted to use this reaction center. The C. tepidum example anchors the Type
+    I P840 branch.
   nodes:
   - node_id: photolithotrophic_trait
     label: photolithotrophic
@@ -81,6 +86,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that captures light quanta and drives charge
       separation in anoxygenic photosynthesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Anoxygenic Type I and Type II reaction centers are distinct multisubunit
+      complexes; the generic node cannot be represented by one component-family term.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KEP5
+      protein_label: P840 reaction center 17 kDa protein
+      gene_symbol: pscD
+      taxon_id: NCBITaxon:194439
+      taxon_label: Chlorobaculum tepidum TLS
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 84
+      sequence_version: 1
+      role: Peripheral PscD component of the C. tepidum P840 Type I reaction center;
+        this accession is not presented as the complete 12-subunit FMO-RC apparatus.
+      evidence:
+      - reference: DOI:10.1073/pnas.2216734120
+        snippet: two peripheral subunits (PscB and PscD) and six FMO proteins (FMO-1
+          to 6) are arranged as two FMO trimers
+        notes: The primary cryo-EM study resolves PscD in the C. tepidum TLS whole
+          reaction-center apparatus; UniProtKB Q8KEP5 is the reviewed strain-level
+          PscD entry.
   - node_id: hydrogen_sulfide_oxidation
     label: hydrogen sulfide oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -335,4 +362,11 @@ curation_history:
     is used where the subject is an activity, since biolink gives it the domain 'biological
     process or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T12:15:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic with explicit anoxygenic scope, reviewed the
+    generic reaction center as label-only, upgraded canonical taxa to strain-level
+    DOI citations, and added the reviewed C. tepidum PscD component example.
   llm_assisted: true

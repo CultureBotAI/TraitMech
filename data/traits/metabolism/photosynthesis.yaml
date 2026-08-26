@@ -26,11 +26,20 @@ canonical_examples:
   taxon_label: Cereibacter sphaeroides
   note: anoxygenic photosynthesis
   reference: PMID:21777427
+- taxon_id: NCBITaxon:1111708
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Strain-level oxygenic photosynthesis model paired to the reviewed PsbA2/D1
+    component of photosystem II.
+  reference: DOI:10.1074/jbc.M806116200
 causal_graphs:
 - graph_id: photosynthesis_chlorophyll_reaction_center
   title: Chlorophyll-based photosynthesis drives electron flow and CO2 fixation
   description: Evidence-backed causal sketch linking chlorophyll-based reaction centers
     to electron flow that powers CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: The graph spans oxygenic and anoxygenic chlorophyll-based photosynthesis.
+    The Synechocystis PsbA2 example supports the oxygenic photosystem II branch only;
+    anoxygenic reaction centers use different protein families.
   nodes:
   - node_id: photosynthesis_trait
     label: photosynthesis
@@ -80,6 +89,30 @@ causal_graphs:
     label: reducing power (NAD(P)H)
     node_type: CAPACITY
     description: NADPH/NAD(P)H reducing equivalents produced by the light reactions.
+  - node_id: photosystem_ii
+    label: photosystem II
+    node_type: GENE_OR_PROTEIN
+    description: Multisubunit pigment-protein reaction-center complex initiating oxygenic
+      photosynthetic charge separation and water oxidation.
+    grounding: GO:0009523
+    protein_examples:
+    - uniprot_id: UniProtKB:P16033
+      protein_label: Photosystem II protein D1 2
+      gene_symbol: psbA2
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. PCC 6803
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 186
+      sequence_version: 1
+      role: D1 reaction-center component of photosystem II; this accession is not
+        presented as the complete water-oxidizing complex.
+      evidence:
+      - reference: DOI:10.1074/jbc.M806116200
+        snippet: the PsbA (D1) subunit of photosystem II (PSII)
+        notes: A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII
+          subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed
+          PsbA2 protein and strain taxon.
   edges:
   - subject: photosynthesis_process
     predicate: confers
@@ -162,6 +195,17 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14519
       notes: NADPH from the light reactions is used in biosynthesis, including carbon
         fixation.
+  - subject: photosystem_ii
+    predicate: initiates
+    object: charge_separation
+    description: Photosystem II initiates oxygenic electron transfer through light-induced
+      reaction-center charge separation.
+    evidence:
+    - reference: DOI:10.1073/pnas.1520211113
+      snippet: PSII reactions are initiated by light-induced charge separation between
+        a chlorophyll dimer and a pheophytin electron acceptor.
+      notes: The primary spectroelectrochemical study supports the generic PSII charge-separation
+        edge; the PsbA2 accession separately grounds a Synechocystis complex component.
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
@@ -227,4 +271,11 @@ curation_history:
     i.e. the pool, not a single species -- which is the very distinction CAPACITY
     exists to draw, and the one docs/CURATION_PLAYBOOK.md records as the reservoir
     sense that must NOT be retyped to TRAIT (#352).'
+  llm_assisted: true
+- timestamp: '2026-08-24T08:35:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed Synechocystis PCC 6803 PsbA2 component example, a GO-grounded
+    photosystem II node, a primary-source PSII charge-separation edge, and scope notes
+    separating oxygenic from anoxygenic branches.
   llm_assisted: true

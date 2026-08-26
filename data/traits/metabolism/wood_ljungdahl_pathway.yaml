@@ -32,6 +32,10 @@ causal_graphs:
   title: Wood-Ljungdahl pathway reduces 2 CO2 to acetyl-CoA
   description: Evidence-backed causal sketch linking reduction of two CO2 molecules
     into acetyl-CoA via the reductive acetyl-CoA pathway.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the methyl and carbonyl branches through acetyl-CoA formation,
+    with an explicit alpha-subunit protein exemplar for the CODH/ACS complex; energetic
+    variants outside this canonical acetogen route are not generalized.
   nodes:
   - node_id: wood_ljungdahl_trait
     label: Wood-Ljungdahl pathway
@@ -70,6 +74,7 @@ causal_graphs:
     label: formyl-THF synthetase (FTS/Fhs)
     node_type: GENE_OR_PROTEIN
     description: Enzyme forming formyl-THF from formate, consuming one ATP.
+    grounding: GO:0004329
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -80,15 +85,39 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme transferring the methyl group onto the corrinoid iron-sulfur
       protein.
-    grounding: UniProtKB:A0A0C5IX96
+    grounding: GO:0102036
   - node_id: cofesp
     label: corrinoid iron-sulfur protein (CoFeSP)
     node_type: GENE_OR_PROTEIN
     description: Corrinoid iron-sulfur protein carrying the methyl group to ACS.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: CoFeSP is a multisubunit corrinoid iron-sulfur carrier; no checked
+      single semantic family or complex term exactly covers the combined carrier represented
+      by this node.
   - node_id: acetyl_coa_synthase
     label: acetyl-CoA synthase (ACS)
     node_type: GENE_OR_PROTEIN
     description: Enzyme condensing CO, methyl-CoFeSP and CoA into acetyl-CoA.
+    grounding: GO:0043884
+    protein_examples:
+    - uniprot_id: UniProtKB:P27988
+      protein_label: Carbon monoxide dehydrogenase/acetyl-CoA synthase subunit alpha
+      gene_symbol: acsB
+      taxon_id: NCBITaxon:1525
+      taxon_label: Neomoorella thermoacetica
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 125
+      sequence_version: 1
+      role: Alpha subunit that combines CO, CoA, and the CoFeSP-borne methyl group
+        to form acetyl-CoA; this accession is one component of the alpha2-beta2 CODH/ACS
+        complex.
+      evidence:
+      - reference: DOI:10.1073/pnas.220404397
+        snippet: Genes acsA and acsB encode the beta and alpha subunits
+        notes: The primary cloning and reconstitution study identifies acsB as the
+          alpha component and tests active AcsAB from C. thermoaceticum; UniProtKB
+          P27988 verifies the reviewed current taxon mapping.
   - node_id: acetyl_coa
     label: acetyl-CoA
     node_type: CHEMICAL
@@ -109,6 +138,9 @@ causal_graphs:
     description: The reductive acetyl-CoA pathway underlies the trait.
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
+      snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main
+        mechanism for energy conservation and for synthesis of acetyl-CoA and cell
+        carbon from CO2
       notes: Ragsdale & Pierce review the Wood-Ljungdahl pathway as the reference
         reductive acetyl-CoA pathway.
     predicate_id: METPO:2007700
@@ -117,7 +149,8 @@ causal_graphs:
     object: wood_ljungdahl_trait
     description: Two molecules of CO2 are fixed and combined into acetyl-CoA.
     evidence:
-    - reference: DOI:10.1128/AEM.02473-10
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: WLP is the key pathway for acetogens to fix CO2 and generate acetate
       notes: Berg places Wood-Ljungdahl among the recognized autotrophic carbon-fixation
         pathways.
     predicate_id: METPO:2007404
@@ -127,6 +160,7 @@ causal_graphs:
     description: The WLP comprises a methyl (eastern) branch.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: WLP consists of two branches, the methyl branch and the carbonyl branch
       notes: 'The Wood-Ljungdahl pathway is a two-branch autotrophic CO2 fixation
         pathway: a methyl branch and a carbonyl branch.'
   - subject: wood_ljungdahl_pathway
@@ -135,6 +169,8 @@ causal_graphs:
     description: The WLP comprises a carbonyl (western) branch.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: The carbonyl-branch involves a single reaction facilitated by a multi-component
+        enzyme complex
       notes: The Wood-Ljungdahl pathway is a two-branch autotrophic CO2 fixation pathway
         with a carbonyl branch.
   - subject: formate_dehydrogenase
@@ -144,6 +180,7 @@ causal_graphs:
       formate node).'
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: reduction of CO2 to formate catalyzed by formate dehydrogenase (FDH)
       notes: Formate dehydrogenase (FDH) reduces CO2 to formate; canonical bacterial
         WLP step.
     predicate_id: METPO:2007802
@@ -153,6 +190,7 @@ causal_graphs:
     description: FDH-catalyzed reduction of CO2 yields formate.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: the first reaction of methyl branch is the reduction of CO2 to formate
       notes: Formate dehydrogenase (FDH) reduces CO2 to formate.
     predicate_id: METPO:2007800
   - subject: formyl_thf_synthetase
@@ -161,6 +199,7 @@ causal_graphs:
     description: Formyl-THF synthetase consumes one ATP to activate formate.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: catalyzed by formyl-THF synthetase (FTS) and consuming one ATP
       notes: Formyl-THF synthetase (FTS) forms formyl-THF, consuming one ATP.
   - subject: methyltransferase
     predicate: transfers methyl to
@@ -169,6 +208,8 @@ causal_graphs:
       protein.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: the methyl group of methyl-THF is transferred to a corrinoid iron-sulfur-containing
+        protein (CoFeSP) via the methyltransferase (MT)
       notes: Methyltransferase transfers the methyl onto a corrinoid iron-sulfur protein
         (CoFeSP).
   - subject: acetyl_coa_synthase
@@ -178,6 +219,7 @@ causal_graphs:
       WLP step.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: converts CO, methyl-CoFeSP and CoA into acetyl-CoA
       notes: ACS combines CO, methyl-CoFeSP and CoA into acetyl-CoA; central terminal
         step of WLP.
     predicate_id: METPO:2007800
@@ -186,7 +228,9 @@ causal_graphs:
     object: methyl_branch
     description: THF serves as the C1 carrier of the WLP methyl branch.
     evidence:
-    - reference: DOI:10.1039/d4cb00099d
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: Formate then undergoes a reaction with tetrahydrofolate (THF) to form
+        formyl-THF
       notes: WLP converts two CO2 to one acetyl-CoA using THF as the C1 carrier.
   - subject: wood_ljungdahl_pathway
     predicate: has quality
@@ -195,9 +239,18 @@ causal_graphs:
       phosphorylation.
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: the activation of formate consumes one ATP, resulting in zero net ATP
+        yield through SLP
       notes: Activation of formate consumes one ATP, so substrate-level phosphorylation
         nets zero ATP.
 curation_history:
+- timestamp: '2026-08-23T09:09:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, grounded Fhs, AcsE activity, and the
+    ACS activity with exact GO terms, retained combined CoFeSP as reviewed label-only,
+    and added DOI-backed UniProtKB P27988 as the ACS alpha-subunit exemplar.
+  llm_assisted: true
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
@@ -263,4 +316,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

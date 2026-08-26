@@ -34,11 +34,19 @@ canonical_examples:
   taxon_label: Pseudomonas putida
   note: metal-tolerant soil bacterium
   reference: PMID:25646541
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level ArsC arsenate-reduction exemplar.
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: arsenic_tolerance_ars_efflux
   title: Arsenic tolerance via ars-operon arsenite efflux
   description: Evidence-backed causal sketch linking the ars operon and ArsB pump
     to extrusion of cytoplasmic arsenite.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: arsenic_tolerant_trait
     label: arsenic tolerant
@@ -51,9 +59,15 @@ causal_graphs:
     grounding: CHEBI:29242
     description: Toxic trivalent arsenic species accumulating in the cytoplasm.
   - node_id: ars_operon
-    label: ars operon (ArsB pump)
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: ArsB arsenite-efflux protein module
     node_type: GENE_OR_PROTEIN
     description: Arsenite efflux machinery encoded by the near-ubiquitous ars operon.
+    gene_symbols:
+    - arsB
+    operon: ars
   - node_id: arsenite_export
     label: arsenite transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -65,15 +79,38 @@ causal_graphs:
     description: Pentavalent arsenic species; substrate for arsenate reductase.
     grounding: CHEBI:29125
   - node_id: arsR_repressor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArsR transcriptional repressor
     node_type: GENE_OR_PROTEIN
     description: Trans-acting repressor that binds the ars promoter and de-represses
       upon arsenite binding.
   - node_id: ars_promoter
     label: ars promoter
-    node_type: GENE_OR_PROTEIN
+    node_type: GENETIC_ELEMENT
     description: Promoter controlling transcription of the ars operon.
   - node_id: arsC_reductase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1LRL1
+      protein_label: Arsenate reductase ArsC1
+      gene_symbol: arsC1
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: UNREVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 99
+      sequence_version: 1
+      role: CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.
+      evidence:
+      - reference: PMID:20463976
+        snippet: arsenic resistance determinants in Cupriavidus metallidurans CH34
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: ArsC arsenate reductase
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic arsenate reductase converting As(V) to As(III).
@@ -82,15 +119,24 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Reduction of intracellular arsenate to arsenite prior to efflux.
   - node_id: arsB_pump
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArsB arsenite efflux permease
     node_type: GENE_OR_PROTEIN
     description: Integral membrane arsenite efflux pump extruding As(III) from the
       cytoplasm.
   - node_id: acr3_pump
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Acr3 arsenite efflux permease
     node_type: GENE_OR_PROTEIN
     description: Alternative inorganic arsenite efflux pump exporting As(III).
   - node_id: arsM_methyltransferase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArsM arsenite S-adenosylmethionine methyltransferase
     node_type: GENE_OR_PROTEIN
     description: Enzyme methylating arsenite to volatile methylated arsenicals.
@@ -262,4 +308,16 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope arsenic_tolerance_ars_efflux=MECHANISTIC with scope_notes;
+    marked 6 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ars_operon,
+    arsR_repressor, arsC_reductase, arsB_pump, acr3_pump, arsM_methyltransferase);
+    added taxon-paired protein example(s) UniProtKB:Q1LRL1 on arsC_reductase (NCBITaxon:266264);
+    retyped 1 node(s) (ars_promoter->GENETIC_ELEMENT); added canonical example(s)
+    NCBITaxon:266264.'
   llm_assisted: true

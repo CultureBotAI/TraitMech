@@ -32,6 +32,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_range_mid2_mild_alkaline_tolerance
   title: pH-range-mid2 mild-alkaline-tolerance range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth
     range of approximately 7–8.
   nodes:
@@ -94,6 +98,10 @@ causal_graphs:
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: ATP synthase coupling proton re-entry (PMF) to ATP generation.
   - node_id: atp_synthesis
     label: ATP synthesis
@@ -103,6 +111,10 @@ causal_graphs:
   - node_id: proton_ion_antiporters
     label: proton:ion antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Antiporters with a direct role in sustaining membrane potential.
   - node_id: membrane_potential
     label: membrane potential (Δψ)
@@ -252,4 +264,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_range_mid2_mild_alkaline_tolerance=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (f0f1_atpase, proton_ion_antiporters).'
   llm_assisted: true

@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>Anoxygenic photosynthesis uses non-water electron donors</h2>
       <p class="meta">Evidence-backed causal sketch linking a single bacteriochlorophyll photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic electron flow without O2 evolution.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · The graph combines a sulfide-donor branch documented in sulfur phototrophs with the type II reaction-center branch illustrated by Cereibacter sphaeroides; it does not imply that every anoxygenic phototroph uses sulfide or a type II center.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -125,34 +128,34 @@
           </li>
           
           <li id="pathograph-1-edge-5">
-            <strong>Type I reaction center</strong>
+            <strong>type II photosynthetic reaction center M subunit</strong>
             <span class="edge-predicate">confers</span>
             <strong>anoxygenic photosynthesis</strong>
             <code>METPO:2007700</code>
-            <p>A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.</p>
+            <p>The PufM-containing type II reaction center is required for photosynthetic growth in the purple bacterium Cereibacter sphaeroides.</p>
             <ul>
               
               <li>
-                <code>DOI:10.3390/biom14030311</code>
-                
-                <span class="meta">Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.</span>
+                <code>DOI:10.1016/j.bbabio.2003.08.008</code>
+                <span class="evidence-snippet">Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light.</span>
+                <span class="meta">The M-polypeptide perturbation directly impaired photosynthetic growth; the claim is restricted to the type II reaction-center branch represented by C. sphaeroides.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-6">
-            <strong>Type I reaction center</strong>
+            <strong>type II photosynthetic reaction center M subunit</strong>
             <span class="edge-predicate">part of</span>
             <strong>photosynthetic electron transport</strong>
             <code>biolink:part_of</code>
-            <p>The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.</p>
+            <p>PufM is a component of the reaction center that drives cyclic electron transfer in purple bacterial photosynthesis.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1038/s41586-024-07180-y</code>
-                
-                <span class="meta">Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.</span>
+                <code>DOI:10.1016/j.bbabio.2003.08.008</code>
+                <span class="evidence-snippet">light energy is used to power a cycle of electron transfer reactions</span>
+                <span class="meta">The primary study describes the R. sphaeroides reaction center within cyclic photosynthetic electron transfer and experimentally perturbs its M polypeptide.</span>
               </li>
               
             </ul>
@@ -178,6 +181,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>type II photosynthetic reaction center M subunit</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/P0C0Y9/entry" rel="nofollow noreferrer"><code>UniProtKB:P0C0Y9</code></a>
+                  <br>Reaction center protein M chain <span class="meta">(pufM)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1063" rel="nofollow noreferrer">Cereibacter sphaeroides</a>
+                  <br><code>NCBITaxon:1063</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v108 · sequence v2</span>
+                </td>
+                <td>
+                  <p>M-chain component of the type II photosynthetic reaction center; this accession is not presented as the complete reaction-center complex.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1016/j.bbabio.2003.08.008" rel="nofollow noreferrer"><code>DOI:10.1016/j.bbabio.2003.08.008</code></a>
+                      
+                      <span class="evidence-snippet">Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light.</span>
+                      <span class="meta">A primary pufM mutagenesis study links the M chain to photosynthetic growth in R. sphaeroides; UniProtKB P0C0Y9 verifies the reviewed Cereibacter sphaeroides protein and InterPro IPR005781 verifies the M-subunit family.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -453,6 +504,12 @@ The 2024 Type I structural synthesis gives unusually strong mechanistic resoluti
           <p class="changes">Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
         
+        <li>
+          <time>2026-08-24T00:00:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
+          <p class="changes">Corrected the canonical C. sphaeroides branch from a Type I center to the PufM component of a type II reaction center, added InterPro grounding and a DOI-backed taxon-matched UniProt example, and documented the graph&#39;s composite scope.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -722,6 +779,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -810,7 +872,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a single bacteriochlorophyll photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic electron flow without O2 evolution.", "edges": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic_etc"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic_etc", "target": "anoxygenic_photosynthesis_trait"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-3", "is_orphan": false, "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light_energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "light_energy", "target": "photosynthetic_etc"}, {"description": "A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.", "evidence": [{"notes": "Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_i_reaction_center", "target": "anoxygenic_photosynthesis_trait"}, {"description": "The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.", "evidence": [{"notes": "Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.", "reference": "DOI:10.1038/s41586-024-07180-y"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "type_i_reaction_center", "target": "photosynthetic_etc"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfide", "target": "elemental_sulfur"}], "evidence_rows": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "edge_id": "edge-1", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic electron transport"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic electron transport", "target": "anoxygenic photosynthesis"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "edge_id": "edge-3", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "edge_id": "edge-4", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "powers", "predicate_id": null, "source": "light energy", "target": "photosynthetic electron transport"}, {"description": "A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.", "edge_id": "edge-5", "evidence": [{"notes": "Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.", "reference": "DOI:10.3390/biom14030311"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Type I reaction center", "target": "anoxygenic photosynthesis"}, {"description": "The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.", "edge_id": "edge-6", "evidence": [{"notes": "Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.", "reference": "DOI:10.1038/s41586-024-07180-y"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "Type I reaction center", "target": "photosynthetic electron transport"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "edge_id": "edge-7", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfide", "target": "elemental sulfur (S0)"}], "graph_id": "anoxygenic_photosynthesis_sulfide_donor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacteriochlorophyll-based photosynthesis using non-water electron donors.", "grounding": "traitmech:000035", "id": "anoxygenic_photosynthesis_trait", "is_orphan": false, "label": "anoxygenic photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Light-harvesting pigment of anoxygenic phototrophs.", "grounding": "CHEBI:38201", "id": "bacteriochlorophyll", "is_orphan": false, "label": "bacteriochlorophyll", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product from sulfide oxidation during anoxygenic photosynthesis.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur (S0)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Light input driving photochemistry in anoxygenic photosynthesis.", "grounding": null, "id": "light_energy", "is_orphan": false, "label": "light energy", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#e0e7ff", "description": "Single-photosystem electron transport powering anoxygenic photosynthesis.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur electron donor (representative anoxygenic donor).", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Homodimeric Type I reaction-center photosystem of anoxygenic phototrophs.", "grounding": null, "id": "type_i_reaction_center", "is_orphan": false, "label": "Type I reaction center", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Anoxygenic photosynthesis uses non-water electron donors"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a single bacteriochlorophyll photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic electron flow without O2 evolution.", "edges": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic_etc"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic_etc", "target": "anoxygenic_photosynthesis_trait"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-3", "is_orphan": false, "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light_energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "light_energy", "target": "photosynthetic_etc"}, {"description": "The PufM-containing type II reaction center is required for photosynthetic growth in the purple bacterium Cereibacter sphaeroides.", "evidence": [{"notes": "The M-polypeptide perturbation directly impaired photosynthetic growth; the claim is restricted to the type II reaction-center branch represented by C. sphaeroides.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light."}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_ii_reaction_center_m", "target": "anoxygenic_photosynthesis_trait"}, {"description": "PufM is a component of the reaction center that drives cyclic electron transfer in purple bacterial photosynthesis.", "evidence": [{"notes": "The primary study describes the R. sphaeroides reaction center within cyclic photosynthetic electron transfer and experimentally perturbs its M polypeptide.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "light energy is used to power a cycle of electron transfer reactions"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "type_ii_reaction_center_m", "target": "photosynthetic_etc"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfide", "target": "elemental_sulfur"}], "evidence_rows": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "edge_id": "edge-1", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic electron transport"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic electron transport", "target": "anoxygenic photosynthesis"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "edge_id": "edge-3", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "edge_id": "edge-4", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "powers", "predicate_id": null, "source": "light energy", "target": "photosynthetic electron transport"}, {"description": "The PufM-containing type II reaction center is required for photosynthetic growth in the purple bacterium Cereibacter sphaeroides.", "edge_id": "edge-5", "evidence": [{"notes": "The M-polypeptide perturbation directly impaired photosynthetic growth; the claim is restricted to the type II reaction-center branch represented by C. sphaeroides.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type II photosynthetic reaction center M subunit", "target": "anoxygenic photosynthesis"}, {"description": "PufM is a component of the reaction center that drives cyclic electron transfer in purple bacterial photosynthesis.", "edge_id": "edge-6", "evidence": [{"notes": "The primary study describes the R. sphaeroides reaction center within cyclic photosynthetic electron transfer and experimentally perturbs its M polypeptide.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "light energy is used to power a cycle of electron transfer reactions"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "type II photosynthetic reaction center M subunit", "target": "photosynthetic electron transport"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "edge_id": "edge-7", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "sulfide", "target": "elemental sulfur (S0)"}], "graph_id": "anoxygenic_photosynthesis_sulfide_donor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacteriochlorophyll-based photosynthesis using non-water electron donors.", "grounding": "traitmech:000035", "id": "anoxygenic_photosynthesis_trait", "is_orphan": false, "label": "anoxygenic photosynthesis", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Light-harvesting pigment of anoxygenic phototrophs.", "grounding": "CHEBI:38201", "id": "bacteriochlorophyll", "is_orphan": false, "label": "bacteriochlorophyll", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product from sulfide oxidation during anoxygenic photosynthesis.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur (S0)", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Light input driving photochemistry in anoxygenic photosynthesis.", "grounding": null, "id": "light_energy", "is_orphan": false, "label": "light energy", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Single-photosystem electron transport powering anoxygenic photosynthesis.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur electron donor (representative anoxygenic donor).", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "PufM component of the heterodimeric type II reaction center in purple phototrophic bacteria.", "grounding": "InterPro:IPR005781", "id": "type_ii_reaction_center_m", "is_orphan": false, "label": "type II photosynthetic reaction center M subunit", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 108, "evidence": [{"notes": "A primary pufM mutagenesis study links the M chain to photosynthetic growth in R. sphaeroides; UniProtKB P0C0Y9 verifies the reviewed Cereibacter sphaeroides protein and InterPro IPR005781 verifies the M-subunit family.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light."}], "gene_symbol": "pufM", "protein_label": "Reaction center protein M chain", "retrieved_on": "2026-08-24", "role": "M-chain component of the type II photosynthetic reaction center; this accession is not presented as the complete reaction-center complex.", "sequence_version": 2, "taxon_id": "NCBITaxon:1063", "taxon_label": "Cereibacter sphaeroides", "uniprot_id": "UniProtKB:P0C0Y9"}], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 108, "evidence": [{"notes": "A primary pufM mutagenesis study links the M chain to photosynthetic growth in R. sphaeroides; UniProtKB P0C0Y9 verifies the reviewed Cereibacter sphaeroides protein and InterPro IPR005781 verifies the M-subunit family.", "reference": "DOI:10.1016/j.bbabio.2003.08.008", "snippet": "Strains of Rb. sphaeroides containing the AM260W reaction centre are incapable of growth under anaerobic conditions in the light."}], "gene_symbol": "pufM", "node_id": "type_ii_reaction_center_m", "node_label": "type II photosynthetic reaction center M subunit", "protein_label": "Reaction center protein M chain", "retrieved_on": "2026-08-24", "role": "M-chain component of the type II photosynthetic reaction center; this accession is not presented as the complete reaction-center complex.", "sequence_version": 2, "taxon_id": "NCBITaxon:1063", "taxon_label": "Cereibacter sphaeroides", "uniprot_id": "UniProtKB:P0C0Y9"}], "scope_notes": "The graph combines a sulfide-donor branch documented in sulfur phototrophs with the type II reaction-center branch illustrated by Cereibacter sphaeroides; it does not imply that every anoxygenic phototroph uses sulfide or a type II center.", "scope_status": "MECHANISTIC", "title": "Anoxygenic photosynthesis uses non-water electron donors"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -833,7 +895,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-24 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

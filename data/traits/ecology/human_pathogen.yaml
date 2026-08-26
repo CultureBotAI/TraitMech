@@ -32,6 +32,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
   title: Human-pathogen Homo sapiens host adaptation
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking human-adapted virulence factors, body-temperature
     and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.
   nodes:
@@ -41,6 +45,9 @@ causal_graphs:
     grounding: METPO:1004004
     description: Pathogen of Homo sapiens.
   - node_id: human_virulence_factors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: human-adapted virulence factors
     node_type: GENE_OR_PROTEIN
     description: Virulence factors tuned to human-cell receptors and biology.
@@ -337,3 +344,12 @@ curation_history:
     that infects organisms of the species Homo sapiens'. Written with the source's
     underscores because that is the string a consumer must resolve.
   llm_assisted: false
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope human_pathogen_anthropoid_adaptation=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (human_virulence_factors).'
+  llm_assisted: true

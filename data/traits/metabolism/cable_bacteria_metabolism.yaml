@@ -21,12 +21,23 @@ canonical_examples:
   taxon_label: Candidatus Electrothrix
   note: Marine cable bacteria conducting electrons over centimetre distances along
     filaments (long-distance electron transport).
-  reference: PMID:27324572
+  reference: DOI:10.1016/j.syapm.2016.05.006
+- taxon_id: NCBITaxon:2005002
+  taxon_label: Candidatus Electronema aureum
+  note: Freshwater cable bacterium strain GS with a closed genome, electrogenic sulfur
+    oxidation physiology, and expressed dissimilatory sulfur-metabolism machinery.
+  reference: DOI:10.1016/j.syapm.2021.126236
 causal_graphs:
 - graph_id: cable_bacteria_long_distance_electron_transport
   title: Cable bacteria long-distance electron transport
   description: DOI-backed graph linking sulfide oxidation, conductive multicellular
     filaments, centimeter-scale electron transport, and oxygen reduction.
+  scope_status: MECHANISTIC
+  scope_notes: The long-distance electron-transport mechanism is experimentally established.
+    DsrAB is included as an expressed E. aureum sulfur-metabolism complex, but its
+    precise reaction direction and causal position in electrogenic sulfur oxidation
+    remain genomic/transcriptomic inferences. No protein identity is assigned to the
+    conductive fibers.
   nodes:
   - node_id: cable_bacteria_trait
     label: Cable bacteria metabolism
@@ -95,6 +106,52 @@ causal_graphs:
     node_type: PATHWAY
     description: Genomically predicted dissimilatory sulfur oxidation pathway supporting
       sulfide oxidation.
+  - node_id: dsrab_complex
+    label: DsrAB dissimilatory sulfite reductase complex
+    node_type: GENE_OR_PROTEIN
+    description: Expressed alpha/beta dissimilatory sulfite-reductase complex implicated
+      in the cable-bacterium sulfur-metabolism repertoire.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the DsrA-DsrB heteromeric complex and its unresolved
+      direction in cable bacteria; no one verified family or activity term captures
+      that complete, direction-neutral entity.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A521G5H7
+      protein_label: Dissimilatory sulfite reductase alpha subunit
+      gene_symbol: CDV28_10159
+      taxon_id: NCBITaxon:2005002
+      taxon_label: Candidatus Electronema aureum
+      entry_status: UNREVIEWED
+      proteome_id: UP000316238
+      retrieved_on: '2026-08-24'
+      entry_version: 24
+      sequence_version: 1
+      role: DsrA alpha component of the E. aureum DsrAB complex; this accession is
+        not the complete complex and does not by itself establish pathway direction.
+      evidence:
+      - reference: DOI:10.1186/s12864-026-12675-1
+        snippet: They encode a complete reductive-type Dsr pathway
+        notes: Comparative genomics plus transcriptomic/proteomic reanalysis supports
+          expression of the Dsr repertoire in cable bacteria; UniProtKB maps this
+          reference-proteome entry to the E. aureum DsrA locus.
+    - uniprot_id: UniProtKB:A0A521G566
+      protein_label: Dissimilatory sulfite reductase beta subunit
+      gene_symbol: CDV28_10160
+      taxon_id: NCBITaxon:2005002
+      taxon_label: Candidatus Electronema aureum
+      entry_status: UNREVIEWED
+      proteome_id: UP000316238
+      retrieved_on: '2026-08-24'
+      entry_version: 24
+      sequence_version: 1
+      role: DsrB beta component of the E. aureum DsrAB complex; this accession is
+        not the complete complex and does not by itself establish pathway direction.
+      evidence:
+      - reference: DOI:10.1186/s12864-026-12675-1
+        snippet: They encode a complete reductive-type Dsr pathway
+        notes: Comparative genomics plus transcriptomic/proteomic reanalysis supports
+          expression of the Dsr repertoire in cable bacteria; UniProtKB maps this
+          reference-proteome entry to the E. aureum DsrB locus.
   edges:
   - subject: cable_bacteria_trait
     predicate: occurs in
@@ -210,6 +267,19 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1800367115
       notes: A redox gradient along filaments immediately broke down upon removal
         of oxygen or laser cutting, showing dependence on intact long-distance transport.
+  - subject: dsrab_complex
+    predicate: part of
+    object: sulfur_oxidation_pathway
+    description: DsrAB is an expressed component of the predicted sulfur-metabolism
+      repertoire associated with electrogenic sulfur oxidation in cable bacteria.
+    evidence:
+    - reference: DOI:10.1186/s12864-026-12675-1
+      snippet: Transcriptomic and proteomic reanalyses confirm expression of this
+        full repertoire
+      notes: This edge records complex membership and expression, not a proven reaction
+        direction; the source explicitly leaves central aspects of cable-bacterium
+        sulfur metabolism unresolved.
+    predicate_id: biolink:part_of
   - subject: sulfur_oxidation_pathway
     predicate: supports
     object: electrogenic_sulfur_oxidation
@@ -294,4 +364,11 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-24T10:10:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cable-bacterium mechanism, added E. aureum as a DOI-backed canonical
+    species, and represented both DsrAB components as taxon-paired examples while
+    preserving uncertainty about pathway direction and conductive-fiber identity.
   llm_assisted: true

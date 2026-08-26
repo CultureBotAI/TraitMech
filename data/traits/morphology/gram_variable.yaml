@@ -33,6 +33,9 @@ causal_graphs:
   title: Gram-variable peptidoglycan thinning
   description: DOI-backed graph linking culture-age-dependent peptidoglycan thinning
     and autolysis to inconsistent gram-staining within a single bacterial population.
+  scope_status: NONMECHANISTIC
+  scope_notes: Gram variability is a culture-state staining outcome rather than a
+    stable protein-mediated trait; no token protein example is appropriate.
   nodes:
   - node_id: gram_variable_trait
     label: gram variable
@@ -247,4 +250,11 @@ curation_history:
     so they migrated together in issue 329 and were split here by reading each edge.
     RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment
     of the kind issue 301 removed.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope gram_variable_wall_thinning=NONMECHANISTIC with scope_notes.'
   llm_assisted: true

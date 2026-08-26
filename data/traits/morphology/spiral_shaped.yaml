@@ -35,6 +35,10 @@ causal_graphs:
   title: Spiral-shape curvature and cell-wall mechanism
   description: Evidence-backed causal sketch linking spiral morphology to scaffold-mediated
     curvature, peptidoglycan remodeling, and helical/spiral cell geometry.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: spiral_shaped_trait
     label: spiral shaped
@@ -46,6 +50,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Local cell-wall synthesis, relaxation, or crosslink remodeling.
   - node_id: curvature_scaffold
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: curvature scaffold
     node_type: GENE_OR_PROTEIN
     description: Protein scaffold or shape complex that biases cell curvature.
@@ -263,4 +270,13 @@ curation_history:
     catches it. Retracted rather than replaced — GO:0005623 is obsolete, GO:0005737
     ''cytoplasm'' excludes the envelope the protoplasmic cylinder includes, and GO:0071944
     ''cell periphery'' is the wrong part.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spiral_shaped_curvature_mechanisms=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (curvature_scaffold).'
   llm_assisted: true

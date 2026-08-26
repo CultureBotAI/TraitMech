@@ -17,12 +17,22 @@ evidence:
 - reference: DOI:10.1089/mdr.2014.0032
   snippet: ovococci that are ellipsoid
   notes: Supports oval/ellipsoidal morphology as an ovococcal bacterial shape class.
+canonical_examples:
+- taxon_id: NCBITaxon:171101
+  taxon_label: Streptococcus pneumoniae R6
+  note: Strain-level oval pneumococcal model paired to reviewed PBP2b, whose depletion
+    directly alters peripheral wall synthesis and cell morphology.
+  reference: DOI:10.1128/JB.00184-13
 causal_graphs:
 - graph_id: oval_shaped_ovococcal_pg_synthesis
   title: Oval-shape ovococcal peptidoglycan mechanism
   description: Evidence-backed causal sketch linking oval morphology to peripheral
     and septal peptidoglycan synthesis, PBP2b-associated elongation, MapZ/FtsZ division
     positioning, and rounded ellipsoidal geometry.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the pneumococcal septal/peripheral peptidoglycan
+    mechanism. The R6 PBP2b example anchors a protein in the elongation branch; aggregate
+    systems remain semantic or reviewed label-only nodes.
   nodes:
   - node_id: oval_shaped_trait
     label: oval shaped
@@ -41,10 +51,31 @@ causal_graphs:
     label: PBP2b
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan synthase associated with elongation in ovococci.
+    grounding: InterPro:IPR047982
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A3M6
+      protein_label: Penicillin-binding protein 2B
+      gene_symbol: penA
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae R6
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 110
+      sequence_version: 1
+      role: R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity
+        required to maintain elongated oval pneumococcal morphology.
+      evidence:
+      - reference: DOI:10.1128/JB.00184-13
+        snippet: PBP2b is essential for peripheral peptidoglycan synthesis
+        notes: The R6-derived depletion study directly connects PBP2b levels to cell
+          morphology; UniProt verifies the reviewed strain-level protein entry.
   - node_id: mapZ_ftsZ_system
     label: MapZ/FtsZ division-positioning system
     node_type: GENE_OR_PROTEIN
     description: Proteins involved in positioning and organizing ovococcal division.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: MapZ and FtsZ are distinct protein families, so this two-protein
+      positioning-system aggregate has no single exact family grounding.
   - node_id: ellipsoidal_geometry
     label: ellipsoidal geometry
     node_type: BIOLOGICAL_PROCESS
@@ -59,12 +90,15 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Elongasome scaffolding protein required for peripheral peptidoglycan
       synthesis and elongated cell shape.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Retained label-only because the evidence supports pneumococcal
+      MreC but no exact semantic family identifier was verified in this review.
   - node_id: rodA
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS-family peptidoglycan glycosyltransferase of the Rod complex
       driving sidewall/peripheral elongation.
-    grounding: UniProtKB:A0A0H2X1V4
+    grounding: InterPro:IPR001182
   - node_id: division_site_placement
     label: correct septum placement / division-site marking
     node_type: BIOLOGICAL_PROCESS
@@ -237,4 +271,22 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope oval_shaped_ovococcal_pg_synthesis=MECHANISTIC with
+    scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mapZ_ftsZ_system, mreC); added taxon-paired protein example(s) UniProtKB:P0A3M6
+    on pbp2b (NCBITaxon:171101); regrounded 1 node(s) (pbp2b: none->InterPro:IPR047982);
+    added canonical example(s) NCBITaxon:171101.'
   llm_assisted: true

@@ -25,11 +25,19 @@ canonical_examples:
   taxon_label: Cupriavidus metallidurans
   note: cobalt-resistance determinants
   reference: PMID:20463976
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level CzcA cobalt-efflux exemplar.
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: cobalt_tolerance_czc_cnr_efflux
   title: Cobalt tolerance via czc/cnr cation-efflux systems
   description: Evidence-backed causal sketch linking the czc and cnr efflux determinants
     to cytoplasmic cobalt detoxification.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: cobalt_tolerant_trait
     label: cobalt tolerant
@@ -42,6 +50,9 @@ causal_graphs:
     grounding: CHEBI:48828
     description: Toxic transition-metal cation accumulating in the cytoplasm.
   - node_id: cobalt_efflux_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: czc/cnr cobalt efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP and Cnr pumps exporting cobalt cations.
@@ -51,11 +62,35 @@ causal_graphs:
     grounding: GO:0030001
     description: Active export of Co(2+) across the cytoplasmic membrane.
   - node_id: czcCBA_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13511
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcA
+      gene_symbol: czcA
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 153
+      sequence_version: 3
+      role: CzcA is one transporter component of the CH34 CzcCBA complex that exports
+        cobalt, zinc, and cadmium.
+      evidence:
+      - reference: PMID:20463976
+        snippet: Czc determinants confer heavy-metal resistance in CH34
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: CzcCBA efflux complex
     node_type: GENE_OR_PROTEIN
     description: HME-RND/CBA chemiosmotic divalent-cation/proton antiporter exporting
       Co2+, Zn2+, Cd2+.
   - node_id: czcRS_two_component
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CzcS/CzcR two-component system
     node_type: GENE_OR_PROTEIN
     description: Sensor kinase CzcS and response regulator CzcR that transcriptionally
@@ -65,15 +100,33 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Transcription of the czcCBA efflux operon.
   - node_id: cnr_operon
-    label: cnr (cnrCBAYXHT) determinant
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: Cnr cobalt-nickel resistance protein module
     node_type: GENE_OR_PROTEIN
     description: Cobalt-nickel resistance operon on plasmid pMOL28 conferring Co/Ni
       efflux.
+    gene_symbols:
+    - cnrC
+    - cnrB
+    - cnrA
+    - cnrY
+    - cnrX
+    - cnrH
+    - cnrT
+    operon: cnrCBAYXHT
   - node_id: dmeF_exporter
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: DmeF CDF-family exporter
     node_type: GENE_OR_PROTEIN
     description: Cation diffusion facilitator with cobalt as preferred substrate.
   - node_id: rcnA_exporter
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RcnA/YohM Co/Ni efflux protein
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound efflux system conferring nickel and cobalt resistance.
@@ -209,4 +262,15 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cobalt_tolerance_czc_cnr_efflux=MECHANISTIC with
+    scope_notes; marked 6 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (cobalt_efflux_system, czcCBA_complex, czcRS_two_component, cnr_operon, dmeF_exporter,
+    rcnA_exporter); added taxon-paired protein example(s) UniProtKB:P13511 on czcCBA_complex
+    (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
   llm_assisted: true

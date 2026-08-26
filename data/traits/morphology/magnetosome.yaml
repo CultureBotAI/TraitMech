@@ -32,6 +32,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking membrane-bounded magnetic-mineral
     organelles arranged in chains to alignment with geomagnetic fields and magnetotactic
     navigation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: magnetosome_trait
     label: magnetosome
@@ -47,6 +51,27 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Movement biased along geomagnetic field lines.
   - node_id: mamk_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6NE59
+      protein_label: Actin-like protein MamK
+      gene_symbol: mamK
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense MSR-1
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-08-25'
+      entry_version: 86
+      sequence_version: 1
+      role: MamK polymerizes into an actin-like scaffold that organizes magnetosomes
+        into chains.
+      evidence:
+      - reference: DOI:10.1128/mbio.01649-23
+        snippet: MamK organizes magnetosome chains
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: MamK
     node_type: GENE_OR_PROTEIN
     description: Actin-like cytoskeletal protein that organizes magnetosomes into
@@ -61,14 +86,31 @@ causal_graphs:
     description: Linear arrangement of magnetosomes into a chain acting as a cellular
       compass.
   - node_id: mamab_operon
-    label: mamAB operon
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: MamAB magnetosome protein module
     node_type: GENE_OR_PROTEIN
     description: Core magnetosome gene operon sufficient for rudimentary biomineralization.
+    gene_symbols:
+    - mamA
+    - mamB
+    - mamE
+    - mamI
+    - mamK
+    - mamL
+    - mamM
+    - mamO
+    - mamQ
+    operon: mamAB
   - node_id: biomineralization
     label: magnetosome biomineralization
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular formation of the magnetic iron-mineral crystal.
   - node_id: mamb_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MamB
     node_type: GENE_OR_PROTEIN
     description: Magnetosome membrane protein implicated in membrane invagination
@@ -229,4 +271,14 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope magnetosome_magnetotaxis=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mamk_protein,
+    mamab_operon, mamb_protein); added taxon-paired protein example(s) UniProtKB:Q6NE59
+    on mamk_protein (NCBITaxon:431944).'
   llm_assisted: true

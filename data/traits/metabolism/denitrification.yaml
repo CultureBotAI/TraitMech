@@ -25,12 +25,16 @@ canonical_examples:
   taxon_label: Paracoccus denitrificans
   note: Classic complete denitrifier (NO3->NO2->NO->N2O->N2 via nar/nir/nor/nos);
     free-living model of the respiratory chain.
-  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12848317/
+  reference: DOI:10.1128/mmbr.61.4.533-616.1997
 causal_graphs:
 - graph_id: denitrification_stepwise_nitrate_to_n2
   title: Denitrification reduces nitrate stepwise to N2
   description: Evidence-backed causal sketch linking nitrate reduction via nitrite,
     NO, and N2O to gaseous N2 in anaerobic respiration.
+  scope_status: MECHANISTIC
+  scope_notes: Represents complete canonical denitrification and uses Paracoccus denitrificans
+    NosZ as the taxon-paired protein example. Individual denitrifiers may lack one
+    or more modules, as captured by the graph's modularity branch.
   nodes:
   - node_id: denitrification_trait
     label: denitrification
@@ -56,6 +60,7 @@ causal_graphs:
     label: respiratory nitrate reductase NarGHI
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound respiratory nitrate reductase catalyzing NO3- to NO2-.
+    grounding: GO:0009325
   - node_id: nitrate_reduction_to_nitrite
     label: nitrate reduction to nitrite
     node_type: BIOLOGICAL_PROCESS
@@ -64,7 +69,7 @@ causal_graphs:
     label: cytochrome cd1 nitrite reductase NirS
     node_type: GENE_OR_PROTEIN
     description: Cytochrome cd1 nitrite reductase reducing nitrite to nitric oxide.
-    grounding: UniProtKB:I0HLW6
+    grounding: GO:0050421
   - node_id: nitrite_reduction_to_no
     label: nitrite reduction to nitric oxide
     node_type: BIOLOGICAL_PROCESS
@@ -74,6 +79,9 @@ causal_graphs:
     label: nitric oxide reductase Nor
     node_type: GENE_OR_PROTEIN
     description: Nitric oxide reductase (norB) reducing NO to N2O.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The cited graph evidence supports a NorB-containing nitric-oxide
+      reductase but does not distinguish cNor, qNor, or another exact complex family.
   - node_id: no_reduction_to_n2o
     label: nitric oxide reduction to nitrous oxide
     node_type: BIOLOGICAL_PROCESS
@@ -82,7 +90,25 @@ causal_graphs:
     label: nitrous oxide reductase NosZ
     node_type: GENE_OR_PROTEIN
     description: Nitrous oxide reductase (nosZ) reducing N2O to N2, terminal step.
-    grounding: UniProtKB:Q30PN7
+    grounding: GO:0050304
+    protein_examples:
+    - uniprot_id: UniProtKB:Q51705
+      protein_label: Nitrous-oxide reductase
+      gene_symbol: nosZ
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 135
+      sequence_version: 1
+      role: NosZ enzyme catalyzing the terminal N2O-to-dinitrogen step in P. denitrificans.
+      evidence:
+      - reference: DOI:10.1042/BJ20020782
+        snippet: N2OR is a multicopper protein which converts N2O into dinitrogen
+          and water.
+        notes: The primary structural study purified and characterized N2O reductase
+          from P. denitrificans; UniProtKB Q51705 verifies the reviewed NosZ protein
+          and matching taxon.
   - node_id: n2o_reduction_to_n2
     label: nitrous oxide reduction to dinitrogen
     node_type: BIOLOGICAL_PROCESS
@@ -224,4 +250,18 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed P. denitrificans NosZ example, grounded the NarGHI complex,
+    retained unresolved Nor family specificity as reviewed label-only, and documented
+    complete-pathway scope and modularity.
   llm_assisted: true

@@ -31,6 +31,10 @@ causal_graphs:
   title: Vibrio-shape CrvA curvature mechanism
   description: Evidence-backed causal sketch linking vibrioid curved-rod morphology
     to periplasmic CrvA polymers and asymmetric peptidoglycan insertion.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: vibrio_shaped_trait
     label: vibrio shaped
@@ -38,6 +42,9 @@ causal_graphs:
     grounding: METPO:1000686
     description: Short curved-rod or comma-shaped bacterial morphology.
   - node_id: crvA
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CrvA
     node_type: GENE_OR_PROTEIN
     description: Periplasmic polymer-forming curvature determinant in Vibrio.
@@ -54,20 +61,26 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Curving of an otherwise rod-like cell body.
   - node_id: crvB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CrvB
     node_type: GENE_OR_PROTEIN
     description: Periplasmic curvature determinant that co-assembles with CrvA into
       the inner-curve filament.
   - node_id: vadR_srna
     label: VadR sRNA
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Small RNA that post-transcriptionally represses crvA mRNA to limit
       curvature.
   - node_id: crvA_mrna
     label: crvA mRNA
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Messenger RNA encoding the CrvA curvature determinant.
   - node_id: vxrAB_tcs
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: VxrAB two-component system
     node_type: GENE_OR_PROTEIN
     description: Two-component signaling system that activates vadR transcription.
@@ -228,4 +241,13 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope vibrio_shaped_crvA_curvature=NONMECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (crvA, crvB, vxrAB_tcs); retyped 2 node(s) (vadR_srna->RNA, crvA_mrna->RNA).'
   llm_assisted: true

@@ -26,11 +26,20 @@ canonical_examples:
   taxon_label: Propionibacterium freudenreichii
   note: Canonical propionic-acid fermenter (Swiss-cheese eyes and flavour).
   reference: PMID:21620505
+- taxon_id: NCBITaxon:1752
+  taxon_label: Propionibacterium freudenreichii subsp. shermanii
+  note: Source organism for structural and substrate-bound characterization of the
+    methylmalonyl-CoA transcarboxylase 12S component.
+  reference: DOI:10.1093/emboj/cdg244
 causal_graphs:
 - graph_id: propionic_acid_fermentation_propionate
   title: Propionic acid fermentation produces propionate via the Wood-Werkman pathway
   description: Evidence-backed causal sketch linking methylmalonyl-CoA-pathway catabolism
     of sugars or lactate to propionate, acetate, and CO2.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the Wood-Werkman reaction sequence and its biotin-dependent
+    transcarboxylation step; the exemplar is explicitly one component of the three-subunit
+    transcarboxylase, not the complete complex.
   nodes:
   - node_id: propionic_acid_fermentation_trait
     label: propionic acid fermentation
@@ -93,6 +102,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Biotin-dependent transcarboxylase converting pyruvate to oxaloacetate.
     grounding: GO:0047154
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8GBW6
+      protein_label: Methylmalonyl-CoA carboxyltransferase 12S subunit
+      taxon_id: NCBITaxon:1752
+      taxon_label: Propionibacterium freudenreichii subsp. shermanii
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 97
+      sequence_version: 4
+      role: Forms the substrate-binding 12S component of the three-subunit transcarboxylase
+        that couples methylmalonyl-CoA decarboxylation to pyruvate carboxylation.
+      evidence:
+      - reference: DOI:10.1093/emboj/cdg244
+        snippet: TC 12S bound to its MMCoA substrate
+        notes: The primary structural study used the P. shermanii 12S component and
+          resolved methylmalonyl-CoA binding; UniProtKB Q8GBW6 verifies the reviewed
+          component identity and source taxon.
   - node_id: biotin
     label: biotin
     node_type: CHEMICAL
@@ -108,6 +134,8 @@ causal_graphs:
     description: Propionic acid fermentation is a class of fermentation metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
+      snippet: fermentation is defined as an anaerobic bacterial redox process of
+        an organic substrate leading to different products
       notes: Energy-conservation review supports propionate formation as a redox-balancing
         fermentation route.
     predicate_id: biolink:participates_in
@@ -117,6 +145,8 @@ causal_graphs:
     description: Propionate is the characteristic end product of the pathway.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: substrates such as glucose, glycerol or lactic acid are converted into
+        propionic acid
       notes: Classical-fermentation review describes propionic acid fermentation via
         the Wood-Werkman pathway in propionibacteria.
     predicate_id: METPO:2007800
@@ -127,6 +157,8 @@ causal_graphs:
       route.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: In Propionibacterium spp., the predominant route is the Wood-Werkman
+        pathway
       notes: Wood-Werkman cycle described as the predominant propionate-forming route
         in Propionibacterium and Acidipropionibacterium.
   - subject: pyruvate
@@ -135,6 +167,8 @@ causal_graphs:
     description: Pyruvate is carboxylated to oxaloacetate in a biotin-dependent reaction.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: pyruvate is converted to oxaloacetate in a biotin-dependent carboxyl
+        transfer reaction
       notes: Pyruvate is carboxylated to oxaloacetate by methylmalonyl-CoA carboxytransferase
         in a biotin-dependent reaction.
   - subject: biotin
@@ -143,6 +177,8 @@ causal_graphs:
     description: The transcarboxylation step is biotin-dependent.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: biotin-dependent carboxyl transfer reaction catalyzed by methylmalonyl-CoA
+        carboxytransferase
       notes: The transcarboxylation converting pyruvate to oxaloacetate is explicitly
         described as biotin-dependent.
   - subject: oxaloacetate
@@ -151,6 +187,7 @@ causal_graphs:
     description: Oxaloacetate is reduced to malate in the reductive branch.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: Oxaloacetate is then reduced to malate
       notes: Oxaloacetate is reduced to malate in the reductive branch leading toward
         succinate.
   - subject: malate
@@ -159,6 +196,7 @@ causal_graphs:
     description: Malate is dehydrated to fumarate.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: reduced to malate, dehydrated to fumarate
       notes: Malate is dehydrated to fumarate in the Wood-Werkman route.
   - subject: fumarate
     predicate: causally upstream of
@@ -166,6 +204,7 @@ causal_graphs:
     description: Fumarate is reduced to succinate.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: dehydrated to fumarate and reduced to succinate
       notes: Fumarate is reduced to succinate en route to propionate formation.
   - subject: succinyl_coa
     predicate: causally upstream of
@@ -173,6 +212,8 @@ causal_graphs:
     description: The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: Succinate is converted to succinyl-CoA by succinyl-CoA synthetase and
+        rearranged via a vitamin B12-dependent methylmalonyl-CoA mutase to methylmalonyl-CoA
       notes: The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates
         during propionate formation.
   - subject: propionyl_coa
@@ -181,6 +222,8 @@ causal_graphs:
     description: Propionyl-CoA is converted to propionate by a CoA-transferase.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: propionyl-CoA is converted to propionic acid with the release of CoA
+        by a CoA-transferase
       notes: Propionyl-CoA is finally converted to propionic acid or propionate by
         a CoA-transferase.
   - subject: propionic_acid_fermentation_trait
@@ -189,9 +232,16 @@ causal_graphs:
     description: The fermentation produces propionate with acetate as a co-product.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: accompanied by acetic acid and CO2 formation
       notes: The fermentation is defined as producing propionic acid with acetate
         as a co-product.
 curation_history:
+- timestamp: '2026-08-23T09:02:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB
+    Q8GBW6 as the transcarboxylase 12S component exemplar.
+  llm_assisted: true
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH

@@ -25,11 +25,19 @@ canonical_examples:
   taxon_label: Cupriavidus metallidurans
   note: cadmium efflux resistance
   reference: PMID:20463976
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level CzcA metal-efflux exemplar.
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: cadmium_tolerance_czc_efflux
   title: Cadmium tolerance via czc cation-efflux system
   description: Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc)
     efflux determinant to cytoplasmic cadmium detoxification.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: cadmium_tolerant_trait
     label: cadmium tolerant
@@ -42,6 +50,27 @@ causal_graphs:
     grounding: CHEBI:48775
     description: Toxic transition-metal cation accumulating in the cytoplasm.
   - node_id: czc_efflux_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13511
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcA
+      gene_symbol: czcA
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 153
+      sequence_version: 3
+      role: CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump
+        exporting cadmium, zinc, and cobalt.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: czc cation-efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.
@@ -51,6 +80,9 @@ causal_graphs:
     grounding: GO:0030001
     description: Active export of Cd(2+) across the cytoplasmic membrane.
   - node_id: metallothionein_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: metallothionein / thiol-rich metal-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Cysteine-rich proteins that bind and sequester cytoplasmic Cd(2+).
@@ -60,6 +92,9 @@ causal_graphs:
     description: Intracellular binding and sequestration of cadmium ions, lowering
       free cytoplasmic Cd(2+).
   - node_id: cada_ptype_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CadA P-type (P1B) ATPase
     node_type: GENE_OR_PROTEIN
     description: ATP-driven P1B-type efflux ATPase pumping Cd(II) from cytoplasm to
@@ -174,4 +209,15 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cadmium_tolerance_czc_efflux=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (czc_efflux_system,
+    metallothionein_proteins, cada_ptype_atpase); added taxon-paired protein example(s)
+    UniProtKB:P13511 on czc_efflux_system (NCBITaxon:266264); added canonical example(s)
+    NCBITaxon:266264.'
   llm_assisted: true

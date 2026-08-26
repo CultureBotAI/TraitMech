@@ -38,6 +38,10 @@ causal_graphs:
   title: Star-shape multiple prosthecae extension
   description: DOI-backed graph linking multi-site polar peptidoglycan growth and
     prostheca outgrowth to a star-shaped cell body with radiating projections.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: star_shaped_trait
     label: star shaped
@@ -57,6 +61,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Multiple projecting arms emerging from a central cell body.
   - node_id: baca_lmdc_module
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: BacA-LmdC morphogenesis module
     node_type: GENE_OR_PROTEIN
     description: Conserved bactofilin (BacA) and M23 endopeptidase (LmdC) functional
@@ -79,6 +86,9 @@ causal_graphs:
     description: Peptidoglycan biosynthesis spatially confined to discrete growth
       zones.
   - node_id: bactofilins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: bactofilins
     node_type: GENE_OR_PROTEIN
     description: Bactofilin cytoskeletal scaffold proteins.
@@ -88,6 +98,9 @@ causal_graphs:
     description: Bifunctional penicillin-binding protein PbpC localized to the prosthecate
       pole.
   - node_id: spmx
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: SpmX
     node_type: GENE_OR_PROTEIN
     description: Developmental regulator co-opted as a morphogen to position prosthecae.
@@ -235,4 +248,13 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope star_shaped_multiple_prosthecae=NONMECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (baca_lmdc_module, bactofilins, spmx).'
   llm_assisted: true

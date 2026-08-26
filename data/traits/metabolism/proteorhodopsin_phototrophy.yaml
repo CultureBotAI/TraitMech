@@ -28,12 +28,21 @@ canonical_examples:
     conditions (retinal-inhibition causally proven). Ca. Pelagibacter ubique uses
     PR for starvation maintenance.'
   reference: PMID:17215843
+- taxon_id: NCBITaxon:133804
+  taxon_label: gamma proteobacterium EBAC31A08
+  note: Source organism for the first functionally characterized green-light-absorbing
+    proteorhodopsin sequence.
+  reference: DOI:10.1126/science.289.5486.1902
 causal_graphs:
 - graph_id: proteorhodopsin_light_driven_proton_pump
   title: Proteorhodopsin pumps protons under illumination, generating PMF
   description: Evidence-backed causal sketch linking retinal-based proteorhodopsin
     light-driven proton pumping to proton motive force without chlorophyll-based reaction
     centers.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the directly demonstrated retinal-dependent light-driven
+    proton pump and downstream proton-motive-force branch; the exemplar is the original
+    EBAC31A08 proteorhodopsin.
   nodes:
   - node_id: proteorhodopsin_trait
     label: proteorhodopsin phototrophy
@@ -44,7 +53,24 @@ causal_graphs:
     label: proteorhodopsin
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump.
-    grounding: UniProtKB:A0A1D7QWW9
+    grounding: InterPro:IPR017402
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F7P4
+      protein_label: Green-light absorbing proteorhodopsin
+      taxon_id: NCBITaxon:133804
+      taxon_label: gamma proteobacterium EBAC31A08
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 97
+      sequence_version: 1
+      role: Retinal-binding light-driven proton pump that establishes the core energy-transduction
+        mechanism represented in this graph.
+      evidence:
+      - reference: DOI:10.1126/science.289.5486.1902
+        snippet: primarily as a light-driven proton pump
+        notes: The discovery study functionally characterized proteorhodopsin from
+          environmental clone EBAC31A08; UniProtKB Q9F7P4 verifies the reviewed protein
+          and source taxon.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -82,6 +108,7 @@ causal_graphs:
     description: The retinal-binding pump realizes proteorhodopsin phototrophy.
     evidence:
     - reference: DOI:10.1126/science.289.5486.1902
+      snippet: bound retinal to form an active, light-driven proton pump
       notes: Béjà et al. identified proteorhodopsin as a retinal-binding light-driven
         proton pump.
     predicate_id: METPO:2007700
@@ -90,17 +117,22 @@ causal_graphs:
     object: proton_motive_force
     description: Light-driven proton pumping by proteorhodopsin generates PMF.
     evidence:
-    - reference: DOI:10.1038/35081051
-      notes: Béjà et al. support proteorhodopsin as a widespread light-energy capture
-        system in marine bacteria.
+    - reference: DOI:10.1073/pnas.0611035104
+      snippet: Illumination of these cells with light coinciding with PR's absorption
+        spectrum creates a proton motive force (pmf)
+      notes: A primary physiological study directly measured light-dependent PMF generation
+        in proteorhodopsin-expressing cells.
     predicate_id: RO:0002326
   - subject: proton_pumping
     predicate: generates
     object: proton_motive_force
     description: Light-driven proton pumping by proteorhodopsin drives PMF generation.
     evidence:
-    - reference: DOI:10.4014/jmb.2410.10034
-      notes: 'Oh 2024: "PR drives PMF generation".'
+    - reference: DOI:10.1073/pnas.0611035104
+      snippet: Illumination of these cells with light coinciding with PR's absorption
+        spectrum creates a proton motive force (pmf)
+      notes: The measured light-dependent PMF is the direct output of the represented
+        proton-pumping process.
     predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: enables
@@ -108,9 +140,10 @@ causal_graphs:
     description: PR-mediated proton transport generates a membrane potential sufficient
       for ATP production.
     evidence:
-    - reference: DOI:10.1007/s12275-024-00125-0
-      notes: 'Lee 2024: "PR-mediated proton transport could generate a sufficient
-        membrane potential for ATP production".'
+    - reference: DOI:10.1073/pnas.0611035104
+      snippet: Sinks include rotation of the flagellar motor and ATP synthesis.
+      notes: The primary study's PMF model identifies ATP synthesis as a sink for
+        the proteorhodopsin-generated motive force.
     predicate_id: RO:0002327
   - subject: proteorhodopsin_trait
     predicate: does not produce
@@ -119,6 +152,7 @@ causal_graphs:
       metabolism; ATP-only energy module.
     evidence:
     - reference: DOI:10.4014/jmb.2410.10034
+      snippet: the PR function of strain IMCC1322, which supplies only ATP.
       notes: 'Oh 2024: "PR can never be harnessed to generate NAD(P)H for anabolic
         metabolism".'
     predicate_id: METPO:2007801
@@ -129,6 +163,8 @@ causal_graphs:
       Schiff base to a central lysine.
     evidence:
     - reference: DOI:10.1038/s41467-024-50960-3
+      snippet: all-trans retinal needs to be incorporated by forming a Schiff base
+        with a central lysine in the chromophore binding pocket.
       notes: 'Hirschi 2024: "Functional proteorhodopsin requires insertion of all-trans
         retinal by formation of a Schiff base with a central lysine".'
   - subject: beta_carotene
@@ -137,10 +173,17 @@ causal_graphs:
     description: Beta-carotene is cleaved by dioxygenase into retinal, an essential
       element of functional PR.
     evidence:
-    - reference: DOI:10.34133/2022/9782712
+    - reference: DOI:10.1128/MMBR.69.1.51-78.2005
+      snippet: converts β,β-carotene into retinal
       notes: 'Jing 2022: "beta-carotene can be cleaved by dioxygenase into retinal,
         which is an important element in functional PR".'
 curation_history:
+- timestamp: '2026-08-23T09:04:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB
+    Q9F7P4 as the EBAC31A08 proteorhodopsin exemplar.
+  llm_assisted: true
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
@@ -219,4 +262,11 @@ curation_history:
     definition; that is the same test the motive-force edges FAILED in issue 341,
     where the subject powers a machine it does not generate. RO:0002326 declares no
     rdfs:domain or rdfs:range.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

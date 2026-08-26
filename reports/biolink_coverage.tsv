@@ -111,7 +111,7 @@ applied	has input	RO:0002233	biolink:has_input	biolink:has_input
 applied	powers	METPO:2007900			
 residual	supports				37
 residual	induces				34
-residual	required for				30
+residual	required for				29
 residual	drives				29
 residual	maintains				29
 residual	mediates				27
@@ -122,35 +122,35 @@ residual	requires				13
 residual	causally upstream of				13
 residual	is converted to				11
 residual	binds		biolink:binds		11
-residual	represses				10
 residual	uses				10
+residual	oxidized by				10
+residual	represses				9
 residual	is required for				8
 residual	determines				8
 residual	inactivates				8
 residual	precursor of				8
 residual	recruits				8
-residual	oxidized by				8
 residual	upregulates				7
 residual	engages				7
 residual	positively influences				7
+residual	is substrate for				7
+residual	triggers				6
 residual	cleaves				6
 residual	increases abundance of				6
-residual	is substrate for				6
-residual	triggers				5
-residual	activates transcription of				5
+residual	initiates				6
+residual	synthesizes				5
 residual	protects				5
 residual	provides				5
 residual	results in				5
 residual	enhances				5
 residual	guides				5
 residual	catalyzes conversion of				5
-residual	initiates				5
 residual	positions				5
 residual	coupled to reduction of				5
-residual	removes				4
 residual	acts as				4
 residual	detoxifies				4
 residual	damages				4
+residual	activates transcription of				4
 residual	activates expression of				4
 residual	induces accumulation of				4
 residual	has characteristic				4
@@ -167,7 +167,6 @@ residual	has part		biolink:has_part		4
 residual	stimulates GTPase activity of				4
 residual	organizes				4
 residual	establishes				4
-residual	synthesizes				4
 residual	favors				4
 residual	can proceed through				4
 residual	assimilated into				4
@@ -178,6 +177,7 @@ residual	delivers				3
 residual	depolymerizes				3
 residual	predicts				3
 residual	limits influx of				3
+residual	removes				3
 residual	powers				3
 residual	has alternative process				3
 residual	positively correlates with				3
@@ -201,7 +201,6 @@ residual	has quality				3
 residual	feed into				3
 residual	polymerizes into				3
 residual	disrupts		biolink:disrupts		3
-residual	carries out				3
 residual	scaffolds				3
 residual	encapsulates				3
 residual	broken down by				3
@@ -234,12 +233,10 @@ residual	repairs				2
 residual	defined as				2
 residual	opens				2
 residual	distinct from				2
-residual	enables biosynthesis of				2
 residual	positively contributes to				2
 residual	increases amount of				2
 residual	perturbs				2
 residual	binds to				2
-residual	constrains				2
 residual	shifts				2
 residual	indicates				2
 residual	refolds				2
@@ -258,6 +255,7 @@ residual	oxidized during				2
 residual	substrate of				2
 residual	is cosubstrate for				2
 residual	coupled to				2
+residual	enables reduction of				2
 residual	stimulates				2
 residual	affects		biolink:affects		2
 residual	supports formation of				2
@@ -275,6 +273,7 @@ residual	polymerizes to				2
 residual	attaches				2
 residual	reduced in				2
 residual	incomplete separation yields				2
+residual	carries out				2
 residual	combines with				2
 residual	dephosphorylates				2
 residual	has component				2
@@ -290,6 +289,7 @@ residual	supplies substrate to				2
 residual	uses energy substrate				2
 residual	imported by				2
 residual	uses chemical energy source				2
+residual	used by				2
 residual	contributes to generation of				2
 residual	couples to				2
 residual	assimilated by				2
@@ -372,8 +372,10 @@ residual	supports survival in				1
 residual	precedes/replaced by				1
 residual	reduces demand for				1
 residual	corresponds to				1
+residual	catalyzes biosynthesis of				1
 residual	rapidly balances				1
 residual	provides early osmotic buffering for				1
+residual	enables biosynthesis of				1
 residual	enables tolerance of				1
 residual	requires counterion balancing by				1
 residual	promotes replacement by				1
@@ -404,6 +406,7 @@ residual	causes increase in				1
 residual	induces transcription of				1
 residual	expands				1
 residual	acts as antioxidant against				1
+residual	constrains				1
 residual	exceeds tolerance of				1
 residual	resists				1
 residual	positively regulates expression of				1
@@ -453,6 +456,7 @@ residual	can cause				1
 residual	accelerates interconversion of				1
 residual	fixes CO2 to produce				1
 residual	has backbone component				1
+residual	represses production of				1
 residual	oxidatively cleaves				1
 residual	part_of				1
 residual	is converted via beta-oxidation to				1
@@ -570,6 +574,7 @@ residual	binds promoter of				1
 residual	reduces diffusion of				1
 residual	provides mechanical support to				1
 residual	increases accumulation of				1
+residual	assembles				1
 residual	localizes to and promotes assembly at				1
 residual	captures				1
 residual	sufficient for				1
@@ -589,6 +594,7 @@ residual	relaxes				1
 residual	causes transition to				1
 residual	drives proliferation of				1
 residual	limits or kills				1
+residual	produces		biolink:produces		1
 residual	composes				1
 residual	correlates with				1
 residual	spatially regulates				1
@@ -620,8 +626,10 @@ residual	alternative inorganic carbon source for				1
 residual	determines speciation of				1
 residual	provides reductant for				1
 residual	enzyme class for				1
+residual	activates production of				1
 residual	decomposes				1
 residual	favors scavenging by				1
+residual	supports activation of				1
 residual	imports and phosphorylates				1
 residual	supports generation of				1
 residual	facilitates supply of				1
@@ -638,7 +646,6 @@ residual	couples electron transport to				1
 residual	uses substrate pool				1
 residual	characteristic of				1
 residual	turns off				1
-residual	used by				1
 residual	causally enables				1
 residual	proceeds via				1
 residual	can support				1
@@ -648,7 +655,6 @@ residual	uses oxidant				1
 residual	can use energy capture route				1
 residual	fixes				1
 residual	mediates transfer to				1
-residual	negatively correlates with				1
 residual	metabolized by				1
 residual	oxidizes carbon to				1
 residual	characterized by				1
@@ -663,10 +669,8 @@ residual	acts as electron donor for				1
 residual	transfers excitation energy to				1
 residual	extends light absorption into				1
 residual	pumps				1
-residual	enables detection by				1
 residual	synthesizes/hydrolyzes				1
 residual	is substrate of		biolink:is_substrate_of		1
-residual	enabled by		biolink:enabled_by		1
 residual	causally upstream of or within				1
 residual	can bear				1
 residual	can be about				1

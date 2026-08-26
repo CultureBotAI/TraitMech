@@ -28,11 +28,19 @@ canonical_examples:
   taxon_label: Sphingobium
   note: lignin-aromatic catabolism
   reference: PMID:22207743
+- taxon_id: NCBITaxon:100226
+  taxon_label: Streptomyces coelicolor A3(2)
+  note: Strain-level laccase-loss model paired to the small laccase protein example.
+  reference: DOI:10.1021/bi500285t
 causal_graphs:
 - graph_id: lignin_degradation_peroxidase_laccase
   title: Lignin degradation breaks down aromatic plant biopolymers via oxidative enzymes
   description: Evidence-backed causal sketch linking peroxidases and laccases to oxidative
     cleavage of recalcitrant lignin aromatic heteropolymer.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines fungal and bacterial oxidative-enzyme mechanisms.
+    The S. coelicolor small-laccase example supports the laccase branch only; the
+    peroxidase branches remain taxon-independent literature summaries.
   nodes:
   - node_id: lignin_degradation_trait
     label: lignin degradation
@@ -43,6 +51,9 @@ causal_graphs:
     label: peroxidases and laccases
     node_type: GENE_OR_PROTEIN
     description: Secreted oxidative enzymes acting on the lignin aromatic framework.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella node combines phylogenetically and catalytically
+      distinct laccase, DyP, manganese-peroxidase, and lignin-peroxidase families.
   - node_id: aromatic_monomers
     label: aromatic monomers / oligomers
     node_type: CHEMICAL
@@ -51,12 +62,33 @@ causal_graphs:
     label: laccase
     node_type: GENE_OR_PROTEIN
     description: Multi-copper oxidase (EC 1.10.3.2) acting on lignin and using mediators.
-    grounding: InterPro:IPR017761
+    grounding: GO:0052716
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9XAL8
+      protein_label: Copper oxidase
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor A3(2)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-08-24'
+      entry_version: 131
+      sequence_version: 1
+      role: SCO6712 small laccase (ScLAC) tested by a laccase-loss comparison; this
+        accession denotes the laccase component, not all oxidative enzymes in the
+        graph.
+      evidence:
+      - reference: DOI:10.1021/bi500285t
+        snippet: strain SCdeltaLAC was inefficient in degrading lignin compared to
+          strain SCWT
+        notes: The primary mutant and biochemical study supports a causal role for
+          the S. coelicolor small laccase. UniProtKB Q9XAL8 is the exact unreviewed
+          SCO6712 entry in reference proteome UP000001973.
   - node_id: dyp_peroxidase
     label: DyP-type peroxidase
     node_type: GENE_OR_PROTEIN
     description: Dye-decolorizing peroxidase (EC 1.11.1.19) contributing to lignin
       depolymerization.
+    grounding: InterPro:IPR006314
   - node_id: manganese_peroxidase
     label: manganese peroxidase
     node_type: GENE_OR_PROTEIN
@@ -66,6 +98,7 @@ causal_graphs:
     label: lignin peroxidase
     node_type: GENE_OR_PROTEIN
     description: Lignin peroxidase (EC 1.11.1.14) cleaving lignin interunit bonds.
+    grounding: GO:0016690
   - node_id: lignin_depolymerization
     label: lignin depolymerization
     node_type: BIOLOGICAL_PROCESS
@@ -242,4 +275,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:20:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cross-taxon oxidative mechanism, added a DOI-backed S. coelicolor
+    small-laccase example, replaced the generic laccase family grounding with its
+    exact GO activity, and grounded DyP and lignin-peroxidase nodes.
   llm_assisted: true

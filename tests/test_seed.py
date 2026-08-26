@@ -79,3 +79,50 @@ def test_causal_graph_template_payload_preserves_edge_evidence():
     assert len(graph["nodes"]) >= 4
     assert len(graph["edges"]) >= 4
     assert all(edge["evidence"] for edge in graph["edges"])
+
+
+def test_causal_graph_template_surfaces_taxon_paired_protein_examples():
+    record = {
+        "causal_graphs": [
+            {
+                "graph_id": "g",
+                "scope_status": "MECHANISTIC",
+                "nodes": [
+                    {
+                        "node_id": "enzyme",
+                        "label": "Example enzyme",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:P0A6Y8",
+                                "protein_label": "DNA gyrase subunit B",
+                                "taxon_id": "NCBITaxon:562",
+                                "taxon_label": "Escherichia coli",
+                                "entry_status": "REVIEWED",
+                                "retrieved_on": "2026-08-23",
+                                "evidence": [{"reference": "DOI:10.1000/example"}],
+                            }
+                        ],
+                    }
+                ],
+                "edges": [],
+            }
+        ]
+    }
+
+    graph = causal_graphs_for_template(record)[0]
+    assert graph["scope_status"] == "MECHANISTIC"
+    assert graph["nodes"][0]["protein_examples"][0]["taxon_id"] == "NCBITaxon:562"
+    assert graph["protein_example_rows"] == [
+        {
+            "node_id": "enzyme",
+            "node_label": "Example enzyme",
+            "uniprot_id": "UniProtKB:P0A6Y8",
+            "protein_label": "DNA gyrase subunit B",
+            "taxon_id": "NCBITaxon:562",
+            "taxon_label": "Escherichia coli",
+            "entry_status": "REVIEWED",
+            "retrieved_on": "2026-08-23",
+            "evidence": [{"reference": "DOI:10.1000/example"}],
+        }
+    ]

@@ -35,6 +35,10 @@ causal_graphs:
   title: Ionizing-radiation tolerance via double-strand-break repair
   description: Evidence-backed causal sketch linking gamma-radiation exposure to efficient
     repair of DNA double-strand breaks and Mn-mediated oxidative protection.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: ionizing_tolerant_trait
     label: ionizing radiation tolerant
@@ -162,4 +166,12 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ionizing_radiation_tolerance_dsb_repair=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

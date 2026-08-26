@@ -26,6 +26,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_range_mid2_moderate_halophile
   title: NaCl-range-mid2 moderate-halophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking robust osmoadaptive tolerance to a 3–8% (w/v)
     NaCl growth range.
   nodes:
@@ -44,11 +48,20 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Strong compatible-solute and ion-balance capacity sustaining growth
       at saline-lake / salt-marsh NaCl levels.
-  - node_id: ectABC_operon
-    label: ectABC operon
+  - node_id: ectABC_enzyme_module
+    label: EctABC ectoine-biosynthesis enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Gene cluster (ectA, ectB, ectC) encoding the ectoine biosynthesis
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
+    description: EctA, EctB, and EctC enzymes catalyzing the ectoine biosynthesis
       pathway.
+    gene_symbols:
+    - ectA
+    - ectB
+    - ectC
+    operon: ectABC
   - node_id: ectoine
     label: ectoine
     node_type: CHEMICAL
@@ -70,6 +83,10 @@ causal_graphs:
   - node_id: betAB_pathway
     label: BetA/BetB pathway
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Choline dehydrogenase (BetA) and betaine aldehyde dehydrogenase (BetB)
       converting choline to glycine betaine.
   - node_id: glycine_betaine
@@ -96,13 +113,15 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the 3–8% range as a value within the NaCl-range distribution.
     predicate_id: rdfs:subClassOf
-  - subject: ectABC_operon
-    predicate: enables biosynthesis of
+  - subject: ectABC_enzyme_module
+    predicate: catalyzes biosynthesis of
     object: ectoine
-    description: The ectABC operon encodes the conserved ectoine biosynthesis pathway.
+    description: The EctABC enzyme module catalyzes the conserved ectoine biosynthesis
+      pathway.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1192059
-      notes: ectoine biosynthesis relies on ectABC; repeatedly supported across taxa.
+      notes: Ectoine biosynthesis relies on the EctA, EctB, and EctC proteins; their
+        operon organization is recorded as node metadata.
   - subject: ectoine
     predicate: positively contributes to
     object: nacl_range_mid2_trait
@@ -204,4 +223,14 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope nacl_range_mid2_moderate_halophile=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (ectABC_enzyme_module, betAB_pathway); added 1 node(s) and 1 edge(s) (ectABC_enzyme_module);
+    removed 1 node(s) and 1 edge(s) together with their evidence (ectABC_operon).'
   llm_assisted: true

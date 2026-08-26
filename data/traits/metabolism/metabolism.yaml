@@ -17,12 +17,23 @@ evidence:
   snippet: ATP synthesis
   notes: ATP-energetics review supports energy conservation as the central output
     of catabolic metabolism.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level model paired to the reviewed AtpD beta component of the respiratory
+    F-type ATP synthase branch represented in this broad metabolism graph.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: metabolism_substrate_to_growth
   title: Metabolism substrate-to-growth flow
   description: DOI-backed graph linking substrate uptake, catabolism producing ATP
     and reducing power, biosynthesis, and growth as the core organization of cellular
     metabolism.
+  scope_status: MECHANISTIC
+  scope_notes: This upper-level graph is a composite organization of metabolism, not
+    a universal linear pathway. The E. coli AtpD example supports only the respiratory
+    ATP-synthase branch; substrate uptake, biosynthesis, and nonrespiratory energy
+    conservation involve many other proteins.
   nodes:
   - node_id: metabolism_trait
     label: metabolism
@@ -71,6 +82,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound enzyme complex that phosphorylates ADP to ATP using
       the proton motive force.
+    grounding: GO:0045259
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase;
+        this accession is not presented as the complete rotary complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: the potential energy of the proton motive force into rotation of
+          the central stalk that drives conformational changes in the F1 catalytic
+          sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head. UniProtKB P0ABB4 verifies the reviewed AtpD
+          beta component and K-12 taxon.
   - node_id: atp_production
     label: ATP production
     node_type: BIOLOGICAL_PROCESS
@@ -313,4 +345,12 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-24T08:45:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Retained the upper metabolism graph with an explicit composite-mechanism
+    scope, added a DOI-backed E. coli K-12 AtpD beta-subunit example, and grounded
+    the ATP synthase node to the current GO complex term without treating one component
+    as the whole complex.
   llm_assisted: true

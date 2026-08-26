@@ -22,6 +22,10 @@ causal_graphs:
   title: Microaerotolerant low-oxygen survival mechanism
   description: Evidence-backed causal sketch linking microaerotolerance to limited
     oxygen exposure and oxidative stress defenses.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: microaerotolerant_trait
     label: microaerotolerant
@@ -38,6 +42,9 @@ causal_graphs:
     grounding: CHEBI:26523
     description: Oxygen-derived oxidants.
   - node_id: oxidative_stress_defense
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: oxidative stress defense enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes such as SOD, catalase, or peroxidase that mitigate ROS.
@@ -65,6 +72,9 @@ causal_graphs:
     description: H2O2, a reactive oxygen species generated during O2 exposure.
     grounding: CHEBI:16240
   - node_id: rubrerythrin_peroxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: rubrerythrin/peroxidase
     node_type: GENE_OR_PROTEIN
     description: Rubrerythrin and peroxidase enzymes that reduce H2O2 to water.
@@ -264,4 +274,13 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope microaerotolerant_low_oxygen_defense=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (oxidative_stress_defense, rubrerythrin_peroxidase).'
   llm_assisted: true

@@ -22,6 +22,9 @@
     <div class="card causal-graph-card">
       <h2>{{ graph.title }}</h2>
       {% if graph.description %}<p class="meta">{{ graph.description }}</p>{% endif %}
+{% if graph.scope_status %}
+      <p class="graph-scope"><code>{{ graph.scope_status }}</code>{% if graph.scope_notes %} · {{ graph.scope_notes }}{% endif %}</p>
+{% endif %}
       {% if graph.issues %}
       <div class="graph-warning">
         <strong>Graph integrity warnings</strong>
@@ -65,6 +68,56 @@
         </ul>
       </div>
       {% endif %}
+{% if graph.protein_example_rows %}
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              {% for ex in graph.protein_example_rows %}
+              <tr>
+                <td>{{ ex.node_label }}</td>
+                <td>
+                  {% set acc = ex.uniprot_id|replace('UniProtKB:','') %}
+                  <a href="https://www.uniprot.org/uniprotkb/{{ acc }}/entry" rel="nofollow noreferrer"><code>{{ ex.uniprot_id }}</code></a>
+                  <br>{{ ex.protein_label }}{% if ex.gene_symbol %} <span class="meta">({{ ex.gene_symbol }})</span>{% endif %}
+                </td>
+                <td>
+                  {% set tid = ex.taxon_id|replace('NCBITaxon:','') %}
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ tid }}" rel="nofollow noreferrer">{{ ex.taxon_label }}</a>
+                  <br><code>{{ ex.taxon_id }}</code>
+                </td>
+                <td>
+                  <code>{{ ex.entry_status }}</code><br>
+                  <span class="meta">retrieved {{ ex.retrieved_on }}{% if ex.entry_version %} · entry v{{ ex.entry_version }}{% endif %}{% if ex.sequence_version %} · sequence v{{ ex.sequence_version }}{% endif %}</span>
+                </td>
+                <td>
+                  {% if ex.role %}<p>{{ ex.role }}</p>{% endif %}
+                  <ul>
+                    {% for ev in ex.evidence %}
+                    <li>
+                      {% set ref = ev.reference %}
+                      {% if ref.startswith('DOI:') %}
+                      <a href="https://doi.org/{{ ref|replace('DOI:','') }}" rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+                      {% elif ref.startswith('PMID:') %}
+                      <a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/" rel="nofollow noreferrer"><code>{{ ref }}</code></a>
+                      {% else %}<code>{{ ref }}</code>{% endif %}
+                      {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
+                      {% if ev.notes %}<span class="meta">{{ ev.notes }}</span>{% endif %}
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+{% endif %}
     </div>
     {% endfor %}
   </section>
@@ -620,6 +673,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }

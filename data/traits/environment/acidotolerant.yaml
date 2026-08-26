@@ -33,6 +33,10 @@ causal_graphs:
   title: Acidotolerant acid-stress pH homeostasis mechanism
   description: Evidence-backed causal sketch linking acidotolerance to acidic exposure
     and maintenance of cytoplasmic pH near compatibility with growth.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: acidotolerant_trait
     label: acidotolerant
@@ -260,4 +264,12 @@ curation_history:
     family''s sense rather than as this record''s own text. Named systems that implement
     it (Gad) would be pathways; the reaction class is not. Was 4 BIOLOGICAL_PROCESS
     to 2 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope acidotolerant_acid_stress_homeostasis=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

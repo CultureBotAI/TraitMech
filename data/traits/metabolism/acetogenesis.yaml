@@ -27,12 +27,16 @@ canonical_examples:
   note: THE model acetogen used to elucidate the Wood-Ljungdahl pathway (formerly
     Moorella/Clostridium thermoaceticum). Acetobacterium woodii is the modern bioenergetics
     model.
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4599090/
+  reference: DOI:10.1073/pnas.220404397
 causal_graphs:
 - graph_id: acetogenesis_wood_ljungdahl
   title: Acetogenesis Wood-Ljungdahl mechanism
   description: Evidence-backed causal sketch linking anaerobic carbon fixation through
     the Wood-Ljungdahl pathway to acetate production.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents canonical Wood-Ljungdahl acetogenesis. The AcsB
+    example is one component of the CODH/ACS complex and supports acetyl-CoA formation;
+    it is not presented as a marker sufficient by itself to infer acetogenesis.
   nodes:
   - node_id: acetogenesis_trait
     label: Acetogenesis
@@ -49,6 +53,30 @@ causal_graphs:
     node_type: PATHWAY
     description: Reductive acetyl-CoA pathway used by acetogens.
     grounding: GO:0030634
+  - node_id: acetyl_coa_synthase
+    label: acetyl-CoA synthase (ACS)
+    node_type: GENE_OR_PROTEIN
+    description: AcsB component of CODH/ACS that forms acetyl-CoA where the carbonyl
+      and methyl branches converge.
+    grounding: GO:0043884
+    protein_examples:
+    - uniprot_id: UniProtKB:P27988
+      protein_label: Carbon monoxide dehydrogenase/acetyl-CoA synthase subunit alpha
+      gene_symbol: acsB
+      taxon_id: NCBITaxon:1525
+      taxon_label: Neomoorella thermoacetica
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: AcsB alpha component that combines CO, CoA, and the CoFeSP-borne methyl
+        group to form acetyl-CoA; this accession is not the complete CODH/ACS complex.
+      evidence:
+      - reference: DOI:10.1073/pnas.220404397
+        snippet: Genes acsA and acsB encode the beta and alpha subunits
+        notes: The primary cloning and reconstitution study identifies acsB as the
+          alpha component of active CODH/ACS from C. thermoaceticum; UniProtKB P27988
+          verifies the reviewed current N. thermoacetica taxon mapping.
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -137,6 +165,16 @@ causal_graphs:
       snippet: convert carbon dioxide and CO into acetyl-CoA
       notes: Supports CO as a substrate for acetogenic acetyl-CoA synthesis.
     predicate_id: biolink:participates_in
+  - subject: acetyl_coa_synthase
+    predicate: catalyzes formation of
+    object: acetyl_coa
+    description: The AcsB component of CODH/ACS catalyzes acetyl-CoA formation at
+      convergence of the Wood-Ljungdahl pathway branches.
+    evidence:
+    - reference: DOI:10.1073/pnas.220404397
+      snippet: Genes acsA and acsB encode the beta and alpha subunits
+      notes: Active AcsAB was reconstituted in the primary study; the edge is scoped
+        to AcsB acting as a component of CODH/ACS, not as a standalone complete complex.
   - subject: wood_ljungdahl_pathway
     predicate: has output
     object: acetyl_coa
@@ -356,4 +394,11 @@ curation_history:
     is-converted-to acetate edge already states that half of the reaction on the chemical
     chain; asserting it again at the process level is the duplication at two levels
     of description that issue 303 criticised in dissimilatory_iron_reduction.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the acetogenesis graph, replaced the model-organism URL with a primary
+    DOI, and added DOI-backed reviewed AcsB as an explicit N. thermoacetica component
+    example with a supported acetyl-CoA-formation edge.
   llm_assisted: true

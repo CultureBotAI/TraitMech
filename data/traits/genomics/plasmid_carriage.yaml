@@ -31,6 +31,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: plasmid_conjugation_hgt
   title: Plasmid carriage drives conjugative horizontal gene transfer
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking plasmid possession to conjugation
     and accessory-function delivery.
   nodes:
@@ -51,6 +55,10 @@ causal_graphs:
   - node_id: ta_system
     label: toxin-antitoxin system
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
     description: Selfish genetic module mediating plasmid addiction / post-segregational
       killing.
   - node_id: plasmid_vertical_inheritance
@@ -60,16 +68,25 @@ causal_graphs:
   - node_id: plasmid_methylase
     label: plasmid-encoded methylase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
     description: Plasmid-borne methyltransferase shielding plasmid DNA from restriction.
   - node_id: restriction_of_plasmid_dna
     label: restriction of incoming plasmid DNA
     node_type: BIOLOGICAL_PROCESS
     description: Cleavage of unmethylated incoming plasmid DNA by restriction-modification
       systems.
-  - node_id: anti_restriction_genes
-    label: plasmid-encoded anti-restriction genes
+  - node_id: anti_restriction_proteins
+    label: plasmid-encoded anti-restriction proteins
     node_type: GENE_OR_PROTEIN
-    description: Plasmid genes inhibiting host restriction-modification defence.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
+    description: Plasmid-encoded proteins that inhibit host restriction-modification
+      defence; their encoding genes remain record-level metadata rather than nodes.
   - node_id: antibiotic_selective_pressure
     label: antibiotic selective pressure
     node_type: ENVIRONMENTAL_FACTOR
@@ -117,14 +134,14 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/nar/gkae896
       notes: plasmid-encoded methylases that protect plasmids from restriction.
-  - subject: anti_restriction_genes
+  - subject: anti_restriction_proteins
     predicate: protects against
     object: restriction_of_plasmid_dna
-    description: Plasmid-encoded anti-restriction genes counter multiple RM system
+    description: Plasmid-encoded anti-restriction proteins counter multiple RM system
       types.
     evidence:
     - reference: DOI:10.1093/nar/gkae896
-      notes: plasmid-encoded anti-restriction genes that protect against multiple
+      notes: plasmid-encoded anti-restriction proteins that protect against multiple
         RM types.
   - subject: antibiotic_selective_pressure
     predicate: promotes retention of
@@ -215,4 +232,14 @@ curation_history:
     ''Plasmid-borne methyltransferase shielding plasmid DNA from restriction'' (MOLECULAR_FUNCTION).
     Neither names an activity, so there is one concept here and it is a protein. A
     rename would have invented a distinction the corpus does not draw.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope plasmid_conjugation_hgt=NONMECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system,
+    plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins);
+    removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).'
   llm_assisted: true

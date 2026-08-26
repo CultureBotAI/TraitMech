@@ -23,6 +23,10 @@ evidence:
     whose number and placement define flagellar arrangement.
 causal_graphs:
 - graph_id: flagellar_arrangement_flhf_flhg
+  scope_status: NONMECHANISTIC
+  scope_notes: Flagellar arrangement is a classification axis whose child patterns
+    have different placement programs. The graph is contextual and does not define
+    one protein mechanism shared by every arrangement class.
   title: Flagellar arrangement set by FlhF/FlhG flagellation pattern
   description: Evidence-backed causal sketch linking FlhF/FlhG-regulated flagellar
     placement to the cellular flagellation pattern.
@@ -42,6 +46,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Regulatory system setting flagellar number and cellular position.
   - node_id: flhf
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FlhF is used across divergent flagellar-placement systems; an
+      exact family term was not verified for this upper classification context.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that marks the future flagellar assembly site and
@@ -51,13 +58,19 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that stimulates FlhF GTPase activity and limits/positions
       flagellar number.
-    grounding: UniProtKB:Q2N2M1
+    grounding: InterPro:IPR033875
   - node_id: flif_msring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This denotes an assembled MS-ring structure centered on FliF,
+      not one standalone protein-family entity.
     label: FliF (MS-ring protein)
     node_type: GENE_OR_PROTEIN
     description: MS-ring forming protein recruited to the cell pole as the earliest
       basal-body assembly step.
   - node_id: flig
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FliG is retained as contextual rotor machinery; an exact family
+      term was not verified for the broad arrangement-class graph.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein bound by FlhF and engaging FliF during basal-body
@@ -182,4 +195,20 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope flagellar_arrangement_flhf_flhg=NONMECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (flhf, flif_msring, flig).'
   llm_assisted: true

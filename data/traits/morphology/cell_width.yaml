@@ -19,6 +19,10 @@ evidence:
     the cellular machinery setting rod width.
 causal_graphs:
 - graph_id: cell_width_mreb_lateral_wall
+  scope_status: NONMECHANISTIC
+  scope_notes: Cell width is a quantitative measurement descriptor rather than one
+    conserved protein-mediated mechanism. The graph is retained only as contextual
+    background on rod-width control.
   title: Cell-width control by MreB-directed lateral cell-wall assembly
   description: DOI-backed graph linking MreB cytoskeletal organization, Rod-complex
     peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width
@@ -30,6 +34,9 @@ causal_graphs:
     grounding: METPO:1000882
     description: Shorter dimension of the cell body, perpendicular to the long axis.
   - node_id: mreb_cytoskeleton
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes an assembled cytoskeletal structure,
+      not one exact MreB protein-family entity.
     label: MreB cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB filaments that pattern lateral cell-wall synthesis.
@@ -52,11 +59,17 @@ causal_graphs:
     description: Class A penicillin-binding-protein peptidoglycan synthesis system
       that acts oppositely to the Rod complex to set cell diameter.
   - node_id: roda_pbp2_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RodA and PBP2 are distinct proteins grouped as a synthase module;
+      one family identifier cannot represent both components.
     label: RodA-PBP2 core synthase
     node_type: GENE_OR_PROTEIN
     description: Essential Rod-complex peptidoglycan synthase (RodA glycosyltransferase
       with PBP2 transpeptidase) driving lateral elongation.
   - node_id: mre_accessory_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines multiple accessory protein families and
+      therefore has no single exact semantic grounding.
     label: Rod-complex accessory proteins MreC/MreD/RodZ
     node_type: GENE_OR_PROTEIN
     description: Accessory components of the Rod complex that regulate RodA-PBP2 enzymatic
@@ -197,6 +210,15 @@ curation_history:
     record's own deep-research artifact; every taxon id was resolved and label-checked
     against the local NCBITaxon build rather than recalled. Organisms the artifact
     names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cell_width_mreb_lateral_wall=NONMECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mreb_cytoskeleton, roda_pbp2_synthase, mre_accessory_proteins).'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:274

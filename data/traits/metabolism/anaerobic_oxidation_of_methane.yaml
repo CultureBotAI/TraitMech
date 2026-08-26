@@ -29,13 +29,18 @@ canonical_examples:
   taxon_label: Candidatus Methanoperedens nitratireducens
   note: Canonical nitrate-dependent ANME archaeon performing anaerobic oxidation of
     methane (ANME-2d). Candidatus taxon (no validly published name).
-  reference: https://pubmed.ncbi.nlm.nih.gov/36635574/
+  reference: DOI:10.1038/s41564-022-01292-9
 causal_graphs:
 - graph_id: aom_anme_sulfate_consortium
   title: AOM couples methane oxidation to sulfate reduction in ANME-SRB consortia
   description: Evidence-backed causal sketch linking anaerobic methanotrophic archaea
     (ANME) and sulfate-reducing bacteria to coupled methane oxidation and sulfate
     reduction.
+  scope_status: MECHANISTIC
+  scope_notes: This is a composite AOM graph spanning sulfate-coupled ANME-SRB consortia
+    and nitrate-dependent Ca. Methanoperedens. The mcrA example supports methane activation
+    in the nitrate-dependent branch; MCR occurrence alone does not establish reaction
+    direction or the AOM phenotype.
   nodes:
   - node_id: aom_trait
     label: anaerobic oxidation of methane
@@ -63,6 +68,31 @@ causal_graphs:
     description: Enzyme that activates methane (to methyl-S-CoM) as the initial step
       of AOM.
     grounding: GO:0044674
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A284VQI9
+      protein_label: coenzyme-B sulfoethylthiotransferase
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:1392998
+      taxon_label: Candidatus Methanoperedens nitratireducens
+      entry_status: UNREVIEWED
+      proteome_id: UP000218615
+      retrieved_on: '2026-08-24'
+      entry_version: 21
+      sequence_version: 1
+      role: McrA alpha component of methyl-coenzyme M reductase in nitrate-dependent
+        reverse methanogenesis; this accession is not the complete MCR complex and
+        is not a directionality marker by itself.
+      evidence:
+      - reference: DOI:10.1038/nature12375
+        snippet: independent AOM through reverse methanogenesis using nitrate as the
+          terminal electron acceptor
+        notes: The primary isotope, genome, and transcript study establishes nitrate-dependent
+          AOM by Ca. M. nitroreducens through reverse methanogenesis.
+      - reference: DOI:10.1007/s00253-016-8065-8
+        snippet: complete reverse methanogenesis pathway including the mcrABCDG genes
+          was identified
+        notes: The taxon-specific study verifies mcrA in Ca. M. nitroreducens; UniProtKB
+          maps A0A284VQI9 to mcrA in its reference proteome.
   - node_id: diet
     label: direct interspecies electron transfer (DIET)
     node_type: BIOLOGICAL_PROCESS
@@ -190,4 +220,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:05:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the composite AOM graph, converted the canonical example to its
+    DOI, and added a taxon-matched Ca. M. nitroreducens mcrA example with explicit
+    complex-component and directionality caveats.
   llm_assisted: true

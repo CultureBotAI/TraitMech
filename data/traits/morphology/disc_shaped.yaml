@@ -25,6 +25,10 @@ causal_graphs:
   title: Disc-shape anisotropic cell-wall growth
   description: DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer
     growth and suppressed axial extension to flat disc-shaped cell geometry.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is a geometric shape classification; the cited sources do not
+    establish a taxon-matched protein determinant for disc geometry, so no token protein
+    node or example is added.
   nodes:
   - node_id: disc_shaped_trait
     label: disc shaped
@@ -148,4 +152,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope disc_shaped_anisotropic_wall_growth=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

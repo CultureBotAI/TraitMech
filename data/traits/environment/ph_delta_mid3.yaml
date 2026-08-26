@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_mid3_wide_breadth
   title: pH-delta-mid3 wide-breadth pH homeostasis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking wide pH-homeostasis flexibility to a pH growth
     breadth of approximately 4–5 pH units.
   nodes:
@@ -59,6 +63,10 @@ causal_graphs:
   - node_id: proton_pumping_respiratory_complexes
     label: proton-pumping respiratory complexes
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Respiratory-chain primary proton pumps that build the proton motive
       force.
   - node_id: proton_motive_force
@@ -69,6 +77,10 @@ causal_graphs:
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-translocating ATP synthase/ATPase that can extrude protons
       under acid stress.
   - node_id: phosphate_buffering
@@ -291,4 +303,13 @@ curation_history:
     The distinct cytoplasmic_buffering_capacity id remains CAPACITY for that quantity
     sense. Proton permeability is a measurable membrane property, which is the schema''s
     QUALITY sense rather than a biological process.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_delta_mid3_wide_breadth=NONMECHANISTIC with scope_notes;
+    marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (proton_pumping_respiratory_complexes,
+    f0f1_atpase).'
   llm_assisted: true

@@ -23,12 +23,16 @@ canonical_examples:
 - taxon_id: NCBITaxon:882
   taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
   note: Model dissimilatory sulfate reducer (formerly Desulfovibrio vulgaris Hildenborough).
-  reference: PMID:15077118
+  reference: DOI:10.1038/nbt959
 causal_graphs:
 - graph_id: sulfate_reduction_to_sulfide
   title: Dissimilatory sulfate reduction respires sulfate to sulfide
   description: Evidence-backed causal sketch linking sulfate as terminal electron
     acceptor to sulfide production in anoxic anaerobic respiration.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the canonical Sat-Apr-Dsr route and uses explicit DsrA and
+    DsrC components from N. vulgaris Hildenborough. One accession is not treated as
+    denoting the DsrAB-DsrC assembly or the separate DsrMKJOP membrane complex.
   nodes:
   - node_id: sulfate_reduction_trait
     label: dissimilatory sulfate reduction
@@ -54,6 +58,7 @@ causal_graphs:
     label: ATP sulfurylase (Sat)
     node_type: GENE_OR_PROTEIN
     description: Sulfate adenylyltransferase that activates sulfate to APS.
+    grounding: GO:0004781
   - node_id: aps
     label: adenosine-5′-phosphosulfate (APS)
     node_type: CHEMICAL
@@ -66,10 +71,51 @@ causal_graphs:
     label: APS reductase AprAB
     node_type: GENE_OR_PROTEIN
     description: Reduces APS to sulfite.
+    grounding: GO:0009973
   - node_id: dsrab_dsrc
     label: DsrAB with DsrC
     node_type: GENE_OR_PROTEIN
     description: Dissimilatory sulfite reductase DsrAB acting with DsrC protein.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node intentionally represents the DsrAB enzyme together
+      with its DsrC partner; no one protein-family or complex term exactly denotes
+      that combined mechanistic assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P45574
+      protein_label: Sulfite reductase, dissimilatory-type subunit alpha
+      gene_symbol: dsrA
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 146
+      sequence_version: 3
+      role: DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this
+        accession is not presented as the complete assembly.
+      evidence:
+      - reference: DOI:10.1074/jbc.M805643200
+        snippet: the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC
+          protein
+        notes: The primary structure is from D. vulgaris Hildenborough and identifies
+          DsrA within the DsrAB-DsrC assembly; UniProtKB P45574 verifies the reviewed
+          alpha subunit and current taxon.
+    - uniprot_id: UniProtKB:P45573
+      protein_label: Sulfite reductase, dissimilatory-type subunit gamma
+      gene_symbol: dsvC
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 142
+      sequence_version: 2
+      role: DsrC/gamma partner bound to DsrAB in the source-backed assembly; this
+        accession is not presented as DsrAB itself.
+      evidence:
+      - reference: DOI:10.1074/jbc.M805643200
+        snippet: the dSiR DsrAB (sulfite reductase) subunits are bound to the DsrC
+          protein
+        notes: The primary structure resolves DsrC bound to DsrAB in D. vulgaris Hildenborough;
+          UniProtKB P45573 verifies the reviewed gamma/DsrC protein and current taxon.
   - node_id: dsrc_trisulfide
     label: DsrC-trisulfide
     node_type: CHEMICAL
@@ -79,6 +125,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Reduces DsrC-trisulfide to sulfide, recycling DsrC and conserving
       energy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: DsrMKJOP composition and nomenclature vary among sulfate reducers,
+      and no exact complex term was verified for the generic parenthetical label.
   - node_id: srm
     label: sulfate/sulfite-reducing microorganisms
     node_type: STATE
@@ -210,4 +259,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added explicit DsrA and DsrC UniProt components from N. vulgaris Hildenborough,
+    grounded Sat and Apr activities, retained combined Dsr assemblies as reviewed
+    label-only, and documented multisubunit scope.
   llm_assisted: true

@@ -25,12 +25,21 @@ canonical_examples:
   taxon_label: Metallosphaera sedula
   note: Thermoacidophilic crenarchaeon where the 3-hydroxypropionate/4-hydroxybutyrate
     CO2-fixation cycle was characterized.
-  reference: PMID:18079405
+  reference: DOI:10.1126/science.1149976
+- taxon_id: NCBITaxon:399549
+  taxon_label: Metallosphaera sedula DSM 5348
+  note: Reference strain used to map the three carboxylase components and Msed_1321
+    4-hydroxybutyryl-CoA dehydratase in biochemical reconstruction of the cycle.
+  reference: DOI:10.1128/AEM.04146-13
 causal_graphs:
 - graph_id: three_hp_four_hb_sulfolobales
   title: 3HP/4HB cycle fixes bicarbonate in aerobic Crenarchaeota
   description: Evidence-backed causal sketch linking bicarbonate fixation via 3-hydroxypropionate
     and 4-hydroxybutyrate intermediates in Sulfolobales.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the experimentally characterized M. sedula 3HP/4HB
+    cycle. Its bifunctional carboxylase is a three-component complex, so each component
+    is recorded separately rather than treating one accession as the complete enzyme.
   nodes:
   - node_id: three_hp_four_hb_trait
     label: 3-hydroxypropionate/4-hydroxybutyrate cycle
@@ -78,11 +87,92 @@ causal_graphs:
     label: acetyl-CoA/propionyl-CoA carboxylase
     node_type: GENE_OR_PROTEIN
     description: Primary carboxylase fixing inorganic carbon in the cycle.
-    grounding: UniProtKB:A0A650CEQ7
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the complete archaeal three-component bifunctional
+      carboxylase; available GO terms describe catalytic activities or subunits rather
+      than this exact complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:A4YD22
+      protein_label: Biotin carboxylase
+      gene_symbol: Msed_0147
+      taxon_id: NCBITaxon:399549
+      taxon_label: Metallosphaera sedula DSM 5348
+      entry_status: UNREVIEWED
+      proteome_id: UP000000242
+      retrieved_on: '2026-08-24'
+      entry_version: 93
+      sequence_version: 1
+      role: Alpha component (biotin carboxylase) of the three-component acetyl-CoA/propionyl-CoA
+        carboxylase; this accession is not the complete enzyme.
+      evidence:
+      - reference: DOI:10.1128/AEM.04146-13
+        snippet: Acetyl-CoA/propionyl-CoA carboxylase Msed_0147, Msed_0148, Msed_1375
+        notes: The primary M. sedula pathway reconstruction maps all three loci to
+          the bifunctional carboxylase. UniProtKB A4YD22 is the Msed_0147 component
+          from the reference proteome.
+    - uniprot_id: UniProtKB:A4YD23
+      protein_label: Biotin carboxyl carrier protein
+      gene_symbol: Msed_0148
+      taxon_id: NCBITaxon:399549
+      taxon_label: Metallosphaera sedula DSM 5348
+      entry_status: UNREVIEWED
+      proteome_id: UP000000242
+      retrieved_on: '2026-08-24'
+      entry_version: 75
+      sequence_version: 1
+      role: Biotin-carboxyl-carrier component of the three-component acetyl-CoA/propionyl-CoA
+        carboxylase; this accession is not the complete enzyme.
+      evidence:
+      - reference: DOI:10.1128/AEM.04146-13
+        snippet: Acetyl-CoA/propionyl-CoA carboxylase Msed_0147, Msed_0148, Msed_1375
+        notes: The primary M. sedula pathway reconstruction maps all three loci to
+          the bifunctional carboxylase. UniProtKB A4YD23 is the Msed_0148 component
+          from the reference proteome.
+    - uniprot_id: UniProtKB:A4YGI1
+      protein_label: Propionyl-CoA carboxylase beta chain
+      gene_symbol: Msed_1375
+      taxon_id: NCBITaxon:399549
+      taxon_label: Metallosphaera sedula DSM 5348
+      entry_status: UNREVIEWED
+      proteome_id: UP000000242
+      retrieved_on: '2026-08-24'
+      entry_version: 85
+      sequence_version: 1
+      role: Gamma carboxyltransferase component of the three-component acetyl-CoA/propionyl-CoA
+        carboxylase; this accession is not the complete enzyme.
+      evidence:
+      - reference: DOI:10.1128/AEM.04146-13
+        snippet: Acetyl-CoA/propionyl-CoA carboxylase Msed_0147, Msed_0148, Msed_1375
+        notes: The primary M. sedula pathway reconstruction maps all three loci to
+          the bifunctional carboxylase. UniProtKB A4YGI1 is the Msed_1375 component
+          from the reference proteome.
   - node_id: four_hydroxybutyryl_coa_dehydratase
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
     description: Enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Current resources use divergent functional names for this radical
+      enzyme, including vinylacetyl-CoA Delta-isomerase; no exact verified GO or InterPro
+      term was assigned to the historical pathway-level label.
+    protein_examples:
+    - uniprot_id: UniProtKB:A4YGC7
+      protein_label: Vinylacetyl-CoA Delta-isomerase
+      gene_symbol: Msed_1321
+      taxon_id: NCBITaxon:399549
+      taxon_label: Metallosphaera sedula DSM 5348
+      entry_status: UNREVIEWED
+      proteome_id: UP000000242
+      retrieved_on: '2026-08-24'
+      entry_version: 82
+      sequence_version: 1
+      role: Msed_1321 protein biochemically assigned as 4-hydroxybutyryl-CoA dehydratase
+        in the M. sedula pathway; the current UniProt label reflects alternate nomenclature.
+      evidence:
+      - reference: DOI:10.1128/AEM.04146-13
+        snippet: 4-hydroxybutyryl-CoA dehydratase (Msed_1321)
+        notes: Recombinant Msed_1321 was assigned to the dehydration step in the primary
+          pathway reconstruction. UniProtKB A4YGC7 is the corresponding reference-proteome
+          entry.
   edges:
   - subject: bicarbonate
     predicate: fixed by
@@ -227,4 +317,18 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T09:50:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the M. sedula 3HP/4HB mechanism, added all three DOI-backed carboxylase
+    components plus Msed_1321 as taxon-paired UniProt examples, and documented why
+    the complex and historical dehydratase labels remain reviewed label-only.
   llm_assisted: true

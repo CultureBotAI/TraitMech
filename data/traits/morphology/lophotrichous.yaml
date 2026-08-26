@@ -29,6 +29,10 @@ causal_graphs:
   title: Lophotrichous flagellation — polar tuft of flagella
   description: Evidence-backed causal sketch linking a polar tuft of bacterial flagella
     to the lophotrichous arrangement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: lophotrichous_trait
     label: lophotrichous
@@ -45,6 +49,9 @@ causal_graphs:
     node_type: QUALITY
     description: Multiple flagella clustered at one cell pole.
   - node_id: flhf_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and initiates polar flagellar assembly.
@@ -54,6 +61,9 @@ causal_graphs:
     description: The cell pole where polar flagellar assembly is nucleated.
     grounding: GO:0060187
   - node_id: flig_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein recruited during basal-body assembly.
@@ -62,8 +72,11 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MS-ring protein forming the membrane base of the flagellar basal
       body.
-    grounding: UniProtKB:A0A0H2X1L8
+    grounding: InterPro:IPR000067
   - node_id: fipa_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane-localized polar landmark/licensing factor required for normal
@@ -73,7 +86,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that regulates flagellar number by stimulating FlhF
       GTPase activity.
-    grounding: UniProtKB:Q2N2M1
+    grounding: InterPro:IPR033875
   - node_id: flagellar_number
     label: flagellar number
     node_type: QUALITY
@@ -191,4 +204,20 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope lophotrichous_polar_tuft=NONMECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf_protein,
+    flig_protein, fipa_protein).'
   llm_assisted: true

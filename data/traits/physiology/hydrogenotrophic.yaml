@@ -25,11 +25,20 @@ canonical_examples:
   taxon_label: Methanocaldococcus jannaschii
   note: hydrogenotrophic methanogen
   reference: PMID:31333590
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: Strain-level Knallgas exemplar for respiratory H2 oxidation by the oxygen-tolerant
+    membrane-bound NiFe hydrogenase.
+  reference: DOI:10.1128/jb.01427-10
 causal_graphs:
 - graph_id: hydrogenotrophic_hydrogen_oxidation_fixation
   title: Hydrogenotrophic H2 oxidation and CO2 fixation
   description: DOI-backed graph linking hydrogenase-catalyzed H2 oxidation, electron
     transport energy conservation, and autotrophic CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: Represents H2 oxidation coupled to electron transport and carbon fixation.
+    The protein node is narrowed to the membrane-bound NiFe uptake-hydrogenase branch
+    demonstrated in C. necator H16; other acceptor branches remain process-level.
   nodes:
   - node_id: hydrogenotrophic_trait
     label: hydrogenotrophic
@@ -42,10 +51,29 @@ causal_graphs:
     grounding: CHEBI:18276
     description: Electron donor oxidized by hydrogenotrophs.
   - node_id: hydrogenase
-    label: hydrogenase
+    label: membrane-bound NiFe uptake hydrogenase complex
     node_type: GENE_OR_PROTEIN
-    description: Metalloenzyme catalyzing H2 oxidation or production.
-    grounding: UniProtKB:A0A059XQG3
+    description: Oxygen-tolerant membrane complex coupling H2 oxidation to the respiratory
+      quinone pool in C. necator H16.
+    grounding: GO:0044569
+    protein_examples:
+    - uniprot_id: UniProtKB:P31891
+      protein_label: Uptake hydrogenase large subunit
+      gene_symbol: hoxG
+      taxon_id: NCBITaxon:381666
+      taxon_label: Cupriavidus necator H16
+      entry_status: REVIEWED
+      proteome_id: UP000008210
+      retrieved_on: '2026-08-23'
+      sequence_version: 4
+      role: Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase
+        complex; this accession does not denote the complete HoxKGZ complex.
+      evidence:
+      - reference: DOI:10.1128/jb.01427-10
+        snippet: large subunit HoxG (67.1 kDa) containing the Ni-Fe active site
+        notes: The primary H16 study identifies HoxG as the catalytic large subunit
+          of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer
+          to the respiratory chain; UniProtKB P31891 verifies the reviewed instance.
   - node_id: protons_electrons
     label: protons and electrons
     node_type: CHEMICAL
@@ -96,11 +124,6 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Hydrogenase-catalyzed oxidation of molecular hydrogen to protons
       and electrons.
-  - node_id: o2_sensitivity
-    label: oxygen sensitivity
-    node_type: ENVIRONMENTAL_FACTOR
-    description: Differential O2 sensitivity that constrains which hydrogenase classes
-      are usable.
   edges:
   - subject: hydrogenotrophic_trait
     predicate: has electron donor
@@ -164,7 +187,9 @@ causal_graphs:
     description: Carbon fixation converts CO2 into cell carbon.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
-      snippet: CO2 ... into cellular carbon
+      snippet: the assimilation of CO2 (oxidation state of +4) into cellular carbon
+        (average oxidation state of 0, as in carbohydrates) requires four reducing
+        equivalents.
       notes: Supports the carbon-assimilation output.
     predicate_id: RO:0002234
   - subject: h2_oxidation
@@ -173,7 +198,8 @@ causal_graphs:
     description: Splitting H2 yields electrons and protons that can generate a proton
       gradient.
     evidence:
-    - reference: DOI:10.2138/gselements.16.1.39
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: generation of a protonmotive force
       notes: Splitting H2 yields electrons and protons that can generate proton gradients
         and ATP; general mechanistic process-level edge.
     predicate_id: biolink:produces
@@ -183,6 +209,8 @@ causal_graphs:
     description: Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.
     evidence:
     - reference: DOI:10.3390/microorganisms7020053
+      snippet: hydrogen uptake to the reduction of electron acceptors (e.g., nitrate,
+        sulfate, and carbon dioxide).
       notes: The hydrogenase reaction is involved in coupling hydrogen uptake to the
         reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).
   - subject: h2_oxidation
@@ -191,27 +219,32 @@ causal_graphs:
     description: H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen
       oxidation).
     evidence:
-    - reference: DOI:10.2138/gselements.16.1.39
-      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
-        nitrate, ferric iron and O2; high-confidence generic edge.
+    - reference: DOI:10.3390/microorganisms7020053
+      snippet: Aerobic hydrogen oxidation (Knallgas) H2 + 1/2O2 → H2O
+      notes: The review tabulates oxygen reduction as the acceptor half-reaction for
+        aerobic hydrogen oxidation.
   - subject: h2_oxidation
     predicate: coupled to reduction of
     object: nitrate
     description: H2 oxidation can be coupled to reduction of nitrate in anaerobic
       respiration.
     evidence:
-    - reference: DOI:10.2138/gselements.16.1.39
-      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
-        nitrate, ferric iron and O2; generic respiratory coupling edge.
+    - reference: DOI:10.3390/microorganisms7020053
+      snippet: energy is obtained by coupling hydrogen oxidation to reduction of electron
+        acceptors such as carbon dioxide, nitrate, or ferric iron
+      notes: The source explicitly includes nitrate among electron acceptors coupled
+        to hydrogen oxidation.
   - subject: h2_oxidation
     predicate: coupled to reduction of
     object: sulfate
     description: H2 oxidation can be coupled to reduction of sulfate in anaerobic
       respiration.
     evidence:
-    - reference: DOI:10.2138/gselements.16.1.39
-      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
-        nitrate, ferric iron and O2; generic respiratory coupling edge.
+    - reference: DOI:10.3390/microorganisms7020053
+      snippet: Hydrogen gas has a low reduction potential and is, thus, a highly energetic
+        electron donor when involved in sulfate, carbon dioxide, and ferric iron reduction
+      notes: The source explicitly identifies hydrogen as the electron donor for sulfate
+        reduction.
   - subject: h2_oxidation
     predicate: can support
     object: autotrophic_co2_fixation
@@ -219,18 +252,19 @@ causal_graphs:
       chemosynthesis.
     evidence:
     - reference: DOI:10.1111/1751-7915.14300
+      snippet: By coupling hydrogen oxidation to carbon fixation in species containing
+        both enzymes, the existing evidence suggests that hydrogenotrophic chemosynthesis
+        is a viable energy generation strategy
       notes: By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis
         is a viable energy generation strategy; trait-level edge.
-  - subject: o2_sensitivity
-    predicate: constrains
-    object: hydrogenase
-    description: Differential O2 sensitivity across hydrogenase classes constrains
-      their distribution and use.
-    evidence:
-    - reference: DOI:10.2138/gselements.16.1.39
-      notes: Hydrogenase classes show different sensitivity to O2 and diverse H2 affinities;
-        broad environmental constraint across classes.
 curation_history:
+- timestamp: '2026-08-23T09:10:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Narrowed the ambiguous hydrogenase label to the membrane-bound NiFe uptake-hydrogenase
+    complex, grounded it to GO:0044569, and added DOI-backed HoxG P31891 for C. necator
+    H16 as an explicit catalytic component.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.874373+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
@@ -367,4 +401,11 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

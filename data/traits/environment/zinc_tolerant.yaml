@@ -25,11 +25,19 @@ canonical_examples:
   taxon_label: Cupriavidus metallidurans
   note: zinc-resistance determinants
   reference: PMID:33540705
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level ZntA zinc-efflux exemplar.
+  reference: PMID:33540705
 causal_graphs:
 - graph_id: zinc_tolerance_czc_efflux
   title: Zinc tolerance via czc cation-efflux system
   description: Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc)
     efflux determinant to cytoplasmic zinc detoxification.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: zinc_tolerant_trait
     label: zinc tolerant
@@ -42,6 +50,9 @@ causal_graphs:
     grounding: CHEBI:29105
     description: Cytoplasmic Zn(2+) excess threatening protein mismetallation.
   - node_id: czc_efflux_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: czc cation-efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP machinery exporting Zn, Cd, and Co cations.
@@ -51,10 +62,33 @@ causal_graphs:
     grounding: GO:0006829
     description: Active export of Zn(2+) across the cytoplasmic membrane.
   - node_id: znta_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1LEH0
+      protein_label: P-type zinc transporter ZntA
+      gene_symbol: zntA
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: UNREVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 135
+      sequence_version: 1
+      role: CH34 ZntA is a P-type ATPase that exports cytoplasmic zinc.
+      evidence:
+      - reference: PMID:33540705
+        snippet: zinc resistance determinants in Cupriavidus metallidurans
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: ZntA P-type ATPase
     node_type: GENE_OR_PROTEIN
     description: PIB2-type P-type ATPase mediating cytoplasmic zinc efflux.
   - node_id: zntr_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ZntR MerR-family regulator
     node_type: GENE_OR_PROTEIN
     description: MerR-family zinc-responsive transcriptional activator of zntA.
@@ -63,6 +97,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Transcription of the zntA zinc-efflux ATPase gene.
   - node_id: czccba_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CzcCBA RND efflux complex
     node_type: GENE_OR_PROTEIN
     description: RND transenvelope pump exporting zinc from the periplasm.
@@ -233,4 +270,15 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope zinc_tolerance_czc_efflux=MECHANISTIC with scope_notes;
+    marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (czc_efflux_system,
+    znta_atpase, zntr_regulator, czccba_complex); added taxon-paired protein example(s)
+    UniProtKB:Q1LEH0 on znta_atpase (NCBITaxon:266264); added canonical example(s)
+    NCBITaxon:266264.'
   llm_assisted: true

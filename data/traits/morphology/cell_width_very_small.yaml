@@ -19,6 +19,9 @@ evidence:
     lineages.
 causal_graphs:
 - graph_id: cell_width_very_small_streamlining
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-width bin. Its streamlined-cell graph
+    is contextual background rather than a universal protein-mediated mechanism.
   title: Very-narrow cell width by streamlining
   description: DOI-backed graph linking nutrient streamlining to a very-narrow rod
     radius (≤0.5 μm).
@@ -64,11 +67,17 @@ causal_graphs:
     node_type: QUALITY
     description: Streamlined small genome characteristic of oligotrophic lineages.
   - node_id: rod_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The rod complex is a variable multisubunit assembly, and no verified
+      single complex term exactly represents this contextual node.
     label: Rod complex
     node_type: GENE_OR_PROTEIN
     description: Elongasome directing organized circumferential peptidoglycan insertion
       that constrains cell width.
   - node_id: apbp_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines multiple class-A penicillin-binding proteins,
+      so no one exact protein-family entity denotes the full group.
     label: class A penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: aPBPs mediating isotropic peptidoglycan insertion that enlarges the
@@ -205,4 +214,13 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cell_width_very_small_streamlining=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (rod_complex, apbp_proteins).'
   llm_assisted: true

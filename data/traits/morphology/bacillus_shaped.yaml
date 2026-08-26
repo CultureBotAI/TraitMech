@@ -27,6 +27,10 @@ causal_graphs:
   title: Bacillus-shape rod elongation mechanism
   description: Evidence-backed causal sketch linking bacillus morphology to MreB-organized
     Rod complexes, lateral peptidoglycan insertion, and FtsZ-coupled division.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: bacillus_shaped_trait
     label: bacillus shaped
@@ -34,10 +38,16 @@ causal_graphs:
     grounding: METPO:1000667
     description: Elongated cylindrical rod-like bacterial morphology.
   - node_id: mreB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
   - node_id: rod_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Rod complex
     node_type: GENE_OR_PROTEIN
     description: MreB-associated cell-wall elongation machinery.
@@ -54,13 +64,16 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
-    grounding: UniProtKB:C0LUM8
+    grounding: InterPro:IPR000158
   - node_id: peptidoglycan_cell_wall
     label: peptidoglycan cell wall
     node_type: CELLULAR_LOCALIZATION
     description: Peptidoglycan sacculus that protects against osmotic lysis and determines
       cell shape.
   - node_id: rodA_pbp2_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RodA-PBP2 synthase (Rod complex)
     node_type: GENE_OR_PROTEIN
     description: Essential elongasome peptidoglycan synthase responsible for bacterial
@@ -81,6 +94,9 @@ causal_graphs:
       glycosyltransferases).
     grounding: CHEBI:28908
   - node_id: class_a_pbps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: class A penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Class A PBPs (aPBPs), a family of peptidoglycan synthases.
@@ -88,7 +104,7 @@ causal_graphs:
     label: RodZ
     node_type: GENE_OR_PROTEIN
     description: Membrane protein broadly implicated in rod-shape maintenance.
-    grounding: UniProtKB:H1XNL6
+    grounding: InterPro:IPR023690
   - node_id: spherical_morphology
     label: spherical cell morphology
     node_type: TRAIT
@@ -314,4 +330,20 @@ curation_history:
     exactly the kind of modelling decision this work defers elsewhere. interacts with
     says what the quoted sentence says and needs no such decision. The edge description
     was rephrased to match the predicate.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope bacillus_shaped_rod_elongation=NONMECHANISTIC with
+    scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mreB, rod_complex, rodA_pbp2_synthase, class_a_pbps).'
   llm_assisted: true

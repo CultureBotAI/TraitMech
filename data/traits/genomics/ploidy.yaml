@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: ploidy_repair_survival
   title: Polyploidy supports DNA repair and long-term survival
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking multiple genome copies to homologous-recombination
     repair templates and survival under desiccation and starvation.
   nodes:
@@ -179,4 +183,11 @@ curation_history:
     the node type, not the predicate, which is the third time in this issue's neighbourhood
     that has been true (compare issue 331's acetate kinase step and issue 330's negated
     node name). With the object correctly a TRAIT, confers applies unchanged.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ploidy_repair_survival=NONMECHANISTIC with scope_notes.'
   llm_assisted: true

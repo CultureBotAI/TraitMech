@@ -21,11 +21,20 @@ canonical_examples:
   taxon_label: Escherichia coli
   note: Paradigm of the bacterial oxidative-stress response (OxyR and SoxRS regulons).
   reference: PMID:22381957
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level peroxide-response model paired to the reviewed OxyR regulator.
+  reference: DOI:10.1073/pnas.86.10.3484
 causal_graphs:
 - graph_id: oxidative_stress_response_ros_defense
   title: Defense against reactive oxygen species
   description: Evidence-backed causal sketch linking reactive oxygen species to an
     induced oxidative-stress defense.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents an E. coli-like peroxide/general-stress regulatory
+    branch, not every bacterial, archaeal, or fungal oxidative-stress system. The
+    OxyR example anchors H2O2-responsive transcription; RpoS and thioredoxin effects
+    are broader supporting modules.
   nodes:
   - node_id: oxidative_stress_response_trait
     label: oxidative stress response
@@ -47,11 +56,34 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Widely conserved bacterial transcription factor that activates oxidative-stress
       defense genes.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Current InterPro terms on OxyR describe shared LysR domains rather
+      than the peroxide-sensing OxyR family as a whole, so a domain grounding would
+      be too broad.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACQ4
+      protein_label: DNA-binding transcriptional dual regulator OxyR
+      gene_symbol: oxyR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 143
+      sequence_version: 1
+      role: E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible
+        defense regulon represented by this branch.
+      evidence:
+      - reference: DOI:10.1073/pnas.86.10.3484
+        snippet: positive regulator of hydrogen peroxide-inducible genes in Escherichia
+          coli
+        notes: The primary study identifies and functionally tests E. coli OxyR; UniProtKB
+          P0ACQ4 is the reviewed K-12 regulator entry.
   - node_id: rpos_sigma_factor
     label: RpoS (sigma-S) general stress sigma factor
     node_type: GENE_OR_PROTEIN
     description: Global stress sigma factor controlling a stress regulon that includes
       oxidative-stress defenses.
+    grounding: InterPro:IPR012761
   - node_id: thioredoxin_system
     label: thioredoxin system
     node_type: PATHWAY
@@ -143,4 +175,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T13:20:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, bounded it to an E. coli-like peroxide branch,
+    reviewed OxyR as label-only because available terms are shared LysR domains, grounded
+    RpoS to its exact InterPro family, and added DOI-cited OxyR P0ACQ4.
   llm_assisted: true

@@ -20,6 +20,10 @@ evidence:
     for cream/pale coloration in many bacterial taxa.
 causal_graphs:
 - graph_id: cream_pigmented_low_carotenoid_density
+  scope_status: NONMECHANISTIC
+  scope_notes: Cream pigmentation is a visual color classification that can arise
+    from multiple low-chromophore states. The graph is illustrative context rather
+    than a source-backed, universally inherited protein mechanism.
   title: Cream-pigmentation low carotenoid density
   description: DOI-backed graph linking low-level carotenoid (or analogous light-absorbing
     pigment) biosynthesis and limited pigment accumulation to a cream/pale-colored
@@ -45,11 +49,19 @@ causal_graphs:
     label: pale cream coloration
     node_type: BIOLOGICAL_PROCESS
     description: Optical phenotype of off-white pigmented colonies.
-  - node_id: carotenoid_biosynthesis_genes
-    label: carotenoid biosynthesis genes (crt locus)
+  - node_id: carotenoid_enzyme_module
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines multiple carotenoid-enzyme families and
+      cannot be represented by one exact protein-family grounding.
+    label: carotenoid biosynthesis enzyme module
     node_type: GENE_OR_PROTEIN
     description: Core carotenoid-pathway enzymes (e.g. crtE/crtB/crtI-type) required
       for synthesis of colored carotenoids.
+    gene_symbols:
+    - crtE
+    - crtB
+    - crtI
+    operon: crt locus
   - node_id: carotenoid_gene_disruption
     label: carotenoid biosynthesis gene disruption
     node_type: EXPERIMENTAL_FACTOR
@@ -88,11 +100,11 @@ causal_graphs:
       snippet: bacterial carotenoid pigments
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
-  - subject: carotenoid_biosynthesis_genes
+  - subject: carotenoid_enzyme_module
     predicate: enables
     object: low_carotenoid_biosynthesis
-    description: Core crt-locus enzymes are required for carotenoid biosynthesis;
-      their activity sets pathway flux.
+    description: The core Crt enzyme module is required for carotenoid biosynthesis;
+      its activity sets pathway flux.
     evidence:
     - reference: DOI:10.3390/pathogens12010086
       notes: Insertions mapped to crtE, crtI, crtB, crtYc, crtYd involved in synthesis
@@ -174,4 +186,14 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cream_pigmented_low_carotenoid_density=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (carotenoid_enzyme_module); added 1 node(s) and 1 edge(s) (carotenoid_enzyme_module);
+    removed 1 node(s) and 1 edge(s) together with their evidence (carotenoid_biosynthesis_genes).'
   llm_assisted: true

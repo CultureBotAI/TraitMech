@@ -29,11 +29,20 @@ canonical_examples:
   taxon_label: Pseudomonas aeruginosa
   note: catalase-positive
   reference: PMID:15972537
+- taxon_id: NCBITaxon:93061
+  taxon_label: Staphylococcus aureus NCTC 8325
+  note: Strain-level exemplar for PerR control of catalase and other peroxide-defense
+    genes.
+  reference: DOI:10.1128/iai.69.6.3744-3754.2001
 causal_graphs:
 - graph_id: catalase_activity_h2o2_detoxification
   title: Catalase hydrogen-peroxide detoxification
   description: Evidence-backed causal sketch linking catalase to dismutation of hydrogen
     peroxide into water and molecular oxygen.
+  scope_status: MECHANISTIC
+  scope_notes: Represents a monofunctional heme-catalase reaction and two alternative
+    bacterial peroxide-sensing regulators. The PerR example supports the S. aureus
+    regulatory branch and is not generalized to OxyR-using taxa.
   nodes:
   - node_id: catalase_activity_trait
     label: catalase activity
@@ -41,9 +50,10 @@ causal_graphs:
     grounding: traitmech:000075
     description: Capacity to decompose hydrogen peroxide via catalase.
   - node_id: catalase
-    label: catalase
+    label: monofunctional heme catalase
     node_type: GENE_OR_PROTEIN
-    description: Heme enzyme that dismutates hydrogen peroxide.
+    description: Monofunctional heme enzyme that dismutates hydrogen peroxide.
+    grounding: InterPro:IPR018028
   - node_id: catalase_function
     label: catalase activity
     node_type: MOLECULAR_FUNCTION
@@ -69,12 +79,37 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Peroxide-sensing transcriptional regulator activated by hydrogen
       peroxide.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: OxyR belongs to the broad LysR regulator family, but the checked
+      InterPro entries describe shared domains rather than an exact OxyR protein family.
   - node_id: perr_regulator
     label: PerR
     node_type: GENE_OR_PROTEIN
     description: Fe-dependent peroxide-sensing transcriptional repressor inactivated
       by hydrogen peroxide.
-    grounding: UniProtKB:A0A097ASJ8
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: PerR belongs to the broader Fur family; IPR002481 is not specific
+      enough to distinguish PerR from other Fur-family regulators, so the exact label
+      is retained with an organism-paired protein example.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2G282
+      protein_label: Peroxide-responsive repressor PerR
+      gene_symbol: perR
+      taxon_id: NCBITaxon:93061
+      taxon_label: Staphylococcus aureus NCTC 8325
+      entry_status: REVIEWED
+      proteome_id: UP000008816
+      retrieved_on: '2026-08-23'
+      entry_version: 109
+      sequence_version: 1
+      role: Manganese-dependent peroxide-responsive repressor controlling katA and
+        the wider oxidative-stress defense regulon in S. aureus.
+      evidence:
+      - reference: DOI:10.1128/iai.69.6.3744-3754.2001
+        snippet: PerR controls oxidative stress resistance and iron storage proteins
+        notes: The primary S. aureus study characterizes PerR regulation and links
+          it to catalase/peroxide defense; UniProtKB Q2G282 verifies the reviewed
+          NCTC 8325 protein instance.
   - node_id: peroxide_defense_systems
     label: peroxide defense systems
     node_type: BIOLOGICAL_PROCESS
@@ -92,41 +127,51 @@ causal_graphs:
     object: catalase_function
     description: Catalase carries out the catalase molecular function.
     evidence:
-    - reference: DOI:10.1007/s00018-003-3206-5
-      notes: Chelikani et al. characterize catalases as the enzymes performing this
-        dismutation.
+    - reference: DOI:10.1021/ja9018572
+      snippet: Catalases are ubiquitous enzymes that prevent cell oxidative damage
+        by degrading hydrogen peroxide
+      notes: The primary mechanistic study identifies catalases as the enzymes carrying
+        out hydrogen-peroxide degradation.
     predicate_id: RO:0002327
   - subject: catalase_function
     predicate: consumes
     object: hydrogen_peroxide
     description: The catalase reaction consumes hydrogen peroxide.
     evidence:
-    - reference: DOI:10.1038/nrmicro3032
-      notes: Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.
+    - reference: DOI:10.1021/ja9018572
+      snippet: degrading hydrogen peroxide to water and oxygen
+      notes: Hydrogen peroxide is the substrate consumed in the catalatic reaction.
     predicate_id: biolink:consumes
   - subject: catalase_function
     predicate: has output
     object: molecular_oxygen
     description: The catalase reaction produces molecular oxygen.
     evidence:
-    - reference: DOI:10.1007/s00018-003-3206-5
-      notes: Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).
+    - reference: DOI:10.1021/ja9018572
+      snippet: hydrogen peroxide to water and oxygen (2H2O2 → 2 H2O + O2)
+      notes: The primary study gives molecular oxygen as a product of the balanced
+        catalase reaction.
     predicate_id: RO:0002234
   - subject: catalase_function
     predicate: has output
     object: water
     description: The catalase reaction produces water.
     evidence:
-    - reference: DOI:10.1007/s00018-003-3206-5
-      notes: Catalase dismutation yields water.
+    - reference: DOI:10.1021/ja9018572
+      snippet: Catalases are ubiquitous enzymes that prevent cell oxidative damage
+        by degrading hydrogen peroxide to water and oxygen
+      notes: The primary study gives water as a product of the catalase reaction.
     predicate_id: RO:0002234
   - subject: catalase
     predicate: confers
     object: catalase_activity_trait
     description: Production of catalase confers the catalase-activity phenotype.
     evidence:
-    - reference: DOI:10.1007/s00018-003-3206-5
-      notes: Supports catalase possession as the basis of the catalase-activity phenotype.
+    - reference: DOI:10.1021/ja9018572
+      snippet: Catalases are ubiquitous enzymes that prevent cell oxidative damage
+        by degrading hydrogen peroxide to water and oxygen
+      notes: The catalase protein's demonstrated reaction is the mechanistic basis
+        of the catalase-activity trait.
     predicate_id: METPO:2007700
   - subject: catalase_activity_trait
     predicate: decomposes
@@ -134,17 +179,20 @@ causal_graphs:
     description: Catalase activity rapidly decomposes hydrogen peroxide into water
       and molecular oxygen.
     evidence:
-    - reference: DOI:10.3390/biom14060697
-      notes: Catalase rapidly decomposes hydrogen peroxide into water and molecular
-        oxygen (canonical enzymology).
+    - reference: DOI:10.1021/ja9018572
+      snippet: degrading hydrogen peroxide to water and oxygen (2H2O2 → 2 H2O + O2)
+        with high efficiency
+      notes: The primary mechanistic study directly supports efficient peroxide decomposition
+        by catalase activity.
   - subject: hydrogen_peroxide
     predicate: activates
     object: oxyr_regulator
     description: Hydrogen peroxide activates the OxyR peroxide-sensing regulator.
     evidence:
-    - reference: DOI:10.1038/nrmicro3032
-      notes: An intracellular H2O2 concentration of ~200 nM is sufficient to drive
-        OxyR into a disulfide-bonded (active) form.
+    - reference: DOI:10.1073/pnas.96.11.6161
+      snippet: In wild-type cells, OxyR is activated by hydrogen peroxide.
+      notes: A primary E. coli study directly demonstrated peroxide-dependent OxyR
+        activation; this regulatory branch is organism-specific rather than universal.
     predicate_id: RO:0002213
   - subject: hydrogen_peroxide
     predicate: favors scavenging by
@@ -153,6 +201,8 @@ causal_graphs:
       which turn over much faster than alkyl hydroperoxide reductase.
     evidence:
     - reference: DOI:10.1038/nrmicro3032
+      snippet: Under these conditions, catalases, which do not require stoichiometric
+        reductants, can turn over much more quickly than Ahp.
       notes: Organisms rely on catalases when H2O2 levels are high; catalases turn
         over much more quickly than Ahp. Likely general across aerobes/facultative
         anaerobes.
@@ -163,6 +213,8 @@ causal_graphs:
       via OxyR or PerR.
     evidence:
     - reference: DOI:10.3389/fimmu.2021.667343
+      snippet: these regulators induce enzymes that reduce cytoplasmic H2O2 concentrations,
+        decrease the intracellular iron pools, and repair the H2O2-mediated damage.
       notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
         control peroxide defense systems.
     predicate_id: RO:0002211
@@ -173,19 +225,30 @@ causal_graphs:
       via OxyR or PerR.
     evidence:
     - reference: DOI:10.3389/fimmu.2021.667343
+      snippet: these regulators induce enzymes that reduce cytoplasmic H2O2 concentrations,
+        decrease the intracellular iron pools, and repair the H2O2-mediated damage.
       notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
         control peroxide defense systems.
     predicate_id: RO:0002211
   - subject: heme_biosynthesis
-    predicate: required for
+    predicate: supports activation of
     object: catalase
     description: Heme biosynthesis is required for catalase activation; impaired heme
       synthesis delays peroxide degradation.
     evidence:
     - reference: DOI:10.1111/mmi.12967
+      snippet: the KatG-dependent peroxidase activity was elevated only 2.6-fold,
+        suggesting that much of the enzyme lacked heme.
       notes: Ferrochelatase (hemH) function is required for timely induction of catalase
-        (KatG) activity; loss delays H2O2 degradation and growth.
+        (KatG) activity in E. coli; this edge is a taxon-specific supporting module.
 curation_history:
+- timestamp: '2026-08-23T09:12:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, grounded the protein and activity separately,
+    retained OxyR and PerR only with exact family-level caveats, and added DOI-backed
+    S. aureus NCTC 8325 PerR Q2G282.
+  llm_assisted: true
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
@@ -270,4 +333,11 @@ curation_history:
     is ''catalase ACTIVITY'' -- a molecular function, which is what catalase_function
     is. A protein is not its activity, and the graph already says so correctly: catalase
     -enables-> catalase_function. Dropped from the protein, kept on the function.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

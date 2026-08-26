@@ -28,6 +28,10 @@ causal_graphs:
   title: Oxidative phosphorylation chemiosmotic coupling
   description: Evidence-backed causal sketch linking respiratory electron transfer,
     proton motive force, ATP synthase, and ATP production.
+  scope_status: MECHANISTIC
+  scope_notes: Represents a concrete aerobic heme-copper-oxidase branch of bacterial
+    oxidative phosphorylation. The redundant family-unspecified terminal-oxidase node
+    was removed rather than assigned an overbroad grounding.
   nodes:
   - node_id: oxidative_phosphorylation_trait
     label: Oxidative phosphorylation
@@ -53,6 +57,7 @@ causal_graphs:
     label: F1Fo ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Rotary enzyme complex that synthesizes ATP using ion motive force.
+    grounding: GO:0045259
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -66,6 +71,7 @@ causal_graphs:
     label: Complex I / NADH:quinone oxidoreductase (NDH-1)
     node_type: GENE_OR_PROTEIN
     description: Proton-translocating NADH:quinone oxidoreductase entry complex.
+    grounding: GO:0045271
   - node_id: succinate
     label: succinate
     node_type: CHEMICAL
@@ -74,6 +80,7 @@ causal_graphs:
     label: succinate dehydrogenase / Complex II
     node_type: GENE_OR_PROTEIN
     description: Complex II coupling succinate oxidation to quinone reduction.
+    grounding: GO:0045273
   - node_id: quinone_pool
     label: quinone pool
     node_type: CHEMICAL
@@ -87,11 +94,6 @@ causal_graphs:
     label: proton translocation
     node_type: BIOLOGICAL_PROCESS
     description: Vectorial transmembrane transfer of protons by respiratory complexes.
-  - node_id: terminal_oxidase
-    label: terminal oxidase
-    node_type: GENE_OR_PROTEIN
-    description: Respiratory enzyme reducing molecular oxygen to water.
-    grounding: UniProtKB:A0A2U9ILE5
   - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
@@ -100,6 +102,28 @@ causal_graphs:
     label: heme-copper oxidase
     node_type: GENE_OR_PROTEIN
     description: Proton-pumping terminal oxidase class.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available InterPro entries describe catalytic subunit-I families,
+      not the complete heme-copper oxidase class represented by this node; the exemplar
+      is therefore explicitly one subunit of a purified complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08306
+      protein_label: Cytochrome c oxidase subunit 2
+      gene_symbol: ctaC
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 167
+      sequence_version: 1
+      role: Subunit II component of purified P. denitrificans cytochrome c oxidase;
+        this accession does not represent the complete heme-copper oxidase complex.
+      evidence:
+      - reference: DOI:10.1016/S0005-2728(98)00092-9
+        snippet: enzyme containing polypeptides I-IV
+        notes: The primary purification study establishes the four-subunit P. denitrificans
+          oxidase and its subunit-II component; UniProtKB P08306 verifies the reviewed
+          protein and taxon.
   edges:
   - subject: oxidative_phosphorylation_trait
     predicate: uses pathway
@@ -153,6 +177,9 @@ causal_graphs:
     description: Complex I oxidizes NADH at the respiratory chain entry point.
     evidence:
     - reference: DOI:10.3390/ijms252413421
+      snippet: Proton-translocating NADH–ubiquinone oxidoreductase (complex I) catalyzes
+        the oxidation of NADH by ubiquinone accompanied by the transmembrane transfer
+        of four protons
       notes: complex I catalyzes the oxidation of NADH by ubiquinone (general prokaryotic
         claim).
   - subject: complex_i
@@ -161,6 +188,7 @@ causal_graphs:
     description: Complex I transfers electrons from NADH to the quinone pool.
     evidence:
     - reference: DOI:10.3390/ijms252413421
+      snippet: oxidation of NADH by ubiquinone
       notes: oxidation of NADH by ubiquinone; reduces the membrane quinone pool.
     predicate_id: METPO:2007802
   - subject: complex_i
@@ -169,32 +197,60 @@ causal_graphs:
     description: Complex I couples redox chemistry to transmembrane proton translocation.
     evidence:
     - reference: DOI:10.3390/ijms252413421
+      snippet: accompanied by the transmembrane transfer of four protons
       notes: coupled with the vectorial transmembrane transfer of four H+ ions.
+  - subject: complex_i
+    predicate: generates
+    object: proton_motive_force
+    description: Complex I proton translocation contributes directly to formation
+      of the proton motive force.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      snippet: contributing to the formation of a proton motive force (pmf)
+      notes: The review directly links proton-translocating NADH-ubiquinone oxidoreductase
+        to PMF formation across bacterial and mitochondrial coupling membranes.
+    predicate_id: biolink:produces
   - subject: succinate
     predicate: is oxidized by
     object: succinate_dehydrogenase
     description: Succinate dehydrogenase oxidizes succinate, reducing quinone.
     evidence:
     - reference: DOI:10.1007/s10863-024-10041-y
+      snippet: catalyzes the two-electron reduction of quinone by succinate
       notes: succinate dehydrogenase catalyzes the two-electron reduction of quinone
         by succinate.
+  - subject: succinate_dehydrogenase
+    predicate: reduces
+    object: quinone_pool
+    description: Complex II transfers electrons from succinate to the membrane quinone
+      pool.
+    evidence:
+    - reference: DOI:10.1007/s10863-024-10041-y
+      snippet: catalyzes the two-electron reduction of quinone by succinate
+      notes: The B. licheniformis respiratory-chain study identifies succinate dehydrogenase
+        as succinate:quinone oxidoreductase, directly joining Complex II to the quinone
+        pool.
+    predicate_id: METPO:2007802
   - subject: proton_translocation
     predicate: generates
     object: proton_motive_force
     description: Vectorial proton translocation establishes the proton motive force.
     evidence:
     - reference: DOI:10.3390/ijms252413421
+      snippet: contributing to the formation of a proton motive force (pmf)
       notes: energy conservation in the form of an electrochemical gradient (proton
         motive force, pmf).
     predicate_id: biolink:produces
-  - subject: terminal_oxidase
+  - subject: heme_copper_oxidase
     predicate: reduces
     object: molecular_oxygen
-    description: Terminal oxidases catalyze four-electron reduction of O2 to water.
+    description: Heme-copper terminal oxidases catalyze four-electron reduction of
+      O2 to water in the concrete branch represented here.
     evidence:
     - reference: DOI:10.3390/ijms25021277
-      notes: Terminal oxidases catalyze four-electron reduction of O2 to 2H2O (general
-        bacterial claim).
+      snippet: catalyze the four-electron reduction of O2 to 2H2O
+      notes: The review identifies heme-copper oxidases as a bacterial terminal-oxidase
+        class carrying out the oxygen-reduction reaction.
     predicate_id: METPO:2007802
   - subject: heme_copper_oxidase
     predicate: translocates
@@ -202,8 +258,17 @@ causal_graphs:
     description: Heme-copper oxidases act as proton pumps contributing to PMF.
     evidence:
     - reference: DOI:10.3390/ijms25021277
+      snippet: Heme-copper oxidases are true proton pumps
       notes: Heme-copper oxidases are true proton pumps (general claim).
 curation_history:
+- timestamp: '2026-08-23T09:14:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, grounded complexes I, II, and ATP synthase,
+    replaced the ambiguous terminal-oxidase node with the cited heme-copper branch,
+    connected the respiratory entry branches, and added DOI-backed P. denitrificans
+    subunit-II P08306.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.912667+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
@@ -305,4 +370,21 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:266 from DOI:10.1016/S0005-2728(98)00092-9
+    back to PMID:30428155 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

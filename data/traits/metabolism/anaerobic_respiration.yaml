@@ -24,16 +24,26 @@ canonical_examples:
 - taxon_id: NCBITaxon:70863
   taxon_label: Shewanella oneidensis
   note: respires metals/alternative acceptors
-  reference: PMID:12368813
+  reference: DOI:10.1038/nbt749
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: nitrate/fumarate anaerobic respiration
   reference: PMID:9230919
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: Complete denitrifier paired to the reviewed NosZ example for the representative
+    nitrogen-oxide respiration branch.
+  reference: DOI:10.1042/BJ20020782
 causal_graphs:
 - graph_id: anaerobic_respiration_denitrification
   title: Anaerobic respiration with nitrogen oxide acceptors
   description: Evidence-backed causal sketch using denitrification as a representative
     anaerobic respiratory process.
+  scope_status: MECHANISTIC
+  scope_notes: This graph uses complete denitrification as one representative branch
+    of anaerobic respiration. The P. denitrificans NosZ example supports only its
+    terminal N2O-reduction step; metal, fumarate, sulfate, and other acceptor routes
+    use different reductases.
   nodes:
   - node_id: anaerobic_respiration_trait
     label: Anaerobic respiration
@@ -73,11 +83,16 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory reductases (e.g., Nar, Nos) that catalyze stepwise reduction
       of nitrogen oxides during denitrification.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This plural umbrella node groups unrelated Nar, Nir, Nor, and
+      Nos enzyme families, so no single protein-family, activity, or complex term
+      exactly represents it.
   - node_id: nitrate_reductase
     label: respiratory nitrate reductase (NarGHI)
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound respiratory nitrate reductase complex that reduces
       nitrate to nitrite.
+    grounding: GO:0009325
   - node_id: nitrate
     label: nitrate
     node_type: CHEMICAL
@@ -94,6 +109,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Terminal reductase of denitrification reducing nitrous oxide to dinitrogen.
     grounding: GO:0050304
+    protein_examples:
+    - uniprot_id: UniProtKB:Q51705
+      protein_label: Nitrous-oxide reductase
+      gene_symbol: nosZ
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 135
+      sequence_version: 1
+      role: NosZ enzyme catalyzing the terminal N2O-to-dinitrogen step in P. denitrificans.
+      evidence:
+      - reference: DOI:10.1042/BJ20020782
+        snippet: N2OR is a multicopper protein which converts N2O into dinitrogen
+          and water.
+        notes: The primary structural study purified and characterized N2O reductase
+          from P. denitrificans; UniProtKB Q51705 verifies the reviewed NosZ protein
+          and matching taxon.
   - node_id: nitrous_oxide
     label: nitrous oxide
     node_type: CHEMICAL
@@ -267,4 +300,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T08:20:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed P. denitrificans NosZ example for the representative
+    denitrification branch, grounded NarGHI to its current GO complex term, explicitly
+    reviewed the plural reductase umbrella as label-only, and documented graph scope.
   llm_assisted: true

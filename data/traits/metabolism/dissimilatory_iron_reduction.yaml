@@ -33,11 +33,20 @@ canonical_examples:
   note: Textbook Fe(III)-reducer; oxidizes acetate coupled to metal reduction (type
     strain PCA).
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC201883/
+- taxon_id: NCBITaxon:211586
+  taxon_label: Shewanella oneidensis MR-1
+  note: Strain-level dissimilatory metal reducer paired to the MtrC surface decaheme
+    cytochrome example supporting the Fe(III)-reduction branch.
+  reference: DOI:10.1073/pnas.0604517103
 causal_graphs:
 - graph_id: dir_ferric_iron_respiration
   title: Dissimilatory iron reduction respires Fe(III) to Fe(II)
   description: Evidence-backed causal sketch linking ferric iron as terminal electron
     acceptor to anaerobic respiration in Geobacter and Shewanella.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines Geobacter and Shewanella routes. The taxon-paired
+    MtrC example supports the extracellular Fe(III)-reduction branch in S. oneidensis
+    MR-1 and is not asserted as a universal component of all iron reducers.
   nodes:
   - node_id: dir_trait
     label: dissimilatory iron reduction
@@ -78,6 +87,33 @@ causal_graphs:
     node_type: CHEMICAL
     description: Insoluble Fe(III) oxide mineral phase serving as terminal electron
       acceptor.
+  - node_id: mtrc
+    label: MtrC-family surface decaheme c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    description: Cell-surface decaheme cytochrome supporting extracellular reduction
+      of ferric iron in Shewanella.
+    grounding: InterPro:IPR020014
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis MR-1
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: MtrC cell-surface component implicated in efficient Fe(III) reduction;
+        this accession is not presented as the complete MtrCAB conduit.
+      evidence:
+      - reference: DOI:10.1073/pnas.0604517103
+        snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated
+          in efficient reduction of Fe(III) and Mn(IV) by MR-1.
+        notes: The primary S. oneidensis MR-1 study supports the MtrC role in metal
+          reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference
+          proteome UP000008186 and verifies the strain taxon.
   edges:
   - subject: ferric_iron
     predicate: oxidized to
@@ -163,6 +199,18 @@ causal_graphs:
         organism itself secretes, whereas this node is ambient Fe(III)-organic-matter
         complex, so it supports the existence of the pool rather than its origin.
     predicate_id: METPO:2007702
+  - subject: mtrc
+    predicate: enables reduction of
+    object: solid_fe3_mineral
+    description: Cell-surface MtrC supports efficient extracellular reduction of insoluble
+      Fe(III) acceptors in S. oneidensis MR-1.
+    evidence:
+    - reference: DOI:10.1073/pnas.0604517103
+      snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated in
+        efficient reduction of Fe(III) and Mn(IV) by MR-1.
+      notes: This primary-source edge is restricted to the Shewanella MR-1 branch;
+        Geobacter and other iron reducers can use different extracellular electron-transfer
+        machinery.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -228,4 +276,12 @@ curation_history:
     donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject
     problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-24T08:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed S. oneidensis MR-1 MtrC example, an InterPro family
+    grounding, an explicitly strain-scoped MtrC-to-Fe(III) edge, and mechanistic scope
+    notes. The unreviewed accession is retained only as an exact component from reference
+    proteome UP000008186.
   llm_assisted: true

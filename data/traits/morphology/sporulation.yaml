@@ -29,12 +29,20 @@ canonical_examples:
   taxon_label: Clostridium acetobutylicum
   note: anaerobic sporulation
   reference: PMID:18631379
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis 168
+  note: Strain-level SpoIIIE sporulation exemplar.
+  reference: DOI:10.1038/s41467-024-51654-6
 causal_graphs:
 - graph_id: sporulation_spo0a_sigma_morphogenesis
   title: Sporulation Spo0A and sigma-factor morphogenesis
   description: Evidence-backed causal sketch linking environmental stress and Spo0A
     activation to asymmetric septation, compartment-specific sigma factors, forespore
     maturation, and endospore formation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: sporulation_trait
     label: sporulation
@@ -46,6 +54,9 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Starvation or stress cue that can trigger sporulation.
   - node_id: spo0a_phosphorelay
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Spo0A phosphorelay
     node_type: GENE_OR_PROTEIN
     description: Phosphorelay-controlled master regulator of sporulation initiation.
@@ -54,6 +65,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Polar division generating mother-cell and forespore compartments.
   - node_id: compartment_sigma_factors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: compartment-specific sigma factors
     node_type: GENE_OR_PROTEIN
     description: Sporulation sigma factors such as sigma F, E, G, and K.
@@ -71,6 +85,27 @@ causal_graphs:
     description: The two cellular compartments produced by asymmetric division during
       sporulation.
   - node_id: spoiiie_translocase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P21458
+      protein_label: DNA translocase SpoIIIE
+      gene_symbol: spoIIIE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-08-25'
+      entry_version: 156
+      sequence_version: 3
+      role: SpoIIIE translocates the chromosome across the asymmetric septum into
+        the B. subtilis forespore.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: SpoIIIE mediates chromosome translocation
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: SpoIIIE
     node_type: GENE_OR_PROTEIN
     description: DNA translocase that pumps the chromosome into the forespore during
@@ -90,19 +125,30 @@ causal_graphs:
     node_type: STATE
     description: Engulfed forespore fully enclosed within the mother-cell cytoplasm.
   - node_id: sigma_f
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: sigma F
     node_type: GENE_OR_PROTEIN
     description: First compartment-specific sigma factor activated in the forespore.
   - node_id: sigma_e
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: sigma E
     node_type: GENE_OR_PROTEIN
     description: Mother-cell sigma factor activated downstream of sigma F.
-    grounding: UniProtKB:A0A0C7NZS0
   - node_id: sigma_g
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: sigma G
     node_type: GENE_OR_PROTEIN
     description: Late forespore sigma factor driving spore maturation and DNA protection.
   - node_id: sigma_k
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: sigma K
     node_type: GENE_OR_PROTEIN
     description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
@@ -328,4 +374,22 @@ curation_history:
     ids that meant the same sense: stress_resistance is QUALITY. Stress resistance
     here is enhanced tolerance or resistance of a cell or mature endospore, a measurable
     protective attribute. The nodes do not describe the general stress-response process.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope sporulation_spo0a_sigma_morphogenesis=MECHANISTIC
+    with scope_notes; marked 7 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (spo0a_phosphorelay, compartment_sigma_factors, spoiiie_translocase, sigma_f,
+    sigma_e, sigma_g, sigma_k); added taxon-paired protein example(s) UniProtKB:P21458
+    on spoiiie_translocase (NCBITaxon:224308); added canonical example(s) NCBITaxon:224308.'
   llm_assisted: true

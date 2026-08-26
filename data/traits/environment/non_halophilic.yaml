@@ -34,6 +34,10 @@ causal_graphs:
   title: Non-halophilic salt-stress response mechanism
   description: Evidence-backed causal sketch linking non-halophily to lack of salt
     requirement, high-osmolarity stress, potassium uptake, and compatible-solute protection.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: non_halophilic_trait
     label: non halophilic
@@ -65,6 +69,9 @@ causal_graphs:
     description: Compatible solute synthesized by Bacillus subtilis during osmotic
       adaptation.
   - node_id: compatible_solute_uptake
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: compatible-solute uptake systems
     node_type: GENE_OR_PROTEIN
     description: Transporters importing glycine betaine, proline, ectoine, or other
@@ -271,4 +278,13 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope non_halophilic_salt_stress_response=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (compatible_solute_uptake).'
   llm_assisted: true

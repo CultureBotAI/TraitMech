@@ -27,6 +27,10 @@ causal_graphs:
   title: Halotolerant salt-stress response mechanism
   description: Evidence-backed causal sketch linking halotolerance to survival under
     high salinity without strict salt requirement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: halotolerant_trait
     label: halotolerant
@@ -66,15 +70,26 @@ causal_graphs:
     description: Osmoadaptation strategy keeping cytoplasmic salt low while accumulating
       compatible solutes.
   - node_id: ectABC_operon
-    label: ectABC operon
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: EctABC ectoine-biosynthesis enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Gene cluster encoding ectoine biosynthesis from aspartate.
+    description: Enzyme module catalyzing ectoine biosynthesis from aspartate.
+    gene_symbols:
+    - ectA
+    - ectB
+    - ectC
+    operon: ectABC
   - node_id: ectoine_biosynthesis
     label: ectoine biosynthesis
     node_type: PATHWAY
     description: De novo synthesis of the compatible solute ectoine.
     grounding: GO:0019491
   - node_id: betA_betB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: betA/betB
     node_type: GENE_OR_PROTEIN
     description: Choline oxidation enzymes producing glycine betaine.
@@ -325,4 +340,13 @@ curation_history:
     differ and a bare quote would put euryhaline''s wording into nacl_delta_mid1''s
     record (#400 review). Either way the steps can be listed, which is the test. Applied
     AGAINST the majority, which was 4 BIOLOGICAL_PROCESS to 2 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope halotolerant_salt_stress_response=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (ectABC_operon, betA_betB).'
   llm_assisted: true

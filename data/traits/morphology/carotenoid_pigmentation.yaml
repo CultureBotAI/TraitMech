@@ -28,6 +28,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking bacterial carotenoid pigmentation
     to isoprenoid precursors, crt enzymes, conjugated carotenoids, and yellow-orange-red
     visible color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: carotenoid_pigmentation_trait
     label: carotenoid pigmentation
@@ -39,6 +43,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Prenyl building blocks used in carotenoid biosynthesis.
   - node_id: crt_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes encoded by crt genes.
@@ -56,6 +63,9 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Visible colors associated with carotenoid absorption spectra.
   - node_id: phytoene_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: phytoene synthase
     node_type: GENE_OR_PROTEIN
     description: CrtB-type enzyme condensing prenyl diphosphate to phytoene.
@@ -67,13 +77,16 @@ causal_graphs:
     label: phytoene desaturase
     node_type: GENE_OR_PROTEIN
     description: CrtI-type enzyme desaturating phytoene toward lycopene.
-    grounding: UniProtKB:A0A060JDC8
+    grounding: InterPro:IPR014102
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
     description: Red C40 carotenoid intermediate formed by desaturation.
     grounding: CHEBI:15948
   - node_id: lycopene_cyclases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: lycopene cyclases
     node_type: GENE_OR_PROTEIN
     description: CrtY-type enzymes cyclizing lycopene into cyclic carotenes.
@@ -286,4 +299,20 @@ curation_history:
     two GGPP to phytoene, then desaturation/isomerization yields lycopene'' -- which
     is the rule''s own test for PATHWAY met explicitly rather than by naming. Applied
     AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope carotenoid_pigmentation_crt_pathway=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (crt_enzymes, phytoene_synthase, lycopene_cyclases).'
   llm_assisted: true

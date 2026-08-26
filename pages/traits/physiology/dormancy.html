@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>Reversible dormancy and resuscitation</h2>
       <p class="meta">Evidence-backed causal sketch linking unfavorable conditions to a reversible dormant state forming a microbial seed bank.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph combines several bacterial dormancy modules rather than asserting one universal pathway. The H37Rv RpfB example anchors the resuscitation branch and is one Rpf-family protein, not a stand-in for toxin-antitoxin or ribosome-hibernation systems.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -195,6 +198,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>resuscitation-promoting factors (Rpf)</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/P9WG29/entry" rel="nofollow noreferrer"><code>UniProtKB:P9WG29</code></a>
+                  <br>Resuscitation-promoting factor RpfB <span class="meta">(rpfB)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83332" rel="nofollow noreferrer">Mycobacterium tuberculosis H37Rv</a>
+                  <br><code>NCBITaxon:83332</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v53 · sequence v1</span>
+                </td>
+                <td>
+                  <p>H37Rv RpfB component of the Rpf family that contributes to recovery from dormancy; it does not denote all five paralogues.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1111/j.1365-2958.2007.06078.x" rel="nofollow noreferrer"><code>DOI:10.1111/j.1365-2958.2007.06078.x</code></a>
+                      
+                      <span class="evidence-snippet">Rpf-like proteins are implicated in resuscitation through peptidoglycan hydrolysis</span>
+                      <span class="meta">Sequential deletion and complementation establish a resuscitation phenotype and place RpfB high in the functional hierarchy; UniProt verifies the reviewed H37Rv RpfB entry.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -410,7 +461,7 @@ Dormancy is an umbrella trait representing reversible, low-metabolic/non-growing
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(1)</span></h2>
+        <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -432,6 +483,25 @@ Dormancy is an umbrella trait representing reversible, low-metabolic/non-growing
           
           
           <span class="meta">Paradigm of bacterial dormancy/non-replicating persistence (latent infection; DosR regulon).</span>
+        </li>
+        
+        <li>
+          <em>Mycobacterium tuberculosis H37Rv</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83332"
+             rel="nofollow noreferrer"><code>NCBITaxon:83332</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1111/j.1365-2958.2007.06078.x"
+             rel="nofollow noreferrer"><code>DOI:10.1111/j.1365-2958.2007.06078.x</code></a>
+          
+          
+          <span class="meta">Strain-level dormancy model paired to reviewed RpfB, one member of the resuscitation-promoting-factor family.</span>
         </li>
         
       </ul>
@@ -479,6 +549,12 @@ Dormancy is an umbrella trait representing reversible, low-metabolic/non-growing
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope dormancy_seed_bank=MECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (toxin_antitoxin_modules, ribosome_hibernation_factors, rpf_proteins); added taxon-paired protein example(s) UniProtKB:P9WG29 on rpf_proteins (NCBITaxon:83332); added canonical example(s) NCBITaxon:83332.</p>
         </li>
         
       </ol>
@@ -750,6 +826,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -838,7 +919,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking unfavorable conditions to a reversible dormant state forming a microbial seed bank.", "edges": [{"description": "Adverse conditions induce entry into dormancy.", "evidence": [{"notes": "Lennon \u0026 Jones review entry/exit from dormancy (seed banks).", "reference": "DOI:10.1038/nrmicro2504"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "unfavorable_conditions", "target": "dormancy_process"}, {"description": "The dormancy process realizes the dormancy trait.", "evidence": [{"notes": "Lewis links dormancy to long-term survival.", "reference": "DOI:10.1038/nrmicro1557"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "dormancy_trait"}, {"description": "Nutrient limitation and heat stress activate the (p)ppGpp stringent response.", "evidence": [{"notes": "The stringent response mediated by (p)ppGpp is activated by nutrient/heat stresses.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "nutrient_heat_stress", "target": "ppgpp_stringent_response"}, {"description": "(p)ppGpp reprograms cellular activity, resulting in slow growth or dormancy.", "evidence": [{"notes": "(p)ppGpp can reprogram cellular life activities resulting in slow cell growth or dormancy.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ppgpp_stringent_response", "target": "dormancy_process"}, {"description": "(p)ppGpp upregulates multiple toxin-antitoxin modules.", "evidence": [{"notes": "(p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA, relBE, yafNO and hokB).", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-5", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "ppgpp_stringent_response", "target": "toxin_antitoxin_modules"}, {"description": "Ribosome hibernation factors turn off protein synthesis during dormancy.", "evidence": [{"notes": "Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein synthesis.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "id": "edge-6", "is_orphan": false, "predicate": "turns off", "predicate_id": null, "source": "ribosome_hibernation_factors", "target": "protein_synthesis"}, {"description": "Hibernation factor binding protects ribosomes from ribonuclease degradation.", "evidence": [{"notes": "Hibernation factors directly block ribonucleases from entering the ribosome in response to starvation.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "id": "edge-7", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "ribosome_hibernation_factors", "target": "ribosome"}, {"description": "Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.", "evidence": [{"notes": "Rpfs reactivate dormant bacteria at very low concentrations.", "reference": "DOI:10.3390/microorganisms12081528"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "rpf_proteins", "target": "dormancy_process"}], "evidence_rows": [{"description": "Adverse conditions induce entry into dormancy.", "edge_id": "edge-1", "evidence": [{"notes": "Lennon \u0026 Jones review entry/exit from dormancy (seed banks).", "reference": "DOI:10.1038/nrmicro2504"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "unfavorable conditions", "target": "dormancy process"}, {"description": "The dormancy process realizes the dormancy trait.", "edge_id": "edge-2", "evidence": [{"notes": "Lewis links dormancy to long-term survival.", "reference": "DOI:10.1038/nrmicro1557"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "target": "dormancy"}, {"description": "Nutrient limitation and heat stress activate the (p)ppGpp stringent response.", "edge_id": "edge-3", "evidence": [{"notes": "The stringent response mediated by (p)ppGpp is activated by nutrient/heat stresses.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "nutrient limitation or heat stress", "target": "(p)ppGpp stringent response"}, {"description": "(p)ppGpp reprograms cellular activity, resulting in slow growth or dormancy.", "edge_id": "edge-4", "evidence": [{"notes": "(p)ppGpp can reprogram cellular life activities resulting in slow cell growth or dormancy.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "(p)ppGpp stringent response", "target": "dormancy process"}, {"description": "(p)ppGpp upregulates multiple toxin-antitoxin modules.", "edge_id": "edge-5", "evidence": [{"notes": "(p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA, relBE, yafNO and hokB).", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "upregulates", "predicate_id": null, "source": "(p)ppGpp stringent response", "target": "toxin-antitoxin modules"}, {"description": "Ribosome hibernation factors turn off protein synthesis during dormancy.", "edge_id": "edge-6", "evidence": [{"notes": "Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein synthesis.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "predicate": "turns off", "predicate_id": null, "source": "ribosome hibernation factors (RMF/HPF/RaiA)", "target": "protein synthesis"}, {"description": "Hibernation factor binding protects ribosomes from ribonuclease degradation.", "edge_id": "edge-7", "evidence": [{"notes": "Hibernation factors directly block ribonucleases from entering the ribosome in response to starvation.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "predicate": "protects", "predicate_id": null, "source": "ribosome hibernation factors (RMF/HPF/RaiA)", "target": "ribosome"}, {"description": "Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.", "edge_id": "edge-8", "evidence": [{"notes": "Rpfs reactivate dormant bacteria at very low concentrations.", "reference": "DOI:10.3390/microorganisms12081528"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "resuscitation-promoting factors (Rpf)", "target": "dormancy process"}], "graph_id": "dormancy_seed_bank", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Entry into a reversible quiescent state.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to enter a reversible low-activity state.", "grounding": "traitmech:000080", "id": "dormancy_trait", "is_orphan": false, "label": "dormancy", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Nutrient starvation or heat stress that triggers the stringent response.", "grounding": null, "id": "nutrient_heat_stress", "is_orphan": false, "label": "nutrient limitation or heat stress", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Guanosine tetra/pentaphosphate-mediated stringent response reprogramming cell activity.", "grounding": null, "id": "ppgpp_stringent_response", "is_orphan": false, "label": "(p)ppGpp stringent response", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Translation of mRNA into protein.", "grounding": "GO:0006412", "id": "protein_synthesis", "is_orphan": false, "label": "protein synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Ribonucleoprotein machine for protein synthesis, protected during dormancy.", "grounding": "GO:0005840", "id": "ribosome", "is_orphan": false, "label": "ribosome", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#f3e8ff", "description": "Factors that bind ribosomes to silence translation during dormancy.", "grounding": null, "id": "ribosome_hibernation_factors", "is_orphan": false, "label": "ribosome hibernation factors (RMF/HPF/RaiA)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Peptidoglycan-hydrolase Rpf proteins that reactivate dormant/VBNC cells.", "grounding": null, "id": "rpf_proteins", "is_orphan": false, "label": "resuscitation-promoting factors (Rpf)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Chromosomal toxin-antitoxin systems (e.g. hipAB, mazEF, relBE) inducing growth arrest.", "grounding": null, "id": "toxin_antitoxin_modules", "is_orphan": false, "label": "toxin-antitoxin modules", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Stress or resource limitation triggering dormancy.", "grounding": null, "id": "unfavorable_conditions", "is_orphan": false, "label": "unfavorable conditions", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Reversible dormancy and resuscitation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking unfavorable conditions to a reversible dormant state forming a microbial seed bank.", "edges": [{"description": "Adverse conditions induce entry into dormancy.", "evidence": [{"notes": "Lennon \u0026 Jones review entry/exit from dormancy (seed banks).", "reference": "DOI:10.1038/nrmicro2504"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "unfavorable_conditions", "target": "dormancy_process"}, {"description": "The dormancy process realizes the dormancy trait.", "evidence": [{"notes": "Lewis links dormancy to long-term survival.", "reference": "DOI:10.1038/nrmicro1557"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "dormancy_trait"}, {"description": "Nutrient limitation and heat stress activate the (p)ppGpp stringent response.", "evidence": [{"notes": "The stringent response mediated by (p)ppGpp is activated by nutrient/heat stresses.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "nutrient_heat_stress", "target": "ppgpp_stringent_response"}, {"description": "(p)ppGpp reprograms cellular activity, resulting in slow growth or dormancy.", "evidence": [{"notes": "(p)ppGpp can reprogram cellular life activities resulting in slow cell growth or dormancy.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ppgpp_stringent_response", "target": "dormancy_process"}, {"description": "(p)ppGpp upregulates multiple toxin-antitoxin modules.", "evidence": [{"notes": "(p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA, relBE, yafNO and hokB).", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-5", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "ppgpp_stringent_response", "target": "toxin_antitoxin_modules"}, {"description": "Ribosome hibernation factors turn off protein synthesis during dormancy.", "evidence": [{"notes": "Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein synthesis.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "id": "edge-6", "is_orphan": false, "predicate": "turns off", "predicate_id": null, "source": "ribosome_hibernation_factors", "target": "protein_synthesis"}, {"description": "Hibernation factor binding protects ribosomes from ribonuclease degradation.", "evidence": [{"notes": "Hibernation factors directly block ribonucleases from entering the ribosome in response to starvation.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "id": "edge-7", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "ribosome_hibernation_factors", "target": "ribosome"}, {"description": "Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.", "evidence": [{"notes": "Rpfs reactivate dormant bacteria at very low concentrations.", "reference": "DOI:10.3390/microorganisms12081528"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "rpf_proteins", "target": "dormancy_process"}], "evidence_rows": [{"description": "Adverse conditions induce entry into dormancy.", "edge_id": "edge-1", "evidence": [{"notes": "Lennon \u0026 Jones review entry/exit from dormancy (seed banks).", "reference": "DOI:10.1038/nrmicro2504"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "unfavorable conditions", "target": "dormancy process"}, {"description": "The dormancy process realizes the dormancy trait.", "edge_id": "edge-2", "evidence": [{"notes": "Lewis links dormancy to long-term survival.", "reference": "DOI:10.1038/nrmicro1557"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "target": "dormancy"}, {"description": "Nutrient limitation and heat stress activate the (p)ppGpp stringent response.", "edge_id": "edge-3", "evidence": [{"notes": "The stringent response mediated by (p)ppGpp is activated by nutrient/heat stresses.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "nutrient limitation or heat stress", "target": "(p)ppGpp stringent response"}, {"description": "(p)ppGpp reprograms cellular activity, resulting in slow growth or dormancy.", "edge_id": "edge-4", "evidence": [{"notes": "(p)ppGpp can reprogram cellular life activities resulting in slow cell growth or dormancy.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "(p)ppGpp stringent response", "target": "dormancy process"}, {"description": "(p)ppGpp upregulates multiple toxin-antitoxin modules.", "edge_id": "edge-5", "evidence": [{"notes": "(p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA, relBE, yafNO and hokB).", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "upregulates", "predicate_id": null, "source": "(p)ppGpp stringent response", "target": "toxin-antitoxin modules"}, {"description": "Ribosome hibernation factors turn off protein synthesis during dormancy.", "edge_id": "edge-6", "evidence": [{"notes": "Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein synthesis.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "predicate": "turns off", "predicate_id": null, "source": "ribosome hibernation factors (RMF/HPF/RaiA)", "target": "protein synthesis"}, {"description": "Hibernation factor binding protects ribosomes from ribonuclease degradation.", "edge_id": "edge-7", "evidence": [{"notes": "Hibernation factors directly block ribonucleases from entering the ribosome in response to starvation.", "reference": "DOI:10.3389/fmicb.2024.1386179"}], "predicate": "protects", "predicate_id": null, "source": "ribosome hibernation factors (RMF/HPF/RaiA)", "target": "ribosome"}, {"description": "Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.", "edge_id": "edge-8", "evidence": [{"notes": "Rpfs reactivate dormant bacteria at very low concentrations.", "reference": "DOI:10.3390/microorganisms12081528"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "resuscitation-promoting factors (Rpf)", "target": "dormancy process"}], "graph_id": "dormancy_seed_bank", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Entry into a reversible quiescent state.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to enter a reversible low-activity state.", "grounding": "traitmech:000080", "id": "dormancy_trait", "is_orphan": false, "label": "dormancy", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Nutrient starvation or heat stress that triggers the stringent response.", "grounding": null, "id": "nutrient_heat_stress", "is_orphan": false, "label": "nutrient limitation or heat stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Guanosine tetra/pentaphosphate-mediated stringent response reprogramming cell activity.", "grounding": null, "id": "ppgpp_stringent_response", "is_orphan": false, "label": "(p)ppGpp stringent response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Translation of mRNA into protein.", "grounding": "GO:0006412", "id": "protein_synthesis", "is_orphan": false, "label": "protein synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fce7f3", "description": "Ribonucleoprotein machine for protein synthesis, protected during dormancy.", "grounding": "GO:0005840", "id": "ribosome", "is_orphan": false, "label": "ribosome", "node_type": "ORGANELLE", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Factors that bind ribosomes to silence translation during dormancy.", "grounding": null, "id": "ribosome_hibernation_factors", "is_orphan": false, "label": "ribosome hibernation factors (RMF/HPF/RaiA)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Peptidoglycan-hydrolase Rpf proteins that reactivate dormant/VBNC cells.", "grounding": null, "id": "rpf_proteins", "is_orphan": false, "label": "resuscitation-promoting factors (Rpf)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 53, "evidence": [{"notes": "Sequential deletion and complementation establish a resuscitation phenotype and place RpfB high in the functional hierarchy; UniProt verifies the reviewed H37Rv RpfB entry.", "reference": "DOI:10.1111/j.1365-2958.2007.06078.x", "snippet": "Rpf-like proteins are implicated in resuscitation through peptidoglycan hydrolysis"}], "gene_symbol": "rpfB", "protein_label": "Resuscitation-promoting factor RpfB", "retrieved_on": "2026-08-24", "role": "H37Rv RpfB component of the Rpf family that contributes to recovery from dormancy; it does not denote all five paralogues.", "sequence_version": 1, "taxon_id": "NCBITaxon:83332", "taxon_label": "Mycobacterium tuberculosis H37Rv", "uniprot_id": "UniProtKB:P9WG29"}], "xrefs": []}, {"color": "#f3e8ff", "description": "Chromosomal toxin-antitoxin systems (e.g. hipAB, mazEF, relBE) inducing growth arrest.", "grounding": null, "id": "toxin_antitoxin_modules", "is_orphan": false, "label": "toxin-antitoxin modules", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Stress or resource limitation triggering dormancy.", "grounding": null, "id": "unfavorable_conditions", "is_orphan": false, "label": "unfavorable conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 53, "evidence": [{"notes": "Sequential deletion and complementation establish a resuscitation phenotype and place RpfB high in the functional hierarchy; UniProt verifies the reviewed H37Rv RpfB entry.", "reference": "DOI:10.1111/j.1365-2958.2007.06078.x", "snippet": "Rpf-like proteins are implicated in resuscitation through peptidoglycan hydrolysis"}], "gene_symbol": "rpfB", "node_id": "rpf_proteins", "node_label": "resuscitation-promoting factors (Rpf)", "protein_label": "Resuscitation-promoting factor RpfB", "retrieved_on": "2026-08-24", "role": "H37Rv RpfB component of the Rpf family that contributes to recovery from dormancy; it does not denote all five paralogues.", "sequence_version": 1, "taxon_id": "NCBITaxon:83332", "taxon_label": "Mycobacterium tuberculosis H37Rv", "uniprot_id": "UniProtKB:P9WG29"}], "scope_notes": "This graph combines several bacterial dormancy modules rather than asserting one universal pathway. The H37Rv RpfB example anchors the resuscitation branch and is one Rpf-family protein, not a stand-in for toxin-antitoxin or ribosome-hibernation systems.", "scope_status": "MECHANISTIC", "title": "Reversible dormancy and resuscitation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -861,7 +942,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

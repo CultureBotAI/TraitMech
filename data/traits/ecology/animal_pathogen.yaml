@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: animal_pathogen_metazoan_adaptation
   title: Animal-pathogen metazoan host adaptation
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking metazoan-adapted virulence factors, immune-evasion
     strategies, and animal-tissue colonization to the animal-pathogen phenotype.
   nodes:
@@ -37,6 +41,9 @@ causal_graphs:
     grounding: METPO:1004002
     description: Pathogen of metazoan hosts.
   - node_id: metazoan_virulence_factors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: metazoan-adapted virulence factors
     node_type: GENE_OR_PROTEIN
     description: Virulence factors tuned to animal-cell receptors and tissues.
@@ -53,6 +60,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Pathology produced in an animal host.
   - node_id: bacterial_adhesins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: bacterial adhesins
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface molecules mediating adherence to host tissues.
@@ -61,6 +71,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Adhesion of bacteria to host cells, extracellular matrix, or mucosa.
   - node_id: complement_regulator_binding_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: complement-regulator-binding surface proteins
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface proteins that bind host complement regulators factor
@@ -70,6 +83,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Evasion of host complement-mediated humoral immunity.
   - node_id: type_iii_secretion_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: type III secretion system
     node_type: GENE_OR_PROTEIN
     description: Injectisome multiprotein complex forming syringe-like structures
@@ -98,6 +114,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Expression of siderophore biosynthesis genes for iron scavenging.
   - node_id: tonb_dependent_transporters
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: TonB-dependent transporters
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane transporters importing siderophore-Fe3+ complexes.
@@ -332,6 +351,16 @@ curation_history:
     action that in turn enables colonization; capsule.yaml''s ''reduced recognition
     and clearance'' is the outcome of that same process, not a separate measurable
     axis.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope animal_pathogen_metazoan_adaptation=NONMECHANISTIC
+    with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (metazoan_virulence_factors, bacterial_adhesins, complement_regulator_binding_proteins,
+    type_iii_secretion_system, tonb_dependent_transporters).'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0

@@ -23,6 +23,10 @@ causal_graphs:
   title: Facultative acidophily pH homeostasis mechanism
   description: Evidence-backed causal sketch linking facultative acidophily to acidic
     growth, near-neutral growth capacity, and inducible pH homeostasis.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultatively_acidophilic_trait
     label: facultatively acidophilic
@@ -52,6 +56,9 @@ causal_graphs:
     description: Maintenance of intracellular pH across acidic and near-neutral environments.
     grounding: GO:0051453
   - node_id: proton_export_pumps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: proton export pumps and antiporters
     node_type: GENE_OR_PROTEIN
     description: Transport systems proposed to remove protons or exchange ions during
@@ -90,6 +97,9 @@ causal_graphs:
     description: A rigid, low-permeability membrane that acts as a barrier to proton
       entry.
   - node_id: glutamate_decarboxylase_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: glutamate decarboxylase system
     node_type: GENE_OR_PROTEIN
     description: Decarboxylase (Gad) system consuming intracellular protons during
@@ -355,4 +365,13 @@ curation_history:
     not the process that establishes it. The schema names this gradient/steady-value
     distinction explicitly. Proton permeability is a measurable membrane property,
     which is the schema''s QUALITY sense rather than a biological process.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope facultatively_acidophilic_ph_homeostasis=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (proton_export_pumps, glutamate_decarboxylase_system).'
   llm_assisted: true

@@ -41,6 +41,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: nacl_delta_high_extreme_euryhaline
   title: NaCl-delta-high extreme-euryhaline breadth
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking maximal osmoadaptive flexibility to NaCl growth
     breadths exceeding 8% (w/v).
   nodes:
@@ -239,4 +243,12 @@ curation_history:
     interval); and Hortaea werneckii and Aureobasidium pullulans (wide ranges quoted,
     but the artifact attributes them only to "the same paper" and does not disambiguate
     which of its two co-cited sources measured them).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope nacl_delta_high_extreme_euryhaline=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

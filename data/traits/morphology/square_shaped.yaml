@@ -31,6 +31,10 @@ causal_graphs:
   title: Square-shape planar anisotropic envelope growth
   description: DOI-backed graph linking anisotropic planar cell-envelope growth and
     S-layer-constrained right-angle geometry to flat square cells.
+  scope_status: NONMECHANISTIC
+  scope_notes: Square shape is retained as a haloarchaeal morphology classification.
+    The contextual S-layer label spans many subunits and does not justify a token
+    protein example for right-angle geometry.
   nodes:
   - node_id: square_shaped_trait
     label: square shaped
@@ -73,6 +77,9 @@ causal_graphs:
     label: S-layer proteins
     node_type: GENE_OR_PROTEIN
     description: Glycoprotein subunits forming the paracrystalline S-layer lattice.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node denotes taxon-variable S-layer subunits rather than
+      one exact protein family.
   - node_id: cell_shape_size_defect
     label: cell shape and size defect
     node_type: STATE
@@ -193,4 +200,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope square_shaped_planar_anisotropic_growth=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (slayer_proteins).'
   llm_assisted: true

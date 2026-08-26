@@ -36,6 +36,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: soil_dwelling_biogeochemistry
   title: Soil-dwelling microbes drive terrestrial biogeochemical cycling
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking soil habitat to participation
     in biogeochemical cycling.
   nodes:
@@ -222,4 +226,12 @@ curation_history:
     motility'' — the match was on the word ''motility'' via the kg-microbe index (#402).
     Replaced with the term GO actually provides for this, resolved through the repo''s
     own OAK adapter before being written rather than recalled.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope soil_dwelling_biogeochemistry=NONMECHANISTIC with
+    scope_notes.'
   llm_assisted: true

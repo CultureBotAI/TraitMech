@@ -33,11 +33,21 @@ canonical_examples:
   taxon_label: Pseudomonas putida
   note: versatile chemoheterotroph
   reference: PMID:31657101
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level chemoheterotrophic model paired to the purified MtlD enzyme of
+    its mannitol catabolic branch.
+  reference: DOI:10.1128/jb.159.3.986-990.1984
 causal_graphs:
 - graph_id: chemoheterotrophic_organic_energy_carbon
   title: Chemoheterotrophic organic energy and carbon metabolism
   description: DOI-backed graph linking organic molecules as chemical energy and carbon
     sources to catabolism, respiration or fermentation, ATP, and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This broad graph combines respiratory, fermentative, glycolytic, and
+    mannitol-utilization branches rather than asserting one universal route. The E.
+    coli K-12 MtlD example anchors only mannitol-1-phosphate conversion and does not
+    represent the multicomponent PTS or all chemoheterotrophic catabolism.
   nodes:
   - node_id: chemoheterotrophic_trait
     label: chemoheterotrophic
@@ -93,6 +103,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: PEP-PTS transporter importing and phosphorylating sugar alcohols
       during organotrophic uptake.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The mannitol PTS is a multicomponent phosphotransfer system whose
+      EI, HPr, and sugar-specific EII components are distinct proteins; no one family
+      term represents the whole node.
   - node_id: mannitol
     label: mannitol
     node_type: CHEMICAL
@@ -103,6 +117,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting mannitol-1-phosphate to fructose-6-phosphate, bridging
       uptake to glycolysis.
+    grounding: InterPro:IPR023028
+    protein_examples:
+    - uniprot_id: UniProtKB:P09424
+      protein_label: Mannitol-1-phosphate 5-dehydrogenase
+      gene_symbol: mtlD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 187
+      sequence_version: 3
+      role: E. coli MtlD enzyme catalyzing the mannitol-1-phosphate dehydrogenase
+        step that connects PTS uptake to fructose-6-phosphate and glycolysis.
+      evidence:
+      - reference: DOI:10.1128/jb.159.3.986-990.1984
+        snippet: Purification and properties of D-mannitol-1-phosphate dehydrogenase
+          from Escherichia coli
+        notes: The primary purification study establishes the E. coli enzyme and catalytic
+          activity; UniProtKB P09424 is the reviewed K-12 MtlD entry.
   - node_id: fructose_6_phosphate
     label: fructose-6-phosphate
     node_type: CHEMICAL
@@ -321,4 +354,11 @@ curation_history:
     METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and
     deliberately NOT touched here, because retyping a node while carrying a wrong
     CURIE along unchanged would make it look reviewed.'
+  llm_assisted: true
+- timestamp: '2026-08-24T13:05:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, scoped its alternative catabolic branches,
+    reviewed the multicomponent mannitol PTS as label-only, and added DOI-cited E.
+    coli K-12 MtlD P09424 with an exact InterPro family grounding.
   llm_assisted: true

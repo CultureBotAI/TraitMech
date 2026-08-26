@@ -40,6 +40,11 @@ causal_graphs:
   title: Oligotrophic low-nutrient efficiency strategy
   description: DOI-backed graph linking nutrient limitation, streamlined genomes,
     efficient nutrient use, and persistence in low-resource environments.
+  scope_status: NONMECHANISTIC
+  scope_notes: This graph summarizes comparative life-history, streamlining, and trait-association
+    evidence rather than one concrete molecular mechanism. The solute-binding-protein
+    node aggregates diverse transporter families, so canonical-taxon and UniProt-example
+    requirements do not apply.
   nodes:
   - node_id: oligotrophic_trait
     label: oligotrophic
@@ -75,6 +80,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Solute-binding proteins with picomolar-nanomolar affinity feeding
       ABC/TRAP/TTT transporters.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The label spans substrate-specific binding proteins from several
+      unrelated ABC, TRAP, and TTT transporter families; the cited comparative study
+      does not define one exact family or complex.
   - node_id: substrate_uptake_low_conc
     label: substrate uptake at low concentration
     node_type: BIOLOGICAL_PROCESS
@@ -194,6 +203,13 @@ causal_graphs:
       notes: Oligotrophs have very small cell volumes (~0.1 um3) (Zhu & Dai 2024).
     predicate_id: biolink:associated_with
 curation_history:
+- timestamp: '2026-08-24T14:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Classified the graph as nonmechanistic comparative adaptation evidence
+    and documented its heterogeneous solute-binding-protein category as reviewed label-only;
+    no trait record or graph was deprecated or removed.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.878135+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

@@ -26,12 +26,20 @@ canonical_examples:
   taxon_label: Bacillus subtilis
   note: Model endospore former and the paradigm for sporulation (strain 168).
   reference: PMID:22091839
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis 168
+  note: Strain-level Spo0A sporulation exemplar.
+  reference: PMID:22091839
 causal_graphs:
 - graph_id: spore_forming_endospore_assembly
   title: Spore-forming endospore assembly mechanism
   description: Evidence-backed causal sketch linking forespore development to cortex
     synthesis, coat assembly, dipicolinic acid accumulation, and the spore-forming
     phenotype.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: spore_forming_trait
     label: spore forming
@@ -62,6 +70,9 @@ causal_graphs:
     node_type: ORGANELLE
     description: Dormant stress-resistant spore produced by endospore-forming bacteria.
   - node_id: spoIID
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: SpoIID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
@@ -69,8 +80,11 @@ causal_graphs:
     label: SpoIIM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
-    grounding: UniProtKB:A5N7K0
+    grounding: InterPro:IPR002798
   - node_id: spoIIP
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: SpoIIP
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
@@ -91,10 +105,34 @@ causal_graphs:
     node_type: STATE
     description: Spore core protection, dehydration, and dormancy state.
   - node_id: spo0a_phosphorylated
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06534
+      protein_label: Stage 0 sporulation protein A
+      gene_symbol: spo0A
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-08-25'
+      entry_version: 188
+      sequence_version: 1
+      role: Activated Spo0A is the B. subtilis master regulator that commits cells
+        to the sporulation program.
+      evidence:
+      - reference: PMID:22091839
+        snippet: Spo0A governs entry into sporulation
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: phosphorylated Spo0A (Spo0A~P)
     node_type: GENE_OR_PROTEIN
     description: Active phosphorylated master regulator of sporulation initiation.
   - node_id: spo0e_phosphatases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Spo0E-family phosphatases
     node_type: GENE_OR_PROTEIN
     description: Spo0A-specific phosphatases providing negative control of sporulation
@@ -269,4 +307,22 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spore_forming_endospore_assembly=MECHANISTIC with
+    scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (spoIID, spoIIP, spo0a_phosphorylated, spo0e_phosphatases); added taxon-paired
+    protein example(s) UniProtKB:P06534 on spo0a_phosphorylated (NCBITaxon:224308);
+    added canonical example(s) NCBITaxon:224308.'
   llm_assisted: true

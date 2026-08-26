@@ -19,12 +19,22 @@ canonical_examples:
   taxon_label: Syntrophomonas wolfei
   note: Type species of Syntrophomonas; original syntrophic fatty-acid oxidiser (coculture
     with Methanospirillum hungatei).
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC243852/
+  reference: DOI:10.1128/AEM.41.4.1029-1039.1981
+- taxon_id: NCBITaxon:335541
+  taxon_label: Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)
+  note: Reference-proteome strain in which Swol_1933 was identified as one of two
+    butyryl-CoA dehydrogenases expressed during syntrophic growth on butyrate.
+  reference: DOI:10.1128/JB.01605-08
 causal_graphs:
 - graph_id: syntrophy_interspecies_electron_transfer
   title: Syntrophy interspecies electron transfer mechanism
   description: DOI-backed graph for product removal and electron transfer between
     fermenting syntrophs and methanogenic partners.
+  scope_status: MECHANISTIC
+  scope_notes: This broad graph covers hydrogen-, formate-, and direct-electron-transfer
+    branches that are not universal to every syntrophic partnership. The S. wolfei
+    Swol_1933 example specifically supports syntrophic butyrate oxidation and does
+    not establish the taxon-general DIET branch.
   nodes:
   - node_id: syntrophy_trait
     label: Syntrophy
@@ -74,6 +84,32 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Extremely low H2 partial pressure required for thermodynamic feasibility
       of MIET.
+  - node_id: butyryl_coa_dehydrogenase
+    label: butyryl-CoA dehydrogenase Swol_1933
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0004085
+    description: Flavoprotein that oxidizes butanoyl-CoA to crotonyl-CoA during the
+      beta-oxidation branch of syntrophic butyrate metabolism.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q0AVM4
+      protein_label: Butyryl-CoA dehydrogenase Swol_1933
+      gene_symbol: Swol_1933
+      taxon_id: NCBITaxon:335541
+      taxon_label: Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)
+      entry_status: REVIEWED
+      proteome_id: UP000001968
+      retrieved_on: '2026-08-24'
+      entry_version: 94
+      sequence_version: 1
+      role: One of the experimentally identified butyryl-CoA dehydrogenases active
+        during syntrophic butyrate oxidation; this example is not a hydrogenase or
+        a marker for every syntrophic metabolism.
+      evidence:
+      - reference: DOI:10.1128/JB.01605-08
+        snippet: peptide mass fingerprinting revealed two Bcd proteins
+        notes: The primary study maps one purified approximately 65-kDa protein to
+          Swol_1933 during syntrophic growth on butyrate; UniProtKB Q0AVM4 is the
+          reviewed protein entry for that locus and strain.
   - node_id: formate_dehydrogenase_complex
     label: formate dehydrogenase complex
     node_type: GENE_OR_PROTEIN
@@ -84,6 +120,10 @@ causal_graphs:
     label: hydrogenase complex
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex producing/consuming H2 in syntrophic hydrogen transfer.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Hydrogenases used in syntrophy span multiple unrelated enzyme
+      families and multisubunit architectures; this cross-taxon node does not identify
+      one exact complex or family.
   - node_id: direct_interspecies_electron_transfer
     label: direct interspecies electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -102,6 +142,9 @@ causal_graphs:
     label: multiheme c-type cytochromes
     node_type: GENE_OR_PROTEIN
     description: Outer-surface multiheme c-type cytochromes mediating DIET.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Multiheme c-type cytochromes comprise many non-equivalent families,
+      and this broad DIET claim does not resolve a taxon-specific protein family.
   edges:
   - subject: syntrophy_trait
     predicate: requires partner interaction
@@ -157,6 +200,19 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2166
       snippet: syntrophic methanogenic communities
       notes: Supports hydrogen-linked electron flow into methanogenic partners.
+    predicate_id: biolink:participates_in
+  - subject: butyryl_coa_dehydrogenase
+    predicate: participates in
+    object: syntrophic_product_formation
+    description: Swol_1933 catalyzes the butyryl-CoA oxidation step of syntrophic
+      butyrate degradation in S. wolfei.
+    evidence:
+    - reference: DOI:10.1128/JB.01605-08
+      snippet: syntrophic oxidation of butyrate in S. wolfei involves butyryl-CoA
+        dehydrogenases
+      notes: Purified Bcd activity and peptide mass fingerprinting identified Swol_1933
+        in butyrate-grown cells, directly supporting this strain-specific mechanistic
+        edge.
     predicate_id: biolink:participates_in
   - subject: low_hydrogen_partial_pressure
     predicate: enables
@@ -286,4 +342,12 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009326×1).
+  llm_assisted: true
+- timestamp: '2026-08-24T10:35:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cross-taxon syntrophy graph, replaced the canonical species
+    URL with its DOI, added the S. wolfei DSM 2245B canonical strain and reviewed
+    Swol_1933 protein example, added its evidence-backed butyrate-oxidation edge,
+    and dispositioned broad hydrogenase and multiheme-cytochrome labels.
   llm_assisted: true

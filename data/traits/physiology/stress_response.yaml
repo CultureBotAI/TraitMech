@@ -29,11 +29,20 @@ canonical_examples:
   taxon_label: Deinococcus radiodurans
   note: extreme stress resistance
   reference: PMID:30339218
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level general-stress model paired to the reviewed RpoS sigma factor.
+  reference: DOI:10.1073/pnas.90.8.3511
 causal_graphs:
 - graph_id: stress_response_induction
   title: Stress-induced protective response
   description: Evidence-backed causal sketch linking environmental stress to an induced,
     protective general stress response.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents the enterobacterial stringent-response/RpoS/Hfq
+    branch and is not universal across microbial taxa. The E. coli RpoS example anchors
+    the sigma-S module; RSH is a heterogeneous enzyme superfamily and Hfq is a separate
+    RNA-chaperone family.
   nodes:
   - node_id: stress_response_trait
     label: stress response
@@ -57,6 +66,10 @@ causal_graphs:
     label: RelA/SpoT homologue enzymes
     node_type: GENE_OR_PROTEIN
     description: RSH enzyme family that synthesizes and hydrolyzes (p)ppGpp.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines long bifunctional Rel/SpoT homologues
+      with small alarmone synthetase and hydrolase subfamilies; one family term would
+      not preserve those catalytic distinctions.
   - node_id: nutrient_limitation
     label: nutrient limitation
     node_type: ENVIRONMENTAL_FACTOR
@@ -73,6 +86,25 @@ causal_graphs:
     label: RpoS (sigma S)
     node_type: GENE_OR_PROTEIN
     description: General-stress-response sigma factor (sigma S / sigma 38).
+    grounding: InterPro:IPR012761
+    protein_examples:
+    - uniprot_id: UniProtKB:P13445
+      protein_label: RNA polymerase sigma factor RpoS
+      gene_symbol: rpoS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 207
+      sequence_version: 3
+      role: E. coli K-12 sigma-S factor directing stationary-phase and general-stress
+        transcription; it anchors only this enterobacterial branch.
+      evidence:
+      - reference: DOI:10.1073/pnas.90.8.3511
+        snippet: the rpoS gene product, sigma 38, is a second principal sigma factor
+          in stationary-phase Escherichia coli
+        notes: The primary study identifies and functionally characterizes E. coli
+          RpoS; UniProtKB P13445 is the reviewed K-12 entry.
   - node_id: general_stress_resistance
     label: general stress resistance
     node_type: BIOLOGICAL_PROCESS
@@ -81,6 +113,7 @@ causal_graphs:
     label: Hfq
     node_type: GENE_OR_PROTEIN
     description: RNA chaperone enabling sRNA-dependent translational regulation.
+    grounding: InterPro:IPR005001
   edges:
   - subject: environmental_stress
     predicate: causes
@@ -229,4 +262,11 @@ curation_history:
     the sigma factor, not the translation, so what the edge actually asserts about
     RpoS is that Hfq increases it. The graph already reads ppgpp -positively regulates->
     rpos alongside it.'
+  llm_assisted: true
+- timestamp: '2026-08-24T13:25:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic and enterobacterial in scope, reviewed the
+    heterogeneous RSH umbrella as label-only, grounded RpoS and Hfq to exact InterPro
+    families, and added DOI-cited E. coli K-12 RpoS P13445.
   llm_assisted: true

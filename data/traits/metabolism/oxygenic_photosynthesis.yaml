@@ -26,12 +26,21 @@ canonical_examples:
   taxon_label: Synechocystis sp. PCC 6803
   note: Default model unicellular cyanobacterium for oxygenic photosynthesis; first
     phototroph genome-sequenced.
-  reference: PMID:16228363
+  reference: DOI:10.1023/A:1013887908680
+- taxon_id: NCBITaxon:1111708
+  taxon_label: Synechocystis sp. PCC 6803
+  note: Strain-level model paired to the reviewed PsbA2/D1 protein example in the
+    photosystem II water-oxidation branch.
+  reference: DOI:10.1074/jbc.M806116200
 causal_graphs:
 - graph_id: oxygenic_photosynthesis_water_splitting
   title: Oxygenic photosynthesis splits water and releases O2
   description: Evidence-backed causal sketch linking two linked photosystems and water
     oxidation to CO2 fixation and oxygen evolution.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the canonical cyanobacterial linear electron-transfer route
+    and uses the D1 component of photosystem II from Synechocystis PCC 6803 as its
+    taxon-paired example; one D1 accession does not denote the complete PSII complex.
   nodes:
   - node_id: oxygenic_photosynthesis_trait
     label: oxygenic photosynthesis
@@ -58,6 +67,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that catalyzes light-driven water oxidation.
     grounding: GO:0009523
+    protein_examples:
+    - uniprot_id: UniProtKB:P16033
+      protein_label: Photosystem II protein D1 2
+      gene_symbol: psbA2
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. PCC 6803
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 186
+      sequence_version: 1
+      role: D1 reaction-center component of photosystem II; this accession is not
+        presented as the complete water-oxidizing complex.
+      evidence:
+      - reference: DOI:10.1074/jbc.M806116200
+        snippet: the PsbA (D1) subunit of photosystem II (PSII)
+        notes: A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII
+          subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed
+          PsbA2 protein and strain taxon.
   - node_id: plastoquinone_pool
     label: plastoquinone/plastoquinol pool
     node_type: CHEMICAL
@@ -77,6 +104,9 @@ causal_graphs:
     label: ferredoxin
     node_type: GENE_OR_PROTEIN
     description: Iron-sulfur electron carrier reduced by PSI.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ferredoxin is an umbrella label spanning multiple iron-sulfur
+      protein families; the cited pathway evidence does not identify one exact family.
   - node_id: fnr
     label: ferredoxin-NADP+ reductase
     node_type: GENE_OR_PROTEIN
@@ -290,4 +320,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added a strain-matched Synechocystis PsbA2/D1 example with an explicit
+    PSII component role, converted the species citation to DOI, retained broad ferredoxin
+    as reviewed label-only, and documented graph scope.
   llm_assisted: true

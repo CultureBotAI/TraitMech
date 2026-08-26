@@ -1,0 +1,66 @@
+slug: methanogenesis
+trait_category: metabolism
+trait_path: data/traits/metabolism/methanogenesis.yaml
+trait_identifier: METPO:1000844
+job: LITERATURE
+job_id: job-futurehouse-paperqa3
+label: protein-taxon-pilot
+template_path: templates/trait_protein_taxon_research.md
+template_vars:
+  trait_label: Methanogenesis
+  trait_identifier: METPO:1000844
+  trait_category: METABOLISM
+  trait_category_slug: metabolism
+  trait_slug: methanogenesis
+  term_kind: CLASS
+  mapping_status: REVIEWED
+  definition: A metabolism in which methane is produced as the primary end product through the reduction
+    of carbon-containing compounds, formate, methanol, or acetate, exclusively performed by methanogenic
+    archaea under strictly anaerobic conditions.
+  parent_traits: METPO:1000060
+  synonyms: Biological methanation, Biomethanation, Carbonate respiration
+  evidence_summary: 'DOI:10.1146/annurev-micro-011720-122807: from CO2 and H2 to methane (Supports hydrogenotrophic
+    methanogenesis as a methane-producing archaeal pathway.) | DOI:10.1021/acs.biochem.9b00164: catalyzes
+    the reversible reduction of methyl-coenzyme M (Supports methyl-coenzyme M reductase as the terminal
+    methane-forming enzyme.)'
+  causal_graph_summary: 'methanogenesis_c1_reduction: 15 nodes, 11 edges'
+  canonical_examples_summary: Methanocaldococcus jannaschii (NCBITaxon:2190; https://pmc.ncbi.nlm.nih.gov/articles/PMC6616113/)
+  protein_node_summary: methanogenesis_c1_reduction:methyl-coenzyme M reductase [GO:0044674] | methanogenesis_c1_reduction:mcrABG
+    gene cluster [label-only]
+query_chars: 3253
+query: "# TraitMech Protein and Taxon Exemplar Research\n\n## Target\n\n- Trait: Methanogenesis (METPO:1000844)\n\
+  - Definition: A metabolism in which methane is produced as the primary end product through the reduction\
+  \ of carbon-containing compounds, formate, methanol, or acetate, exclusively performed by methanogenic\
+  \ archaea under strictly anaerobic conditions.\n- Existing canonical examples: Methanocaldococcus jannaschii\
+  \ (NCBITaxon:2190; https://pmc.ncbi.nlm.nih.gov/articles/PMC6616113/)\n- Existing gene/protein nodes:\
+  \ methanogenesis_c1_reduction:methyl-coenzyme M reductase [GO:0044674] | methanogenesis_c1_reduction:mcrABG\
+  \ gene cluster [label-only]\n- Existing graph summary: methanogenesis_c1_reduction: 15 nodes, 11 edges\n\
+  \n## Objective\n\nDetermine whether the existing graph for **Methanogenesis** is mechanistic and,\n\
+  if so, identify at least one exact protein instance whose experimentally\nsupported role and organism\
+  \ match one existing canonical example. The result is\nresearch input for `data/traits/metabolism/methanogenesis.yaml`.\n\
+  \n## Required Analysis\n\n1. Decide `MECHANISTIC`, `NONMECHANISTIC`, or `REVIEW_NEEDED`, with a concise\n\
+  \   source-backed rationale. Do not add a token protein to a measurement,\n   classification, numeric\
+  \ bin, hazard class, or upper-ontology context.\n2. For each existing gene/protein node, decide whether\
+  \ it denotes a molecular\n   function, protein family, named protein, or multisubunit complex. Recommend\n\
+  \   an exact GO, InterPro, NCBIfam, or Complex Portal grounding only when its\n   definition matches.\
+  \ Explicitly flag broad labels that must remain label-only\n   or be split.\n3. Select one existing\
+  \ canonical taxon for which a primary paper identifies a\n   concrete protein, gene, or complex component\
+  \ that causally supports the\n   graph. Prefer direct genetic, biochemical, structural, or physiological\n\
+  \   evidence over genome annotation or review inference.\n4. Report the current UniProtKB primary accession\
+  \ for that exact protein in the\n   same taxon. Distinguish a complex from its components: a single\
+  \ subunit\n   accession is an example component and must not be described as the entire\n   complex.\n\
+  5. For every proposed protein example, provide:\n   - protein name and gene symbol;\n   - UniProtKB\
+  \ primary accession;\n   - NCBITaxon identifier and scientific name;\n   - reviewed/unreviewed status,\
+  \ and reference-proteome accession if unreviewed;\n   - exact role or complex-component role;\n   -\
+  \ primary DOI (PMID only if no DOI exists);\n   - a short contiguous verbatim snippet from the source;\
+  \ and\n   - notes explaining how the snippet supports this protein in this taxon.\n\n## Evidence Rules\n\
+  \n- Prefer primary experimental papers with DOI citations.\n- UniProt proves identity and taxonomy,\
+  \ not the causal role; cite the paper for\n  the role and use UniProt only to verify the current accession\
+  \ and metadata.\n- Never infer a taxon-protein pair from two unrelated sources.\n- Mark family-only,\
+  \ taxon-mismatched, annotation-only, or review-only evidence\n  uncertain and do not recommend it for\
+  \ direct curation.\n\n## Output\n\nReturn a compact scope decision, a node-grounding review table, a\
+  \ protein/taxon\nexample table, DOI-first bibliography, and a final list of claims safe to\ncurate versus\
+  \ findings that remain uncertain.\n"
+submitted_at: '2026-08-23T08:09:41.994636+00:00'
+status: dry-run
+query_sha256: f2ae103eddf9b08ea0430ad49951f03dfa9ad4698c89a1731c7cfa24e9f4a027

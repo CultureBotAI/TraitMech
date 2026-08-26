@@ -33,6 +33,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking a single bacteriochlorophyll
     photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic
     electron flow without O2 evolution.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines a sulfide-donor branch documented in sulfur phototrophs
+    with the type II reaction-center branch illustrated by Cereibacter sphaeroides;
+    it does not imply that every anoxygenic phototroph uses sulfide or a type II center.
   nodes:
   - node_id: anoxygenic_photosynthesis_trait
     label: anoxygenic photosynthesis
@@ -59,10 +63,31 @@ causal_graphs:
     label: light energy
     node_type: ENVIRONMENTAL_FACTOR
     description: Light input driving photochemistry in anoxygenic photosynthesis.
-  - node_id: type_i_reaction_center
-    label: Type I reaction center
+  - node_id: type_ii_reaction_center_m
+    label: type II photosynthetic reaction center M subunit
     node_type: GENE_OR_PROTEIN
-    description: Homodimeric Type I reaction-center photosystem of anoxygenic phototrophs.
+    grounding: InterPro:IPR005781
+    description: PufM component of the heterodimeric type II reaction center in purple
+      phototrophic bacteria.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C0Y9
+      protein_label: Reaction center protein M chain
+      gene_symbol: pufM
+      taxon_id: NCBITaxon:1063
+      taxon_label: Cereibacter sphaeroides
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 108
+      sequence_version: 2
+      role: M-chain component of the type II photosynthetic reaction center; this
+        accession is not presented as the complete reaction-center complex.
+      evidence:
+      - reference: DOI:10.1016/j.bbabio.2003.08.008
+        snippet: Strains of Rb. sphaeroides containing the AM260W reaction centre
+          are incapable of growth under anaerobic conditions in the light.
+        notes: A primary pufM mutagenesis study links the M chain to photosynthetic
+          growth in R. sphaeroides; UniProtKB P0C0Y9 verifies the reviewed Cereibacter
+          sphaeroides protein and InterPro IPR005781 verifies the M-subunit family.
   - node_id: elemental_sulfur
     label: elemental sulfur (S0)
     node_type: CHEMICAL
@@ -106,26 +131,30 @@ causal_graphs:
     - reference: DOI:10.1016/j.tim.2006.09.001
       notes: Light energy captured by bacteriochlorophyll powers single-photosystem
         electron flow in anoxygenic phototrophs.
-  - subject: type_i_reaction_center
+  - subject: type_ii_reaction_center_m
     predicate: confers
     object: anoxygenic_photosynthesis_trait
-    description: A homodimeric Type I reaction-center photosystem mediates anoxygenic
-      photosynthesis across diverse phyla.
+    description: The PufM-containing type II reaction center is required for photosynthetic
+      growth in the purple bacterium Cereibacter sphaeroides.
     evidence:
-    - reference: DOI:10.3390/biom14030311
-      notes: 'Niederman: diverse homodimeric Type I reaction-center photosystems underpin
-        anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y
-        showing Chloroflexota use a Type I RC.'
+    - reference: DOI:10.1016/j.bbabio.2003.08.008
+      snippet: Strains of Rb. sphaeroides containing the AM260W reaction centre are
+        incapable of growth under anaerobic conditions in the light.
+      notes: The M-polypeptide perturbation directly impaired photosynthetic growth;
+        the claim is restricted to the type II reaction-center branch represented
+        by C. sphaeroides.
     predicate_id: METPO:2007700
-  - subject: type_i_reaction_center
+  - subject: type_ii_reaction_center_m
     predicate: part of
     object: photosynthetic_etc
-    description: The Type I reaction center is the photochemical core of the single-photosystem
-      electron transport chain.
+    description: PufM is a component of the reaction center that drives cyclic electron
+      transfer in purple bacterial photosynthesis.
     evidence:
-    - reference: DOI:10.1038/s41586-024-07180-y
-      notes: 'Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type
-        I reaction centre for photosynthetic electron transport.'
+    - reference: DOI:10.1016/j.bbabio.2003.08.008
+      snippet: light energy is used to power a cycle of electron transfer reactions
+      notes: The primary study describes the R. sphaeroides reaction center within
+        cyclic photosynthetic electron transfer and experimentally perturbs its M
+        polypeptide.
     predicate_id: biolink:part_of
   - subject: sulfide
     predicate: oxidized to
@@ -177,4 +206,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Corrected the canonical C. sphaeroides branch from a Type I center to the
+    PufM component of a type II reaction center, added InterPro grounding and a DOI-backed
+    taxon-matched UniProt example, and documented the graph's composite scope.
   llm_assisted: true

@@ -29,17 +29,21 @@ canonical_examples:
 - taxon_id: NCBITaxon:1076
   taxon_label: Rhodopseudomonas palustris
   note: metabolically versatile photoheterotroph
-  reference: PMID:37556472
+  reference: DOI:10.1371/journal.pcbi.1011371
 - taxon_id: NCBITaxon:1085
   taxon_label: Rhodospirillum rubrum
   note: purple non-sulfur photoheterotroph
-  reference: PMID:34621257
+  reference: DOI:10.3389/fmicb.2021.731976
 causal_graphs:
 - graph_id: photoheterotrophic_light_organic_carbon
   title: Photoheterotrophic light-supported organic carbon assimilation
   description: DOI-backed graph linking light capture, bacteriochlorophyll reaction
     centers, photosynthetic electron transport, ATP generation, and organic carbon
     assimilation.
+  scope_status: MECHANISTIC
+  scope_notes: The graph presents bacteriochlorophyll reaction-center and proteorhodopsin
+    branches as alternative photoheterotrophic mechanisms. The R. rubrum example anchors
+    the Type II reaction-center branch and does not represent rhodopsin-based phototrophy.
   nodes:
   - node_id: photoheterotrophic_trait
     label: photoheterotrophic
@@ -60,6 +64,29 @@ causal_graphs:
     label: photosynthetic reaction center
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex initiating photochemical charge separation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes a multisubunit photosynthetic complex across
+      distinct Type I and Type II families; no single protein-family term represents
+      the generic complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P10717
+      protein_label: Reaction center protein L chain
+      gene_symbol: pufL
+      taxon_id: NCBITaxon:1085
+      taxon_label: Rhodospirillum rubrum
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 119
+      sequence_version: 2
+      role: L-chain component of the R. rubrum Type II photochemical reaction center;
+        this accession is not presented as the complete reaction-center complex.
+      evidence:
+      - reference: DOI:10.1128/jb.182.5.1200-1207.2000
+        snippet: The proteins of the photochemical components are encoded by the puf
+          operon (LHalpha, LHbeta, RC-L, and RC-M) and by puhA (RC-H)
+        notes: The primary R. rubrum assembly study identifies RC-L as a puf-encoded
+          reaction-center component and reports phototrophic incompetence of puf mutants;
+          UniProtKB P10717 is the reviewed species-level PufL entry.
   - node_id: photosynthetic_electron_transport
     label: photosynthetic electron transport
     node_type: PATHWAY
@@ -99,7 +126,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump enabling rhodopsin-based
       phototrophy.
-    grounding: UniProtKB:A0A1D7QWW9
+    grounding: InterPro:IPR017402
   - node_id: nadph_anabolic
     label: NAD(P)H for anabolic metabolism
     node_type: CHEMICAL
@@ -336,4 +363,18 @@ curation_history:
     assert biology they specifically do not claim (#400 review). Both forms are named
     routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1
     before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:05:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, separated reaction-center and proteorhodopsin
+    scope, reviewed the generic reaction center as label-only, upgraded canonical
+    citations to DOIs, and added the reviewed R. rubrum PufL component example.
   llm_assisted: true

@@ -27,11 +27,19 @@ canonical_examples:
   note: Model for beta-carboxysomes (cyanobacterial CO2-fixing microcompartments;
     strain PCC 7942). Halothiobacillus neapolitanus is the alpha-carboxysome model.
   reference: DOI:10.1128/mmbr.00061-12
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942
+  note: Strain-level exemplar matched to CcmK2.
+  reference: DOI:10.1128/mmbr.00061-12
 causal_graphs:
 - graph_id: carboxysome_co2_concentrating
   title: Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation
   description: Evidence-backed causal sketch linking the carboxysome protein shell
     encapsulating RuBisCO and carbonic anhydrase to enhanced carbon fixation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: carboxysome_trait
     label: carboxysome
@@ -77,6 +85,27 @@ causal_graphs:
     description: Carboxylation of RuBP by RuBisCO, the productive carbon-fixation
       reaction.
   - node_id: bmc_shell_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q03511
+      protein_label: Carboxysome shell protein CcmK2
+      gene_symbol: ccmK2
+      taxon_id: NCBITaxon:1140
+      taxon_label: Synechococcus elongatus PCC 7942
+      entry_status: REVIEWED
+      proteome_id: UP000889800
+      retrieved_on: '2026-08-25'
+      entry_version: 110
+      sequence_version: 1
+      role: CcmK2 is one hexamer-forming component of the beta-carboxysome shell;
+        the accession does not denote the complete shell.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00061-12
+        snippet: CcmK shell proteins form the carboxysome boundary
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: BMC-H/T/P shell proteins
     node_type: GENE_OR_PROTEIN
     description: Hexameric, trimeric and pentameric protein paralogues forming the
@@ -218,4 +247,14 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope carboxysome_co2_concentrating=MECHANISTIC with scope_notes;
+    marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (bmc_shell_proteins);
+    added taxon-paired protein example(s) UniProtKB:Q03511 on bmc_shell_proteins (NCBITaxon:1140);
+    added canonical example(s) NCBITaxon:1140.'
   llm_assisted: true

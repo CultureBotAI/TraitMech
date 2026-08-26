@@ -26,12 +26,21 @@ canonical_examples:
   taxon_label: Ignicoccus hospitalis
   note: Hyperthermophilic crenarchaeon in which the dicarboxylate/4-hydroxybutyrate
     autotrophic CO2-fixation cycle was discovered.
-  reference: PMID:18511565
+  reference: DOI:10.1073/pnas.0801043105
+- taxon_id: NCBITaxon:453591
+  taxon_label: Ignicoccus hospitalis KIN4/I
+  note: Strain-level DC/4HB model paired to the Igni_0341 PEP-carboxylase example.
+  reference: DOI:10.1073/pnas.2022114118
 causal_graphs:
 - graph_id: dc_four_hb_anaerobic_archaeal_co2_fixation
   title: DC/4HB cycle fixes CO2 in anaerobic Crenarchaeota
   description: Evidence-backed causal sketch linking dicarboxylate and 4-hydroxybutyrate
     intermediates to CO2 fixation in anaerobic / microaerophilic Crenarchaeota.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the experimentally reconstructed I. hospitalis
+    DC/4HB cycle. The Igni_0341 PEP-carboxylase example supports one of its two carbon-fixing
+    reactions; its recombinant protein was insoluble, so the source treats gene identity
+    as unambiguous but does not report purified-enzyme activity for that locus.
   nodes:
   - node_id: dc_four_hb_trait
     label: dicarboxylate/4-hydroxybutyrate cycle
@@ -69,6 +78,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxylates PEP to oxaloacetate using bicarbonate.
     grounding: GO:0008964
+    protein_examples:
+    - uniprot_id: UniProtKB:A8A9C2
+      protein_label: Phosphoenolpyruvate carboxylase
+      taxon_id: NCBITaxon:453591
+      taxon_label: Ignicoccus hospitalis KIN4/I
+      entry_status: UNREVIEWED
+      proteome_id: UP000000262
+      retrieved_on: '2026-08-24'
+      entry_version: 70
+      sequence_version: 1
+      role: Igni_0341 PEP carboxylase assigned to the bicarbonate-fixing reaction
+        of the I. hospitalis DC/4HB cycle.
+      evidence:
+      - reference: DOI:10.1073/pnas.2022114118
+        snippet: the identity of the PEP carboxylase gene was unambiguous
+        notes: The primary localization study explicitly maps PEP carboxylase to Igni_0341
+          while disclosing failed recovery of active recombinant protein. UniProtKB
+          A8A9C2 is the exact unreviewed Igni_0341 entry in reference proteome UP000000262.
   - node_id: acetyl_coa
     label: acetyl-CoA
     node_type: CHEMICAL
@@ -96,6 +123,10 @@ causal_graphs:
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
     description: Hallmark radical enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available family signatures cover domains shared with related
+      HpaB/PvcC/vinylacetyl-CoA isomerase proteins rather than an exact reviewed whole-protein
+      family for the historical 4-hydroxybutyryl-CoA dehydratase label.
   - node_id: crotonyl_coa
     label: crotonyl-CoA
     node_type: CHEMICAL
@@ -279,4 +310,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:35:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the I. hospitalis DC/4HB mechanism, added a DOI-backed strain-level
+    Igni_0341 PEP-carboxylase example with its experimental limitation, and recorded
+    the historical 4-hydroxybutyryl-CoA-dehydratase node as reviewed label-only.
   llm_assisted: true

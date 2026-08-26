@@ -13,6 +13,10 @@ evidence:
   notes: Supports bacterial pigments as chemically produced microbial color phenotypes.
 causal_graphs:
 - graph_id: pigmentation_biosynthetic_colorants
+  scope_status: NONMECHANISTIC
+  scope_notes: Pigmentation is an upper color phenotype spanning chemically and genetically
+    unrelated carotenoid, melanin, phenazine, and other pathways. The graph catalogs
+    alternatives rather than one shared mechanism.
   title: Microbial pigmentation biosynthetic mechanism
   description: Evidence-backed causal sketch linking microbial pigmentation to pigment
     biosynthesis pathways, chromophore-containing metabolites, environmental regulation,
@@ -66,16 +70,27 @@ causal_graphs:
     label: phenazine biosynthesis
     node_type: PATHWAY
     description: Biosynthetic pathway producing phenazine pigments such as pyocyanin.
-  - node_id: crt_carotenoid_genes
-    label: crtE/crtB/crtI/crtY gene set
+  - node_id: carotenoid_enzyme_module
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node combines multiple distinct carotenoid-biosynthesis
+      enzyme families and therefore has no single exact protein-family grounding.
+    label: CrtE/CrtB/CrtI/CrtY carotenoid enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Core carotenogenic genes encoding enzymes for beta-carotene biosynthesis.
+    description: Core carotenogenic proteins catalyzing beta-carotene biosynthesis.
+    gene_symbols:
+    - crtE
+    - crtB
+    - crtI
+    - crtY
   - node_id: beta_carotene_biosynthesis
     label: beta-carotene biosynthesis
     node_type: PATHWAY
     description: Biosynthetic route producing the carotenoid pigment beta-carotene.
     grounding: GO:1901812
   - node_id: hppd_gene
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HppD is retained as one pathway-specific contextual example;
+      an exact semantic family term was not verified for this upper pigmentation graph.
     label: hppD 4-hydroxyphenylpyruvate dioxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisate.
@@ -89,6 +104,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Brown-black pigment formed by polymerization of homogentisate.
   - node_id: hmga_gene
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HmgA is retained as one pathway-specific contextual example;
+      an exact semantic family term was not verified for this upper pigmentation graph.
     label: hmgA homogentisate 1,2-dioxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting homogentisate to maleylacetoacetate, preventing
@@ -151,11 +169,10 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11122920
       notes: GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA
         or MEP pathways.
-  - subject: crt_carotenoid_genes
+  - subject: carotenoid_enzyme_module
     predicate: enables
     object: beta_carotene_biosynthesis
-    description: The crtE/crtB/crtI/crtY gene set encodes enzymes enabling beta-carotene
-      biosynthesis.
+    description: The CrtE/CrtB/CrtI/CrtY enzyme module enables beta-carotene biosynthesis.
     evidence:
     - reference: DOI:10.3390/microorganisms11030614
       notes: 'beta-carotene: crtE, crtY, crtI, crtB; curate as generic carotenoid
@@ -304,4 +321,15 @@ curation_history:
     rather than by naming. Applied AGAINST the majority, which was 5 BIOLOGICAL_PROCESS
     to 1 before this tranche. A named biosynthetic route; both typings say ''Biosynthetic
     pathway producing phenazine pigments''. The rule breaks the 1-1 tie.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope pigmentation_biosynthetic_colorants=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (carotenoid_enzyme_module, hppd_gene, hmga_gene); added 1 node(s) and 1 edge(s)
+    (carotenoid_enzyme_module); removed 1 node(s) and 1 edge(s) together with their
+    evidence (crt_carotenoid_genes).'
   llm_assisted: true

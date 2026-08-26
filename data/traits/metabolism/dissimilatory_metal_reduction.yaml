@@ -29,12 +29,22 @@ canonical_examples:
   taxon_label: Geobacter sulfurreducens
   note: Model dissimilatory metal reducer; respires Fe(III)/Mn(IV) via extracellular
     electron transfer and conductive pili (type strain PCA).
-  reference: PMID:14671304
+  reference: DOI:10.1126/science.1088727
+- taxon_id: NCBITaxon:211586
+  taxon_label: Shewanella oneidensis MR-1
+  note: Strain-level metal reducer paired to the MtrC surface component of the MtrCAB
+    extracellular electron-transfer conduit.
+  reference: DOI:10.1073/pnas.0604517103
 causal_graphs:
 - graph_id: metal_reduction_anaerobic_respiration
   title: Dissimilatory metal reduction couples organic oxidation to metal respiration
   description: Evidence-backed causal sketch linking oxidation of organic matter or
     hydrogen to reduction of metal terminal electron acceptors.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines broad metal respiration with a Shewanella MtrCAB
+    branch and other extracellular-transfer routes. The MtrC protein example supports
+    only the S. oneidensis MR-1 branch and does not imply that all metal reducers
+    encode MtrCAB.
   nodes:
   - node_id: metal_reduction_trait
     label: dissimilatory metal reduction
@@ -64,6 +74,31 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane porin-cytochrome complex forming an electron-transfer
       conduit.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: MtrCAB is a multisubunit porin-cytochrome conduit; the verified
+      MtrC family term denotes one surface component rather than the complete complex
+      represented by this node.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis MR-1
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: Cell-surface MtrC component of the MtrCAB conduit; this accession is not
+        presented as the complete three-component complex.
+      evidence:
+      - reference: DOI:10.1073/pnas.0604517103
+        snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated
+          in efficient reduction of Fe(III) and Mn(IV) by MR-1.
+        notes: The primary S. oneidensis MR-1 study supports MtrC in metal reduction.
+          UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome
+          UP000008186 and verifies the strain taxon.
   - node_id: extracellular_acceptor
     label: extracellular electron acceptor
     node_type: CHEMICAL
@@ -189,4 +224,12 @@ curation_history:
     donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject
     problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-24T08:10:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed S. oneidensis MR-1 MtrC component example, documented
+    why the whole MtrCAB complex remains reviewed label-only, and scoped the graph's
+    mixed extracellular metal-reduction routes. The unreviewed accession is retained
+    only as an exact reference-proteome component.
   llm_assisted: true

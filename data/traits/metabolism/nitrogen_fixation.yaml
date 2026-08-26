@@ -31,6 +31,10 @@ causal_graphs:
   title: Nitrogenase-catalyzed dinitrogen reduction
   description: Evidence-backed causal sketch linking the nitrogenase complex to reduction
     of atmospheric dinitrogen to ammonia.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the canonical molybdenum-nitrogenase electron-transfer and
+    catalytic sequence plus oxygen inhibition; alternative nitrogenases and lineage-specific
+    protection systems are outside this graph.
   nodes:
   - node_id: nitrogen_fixation_trait
     label: nitrogen fixation
@@ -41,7 +45,7 @@ causal_graphs:
     label: nitrogenase
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive enzyme complex that reduces dinitrogen.
-    grounding: UniProtKB:A0A089HR75
+    grounding: GO:0016610
   - node_id: nitrogen_fixation_process
     label: nitrogen fixation
     node_type: BIOLOGICAL_PROCESS
@@ -62,18 +66,42 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Low-potential electron carriers that donate electrons to the nitrogenase
       Fe-protein (NifH).
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The combined label intentionally denotes alternative ferredoxin
+      and flavodoxin donors; no single exact family term covers both without overstating
+      a taxon-specific carrier.
   - node_id: nifh_fe_protein
     label: NifH (Fe-protein)
     node_type: GENE_OR_PROTEIN
     description: Nitrogenase iron protein; ATP-dependent electron donor to the MoFe
       protein.
+    grounding: InterPro:IPR005977
+    protein_examples:
+    - uniprot_id: UniProtKB:P00459
+      protein_label: Nitrogenase iron protein 1
+      gene_symbol: nifH1
+      taxon_id: NCBITaxon:354
+      taxon_label: Azotobacter vinelandii
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 167
+      sequence_version: 2
+      role: ATP-coupled Fe-protein component that transfers electrons to the catalytic
+        MoFe protein in the A. vinelandii nitrogenase system.
+      evidence:
+      - reference: DOI:10.1074/jbc.271.4.1884
+        snippet: exclusively due to the substitution of the Fe protein residue serine
+          44
+        notes: The A. vinelandii nifH Fe-protein mutant causally links this exact
+          component to altered nitrogenase electron transfer; UniProtKB P00459 verifies
+          the reviewed protein and taxon.
   - node_id: p_cluster
     label: P-cluster
-    node_type: GENE_OR_PROTEIN
+    node_type: CHEMICAL
     description: '[8Fe-7S] metallocluster in NifDK that relays electrons to the FeMo-cofactor.'
   - node_id: femo_cofactor
     label: FeMo-cofactor (M-cluster)
-    node_type: GENE_OR_PROTEIN
+    node_type: CHEMICAL
     description: '[7Fe-9S-Mo-C-homocitrate] active-site cofactor that binds and reduces
       N2.'
   - node_id: atp
@@ -93,25 +121,31 @@ causal_graphs:
     object: nitrogen_fixation_process
     description: The nitrogenase complex carries out biological nitrogen fixation.
     evidence:
-    - reference: DOI:10.1038/nrmicro954
-      notes: Dixon & Kahn review nitrogenase as the catalyst of biological nitrogen
-        fixation.
+    - reference: DOI:10.34133/bdr.0005
+      snippet: In the biological nitrogen fixation reaction, N2 is reduced to form
+        NH3 under ambient conditions by the nitrogenase enzyme
+      notes: The DOI-backed nitrogenase review identifies the enzyme as the catalyst
+        of biological nitrogen fixation.
     predicate_id: RO:0002327
   - subject: nitrogen_fixation_process
     predicate: consumes
     object: dinitrogen
     description: Nitrogen fixation consumes atmospheric dinitrogen.
     evidence:
-    - reference: DOI:10.1038/nrmicro.2018.9
-      notes: Kuypers et al. place N2 reduction as the reductive entry to the nitrogen
-        cycle.
+    - reference: DOI:10.34133/bdr.0005
+      snippet: In the biological nitrogen fixation reaction, N2 is reduced to form
+        NH3 under ambient conditions by the nitrogenase enzyme
+      notes: The same review explicitly identifies N2 as the substrate reduced by
+        nitrogenase.
     predicate_id: biolink:consumes
   - subject: nitrogen_fixation_process
     predicate: has output
     object: ammonia
     description: Nitrogen fixation produces ammonia.
     evidence:
-    - reference: DOI:10.1038/nrmicro954
+    - reference: DOI:10.34133/bdr.0005
+      snippet: N2 is reduced to form NH3 under ambient conditions by the nitrogenase
+        enzyme
       notes: Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.
     predicate_id: RO:0002234
   - subject: nitrogen_fixation_trait
@@ -119,7 +153,9 @@ causal_graphs:
     object: nitrogenase
     description: The nitrogen-fixation trait depends on the nitrogenase complex.
     evidence:
-    - reference: DOI:10.1038/nrmicro954
+    - reference: DOI:10.34133/bdr.0005
+      snippet: enzymes capable of converting atmospheric nitrogen N2 to NH3 in ambient
+        conditions
       notes: Supports nitrogenase as required for the trait.
     predicate_id: RO:0002502
   - subject: ferredoxin_flavodoxin
@@ -128,7 +164,9 @@ causal_graphs:
     description: Reduced ferredoxin/flavodoxin donate electrons to the [4Fe-4S] cluster
       of the NifH homodimer.
     evidence:
-    - reference: DOI:10.1128/aem.00378-23
+    - reference: DOI:10.34133/bdr.0005
+      snippet: Reduced electron carriers donate electrons to the [4Fe-4S] cluster
+        at the interface of the NifH homodimer.
       notes: Reduced electron carriers donate electrons to the [4Fe-4S] cluster at
         the interface of the NifH homodimer; core Mo-nitrogenase mechanism.
   - subject: nifh_fe_protein
@@ -138,6 +176,9 @@ causal_graphs:
       in the MoFe protein in an ATP-dependent step.
     evidence:
     - reference: DOI:10.1128/aem.00378-23
+      snippet: The Fe-protein contains 1 FeS cluster that accepts electrons from Fd
+        or Fld and reduces the P-cluster in the MoFe protein in an ATP-dependent electron
+        transfer.
       notes: The Fe-protein FeS cluster accepts electrons from Fd or Fld and reduces
         the P-cluster in the MoFe protein in an ATP-dependent electron transfer.
   - subject: p_cluster
@@ -146,6 +187,8 @@ causal_graphs:
     description: The P-cluster relays electrons to the FeMo-cofactor for N2 reduction.
     evidence:
     - reference: DOI:10.1128/aem.00378-23
+      snippet: The P-cluster delivers electrons to the MoFe cofactor allowing electrons
+        to be loaded for the reduction of N2.
       notes: The P-cluster delivers electrons to the MoFe cofactor allowing electrons
         to be loaded for the reduction of N2; core electron relay.
   - subject: femo_cofactor
@@ -154,6 +197,9 @@ causal_graphs:
     description: The FeMo-cofactor binds and reduces N2 to ammonia.
     evidence:
     - reference: DOI:10.34133/bdr.0005
+      snippet: Electrons are sequentially donated to the [8Fe-7S] cluster in the NifDK
+        protein, then finally to FeMo-co, which binds and reduces N2 to form NH3 and
+        H2
       notes: FeMo-co binds and reduces N2 to form NH3 and H2 in the canonical Mo-dependent
         nitrogenase.
     predicate_id: RO:0002327
@@ -164,6 +210,8 @@ causal_graphs:
       protein.
     evidence:
     - reference: DOI:10.34133/bdr.0005
+      snippet: NifH transiently binds and then dissociates from the NifDK complex,
+        hydrolyzing 2 molecules of Mg-ATP per electron transfer.
       notes: NifH transiently binds and dissociates from NifDK, hydrolyzing 2 Mg-ATP
         per electron transfer; supports per-electron ATP cost.
   - subject: molecular_oxygen
@@ -172,10 +220,18 @@ causal_graphs:
     description: Molecular oxygen inactivates the oxygen-sensitive nitrogenase complex.
     evidence:
     - reference: DOI:10.1128/aem.00378-23
+      snippet: Each metal cofactor is very sensitive to oxygen damage.
       notes: Nitrogenase is an O2-sensitive enzyme; broad, well-supported claim across
         diazotrophs.
     predicate_id: RO:0002212
 curation_history:
+- timestamp: '2026-08-23T09:06:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, grounded NifH semantically, retyped
+    the P-cluster and FeMo-cofactor as chemicals, documented the combined carrier
+    label, and added DOI-backed UniProtKB P00459 for A. vinelandii.
+  llm_assisted: true
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
@@ -240,4 +296,11 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

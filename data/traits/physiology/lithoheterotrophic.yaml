@@ -22,12 +22,23 @@ evidence:
 - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
   snippet: oxidize inorganic atoms or molecules
   notes: Review supports inorganic compound oxidation as lithotrophic energy metabolism.
+canonical_examples:
+- taxon_id: NCBITaxon:317655
+  taxon_label: Sphingopyxis alaskensis RB2256
+  note: Strain-level facultative lithoheterotrophic example that oxidizes H2 during
+    aerobic growth on organic carbon, paired to its group 2a hydrogenase large subunit.
+  reference: DOI:10.1038/s41564-023-01322-0
 causal_graphs:
 - graph_id: lithoheterotrophic_inorganic_energy_organic_carbon
   title: Lithoheterotrophic inorganic energy and organic carbon use
   description: DOI-backed graph linking inorganic electron donors, Fe(II) oxidation,
     respiratory energy conservation, organic carbon uptake, precursor metabolites,
     and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This modular graph covers Fe(II), reduced-sulfur, H2, and an exploratory
+    direct-electron-transfer branch. The S. alaskensis example anchors only aerobic
+    H2-supported growth on organic carbon; Q1J422 is one hydrogenase large subunit,
+    not the complete complex or evidence for every donor branch.
   nodes:
   - node_id: lithoheterotrophic_trait
     label: lithoheterotrophic
@@ -95,6 +106,12 @@ causal_graphs:
     description: Reduced inorganic sulfur electron donor oxidized for lithotrophic
       energy.
     grounding: CHEBI:15138
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Reduced inorganic gas oxidized as a supplementary energy source during
+      lithoheterotrophic growth.
   - node_id: sqr
     label: sulfide:quinone oxidoreductase (SQR)
     node_type: GENE_OR_PROTEIN
@@ -110,11 +127,47 @@ causal_graphs:
     label: periplasmic Sox system
     node_type: GENE_OR_PROTEIN
     description: Periplasmic sox gene cluster encoding thiosulfate oxidation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes a variable multisubunit Sox pathway whose component
+      composition differs among taxa; no checked whole-system term exactly represents
+      the label.
   - node_id: conductive_pili_cytochromes
     label: conductive pili and c-type cytochromes
     node_type: GENE_OR_PROTEIN
     description: Surface structures mediating extracellular/direct interspecies electron
       transfer.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This is a composite label spanning structurally distinct pili
+      and multiple outer-surface cytochrome families, so one protein-family or complex
+      grounding would be misleading.
+  - node_id: group_2a_nife_hydrogenase
+    label: group 2a [NiFe]-hydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Plasmid-borne multisubunit uptake hydrogenase used for aerobic H2
+      oxidation by S. alaskensis RB2256.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available InterPro terms cover broad NiFe hydrogenase large-subunit
+      families rather than this complete group 2a multisubunit enzyme; the exact catalytic
+      component is retained as the taxon-paired protein example.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1J422
+      protein_label: Group 2a [NiFe]-hydrogenase large subunit HucL
+      gene_symbol: Sala_3198
+      taxon_id: NCBITaxon:317655
+      taxon_label: Sphingopyxis alaskensis RB2256
+      entry_status: UNREVIEWED
+      proteome_id: UP000006578
+      retrieved_on: '2026-08-24'
+      entry_version: 98
+      sequence_version: 1
+      role: Catalytic large-subunit component of the plasmid-borne group 2a [NiFe]-hydrogenase;
+        this accession is not presented as the complete hydrogenase complex.
+      evidence:
+      - reference: DOI:10.1038/s41564-023-01322-0
+        snippet: group 2a [NiFe]-hydrogenase large subunit gene (hucL; locus Sala_3198)
+        notes: The primary study measured Sala_3198 expression during aerobic growth
+          and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis
+          RB2256 reference proteome.
   - node_id: diet
     label: direct interspecies electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -237,6 +290,29 @@ causal_graphs:
       notes: sulfide oxidation as lithotrophic energy metabolism in nitrate-reducing
         chemolithotrophs/heterotrophs
     predicate_id: rdfs:subClassOf
+  - subject: molecular_hydrogen
+    predicate: example of
+    object: inorganic_electron_donor
+    description: H2 is a reduced inorganic donor that can supplement energy during
+      organic-carbon-supported growth.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01322-0
+      snippet: uses an abundant reduced gas as an energy source
+      notes: The culture study shows that S. alaskensis consumes H2 while growing
+        on organic carbon, supporting H2 as the inorganic energy donor in this branch.
+    predicate_id: rdfs:subClassOf
+  - subject: molecular_hydrogen
+    predicate: oxidized by
+    object: group_2a_nife_hydrogenase
+    description: The group 2a uptake hydrogenase mediates aerobic H2 oxidation in
+      S. alaskensis.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01322-0
+      snippet: encodes a plasmid-borne group 2a [NiFe]-hydrogenase, aerobically consumed
+        H2
+      notes: The primary growth, gas-consumption, and hucL-expression experiments
+        pair the enzyme class with H2 oxidation in strain RB2256; Q1J422 is only its
+        large-subunit component.
   - subject: sqr
     predicate: oxidizes
     object: sulfide
@@ -411,4 +487,12 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:55:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, reviewed the Sox and conductive-surface composites
+    as label-only, added DOI-cited S. alaskensis RB2256 and its H2 branch, and paired
+    the group 2a hydrogenase with reference-proteome component Q1J422 without treating
+    one large subunit as the complete complex.
   llm_assisted: true

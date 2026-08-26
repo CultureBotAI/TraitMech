@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>Hydrogenotrophic H2 oxidation and CO2 fixation</h2>
       <p class="meta">DOI-backed graph linking hydrogenase-catalyzed H2 oxidation, electron transport energy conservation, and autotrophic CO2 fixation.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · Represents H2 oxidation coupled to electron transport and carbon fixation. The protein node is narrowed to the membrane-bound NiFe uptake-hydrogenase branch demonstrated in C. necator H16; other acceptor branches remain process-level.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -74,7 +77,7 @@
           </li>
           
           <li id="pathograph-1-edge-2">
-            <strong>hydrogenase</strong>
+            <strong>membrane-bound NiFe uptake hydrogenase complex</strong>
             <span class="edge-predicate">oxidizes</span>
             <strong>molecular hydrogen</strong>
             <code>METPO:2007803</code>
@@ -108,7 +111,7 @@
           </li>
           
           <li id="pathograph-1-edge-4">
-            <strong>hydrogenase</strong>
+            <strong>membrane-bound NiFe uptake hydrogenase complex</strong>
             <span class="edge-predicate">interacts with</span>
             <strong>electron transport system</strong>
             <code>biolink:interacts_with</code>
@@ -168,7 +171,7 @@
               
               <li>
                 <code>DOI:10.1128/AEM.02473-10</code>
-                <span class="evidence-snippet">CO2 ... into cellular carbon</span>
+                <span class="evidence-snippet">the assimilation of CO2 (oxidation state of +4) into cellular carbon (average oxidation state of 0, as in carbohydrates) requires four reducing equivalents.</span>
                 <span class="meta">Supports the carbon-assimilation output.</span>
               </li>
               
@@ -184,8 +187,8 @@
             <ul>
               
               <li>
-                <code>DOI:10.2138/gselements.16.1.39</code>
-                
+                <code>DOI:10.21775/cimb.006.159</code>
+                <span class="evidence-snippet">generation of a protonmotive force</span>
                 <span class="meta">Splitting H2 yields electrons and protons that can generate proton gradients and ATP; general mechanistic process-level edge.</span>
               </li>
               
@@ -202,7 +205,7 @@
               
               <li>
                 <code>DOI:10.3390/microorganisms7020053</code>
-                
+                <span class="evidence-snippet">hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).</span>
                 <span class="meta">The hydrogenase reaction is involved in coupling hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).</span>
               </li>
               
@@ -218,9 +221,9 @@
             <ul>
               
               <li>
-                <code>DOI:10.2138/gselements.16.1.39</code>
-                
-                <span class="meta">Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; high-confidence generic edge.</span>
+                <code>DOI:10.3390/microorganisms7020053</code>
+                <span class="evidence-snippet">Aerobic hydrogen oxidation (Knallgas) H2 + 1/2O2 → H2O</span>
+                <span class="meta">The review tabulates oxygen reduction as the acceptor half-reaction for aerobic hydrogen oxidation.</span>
               </li>
               
             </ul>
@@ -235,9 +238,9 @@
             <ul>
               
               <li>
-                <code>DOI:10.2138/gselements.16.1.39</code>
-                
-                <span class="meta">Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.</span>
+                <code>DOI:10.3390/microorganisms7020053</code>
+                <span class="evidence-snippet">energy is obtained by coupling hydrogen oxidation to reduction of electron acceptors such as carbon dioxide, nitrate, or ferric iron</span>
+                <span class="meta">The source explicitly includes nitrate among electron acceptors coupled to hydrogen oxidation.</span>
               </li>
               
             </ul>
@@ -252,9 +255,9 @@
             <ul>
               
               <li>
-                <code>DOI:10.2138/gselements.16.1.39</code>
-                
-                <span class="meta">Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.</span>
+                <code>DOI:10.3390/microorganisms7020053</code>
+                <span class="evidence-snippet">Hydrogen gas has a low reduction potential and is, thus, a highly energetic electron donor when involved in sulfate, carbon dioxide, and ferric iron reduction</span>
+                <span class="meta">The source explicitly identifies hydrogen as the electron donor for sulfate reduction.</span>
               </li>
               
             </ul>
@@ -270,25 +273,8 @@
               
               <li>
                 <code>DOI:10.1111/1751-7915.14300</code>
-                
+                <span class="evidence-snippet">By coupling hydrogen oxidation to carbon fixation in species containing both enzymes, the existing evidence suggests that hydrogenotrophic chemosynthesis is a viable energy generation strategy</span>
                 <span class="meta">By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis is a viable energy generation strategy; trait-level edge.</span>
-              </li>
-              
-            </ul>
-          </li>
-          
-          <li id="pathograph-1-edge-14">
-            <strong>oxygen sensitivity</strong>
-            <span class="edge-predicate">constrains</span>
-            <strong>hydrogenase</strong>
-            
-            <p>Differential O2 sensitivity across hydrogenase classes constrains their distribution and use.</p>
-            <ul>
-              
-              <li>
-                <code>DOI:10.2138/gselements.16.1.39</code>
-                
-                <span class="meta">Hydrogenase classes show different sensitivity to O2 and diverse H2 affinities; broad environmental constraint across classes.</span>
               </li>
               
             </ul>
@@ -297,6 +283,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>membrane-bound NiFe uptake hydrogenase complex</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/P31891/entry" rel="nofollow noreferrer"><code>UniProtKB:P31891</code></a>
+                  <br>Uptake hydrogenase large subunit <span class="meta">(hoxG)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=381666" rel="nofollow noreferrer">Cupriavidus necator H16</a>
+                  <br><code>NCBITaxon:381666</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-23 · sequence v4</span>
+                </td>
+                <td>
+                  <p>Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase complex; this accession does not denote the complete HoxKGZ complex.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1128/jb.01427-10" rel="nofollow noreferrer"><code>DOI:10.1128/jb.01427-10</code></a>
+                      
+                      <span class="evidence-snippet">large subunit HoxG (67.1 kDa) containing the Ni-Fe active site</span>
+                      <span class="meta">The primary H16 study identifies HoxG as the catalytic large subunit of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer to the respiratory chain; UniProtKB P31891 verifies the reviewed instance.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -492,7 +526,7 @@ Identifiers below are restricted to high-confidence CURIEs. Labels are deliberat
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(2)</span></h2>
+        <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -535,6 +569,25 @@ Identifiers below are restricted to high-confidence CURIEs. Labels are deliberat
           <span class="meta">hydrogenotrophic methanogen</span>
         </li>
         
+        <li>
+          <em>Cupriavidus necator H16</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=381666"
+             rel="nofollow noreferrer"><code>NCBITaxon:381666</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/jb.01427-10"
+             rel="nofollow noreferrer"><code>DOI:10.1128/jb.01427-10</code></a>
+          
+          
+          <span class="meta">Strain-level Knallgas exemplar for respiratory H2 oxidation by the oxygen-tolerant membrane-bound NiFe hydrogenase.</span>
+        </li>
+        
       </ul>
     </div>
     
@@ -545,6 +598,12 @@ Identifiers below are restricted to high-confidence CURIEs. Labels are deliberat
     <div class="card">
       <h2>Curation history</h2>
       <ol>
+        
+        <li>
+          <time>2026-08-23T09:10:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Narrowed the ambiguous hydrogenase label to the membrane-bound NiFe uptake-hydrogenase complex, grounded it to GO:0044569, and added DOI-backed HoxG P31891 for C. necator H16 as an explicit catalytic component.</p>
+        </li>
         
         <li>
           <time>2026-05-05T01:35:46.874373+00:00</time> ·
@@ -652,6 +711,12 @@ Identifiers below are restricted to high-confidence CURIEs. Labels are deliberat
           <time>2026-08-17T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_SENSE</strong> · claude
           <p class="changes">One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical sense here. The molecule, not the condition — the dioxygen participating in the reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other chemical occurrences already use, so one id means one sense corpus-wide (issues 356, 384).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-22T04:26:16Z</time> ·
+          <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
+          <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic GO/InterPro terms and retracted 1 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
         
       </ol>
@@ -923,6 +988,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -1011,7 +1081,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking hydrogenase-catalyzed H2 oxidation, electron transport energy conservation, and autotrophic CO2 fixation.", "edges": [{"description": "Molecular hydrogen serves as the electron donor for hydrogenotrophy.", "evidence": [{"notes": "Supports H2 oxidation as a microbial energy process.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "hydrogenotrophic_trait", "target": "molecular_hydrogen"}, {"description": "Hydrogenases catalyze H2 oxidation.", "evidence": [{"notes": "Supports hydrogenase-catalyzed H2 oxidation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "reversible oxidation of hydrogen gas"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "hydrogenase", "target": "molecular_hydrogen"}, {"description": "H2 oxidation yields protons and electrons.", "evidence": [{"notes": "Supports the H2 redox half reaction.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "H2 \u003c--\u003e 2 H+ + 2 e-"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "molecular_hydrogen", "target": "protons_electrons"}, {"description": "Hydrogenases can couple H2 metabolism to membrane electron transport systems.", "evidence": [{"notes": "Supports coupling to electron transport.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "interact with membrane-bound electron transport systems"}], "id": "edge-4", "is_orphan": false, "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "hydrogenase", "target": "electron_transport_system"}, {"description": "Membrane-linked H2 metabolism can conserve energy as proton motive force.", "evidence": [{"notes": "Supports membrane-linked energy conservation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "id": "edge-5", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron_transport_system", "target": "proton_motive_force"}, {"description": "CO2 supplies carbon for autotrophic hydrogenotrophic growth.", "evidence": [{"notes": "Supports CO2 assimilation into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "assimilation of CO2"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "autotrophic_co2_fixation"}, {"description": "Carbon fixation converts CO2 into cell carbon.", "evidence": [{"notes": "Supports the carbon-assimilation output.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "autotrophic_co2_fixation", "target": "cellular_carbon"}, {"description": "Splitting H2 yields electrons and protons that can generate a proton gradient.", "evidence": [{"notes": "Splitting H2 yields electrons and protons that can generate proton gradients and ATP; general mechanistic process-level edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "id": "edge-8", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "h2_oxidation", "target": "proton_motive_force"}, {"description": "Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.", "evidence": [{"notes": "The hydrogenase reaction is involved in coupling hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).", "reference": "DOI:10.3390/microorganisms7020053"}], "id": "edge-9", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "carbon_dioxide"}, {"description": "H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen oxidation).", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; high-confidence generic edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "id": "edge-10", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "molecular_oxygen"}, {"description": "H2 oxidation can be coupled to reduction of nitrate in anaerobic respiration.", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "id": "edge-11", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "nitrate"}, {"description": "H2 oxidation can be coupled to reduction of sulfate in anaerobic respiration.", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "id": "edge-12", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "sulfate"}, {"description": "Coupling H2 oxidation to carbon fixation enables hydrogenotrophic chemosynthesis.", "evidence": [{"notes": "By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis is a viable energy generation strategy; trait-level edge.", "reference": "DOI:10.1111/1751-7915.14300"}], "id": "edge-13", "is_orphan": false, "predicate": "can support", "predicate_id": null, "source": "h2_oxidation", "target": "autotrophic_co2_fixation"}, {"description": "Differential O2 sensitivity across hydrogenase classes constrains their distribution and use.", "evidence": [{"notes": "Hydrogenase classes show different sensitivity to O2 and diverse H2 affinities; broad environmental constraint across classes.", "reference": "DOI:10.2138/gselements.16.1.39"}], "id": "edge-14", "is_orphan": false, "predicate": "constrains", "predicate_id": null, "source": "o2_sensitivity", "target": "hydrogenase"}], "evidence_rows": [{"description": "Molecular hydrogen serves as the electron donor for hydrogenotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports H2 oxidation as a microbial energy process.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "hydrogenotrophic", "target": "molecular hydrogen"}, {"description": "Hydrogenases catalyze H2 oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports hydrogenase-catalyzed H2 oxidation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "reversible oxidation of hydrogen gas"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "hydrogenase", "target": "molecular hydrogen"}, {"description": "H2 oxidation yields protons and electrons.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the H2 redox half reaction.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "H2 \u003c--\u003e 2 H+ + 2 e-"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "molecular hydrogen", "target": "protons and electrons"}, {"description": "Hydrogenases can couple H2 metabolism to membrane electron transport systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports coupling to electron transport.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "interact with membrane-bound electron transport systems"}], "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "hydrogenase", "target": "electron transport system"}, {"description": "Membrane-linked H2 metabolism can conserve energy as proton motive force.", "edge_id": "edge-5", "evidence": [{"notes": "Supports membrane-linked energy conservation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron transport system", "target": "proton motive force"}, {"description": "CO2 supplies carbon for autotrophic hydrogenotrophic growth.", "edge_id": "edge-6", "evidence": [{"notes": "Supports CO2 assimilation into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "assimilation of CO2"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "autotrophic CO2 fixation"}, {"description": "Carbon fixation converts CO2 into cell carbon.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the carbon-assimilation output.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "autotrophic CO2 fixation", "target": "cellular carbon"}, {"description": "Splitting H2 yields electrons and protons that can generate a proton gradient.", "edge_id": "edge-8", "evidence": [{"notes": "Splitting H2 yields electrons and protons that can generate proton gradients and ATP; general mechanistic process-level edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "H2 oxidation", "target": "proton motive force"}, {"description": "Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.", "edge_id": "edge-9", "evidence": [{"notes": "The hydrogenase reaction is involved in coupling hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).", "reference": "DOI:10.3390/microorganisms7020053"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "carbon dioxide"}, {"description": "H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen oxidation).", "edge_id": "edge-10", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; high-confidence generic edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "oxygen"}, {"description": "H2 oxidation can be coupled to reduction of nitrate in anaerobic respiration.", "edge_id": "edge-11", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "nitrate"}, {"description": "H2 oxidation can be coupled to reduction of sulfate in anaerobic respiration.", "edge_id": "edge-12", "evidence": [{"notes": "Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate, nitrate, ferric iron and O2; generic respiratory coupling edge.", "reference": "DOI:10.2138/gselements.16.1.39"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "sulfate"}, {"description": "Coupling H2 oxidation to carbon fixation enables hydrogenotrophic chemosynthesis.", "edge_id": "edge-13", "evidence": [{"notes": "By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis is a viable energy generation strategy; trait-level edge.", "reference": "DOI:10.1111/1751-7915.14300"}], "predicate": "can support", "predicate_id": null, "source": "H2 oxidation", "target": "autotrophic CO2 fixation"}, {"description": "Differential O2 sensitivity across hydrogenase classes constrains their distribution and use.", "edge_id": "edge-14", "evidence": [{"notes": "Hydrogenase classes show different sensitivity to O2 and diverse H2 affinities; broad environmental constraint across classes.", "reference": "DOI:10.2138/gselements.16.1.39"}], "predicate": "constrains", "predicate_id": null, "source": "oxygen sensitivity", "target": "hydrogenase"}], "graph_id": "hydrogenotrophic_hydrogen_oxidation_fixation", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Carbon fixation pathway converting inorganic carbon into cell carbon.", "grounding": "GO:0015977", "id": "autotrophic_co2_fixation", "is_orphan": false, "label": "autotrophic CO2 fixation", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced cell material produced from CO2.", "grounding": null, "id": "cellular_carbon", "is_orphan": false, "label": "cellular carbon", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane-linked electron-transfer route supporting energy conservation.", "grounding": "GO:0022900", "id": "electron_transport_system", "is_orphan": false, "label": "electron transport system", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Hydrogenase-catalyzed oxidation of molecular hydrogen to protons and electrons.", "grounding": null, "id": "h2_oxidation", "is_orphan": false, "label": "H2 oxidation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Metalloenzyme catalyzing H2 oxidation or production.", "grounding": "UniProtKB:A0A059XQG3", "id": "hydrogenase", "is_orphan": false, "label": "hydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using H2 as electron donor and CO2 as carbon source.", "grounding": "METPO:1000646", "id": "hydrogenotrophic_trait", "is_orphan": false, "label": "hydrogenotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor oxidized by hydrogenotrophs.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor that can be reduced when coupled to H2 oxidation.", "grounding": null, "id": "molecular_oxygen", "is_orphan": false, "label": "oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic electron acceptor reducible by H2 oxidation in anaerobic respiration.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Differential O2 sensitivity that constrains which hydrogenase classes are usable.", "grounding": null, "id": "o2_sensitivity", "is_orphan": false, "label": "oxygen sensitivity", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Ion gradient used for energy conservation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "Products of hydrogen oxidation.", "grounding": null, "id": "protons_electrons", "is_orphan": false, "label": "protons and electrons", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic electron acceptor reducible by H2 oxidation in anaerobic respiration.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Hydrogenotrophic H2 oxidation and CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking hydrogenase-catalyzed H2 oxidation, electron transport energy conservation, and autotrophic CO2 fixation.", "edges": [{"description": "Molecular hydrogen serves as the electron donor for hydrogenotrophy.", "evidence": [{"notes": "Supports H2 oxidation as a microbial energy process.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "hydrogenotrophic_trait", "target": "molecular_hydrogen"}, {"description": "Hydrogenases catalyze H2 oxidation.", "evidence": [{"notes": "Supports hydrogenase-catalyzed H2 oxidation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "reversible oxidation of hydrogen gas"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "hydrogenase", "target": "molecular_hydrogen"}, {"description": "H2 oxidation yields protons and electrons.", "evidence": [{"notes": "Supports the H2 redox half reaction.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "H2 \u003c--\u003e 2 H+ + 2 e-"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "molecular_hydrogen", "target": "protons_electrons"}, {"description": "Hydrogenases can couple H2 metabolism to membrane electron transport systems.", "evidence": [{"notes": "Supports coupling to electron transport.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "interact with membrane-bound electron transport systems"}], "id": "edge-4", "is_orphan": false, "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "hydrogenase", "target": "electron_transport_system"}, {"description": "Membrane-linked H2 metabolism can conserve energy as proton motive force.", "evidence": [{"notes": "Supports membrane-linked energy conservation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "id": "edge-5", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron_transport_system", "target": "proton_motive_force"}, {"description": "CO2 supplies carbon for autotrophic hydrogenotrophic growth.", "evidence": [{"notes": "Supports CO2 assimilation into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "assimilation of CO2"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "autotrophic_co2_fixation"}, {"description": "Carbon fixation converts CO2 into cell carbon.", "evidence": [{"notes": "Supports the carbon-assimilation output.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the assimilation of CO2 (oxidation state of +4) into cellular carbon (average oxidation state of 0, as in carbohydrates) requires four reducing equivalents."}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "autotrophic_co2_fixation", "target": "cellular_carbon"}, {"description": "Splitting H2 yields electrons and protons that can generate a proton gradient.", "evidence": [{"notes": "Splitting H2 yields electrons and protons that can generate proton gradients and ATP; general mechanistic process-level edge.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "id": "edge-8", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "h2_oxidation", "target": "proton_motive_force"}, {"description": "Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.", "evidence": [{"notes": "The hydrogenase reaction is involved in coupling hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide)."}], "id": "edge-9", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "carbon_dioxide"}, {"description": "H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen oxidation).", "evidence": [{"notes": "The review tabulates oxygen reduction as the acceptor half-reaction for aerobic hydrogen oxidation.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "Aerobic hydrogen oxidation (Knallgas) H2 + 1/2O2 \u2192 H2O"}], "id": "edge-10", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "molecular_oxygen"}, {"description": "H2 oxidation can be coupled to reduction of nitrate in anaerobic respiration.", "evidence": [{"notes": "The source explicitly includes nitrate among electron acceptors coupled to hydrogen oxidation.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "energy is obtained by coupling hydrogen oxidation to reduction of electron acceptors such as carbon dioxide, nitrate, or ferric iron"}], "id": "edge-11", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "nitrate"}, {"description": "H2 oxidation can be coupled to reduction of sulfate in anaerobic respiration.", "evidence": [{"notes": "The source explicitly identifies hydrogen as the electron donor for sulfate reduction.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "Hydrogen gas has a low reduction potential and is, thus, a highly energetic electron donor when involved in sulfate, carbon dioxide, and ferric iron reduction"}], "id": "edge-12", "is_orphan": false, "predicate": "coupled to reduction of", "predicate_id": null, "source": "h2_oxidation", "target": "sulfate"}, {"description": "Coupling H2 oxidation to carbon fixation enables hydrogenotrophic chemosynthesis.", "evidence": [{"notes": "By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis is a viable energy generation strategy; trait-level edge.", "reference": "DOI:10.1111/1751-7915.14300", "snippet": "By coupling hydrogen oxidation to carbon fixation in species containing both enzymes, the existing evidence suggests that hydrogenotrophic chemosynthesis is a viable energy generation strategy"}], "id": "edge-13", "is_orphan": false, "predicate": "can support", "predicate_id": null, "source": "h2_oxidation", "target": "autotrophic_co2_fixation"}], "evidence_rows": [{"description": "Molecular hydrogen serves as the electron donor for hydrogenotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports H2 oxidation as a microbial energy process.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "hydrogenotrophic", "target": "molecular hydrogen"}, {"description": "Hydrogenases catalyze H2 oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports hydrogenase-catalyzed H2 oxidation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "reversible oxidation of hydrogen gas"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "membrane-bound NiFe uptake hydrogenase complex", "target": "molecular hydrogen"}, {"description": "H2 oxidation yields protons and electrons.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the H2 redox half reaction.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "H2 \u003c--\u003e 2 H+ + 2 e-"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "molecular hydrogen", "target": "protons and electrons"}, {"description": "Hydrogenases can couple H2 metabolism to membrane electron transport systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports coupling to electron transport.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "interact with membrane-bound electron transport systems"}], "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "membrane-bound NiFe uptake hydrogenase complex", "target": "electron transport system"}, {"description": "Membrane-linked H2 metabolism can conserve energy as proton motive force.", "edge_id": "edge-5", "evidence": [{"notes": "Supports membrane-linked energy conservation.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron transport system", "target": "proton motive force"}, {"description": "CO2 supplies carbon for autotrophic hydrogenotrophic growth.", "edge_id": "edge-6", "evidence": [{"notes": "Supports CO2 assimilation into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "assimilation of CO2"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "autotrophic CO2 fixation"}, {"description": "Carbon fixation converts CO2 into cell carbon.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the carbon-assimilation output.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the assimilation of CO2 (oxidation state of +4) into cellular carbon (average oxidation state of 0, as in carbohydrates) requires four reducing equivalents."}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "autotrophic CO2 fixation", "target": "cellular carbon"}, {"description": "Splitting H2 yields electrons and protons that can generate a proton gradient.", "edge_id": "edge-8", "evidence": [{"notes": "Splitting H2 yields electrons and protons that can generate proton gradients and ATP; general mechanistic process-level edge.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "generation of a protonmotive force"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "H2 oxidation", "target": "proton motive force"}, {"description": "Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.", "edge_id": "edge-9", "evidence": [{"notes": "The hydrogenase reaction is involved in coupling hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "hydrogen uptake to the reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide)."}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "carbon dioxide"}, {"description": "H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen oxidation).", "edge_id": "edge-10", "evidence": [{"notes": "The review tabulates oxygen reduction as the acceptor half-reaction for aerobic hydrogen oxidation.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "Aerobic hydrogen oxidation (Knallgas) H2 + 1/2O2 \u2192 H2O"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "oxygen"}, {"description": "H2 oxidation can be coupled to reduction of nitrate in anaerobic respiration.", "edge_id": "edge-11", "evidence": [{"notes": "The source explicitly includes nitrate among electron acceptors coupled to hydrogen oxidation.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "energy is obtained by coupling hydrogen oxidation to reduction of electron acceptors such as carbon dioxide, nitrate, or ferric iron"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "nitrate"}, {"description": "H2 oxidation can be coupled to reduction of sulfate in anaerobic respiration.", "edge_id": "edge-12", "evidence": [{"notes": "The source explicitly identifies hydrogen as the electron donor for sulfate reduction.", "reference": "DOI:10.3390/microorganisms7020053", "snippet": "Hydrogen gas has a low reduction potential and is, thus, a highly energetic electron donor when involved in sulfate, carbon dioxide, and ferric iron reduction"}], "predicate": "coupled to reduction of", "predicate_id": null, "source": "H2 oxidation", "target": "sulfate"}, {"description": "Coupling H2 oxidation to carbon fixation enables hydrogenotrophic chemosynthesis.", "edge_id": "edge-13", "evidence": [{"notes": "By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis is a viable energy generation strategy; trait-level edge.", "reference": "DOI:10.1111/1751-7915.14300", "snippet": "By coupling hydrogen oxidation to carbon fixation in species containing both enzymes, the existing evidence suggests that hydrogenotrophic chemosynthesis is a viable energy generation strategy"}], "predicate": "can support", "predicate_id": null, "source": "H2 oxidation", "target": "autotrophic CO2 fixation"}], "graph_id": "hydrogenotrophic_hydrogen_oxidation_fixation", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Carbon fixation pathway converting inorganic carbon into cell carbon.", "grounding": "GO:0015977", "id": "autotrophic_co2_fixation", "is_orphan": false, "label": "autotrophic CO2 fixation", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced cell material produced from CO2.", "grounding": null, "id": "cellular_carbon", "is_orphan": false, "label": "cellular carbon", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane-linked electron-transfer route supporting energy conservation.", "grounding": "GO:0022900", "id": "electron_transport_system", "is_orphan": false, "label": "electron transport system", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hydrogenase-catalyzed oxidation of molecular hydrogen to protons and electrons.", "grounding": null, "id": "h2_oxidation", "is_orphan": false, "label": "H2 oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-tolerant membrane complex coupling H2 oxidation to the respiratory quinone pool in C. necator H16.", "grounding": "GO:0044569", "id": "hydrogenase", "is_orphan": false, "label": "membrane-bound NiFe uptake hydrogenase complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "evidence": [{"notes": "The primary H16 study identifies HoxG as the catalytic large subunit of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer to the respiratory chain; UniProtKB P31891 verifies the reviewed instance.", "reference": "DOI:10.1128/jb.01427-10", "snippet": "large subunit HoxG (67.1 kDa) containing the Ni-Fe active site"}], "gene_symbol": "hoxG", "protein_label": "Uptake hydrogenase large subunit", "proteome_id": "UP000008210", "retrieved_on": "2026-08-23", "role": "Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase complex; this accession does not denote the complete HoxKGZ complex.", "sequence_version": 4, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P31891"}], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using H2 as electron donor and CO2 as carbon source.", "grounding": "METPO:1000646", "id": "hydrogenotrophic_trait", "is_orphan": false, "label": "hydrogenotrophic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor oxidized by hydrogenotrophs.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor that can be reduced when coupled to H2 oxidation.", "grounding": null, "id": "molecular_oxygen", "is_orphan": false, "label": "oxygen", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic electron acceptor reducible by H2 oxidation in anaerobic respiration.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Ion gradient used for energy conservation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Products of hydrogen oxidation.", "grounding": null, "id": "protons_electrons", "is_orphan": false, "label": "protons and electrons", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic electron acceptor reducible by H2 oxidation in anaerobic respiration.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "evidence": [{"notes": "The primary H16 study identifies HoxG as the catalytic large subunit of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer to the respiratory chain; UniProtKB P31891 verifies the reviewed instance.", "reference": "DOI:10.1128/jb.01427-10", "snippet": "large subunit HoxG (67.1 kDa) containing the Ni-Fe active site"}], "gene_symbol": "hoxG", "node_id": "hydrogenase", "node_label": "membrane-bound NiFe uptake hydrogenase complex", "protein_label": "Uptake hydrogenase large subunit", "proteome_id": "UP000008210", "retrieved_on": "2026-08-23", "role": "Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase complex; this accession does not denote the complete HoxKGZ complex.", "sequence_version": 4, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P31891"}], "scope_notes": "Represents H2 oxidation coupled to electron transport and carbon fixation. The protein node is narrowed to the membrane-bound NiFe uptake-hydrogenase branch demonstrated in C. necator H16; other acceptor branches remain process-level.", "scope_status": "MECHANISTIC", "title": "Hydrogenotrophic H2 oxidation and CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1034,7 +1104,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-17 02:00 UTC from
+      Record as of 2026-08-23 09:10 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

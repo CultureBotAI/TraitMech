@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>DNRA reduces nitrate to ammonium, conserving fixed nitrogen</h2>
       <p class="meta">Evidence-backed causal sketch linking nitrate respiration ending in ammonium to nitrogen retention under high donor-to-acceptor ratios.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · Represents the canonical Nar/Nrf DNRA route and illustrates its nitrite-to-ammonium step with W. succinogenes NrfA. Regulatory details are broader bacterial modules and are not asserted to be identical in every DNRA organism.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -161,7 +164,7 @@
           <li id="pathograph-1-edge-7">
             <strong>NarX-NarL two-component system</strong>
             <span class="edge-predicate">activates expression of</span>
-            <strong>nrf operon</strong>
+            <strong>nrf operon transcription</strong>
             
             <p>NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.</p>
             <ul>
@@ -178,7 +181,7 @@
           <li id="pathograph-1-edge-8">
             <strong>FNR regulator</strong>
             <span class="edge-predicate">activates expression of</span>
-            <strong>nrf operon</strong>
+            <strong>nrf operon transcription</strong>
             
             <p>FNR activates nrf operon transcription under anaerobic conditions.</p>
             <ul>
@@ -212,6 +215,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>NrfA cytochrome c nitrite reductase</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/Q9S1E5/entry" rel="nofollow noreferrer"><code>UniProtKB:Q9S1E5</code></a>
+                  <br>Cytochrome c-552 <span class="meta">(nrfA)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=273121" rel="nofollow noreferrer">Wolinella succinogenes ATCC 29543</a>
+                  <br><code>NCBITaxon:273121</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v163 · sequence v2</span>
+                </td>
+                <td>
+                  <p>Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron nitrite reduction step in W. succinogenes.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1074/jbc.M006188200" rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M006188200</code></a>
+                      
+                      <span class="evidence-snippet">Cytochrome c nitrite reductase catalyzes the 6-electron reduction of nitrite to ammonia.</span>
+                      <span class="meta">The primary structural and mechanistic study is from W. succinogenes; UniProtKB Q9S1E5 verifies the reviewed NrfA protein and strain taxon.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -418,7 +469,7 @@ A concise set of the strongest graph-ready relationships is provided below.
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(1)</span></h2>
+        <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -435,11 +486,30 @@ A concise set of the strongest graph-ready relationships is provided below.
           
           
           
-          <a href="https://pubmed.ncbi.nlm.nih.gov/14500908/"
-             rel="nofollow noreferrer"><code>PMID:14500908</code></a>
+          <a href="https://doi.org/10.1073/pnas.1932838100"
+             rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1932838100</code></a>
           
           
           <span class="meta">Model organism for respiratory dissimilatory nitrate/nitrite reduction to ammonium (DNRA).</span>
+        </li>
+        
+        <li>
+          <em>Wolinella succinogenes ATCC 29543</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=273121"
+             rel="nofollow noreferrer"><code>NCBITaxon:273121</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1074/jbc.M006188200"
+             rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M006188200</code></a>
+          
+          
+          <span class="meta">Strain-level source of the structurally characterized NrfA cytochrome c nitrite reductase and the matching reviewed UniProt example.</span>
         </li>
         
       </ul>
@@ -475,6 +545,12 @@ A concise set of the strongest graph-ready relationships is provided below.
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-24T00:00:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
+          <p class="changes">Added a strain-matched W. succinogenes NrfA example and exact GO activity, grounded NarGHI, retyped the nrf operon carrier as transcription, and retained combined NarX-NarL and broad FNR labels with explicit review rationales.</p>
         </li>
         
       </ol>
@@ -746,6 +822,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -834,7 +915,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking nitrate respiration ending in ammonium to nitrogen retention under high donor-to-acceptor ratios.", "edges": [{"description": "Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.", "evidence": [{"notes": "Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited conditions.", "reference": "DOI:10.1126/science.1254070"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "nitrate", "target": "ammonium"}, {"description": "High donor-to-acceptor ratio favors DNRA over denitrification.", "evidence": [{"notes": "DNRA review supports its competitive advantage and N-retaining role under nitrate-limited conditions.", "reference": "DOI:10.1007/s11157-025-09719-5"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "donor_acceptor_ratio", "target": "dnra_trait"}, {"description": "NarGHI nitrate reductase catalyzes the canonical first DNRA step, reducing nitrate to nitrite.", "evidence": [{"notes": "Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic NarGHI (egas2024).", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "nitrate", "target": "nitrite"}, {"description": "NarGHI nitrate reductase catalyzes production of nitrite from nitrate.", "evidence": [{"notes": "Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI catalyzing the first step.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "narghi", "target": "nitrite"}, {"description": "NrfA cytochrome c nitrite reductase catalyzes the canonical second DNRA step, reducing nitrite to ammonium.", "evidence": [{"notes": "Second step performed by cytochrome c nitrite reductase (NrfA): reduction of nitrite to ammonium (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "nitrite", "target": "ammonium"}, {"description": "NrfA reduces nitrite to ammonium, the final DNRA product.", "evidence": [{"notes": "Cytochrome c nitrite reductase (NrfA) performs the canonical reduction of nitrite to ammonium.", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-6", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "nrfa", "target": "ammonium"}, {"description": "NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.", "evidence": [{"notes": "Expression of nap and nrf operons is tightly regulated by NarX-NarL and NarQ-NarP, activating transcription under appropriate conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-7", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "narx_narl", "target": "nrf_operon"}, {"description": "FNR activates nrf operon transcription under anaerobic conditions.", "evidence": [{"notes": "FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-8", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "fnr", "target": "nrf_operon"}, {"description": "Anaerobic conditions, sensed via FNR, permit DNRA respiration.", "evidence": [{"notes": "nap/nrf operon expression activated under anaerobic conditions; DNRA proceeds under oxygen-depleted conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-9", "is_orphan": false, "predicate": "permits", "predicate_id": null, "source": "anaerobic_conditions", "target": "dnra_trait"}], "evidence_rows": [{"description": "Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.", "edge_id": "edge-1", "evidence": [{"notes": "Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited conditions.", "reference": "DOI:10.1126/science.1254070"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "nitrate", "target": "ammonium"}, {"description": "High donor-to-acceptor ratio favors DNRA over denitrification.", "edge_id": "edge-2", "evidence": [{"notes": "DNRA review supports its competitive advantage and N-retaining role under nitrate-limited conditions.", "reference": "DOI:10.1007/s11157-025-09719-5"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high donor-to-acceptor ratio", "target": "dissimilatory nitrate reduction to ammonium"}, {"description": "NarGHI nitrate reductase catalyzes the canonical first DNRA step, reducing nitrate to nitrite.", "edge_id": "edge-3", "evidence": [{"notes": "Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic NarGHI (egas2024).", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "reduced to", "predicate_id": null, "source": "nitrate", "target": "nitrite"}, {"description": "NarGHI nitrate reductase catalyzes production of nitrite from nitrate.", "edge_id": "edge-4", "evidence": [{"notes": "Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI catalyzing the first step.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "NarGHI nitrate reductase", "target": "nitrite"}, {"description": "NrfA cytochrome c nitrite reductase catalyzes the canonical second DNRA step, reducing nitrite to ammonium.", "edge_id": "edge-5", "evidence": [{"notes": "Second step performed by cytochrome c nitrite reductase (NrfA): reduction of nitrite to ammonium (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "reduced to", "predicate_id": null, "source": "nitrite", "target": "ammonium"}, {"description": "NrfA reduces nitrite to ammonium, the final DNRA product.", "edge_id": "edge-6", "evidence": [{"notes": "Cytochrome c nitrite reductase (NrfA) performs the canonical reduction of nitrite to ammonium.", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "NrfA cytochrome c nitrite reductase", "target": "ammonium"}, {"description": "NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.", "edge_id": "edge-7", "evidence": [{"notes": "Expression of nap and nrf operons is tightly regulated by NarX-NarL and NarQ-NarP, activating transcription under appropriate conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "activates expression of", "predicate_id": null, "source": "NarX-NarL two-component system", "target": "nrf operon"}, {"description": "FNR activates nrf operon transcription under anaerobic conditions.", "edge_id": "edge-8", "evidence": [{"notes": "FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "activates expression of", "predicate_id": null, "source": "FNR regulator", "target": "nrf operon"}, {"description": "Anaerobic conditions, sensed via FNR, permit DNRA respiration.", "edge_id": "edge-9", "evidence": [{"notes": "nap/nrf operon expression activated under anaerobic conditions; DNRA proceeds under oxygen-depleted conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "permits", "predicate_id": null, "source": "anaerobic conditions", "target": "dissimilatory nitrate reduction to ammonium"}], "graph_id": "dnra_nitrate_to_ammonium", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Final reduction product retained in the ecosystem.", "grounding": "CHEBI:28938", "id": "ammonium", "is_orphan": false, "label": "ammonium", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Oxygen-depleted environment permissive for DNRA respiration.", "grounding": null, "id": "anaerobic_conditions", "is_orphan": false, "label": "anaerobic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiratory reduction of nitrate to ammonium.", "grounding": "traitmech:000030", "id": "dnra_trait", "is_orphan": false, "label": "dissimilatory nitrate reduction to ammonium", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Nitrate-limited, high-electron-donor environment selecting for DNRA over denitrification.", "grounding": null, "id": "donor_acceptor_ratio", "is_orphan": false, "label": "high donor-to-acceptor ratio", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "O2/NO-sensing global regulator activating nitrate respiration operons under anaerobic conditions.", "grounding": null, "id": "fnr", "is_orphan": false, "label": "FNR regulator", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound nitrate reductase catalyzing the first DNRA step (nitrate to nitrite).", "grounding": null, "id": "narghi", "is_orphan": false, "label": "NarGHI nitrate reductase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Nitrate/nitrite-sensing two-component regulatory system activating DNRA operon transcription.", "grounding": null, "id": "narx_narl", "is_orphan": false, "label": "NarX-NarL two-component system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DNRA.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate reduced from nitrate and then to ammonium in DNRA.", "grounding": "CHEBI:16301", "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Operon encoding cytochrome c nitrite reductase (NrfA) and accessory subunits for DNRA.", "grounding": null, "id": "nrf_operon", "is_orphan": false, "label": "nrf operon", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cytochrome c nitrite reductase catalyzing the canonical second DNRA step (nitrite to ammonium).", "grounding": null, "id": "nrfa", "is_orphan": false, "label": "NrfA cytochrome c nitrite reductase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "DNRA reduces nitrate to ammonium, conserving fixed nitrogen"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking nitrate respiration ending in ammonium to nitrogen retention under high donor-to-acceptor ratios.", "edges": [{"description": "Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.", "evidence": [{"notes": "Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited conditions.", "reference": "DOI:10.1126/science.1254070"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "nitrate", "target": "ammonium"}, {"description": "High donor-to-acceptor ratio favors DNRA over denitrification.", "evidence": [{"notes": "DNRA review supports its competitive advantage and N-retaining role under nitrate-limited conditions.", "reference": "DOI:10.1007/s11157-025-09719-5"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "donor_acceptor_ratio", "target": "dnra_trait"}, {"description": "NarGHI nitrate reductase catalyzes the canonical first DNRA step, reducing nitrate to nitrite.", "evidence": [{"notes": "Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic NarGHI (egas2024).", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "nitrate", "target": "nitrite"}, {"description": "NarGHI nitrate reductase catalyzes production of nitrite from nitrate.", "evidence": [{"notes": "Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI catalyzing the first step.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "narghi", "target": "nitrite"}, {"description": "NrfA cytochrome c nitrite reductase catalyzes the canonical second DNRA step, reducing nitrite to ammonium.", "evidence": [{"notes": "Second step performed by cytochrome c nitrite reductase (NrfA): reduction of nitrite to ammonium (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "nitrite", "target": "ammonium"}, {"description": "NrfA reduces nitrite to ammonium, the final DNRA product.", "evidence": [{"notes": "Cytochrome c nitrite reductase (NrfA) performs the canonical reduction of nitrite to ammonium.", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-6", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "nrfa", "target": "ammonium"}, {"description": "NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.", "evidence": [{"notes": "Expression of nap and nrf operons is tightly regulated by NarX-NarL and NarQ-NarP, activating transcription under appropriate conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-7", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "narx_narl", "target": "nrf_operon"}, {"description": "FNR activates nrf operon transcription under anaerobic conditions.", "evidence": [{"notes": "FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-8", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "fnr", "target": "nrf_operon"}, {"description": "Anaerobic conditions, sensed via FNR, permit DNRA respiration.", "evidence": [{"notes": "nap/nrf operon expression activated under anaerobic conditions; DNRA proceeds under oxygen-depleted conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "id": "edge-9", "is_orphan": false, "predicate": "permits", "predicate_id": null, "source": "anaerobic_conditions", "target": "dnra_trait"}], "evidence_rows": [{"description": "Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.", "edge_id": "edge-1", "evidence": [{"notes": "Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited conditions.", "reference": "DOI:10.1126/science.1254070"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "nitrate", "target": "ammonium"}, {"description": "High donor-to-acceptor ratio favors DNRA over denitrification.", "edge_id": "edge-2", "evidence": [{"notes": "DNRA review supports its competitive advantage and N-retaining role under nitrate-limited conditions.", "reference": "DOI:10.1007/s11157-025-09719-5"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high donor-to-acceptor ratio", "target": "dissimilatory nitrate reduction to ammonium"}, {"description": "NarGHI nitrate reductase catalyzes the canonical first DNRA step, reducing nitrate to nitrite.", "edge_id": "edge-3", "evidence": [{"notes": "Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic NarGHI (egas2024).", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "reduced to", "predicate_id": null, "source": "nitrate", "target": "nitrite"}, {"description": "NarGHI nitrate reductase catalyzes production of nitrite from nitrate.", "edge_id": "edge-4", "evidence": [{"notes": "Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI catalyzing the first step.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "NarGHI nitrate reductase", "target": "nitrite"}, {"description": "NrfA cytochrome c nitrite reductase catalyzes the canonical second DNRA step, reducing nitrite to ammonium.", "edge_id": "edge-5", "evidence": [{"notes": "Second step performed by cytochrome c nitrite reductase (NrfA): reduction of nitrite to ammonium (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "reduced to", "predicate_id": null, "source": "nitrite", "target": "ammonium"}, {"description": "NrfA reduces nitrite to ammonium, the final DNRA product.", "edge_id": "edge-6", "evidence": [{"notes": "Cytochrome c nitrite reductase (NrfA) performs the canonical reduction of nitrite to ammonium.", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "NrfA cytochrome c nitrite reductase", "target": "ammonium"}, {"description": "NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.", "edge_id": "edge-7", "evidence": [{"notes": "Expression of nap and nrf operons is tightly regulated by NarX-NarL and NarQ-NarP, activating transcription under appropriate conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "activates expression of", "predicate_id": null, "source": "NarX-NarL two-component system", "target": "nrf operon transcription"}, {"description": "FNR activates nrf operon transcription under anaerobic conditions.", "edge_id": "edge-8", "evidence": [{"notes": "FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "activates expression of", "predicate_id": null, "source": "FNR regulator", "target": "nrf operon transcription"}, {"description": "Anaerobic conditions, sensed via FNR, permit DNRA respiration.", "edge_id": "edge-9", "evidence": [{"notes": "nap/nrf operon expression activated under anaerobic conditions; DNRA proceeds under oxygen-depleted conditions (hird2025).", "reference": "DOI:10.1128/aem.00292-25"}], "predicate": "permits", "predicate_id": null, "source": "anaerobic conditions", "target": "dissimilatory nitrate reduction to ammonium"}], "graph_id": "dnra_nitrate_to_ammonium", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Final reduction product retained in the ecosystem.", "grounding": "CHEBI:28938", "id": "ammonium", "is_orphan": false, "label": "ammonium", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Oxygen-depleted environment permissive for DNRA respiration.", "grounding": null, "id": "anaerobic_conditions", "is_orphan": false, "label": "anaerobic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiratory reduction of nitrate to ammonium.", "grounding": "traitmech:000030", "id": "dnra_trait", "is_orphan": false, "label": "dissimilatory nitrate reduction to ammonium", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Nitrate-limited, high-electron-donor environment selecting for DNRA over denitrification.", "grounding": null, "id": "donor_acceptor_ratio", "is_orphan": false, "label": "high donor-to-acceptor ratio", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "O2/NO-sensing global regulator activating nitrate respiration operons under anaerobic conditions.", "grounding": null, "id": "fnr", "is_orphan": false, "label": "FNR regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound nitrate reductase catalyzing the first DNRA step (nitrate to nitrite).", "grounding": "GO:0009325", "id": "narghi", "is_orphan": false, "label": "NarGHI nitrate reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Nitrate/nitrite-sensing two-component regulatory system activating DNRA operon transcription.", "grounding": null, "id": "narx_narl", "is_orphan": false, "label": "NarX-NarL two-component system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DNRA.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate reduced from nitrate and then to ammonium in DNRA.", "grounding": "CHEBI:16301", "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the operon encoding NrfA and accessory DNRA proteins.", "grounding": null, "id": "nrf_operon", "is_orphan": false, "label": "nrf operon transcription", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytochrome c nitrite reductase catalyzing the canonical second DNRA step (nitrite to ammonium).", "grounding": "GO:0042279", "id": "nrfa", "is_orphan": false, "label": "NrfA cytochrome c nitrite reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 163, "evidence": [{"notes": "The primary structural and mechanistic study is from W. succinogenes; UniProtKB Q9S1E5 verifies the reviewed NrfA protein and strain taxon.", "reference": "DOI:10.1074/jbc.M006188200", "snippet": "Cytochrome c nitrite reductase catalyzes the 6-electron reduction of nitrite to ammonia."}], "gene_symbol": "nrfA", "protein_label": "Cytochrome c-552", "retrieved_on": "2026-08-24", "role": "Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron nitrite reduction step in W. succinogenes.", "sequence_version": 2, "taxon_id": "NCBITaxon:273121", "taxon_label": "Wolinella succinogenes ATCC 29543", "uniprot_id": "UniProtKB:Q9S1E5"}], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 163, "evidence": [{"notes": "The primary structural and mechanistic study is from W. succinogenes; UniProtKB Q9S1E5 verifies the reviewed NrfA protein and strain taxon.", "reference": "DOI:10.1074/jbc.M006188200", "snippet": "Cytochrome c nitrite reductase catalyzes the 6-electron reduction of nitrite to ammonia."}], "gene_symbol": "nrfA", "node_id": "nrfa", "node_label": "NrfA cytochrome c nitrite reductase", "protein_label": "Cytochrome c-552", "retrieved_on": "2026-08-24", "role": "Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron nitrite reduction step in W. succinogenes.", "sequence_version": 2, "taxon_id": "NCBITaxon:273121", "taxon_label": "Wolinella succinogenes ATCC 29543", "uniprot_id": "UniProtKB:Q9S1E5"}], "scope_notes": "Represents the canonical Nar/Nrf DNRA route and illustrates its nitrite-to-ammonium step with W. succinogenes NrfA. Regulatory details are broader bacterial modules and are not asserted to be identical in every DNRA organism.", "scope_status": "MECHANISTIC", "title": "DNRA reduces nitrate to ammonium, conserving fixed nitrogen"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -857,7 +938,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-06-24 17:21 UTC from
+      Record as of 2026-08-24 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

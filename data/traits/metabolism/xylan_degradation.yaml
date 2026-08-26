@@ -37,6 +37,10 @@ causal_graphs:
   title: Xylan degradation hydrolyzes hemicellulose to xylose
   description: Evidence-backed causal sketch linking xylanases and accessory enzymes
     to xylan hydrolysis into xylose and xylo-oligosaccharides.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines core xylanase activity, carbon-catabolite regulation,
+    and accessory CE15 enzymes. The C. saccharolyticus XynA example supports the core
+    xylanase branch only.
   nodes:
   - node_id: xylan_degradation_trait
     label: xylan degradation
@@ -47,6 +51,27 @@ causal_graphs:
     label: xylanase systems
     node_type: GENE_OR_PROTEIN
     description: Endo-/exo-xylanases and accessory enzymes acting on xylan.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This system-level node combines endo- and exo-xylanases with
+      accessory enzymes from multiple families; no one ontology term denotes the set.
+    protein_examples:
+    - uniprot_id: UniProtKB:P23556
+      protein_label: Endo-1,4-beta-xylanase A
+      gene_symbol: xynA
+      taxon_id: NCBITaxon:44001
+      taxon_label: Caldicellulosiruptor saccharolyticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 101
+      sequence_version: 1
+      role: XynA endo-xylanase representing the core hydrolytic component of the broader
+        xylanase-system node.
+      evidence:
+      - reference: DOI:10.1128/aem.56.4.1017-1024.1990
+        snippet: ORF1 appears to code for a xylanase (XynA)
+        notes: The primary cloning and expression study identifies active XynA from
+          C. saccharolyticus. UniProtKB P23556 is the reviewed XynA entry from the
+          same species.
   - node_id: xylose
     label: xylose
     node_type: CHEMICAL
@@ -67,6 +92,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Accessory esterases cleaving lignin-carbohydrate ester linkages on
       glucuronoxylan.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: CAZy CE15 contains glucuronoyl and other esterase activities,
+      while the available InterPro match is the broader alpha/beta-hydrolase superfamily;
+      neither is an exact reviewed grounding for this functional plural node.
   - node_id: xylan_saccharification
     label: xylan saccharification
     node_type: BIOLOGICAL_PROCESS
@@ -183,4 +212,21 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:30:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the composite xylan-degradation mechanism, added a DOI-backed C.
+    saccharolyticus XynA example, and documented reviewed label-only dispositions
+    for the multi-family xylanase-system and CE15 accessory-enzyme nodes.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:44001 from DOI:10.1128/aem.56.4.1017-1024.1990
+    back to PMID:18776029 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

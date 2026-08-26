@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: pressure_range_growth_bounded_span
   title: 'Pressure range: bounded hydrostatic-pressure span supporting growth'
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
     minimum/maximum bounds within which growth is sustained.
   nodes:
@@ -189,4 +193,12 @@ curation_history:
     A named biosynthetic route to polyunsaturated fatty acids. The two typings describe
     it in near-identical words, so the split was arbitrary and the rule breaks the
     1-1 tie.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope pressure_range_growth_bounded_span=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

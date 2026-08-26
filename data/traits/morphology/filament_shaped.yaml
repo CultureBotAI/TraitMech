@@ -35,6 +35,10 @@ causal_graphs:
   title: Filament-shape Streptomyces polar growth mechanism
   description: Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy
     polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: filament_shaped_trait
     label: filament shaped
@@ -45,12 +49,12 @@ causal_graphs:
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Polarity determinant for Streptomyces apical growth.
-    grounding: UniProtKB:Q1IYG2
+    grounding: InterPro:IPR007793
   - node_id: scy
     label: Scy
     node_type: GENE_OR_PROTEIN
     description: Streptomyces cytoskeletal element associated with the polarisome.
-    grounding: UniProtKB:A0A191V3Q4
+    grounding: InterPro:IPR048240
   - node_id: apical_polarisome
     label: apical polarisome
     node_type: CELLULAR_LOCALIZATION
@@ -72,7 +76,7 @@ causal_graphs:
     label: SulA
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor that blocks FtsZ polymerization.
-    grounding: UniProtKB:H8YHZ0
+    grounding: InterPro:IPR004596
   - node_id: ftsz_polymerization
     label: FtsZ polymerization
     node_type: BIOLOGICAL_PROCESS
@@ -87,6 +91,9 @@ causal_graphs:
     description: Emergence of new branches via splitting of polarisomes at hyphal
       tips.
   - node_id: cgla
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CglA
     node_type: GENE_OR_PROTEIN
     description: LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to
@@ -297,4 +304,20 @@ curation_history:
     entailed a false type on its object. ''Scy is a COMPONENT of the tip-organizing
     center.'' Mereology, not causation. The corpus already uses `part of` this way
     (flii_atpase_complex part of ft3ss_export_system).'
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 3 organism-specific UniProtKB grounding(s): replaced 3 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope filament_shaped_streptomyces_polar_growth=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (cgla).'
   llm_assisted: true

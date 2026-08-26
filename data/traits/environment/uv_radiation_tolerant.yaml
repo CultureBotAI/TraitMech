@@ -39,6 +39,10 @@ causal_graphs:
   title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair
   description: Evidence-backed causal sketch linking UV-induced pyrimidine dimers
     to nucleotide-excision and photoreactivation repair.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: uv_tolerant_trait
     label: UV radiation tolerant
@@ -68,6 +72,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Second principal UV-induced DNA lesion (6-4PP).
   - node_id: cpd_photolyase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CPD photolyase
     node_type: GENE_OR_PROTEIN
     description: Light-driven enzyme that directly reverses cyclobutane pyrimidine
@@ -233,4 +240,13 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope uv_tolerance_excision_repair=NONMECHANISTIC with
+    scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (cpd_photolyase).'
   llm_assisted: true

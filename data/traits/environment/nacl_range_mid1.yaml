@@ -26,6 +26,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_range_mid1_slight_halophile
   title: NaCl-range-mid1 slight-halophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking modest osmoadaptive tolerance to a 1–3% (w/v)
     NaCl growth range.
   nodes:
@@ -175,4 +179,12 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope nacl_range_mid1_slight_halophile=NONMECHANISTIC with
+    scope_notes.'
   llm_assisted: true

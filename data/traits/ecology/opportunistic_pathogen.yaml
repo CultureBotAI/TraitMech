@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: opportunistic_pathogen_context_dependent_virulence
   title: Opportunistic pathogenesis under compromised host defense
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking compromised host defenses to
     context-dependent virulence in normally commensal/environmental microbes.
   nodes:
@@ -198,4 +202,12 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope opportunistic_pathogen_context_dependent_virulence=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

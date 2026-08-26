@@ -23,6 +23,10 @@ evidence:
     intracellular organelles.
 causal_graphs:
 - graph_id: inclusion_compartmentalization
+  scope_status: NONMECHANISTIC
+  scope_notes: Intracellular inclusion is an upper morphology class spanning unrelated
+    gas vesicles, storage granules, and bacterial microcompartments. Its graph presents
+    alternatives and is not one shared protein-mediated mechanism.
   title: Intracellular inclusions compartmentalize prokaryotic cytoplasm
   description: Evidence-backed causal sketch linking discrete intracellular inclusions
     (storage granules, gas vesicles, microcompartments) to cytoplasmic compartmentalization.
@@ -63,10 +67,18 @@ causal_graphs:
     label: polyphosphate granule
     node_type: CELLULAR_LOCALIZATION
     description: Inorganic polyphosphate (volutin) storage inclusion.
-  - node_id: gas_vesicle_gene_cluster
-    label: gas vesicle gene cluster
+  - node_id: gas_vesicle_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The module contains multiple distinct structural and assembly
+      protein families, so no single exact term denotes the complete protein set.
+    label: gas vesicle structural and assembly proteins
     node_type: GENE_OR_PROTEIN
     description: gvp operon encoding gas vesicle structural and assembly proteins.
+    gene_symbols:
+    - gvpA
+    - gvpC
+    - gvpN
+    operon: gvp
   - node_id: gas_vesicle
     label: gas vesicle
     node_type: ORGANELLE
@@ -77,6 +89,9 @@ causal_graphs:
     node_type: TRAIT
     description: Capacity for vertical positioning in the water column.
   - node_id: bmc_metabolic_cargo
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial-microcompartment cargo varies by pathway and combines
+      unrelated enzyme families; one protein-family grounding would overgeneralize.
     label: encapsulated metabolic enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes/pathway segment sequestered within a microcompartment shell.
@@ -132,15 +147,15 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/foods14132211
       notes: '"polyP synthesis is catalyzed by polyphosphate kinase (Ppk)".'
-  - subject: gas_vesicle_gene_cluster
-    predicate: encodes
+  - subject: gas_vesicle_proteins
+    predicate: assembles
     object: gas_vesicle
-    description: The gvp gene cluster encodes the gas vesicle organelle.
+    description: Gvp structural and assembly proteins form the gas vesicle organelle.
     evidence:
     - reference: DOI:10.1186/s13036-024-00426-3
-      notes: '"gene-encoded, inert, hollow, gas-filled protein nanoparticles"; direct
-        definitional edge.'
-    predicate_id: METPO:2007813
+      snippet: hollow, gas-filled protein nanoparticles
+      notes: Supports the protein composition of gas vesicles; gvp operon membership
+        is retained as node metadata rather than a primary gene-cluster node.
   - subject: gas_vesicle
     predicate: confers
     object: buoyancy
@@ -258,4 +273,14 @@ curation_history:
     not a disposition the inclusion confers -- it is how the inclusion PRESENTS: ''spatial
     segregation of material or activity within the cytoplasm''. That is what `manifests
     as` is for, and its gate is already open.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope inclusion_compartmentalization=NONMECHANISTIC with
+    scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (gas_vesicle_proteins, bmc_metabolic_cargo); added 1 node(s) and 1 edge(s) (gas_vesicle_proteins);
+    removed 1 node(s) and 1 edge(s) together with their evidence (gas_vesicle_gene_cluster).'
   llm_assisted: true

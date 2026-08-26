@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_low_limited_breadth
   title: pH-delta-low limited-breadth pH homeostasis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking limited pH-homeostasis flexibility to a pH
     growth breadth of approximately 1–2 pH units.
   nodes:
@@ -75,6 +79,10 @@ causal_graphs:
   - node_id: f1fo_atpase
     label: F1Fo-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-coupled ATPase that expels or imports H+ using or generating
       PMF.
   edges:
@@ -202,4 +210,13 @@ curation_history:
     pH under pH stress' is cytoplasmic_ph_homeostasis, which is IN THE SAME GRAPH
     already typed BIOLOGICAL_PROCESS and grounded GO:0051453. Grounding the capacity
     node to GO:0051453 would have produced a DUPLICATE_GROUNDING against it.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_delta_low_limited_breadth=NONMECHANISTIC with
+    scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (f1fo_atpase).'
   llm_assisted: true

@@ -24,12 +24,22 @@ canonical_examples:
 - taxon_id: NCBITaxon:70863
   taxon_label: Shewanella oneidensis
   note: extracellular electron transfer to metals
-  reference: PMID:12368813
+  reference: DOI:10.1038/nbt749
+- taxon_id: NCBITaxon:211586
+  taxon_label: Shewanella oneidensis MR-1
+  note: Strain-level extracellular electron-transfer model paired to its MtrC surface
+    decaheme cytochrome.
+  reference: DOI:10.1073/pnas.0604517103
 causal_graphs:
 - graph_id: electron_transfer_redox_carriers
   title: Electron transfer redox carrier mechanism
   description: DOI-backed graph for electron donor/acceptor chemistry, redox proteins,
     membrane electron transport, and extracellular electron-transfer structures.
+  scope_status: MECHANISTIC
+  scope_notes: This is a composite graph spanning respiratory-chain and extracellular
+    electron-transfer modules. The MtrC example supports the S. oneidensis MR-1 extracellular
+    branch only; it does not ground the generic respiratory complexes or imply that
+    MtrC participates in all electron-transfer traits.
   nodes:
   - node_id: electron_transfer_trait
     label: Electron transfer
@@ -49,10 +59,39 @@ causal_graphs:
     label: redox protein
     node_type: GENE_OR_PROTEIN
     description: Protein carrier mediating electron transfer.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Redox protein is an umbrella label spanning unrelated carrier
+      families and activities, so no single exact GO or InterPro term represents this
+      generic node.
   - node_id: cytochrome
     label: c-type cytochrome
     node_type: GENE_OR_PROTEIN
     description: Heme-containing electron-transfer protein.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The broad c-type cytochrome label spans many monoheme and multiheme
+      families; the MtrC example illustrates one source-backed extracellular branch
+      without narrowing the generic node to that family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis MR-1
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: MtrC-family c-type cytochrome mediating extracellular electron transfer
+        to Fe(III) and Mn(IV) acceptors in S. oneidensis MR-1.
+      evidence:
+      - reference: DOI:10.1073/pnas.0604517103
+        snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated
+          in efficient reduction of Fe(III) and Mn(IV) by MR-1.
+        notes: The primary study supports the extracellular electron-transfer role.
+          UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome
+          UP000008186 and verifies the strain taxon.
   - node_id: membrane_electron_transport_chain
     label: membrane electron transport chain
     node_type: PATHWAY
@@ -77,6 +116,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Proton-translocating NADH:ubiquinone oxidoreductase entry point of
       the respiratory chain.
+    grounding: GO:0030964
   - node_id: ubiquinone
     label: ubiquinone
     node_type: CHEMICAL
@@ -93,17 +133,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ubiquinol:cytochrome c oxidoreductase (Complex III) of the respiratory
       chain.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph uses a bacterial respiratory bc1-complex label, while
+      the reviewed candidate terms were either molecular-function activities or compartment-specific
+      complexes rather than an exact taxon-agnostic complex.
   - node_id: cytochrome_c
     label: cytochrome c
     node_type: GENE_OR_PROTEIN
     description: Mobile electron carrier shuttling electrons from bc1 to the terminal
       oxidase.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cytochrome c is a broad protein class containing multiple families;
+      this graph does not identify one exact family or chain architecture.
   - node_id: terminal_oxidase
     label: terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: Terminal respiratory oxidase (Complex IV) that reduces the final
       acceptor.
-    grounding: UniProtKB:A0A2U9ILE5
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Terminal oxidase is deliberately broad across heme-copper and
+      quinol oxidase families; the cited graph does not identify one exact family
+      or multisubunit complex term.
   - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
@@ -347,4 +397,19 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T08:15:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed S. oneidensis MR-1 MtrC example, grounded Complex I
+    to the current GO complex term, recorded explicit reviewed label-only dispositions
+    for the remaining broad protein labels, and documented the graph's composite respiratory/EET
+    scope.
   llm_assisted: true

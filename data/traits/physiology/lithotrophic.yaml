@@ -33,12 +33,22 @@ canonical_examples:
 - taxon_id: NCBITaxon:915
   taxon_label: Nitrosomonas europaea
   note: ammonia lithotroph
-  reference: PMID:12700255
+  reference: DOI:10.1128/jb.185.9.2759-2773.2003
+- taxon_id: NCBITaxon:228410
+  taxon_label: Nitrosomonas europaea ATCC 19718
+  note: Strain-level ammonia lithotroph paired to the AmoA alpha component of ammonia
+    monooxygenase.
+  reference: DOI:10.1128/jb.175.8.2436-2444.1993
 causal_graphs:
 - graph_id: lithotrophic_inorganic_donor_energy
   title: Lithotrophic inorganic-donor energy mechanism
   description: DOI-backed graph linking inorganic electron donors to respiratory electron
     transport, proton motive force, and ATP synthesis.
+  scope_status: MECHANISTIC
+  scope_notes: This cross-donor graph combines hydrogen, sulfur, ammonia, and nitrite
+    oxidation. The N. europaea AmoA example anchors only the ammonia branch; Q04507
+    is an alpha-subunit component of a multisubunit ammonia monooxygenase and not
+    the complete enzyme or any other donor-oxidation system.
   nodes:
   - node_id: lithotrophic_trait
     label: lithotrophic
@@ -84,6 +94,10 @@ causal_graphs:
     label: Sox multienzyme system
     node_type: GENE_OR_PROTEIN
     description: Periplasmic thiosulfate-oxidizing multienzyme complex (soxXA/soxYZ/soxB/soxCD).
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Sox denotes a variable pathway assembled from multiple distinct
+      protein families and complexes; no one protein-family term represents the complete
+      generic system used by this graph.
   - node_id: sulfite
     label: sulfite
     node_type: CHEMICAL
@@ -92,6 +106,9 @@ causal_graphs:
     label: SoeABC sulfite dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound sulfite dehydrogenase oxidizing sulfite to sulfate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SoeABC is a multisubunit membrane complex; the graph and cited
+      review do not isolate one subunit family as the generic node.
   - node_id: ammonia
     label: ammonia
     node_type: CHEMICAL
@@ -102,6 +119,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing the first step of ammonia oxidation (EC 1.14.99.39).
     grounding: GO:0018597
+    protein_examples:
+    - uniprot_id: UniProtKB:Q04507
+      protein_label: Ammonia monooxygenase alpha subunit
+      gene_symbol: amoA1
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea ATCC 19718
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 126
+      sequence_version: 2
+      role: AmoA alpha-subunit component of the N. europaea ammonia monooxygenase;
+        the accession maps two duplicated amoA gene copies and is not the whole enzyme
+        complex.
+      evidence:
+      - reference: DOI:10.1128/jb.175.8.2436-2444.1993
+        snippet: Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas
+          europaea
+        notes: The primary strain-level study characterizes N. europaea AmoA and ammonia
+          oxidation; UniProtKB Q04507 is the reviewed alpha-subunit entry.
   - node_id: hydroxylamine
     label: hydroxylamine
     node_type: CHEMICAL
@@ -121,6 +157,10 @@ causal_graphs:
     label: nitrite oxidoreductase (NXR)
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing nitrite to nitrate (EC 1.7.5.1).
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: NXR is a multisubunit molybdoenzyme whose architecture and component
+      families vary across nitrite oxidizers; this generic node does not identify
+      a single exact subunit or whole-complex term.
   - node_id: molecular_oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -240,6 +280,13 @@ causal_graphs:
       notes: Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic
         sulfur oxidation contexts.
 curation_history:
+- timestamp: '2026-08-24T14:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed strain-level N. europaea canonical example and reviewed
+    AmoA alpha-subunit example, upgraded the species citation to DOI, and documented
+    Sox, SoeABC, and NXR as reviewed label-only multisystem or multicomponent nodes.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.875909+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

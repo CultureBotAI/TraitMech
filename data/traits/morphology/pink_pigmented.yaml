@@ -30,6 +30,10 @@ causal_graphs:
   title: Pink pigmentation carotenoid mechanism
   description: Evidence-backed causal sketch linking pink microbial pigmentation to
     carotenoid biosynthesis, conjugated carotenoid pigments, and visible pink color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: pink_pigmented_trait
     label: pink pigmented
@@ -41,6 +45,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Prenyl building blocks used in carotenoid biosynthesis.
   - node_id: crt_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
@@ -63,19 +70,29 @@ causal_graphs:
     description: Central acyclic carotenoid precursor of colored downstream carotenoids.
     grounding: CHEBI:15948
   - node_id: photosynthesis_gene_cluster
-    label: photosynthesis gene cluster
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: photosynthesis protein module
     node_type: GENE_OR_PROTEIN
-    description: Genomic module that co-localizes crt carotenoid genes with photosynthesis
-      genes in phototrophs.
+    description: Protein module encoded alongside carotenoid enzymes in phototrophs.
+    operon: photosynthesis gene cluster
   - node_id: ambient_oxygen
     label: ambient molecular oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Environmental oxygen level regulating carotenoid biosynthetic gene
       expression.
   - node_id: crt_operon
-    label: crtI-crtB operon
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: CrtI-CrtB carotenoid enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Carotenoid biosynthetic operon encoding phytoene synthase and desaturase.
+    description: Phytoene synthase and desaturase module for carotenoid biosynthesis.
+    gene_symbols:
+    - crtI
+    - crtB
+    operon: crtI-crtB
   edges:
   - subject: isoprenoid_precursors
     predicate: feed into
@@ -267,4 +284,13 @@ curation_history:
     label and still retracts ENVO:01001495 if it has been re-applied — the grounder
     keys on (label, node_type), so an un-normalised label is what lets the retracted
     CURIE come back.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope pink_pigmented_carotenoid_color=NONMECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (crt_enzymes, photosynthesis_gene_cluster, crt_operon).'
   llm_assisted: true

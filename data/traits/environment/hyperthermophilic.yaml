@@ -30,6 +30,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking hyperthermophily to very high
     temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and membrane
     adaptation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: hyperthermophilic_trait
     label: hyperthermophilic
@@ -43,6 +47,9 @@ causal_graphs:
     description: Growth condition around 80 degrees C or hotter.
     grounding: PATO:0001305
   - node_id: thermostable_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: thermostable enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes resistant to irreversible inactivation at high temperatures.
@@ -53,6 +60,9 @@ causal_graphs:
       supercoiling.
     grounding: GO:0160097
   - node_id: molecular_chaperonins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: archaeal molecular chaperonins
     node_type: GENE_OR_PROTEIN
     description: Protein-folding systems in hyperthermophilic archaea.
@@ -66,6 +76,9 @@ causal_graphs:
     description: Extremolyte/compatible solute found in hyperthermophilic archaea
       that confers thermoprotection.
   - node_id: archaeal_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: archaeal proteins
     node_type: GENE_OR_PROTEIN
     description: Cellular proteins whose thermostability is enhanced by protective
@@ -81,6 +94,9 @@ causal_graphs:
     description: Cross-linked tetraether membrane lipids whose abundance increases
       at high growth temperature.
   - node_id: gms_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Gms (GMGT synthase)
     node_type: GENE_OR_PROTEIN
     description: Enzyme required to form the bridging cross-link of GMGT lipids.
@@ -304,4 +320,13 @@ curation_history:
     ids that meant the same sense: membrane_rigidity is QUALITY. Membrane rigidity
     is a physical attribute of the bilayer and therefore a QUALITY under the schema''s
     membrane-fluidity example.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope hyperthermophilic_thermostability=NONMECHANISTIC
+    with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (thermostable_enzymes, molecular_chaperonins, archaeal_proteins, gms_synthase).'
   llm_assisted: true

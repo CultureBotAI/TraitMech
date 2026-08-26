@@ -24,6 +24,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking facultative psychrophily to low-temperature
     growth, moderate-temperature optima, membrane remodeling, and cold acclimation
     proteins.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultative_psychrophilic_trait
     label: facultative psychrophilic
@@ -51,6 +55,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Membrane lipid features that maintain fluidity under cold conditions.
   - node_id: cold_shock_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins involved in cold shock and cold acclimation responses.
@@ -301,6 +308,15 @@ curation_history:
     record's own deep-research artifact; every taxon id was resolved and label-checked
     against the local NCBITaxon build rather than recalled. Organisms the artifact
     names as contrast cases rather than exemplars were deliberately excluded.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope facultative_psychrophilic_cold_tolerance=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (cold_shock_proteins).'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:334543

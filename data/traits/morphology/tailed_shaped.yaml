@@ -21,11 +21,21 @@ evidence:
   snippet: polar growth
   notes: Cell-shape review supports unipolar peptidoglycan growth as the basis for
     stalk-like polar appendages.
+canonical_examples:
+- taxon_id: NCBITaxon:565050
+  taxon_label: Caulobacter vibrioides NA1000
+  note: Reference stalked-cell model paired to reviewed MreB, whose depletion causes
+    a direct stalk-elongation defect.
+  reference: DOI:10.1128/JB.187.2.544-553.2005
 causal_graphs:
 - graph_id: tailed_shaped_polar_stalk_growth
   title: Tailed-shape polar stalk extension
   description: DOI-backed graph linking unipolar peptidoglycan growth and stalk outgrowth
     to tailed cell morphology.
+  scope_status: MECHANISTIC
+  scope_notes: Represents Caulobacter polar stalk morphogenesis. The NA1000 MreB example
+    anchors one protein of the elongation machinery; broad bactofilin and synthase
+    nodes remain reviewed contextual aggregates.
   nodes:
   - node_id: tailed_shaped_trait
     label: tailed shaped
@@ -48,6 +58,9 @@ causal_graphs:
     label: bactofilin polymers
     node_type: GENE_OR_PROTEIN
     description: Cytoskeletal scaffold polymers that organize polar stalk synthesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node aggregates Caulobacter BacA/BacB and related bactofilins,
+      so no single exact family term represents all components.
   - node_id: stalk_base
     label: stalk base
     node_type: CELLULAR_LOCALIZATION
@@ -60,15 +73,36 @@ causal_graphs:
     label: cell wall synthase
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan synthase recruited to extend the stalk.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The source uses a functional class label in this cross-study
+      graph rather than identifying one universally applicable synthase family.
   - node_id: mreb
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog directing cell-wall synthesis for stalk formation.
+    grounding: InterPro:IPR004753
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3C7V4
+      protein_label: Rod shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides NA1000
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 42
+      sequence_version: 1
+      role: Caulobacter MreB organizes elongation machinery and is required for normal
+        polar stalk elongation.
+      evidence:
+      - reference: DOI:10.1128/JB.187.2.544-553.2005
+        snippet: MreB depletion leads to a stalk elongation defect
+        notes: The primary Caulobacter depletion study directly establishes MreB's
+          role in stalk biogenesis; UniProt verifies the reviewed NA1000 protein.
   - node_id: roda
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS peptidoglycan polymerase required for stalk elongation.
-    grounding: UniProtKB:A0A0H2X1V4
+    grounding: InterPro:IPR001182
   - node_id: phosphate_starvation
     label: phosphate starvation
     node_type: ENVIRONMENTAL_FACTOR
@@ -247,4 +281,22 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope tailed_shaped_polar_stalk_growth=MECHANISTIC with
+    scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (bactofilin_polymers, cell_wall_synthase); added taxon-paired protein example(s)
+    UniProtKB:A0A0H3C7V4 on mreb (NCBITaxon:565050); regrounded 1 node(s) (mreb: none->InterPro:IPR004753);
+    added canonical example(s) NCBITaxon:565050.'
   llm_assisted: true

@@ -34,6 +34,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: temperature_optimum_high_thermophile_setpoint
   title: Temperature-optimum-high thermophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking thermophile membrane and protein thermostability
     adaptation to a temperature optimum above 40 °C.
   nodes:
@@ -74,6 +78,10 @@ causal_graphs:
   - node_id: nucleoid_associated_proteins
     label: nucleoid-associated proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proteins that organize the nucleoid and enhance DNA thermostability.
   - node_id: genome_thermostability
     label: genome thermostability
@@ -82,6 +90,10 @@ causal_graphs:
   - node_id: small_heat_shock_proteins
     label: small heat shock proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Chaperones that bind denaturing proteins to prevent aggregation under
       heat stress.
   - node_id: protein_aggregation_heat
@@ -91,6 +103,9 @@ causal_graphs:
   - node_id: thermosome
     label: thermosome (group II chaperonin)
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual group-II chaperonin complex in a quantitative
+      temperature bin; no one component family represents the full thermosome.
     description: Group II chaperonin that refolds denatured proteins in an ATP-dependent
       manner.
   - node_id: denatured_protein_refolding
@@ -328,4 +343,13 @@ curation_history:
     ids that meant the same sense: dna_positive_supercoiling is BIOLOGICAL_PROCESS.
     GO:0160097 denotes the process of introducing positive supercoils into DNA. The
     general DNA-topology state remains separately modelled as dna_supercoiling.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope temperature_optimum_high_thermophile_setpoint=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (nucleoid_associated_proteins, small_heat_shock_proteins, thermosome).'
   llm_assisted: true

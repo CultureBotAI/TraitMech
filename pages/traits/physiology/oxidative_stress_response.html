@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>Defense against reactive oxygen species</h2>
       <p class="meta">Evidence-backed causal sketch linking reactive oxygen species to an induced oxidative-stress defense.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents an E. coli-like peroxide/general-stress regulatory branch, not every bacterial, archaeal, or fungal oxidative-stress system. The OxyR example anchors H2O2-responsive transcription; RpoS and thioredoxin effects are broader supporting modules.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -144,6 +147,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>OxyR transcriptional regulator</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/P0ACQ4/entry" rel="nofollow noreferrer"><code>UniProtKB:P0ACQ4</code></a>
+                  <br>DNA-binding transcriptional dual regulator OxyR <span class="meta">(oxyR)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v143 · sequence v1</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible defense regulon represented by this branch.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1073/pnas.86.10.3484" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.86.10.3484</code></a>
+                      
+                      <span class="evidence-snippet">positive regulator of hydrogen peroxide-inducible genes in Escherichia coli</span>
+                      <span class="meta">The primary study identifies and functionally tests E. coli OxyR; UniProtKB P0ACQ4 is the reviewed K-12 regulator entry.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -339,7 +390,7 @@ The following table provides all candidate causal graph nodes with ontology grou
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(1)</span></h2>
+        <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -361,6 +412,25 @@ The following table provides all candidate causal graph nodes with ontology grou
           
           
           <span class="meta">Paradigm of the bacterial oxidative-stress response (OxyR and SoxRS regulons).</span>
+        </li>
+        
+        <li>
+          <em>Escherichia coli K-12</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
+             rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1073/pnas.86.10.3484"
+             rel="nofollow noreferrer"><code>DOI:10.1073/pnas.86.10.3484</code></a>
+          
+          
+          <span class="meta">Strain-level peroxide-response model paired to the reviewed OxyR regulator.</span>
         </li>
         
       </ul>
@@ -408,6 +478,12 @@ The following table provides all candidate causal graph nodes with ontology grou
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-24T13:20:00-07:00</time> ·
+          <strong>REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON</strong> · codex
+          <p class="changes">Marked the graph mechanistic, bounded it to an E. coli-like peroxide branch, reviewed OxyR as label-only because available terms are shared LysR domains, grounded RpoS to its exact InterPro family, and added DOI-cited OxyR P0ACQ4.</p>
         </li>
         
       </ol>
@@ -679,6 +755,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -767,7 +848,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking reactive oxygen species to an induced oxidative-stress defense.", "edges": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "oxidative_stress_process"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "oxidative_stress_process", "target": "oxidative_stress_response_trait"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "oxyr_regulator", "target": "oxidative_stress_process"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "rpos_sigma_factor", "target": "oxidative_stress_process"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thioredoxin_system", "target": "oxidative_stress_process"}], "evidence_rows": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "edge_id": "edge-1", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "target": "response to oxidative stress"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "edge_id": "edge-2", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "response to oxidative stress", "target": "oxidative stress response"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "edge_id": "edge-3", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "OxyR transcriptional regulator", "target": "response to oxidative stress"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "edge_id": "edge-4", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "RpoS (sigma-S) general stress sigma factor", "target": "response to oxidative stress"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "edge_id": "edge-5", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thioredoxin system", "target": "response to oxidative stress"}], "graph_id": "oxidative_stress_response_ros_defense", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reactive oxygen species.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Defense response to reactive oxygen species.", "grounding": "GO:0006979", "id": "oxidative_stress_process", "is_orphan": false, "label": "response to oxidative stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to defend against reactive oxygen species.", "grounding": "traitmech:000079", "id": "oxidative_stress_response_trait", "is_orphan": false, "label": "oxidative stress response", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Widely conserved bacterial transcription factor that activates oxidative-stress defense genes.", "grounding": null, "id": "oxyr_regulator", "is_orphan": false, "label": "OxyR transcriptional regulator", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Global stress sigma factor controlling a stress regulon that includes oxidative-stress defenses.", "grounding": null, "id": "rpos_sigma_factor", "is_orphan": false, "label": "RpoS (sigma-S) general stress sigma factor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "Thiol-disulfide redox repair system supporting survival under oxidative/oxidant stress.", "grounding": null, "id": "thioredoxin_system", "is_orphan": false, "label": "thioredoxin system", "node_type": "PATHWAY", "xrefs": []}], "title": "Defense against reactive oxygen species"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking reactive oxygen species to an induced oxidative-stress defense.", "edges": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "oxidative_stress_process"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "oxidative_stress_process", "target": "oxidative_stress_response_trait"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "oxyr_regulator", "target": "oxidative_stress_process"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "rpos_sigma_factor", "target": "oxidative_stress_process"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thioredoxin_system", "target": "oxidative_stress_process"}], "evidence_rows": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "edge_id": "edge-1", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "target": "response to oxidative stress"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "edge_id": "edge-2", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "response to oxidative stress", "target": "oxidative stress response"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "edge_id": "edge-3", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "OxyR transcriptional regulator", "target": "response to oxidative stress"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "edge_id": "edge-4", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "RpoS (sigma-S) general stress sigma factor", "target": "response to oxidative stress"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "edge_id": "edge-5", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "thioredoxin system", "target": "response to oxidative stress"}], "graph_id": "oxidative_stress_response_ros_defense", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reactive oxygen species.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Defense response to reactive oxygen species.", "grounding": "GO:0006979", "id": "oxidative_stress_process", "is_orphan": false, "label": "response to oxidative stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to defend against reactive oxygen species.", "grounding": "traitmech:000079", "id": "oxidative_stress_response_trait", "is_orphan": false, "label": "oxidative stress response", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Widely conserved bacterial transcription factor that activates oxidative-stress defense genes.", "grounding": null, "id": "oxyr_regulator", "is_orphan": false, "label": "OxyR transcriptional regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 143, "evidence": [{"notes": "The primary study identifies and functionally tests E. coli OxyR; UniProtKB P0ACQ4 is the reviewed K-12 regulator entry.", "reference": "DOI:10.1073/pnas.86.10.3484", "snippet": "positive regulator of hydrogen peroxide-inducible genes in Escherichia coli"}], "gene_symbol": "oxyR", "protein_label": "DNA-binding transcriptional dual regulator OxyR", "retrieved_on": "2026-08-24", "role": "E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible defense regulon represented by this branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0ACQ4"}], "xrefs": []}, {"color": "#f3e8ff", "description": "Global stress sigma factor controlling a stress regulon that includes oxidative-stress defenses.", "grounding": "InterPro:IPR012761", "id": "rpos_sigma_factor", "is_orphan": false, "label": "RpoS (sigma-S) general stress sigma factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Thiol-disulfide redox repair system supporting survival under oxidative/oxidant stress.", "grounding": null, "id": "thioredoxin_system", "is_orphan": false, "label": "thioredoxin system", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 143, "evidence": [{"notes": "The primary study identifies and functionally tests E. coli OxyR; UniProtKB P0ACQ4 is the reviewed K-12 regulator entry.", "reference": "DOI:10.1073/pnas.86.10.3484", "snippet": "positive regulator of hydrogen peroxide-inducible genes in Escherichia coli"}], "gene_symbol": "oxyR", "node_id": "oxyr_regulator", "node_label": "OxyR transcriptional regulator", "protein_label": "DNA-binding transcriptional dual regulator OxyR", "retrieved_on": "2026-08-24", "role": "E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible defense regulon represented by this branch.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0ACQ4"}], "scope_notes": "This graph represents an E. coli-like peroxide/general-stress regulatory branch, not every bacterial, archaeal, or fungal oxidative-stress system. The OxyR example anchors H2O2-responsive transcription; RpoS and thioredoxin effects are broader supporting modules.", "scope_status": "MECHANISTIC", "title": "Defense against reactive oxygen species"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -790,7 +871,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-24 20:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

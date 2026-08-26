@@ -19,6 +19,10 @@ evidence:
     0.5–0.65 μm range.
 causal_graphs:
 - graph_id: cell_width_small_mreb_setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-width bin. Its graph illustrates possible
+    rod-system determinants but does not define a universal mechanism for the measured
+    interval.
   title: Small cell-width MreB-Rod set-point
   description: DOI-backed graph linking MreB-organized lateral wall synthesis to a
     narrow rod radius set-point (0.5–0.65 μm).
@@ -34,6 +38,9 @@ causal_graphs:
     grounding: METPO:1000882
     description: Regulated shorter cellular dimension.
   - node_id: mreb_cytoskeleton
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes an assembled cytoskeletal structure,
+      not one exact MreB protein-family entity.
     label: MreB cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB filaments organizing lateral cell-wall synthesis.
@@ -42,6 +49,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized lateral peptidoglycan assembly.
   - node_id: mrec_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual source supports the MreC label, but an exact semantic
+      family term was not verified in this review.
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-complex protein that favors the open, active PBP2
@@ -224,4 +234,13 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cell_width_small_mreb_setpoint=NONMECHANISTIC with
+    scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mreb_cytoskeleton, mrec_protein).'
   llm_assisted: true

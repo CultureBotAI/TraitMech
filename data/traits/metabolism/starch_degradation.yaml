@@ -30,6 +30,11 @@ causal_graphs:
   title: Starch degradation hydrolyzes amylose/amylopectin to glucose
   description: Evidence-backed causal sketch linking amylase systems to hydrolysis
     of starch into maltooligosaccharides and glucose.
+  scope_status: MECHANISTIC
+  scope_notes: Represents extracellular alpha-amylase initiation followed by a generic
+    exo-hydrolase step. The B. licheniformis protein example supports the alpha-amylase
+    branch; alpha-glucosidase and glucoamylase remain unresolved as a combined downstream
+    label.
   nodes:
   - node_id: starch_degradation_trait
     label: starch degradation
@@ -37,9 +42,30 @@ causal_graphs:
     grounding: traitmech:000115
     description: Hydrolysis of starch to assimilable sugars.
   - node_id: amylase
-    label: amylases / starch-active glycoside hydrolases
+    label: alpha-amylase
     node_type: GENE_OR_PROTEIN
-    description: Alpha-amylase family enzymes acting on starch.
+    description: Endo-acting alpha-amylase hydrolyzing internal alpha-1,4-glucosidic
+      linkages in starch.
+    grounding: GO:0004556
+    protein_examples:
+    - uniprot_id: UniProtKB:P06278
+      protein_label: Alpha-amylase
+      gene_symbol: amyS
+      taxon_id: NCBITaxon:1402
+      taxon_label: Bacillus licheniformis
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 173
+      sequence_version: 1
+      role: Secreted alpha-amylase that hydrolyzes soluble starch in the canonical
+        B. licheniformis example.
+      evidence:
+      - reference: DOI:10.1021/bp060057a
+        snippet: The enzymatic hydrolysis of soluble starch with an alpha-amylase
+          from Bacillus licheniformis
+        notes: The primary enzymology study directly tests B. licheniformis alpha-amylase
+          on soluble starch; UniProtKB P06278 verifies the reviewed AmyS protein and
+          taxon.
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -59,15 +85,21 @@ causal_graphs:
     label: alpha-glucosidase / glucoamylase
     node_type: GENE_OR_PROTEIN
     description: Exo-acting glycoside hydrolase that releases glucose from maltooligosaccharides.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Alpha-glucosidase and glucoamylase are distinct activities and
+      families; this combined label must be split before assigning an exact term.
   edges:
   - subject: amylase
     predicate: confers
     object: starch_degradation_trait
-    description: Amylases hydrolyze starch's alpha-1,4 and alpha-1,6 linkages.
+    description: Alpha-amylase endo-hydrolyzes starch alpha-1,4 linkages and initiates
+      production of shorter glucans.
     evidence:
     - reference: DOI:10.1016/S0168-1656(01)00407-2
-      notes: van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze
-        starch.
+      snippet: the use of starch-converting enzymes in the production of maltodextrin,
+        modified starches, or glucose and fructose syrups
+      notes: The review supports alpha-amylase-family starch conversion; the edge
+        no longer attributes alpha-1,6 hydrolysis to the refined alpha-amylase node.
     predicate_id: METPO:2007700
   - subject: starch_degradation_trait
     predicate: produces
@@ -90,12 +122,15 @@ causal_graphs:
     predicate_id: RO:0001001
   - subject: amylase
     predicate: hydrolyzes
-    object: maltooligosaccharides
-    description: Alpha-amylase endo-cleaves starch alpha-1,4 bonds to generate maltooligosaccharides.
+    object: starch
+    description: B. licheniformis alpha-amylase hydrolyzes starch; the adjacent starch-to-maltooligosaccharide
+      edge records the product transition.
     evidence:
-    - reference: DOI:10.1007/s00018-023-04812-w
-      notes: An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic
-        alpha-amylase (EC 3.2.1.1) chemistry.
+    - reference: DOI:10.1021/bp060057a
+      snippet: The enzymatic hydrolysis of soluble starch with an alpha-amylase from
+        Bacillus licheniformis
+      notes: Direct substrate-enzyme evidence from the canonical taxon; changing the
+        object from the product node corrects the previous edge direction.
     predicate_id: METPO:2007808
   - subject: alpha_glucosidase
     predicate: degrades
@@ -186,4 +221,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0001001×1).
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Refined the broad amylase node to alpha-amylase with GO and a DOI-backed
+    B. licheniformis AmyS example, corrected the enzyme-substrate edge, retained the
+    combined downstream exo-hydrolase label with an explicit rationale, and documented
+    graph scope.
   llm_assisted: true

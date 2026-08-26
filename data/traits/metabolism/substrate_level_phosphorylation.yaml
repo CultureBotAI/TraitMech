@@ -25,11 +25,20 @@ canonical_examples:
   taxon_label: Clostridium acetobutylicum
   note: fermentative substrate-level phosphorylation
   reference: PMID:11466286
+- taxon_id: NCBITaxon:301447
+  taxon_label: Streptococcus pyogenes serotype M1
+  note: Reference-proteome strain SF370 in which arcC was deleted in-frame to test
+    the arginine-deiminase pathway.
+  reference: DOI:10.1128/IAI.00916-13
 causal_graphs:
 - graph_id: substrate_level_phosphorylation_direct_atp
   title: Substrate-level phosphorylation direct ATP formation
   description: DOI-backed graph connecting high-energy phosphorylated intermediates,
     kinase reactions, ADP phosphorylation, and ATP formation.
+  scope_status: MECHANISTIC
+  scope_notes: Represents direct phosphoryl transfer to ADP and two concrete enzyme
+    routes; the unreviewed ArcC exemplar is retained only because it is the exact
+    SF370 reference-proteome sequence paired to a gene-deletion study.
   nodes:
   - node_id: substrate_level_phosphorylation_trait
     label: Substrate-level phosphorylation
@@ -95,6 +104,25 @@ causal_graphs:
     description: Carbamate kinase of the arginine deiminase pathway that generates
       ATP by SLP.
     grounding: GO:0008804
+    protein_examples:
+    - uniprot_id: UniProtKB:Q99YT9
+      protein_label: Carbamate kinase
+      gene_symbol: arcC
+      taxon_id: NCBITaxon:301447
+      taxon_label: Streptococcus pyogenes serotype M1
+      entry_status: UNREVIEWED
+      proteome_id: UP000000750
+      retrieved_on: '2026-08-23'
+      entry_version: 146
+      sequence_version: 1
+      role: ArcC of the arginine-deiminase pathway, which catalyzes the ATP-forming
+        carbamate-kinase reaction represented by this node.
+      evidence:
+      - reference: DOI:10.1128/IAI.00916-13
+        snippet: individual in-frame deletion mutations were constructed in arcC (SPy_1541)
+        notes: The primary study constructed the exact SF370 arcC deletion; UniProtKB
+          Q99YT9 is the corresponding current unreviewed entry in reference proteome
+          UP000000750.
   edges:
   - subject: substrate_level_phosphorylation_trait
     predicate: occurs in
@@ -129,7 +157,7 @@ causal_graphs:
     description: Acetyl phosphate is converted by acetate kinase during acetate dissimilation.
     evidence:
     - reference: DOI:10.1128/MMBR.69.1.12-50.2005
-      snippet: Acetyl phosphate ... high-energy intermediate
+      snippet: acetyl∼P, the high-energy intermediate of acetate dissimilation
       notes: Supports acetyl phosphate as the high-energy acetate-switch intermediate.
   - subject: acetate_kinase
     predicate: produces
@@ -157,6 +185,8 @@ causal_graphs:
     description: Absence of oxygen enables fermentative metabolism.
     evidence:
     - reference: DOI:10.1093/femsre/fuae016
+      snippet: Fermentation is a type of metabolism carried out by organisms in environments
+        without oxygen.
       notes: Fermentation is a type of metabolism carried out by organisms in environments
         without oxygen.
     predicate_id: RO:0002327
@@ -166,6 +196,7 @@ causal_graphs:
     description: In fermentation, ATP is produced by substrate-level phosphorylation.
     evidence:
     - reference: DOI:10.1093/femsre/fuae016
+      snippet: ATP is produced by substrate-level phosphorylation.
       notes: ATP is produced by substrate-level phosphorylation; strong definitional
         edge.
   - subject: acka_pta_pathway
@@ -175,6 +206,8 @@ causal_graphs:
       phosphorylation.
     evidence:
     - reference: DOI:10.1042/ETLS20220092
+      snippet: acetate kinase and phosphotransacetylase (AckA-Pta), a set of reactions
+        that allows ATP production via substrate-level phosphorylation
       notes: AckA-Pta, a set of reactions that allows ATP production via substrate-level
         phosphorylation.
   - subject: carbamate_kinase_arginine_deiminase
@@ -184,9 +217,17 @@ causal_graphs:
       SLP route for ATP production.
     evidence:
     - reference: DOI:10.1039/d4cb00099d
+      snippet: As part of the arginine deiminase (ADI) pathway, carbamate kinase generates
+        one ATP molecule
       notes: The carbamate kinase reaction has been reported to be effective for ATP
         production in several acetogens.
 curation_history:
+- timestamp: '2026-08-23T09:03:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic and added the DOI-backed SF370 ArcC reference-proteome
+    exemplar with an explicit unreviewed-entry exception.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.913184+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

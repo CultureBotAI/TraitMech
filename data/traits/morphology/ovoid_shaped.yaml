@@ -20,12 +20,22 @@ evidence:
 - reference: DOI:10.1016/j.cub.2021.04.041
   snippet: ovoid bacterium Streptococcus pneumoniae
   notes: Supports ovoid bacterial morphology as a recognized ovococcal shape.
+canonical_examples:
+- taxon_id: NCBITaxon:171101
+  taxon_label: Streptococcus pneumoniae R6
+  note: Strain-level ovoid pneumococcal model paired to reviewed PBP2b, a component
+    of the RodA-PBP2b peripheral peptidoglycan machinery.
+  reference: DOI:10.1128/JB.00184-13
 causal_graphs:
 - graph_id: ovoid_shaped_midcell_pg_assembly
   title: Ovoid-shape midcell peptidoglycan mechanism
   description: Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan
     assembly, MapZ division-site placement, DivIVA-associated growth, and rounded
     ovoid geometry.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents pneumococcal midcell wall assembly. The R6 PBP2b
+    example is explicitly one protein component of the RodA-PBP2b elongasome, not
+    an accession for the full protein complex.
   nodes:
   - node_id: ovoid_shaped_trait
     label: ovoid shaped
@@ -40,11 +50,12 @@ causal_graphs:
     label: MapZ
     node_type: GENE_OR_PROTEIN
     description: Membrane protein involved in division-site placement in S. pneumoniae.
+    grounding: InterPro:IPR030858
   - node_id: divIVA
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Protein involved in septum splitting and elongation in ovococci.
-    grounding: UniProtKB:Q1IYG2
+    grounding: InterPro:IPR007793
   - node_id: septum_splitting
     label: septum splitting
     node_type: BIOLOGICAL_PROCESS
@@ -71,10 +82,33 @@ causal_graphs:
     label: FtsW-PBP2x complex
     node_type: GENE_OR_PROTEIN
     description: Divisome PG synthase complex that builds the division septum.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FtsW and PBP2x are distinct protein families; no single semantic
+      family term represents this two-protein complex.
   - node_id: roda_pbp2b
     label: RodA-PBP2b elongasome
     node_type: GENE_OR_PROTEIN
     description: Elongasome PG synthase pair driving peripheral wall elongation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RodA and PBP2b are distinct protein families; no single semantic
+      family term represents the pair.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A3M6
+      protein_label: Penicillin-binding protein 2B
+      gene_symbol: penA
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae R6
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 110
+      sequence_version: 1
+      role: R6 PBP2b is the transpeptidase component of the RodA-PBP2b elongasome
+        that performs peripheral peptidoglycan synthesis.
+      evidence:
+      - reference: DOI:10.1128/JB.00184-13
+        snippet: PBP2b is essential for peripheral peptidoglycan synthesis
+        notes: The R6-derived depletion study establishes the protein's peripheral-wall
+          and morphology role; UniProt verifies the reviewed R6 accession.
   - node_id: ftsz_ring
     label: FtsZ ring
     node_type: CELLULAR_LOCALIZATION
@@ -233,4 +267,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ovoid_shaped_midcell_pg_assembly=MECHANISTIC with
+    scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (ftsw_pbp2x, roda_pbp2b); added taxon-paired protein example(s) UniProtKB:P0A3M6
+    on roda_pbp2b (NCBITaxon:171101); regrounded 1 node(s) (mapZ: none->InterPro:IPR030858);
+    added canonical example(s) NCBITaxon:171101.'
   llm_assisted: true

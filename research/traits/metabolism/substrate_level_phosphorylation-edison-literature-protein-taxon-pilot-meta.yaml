@@ -1,0 +1,65 @@
+slug: substrate_level_phosphorylation
+trait_category: metabolism
+trait_path: data/traits/metabolism/substrate_level_phosphorylation.yaml
+trait_identifier: METPO:1000804
+job: LITERATURE
+job_id: job-futurehouse-paperqa3
+label: protein-taxon-pilot
+template_path: templates/trait_protein_taxon_research.md
+template_vars:
+  trait_label: Substrate-level phosphorylation
+  trait_identifier: METPO:1000804
+  trait_category: METABOLISM
+  trait_category_slug: metabolism
+  trait_slug: substrate_level_phosphorylation
+  term_kind: CLASS
+  mapping_status: REVIEWED
+  definition: A metabolism in which ATP is formed directly by transfer of a phosphoryl group from a substrate
+    to ADP.
+  parent_traits: METPO:1000060
+  synonyms: ''
+  evidence_summary: 'DOI:10.1111/1751-7915.13746: Substrate-level phosphorylation is one of the main sources
+    (Review supports SLP as microbial energy conservation in fermentative metabolism.) | DOI:10.1128/MMBR.69.1.12-50.2005:
+    phosphotransacetylase [PTA], acetate kinase [ACK] (Review supports acetate kinase and phosphotransacetylase
+    as central acetate-switch enzymes.)'
+  causal_graph_summary: 'substrate_level_phosphorylation_direct_atp: 13 nodes, 10 edges'
+  canonical_examples_summary: Streptococcus pyogenes (NCBITaxon:1314; PMID:27442496) | Clostridium acetobutylicum
+    (NCBITaxon:1488; PMID:11466286)
+  protein_node_summary: substrate_level_phosphorylation_direct_atp:acetate kinase [GO:0008776] | substrate_level_phosphorylation_direct_atp:carbamate
+    kinase (arginine deiminase pathway) [GO:0008804]
+query_chars: 3247
+query: "# TraitMech Protein and Taxon Exemplar Research\n\n## Target\n\n- Trait: Substrate-level phosphorylation\
+  \ (METPO:1000804)\n- Definition: A metabolism in which ATP is formed directly by transfer of a phosphoryl\
+  \ group from a substrate to ADP.\n- Existing canonical examples: Streptococcus pyogenes (NCBITaxon:1314;\
+  \ PMID:27442496) | Clostridium acetobutylicum (NCBITaxon:1488; PMID:11466286)\n- Existing gene/protein\
+  \ nodes: substrate_level_phosphorylation_direct_atp:acetate kinase [GO:0008776] | substrate_level_phosphorylation_direct_atp:carbamate\
+  \ kinase (arginine deiminase pathway) [GO:0008804]\n- Existing graph summary: substrate_level_phosphorylation_direct_atp:\
+  \ 13 nodes, 10 edges\n\n## Objective\n\nDetermine whether the existing graph for **Substrate-level phosphorylation**\
+  \ is mechanistic and,\nif so, identify at least one exact protein instance whose experimentally\nsupported\
+  \ role and organism match one existing canonical example. The result is\nresearch input for `data/traits/metabolism/substrate_level_phosphorylation.yaml`.\n\
+  \n## Required Analysis\n\n1. Decide `MECHANISTIC`, `NONMECHANISTIC`, or `REVIEW_NEEDED`, with a concise\n\
+  \   source-backed rationale. Do not add a token protein to a measurement,\n   classification, numeric\
+  \ bin, hazard class, or upper-ontology context.\n2. For each existing gene/protein node, decide whether\
+  \ it denotes a molecular\n   function, protein family, named protein, or multisubunit complex. Recommend\n\
+  \   an exact GO, InterPro, NCBIfam, or Complex Portal grounding only when its\n   definition matches.\
+  \ Explicitly flag broad labels that must remain label-only\n   or be split.\n3. Select one existing\
+  \ canonical taxon for which a primary paper identifies a\n   concrete protein, gene, or complex component\
+  \ that causally supports the\n   graph. Prefer direct genetic, biochemical, structural, or physiological\n\
+  \   evidence over genome annotation or review inference.\n4. Report the current UniProtKB primary accession\
+  \ for that exact protein in the\n   same taxon. Distinguish a complex from its components: a single\
+  \ subunit\n   accession is an example component and must not be described as the entire\n   complex.\n\
+  5. For every proposed protein example, provide:\n   - protein name and gene symbol;\n   - UniProtKB\
+  \ primary accession;\n   - NCBITaxon identifier and scientific name;\n   - reviewed/unreviewed status,\
+  \ and reference-proteome accession if unreviewed;\n   - exact role or complex-component role;\n   -\
+  \ primary DOI (PMID only if no DOI exists);\n   - a short contiguous verbatim snippet from the source;\
+  \ and\n   - notes explaining how the snippet supports this protein in this taxon.\n\n## Evidence Rules\n\
+  \n- Prefer primary experimental papers with DOI citations.\n- UniProt proves identity and taxonomy,\
+  \ not the causal role; cite the paper for\n  the role and use UniProt only to verify the current accession\
+  \ and metadata.\n- Never infer a taxon-protein pair from two unrelated sources.\n- Mark family-only,\
+  \ taxon-mismatched, annotation-only, or review-only evidence\n  uncertain and do not recommend it for\
+  \ direct curation.\n\n## Output\n\nReturn a compact scope decision, a node-grounding review table, a\
+  \ protein/taxon\nexample table, DOI-first bibliography, and a final list of claims safe to\ncurate versus\
+  \ findings that remain uncertain.\n"
+submitted_at: '2026-08-23T08:09:41.932802+00:00'
+status: dry-run
+query_sha256: 3cab1222338fdebb86f267a303f682afb170d367d59abc964badb4edf8a8dde4

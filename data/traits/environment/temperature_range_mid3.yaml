@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_range_mid3_upper_mesophile
   title: Temperature-range-mid3 upper-mesophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking upper-mesophile adaptation to a temperature
     growth range of approximately 30–34 °C.
   nodes:
@@ -54,10 +58,18 @@ causal_graphs:
   - node_id: desk
     label: DesK
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Membrane-bound histidine kinase that senses membrane order/thickness.
   - node_id: desr
     label: DesR
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Response regulator activated by DesK to control des transcription.
   - node_id: phospho_desr
     label: phosphorylated DesR
@@ -66,6 +78,10 @@ causal_graphs:
   - node_id: des_gene
     label: des (acyl-lipid desaturase)
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Fatty-acid desaturase that introduces double bonds to fluidize the
       membrane.
   - node_id: membrane_fatty_acyl_chains
@@ -222,4 +238,13 @@ curation_history:
     ids that meant the same sense: membrane_rigidity is QUALITY. Membrane rigidity
     is a physical attribute of the bilayer and therefore a QUALITY under the schema''s
     membrane-fluidity example.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope temperature_range_mid3_upper_mesophile=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (desk, desr, des_gene).'
   llm_assisted: true

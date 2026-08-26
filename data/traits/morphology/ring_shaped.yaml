@@ -24,6 +24,10 @@ causal_graphs:
   title: Ring-shape curved growth and pole closure
   description: DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole
     closure to toroidal ring morphology.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a ring-shape classification. Its contextual protein
+    modules come from several taxa and support curvature or wall organization, not
+    the proposed pole-to-pole closure into a ring; no token protein example is assigned.
   nodes:
   - node_id: ring_shaped_trait
     label: ring shaped
@@ -46,6 +50,9 @@ causal_graphs:
     label: MreB filaments
     node_type: GENE_OR_PROTEIN
     description: Actin-like cytoskeletal filaments guiding cell-wall synthesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node is a cross-taxon MreB-filament aggregate and no exact
+      family term was verified for this contextual use.
   - node_id: cell_wall_growth_rate
     label: rate of cell wall growth
     node_type: BIOLOGICAL_PROCESS
@@ -59,6 +66,9 @@ causal_graphs:
     label: bactofilin polymers
     node_type: GENE_OR_PROTEIN
     description: Cytoskeletal bactofilin polymers that localize to sites of wall remodeling.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node spans multiple bactofilin paralogues and taxa and is
+      therefore retained as a reviewed aggregate label.
   - node_id: cell_wall_biosynthesis
     label: cell wall biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -68,6 +78,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Conserved bactofilin and M23 peptidase functional module remodeling
       the wall locally.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This is a multi-protein bactofilin/M23 module, not one protein
+      family or accession.
   - node_id: wall_biosynthesis_mode_change
     label: local change in cell wall biosynthesis mode
     node_type: BIOLOGICAL_PROCESS
@@ -77,6 +90,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic CrvA polymer that skews peptidoglycan synthesis to generate
       curvature.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Retained label-only because an exact semantic CrvA family term
+      was not verified in this review.
   - node_id: pg_synthesis_rate_skew
     label: skewed peptidoglycan synthesis rates
     node_type: BIOLOGICAL_PROCESS
@@ -85,6 +101,9 @@ causal_graphs:
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate filament-like protein promoting cell curvature.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Retained label-only because an exact semantic crescentin family
+      term was not verified in this review.
   - node_id: cell_curvature
     label: cell curvature
     node_type: QUALITY
@@ -243,4 +262,13 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ring_shaped_curved_growth_closure=NONMECHANISTIC
+    with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mreb_filaments, bactofilin_polymers, bactofilin_lmdc_module, crva_polymer, crescentin).'
   llm_assisted: true

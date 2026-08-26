@@ -22,6 +22,10 @@ evidence:
 causal_graphs:
 - graph_id: gc_high_low_gc_bin
   title: GC-high (METPO ≤42.65%) low-GC bin
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: DOI-backed graph linking AT-biased mutation pressure to a GC content
     at or below ~42.65% (the threshold encoded by the METPO synonym GC_<=42.65 on
     this record).
@@ -205,4 +209,11 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope gc_high_low_gc_bin=NONMECHANISTIC with scope_notes.'
   llm_assisted: true

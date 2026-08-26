@@ -26,11 +26,21 @@ canonical_examples:
   taxon_label: Escherichia coli
   note: organic energy + carbon source
   reference: DOI:10.1002/9781118960608.gbm01147
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level respiratory chemoorganoheterotroph paired to the reviewed AtpD
+    beta component of its F-type ATP synthase.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: chemoorganoheterotrophic_organic_energy_carbon
   title: Chemoorganoheterotrophic organic energy and carbon metabolism
   description: DOI-backed graph linking organic molecules as chemical energy, electron,
     and carbon sources to catabolism, respiration or fermentation, ATP, and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This broad graph includes both respiratory and fermentative branches.
+    The E. coli K-12 AtpD example anchors only F-type ATP synthesis in the respiratory
+    branch; one beta-subunit accession does not denote the complete complex or all
+    chemoorganoheterotrophic routes.
   nodes:
   - node_id: chemoorganoheterotrophic_trait
     label: chemoorganoheterotrophic
@@ -64,6 +74,31 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy carrier produced by catabolic pathways.
+  - node_id: atp_synthase
+    label: ATP synthase
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    description: F-type rotary complex that uses proton motive force to synthesize
+      ATP in the respiratory branch.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the E. coli F1 catalytic head; this accession is not
+        presented as the complete F1Fo complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: proton motive force drives rotation and conformational changes in
+          the F1 catalytic sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head; UniProt verifies the reviewed K-12 AtpD
+          entry.
   - node_id: precursor_metabolites
     label: precursor metabolites
     node_type: CHEMICAL
@@ -157,6 +192,17 @@ causal_graphs:
       snippet: drives ATP synthesis
       notes: Supports respiratory ATP synthesis.
     predicate_id: RO:0002234
+  - subject: atp_synthase
+    predicate: produces
+    object: atp
+    description: F-type ATP synthase produces ATP during respiratory energy conservation.
+    evidence:
+    - reference: DOI:10.7554/eLife.21598
+      snippet: proton motive force drives rotation and conformational changes in the
+        F1 catalytic sites
+      notes: Supports ATP synthesis by the E. coli F1Fo complex and identifies the
+        beta-containing catalytic head.
+    predicate_id: biolink:produces
   - subject: fermentation
     predicate: has output
     object: atp
@@ -363,4 +409,14 @@ curation_history:
     synonym ''Acetate fermentation'' explains the mismatch. Replaced with GO:0006113,
     the (fermentation, BIOLOGICAL_PROCESS) row mappings/node_grounding.tsv already
     holds and the grounding eight sibling records already carry.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope chemoorganoheterotrophic_organic_energy_carbon=MECHANISTIC
+    with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase
+    (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical
+    example(s) NCBITaxon:83333.'
   llm_assisted: true

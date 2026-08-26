@@ -21,6 +21,10 @@ evidence:
     machines and physical mechanisms.
 causal_graphs:
 - graph_id: motility_locomotion_machinery
+  scope_status: NONMECHANISTIC
+  scope_notes: Motility is an upper phenotype class spanning flagellar, gliding, twitching,
+    and archaellar mechanisms. The graph catalogs alternatives rather than asserting
+    one mechanism shared by every motile organism.
   title: Bacterial motility machinery
   description: Evidence-backed causal sketch linking motility to flagella, type IV
     pili, gliding systems, chemotaxis, and energy transduction.
@@ -31,6 +35,9 @@ causal_graphs:
     grounding: METPO:1000701
     description: Independent movement through the environment.
   - node_id: flagellar_motor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The flagellar motor is a lineage-variable multisubunit assembly;
+      no single verified complex term covers this broad contextual node.
     label: flagellar motor
     node_type: GENE_OR_PROTEIN
     description: Rotary motor that powers flagellar swimming or swarming.
@@ -40,6 +47,9 @@ causal_graphs:
     description: Dynamic pilus that powers twitching and related surface motility.
     grounding: GO:0044096
   - node_id: gliding_motility_machinery
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Gliding motility uses unrelated machineries in different lineages,
+      so no single protein-family or complex term denotes this umbrella.
     label: gliding motility machinery
     node_type: GENE_OR_PROTEIN
     description: Cell-envelope motors and adhesins that move bacteria over surfaces
@@ -59,10 +69,16 @@ causal_graphs:
     node_type: TRAIT
     description: Form of bacterial surface translocation powered by type IV pili.
   - node_id: pilb_extension_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual graph supports a PilB-like extension ATPase but
+      does not identify one exact family term across all twitching systems.
     label: PilB extension ATPase
     node_type: GENE_OR_PROTEIN
     description: Homohexameric ATPase that drives type IV pilus extension.
   - node_id: pilt_retraction_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual graph supports a PilT-like retraction ATPase but
+      does not identify one exact family term across all twitching systems.
     label: PilT retraction ATPase
     node_type: GENE_OR_PROTEIN
     description: Antagonistic ATPase that drives type IV pilus retraction.
@@ -76,6 +92,9 @@ causal_graphs:
     description: Second messenger that inversely regulates motility and biofilm formation.
     grounding: CHEBI:49537
   - node_id: archaellum
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The archaellum is a multisubunit archaeal motility assembly rather
+      than one protein-family entity.
     label: archaellum
     node_type: GENE_OR_PROTEIN
     description: Archaeal rotary propulsion filament, the analogue of the bacterial
@@ -300,4 +319,14 @@ curation_history:
     only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge
     entailed a false type on its object. ''Ion motive force POWERS rotation of many
     bacterial flagellar motors.'''
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope motility_locomotion_machinery=NONMECHANISTIC with
+    scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (flagellar_motor, gliding_motility_machinery, pilb_extension_atpase, pilt_retraction_atpase,
+    archaellum).'
   llm_assisted: true

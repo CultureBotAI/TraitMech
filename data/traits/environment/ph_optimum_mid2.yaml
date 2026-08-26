@@ -29,6 +29,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_optimum_mid2_alkaline_tolerant_setpoint
   title: pH-optimum-mid2 alkaline-tolerant setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking modest alkaline pH-homeostasis at slightly
     basic external pH to a pH-optimum between 7 and 8.
   nodes:
@@ -62,13 +66,17 @@ causal_graphs:
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Sodium:proton antiporters that acidify the cytoplasm when internal
       pH is too high.
   - node_id: k_h_antiporters
     label: K+/H+ antiporters
     node_type: GENE_OR_PROTEIN
     description: Potassium:proton antiporters regulating bacterial internal pH.
-    grounding: UniProtKB:A0A1Z4VR00
+    grounding: GO:0015386
   - node_id: respiratory_proton_pumping
     label: proton-pumping respiratory chain components
     node_type: PATHWAY
@@ -86,6 +94,9 @@ causal_graphs:
   - node_id: f0f1_atp_synthase
     label: F0F1-ATP synthase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual multisubunit ATP-synthase complex in
+      a quantitative pH bin; no one component family represents the whole complex.
     description: Proton-transporting ATP synthase complex that makes ATP from PMF.
   edges:
   - subject: slightly_alkaline_external_ph
@@ -246,4 +257,20 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_optimum_mid2_alkaline_tolerant_setpoint=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (na_h_antiporters, f0f1_atp_synthase).'
   llm_assisted: true

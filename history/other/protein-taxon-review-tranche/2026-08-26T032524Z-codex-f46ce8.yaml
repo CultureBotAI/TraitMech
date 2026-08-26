@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: other
+  path: docs/plans/2026-08-23-causal-graph-protein-taxon-review.md
+  slug: protein-taxon-review-tranche
+session:
+  id: 2026-08-26T032524Z-codex-f46ce8
+  timestamp: '2026-08-26T03:25:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/518
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/511
+events:
+- type: EDIT
+  outcome: needs_followup
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Corpus-wide protein-taxon scope review and taxon-paired exemplar tranche
+  details: 'Records after the fact (review issue 518) the bulk change in commit f32b3168,
+    made by codex on 2026-08-24 and 2026-08-25 and carried into PR 511 without a history record;
+    claude wrote this record during the adversarial review of that PR. Following the plan
+    in docs/plans/2026-08-23-causal-graph-protein-taxon-review.md, the session reviewed all
+    353 causal graphs across 352 trait records: it set an explicit scope_status on every graph
+    (119 MECHANISTIC, 233 NONMECHANISTIC with scope_notes), marked label-only GENE_OR_PROTEIN
+    nodes REVIEWED_LABEL_ONLY with grounding_notes, added 128 taxon-paired protein_examples
+    (98 distinct UniProtKB accessions, each with primary-source evidence and a canonical taxon),
+    regrounded and retyped nodes, removed redundant gene, operon, and subunit nodes and their
+    edges in 15 records, and added or replaced canonical examples so exemplar taxa are cited.
+    The only remaining coverage gap is spore_germination.yaml, which DO_NOT_WORK.md excludes
+    from agentic curation. Exemplar evidence came from tracked reports and DOIs; the research
+    pilot sidecars under research/traits/metabolism were dry runs and no paid research call
+    was made. Follow-ups from the review: 268 of the 352 records shipped without a per-record
+    curation event and were backfilled by scripts/backfill_protein_taxon_events.py (issue
+    517); five canonical-example citations were replaced with different papers under an upgrade
+    label and were restored (issue 519); evidence references were rewritten on surviving edges
+    outside the tranche''s stated scope (issue 520); and the taxon-match rule pushed protein-source
+    taxa into canonical_examples, including a quorum-quenching organism on quorum_sensing.yaml
+    (issue 521).'

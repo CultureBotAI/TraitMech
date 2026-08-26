@@ -24,6 +24,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_optimum_mid4_warm_mesophile
   title: Temperature-optimum-mid4 warm-mesophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking warm-mesophile membrane and enzyme adaptation
     to a temperature optimum between 34 and 40 °C.
   nodes:
@@ -65,12 +69,12 @@ causal_graphs:
       rigidification.
   - node_id: rna_thermometer
     label: RNA thermometer hairpin
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Cis-regulatory mRNA hairpin (e.g. ROSE/FourU) controlling translation
       by temperature.
   - node_id: shine_dalgarno_sequence
     label: Shine-Dalgarno / AUG ribosome binding site
-    node_type: GENE_OR_PROTEIN
+    node_type: GENETIC_ELEMENT
     description: Ribosome-binding region of mRNA required for translation initiation.
   - node_id: temperature_upshift
     label: temperature upshift / heat shock
@@ -83,17 +87,25 @@ causal_graphs:
   - node_id: dnak_chaperone
     label: DnaK chaperone
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Hsp70-family chaperone that binds and sequesters the heat-shock sigma
       factor RpoH.
   - node_id: rpoh_sigma_factor
     label: RpoH (sigma-32) heat-shock sigma factor
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Alternative sigma factor directing the heat-shock response regulon.
   - node_id: ftsh_protease
     label: FtsH protease
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent membrane protease that controls RpoH protein levels.
-    grounding: UniProtKB:A0A0D7UY21
+    grounding: InterPro:IPR005936
   edges:
   - subject: warm_environment
     predicate: engages
@@ -246,4 +258,21 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope temperature_optimum_mid4_warm_mesophile=NONMECHANISTIC
+    with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (dnak_chaperone, rpoh_sigma_factor); retyped 2 node(s) (rna_thermometer->RNA,
+    shine_dalgarno_sequence->GENETIC_ELEMENT).'
   llm_assisted: true

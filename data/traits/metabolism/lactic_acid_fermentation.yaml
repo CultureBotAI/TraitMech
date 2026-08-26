@@ -26,11 +26,20 @@ canonical_examples:
   taxon_label: Lactococcus lactis
   note: Canonical homolactic fermenter and dairy model organism.
   reference: PMID:17307855
+- taxon_id: NCBITaxon:272623
+  taxon_label: Lactococcus lactis subsp. lactis IL1403
+  note: Strain-level homolactic-fermentation exemplar paired to a reviewed lactate
+    dehydrogenase protein instance.
+  reference: DOI:10.1128/JB.183.13.3817-3824.2001
 causal_graphs:
 - graph_id: lactic_acid_fermentation_lactate
   title: Lactic acid fermentation converts sugars to lactate
   description: Evidence-backed causal sketch linking glycolysis-coupled lactate production
     to substrate-level ATP generation in lactic acid bacteria.
+  scope_status: MECHANISTIC
+  scope_notes: Represents pyruvate reduction, NAD+ regeneration, ATP-producing glycolysis,
+    and acidification effects; the protein exemplar supports the central LDH step
+    in L. lactis IL1403.
   nodes:
   - node_id: lactic_acid_fermentation_trait
     label: lactic acid fermentation
@@ -67,6 +76,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that reduces pyruvate to lactate (EC 1.1.1.27).
     grounding: GO:0004457
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01462
+      protein_label: L-lactate dehydrogenase 1
+      gene_symbol: ldh1
+      taxon_id: NCBITaxon:272623
+      taxon_label: Lactococcus lactis subsp. lactis IL1403
+      entry_status: REVIEWED
+      proteome_id: UP000002196
+      retrieved_on: '2026-08-23'
+      entry_version: 182
+      sequence_version: 3
+      role: Catalyzes reduction of pyruvate to L-lactate during homolactic fermentation
+        in the canonical L. lactis strain.
+      evidence:
+      - reference: DOI:10.1128/JB.183.13.3817-3824.2001
+        snippet: high lactate dehydrogenase activity
+        notes: The primary study measured LDH activity and homolactic physiology in
+          L. lactis IL1403; UniProtKB Q01462 supplies the exact reviewed protein and
+          strain pairing.
   - node_id: phosphoketolase_pathway
     label: phosphoketolase pathway
     node_type: PATHWAY
@@ -97,6 +125,8 @@ causal_graphs:
     description: Lactic acid fermentation is a class of fermentation metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
+      snippet: fermentation is defined as an anaerobic bacterial redox process of
+        an organic substrate leading to different products
       notes: Energy-conservation review supports lactate as a fermentation end product.
     predicate_id: biolink:participates_in
   - subject: lactic_acid_fermentation_trait
@@ -105,6 +135,8 @@ causal_graphs:
     description: Lactate is the characteristic end product of the pathway.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: lactic fermentation channels carbohydrate metabolism toward lactate
+        formation
       notes: Classical-fermentation review describes the lactic-acid pathway.
     predicate_id: METPO:2007800
   - subject: glucose
@@ -113,7 +145,8 @@ causal_graphs:
     description: Homofermentative LAB ferment glucose mainly via the EMP/glycolysis
       pathway.
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: Homolactic LAB metabolize hexoses (primarily glucose) via the EMP pathway
       notes: homofermentative LAB rely mainly on glycolysis (EMP).
   - subject: glycolysis_emp
     predicate: has output
@@ -121,6 +154,8 @@ causal_graphs:
     description: Glycolysis yields pyruvate as the intermediate reduced to lactate.
     evidence:
     - reference: DOI:10.3390/foods12152850
+      snippet: glucose acts as the carbon source to create pyruvate through the glycolysis
+        process
       notes: Glycolysis of glucose generates pyruvate, which lactate dehydrogenase
         reduces to lactate.
     predicate_id: RO:0002234
@@ -130,6 +165,7 @@ causal_graphs:
     description: Pyruvate is the substrate of lactate dehydrogenase.
     evidence:
     - reference: DOI:10.3390/foods12152850
+      snippet: subsequently converted to lactic acid by lactate dehydrogenase
       notes: Lactate dehydrogenase converts pyruvate to lactate.
   - subject: lactate_dehydrogenase
     predicate: produces
@@ -137,6 +173,8 @@ causal_graphs:
     description: Lactate dehydrogenase reduces pyruvate to lactate.
     evidence:
     - reference: DOI:10.3390/foods12152850
+      snippet: Lactate dehydrogenase plays an important role in the production of
+        lactic acid from pyruvate
       notes: one mole of glucose produces two moles of lactic acid and two ATP molecules
         via LDH.
     predicate_id: METPO:2007800
@@ -146,7 +184,9 @@ causal_graphs:
     description: Heterofermentative phosphoketolase route yields lactate among its
       products.
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: This route typically yields equimolar lactate, ethanol (or acetate)
+        and CO2
       notes: products are lactate, carbon dioxide, and either ethanol or acetate (phosphoketolase
         route).
     predicate_id: biolink:produces
@@ -155,7 +195,8 @@ causal_graphs:
     object: carbon_dioxide
     description: Heterolactic phosphoketolase route co-produces CO2.
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: leading to the formation of lactate, ethanol or acetate, and CO2
       notes: heterolactic products are lactate, carbon dioxide, and ethanol or acetate.
     predicate_id: biolink:produces
   - subject: phosphoketolase_pathway
@@ -163,7 +204,9 @@ causal_graphs:
     object: ethanol
     description: Heterolactic phosphoketolase route co-produces ethanol (or acetate).
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: glucose is processed through the 6-phosphogluconate/phosphoketolase
+        pathway, leading to the formation of lactate, ethanol or acetate
       notes: heterolactic products include ethanol or acetate.
     predicate_id: biolink:produces
   - subject: lactate
@@ -171,7 +214,9 @@ causal_graphs:
     object: decreased_ph
     description: Accumulation of lactic acid acidifies the medium.
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: lactic fermentation channels carbohydrate metabolism toward lactate
+        formation and rapid acidification of the environment
       notes: acidification from lactic acid exerts antagonistic effects on microbes.
     predicate_id: biolink:causes
   - subject: decreased_ph
@@ -180,7 +225,8 @@ causal_graphs:
     description: Lactate-driven acidification inhibits spoilage and pathogenic microbes
       (biopreservation).
     evidence:
-    - reference: DOI:10.3390/fermentation10030168
+    - reference: DOI:10.3390/molecules31020333
+      snippet: lowering pH and inhibiting pathogenic and spoilage microorganisms
       notes: higher lactic acid / lower pH increases inhibition of spoilage and pathogenic
         microbes.
     predicate_id: RO:0002212
@@ -190,6 +236,12 @@ curation_history:
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (lactic acid fermentation); product-specific
     sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-08-23T09:01:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB
+    Q01462 as the L. lactis IL1403 lactate-dehydrogenase exemplar.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude

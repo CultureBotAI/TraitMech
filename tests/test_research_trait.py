@@ -32,6 +32,8 @@ def test_template_vars_include_trait_context():
     assert variables["trait_identifier"] == "METPO:1000632"
     assert variables["trait_category_slug"] == "physiology"
     assert "inorganic carbon" in variables["definition"]
+    assert "NCBITaxon:" in variables["canonical_examples_summary"]
+    assert "[" in variables["protein_node_summary"]
 
 
 def test_provider_args_mirror_dismech_cborg_shortcut():

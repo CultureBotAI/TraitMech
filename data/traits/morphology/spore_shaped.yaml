@@ -18,11 +18,21 @@ evidence:
   snippet: structure of the endospore coat
   notes: Supports endospore morphology as a differentiated structure with specialized
     surface layers.
+canonical_examples:
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis 168
+  note: Reference endospore-forming strain paired to reviewed SpoIVA, the ATPase that
+    builds the basement layer of the spore coat.
+  reference: DOI:10.1016/j.molcel.2008.05.030
 causal_graphs:
 - graph_id: spore_shaped_endospore_layers
   title: Spore-shape endospore layer mechanism
   description: Evidence-backed causal sketch linking spore-shaped morphology to forespore
     engulfment, cortex formation, coat assembly, and dehydrated spore-core maturation.
+  scope_status: MECHANISTIC
+  scope_notes: Represents Bacillus endospore morphogenesis and coat assembly. The
+    SpoIVA accession anchors one protein in the multiprotein coat program and does
+    not stand in for SpoVM, SpoVID, CotE, or SafA.
   nodes:
   - node_id: spore_shaped_trait
     label: spore shaped
@@ -65,16 +75,36 @@ causal_graphs:
     label: SpoIVA
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein that anchors coat material to the spore surface.
+    grounding: InterPro:IPR014201
+    protein_examples:
+    - uniprot_id: UniProtKB:P35149
+      protein_label: Stage IV sporulation protein A
+      gene_symbol: spoIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 134
+      sequence_version: 1
+      role: SpoIVA hydrolyzes ATP and self-assembles into the basement layer that
+        supports deposition of the Bacillus spore coat.
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2008.05.030
+        snippet: ATP-driven self-assembly of a morphogenetic protein
+        notes: The primary Bacillus subtilis study establishes SpoIVA ATPase-dependent
+          coat deployment and self-assembly; UniProt verifies the reviewed 168 protein.
   - node_id: spovm_protein
     label: SpoVM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for spore coat encasement.
-    grounding: UniProtKB:A0A2K8N6W1
+    grounding: InterPro:IPR012609
   - node_id: spovid_protein
     label: SpoVID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for spore coat encasement.
-    grounding: UniProtKB:A0A0B5ANC0
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Retained label-only because no exact semantic SpoVID family identifier
+      was verified in this review.
   - node_id: spore_encasement
     label: spore encasement
     node_type: BIOLOGICAL_PROCESS
@@ -84,7 +114,7 @@ causal_graphs:
     label: CotE
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for outer coat assembly.
-    grounding: UniProtKB:D5WPR1
+    grounding: InterPro:IPR018901
   - node_id: outer_coat
     label: outer coat
     node_type: CELLULAR_LOCALIZATION
@@ -93,6 +123,9 @@ causal_graphs:
     label: SafA
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for inner coat assembly.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Retained label-only because no exact semantic SafA family identifier
+      was verified in this review.
   - node_id: inner_coat
     label: inner coat
     node_type: CELLULAR_LOCALIZATION
@@ -267,4 +300,22 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 3 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spore_shaped_endospore_layers=MECHANISTIC with scope_notes;
+    marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (spovid_protein,
+    safa_protein); added taxon-paired protein example(s) UniProtKB:P35149 on spoiva_protein
+    (NCBITaxon:224308); regrounded 1 node(s) (spoiva_protein: none->InterPro:IPR014201);
+    added canonical example(s) NCBITaxon:224308.'
   llm_assisted: true

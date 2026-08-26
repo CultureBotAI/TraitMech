@@ -42,6 +42,9 @@
     <div class="card causal-graph-card">
       <h2>Chemoautolithotrophic inorganic energy and CO2 fixation</h2>
       <p class="meta">DOI-backed graph linking inorganic chemical donors, respiratory energy conservation, CO2 fixation, and biomass production.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph combines representative ammonia- and iron-oxidation with generic respiratory and carbon-fixation steps. The N. europaea AmoA example anchors only ammonia oxidation; Q04507 is an alpha-subunit component of a multisubunit ammonia monooxygenase and is not the complete complex or the iron branch.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -91,6 +94,23 @@
           </li>
           
           <li id="pathograph-1-edge-3">
+            <strong>ammonia monooxygenase</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>ammonia</strong>
+            <code>METPO:2007803</code>
+            <p>Ammonia monooxygenase initiates ammonia oxidation in the N. europaea branch of chemoautolithotrophy.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.175.8.2436-2444.1993</code>
+                <span class="evidence-snippet">Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea</span>
+                <span class="meta">The primary study supports AmoA as a component of the N. europaea enzyme that catalyzes ammonia oxidation to hydroxylamine; it does not support the graph&#39;s separate iron-oxidation branch.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
             <strong>ferrous iron</strong>
             <span class="edge-predicate">example of</span>
             <strong>inorganic electron donor</strong>
@@ -107,7 +127,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-4">
+          <li id="pathograph-1-edge-5">
             <strong>inorganic electron donor</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
@@ -124,7 +144,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-5">
+          <li id="pathograph-1-edge-6">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">has output</span>
             <strong>ATP</strong>
@@ -141,7 +161,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-6">
+          <li id="pathograph-1-edge-7">
             <strong>chemoautolithotrophic</strong>
             <span class="edge-predicate">has carbon source</span>
             <strong>carbon dioxide</strong>
@@ -158,7 +178,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-7">
+          <li id="pathograph-1-edge-8">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">fixed by</span>
             <strong>CO2-fixation pathway</strong>
@@ -175,7 +195,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-8">
+          <li id="pathograph-1-edge-9">
             <strong>CO2-fixation pathway</strong>
             <span class="edge-predicate">has output</span>
             <strong>biomass</strong>
@@ -192,7 +212,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-9">
+          <li id="pathograph-1-edge-10">
             <strong>chemoautolithotrophic</strong>
             <span class="edge-predicate">requires</span>
             <strong>CO2-fixation pathway</strong>
@@ -209,7 +229,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-10">
+          <li id="pathograph-1-edge-11">
             <strong>chemoautolithotrophic</strong>
             <span class="edge-predicate">requires</span>
             <strong>oxidation of reduced inorganic compounds</strong>
@@ -226,7 +246,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-11">
+          <li id="pathograph-1-edge-12">
             <strong>oxidation of reduced inorganic compounds</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
@@ -243,7 +263,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-12">
+          <li id="pathograph-1-edge-13">
             <strong>chemoautolithotrophic</strong>
             <span class="edge-predicate">distinct from</span>
             <strong>chemo-organoheterotrophy</strong>
@@ -263,6 +283,54 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>ammonia monooxygenase</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/Q04507/entry" rel="nofollow noreferrer"><code>UniProtKB:Q04507</code></a>
+                  <br>Ammonia monooxygenase alpha subunit <span class="meta">(amoA1)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410" rel="nofollow noreferrer">Nitrosomonas europaea ATCC 19718</a>
+                  <br><code>NCBITaxon:228410</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v126 · sequence v2</span>
+                </td>
+                <td>
+                  <p>AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this accession maps two duplicated amoA gene copies and does not denote the whole enzyme complex.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1128/jb.175.8.2436-2444.1993" rel="nofollow noreferrer"><code>DOI:10.1128/jb.175.8.2436-2444.1993</code></a>
+                      
+                      <span class="evidence-snippet">Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea</span>
+                      <span class="meta">The primary strain-level study sequences and characterizes N. europaea AmoA; UniProtKB Q04507 is the reviewed alpha-subunit entry for ATCC 19718.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
   </section>
@@ -467,7 +535,7 @@ Confidently groundable examples include carbon dioxide (`CHEBI:16526`) and molec
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(2)</span></h2>
+        <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -510,6 +578,25 @@ Confidently groundable examples include carbon dioxide (`CHEBI:16526`) and molec
           <span class="meta">iron/sulfur chemolithoautotroph</span>
         </li>
         
+        <li>
+          <em>Nitrosomonas europaea ATCC 19718</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410"
+             rel="nofollow noreferrer"><code>NCBITaxon:228410</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/jb.175.8.2436-2444.1993"
+             rel="nofollow noreferrer"><code>DOI:10.1128/jb.175.8.2436-2444.1993</code></a>
+          
+          
+          <span class="meta">Strain-level ammonia-oxidizing chemoautolithotroph paired to the AmoA alpha component of ammonia monooxygenase.</span>
+        </li>
+        
       </ul>
     </div>
     
@@ -520,6 +607,12 @@ Confidently groundable examples include carbon dioxide (`CHEBI:16526`) and molec
     <div class="card">
       <h2>Curation history</h2>
       <ol>
+        
+        <li>
+          <time>2026-08-24T14:00:00-07:00</time> ·
+          <strong>REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON</strong> · codex
+          <p class="changes">Added a DOI-backed N. europaea ATCC 19718 canonical example, semantically grounded ammonia monooxygenase, reviewed AmoA alpha-subunit example, and one complete-evidence ammonia-oxidation edge; documented the multisubunit and branch scope.</p>
+        </li>
         
         <li>
           <time>2026-05-05T01:35:46.868850+00:00</time> ·
@@ -874,6 +967,11 @@ function renderPathograph(containerId, data) {
     var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
     html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
     if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
     if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
     showTooltip(event, html);
   }
@@ -962,7 +1060,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking inorganic chemical donors, respiratory energy conservation, CO2 fixation, and biomass production.", "edges": [{"description": "Inorganic chemical electron donors supply the energy for chemoautolithotrophy.", "evidence": [{"notes": "Supports lithotrophic oxidation of inorganic substrates.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemoautolithotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Ammonia is an inorganic donor in chemolithoautotrophic nitrification.", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic example.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "Chemolitho-autotrophic ammonia-oxidizing bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ammonia", "target": "inorganic_electron_donor"}, {"description": "Fe(II) is a representative inorganic electron donor.", "evidence": [{"notes": "Supports Fe(II) oxidation as an inorganic energy source.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) as the energy source"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous_iron", "target": "inorganic_electron_donor"}, {"description": "Inorganic donor oxidation feeds respiratory energy conservation.", "evidence": [{"notes": "Supports respiratory electron transfer as energy-conserving pathway.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_electron_donor", "target": "respiratory_chain"}, {"description": "Respiratory energy conservation produces ATP.", "evidence": [{"notes": "Supports ATP production from electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-5", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiratory_chain", "target": "atp"}, {"description": "Chemoautolithotrophs use CO2 as the primary carbon source.", "evidence": [{"notes": "Supports inorganic carbon fixation by autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-6", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoautolithotrophic_trait", "target": "carbon_dioxide"}, {"description": "CO2 is fixed into cellular carbon by autotrophic pathways.", "evidence": [{"notes": "Supports conversion of CO2 by microbial autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic carbon dioxide assimilation pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "Fixed carbon supports biomass production.", "evidence": [{"notes": "Supports biomass production from autotrophic CO2 fixation.", "reference": "DOI:10.1038/nrmicro.2016.130", "snippet": "microbial autotrophic production"}], "id": "edge-8", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "co2_fixation_pathway", "target": "biomass"}, {"description": "Chemoautolithotrophy requires CO2 fixation to convert inorganic carbon into organic carbon.", "evidence": [{"notes": "Chemolithoautotrophs convert CO2 to organic carbon (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-9", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "co2_fixation_pathway"}, {"description": "Chemoautolithotrophy requires oxidation of reduced inorganic compounds for energy.", "evidence": [{"notes": "Using the energy produced by oxidizing reduced inorganic compounds (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-10", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "inorganic_compound_oxidation"}, {"description": "Oxidation of reduced inorganic compounds donates electrons to the respiratory chain.", "evidence": [{"notes": "Energy produced by oxidizing reduced inorganic compounds is conserved via electron transport (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-11", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_compound_oxidation", "target": "respiratory_chain"}, {"description": "Chemolithoautotrophy (inorganic energy, CO2 carbon) is metabolically distinct from chemo-organoheterotrophy (organic energy and carbon).", "evidence": [{"notes": "Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs using glucose (Fukala \u0026 Kucera 2024).", "reference": "DOI:10.3390/molecules29102293"}], "id": "edge-12", "is_orphan": false, "predicate": "distinct from", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "chemoorganoheterotrophy"}], "evidence_rows": [{"description": "Inorganic chemical electron donors supply the energy for chemoautolithotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports lithotrophic oxidation of inorganic substrates.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemoautolithotrophic", "target": "inorganic electron donor"}, {"description": "Ammonia is an inorganic donor in chemolithoautotrophic nitrification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic example.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "Chemolitho-autotrophic ammonia-oxidizing bacteria"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ammonia", "target": "inorganic electron donor"}, {"description": "Fe(II) is a representative inorganic electron donor.", "edge_id": "edge-3", "evidence": [{"notes": "Supports Fe(II) oxidation as an inorganic energy source.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) as the energy source"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous iron", "target": "inorganic electron donor"}, {"description": "Inorganic donor oxidation feeds respiratory energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports respiratory electron transfer as energy-conserving pathway.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic electron donor", "target": "respiratory chain"}, {"description": "Respiratory energy conservation produces ATP.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP production from electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiratory chain", "target": "ATP"}, {"description": "Chemoautolithotrophs use CO2 as the primary carbon source.", "edge_id": "edge-6", "evidence": [{"notes": "Supports inorganic carbon fixation by autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoautolithotrophic", "target": "carbon dioxide"}, {"description": "CO2 is fixed into cellular carbon by autotrophic pathways.", "edge_id": "edge-7", "evidence": [{"notes": "Supports conversion of CO2 by microbial autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic carbon dioxide assimilation pathway"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "CO2-fixation pathway"}, {"description": "Fixed carbon supports biomass production.", "edge_id": "edge-8", "evidence": [{"notes": "Supports biomass production from autotrophic CO2 fixation.", "reference": "DOI:10.1038/nrmicro.2016.130", "snippet": "microbial autotrophic production"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "CO2-fixation pathway", "target": "biomass"}, {"description": "Chemoautolithotrophy requires CO2 fixation to convert inorganic carbon into organic carbon.", "edge_id": "edge-9", "evidence": [{"notes": "Chemolithoautotrophs convert CO2 to organic carbon (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic", "target": "CO2-fixation pathway"}, {"description": "Chemoautolithotrophy requires oxidation of reduced inorganic compounds for energy.", "edge_id": "edge-10", "evidence": [{"notes": "Using the energy produced by oxidizing reduced inorganic compounds (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic", "target": "oxidation of reduced inorganic compounds"}, {"description": "Oxidation of reduced inorganic compounds donates electrons to the respiratory chain.", "edge_id": "edge-11", "evidence": [{"notes": "Energy produced by oxidizing reduced inorganic compounds is conserved via electron transport (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "oxidation of reduced inorganic compounds", "target": "respiratory chain"}, {"description": "Chemolithoautotrophy (inorganic energy, CO2 carbon) is metabolically distinct from chemo-organoheterotrophy (organic energy and carbon).", "edge_id": "edge-12", "evidence": [{"notes": "Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs using glucose (Fukala \u0026 Kucera 2024).", "reference": "DOI:10.3390/molecules29102293"}], "predicate": "distinct from", "predicate_id": null, "source": "chemoautolithotrophic", "target": "chemo-organoheterotrophy"}], "graph_id": "chemoautolithotrophic_inorganic_energy_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative inorganic nitrogen electron donor.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced during chemotrophic growth.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Cell material produced from fixed carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source for autotrophic biosynthesis.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemical donors for energy and CO2 for carbon.", "grounding": "METPO:1000634", "id": "chemoautolithotrophic_trait", "is_orphan": false, "label": "chemoautolithotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using organic compounds as energy and carbon source.", "grounding": null, "id": "chemoorganoheterotrophy", "is_orphan": false, "label": "chemo-organoheterotrophy", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic pathway converting CO2 into cellular carbon.", "grounding": "GO:0015977", "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2-fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Representative inorganic metal electron donor.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced inorganic compounds that yields metabolic energy.", "grounding": null, "id": "inorganic_compound_oxidation", "is_orphan": false, "label": "oxidation of reduced inorganic compounds", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound oxidized for energy.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Energy-conserving electron-transfer pathway.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}], "title": "Chemoautolithotrophic inorganic energy and CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking inorganic chemical donors, respiratory energy conservation, CO2 fixation, and biomass production.", "edges": [{"description": "Inorganic chemical electron donors supply the energy for chemoautolithotrophy.", "evidence": [{"notes": "Supports lithotrophic oxidation of inorganic substrates.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemoautolithotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Ammonia is an inorganic donor in chemolithoautotrophic nitrification.", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic example.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "Chemolitho-autotrophic ammonia-oxidizing bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ammonia", "target": "inorganic_electron_donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation in the N. europaea branch of chemoautolithotrophy.", "evidence": [{"notes": "The primary study supports AmoA as a component of the N. europaea enzyme that catalyzes ammonia oxidation to hydroxylamine; it does not support the graph\u0027s separate iron-oxidation branch.", "reference": "DOI:10.1128/jb.175.8.2436-2444.1993", "snippet": "Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "ammonia_monooxygenase", "target": "ammonia"}, {"description": "Fe(II) is a representative inorganic electron donor.", "evidence": [{"notes": "Supports Fe(II) oxidation as an inorganic energy source.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) as the energy source"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous_iron", "target": "inorganic_electron_donor"}, {"description": "Inorganic donor oxidation feeds respiratory energy conservation.", "evidence": [{"notes": "Supports respiratory electron transfer as energy-conserving pathway.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-5", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_electron_donor", "target": "respiratory_chain"}, {"description": "Respiratory energy conservation produces ATP.", "evidence": [{"notes": "Supports ATP production from electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiratory_chain", "target": "atp"}, {"description": "Chemoautolithotrophs use CO2 as the primary carbon source.", "evidence": [{"notes": "Supports inorganic carbon fixation by autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoautolithotrophic_trait", "target": "carbon_dioxide"}, {"description": "CO2 is fixed into cellular carbon by autotrophic pathways.", "evidence": [{"notes": "Supports conversion of CO2 by microbial autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic carbon dioxide assimilation pathway"}], "id": "edge-8", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "Fixed carbon supports biomass production.", "evidence": [{"notes": "Supports biomass production from autotrophic CO2 fixation.", "reference": "DOI:10.1038/nrmicro.2016.130", "snippet": "microbial autotrophic production"}], "id": "edge-9", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "co2_fixation_pathway", "target": "biomass"}, {"description": "Chemoautolithotrophy requires CO2 fixation to convert inorganic carbon into organic carbon.", "evidence": [{"notes": "Chemolithoautotrophs convert CO2 to organic carbon (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-10", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "co2_fixation_pathway"}, {"description": "Chemoautolithotrophy requires oxidation of reduced inorganic compounds for energy.", "evidence": [{"notes": "Using the energy produced by oxidizing reduced inorganic compounds (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-11", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "inorganic_compound_oxidation"}, {"description": "Oxidation of reduced inorganic compounds donates electrons to the respiratory chain.", "evidence": [{"notes": "Energy produced by oxidizing reduced inorganic compounds is conserved via electron transport (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "id": "edge-12", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_compound_oxidation", "target": "respiratory_chain"}, {"description": "Chemolithoautotrophy (inorganic energy, CO2 carbon) is metabolically distinct from chemo-organoheterotrophy (organic energy and carbon).", "evidence": [{"notes": "Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs using glucose (Fukala \u0026 Kucera 2024).", "reference": "DOI:10.3390/molecules29102293"}], "id": "edge-13", "is_orphan": false, "predicate": "distinct from", "predicate_id": null, "source": "chemoautolithotrophic_trait", "target": "chemoorganoheterotrophy"}], "evidence_rows": [{"description": "Inorganic chemical electron donors supply the energy for chemoautolithotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports lithotrophic oxidation of inorganic substrates.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemoautolithotrophic", "target": "inorganic electron donor"}, {"description": "Ammonia is an inorganic donor in chemolithoautotrophic nitrification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic example.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "Chemolitho-autotrophic ammonia-oxidizing bacteria"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ammonia", "target": "inorganic electron donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation in the N. europaea branch of chemoautolithotrophy.", "edge_id": "edge-3", "evidence": [{"notes": "The primary study supports AmoA as a component of the N. europaea enzyme that catalyzes ammonia oxidation to hydroxylamine; it does not support the graph\u0027s separate iron-oxidation branch.", "reference": "DOI:10.1128/jb.175.8.2436-2444.1993", "snippet": "Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "ammonia monooxygenase", "target": "ammonia"}, {"description": "Fe(II) is a representative inorganic electron donor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports Fe(II) oxidation as an inorganic energy source.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) as the energy source"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous iron", "target": "inorganic electron donor"}, {"description": "Inorganic donor oxidation feeds respiratory energy conservation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports respiratory electron transfer as energy-conserving pathway.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic electron donor", "target": "respiratory chain"}, {"description": "Respiratory energy conservation produces ATP.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP production from electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiratory chain", "target": "ATP"}, {"description": "Chemoautolithotrophs use CO2 as the primary carbon source.", "edge_id": "edge-7", "evidence": [{"notes": "Supports inorganic carbon fixation by autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoautolithotrophic", "target": "carbon dioxide"}, {"description": "CO2 is fixed into cellular carbon by autotrophic pathways.", "edge_id": "edge-8", "evidence": [{"notes": "Supports conversion of CO2 by microbial autotrophic pathways.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic carbon dioxide assimilation pathway"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "CO2-fixation pathway"}, {"description": "Fixed carbon supports biomass production.", "edge_id": "edge-9", "evidence": [{"notes": "Supports biomass production from autotrophic CO2 fixation.", "reference": "DOI:10.1038/nrmicro.2016.130", "snippet": "microbial autotrophic production"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "CO2-fixation pathway", "target": "biomass"}, {"description": "Chemoautolithotrophy requires CO2 fixation to convert inorganic carbon into organic carbon.", "edge_id": "edge-10", "evidence": [{"notes": "Chemolithoautotrophs convert CO2 to organic carbon (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic", "target": "CO2-fixation pathway"}, {"description": "Chemoautolithotrophy requires oxidation of reduced inorganic compounds for energy.", "edge_id": "edge-11", "evidence": [{"notes": "Using the energy produced by oxidizing reduced inorganic compounds (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "requires", "predicate_id": null, "source": "chemoautolithotrophic", "target": "oxidation of reduced inorganic compounds"}, {"description": "Oxidation of reduced inorganic compounds donates electrons to the respiratory chain.", "edge_id": "edge-12", "evidence": [{"notes": "Energy produced by oxidizing reduced inorganic compounds is conserved via electron transport (Deng et al. 2023).", "reference": "DOI:10.1186/s40168-023-01712-w"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "oxidation of reduced inorganic compounds", "target": "respiratory chain"}, {"description": "Chemolithoautotrophy (inorganic energy, CO2 carbon) is metabolically distinct from chemo-organoheterotrophy (organic energy and carbon).", "edge_id": "edge-13", "evidence": [{"notes": "Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs using glucose (Fukala \u0026 Kucera 2024).", "reference": "DOI:10.3390/molecules29102293"}], "predicate": "distinct from", "predicate_id": null, "source": "chemoautolithotrophic", "target": "chemo-organoheterotrophy"}], "graph_id": "chemoautolithotrophic_inorganic_energy_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative inorganic nitrogen electron donor.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Multisubunit enzyme initiating aerobic ammonia oxidation.", "grounding": "GO:0018597", "id": "ammonia_monooxygenase", "is_orphan": false, "label": "ammonia monooxygenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 126, "evidence": [{"notes": "The primary strain-level study sequences and characterizes N. europaea AmoA; UniProtKB Q04507 is the reviewed alpha-subunit entry for ATCC 19718.", "reference": "DOI:10.1128/jb.175.8.2436-2444.1993", "snippet": "Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea"}], "gene_symbol": "amoA1", "protein_label": "Ammonia monooxygenase alpha subunit", "retrieved_on": "2026-08-24", "role": "AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this accession maps two duplicated amoA gene copies and does not denote the whole enzyme complex.", "sequence_version": 2, "taxon_id": "NCBITaxon:228410", "taxon_label": "Nitrosomonas europaea ATCC 19718", "uniprot_id": "UniProtKB:Q04507"}], "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced during chemotrophic growth.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cell material produced from fixed carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source for autotrophic biosynthesis.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemical donors for energy and CO2 for carbon.", "grounding": "METPO:1000634", "id": "chemoautolithotrophic_trait", "is_orphan": false, "label": "chemoautolithotrophic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using organic compounds as energy and carbon source.", "grounding": null, "id": "chemoorganoheterotrophy", "is_orphan": false, "label": "chemo-organoheterotrophy", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic pathway converting CO2 into cellular carbon.", "grounding": "GO:0015977", "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2-fixation pathway", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Representative inorganic metal electron donor.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced inorganic compounds that yields metabolic energy.", "grounding": null, "id": "inorganic_compound_oxidation", "is_orphan": false, "label": "oxidation of reduced inorganic compounds", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound oxidized for energy.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Energy-conserving electron-transfer pathway.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 126, "evidence": [{"notes": "The primary strain-level study sequences and characterizes N. europaea AmoA; UniProtKB Q04507 is the reviewed alpha-subunit entry for ATCC 19718.", "reference": "DOI:10.1128/jb.175.8.2436-2444.1993", "snippet": "Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas europaea"}], "gene_symbol": "amoA1", "node_id": "ammonia_monooxygenase", "node_label": "ammonia monooxygenase", "protein_label": "Ammonia monooxygenase alpha subunit", "retrieved_on": "2026-08-24", "role": "AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this accession maps two duplicated amoA gene copies and does not denote the whole enzyme complex.", "sequence_version": 2, "taxon_id": "NCBITaxon:228410", "taxon_label": "Nitrosomonas europaea ATCC 19718", "uniprot_id": "UniProtKB:Q04507"}], "scope_notes": "This graph combines representative ammonia- and iron-oxidation with generic respiratory and carbon-fixation steps. The N. europaea AmoA example anchors only ammonia oxidation; Q04507 is an alpha-subunit component of a multisubunit ammonia monooxygenase and is not the complete complex or the iron branch.", "scope_status": "MECHANISTIC", "title": "Chemoautolithotrophic inorganic energy and CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -985,7 +1083,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 01:00 UTC from
+      Record as of 2026-08-24 21:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

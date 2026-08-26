@@ -32,6 +32,10 @@ causal_graphs:
   title: Obligate anaerobe oxygen-toxicity mechanism
   description: Evidence-backed causal sketch linking obligate anaerobiosis to oxygen-blocked
     growth and oxygen-sensitive metabolic chemistry.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: obligate_anaerobic_trait
     label: obligately anaerobic
@@ -84,14 +88,23 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Irreparable lesions blocking replication caused by hydroxyl radicals.
   - node_id: pyruvate_formate_lyase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: pyruvate formate-lyase (PFL)
     node_type: GENE_OR_PROTEIN
     description: Glycyl-radical enzyme rapidly inactivated by O2.
   - node_id: pyruvate_ferredoxin_oxidoreductase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: pyruvate:ferredoxin oxidoreductase (PFOR)
     node_type: GENE_OR_PROTEIN
     description: O2-sensitive anaerobic metalloenzyme.
   - node_id: fefe_hydrogenase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: '[FeFe]-hydrogenase'
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive low-potential redox enzyme.
@@ -248,4 +261,13 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16240×1, CHEBI:29191×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope obligate_anaerobe_oxygen_toxicity=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (pyruvate_formate_lyase, pyruvate_ferredoxin_oxidoreductase, fefe_hydrogenase).'
   llm_assisted: true

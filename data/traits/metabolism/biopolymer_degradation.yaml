@@ -35,6 +35,10 @@ causal_graphs:
   title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly
   description: Evidence-backed causal sketch linking secreted depolymerizing enzymes
     to liberation of assimilable units from recalcitrant biopolymers.
+  scope_status: MECHANISTIC
+  scope_notes: This is a composite umbrella graph spanning cellulose, chitin, polysaccharide-import,
+    and lignin branches. The C. fimi CenA example supports the cellulose branch only;
+    it is not presented as a protein that realizes every branch.
   nodes:
   - node_id: biopolymer_degradation_trait
     label: biopolymer degradation
@@ -46,6 +50,9 @@ causal_graphs:
     label: secreted depolymerizing enzymes
     node_type: GENE_OR_PROTEIN
     description: Extracellular hydrolases / oxidoreductases acting on biopolymers.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella node combines unrelated hydrolase and oxidoreductase
+      families, so no single GO or InterPro term denotes the represented set.
   - node_id: assimilable_units
     label: assimilable mono- and oligosaccharides
     node_type: CHEMICAL
@@ -54,6 +61,24 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Glycoside hydrolase cleaving internal beta-1,4 linkages in cellulose.
+    grounding: GO:0008810
+    protein_examples:
+    - uniprot_id: UniProtKB:P07984
+      protein_label: Endoglucanase A
+      gene_symbol: cenA
+      taxon_id: NCBITaxon:1708
+      taxon_label: Cellulomonas fimi
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 122
+      sequence_version: 1
+      role: Secreted CenA endoglucanase representing the cellulose-hydrolysis branch
+        of this composite biopolymer-degradation graph.
+      evidence:
+      - reference: DOI:10.1016/0378-1119(86)90196-4
+        snippet: they expressed carboxymethylcellulase activity in Escherichia coli
+        notes: The primary cloning and deletion study identifies active C. fimi CenA.
+          UniProtKB P07984 is the reviewed CenA entry from the same species.
   - node_id: cello_oligosaccharides
     label: cello-oligosaccharides
     node_type: CHEMICAL
@@ -73,6 +98,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane TonB-dependent transporter importing oligosaccharides
       into the periplasm.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SusC-like transporters are substrate-diverse; the cited starch-utilization
+      example does not establish one exact family term for every oligosaccharide transporter
+      represented by this broad node.
   - node_id: oligosaccharides
     label: oligosaccharides
     node_type: CHEMICAL
@@ -82,10 +111,15 @@ causal_graphs:
     label: periplasmic GH3 hydrolase
     node_type: GENE_OR_PROTEIN
     description: Periplasmic glycosyl hydrolase converting imported oligomers to monosaccharides.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: GH3 is a functionally diverse glycoside-hydrolase family, while
+      this node additionally asserts localization and substrate context not captured
+      by a single reviewed semantic term.
   - node_id: endochitinase
     label: endo-chitinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme cleaving internally within the beta-1,4-GlcNAc chitin polymer.
+    grounding: GO:0008843
   - node_id: chitooligosaccharides
     label: chitooligosaccharides
     node_type: CHEMICAL
@@ -94,6 +128,9 @@ causal_graphs:
     label: lignin-oxidizing redox enzymes (LiP/MnP/VP/laccase/DyP)
     node_type: GENE_OR_PROTEIN
     description: Secreted oxidoreductases that oxidatively attack lignin.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This combined label spans LiP, MnP, versatile peroxidase, laccase,
+      and DyP families; no one protein-family term is valid for the full set.
   - node_id: lignin
     label: lignin
     node_type: CHEMICAL
@@ -248,4 +285,21 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:05:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the composite mechanism, added a DOI-backed C. fimi CenA example,
+    grounded endoglucanase and endochitinase activities, and recorded explicit reviewed
+    label-only dispositions for the broad multi-family protein nodes.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:1708 from DOI:10.1016/0378-1119(86)90196-4
+    back to PMID:23342046 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

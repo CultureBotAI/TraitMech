@@ -28,6 +28,9 @@ causal_graphs:
   title: Spindle-shape symmetric polar taper
   description: DOI-backed graph linking symmetric tapered polar wall growth and reduced
     end-cap radius to spindle morphology.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is a geometric shape classification; the cited evidence does not
+    establish a taxon-matched protein determinant for symmetric tapering.
   nodes:
   - node_id: spindle_shaped_trait
     label: spindle shaped
@@ -164,4 +167,12 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spindle_shaped_symmetric_taper=NONMECHANISTIC with
+    scope_notes.'
   llm_assisted: true

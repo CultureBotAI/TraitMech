@@ -29,11 +29,20 @@ canonical_examples:
   note: Model rhizobium-legume symbiont (alfalfa / Medicago); strain 1021 (NCBITaxon:266834)
     is the most-studied reference.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3164228/
+- taxon_id: NCBITaxon:266834
+  taxon_label: Sinorhizobium meliloti 1021
+  note: Strain-level nitrogen-fixing symbiosis exemplar matched to the NifH protein
+    instance represented below.
+  reference: DOI:10.1094/MPMI-06-25-0074-R
 causal_graphs:
 - graph_id: rhizobia_legume_n2_fixation
   title: Rhizobia–legume root-nodule N2-fixing mutualism
   description: Evidence-backed causal sketch linking symbiotic signalling and root-nodule
     colonization to N2 fixation in exchange for plant photosynthate.
+  scope_status: MECHANISTIC
+  scope_notes: The S. meliloti 1021 NifH example anchors the bacterial nitrogenase
+    branch in a root-nodule symbiosis. It represents one component of the nitrogenase
+    complex, not the complete complex or the host leghemoglobin branch.
   nodes:
   - node_id: n2_fix_symbiosis_trait
     label: nitrogen-fixing symbiosis
@@ -61,6 +70,9 @@ causal_graphs:
     label: leghemoglobin
     node_type: GENE_OR_PROTEIN
     description: Nodule oxygen-binding protein buffering O2 around bacteroids.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This is a host-plant protein family used as context in the mixed
+      host-microbe graph; it is not the bacterial protein exemplar.
   - node_id: nodule_oxygen_diffusion_barrier
     label: nodule oxygen diffusion barrier
     node_type: CELLULAR_LOCALIZATION
@@ -75,6 +87,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial enzyme complex catalyzing reduction of N2 to NH3.
     grounding: GO:0016610
+    gene_symbols:
+    - nifH
+    - nifD
+    - nifK
+    protein_examples:
+    - uniprot_id: UniProtKB:P00460
+      protein_label: Nitrogenase iron protein NifH
+      gene_symbol: nifH
+      taxon_id: NCBITaxon:266834
+      taxon_label: Sinorhizobium meliloti 1021
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 158
+      sequence_version: 2
+      role: NifH is the ATP-coupled electron-delivery component of the S. meliloti
+        nitrogenase complex required for nitrogen fixation in nodules.
+      evidence:
+      - reference: DOI:10.1094/MPMI-06-25-0074-R
+        snippet: nifH1491::Tn5
+        notes: The strain 1021 nifH mutant provides direct non-fixing symbiosis evidence;
+          UniProtKB P00460 is the reviewed strain-matched NifH entry.
   - node_id: organic_acids
     label: organic acids
     node_type: CHEMICAL
@@ -217,4 +250,14 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope rhizobia_legume_n2_fixation=MECHANISTIC with scope_notes;
+    marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (leghemoglobin);
+    added taxon-paired protein example(s) UniProtKB:P00460 on nitrogenase_complex
+    (NCBITaxon:266834); added canonical example(s) NCBITaxon:266834.'
   llm_assisted: true

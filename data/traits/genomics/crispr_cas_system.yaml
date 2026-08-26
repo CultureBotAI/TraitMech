@@ -26,21 +26,49 @@ canonical_examples:
   note: Organism in which CRISPR-Cas adaptive immunity was experimentally demonstrated
     (Barrangou et al. 2007); dairy model for CRISPR biology.
   reference: PMID:17379808
+- taxon_id: NCBITaxon:301447
+  taxon_label: Streptococcus pyogenes serotype M1
+  note: Type II CRISPR-Cas exemplar paired to reviewed Cas9 used to demonstrate dual-RNA-guided
+    target-DNA cleavage.
+  reference: DOI:10.1126/science.1225829
 causal_graphs:
 - graph_id: crispr_adaptive_immunity
   title: CRISPR-Cas adaptive immunity against invading nucleic acids
   description: Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery
     to defense against invading mobile genetic elements.
+  scope_status: MECHANISTIC
+  scope_notes: The protein example anchors the experimentally resolved S. pyogenes
+    type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and
+    the Cas9 accession is not presented as an example of every CRISPR-Cas type.
   nodes:
   - node_id: crispr_trait
     label: CRISPR-Cas system
     node_type: TRAIT
     grounding: traitmech:000094
     description: Possession of CRISPR arrays and Cas proteins for adaptive immunity.
-  - node_id: cas_proteins
-    label: Cas proteins
+  - node_id: cas9_effector
+    label: Cas9 effector protein
     node_type: GENE_OR_PROTEIN
-    description: CRISPR-associated nucleases and accessory proteins.
+    description: RNA-guided type II CRISPR endonuclease that cleaves complementary
+      target DNA.
+    grounding: InterPro:IPR028629
+    protein_examples:
+    - uniprot_id: UniProtKB:Q99ZW2
+      protein_label: CRISPR-associated endonuclease Cas9
+      gene_symbol: cas9
+      taxon_id: NCBITaxon:301447
+      taxon_label: Streptococcus pyogenes serotype M1
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 147
+      sequence_version: 1
+      role: S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA
+        to make sequence-specific double-strand breaks in target DNA.
+      evidence:
+      - reference: DOI:10.1126/science.1225829
+        snippet: Cas9 endonuclease family can be programmed
+        notes: The primary biochemical study purified S. pyogenes Cas9 and established
+          dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.
   - node_id: defense_response_to_virus
     label: defense response to virus
     node_type: BIOLOGICAL_PROCESS
@@ -50,6 +78,9 @@ causal_graphs:
     label: Cas1-Cas2 complex
     node_type: GENE_OR_PROTEIN
     description: Cas1-Cas2 integrase complex that captures and integrates new spacers.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cas1 and Cas2 are distinct protein families; this node denotes
+      their adaptation complex rather than one component family.
   - node_id: spacer_acquisition
     label: spacer acquisition (adaptation)
     node_type: BIOLOGICAL_PROCESS
@@ -62,11 +93,11 @@ causal_graphs:
       into mature crRNAs.
   - node_id: crrna
     label: crRNA
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Mature CRISPR RNA that guides Cas effectors to complementary targets.
   - node_id: crrna_effector_complex
     label: crRNA-Cas effector complex
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Ribonucleoprotein complex of crRNA and Cas effector(s) performing
       interference.
   - node_id: invading_nucleic_acid
@@ -79,14 +110,15 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Selective pressure from invading bacteriophages and plasmids.
   edges:
-  - subject: cas_proteins
+  - subject: cas9_effector
     predicate: confers
     object: crispr_trait
-    description: Cas nucleases together with CRISPR arrays realize the adaptive immune
-      system.
+    description: Cas9 together with CRISPR-derived guide RNAs realizes the type II
+      adaptive immune interference system.
     evidence:
     - reference: DOI:10.1038/s41579-019-0299-x
-      notes: Makarova et al. classify CRISPR-Cas systems by Cas-protein content.
+      notes: Makarova et al. classify type II CRISPR-Cas systems by Cas9 content;
+        the protein example is restricted to this branch.
     predicate_id: METPO:2007700
   - subject: crispr_trait
     predicate: participates in
@@ -188,4 +220,16 @@ curation_history:
     the subject is an activity, since biolink gives it the domain 'biological process
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope crispr_adaptive_immunity=MECHANISTIC with scope_notes;
+    marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (cas1_cas2_complex);
+    added taxon-paired protein example(s) UniProtKB:Q99ZW2 on cas9_effector (NCBITaxon:301447);
+    retyped 2 node(s) (crrna->RNA, crrna_effector_complex->RNA); added 1 node(s) and
+    1 edge(s) (cas9_effector); removed 1 node(s) and 1 edge(s) together with their
+    evidence (cas_proteins); added canonical example(s) NCBITaxon:301447.'
   llm_assisted: true

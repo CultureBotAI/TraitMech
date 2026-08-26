@@ -29,11 +29,21 @@ canonical_examples:
   taxon_label: Neisseria gonorrhoeae
   note: oxidase-positive
   reference: PMID:20154126
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: Canonical bacterial family A cytochrome-c-oxidase model paired to its reviewed
+    catalytic subunit I-alpha.
+  reference: DOI:10.1002/j.1460-2075.1987.tb02579.x
 causal_graphs:
 - graph_id: oxidase_activity_terminal_oxidase
   title: Terminal respiratory oxidase reducing oxygen
   description: Evidence-backed causal sketch linking a terminal respiratory oxidase
     to reduction of molecular oxygen, the basis of the oxidase test.
+  scope_status: MECHANISTIC
+  scope_notes: The graph focuses on cytochrome-c-dependent heme-copper oxidase activity
+    and its family A cofactor path; other oxidase-positive taxa can use distinct terminal
+    oxidases. P08305 is one Paracoccus subunit I-alpha component, not the complete
+    multisubunit complex or every diagnostic oxidase target.
   nodes:
   - node_id: oxidase_activity_trait
     label: oxidase activity
@@ -44,7 +54,7 @@ causal_graphs:
     label: cytochrome c oxidase
     node_type: GENE_OR_PROTEIN
     description: Terminal oxidase of the respiratory chain.
-    grounding: UniProtKB:A0A075NZN5
+    grounding: GO:0045277
   - node_id: cytochrome_c_oxidase_function
     label: cytochrome-c oxidase activity
     node_type: MOLECULAR_FUNCTION
@@ -60,6 +70,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Canonical heme-copper terminal oxidase with heme a/a3 and CuA/CuB
       centers, the classic oxidase-test target.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the complete family A multisubunit oxidase;
+      available component-family terms describe individual subunits rather than the
+      assembled complex represented here.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08305
+      protein_label: Cytochrome c oxidase subunit 1-alpha
+      gene_symbol: ctaDI
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 132
+      sequence_version: 1
+      role: Catalytic subunit I-alpha component of the Paracoccus family A cytochrome-c
+        oxidase; it is not presented as the complete complex.
+      evidence:
+      - reference: DOI:10.1002/j.1460-2075.1987.tb02579.x
+        snippet: Isolation and analysis of the genes for cytochrome c oxidase in Paracoccus
+          denitrificans
+        notes: The primary gene study identifies the Paracoccus oxidase subunits;
+          UniProtKB P08305 is the reviewed ctaDI subunit I-alpha entry.
   - node_id: reduced_cytochrome_c
     label: reduced cytochrome c
     node_type: CHEMICAL
@@ -235,4 +267,18 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:16Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T13:15:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, documented the diagnostic oxidase scope,
+    reviewed the family A whole-complex node as label-only, and added DOI-cited Paracoccus
+    subunit I-alpha P08305 as an explicit component example.
   llm_assisted: true

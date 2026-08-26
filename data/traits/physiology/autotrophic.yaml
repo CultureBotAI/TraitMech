@@ -33,23 +33,28 @@ evidence:
     that fixes CO2 via the Calvin-Benson cycle (Kaneko et al. 1996, DNA Res, full
     genome).'
 canonical_examples:
-- taxon_id: NCBITaxon:106590
-  taxon_label: Cupriavidus necator
-  note: H2/CO2 chemolithoautotroph
-  reference: PMID:16964242
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: H2/CO2 chemolithoautotroph with two active Calvin-Benson-Bassham operons
+  reference: DOI:10.1038/nbt1244
 - taxon_id: NCBITaxon:915
   taxon_label: Nitrosomonas europaea
   note: ammonia-oxidising chemoautotroph
-  reference: PMID:12700255
+  reference: DOI:10.1128/JB.185.9.2759-2773.2003
 - taxon_id: NCBITaxon:32046
   taxon_label: Synechococcus elongatus
   note: photoautotrophic cyanobacterium
-  reference: PMID:25633131
+  reference: DOI:10.1038/srep08132
 causal_graphs:
 - graph_id: autotrophic_inorganic_carbon_fixation
   title: Autotrophic inorganic carbon fixation
   description: DOI-backed graph linking inorganic carbon, energy and reductant supply,
     CO2-fixation pathways, carboxylating enzymes, precursor metabolites, and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This cross-pathway graph represents alternative autotrophic carbon-fixation
+    mechanisms rather than a claim that one organism carries the Calvin-Benson and
+    Wood-Ljungdahl pathways together. The C. necator H16 example anchors the RuBisCO
+    branch.
   nodes:
   - node_id: autotrophic_trait
     label: autotrophic
@@ -85,6 +90,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:P42721
+      protein_label: Ribulose bisphosphate carboxylase large chain, plasmid
+      gene_symbol: cbbL2
+      taxon_id: NCBITaxon:381666
+      taxon_label: Cupriavidus necator H16
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 153
+      sequence_version: 3
+      role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
+        active CBB operons of C. necator H16.
+      evidence:
+      - reference: DOI:10.1186/s12934-020-01494-y
+        snippet: both CBB operons were active and contributed almost equally to the
+          carbon fixation process
+        notes: The strain-level perturbation study supports activity of both H16 CBB
+          operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain
+          in that strain.
   - node_id: precursor_metabolites
     label: precursor metabolites
     node_type: CHEMICAL
@@ -132,6 +156,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex catalyzing the terminal acetyl-CoA-forming step of
       the Wood-Ljungdahl pathway.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: CODH/ACS is a multisubunit, taxon-variable complex whose CODH
+      and ACS components have distinct protein families; no one protein-family term
+      exactly represents this composite node.
   - node_id: molecular_hydrogen
     label: molecular hydrogen
     node_type: CHEMICAL
@@ -431,4 +459,11 @@ curation_history:
     is used where the subject is an activity, since biolink gives it the domain 'biological
     process or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:30:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, documented the alternative-pathway scope,
+    reviewed the composite CODH/ACS node as label-only, upgraded canonical citations
+    to DOI references, and added a reviewed C. necator H16 cbbL2 protein example.
   llm_assisted: true

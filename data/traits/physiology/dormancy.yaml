@@ -25,11 +25,21 @@ canonical_examples:
   note: Paradigm of bacterial dormancy/non-replicating persistence (latent infection;
     DosR regulon).
   reference: PMID:8675308
+- taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  note: Strain-level dormancy model paired to reviewed RpfB, one member of the resuscitation-promoting-factor
+    family.
+  reference: DOI:10.1111/j.1365-2958.2007.06078.x
 causal_graphs:
 - graph_id: dormancy_seed_bank
   title: Reversible dormancy and resuscitation
   description: Evidence-backed causal sketch linking unfavorable conditions to a reversible
     dormant state forming a microbial seed bank.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines several bacterial dormancy modules rather than
+    asserting one universal pathway. The H37Rv RpfB example anchors the resuscitation
+    branch and is one Rpf-family protein, not a stand-in for toxin-antitoxin or ribosome-hibernation
+    systems.
   nodes:
   - node_id: dormancy_trait
     label: dormancy
@@ -59,10 +69,16 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Chromosomal toxin-antitoxin systems (e.g. hipAB, mazEF, relBE) inducing
       growth arrest.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines unrelated toxin and antitoxin families;
+      the graph evidence does not identify one exact protein-family term.
   - node_id: ribosome_hibernation_factors
     label: ribosome hibernation factors (RMF/HPF/RaiA)
     node_type: GENE_OR_PROTEIN
     description: Factors that bind ribosomes to silence translation during dormancy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RMF, HPF, and RaiA are distinct ribosome-associated protein families,
+      so no single semantic family term represents the aggregate node.
   - node_id: protein_synthesis
     label: protein synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -79,6 +95,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan-hydrolase Rpf proteins that reactivate dormant/VBNC
       cells.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node intentionally denotes the five paralogous RpfA-E proteins;
+      a single accession or function term would erase their documented functional
+      hierarchy.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WG29
+      protein_label: Resuscitation-promoting factor RpfB
+      gene_symbol: rpfB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis H37Rv
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 53
+      sequence_version: 1
+      role: H37Rv RpfB component of the Rpf family that contributes to recovery from
+        dormancy; it does not denote all five paralogues.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2007.06078.x
+        snippet: Rpf-like proteins are implicated in resuscitation through peptidoglycan
+          hydrolysis
+        notes: Sequential deletion and complementation establish a resuscitation phenotype
+          and place RpfB high in the functional hierarchy; UniProt verifies the reviewed
+          H37Rv RpfB entry.
   edges:
   - subject: unfavorable_conditions
     predicate: causes
@@ -187,4 +226,15 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope dormancy_seed_bank=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (toxin_antitoxin_modules,
+    ribosome_hibernation_factors, rpf_proteins); added taxon-paired protein example(s)
+    UniProtKB:P9WG29 on rpf_proteins (NCBITaxon:83332); added canonical example(s)
+    NCBITaxon:83332.'
   llm_assisted: true

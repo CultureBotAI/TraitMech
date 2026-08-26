@@ -32,12 +32,21 @@ canonical_examples:
   taxon_label: Chlorobaculum tepidum
   note: Green sulfur bacterium fixing CO2 via the reductive TCA cycle (rTCA first
     shown in Chlorobia).
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2998096/
+  reference: DOI:10.1128/JB.00523-06
+- taxon_id: NCBITaxon:194439
+  taxon_label: Chlorobaculum tepidum TLS
+  note: Strain-level rTCA model paired to both experimentally reconstituted AclAB
+    protein components.
+  reference: DOI:10.1128/JB.00523-06
 causal_graphs:
 - graph_id: rtca_reverse_tricarboxylic_acid_co2_fixation
   title: Reductive TCA cycle runs the TCA cycle in reverse to fix CO2
   description: Evidence-backed causal sketch linking reverse TCA cycle operation in
     anaerobic/microaerophilic autotrophs to CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: The graph includes alternative citrate-cleavage routes and reductive
+    2-oxoacid oxidoreductases. The C. tepidum TLS examples explicitly represent both
+    components of the AclAB route and do not stand for the alternative CCS/CCL system.
   nodes:
   - node_id: rtca_trait
     label: reductive tricarboxylic acid cycle
@@ -59,21 +68,69 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 2.3.3.8) cleaving citrate into oxaloacetate and acetyl-CoA
       in rTCA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node denotes the complete two-subunit prokaryotic AclAB enzyme;
+      verified family terms describe individual subunits rather than this assembled
+      catalytic complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KDG1
+      protein_label: Citrate lyase, subunit1
+      taxon_id: NCBITaxon:194439
+      taxon_label: Chlorobaculum tepidum TLS
+      entry_status: UNREVIEWED
+      proteome_id: UP000001007
+      retrieved_on: '2026-08-24'
+      entry_version: 117
+      sequence_version: 1
+      role: Subunit 1 component of the C. tepidum ATP citrate lyase; this accession
+        is not presented as the complete AclAB enzyme.
+      evidence:
+      - reference: DOI:10.1128/JB.00523-06
+        snippet: significant ACL activity required both CLS and CLL
+        notes: The primary reconstitution study shows that both C. tepidum subunits
+          are required for activity. UniProtKB Q8KDG1 is the exact subunit 1 entry
+          in reference proteome UP000001007.
+    - uniprot_id: UniProtKB:Q8KDG2
+      protein_label: Citrate lyase, subunit2
+      taxon_id: NCBITaxon:194439
+      taxon_label: Chlorobaculum tepidum TLS
+      entry_status: UNREVIEWED
+      proteome_id: UP000001007
+      retrieved_on: '2026-08-24'
+      entry_version: 117
+      sequence_version: 1
+      role: Subunit 2 component of the C. tepidum ATP citrate lyase; this accession
+        is not presented as the complete AclAB enzyme.
+      evidence:
+      - reference: DOI:10.1128/JB.00523-06
+        snippet: Neither purified recombinant subunit preparation alone possessed
+          any enzymatic activity.
+        notes: The primary reconstitution study shows that neither component alone
+          represents active AclAB. UniProtKB Q8KDG2 is the exact subunit 2 entry in
+          reference proteome UP000001007.
   - node_id: citryl_coa_synthetase_lyase
     label: citryl-CoA synthetase/lyase route
     node_type: GENE_OR_PROTEIN
     description: Two-enzyme citrate-cleavage system (CCS EC 6.2.1.18 + CCL EC 4.1.3.34)
       alternative to ACL.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This combined route node intentionally denotes two distinct enzymes;
+      a single protein-family grounding would incorrectly collapse CCS and CCL.
   - node_id: pfor
     label: pyruvate:ferredoxin oxidoreductase (PFOR)
     node_type: GENE_OR_PROTEIN
     description: Key rTCA enzyme (EC 1.2.7.1) catalyzing reductive carboxylation of
       acetyl-CoA to pyruvate.
+    grounding: GO:0019164
   - node_id: ogor
     label: 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)
     node_type: GENE_OR_PROTEIN
     description: Key rTCA enzyme (EC 1.2.7.3/1.2.7.11) for reductive carboxylation
       of succinyl-CoA to 2-oxoglutarate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node combines OGOR/KOR enzyme forms and two EC assignments,
+      often realized by multi-subunit complexes; no single verified family term covers
+      that full scope.
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: CHEMICAL
@@ -208,4 +265,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:40:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the alternative rTCA routes, added DOI-backed C. tepidum TLS examples
+    for both required AclAB components, grounded PFOR activity, and documented the
+    multi-enzyme and multi-subunit labels that remain reviewed label-only.
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000032
 label: manganese oxidation
-definition: A metabolism in which bacteria oxidize soluble Mn(II) to insoluble Mn(III/IV)
-  oxides, typically catalyzed by multicopper oxidases. Characteristic of organisms
-  such as Bacillus sp. SG-1, Leptothrix, and Pseudomonas putida.
+definition: A metabolism in which microorganisms oxidize soluble Mn(II) to Mn(III)
+  or Mn(IV) products through mechanisms including bacterial multicopper oxidases and
+  fungal manganese peroxidases; many systems deposit insoluble manganese oxides.
 definition_source: DOI:10.1016/j.tim.2005.07.009
 trait_category: METABOLISM
 term_kind: CLASS
@@ -20,27 +20,75 @@ evidence:
 - reference: DOI:10.1146/annurev.earth.32.101802.120213
   notes: Tebo et al., "Biogenic manganese oxides", supports the formation and properties
     of bacterially produced Mn(III/IV) oxides.
+- reference: DOI:10.1021/bi002104s
+  snippet: ability to bind and oxidize MnII
+  notes: Site-directed mutagenesis of manganese peroxidase isozyme 1 supports a distinct
+    fungal enzymatic route from Mn(II) to Mn(III).
 canonical_examples:
 - taxon_id: NCBITaxon:89
   taxon_label: Leptothrix discophora
   note: Classic Mn(II)-oxidising sheathed bacterium.
   reference: PMID:25149187
+- taxon_id: NCBITaxon:2822231
+  taxon_label: Phanerodontia chrysosporium
+  note: White-rot fungal exemplar for direct Mn(II) oxidation by manganese peroxidase
+    isozyme 1.
+  reference: DOI:10.1021/bi002104s
 causal_graphs:
 - graph_id: manganese_oxidation_multicopper_oxidase
-  title: Manganese oxidation produces insoluble Mn(III/IV) oxides
-  description: Evidence-backed causal sketch linking multicopper-oxidase activity
-    to oxidation of soluble Mn(II) to insoluble Mn(III/IV) oxides.
+  title: Enzymatic manganese oxidation produces Mn(III/IV) products
+  description: Evidence-backed causal sketch retaining the bacterial multicopper-oxidase
+    oxide-forming branch and a distinct fungal manganese-peroxidase Mn(II)-to-Mn(III)
+    branch.
+  scope_status: MECHANISTIC
+  scope_notes: Both branches describe directly investigated oxidation mechanisms.
+    MofA is not assigned as an exemplar because its exact catalytic role remains uncertain;
+    the reviewed MnP-1 example supports only the fungal peroxidase branch.
   nodes:
   - node_id: manganese_oxidation_trait
     label: manganese oxidation
     node_type: TRAIT
     grounding: traitmech:000032
-    description: Bacterial oxidation of Mn(II) to Mn(III/IV) oxides.
+    description: Microbial enzymatic oxidation of Mn(II) to Mn(III) or Mn(IV) products.
   - node_id: multicopper_oxidase
     label: multicopper oxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme family catalyzing Mn(II) oxidation in bacteria.
-    grounding: UniProtKB:A0A059ZYC2
+    grounding: InterPro:IPR045087
+  - node_id: manganese_peroxidase
+    label: manganese peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Fungal heme peroxidase that uses hydrogen peroxide to oxidize Mn(II)
+      to diffusible Mn(III).
+    grounding: GO:0016689
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02567
+      protein_label: Manganese peroxidase 1
+      gene_symbol: MNP1
+      taxon_id: NCBITaxon:2822231
+      taxon_label: Phanerodontia chrysosporium
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 150
+      sequence_version: 1
+      role: MnP-1 directly oxidizes Mn(II) to Mn(III); it illustrates the fungal peroxidase
+        branch and is not presented as a bacterial multicopper oxidase.
+      evidence:
+      - reference: DOI:10.1021/bi002104s
+        snippet: manganese peroxidase isozyme 1
+        notes: The primary mutagenesis study tested Mn binding and oxidation by isozyme
+          1 from P. chrysosporium; UniProtKB Q02567 verifies the reviewed protein
+          and current organism taxonomy.
+  - node_id: manganese_ii
+    label: manganese(II)
+    node_type: CHEMICAL
+    description: Soluble reduced manganese substrate for enzymatic oxidation.
+    grounding: CHEBI:29035
+  - node_id: manganese_iii
+    label: manganese(III)
+    node_type: CHEMICAL
+    description: Oxidized manganese product released by manganese peroxidase.
+    grounding: CHEBI:29041
   - node_id: mn_oxides
     label: Mn(III/IV) oxides
     node_type: CHEMICAL
@@ -65,12 +113,45 @@ causal_graphs:
     node_type: CHEMICAL
     description: Insoluble MnO2 nanoparticles released as the final biomineral product.
   edges:
+  - subject: manganese_ii
+    predicate: is substrate for
+    object: manganese_peroxidase
+    description: MnP-1 binds and oxidizes Mn(II).
+    evidence:
+    - reference: DOI:10.1021/bi002104s
+      snippet: ability to bind and oxidize MnII
+      notes: Primary mutagenesis and kinetic measurements establish Mn(II) as the
+        substrate of P. chrysosporium MnP-1.
+  - subject: manganese_peroxidase
+    predicate: produces
+    object: manganese_iii
+    description: Manganese peroxidase oxidizes Mn(II) and releases Mn(III).
+    evidence:
+    - reference: DOI:10.1021/bi002104s
+      snippet: efficiently release MnIII
+      notes: The source describes Mn(III) release as the direct product of the MnP-catalyzed
+        oxidation.
+    predicate_id: METPO:2007800
+  - subject: manganese_peroxidase
+    predicate: confers
+    object: manganese_oxidation_trait
+    description: MnP-1 confers the Mn(II)-oxidizing capacity represented by the fungal
+      branch of this trait.
+    evidence:
+    - reference: DOI:10.1021/bi002104s
+      snippet: ability to bind and oxidize MnII
+      notes: The primary mutagenesis study directly tests Mn(II) oxidation by P. chrysosporium
+        MnP-1, linking the enzyme to the trait without extending the claim to the
+        bacterial multicopper-oxidase branch.
+    predicate_id: METPO:2007700
   - subject: multicopper_oxidase
     predicate: confers
     object: manganese_oxidation_trait
     description: Multicopper oxidases catalyze the Mn(II) → Mn(III/IV) oxidation step.
     evidence:
     - reference: DOI:10.1016/j.tim.2005.07.009
+      snippet: the reaction might involve a unique multicopper oxidase system capable
+        of a two-electron oxidation of the substrate
       notes: Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase
         mechanism.
     predicate_id: METPO:2007700
@@ -80,6 +161,7 @@ causal_graphs:
     description: The metabolism deposits biogenic Mn(III/IV) oxides.
     evidence:
     - reference: DOI:10.1146/annurev.earth.32.101802.120213
+      snippet: Manganese(IV) oxides produced through microbial activity
       notes: Tebo et al. characterize the formation and properties of bacterially
         produced Mn(III/IV) oxides.
     predicate_id: METPO:2007800
@@ -90,6 +172,7 @@ causal_graphs:
       Mn(II) oxidation.
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
+      snippet: others can use O2 directly, via multicopper oxidase enzymes.
       notes: Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes
         for Mn(II) oxidation.
     predicate_id: METPO:2007702
@@ -100,6 +183,8 @@ causal_graphs:
       intermediate.
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
+      snippet: The second step in the Mnx mechanism is a cooperative two-electron
+        transfer, forming the Mn(III)(OH)Mn(III) intermediate
       notes: 'Cryo-EM mechanistic model: a cooperative two-electron step producing
         a Mn(III)(OH)Mn(III) intermediate.'
     predicate_id: METPO:2007800
@@ -109,6 +194,8 @@ causal_graphs:
     description: Two Mn(III)(OH)Mn(III) species disproportionate to form Mn(IV)(O)Mn(IV).
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
+      snippet: two Mn(III)(OH)Mn(III) intermediates interact and disproportionate,
+        to form the next intermediate, Mn(IV)(O)Mn(IV)
       notes: Disproportionation of two Mn(III)(OH)Mn(III) species to form Mn(IV)(O)Mn(IV).
   - subject: mn_iv_o_mn_iv_intermediate
     predicate: condenses into
@@ -116,6 +203,8 @@ causal_graphs:
     description: Mn(IV)(O)Mn(IV) condenses en route to MnO2 nanoparticle release.
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
+      snippet: The Mn(IV)(O)Mn(IV) complex is at the final oxidation level of the
+        MnO2 product, but it needs to lose protons and condense into nanoparticles.
       notes: Mn(IV)(O)Mn(IV) is en route to MnO2, with release of MnO2 nanoparticles.
   - subject: mno2_nanoparticles
     predicate: is a
@@ -124,10 +213,18 @@ causal_graphs:
       oxide product.
     evidence:
     - reference: DOI:10.1021/jacs.3c06537
+      snippet: oxidize soluble Mn(II) to insoluble Mn(IV) oxides.
       notes: MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product
         of the oxidation cascade.
     predicate_id: rdfs:subClassOf
 curation_history:
+- timestamp: '2026-08-23T09:05:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, retained MofA as unresolved, broadened
+    the trait to microorganisms, and added a DOI-backed fungal MnP-1 oxidation branch
+    with taxon-paired UniProtKB Q02567 connected explicitly to the trait.
+  llm_assisted: true
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
@@ -188,4 +285,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
+    GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true

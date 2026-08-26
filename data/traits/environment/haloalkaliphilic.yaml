@@ -26,6 +26,10 @@ causal_graphs:
   title: Haloalkaliphilic salt and alkaline-pH adaptation mechanism
   description: Evidence-backed causal sketch linking haloalkaliphily to combined hypersaline
     and alkaline conditions.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: haloalkaliphilic_trait
     label: haloalkaliphilic
@@ -286,4 +290,12 @@ curation_history:
     and the wording varies by record. There is no step list to enumerate, which is
     exactly the distinction this rule draws. Was 7 BIOLOGICAL_PROCESS to 1 before
     this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope haloalkaliphilic_salt_alkaline_adaptation=NONMECHANISTIC
+    with scope_notes.'
   llm_assisted: true

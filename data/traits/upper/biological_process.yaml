@@ -25,6 +25,10 @@ causal_graphs:
   description: DOI-backed upper-ontology context graph linking biological process
     to molecular functions, gene products, and the non-environmental child metabolism
     class.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is an upper-ontology context graph, not a taxon-specific biological
+    mechanism. Gene products are described by the remaining GO-CAM context but are
+    not modeled as primary causal nodes or token protein examples.
   nodes:
   - node_id: biological_process_trait
     label: biological process
@@ -38,10 +42,6 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0003674
     description: Elemental molecular activity carried out by a gene product.
-  - node_id: gene_product
-    label: gene product
-    node_type: GENE_OR_PROTEIN
-    description: Gene, protein, RNA, or macromolecular complex annotated to GO.
   - node_id: metabolism_trait
     label: metabolism
     node_type: TRAIT
@@ -65,15 +65,6 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: A molecular function causally downstream of another in a GO-CAM model.
   edges:
-  - subject: gene_product
-    predicate: carries out
-    object: molecular_function
-    description: Gene products are annotated to molecular functions that describe
-      their activities.
-    evidence:
-    - reference: DOI:10.1093/database/bat054
-      snippet: Elemental activities, such as catalysis or binding
-      notes: Supports molecular function as gene-product activity.
   - subject: molecular_function
     predicate: contributes to
     object: biological_process_trait
@@ -103,14 +94,6 @@ causal_graphs:
       notes: a GO Molecular Function and a GO Biological Process (BP) are linked by
         mereological (part_of) relations
     predicate_id: biolink:part_of
-  - subject: molecular_function
-    predicate: enabled by
-    object: gene_product
-    description: A molecular function activity is enabled by a gene product (RO:0002333).
-    evidence:
-    - reference: DOI:10.1186/s40708-023-00208-5
-      notes: Essential GO-CAM mechanistic edge; figure example "glucokinase activity
-        enabled by Hxk1".
   - subject: molecular_function
     predicate: occurs in
     object: cellular_component
@@ -198,4 +181,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002233×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope biological_process_go_upper_context=NONMECHANISTIC
+    with scope_notes; removed 1 node(s) and 2 edge(s) together with their evidence
+    (gene_product).'
   llm_assisted: true

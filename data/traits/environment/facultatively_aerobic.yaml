@@ -28,6 +28,10 @@ causal_graphs:
   title: Facultative aerobe oxygen-flexible growth mechanism
   description: Evidence-backed causal sketch linking facultative aerobic growth to
     oxygen-responsive respiratory switching.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultative_aerobic_trait
     label: facultatively aerobic
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Growth-supporting metabolism when oxygen is unavailable.
   - node_id: fnr_type_regulation
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FNR-type oxygen-responsive regulation
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensing regulatory systems that tune respiratory metabolism.
@@ -62,23 +69,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Selection of which terminal respiratory enzyme/branch is active.
   - node_id: arcab_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArcAB two-component system
     node_type: GENE_OR_PROTEIN
     description: Redox-responsive two-component regulatory system controlling aerobic
       respiration.
   - node_id: anaerobic_metabolism_genes
-    label: anaerobic metabolism genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: anaerobic metabolism protein systems
     node_type: GENE_OR_PROTEIN
-    description: Genes encoding anaerobic metabolic functions activated under anoxia.
+    description: Protein systems for anaerobic metabolic functions activated under
+      anoxia.
   - node_id: aerobic_metabolism_genes
-    label: aerobic metabolism genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: aerobic metabolism protein systems
     node_type: GENE_OR_PROTEIN
-    description: Genes encoding aerobic respiratory functions repressed under anoxia.
+    description: Protein systems for aerobic respiratory functions repressed under
+      anoxia.
   - node_id: cytochrome_bd_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cytochrome bd oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity terminal oxidase that reduces oxygen at low O2 concentrations.
-    grounding: UniProtKB:Q6L5L4
   edges:
   - subject: molecular_oxygen
     predicate: enables
@@ -215,4 +235,21 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:Q6L5L4×1).
+  llm_assisted: true
+- timestamp: '2026-08-22T04:26:15Z'
+  curator: codex
+  action: REVIEW_UNIPROT_INSTANCE_GROUNDINGS
+  changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
+    GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
+    supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope facultative_aerobe_oxygen_flexible_growth=NONMECHANISTIC
+    with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (fnr_type_regulation, arcab_system, anaerobic_metabolism_genes, aerobic_metabolism_genes,
+    cytochrome_bd_oxidase).'
   llm_assisted: true

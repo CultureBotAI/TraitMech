@@ -29,11 +29,21 @@ canonical_examples:
   note: Model facultative methylotroph (formerly Methylobacterium extorquens; strain
     AM1).
   reference: PMID:12730156
+- taxon_id: NCBITaxon:272630
+  taxon_label: Methylorubrum extorquens AM1
+  note: Strain-level facultative methylotroph paired to reviewed MxaF, the large catalytic
+    component of its MxaFI methanol dehydrogenase.
+  reference: DOI:10.1016/0378-1119(90)90457-3
 causal_graphs:
 - graph_id: methylotrophic_methanol_assimilation
   title: Methanol-based methylotrophy mechanism
   description: DOI-backed graph for methanol oxidation to formaldehyde and assimilation
     through native methylotrophy pathways.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines alternative RuMP and serine assimilation branches
+    and several methanol/formaldehyde oxidation enzyme classes. The AM1 MxaF accession
+    anchors only the calcium-dependent MxaFI branch and is one subunit, not the complete
+    heterotetramer.
   nodes:
   - node_id: methylotrophic_trait
     label: methylotrophic
@@ -49,10 +59,17 @@ causal_graphs:
     label: methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Primary enzyme oxidizing methanol in methylotrophy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella spans unrelated PQQ-dependent and NAD-dependent
+      enzyme families; the graph preserves their alternatives instead of assigning
+      one family term.
   - node_id: pqq_dependent_mdh
     label: PQQ-dependent methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Periplasmic methanol dehydrogenase class in Gram-negative methylotrophs.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node combines MxaFI and XoxF lineages with different subunit
+      and metal requirements, so a single protein-family term would overstate identity.
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -81,18 +98,30 @@ causal_graphs:
     label: 3-hexulose-6-phosphate synthase (Hps)
     node_type: GENE_OR_PROTEIN
     description: Hallmark RuMP-cycle enzyme that condenses formaldehyde for assimilation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The cited comparative source supports the Hps activity but does
+      not distinguish a single exact family term across all represented methylotrophs.
   - node_id: serine_glyoxylate_aminotransferase
     label: serine-glyoxylate aminotransferase (SgaA/SGT)
     node_type: GENE_OR_PROTEIN
     description: Conserved serine-cycle enzyme found across methylotroph genomes.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SgaA/SGT is used here as a comparative functional label across
+      isozymes; the graph source does not justify one exact family grounding.
   - node_id: hydroxypyruvate_reductase
     label: hydroxypyruvate reductase (HprA/HPR)
     node_type: GENE_OR_PROTEIN
     description: Ubiquitous serine-cycle enzyme reducing hydroxypyruvate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HprA/HPR is an activity-level umbrella across homologous reductases;
+      no exact family term was verified for every organism represented by the graph.
   - node_id: formaldehyde_dehydrogenase
     label: formaldehyde dehydrogenase (Fld/FDH)
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing formaldehyde to formate during dissimilation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The label spans cofactor-distinct formaldehyde oxidation systems;
+      the cited graph does not select one protein family.
   - node_id: formate
     label: formate
     node_type: CHEMICAL
@@ -112,6 +141,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Calcium-dependent methanol dehydrogenase of the PQQ alcohol dehydrogenase
       family.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: MxaFI is a multisubunit enzyme assembled from distinct MxaF and
+      MxaI families; no verified complex CURIE was available for the complete node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P16027
+      protein_label: Methanol dehydrogenase [cytochrome c] subunit 1
+      gene_symbol: mxaF
+      taxon_id: NCBITaxon:272630
+      taxon_label: Methylorubrum extorquens AM1
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 179
+      sequence_version: 1
+      role: Large catalytic MxaF component of the AM1 MxaFI methanol dehydrogenase;
+        this accession is not presented as the complete enzyme.
+      evidence:
+      - reference: DOI:10.1016/0378-1119(90)90457-3
+        snippet: AM1 moxF and moxJ genes are involved in methanol oxidation
+        notes: The primary sequence study identifies the AM1 moxF/mxaF gene in methanol
+          oxidation; UniProt verifies reviewed P16027 and the strain taxon.
   - node_id: pqq
     label: pyrroloquinoline quinone (PQQ)
     node_type: CHEMICAL
@@ -354,4 +403,16 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope methylotrophic_methanol_assimilation=MECHANISTIC
+    with scope_notes; marked 7 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (methanol_dehydrogenase, pqq_dependent_mdh, hexulose_phosphate_synthase, serine_glyoxylate_aminotransferase,
+    hydroxypyruvate_reductase, formaldehyde_dehydrogenase, mxa_methanol_dehydrogenase);
+    added taxon-paired protein example(s) UniProtKB:P16027 on mxa_methanol_dehydrogenase
+    (NCBITaxon:272630); added canonical example(s) NCBITaxon:272630.'
   llm_assisted: true

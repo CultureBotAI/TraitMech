@@ -38,6 +38,10 @@ causal_graphs:
   title: Pleomorphic-shape relaxed shape control
   description: DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall
     shape control to multi-morphology populations.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pleomorphism groups multiple unrelated causes and cell states; the
+    contextual cytoskeleton label is not one inherited protein mechanism and receives
+    no token accession.
   nodes:
   - node_id: pleomorphic_shaped_trait
     label: pleomorphic shaped
@@ -48,6 +52,9 @@ causal_graphs:
     label: weak/absent shape-determining cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Reduced MreB or analogous shape-determining cytoskeletal activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node explicitly combines MreB with analogous but unrelated
+      shape systems and therefore has no exact single family grounding.
   - node_id: weak_cell_wall
     label: weak or absent peptidoglycan wall
     node_type: CELLULAR_LOCALIZATION
@@ -201,4 +208,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1, RO:0002327×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope pleomorphic_shaped_relaxed_shape_control=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (weak_cytoskeleton).'
   llm_assisted: true

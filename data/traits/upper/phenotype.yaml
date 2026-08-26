@@ -21,6 +21,9 @@ causal_graphs:
   title: Phenotype quality and child-trait context
   description: DOI-backed upper-ontology context graph linking phenotype to its quality
     parent and to non-environmental, non-genomic TraitMech child groupings.
+  scope_status: NONMECHANISTIC
+  scope_notes: Phenotype is an upper classification spanning many unrelated mechanisms;
+    assigning one token protein would be misleading.
   nodes:
   - node_id: phenotype_trait
     label: phenotype
@@ -112,4 +115,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×3).
+  llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope phenotype_quality_child_context=NONMECHANISTIC with
+    scope_notes.'
   llm_assisted: true
