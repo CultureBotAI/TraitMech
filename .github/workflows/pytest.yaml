@@ -12,6 +12,12 @@ on:
       # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
       # research/traits/ directly, so an artifact-only PR has to run it (#250).
       - "research/**"
+      # test_write_validated_round_trip.py::test_the_whole_corpus_round_trips
+      # reads data/traits/ directly, so a curation-only PR has to run it too.
+      # Omitting this let 13 records drift off the round-trip invariant across
+      # #544-#552 without a single red check (#554) — the same
+      # filter-narrower-than-the-job defect as #184/#200/#250/#252.
+      - "data/traits/**"
   push:
     branches: [main]
     paths:
@@ -23,6 +29,8 @@ on:
       # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
       # research/traits/ directly, so an artifact-only PR has to run it (#250).
       - "research/**"
+      # As above: the corpus round-trip test reads data/traits/ (#554).
+      - "data/traits/**"
   workflow_dispatch:
 
 jobs:

@@ -21,8 +21,8 @@ canonical_examples:
 - taxon_id: NCBITaxon:2303410
   taxon_label: Simulacricoccus ruber
   reference: DOI:10.1099/ijsem.0.002936
-  note: The polyphasic species description explicitly characterizes type strain
-    MCy10636 (DSM 106554; NCCB 100651) as microaerotolerant. It supports the organism-level
+  note: The polyphasic species description explicitly characterizes type strain MCy10636
+    (DSM 106554; NCCB 100651) as microaerotolerant. It supports the organism-level
     trait assignment but is not used to universalize a molecular oxygen-defense mechanism.
 causal_graphs:
 - graph_id: microaerotolerant_low_oxygen_defense
@@ -295,6 +295,6 @@ curation_history:
   curator: codex
   action: ADD_CANONICAL_EXAMPLES
   changes: Added Simulacricoccus ruber strain MCy10636 as the explicit organism-level
-    microaerotolerant example in this record's own research artifact; verified
-    NCBITaxon:2303410 and its current label against NCBI.
+    microaerotolerant example in this record's own research artifact; verified NCBITaxon:2303410
+    and its current label against NCBI.
   llm_assisted: true

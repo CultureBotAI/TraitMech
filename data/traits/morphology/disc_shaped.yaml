@@ -24,8 +24,8 @@ canonical_examples:
 - taxon_id: NCBITaxon:2246
   taxon_label: Haloferax volcanii
   note: Pleomorphic haloarchaeon that forms flat disks in mid- and late-log growth;
-    the cited genetic and imaging study directly verifies this conditional disk
-    state and its DdfA dependence.
+    the cited genetic and imaging study directly verifies this conditional disk state
+    and its DdfA dependence.
   reference: DOI:10.1038/s41467-024-45196-0
 causal_graphs:
 - graph_id: disc_shaped_anisotropic_wall_growth
@@ -172,6 +172,6 @@ curation_history:
   curator: codex
   action: ADD_CANONICAL_EXAMPLES
   changes: Added growth-phase-qualified Haloferax volcanii as a disk-shaped exemplar
-    from this record's own research artifact and direct genetics/imaging source;
-    NCBITaxon:2246 and its current label were verified against NCBI.
+    from this record's own research artifact and direct genetics/imaging source; NCBITaxon:2246
+    and its current label were verified against NCBI.
   llm_assisted: true

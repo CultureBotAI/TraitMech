@@ -20,10 +20,10 @@ canonical_examples:
 - taxon_id: NCBITaxon:157784
   taxon_label: Zestomonas thermotolerans
   reference: DOI:10.1099/00207713-52-6-2203
-  note: Type strain CM3 (DSM 14292; LMG 21284) was described as thermotolerant,
-    with an approximately 47 degrees C optimum and a 55 degrees C maximum. The source
-    published it as Pseudomonas thermotolerans; NCBI now uses Zestomonas thermotolerans
-    for this taxon id.
+  note: Type strain CM3 (DSM 14292; LMG 21284) was described as thermotolerant, with
+    an approximately 47 degrees C optimum and a 55 degrees C maximum. The source published
+    it as Pseudomonas thermotolerans; NCBI now uses Zestomonas thermotolerans for
+    this taxon id.
 causal_graphs:
 - graph_id: thermotolerant_facultative_heat_adaptation
   title: Thermotolerant facultative heat-adaptation mechanism
@@ -293,6 +293,6 @@ curation_history:
   action: ADD_CANONICAL_EXAMPLES
   changes: Added Zestomonas thermotolerans strain CM3 as the directly characterized
     thermotolerant exemplar from this record's own research artifact; preserved the
-    source's historical Pseudomonas thermotolerans name in the note and verified
-    NCBITaxon:157784 and its current label against NCBI.
+    source's historical Pseudomonas thermotolerans name in the note and verified NCBITaxon:157784
+    and its current label against NCBI.
   llm_assisted: true

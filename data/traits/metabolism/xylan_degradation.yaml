@@ -144,14 +144,14 @@ causal_graphs:
   - subject: hemicellulase_genes
     predicate: has output
     object: xylanase
-    description: Expression of hemicellulase-encoding genes yields the xylanase
-      systems that act on non-preferred hemicellulosic carbon sources.
+    description: Expression of hemicellulase-encoding genes yields the xylanase systems
+      that act on non-preferred hemicellulosic carbon sources.
     evidence:
     - reference: DOI:10.1007/s00253-023-12977-4
-      snippet: genes that encode the proteins responsible for the metabolism of
-        non-preferred carbon sources
-      notes: Novak & Gardner describe this output of carbon-catabolite-regulated
-        gene expression in their xylanase and hemicellulase regulatory review.
+      snippet: genes that encode the proteins responsible for the metabolism of non-preferred
+        carbon sources
+      notes: Novak & Gardner describe this output of carbon-catabolite-regulated gene
+        expression in their xylanase and hemicellulase regulatory review.
     predicate_id: RO:0002234
   - subject: glucuronoyl_esterase
     predicate: positively regulates
@@ -180,10 +180,10 @@ causal_graphs:
     description: Xylan saccharification releases xylose-equivalent soluble sugars.
     evidence:
     - reference: DOI:10.1186/s13068-025-02639-0
-      snippet: increasing saccharification by 57 ± 1 μM and 61 ± 3 μM of
-        xylose equivalents, respectively
-      notes: Pentari et al. directly quantified xylose-equivalent output during
-        CE15-assisted xylan saccharification.
+      snippet: increasing saccharification by 57 ± 1 μM and 61 ± 3 μM of xylose equivalents,
+        respectively
+      notes: Pentari et al. directly quantified xylose-equivalent output during CE15-assisted
+        xylan saccharification.
     predicate_id: RO:0002234
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
@@ -272,8 +272,8 @@ curation_history:
 - timestamp: '2026-08-26T09:15:30Z'
   curator: codex
   action: CONNECT_CAUSAL_GRAPH
-  changes: Connected the carbon-catabolite-regulation and CE15-saccharification
-    branches to the core xylan-degradation mechanism with two source-verified
-    has-output edges; genes remain supporting graph fields rather than primary
-    records (issues 426 and 183).
+  changes: Connected the carbon-catabolite-regulation and CE15-saccharification branches
+    to the core xylan-degradation mechanism with two source-verified has-output edges;
+    genes remain supporting graph fields rather than primary records (issues 426 and
+    183).
   llm_assisted: true

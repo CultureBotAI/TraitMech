@@ -182,8 +182,8 @@ causal_graphs:
   - subject: chitinase
     predicate: hydrolyzes
     object: chitin
-    description: Chitinases hydrolyze the beta-1,4 glycosidic bonds of polymeric
-      chitin, connecting the enzyme-driven trait to its substrate.
+    description: Chitinases hydrolyze the beta-1,4 glycosidic bonds of polymeric chitin,
+      connecting the enzyme-driven trait to its substrate.
     evidence:
     - reference: DOI:10.3389/fmicb.2013.00149
       snippet: initial hydrolysis of the (1→4)-β-glycoside bond, as seen for chitinase-catalyzed
@@ -194,14 +194,14 @@ causal_graphs:
   - subject: exochitinase
     predicate: hydrolyzes
     object: chitin
-    description: Processive exochitinases hydrolyze chitin from chain ends while
-      releasing diacetylchitobiose.
+    description: Processive exochitinases hydrolyze chitin from chain ends while releasing
+      diacetylchitobiose.
     evidence:
     - reference: DOI:10.3389/fmicb.2013.00149
       snippet: ChiA and ChiB are processive enzymes cleaving off disaccharides while
         sliding along the chitin polymer
-      notes: The review directly supports the substrate, processive action, and
-        disaccharide product represented by this branch.
+      notes: The review directly supports the substrate, processive action, and disaccharide
+        product represented by this branch.
     predicate_id: METPO:2007808
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
