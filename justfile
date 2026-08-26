@@ -532,10 +532,10 @@ gen-site: seed-apply build-embeddings gen-pages
 # NOTE: the shared LinkML module (mech_shared.yaml) is vendored byte-identical
 # across the Mech repos (package-namespaced path per repo). Its self-generated
 # sha256 pin (verify-/refresh-schema-pin) was retired — same self-referential
-# flaw as the id-label pin. It is now covered by the shared-reference drift check
-# (scripts/check_vendored_sync.sh diffs src/*/schema/mech_shared.yaml against the
-# hub's copy at CultureBotAI/CultureMech@<scripts/.vendored_canon_ref>) plus the
-# hub's nightly vendored-fleet-audit.yml.
+# flaw as the id-label pin. It is now covered by the manifest-driven drift check:
+# scripts/check_vendored_sync.sh verifies the package-specific schema against
+# CultureBotAI/culturebotai-claw@<scripts/.vendored_canon_ref>, and claw audits
+# the complete five-Mech fleet before an authority release.
 
 # Run tests with coverage
 test:
@@ -1023,10 +1023,10 @@ report-label-drift:
 # across the Mech repos. The old self-generated sha256 pin (verify-/refresh-
 # validator-pin) was retired — it only compared a copy to a hash from the SAME
 # repo, so all four could pass while diverged. Drift is now caught by the
-# shared-reference check: the `vendored-sync` CI job runs
-# scripts/check_vendored_sync.sh, which diffs these files against
-# CultureBotAI/CultureMech@<scripts/.vendored_canon_ref>. To propagate a change:
-# PR into that hub → merge → bump .vendored_canon_ref here.
+# manifest-driven check: the `vendored-sync` CI job runs
+# scripts/check_vendored_sync.sh, which verifies these files against
+# CultureBotAI/culturebotai-claw@<scripts/.vendored_canon_ref>. To propagate a
+# change: PR into claw, merge, then roll the reviewed claw pin across all Mechs.
 
 # Discussions / knowledge-gap browser (shared kg_microbe_discussions in claw).
 # Writes app/discussions/{index.html,data.js} from every record's discussions.

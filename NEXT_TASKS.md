@@ -214,7 +214,15 @@ model.
   formulas like CultureMech's. TraitMech's own gate stays OFF by design (its
   groundings are GO/CHEBI/PATO with prose labels; enabling it surfaces nothing).
 
-Update (2026-07-25): **the CultureMech → claw relocation was ABANDONED, not
+**Current governance update (2026-08-25; supersedes the topology chronology
+below):** reviewed `CultureBotAI/culturebotai-claw#133` makes
+`CultureBotAI/culturebotai-claw` the canonical manifest and payload source.
+TraitMech is one of five pinned consumers. Shared changes land in claw first and
+then roll to all five Mechs at one immutable claw commit. The July–August notes
+below remain as incident history; their old propagation instructions are no
+longer active.
+
+Historical update (2026-07-25): **the CultureMech → claw relocation was ABANDONED, not
 deferred.** Do not treat "repoint each Mech's `CANON_REPO` to
 `CultureBotAI/culturebotai-claw`" as ready-to-run work — it is superseded by the
 claw-as-mirror decision, and the old "blocked on making claw public" framing was

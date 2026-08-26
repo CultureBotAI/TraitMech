@@ -685,8 +685,13 @@ def test_list_shorthand_counts_as_unfiltered_ci(tmp_path):
     assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
 
 
-def test_no_cancellation_is_clean():
-    """Sharing a group only queues; without cancellation there is no hazard."""
+def test_no_in_progress_cancellation_is_clean_for_this_rule():
+    """This rule models in-progress cancellation, not pending-run replacement.
+
+    GitHub may replace an older pending member of a shared group even when this
+    flag is false. Workflows that require one verdict per main commit therefore
+    use ``github.run_id`` for non-PR groups and test that contract separately.
+    """
     assert _conc(f"""
         on:
           pull_request:
