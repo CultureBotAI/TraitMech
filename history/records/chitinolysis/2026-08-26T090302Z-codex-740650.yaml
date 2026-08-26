@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/chitinolysis.yaml
+  slug: chitinolysis
+session:
+  id: 2026-08-26T090302Z-codex-740650
+  timestamp: '2026-08-26T09:03:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Connect the chitinolysis hydrolytic core
+  details: Verified the tracked research against the current graph and the publisher-hosted
+    foundational review. Added two verbatim-snippet-backed chitinase-to-chitin substrate edges,
+    connecting the generic hydrolytic core and exochitinase branch to the LPMO/chitin branch.
+    The graph moves from three components to one without treating downstream product utilization
+    as evidence of primary chitinolysis and without creating gene or operon primary records.
