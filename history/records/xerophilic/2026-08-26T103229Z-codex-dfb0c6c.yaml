@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/xerophilic.yaml
+  slug: xerophilic
+session:
+  id: 2026-08-26T103229Z-codex-dfb0c6c
+  timestamp: '2026-08-26T10:32:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect compatible-solute accumulation to osmotic adjustment
+  details: >-
+    Added one source-supported enables edge from compatible-solute accumulation to
+    osmotic adjustment, joining the graph's two existing components without asserting
+    a universal solute identity. Chemical, pathway, gene, and protein concepts remain
+    supporting causal-graph fields in YAML and were not promoted to primary TraitRecord
+    entries.

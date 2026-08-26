@@ -142,6 +142,17 @@ causal_graphs:
       notes: Fungi employ physiological adaptations including altering plasma membrane
         fluidity; broad adaptation likely relevant across low-aw settings.
     predicate_id: RO:0002213
+  - subject: compatible_solute_accumulation
+    predicate: enables
+    object: osmotic_adjustment
+    description: Accumulation of compatible solutes enables osmotic adjustment under
+      low-water-activity stress.
+    evidence:
+    - reference: DOI:10.1046/j.1462-2920.2002.00335.x
+      snippet: rely exclusively on the accumulation of compatible solutes for osmoadaptation
+      notes: Supports the general process bridge from compatible-solute accumulation
+        to osmotic adjustment without asserting a universal solute identity.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -174,4 +185,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope xerophilic_low_water_activity_growth=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-26T10:32:29Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected compatible-solute accumulation to osmotic adjustment with one
+    source-supported enables edge, joining both graph components. Chemical, pathway,
+    gene, and protein concepts remain supporting YAML fields rather than primary
+    TraitRecord entries. Addresses issues 426 and 183.
   llm_assisted: true
