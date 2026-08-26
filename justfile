@@ -171,8 +171,9 @@ gen-priority-dashboard *args:
 
 # Check canonical_examples taxon ids against NCBITaxon (#445).
 #
-# NOT in `qc`, following validate-products: resolution needs the OAK NCBITaxon
-# build, a large download a bare CI runner may not have. Without an adapter the
+# NOT in `qc`, following validate-products: the default resolver needs the 13 GB
+# OAK NCBITaxon build. The canonical-example-taxonomy workflow instead uses one
+# batched authoritative NCBI request (`--ncbi-api`). Without either resolver the
 # id-shape checks still run and resolution is reported as SKIPPED rather than
 # passing quietly. ERROR on a malformed/missing/unresolvable id; WARN on label
 # drift, since NCBI relabels nodes for its own reasons and a curator-chosen
