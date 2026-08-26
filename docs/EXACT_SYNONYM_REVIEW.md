@@ -126,7 +126,7 @@ without ontology downloads and compares it with the committed report. It is in
 | Priority | Issue | Disposition |
 |---|---|---|
 | P0 | [#464 — exact-name collisions](https://github.com/CultureBotAI/TraitMech/issues/464) | Implemented on this branch: exact-only report, fail-closed resolver policy, and snapshot-free QC freshness gate. |
-| P1 | [#512 — proposed METPO CURIE reconciliation](https://github.com/CultureBotAI/TraitMech/issues/512) | Needs upstream/human action: 39 proposed CURIEs account for 88 `TERM_NOT_FOUND` assertions. |
+| P1 | [#512 — proposed METPO CURIE reconciliation](https://github.com/CultureBotAI/TraitMech/issues/512) | Needs upstream/human action: 39 proposed CURIEs account for 89 `TERM_NOT_FOUND` assertions. |
 | P1 | [#514 — unresolved MICRO xrefs](https://github.com/CultureBotAI/TraitMech/issues/514) | Needs curator action: recover an authoritative source or replace/retract four unverifiable xrefs. |
 | P2 | [#515 — METPO source and label refresh](https://github.com/CultureBotAI/TraitMech/issues/515) | Agent-safe migration after measuring the complete release delta; covers the three `alkaphilic` label drifts. |
 | P2 | [#513 — reproducible snapshot acquisition](https://github.com/CultureBotAI/TraitMech/issues/513) | Implemented on this branch: manifest-locked download/reuse with byte-count and SHA-256 verification. |
