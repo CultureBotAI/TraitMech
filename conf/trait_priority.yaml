@@ -45,11 +45,10 @@ thresholds:
   # and let the bins inherit" case (DisMech: broad_parent_min_children: 4).
   broad_parent_min_children: 4
   # DisMech lumps a subtype series into its parent. TraitMech does NOT, unless
-  # the siblings actually duplicate each other -- measured mean sibling
-  # node-label overlap is 5% (max 20%), so the bins carry distinct content and
-  # lumping them would discard real curation. This is the threshold above which
-  # a series is genuinely redundant enough to propose lumping; nothing in the
-  # corpus currently reaches it, which is the point.
+  # the siblings actually duplicate each other. Live sibling/parent overlap is
+  # emitted by `just trait-priority` and the generated dashboard (#481), so this
+  # comment cannot go stale as the corpus changes. This is the threshold above
+  # which a series is redundant enough to propose lumping.
   series_lump_min_sibling_overlap: 0.60
   # Report series membership as information from this size up.
   series_min_family_size: 3

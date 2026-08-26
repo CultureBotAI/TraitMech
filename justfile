@@ -156,10 +156,9 @@ audit-predicate-domains *args:
 # every component is inspectable, resolving to an ACTION rather than a rank.
 #
 # One DisMech rule is deliberately inverted. It lumps subtype series into their
-# parent; TraitMech does not, because measured sibling node-label overlap across
-# the binned families is 5% -- the bins carry distinct mechanism content, so
-# lumping would discard real curation. LUMP_INTO_PARENT fires only above a
-# configured measured-overlap threshold that nothing currently reaches.
+# parent; TraitMech does not, because live sibling/parent overlap is measured by
+# the command and emitted in its output and dashboard (#481). LUMP_INTO_PARENT
+# fires only above the configured measured-overlap threshold.
 trait-priority *args:
     uv run python scripts/trait_priority.py {{args}}
 

@@ -3,8 +3,8 @@
 The test that carries the most weight is `test_series_do_not_lump_at_measured_overlap`.
 DisMech's prioritiser lumps a subtype series into its parent; importing that rule
 unchanged would tell a curator to merge TraitMech's binned families, which
-measurably hold distinct mechanism content (5% mean sibling overlap). So the
-inverted rule needs a test that fails if someone "fixes" it back.
+measurably hold distinct mechanism content. So the inverted rule needs a test
+that fails if someone "fixes" it back, while live values must stay generated.
 """
 
 from __future__ import annotations
@@ -21,7 +21,9 @@ from trait_priority import (  # noqa: E402
     is_grouping_term,
     jaccard,
     load_config,
+    overlap_measurements,
     recommend,
+    render_html,
     score,
     sibling_overlap,
     Record,
@@ -88,6 +90,57 @@ def test_the_real_corpus_lumps_nothing_and_says_why():
         "sibling overlap rose sharply; the lumping decision needs re-examining, "
         f"not silently accepting: {meta['mean_series_overlap']}"
     )
+    assert meta["sibling_pairs"] > 0
+    assert meta["mean_sibling_overlap"] <= meta["max_sibling_overlap"]
+    assert meta["child_parent_pairs"] > 0
+    assert meta["child_edges_compared"] > 0
+
+
+def test_overlap_measurements_are_computed_from_declared_relationships():
+    parent = _rec(
+        identifier="parent",
+        node_labels={"trait", "shared"},
+        edge_signatures={("shared", "RO:1", "trait")},
+        edges=1,
+    )
+    child_a = _rec(
+        identifier="a",
+        parents=["parent"],
+        node_labels={"a", "shared"},
+        edge_signatures={("shared", "RO:1", "trait"), ("a", "RO:2", "shared")},
+        edges=2,
+    )
+    child_b = _rec(
+        identifier="b",
+        parents=["parent"],
+        node_labels={"b", "shared"},
+        edge_signatures={("b", "RO:3", "shared")},
+        edges=1,
+    )
+    measured = overlap_measurements(
+        {record.identifier: record for record in (parent, child_a, child_b)},
+        {"series": [child_a, child_b]},
+    )
+    assert measured == {
+        "sibling_pairs": 1,
+        "mean_sibling_overlap": 0.333,
+        "max_sibling_overlap": 0.333,
+        "child_parent_pairs": 2,
+        "mean_child_parent_overlap": 0.333,
+        "max_child_parent_overlap": 0.333,
+        "child_edges_compared": 3,
+        "shared_structural_edges": 1,
+    }
+
+
+def test_dashboard_lumping_conclusion_is_derived_from_the_action_count():
+    _, meta = build_queue()
+    html = render_html([], meta, top=0)
+    assert "Nothing lumps" in html
+    changed = {**meta, "actions": {**meta["actions"], "LUMP_INTO_PARENT": 2}}
+    html = render_html([], changed, top=0)
+    assert "2 record(s) cross the configured redundancy threshold" in html
+    assert "Nothing lumps" not in html
 
 
 # --- series detection --------------------------------------------------------

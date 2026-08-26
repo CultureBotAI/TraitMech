@@ -18,14 +18,11 @@ than a copy. DisMech penalises a subtype series hard (`subtype_series_penalty:
 -18`) and recommends `LUMP_INTO_PARENT`, because in MONDO an over-split series is
 usually redundant term proliferation. TraitMech's binned families --
 `temperature_range_{low,mid1..4,high,very_low}`, `ph_delta_*`, `nacl_*` -- look
-identical in shape but are not redundant. Measured on the live corpus:
-
-    child edges byte-identical to a parent edge   18 of 3256   (0%)
-    mean node-label overlap between siblings                    5%  (max 20%)
-    mean node-label overlap child vs parent                     ~8%
-
-So the bins carry distinct mechanism content, and lumping them would discard
-real curation. Series membership is therefore reported as INFORMATION, and
+identical in shape but are not redundant. The live sibling, child/parent, and
+structural-edge overlap measurements are emitted in the CLI and dashboard
+rather than frozen in this docstring (#481). They show that the bins carry
+distinct mechanism content, and lumping them would discard real curation.
+Series membership is therefore reported as INFORMATION, and
 `LUMP_INTO_PARENT` fires only when measured sibling overlap exceeds
 `series_lump_min_sibling_overlap`. Nothing in the corpus currently reaches that
 threshold, which is the correct outcome and not a bug.
@@ -112,6 +109,7 @@ class Record:
     components: int
     examples: int
     node_labels: set[str] = field(default_factory=set)
+    edge_signatures: set[tuple[str, str, str]] = field(default_factory=set)
     edges_with_evidence: int = 0
     has_definition: bool = False
     has_definition_source: bool = False
@@ -165,6 +163,15 @@ def read_records(
             components=_components(nodes, edges),
             examples=len(doc.get("canonical_examples") or []),
             node_labels={(n.get("label") or "").lower() for n in nodes} - {""},
+            edge_signatures={
+                (
+                    str(edge.get("subject") or ""),
+                    str(edge.get("predicate_id") or edge.get("predicate") or ""),
+                    str(edge.get("object") or ""),
+                )
+                for edge in edges
+                if edge.get("subject") and edge.get("object")
+            },
             edges_with_evidence=sum(1 for e in edges if e.get("evidence")),
             has_definition=bool(doc.get("definition")),
             has_definition_source=bool(doc.get("definition_source")),
@@ -239,8 +246,9 @@ def sibling_overlap(members: list[Record]) -> float:
 
     This is the measurement that decides whether lumping is defensible, rather
     than the assumption that a shared label prefix implies shared content. On
-    this corpus it averages 0.05, so nothing lumps -- and that is the answer,
-    not a missing feature.
+    a shared label prefix implies shared content. The current value is emitted
+    in the generated metadata, so corpus drift cannot make this explanation
+    disagree with the measurement (#481).
     """
     pairs = [
         jaccard(members[i].node_labels, members[j].node_labels)
@@ -248,6 +256,57 @@ def sibling_overlap(members: list[Record]) -> float:
         for j in range(i + 1, len(members))
     ]
     return sum(pairs) / len(pairs) if pairs else 0.0
+
+
+def overlap_measurements(
+    records: dict[str, Record], families: dict[str, list[Record]]
+) -> dict[str, int | float | None]:
+    """Return reproducible corpus-level measurements behind the lumping rule.
+
+    Sibling statistics are pair-weighted across all detected series. Parent
+    statistics cover direct parent links from a series member to another corpus
+    record. A shared structural edge means the same subject node id, grounded
+    predicate id (or predicate label when ungrounded), and object node id; it is
+    deliberately named precisely rather than described as "byte-identical".
+    """
+    sibling_values = [
+        jaccard(members[i].node_labels, members[j].node_labels)
+        for members in families.values()
+        for i in range(len(members))
+        for j in range(i + 1, len(members))
+    ]
+    family_members = {
+        record.identifier for members in families.values() for record in members
+    }
+    child_parent_pairs: list[tuple[Record, Record]] = []
+    for identifier in sorted(family_members):
+        child = records[identifier]
+        child_parent_pairs.extend(
+            (child, records[parent]) for parent in child.parents if parent in records
+        )
+    parent_values = [
+        jaccard(child.node_labels, parent.node_labels)
+        for child, parent in child_parent_pairs
+    ]
+    return {
+        "sibling_pairs": len(sibling_values),
+        "mean_sibling_overlap": (
+            round(sum(sibling_values) / len(sibling_values), 3)
+            if sibling_values
+            else None
+        ),
+        "max_sibling_overlap": round(max(sibling_values), 3) if sibling_values else None,
+        "child_parent_pairs": len(child_parent_pairs),
+        "mean_child_parent_overlap": (
+            round(sum(parent_values) / len(parent_values), 3) if parent_values else None
+        ),
+        "max_child_parent_overlap": round(max(parent_values), 3) if parent_values else None,
+        "child_edges_compared": sum(child.edges for child, _ in child_parent_pairs),
+        "shared_structural_edges": sum(
+            len(child.edge_signatures & parent.edge_signatures)
+            for child, parent in child_parent_pairs
+        ),
+    }
 
 
 # --- scoring -----------------------------------------------------------------
@@ -397,6 +456,7 @@ def build_queue(
         )
     rows.sort(key=lambda x: (-x["score"], x["category"], x["slug"]))
 
+    measured_overlap = overlap_measurements(recs, families)
     meta = {
         "records": len(rows),
         "series_families": len(families),
@@ -404,9 +464,14 @@ def build_queue(
         # the queue leaves no trace in the file unless the count is written down.
         "excluded_non_mechanism": sum(1 for x in rows if x["action"] == "DROP_NON_MECHANISM"),
         "excluded_deprecated": sum(1 for x in rows if x["action"] == "DROP_DEPRECATED"),
+        # Retained for compatibility with existing dashboard consumers: this is
+        # the unweighted mean of family means used by the decision rule. The
+        # explicitly named pair-weighted measurements below are the review
+        # statistics introduced in #481.
         "mean_series_overlap": (
             round(sum(overlaps.values()) / len(overlaps), 3) if overlaps else None
         ),
+        **measured_overlap,
         "lump_threshold": cfg["thresholds"]["series_lump_min_sibling_overlap"],
         "unresearched_mechanism_records": sum(
             1 for x in rows if not x["researched"] and not x["action"].startswith("DROP")
@@ -435,11 +500,24 @@ def render_html(rows: list[dict[str, Any]], meta: dict[str, Any], top: int) -> s
         for a, n in meta["actions"].items()
         if n
     )
+    lumped = meta["actions"].get("LUMP_INTO_PARENT", 0)
+    lumping_outcome = (
+        "Nothing lumps, because the bins carry distinct mechanism content"
+        if lumped == 0
+        else f"{lumped} record(s) cross the configured redundancy threshold"
+    )
     lump = (
         f"<p><strong>Lumping.</strong> {meta['series_families']} binned series detected; "
-        f"mean sibling node-label overlap <strong>{meta['mean_series_overlap']}</strong> "
-        f"against a lump threshold of {meta['lump_threshold']}. Nothing lumps, because the "
-        f"bins carry distinct mechanism content &mdash; the rule DisMech applies to MONDO "
+        f"{meta['sibling_pairs']} sibling pairs have mean node-label overlap "
+        f"<strong>{meta['mean_sibling_overlap']}</strong> "
+        f"(max {meta['max_sibling_overlap']}); {meta['child_parent_pairs']} direct "
+        f"child/parent pairs have mean overlap {meta['mean_child_parent_overlap']} "
+        f"(max {meta['max_child_parent_overlap']}). "
+        f"Only {meta['shared_structural_edges']} of {meta['child_edges_compared']} child "
+        f"edges share the same subject/predicate/object structure with a parent. "
+        f"The unweighted mean of family means is {meta['mean_series_overlap']} "
+        f"against a lump threshold of {meta['lump_threshold']}. {lumping_outcome} &mdash; "
+        f"the rule DisMech applies to MONDO "
         f"subtype series does not transfer unretuned.</p>"
     )
     body = [
@@ -540,8 +618,12 @@ def main() -> int:
             f"have no artifact -- the rest need theirs APPLIED, not re-run"
         )
         print(
-            f"lumping: {meta['series_families']} series, mean sibling overlap "
-            f"{meta['mean_series_overlap']} vs threshold {meta['lump_threshold']} "
+            f"lumping: {meta['series_families']} series / {meta['sibling_pairs']} sibling "
+            f"pairs, mean overlap {meta['mean_sibling_overlap']} "
+            f"(max {meta['max_sibling_overlap']}); child/parent mean "
+            f"{meta['mean_child_parent_overlap']}; structural parent-edge overlap "
+            f"{meta['shared_structural_edges']}/{meta['child_edges_compared']}; "
+            f"threshold {meta['lump_threshold']} "
             f"-> {meta['actions'].get('LUMP_INTO_PARENT', 0)} lumped"
         )
     return 0
