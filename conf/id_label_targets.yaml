@@ -43,7 +43,10 @@ ignored_prefixes:
                        # family name. Same rationale as UniProtKB above.
                        # See docs/GROUNDING_POLICY.md.
 
-synonym_scope: exact_related
+# Labels accepted as ontology correspondence evidence must be canonical labels
+# or explicitly scoped exact synonyms.  Related/broad/narrow synonyms remain
+# useful search aliases, but are not evidence of exact label correspondence.
+synonym_scope: exact
 
 targets:
   # Causal-node grounding table: (target_curie, target_label) across

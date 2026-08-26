@@ -13,6 +13,11 @@ synonyms:
 - synonym_text: sulfate respiration
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrmicro1892
+- synonym_text: dissimilatory sulphate reduction
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0019420
 evidence:
 - reference: DOI:10.1038/nrmicro1892
   notes: Muyzer & Stams review sulfate-reducing bacteria, which respire sulfate to
@@ -266,4 +271,12 @@ curation_history:
   changes: Added explicit DsrA and DsrC UniProt components from N. vulgaris Hildenborough,
     grounded Sat and Apr activities, retained combined Dsr assemblies as reviewed
     label-only, and documented multisubunit scope.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0019420;
+    declared exact synonym(s): ''dissimilatory sulphate reduction''. Evidence is predicate-scoped
+    in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
+    release deltas and disputed hits.'
   llm_assisted: true

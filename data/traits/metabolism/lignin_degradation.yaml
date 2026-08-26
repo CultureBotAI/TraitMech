@@ -13,6 +13,14 @@ synonyms:
 - synonym_text: ligninolytic
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1039/c1np00042j
+- synonym_text: lignin breakdown
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: lignin catabolism
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0046274
 evidence:
 - reference: DOI:10.1039/c1np00042j
   notes: Bugg et al. review pathways for degradation of lignin in bacteria and fungi.
@@ -282,4 +290,12 @@ curation_history:
   changes: Scoped the cross-taxon oxidative mechanism, added a DOI-backed S. coelicolor
     small-laccase example, replaced the generic laccase family grounding with its
     exact GO activity, and grounded DyP and lignin-peroxidase nodes.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0046274;
+    declared exact synonym(s): ''lignin breakdown'', ''lignin catabolism''. Evidence
+    is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
+    data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

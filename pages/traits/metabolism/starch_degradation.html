@@ -247,15 +247,26 @@
 
     
     <div class="card">
-      <h2>Synonyms (1)</h2>
+      <h2>Synonyms (3)</h2>
       <ul class="synonyms">
         
         <li>amylolytic <span class="meta">RELATED_SYNONYM · DOI:10.1016/S0168-1656(01)00407-2</span></li>
+        
+        <li>starch breakdown <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
+        
+        <li>starch catabolism <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
         
       </ul>
     </div>
     
 
+    
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        <li><code>GO:0005983</code></li>
+      </ul>
+    </div>
     
 
     <div class="card kg-context">
@@ -515,6 +526,12 @@ The following table organizes all candidate nodes for the starch degradation cau
           <time>2026-08-24T00:00:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Refined the broad amylase node to alpha-amylase with GO and a DOI-backed B. licheniformis AmyS example, corrected the enzyme-substrate edge, retained the combined downstream exo-hydrolase label with an explicit rationale, and documented graph scope.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T06:15:39Z</time> ·
+          <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
+          <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0005983; declared exact synonym(s): &#39;starch breakdown&#39;, &#39;starch catabolism&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
         
       </ol>
@@ -902,7 +919,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-24 00:00 UTC from
+      Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

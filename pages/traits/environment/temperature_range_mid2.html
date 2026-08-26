@@ -268,12 +268,14 @@
 
     
     <div class="card">
-      <h2>Synonyms (2)</h2>
+      <h2>Synonyms (3)</h2>
       <ul class="synonyms">
         
         <li>Mesophilie <span class="meta">EXACT_SYNONYM · metpo.owl</span></li>
         
         <li>TR_27_to_30 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        
+        <li>mesophilic <span class="meta">EXACT_SYNONYM · https://w3id.org/metpo/releases/2026-06-12/metpo.owl</span></li>
         
       </ul>
     </div>
@@ -491,6 +493,12 @@ Identifiers below are included only where confidence is high. Taxon-specific gen
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope temperature_range_mid2_baseline_mesophile=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (heat_shock_proteins); retyped 1 node(s) (rna_thermometer-&gt;RNA).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T06:15:38Z</time> ·
+          <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
+          <p class="changes">Ontology exact-match review (2026-08-25): declared exact synonym(s): &#39;mesophilic&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
         
       </ol>
@@ -878,7 +886,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

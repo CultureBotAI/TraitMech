@@ -6,6 +6,8 @@ definition_source: DOI:10.1186/gb-2010-11-1-r2
 trait_category: UPPER
 term_kind: CLASS
 mapping_status: REVIEWED
+xrefs:
+- PATO:0000001
 evidence:
 - reference: DOI:10.1186/gb-2010-11-1-r2
   snippet: ontology of qualities termed Phenotype and Trait ontology
@@ -97,4 +99,11 @@ curation_history:
   changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope quality_upper_child_context=NONMECHANISTIC with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:41Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0000001.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

@@ -16,6 +16,14 @@ synonyms:
 - synonym_text: hemicellulose degradation
   synonym_type: BROAD_SYNONYM
   source: DOI:10.1016/j.cbpa.2015.10.018
+- synonym_text: xylan breakdown
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: xylan catabolism
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0045493
 evidence:
 - reference: DOI:10.1111/j.1757-1707.2009.01004.x
   notes: Dodd & Cann review the enzymatic deconstruction of xylan, the major hemicellulosic
@@ -229,4 +237,12 @@ curation_history:
     so this was a replacement rather than an identifier normalisation. The pre-tranche
     citation is restored; a deliberate replacement can be made in a new event that
     says so.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0045493;
+    declared exact synonym(s): ''xylan breakdown'', ''xylan catabolism''. Evidence
+    is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
+    data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

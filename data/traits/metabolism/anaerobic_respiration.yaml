@@ -15,6 +15,8 @@ synonyms:
 - synonym_text: Dissimilatory respiration (non-O₂)
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+xrefs:
+- GO:0009061
 evidence:
 - reference: DOI:10.1128/mmbr.61.4.533-616.1997
   snippet: N oxides as terminal electron acceptors
@@ -57,7 +59,7 @@ causal_graphs:
   - node_id: denitrification
     label: denitrification
     node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0019330
+    grounding: GO:0019333
     description: Respiratory reduction of nitrogen oxides.
   - node_id: nitrogen_oxides
     label: nitrogen oxides
@@ -307,4 +309,11 @@ curation_history:
   changes: Added a DOI-backed P. denitrificans NosZ example for the representative
     denitrification branch, grounded NarGHI to its current GO complex term, explicitly
     reviewed the plural reductase umbrella as label-only, and documented graph scope.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009061.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

@@ -12,6 +12,8 @@ synonyms:
 - synonym_text: gas vacuole
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrmicro2834
+xrefs:
+- GO:0031411
 evidence:
 - reference: DOI:10.1038/nrmicro2834
   notes: Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous
@@ -270,4 +272,11 @@ curation_history:
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (gvpa_protein,
     gvpc_protein, gvpd_protein); added taxon-paired protein example(s) UniProtKB:B0JPK6
     on gvpa_protein (NCBITaxon:449447); added canonical example(s) NCBITaxon:449447.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031411.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

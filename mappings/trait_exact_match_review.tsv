@@ -1,0 +1,51 @@
+record_id	target_curie	decision	rationale
+METPO:1000060	GO:0008152	APPROVED	Definitions agree on organismal biochemical metabolism; the TraitRecord label is a declared GO exact synonym.
+METPO:1000188	PATO:0000001	APPROVED	Both terms denote a specifically dependent quality inhering in a bearer.
+METPO:1000526	CHEBI:24431	APPROVED	Existing xref; both terms denote the upper class of entities of chemical interest.
+METPO:1000602	PATO:0001455	APPROVED	Both denote oxygen-dependent growth/aerobic quality.
+METPO:1000603	PATO:0001456	APPROVED	Both denote oxygen-independent growth/anaerobic quality.
+METPO:1000630	GO:0008150	APPROVED	Existing xref; the TraitRecord label is a declared GO exact synonym and the definitions agree on biological process.
+METPO:1000680	PATO:0002539	APPROVED	Both definitions denote a circular or toroidal ring shape.
+METPO:1000685	PATO:0002065	APPROVED	Both definitions denote radiating projections from a common center.
+METPO:1000801	GO:0009060	APPROVED	Both define respiration using oxygen as terminal electron acceptor.
+METPO:1000802	GO:0009061	APPROVED	Both define respiration using a terminal electron acceptor other than oxygen.
+METPO:1000803	GO:0006119	APPROVED	Both define respiratory-chain oxidation coupled to ADP phosphorylation through a proton gradient.
+METPO:1000805	GO:0022904	REJECTED	The TraitRecord permits any donor-to-acceptor electron transfer; GO requires a respiratory carrier chain that generates a transmembrane electrochemical gradient.
+METPO:1000844	GO:0015948	APPROVED	Both define the reactions and pathways that form methane.
+METPO:1000870	GO:0043934	REJECTED	The TraitRecord is restricted to dormant stress-resistant endospores; GO covers development of spores generally.
+METPO:1002005	GO:0006113	APPROVED	Both define oxygen-independent organic redox metabolism with substrate-level phosphorylation.
+METPO:1003003	PATO:0002418	REJECTED	PATO denotes affinity for acidic histological dyes, not microbial growth at low environmental pH.
+METPO:1003021	GO:0043473	REJECTED	The TraitRecord is a color phenotype; GO denotes the biological process of pigment accumulation.
+METPO:2000101	RO:0000086	APPROVED	Both are the bearer-to-dependent-quality relation.
+METPO:2000102	RO:0002200	APPROVED	Both are the biological-entity-to-phenotype relation.
+METPO:2000103	RO:0002215	APPROVED	Existing xref; both denote the relation between a bearer and a biological process it is capable of carrying out.
+METPO:2000207	RO:0002020	REJECTED	METPO relates an organism to a transported chemical; RO relates a transport process or activity to its cargo.
+METPO:2000208	RO:0002340	REJECTED	METPO relates an organism to a chemical; RO imports has a transportation/localization process as subject.
+METPO:2000209	RO:0002345	REJECTED	METPO relates an organism to a chemical; RO exports has a transportation/localization process as subject.
+METPO:2000202	RO:0003000	APPROVED	Existing xref; both denote production of an output, and the labels are canonical on both terms.
+traitmech:000019	GO:0015977	APPROVED	Both define assimilation of inorganic carbon into organic compounds.
+traitmech:000021	GO:0019643	APPROVED	Both define the reverse TCA carbon-fixation pathway producing acetyl-CoA.
+traitmech:000028	GO:0019655	APPROVED	Both define pyruvate fermentation to ethanol and carbon dioxide.
+traitmech:000038	GO:0015979	APPROVED	Both define light-powered synthesis/fixation of organic compounds.
+traitmech:000053	GO:0042710	REJECTED	The TraitRecord denotes the ecological biofilm lifestyle; GO denotes the process that forms the biofilm.
+traitmech:000063	GO:0042603	APPROVED	Both define the organized protective extracellular capsule of bacteria or fungi.
+traitmech:000064	GO:0030115	REJECTED	The TraitRecord explicitly includes archaeal S-layers; the GO definition is restricted to bacteria.
+traitmech:000067	GO:0070088	APPROVED	Both define a cytoplasmic polyhydroxyalkanoate storage granule.
+traitmech:000070	GO:0031411	APPROVED	Both define the proteinaceous gas-filled buoyancy organelle.
+traitmech:000071	GO:0110143	APPROVED	Both define the membrane-bound magnetic-mineral organelle of magnetotactic bacteria.
+traitmech:000072	GO:0031470	APPROVED	Both define the protein-shelled carbon-fixation microcompartment containing RuBisCO.
+traitmech:000075	GO:0004096	REJECTED	The TraitRecord denotes the cell-level catalase-positive phenotype; GO denotes the molecular catalytic activity.
+traitmech:000077	GO:0009039	REJECTED	The TraitRecord denotes the cell-level urease-positive phenotype; GO denotes the molecular catalytic activity.
+traitmech:000083	GO:0009847	APPROVED	Both define exit from spore dormancy through the earliest resumption of growth.
+traitmech:000084	GO:0009372	APPROVED	Both define density-dependent diffusible cell-cell signaling and coordinated response.
+traitmech:000085	GO:0008218	REJECTED	The TraitRecord denotes a cell-level capability; GO denotes the light-producing biological process.
+traitmech:000086	GO:0006935	APPROVED	Both define directed movement along a chemical concentration gradient.
+traitmech:000094	GO:0099048	REJECTED	The TraitRecord denotes possession of the CRISPR-Cas system; GO denotes the defense response carried out by it.
+traitmech:000100	PATO:0001374	APPROVED	Both define the number of complete homologous chromosome/genome sets in a cell.
+traitmech:000103	GO:0009399	APPROVED	Both define conversion of atmospheric dinitrogen to biologically available ammonium.
+traitmech:000105	GO:0019420	APPROVED	Both define sulfate reduction to hydrogen sulfide as terminal-electron-acceptor respiration.
+traitmech:000106	GO:0019417	REJECTED	The TraitRecord covers oxidation of sulfide, elemental sulfur, and thiosulfate; GO is restricted to adding oxygen to elemental sulfur.
+traitmech:000113	GO:0045493	APPROVED	Both define enzymatic breakdown of xylan.
+traitmech:000114	GO:0046274	APPROVED	Both define breakdown of lignin polymers.
+traitmech:000115	GO:0005983	APPROVED	Both define breakdown of starch polymers.
+traitmech:000116	GO:0006508	REJECTED	The TraitRecord is restricted to secreted nutritional proteolysis; GO covers all protein hydrolysis.

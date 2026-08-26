@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_exact_synonyms.py
+  slug: exact-synonym-audit
+session:
+  id: 2026-08-26T013216Z-codex-7d67e4
+  timestamp: '2026-08-26T01:32:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - ontology_mapping
+  - causal_graphs
+  summary: Audit exact ontology synonyms and apply predicate-scoped matches
+  details: 'Audited all 477 trait records against pinned direct METPO, GO, ChEBI, ENVO, PATO,
+    and RO releases, with OAK as an independent local cross-check and OLS4 spot checks. Reviewed
+    all 50 exact-label candidates in a curator decision ledger: approved 35 (including four
+    pre-existing mappings), rejected 15 scope or entity-type false positives, and applied
+    31 new top-level xrefs plus 34 exact synonyms across 40 records. Added network-free audit
+    and idempotent apply tooling, reproducible reports, exact-scope configuration, and regression
+    tests. Corrected four causal groundings found during review: denitrification and conjugation
+    replacements, and removal of obsolete or unresolved RuMP-cycle and sulfane-sulfur assertions.
+    Deliberately did not migrate three METPO canonical-label drifts from the repository''s
+    pinned 2025 source release. Validation covered strict schema, ontology correspondence,
+    round-trip serialization, lint, and the full test/QC suites.'

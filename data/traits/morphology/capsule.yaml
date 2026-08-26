@@ -16,6 +16,8 @@ synonyms:
 - synonym_text: capsular polysaccharide
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1146/annurev.biochem.75.103004.142545
+xrefs:
+- GO:0042603
 evidence:
 - reference: DOI:10.1146/annurev.micro.50.1.285
   notes: Roberts, "The biochemistry and genetics of capsular polysaccharide production
@@ -269,4 +271,11 @@ curation_history:
     the tranche: set graph scope capsule_polysaccharide_protection=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (wzx_flippase, wzy_polymerase, wza_export_protein, kpsmt_abc_transporter).'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0042603.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

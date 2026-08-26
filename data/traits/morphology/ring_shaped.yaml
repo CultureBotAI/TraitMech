@@ -12,8 +12,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 - synonym_text: ring-shaped
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato.obo
+- synonym_text: annular
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato.obo
+xrefs:
+- PATO:0002539
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: cell curvature
@@ -271,4 +276,12 @@ curation_history:
     the tranche: set graph scope ring_shaped_curved_growth_closure=NONMECHANISTIC
     with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mreb_filaments, bactofilin_polymers, bactofilin_lmdc_module, crva_polymer, crescentin).'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0002539;
+    declared exact synonym(s): ''annular''; upgraded to exact scope: ''ring-shaped''.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

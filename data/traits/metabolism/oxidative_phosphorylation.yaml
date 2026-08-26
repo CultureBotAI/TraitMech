@@ -9,7 +9,13 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
+synonyms:
+- synonym_text: respiratory-chain phosphorylation
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
 created_by: Anthea Guo
+xrefs:
+- GO:0006119
 evidence:
 - reference: DOI:10.1038/191144a0
   snippet: phosphorylation to electron and hydrogen transfer
@@ -387,4 +393,12 @@ curation_history:
     so this was a replacement rather than an identifier normalisation. The pre-tranche
     citation is restored; a deliberate replacement can be made in a new event that
     says so.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006119;
+    declared exact synonym(s): ''respiratory-chain phosphorylation''. Evidence is
+    predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
+    data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

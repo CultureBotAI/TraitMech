@@ -13,6 +13,8 @@ synonyms:
 - synonym_text: bacterial microcompartment
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrmicro.2018.10
+xrefs:
+- GO:0031470
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld et al. review bacterial microcompartments; the carboxysome is the
@@ -257,4 +259,11 @@ curation_history:
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (bmc_shell_proteins);
     added taxon-paired protein example(s) UniProtKB:Q03511 on bmc_shell_proteins (NCBITaxon:1140);
     added canonical example(s) NCBITaxon:1140.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031470.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

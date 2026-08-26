@@ -10,6 +10,8 @@ mapping_status: REVIEWED
 parent_traits:
 - METPO:1000800
 created_by: Luke Wang
+xrefs:
+- GO:0006113
 evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
   snippet: substrate of a fermentation has to serve as electron donor as well as acceptor
@@ -356,4 +358,11 @@ curation_history:
     expressed CA_C2229 locus, grounded PFOR and ATP synthase to current semantic terms,
     retained unresolved FNOR as explicitly reviewed label-only, and documented the
     graph's branch-specific scope.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006113.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

@@ -608,6 +608,25 @@ check: lint test
 audit-unapplied-groundings:
     uv run python scripts/audit_unapplied_groundings.py
 
+# Exact labels are not necessarily unique. Keep the exact-only ambiguity table
+# current without requiring the large external ontology snapshots used by the
+# full grounding review.
+audit-exact-synonym-collisions:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    tmp="$(mktemp)"
+    trap 'rm -f "$tmp"' EXIT
+    uv run python scripts/audit_exact_synonyms.py \
+      --collisions-only --collision-out "$tmp"
+    if ! diff -q reports/exact_synonym_collisions.tsv "$tmp" >/dev/null; then
+      echo "STALE reports/exact_synonym_collisions.tsv" >&2
+      diff -u reports/exact_synonym_collisions.tsv "$tmp" || true
+      echo "Regenerate it with:" >&2
+      echo "  uv run python scripts/audit_exact_synonyms.py --collisions-only" >&2
+      exit 1
+    fi
+    echo "  OK    reports/exact_synonym_collisions.tsv"
+
 audit-derived-reports:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -1025,7 +1044,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-unapplied-groundings audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
@@ -1035,6 +1054,24 @@ qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals au
 # `exceptions:` allow-list in conf/id_label_targets.yaml.
 validate-products:
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+# Rebuild the exact-synonym review from versioned ontology snapshots.  This is
+# intentionally not in qc: the official GO/ChEBI/ENVO/PATO/RO/METPO downloads
+# are large external inputs, pinned by SHA-256 in the generated manifest rather
+# than committed to this repository.  Pass --oak-dir through args for the
+# independent OAK sqlite cross-check.
+report-exact-synonyms snapshot_dir *args:
+    uv run python scripts/audit_exact_synonyms.py --snapshot-dir {{snapshot_dir}} {{args}}
+
+# Download or verify the exact ontology bytes locked by the review manifest.
+# Existing mismatched files fail closed and are never overwritten.
+fetch-exact-synonym-snapshots snapshot_dir *args:
+    uv run python scripts/fetch_exact_synonym_snapshots.py \
+      --out-dir {{snapshot_dir}} {{args}}
+
+# Dry-run the approved TraitRecord xrefs/exact synonyms; append --apply to write.
+apply-trait-exact-matches snapshot_dir *args:
+    uv run python scripts/apply_trait_exact_matches.py --snapshot-dir {{snapshot_dir}} {{args}}
 
 # Baseline (non-failing): do the CURIEs SUGGESTED in the deep-research reports
 # mean what those reports say they mean? Writes a ranked backlog to

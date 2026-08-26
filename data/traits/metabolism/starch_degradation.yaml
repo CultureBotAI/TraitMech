@@ -13,6 +13,14 @@ synonyms:
 - synonym_text: amylolytic
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1016/S0168-1656(01)00407-2
+- synonym_text: starch breakdown
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: starch catabolism
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0005983
 evidence:
 - reference: DOI:10.1016/S0168-1656(01)00407-2
   notes: van der Maarel et al. review starch-converting enzymes of the alpha-amylase
@@ -229,4 +237,12 @@ curation_history:
     B. licheniformis AmyS example, corrected the enzyme-substrate edge, retained the
     combined downstream exo-hydrolase label with an explicit rationale, and documented
     graph scope.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0005983;
+    declared exact synonym(s): ''starch breakdown'', ''starch catabolism''. Evidence
+    is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
+    data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

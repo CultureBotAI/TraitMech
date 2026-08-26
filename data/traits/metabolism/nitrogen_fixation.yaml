@@ -13,6 +13,8 @@ synonyms:
 - synonym_text: diazotrophy
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrmicro954
+xrefs:
+- GO:0009399
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.9
   notes: Kuypers, Marchant & Kartal place nitrogen fixation as the reductive entry
@@ -303,4 +305,11 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T01:14:58Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009399.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

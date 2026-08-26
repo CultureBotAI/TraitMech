@@ -13,6 +13,8 @@ synonyms:
 - synonym_text: polyploidy
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1159/000368855
+xrefs:
+- PATO:0001374
 evidence:
 - reference: DOI:10.1159/000368855
   notes: Soppa reviews polyploidy in archaea and bacteria and its links to desiccation
@@ -190,4 +192,11 @@ curation_history:
   changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope ploidy_repair_survival=NONMECHANISTIC with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:38Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0001374.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

@@ -85,7 +85,6 @@ causal_graphs:
     label: ribulose monophosphate cycle
     node_type: PATHWAY
     description: Prokaryotic formaldehyde assimilation pathway.
-    grounding: GO:0019647
   - node_id: serine_pathway
     label: serine pathway
     node_type: PATHWAY
@@ -301,6 +300,14 @@ causal_graphs:
     - reference: DOI:10.1016/b978-0-443-13307-7.00014-1
       notes: MxaF contains a calcium ion in its active site.
 curation_history:
+- timestamp: '2026-08-25T00:00:00-07:00'
+  curator: codex
+  action: REVIEW_ONTOLOGY_GROUNDINGS
+  changes: Retracted obsolete GO:0019647 from the ribulose monophosphate cycle node.
+    GO replaced it with broader GO:0019649 formaldehyde assimilation, which is already
+    represented by a separate graph node and is not an exact grounding for this named
+    pathway variant.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.877023+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

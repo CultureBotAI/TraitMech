@@ -351,17 +351,30 @@
 
     
     <div class="card">
-      <h2>Synonyms (2)</h2>
+      <h2>Synonyms (5)</h2>
       <ul class="synonyms">
         
         <li>CO2 fixation <span class="meta">RELATED_SYNONYM · DOI:10.1128/AEM.02473-10</span></li>
         
         <li>autotrophic carbon assimilation <span class="meta">RELATED_SYNONYM · DOI:10.1146/annurev-marine-120709-142712</span></li>
         
+        <li>autotrophic CO2 fixation <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
+        
+        <li>autotrophic CO2 fixation pathway <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
+        
+        <li>autotrophy <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
+        
       </ul>
     </div>
     
 
+    
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        <li><code>GO:0015977</code></li>
+      </ul>
+    </div>
     
 
     <div class="card kg-context">
@@ -652,6 +665,12 @@ Use label-only nodes unless the project’s selected pathway ontology has been v
           <time>2026-08-24T08:25:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Added a DOI-backed C. necator H16 cbbL2/RuBisCO example, grounded the generic RuBisCO node to InterPro, recorded the AclAB complex as reviewed label-only, and scoped the example to the CBB branch of this multi-pathway graph.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T06:15:39Z</time> ·
+          <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
+          <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0015977; declared exact synonym(s): &#39;autotrophic CO2 fixation&#39;, &#39;autotrophic CO2 fixation pathway&#39;, &#39;autotrophy&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
         
       </ol>
@@ -1039,7 +1058,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-24 08:25 UTC from
+      Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

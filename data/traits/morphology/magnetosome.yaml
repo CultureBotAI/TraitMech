@@ -13,6 +13,8 @@ synonyms:
 - synonym_text: magnetotactic
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrmicro842
+xrefs:
+- GO:0110143
 evidence:
 - reference: DOI:10.1038/nrmicro.2016.99
   notes: Uebe & Schüler review magnetosome biogenesis as the formation of membrane-bounded
@@ -281,4 +283,11 @@ curation_history:
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mamk_protein,
     mamab_operon, mamb_protein); added taxon-paired protein example(s) UniProtKB:Q6NE59
     on mamk_protein (NCBITaxon:431944).'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0110143.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

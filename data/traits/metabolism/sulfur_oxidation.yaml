@@ -92,7 +92,6 @@ causal_graphs:
   - node_id: sulfane_sulfur
     label: sulfane sulfur
     node_type: CHEMICAL
-    grounding: CHEBI:15037
     description: Sulfane sulfur / S0 / polysulfide intermediate.
   - node_id: pdo_enzyme
     label: persulfide dioxygenase (PDO)
@@ -235,6 +234,13 @@ causal_graphs:
         S0, thiosulfate and sulfate.
     predicate_id: METPO:2007803
 curation_history:
+- timestamp: '2026-08-25T00:00:00-07:00'
+  curator: codex
+  action: REVIEW_ONTOLOGY_GROUNDINGS
+  changes: Retracted CHEBI:15037 from sulfane sulfur because the identifier is absent
+    from ChEBI release 254, does not resolve in OAK, and has no sulfane-sulfur replacement
+    in OLS4. Retained the chemically meaningful label for future curation.
+  llm_assisted: true
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
