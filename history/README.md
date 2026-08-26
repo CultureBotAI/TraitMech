@@ -133,9 +133,9 @@ wrong is invisible without a record here. That is what `outcome: no_change` is f
 `src/traitmech/schema/history.yaml` describes presence as *advisory* and states
 "one record per session per target" unqualified. Both are superseded by #325 and
 **neither is edited here on purpose**: that file is vendored byte-identical from
-CultureMech, and a one-copy edit would fail `scripts/check_vendored_sync.sh`.
-The canonical policy has to change in CultureMech first and then be re-vendored;
-the remaining policy correction is tracked in #358.
+canonical claw, and a one-copy edit would fail `scripts/check_vendored_sync.sh`.
+The canonical policy has to change in claw first and then be rolled out under a
+reviewed fleet pin; the remaining policy correction is tracked in #358.
 
 Until then this README and the `curation-history` workflow are the operative
 statements of the policy, and the schema's prose is stale by design rather than
@@ -143,18 +143,19 @@ by neglect.
 
 ## Where the schema lives
 
-Two copies, on purpose:
+The authority and consumer copies are separate on purpose:
 
-- **Canonical schema**: `CultureMech/src/culturemech/schema/history.yaml`.
-- **Scaffolder and audited packaged mirror**:
-  `culturebotai-claw/src/kg_microbe_history/` and
-  `culturebotai-claw/shared/history/history.yaml`.
-- **Vendored here**: `src/traitmech/schema/history.yaml`, byte-identical.
+- **Canonical schema**:
+  `culturebotai-claw/src/kg_microbe_governance/artifacts/schema/history.yaml`.
+- **Vendored here**: `src/traitmech/schema/history.yaml`, byte-identical and
+  selected by claw's manifest for this repository.
+- **Transitional claw compatibility copies**: `src/kg_microbe_history/` and
+  `shared/history/history.yaml`; these are not independent authorities.
 
 Check that identity rather than trusting this file — with a claw checkout:
 
 ```bash
-diff "${CLAW_SRC:-../culturebotai-claw/src}/../shared/history/history.yaml" \
+diff "${CLAW_SRC:-../culturebotai-claw/src}/kg_microbe_governance/artifacts/schema/history.yaml" \
      src/traitmech/schema/history.yaml && echo "in sync"
 ```
 
@@ -171,7 +172,7 @@ work with no claw checkout at all.
 `just new-history` **prefers** claw, via `CLAW_SRC` (default:
 `../culturebotai-claw/src`), and falls back to
 `scripts/new_history_record.py` when there is no checkout there. Claw stays the
-canonical scaffolder so the record shape does not drift across the four Mech
+canonical scaffolder so the record shape does not drift across the five Mech
 repos; the fallback exists because the alternative to a slightly-divergent
 record is no record at all.
 
@@ -207,8 +208,8 @@ fails `just validate-history` until you replace it — which is the promise two
 paragraphs up, and which a near-miss wording would quietly break, since the
 schema pattern is a negative lookahead on that exact string.
 
-Changing the schema means changing CultureMech's canonical copy and re-vendoring
-here — the same hub-and-spoke rule as `mech_shared.yaml`.
-`scripts/check_vendored_sync.sh` includes the path-mapped `history.yaml`, and the
-single claw fleet audit supplies the nightly backstop. The gap recorded in #191
-is therefore resolved.
+Changing the schema means changing claw's canonical governance artifact and
+manifest, merging a reviewed commit, and coordinating that immutable pin across
+the five Mechs. `scripts/check_vendored_sync.sh` selects the package-mapped
+`history.yaml` from that manifest, and the claw fleet audit supplies the
+cross-repository backstop. The gap recorded in #191 is therefore resolved.

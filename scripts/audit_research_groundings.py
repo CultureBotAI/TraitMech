@@ -26,7 +26,7 @@ The value is a curator seeing "this suggestion does not resolve to what the
 report claims" BEFORE lifting it into a grounding table.
 
 Not built on scripts/validate_id_label_correspondence.py: that file is vendored
-byte-identical across the Mech repos and drift-checked against CultureMech by
+byte-identical across the Mech repos and drift-checked against canonical claw by
 the `vendored-sync` CI job, so extending it here would fail CI. Its config
 vocabulary is mirrored where it makes sense (adapters, canonical-or-synonym
 policy) so the two read alike.

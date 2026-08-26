@@ -74,9 +74,9 @@ target-version = "py310"
 # Keep the narrow ignore for direct lint invocations against a generated copy;
 # hand-fixing generator-owned imports would be overwritten on regeneration.
 "src/traitmech/schema/traitmech_dataclasses.py" = ["F401"]
-# Vendored byte-identical from the canonical hub (CultureBotAI/CultureMech) and
+# Vendored byte-identical from canonical CultureBotAI/culturebotai-claw and
 # guarded by vendored-sync.yaml — any local edit fails that gate. The two E741
 # `l` findings are upstream's to fix, not ours: linting them here only tempts a
 # drift-inducing edit. Scoped to E741 so other rules still see the file. The fix
-# belongs in the hub copy (#312).
+# belongs in claw's canonical copy (#312).
 "scripts/validate_id_label_correspondence.py" = ["E741"]
