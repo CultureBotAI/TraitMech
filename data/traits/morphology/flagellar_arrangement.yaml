@@ -21,6 +21,21 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Bacterial flagellum review supports the flagellum as the locomotory organelle
     whose number and placement define flagellar arrangement.
+canonical_examples:
+- taxon_id: NCBITaxon:319224
+  taxon_label: Shewanella putrefaciens CN-32
+  note: 'Monotrichous polar flagellation: hooks are monopolar in about 92% of wild-type
+    cells, and disrupting the FlhF FliG-binding region redistributes them to subpolar
+    sites. The figure is a localization percentage, not a per-cell flagellar count.
+    Exemplifies the monotrichous arrangement class, not every flagellation pattern.'
+  reference: DOI:10.1038/s41467-024-50274-4
+- taxon_id: NCBITaxon:210
+  taxon_label: Helicobacter pylori
+  note: 'Multi-flagellate polar tuft: wild-type populations centre on about four flagella
+    per cell, and flhF/flhG deletions shift number and polar placement. Exemplifies
+    a lophotrichous arrangement whose numerical control differs from monotrichous
+    vibrios.'
+  reference: DOI:10.1128/JB.00110-23
 causal_graphs:
 - graph_id: flagellar_arrangement_flhf_flhg
   scope_status: NONMECHANISTIC
@@ -211,4 +226,15 @@ curation_history:
     the tranche: set graph scope flagellar_arrangement_flhf_flhg=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhf, flif_msring, flig).'
+  llm_assisted: true
+- timestamp: '2026-08-26T19:05:00Z'
+  curator: claude
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Added 2 source-backed canonical example(s) from this record''s own deep-research
+    artifact (issue 444): Shewanella putrefaciens CN-32 (NCBITaxon:319224), Helicobacter
+    pylori (NCBITaxon:210). Each note scopes the exemplar to the single flagellation
+    pattern the cited source establishes, because this record is an upper class whose
+    graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels
+    were verified against NCBI taxonomy and every DOI resolved through Crossref. No
+    gene or operon was promoted to a primary entry.'
   llm_assisted: true

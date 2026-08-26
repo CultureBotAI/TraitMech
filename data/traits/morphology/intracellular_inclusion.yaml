@@ -21,6 +21,28 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld et al. review bacterial microcompartments as a major class of protein-bounded
     intracellular organelles.
+canonical_examples:
+- taxon_id: NCBITaxon:2242
+  taxon_label: Halobacterium salinarum
+  note: 'Gas vesicle: a gas-filled, protein-shelled inclusion built from this organism''s
+    Gvp proteins, where GvpA forms the shell ribs and GvpC stabilises the exterior.
+    The cited interaction and deletion analysis was performed on those proteins in
+    a heterologous haloarchaeal host, so it establishes the protein roles rather than
+    in-situ assembly. Exemplifies the gas-filled inclusion type only.'
+  reference: DOI:10.3389/fmicb.2022.971917
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: 'Polyhydroxybutyrate storage granule: the reference PHB-accumulating organism,
+    whose PhaM activator and PhaP phasins set granule number, surface properties,
+    and partitioning. Review-level synthesis of primary studies; exemplifies the storage-granule
+    type only.'
+  reference: DOI:10.1093/femsre/fuaa058
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: 'Magnetosome: a membrane-bounded magnetite inclusion; the organism carries
+    over 30 magnetosome-associated proteins, with the mamAB operon required for magnetosome
+    membrane formation. Exemplifies the mineral-bearing organelle type only.'
+  reference: DOI:10.1111/mmi.15330
 causal_graphs:
 - graph_id: inclusion_compartmentalization
   scope_status: NONMECHANISTIC
@@ -283,4 +305,16 @@ curation_history:
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (gas_vesicle_proteins, bmc_metabolic_cargo); added 1 node(s) and 1 edge(s) (gas_vesicle_proteins);
     removed 1 node(s) and 1 edge(s) together with their evidence (gas_vesicle_gene_cluster).'
+  llm_assisted: true
+- timestamp: '2026-08-26T19:05:00Z'
+  curator: claude
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Added 3 source-backed canonical example(s) from this record''s own deep-research
+    artifact (issue 444): Halobacterium salinarum (NCBITaxon:2242), Cupriavidus necator
+    H16 (NCBITaxon:381666), Magnetospirillum gryphiswaldense MSR-1 (NCBITaxon:431944).
+    Each note scopes the exemplar to the single inclusion type the cited source establishes,
+    because this record is an upper class whose graph is NONMECHANISTIC and spans
+    alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy
+    and every DOI resolved through Crossref. No gene or operon was promoted to a primary
+    entry.'
   llm_assisted: true

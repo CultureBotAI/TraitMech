@@ -326,7 +326,7 @@ curation_history:
 - timestamp: '2026-08-26T11:06:05Z'
   curator: codex
   action: ADD_CANONICAL_EXAMPLES
-  changes: Added a mutant-specific Serratia marcescens white-colony example from
-    DOI:10.3389/fmicb.2021.793202, explicitly retaining SCQ1 delta-slyA context in
-    the note; verified the current species taxon and label through NCBI Taxonomy.
+  changes: Added a mutant-specific Serratia marcescens white-colony example from DOI:10.3389/fmicb.2021.793202,
+    explicitly retaining SCQ1 delta-slyA context in the note; verified the current
+    species taxon and label through NCBI Taxonomy.
   llm_assisted: true

@@ -437,6 +437,73 @@ Because no single gene causes every form of intracellular inclusion, the existin
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(3)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Halobacterium salinarum</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2242"
+             rel="nofollow noreferrer"><code>NCBITaxon:2242</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2022.971917"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2022.971917</code></a>
+          
+          
+          <span class="meta">Gas vesicle: a gas-filled, protein-shelled inclusion built from this organism&#39;s Gvp proteins, where GvpA forms the shell ribs and GvpC stabilises the exterior. The cited interaction and deletion analysis was performed on those proteins in a heterologous haloarchaeal host, so it establishes the protein roles rather than in-situ assembly. Exemplifies the gas-filled inclusion type only.</span>
+        </li>
+        
+        <li>
+          <em>Cupriavidus necator H16</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=381666"
+             rel="nofollow noreferrer"><code>NCBITaxon:381666</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1093/femsre/fuaa058"
+             rel="nofollow noreferrer"><code>DOI:10.1093/femsre/fuaa058</code></a>
+          
+          
+          <span class="meta">Polyhydroxybutyrate storage granule: the reference PHB-accumulating organism, whose PhaM activator and PhaP phasins set granule number, surface properties, and partitioning. Review-level synthesis of primary studies; exemplifies the storage-granule type only.</span>
+        </li>
+        
+        <li>
+          <em>Magnetospirillum gryphiswaldense MSR-1</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=431944"
+             rel="nofollow noreferrer"><code>NCBITaxon:431944</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1111/mmi.15330"
+             rel="nofollow noreferrer"><code>DOI:10.1111/mmi.15330</code></a>
+          
+          
+          <span class="meta">Magnetosome: a membrane-bounded magnetite inclusion; the organism carries over 30 magnetosome-associated proteins, with the mamAB operon required for magnetosome membrane formation. Exemplifies the mineral-bearing organelle type only.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -509,6 +576,12 @@ Because no single gene causes every form of intracellular inclusion, the existin
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope inclusion_compartmentalization=NONMECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (gas_vesicle_proteins, bmc_metabolic_cargo); added 1 node(s) and 1 edge(s) (gas_vesicle_proteins); removed 1 node(s) and 1 edge(s) together with their evidence (gas_vesicle_gene_cluster).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T19:05:00Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 3 source-backed canonical example(s) from this record&#39;s own deep-research artifact (issue 444): Halobacterium salinarum (NCBITaxon:2242), Cupriavidus necator H16 (NCBITaxon:381666), Magnetospirillum gryphiswaldense MSR-1 (NCBITaxon:431944). Each note scopes the exemplar to the single inclusion type the cited source establishes, because this record is an upper class whose graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every DOI resolved through Crossref. No gene or operon was promoted to a primary entry.</p>
         </li>
         
       </ol>
@@ -896,7 +969,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-26 19:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

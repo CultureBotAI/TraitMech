@@ -370,6 +370,16 @@ retype-causal-nodes-apply *args:
 reground-fermentation-curie *args:
     uv run python scripts/reground_fermentation_curie.py {{args}}
 
+# Re-emit trait records that drifted off write_validated_trait's form (#554).
+# Formatting only; no data or provenance changes. Default dry-run.
+normalize-trait-emission *args:
+    uv run python scripts/normalize_trait_emission.py {{args}}
+
+# Add canonical examples for flagellar arrangement, intracellular inclusion, and
+# motility (#444). Default dry-run.
+add-morphology-motility-exemplars *args:
+    uv run python scripts/add_morphology_motility_exemplars.py {{args}}
+
 # Backfill per-record curation events the protein-taxon tranche omitted (#517). Default dry-run.
 backfill-protein-taxon-events *args:
     uv run python scripts/backfill_protein_taxon_events.py {{args}}

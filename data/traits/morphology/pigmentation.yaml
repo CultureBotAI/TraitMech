@@ -16,8 +16,8 @@ canonical_examples:
   taxon_label: Serratia marcescens
   reference: DOI:10.3389/fmicb.2021.793202
   note: Wild-type strain SCQ1 formed red colonies through prodigiosin production,
-    providing a direct instance of the parent pigmentation phenotype; the source
-    contrasts this state with stable nonpigmented derivatives.
+    providing a direct instance of the parent pigmentation phenotype; the source contrasts
+    this state with stable nonpigmented derivatives.
 causal_graphs:
 - graph_id: pigmentation_biosynthetic_colorants
   scope_status: NONMECHANISTIC
@@ -343,7 +343,7 @@ curation_history:
 - timestamp: '2026-08-26T11:06:05Z'
   curator: codex
   action: ADD_CANONICAL_EXAMPLES
-  changes: Added Serratia marcescens as a directly observed pigmentation example
-    using wild-type SCQ1 red-colony prodigiosin evidence from DOI:10.3389/fmicb.2021.793202;
+  changes: Added Serratia marcescens as a directly observed pigmentation example using
+    wild-type SCQ1 red-colony prodigiosin evidence from DOI:10.3389/fmicb.2021.793202;
     verified the current species taxon and label through NCBI Taxonomy.
   llm_assisted: true

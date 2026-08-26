@@ -244,7 +244,7 @@ data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	disc_shaped_an
 data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbell_shaped_snapping_division	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/ellipsoidal.yaml	METPO:1000673	ellipsoidal	ellipsoidal_ovococcal_elongation	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/morphology/filament_shaped.yaml	METPO:1000674	filament shaped	filament_shaped_streptomyces_polar_growth	NONMECHANISTIC	4	3	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	flagellar_arrangement_flhf_flhg	NONMECHANISTIC	4	1	3	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	flagellar_arrangement_flhf_flhg	NONMECHANISTIC	4	1	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/flagellated.yaml	METPO:1000704	flagellated	flagellated_flagellar_motor	MECHANISTIC	8	0	8	3	3	1	1	PASS	0	0	-
 data/traits/morphology/flask_shaped.yaml	METPO:1000675	flask shaped	flask_shaped_asymmetric_polar_growth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/fusiform_shaped.yaml	METPO:1000690	fusiform shaped	fusiform_shaped_tapered_polar_growth	NONMECHANISTIC	6	2	4	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -257,13 +257,13 @@ data/traits/morphology/gram_variable.yaml	METPO:1000700	gram variable	gram_varia
 data/traits/morphology/green_pigmented.yaml	METPO:1003025	green pigmented	green_pigmented_pyocyanin_phenazine	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/helical_shaped.yaml	METPO:1000676	helical shaped	helical_shaped_pg_relaxation	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/heterocyst.yaml	traitmech:000073	heterocyst	heterocyst_microoxic_nitrogen_fixation	MECHANISTIC	4	0	4	1	1	1	1	PASS	0	0	-
-data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	inclusion_compartmentalization	NONMECHANISTIC	3	1	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	inclusion_compartmentalization	NONMECHANISTIC	3	1	2	3	3	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	irregular_shaped_loss_of_patterning	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/lophotrichous.yaml	traitmech:000058	lophotrichous	lophotrichous_polar_tuft	NONMECHANISTIC	5	2	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/magnetosome.yaml	traitmech:000071	magnetosome	magnetosome_magnetotaxis	MECHANISTIC	3	0	3	1	1	1	1	PASS	0	0	-
 data/traits/morphology/monotrichous.yaml	traitmech:000057	monotrichous	monotrichous_single_polar_flagellum	NONMECHANISTIC	5	1	4	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/motile.yaml	METPO:1000702	motile	motile_energy_dependent_locomotion	MECHANISTIC	9	1	8	3	3	1	1	PASS	0	0	-
-data/traits/morphology/motility.yaml	METPO:1000701	motility	motility_locomotion_machinery	NONMECHANISTIC	6	1	5	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/motility.yaml	METPO:1000701	motility	motility_locomotion_machinery	NONMECHANISTIC	6	1	5	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/mycelial_growth.yaml	traitmech:000074	mycelial growth	mycelial_branching_hyphal_growth	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/non_motile.yaml	METPO:1000703	non motile	non_motile_absent_motility_apparatus	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/non_spore_forming.yaml	METPO:1000872	non-spore forming	non_spore_forming_absent_spo0a_cascade	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-

@@ -305,10 +305,14 @@ def _run(args: list[str]) -> str:
     return buf.getvalue()
 
 
-def _row_count(out: str) -> int:
+def _re_row(line: str):
     import re as _re
 
-    return len([ln for ln in out.splitlines() if _re.match(r"^ *-?[0-9]+ [A-Z_]+", ln)])
+    return _re.match(r"^ *-?[0-9]+ [A-Z_]+", line)
+
+
+def _row_count(out: str) -> int:
+    return len([ln for ln in out.splitlines() if _re_row(ln)])
 
 
 def test_top_zero_means_all_rows():
@@ -327,10 +331,22 @@ def test_the_footer_count_equals_the_rows_actually_printed():
 
 
 def test_action_filter_narrows_both_rows_and_the_stated_count():
+    """Derive the count rather than pin it (#555).
+
+    ALREADY_DEEP is computed from live corpus depth, so a pinned number breaks
+    every time a record legitimately gains edges or examples — it was bumped
+    9 -> 15 once and had drifted to 17 before this. What the filter must
+    guarantee is that it narrows the rows AND the stated count together, which
+    holds at any corpus size.
+    """
     out = _run(["--action", "ALREADY_DEEP", "--top", "0"])
     printed = _row_count(out)
-    assert printed == 15, printed
+    unfiltered = _row_count(_run(["--top", "0"]))
+    assert 0 < printed < unfiltered, (printed, unfiltered)
     assert f"{printed} row(s) shown of {printed} matching" in out
+    for line in out.splitlines():
+        if _re_row(line):
+            assert "ALREADY_DEEP" in line, line
 
 
 def test_researched_flag_strips_provider_suffixes(tmp_path):

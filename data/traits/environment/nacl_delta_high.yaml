@@ -188,8 +188,8 @@ causal_graphs:
   - subject: compatible_solute_accumulation
     predicate: part of
     object: halophilic_osmoadaptation
-    description: Compatible-solute accumulation is one of the major halophilic
-      osmoadaptation strategies.
+    description: Compatible-solute accumulation is one of the major halophilic osmoadaptation
+      strategies.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: organic-solutes-in strategy
@@ -204,8 +204,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: molar concentrations of KCl
-      notes: The review identifies intracellular KCl accumulation as a general
-        strategy for osmotic balance in halophilic microorganisms.
+      notes: The review identifies intracellular KCl accumulation as a general strategy
+        for osmotic balance in halophilic microorganisms.
     predicate_id: biolink:part_of
   - subject: salt_in_osmoadaptation
     predicate: part of
@@ -311,7 +311,7 @@ curation_history:
   curator: codex
   action: CONNECT_CAUSAL_GRAPH
   changes: Connected the five source-supported osmoadaptation components to the existing
-    extreme-euryhaline graph core (issues 426 and 183). Preserved the record as a measured
-    NaCl growth-breadth bin; generic salt mechanisms do not directly establish the high-breadth
-    trait, and no gene or operon was promoted to a primary entry.
+    extreme-euryhaline graph core (issues 426 and 183). Preserved the record as a
+    measured NaCl growth-breadth bin; generic salt mechanisms do not directly establish
+    the high-breadth trait, and no gene or operon was promoted to a primary entry.
   llm_assisted: true
