@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_delta_high.yaml
+  slug: nacl_delta_high
+session:
+  id: 2026-08-26T104405Z-codex-cab03f4
+  timestamp: '2026-08-26T10:44:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the NaCl-delta-high osmoadaptation graph
+  details: >-
+    Added five source-supported edges among existing process and quality nodes, joining
+    the graph's six components while preserving the quantitative boundary: the record
+    denotes a measured NaCl growth breadth above approximately 8% w/v, and generic salt
+    mechanisms do not themselves establish that breadth. Genes and operons remain
+    eligible only as supporting YAML fields and were not promoted to primary entries.
