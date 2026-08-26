@@ -169,12 +169,11 @@ The vendored copy exists so validation has **no dependency on a claw checkout**.
 validate-history` and the `curation-history` workflow both use the local copy and
 work with no claw checkout at all.
 
-`just new-history` **prefers** claw, via `CLAW_SRC` (default:
-`../culturebotai-claw/src`), and falls back to
-`scripts/new_history_record.py` when there is no checkout there. Claw stays the
-canonical scaffolder so the record shape does not drift across the five Mech
-repos; the fallback exists because the alternative to a slightly-divergent
-record is no record at all.
+`just new-history` always uses `scripts/new_history_record.py`. The old recipe
+preferred claw when a checkout happened to be present, which meant the same
+command produced different `links` values on different machines: the local
+scaffolder expands bare issue and PR numbers, while claw passed them through.
+The local argument surface and record shape remain parity-tested against claw.
 
 That fallback was added in #296, after the #294 backfill wrote two records by
 hand. The prompt for it is worth keeping: this file previously asserted that
@@ -188,7 +187,10 @@ The two scaffolders take the **same arguments** and produce byte-identical
 records apart from the id's hash suffix and one deliberate difference: a bare
 `--issue 296` becomes a full URL here, because the schema declares those
 `range: uri` and every committed record carries URLs, whereas claw passes the
-string through. Check that parity rather than trusting this paragraph:
+string through. `just validate-history` also requires absolute HTTP(S) URLs in
+`links.issues` and `links.prs`, and an absolute URI in `links.urls`, because
+LinkML's runtime validator does not currently enforce the `uri` range by itself.
+Check scaffolder parity rather than trusting this paragraph:
 
 ```bash
 # Exercise a non-`record` kind too: the layout is history/<kind-dir>/<slug>/,

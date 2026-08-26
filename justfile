@@ -416,26 +416,12 @@ curate-knowledge-gaps *args:
 #   just new-history --kind record --slug cellulolysis \
 #     --target-root data/traits/metabolism --event EDIT --outcome changed \
 #     --summary "..." --details "..." --model <model-id>
-# NOT gated on _require-claw. It used to be, and the effect was that records
-# simply did not get written on a machine without a claw checkout — both edits in
-# #294 were hand-authored for exactly that reason, and history/README's own
-# worked example is the issue that PR closed (#296). Claw stays PREFERRED so the
-# canonical scaffolder keeps producing the canonical shape across the fleet;
-# scripts/new_history_record.py is the fallback, writing against the same
-# vendored schema `just validate-history` and CI check.
+# Always use the local scaffolder. The previous claw-preferred branch bypassed
+# this repository's bare issue/PR number normalization whenever claw happened to
+# be installed (#423), making identical commands produce different link values.
+# "$@" not {{args}} — see `set positional-arguments` at the top of this file.
 new-history *args:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    # "$@" not {{args}} — see `set positional-arguments` at the top of this file.
-    # `uv run python`, not `python3`: bare python3 is whatever the machine puts
-    # first on PATH (miniforge here, not the project venv), which is the same
-    # undeclared-interpreter problem the Homebrew paths had.
-    if [ -d "{{claw_src}}/kg_microbe_history" ]; then
-      PYTHONPATH="{{claw_src}}" uv run python -m kg_microbe_history new "$@"
-    else
-      echo "note: no claw checkout at {{claw_src}}; using the local scaffolder." >&2
-      uv run python scripts/new_history_record.py "$@"
-    fi
+    uv run python scripts/new_history_record.py "$@"
 
 # Validate one history record, or a directory of them. Uses the VENDORED schema,
 # so this works with no claw checkout — same as CI.
@@ -456,10 +442,12 @@ validate-history target="history":
         echo "No history records under '$target'."
         exit 0
       fi
+      uv run python scripts/validate_history_links.py "$target"
       find "$target" -name '*.yaml' -print0 \
         | xargs -0 uv run linkml-validate \
             --schema src/traitmech/schema/history.yaml --target-class HistoryRecord
     else
+      uv run python scripts/validate_history_links.py "$target"
       uv run linkml-validate \
         --schema src/traitmech/schema/history.yaml --target-class HistoryRecord "$target"
     fi

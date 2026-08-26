@@ -22,6 +22,7 @@ from new_history_record import (  # noqa: E402
     CLAW_PLACEHOLDER,
     KIND_DIRS,
     _link,
+    history_link_errors,
     history_validation_errors,
     main,
     session_id,
@@ -136,6 +137,26 @@ def test_links_without_issues_or_prs_are_omitted(tmp_path):
 def test_bare_issue_numbers_become_uris(given, expected):
     """The schema declares these `range: uri`; claw writes "296" through as-is."""
     assert _link(given, "issues") == expected
+
+
+def test_bare_history_links_fail_explicit_uri_validation():
+    instance = {"links": {"issues": ["423"], "prs": ["#529"]}}
+
+    assert history_link_errors(instance) == [
+        "links.issues[0] must be an absolute HTTP(S) URL; got '423'",
+        "links.prs[0] must be an absolute HTTP(S) URL; got '#529'",
+    ]
+
+
+def test_history_link_validation_rejects_whitespace_in_urls():
+    assert history_link_errors({"links": {"urls": ["https://example.org/not valid"]}}) == [
+        "links.urls[0] must be an absolute URI; got "
+        "'https://example.org/not valid'"
+    ]
+
+
+def test_general_history_urls_accept_non_http_absolute_uris():
+    assert history_link_errors({"links": {"urls": ["doi:10.1000/example"]}}) == []
 
 
 def test_the_placeholder_is_claw_s_exact_string(tmp_path):
