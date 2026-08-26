@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/genome_streamlining.yaml
+  slug: genome_streamlining
+session:
+  id: 2026-08-26T092710Z-codex-789d95
+  timestamp: '2026-08-26T09:27:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Connected the vitamin-dependence branch to the genome-streamlining graph with a
+    noncausal, model-qualified association.
+  details: Added genome streamlining -> associated with -> exogenous B-vitamin dependence
+    using two verbatim snippets checked against the primary paper. The predicate and description
+    preserve that this is community-model evidence, not a universal causal consequence.
