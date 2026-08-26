@@ -24,8 +24,8 @@ name: Curation history
 # thing to route around.
 #
 # Validation uses the VENDORED schema at src/traitmech/schema/history.yaml, so
-# this job has no dependency on a culturebotai-claw checkout. Only the
-# `just new-history` scaffolder needs claw, and that is a dev-time tool.
+# this job and the repository-local `just new-history` scaffolder have no
+# dependency on a culturebotai-claw checkout.
 
 on:
   pull_request:
@@ -33,6 +33,9 @@ on:
       - "data/traits/**"
       - "history/**"
       - "src/traitmech/schema/history.yaml"
+      - "scripts/new_history_record.py"
+      - "scripts/validate_history_links.py"
+      - "justfile"
       - ".github/workflows/curation-history.yaml"
   push:
     branches: [main]
@@ -40,6 +43,9 @@ on:
       - "data/traits/**"
       - "history/**"
       - "src/traitmech/schema/history.yaml"
+      - "scripts/new_history_record.py"
+      - "scripts/validate_history_links.py"
+      - "justfile"
       - ".github/workflows/curation-history.yaml"
   workflow_dispatch:
 
@@ -73,16 +79,7 @@ jobs:
         run: uv sync
 
       - name: Validate history records (blocking)
-        run: |
-          set -euo pipefail
-          if [ ! -d history ] || [ -z "$(find history -name '*.yaml' -print -quit)" ]; then
-            echo "No history records to validate."
-            exit 0
-          fi
-          find history -name '*.yaml' -print0 \
-            | xargs -0 uv run linkml-validate \
-                --schema src/traitmech/schema/history.yaml \
-                --target-class HistoryRecord
+        run: just validate-history
 
       - name: Check for missing history records (blocking)
         if: github.event_name == 'pull_request'

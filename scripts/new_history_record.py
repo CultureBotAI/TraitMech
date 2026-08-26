@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """Scaffold a history record without a claw checkout.
 
-`just new-history` calls claw's `kg_microbe_history` scaffolder, which needs a
-`culturebotai-claw` checkout that is not always present — so on a machine
-without one, records simply do not get written. Both edits in #294 were
-hand-authored for that reason, and `history/README.md`'s own worked example is
-literally the issue that PR was closing (#296).
+`just new-history` uses this repository-local scaffolder so its output does not
+depend on whether a `culturebotai-claw` checkout happens to be present. Both
+edits in #294 were hand-authored when the old recipe required claw, and
+`history/README.md`'s own worked example is literally the issue that PR was
+closing (#296).
 
 The schema is already vendored at `src/traitmech/schema/history.yaml`, which is
 what `just validate-history` and CI check against, so nothing about writing a
-record actually requires claw. This is the fallback: same arguments, same output
-contract (the record path is the last stdout line), validated against the same
-vendored schema before it is written.
+record actually requires claw. This local implementation keeps the same
+arguments and output contract (the record path is the last stdout line), and
+validates against that vendored schema before writing.
 
-Claw stays the preferred path when available — `just new-history` tries it
-first, so the canonical scaffolder keeps producing the canonical shape across
-the fleet and this only fills the gap.
+The argument surface and record shape intentionally stay compatible with claw,
+but bare issue and PR numbers are normalized to full URLs here because the
+vendored schema declares those fields as URIs.
 
 Usage:
     python scripts/new_history_record.py --kind record --slug cellulolysis \\
@@ -29,6 +29,7 @@ import datetime as _dt
 import hashlib
 import sys
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import yaml
 from linkml.validator import Validator
@@ -169,6 +170,51 @@ def _get_validator() -> Validator:
     return _VALIDATOR
 
 
+def history_link_errors(instance: object) -> list[str]:
+    """Return errors for link values that are not absolute usable URIs.
+
+    LinkML's runtime validator currently accepts bare strings for ``range: uri``.
+    The corpus policy is stricter and intentionally explicit: history links must
+    be directly usable URLs, not issue/PR numbers that require repository context.
+    """
+    if not isinstance(instance, dict):
+        return []
+    links = instance.get("links")
+    if not isinstance(links, dict):
+        return []
+    errors: list[str] = []
+    for field in ("issues", "prs", "urls"):
+        values = links.get(field)
+        if not isinstance(values, list):
+            continue
+        for index, value in enumerate(values):
+            parsed = urlsplit(value) if isinstance(value, str) else None
+            has_whitespace = isinstance(value, str) and any(
+                char.isspace() for char in value
+            )
+            if field in {"issues", "prs"}:
+                invalid = (
+                    parsed is None
+                    or parsed.scheme not in {"http", "https"}
+                    or not parsed.netloc
+                    or has_whitespace
+                )
+                requirement = "an absolute HTTP(S) URL"
+            else:
+                invalid = (
+                    parsed is None
+                    or not parsed.scheme
+                    or (parsed.scheme in {"http", "https"} and not parsed.netloc)
+                    or has_whitespace
+                )
+                requirement = "an absolute URI"
+            if invalid:
+                errors.append(
+                    f"links.{field}[{index}] must be {requirement}; got {value!r}"
+                )
+    return errors
+
+
 def history_validation_errors(path: Path) -> list[str]:
     """Return ERROR messages for one history record, or an empty list."""
     try:
@@ -182,8 +228,9 @@ def history_validation_errors(path: Path) -> list[str]:
         report = _get_validator().validate(instance, target_class="HistoryRecord")
     except Exception as exc:  # noqa: BLE001 -- turn validator failures into refusal
         return [f"{type(exc).__name__}: {exc}"]
-    return [result.message for result in report.results
-            if result.severity == Severity.ERROR]
+    errors = [result.message for result in report.results
+              if result.severity == Severity.ERROR]
+    return [*errors, *history_link_errors(instance)]
 
 
 def validate(path: Path) -> None:
