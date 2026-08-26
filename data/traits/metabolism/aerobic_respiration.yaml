@@ -160,6 +160,18 @@ causal_graphs:
       snippet: gradient across a coupling membrane that drives ATP synthesis
       notes: Supports ATP synthesis driven by the respiratory ion gradient.
     predicate_id: METPO:2007800
+  - subject: cytochrome_c_oxidase
+    predicate: part of
+    object: electron_transport_chain
+    description: Cytochrome c oxidase is the terminal enzyme of the graph's represented
+      aerobic respiratory-chain branch.
+    evidence:
+    - reference: DOI:10.1146/annurev.biophys.27.1.329
+      snippet: terminal enzyme of respiratory chains
+      notes: Connects the documented cytochrome-c-oxidase branch to the respiratory
+        electron-transport pathway without asserting that this oxidase family is universal
+        across aerobes.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-08-23T09:08:00Z'
   curator: codex
@@ -268,4 +280,13 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009060.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-26T10:25:59Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected cytochrome c oxidase to the represented electron-transport-chain
+    branch with one source-supported part-of edge, joining both graph components.
+    The protein remains a supporting YAML graph field and the existing scope note
+    continues to reject a universal terminal-oxidase-family claim. Addresses issues
+    426 and 183.
   llm_assisted: true
