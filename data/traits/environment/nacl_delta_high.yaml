@@ -185,6 +185,61 @@ causal_graphs:
       notes: Hypersaline environments containing >100-150 g/L salts; halophiles grow
         at >100-150 g/L.
     predicate_id: METPO:2007401
+  - subject: compatible_solute_accumulation
+    predicate: part of
+    object: halophilic_osmoadaptation
+    description: Compatible-solute accumulation is one of the major halophilic
+      osmoadaptation strategies.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: organic-solutes-in strategy
+      notes: The review identifies synthesis or accumulation of organic compatible
+        solutes as a general strategy used by halophilic microorganisms.
+    predicate_id: biolink:part_of
+  - subject: salt_in_osmoadaptation
+    predicate: part of
+    object: halophilic_osmoadaptation
+    description: Salt-in osmoadaptation is one of the major halophilic osmoadaptation
+      strategies.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: molar concentrations of KCl
+      notes: The review identifies intracellular KCl accumulation as a general
+        strategy for osmotic balance in halophilic microorganisms.
+    predicate_id: biolink:part_of
+  - subject: salt_in_osmoadaptation
+    predicate: part of
+    object: hybrid_salt_osmoregulation
+    description: The salt-in strategy is one constituent of hybrid salt-in/salt-out
+      osmoregulation.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      snippet: not mutually exclusive
+      notes: The Dead Sea biofilm study concludes that salt-in and salt-out strategies
+        can operate together in bacteria exposed to salinity fluctuations.
+    predicate_id: biolink:part_of
+  - subject: proteome_reorganization
+    predicate: part of
+    object: halophilic_osmoadaptation
+    description: Long-term proteome reorganization is part of evolutionary adaptation
+      across aquatic salinity transitions.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adg2059
+      snippet: isoelectric point distributions
+      notes: Cross-biome transitions are accompanied by systematic shifts in proteome
+        amino-acid composition and inferred-proteome pI distributions.
+    predicate_id: biolink:part_of
+  - subject: hybrid_salt_osmoregulation
+    predicate: contributes to
+    object: maximal_osmoadaptive_flexibility
+    description: Combining salt-in and salt-out responses contributes to flexibility
+      under rapid, extreme salinity changes.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      snippet: cope with such atypical changes
+      notes: The study links simultaneous ion transport and compatible-solute responses
+        to bacteria inhabiting a rapidly fluctuating salinity environment.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842691+00:00'
   curator: seed_from_metpo
@@ -251,4 +306,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope nacl_delta_high_extreme_euryhaline=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-26T10:44:05Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected the five source-supported osmoadaptation components to the existing
+    extreme-euryhaline graph core (issues 426 and 183). Preserved the record as a measured
+    NaCl growth-breadth bin; generic salt mechanisms do not directly establish the high-breadth
+    trait, and no gene or operon was promoted to a primary entry.
   llm_assisted: true
