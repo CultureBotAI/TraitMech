@@ -18,6 +18,11 @@ synonyms:
 - synonym_text: star-shaped
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: stellate
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato.obo
+xrefs:
+- PATO:0002065
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: polar growth
@@ -257,4 +262,12 @@ curation_history:
     the tranche: set graph scope star_shaped_multiple_prosthecae=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (baca_lmdc_module, bactofilins, spmx).'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:41Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0002065;
+    declared exact synonym(s): ''stellate''. Evidence is predicate-scoped in the versioned
+    ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release
+    deltas and disputed hits.'
   llm_assisted: true

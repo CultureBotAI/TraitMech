@@ -13,6 +13,11 @@ synonyms:
 - synonym_text: alcoholic fermentation
   synonym_type: RELATED_SYNONYM
   source: DOI:10.3390/molecules31020333
+- synonym_text: glucose fermentation to ethanol
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0019655
 evidence:
 - reference: DOI:10.3390/molecules31020333
   notes: Review of classical fermentations describes the alcoholic (ethanol) pathway
@@ -288,4 +293,12 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB
     P06672 as the Z. mobilis ZM4 pyruvate-decarboxylase exemplar.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0019655;
+    declared exact synonym(s): ''glucose fermentation to ethanol''. Evidence is predicate-scoped
+    in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
+    release deltas and disputed hits.'
   llm_assisted: true

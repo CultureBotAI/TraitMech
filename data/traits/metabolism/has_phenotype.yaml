@@ -7,6 +7,8 @@ parent_traits:
 - METPO:2000101
 domain: https://w3id.org/metpo/1000525
 range_: https://w3id.org/metpo/1000059
+xrefs:
+- RO:0002200
 curation_history:
 - timestamp: '2026-05-05T01:35:46.982025+00:00'
   curator: seed_from_metpo
@@ -39,4 +41,11 @@ curation_history:
     stay deprecated'', for the rationale.
 
     '
+  llm_assisted: true
+- timestamp: '2026-08-26T01:14:58Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): RO:0002200.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

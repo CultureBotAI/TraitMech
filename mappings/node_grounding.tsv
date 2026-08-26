@@ -104,7 +104,6 @@ flagellar filament	CELLULAR_LOCALIZATION	GO:0009420	bacterial-type flagellum fil
 flagellar hook	CELLULAR_LOCALIZATION	GO:0009424	bacterial-type flagellum hook	skos:closeMatch	GO	high	GO-CC bacterial flagellum hook via kg-microbe merged-kg
 forespore	CELLULAR_LOCALIZATION	GO:0042763	intracellular immature spore	skos:closeMatch	GO	medium	forespore = immature spore via kg-microbe merged-kg
 formaldehyde assimilation	PATHWAY	GO:0019649	formaldehyde assimilation	skos:exactMatch	GO	high	exact GO term via kg-microbe merged-kg
-ribulose monophosphate cycle	PATHWAY	GO:0019647	formaldehyde assimilation via ribulose monophosphate cycle	skos:closeMatch	GO	high	GO RuMP-cycle term via kg-microbe merged-kg
 high temperature	ENVIRONMENTAL_FACTOR	PATO:0001305	increased temperature	skos:closeMatch	PATO	high	PATO increased-temperature quality via kg-microbe merged-kg
 high osmolarity	ENVIRONMENTAL_FACTOR	PATO:0001657	increased osmolarity	skos:closeMatch	PATO	high	PATO increased-osmolarity quality via kg-microbe merged-kg
 cold environment	ENVIRONMENTAL_FACTOR	ENVO:01000309	cold environment	skos:exactMatch	ENVO	high	exact ENVO term via kg-microbe merged-kg

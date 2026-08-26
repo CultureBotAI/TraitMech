@@ -13,6 +13,8 @@ synonyms:
 - synonym_text: germination
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1016/j.mib.2003.10.001
+xrefs:
+- GO:0009847
 evidence:
 - reference: DOI:10.1016/j.mib.2003.10.001
   notes: Setlow reviews spore germination, in which nutrient germinants trigger dipicolinic-acid
@@ -154,4 +156,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-26T01:15:00Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009847.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

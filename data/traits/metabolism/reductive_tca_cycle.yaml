@@ -20,6 +20,23 @@ synonyms:
 - synonym_text: Arnon-Buchanan cycle
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1146/annurev-marine-120709-142712
+- synonym_text: reductive carboxylate cycle
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: reductive carboxylic acid cycle
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: reductive citric acid pathway
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: reductive Kreb's cycle
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: reductive TCA cycle
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0019643
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review describes the reductive citric acid cycle as functional in anaerobic/microaerophilic
@@ -272,4 +289,14 @@ curation_history:
   changes: Scoped the alternative rTCA routes, added DOI-backed C. tepidum TLS examples
     for both required AclAB components, grounded PFOR activity, and documented the
     multi-enzyme and multi-subunit labels that remain reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0019643;
+    declared exact synonym(s): ''reductive carboxylate cycle'', ''reductive carboxylic
+    acid cycle'', ''reductive citric acid pathway'', "reductive Kreb''s cycle", ''reductive
+    TCA cycle''. Evidence is predicate-scoped in the versioned ontology snapshots;
+    OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed
+    hits.'
   llm_assisted: true

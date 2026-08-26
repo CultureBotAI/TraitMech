@@ -9,6 +9,8 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - traitmech:000037
+xrefs:
+- GO:0015979
 evidence:
 - reference: DOI:10.1016/j.tim.2006.09.001
   notes: Bryant & Frigaard treat prokaryotic photosynthesis (reaction-center based)
@@ -278,4 +280,11 @@ curation_history:
   changes: Added a DOI-backed Synechocystis PCC 6803 PsbA2 component example, a GO-grounded
     photosystem II node, a primary-source PSII charge-separation edge, and scope notes
     separating oxygenic from anoxygenic branches.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0015979.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

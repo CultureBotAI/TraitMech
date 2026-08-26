@@ -9,6 +9,10 @@ definition_source: DOI:10.1093/database/bat054
 trait_category: UPPER
 term_kind: CLASS
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: physiological process
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
 xrefs:
 - GO:0008150
 evidence:
@@ -190,4 +194,11 @@ curation_history:
     the tranche: set graph scope biological_process_go_upper_context=NONMECHANISTIC
     with scope_notes; removed 1 node(s) and 2 edge(s) together with their evidence
     (gene_product).'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:41Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''physiological
+    process''. Evidence is predicate-scoped in the versioned ontology snapshots; OAK
+    cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

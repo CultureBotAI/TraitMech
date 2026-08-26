@@ -13,6 +13,11 @@ synonyms:
 - synonym_text: autoinduction
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1146/annurev.cellbio.21.012704.131001
+- synonym_text: quorum sensing system
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0009372
 evidence:
 - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
   snippet: Bacteria communicate with one another using chemical signal molecules.
@@ -238,4 +243,12 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
     GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T01:15:00Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009372;
+    declared exact synonym(s): ''quorum sensing system''. Evidence is predicate-scoped
+    in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
+    release deltas and disputed hits.'
   llm_assisted: true

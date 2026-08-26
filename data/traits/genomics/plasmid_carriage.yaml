@@ -46,7 +46,7 @@ causal_graphs:
   - node_id: conjugation
     label: conjugation
     node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0000746
+    grounding: GO:0009291
     description: Cell-to-cell transfer of genetic material via direct contact.
   - node_id: accessory_function
     label: accessory function
@@ -172,6 +172,13 @@ causal_graphs:
         fitness cost.
     predicate_id: RO:0002212
 curation_history:
+- timestamp: '2026-08-25T00:00:00-07:00'
+  curator: codex
+  action: REVIEW_ONTOLOGY_GROUNDINGS
+  changes: Replaced obsolete GO:0000746 conjugation with GO:0009291 unidirectional
+    conjugation, whose definition specifically covers contact-dependent donor-to-recipient
+    transfer of genetic material described by this plasmid graph.
+  llm_assisted: true
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH

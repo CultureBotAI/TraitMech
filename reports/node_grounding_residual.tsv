@@ -153,6 +153,7 @@ acetate	CHEMICAL	2	data/traits/metabolism/mixed_acid_fermentation.yaml|data/trai
 succinate	CHEMICAL	2	data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/metabolism/propionic_acid_fermentation.yaml
 succinyl-coa	CHEMICAL	2	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml
 sox enzyme system	GENE_OR_PROTEIN	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/physiology/chemolithotrophic.yaml
+sulfane sulfur	CHEMICAL	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/morphology/sulfur_globule.yaml
 persulfide dioxygenase (pdo)	GENE_OR_PROTEIN	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/morphology/sulfur_globule.yaml
 direct interspecies electron transfer	BIOLOGICAL_PROCESS	2	data/traits/metabolism/syntrophy.yaml|data/traits/physiology/lithoheterotrophic.yaml
 fipa	GENE_OR_PROTEIN	2	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/lophotrichous.yaml
@@ -1985,7 +1986,6 @@ parallel division planes	QUALITY	1	data/traits/morphology/streptococcus_arrangem
 pcsb autolysin	GENE_OR_PROTEIN	1	data/traits/morphology/streptococcus_arrangement.yaml
 ftsex complex	GENE_OR_PROTEIN	1	data/traits/morphology/streptococcus_arrangement.yaml
 oxidative sulfur metabolism	BIOLOGICAL_PROCESS	1	data/traits/morphology/sulfur_globule.yaml
-sulfane sulfur	CHEMICAL	1	data/traits/morphology/sulfur_globule.yaml
 polysulfide (h2sn)	CHEMICAL	1	data/traits/morphology/sulfur_globule.yaml
 wetting surfactant	CHEMICAL	1	data/traits/morphology/swarming_motility.yaml
 swarm expansion	BIOLOGICAL_PROCESS	1	data/traits/morphology/swarming_motility.yaml
@@ -2125,6 +2125,7 @@ copper	CHEMICAL	1	data/traits/physiology/methanotrophic.yaml
 cu(i)	CHEMICAL	1	data/traits/physiology/methanotrophic.yaml
 copper acquisition	BIOLOGICAL_PROCESS	1	data/traits/physiology/methanotrophic.yaml
 pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/methylotrophic.yaml
+ribulose monophosphate cycle	PATHWAY	1	data/traits/physiology/methylotrophic.yaml
 serine pathway	PATHWAY	1	data/traits/physiology/methylotrophic.yaml
 biomass precursor	BIOLOGICAL_PROCESS	1	data/traits/physiology/methylotrophic.yaml
 3-hexulose-6-phosphate synthase (hps)	GENE_OR_PROTEIN	1	data/traits/physiology/methylotrophic.yaml

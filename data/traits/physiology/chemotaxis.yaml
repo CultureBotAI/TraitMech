@@ -13,6 +13,11 @@ synonyms:
 - synonym_text: chemotactic
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1038/nrm1524
+- synonym_text: taxis in response to chemical stimulus
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0006935
 evidence:
 - reference: DOI:10.1038/nrm1524
   notes: Wadhams & Armitage review bacterial chemotaxis as gradient-guided movement
@@ -263,4 +268,12 @@ curation_history:
   changes: Scoped the graph to the enterobacterial Che pathway, added cited E. coli
     K-12 and reviewed CheY as a taxon-paired example, and reviewed all seven protein
     nodes against current InterPro families.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:41Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006935;
+    declared exact synonym(s): ''taxis in response to chemical stimulus''. Evidence
+    is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
+    data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

@@ -16,6 +16,17 @@ synonyms:
 - synonym_text: autotrophic carbon assimilation
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1146/annurev-marine-120709-142712
+- synonym_text: autotrophic CO2 fixation
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: autotrophic CO2 fixation pathway
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: autotrophy
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0015977
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review of the distribution of autotrophic CO2-fixation pathways establishes
@@ -322,4 +333,13 @@ curation_history:
   changes: Added a DOI-backed C. necator H16 cbbL2/RuBisCO example, grounded the generic
     RuBisCO node to InterPro, recorded the AclAB complex as reviewed label-only, and
     scoped the example to the CBB branch of this multi-pathway graph.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0015977;
+    declared exact synonym(s): ''autotrophic CO2 fixation'', ''autotrophic CO2 fixation
+    pathway'', ''autotrophy''. Evidence is predicate-scoped in the versioned ontology
+    snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas
+    and disputed hits.'
   llm_assisted: true

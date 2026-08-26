@@ -16,6 +16,11 @@ synonyms:
 - synonym_text: polyhydroxybutyrate inclusion
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1128/mr.54.4.450-472.1990
+- synonym_text: PHA granule
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+xrefs:
+- GO:0070088
 evidence:
 - reference: DOI:10.1128/mr.54.4.450-472.1990
   notes: Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy
@@ -259,4 +264,12 @@ curation_history:
     taxon-paired protein example(s) UniProtKB:P23608 on pha_synthase_phac (NCBITaxon:381666);
     added 1 node(s) and 2 edge(s) (phap_transcription); removed 1 node(s) and 1 edge(s)
     together with their evidence (phap_gene); added canonical example(s) NCBITaxon:381666.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:40Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0070088;
+    declared exact synonym(s): ''PHA granule''. Evidence is predicate-scoped in the
+    versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
+    release deltas and disputed hits.'
   llm_assisted: true

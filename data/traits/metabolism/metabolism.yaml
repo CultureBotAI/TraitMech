@@ -8,6 +8,8 @@ mapping_status: REVIEWED
 parent_traits:
 - METPO:1000630
 created_by: Anthea Guo
+xrefs:
+- GO:0008152
 evidence:
 - reference: DOI:10.1126/science.1238842
   snippet: energy and microbial life
@@ -353,4 +355,11 @@ curation_history:
     scope, added a DOI-backed E. coli K-12 AtpD beta-subunit example, and grounded
     the ATP synthase node to the current GO complex term without treating one component
     as the whole complex.
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:39Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0008152.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

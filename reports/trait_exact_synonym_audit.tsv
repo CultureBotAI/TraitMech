@@ -1,0 +1,517 @@
+record_path	record_id	record_label	grounding_role	grounding_curie	ontology_label	record_label_match	declared_exact_synonyms	missing_exact_synonyms	status	oak_status	source_version
+data/traits/ecology/animal_pathogen.yaml	METPO:1004002	animal pathogen	identifier	METPO:1004002	animal pathogen	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biofilm_formation.yaml	traitmech:000053	biofilm formation	identifier	traitmech:000053					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/biosafety_level.yaml	METPO:1001101	biosafety level	identifier	METPO:1001101	biosafety level	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biosafety_level_1.yaml	METPO:1001102	biosafety level 1	identifier	METPO:1001102	biosafety level 1	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biosafety_level_2.yaml	METPO:1001103	biosafety level 2	identifier	METPO:1001103	biosafety level 2	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biosafety_level_3.yaml	METPO:1001104	biosafety level 3	identifier	METPO:1001104	biosafety level 3	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biosafety_level_4.yaml	METPO:1001105	biosafety level 4	identifier	METPO:1001105	biosafety level 4	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/biosafety_level_5.yaml	METPO:1001106	biosafety level 5	identifier	METPO:1001106	biosafety level 5	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/commensalism.yaml	traitmech:000042	commensalism	identifier	traitmech:000042					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/endosymbiosis.yaml	traitmech:000045	endosymbiosis	identifier	traitmech:000045					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/free_living.yaml	traitmech:000048	free-living	identifier	traitmech:000048					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/gut_associated.yaml	traitmech:000052	gut-associated	identifier	traitmech:000052					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/habitat_association.yaml	traitmech:000047	habitat association	identifier	traitmech:000047					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/host_associated.yaml	traitmech:000049	host-associated	identifier	traitmech:000049					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/human_pathogen.yaml	METPO:1004004	human pathogen	identifier	METPO:1004004	human pathogen	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/mutualism.yaml	traitmech:000041	mutualism	identifier	traitmech:000041					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/nitrogen_fixing_symbiosis.yaml	traitmech:000044	nitrogen-fixing symbiosis	identifier	traitmech:000044					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/opportunistic_pathogen.yaml	traitmech:000046	opportunistic pathogen	identifier	traitmech:000046					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/parasitism.yaml	traitmech:000043	parasitism	identifier	traitmech:000043					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/pathogenic_to_host.yaml	METPO:1004000	pathogenic to host	identifier	METPO:1004000	pathogenic to host	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/plant_pathogen.yaml	METPO:1004003	plant pathogen	identifier	METPO:1004003	plant pathogen	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/ecology/predatory_bacterium.yaml	traitmech:000054	predatory bacterium	identifier	traitmech:000054					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/rhizosphere_association.yaml	traitmech:000051	rhizosphere association	identifier	traitmech:000051					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/saprotrophy.yaml	traitmech:000055	saprotrophy	identifier	traitmech:000055					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/soil_dwelling.yaml	traitmech:000050	soil-dwelling	identifier	traitmech:000050					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/ecology/symbiosis.yaml	traitmech:000040	symbiosis	identifier	traitmech:000040					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/acidophilic.yaml	METPO:1003003	acidophilic	identifier	METPO:1003003	acidophilic	CANONICAL_LABEL	acidophil | acidophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/acidotolerant.yaml	METPO:1003008	acidotolerant	identifier	METPO:1003008	acidotolerant	CANONICAL_LABEL	aciduric		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/aerobic.yaml	METPO:1000602	aerobic	identifier	METPO:1000602	aerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/aerobic.yaml	METPO:1000602	aerobic	xref	PATO:0001455	aerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo
+data/traits/environment/aerotolerant.yaml	METPO:1000609	aerotolerant	identifier	METPO:1000609	aerotolerant	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/alkalotolerant.yaml	METPO:1003009	alkalotolerant	identifier	METPO:1003009	alkalotolerant	CANONICAL_LABEL	alkalitolerant		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/alkaphilic.yaml	METPO:1003002	alkaphilic	identifier	METPO:1003002	alkaliphilic	NO_EXACT_LABEL_MATCH	alkaliphile | alkaliphilic | alkalophile | alkalophilic		GROUNDING_LABEL_MISMATCH	DIFFERS	2026-06-12
+data/traits/environment/anaerobic.yaml	METPO:1000603	anaerobic	identifier	METPO:1000603	anaerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/anaerobic.yaml	METPO:1000603	anaerobic	xref	PATO:0001456	anaerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo
+data/traits/environment/arsenic_tolerant.yaml	traitmech:000017	arsenic tolerant	identifier	traitmech:000017					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/cadmium_tolerant.yaml	traitmech:000013	cadmium tolerant	identifier	traitmech:000013					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/cobalt_tolerant.yaml	traitmech:000015	cobalt tolerant	identifier	traitmech:000015					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/copper_tolerant.yaml	traitmech:000018	copper tolerant	identifier	traitmech:000018					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/delta_phenotype_with_numerical_limits.yaml	METPO:1000534	delta phenotype with numerical limits	identifier	METPO:1000534	delta phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/desiccation_tolerant.yaml	traitmech:000010	desiccation tolerant	identifier	traitmech:000010					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/euryhaline.yaml	METPO:1000627	euryhaline	identifier	METPO:1000627	euryhaline	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/extreme_hyperthermophilic.yaml	METPO:1000721	extreme hyperthermophilic	identifier	METPO:1000721	extreme hyperthermophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/extremely_halophilic.yaml	METPO:1000628	extremely halophilic	identifier	METPO:1000628	extremely halophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/facultative_oxygen_preference.yaml	METPO:1000612	facultative oxygen preference	identifier	METPO:1000612	facultative oxygen preference	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/facultative_psychrophilic.yaml	METPO:1000720	facultative psychrophilic	identifier	METPO:1000720	facultative psychrophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/facultatively_acidophilic.yaml	METPO:1003007	facultatively acidophilic	identifier	METPO:1003007	facultatively acidophilic	CANONICAL_LABEL	facultative acidophile | facultatively acidophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/facultatively_aerobic.yaml	METPO:1000608	facultatively aerobic	identifier	METPO:1000608	facultatively aerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/facultatively_alkaphilic.yaml	METPO:1003005	facultatively alkaphilic	identifier	METPO:1003005	facultatively alkaliphilic	NO_EXACT_LABEL_MATCH	facultative alkaliphile | facultative alkaphilic | facultatively alkaliphilic		GROUNDING_LABEL_MISMATCH	DIFFERS	2026-06-12
+data/traits/environment/facultatively_anaerobic.yaml	METPO:1000605	facultatively anaerobic	identifier	METPO:1000605	facultatively anaerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml	METPO:1000535	growth range phenotype with numerical limits	identifier	METPO:1000535	growth range phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/haloalkaliphilic.yaml	METPO:1000621	haloalkaliphilic	identifier	METPO:1000621	haloalkaliphilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/halophilic.yaml	METPO:1000620	halophilic	identifier	METPO:1000620	halophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/halophily_preference.yaml	METPO:1000629	halophily preference	identifier	METPO:1000629	halophily preference	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/halotolerant.yaml	METPO:1000622	halotolerant	identifier	METPO:1000622	halotolerant	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/hyperthermophilic.yaml	METPO:1000617	hyperthermophilic	identifier	METPO:1000617	hyperthermophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ionizing_radiation_tolerant.yaml	traitmech:000008	ionizing radiation tolerant	identifier	traitmech:000008					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/mercury_tolerant.yaml	traitmech:000016	mercury tolerant	identifier	traitmech:000016					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/mesophilic.yaml	METPO:1000615	mesophilic	identifier	METPO:1000615	mesophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/metal_tolerant.yaml	traitmech:000012	metal tolerant	identifier	traitmech:000012					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/microaerophilic.yaml	METPO:1000604	microaerophilic	identifier	METPO:1000604	microaerophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/microaerotolerant.yaml	METPO:1000610	microaerotolerant	identifier	METPO:1000610	microaerotolerant	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/moderately_halophilic.yaml	METPO:1000623	moderately halophilic	identifier	METPO:1000623	moderately halophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	identifier	METPO:1000335	NaCl delta	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	identifier	METPO:1000482	NaCl delta high	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	identifier	METPO:1000479	NaCl delta low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	identifier	METPO:1000480	NaCl delta mid1	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	identifier	METPO:1000481	NaCl delta mid2	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	identifier	METPO:1000333	NaCl optimum	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	identifier	METPO:1000468	NaCl optimum high	CANONICAL_LABEL	Extreme halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	identifier	METPO:1000465	NaCl optimum low	CANONICAL_LABEL	Halotolerant | Non-halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_optimum_mid1.yaml	METPO:1000466	NaCl optimum mid1	identifier	METPO:1000466	NaCl optimum mid1	CANONICAL_LABEL	Halotolerant | Slight halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_optimum_mid2.yaml	METPO:1000467	NaCl optimum mid2	identifier	METPO:1000467	NaCl optimum mid2	CANONICAL_LABEL	Halotolerant | Moderate halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_range.yaml	METPO:1000334	NaCl range	identifier	METPO:1000334	NaCl range	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_range_high.yaml	METPO:1000472	NaCl range high	identifier	METPO:1000472	NaCl range high	CANONICAL_LABEL	Extreme halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_range_low.yaml	METPO:1000469	NaCl range low	identifier	METPO:1000469	NaCl range low	CANONICAL_LABEL	Halotolerant | Non-halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_range_mid1.yaml	METPO:1000470	NaCl range mid1	identifier	METPO:1000470	NaCl range mid1	CANONICAL_LABEL	Halotolerant | Slight halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/nacl_range_mid2.yaml	METPO:1000471	NaCl range mid2	identifier	METPO:1000471	NaCl range mid2	CANONICAL_LABEL	Halotolerant | Moderate halophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/neutrophilic.yaml	METPO:1003001	neutrophilic	identifier	METPO:1003001	neutrophilic	CANONICAL_LABEL	neutralophile | neutralophilic | neutrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/non_halophilic.yaml	METPO:1000624	non halophilic	identifier	METPO:1000624	non halophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/obligately_acidophilic.yaml	METPO:1003006	obligately acidophilic	identifier	METPO:1003006	obligately acidophilic	CANONICAL_LABEL	obligate acidophile | obligately acidophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/obligately_aerobic.yaml	METPO:1000606	obligately aerobic	identifier	METPO:1000606	obligately aerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/obligately_alkaphilic.yaml	METPO:1003004	obligately alkaphilic	identifier	METPO:1003004	obligately alkaliphilic	NO_EXACT_LABEL_MATCH	obligate alkaliphile | obligate alkaphilic | obligately alkaliphilic		GROUNDING_LABEL_MISMATCH	DIFFERS	2026-06-12
+data/traits/environment/obligately_anaerobic.yaml	METPO:1000607	obligately anaerobic	identifier	METPO:1000607	obligately anaerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/obligately_piezophilic.yaml	traitmech:000002	obligately piezophilic	identifier	traitmech:000002					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	METPO:1000536	optimum phenotype with numerical limits	identifier	METPO:1000536	optimum phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/oxygen_preference.yaml	METPO:1000601	oxygen preference	identifier	METPO:1000601	oxygen preference	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta.yaml	METPO:1000232	pH delta	identifier	METPO:1000232	pH delta	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_high.yaml	METPO:1000478	pH delta high	identifier	METPO:1000478	pH delta high	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_low.yaml	METPO:1000474	pH delta low	identifier	METPO:1000474	pH delta low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_mid1.yaml	METPO:1000475	pH delta mid1	identifier	METPO:1000475	pH delta mid1	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_mid2.yaml	METPO:1000476	pH delta mid2	identifier	METPO:1000476	pH delta mid2	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_mid3.yaml	METPO:1000477	pH delta mid3	identifier	METPO:1000477	pH delta mid3	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_delta_very_low.yaml	METPO:1000473	pH delta very low	identifier	METPO:1000473	pH delta very low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_growth_preference.yaml	METPO:1003000	pH growth preference	identifier	METPO:1003000	pH growth preference	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_optimum.yaml	METPO:1000331	pH optimum	identifier	METPO:1000331	pH optimum	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_optimum_high.yaml	METPO:1000458	pH optimum high	identifier	METPO:1000458	pH optimum high	CANONICAL_LABEL	Alkali Tolerant | Alkaliphile | Extreme Alkaliphile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_optimum_low.yaml	METPO:1000455	pH optimum low	identifier	METPO:1000455	pH optimum low	CANONICAL_LABEL	Acid Tolerant | Acidophile | Extreme Acidophile | Facultative acidophile | Obligative acidophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_optimum_mid1.yaml	METPO:1000456	pH optimum mid1	identifier	METPO:1000456	pH optimum mid1	CANONICAL_LABEL	Alkali Tolerant | Neutrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_optimum_mid2.yaml	METPO:1000457	pH optimum mid2	identifier	METPO:1000457	pH optimum mid2	CANONICAL_LABEL	Alkali Tolerant | Alkaliphile | Neutrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_phenotype_with_numerical_limits.yaml	METPO:1000531	pH phenotype with numerical limits	identifier	METPO:1000531	pH phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range.yaml	METPO:1000332	pH range	identifier	METPO:1000332	pH range	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_high.yaml	METPO:1000464	pH range high	identifier	METPO:1000464	pH range high	CANONICAL_LABEL	Alkali Tolerant | Alkaliphile | Extreme Alkaliphile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_low.yaml	METPO:1000460	pH range low	identifier	METPO:1000460	pH range low	CANONICAL_LABEL	Acid Tolerant | Acidophile | Facultative acidophile | Obligative acidophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_mid1.yaml	METPO:1000461	pH range mid1	identifier	METPO:1000461	pH range mid1	CANONICAL_LABEL	Alkali Tolerant | Facultative acidophile | Neutrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_mid2.yaml	METPO:1000462	pH range mid2	identifier	METPO:1000462	pH range mid2	CANONICAL_LABEL	Alkali Tolerant | Alkaliphile | Facultative acidophile | Neutrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_mid3.yaml	METPO:1000463	pH range mid3	identifier	METPO:1000463	pH range mid3	CANONICAL_LABEL	Alkali Tolerant | Alkaliphile | Extreme Alkaliphile | Facultative acidophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/ph_range_very_low.yaml	METPO:1000459	pH range very low	identifier	METPO:1000459	pH range very low	CANONICAL_LABEL	Acid Tolerant | Acidophile | Extreme Acidophile | Facultative acidophile | Obligative acidophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/piezophilic.yaml	traitmech:000001	piezophilic	identifier	traitmech:000001					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/piezotolerant.yaml	traitmech:000003	piezotolerant	identifier	traitmech:000003					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/pressure_delta.yaml	traitmech:000006	pressure delta	identifier	traitmech:000006					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/pressure_optimum.yaml	traitmech:000004	pressure optimum	identifier	traitmech:000004					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/pressure_range.yaml	traitmech:000005	pressure range	identifier	traitmech:000005					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/psychrophilic.yaml	METPO:1000614	psychrophilic	identifier	METPO:1000614	psychrophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/psychrotolerant.yaml	METPO:1000618	psychrotolerant	identifier	METPO:1000618	psychrotolerant	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/radiotolerant.yaml	traitmech:000007	radiotolerant	identifier	traitmech:000007					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	METPO:1000532	salinity phenotype with numerical limits	identifier	METPO:1000532	salinity phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/slightly_halophilic.yaml	METPO:1000625	slightly halophilic	identifier	METPO:1000625	slightly halophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/stenohaline.yaml	METPO:1000626	stenohaline	identifier	METPO:1000626	stenohaline	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/strictly_anaerobic.yaml	METPO:1000611	strictly anaerobic	identifier	METPO:1000611	strictly anaerobic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta.yaml	METPO:1000303	temperature delta	identifier	METPO:1000303	temperature delta	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta_high.yaml	METPO:1000487	temperature delta high	identifier	METPO:1000487	temperature delta high	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta_low.yaml	METPO:1000484	temperature delta low	identifier	METPO:1000484	temperature delta low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta_mid1.yaml	METPO:1000485	temperature delta mid1	identifier	METPO:1000485	temperature delta mid1	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta_mid2.yaml	METPO:1000486	temperature delta mid2	identifier	METPO:1000486	temperature delta mid2	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_delta_very_low.yaml	METPO:1000483	temperature delta very low	identifier	METPO:1000483	temperature delta very low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum.yaml	METPO:1000304	temperature optimum	identifier	METPO:1000304	temperature optimum	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_high.yaml	METPO:1000447	temperature optimum high	identifier	METPO:1000447	temperature optimum high	CANONICAL_LABEL	Thermophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_low.yaml	METPO:1000442	temperature optimum low	identifier	METPO:1000442	temperature optimum low	CANONICAL_LABEL	Psychrophile | Psychrotolerant		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_mid1.yaml	METPO:1000443	temperature optimum mid1	identifier	METPO:1000443	temperature optimum mid1	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_mid2.yaml	METPO:1000444	temperature optimum mid2	identifier	METPO:1000444	temperature optimum mid2	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_mid3.yaml	METPO:1000445	temperature optimum mid3	identifier	METPO:1000445	temperature optimum mid3	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_mid4.yaml	METPO:1000446	temperature optimum mid4	identifier	METPO:1000446	temperature optimum mid4	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_optimum_very_low.yaml	METPO:1000441	temperature optimum very low	identifier	METPO:1000441	temperature optimum very low	CANONICAL_LABEL	Psychrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_phenotype_with_numerical_limits.yaml	METPO:1000533	temperature phenotype with numerical limits	identifier	METPO:1000533	temperature phenotype with numerical limits	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_preference.yaml	METPO:1000613	temperature preference	identifier	METPO:1000613	temperature preference	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range.yaml	METPO:1000306	temperature range	identifier	METPO:1000306	temperature range	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_high.yaml	METPO:1000454	temperature range high	identifier	METPO:1000454	temperature range high	CANONICAL_LABEL	Thermophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_low.yaml	METPO:1000449	temperature range low	identifier	METPO:1000449	temperature range low	CANONICAL_LABEL	Psychrophile | Psychrotolerant		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_mid1.yaml	METPO:1000450	temperature range mid1	identifier	METPO:1000450	temperature range mid1	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_mid2.yaml	METPO:1000451	temperature range mid2	identifier	METPO:1000451	temperature range mid2	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	identifier	METPO:1000452	temperature range mid3	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	identifier	METPO:1000453	temperature range mid4	CANONICAL_LABEL	mesophilic		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	identifier	METPO:1000448	temperature range very low	CANONICAL_LABEL	Psychrophile		EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/thermophilic.yaml	METPO:1000616	thermophilic	identifier	METPO:1000616	thermophilic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	identifier	METPO:1000619	thermotolerant	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation tolerant	identifier	traitmech:000009					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	identifier	traitmech:000011					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	identifier	traitmech:000014					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	identifier	traitmech:000096					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	identifier	traitmech:000094					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	identifier	METPO:1000127	GC content	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	identifier	METPO:1000432	GC high	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	identifier	METPO:1000429	GC low	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/genomics/gc_mid1.yaml	METPO:1000430	GC mid1	identifier	METPO:1000430	GC mid1	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/genomics/gc_mid2.yaml	METPO:1000431	GC mid2	identifier	METPO:1000431	GC mid2	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/genomics/gc_skew.yaml	traitmech:000097	GC skew	identifier	traitmech:000097					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	identifier	traitmech:000098					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/genome_streamlining.yaml	traitmech:000099	genome streamlining	identifier	traitmech:000099					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/genomic_island.yaml	traitmech:000093	genomic island	identifier	traitmech:000093					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/mobile_genetic_element.yaml	traitmech:000089	mobile genetic element	identifier	traitmech:000089					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness	identifier	traitmech:000102					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	plasmid carriage	identifier	traitmech:000090					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	identifier	traitmech:000100					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	xref	PATO:0001374	ploidy	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo
+data/traits/genomics/prophage.yaml	traitmech:000091	prophage	identifier	traitmech:000091					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	restriction-modification system	identifier	traitmech:000095					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	identifier	traitmech:000101					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/genomics/transposable_element.yaml	traitmech:000092	transposable element	identifier	traitmech:000092					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/accumulates.yaml	METPO:2000210	accumulates	identifier	METPO:2000210	accumulates	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/acetogenesis.yaml	METPO:1000845	Acetogenesis	identifier	METPO:1000845	Acetogenesis	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/aerobic_respiration.yaml	METPO:1000801	Aerobic respiration	identifier	METPO:1000801	Aerobic respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/aerobic_respiration.yaml	METPO:1000801	Aerobic respiration	xref	GO:0009060	aerobic respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/anaerobic_oxidation_of_methane.yaml	traitmech:000033	anaerobic oxidation of methane	identifier	traitmech:000033					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/anaerobic_respiration.yaml	METPO:1000802	Anaerobic respiration	identifier	METPO:1000802	Anaerobic respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/anaerobic_respiration.yaml	METPO:1000802	Anaerobic respiration	xref	GO:0009061	anaerobic respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/anoxygenic_photosynthesis.yaml	traitmech:000035	anoxygenic photosynthesis	identifier	traitmech:000035					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/assimilates.yaml	METPO:2000002	assimilates	identifier	METPO:2000002	assimilates	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/biopolymer_degradation.yaml	traitmech:000110	biopolymer degradation	identifier	traitmech:000110					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/builds_acid_from.yaml	METPO:2000003	builds acid from	identifier	METPO:2000003	builds acid from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/builds_base_from.yaml	METPO:2000004	builds base from	identifier	METPO:2000004	builds base from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/builds_gas_from.yaml	METPO:2000005	builds gas from	identifier	METPO:2000005	builds gas from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/cable_bacteria_metabolism.yaml	METPO:1002003	Cable bacteria metabolism	identifier	METPO:1002003	Cable bacteria metabolism	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/calvin_benson_bassham_cycle.yaml	traitmech:000020	Calvin-Benson-Bassham cycle	identifier	traitmech:000020					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/capable_of.yaml	METPO:2000103	capable of	identifier	METPO:2000103	capable of	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/capable_of.yaml	METPO:2000103	capable of	xref	RO:0002215	capable of	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-12-17
+data/traits/metabolism/carbon_fixation.yaml	traitmech:000019	carbon fixation	identifier	traitmech:000019					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/carbon_fixation.yaml	traitmech:000019	carbon fixation	xref	GO:0015977	carbon fixation	CANONICAL_LABEL	autotrophic CO2 fixation | autotrophic CO2 fixation pathway | autotrophy		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/cellulolysis.yaml	traitmech:000111	cellulolysis	identifier	traitmech:000111					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/chitinolysis.yaml	traitmech:000112	chitinolysis	identifier	traitmech:000112					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/compartmentalizes.yaml	METPO:2000212	compartmentalizes	identifier	METPO:2000212	compartmentalizes	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/degrades.yaml	METPO:2000007	degrades	identifier	METPO:2000007	degrades	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/denitrification.yaml	traitmech:000104	denitrification	identifier	traitmech:000104					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml	traitmech:000025	dicarboxylate/4-hydroxybutyrate cycle	identifier	traitmech:000025					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/disproportionates.yaml	METPO:2000200	disproportionates	identifier	METPO:2000200	disproportionates	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/disproportionation.yaml	METPO:1000806	Disproportionation	identifier	METPO:1000806	Disproportionation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/dissimilatory_iron_reduction.yaml	traitmech:000031	dissimilatory iron reduction	identifier	traitmech:000031					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dissimilatory_manganese_reduction.yaml	traitmech:000108	dissimilatory manganese reduction	identifier	traitmech:000108					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dissimilatory_metal_reduction.yaml	traitmech:000039	dissimilatory metal reduction	identifier	traitmech:000039					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml	traitmech:000030	dissimilatory nitrate reduction to ammonium	identifier	traitmech:000030					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dissimilatory_sulfate_reduction.yaml	traitmech:000105	dissimilatory sulfate reduction	identifier	traitmech:000105					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/dissimilatory_sulfate_reduction.yaml	traitmech:000105	dissimilatory sulfate reduction	xref	GO:0019420	dissimilatory sulfate reduction	CANONICAL_LABEL	dissimilatory sulphate reduction		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/does_not_accumulate.yaml	METPO:2000230	does not accumulate	identifier	METPO:2000230	does not accumulate	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_assimilate.yaml	METPO:2000027	does not assimilate	identifier	METPO:2000027	does not assimilate	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_build_acid_from.yaml	METPO:2000028	does not build acid from	identifier	METPO:2000028	does not build acid from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_build_base_from.yaml	METPO:2000029	does not build base from	identifier	METPO:2000029	does not build base from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_build_gas_from.yaml	METPO:2000030	does not build gas from	identifier	METPO:2000030	does not build gas from	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_compartmentalize.yaml	METPO:2000232	does not compartmentalize	identifier	METPO:2000232	does not compartmentalize	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_degrade.yaml	METPO:2000033	does not degrade	identifier	METPO:2000033	does not degrade	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_disproportionate.yaml	METPO:2000220	does not disproportionate	identifier	METPO:2000220	does not disproportionate	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_export.yaml	METPO:2000229	does not export	identifier	METPO:2000229	does not export	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_ferment.yaml	METPO:2000037	does not ferment	identifier	METPO:2000037	does not ferment	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_hydrolyze.yaml	METPO:2000039	does not hydrolyze	identifier	METPO:2000039	does not hydrolyze	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_import.yaml	METPO:2000228	does not import	identifier	METPO:2000228	does not import	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_oxidize.yaml	METPO:2000042	does not oxidize	identifier	METPO:2000042	does not oxidize	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_produce.yaml	METPO:2000222	does not produce	identifier	METPO:2000222	does not produce	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_reduce.yaml	METPO:2000044	does not reduce	identifier	METPO:2000044	does not reduce	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_sequester.yaml	METPO:2000231	does not sequester	identifier	METPO:2000231	does not sequester	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_show_activity_of.yaml	METPO:2000303	does not show activity of	identifier	METPO:2000303	does not show activity of	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_transport.yaml	METPO:2000227	does not transport	identifier	METPO:2000227	does not transport	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_carbon_source.yaml	METPO:2000031	does not use as carbon source	identifier	METPO:2000031	does not use as carbon source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_electron_acceptor.yaml	METPO:2000034	does not use as electron acceptor	identifier	METPO:2000034	does not use as electron acceptor	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_electron_donor.yaml	METPO:2000035	does not use as electron donor	identifier	METPO:2000035	does not use as electron donor	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_energy_source.yaml	METPO:2000036	does not use as energy source	identifier	METPO:2000036	does not use as energy source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_nitrogen_source.yaml	METPO:2000040	does not use as nitrogen source	identifier	METPO:2000040	does not use as nitrogen source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_as_sulfur_source.yaml	METPO:2000047	does not use as sulfur source	identifier	METPO:2000047	does not use as sulfur source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_aerobic_catabolization.yaml	METPO:2000021	does not use for aerobic catabolization	identifier	METPO:2000021	does not use for aerobic catabolization	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_aerobic_growth.yaml	METPO:2000022	does not use for aerobic growth	identifier	METPO:2000022	does not use for aerobic growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_anaerobic_catabolization.yaml	METPO:2000023	does not use for anaerobic catabolization	identifier	METPO:2000023	does not use for anaerobic catabolization	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_anaerobic_growth.yaml	METPO:2000024	does not use for anaerobic growth	identifier	METPO:2000024	does not use for anaerobic growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_anaerobic_growth_in_the_dark.yaml	METPO:2000025	does not use for anaerobic growth in the dark	identifier	METPO:2000025	does not use for anaerobic growth in the dark	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_anaerobic_growth_with_light.yaml	METPO:2000026	does not use for anaerobic growth with light	identifier	METPO:2000026	does not use for anaerobic growth with light	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_growth.yaml	METPO:2000038	does not use for growth	identifier	METPO:2000038	does not use for growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_for_respiration.yaml	METPO:2000046	does not use for respiration	identifier	METPO:2000046	does not use for respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/does_not_use_in_other_way.yaml	METPO:2000041	does not use in other way	identifier	METPO:2000041	does not use in other way	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/electron_transfer.yaml	METPO:1000805	Electron transfer	identifier	METPO:1000805	Electron transfer	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/enzyme_activity_analyzed.yaml	METPO:2000301	enzyme activity analyzed	identifier	METPO:2000301	enzyme activity analyzed	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/ethanol_fermentation.yaml	traitmech:000028	ethanol fermentation	identifier	traitmech:000028					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/ethanol_fermentation.yaml	traitmech:000028	ethanol fermentation	xref	GO:0019655	pyruvate fermentation to ethanol	EXACT_SYNONYM	ethanol fermentation | glucose fermentation to ethanol		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/exports.yaml	METPO:2000209	exports	identifier	METPO:2000209	exports	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/fermentation.yaml	METPO:1002005	Fermentation	identifier	METPO:1002005	Fermentation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/fermentation.yaml	METPO:1002005	Fermentation	xref	GO:0006113	fermentation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/fermentative_hydrogen_production.yaml	traitmech:000109	fermentative hydrogen production	identifier	traitmech:000109					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/ferments.yaml	METPO:2000011	ferments	identifier	METPO:2000011	ferments	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/has_growth_nacl_observation.yaml	METPO:2000508	has growth NaCl observation	identifier	METPO:2000508	obsolete has growth NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_growth_oxygen_observation.yaml	METPO:2000514	has growth oxygen observation	identifier	METPO:2000514	obsolete has growth oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_growth_ph_observation.yaml	METPO:2000502	has growth pH observation	identifier	METPO:2000502	obsolete has growth pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_growth_temperature_observation.yaml	METPO:2000054	has growth temperature observation	identifier	METPO:2000054	obsolete has growth temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_nacl_delta_observation.yaml	METPO:2000510	has NaCl delta observation	identifier	METPO:2000510	obsolete has NaCl delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_nacl_observation.yaml	METPO:2000506	has NaCl observation	identifier	METPO:2000506	obsolete has NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_observation.yaml	METPO:2000511	has observation	identifier	METPO:2000511	obsolete has observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_optimum_nacl_observation.yaml	METPO:2000507	has optimum NaCl observation	identifier	METPO:2000507	obsolete has optimum NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_optimum_oxygen_observation.yaml	METPO:2000513	has optimum oxygen observation	identifier	METPO:2000513	obsolete has optimum oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_optimum_ph_observation.yaml	METPO:2000501	has optimum pH observation	identifier	METPO:2000501	obsolete has optimum pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_optimum_temperature_observation.yaml	METPO:2000053	has optimum temperature observation	identifier	METPO:2000053	obsolete has optimum temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_oxygen_delta_observation.yaml	METPO:2000516	has oxygen delta observation	identifier	METPO:2000516	obsolete has oxygen delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_oxygen_observation.yaml	METPO:2000512	has oxygen observation	identifier	METPO:2000512	obsolete has oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_ph_delta_observation.yaml	METPO:2000504	has pH delta observation	identifier	METPO:2000504	obsolete has pH delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_ph_observation.yaml	METPO:2000239	has pH observation	identifier	METPO:2000239	obsolete has pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_phenotype.yaml	METPO:2000102	has phenotype	identifier	METPO:2000102	has phenotype	CANONICAL_LABEL			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_phenotype.yaml	METPO:2000102	has phenotype	xref	RO:0002200	has phenotype	CANONICAL_LABEL			DEPRECATED_TERM	AGREES	releases/2025-12-17
+data/traits/metabolism/has_quality.yaml	METPO:2000101	has quality	identifier	METPO:2000101	has quality	CANONICAL_LABEL			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_quality.yaml	METPO:2000101	has quality	xref	RO:0000086	has quality	CANONICAL_LABEL			DEPRECATED_TERM	AGREES	releases/2025-12-17
+data/traits/metabolism/has_range_nacl_observation.yaml	METPO:2000509	has range NaCl observation	identifier	METPO:2000509	obsolete has range NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_range_oxygen_observation.yaml	METPO:2000515	has range oxygen observation	identifier	METPO:2000515	obsolete has range oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_range_ph_observation.yaml	METPO:2000503	has range pH observation	identifier	METPO:2000503	obsolete has range pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_range_temperature_observation.yaml	METPO:2000055	has range temperature observation	identifier	METPO:2000055	obsolete has range temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_temperature_delta_observation.yaml	METPO:2000056	has temperature delta observation	identifier	METPO:2000056	obsolete has temperature delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/has_temperature_observation.yaml	METPO:2000052	has temperature observation	identifier	METPO:2000052	obsolete has temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/metabolism/homoacetogenesis.yaml	METPO:1000846	Homoacetogenesis	identifier	METPO:1000846	Homoacetogenesis	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/hydrolyzes.yaml	METPO:2000013	hydrolyzes	identifier	METPO:2000013	hydrolyzes	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/imports.yaml	METPO:2000208	imports	identifier	METPO:2000208	imports	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/iron_oxidation.yaml	traitmech:000107	iron oxidation	identifier	traitmech:000107					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/is_not_required_for_growth.yaml	METPO:2000045	is not required for growth	identifier	METPO:2000045	is not required for growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/lactic_acid_fermentation.yaml	traitmech:000026	lactic acid fermentation	identifier	traitmech:000026					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/lignin_degradation.yaml	traitmech:000114	lignin degradation	identifier	traitmech:000114					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/lignin_degradation.yaml	traitmech:000114	lignin degradation	xref	GO:0046274	lignin catabolic process	EXACT_SYNONYM	lignin breakdown | lignin catabolism | lignin degradation		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/manganese_oxidation.yaml	traitmech:000032	manganese oxidation	identifier	traitmech:000032					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/metabolism.yaml	METPO:1000060	metabolism	identifier	METPO:1000060	metabolism	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/metabolism.yaml	METPO:1000060	metabolism	xref	GO:0008152	metabolic process	EXACT_SYNONYM	metabolism		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/methanogenesis.yaml	METPO:1000844	Methanogenesis	identifier	METPO:1000844	Methanogenesis	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/methanogenesis.yaml	METPO:1000844	Methanogenesis	xref	GO:0015948	methanogenesis	CANONICAL_LABEL	methane biosynthesis | methane biosynthetic process		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/mixed_acid_fermentation.yaml	traitmech:000027	mixed-acid fermentation	identifier	traitmech:000027					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/nitrogen_fixation.yaml	traitmech:000103	nitrogen fixation	identifier	traitmech:000103					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/nitrogen_fixation.yaml	traitmech:000103	nitrogen fixation	xref	GO:0009399	nitrogen fixation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/organism_interacts_with_chemical.yaml	METPO:2000001	organism interacts with chemical	identifier	METPO:2000001	organism interacts with chemical	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/oxidative_phosphorylation.yaml	METPO:1000803	Oxidative phosphorylation	identifier	METPO:1000803	Oxidative phosphorylation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/oxidative_phosphorylation.yaml	METPO:1000803	Oxidative phosphorylation	xref	GO:0006119	oxidative phosphorylation	CANONICAL_LABEL	respiratory-chain phosphorylation		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/oxidizes.yaml	METPO:2000016	oxidizes	identifier	METPO:2000016	oxidizes	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/oxygenic_photosynthesis.yaml	traitmech:000034	oxygenic photosynthesis	identifier	traitmech:000034					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/photosynthesis.yaml	traitmech:000038	photosynthesis	identifier	traitmech:000038					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/photosynthesis.yaml	traitmech:000038	photosynthesis	xref	GO:0015979	photosynthesis	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/phototrophy.yaml	traitmech:000037	phototrophy	identifier	traitmech:000037					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/produces.yaml	METPO:2000202	produces	identifier	METPO:2000202	produces	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/produces.yaml	METPO:2000202	produces	xref	RO:0003000	produces	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-12-17
+data/traits/metabolism/propionic_acid_fermentation.yaml	traitmech:000029	propionic acid fermentation	identifier	traitmech:000029					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/proteolysis.yaml	traitmech:000116	proteolysis	identifier	traitmech:000116					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/proteorhodopsin_phototrophy.yaml	traitmech:000036	proteorhodopsin phototrophy	identifier	traitmech:000036					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/reduces.yaml	METPO:2000017	reduces	identifier	METPO:2000017	reduces	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/reductive_tca_cycle.yaml	traitmech:000021	reductive tricarboxylic acid cycle	identifier	traitmech:000021					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/reductive_tca_cycle.yaml	traitmech:000021	reductive tricarboxylic acid cycle	xref	GO:0019643	reductive tricarboxylic acid cycle	CANONICAL_LABEL	reductive carboxylate cycle | reductive carboxylic acid cycle | reductive citric acid pathway | reductive Kreb's cycle | reductive TCA cycle		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/requires_for_growth.yaml	METPO:2000018	requires for growth	identifier	METPO:2000018	requires for growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/respiration.yaml	METPO:1000800	respiration	identifier	METPO:1000800	respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/sequesters.yaml	METPO:2000211	sequesters	identifier	METPO:2000211	sequesters	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/shows_activity_of.yaml	METPO:2000302	shows activity of	identifier	METPO:2000302	shows activity of	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/starch_degradation.yaml	traitmech:000115	starch degradation	identifier	traitmech:000115					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/starch_degradation.yaml	traitmech:000115	starch degradation	xref	GO:0005983	starch catabolic process	EXACT_SYNONYM	starch breakdown | starch catabolism | starch degradation		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/metabolism/substrate_level_phosphorylation.yaml	METPO:1000804	Substrate-level phosphorylation	identifier	METPO:1000804	Substrate-level phosphorylation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/sulfur_oxidation.yaml	traitmech:000106	sulfur oxidation	identifier	traitmech:000106					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/syntrophy.yaml	METPO:1002006	Syntrophy	identifier	METPO:1002006	Syntrophy	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/three_hydroxypropionate_bicycle.yaml	traitmech:000023	3-hydroxypropionate bicycle	identifier	traitmech:000023					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml	traitmech:000024	3-hydroxypropionate/4-hydroxybutyrate cycle	identifier	traitmech:000024					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/transports.yaml	METPO:2000207	transports	identifier	METPO:2000207	transports	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_carbon_source.yaml	METPO:2000006	uses as carbon source	identifier	METPO:2000006	uses as carbon source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_carbon_source.yaml	METPO:2000006	uses as carbon source	xref	MICRO:0001460					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/uses_as_electron_acceptor.yaml	METPO:2000008	uses as electron acceptor	identifier	METPO:2000008	uses as electron acceptor	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_electron_acceptor.yaml	METPO:2000008	uses as electron acceptor	xref	MICRO:0001463					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/uses_as_electron_donor.yaml	METPO:2000009	uses as electron donor	identifier	METPO:2000009	uses as electron donor	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_electron_donor.yaml	METPO:2000009	uses as electron donor	xref	MICRO:0001462					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/uses_as_energy_source.yaml	METPO:2000010	uses as energy source	identifier	METPO:2000010	uses as energy source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_energy_source.yaml	METPO:2000010	uses as energy source	xref	MICRO:0001461					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/uses_as_nitrogen_source.yaml	METPO:2000014	uses as nitrogen source	identifier	METPO:2000014	uses as nitrogen source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_as_sulfur_source.yaml	METPO:2000020	uses as sulfur source	identifier	METPO:2000020	uses as sulfur source	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_aerobic_catabolization.yaml	METPO:2000032	uses for aerobic catabolization	identifier	METPO:2000032	uses for aerobic catabolization	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_aerobic_growth.yaml	METPO:2000043	uses for aerobic growth	identifier	METPO:2000043	uses for aerobic growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_anaerobic_catabolization.yaml	METPO:2000048	uses for anaerobic catabolization	identifier	METPO:2000048	uses for anaerobic catabolization	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_anaerobic_growth.yaml	METPO:2000049	uses for anaerobic growth	identifier	METPO:2000049	uses for anaerobic growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_anaerobic_growth_in_the_dark.yaml	METPO:2000050	uses for anaerobic growth in the dark	identifier	METPO:2000050	uses for anaerobic growth in the dark	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_anaerobic_growth_with_light.yaml	METPO:2000051	uses for anaerobic growth with light	identifier	METPO:2000051	uses for anaerobic growth with light	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_growth.yaml	METPO:2000012	uses for growth	identifier	METPO:2000012	uses for growth	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_for_respiration.yaml	METPO:2000019	uses for respiration	identifier	METPO:2000019	uses for respiration	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/uses_in_other_way.yaml	METPO:2000015	uses in other way	identifier	METPO:2000015	uses in other way	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/metabolism/wood_ljungdahl_pathway.yaml	traitmech:000022	Wood-Ljungdahl pathway	identifier	traitmech:000022					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/xylan_degradation.yaml	traitmech:000113	xylan degradation	identifier	traitmech:000113					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/metabolism/xylan_degradation.yaml	traitmech:000113	xylan degradation	xref	GO:0045493	xylan catabolic process	EXACT_SYNONYM	xylan breakdown | xylan catabolism | xylan degradation		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/amphitrichous.yaml	traitmech:000059	amphitrichous	identifier	traitmech:000059					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/axially_filamented.yaml	METPO:1000705	axially filamented	identifier	METPO:1000705	axially filamented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/bacillus_shaped.yaml	METPO:1000667	bacillus shaped	identifier	METPO:1000667	bacillus shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/black_pigmented.yaml	METPO:1003022	black pigmented	identifier	METPO:1003022	black pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/branched_shaped.yaml	METPO:1000687	branched shaped	identifier	METPO:1000687	branched shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/brown_pigmented.yaml	METPO:1003023	brown pigmented	identifier	METPO:1003023	brown pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/capsule.yaml	traitmech:000063	capsule	identifier	traitmech:000063					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/capsule.yaml	traitmech:000063	capsule	xref	GO:0042603	capsule	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/carboxysome.yaml	traitmech:000072	carboxysome	identifier	traitmech:000072					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/carboxysome.yaml	traitmech:000072	carboxysome	xref	GO:0031470	carboxysome	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/carotenoid_pigmentation.yaml	METPO:1003031	carotenoid pigmentation	identifier	METPO:1003031	carotenoid pigmentation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_length.yaml	METPO:1000881	cell length	identifier	METPO:1000881	cell length	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_length_large.yaml	METPO:1000886	cell length large	identifier	METPO:1000886	cell length large	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_length_medium.yaml	METPO:1000885	cell length medium	identifier	METPO:1000885	cell length medium	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	identifier	METPO:1000884	cell length small	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_length_very_small.yaml	METPO:1000883	cell length very small	identifier	METPO:1000883	cell length very small	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_shape.yaml	METPO:1000666	cell shape	identifier	METPO:1000666	cell shape	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_width.yaml	METPO:1000882	cell width	identifier	METPO:1000882	cell width	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_width_large.yaml	METPO:1000890	cell width large	identifier	METPO:1000890	cell width large	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_width_medium.yaml	METPO:1000889	cell width medium	identifier	METPO:1000889	cell width medium	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_width_small.yaml	METPO:1000888	cell width small	identifier	METPO:1000888	cell width small	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cell_width_very_small.yaml	METPO:1000887	cell width very small	identifier	METPO:1000887	cell width very small	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/coccobacillus_shaped.yaml	METPO:1000688	coccobacillus shaped	identifier	METPO:1000688	coccobacillus shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/coccus_shaped.yaml	METPO:1000668	coccus shaped	identifier	METPO:1000668	coccus shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/cream_pigmented.yaml	METPO:1003024	cream pigmented	identifier	METPO:1003024	cream pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/crescent_shaped.yaml	METPO:1000669	crescent shaped	identifier	METPO:1000669	crescent shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/curved_shaped.yaml	METPO:1000670	curved shaped	identifier	METPO:1000670	curved shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/diplococcus_shaped.yaml	METPO:1000671	diplococcus shaped	identifier	METPO:1000671	diplococcus shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	identifier	METPO:1000689	disc shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	identifier	METPO:1000672	dumbbell shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/ellipsoidal.yaml	METPO:1000673	ellipsoidal	identifier	METPO:1000673	ellipsoidal	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/filament_shaped.yaml	METPO:1000674	filament shaped	identifier	METPO:1000674	filament shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	identifier	traitmech:000056					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/flagellated.yaml	METPO:1000704	flagellated	identifier	METPO:1000704	flagellated	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/flask_shaped.yaml	METPO:1000675	flask shaped	identifier	METPO:1000675	flask shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/fusiform_shaped.yaml	METPO:1000690	fusiform shaped	identifier	METPO:1000690	fusiform shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/gas_vesicle.yaml	traitmech:000070	gas vesicle	identifier	traitmech:000070					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/gas_vesicle.yaml	traitmech:000070	gas vesicle	xref	GO:0031411	gas vesicle	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/gliding.yaml	METPO:1000706	gliding	identifier	METPO:1000706	gliding	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/gram_negative.yaml	METPO:1000699	gram negative	identifier	METPO:1000699	gram negative	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/gram_positive.yaml	METPO:1000698	gram positive	identifier	METPO:1000698	gram positive	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/gram_stain.yaml	METPO:1000697	gram stain	identifier	METPO:1000697	gram stain	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/gram_variable.yaml	METPO:1000700	gram variable	identifier	METPO:1000700	gram variable	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/green_pigmented.yaml	METPO:1003025	green pigmented	identifier	METPO:1003025	green pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/helical_shaped.yaml	METPO:1000676	helical shaped	identifier	METPO:1000676	helical shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/heterocyst.yaml	traitmech:000073	heterocyst	identifier	traitmech:000073					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	identifier	traitmech:000066					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	identifier	METPO:1000691	irregular shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/lophotrichous.yaml	traitmech:000058	lophotrichous	identifier	traitmech:000058					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/magnetosome.yaml	traitmech:000071	magnetosome	identifier	traitmech:000071					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/magnetosome.yaml	traitmech:000071	magnetosome	xref	GO:0110143	magnetosome	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/monotrichous.yaml	traitmech:000057	monotrichous	identifier	traitmech:000057					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/motile.yaml	METPO:1000702	motile	identifier	METPO:1000702	motile	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/motility.yaml	METPO:1000701	motility	identifier	METPO:1000701	motility	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/mycelial_growth.yaml	traitmech:000074	mycelial growth	identifier	traitmech:000074					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/non_motile.yaml	METPO:1000703	non motile	identifier	METPO:1000703	non motile	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/non_spore_forming.yaml	METPO:1000872	non-spore forming	identifier	METPO:1000872	non-spore forming	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/orange_pigmented.yaml	METPO:1003026	orange pigmented	identifier	METPO:1003026	orange pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/oval_shaped.yaml	METPO:1000678	oval shaped	identifier	METPO:1000678	oval shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/ovoid_shaped.yaml	METPO:1000677	ovoid shaped	identifier	METPO:1000677	ovoid shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/peritrichous.yaml	traitmech:000060	peritrichous	identifier	traitmech:000060					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/pigmentation.yaml	METPO:1003021	pigmentation	identifier	METPO:1003021	pigmentation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/pink_pigmented.yaml	METPO:1003027	pink pigmented	identifier	METPO:1003027	pink pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/pleomorphic_shaped.yaml	METPO:1000679	pleomorphic shaped	identifier	METPO:1000679	pleomorphic shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhydroxyalkanoate granule	identifier	traitmech:000067					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhydroxyalkanoate granule	xref	GO:0070088	polyhydroxyalkanoate granule	CANONICAL_LABEL	PHA granule		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	polyphosphate granule	identifier	traitmech:000068					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/prosthecate.yaml	traitmech:000065	prosthecate	identifier	traitmech:000065					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/red_pigmented.yaml	METPO:1003028	red pigmented	identifier	METPO:1003028	red pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	identifier	METPO:1000680	ring shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	xref	PATO:0002539	ring shaped	CANONICAL_LABEL	annular | ring-shaped		EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo
+data/traits/morphology/rod_shaped.yaml	METPO:1000681	rod shaped	identifier	METPO:1000681	rod shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/s_layer.yaml	traitmech:000064	S-layer	identifier	traitmech:000064					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/sarcina_arrangement.yaml	traitmech:000120	sarcina arrangement	identifier	traitmech:000120					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/sphere_shaped.yaml	METPO:1000683	sphere shaped	identifier	METPO:1000683	sphere shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/spindle_shaped.yaml	METPO:1000692	spindle shaped	identifier	METPO:1000692	spindle shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/spiral_shaped.yaml	METPO:1000684	spiral shaped	identifier	METPO:1000684	spiral shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/spirochete_shaped.yaml	METPO:1000693	spirochete shaped	identifier	METPO:1000693	spirochete shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/spore_forming.yaml	METPO:1000871	spore forming	identifier	METPO:1000871	spore forming	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/spore_shaped.yaml	METPO:1000682	spore shaped	identifier	METPO:1000682	spore shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/sporulation.yaml	METPO:1000870	sporulation	identifier	METPO:1000870	sporulation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/square_shaped.yaml	METPO:1000694	square shaped	identifier	METPO:1000694	square shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/staphylococcus_arrangement.yaml	traitmech:000118	staphylococcus arrangement	identifier	traitmech:000118					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/star_shaped.yaml	METPO:1000685	star shaped	identifier	METPO:1000685	star shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/star_shaped.yaml	METPO:1000685	star shaped	xref	PATO:0002065	star shaped	CANONICAL_LABEL	stellate		EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo
+data/traits/morphology/streptococcus_arrangement.yaml	traitmech:000117	streptococcus arrangement	identifier	traitmech:000117					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/sulfur_globule.yaml	traitmech:000069	sulfur globule	identifier	traitmech:000069					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/swarming_motility.yaml	traitmech:000062	swarming motility	identifier	traitmech:000062					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/tailed_shaped.yaml	METPO:1000695	tailed shaped	identifier	METPO:1000695	tailed shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/tetrad_arrangement.yaml	traitmech:000119	tetrad arrangement	identifier	traitmech:000119					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/triangular_shaped.yaml	METPO:1000696	triangular shaped	identifier	METPO:1000696	triangular shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/twitching_motility.yaml	traitmech:000061	twitching motility	identifier	traitmech:000061					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/morphology/vibrio_shaped.yaml	METPO:1000686	vibrio shaped	identifier	METPO:1000686	vibrio shaped	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/white_pigmented.yaml	METPO:1003029	white pigmented	identifier	METPO:1003029	white pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/morphology/yellow_pigmented.yaml	METPO:1003030	yellow pigmented	identifier	METPO:1003030	yellow pigmented	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/observation/growth_nacl_observation.yaml	METPO:1001007	growth NaCl observation	identifier	METPO:1001007	obsolete growth NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/growth_oxygen_observation.yaml	METPO:1001017	growth oxygen observation	identifier	METPO:1001017	obsolete growth oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/growth_ph_observation.yaml	METPO:1001012	growth pH observation	identifier	METPO:1001012	obsolete growth pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/growth_temperature_observation.yaml	METPO:1001002	growth temperature observation	identifier	METPO:1001002	obsolete growth temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/nacl_delta_observation.yaml	METPO:1001008	NaCl delta observation	identifier	METPO:1001008	obsolete NaCl delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/nacl_observation.yaml	METPO:1001022	NaCl observation	identifier	METPO:1001022	obsolete NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/nacl_range_observation.yaml	METPO:1001009	NaCl range observation	identifier	METPO:1001009	obsolete NaCl range observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/optimum_nacl_observation.yaml	METPO:1001010	optimum NaCl observation	identifier	METPO:1001010	obsolete optimum NaCl observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/optimum_oxygen_observation.yaml	METPO:1001016	optimum oxygen observation	identifier	METPO:1001016	obsolete optimum oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/optimum_ph_observation.yaml	METPO:1001013	optimum pH observation	identifier	METPO:1001013	obsolete optimum pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/optimum_temperature_observation.yaml	METPO:1001001	optimum temperature observation	identifier	METPO:1001001	obsolete optimum temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/oxygen_delta_observation.yaml	METPO:1001019	oxygen delta observation	identifier	METPO:1001019	obsolete oxygen delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/oxygen_observation.yaml	METPO:1001020	oxygen observation	identifier	METPO:1001020	obsolete oxygen observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/oxygen_range_observation.yaml	METPO:1001018	oxygen range observation	identifier	METPO:1001018	obsolete oxygen range observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/ph_delta_observation.yaml	METPO:1001014	pH delta observation	identifier	METPO:1001014	obsolete pH delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/ph_observation.yaml	METPO:1001023	pH observation	identifier	METPO:1001023	obsolete pH observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/ph_range_observation.yaml	METPO:1001015	pH range observation	identifier	METPO:1001015	obsolete pH range observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/temperature_delta_observation.yaml	METPO:1001004	temperature delta observation	identifier	METPO:1001004	obsolete temperature delta observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/temperature_observation.yaml	METPO:1001021	temperature observation	identifier	METPO:1001021	obsolete temperature observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/observation/temperature_range_observation.yaml	METPO:1001003	temperature range observation	identifier	METPO:1001003	obsolete temperature range observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	antibiotic resistance	identifier	traitmech:000088					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/autotrophic.yaml	METPO:1000632	autotrophic	identifier	METPO:1000632	autotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	identifier	traitmech:000085					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/carboxydotrophic.yaml	METPO:1000633	carboxydotrophic	identifier	METPO:1000633	carboxydotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/catalase_activity.yaml	traitmech:000075	catalase activity	identifier	traitmech:000075					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/chemoautolithotrophic.yaml	METPO:1000634	chemoautolithotrophic	identifier	METPO:1000634	chemoautolithotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemoautotrophic.yaml	METPO:1000635	chemoautotrophic	identifier	METPO:1000635	chemoautotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemoheterotrophic.yaml	METPO:1000636	chemoheterotrophic	identifier	METPO:1000636	chemoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemolithoautotrophic.yaml	METPO:1000637	chemolithoautotrophic	identifier	METPO:1000637	chemolithoautotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemolithoheterotrophic.yaml	METPO:1000638	chemolithoheterotrophic	identifier	METPO:1000638	chemolithoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemolithotrophic.yaml	METPO:1000639	chemolithotrophic	identifier	METPO:1000639	chemolithotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemoorganoheterotrophic.yaml	METPO:1000640	chemoorganoheterotrophic	identifier	METPO:1000640	chemoorganoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemoorganotrophic.yaml	METPO:1000663	chemoorganotrophic	identifier	METPO:1000663	chemoorganotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/chemotaxis.yaml	traitmech:000086	chemotaxis	identifier	traitmech:000086					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/chemotaxis.yaml	traitmech:000086	chemotaxis	xref	GO:0006935	chemotaxis	CANONICAL_LABEL	taxis in response to chemical stimulus		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/physiology/chemotrophic.yaml	METPO:1000641	chemotrophic	identifier	METPO:1000641	chemotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/copiotrophic.yaml	METPO:1000642	copiotrophic	identifier	METPO:1000642	copiotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/dormancy.yaml	traitmech:000080	dormancy	identifier	traitmech:000080					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/heterotrophic.yaml	METPO:1000644	heterotrophic	identifier	METPO:1000644	heterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/hydrogenotrophic.yaml	METPO:1000646	hydrogenotrophic	identifier	METPO:1000646	hydrogenotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/lithoautotrophic.yaml	METPO:1000647	lithoautotrophic	identifier	METPO:1000647	lithoautotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/lithoheterotrophic.yaml	METPO:1000648	lithoheterotrophic	identifier	METPO:1000648	lithoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/lithotrophic.yaml	METPO:1000649	lithotrophic	identifier	METPO:1000649	lithotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/methanotrophic.yaml	METPO:1000650	methanotrophic	identifier	METPO:1000650	methanotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/methylotrophic.yaml	METPO:1000651	methylotrophic	identifier	METPO:1000651	methylotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/mixotrophic.yaml	METPO:1000652	mixotrophic	identifier	METPO:1000652	mixotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/natural_competence.yaml	traitmech:000087	natural competence	identifier	traitmech:000087					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/nutrient_adaptation.yaml	METPO:1000731	nutrient adaptation	identifier	METPO:1000731	nutrient adaptation	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/oligotrophic.yaml	METPO:1000654	oligotrophic	identifier	METPO:1000654	oligotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/organoheterotrophic.yaml	METPO:1000664	organoheterotrophic	identifier	METPO:1000664	organoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/organotrophic.yaml	METPO:1000655	organotrophic	identifier	METPO:1000655	organotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/oxidase_activity.yaml	traitmech:000076	oxidase activity	identifier	traitmech:000076					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/oxidative_stress_response.yaml	traitmech:000079	oxidative stress response	identifier	traitmech:000079					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/persister_cell_formation.yaml	traitmech:000082	persister cell formation	identifier	traitmech:000082					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/photoautotrophic.yaml	METPO:1000656	photoautotrophic	identifier	METPO:1000656	photoautotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/photoheterotrophic.yaml	METPO:1000657	photoheterotrophic	identifier	METPO:1000657	photoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/photolithoautotrophic.yaml	METPO:1000665	photolithoautotrophic	identifier	METPO:1000665	photolithoautotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/photolithotrophic.yaml	METPO:1000658	photolithotrophic	identifier	METPO:1000658	photolithotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/photoorganoheterotrophic.yaml	METPO:1000659	photoorganoheterotrophic	identifier	METPO:1000659	photoorganoheterotrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/phototrophic.yaml	METPO:1000660	phototrophic	identifier	METPO:1000660	phototrophic	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	identifier	traitmech:000084					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	xref	GO:0009372	quorum sensing	CANONICAL_LABEL	quorum sensing system		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/physiology/spore_germination.yaml	traitmech:000083	spore germination	identifier	traitmech:000083					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/spore_germination.yaml	traitmech:000083	spore germination	xref	GO:0009847	spore germination	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/physiology/stress_response.yaml	traitmech:000078	stress response	identifier	traitmech:000078					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/trophic_type.yaml	METPO:1000631	trophic type	identifier	METPO:1000631	trophic type	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/physiology/urease_activity.yaml	traitmech:000077	urease activity	identifier	traitmech:000077					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/physiology/viable_but_nonculturable_state.yaml	traitmech:000081	viable but nonculturable state	identifier	traitmech:000081					NO_DIRECT_SOURCE	NOT_CHECKED	
+data/traits/quantitative_property/has_maximum_observed_value.yaml	METPO:2000060	has maximum observed value	identifier	METPO:2000060	obsolete has maximum observed value	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/has_minimum_observed_value.yaml	METPO:2000059	has minimum observed value	identifier	METPO:2000059	obsolete has minimum observed value	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/has_observed_spot_value.yaml	METPO:2000058	has observed spot value	identifier	METPO:2000058	obsolete has observed spot value	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/has_value.yaml	METPO:2000071	has value	identifier	METPO:2000071	has value	CANONICAL_LABEL			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/has_value_comments.yaml	METPO:2000061	has value comments	identifier	METPO:2000061	obsolete has value comments	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/is_negative_data.yaml	METPO:2000062	is negative data	identifier	METPO:2000062	obsolete is negative data	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/quantitative_property/observation_data_property.yaml	METPO:2000063	observation data property	identifier	METPO:2000063	obsolete observation data property	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/upper/biological_process.yaml	METPO:1000630	biological process	identifier	METPO:1000630	biological process	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/biological_process.yaml	METPO:1000630	biological process	xref	GO:0008150	biological_process	EXACT_SYNONYM	biological process | physiological process		EXACT_COMPLETE	AGREES	releases/2026-07-26
+data/traits/upper/chemical_entity.yaml	METPO:1000526	chemical entity	identifier	METPO:1000526	chemical entity	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/chemical_entity.yaml	METPO:1000526	chemical entity	xref	CHEBI:24431	chemical entity	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	254
+data/traits/upper/enzyme.yaml	METPO:1000527	enzyme	identifier	METPO:1000527	enzyme	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/material_entity.yaml	METPO:1000186	material entity	identifier	METPO:1000186	material entity	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/microbe.yaml	METPO:1000525	microbe	identifier	METPO:1000525	microbe	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/observation.yaml	METPO:1001000	observation	identifier	METPO:1001000	obsolete observation	NO_EXACT_LABEL_MATCH			DEPRECATED_TERM	AGREES	2026-06-12
+data/traits/upper/phenotype.yaml	METPO:1000059	phenotype	identifier	METPO:1000059	phenotype	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/quality.yaml	METPO:1000188	quality	identifier	METPO:1000188	quality	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	2026-06-12
+data/traits/upper/quality.yaml	METPO:1000188	quality	xref	PATO:0000001	quality	CANONICAL_LABEL			EXACT_COMPLETE	AGREES	releases/2025-05-14/pato.obo

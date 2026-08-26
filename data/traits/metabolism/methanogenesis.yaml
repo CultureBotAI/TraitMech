@@ -19,7 +19,15 @@ synonyms:
 - synonym_text: Carbonate respiration
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: methane biosynthesis
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: methane biosynthetic process
+  synonym_type: EXACT_SYNONYM
+  source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
 created_by: Luke Wang
+xrefs:
+- GO:0015948
 evidence:
 - reference: DOI:10.1146/annurev-micro-011720-122807
   snippet: from CO2 and H2 to methane
@@ -374,4 +382,12 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T01:14:58Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0015948;
+    declared exact synonym(s): ''methane biosynthesis'', ''methane biosynthetic process''.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

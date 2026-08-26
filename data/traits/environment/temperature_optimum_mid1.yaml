@@ -15,6 +15,9 @@ synonyms:
 - synonym_text: TO_22_to_27
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: mesophilic
+  synonym_type: EXACT_SYNONYM
+  source: https://w3id.org/metpo/releases/2026-06-12/metpo.owl
 evidence:
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
@@ -222,4 +225,11 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_optimum_mid1_lower_mesophile=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-26T06:15:38Z'
+  curator: codex
+  action: ADD_EXACT_ONTOLOGY_MATCH
+  changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
+    Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
+    direct data, and OLS4 spot-checked release deltas and disputed hits.'
   llm_assisted: true

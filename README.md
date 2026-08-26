@@ -155,8 +155,13 @@ For direct access to every committed report, see:
   backlog](reports/research_grounding_backlog.tsv), [research grounding
   drift](reports/research_grounding_drift.tsv), [UniProt
   audit](reports/uniprot_grounding_audit.tsv), [UniProt
-  candidates](reports/uniprot_match_candidates.tsv), and [label
-  drift](reports/label_drift.tsv).
+  candidates](reports/uniprot_match_candidates.tsv), [label
+  drift](reports/label_drift.tsv), [trait exact-synonym
+  audit](reports/trait_exact_synonym_audit.tsv), [exact-match
+  candidates](reports/trait_exact_match_candidates.tsv), [exact-synonym
+  collisions](reports/exact_synonym_collisions.tsv), [causal-grounding
+  exactness](reports/causal_grounding_exactness.tsv), and the [ontology
+  snapshot manifest](reports/ontology_snapshot_manifest.tsv).
 - Curation queues: [gap-fix narrative](reports/gap_fix_backlog.md), [gap-fix
   table](reports/gap_fix_backlog.tsv), [knowledge-gap
   narrative](reports/knowledge_gap_scan.md), [knowledge-gap
