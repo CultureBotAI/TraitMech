@@ -15,7 +15,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from render_trait_pages import corpus_timestamp  # noqa: E402
+from render_trait_pages import corpus_timestamp, reciprocal_neighbor_edges  # noqa: E402
 
 
 def _doc(*timestamps):
@@ -95,3 +95,25 @@ def test_real_corpus_yields_a_stamp():
         if isinstance(doc, dict):
             traits.append((p, doc))
     assert corpus_timestamp(traits), "no parsable curation_history timestamp in the corpus"
+
+
+def test_reciprocal_neighbor_edges_are_unique_stable_and_in_scope():
+    neighbors = {
+        "A": [{"id": "B"}, {"id": "C"}, {"id": "outside"}],
+        "B": [{"id": "A"}],
+        "C": [{"id": "A"}, {"id": "C"}],
+        "outside": [{"id": "A"}],
+    }
+    assert reciprocal_neighbor_edges(neighbors, {"A", "B", "C"}) == [
+        {"source": "A", "target": "B"},
+        {"source": "A", "target": "C"},
+    ]
+
+
+def test_graph_and_umap_use_one_category_filter_and_graph_draws_links():
+    graph = (REPO_ROOT / "src/traitmech/templates/graph.html").read_text()
+    umap = (REPO_ROOT / "src/traitmech/templates/umap.html").read_text()
+    assert 'id="category-filter"' not in graph
+    assert 'id="category-filter"' not in umap
+    assert 'line.graph-edge' in graph
+    assert "GRAPH_EDGES" in graph
