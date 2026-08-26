@@ -400,6 +400,11 @@ knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
     PYTHONPATH={{claw_src}} uv run python -m kg_microbe_kgscan \
       --config conf/kgscan_config.yaml {{args}}
 
+# Replay the fixed #409 knowledge-gap curation. Validated dry-run by default;
+# pass --apply to write the ten in-scope trait records.
+curate-knowledge-gaps *args:
+    uv run python scripts/curate_knowledge_gaps.py {{args}}
+
 # ============== Curation history (append-only provenance) ==============
 # Records which model, using which tool, changed what, why, and under which
 # issue. ONE record per change under history/ -- per target for hand curation,
