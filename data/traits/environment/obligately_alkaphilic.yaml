@@ -1,21 +1,18 @@
 identifier: METPO:1003004
-label: obligately alkaphilic
-definition: A pH growth preference in which an organism requires alkaline conditions
+label: obligately alkaliphilic
+definition: An alkaliphilic phenotype in which an organism requires alkaline conditions
   (typically pH above 8.5) for growth and cannot grow at neutral or acidic pH.
 definition_source: DOI:10.3389/fbioe.2015.00075
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
-- METPO:1003000
+- METPO:1003002
 synonyms:
 - synonym_text: obligate alkaliphile
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 - synonym_text: obligate alkaphilic
-  synonym_type: EXACT_SYNONYM
-  source: metpo.owl
-- synonym_text: obligately alkaliphilic
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
@@ -41,7 +38,7 @@ causal_graphs:
     descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: obligately_alkaphilic_trait
-    label: obligately alkaphilic
+    label: obligately alkaliphilic
     node_type: TRAIT
     grounding: METPO:1003004
     description: Growth requires alkaline pH and does not extend to neutral or acidic
@@ -369,3 +366,11 @@ curation_history:
     (sodium_proton_antiporter, proton_coupled_atp_synthase, trkah_transport_system,
     cation_proton_antiporter).'
   llm_assisted: true
+- timestamp: '2026-08-26T07:35:00Z'
+  curator: migrate_metpo_2026_06_12
+  action: MIGRATE_METPO_RELEASE
+  changes: 'Migrated source-owned fields to locked METPO 2026-06-12: label ''obligately
+    alkaphilic'' -> ''obligately alkaliphilic''; definition synchronized to METPO
+    2026-06-12; parent_traits (''METPO:1003000'',) -> (''METPO:1003002'',); synonyms
+    synchronized at ontology-declared scope; grounded node obligately_alkaphilic_trait
+    label synchronized'

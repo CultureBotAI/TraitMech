@@ -372,10 +372,15 @@ backfill-protein-taxon-events *args:
 restore-substituted-citations *args:
     uv run python scripts/restore_substituted_citations.py {{args}}
 
-# Refresh raw METPO copy from the local KG-Hub assays clone
-refresh-metpo:
-    cp ../assays/assay-metadata/metpo.owl data/raw/metpo.owl
-    @echo "Refreshed data/raw/metpo.owl"
+# Install the manifest-locked METPO source. The former sibling-copy recipe could
+# silently roll the source back because ../assays remains on 2025-11-25 (#515).
+refresh-metpo *args:
+    uv run python scripts/refresh_metpo_source.py --apply {{args}}
+
+# Migrate source-owned fields changed by the locked METPO 2026-06-12 release.
+# Dry-run by default; stable filenames/ids and evidence snippets are preserved.
+migrate-metpo-2026-06-12 *args:
+    uv run python scripts/migrate_metpo_2026_06_12.py {{args}}
 
 # Build slim deepwalk subset + METPO ↔ kg-microbe-node match table from the
 # local kg-microbe deepwalk artifact. Reads

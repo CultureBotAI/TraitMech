@@ -62,6 +62,16 @@ def test_no_material_entity_subtree_seeded():
     assert "METPO:1000526" in skipped or "METPO:1000525" in skipped
 
 
+def test_deprecated_metpo_entities_are_parsed_but_never_seeded():
+    """A source refresh must not turn METPO's legacy namespace into records."""
+    parsed = parse_owl(OWL_PATH)
+    retired = parsed["METPO:1000001"]
+    assert retired["label"] == "obsolete acid-fast"
+    assert retired["deprecated"] is True
+    parents = {curie: record["parents"] for curie, record in parsed.items()}
+    assert categorize("METPO:1000001", retired, parents) is None
+
+
 def test_slug_collision_uses_localid_suffix():
     assert slugify("pH optimum", "fallback") == "ph_optimum"
     assert slugify(None, "fallback") == "fallback"
