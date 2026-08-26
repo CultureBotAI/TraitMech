@@ -381,6 +381,11 @@ refresh-metpo *args:
 migrate-metpo-2026-06-12 *args:
     uv run python scripts/migrate_metpo_2026_06_12.py {{args}}
 
+# Finalize review dispositions for active additions and non-target drift (#534).
+# Dry-run by default; --apply updates only the release-delta inventory.
+finalize-metpo-2026-06-12-review *args:
+    uv run python scripts/finalize_metpo_2026_06_12_review.py {{args}}
+
 # Build slim deepwalk subset + METPO ↔ kg-microbe-node match table from the
 # local kg-microbe deepwalk artifact. Reads
 # ../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz
