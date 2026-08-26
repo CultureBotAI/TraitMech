@@ -20,6 +20,13 @@ evidence:
   snippet: polar growth
   notes: Cell-shape review supports polarized peptidoglycan growth as a mechanism
     producing asymmetric flask-like morphology.
+canonical_examples:
+- taxon_id: NCBITaxon:521674
+  taxon_label: Planctopirus limnophila DSM 3776
+  note: Pear-shaped planctomycete whose body narrows toward one pole; the cited
+    functional study distinguishes this cell shape from its polar budding division
+    mode.
+  reference: DOI:10.1038/s41564-019-0588-1
 causal_graphs:
 - graph_id: flask_shaped_asymmetric_polar_growth
   title: Flask-shape asymmetric polar growth
@@ -215,4 +222,11 @@ curation_history:
     the tranche: set graph scope flask_shaped_asymmetric_polar_growth=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (bactofilin_cytoskeleton).'
+  llm_assisted: true
+- timestamp: '2026-08-26T09:40:27Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: Added Planctopirus limnophila DSM 3776 as a strain-level pear/flask-shaped
+    exemplar from this record's own research artifact; NCBITaxon:521674 and its
+    current label were verified against NCBI.
   llm_assisted: true
