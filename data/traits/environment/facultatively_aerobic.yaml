@@ -23,6 +23,14 @@ evidence:
   snippet: A facultative aerobic, moderately thermophilic, spore forming bacterium
   notes: 'Organism example: Anoxybacillus kamchatkensis strain JW/VK-KG4 is described
     as facultatively aerobic.'
+canonical_examples:
+- taxon_id: NCBITaxon:265546
+  taxon_label: Anoxybacillus ayderensis
+  reference: DOI:10.1007/s00792-005-0479-7
+  note: Type strain JW/VK-KG4 (DSM 14988; ATCC BAA-549) was grown both aerobically
+    and anaerobically, with measured doubling times of 34 and 40 minutes, respectively.
+    The source published it as Anoxybacillus kamchatkensis; NCBI now treats that name
+    as a synonym of Anoxybacillus ayderensis at this taxon id.
 causal_graphs:
 - graph_id: facultative_aerobe_oxygen_flexible_growth
   title: Facultative aerobe oxygen-flexible growth mechanism
@@ -252,4 +260,12 @@ curation_history:
     with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (fnr_type_regulation, arcab_system, anaerobic_metabolism_genes, aerobic_metabolism_genes,
     cytochrome_bd_oxidase).'
+  llm_assisted: true
+- timestamp: '2026-08-26T10:54:11Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: Added Anoxybacillus ayderensis strain JW/VK-KG4 as a directly assayed
+    facultatively aerobic exemplar from this record's own research artifact; preserved
+    the source's historical Anoxybacillus kamchatkensis name in the note and verified
+    NCBITaxon:265546 and its current label against NCBI.
   llm_assisted: true
