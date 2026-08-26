@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/stenohaline.yaml
+  slug: stenohaline
+session:
+  id: 2026-08-26T100455Z-codex-c70b581
+  timestamp: '2026-08-26T10:04:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the stenohaline record's contextual osmoadaptation graph
+  details: >-
+    Added five source-supported bridging edges for potassium import, osmotic upshift,
+    potassium and compatible-solute uptake, salt-out osmoadaptation, and aquaporin-facilitated
+    water diffusion. The edges connect all six existing components through osmotic
+    imbalance and water flux while preserving the research artifact's boundary: these
+    are generic bacterial background mechanisms, not asserted causes of stenohaly.
+    Gene and protein concepts remain supporting causal-graph nodes in YAML and were
+    not promoted to primary TraitRecord entries.
