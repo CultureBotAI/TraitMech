@@ -83,3 +83,17 @@ def test_verify_only_reports_missing_snapshot(tmp_path) -> None:
             "--verify-only",
         ]
     ) == 1
+
+
+def test_missing_download_source_fails_without_installing_snapshot(tmp_path) -> None:
+    payload = b"expected"
+    source = tmp_path / "source.obo"
+    source.write_bytes(payload)
+    manifest = tmp_path / "manifest.tsv"
+    write_manifest(manifest, source, payload)
+    source.unlink()
+    out_dir = tmp_path / "snapshots"
+
+    assert fetch.main(["--manifest", str(manifest), "--out-dir", str(out_dir)]) == 1
+    assert not (out_dir / "test.obo").exists()
+    assert not list(out_dir.glob("*.part"))
