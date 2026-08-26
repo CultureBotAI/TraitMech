@@ -163,7 +163,10 @@ For direct access to every committed report, see:
   exactness](reports/causal_grounding_exactness.tsv), and the [ontology
   snapshot manifest](reports/ontology_snapshot_manifest.tsv). The [METPO
   2026-06-12 release delta](reports/metpo_2026_06_12_release_delta.tsv) records
-  every source addition and changed field considered during that migration.
+  every source addition and changed field considered during that migration;
+  its [active-review table](reports/metpo_2026_06_12_active_review.tsv) and
+  [review narrative](docs/METPO_2026_06_12_ACTIVE_REVIEW.md) document the final
+  curation decisions.
 - Curation queues: [gap-fix narrative](reports/gap_fix_backlog.md), [gap-fix
   table](reports/gap_fix_backlog.tsv), [knowledge-gap
   narrative](reports/knowledge_gap_scan.md), [knowledge-gap
