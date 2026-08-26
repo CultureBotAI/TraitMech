@@ -44,6 +44,10 @@ on:
       # possible version of the filter-narrower-than-the-job bug (#184, #200).
       - "pages/**"
       - "src/traitmech/templates/**"
+      # The discussions-data audit compares app/discussions/data.js with the
+      # source YAML. A direct artifact edit must therefore run the same gate;
+      # otherwise the path filter would make its only consumer silent (#409).
+      - "app/**"
       # The renderer's other two tracked inputs. Both change what it emits, so
       # both must trigger the job that compares its output: the embedding
       # tables feed the match/UMAP/graph sections, and metpo.owl supplies the

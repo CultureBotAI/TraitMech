@@ -189,6 +189,14 @@ audit-canonical-examples *args:
 audit-discussion-anchors *args:
     uv run python scripts/audit_discussion_anchors.py {{args}}
 
+# Fail when app/discussions/data.js no longer matches the authoritative
+# discussions in data/traits (#409). The generator itself is shared from claw,
+# but ordinary QC does not have a claw checkout; this credential-free semantic
+# projection catches stale rows, counts, links, and facets without rewriting the
+# tracked artifact it judges.
+audit-discussions-data *args:
+    uv run python scripts/audit_discussions_data.py {{args}}
+
 # Flag open PRs that received NO CI at all (#345). PR #344 produced zero
 # pull_request workflow runs -- not failures, not skips -- while `gh pr checks`
 # said "no checks reported" and mergeStateStatus said CLEAN. Two of the
@@ -1047,7 +1055,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-discussions-data audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
