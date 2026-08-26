@@ -225,6 +225,64 @@ causal_graphs:
       notes: COG0580 linked to GO:0015250 and described as enabling facilitated diffusion
         of water; functional edge.
     predicate_id: RO:0002327
+  - subject: k_import_systems
+    predicate: enables
+    object: rapid_k_import
+    description: Potassium-import systems enable the rapid K+ uptake used as an early
+      bacterial response to osmotic upshift.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      snippet: Bacterial cells commonly import a lot of potassium during an osmotic
+        upshift
+      notes: Supports a generic bacterial osmoadaptation relationship; it does not
+        establish potassium import as a cause of stenohaly.
+    predicate_id: RO:0002327
+  - subject: osmotic_upshift
+    predicate: causes
+    object: osmotic_imbalance
+    description: An increase in external osmolarity causes cellular water loss and
+      an osmotic imbalance.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      snippet: Under hypertonic conditions, water leaves the cell
+      notes: Supports the physical consequence of a generic osmotic upshift; it does
+        not establish osmotic upshift as specific to stenohaline organisms.
+    predicate_id: biolink:causes
+  - subject: k_solute_uptake
+    predicate: mitigates
+    object: osmotic_imbalance
+    description: Uptake of potassium and compatible solutes helps cells survive changes
+      in external osmolality.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      snippet: potassium and compatible solute transport are vital for bacteria to
+        survive changes in external osmolality
+      notes: Supports a generic bacterial osmoadaptation relationship; it does not
+        establish this uptake process as a cause of stenohaly.
+    predicate_id: METPO:2007407
+  - subject: salt_out_osmoadaptation
+    predicate: mitigates
+    object: osmotic_imbalance
+    description: Salt-out osmoadaptation replaces accumulated K+ with compatible solutes
+      to restore osmotic balance.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      snippet: neutral compatible solutes such as glycine betaine, trehalose, and other
+        osmolytes to replace K+ ions
+      notes: Supports the generic salt-out strategy; it does not establish compatible-solute
+        accumulation as a cause of stenohaly.
+    predicate_id: METPO:2007407
+  - subject: facilitated_water_diffusion
+    predicate: part of
+    object: water_flux
+    description: Aquaporin-facilitated diffusion is one route of water flux across
+      the cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: enabling the facilitated diffusion of water
+      notes: Connects the contextual aquaporin process to the record's existing water-flux
+        process without asserting a direct effect on stenohaly.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864123+00:00'
   curator: seed_from_metpo
@@ -321,4 +379,14 @@ curation_history:
     the tranche: set graph scope stenohaline_narrow_salinity_tolerance=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (salinity_adaptation_genes, k_import_systems, opua_importer).'
+  llm_assisted: true
+- timestamp: '2026-08-26T10:04:55Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected five contextual osmoadaptation relationships to the existing
+    osmotic-imbalance and water-flux processes, joining all six graph components.
+    The new edges describe generic bacterial responses and do not assert that genes,
+    proteins, or osmoadaptation mechanisms cause stenohaly; gene and protein concepts
+    remain supporting YAML fields rather than primary TraitRecord entries. Addresses
+    issues 426 and 183.
   llm_assisted: true
