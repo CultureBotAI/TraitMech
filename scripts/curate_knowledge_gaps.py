@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Turn ten scraped sentences into ten answerable, anchored knowledge gaps (#409).
 
+Default is a validated dry run. Pass ``--apply`` to write the curated records.
+
 WHAT WAS THERE. The `kg-microbe-kgscan` pass attached one discussion each to ten
 ecology records. Every one had `kind: KNOWLEDGE_GAP`, `status: OPEN`, no
 `attaches_to`, no `posed_date`, and no `proposed_experiments` -- and a `prompt`
@@ -51,13 +53,18 @@ the prose about it is true. That gap is filed as #415.
 
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from traitmech.curate.curation_event import record_curation_event  # noqa: E402
-from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+from traitmech.validation.write_validated import (  # noqa: E402
+    ValidationFailedError,
+    validate_trait,
+    write_validated_trait,
+)
 
 import yaml  # noqa: E402
 
@@ -912,7 +919,9 @@ def scan_note(discussion_id: str, topic: str) -> str:
     return " ".join(note)
 
 
-def apply(path: Path, plan_by_id: dict[str, dict]) -> list[str]:
+def apply(
+    path: Path, plan_by_id: dict[str, dict], *, write: bool = False
+) -> list[str]:
     doc = yaml.safe_load(path.read_text())
     touched = []
     for disc in doc.get("discussions") or []:
@@ -949,24 +958,40 @@ def apply(path: Path, plan_by_id: dict[str, dict]) -> list[str]:
         timestamp=TIMESTAMP,
         upsert=True,
     )
-    write_validated_trait(doc, path)
+    if write:
+        write_validated_trait(doc, path)
+    else:
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
     return touched
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help="write validated changes (default: validate and report only)",
+    )
+    args = parser.parse_args(argv)
+
     by_file: dict[str, dict[str, dict]] = {}
     for did, plan in PLAN.items():
         by_file.setdefault(plan["file"], {})[did] = plan
     total = 0
     for rel, plan_by_id in sorted(by_file.items()):
-        touched = apply(TRAITS / rel, plan_by_id)
+        touched = apply(TRAITS / rel, plan_by_id, write=args.apply)
         missing = set(plan_by_id) - set(touched)
         if missing:
             print(f"NOT FOUND in {rel}: {', '.join(sorted(missing))}")
             return 1
         total += len(touched)
-        print(f"{rel}: {', '.join(touched)}")
-    print(f"\ncurated {total} discussions across {len(by_file)} records")
+        mode = "wrote" if args.apply else "would curate"
+        print(f"{mode} {rel}: {', '.join(touched)}")
+    summary = "curated" if args.apply else "would curate"
+    suffix = "" if args.apply else " (dry run; pass --apply to write)"
+    print(f"\n{summary} {total} discussions across {len(by_file)} records{suffix}")
     return 0
 
 

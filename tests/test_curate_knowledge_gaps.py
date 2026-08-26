@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from curate_knowledge_gaps import PLAN, SCAN_OUTPUT, scan_note  # noqa: E402
+from curate_knowledge_gaps import PLAN, SCAN_OUTPUT, apply, scan_note  # noqa: E402
 
 
 def test_every_planned_discussion_has_frozen_scan_output():
@@ -103,3 +103,14 @@ def test_corpus_notes_still_hold_the_scan_sentences():
             assert ref in disc["notes"], f"{did}: {ref} missing from the record"
             assert snippet in disc["notes"], f"{did}: the snippet for {ref} missing"
         assert "evidence" not in disc, f"{did}: scan PMIDs re-pointed at the authored question"
+
+
+def test_apply_defaults_to_validated_dry_run(tmp_path):
+    did, plan = next(iter(PLAN.items()))
+    source = Path("data/traits") / plan["file"]
+    target = tmp_path / source.name
+    target.write_bytes(source.read_bytes())
+    before = target.read_bytes()
+
+    assert apply(target, {did: plan}) == [did]
+    assert target.read_bytes() == before
