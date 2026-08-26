@@ -44,7 +44,7 @@ data/traits/environment/extremely_halophilic.yaml	METPO:1000628	extremely haloph
 data/traits/environment/facultative_oxygen_preference.yaml	METPO:1000612	facultative oxygen preference	facultative_oxygen_preference_switching	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultative_psychrophilic.yaml	METPO:1000720	facultative psychrophilic	facultative_psychrophilic_cold_tolerance	NONMECHANISTIC	2	1	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_acidophilic.yaml	METPO:1003007	facultatively acidophilic	facultatively_acidophilic_ph_homeostasis	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/facultatively_aerobic.yaml	METPO:1000608	facultatively aerobic	facultative_aerobe_oxygen_flexible_growth	NONMECHANISTIC	5	0	5	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/facultatively_aerobic.yaml	METPO:1000608	facultatively aerobic	facultative_aerobe_oxygen_flexible_growth	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_alkaphilic.yaml	METPO:1003005	facultatively alkaliphilic	facultatively_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_anaerobic.yaml	METPO:1000605	facultatively anaerobic	facultative_anaerobe_oxygen_switch	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml	METPO:1000535	growth range phenotype with numerical limits	growth_range_phenotype_descriptor	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
@@ -58,7 +58,7 @@ data/traits/environment/mercury_tolerant.yaml	traitmech:000016	mercury tolerant	
 data/traits/environment/mesophilic.yaml	METPO:1000615	mesophilic	mesophilic_homoviscous_adaptation	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/metal_tolerant.yaml	traitmech:000012	metal tolerant	metal_tolerance_efflux_detoxification	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/microaerophilic.yaml	METPO:1000604	microaerophilic	microaerophile_low_oxygen_respiration	NONMECHANISTIC	6	3	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/microaerotolerant.yaml	METPO:1000610	microaerotolerant	microaerotolerant_low_oxygen_defense	NONMECHANISTIC	3	1	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/microaerotolerant.yaml	METPO:1000610	microaerotolerant	microaerotolerant_low_oxygen_defense	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/moderately_halophilic.yaml	METPO:1000623	moderately halophilic	moderate_halophile_compatible_solutes	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	nacl_delta_euryhaline_breadth	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	nacl_delta_high_extreme_euryhaline	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -142,7 +142,7 @@ data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature ra
 data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	temperature_range_mid4_warm_mesophile	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	temperature_range_very_low_psychrophile	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/thermophilic.yaml	METPO:1000616	thermophilic	thermophilic_heat_adaptation	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	thermotolerant_facultative_heat_adaptation	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	thermotolerant_facultative_heat_adaptation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation tolerant	uv_tolerance_excision_repair	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	xerophilic_low_water_activity_growth	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_tolerance_czc_efflux	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-

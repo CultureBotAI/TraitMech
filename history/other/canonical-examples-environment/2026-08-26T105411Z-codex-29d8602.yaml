@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: other
+  path: data/traits
+  slug: canonical-examples-environment
+session:
+  id: 2026-08-26T105411Z-codex-29d8602
+  timestamp: '2026-08-26T10:54:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Add three source-verified environmental exemplars from record-local research
+  details: |-
+    Reviewed the next non-bin environmental records in the canonical-example backlog
+    under the issue 444 standard. Added Anoxybacillus ayderensis strain JW/VK-KG4
+    for facultatively aerobic, Simulacricoccus ruber strain MCy10636 for
+    microaerotolerant, and Zestomonas thermotolerans strain CM3 for thermotolerant.
+    Each exemplar is named by its record's own deep-research artifact, supported by
+    a direct primary species description, and resolved to a current NCBI Taxonomy
+    identifier and label. Notes preserve the historical source names Anoxybacillus
+    kamchatkensis and Pseudomonas thermotolerans after their NCBI genus updates.
+
+    Deferred slightly_halophilic despite a strong local source because its numerical
+    optimum-bin placement overlaps the existing policy blocker in issue 478. The
+    other numerical pH, temperature, NaCl, cell-size, and GC bins remain deferred
+    under issues 475 and 478; no duplicate follow-up issue was opened. No gene or
+    operon was promoted to a primary record.
