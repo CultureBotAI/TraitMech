@@ -155,7 +155,7 @@ data/traits/genomics/gc_mid1.yaml	gc_mid1_high_gc_bin	7	1	7	7
 data/traits/genomics/gc_mid2.yaml	gc_mid2_mid_high_gc_bin	9	1	9	9
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry	9	1	9	9
 data/traits/genomics/genome_size.yaml	genome_size_population_lifestyle	9	1	9	9
-data/traits/genomics/genome_streamlining.yaml	streamlining_oligotrophic_selection	8	2	6	6,2
+data/traits/genomics/genome_streamlining.yaml	streamlining_oligotrophic_selection	8	1	8	8
 data/traits/genomics/genomic_island.yaml	gi_hgt_accessory_function	8	2	4	4,4
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer	16	4	10	10,2,2,2
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt	11	2	8	8,3
