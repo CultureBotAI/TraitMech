@@ -241,3 +241,11 @@ curation_history:
     membrane potential is an inside-positive electrical state, not the process that
     establishes it. The schema names this gradient/steady-value distinction explicitly.'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_range_very_low_extreme_acidophile=NONMECHANISTIC
+    with scope_notes.'
+  llm_assisted: true

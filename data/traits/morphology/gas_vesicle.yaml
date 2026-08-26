@@ -261,3 +261,13 @@ curation_history:
     cell density permitting vertical positioning'' is a disposition. Needs TRAIT added
     to `confers`'' subject_types, recorded there as a decision.'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope gas_vesicle_buoyancy=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (gvpa_protein,
+    gvpc_protein, gvpd_protein); added taxon-paired protein example(s) UniProtKB:B0JPK6
+    on gvpa_protein (NCBITaxon:449447); added canonical example(s) NCBITaxon:449447.'
+  llm_assisted: true

@@ -27,7 +27,7 @@ canonical_examples:
   taxon_label: Acetobacterium woodii
   note: Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway
     (Rnf bioenergetics model).
-  reference: DOI:10.1128/JB.00357-18
+  reference: PMID:22479398
 - taxon_id: NCBITaxon:1525
   taxon_label: Neomoorella thermoacetica
   note: Model homoacetogen used for biochemical reconstruction of the CODH/ACS convergence
@@ -470,4 +470,14 @@ curation_history:
   changes: Scoped the homoacetogenesis mechanism, grounded Fhs, added DOI-backed N.
     thermoacetica AcsB as an explicit CODH/ACS component, and documented the combined
     CODH/ACS, Rnf/Ech, and ATP-synthase labels without over-generalizing architecture.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:33952 from DOI:10.1128/JB.00357-18
+    back to PMID:22479398 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

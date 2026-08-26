@@ -210,3 +210,14 @@ curation_history:
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope cadmium_tolerance_czc_efflux=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (czc_efflux_system,
+    metallothionein_proteins, cada_ptype_atpase); added taxon-paired protein example(s)
+    UniProtKB:P13511 on czc_efflux_system (NCBITaxon:266264); added canonical example(s)
+    NCBITaxon:266264.'
+  llm_assisted: true

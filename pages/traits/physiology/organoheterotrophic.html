@@ -679,6 +679,12 @@ These should be modeled as **representative or optional modules**, not universal
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): oxidative_phosphorylation is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route through enumerable complexes -- environment/ph_delta_mid1.yaml lists them (nuo, cyo, ndh, sdh). The rule breaks what was a 2-2 tie before this tranche.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope organoheterotrophic_organic_donor_carbon=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); regrounded 2 node(s) (nadh_dehydrogenase_complex_i: none-&gt;GO:0030964, cytochrome_bc1_complex: none-&gt;GO:0045275); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1064,7 +1070,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-16 02:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

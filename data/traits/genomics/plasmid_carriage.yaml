@@ -233,3 +233,13 @@ curation_history:
     Neither names an activity, so there is one concept here and it is a protein. A
     rename would have invented a distinction the corpus does not draw.'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope plasmid_conjugation_hgt=NONMECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system,
+    plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins);
+    removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).'
+  llm_assisted: true

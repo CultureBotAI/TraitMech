@@ -22,7 +22,7 @@ canonical_examples:
   taxon_label: Paracoccus denitrificans
   note: Free-living model of the mitochondrial-type respiratory chain and oxidative
     phosphorylation (full set of bacterial respiratory complexes).
-  reference: DOI:10.1016/S0005-2728(98)00092-9
+  reference: PMID:30428155
 causal_graphs:
 - graph_id: oxidative_phosphorylation_chemiosmotic_coupling
   title: Oxidative phosphorylation chemiosmotic coupling
@@ -377,4 +377,14 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
     GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:266 from DOI:10.1016/S0005-2728(98)00092-9
+    back to PMID:30428155 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

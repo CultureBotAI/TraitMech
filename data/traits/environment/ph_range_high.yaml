@@ -265,3 +265,13 @@ curation_history:
     Na+ is the substrate that sustains high levels of alkaliphile antiport activity.''
     The ANTIPORT is what the Na+ pool sustains, and that node is in the same graph.'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope ph_range_high_extreme_alkaliphile=NONMECHANISTIC
+    with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mrp_antiporter_complex, na_solute_symporters, f1fo_atp_synthase); removed 1 node(s)
+    and 1 edge(s) together with their evidence (mrp_operon).'
+  llm_assisted: true

@@ -679,8 +679,8 @@ Ontology identifiers below are deliberately conservative. Label-only nodes are p
           
           
           
-          <a href="https://doi.org/10.1128/JB.00357-18"
-             rel="nofollow noreferrer"><code>DOI:10.1128/JB.00357-18</code></a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/22479398/"
+             rel="nofollow noreferrer"><code>PMID:22479398</code></a>
           
           
           <span class="meta">Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway (Rnf bioenergetics model).</span>
@@ -822,6 +822,12 @@ Ontology identifiers below are deliberately conservative. Label-only nodes are p
           <time>2026-08-24T10:20:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the homoacetogenesis mechanism, grounded Fhs, added DOI-backed N. thermoacetica AcsB as an explicit CODH/ACS component, and documented the combined CODH/ACS, Rnf/Ech, and ATP-synthase labels without over-generalizing architecture.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T03:24:00Z</time> ·
+          <strong>RESTORE_CANONICAL_CITATION</strong> · claude
+          <p class="changes">Restored the canonical-example citation for NCBITaxon:33952 from DOI:10.1128/JB.00357-18 back to PMID:22479398 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
         
       </ol>
@@ -1209,7 +1215,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-24 10:20 UTC from
+      Record as of 2026-08-26 03:24 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

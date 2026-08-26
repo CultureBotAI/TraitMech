@@ -29,7 +29,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:1708
   taxon_label: Cellulomonas fimi
   note: cellulose/biopolymer degrader
-  reference: DOI:10.1016/0378-1119(86)90196-4
+  reference: PMID:23342046
 causal_graphs:
 - graph_id: biopolymer_degradation_extracellular_hydrolysis
   title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly
@@ -292,4 +292,14 @@ curation_history:
   changes: Scoped the composite mechanism, added a DOI-backed C. fimi CenA example,
     grounded endoglucanase and endochitinase activities, and recorded explicit reviewed
     label-only dispositions for the broad multi-family protein nodes.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:1708 from DOI:10.1016/0378-1119(86)90196-4
+    back to PMID:23342046 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

@@ -315,3 +315,14 @@ curation_history:
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spore_forming_endospore_assembly=MECHANISTIC with
+    scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (spoIID, spoIIP, spo0a_phosphorylated, spo0e_phosphatases); added taxon-paired
+    protein example(s) UniProtKB:P06534 on spo0a_phosphorylated (NCBITaxon:224308);
+    added canonical example(s) NCBITaxon:224308.'
+  llm_assisted: true

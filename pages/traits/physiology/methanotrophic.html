@@ -691,6 +691,12 @@ Additional label-only candidates pending identifier verification include nitrate
           <p class="changes">Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813, issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so the CURIE resolved to nothing upstream while looking like an upstream term to anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv, which is not read at the point of use. RO:0002205 (has gene product) is the nearest real term but relates a GENE to a gene product, whereas these edges relate a gene cluster or operon to a protein complex or a biosynthetic process, which its range does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it, which puts it in the same state as the rest of that cohort rather than in a category of its own.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope methanotrophic_methane_oxidation=MECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (methanol_dehydrogenase); added taxon-paired protein example(s) UniProtKB:G1UBD1 on particulate_methane_monooxygenase (NCBITaxon:243233); regrounded 2 node(s) (particulate_methane_monooxygenase: none-&gt;GO:0015050, soluble_methane_monooxygenase: none-&gt;GO:0015050); removed 4 node(s) and 2 edge(s) together with their evidence (mmoh_subunits, mmoxyz_genes, pmmo_subunits, pmocab_operon); added canonical example(s) NCBITaxon:243233.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1076,7 +1082,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 04:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

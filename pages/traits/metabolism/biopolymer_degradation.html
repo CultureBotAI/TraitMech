@@ -505,8 +505,8 @@ Source-stated identifiers that can safely be carried forward include:
           
           
           
-          <a href="https://doi.org/10.1016/0378-1119(86)90196-4"
-             rel="nofollow noreferrer"><code>DOI:10.1016/0378-1119(86)90196-4</code></a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/23342046/"
+             rel="nofollow noreferrer"><code>PMID:23342046</code></a>
           
           
           <span class="meta">cellulose/biopolymer degrader</span>
@@ -593,6 +593,12 @@ Source-stated identifiers that can safely be carried forward include:
           <time>2026-08-24T09:05:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the composite mechanism, added a DOI-backed C. fimi CenA example, grounded endoglucanase and endochitinase activities, and recorded explicit reviewed label-only dispositions for the broad multi-family protein nodes.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T03:24:00Z</time> ·
+          <strong>RESTORE_CANONICAL_CITATION</strong> · claude
+          <p class="changes">Restored the canonical-example citation for NCBITaxon:1708 from DOI:10.1016/0378-1119(86)90196-4 back to PMID:23342046 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
         
       </ol>
@@ -980,7 +986,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-24 09:05 UTC from
+      Record as of 2026-08-26 03:24 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

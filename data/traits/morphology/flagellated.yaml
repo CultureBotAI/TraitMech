@@ -388,3 +388,15 @@ curation_history:
     entailed a false type on its object. ''Ion flux through stator complexes POWERS
     torque generation.'''
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope flagellated_flagellar_motor=MECHANISTIC with scope_notes;
+    marked 8 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flagellar_basal_body,
+    stator_complex, ft3ss_export_system, flagellar_structural_subunits, flii_atpase_complex,
+    fld_filament_cap, hook_filament_junction, chey_p); added taxon-paired protein
+    example(s) UniProtKB:P04949 on flagellar_structural_subunits (NCBITaxon:83333);
+    added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true

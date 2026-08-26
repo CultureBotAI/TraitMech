@@ -500,6 +500,12 @@ Recent work complicates the strict two-strategy division. In 2024, *N. thermophi
           <p class="changes">Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses under the single label `reduces` - genuine electron donation, and a lessens/decreases sense - and METPO:2007802 is defined as donating electrons to the object and lowering its oxidation state, which this edge does not assert. The two senses could not be separated mechanically because the label was identical, so they migrated together in issue 329 and were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment of the kind issue 301 removed.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope nacl_range_tolerance_breadth=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (trk_ktr_k_influx, kima_kup_k_uptake, opua_solute_importers).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -885,7 +891,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 06:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

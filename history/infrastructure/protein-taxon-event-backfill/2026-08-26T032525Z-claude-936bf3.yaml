@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/backfill_protein_taxon_events.py
+  slug: protein-taxon-event-backfill
+session:
+  id: 2026-08-26T032525Z-claude-936bf3
+  timestamp: '2026-08-26T03:25:25Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/517
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/511
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Backfill curation events for 268 records the protein-taxon tranche left unrecorded
+  details: 'One-shot migration (dry-run default, --apply opt-in, per-record canary before
+    the batch). For each trait record changed by commit f32b3168 that received no curation
+    event from the tranche, the script compares the record with its state at the tranche''s
+    parent commit 70aef2c5 and appends one event describing exactly what the tranche changed
+    there: scope disposition, reviewed-label-only nodes, taxon-paired protein examples added,
+    regroundings and retypings, nodes and edges removed, canonical examples added or replaced,
+    and citations changed. 268 records were backfilled; the 84 that already carried a tranche
+    event were left alone. Events use the tranche''s existing action vocabulary (CURATE_PROTEIN_TAXON_EXAMPLE
+    when examples were added, otherwise REVIEW_GRAPH_PROTEIN_TAXON), a fixed timestamp with
+    upsert so re-runs refresh rather than duplicate, and every write went through write_validated_trait.'

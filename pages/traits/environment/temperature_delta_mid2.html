@@ -457,6 +457,12 @@ Direct broad-range studies additionally support temperature-dependent isozyme ex
           <p class="changes">Normalised causal-node type(s) so one node_id means one thing corpus-wide (issue 356): membrane_fluidity: BIOLOGICAL_PROCESS -&gt; QUALITY; membrane_fluidity: description aligned with its 24 peers. The schema&#39;s OWN example of QUALITY: &#39;a quality or measurable attribute of a cellular component (e.g. membrane fluidity ...)&#39;. 24 of 25 occurrences are already QUALITY and describe &#39;the physical state of the lipid bilayer&#39;. The lone BIOLOGICAL_PROCESS one (temperature_delta_mid2.yaml) is the interesting case: its DESCRIPTION said &#39;Maintenance of optimal membrane fluidity&#39;, which is a process and would argue for a rename rather than a retype -- but its EDGES read the other way, &#39;unsaturated_fatty_acids -increases-&gt; membrane_fluidity -enables-&gt; broad_thermal_adaptation&#39;, which is the homeoviscous-adaptation cascade acting on the PROPERTY, and matches how the other 24 are wired. Three signals (schema, 24 peers, its own edges) against one (its description), so the description is what was wrong; it is corrected here rather than the node being renamed.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope temperature_delta_mid2_broad_breadth=NONMECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (des_desaturase, rpos_sigma_factor).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -842,7 +848,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-15 02:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

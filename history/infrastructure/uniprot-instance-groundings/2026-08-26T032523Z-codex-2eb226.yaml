@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_uniprot_instance_groundings.py
+  slug: uniprot-instance-groundings
+session:
+  id: 2026-08-26T032523Z-codex-2eb226
+  timestamp: '2026-08-26T03:25:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/518
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/511
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Replace or retract organism-specific UniProt groundings across 48 records
+  details: Records after the fact (review issue 518) the bulk change in commit d1655dad, made
+    by codex on 2026-08-22 and carried into PR 511 without a history record; claude wrote
+    this record during the adversarial review of that PR. The migration scripts/migrate_uniprot_instance_groundings.py
+    reviewed every GENE_OR_PROTEIN node grounded to a UniProtKB accession across 48 trait
+    records and either replaced the accession with a taxon-agnostic GO or InterPro family
+    or complex term, or retracted it as a reviewed label-only node, following docs/GROUNDING_POLICY.md
+    and the candidate inventory in mappings/uniprot_regrounding_candidates.tsv. Each of the
+    48 records carries a REVIEW_UNIPROT_INSTANCE_GROUNDINGS curation event dated 2026-08-22.
+    After the change no GENE_OR_PROTEIN node grounding in the corpus uses a UniProtKB accession.

@@ -538,6 +538,12 @@ Identifiers below are proposed only where the mapping is sufficiently stable. St
           <p class="changes">Edge pfa_operon -&gt; omega3_pufa in graph piezophilic_hhp_membrane_adaptation: re-grounded it from enables/RO:0002327 to produces/METPO:2007800. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. A GENE_OR_PROTEIN subject bringing a CHEMICAL into existence, which is exactly `produces`&#39; declared gate. NOT `encodes`: the operon encodes a SYNTHASE, and the synthase makes the PUFA -- `encodes` does not admit a CHEMICAL object, correctly.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope piezophilic_hhp_membrane_adaptation=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (pfa_operon).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -923,7 +929,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 18:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

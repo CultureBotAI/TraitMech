@@ -248,3 +248,15 @@ curation_history:
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1, biolink:catalyzes×1, RO:0002211×1).
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope pha_granule_carbon_energy_storage=MECHANISTIC with
+    scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (pha_synthase_phac, phasin_phap, phar_regulator, pha_depolymerase_phaz); added
+    taxon-paired protein example(s) UniProtKB:P23608 on pha_synthase_phac (NCBITaxon:381666);
+    added 1 node(s) and 2 edge(s) (phap_transcription); removed 1 node(s) and 1 edge(s)
+    together with their evidence (phap_gene); added canonical example(s) NCBITaxon:381666.'
+  llm_assisted: true

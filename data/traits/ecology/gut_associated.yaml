@@ -258,6 +258,15 @@ curation_history:
     an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
     in the discussion's notes.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope gut_associated_microbiota_metabolism=NONMECHANISTIC
+    with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (adhesins).'
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3
   prompt: This record commits to luminal oxygen limitation contributing to the primary

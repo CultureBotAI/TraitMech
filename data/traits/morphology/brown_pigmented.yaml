@@ -289,3 +289,12 @@ curation_history:
     or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope brown_pigmented_pyomelanin_pathway=MECHANISTIC with
+    scope_notes; added taxon-paired protein example(s) UniProtKB:A0AAE7AGQ2 on hppD
+    (NCBITaxon:651); added canonical example(s) NCBITaxon:651.'
+  llm_assisted: true

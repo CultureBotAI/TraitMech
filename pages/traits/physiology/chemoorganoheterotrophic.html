@@ -736,6 +736,12 @@ Label-only candidates where exact ontology scope should be checked:
           <p class="changes">Repaired a wrong CURIE (issue 391): fermentation: METPO:1000845 -&gt; GO:0006113. Was METPO:1000845 &#39;Acetogenesis&#39; — a Wood-Ljungdahl acetate-producing metabolism, while the node describes &#39;Energy metabolism using organic electron acceptors and substrate-level phosphorylation&#39;, i.e. fermentation. The term&#39;s related synonym &#39;Acetate fermentation&#39; explains the mismatch. Replaced with GO:0006113, the (fermentation, BIOLOGICAL_PROCESS) row mappings/node_grounding.tsv already holds and the grounding eight sibling records already carry.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope chemoorganoheterotrophic_organic_energy_carbon=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1121,7 +1127,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-22 04:30 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

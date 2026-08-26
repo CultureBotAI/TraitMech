@@ -589,6 +589,12 @@ This avoids asserting that every upstream carotenoid step directly causes yellow
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): carotenoid_biosynthesis is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named biosynthetic route. Most descriptions call it one outright, including BIOLOGICAL_PROCESS-typed ones (&#39;Enzymatic pathway producing carotenoid pigments&#39;); red_pigmented.yaml instead ENUMERATES the steps -- &#39;Phytoene synthase condenses two GGPP to phytoene, then desaturation/isomerization yields lycopene&#39; -- which is the rule&#39;s own test for PATHWAY met explicitly rather than by naming. Applied AGAINST the majority, which was 5 BIOLOGICAL_PROCESS to 1 before this tranche.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope yellow_pigmented_carotenoid_color=NONMECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (crt_enzymes, idsa_crte, crti, crty).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -974,7 +980,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-16 02:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

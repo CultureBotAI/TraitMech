@@ -232,3 +232,13 @@ curation_history:
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope mercury_tolerance_mer_reduction=MECHANISTIC with
+    scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (mer_operon, merb_lyase, merr_sensor); added taxon-paired protein example(s) UniProtKB:Q1L9Z3
+    on mer_operon (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true

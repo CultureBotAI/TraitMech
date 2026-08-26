@@ -198,3 +198,11 @@ curation_history:
     association rather than treating flagellar count as diagnostic; the graph is now
     one connected component.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope peritrichous_surface_distributed_flagella=NONMECHANISTIC
+    with scope_notes.'
+  llm_assisted: true

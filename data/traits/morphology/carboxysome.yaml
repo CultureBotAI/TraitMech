@@ -248,3 +248,13 @@ curation_history:
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope carboxysome_co2_concentrating=MECHANISTIC with scope_notes;
+    marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (bmc_shell_proteins);
+    added taxon-paired protein example(s) UniProtKB:Q03511 on bmc_shell_proteins (NCBITaxon:1140);
+    added canonical example(s) NCBITaxon:1140.'
+  llm_assisted: true

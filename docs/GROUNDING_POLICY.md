@@ -4,7 +4,9 @@ Status: **corpus-wide protein/taxon review applied.**
 All historical UniProt instance groundings have been reviewed and either
 replaced or retracted (§7). The taxon-paired `protein_examples` model and
 coverage audit are implemented. The only remaining coverage gap is the
-explicitly protected `spore_germination.yaml` record.
+`spore_germination.yaml` record, which `DO_NOT_WORK.md` excludes from agentic
+curation; the coverage audit reads that file and reports the record as
+`PROTECTED` rather than `GAP`, so the `--fail-on gaps` gate stays reachable.
 
 This document covers protein, protein-family, and protein-complex `CausalNode`
 entries typed with the legacy `GENE_OR_PROTEIN` enum value, and the

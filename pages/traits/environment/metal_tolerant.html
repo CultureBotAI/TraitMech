@@ -507,6 +507,12 @@ Use ChEBI identifiers only after confirming the exact protonation and oxidation 
           <p class="changes">Retyped the object node from STATE/CAPACITY to TRAIT and re-grounded its in-edge from enables/RO:0002327 to METPO:2007700 (confers), issue 334. biolink declares enables range &#39;biological process or activity&#39;, which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy. The node&#39;s own description gives it away as a disposition rather than a state - phrasings like &#34;Capacity of an organism to grow and survive under...&#34;, &#34;Ability to grow when...&#34; and &#34;tolerance of...&#34; describe what an organism CAN do, which is what a TRAIT is. So the defect was the node type, not the predicate, which is the third time in this issue&#39;s neighbourhood that has been true (compare issue 331&#39;s acetate kinase step and issue 330&#39;s negated node name). With the object correctly a TRAIT, confers applies unchanged.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope metal_tolerance_efflux_detoxification=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (efflux_pump, arsc_reductase, ars_detoxification_proteins); added 1 node(s) and 1 edge(s) (ars_detoxification_proteins); removed 1 node(s) and 1 edge(s) together with their evidence (ars_operon).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -892,7 +898,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 05:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

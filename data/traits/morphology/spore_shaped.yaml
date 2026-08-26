@@ -308,3 +308,14 @@ curation_history:
     GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope spore_shaped_endospore_layers=MECHANISTIC with scope_notes;
+    marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (spovid_protein,
+    safa_protein); added taxon-paired protein example(s) UniProtKB:P35149 on spoiva_protein
+    (NCBITaxon:224308); regrounded 1 node(s) (spoiva_protein: none->InterPro:IPR014201);
+    added canonical example(s) NCBITaxon:224308.'
+  llm_assisted: true

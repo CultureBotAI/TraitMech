@@ -300,3 +300,14 @@ curation_history:
     entailed a false type on its object. ''Proton motive force can POWER gliding motility
     motors.'''
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope gliding_surface_motility=MECHANISTIC with scope_notes;
+    marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (gliding_motility_machinery,
+    surface_adhesins, type_ix_secretion_system); added taxon-paired protein example(s)
+    UniProtKB:Q1D823 on gliding_motility_machinery (NCBITaxon:246197); added canonical
+    example(s) NCBITaxon:246197.'
+  llm_assisted: true

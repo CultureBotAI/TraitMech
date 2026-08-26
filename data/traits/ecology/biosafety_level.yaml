@@ -279,6 +279,14 @@ curation_history:
     an experiment with a decision criterion. The scan's sentence and PMIDs are preserved
     in the discussion's notes.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope biosafety_level_hazard_classification=NONMECHANISTIC
+    with scope_notes.'
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-93e87bc8aba3
   prompt: This record's graph enumerates bsl1 through bsl5, but BSL-5 is not an assigned

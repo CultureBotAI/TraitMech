@@ -518,6 +518,12 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
           <p class="changes">Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402): flagellar_motility: GO:0003341 -&gt; GO:0071973. Was GO:0003341 &#39;cilium movement&#39;. Bacteria have flagella, not cilia, and the node says &#39;Flagellum-dependent cell motility&#39; — the match was on the word &#39;motility&#39; via the kg-microbe index (#402). Replaced with the term GO actually provides for this, resolved through the repo&#39;s own OAK adapter before being written rather than recalled.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope soil_dwelling_biogeochemistry=NONMECHANISTIC with scope_notes.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -903,7 +909,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-17 06:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

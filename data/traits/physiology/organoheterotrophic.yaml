@@ -364,3 +364,14 @@ curation_history:
     lists them (nuo, cyo, ndh, sdh). The rule breaks what was a 2-2 tie before this
     tranche.'
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope organoheterotrophic_organic_donor_carbon=MECHANISTIC
+    with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase
+    (NCBITaxon:83333); regrounded 2 node(s) (nadh_dehydrogenase_complex_i: none->GO:0030964,
+    cytochrome_bc1_complex: none->GO:0045275); added 1 node(s) and 1 edge(s) (atp_synthase);
+    added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true

@@ -9,8 +9,15 @@ evidence.
 
 Output: ``reports/graph_protein_taxon_coverage.tsv``, one row per graph. The
 default is report-only so the existing backlog can be curated incrementally.
-Use ``--fail-on gaps`` for the final coverage gate and ``--fail-on errors`` to
-enforce malformed or contradictory examples during rollout.
+Use ``--fail-on errors`` to enforce malformed or contradictory examples during
+rollout and ``--fail-on gaps`` for the final coverage gate; ``gaps`` fails on
+errors as well, so the final gate cannot pass a corpus with contradictory
+examples just because its coverage is complete.
+
+Records listed in ``DO_NOT_WORK.md`` are excluded from agentic curation and can
+never be brought to coverage by the usual route, so their graphs report the
+status ``PROTECTED`` (with the unmet requirements still listed) and do not count
+toward the ``gaps`` gate. Editing that file is a user decision.
 """
 
 from __future__ import annotations
@@ -28,6 +35,9 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS = REPO_ROOT / "data" / "traits"
 REPORT = REPO_ROOT / "reports" / "graph_protein_taxon_coverage.tsv"
+DO_NOT_WORK = REPO_ROOT / "DO_NOT_WORK.md"
+
+PROTECTED_PATH_RE = re.compile(r"`(data/traits/[^`]+\.yaml)`")
 
 SEMANTIC_PROTEIN_PREFIXES = {"ComplexPortal", "GO", "InterPro", "NCBIfam"}
 ERROR_CODES = {
@@ -100,6 +110,13 @@ def load_records(traits_dir: Path = TRAITS) -> list[tuple[str, dict[str, Any]]]:
     return records
 
 
+def load_protected(path: Path = DO_NOT_WORK) -> set[str]:
+    """Return repo-relative trait paths that DO_NOT_WORK.md excludes from curation."""
+    if not path.is_file():
+        return set()
+    return set(PROTECTED_PATH_RE.findall(path.read_text(encoding="utf-8")))
+
+
 def _issue(issues: list[tuple[str, str]], code: str, detail: str = "") -> None:
     rendered = f"{code}:{detail}" if detail else code
     issues.append(("ERROR" if code in ERROR_CODES else "GAP", rendered))
@@ -118,8 +135,15 @@ def graph_row(
     file_label: str,
     record: dict[str, Any],
     graph: dict[str, Any],
+    *,
+    protected: bool = False,
 ) -> dict[str, Any]:
-    """Return one deterministic coverage row for a causal graph."""
+    """Return one deterministic coverage row for a causal graph.
+
+    A ``protected`` graph keeps its findings and counts in the row but takes
+    the status ``PROTECTED`` instead of ``GAP``, and its gaps are not counted
+    toward the ``--fail-on gaps`` gate. Errors are never protected.
+    """
     issues: list[tuple[str, str]] = []
     scope = str(graph.get("scope_status") or "UNREVIEWED")
     nodes = [node for node in graph.get("nodes") or [] if isinstance(node, dict)]
@@ -232,7 +256,7 @@ def graph_row(
     if error_count:
         row_status = "ERROR"
     elif gap_count:
-        row_status = "GAP"
+        row_status = "PROTECTED" if protected else "GAP"
     elif scope == "NONMECHANISTIC":
         row_status = "NONMECHANISTIC"
     else:
@@ -260,14 +284,20 @@ def graph_row(
 
 def coverage_rows(
     records: Iterable[tuple[str, dict[str, Any]]] | None = None,
+    protected: set[str] | None = None,
 ) -> list[dict[str, Any]]:
     """Return one coverage row per graph in the supplied or live corpus."""
     source = load_records() if records is None else records
+    shielded = load_protected() if protected is None else protected
     rows: list[dict[str, Any]] = []
     for file_label, record in source:
         for graph in record.get("causal_graphs") or []:
             if isinstance(graph, dict):
-                rows.append(graph_row(file_label, record, graph))
+                rows.append(
+                    graph_row(
+                        file_label, record, graph, protected=file_label in shielded
+                    )
+                )
     return rows
 
 
@@ -295,7 +325,10 @@ def main() -> int:
         "--fail-on",
         choices=("none", "errors", "gaps", "any"),
         default="none",
-        help="exit non-zero for the selected finding class (default: none)",
+        help=(
+            "exit non-zero for the selected finding class (default: none); "
+            "'gaps' also fails on errors, 'any' additionally fails on protected gaps"
+        ),
     )
     args = parser.parse_args()
 
@@ -303,18 +336,26 @@ def main() -> int:
     write_report(rows, args.out)
     statuses = Counter(row["status"] for row in rows)
     print(f"causal graphs: {len(rows)}")
-    for status in ("PASS", "NONMECHANISTIC", "GAP", "ERROR"):
+    for status in ("PASS", "NONMECHANISTIC", "GAP", "PROTECTED", "ERROR"):
         print(f"  {status.lower():16s} {statuses[status]}")
     print(f"wrote {args.out}")
 
+    return gate_exit_code(rows, args.fail_on)
+
+
+def gate_exit_code(rows: list[dict[str, Any]], fail_on: str) -> int:
+    """Map the coverage rows and a ``--fail-on`` class to a process exit code."""
     errors = sum(int(row["error_count"]) for row in rows)
-    gaps = sum(int(row["gap_count"]) for row in rows)
-    if args.fail_on == "errors":
+    gaps = sum(int(row["gap_count"]) for row in rows if row["status"] != "PROTECTED")
+    protected_gaps = sum(
+        int(row["gap_count"]) for row in rows if row["status"] == "PROTECTED"
+    )
+    if fail_on == "errors":
         return int(errors > 0)
-    if args.fail_on == "gaps":
-        return int(gaps > 0)
-    if args.fail_on == "any":
+    if fail_on == "gaps":
         return int(errors > 0 or gaps > 0)
+    if fail_on == "any":
+        return int(errors > 0 or gaps > 0 or protected_gaps > 0)
     return 0
 
 

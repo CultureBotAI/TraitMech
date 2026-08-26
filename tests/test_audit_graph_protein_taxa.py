@@ -7,7 +7,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from audit_graph_protein_taxa import coverage_rows, write_report  # noqa: E402
+from audit_graph_protein_taxa import (  # noqa: E402
+    coverage_rows,
+    gate_exit_code,
+    load_protected,
+    write_report,
+)
 
 
 def _example(**overrides):
@@ -207,7 +212,73 @@ def test_nonprotein_legacy_node_does_not_satisfy_protein_coverage():
     assert "NO_PROTEIN_NODE" in row["unmet_requirements"]
 
 
+def _gap_record():
+    return _record(
+        node={"node_id": "chemical", "label": "x", "node_type": "CHEMICAL"},
+        canonical=[],
+        graph_updates={"scope_status": "REVIEW_NEEDED"},
+    )
+
+
+def test_protected_record_reports_protected_not_gap():
+    row = coverage_rows([("p.yaml", _gap_record())], protected={"p.yaml"})[0]
+    assert row["status"] == "PROTECTED"
+    assert row["gap_count"] == 4
+    assert "SCOPE_NOT_REVIEWED" in row["unmet_requirements"]
+
+
+def test_protection_never_hides_errors():
+    node = {
+        "node_id": "protein",
+        "label": "protein",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding": "UniProtKB:P0A6Y8",
+        "protein_examples": [_example()],
+    }
+    row = coverage_rows([("p.yaml", _record(node=node))], protected={"p.yaml"})[0]
+    assert row["status"] == "ERROR"
+
+
+def test_gaps_gate_fails_on_errors_and_ignores_protected_gaps():
+    error_node = {
+        "node_id": "protein",
+        "label": "protein",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding": "UniProtKB:P0A6Y8",
+        "protein_examples": [_example()],
+    }
+    error_rows = coverage_rows([("e.yaml", _record(node=error_node))], protected=set())
+    assert gate_exit_code(error_rows, "errors") == 1
+    assert gate_exit_code(error_rows, "gaps") == 1
+
+    gap_rows = coverage_rows([("g.yaml", _gap_record())], protected=set())
+    assert gate_exit_code(gap_rows, "errors") == 0
+    assert gate_exit_code(gap_rows, "gaps") == 1
+
+    protected_rows = coverage_rows([("p.yaml", _gap_record())], protected={"p.yaml"})
+    assert gate_exit_code(protected_rows, "gaps") == 0
+    assert gate_exit_code(protected_rows, "any") == 1
+
+
+def test_load_protected_reads_backticked_trait_paths(tmp_path):
+    listing = tmp_path / "DO_NOT_WORK.md"
+    listing.write_text(
+        "- `spore_germination` (`data/traits/physiology/spore_germination.yaml`)\n"
+        "- prose mentioning data/traits/x/y.yaml without backticks\n",
+        encoding="utf-8",
+    )
+    assert load_protected(listing) == {"data/traits/physiology/spore_germination.yaml"}
+    assert load_protected(tmp_path / "missing.md") == set()
+
+
 def test_real_corpus_has_one_row_per_graph():
     rows = coverage_rows()
     assert len(rows) == 353
     assert not any("GENERIC_UNIPROT_GROUNDING" in row["unmet_requirements"] for row in rows)
+
+
+def test_real_corpus_protected_records_come_from_do_not_work():
+    rows = coverage_rows()
+    protected = {row["file"] for row in rows if row["status"] == "PROTECTED"}
+    assert protected <= load_protected()
+    assert not [row for row in rows if row["status"] == "GAP"]

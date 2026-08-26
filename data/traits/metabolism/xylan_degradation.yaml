@@ -27,7 +27,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:44001
   taxon_label: Caldicellulosiruptor saccharolyticus
   note: thermophilic hemicellulose degrader
-  reference: DOI:10.1128/aem.56.4.1017-1024.1990
+  reference: PMID:18776029
 - taxon_id: NCBITaxon:28116
   taxon_label: Bacteroides ovatus
   note: gut xylan utiliser
@@ -219,4 +219,14 @@ curation_history:
   changes: Scoped the composite xylan-degradation mechanism, added a DOI-backed C.
     saccharolyticus XynA example, and documented reviewed label-only dispositions
     for the multi-family xylanase-system and CE15 accessory-enzyme nodes.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:44001 from DOI:10.1128/aem.56.4.1017-1024.1990
+    back to PMID:18776029 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

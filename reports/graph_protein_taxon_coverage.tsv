@@ -342,7 +342,7 @@ data/traits/physiology/photolithotrophic.yaml	METPO:1000658	photolithotrophic	ph
 data/traits/physiology/photoorganoheterotrophic.yaml	METPO:1000659	photoorganoheterotrophic	photoorganoheterotrophic_light_organic_electrons	MECHANISTIC	2	0	2	2	2	1	1	PASS	0	0	-
 data/traits/physiology/phototrophic.yaml	METPO:1000660	phototrophic	phototrophic_light_energy_capture	MECHANISTIC	3	2	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	quorum_sensing_autoinducer	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
-data/traits/physiology/spore_germination.yaml	traitmech:000083	spore germination	spore_germination_germinant_trigger	UNREVIEWED	0	0	0	1	1	0	0	GAP	0	3	SCOPE_NOT_REVIEWED|NO_PROTEIN_NODE|NO_TAXON_MATCHED_PROTEIN_EXAMPLE
+data/traits/physiology/spore_germination.yaml	traitmech:000083	spore germination	spore_germination_germinant_trigger	UNREVIEWED	0	0	0	1	1	0	0	PROTECTED	0	3	SCOPE_NOT_REVIEWED|NO_PROTEIN_NODE|NO_TAXON_MATCHED_PROTEIN_EXAMPLE
 data/traits/physiology/stress_response.yaml	traitmech:000078	stress response	stress_response_induction	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
 data/traits/physiology/trophic_type.yaml	METPO:1000631	trophic type	trophic_type_classification_axes	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/urease_activity.yaml	traitmech:000077	urease activity	urease_activity_urea_hydrolysis	MECHANISTIC	1	0	1	1	1	3	3	PASS	0	0	-

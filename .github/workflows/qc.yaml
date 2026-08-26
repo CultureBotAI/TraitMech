@@ -19,6 +19,10 @@ on:
       # recipe was added — a filter narrower than what the job reads is exactly
       # #184/#200/#250/#252.
       - "proposals/**"
+      # audit-graph-protein-taxa reads DO_NOT_WORK.md to report protected
+      # records instead of gaps (#522), so editing that list changes what qc
+      # verifies.
+      - "DO_NOT_WORK.md"
       - "justfile"
       - "pyproject.toml"
       - ".github/workflows/qc.yaml"

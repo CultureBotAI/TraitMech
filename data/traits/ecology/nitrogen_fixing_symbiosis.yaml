@@ -251,3 +251,13 @@ curation_history:
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope rhizobia_legume_n2_fixation=MECHANISTIC with scope_notes;
+    marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (leghemoglobin);
+    added taxon-paired protein example(s) UniProtKB:P00460 on nitrogenase_complex
+    (NCBITaxon:266834); added canonical example(s) NCBITaxon:266834.'
+  llm_assisted: true

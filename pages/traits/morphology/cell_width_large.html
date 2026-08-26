@@ -497,6 +497,12 @@ Protein nodes should be assigned **taxon-specific UniProt accessions during impl
           <p class="changes">Edge rod_complex_rotation -&gt; even_pg_distribution in graph cell_width_large_setpoint_increase: retyped even_pg_distribution to BIOLOGICAL_PROCESS. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. The label reads like a quality but the description does not: &#39;Evenly distributed INSERTION of peptidoglycan in the cell-surface layer.&#39; Insertion is a process, so `enables` is already the right relation and only the node type was wrong.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope cell_width_large_setpoint_increase=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (roda_pbp2_complex, mreb_filaments, mrec_mred_balance).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -882,7 +888,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 18:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

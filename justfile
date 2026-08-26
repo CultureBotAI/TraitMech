@@ -278,7 +278,9 @@ audit-justfile-paths *args:
 # Report graph-level protein, canonical-taxon, semantic-grounding, and
 # taxon-paired UniProt-example coverage. Existing coverage gaps remain a
 # reported backlog during rollout, but malformed/contradictory examples fail.
-# Use `--fail-on gaps` for the completed corpus. Offline and deterministic.
+# Use `--fail-on gaps` for the completed corpus: it fails on errors too, and
+# records listed in DO_NOT_WORK.md report PROTECTED instead of GAP so the
+# gate stays reachable. Offline and deterministic.
 audit-graph-protein-taxa *args:
     uv run python scripts/audit_graph_protein_taxa.py --fail-on errors {{args}}
 
@@ -359,6 +361,15 @@ retype-causal-nodes-apply *args:
 # Repair the fermentation grounding in chemoorganoheterotrophic.yaml (#391). Default dry-run.
 reground-fermentation-curie *args:
     uv run python scripts/reground_fermentation_curie.py {{args}}
+
+# Backfill per-record curation events the protein-taxon tranche omitted (#517). Default dry-run.
+backfill-protein-taxon-events *args:
+    uv run python scripts/backfill_protein_taxon_events.py {{args}}
+
+# Restore the five canonical-example citations the tranche replaced under an
+# "upgrade" label (#519). Default dry-run.
+restore-substituted-citations *args:
+    uv run python scripts/restore_substituted_citations.py {{args}}
 
 # Refresh raw METPO copy from the local KG-Hub assays clone
 refresh-metpo:

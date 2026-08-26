@@ -19,7 +19,9 @@ quoted in prose; derive them again before planning or reporting.
 - Full open-issue queue triage: [review-open-issues](.claude/skills/review-open-issues/SKILL.md)
 
 Read [the curation playbook](docs/CURATION_PLAYBOOK.md) and [grounding
-policy](docs/GROUNDING_POLICY.md) before changing curated data.
+policy](docs/GROUNDING_POLICY.md) before changing curated data. Records listed
+in [DO_NOT_WORK.md](DO_NOT_WORK.md) are excluded from agentic curation; do not
+edit them unless a user removes the entry.
 
 ## Safe mutation contract
 

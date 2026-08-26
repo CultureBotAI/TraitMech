@@ -696,6 +696,12 @@ Organic-substrate availability is the main bottom-up control on marine heterotro
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): fermentation is typed BIOLOGICAL_PROCESS. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A CLASS of routes rather than one route -- fermentation names a mode of energy conservation with many distinct implementations, so its steps cannot be enumerated without picking one. Was 3 BIOLOGICAL_PROCESS to 2 before this tranche. NOTE its groundings disagree with each other (GO:0006113 x3, METPO:1002005, and METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and deliberately NOT touched here, because retyping a node while carrying a wrong CURIE along unchanged would make it look reviewed.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope heterotrophic_organic_carbon_assimilation=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1081,7 +1087,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-16 02:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

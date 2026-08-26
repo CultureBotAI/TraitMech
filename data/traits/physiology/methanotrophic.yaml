@@ -382,3 +382,17 @@ curation_history:
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope methanotrophic_methane_oxidation=MECHANISTIC with
+    scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (methanol_dehydrogenase); added taxon-paired protein example(s) UniProtKB:G1UBD1
+    on particulate_methane_monooxygenase (NCBITaxon:243233); regrounded 2 node(s)
+    (particulate_methane_monooxygenase: none->GO:0015050, soluble_methane_monooxygenase:
+    none->GO:0015050); removed 4 node(s) and 2 edge(s) together with their evidence
+    (mmoh_subunits, mmoxyz_genes, pmmo_subunits, pmocab_operon); added canonical example(s)
+    NCBITaxon:243233.'
+  llm_assisted: true

@@ -501,3 +501,15 @@ curation_history:
     entailed a false type on its object. ''Torque generation drives rotation of the
     flagellar motor.'''
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope motile_energy_dependent_locomotion=MECHANISTIC with
+    scope_notes; marked 8 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (flagellar_motor, motab_stator, flig_rotor, chea_kinase, chey_response_regulator,
+    flagellar_c_ring, pilb_atpase, pilt_atpase); added taxon-paired protein example(s)
+    UniProtKB:P0AE67 on chey_response_regulator (NCBITaxon:83333); added canonical
+    example(s) NCBITaxon:83333.'
+  llm_assisted: true

@@ -26,7 +26,7 @@ canonical_examples:
   taxon_label: Serratia marcescens
   note: Textbook chitinolytic system (ChiA/ChiB/ChiC1 plus the CBP21 LPMO that founded
     the lytic polysaccharide monooxygenase field).
-  reference: DOI:10.1002/j.1460-2075.1986.tb04235.x
+  reference: PMID:23398882
 causal_graphs:
 - graph_id: chitinolysis_chitinase
   title: Chitinolysis hydrolyzes chitin to N-acetylglucosamine
@@ -250,4 +250,14 @@ curation_history:
   changes: Scoped the S. marcescens mechanism, added DOI-backed ChiA and CBP21 protein
     examples, grounded the generic chitinase activity, and documented why the combined
     exochitinase and AA10 labels remain reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-08-26T03:24:00Z'
+  curator: claude
+  action: RESTORE_CANONICAL_CITATION
+  changes: Restored the canonical-example citation for NCBITaxon:615 from DOI:10.1002/j.1460-2075.1986.tb04235.x
+    back to PMID:23398882 (review issue 519). The tranche event described the change
+    as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID,
+    so this was a replacement rather than an identifier normalisation. The pre-tranche
+    citation is restored; a deliberate replacement can be made in a new event that
+    says so.
   llm_assisted: true

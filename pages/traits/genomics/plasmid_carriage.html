@@ -499,6 +499,12 @@ Identifiers below are restricted to high-confidence established terms. Family- o
           <p class="changes">Separated the protein sense from the activity sense so one node_id means one thing (issue 356): retyped plasmid_methylase: MOLECULAR_FUNCTION -&gt; GENE_OR_PROTEIN. The exception in this tranche. Both occurrences describe the ENZYME -- &#39;Methyltransferase encoded by a mobile element that pre-methylates its DNA&#39; (GENE_OR_PROTEIN) and &#39;Plasmid-borne methyltransferase shielding plasmid DNA from restriction&#39; (MOLECULAR_FUNCTION). Neither names an activity, so there is one concept here and it is a protein. A rename would have invented a distinction the corpus does not draw.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope plasmid_conjugation_hgt=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system, plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins); removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -884,7 +890,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-15 06:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

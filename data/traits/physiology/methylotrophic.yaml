@@ -404,3 +404,15 @@ curation_history:
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope methylotrophic_methanol_assimilation=MECHANISTIC
+    with scope_notes; marked 7 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
+    (methanol_dehydrogenase, pqq_dependent_mdh, hexulose_phosphate_synthase, serine_glyoxylate_aminotransferase,
+    hydroxypyruvate_reductase, formaldehyde_dehydrogenase, mxa_methanol_dehydrogenase);
+    added taxon-paired protein example(s) UniProtKB:P16027 on mxa_methanol_dehydrogenase
+    (NCBITaxon:272630); added canonical example(s) NCBITaxon:272630.'
+  llm_assisted: true

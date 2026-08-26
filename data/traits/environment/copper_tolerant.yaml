@@ -196,3 +196,13 @@ curation_history:
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×2, biolink:causes×1, RO:0002327×1).
   llm_assisted: true
+- timestamp: '2026-08-26T03:23:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
+    tranche of 2026-08-24/25, which shipped without a per-record event. In this record
+    the tranche: set graph scope copper_tolerance_cop_efflux=MECHANISTIC with scope_notes;
+    marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (copper_efflux_system,
+    multicopper_oxidase); added taxon-paired protein example(s) UniProtKB:Q1LBE6 on
+    multicopper_oxidase (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true

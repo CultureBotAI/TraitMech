@@ -542,6 +542,12 @@ Spirochetes combine a peptidoglycan-containing cell cylinder with periplasmic fl
           <p class="changes">Repaired a wrong CURIE from the kg-microbe name-match pass (issue 402): cell_body: GO:0044297 retracted. Was GO:0044297 &#39;cell body&#39;, whose GO definition is &#39;the portion of a cell bearing surface projections such as axons, dendrites, cilia, or flagella THAT INCLUDES THE NUCLEUS&#39; — so the term excludes prokaryotes by definition, and the node reads &#39;The bacterial cell body (protoplasmic cylinder)&#39;. Found by the #405 review, and notable because BOTH sweep heuristics miss it: the labels match exactly and the term is not more specific, so only reading the DEFINITION catches it. Retracted rather than replaced — GO:0005623 is obsolete, GO:0005737 &#39;cytoplasm&#39; excludes the envelope the protoplasmic cylinder includes, and GO:0071944 &#39;cell periphery&#39; is the wrong part.</p>
         </li>
         
+        <li>
+          <time>2026-08-26T03:23:00Z</time> ·
+          <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
+          <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope spiral_shaped_curvature_mechanisms=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (curvature_scaffold).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -927,7 +933,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-17 06:00 UTC from
+      Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%
