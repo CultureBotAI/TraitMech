@@ -1,0 +1,47 @@
+# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
+name: canonical-example-taxonomy
+
+# The local audit normally uses OAK's 13 GB NCBITaxon sqlite build. CI resolves
+# the roughly 300 exemplar ids in one NCBI EFetch POST instead: authoritative,
+# cheap, and small enough for a normal hosted runner. Network failure is an
+# explicit failure, never a clean-looking skipped resolution.
+on:
+  pull_request:
+    paths: &trigger_paths
+      - "data/traits/**"
+      - "scripts/audit_canonical_examples.py"
+      - "tests/test_audit_canonical_examples.py"
+      - "justfile"
+      - ".github/workflows/canonical-example-taxonomy.yaml"
+  push:
+    branches: [main]
+    paths: *trigger_paths
+  schedule:
+    - cron: "23 10 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: canonical-example-taxonomy-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  canonical-example-taxonomy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync
+      - name: Resolve canonical examples against NCBI Taxonomy
+        run: uv run python scripts/audit_canonical_examples.py --ncbi-api
