@@ -341,7 +341,8 @@ def test_action_filter_narrows_both_rows_and_the_stated_count():
     """
     out = _run(["--action", "ALREADY_DEEP", "--top", "0"])
     printed = _row_count(out)
-    assert 0 < printed < 477, printed
+    unfiltered = _row_count(_run(["--top", "0"]))
+    assert 0 < printed < unfiltered, (printed, unfiltered)
     assert f"{printed} row(s) shown of {printed} matching" in out
     for line in out.splitlines():
         if _re_row(line):

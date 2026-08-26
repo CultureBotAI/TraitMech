@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_morphology_motility_exemplars.py
+  slug: canonical-examples-morphology-motility
+session:
+  id: 2026-08-26T184726Z-claude-8e8a77
+  timestamp: '2026-08-26T18:47:26Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/557
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/556
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Correct three exemplar notes that misstated what their cited source measured
+  details: Corrects record 2026-08-26T181543Z-claude-d97ace, which must not be edited (history/README.md).
+    An adversarial review of PR 556 found three notes asserting more than their source shows,
+    and all three were confirmed against the primary literature before changing anything.
+    First, the gas-vesicle exemplar cited Halobacterium salinarum NRC-1 (NCBITaxon:64091)
+    and claimed the Gvp proteins were characterized by deletion and interaction analysis in
+    that organism; Europe PMC metadata for DOI:10.3389/fmicb.2022.971917 shows the split-GFP,
+    pulldown, and deletion work was done in Haloferax volcanii as a heterologous host, and
+    the strain suffix appeared nowhere in the source or the record's own artifact. The exemplar
+    now uses the species node NCBITaxon:2242 and the note states that the analysis establishes
+    protein roles in a heterologous host rather than in-situ assembly. Second, the flagellar-arrangement
+    note restated a 92% localization measurement as a per-cell flagellar count; it now reports
+    monopolar hook localization and says explicitly that the figure is not a count. Third,
+    the motility note presented a 63% twitching-zone reduction as a clean block of pilus assembly;
+    the source attributes it to PlzR overexpression, and the record's own artifact instructs
+    curators to keep the overexpression and 1% agar qualifiers and the pleiotropy caveat,
+    all of which the note now carries. The Salmonella note was also softened to say the cited
+    review treats that organism together with Escherichia coli. Canonical examples were additionally
+    moved to follow the evidence block, matching the ordering used by 250 of the 259 records
+    that carry them. Coverage is unchanged at 436 examples across 259 records; the live NCBI
+    audit resolves all 436 with zero errors and the 24 pre-existing label-drift warnings,
+    none on these records.

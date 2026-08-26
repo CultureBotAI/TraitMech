@@ -13,9 +13,11 @@ changes; only formatting.** For that reason, and following the #344 precedent
 exactly, it adds no `curation_history` event: there is no curation claim to
 record, and thirteen "reflowed a line" events would be provenance noise.
 
-Two-pass, per #324's lesson: every file is computed and semantically checked
-before anything is written, and the run aborts on the first mismatch rather
-than leaving the corpus half-normalised.
+Two-pass, per #324's lesson: every file is rendered and semantically checked
+BEFORE anything is written, so a record that would change data aborts the run
+with the corpus untouched. The post-write pass only re-verifies what was
+written; an abort there would leave the corpus partly normalised, which is
+recoverable by re-running but is not the same guarantee as the pre-write pass.
 
 Usage:
     python scripts/normalize_trait_emission.py           # dry run (default)
