@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/migrate_metpo_2026_06_12.py
+  slug: metpo-2026-06-12-migration
+session:
+  id: 2026-08-26T075914Z-codex-cf43c0
+  timestamp: '2026-08-26T07:59:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/515
+  - https://github.com/CultureBotAI/TraitMech/issues/534
+  - https://github.com/CultureBotAI/TraitMech/issues/535
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/533
+events:
+- type: EDIT
+  outcome: needs_followup
+  sections:
+  - grounding
+  - synonyms
+  - parent_traits
+  summary: Refresh locked METPO source and migrate three alkaliphilic records
+  details: Compared the prior METPO 2025-11-25 source with the manifest-locked 2026-06-12
+    release, recorded 1,546 additions or field deltas, and mechanically migrated the three
+    reviewed alkaliphilic label changes (METPO:1003002, METPO:1003004, METPO:1003005) while
+    preserving filenames, graph/node identifiers, evidence, and prior history. Updated the
+    grounded TRAIT labels, synchronized source-owned synonym scope, and adopted METPO:1003004's
+    revised definition and parent. Added hash-verified atomic refresh and idempotent migration
+    commands, plus an owl:deprecated seeder guard that excludes 1,216 retired entities. No
+    new primary records were seeded; genes and operons remain out of primary-entry scope and
+    may occur only in supporting YAML fields. The 94 active additions and 59 non-target active
+    field deltas are tracked in issue 534; the reviewed local observation root now deprecated
+    upstream is tracked for a human decision in issue 535. Verified with commit-level just
+    qc, validate-products, exact-synonym audit, migration idempotence, and the full dev test
+    suite (README catalog omission found, fixed, and retested).
