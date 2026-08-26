@@ -35,6 +35,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: te_transposition_rearrangement
   title: Transposable elements drive DNA transposition and genome rearrangement
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking TE possession to DNA transposition
     activity and resulting genome rearrangement and plasticity.
   nodes:

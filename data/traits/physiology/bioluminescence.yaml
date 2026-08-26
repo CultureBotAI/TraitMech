@@ -25,12 +25,17 @@ canonical_examples:
   taxon_label: Aliivibrio fischeri
   note: Model bioluminescent bacterium (lux operon); Euprymna squid light-organ symbiont
     and quorum-sensing paradigm.
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3759917/
+  reference: DOI:10.3390/ijms140816386
 causal_graphs:
 - graph_id: bioluminescence_luciferase
   title: Luciferase-catalyzed light emission
   description: Evidence-backed causal sketch linking luciferase to oxygen-dependent
     light emission, often under quorum-sensing control.
+  scope_status: MECHANISTIC
+  scope_notes: The graph describes the A. fischeri Lux system. LuxAB is a heterodimer,
+    LuxCDE is a three-component fatty-acid reductase system, and LuxI/LuxR regulation
+    is not universal to all bioluminescent organisms. The taxon-paired example anchors
+    the LuxI quorum-sensing branch.
   nodes:
   - node_id: bioluminescence_trait
     label: bioluminescence
@@ -41,6 +46,7 @@ causal_graphs:
     label: luciferase
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing the light-emitting reaction.
+    grounding: GO:0047646
   - node_id: bioluminescence_process
     label: bioluminescence
     node_type: BIOLOGICAL_PROCESS
@@ -67,18 +73,48 @@ causal_graphs:
     label: LuxG flavin reductase
     node_type: GENE_OR_PROTEIN
     description: NAD(P)H-dependent flavin reductase generating FMNH2.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: LuxG homologs differ in pyridine-nucleotide preference, and the
+      graph does not resolve a single exact reductase family or cofactor specificity.
   - node_id: luxcde_complex
     label: LuxCDE fatty acid reductase complex
     node_type: GENE_OR_PROTEIN
     description: LuxC/LuxD/LuxE complex supplying long-chain aldehyde substrate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the three distinct LuxC, LuxD, and LuxE components;
+      no single protein-family grounding can represent the complete reductase system.
   - node_id: lux_i
     label: LuxI autoinducer synthase
     node_type: GENE_OR_PROTEIN
     description: Synthase producing the 3-oxo-C6-HSL acyl-homoserine lactone autoinducer.
+    grounding: GO:0061579
+    protein_examples:
+    - uniprot_id: UniProtKB:P12747
+      protein_label: Acyl-homoserine-lactone synthase
+      gene_symbol: luxI
+      taxon_id: NCBITaxon:668
+      taxon_label: Aliivibrio fischeri
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 97
+      sequence_version: 1
+      role: LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent
+        lux-locus expression in A. fischeri; it is a regulatory component, not the
+        luciferase enzyme itself.
+      evidence:
+      - reference: DOI:10.1128/JB.00035-24
+        snippet: LuxI as the autoinducer synthase
+        notes: The A. fischeri study identifies LuxI as the synthase for the LuxR-binding
+          3-oxo-C6-HSL signal; reviewed UniProtKB P12747 is the species-level LuxI
+          entry.
   - node_id: lux_r
     label: LuxR transcription factor
     node_type: GENE_OR_PROTEIN
     description: Autoinducer-responsive activator of the lux locus.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: LuxR-family transcription factors include many signal specificities;
+      the graph names the A. fischeri regulator but no exact whole-protein ontology
+      term was verified beyond broad LuxR domains.
   - node_id: autoinducer_hsl
     label: 3-oxo-C6-HSL autoinducer
     node_type: CHEMICAL
@@ -270,4 +306,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:05:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the Lux-system scope and every protein node, converted the canonical
+    A. fischeri citation to DOI, grounded luciferase and LuxI functions, and added
+    a reviewed A. fischeri LuxI protein example.
   llm_assisted: true

@@ -24,12 +24,17 @@ canonical_examples:
 - taxon_id: NCBITaxon:920
   taxon_label: Acidithiobacillus ferrooxidans
   note: Archetypal iron/sulfur chemolithoautotroph; bioleaching model organism.
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2754497/
+  reference: DOI:10.1186/1471-2180-10-229
 causal_graphs:
 - graph_id: chemolithoautotrophic_energy_and_fixation
   title: Chemolithoautotrophic energy and CO2 fixation
   description: DOI-backed graph linking inorganic donor oxidation, respiratory energy
     conservation, reductant generation, and autotrophic CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines conserved energy-conservation and carbon-fixation
+    modules while allowing lineage-specific inorganic donors and transporters. The
+    A. ferrooxidans example anchors the CBB/RuBisCO branch and does not imply that
+    every chemolithoautotroph uses form I RuBisCO.
   nodes:
   - node_id: chemolithoautotrophic_trait
     label: chemolithoautotrophic
@@ -83,6 +88,24 @@ causal_graphs:
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, the carboxylating
       enzyme of the CBB cycle.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C916
+      protein_label: Ribulose bisphosphate carboxylase large chain 1
+      gene_symbol: cbbL1
+      taxon_id: NCBITaxon:920
+      taxon_label: Acidithiobacillus ferrooxidans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 57
+      sequence_version: 1
+      role: Large-chain component of form I RuBisCO in the A. ferrooxidans CBB pathway;
+        this accession is not presented as the complete L8S8 enzyme.
+      evidence:
+      - reference: DOI:10.1186/1471-2180-10-229
+        snippet: cbbR is divergently transcribed from cbbL1, a gene predicted to encode
+          the large subunit of form I RubisCO
+        notes: The A. ferrooxidans carbon-fixation study identifies cbbL1 and its
+          CBB context; UniProtKB P0C916 is the reviewed species-level cbbL1 entry.
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -94,6 +117,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane transporter that increases intracellular availability of
       dissolved inorganic carbon.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This functional node spans unrelated CO2 and bicarbonate uptake
+      systems; the cited graph does not resolve one exact transporter family or complex.
   - node_id: dissolved_inorganic_carbon
     label: dissolved inorganic carbon
     node_type: CHEMICAL
@@ -383,4 +409,11 @@ curation_history:
     a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything
     else. A named route through enumerable complexes. Was 4 PATHWAY to 2 before this
     tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-24T11:40:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon
+    transporter node as label-only, replaced the canonical web citation with its DOI,
+    and added the reviewed A. ferrooxidans cbbL1 large-chain example.
   llm_assisted: true

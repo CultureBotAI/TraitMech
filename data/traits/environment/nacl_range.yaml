@@ -22,6 +22,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_range_tolerance_breadth
   title: NaCl-range osmotic-tolerance breadth
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low
     and high salt, and the bounded span of growth-supporting NaCl concentrations.
   nodes:
@@ -56,11 +60,19 @@ causal_graphs:
   - node_id: trk_ktr_k_influx
     label: Trk/Ktr potassium influx systems
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Low-affinity potassium import systems (TrkAH, KtrAB, KtrCD) with
       c-di-AMP-binding gating subunits.
   - node_id: kima_kup_k_uptake
     label: KimA/Kup high-affinity K+ uptake transporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: High-affinity potassium uptake transporters (KimA, KupA/KupB) directly
       inhibited by c-di-AMP.
   - node_id: kdp_expression
@@ -71,6 +83,10 @@ causal_graphs:
   - node_id: opua_solute_importers
     label: OpuA-like compatible-solute importers
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: ABC-type compatible-solute importers (OpuA family) bound and regulated
       by c-di-AMP.
   edges:

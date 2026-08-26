@@ -27,12 +27,16 @@ canonical_examples:
   taxon_label: Acetivibrio thermocellus
   note: Thermophilic anaerobe secreting the paradigm cellulosome (formerly Clostridium
     thermocellum). Ruminococcus is the mesophilic rumen model.
-  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8951355/
+  reference: DOI:10.1016/S0022-2836(02)00497-7
 causal_graphs:
 - graph_id: cellulolysis_cellulase_systems
   title: Cellulolysis hydrolyzes cellulose to glucose
   description: Evidence-backed causal sketch linking cellulase systems (cellulosomes
     / free enzymes) to cellulose hydrolysis into cellodextrins and glucose.
+  scope_status: MECHANISTIC
+  scope_notes: The graph combines free cellulases and cellulosome organization. The
+    A. thermocellus CelS example supports the cellobiohydrolase and cellulosome branch,
+    not every cellulase or regulatory component in the graph.
   nodes:
   - node_id: cellulolysis_trait
     label: cellulolysis
@@ -43,6 +47,10 @@ causal_graphs:
     label: cellulase systems
     node_type: GENE_OR_PROTEIN
     description: Endoglucanases, exoglucanases, and beta-glucosidases (sometimes cellulosomal).
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This system-level node combines multiple catalytic families and
+      free-enzyme versus cellulosomal architectures, so no single protein-family term
+      denotes it.
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -57,10 +65,30 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Cellulase that cleaves internal bonds of cellulose chains.
+    grounding: GO:0008810
   - node_id: cellobiohydrolase
     label: cellobiohydrolase / exoglucanase
     node_type: GENE_OR_PROTEIN
     description: Cellulase that processively releases cellobiose from chain ends.
+    grounding: GO:0102252
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C2S5
+      protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+      gene_symbol: celS
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 80
+      sequence_version: 1
+      role: Catalytic CelS component of the A. thermocellus cellulosome; this accession
+        denotes the cellobiohydrolase component, not the complete cellulosome.
+      evidence:
+      - reference: DOI:10.1016/S0022-2836(02)00497-7
+        snippet: Cellobiohydrolase CelS plays an important role in the cellulosome
+        notes: The primary structural and catalytic study identifies CelS as the major
+          enzymatic component of the A. thermocellus cellulosome. UniProtKB P0C2S5
+          is the reviewed CelS entry from that species.
   - node_id: beta_glucosidase
     label: beta-glucosidase
     node_type: GENE_OR_PROTEIN
@@ -80,22 +108,24 @@ causal_graphs:
     label: scaffoldin
     node_type: GENE_OR_PROTEIN
     description: Non-catalytic backbone protein of the cellulosome.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Scaffoldins are modular proteins with varying cohesin, carbohydrate-binding,
+      dockerin, and anchoring architectures; verified terms describe their modules
+      rather than the complete scaffoldin class.
   - node_id: cohesin_domain
     label: cohesin domain
     node_type: GENE_OR_PROTEIN
     description: Scaffoldin module that binds dockerin domains.
+    grounding: InterPro:IPR002102
   - node_id: dockerin_domain
     label: dockerin domain
     node_type: GENE_OR_PROTEIN
     description: Enzyme-borne module that binds scaffoldin cohesin domains.
+    grounding: InterPro:IPR002105
   - node_id: ccr
     label: carbon catabolite repression
     node_type: BIOLOGICAL_PROCESS
     description: Glucose-signal-driven repression of catabolic gene transcription.
-  - node_id: cellulolytic_genes
-    label: cellulolytic / lignocellulose-catabolic genes
-    node_type: GENE_OR_PROTEIN
-    description: Genes encoding cellulose-degrading enzymes.
   edges:
   - subject: cellulase
     predicate: confers
@@ -174,14 +204,16 @@ causal_graphs:
       notes: Dockerin modules interacting with scaffoldin cohesin modules; canonical
         assembly interaction.
   - subject: ccr
-    predicate: represses
-    object: cellulolytic_genes
-    description: Carbon catabolite repression represses cellulolytic/lignocellulose-catabolic
-      genes when glucose signals are high.
+    predicate: represses production of
+    object: cellulase
+    description: Carbon catabolite repression lowers production of the cellulase machinery
+      when glucose signals are high.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic
-        genes when glucose-derived signals are high.
+      snippet: transcription of lignocellulose-catabolic genes
+      notes: CcpA recognition of CRE sites represses transcription of the genes encoding
+        lignocellulose-catabolic proteins; the genes are metadata rather than graph
+        nodes.
   - subject: cellulose
     predicate: is hydrolyzed to
     object: cellobiose
@@ -253,18 +285,6 @@ causal_graphs:
         systems as alternative implementations of cellulose utilization. Cellulosomes
         occur only in restricted lineages; this edge must not be read as a requirement.
     predicate_id: METPO:2007700
-  - subject: cellulolytic_genes
-    predicate: encodes
-    object: cellulase
-    description: Cellulolytic genes encode the cellulase system, linking the catabolite-repression
-      branch to the catalytic machinery it regulates.
-    evidence:
-    - reference: DOI:10.1093/jambio/lxac002
-      snippet: transcription of lignocellulose-catabolic genes
-      notes: Connects the regulatory branch to the enzymes whose expression is repressed.
-        The gene-set node remains broader than cellulose-specific; see curation note
-        on replacing it with a taxon-specific operon.
-    predicate_id: METPO:2007813
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -388,4 +408,11 @@ curation_history:
     in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it,
     which puts it in the same state as the rest of that cohort rather than in a category
     of its own.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:10:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cellulase-system graph, added a DOI-backed A. thermocellus CelS
+    example, grounded cellulase activities and cohesin/dockerin modules, and documented
+    the remaining system-level labels as reviewed label-only.
   llm_assisted: true

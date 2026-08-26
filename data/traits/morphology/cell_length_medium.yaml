@@ -19,6 +19,9 @@ evidence:
     at moderate growth rates.
 causal_graphs:
 - graph_id: cell_length_medium_growth_rate
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-length bin. Its graph illustrates contextual
+    growth and division factors but is not a single protein-mediated causal mechanism.
   title: Medium cell-length under moderate growth
   description: DOI-backed graph linking moderate elongation rate and the growth-rate
     size law to a medium cell-length range (2–3 μm).
@@ -47,6 +50,9 @@ causal_graphs:
     description: Elongasome machinery (MreB/MreC/MreD/RodA/PBP2) directing lateral
       peptidoglycan synthesis.
   - node_id: rodA_pbp2_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RodA and PBP2 are distinct proteins grouped as a contextual synthase
+      complex; one family identifier cannot represent both components.
     label: RodA-PBP2 complex
     node_type: GENE_OR_PROTEIN
     description: SEDS glycosyltransferase RodA paired with transpeptidase PBP2, the
@@ -56,6 +62,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Insertion of new peptidoglycan along the cell cylinder driving elongation.
   - node_id: mreC_mreD_balance
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes a balance between distinct MreC and MreD proteins,
+      not one semantically groundable protein entity.
     label: MreC/MreD balance
     node_type: GENE_OR_PROTEIN
     description: Relative levels of MreC and MreD that tune elongasome transpeptidase

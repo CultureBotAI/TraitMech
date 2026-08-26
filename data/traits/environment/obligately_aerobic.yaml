@@ -32,6 +32,10 @@ causal_graphs:
   title: Obligate aerobe oxygen-dependent respiration mechanism
   description: Evidence-backed causal sketch linking obligate aerobic growth to oxygen-dependent
     terminal oxidase respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: obligate_aerobic_trait
     label: obligately aerobic
@@ -49,6 +53,9 @@ causal_graphs:
     grounding: GO:0022900
     description: Respiratory chain that transfers electrons to terminal acceptors.
   - node_id: terminal_oxidases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: terminal respiratory oxidases
     node_type: GENE_OR_PROTEIN
     description: Oxygen-reducing terminal oxidase complexes.
@@ -86,6 +93,9 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Enzyme activity that detoxifies hydrogen peroxide.
   - node_id: fe_s_cluster_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Fe-S cluster enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes with exposed iron-sulfur clusters vulnerable to ROS.

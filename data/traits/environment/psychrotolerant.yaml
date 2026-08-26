@@ -30,6 +30,10 @@ causal_graphs:
   title: Psychrotolerant facultative cold-adaptation mechanism
   description: DOI-backed graph linking psychrotolerance to low-temperature membrane
     and enzyme acclimation that does not preclude growth at moderate ambient temperatures.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: psychrotolerant_trait
     label: psychrotolerant

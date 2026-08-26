@@ -30,12 +30,21 @@ canonical_examples:
   taxon_label: Pseudomonas putida
   note: versatile chemoorganotroph
   reference: PMID:12534463
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level respiratory chemoorganotroph paired to the reviewed AtpD beta
+    component of its F-type ATP synthase.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: chemoorganotrophic_organic_oxidation_energy
   title: Chemoorganotrophic organic chemical oxidation
   description: DOI-backed graph for chemical oxidation of organic compounds, electron
     transfer to respiratory chains, proton motive force, ATP synthesis, and organic
     carbon assimilation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph includes respiratory and fermentative alternatives. The
+    E. coli K-12 AtpD example anchors only F-type ATP synthesis in the respiratory
+    branch and is one beta component, not the complete rotary complex.
   nodes:
   - node_id: chemoorganotrophic_trait
     label: chemoorganotrophic
@@ -72,6 +81,30 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy carrier formed by ATP synthase.
+  - node_id: atp_synthase
+    label: ATP synthase
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    description: F-type rotary complex that converts proton motive force into ATP.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the E. coli F1 catalytic head; this accession is not
+        presented as the complete F1Fo complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: proton motive force drives rotation and conformational changes in
+          the F1 catalytic sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head; UniProt verifies the reviewed K-12 AtpD
+          entry.
   - node_id: biomass
     label: biomass
     node_type: CHEMICAL
@@ -175,6 +208,17 @@ causal_graphs:
       snippet: drives ATP synthesis
       notes: Supports ATP production from respiratory energy conservation.
     predicate_id: biolink:produces
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthase
+    description: Proton motive force drives the F-type ATP synthase rotary mechanism.
+    evidence:
+    - reference: DOI:10.7554/eLife.21598
+      snippet: proton motive force drives rotation and conformational changes in the
+        F1 catalytic sites
+      notes: The E. coli structural study directly supports coupling of proton motive
+        force to the beta-containing ATP synthase complex.
+    predicate_id: RO:0002212
   - subject: organic_compound
     predicate: assimilated into
     object: biomass

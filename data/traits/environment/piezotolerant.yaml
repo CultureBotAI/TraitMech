@@ -38,6 +38,10 @@ causal_graphs:
   title: 'Piezotolerance: growth across atmospheric and elevated pressures'
   description: Evidence-backed causal sketch linking adaptation to elevated hydrostatic
     pressure to growth that is sustained at atmospheric pressure.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: piezotolerant_trait
     label: piezotolerant
@@ -68,10 +72,18 @@ causal_graphs:
     description: Branched-chain and unsaturated fatty acids enriched in membrane lipids
       under pressure.
   - node_id: heat_shock_genes
-    label: heat-shock response genes (rpoH, rpoE, dnaK, groEL)
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: heat-shock response proteins (RpoH, RpoE, DnaK, GroEL)
     node_type: GENE_OR_PROTEIN
-    description: Key heat-shock/chaperone genes transcriptionally upregulated after
-      pressure shock.
+    description: Key heat-shock regulators and chaperones upregulated after pressure
+      shock.
+    gene_symbols:
+    - rpoH
+    - rpoE
+    - dnaK
+    - groEL
   - node_id: piezolyte_accumulation
     label: piezolyte accumulation
     node_type: BIOLOGICAL_PROCESS

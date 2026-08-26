@@ -31,6 +31,10 @@ causal_graphs:
   title: Staphylococcus arrangement via multi-plane non-orthogonal division
   description: Evidence-backed causal sketch linking non-orthogonal multi-plane division
     and incomplete daughter-cell separation to irregular grape-like coccal clusters.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: staphylococcus_trait
     label: staphylococcus arrangement
@@ -47,11 +51,17 @@ causal_graphs:
     node_type: QUALITY
     description: Successive division planes oriented in multiple non-orthogonal directions.
   - node_id: facz
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FacZ
     node_type: GENE_OR_PROTEIN
     description: S. aureus division-site placement factor that prevents aberrant Z-ring
       placement.
   - node_id: gpsb
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: GpsB
     node_type: GENE_OR_PROTEIN
     description: Conserved cell-division regulator that promotes lateral interactions

@@ -29,11 +29,19 @@ canonical_examples:
   note: Model secretor of extracellular proteases (subtilisin); paradigm for bacterial
     proteolysis.
   reference: PMID:34410368
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis 168
+  note: Strain-level AprE model paired to the reviewed subtilisin E protein example.
+  reference: DOI:10.1128/jb.158.2.411-418.1984
 causal_graphs:
 - graph_id: proteolysis_extracellular_protease
   title: Proteolysis hydrolyzes extracellular proteins to amino acids
   description: Evidence-backed causal sketch linking secreted bacterial proteases
     to extracellular hydrolysis of proteins/peptides into amino acids and short peptides.
+  scope_status: MECHANISTIC
+  scope_notes: The graph summarizes extracellular protein hydrolysis, peptide uptake,
+    and intracellular hydrolysis. AprE is one experimentally characterized extracellular
+    protease component and is not presented as the complete proteolytic system.
   nodes:
   - node_id: proteolysis_trait
     label: proteolysis
@@ -44,6 +52,28 @@ causal_graphs:
     label: secreted proteases
     node_type: GENE_OR_PROTEIN
     description: Extracellular microbial proteases acting on protein substrates.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Secreted microbial proteases span serine, metallo-, cysteine,
+      and other peptidase families; no single family or activity term denotes the
+      full plural node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P04189
+      protein_label: Subtilisin E
+      gene_symbol: aprE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 189
+      sequence_version: 3
+      role: Major extracellular alkaline serine protease AprE, representing one component
+        of the broader secreted-protease node.
+      evidence:
+      - reference: DOI:10.1128/jb.158.2.411-418.1984
+        snippet: a fivefold increase in serine protease activity was observed
+        notes: The primary cloning study identifies the B. subtilis I168 subtilisin
+          structural gene and its expressed protease activity. UniProtKB P04189 is
+          the reviewed AprE entry from strain 168.
   - node_id: amino_acids
     label: amino acids / short peptides
     node_type: CHEMICAL
@@ -58,11 +88,17 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane transporters (oligopeptide permease Opp, DtpT, ABC transporter
       Dpp) importing peptides short enough for uptake.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Opp, DtpT, and Dpp are distinct transporter architectures and
+      the node intentionally combines them as alternative uptake systems.
   - node_id: intracellular_peptidases
     label: intracellular peptidases
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic exo-/endo-peptidases that further hydrolyze imported
       peptides to free amino acids.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node denotes an organism-dependent set of intracellular exo-
+      and endopeptidases rather than one protein family or exact activity.
   - node_id: large_proteins
     label: large extracellular proteins
     node_type: CHEMICAL
@@ -194,4 +230,11 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is
     unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:25:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the extracellular-proteolysis mechanism, added a DOI-backed B. subtilis
+    168 AprE example, and recorded reviewed label-only dispositions for the broad
+    protease, peptide-transporter, and intracellular-peptidase sets.
   llm_assisted: true

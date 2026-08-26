@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_delta_mid1_moderate_breadth
   title: Temperature-delta-mid1 moderate-breadth thermal adaptation
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking moderate thermal-adaptation flexibility to
     a 10–20 °C temperature growth breadth.
   nodes:

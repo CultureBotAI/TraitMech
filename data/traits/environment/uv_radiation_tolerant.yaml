@@ -39,6 +39,10 @@ causal_graphs:
   title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair
   description: Evidence-backed causal sketch linking UV-induced pyrimidine dimers
     to nucleotide-excision and photoreactivation repair.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: uv_tolerant_trait
     label: UV radiation tolerant
@@ -68,6 +72,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Second principal UV-induced DNA lesion (6-4PP).
   - node_id: cpd_photolyase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CPD photolyase
     node_type: GENE_OR_PROTEIN
     description: Light-driven enzyme that directly reverses cyclobutane pyrimidine

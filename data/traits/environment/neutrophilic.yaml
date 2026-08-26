@@ -37,6 +37,10 @@ causal_graphs:
   title: Neutrophilic near-neutral pH homeostasis mechanism
   description: Evidence-backed causal sketch linking neutrophilic growth to near-neutral
     external pH and ordinary cytoplasmic pH homeostasis.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: neutrophilic_trait
     label: neutrophilic
@@ -85,6 +89,9 @@ causal_graphs:
     description: Enzyme-catalyzed decarboxylation reaction that consumes cytoplasmic
       protons.
   - node_id: f1f0_atpase_proton_pump
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: F1F0-ATPase proton pump
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent proton transporter contributing to pH restoration.

@@ -42,6 +42,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking high hydrostatic pressure to
     unsaturated / branched-chain fatty-acid membrane adaptation enabling optimal high-pressure
     growth.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: piezophilic_trait
     label: piezophilic
@@ -62,9 +66,19 @@ causal_graphs:
     description: Lipid composition adjustment maintaining membrane fluidity under
       HHP.
   - node_id: pfa_operon
-    label: pfa operon
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: Pfa polyunsaturated-fatty-acid enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Gene cluster encoding an omega-3 polyunsaturated fatty acid synthase.
+    description: Protein module forming an omega-3 polyunsaturated fatty acid synthase.
+    gene_symbols:
+    - pfaA
+    - pfaB
+    - pfaC
+    - pfaD
+    - pfaE
+    operon: pfa
   - node_id: omega3_pufa
     label: omega-3 polyunsaturated fatty acids
     node_type: CHEMICAL

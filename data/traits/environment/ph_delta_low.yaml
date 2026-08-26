@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_low_limited_breadth
   title: pH-delta-low limited-breadth pH homeostasis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking limited pH-homeostasis flexibility to a pH
     growth breadth of approximately 1–2 pH units.
   nodes:
@@ -75,6 +79,10 @@ causal_graphs:
   - node_id: f1fo_atpase
     label: F1Fo-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-coupled ATPase that expels or imports H+ using or generating
       PMF.
   edges:

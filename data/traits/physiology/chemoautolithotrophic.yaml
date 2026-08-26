@@ -33,11 +33,21 @@ canonical_examples:
   taxon_label: Acidithiobacillus ferrooxidans
   note: iron/sulfur chemolithoautotroph
   reference: PMID:19077236
+- taxon_id: NCBITaxon:228410
+  taxon_label: Nitrosomonas europaea ATCC 19718
+  note: Strain-level ammonia-oxidizing chemoautolithotroph paired to the AmoA alpha
+    component of ammonia monooxygenase.
+  reference: DOI:10.1128/jb.175.8.2436-2444.1993
 causal_graphs:
 - graph_id: chemoautolithotrophic_inorganic_energy_co2_fixation
   title: Chemoautolithotrophic inorganic energy and CO2 fixation
   description: DOI-backed graph linking inorganic chemical donors, respiratory energy
     conservation, CO2 fixation, and biomass production.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines representative ammonia- and iron-oxidation with
+    generic respiratory and carbon-fixation steps. The N. europaea AmoA example anchors
+    only ammonia oxidation; Q04507 is an alpha-subunit component of a multisubunit
+    ammonia monooxygenase and is not the complete complex or the iron branch.
   nodes:
   - node_id: chemoautolithotrophic_trait
     label: chemoautolithotrophic
@@ -55,6 +65,30 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16134
     description: Representative inorganic nitrogen electron donor.
+  - node_id: ammonia_monooxygenase
+    label: ammonia monooxygenase
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0018597
+    description: Multisubunit enzyme initiating aerobic ammonia oxidation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q04507
+      protein_label: Ammonia monooxygenase alpha subunit
+      gene_symbol: amoA1
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea ATCC 19718
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 126
+      sequence_version: 2
+      role: AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this
+        accession maps two duplicated amoA gene copies and does not denote the whole
+        enzyme complex.
+      evidence:
+      - reference: DOI:10.1128/jb.175.8.2436-2444.1993
+        snippet: Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas
+          europaea
+        notes: The primary strain-level study sequences and characterizes N. europaea
+          AmoA; UniProtKB Q04507 is the reviewed alpha-subunit entry for ATCC 19718.
   - node_id: ferrous_iron
     label: ferrous iron
     node_type: CHEMICAL
@@ -112,6 +146,19 @@ causal_graphs:
       snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
       notes: Supports ammonia oxidation as a chemolithoautotrophic example.
     predicate_id: rdfs:subClassOf
+  - subject: ammonia_monooxygenase
+    predicate: oxidizes
+    object: ammonia
+    description: Ammonia monooxygenase initiates ammonia oxidation in the N. europaea
+      branch of chemoautolithotrophy.
+    evidence:
+    - reference: DOI:10.1128/jb.175.8.2436-2444.1993
+      snippet: Sequence of the gene coding for ammonia monooxygenase in Nitrosomonas
+        europaea
+      notes: The primary study supports AmoA as a component of the N. europaea enzyme
+        that catalyzes ammonia oxidation to hydroxylamine; it does not support the
+        graph's separate iron-oxidation branch.
+    predicate_id: METPO:2007803
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_electron_donor
@@ -203,6 +250,13 @@ causal_graphs:
       notes: Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs
         using glucose (Fukala & Kucera 2024).
 curation_history:
+- timestamp: '2026-08-24T14:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed N. europaea ATCC 19718 canonical example, semantically
+    grounded ammonia monooxygenase, reviewed AmoA alpha-subunit example, and one complete-evidence
+    ammonia-oxidation edge; documented the multisubunit and branch scope.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.868850+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

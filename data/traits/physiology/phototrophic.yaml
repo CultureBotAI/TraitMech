@@ -29,19 +29,24 @@ evidence:
   notes: Review supports bacteriochlorophyll reaction centers in aerobic anoxygenic
     phototrophs.
 canonical_examples:
-- taxon_id: NCBITaxon:1148
+- taxon_id: NCBITaxon:1111708
   taxon_label: Synechocystis sp. PCC 6803
   note: oxygenic phototroph
-  reference: PMID:23945601
+  reference: DOI:10.3390/md11082894
 - taxon_id: NCBITaxon:1085
   taxon_label: Rhodospirillum rubrum
   note: anoxygenic phototroph
-  reference: PMID:21886856
+  reference: DOI:10.4056/sigs.1804360
 causal_graphs:
 - graph_id: phototrophic_light_energy_capture
   title: Phototrophic light-energy capture mechanism
   description: DOI-backed graph for bacterial light capture, photosynthetic electron
     transport, ATP generation, and reductant formation.
+  scope_status: MECHANISTIC
+  scope_notes: This cross-mechanism graph includes chlorophyll/bacteriochlorophyll
+    reaction centers and retinal ion pumps as alternatives. The R. rubrum PufL example
+    anchors a Type II reaction center and does not represent oxygenic or rhodopsin-based
+    phototrophy.
   nodes:
   - node_id: phototrophic_trait
     label: phototrophic
@@ -57,6 +62,29 @@ causal_graphs:
     label: photosynthetic reaction center
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that initiates photochemical charge separation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This generic node spans oxygenic photosystems and anoxygenic
+      Type I and Type II multisubunit reaction centers; no one component-family term
+      represents all of them.
+    protein_examples:
+    - uniprot_id: UniProtKB:P10717
+      protein_label: Reaction center protein L chain
+      gene_symbol: pufL
+      taxon_id: NCBITaxon:1085
+      taxon_label: Rhodospirillum rubrum
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 119
+      sequence_version: 2
+      role: L-chain component of the R. rubrum Type II photochemical reaction center;
+        this accession is not presented as the complete reaction-center complex.
+      evidence:
+      - reference: DOI:10.1128/jb.182.5.1200-1207.2000
+        snippet: The proteins of the photochemical components are encoded by the puf
+          operon (LHalpha, LHbeta, RC-L, and RC-M) and by puhA (RC-H)
+        notes: The primary R. rubrum assembly study identifies RC-L as a puf-encoded
+          reaction-center component and reports phototrophic incompetence of puf mutants;
+          UniProtKB P10717 is the reviewed species-level PufL entry.
   - node_id: bacteriochlorophyll
     label: bacteriochlorophyll
     node_type: CHEMICAL
@@ -98,6 +126,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane enzyme complex that synthesizes ATP driven by proton motive
       force.
+    grounding: GO:0045259
   - node_id: rhodopsin
     label: rhodopsin
     node_type: GENE_OR_PROTEIN
@@ -353,4 +382,11 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:20:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, documented reaction-center versus rhodopsin
+    scope, reviewed the generic reaction center as label-only, grounded the ATP synthase
+    complex to GO, upgraded canonical citations to DOIs, and added R. rubrum PufL.
   llm_assisted: true

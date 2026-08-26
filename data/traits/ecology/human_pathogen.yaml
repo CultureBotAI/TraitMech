@@ -32,6 +32,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
   title: Human-pathogen Homo sapiens host adaptation
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking human-adapted virulence factors, body-temperature
     and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.
   nodes:
@@ -41,6 +45,9 @@ causal_graphs:
     grounding: METPO:1004004
     description: Pathogen of Homo sapiens.
   - node_id: human_virulence_factors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: human-adapted virulence factors
     node_type: GENE_OR_PROTEIN
     description: Virulence factors tuned to human-cell receptors and biology.

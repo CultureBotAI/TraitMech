@@ -1,16 +1,22 @@
-# Grounding policy for causal-graph gene/protein nodes
+# Grounding policy for causal-graph protein nodes
 
-Status: **instance-grounding remediation and protein-example schema applied.**
+Status: **corpus-wide protein/taxon review applied.**
 All historical UniProt instance groundings have been reviewed and either
 replaced or retracted (§7). The taxon-paired `protein_examples` model and
-coverage audit are implemented; corpus-wide exemplar backfill remains in
-progress.
+coverage audit are implemented. The only remaining coverage gap is the
+explicitly protected `spore_germination.yaml` record.
 
-This document covers `CausalNode` entries typed `GENE_OR_PROTEIN`, and the
+This document covers protein, protein-family, and protein-complex `CausalNode`
+entries typed with the legacy `GENE_OR_PROTEIN` enum value, and the
 exemplar taxon / genome layer that mechanism claims should hang off. It
 combines an audit of the current corpus (reproducible via
 `scripts/audit_uniprot_grounding.py`) with a literature/primary-source
 review of how comparable resources ground protein entities.
+
+Despite the legacy enum name, genes, promoters, operons, and gene clusters are
+not primary causal nodes. Gene symbols and operon/cluster names belong in the
+node's `gene_symbols` and `operon` metadata. Regulatory RNAs and genomic
+elements use `RNA` and `GENETIC_ELEMENT`, respectively.
 
 ## 1. What the initial audit found
 
@@ -77,6 +83,8 @@ node onto a protein accession. Decide what the node *is* first.
 | A specific **complex instance** in one organism | Complex Portal `CPX-…` | E. coli complexes only, in practice |
 | A specific **protein instance** in one organism | UniProtKB **reviewed** accession, paired with a taxon | *B. subtilis* DesK → `UniProtKB:O34757` |
 | A functional **class** ("virulence factors") | Do not ground to a protein at all — use a GO BP term, or split into concrete nodes | — |
+| A **gene, promoter, operon, or gene cluster** | Do not create a protein node; store gene/operon names as metadata, or use `GENETIC_ELEMENT` only when the element itself is causally required | `EctABC enzyme module`, with `gene_symbols: [ectA, ectB, ectC]` and `operon: ectABC` |
+| A regulatory **RNA** | `RNA`, with an RNA-family grounding when one exists | RNA thermometer → `RNA` |
 
 Supporting points from the source review, all verified 3-0 by adversarial
 check:
@@ -283,14 +291,21 @@ wrong protein, or still required organism pairing. The mapping source and 39
 candidate-inventory rows were reconciled so `ground-nodes` cannot restore the
 old instances.
 
-Current audit state (818 `GENE_OR_PROTEIN` nodes):
+Current audit state after the 2026-08-25 review (802 protein nodes using the
+legacy `GENE_OR_PROTEIN` enum value):
 
 | | count |
 |---|---:|
-| GO-grounded | 81 |
-| InterPro-grounded | 54 |
-| UniProtKB-grounded | **0** |
-| Ungrounded (label only) | 683 |
+| GO-grounded | 136 |
+| InterPro-grounded | 87 |
+| Generic UniProtKB-grounded | **0** |
+| Explicitly reviewed label-only | 579 |
+| Taxon-paired UniProt example uses | 128 |
+| Unique UniProt example accessions | 98 |
+
+Graph-level coverage is 119 mechanistic passes, 233 reviewed nonmechanistic
+dispositions, one protected gap, and zero errors. The live UniProt audit
+reports zero accession, taxon, status, or version findings.
 
 ### Candidate gate
 
@@ -312,7 +327,7 @@ which is the argument for keeping the gate strict:
   (MCP)` are ambiguous between an activity and a complex, and are excluded
   pending curation.
 
-The remaining 683 ungrounded nodes are the real curation backlog. Roughly 95
-of them are functional classes ("virulence factors", "osmolyte transport and
-synthesis genes") that should never receive a protein accession at all — see
-§2 — and the rest need a curator, not another automated pass.
+The 579 label-only nodes are explicit curator decisions, not silent grounding
+failures. Many are functional classes or multiprotein aggregates that should
+never receive one protein accession; future work may split them into concrete
+families when the graph needs that additional resolution.

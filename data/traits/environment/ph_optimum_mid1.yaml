@@ -26,6 +26,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_optimum_mid1_neutrophile_setpoint
   title: pH-optimum-mid1 neutrophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking minimal pH-homeostasis load at near-neutral
     external pH to a pH-optimum between 6 and 7 (neutrophile).
   nodes:
@@ -52,6 +56,10 @@ causal_graphs:
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: F-type ATP synthase/ATPase functioning as a proton pump.
   - node_id: proton
     label: proton (H+)

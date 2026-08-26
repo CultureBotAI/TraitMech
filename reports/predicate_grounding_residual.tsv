@@ -1,7 +1,7 @@
 predicate_label	edge_count	status	blocked_by	example_files
 supports	37	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/ecology/symbiosis.yaml|data/traits/environment/alkalotolerant.yaml
 induces	34	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/host_associated.yaml|data/traits/environment/cadmium_tolerant.yaml
-required for	30	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/free_living.yaml|data/traits/ecology/symbiosis.yaml
+required for	29	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/free_living.yaml|data/traits/ecology/symbiosis.yaml
 drives	29	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/environment/nacl_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 maintains	29	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/acidophilic.yaml|data/traits/environment/acidotolerant.yaml
 mediates	27	unmapped		data/traits/ecology/animal_pathogen.yaml|data/traits/environment/extremely_halophilic.yaml|data/traits/environment/metal_tolerant.yaml
@@ -12,35 +12,35 @@ requires	13	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/env
 causally upstream of	13	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 is converted to	11	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml
 binds	11	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml
-represses	10	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml
 uses	10	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_delta.yaml|data/traits/environment/nacl_optimum_mid2.yaml
+oxidized by	10	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
+represses	9	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
 determines	8	unmapped		data/traits/ecology/mutualism.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/ph_delta_low.yaml
 inactivates	8	unmapped		data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
 precursor of	8	unmapped		data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/green_pigmented.yaml|data/traits/morphology/pigmentation.yaml
 recruits	8	unmapped		data/traits/morphology/axially_filamented.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/filament_shaped.yaml
-oxidized by	8	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithotrophic.yaml
 upregulates	7	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/oxygen_preference.yaml
 engages	7	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 positively influences	7	unmapped		data/traits/genomics/gc_mid2.yaml|data/traits/morphology/oval_shaped.yaml
+is substrate for	7	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/metabolism/manganese_oxidation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml
+triggers	6	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/morphology/polyhydroxyalkanoate_granule.yaml
 cleaves	6	unmapped		data/traits/environment/mercury_tolerant.yaml|data/traits/genomics/crispr_cas_system.yaml|data/traits/genomics/restriction_modification_system.yaml
 increases abundance of	6	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
-is substrate for	6	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/physiology/bioluminescence.yaml
-triggers	5	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/morphology/polyhydroxyalkanoate_granule.yaml
-activates transcription of	5	unmapped		data/traits/environment/cobalt_tolerant.yaml|data/traits/environment/temperature_range_mid3.yaml|data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+initiates	6	unmapped		data/traits/metabolism/photosynthesis.yaml|data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml
+synthesizes	5	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/morphology/intracellular_inclusion.yaml|data/traits/morphology/ovoid_shaped.yaml
 protects	5	unmapped		data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/psychrotolerant.yaml
 provides	5	unmapped		data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/psychrotolerant.yaml|data/traits/environment/temperature_range_low.yaml
 results in	5	unmapped		data/traits/environment/nacl_range_high.yaml|data/traits/environment/zinc_tolerant.yaml|data/traits/morphology/ellipsoidal.yaml
 enhances	5	unmapped		data/traits/environment/ph_optimum_high.yaml|data/traits/morphology/carboxysome.yaml|data/traits/physiology/heterotrophic.yaml
 guides	5	unmapped		data/traits/genomics/crispr_cas_system.yaml|data/traits/morphology/curved_shaped.yaml|data/traits/morphology/fusiform_shaped.yaml
 catalyzes conversion of	5	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/black_pigmented.yaml
-initiates	5	unmapped		data/traits/metabolism/photosynthesis.yaml|data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml
 positions	5	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/oval_shaped.yaml
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
-removes	4	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml|data/traits/genomics/genome_streamlining.yaml
 acts as	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/temperature_optimum_very_low.yaml|data/traits/metabolism/anaerobic_respiration.yaml
 detoxifies	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/anaerobic.yaml|data/traits/environment/microaerophilic.yaml
 damages	4	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
+activates transcription of	4	unmapped		data/traits/environment/cobalt_tolerant.yaml|data/traits/environment/temperature_range_mid3.yaml|data/traits/metabolism/calvin_benson_bassham_cycle.yaml
 activates expression of	4	unmapped		data/traits/environment/mesophilic.yaml|data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml|data/traits/physiology/bioluminescence.yaml
 induces accumulation of	4	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/piezophilic.yaml|data/traits/environment/piezotolerant.yaml
 has characteristic	4	unmapped		data/traits/environment/obligately_piezophilic.yaml|data/traits/physiology/persister_cell_formation.yaml
@@ -57,7 +57,6 @@ has part	4	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/tra
 stimulates GTPase activity of	4	unmapped		data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 organizes	4	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/magnetosome.yaml
 establishes	4	unmapped		data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/spiral_shaped.yaml|data/traits/morphology/spore_shaped.yaml
-synthesizes	4	unmapped		data/traits/morphology/intracellular_inclusion.yaml|data/traits/morphology/ovoid_shaped.yaml|data/traits/morphology/polyphosphate_granule.yaml
 favors	4	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/physiology/oligotrophic.yaml
 can proceed through	4	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 assimilated into	4	unmapped		data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
@@ -68,6 +67,7 @@ delivers	3	unmapped		data/traits/ecology/pathogenic_to_host.yaml|data/traits/eco
 depolymerizes	3	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/metabolism/biopolymer_degradation.yaml
 predicts	3	unmapped		data/traits/ecology/soil_dwelling.yaml|data/traits/morphology/gliding.yaml|data/traits/morphology/non_spore_forming.yaml
 limits influx of	3	unmapped		data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml|data/traits/morphology/carboxysome.yaml
+removes	3	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml|data/traits/morphology/gram_stain.yaml
 powers	3	blocked_by_node_type	METPO:2007900	data/traits/environment/aerobic.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 has alternative process	3	unmapped		data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
 positively correlates with	3	unmapped		data/traits/environment/ionizing_radiation_tolerant.yaml|data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/nutrient_adaptation.yaml
@@ -91,7 +91,6 @@ has quality	3	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/
 feed into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
 polymerizes into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/magnetosome.yaml
 disrupts	3	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/irregular_shaped.yaml
-carries out	3	unmapped		data/traits/morphology/ellipsoidal.yaml|data/traits/upper/biological_process.yaml
 scaffolds	3	unmapped		data/traits/morphology/fusiform_shaped.yaml|data/traits/morphology/tetrad_arrangement.yaml|data/traits/physiology/chemotaxis.yaml
 encapsulates	3	unmapped		data/traits/morphology/intracellular_inclusion.yaml|data/traits/physiology/chemoautotrophic.yaml
 broken down by	3	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
@@ -124,12 +123,10 @@ repairs	2	unmapped		data/traits/environment/ionizing_radiation_tolerant.yaml|dat
 defined as	2	unmapped		data/traits/environment/nacl_optimum_low.yaml|data/traits/environment/nacl_range_mid1.yaml
 opens	2	unmapped		data/traits/environment/nacl_range_low.yaml|data/traits/environment/temperature_range_mid2.yaml
 distinct from	2	unmapped		data/traits/environment/nacl_range_mid1.yaml|data/traits/physiology/chemoautolithotrophic.yaml
-enables biosynthesis of	2	unmapped		data/traits/environment/nacl_range_mid2.yaml
 positively contributes to	2	unmapped		data/traits/environment/nacl_range_mid2.yaml
 increases amount of	2	unmapped		data/traits/environment/obligately_piezophilic.yaml|data/traits/morphology/non_motile.yaml
 perturbs	2	unmapped		data/traits/environment/ph_delta_low.yaml|data/traits/morphology/spirochete_shaped.yaml
 binds to	2	unmapped		data/traits/environment/psychrophilic.yaml|data/traits/metabolism/cellulolysis.yaml
-constrains	2	unmapped		data/traits/environment/salinity_phenotype_with_numerical_limits.yaml|data/traits/physiology/hydrogenotrophic.yaml
 shifts	2	unmapped		data/traits/environment/temperature_delta_low.yaml|data/traits/morphology/cell_width_large.yaml
 indicates	2	unmapped		data/traits/environment/temperature_optimum.yaml|data/traits/physiology/copiotrophic.yaml
 refolds	2	unmapped		data/traits/environment/temperature_optimum_high.yaml|data/traits/environment/thermophilic.yaml
@@ -148,6 +145,7 @@ oxidized during	2	unmapped		data/traits/metabolism/cable_bacteria_metabolism.yam
 substrate of	2	unmapped		data/traits/metabolism/calvin_benson_bassham_cycle.yaml
 is cosubstrate for	2	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml
 coupled to	2	unmapped		data/traits/metabolism/dissimilatory_iron_reduction.yaml
+enables reduction of	2	unmapped		data/traits/metabolism/dissimilatory_iron_reduction.yaml|data/traits/metabolism/dissimilatory_manganese_reduction.yaml
 stimulates	2	unmapped		data/traits/metabolism/fermentative_hydrogen_production.yaml|data/traits/morphology/branched_shaped.yaml
 affects	2	unmapped		data/traits/metabolism/fermentative_hydrogen_production.yaml|data/traits/physiology/urease_activity.yaml
 supports formation of	2	unmapped		data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemolithoheterotrophic.yaml
@@ -165,6 +163,7 @@ polymerizes to	2	unmapped		data/traits/morphology/brown_pigmented.yaml
 attaches	2	unmapped		data/traits/morphology/cell_length.yaml|data/traits/morphology/sarcina_arrangement.yaml
 reduced in	2	unmapped		data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/sphere_shaped.yaml
 incomplete separation yields	2	unmapped		data/traits/morphology/diplococcus_shaped.yaml
+carries out	2	unmapped		data/traits/morphology/ellipsoidal.yaml
 combines with	2	unmapped		data/traits/morphology/flask_shaped.yaml|data/traits/morphology/oval_shaped.yaml
 dephosphorylates	2	unmapped		data/traits/morphology/non_spore_forming.yaml|data/traits/physiology/chemotaxis.yaml
 has component	2	unmapped		data/traits/morphology/ovoid_shaped.yaml
@@ -180,6 +179,7 @@ supplies substrate to	2	unmapped		data/traits/physiology/autotrophic.yaml|data/t
 uses energy substrate	2	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml
 imported by	2	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/heterotrophic.yaml
 uses chemical energy source	2	unmapped		data/traits/physiology/chemoorganoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml
+used by	2	unmapped		data/traits/physiology/chemotrophic.yaml|data/traits/physiology/heterotrophic.yaml
 contributes to generation of	2	unmapped		data/traits/physiology/chemotrophic.yaml
 couples to	2	unmapped		data/traits/physiology/heterotrophic.yaml
 assimilated by	2	unmapped		data/traits/physiology/methylotrophic.yaml
@@ -262,8 +262,10 @@ supports survival in	1	unmapped		data/traits/environment/nacl_delta_high.yaml
 precedes/replaced by	1	unmapped		data/traits/environment/nacl_delta_mid1.yaml
 reduces demand for	1	unmapped		data/traits/environment/nacl_optimum_low.yaml
 corresponds to	1	unmapped		data/traits/environment/nacl_range_mid1.yaml
+catalyzes biosynthesis of	1	unmapped		data/traits/environment/nacl_range_mid2.yaml
 rapidly balances	1	unmapped		data/traits/environment/nacl_range_mid2.yaml
 provides early osmotic buffering for	1	unmapped		data/traits/environment/nacl_range_mid2.yaml
+enables biosynthesis of	1	unmapped		data/traits/environment/nacl_range_mid2.yaml
 enables tolerance of	1	unmapped		data/traits/environment/non_halophilic.yaml
 requires counterion balancing by	1	unmapped		data/traits/environment/non_halophilic.yaml
 promotes replacement by	1	unmapped		data/traits/environment/non_halophilic.yaml
@@ -294,6 +296,7 @@ causes increase in	1	unmapped		data/traits/environment/piezotolerant.yaml
 induces transcription of	1	unmapped		data/traits/environment/piezotolerant.yaml
 expands	1	unmapped		data/traits/environment/pressure_range.yaml
 acts as antioxidant against	1	unmapped		data/traits/environment/radiotolerant.yaml
+constrains	1	unmapped		data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 exceeds tolerance of	1	unmapped		data/traits/environment/stenohaline.yaml
 resists	1	unmapped		data/traits/environment/temperature_delta_high.yaml
 positively regulates expression of	1	unmapped		data/traits/environment/temperature_delta_mid2.yaml
@@ -343,6 +346,7 @@ can cause	1	unmapped		data/traits/metabolism/calvin_benson_bassham_cycle.yaml
 accelerates interconversion of	1	unmapped		data/traits/metabolism/carbon_fixation.yaml
 fixes CO2 to produce	1	unmapped		data/traits/metabolism/carbon_fixation.yaml
 has backbone component	1	unmapped		data/traits/metabolism/cellulolysis.yaml
+represses production of	1	unmapped		data/traits/metabolism/cellulolysis.yaml
 oxidatively cleaves	1	unmapped		data/traits/metabolism/chitinolysis.yaml
 part_of	1	unmapped		data/traits/metabolism/denitrification.yaml
 is converted via beta-oxidation to	1	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml
@@ -460,6 +464,7 @@ binds promoter of	1	unmapped		data/traits/morphology/heterocyst.yaml
 reduces diffusion of	1	unmapped		data/traits/morphology/heterocyst.yaml
 provides mechanical support to	1	unmapped		data/traits/morphology/heterocyst.yaml
 increases accumulation of	1	unmapped		data/traits/morphology/intracellular_inclusion.yaml
+assembles	1	unmapped		data/traits/morphology/intracellular_inclusion.yaml
 localizes to and promotes assembly at	1	unmapped		data/traits/morphology/lophotrichous.yaml
 captures	1	unmapped		data/traits/morphology/lophotrichous.yaml
 sufficient for	1	unmapped		data/traits/morphology/magnetosome.yaml
@@ -479,6 +484,7 @@ relaxes	1	unmapped		data/traits/morphology/pleomorphic_shaped.yaml
 causes transition to	1	unmapped		data/traits/morphology/pleomorphic_shaped.yaml
 drives proliferation of	1	unmapped		data/traits/morphology/pleomorphic_shaped.yaml
 limits or kills	1	unmapped		data/traits/morphology/pleomorphic_shaped.yaml
+produces	1	blocked_by_node_type	METPO:2007800	data/traits/morphology/polyhydroxyalkanoate_granule.yaml
 composes	1	unmapped		data/traits/morphology/prosthecate.yaml
 correlates with	1	unmapped		data/traits/morphology/ring_shaped.yaml
 spatially regulates	1	unmapped		data/traits/morphology/ring_shaped.yaml
@@ -510,8 +516,10 @@ alternative inorganic carbon source for	1	unmapped		data/traits/physiology/autot
 determines speciation of	1	unmapped		data/traits/physiology/autotrophic.yaml
 provides reductant for	1	unmapped		data/traits/physiology/autotrophic.yaml
 enzyme class for	1	unmapped		data/traits/physiology/carboxydotrophic.yaml
+activates production of	1	unmapped		data/traits/physiology/carboxydotrophic.yaml
 decomposes	1	unmapped		data/traits/physiology/catalase_activity.yaml
 favors scavenging by	1	unmapped		data/traits/physiology/catalase_activity.yaml
+supports activation of	1	unmapped		data/traits/physiology/catalase_activity.yaml
 imports and phosphorylates	1	unmapped		data/traits/physiology/chemoheterotrophic.yaml
 supports generation of	1	unmapped		data/traits/physiology/chemolithoautotrophic.yaml
 facilitates supply of	1	unmapped		data/traits/physiology/chemolithoautotrophic.yaml
@@ -528,7 +536,6 @@ couples electron transport to	1	unmapped		data/traits/physiology/chemotrophic.ya
 uses substrate pool	1	unmapped		data/traits/physiology/copiotrophic.yaml
 characteristic of	1	unmapped		data/traits/physiology/copiotrophic.yaml
 turns off	1	unmapped		data/traits/physiology/dormancy.yaml
-used by	1	unmapped		data/traits/physiology/heterotrophic.yaml
 causally enables	1	unmapped		data/traits/physiology/heterotrophic.yaml
 proceeds via	1	unmapped		data/traits/physiology/heterotrophic.yaml
 can support	1	unmapped		data/traits/physiology/hydrogenotrophic.yaml
@@ -538,7 +545,6 @@ uses oxidant	1	unmapped		data/traits/physiology/methanotrophic.yaml
 can use energy capture route	1	unmapped		data/traits/physiology/mixotrophic.yaml
 fixes	1	unmapped		data/traits/physiology/mixotrophic.yaml
 mediates transfer to	1	unmapped		data/traits/physiology/natural_competence.yaml
-negatively correlates with	1	unmapped		data/traits/physiology/nutrient_adaptation.yaml
 metabolized by	1	unmapped		data/traits/physiology/organoheterotrophic.yaml
 oxidizes carbon to	1	unmapped		data/traits/physiology/organoheterotrophic.yaml
 characterized by	1	unmapped		data/traits/physiology/persister_cell_formation.yaml
@@ -553,10 +559,8 @@ acts as electron donor for	1	unmapped		data/traits/physiology/photolithotrophic.
 transfers excitation energy to	1	unmapped		data/traits/physiology/phototrophic.yaml
 extends light absorption into	1	unmapped		data/traits/physiology/phototrophic.yaml
 pumps	1	unmapped		data/traits/physiology/phototrophic.yaml
-enables detection by	1	unmapped		data/traits/physiology/quorum_sensing.yaml
 synthesizes/hydrolyzes	1	unmapped		data/traits/physiology/stress_response.yaml
 is substrate of	1	unmapped		data/traits/physiology/urease_activity.yaml
-enabled by	1	unmapped		data/traits/upper/biological_process.yaml
 causally upstream of or within	1	unmapped		data/traits/upper/biological_process.yaml
 can bear	1	unmapped		data/traits/upper/material_entity.yaml
 can be about	1	unmapped		data/traits/upper/material_entity.yaml

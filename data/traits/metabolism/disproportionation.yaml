@@ -24,12 +24,23 @@ canonical_examples:
   taxon_label: Desulfocapsa sulfexigens
   note: Model for inorganic-sulfur disproportionation (S0/thiosulfate/sulfite to sulfate
     + sulfide as sole energy source).
-  reference: PMID:23961312
+  reference: DOI:10.4056/sigs.3777412
+- taxon_id: NCBITaxon:2283
+  taxon_label: Acidianus ambivalens
+  note: Thermoacidophilic archaeon whose purified SOR catalyzes oxygen-dependent elemental-sulfur
+    disproportionation; this is distinct from the canonical anaerobic growth mechanism
+    of D. sulfexigens.
+  reference: DOI:10.1126/science.1120306
 causal_graphs:
 - graph_id: sulfur_disproportionation_redox_split
   title: Sulfur disproportionation redox split
   description: DOI-backed graph linking a single sulfur intermediate to simultaneous
     oxidation and reduction products under anoxic conditions.
+  scope_status: MECHANISTIC
+  scope_notes: This cross-taxon graph combines the canonical anaerobic phenotype with
+    chemically explicit TsdA/TetH and oxygen-dependent SOR branches. SOR supports
+    an enzymatic sulfur-disproportionation reaction but is not asserted as the mechanism
+    of anaerobic D. sulfexigens growth; TsdA and TetH occurrence alone is not diagnostic.
   nodes:
   - node_id: disproportionation_trait
     label: Disproportionation
@@ -85,16 +96,40 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing thiosulfate to tetrathionate, entry step of the
       S4 intermediate pathway.
+    grounding: GO:0050338
   - node_id: teth_tetrathionate_hydrolase
     label: TetH tetrathionate hydrolase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that hydrolyzes/disproportionates tetrathionate to elemental
       sulfur, thiosulfate, and sulfate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: TetH proteins are taxon- and acidophile-specific members of broader
+      hydrolase families; no exact verified GO or InterPro term was assigned to this
+      generic pathway label.
   - node_id: sor_sulfur_oxygenase_reductase
     label: SOR sulfur oxygenase reductase
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing O2-dependent disproportionation of elemental sulfur
       into sulfite and sulfide.
+    grounding: GO:0033755
+    protein_examples:
+    - uniprot_id: UniProtKB:P29082
+      protein_label: Sulfur oxygenase/reductase
+      gene_symbol: sor
+      taxon_id: NCBITaxon:2283
+      taxon_label: Acidianus ambivalens
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 101
+      sequence_version: 3
+      role: Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent
+        elemental-sulfur disproportionation in A. ambivalens.
+      evidence:
+      - reference: DOI:10.1126/science.1120306
+        snippet: catalyzes an oxygen-dependent disproportionation of elemental sulfur
+        notes: The primary structural and biochemical study establishes the reaction
+          and self-compartmentalized SOR assembly; UniProtKB P29082 is the reviewed
+          A. ambivalens sor product.
   - node_id: iron_sulfide_mineral
     label: iron-sulfide mineral formation
     node_type: CHEMICAL
@@ -353,4 +388,12 @@ curation_history:
     half and rejected because it fits only the oxidised half, which would split a
     matched pair from one reaction, and because it is an unminted placeholder where
     RO:0001001 is real.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:15:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cross-taxon disproportionation graph, grounded TsdA and SOR,
+    added a DOI-backed reviewed A. ambivalens SOR example, and documented TetH plus
+    the distinction between aerobic SOR chemistry and anaerobic disproportionating
+    growth.
   llm_assisted: true

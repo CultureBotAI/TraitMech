@@ -29,6 +29,10 @@ causal_graphs:
   title: Monotrichous flagellation — single polar flagellum
   description: Evidence-backed causal sketch linking a single polar bacterial flagellum
     to monotrichous flagellation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: monotrichous_trait
     label: monotrichous
@@ -45,6 +49,9 @@ causal_graphs:
     node_type: QUALITY
     description: Single flagellum positioned at one cell pole.
   - node_id: flhf_gtpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that targets and anchors flagellar assembly to the
@@ -64,16 +71,25 @@ causal_graphs:
     node_type: QUALITY
     description: The count of flagella per cell.
   - node_id: flig_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein that bridges the MS-ring to motor and chemotaxis
       components.
   - node_id: flif_msring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliF MS-ring protein
     node_type: GENE_OR_PROTEIN
     description: MS-ring protein forming the membrane-embedded base of the flagellar
       basal body.
   - node_id: flim_flin
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliM/FliN C-ring partners
     node_type: GENE_OR_PROTEIN
     description: C-ring switch-complex proteins that interact with FliG in the cytoplasmic

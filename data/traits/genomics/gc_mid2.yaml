@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: gc_mid2_mid_high_gc_bin
   title: GC-mid2 (METPO 57.0–66.3%) mid-high GC bin
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: DOI-backed graph linking moderate GC-biased gene conversion to a GC
     content of ~57.0–66.3% (the threshold encoded by the METPO synonym GC_57.0_66.3
     on this record).

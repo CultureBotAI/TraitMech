@@ -29,6 +29,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking coccobacillus shape to peptidoglycan
     synthesis, MreB-associated elongation, septal growth, and reduced length-to-width
     ratio.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: coccobacillus_shaped_trait
     label: coccobacillus shaped
@@ -36,6 +40,9 @@ causal_graphs:
     grounding: METPO:1000688
     description: Short, plump rod morphology intermediate between coccus and bacillus.
   - node_id: mreB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in cell-shape
@@ -54,6 +61,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell geometry with reduced length-to-width ratio.
   - node_id: rodA_pbp3_elongasome
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RodA/PBP3 elongasome
     node_type: GENE_OR_PROTEIN
     description: SEDS/PBP pair RodA/PBP3 mediating lateral cell-wall elongation.
@@ -63,6 +73,9 @@ causal_graphs:
     description: Geometric ratio of long to short cell axes that distinguishes rods
       from cocci.
   - node_id: gpsB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: GpsB
     node_type: GENE_OR_PROTEIN
     description: Cell-cycle regulator coordinating peptidoglycan synthase localization.
@@ -72,11 +85,17 @@ causal_graphs:
     description: Spatial distribution of penicillin-binding protein 2 between periphery
       and septum.
   - node_id: ftsZ_filament
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsZ filament properties
     node_type: GENE_OR_PROTEIN
     description: Divisome tubulin-homolog FtsZ filament conformation affecting cell-wall
       insertion geometry.
   - node_id: pbp2_elongasome
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PBP2 (elongasome transpeptidase)
     node_type: GENE_OR_PROTEIN
     description: Penicillin-binding protein 2, transpeptidase of the RodA-PBP2 elongasome

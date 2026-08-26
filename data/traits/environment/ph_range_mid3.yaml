@@ -31,6 +31,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_range_mid3_alkaliphile_range
   title: pH-range-mid3 alkaliphile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis to
     a pH growth range of approximately 8–10.
   nodes:
@@ -52,6 +56,10 @@ causal_graphs:
   - node_id: mrp_antiporter
     label: Mrp Na+/H+ antiporter complex
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Multi-subunit cation/proton antiporter conserved in many alkaliphiles.
   - node_id: intracellular_ph_homeostasis
     label: intracellular pH homeostasis

@@ -37,6 +37,10 @@ causal_graphs:
   title: Non-motile absent motility apparatus
   description: DOI-backed graph linking absence or non-expression of the flagellar
     or pilus-based motility apparatus to the non-motile phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: non_motile_trait
     label: non motile
@@ -69,11 +73,21 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Downregulation of flagellar structural and regulatory genes.
   - node_id: flhdc_master_operon
-    label: flhDC flagellar master operon
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: FlhD4C2 flagellar master regulator complex
     node_type: GENE_OR_PROTEIN
-    description: Master regulatory operon controlling the flagellar transcriptional
+    description: Master protein regulator controlling the flagellar transcriptional
       hierarchy.
+    gene_symbols:
+    - flhD
+    - flhC
+    operon: flhDC
   - node_id: wspr_dgc
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: WspR diguanylate cyclase
     node_type: GENE_OR_PROTEIN
     description: Diguanylate cyclase that synthesizes c-di-GMP when activated.

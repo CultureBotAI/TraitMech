@@ -29,12 +29,21 @@ canonical_examples:
   taxon_label: Cupriavidus necator
   note: Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on
     H2+CO2 (strain H16).
-  reference: PMID:16964242
+  reference: DOI:10.1038/nbt1244
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: Strain-level CBB model paired to the reviewed plasmid cbbL2 RuBisCO large-chain
+    example.
+  reference: DOI:10.1186/s12934-020-01494-y
 causal_graphs:
 - graph_id: carbon_fixation_co2_assimilation
   title: Autotrophic carbon fixation assimilates CO2 into organic carbon
   description: Evidence-backed causal sketch linking inorganic CO2 to organic carbon
     via six recognized autotrophic carbon-fixation pathways.
+  scope_status: MECHANISTIC
+  scope_notes: This composite graph spans multiple independent carbon-fixation pathways.
+    The C. necator H16 RuBisCO example supports the CBB branch only; the rTCA, 3HP/4HB,
+    and Wood-Ljungdahl branches require different pathway-specific proteins.
   nodes:
   - node_id: carbon_fixation_trait
     label: carbon fixation
@@ -67,6 +76,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson-Bassham cycle that fixes
       CO2.
+    grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:P42721
+      protein_label: Ribulose bisphosphate carboxylase large chain, plasmid
+      gene_symbol: cbbL2
+      taxon_id: NCBITaxon:381666
+      taxon_label: Cupriavidus necator H16
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 153
+      sequence_version: 3
+      role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
+        active CBB operons of C. necator H16.
+      evidence:
+      - reference: DOI:10.1186/s12934-020-01494-y
+        snippet: both CBB operons were active and contributed almost equally to the
+          carbon fixation process
+        notes: The strain-level perturbation study supports activity of both H16 CBB
+          operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain
+          in that strain.
   - node_id: cbb_cycle
     label: Calvin-Benson-Bassham cycle
     node_type: PATHWAY
@@ -106,6 +135,10 @@ causal_graphs:
     label: ATP citrate lyase (aclAB)
     node_type: GENE_OR_PROTEIN
     description: Key marker enzyme enabling the reverse TCA carbon-fixation cycle.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the two-subunit AclAB ATP citrate lyase complex;
+      verified family terms describe individual AclA or AclB chains rather than the
+      complete complex represented here.
   edges:
   - subject: carbon_dioxide
     predicate: fixed by
@@ -282,4 +315,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T08:25:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed C. necator H16 cbbL2/RuBisCO example, grounded the generic
+    RuBisCO node to InterPro, recorded the AclAB complex as reviewed label-only, and
+    scoped the example to the CBB branch of this multi-pathway graph.
   llm_assisted: true

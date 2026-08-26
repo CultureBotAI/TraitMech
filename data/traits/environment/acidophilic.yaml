@@ -30,6 +30,10 @@ causal_graphs:
   title: Acidophilic pH homeostasis mechanism
   description: Evidence-backed causal sketch linking acidophily to acidic environments,
     proton exclusion, and cytoplasmic pH homeostasis.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: acidophilic_trait
     label: acidophilic
@@ -60,11 +64,17 @@ causal_graphs:
     node_type: STATE
     description: Positive-inside membrane potential reducing proton influx.
   - node_id: primary_proton_pumps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: primary proton pumps
     node_type: GENE_OR_PROTEIN
     description: Proton-pumping respiratory chain complexes that actively translocate
       protons.
   - node_id: proton_coupled_atpases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: proton-coupled ATPases
     node_type: GENE_OR_PROTEIN
     description: ATP-driven primary pumps that actively transport protons across the

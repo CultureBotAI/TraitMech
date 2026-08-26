@@ -43,19 +43,24 @@ evidence:
     cyanobacterium that uses oxygenic photosynthesis to drive Calvin-Benson CO2 fixation
     (Kaneko et al. 1996, DNA Res, full genome).'
 canonical_examples:
-- taxon_id: NCBITaxon:1148
+- taxon_id: NCBITaxon:1111708
   taxon_label: Synechocystis sp. PCC 6803
   note: oxygenic photoautotroph
-  reference: PMID:23945601
-- taxon_id: NCBITaxon:1097
-  taxon_label: Chlorobaculum tepidum
+  reference: DOI:10.3390/md11082894
+- taxon_id: NCBITaxon:194439
+  taxon_label: Chlorobaculum tepidum TLS
   note: anoxygenic photoautotroph
-  reference: PMID:12093901
+  reference: DOI:10.1073/pnas.132181499
 causal_graphs:
 - graph_id: photoautotrophic_cyanobacterial_carbon_fixation
   title: Photoautotrophic light-powered CO2 fixation
   description: DOI-backed graph linking light capture, photosynthetic electron transport,
     ATP/reductant supply, and Calvin-Benson carbon fixation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph specifically represents oxygenic cyanobacterial photoautotrophy,
+    even though the trait also has an anoxygenic canonical example. The Synechocystis
+    protein example is the D1 component of photosystem II and does not denote the
+    complete multisubunit complex.
   nodes:
   - node_id: photoautotrophic_trait
     label: photoautotrophic
@@ -72,6 +77,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygenic photosystem that extracts electrons from water in cyanobacteria.
     grounding: GO:0009523
+    protein_examples:
+    - uniprot_id: UniProtKB:P16033
+      protein_label: Photosystem II protein D1 2
+      gene_symbol: psbA2
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. PCC 6803
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 186
+      sequence_version: 1
+      role: D1 reaction-center component of photosystem II; this accession is not
+        presented as the complete water-oxidizing complex.
+      evidence:
+      - reference: DOI:10.1074/jbc.M806116200
+        snippet: the PsbA (D1) subunit of photosystem II (PSII)
+        notes: A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII
+          subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed
+          PsbA2 protein and strain taxon.
   - node_id: water
     label: water
     node_type: CHEMICAL
@@ -131,6 +154,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carbonic anhydrase that dehydrates bicarbonate to CO2 inside the
       carboxysome.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cyanobacterial carboxysomes recruit different carbonic-anhydrase
+      families and architectures; the graph does not identify a single exact family.
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -376,4 +402,11 @@ curation_history:
     assert biology they specifically do not claim (#400 review). Both forms are named
     routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1
     before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-24T11:45:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the cyanobacterial graph mechanistic, documented its oxygenic scope,
+    reviewed carboxysomal carbonic anhydrase as label-only, upgraded canonical examples
+    to strain-level DOI citations, and added the reviewed Synechocystis PsbA2 example.
   llm_assisted: true

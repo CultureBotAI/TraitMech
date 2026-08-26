@@ -40,11 +40,21 @@ canonical_examples:
   taxon_label: Bacillus subtilis
   note: soil heterotroph
   reference: PMID:17122393
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level heterotrophic model paired to the reviewed AtpD beta component
+    of the aerobic respiratory ATP-synthesis branch.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: heterotrophic_organic_carbon_assimilation
   title: Heterotrophic organic carbon assimilation
   description: DOI-backed graph linking external organic molecules, nutrient uptake,
     catabolism, precursor metabolites, and biomass formation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents several organic-carbon assimilation branches.
+    The E. coli K-12 AtpD example anchors the aerobic respiratory branch only; one
+    beta-subunit accession does not denote the complete ATP synthase or all forms
+    of heterotrophy.
   nodes:
   - node_id: heterotrophic_trait
     label: heterotrophic
@@ -109,6 +119,30 @@ causal_graphs:
     description: Anaerobic energy conservation via substrate-level phosphorylation
       when respiration is unavailable.
     grounding: GO:0006113
+  - node_id: atp_synthase
+    label: ATP synthase
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    description: F-type rotary complex producing ATP in the aerobic respiratory branch.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the E. coli F1 catalytic head in respiratory ATP synthesis;
+        it is not presented as the complete complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: proton motive force drives rotation and conformational changes in
+          the F1 catalytic sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head; UniProt verifies the reviewed K-12 AtpD
+          entry.
   edges:
   - subject: heterotrophic_trait
     predicate: has carbon source
@@ -217,6 +251,18 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2024.05.011
       notes: Anaerobic conditions favor substrate-level phosphorylation (fermentation)
         for heterotrophic energy conservation.
+  - subject: atp_synthase
+    predicate: participates in
+    object: aerobic_respiration
+    description: F-type ATP synthase performs ATP synthesis in the aerobic respiratory
+      branch.
+    evidence:
+    - reference: DOI:10.7554/eLife.21598
+      snippet: proton motive force drives rotation and conformational changes in the
+        F1 catalytic sites
+      notes: Supports the beta-containing E. coli F1Fo complex as the terminal ATP-producing
+        machinery of respiration.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.873704+00:00'
   curator: seed_from_metpo

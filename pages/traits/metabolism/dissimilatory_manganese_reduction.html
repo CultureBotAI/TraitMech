@@ -43,6 +43,8 @@
       <h2>Dissimilatory manganese reduction respires Mn(IV) to Mn(II)</h2>
       <p class="meta">Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron acceptor to soluble Mn(II) and anaerobic respiration.</p>
 
+      <p class="graph-scope"><code>MECHANISTIC</code> · The MtrC protein example and protein-to-Mn(IV) edge are specific to the extracellular metal-reduction route characterized in S. oneidensis MR-1; they are not asserted as universal across manganese reducers.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -159,9 +161,73 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-7">
+            <strong>MtrC-family surface decaheme c-type cytochrome</strong>
+            <span class="edge-predicate">enables reduction of</span>
+            <strong>Mn(IV) oxide</strong>
+            
+            <p>Cell-surface MtrC supports efficient extracellular reduction of Mn(IV) acceptors in S. oneidensis MR-1.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1073/pnas.0604517103</code>
+                <span class="evidence-snippet">The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1.</span>
+                <span class="meta">This primary-source edge is restricted to the S. oneidensis MR-1 route; methane-coupled and other manganese-reduction mechanisms may use different proteins.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>MtrC-family surface decaheme c-type cytochrome</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/Q8EG34/entry" rel="nofollow noreferrer"><code>UniProtKB:Q8EG34</code></a>
+                  <br>Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC <span class="meta">(mtrC)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586" rel="nofollow noreferrer">Shewanella oneidensis MR-1</a>
+                  <br><code>NCBITaxon:211586</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v125 · sequence v1</span>
+                </td>
+                <td>
+                  <p>MtrC cell-surface component implicated in efficient Mn(IV) reduction; this accession is not presented as the complete MtrCAB conduit.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1073/pnas.0604517103" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0604517103</code></a>
+                      
+                      <span class="evidence-snippet">The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1.</span>
+                      <span class="meta">The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
     
@@ -367,7 +433,7 @@ The trait should denote an **anaerobic, energy-conserving respiratory capacity**
     
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
-        <span class="meta">(1)</span></h2>
+        <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
@@ -384,11 +450,30 @@ The trait should denote an **anaerobic, energy-conserving respiratory capacity**
           
           
           
-          <a href="https://pubmed.ncbi.nlm.nih.gov/12368813/"
-             rel="nofollow noreferrer"><code>PMID:12368813</code></a>
+          <a href="https://doi.org/10.1038/nbt749"
+             rel="nofollow noreferrer"><code>DOI:10.1038/nbt749</code></a>
           
           
           <span class="meta">Model dissimilatory metal reducer (strain MR-1 = Manganese Reducer 1); respires Mn(IV)/Fe(III) via extracellular electron transfer.</span>
+        </li>
+        
+        <li>
+          <em>Shewanella oneidensis MR-1</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586"
+             rel="nofollow noreferrer"><code>NCBITaxon:211586</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1073/pnas.0604517103"
+             rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0604517103</code></a>
+          
+          
+          <span class="meta">Strain-level metal reducer paired to the MtrC surface decaheme cytochrome example supporting efficient Mn(IV) reduction.</span>
         </li>
         
       </ul>
@@ -442,6 +527,12 @@ The trait should denote an **anaerobic, energy-conserving respiratory capacity**
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to has electron acceptor, 1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them. 1 electron edge(s) were also reversed back to trait -&gt; chemical, restoring the donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject problem that forced that collapse does not arise here because these predicates take a causal-node domain rather than METPO:2000001&#39;s microbe domain (issue 301).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-24T08:05:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Added a DOI-backed S. oneidensis MR-1 MtrC example, an InterPro family grounding, an explicitly strain-scoped MtrC-to-Mn(IV) edge, and mechanistic scope notes. The unreviewed accession is retained only as an exact component from reference proteome UP000008186.</p>
         </li>
         
       </ol>
@@ -806,7 +897,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron acceptor to soluble Mn(II) and anaerobic respiration.", "edges": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "mn_iv_oxide", "target": "mn_ii"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dmr_trait", "target": "mn_iv_oxide"}, {"description": "Oxidation of organic matter is coupled to Mn(IV) reduction.", "evidence": [{"notes": "Lovley: oxidation of organic matter coupled to reduction of Fe(III) or Mn(IV); fatty acids and aromatics fully oxidized with Mn(IV) as sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-3", "is_orphan": false, "predicate": "is oxidized coupled to", "predicate_id": null, "source": "organic_matter", "target": "dmr_trait"}, {"description": "H2 serves as electron donor for dissimilatory manganese reduction.", "evidence": [{"notes": "Lovley: organisms with Mn(IV) as sole electron acceptor can completely oxidize hydrogen.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-4", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "hydrogen", "target": "dmr_trait"}, {"description": "Anoxic conditions enable anaerobic Mn(IV) respiration.", "evidence": [{"notes": "Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments, soils, and groundwater under anaerobic conditions.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anoxia", "target": "dmr_trait"}, {"description": "Anaerobic methane oxidation can be coupled to Mn reduction (Fe-Mn-AOM).", "evidence": [{"notes": "Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important biogeochemical process with MnO2-coupled AOM reactions.", "reference": "DOI:10.5194/egusphere-2024-1829"}], "id": "edge-6", "is_orphan": false, "predicate": "is coupled to", "predicate_id": null, "source": "methane_oxidation", "target": "dmr_trait"}], "evidence_rows": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "Mn(IV) oxide", "target": "manganese(2+)"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory manganese reduction", "target": "Mn(IV) oxide"}, {"description": "Oxidation of organic matter is coupled to Mn(IV) reduction.", "edge_id": "edge-3", "evidence": [{"notes": "Lovley: oxidation of organic matter coupled to reduction of Fe(III) or Mn(IV); fatty acids and aromatics fully oxidized with Mn(IV) as sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "is oxidized coupled to", "predicate_id": null, "source": "organic matter", "target": "dissimilatory manganese reduction"}, {"description": "H2 serves as electron donor for dissimilatory manganese reduction.", "edge_id": "edge-4", "evidence": [{"notes": "Lovley: organisms with Mn(IV) as sole electron acceptor can completely oxidize hydrogen.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "dihydrogen", "target": "dissimilatory manganese reduction"}, {"description": "Anoxic conditions enable anaerobic Mn(IV) respiration.", "edge_id": "edge-5", "evidence": [{"notes": "Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments, soils, and groundwater under anaerobic conditions.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anoxic conditions", "target": "dissimilatory manganese reduction"}, {"description": "Anaerobic methane oxidation can be coupled to Mn reduction (Fe-Mn-AOM).", "edge_id": "edge-6", "evidence": [{"notes": "Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important biogeochemical process with MnO2-coupled AOM reactions.", "reference": "DOI:10.5194/egusphere-2024-1829"}], "predicate": "is coupled to", "predicate_id": null, "source": "anaerobic methane oxidation", "target": "dissimilatory manganese reduction"}], "graph_id": "dmr_mn_oxide_respiration", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Absence of oxygen permitting anaerobic Mn(IV) respiration.", "grounding": null, "id": "anoxia", "is_orphan": false, "label": "anoxic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on Mn(IV) oxide as terminal acceptor.", "grounding": "traitmech:000108", "id": "dmr_trait", "is_orphan": false, "label": "dissimilatory manganese reduction", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "H2 used as electron donor for dissimilatory manganese reduction.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "dihydrogen", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Anaerobic oxidation of methane (AOM) coupled to metal-oxide reduction.", "grounding": null, "id": "methane_oxidation", "is_orphan": false, "label": "anaerobic methane oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Mn(II) released after reduction.", "grounding": "CHEBI:29035", "id": "mn_ii", "is_orphan": false, "label": "manganese(2+)", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Mn(IV) oxide used as terminal electron acceptor.", "grounding": null, "id": "mn_iv_oxide", "is_orphan": false, "label": "Mn(IV) oxide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic carbon electron donor oxidized during Mn(IV) respiration.", "grounding": null, "id": "organic_matter", "is_orphan": false, "label": "organic matter", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": null, "scope_status": null, "title": "Dissimilatory manganese reduction respires Mn(IV) to Mn(II)"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron acceptor to soluble Mn(II) and anaerobic respiration.", "edges": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "mn_iv_oxide", "target": "mn_ii"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dmr_trait", "target": "mn_iv_oxide"}, {"description": "Oxidation of organic matter is coupled to Mn(IV) reduction.", "evidence": [{"notes": "Lovley: oxidation of organic matter coupled to reduction of Fe(III) or Mn(IV); fatty acids and aromatics fully oxidized with Mn(IV) as sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-3", "is_orphan": false, "predicate": "is oxidized coupled to", "predicate_id": null, "source": "organic_matter", "target": "dmr_trait"}, {"description": "H2 serves as electron donor for dissimilatory manganese reduction.", "evidence": [{"notes": "Lovley: organisms with Mn(IV) as sole electron acceptor can completely oxidize hydrogen.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-4", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "hydrogen", "target": "dmr_trait"}, {"description": "Anoxic conditions enable anaerobic Mn(IV) respiration.", "evidence": [{"notes": "Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments, soils, and groundwater under anaerobic conditions.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anoxia", "target": "dmr_trait"}, {"description": "Anaerobic methane oxidation can be coupled to Mn reduction (Fe-Mn-AOM).", "evidence": [{"notes": "Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important biogeochemical process with MnO2-coupled AOM reactions.", "reference": "DOI:10.5194/egusphere-2024-1829"}], "id": "edge-6", "is_orphan": false, "predicate": "is coupled to", "predicate_id": null, "source": "methane_oxidation", "target": "dmr_trait"}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of Mn(IV) acceptors in S. oneidensis MR-1.", "evidence": [{"notes": "This primary-source edge is restricted to the S. oneidensis MR-1 route; methane-coupled and other manganese-reduction mechanisms may use different proteins.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "id": "edge-7", "is_orphan": false, "predicate": "enables reduction of", "predicate_id": null, "source": "mtrc", "target": "mn_iv_oxide"}], "evidence_rows": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "Mn(IV) oxide", "target": "manganese(2+)"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory manganese reduction", "target": "Mn(IV) oxide"}, {"description": "Oxidation of organic matter is coupled to Mn(IV) reduction.", "edge_id": "edge-3", "evidence": [{"notes": "Lovley: oxidation of organic matter coupled to reduction of Fe(III) or Mn(IV); fatty acids and aromatics fully oxidized with Mn(IV) as sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "is oxidized coupled to", "predicate_id": null, "source": "organic matter", "target": "dissimilatory manganese reduction"}, {"description": "H2 serves as electron donor for dissimilatory manganese reduction.", "edge_id": "edge-4", "evidence": [{"notes": "Lovley: organisms with Mn(IV) as sole electron acceptor can completely oxidize hydrogen.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "dihydrogen", "target": "dissimilatory manganese reduction"}, {"description": "Anoxic conditions enable anaerobic Mn(IV) respiration.", "edge_id": "edge-5", "evidence": [{"notes": "Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments, soils, and groundwater under anaerobic conditions.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anoxic conditions", "target": "dissimilatory manganese reduction"}, {"description": "Anaerobic methane oxidation can be coupled to Mn reduction (Fe-Mn-AOM).", "edge_id": "edge-6", "evidence": [{"notes": "Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important biogeochemical process with MnO2-coupled AOM reactions.", "reference": "DOI:10.5194/egusphere-2024-1829"}], "predicate": "is coupled to", "predicate_id": null, "source": "anaerobic methane oxidation", "target": "dissimilatory manganese reduction"}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of Mn(IV) acceptors in S. oneidensis MR-1.", "edge_id": "edge-7", "evidence": [{"notes": "This primary-source edge is restricted to the S. oneidensis MR-1 route; methane-coupled and other manganese-reduction mechanisms may use different proteins.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "predicate": "enables reduction of", "predicate_id": null, "source": "MtrC-family surface decaheme c-type cytochrome", "target": "Mn(IV) oxide"}], "graph_id": "dmr_mn_oxide_respiration", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Absence of oxygen permitting anaerobic Mn(IV) respiration.", "grounding": null, "id": "anoxia", "is_orphan": false, "label": "anoxic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on Mn(IV) oxide as terminal acceptor.", "grounding": "traitmech:000108", "id": "dmr_trait", "is_orphan": false, "label": "dissimilatory manganese reduction", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "H2 used as electron donor for dissimilatory manganese reduction.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "dihydrogen", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Anaerobic oxidation of methane (AOM) coupled to metal-oxide reduction.", "grounding": null, "id": "methane_oxidation", "is_orphan": false, "label": "anaerobic methane oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Mn(II) released after reduction.", "grounding": "CHEBI:29035", "id": "mn_ii", "is_orphan": false, "label": "manganese(2+)", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Mn(IV) oxide used as terminal electron acceptor.", "grounding": null, "id": "mn_iv_oxide", "is_orphan": false, "label": "Mn(IV) oxide", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-surface decaheme cytochrome supporting extracellular reduction of manganese oxide in Shewanella.", "grounding": "InterPro:IPR020014", "id": "mtrc", "is_orphan": false, "label": "MtrC-family surface decaheme c-type cytochrome", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Mn(IV) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "xrefs": []}, {"color": "#fef3c7", "description": "Organic carbon electron donor oxidized during Mn(IV) respiration.", "grounding": null, "id": "organic_matter", "is_orphan": false, "label": "organic matter", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "node_id": "mtrc", "node_label": "MtrC-family surface decaheme c-type cytochrome", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Mn(IV) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "scope_notes": "The MtrC protein example and protein-to-Mn(IV) edge are specific to the extracellular metal-reduction route characterized in S. oneidensis MR-1; they are not asserted as universal across manganese reducers.", "scope_status": "MECHANISTIC", "title": "Dissimilatory manganese reduction respires Mn(IV) to Mn(II)"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -829,7 +920,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-06 00:00 UTC from
+      Record as of 2026-08-24 08:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

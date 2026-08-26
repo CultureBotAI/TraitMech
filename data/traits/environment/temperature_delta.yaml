@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_delta_thermal_flexibility
   title: Temperature-delta thermal-adaptation flexibility
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking the flexibility of membrane and enzyme adaptation
     to the breadth of the temperature growth range (delta = max − min).
   nodes:

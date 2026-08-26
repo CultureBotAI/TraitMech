@@ -29,6 +29,10 @@ causal_graphs:
   title: Lophotrichous flagellation — polar tuft of flagella
   description: Evidence-backed causal sketch linking a polar tuft of bacterial flagella
     to the lophotrichous arrangement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: lophotrichous_trait
     label: lophotrichous
@@ -45,6 +49,9 @@ causal_graphs:
     node_type: QUALITY
     description: Multiple flagella clustered at one cell pole.
   - node_id: flhf_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and initiates polar flagellar assembly.
@@ -54,6 +61,9 @@ causal_graphs:
     description: The cell pole where polar flagellar assembly is nucleated.
     grounding: GO:0060187
   - node_id: flig_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein recruited during basal-body assembly.
@@ -64,6 +74,9 @@ causal_graphs:
       body.
     grounding: InterPro:IPR000067
   - node_id: fipa_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane-localized polar landmark/licensing factor required for normal

@@ -24,6 +24,10 @@ evidence:
     elements.
 causal_graphs:
 - graph_id: cell_shape_peptidoglycan_cytoskeleton
+  scope_status: NONMECHANISTIC
+  scope_notes: Cell shape is an upper morphology descriptor spanning distinct rods,
+    cocci, curved cells, and other forms. The graph is retained as contextual background
+    on alternative determinants, not as one mechanism inherited by every child shape.
   title: Bacterial cell-shape morphogenesis mechanism
   description: Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis,
     PBPs, MreB, FtsZ, crescentin, and localized wall growth.
@@ -44,10 +48,16 @@ causal_graphs:
     description: Biosynthesis and remodeling of the bacterial cell wall.
     grounding: GO:0009252
   - node_id: penicillin_binding_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella combines multiple penicillin-binding-protein families
+      with different enzymatic roles, so no single exact family term denotes the node.
     label: penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Enzymes that synthesize and remodel peptidoglycan.
   - node_id: mreB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph uses MreB generically across divergent bacterial lineages;
+      an exact family term was not verified for this upper-context node.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in rod-shape determination.
@@ -57,6 +67,9 @@ causal_graphs:
     description: Tubulin-like bacterial cell-division protein.
     grounding: InterPro:IPR000158
   - node_id: crescentin
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Crescentin is a lineage-specific curvature determinant retained
+      only as one contextual alternative in this upper shape graph.
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like protein required for curved rod shape
@@ -83,6 +96,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Membrane lipid composition state with increased lipid order.
   - node_id: flotillins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This plural node combines multiple bacterial flotillin paralogues
+      and has no single exact family grounding.
     label: flotillins
     node_type: GENE_OR_PROTEIN
     description: Membrane microdomain scaffolding proteins.

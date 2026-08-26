@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: biosafety_level_2_moderate_hazard
   title: BSL-2 moderate-hazard classification
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking moderate pathogen virulence and the presence
     of effective countermeasures to BSL-2 classification.
   nodes:

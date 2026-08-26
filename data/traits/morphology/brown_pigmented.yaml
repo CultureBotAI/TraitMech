@@ -17,12 +17,22 @@ evidence:
   snippet: Brown pigments are produced when homogentisic acid accumulates
   notes: Supports brown microbial pigmentation as a homogentisic-acid/pyomelanin pathway
     phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:651
+  taxon_label: Aeromonas media
+  note: Species-level pyomelanin model paired to an HppD protein; disruption and heterologous-expression
+    experiments in strain WS establish HppD-dependent pigment production.
+  reference: DOI:10.1371/journal.pone.0120923
 causal_graphs:
 - graph_id: brown_pigmented_pyomelanin_pathway
   title: Brown pigmentation pyomelanin mechanism
   description: Evidence-backed causal sketch linking brown microbial pigmentation
     to tyrosine catabolism, homogentisic acid accumulation, oxidative polymerization
     into pyomelanin, and visible brown color.
+  scope_status: MECHANISTIC
+  scope_notes: The retained mechanism is the HppD-dependent homogentisate/pyomelanin
+    branch demonstrated in Aeromonas media; HmgA is retained as the opposing degradative
+    branch and is not represented by the HppD example.
   nodes:
   - node_id: brown_pigmented_trait
     label: brown pigmented
@@ -39,6 +49,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that can form homogentisic acid from 4-hydroxyphenylpyruvate.
     grounding: GO:0003868
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AAE7AGQ2
+      protein_label: 4-hydroxyphenylpyruvate dioxygenase
+      gene_symbol: hppD
+      taxon_id: NCBITaxon:651
+      taxon_label: Aeromonas media
+      entry_status: UNREVIEWED
+      proteome_id: UP000502657
+      retrieved_on: '2026-08-25'
+      entry_version: 8
+      sequence_version: 1
+      role: Aeromonas HppD converts 4-hydroxyphenylpyruvate to homogentisate in the
+        pyomelanin-producing branch that generates brown pigmentation.
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0120923
+        snippet: disruption of any one of these genes impairs or blocks pigmentation
+        notes: The A. media WS mutagenesis and HppD-expression experiments establish
+          the protein-family role; UniProt supplies a current species-matched HppD
+          entry from a reference proteome.
   - node_id: homogentisic_acid
     label: homogentisic acid
     node_type: CHEMICAL

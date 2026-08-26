@@ -32,6 +32,10 @@ causal_graphs:
   title: Microaerophilic low-oxygen respiration mechanism
   description: Evidence-backed causal sketch linking microaerophily to microoxic environments
     and high-affinity terminal oxidases.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: microaerophilic_trait
     label: microaerophilic
@@ -48,14 +52,23 @@ causal_graphs:
     grounding: CHEBI:15379
     description: Dioxygen present at low concentration.
   - node_id: high_affinity_terminal_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: high-affinity terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: Respiratory oxidase enabling oxygen use at low concentration.
   - node_id: cbb3_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cytochrome cbb3 oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity cytochrome oxidase associated with microaerobic metabolism.
   - node_id: cytochrome_bd_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cytochrome bd ubiquinol oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity quinol oxidase widespread in low-oxygen-adapted bacteria.

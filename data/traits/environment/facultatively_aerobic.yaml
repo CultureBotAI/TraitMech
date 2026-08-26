@@ -28,6 +28,10 @@ causal_graphs:
   title: Facultative aerobe oxygen-flexible growth mechanism
   description: Evidence-backed causal sketch linking facultative aerobic growth to
     oxygen-responsive respiratory switching.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultative_aerobic_trait
     label: facultatively aerobic
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Growth-supporting metabolism when oxygen is unavailable.
   - node_id: fnr_type_regulation
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FNR-type oxygen-responsive regulation
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensing regulatory systems that tune respiratory metabolism.
@@ -62,19 +69,33 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Selection of which terminal respiratory enzyme/branch is active.
   - node_id: arcab_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArcAB two-component system
     node_type: GENE_OR_PROTEIN
     description: Redox-responsive two-component regulatory system controlling aerobic
       respiration.
   - node_id: anaerobic_metabolism_genes
-    label: anaerobic metabolism genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: anaerobic metabolism protein systems
     node_type: GENE_OR_PROTEIN
-    description: Genes encoding anaerobic metabolic functions activated under anoxia.
+    description: Protein systems for anaerobic metabolic functions activated under
+      anoxia.
   - node_id: aerobic_metabolism_genes
-    label: aerobic metabolism genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: aerobic metabolism protein systems
     node_type: GENE_OR_PROTEIN
-    description: Genes encoding aerobic respiratory functions repressed under anoxia.
+    description: Protein systems for aerobic respiratory functions repressed under
+      anoxia.
   - node_id: cytochrome_bd_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cytochrome bd oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity terminal oxidase that reduces oxygen at low O2 concentrations.

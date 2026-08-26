@@ -43,6 +43,8 @@
       <h2>Chemolithoheterotrophic inorganic chemical energy and organic carbon use</h2>
       <p class="meta">DOI-backed graph linking inorganic chemical electron donors, Fe(II) and reduced sulfur examples, respiratory energy conservation, organic carbon uptake, and biomass.</p>
 
+      <p class="graph-scope"><code>MECHANISTIC</code> · This modular graph covers Fe(II), reduced-sulfur, and H2 donor branches coupled to organic-carbon assimilation. The S. alaskensis example anchors only the H2 branch; Q1J422 is the catalytic large-subunit component of its group 2a hydrogenase, not the complete multisubunit enzyme or the sulfur/iron branches.</p>
+
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
@@ -109,6 +111,40 @@
           </li>
           
           <li id="pathograph-1-edge-4">
+            <strong>molecular hydrogen</strong>
+            <span class="edge-predicate">example of</span>
+            <strong>inorganic chemical donor</strong>
+            <code>rdfs:subClassOf</code>
+            <p>H2 is a reduced inorganic donor that can supplement energy during organic-carbon-supported growth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01322-0</code>
+                <span class="evidence-snippet">uses an abundant reduced gas as an energy source</span>
+                <span class="meta">The culture study shows that S. alaskensis consumes H2 while growing on organic carbon, supporting H2 as the inorganic energy donor in this branch.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>molecular hydrogen</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>group 2a [NiFe]-hydrogenase</strong>
+            
+            <p>The group 2a uptake hydrogenase mediates aerobic H2 oxidation in S. alaskensis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01322-0</code>
+                <span class="evidence-snippet">encodes a plasmid-borne group 2a [NiFe]-hydrogenase, aerobically consumed H2</span>
+                <span class="meta">The primary growth, gas-consumption, and hucL-expression experiments pair the enzyme class with H2 oxidation in strain RB2256; Q1J422 is only its large-subunit component.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
             <strong>inorganic chemical donor</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
@@ -125,7 +161,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-5">
+          <li id="pathograph-1-edge-7">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">generates</span>
             <strong>proton motive force</strong>
@@ -142,7 +178,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-6">
+          <li id="pathograph-1-edge-8">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives production of</span>
             <strong>ATP</strong>
@@ -159,7 +195,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-7">
+          <li id="pathograph-1-edge-9">
             <strong>chemolithoheterotrophic</strong>
             <span class="edge-predicate">has carbon source</span>
             <strong>organic compound</strong>
@@ -176,7 +212,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-8">
+          <li id="pathograph-1-edge-10">
             <strong>organic compound</strong>
             <span class="edge-predicate">imported by</span>
             <strong>organic nutrient uptake</strong>
@@ -193,7 +229,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-9">
+          <li id="pathograph-1-edge-11">
             <strong>organic nutrient uptake</strong>
             <span class="edge-predicate">supports formation of</span>
             <strong>biomass</strong>
@@ -210,7 +246,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-10">
+          <li id="pathograph-1-edge-12">
             <strong>Sox sulfur-oxidation pathway</strong>
             <span class="edge-predicate">has output</span>
             <strong>sulfate</strong>
@@ -227,7 +263,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-11">
+          <li id="pathograph-1-edge-13">
             <strong>thiosulfate</strong>
             <span class="edge-predicate">oxidized by</span>
             <strong>Sox sulfur-oxidation pathway</strong>
@@ -244,7 +280,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-12">
+          <li id="pathograph-1-edge-14">
             <strong>branched thiosulfate oxidation pathway</strong>
             <span class="edge-predicate">produces intermediate</span>
             <strong>elemental sulfur</strong>
@@ -261,7 +297,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-13">
+          <li id="pathograph-1-edge-15">
             <strong>organic carbon import system</strong>
             <span class="edge-predicate">supports</span>
             <strong>organic nutrient uptake</strong>
@@ -281,6 +317,53 @@
         </ul>
       </div>
       
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>group 2a [NiFe]-hydrogenase</td>
+                <td>
+                  
+                  <a href="https://www.uniprot.org/uniprotkb/Q1J422/entry" rel="nofollow noreferrer"><code>UniProtKB:Q1J422</code></a>
+                  <br>Group 2a [NiFe]-hydrogenase large subunit HucL <span class="meta">(Sala_3198)</span>
+                </td>
+                <td>
+                  
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=317655" rel="nofollow noreferrer">Sphingopyxis alaskensis RB2256</a>
+                  <br><code>NCBITaxon:317655</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-08-24 · entry v98 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Catalytic large-subunit component of the plasmid-borne group 2a [NiFe]-hydrogenase; this accession is not presented as the complete hydrogenase complex.</p>
+                  <ul>
+                    
+                    <li>
+                      
+                      
+                      <a href="https://doi.org/10.1038/s41564-023-01322-0" rel="nofollow noreferrer"><code>DOI:10.1038/s41564-023-01322-0</code></a>
+                      
+                      <span class="evidence-snippet">group 2a [NiFe]-hydrogenase large subunit gene (hucL; locus Sala_3198)</span>
+                      <span class="meta">The primary study measured Sala_3198 expression during aerobic growth and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis RB2256 reference proteome.</span>
+                    </li>
+                    
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
     
@@ -484,6 +567,35 @@ Identifiers below are supplied only where confidence is high. Labels are deliber
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Sphingopyxis alaskensis RB2256</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=317655"
+             rel="nofollow noreferrer"><code>NCBITaxon:317655</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1038/s41564-023-01322-0"
+             rel="nofollow noreferrer"><code>DOI:10.1038/s41564-023-01322-0</code></a>
+          
+          
+          <span class="meta">Strain-level facultative chemolithoheterotrophic example that oxidizes H2 during aerobic growth on organic carbon, paired to its group 2a hydrogenase large subunit.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -598,6 +710,12 @@ Identifiers below are supplied only where confidence is high. Labels are deliber
           <time>2026-08-07T18:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Edge sox_pathway -&gt; sulfate in graph chemolithoheterotrophic_inorganic_energy_organic_carbon: re-grounded it from enables/RO:0002327 to has output/RO:0002234. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. The subject IS an activity (PATHWAY), which is the documented dividing line: activity subjects take RO:0002234, whose domain &#39;biological process or activity&#39; they satisfy, rather than the METPO term minted for the subjects RO cannot cover.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-24T12:50:00-07:00</time> ·
+          <strong>REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON</strong> · codex
+          <p class="changes">Marked the graph mechanistic, reviewed the broad importer as label-only, added DOI-cited S. alaskensis RB2256 and its H2 branch, and paired the group 2a hydrogenase node with reference-proteome component Q1J422 without treating one large subunit as the complete complex.</p>
         </li>
         
       </ol>
@@ -962,7 +1080,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking inorganic chemical electron donors, Fe(II) and reduced sulfur examples, respiratory energy conservation, organic carbon uptake, and biomass.", "edges": [{"description": "Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.", "evidence": [{"notes": "Supports inorganic chemical donors in chemolithotrophic metabolism.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemolithoheterotrophic_trait", "target": "inorganic_chemical_donor"}, {"description": "Fe(II) is an experimentally supported inorganic donor for chemolithoheterotrophy.", "evidence": [{"notes": "Supports Fe(II) as energy source in engineered chemolithoheterotrophy.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) oxidation provides energy"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous_iron", "target": "inorganic_chemical_donor"}, {"description": "Reduced sulfur compounds can fuel chemolithoheterotrophic metabolism.", "evidence": [{"notes": "Supports sulfur oxidation as an energy source coupled to organic compound uptake.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "oxidize sulfur to fuel"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced_sulfur_compound", "target": "inorganic_chemical_donor"}, {"description": "Oxidized inorganic donors feed electrons into respiratory energy conservation.", "evidence": [{"notes": "Supports electron transfer in energy-conserving respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_chemical_donor", "target": "respiratory_chain"}, {"description": "Respiratory electron transfer generates an ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory_chain", "target": "proton_motive_force"}, {"description": "Proton motive force powers ATP synthesis.", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "drives production of", "predicate_id": "biolink:produces", "source": "proton_motive_force", "target": "atp"}, {"description": "Organic compounds provide carbon for chemolithoheterotrophic growth.", "evidence": [{"notes": "Supports organic carbon use under inorganic donor oxidizing conditions.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "glucose as the sole carbon source"}], "id": "edge-7", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemolithoheterotrophic_trait", "target": "organic_compound"}, {"description": "Organic compounds are taken up for heterotrophic carbon assimilation.", "evidence": [{"notes": "Supports organic compound uptake fueled by sulfur oxidation.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "uptake of organic compounds"}], "id": "edge-8", "is_orphan": false, "predicate": "imported by", "predicate_id": null, "source": "organic_compound", "target": "nutrient_uptake"}, {"description": "Uptaken organic carbon supports cell-material production.", "evidence": [{"notes": "Supports assimilation of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-9", "is_orphan": false, "predicate": "supports formation of", "predicate_id": null, "source": "nutrient_uptake", "target": "biomass"}, {"description": "The conserved soxCDYZAXB gene cluster enables complete oxidation of thiosulfate to sulfate without free intermediates.", "evidence": [{"notes": "Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete oxidation of thiosulfate to sulfate, without free intermediates.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-10", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "sox_pathway", "target": "sulfate"}, {"description": "Thiosulfate, a reduced inorganic sulfur donor, is oxidized by the Sox pathway.", "evidence": [{"notes": "Sox system mediates complete oxidation of thiosulfate to sulfate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-11", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "sox_pathway"}, {"description": "Truncated soxXYZAB with reverse Dsr/Apr/Sat oxidizes thiosulfate via an elemental sulfur intermediate.", "evidence": [{"notes": "Branched thiosulfate oxidation pathway in which Dsr operating in reverse oxidizes sulfane-derived sulfur to sulfite, with elemental sulfur as intermediate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-12", "is_orphan": false, "predicate": "produces intermediate", "predicate_id": null, "source": "branched_thiosulfate_oxidation", "target": "elemental_sulfur"}, {"description": "Amino acid and carboxylic acid import systems support organic carbon uptake in heterotrophs and mixotrophs.", "evidence": [{"notes": "Import systems for amino acids and carboxylic acids were overly abundant in mixotrophs and heterotrophs, supporting the organic-carbon dependency of the trait.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-13", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "organic_carbon_importer", "target": "nutrient_uptake"}], "evidence_rows": [{"description": "Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic chemical donors in chemolithotrophic metabolism.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemolithoheterotrophic", "target": "inorganic chemical donor"}, {"description": "Fe(II) is an experimentally supported inorganic donor for chemolithoheterotrophy.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Fe(II) as energy source in engineered chemolithoheterotrophy.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) oxidation provides energy"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous iron", "target": "inorganic chemical donor"}, {"description": "Reduced sulfur compounds can fuel chemolithoheterotrophic metabolism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfur oxidation as an energy source coupled to organic compound uptake.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "oxidize sulfur to fuel"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced sulfur compound", "target": "inorganic chemical donor"}, {"description": "Oxidized inorganic donors feed electrons into respiratory energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports electron transfer in energy-conserving respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic chemical donor", "target": "respiratory chain"}, {"description": "Respiratory electron transfer generates an ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports proton motive force generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory chain", "target": "proton motive force"}, {"description": "Proton motive force powers ATP synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives production of", "predicate_id": "biolink:produces", "source": "proton motive force", "target": "ATP"}, {"description": "Organic compounds provide carbon for chemolithoheterotrophic growth.", "edge_id": "edge-7", "evidence": [{"notes": "Supports organic carbon use under inorganic donor oxidizing conditions.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "glucose as the sole carbon source"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemolithoheterotrophic", "target": "organic compound"}, {"description": "Organic compounds are taken up for heterotrophic carbon assimilation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports organic compound uptake fueled by sulfur oxidation.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "uptake of organic compounds"}], "predicate": "imported by", "predicate_id": null, "source": "organic compound", "target": "organic nutrient uptake"}, {"description": "Uptaken organic carbon supports cell-material production.", "edge_id": "edge-9", "evidence": [{"notes": "Supports assimilation of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "supports formation of", "predicate_id": null, "source": "organic nutrient uptake", "target": "biomass"}, {"description": "The conserved soxCDYZAXB gene cluster enables complete oxidation of thiosulfate to sulfate without free intermediates.", "edge_id": "edge-10", "evidence": [{"notes": "Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete oxidation of thiosulfate to sulfate, without free intermediates.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "Sox sulfur-oxidation pathway", "target": "sulfate"}, {"description": "Thiosulfate, a reduced inorganic sulfur donor, is oxidized by the Sox pathway.", "edge_id": "edge-11", "evidence": [{"notes": "Sox system mediates complete oxidation of thiosulfate to sulfate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "Sox sulfur-oxidation pathway"}, {"description": "Truncated soxXYZAB with reverse Dsr/Apr/Sat oxidizes thiosulfate via an elemental sulfur intermediate.", "edge_id": "edge-12", "evidence": [{"notes": "Branched thiosulfate oxidation pathway in which Dsr operating in reverse oxidizes sulfane-derived sulfur to sulfite, with elemental sulfur as intermediate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "produces intermediate", "predicate_id": null, "source": "branched thiosulfate oxidation pathway", "target": "elemental sulfur"}, {"description": "Amino acid and carboxylic acid import systems support organic carbon uptake in heterotrophs and mixotrophs.", "edge_id": "edge-13", "evidence": [{"notes": "Import systems for amino acids and carboxylic acids were overly abundant in mixotrophs and heterotrophs, supporting the organic-carbon dependency of the trait.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "supports", "predicate_id": null, "source": "organic carbon import system", "target": "organic nutrient uptake"}], "graph_id": "chemolithoheterotrophic_inorganic_energy_organic_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced from proton motive force.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cell material formed from organic carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Truncated Sox plus reverse Dsr/Apr/Sat oxidizing thiosulfate via an elemental sulfur intermediate.", "grounding": null, "id": "branched_thiosulfate_oxidation", "is_orphan": false, "label": "branched thiosulfate oxidation pathway", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemical electron donors and organic carbon.", "grounding": "METPO:1000638", "id": "chemolithoheterotrophic_trait", "is_orphan": false, "label": "chemolithoheterotrophic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "S0 intermediate of branched sulfur-compound oxidation.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(II), an inorganic chemical energy source.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic chemical supplying electrons and energy.", "grounding": null, "id": "inorganic_chemical_donor", "is_orphan": false, "label": "inorganic chemical donor", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Uptake of external organic compounds.", "grounding": null, "id": "nutrient_uptake", "is_orphan": false, "label": "organic nutrient uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Amino acid and carboxylic acid import systems mediating organic carbon uptake.", "grounding": null, "id": "organic_carbon_importer", "is_orphan": false, "label": "organic carbon import system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic carbon source used for biosynthesis.", "grounding": "CHEBI:50860", "id": "organic_compound", "is_orphan": false, "label": "organic compound", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient generated by respiratory electron transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic sulfur electron donor such as sulfide or thiosulfate.", "grounding": null, "id": "reduced_sulfur_compound", "is_orphan": false, "label": "reduced sulfur compound", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer pathway conserving energy from donor oxidation.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "soxCDYZAXB gene cluster mediating complete oxidation of thiosulfate to sulfate.", "grounding": null, "id": "sox_pathway", "is_orphan": false, "label": "Sox sulfur-oxidation pathway", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fully oxidized sulfur end product of sulfur-compound oxidation.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic sulfur electron donor oxidized to sulfate.", "grounding": "CHEBI:16094", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": null, "scope_status": null, "title": "Chemolithoheterotrophic inorganic chemical energy and organic carbon use"}];
+  var graphs = [{"description": "DOI-backed graph linking inorganic chemical electron donors, Fe(II) and reduced sulfur examples, respiratory energy conservation, organic carbon uptake, and biomass.", "edges": [{"description": "Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.", "evidence": [{"notes": "Supports inorganic chemical donors in chemolithotrophic metabolism.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemolithoheterotrophic_trait", "target": "inorganic_chemical_donor"}, {"description": "Fe(II) is an experimentally supported inorganic donor for chemolithoheterotrophy.", "evidence": [{"notes": "Supports Fe(II) as energy source in engineered chemolithoheterotrophy.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) oxidation provides energy"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous_iron", "target": "inorganic_chemical_donor"}, {"description": "Reduced sulfur compounds can fuel chemolithoheterotrophic metabolism.", "evidence": [{"notes": "Supports sulfur oxidation as an energy source coupled to organic compound uptake.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "oxidize sulfur to fuel"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced_sulfur_compound", "target": "inorganic_chemical_donor"}, {"description": "H2 is a reduced inorganic donor that can supplement energy during organic-carbon-supported growth.", "evidence": [{"notes": "The culture study shows that S. alaskensis consumes H2 while growing on organic carbon, supporting H2 as the inorganic energy donor in this branch.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "uses an abundant reduced gas as an energy source"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "molecular_hydrogen", "target": "inorganic_chemical_donor"}, {"description": "The group 2a uptake hydrogenase mediates aerobic H2 oxidation in S. alaskensis.", "evidence": [{"notes": "The primary growth, gas-consumption, and hucL-expression experiments pair the enzyme class with H2 oxidation in strain RB2256; Q1J422 is only its large-subunit component.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "encodes a plasmid-borne group 2a [NiFe]-hydrogenase, aerobically consumed H2"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "molecular_hydrogen", "target": "group_2a_nife_hydrogenase"}, {"description": "Oxidized inorganic donors feed electrons into respiratory energy conservation.", "evidence": [{"notes": "Supports electron transfer in energy-conserving respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-6", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_chemical_donor", "target": "respiratory_chain"}, {"description": "Respiratory electron transfer generates an ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-7", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory_chain", "target": "proton_motive_force"}, {"description": "Proton motive force powers ATP synthesis.", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-8", "is_orphan": false, "predicate": "drives production of", "predicate_id": "biolink:produces", "source": "proton_motive_force", "target": "atp"}, {"description": "Organic compounds provide carbon for chemolithoheterotrophic growth.", "evidence": [{"notes": "Supports organic carbon use under inorganic donor oxidizing conditions.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "glucose as the sole carbon source"}], "id": "edge-9", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemolithoheterotrophic_trait", "target": "organic_compound"}, {"description": "Organic compounds are taken up for heterotrophic carbon assimilation.", "evidence": [{"notes": "Supports organic compound uptake fueled by sulfur oxidation.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "uptake of organic compounds"}], "id": "edge-10", "is_orphan": false, "predicate": "imported by", "predicate_id": null, "source": "organic_compound", "target": "nutrient_uptake"}, {"description": "Uptaken organic carbon supports cell-material production.", "evidence": [{"notes": "Supports assimilation of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-11", "is_orphan": false, "predicate": "supports formation of", "predicate_id": null, "source": "nutrient_uptake", "target": "biomass"}, {"description": "The conserved soxCDYZAXB gene cluster enables complete oxidation of thiosulfate to sulfate without free intermediates.", "evidence": [{"notes": "Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete oxidation of thiosulfate to sulfate, without free intermediates.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-12", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "sox_pathway", "target": "sulfate"}, {"description": "Thiosulfate, a reduced inorganic sulfur donor, is oxidized by the Sox pathway.", "evidence": [{"notes": "Sox system mediates complete oxidation of thiosulfate to sulfate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-13", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "sox_pathway"}, {"description": "Truncated soxXYZAB with reverse Dsr/Apr/Sat oxidizes thiosulfate via an elemental sulfur intermediate.", "evidence": [{"notes": "Branched thiosulfate oxidation pathway in which Dsr operating in reverse oxidizes sulfane-derived sulfur to sulfite, with elemental sulfur as intermediate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-14", "is_orphan": false, "predicate": "produces intermediate", "predicate_id": null, "source": "branched_thiosulfate_oxidation", "target": "elemental_sulfur"}, {"description": "Amino acid and carboxylic acid import systems support organic carbon uptake in heterotrophs and mixotrophs.", "evidence": [{"notes": "Import systems for amino acids and carboxylic acids were overly abundant in mixotrophs and heterotrophs, supporting the organic-carbon dependency of the trait.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "id": "edge-15", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "organic_carbon_importer", "target": "nutrient_uptake"}], "evidence_rows": [{"description": "Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic chemical donors in chemolithotrophic metabolism.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "has electron donor", "predicate_id": "METPO:2007701", "source": "chemolithoheterotrophic", "target": "inorganic chemical donor"}, {"description": "Fe(II) is an experimentally supported inorganic donor for chemolithoheterotrophy.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Fe(II) as energy source in engineered chemolithoheterotrophy.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "Fe(II) oxidation provides energy"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "ferrous iron", "target": "inorganic chemical donor"}, {"description": "Reduced sulfur compounds can fuel chemolithoheterotrophic metabolism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfur oxidation as an energy source coupled to organic compound uptake.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "oxidize sulfur to fuel"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced sulfur compound", "target": "inorganic chemical donor"}, {"description": "H2 is a reduced inorganic donor that can supplement energy during organic-carbon-supported growth.", "edge_id": "edge-4", "evidence": [{"notes": "The culture study shows that S. alaskensis consumes H2 while growing on organic carbon, supporting H2 as the inorganic energy donor in this branch.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "uses an abundant reduced gas as an energy source"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "molecular hydrogen", "target": "inorganic chemical donor"}, {"description": "The group 2a uptake hydrogenase mediates aerobic H2 oxidation in S. alaskensis.", "edge_id": "edge-5", "evidence": [{"notes": "The primary growth, gas-consumption, and hucL-expression experiments pair the enzyme class with H2 oxidation in strain RB2256; Q1J422 is only its large-subunit component.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "encodes a plasmid-borne group 2a [NiFe]-hydrogenase, aerobically consumed H2"}], "predicate": "oxidized by", "predicate_id": null, "source": "molecular hydrogen", "target": "group 2a [NiFe]-hydrogenase"}, {"description": "Oxidized inorganic donors feed electrons into respiratory energy conservation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports electron transfer in energy-conserving respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic chemical donor", "target": "respiratory chain"}, {"description": "Respiratory electron transfer generates an ion gradient.", "edge_id": "edge-7", "evidence": [{"notes": "Supports proton motive force generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory chain", "target": "proton motive force"}, {"description": "Proton motive force powers ATP synthesis.", "edge_id": "edge-8", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives production of", "predicate_id": "biolink:produces", "source": "proton motive force", "target": "ATP"}, {"description": "Organic compounds provide carbon for chemolithoheterotrophic growth.", "edge_id": "edge-9", "evidence": [{"notes": "Supports organic carbon use under inorganic donor oxidizing conditions.", "reference": "DOI:10.1038/s41598-021-81412-3", "snippet": "glucose as the sole carbon source"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemolithoheterotrophic", "target": "organic compound"}, {"description": "Organic compounds are taken up for heterotrophic carbon assimilation.", "edge_id": "edge-10", "evidence": [{"notes": "Supports organic compound uptake fueled by sulfur oxidation.", "reference": "DOI:10.1128/mBio.01112-19", "snippet": "uptake of organic compounds"}], "predicate": "imported by", "predicate_id": null, "source": "organic compound", "target": "organic nutrient uptake"}, {"description": "Uptaken organic carbon supports cell-material production.", "edge_id": "edge-11", "evidence": [{"notes": "Supports assimilation of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "supports formation of", "predicate_id": null, "source": "organic nutrient uptake", "target": "biomass"}, {"description": "The conserved soxCDYZAXB gene cluster enables complete oxidation of thiosulfate to sulfate without free intermediates.", "edge_id": "edge-12", "evidence": [{"notes": "Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete oxidation of thiosulfate to sulfate, without free intermediates.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "Sox sulfur-oxidation pathway", "target": "sulfate"}, {"description": "Thiosulfate, a reduced inorganic sulfur donor, is oxidized by the Sox pathway.", "edge_id": "edge-13", "evidence": [{"notes": "Sox system mediates complete oxidation of thiosulfate to sulfate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "Sox sulfur-oxidation pathway"}, {"description": "Truncated soxXYZAB with reverse Dsr/Apr/Sat oxidizes thiosulfate via an elemental sulfur intermediate.", "edge_id": "edge-14", "evidence": [{"notes": "Branched thiosulfate oxidation pathway in which Dsr operating in reverse oxidizes sulfane-derived sulfur to sulfite, with elemental sulfur as intermediate.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "produces intermediate", "predicate_id": null, "source": "branched thiosulfate oxidation pathway", "target": "elemental sulfur"}, {"description": "Amino acid and carboxylic acid import systems support organic carbon uptake in heterotrophs and mixotrophs.", "edge_id": "edge-15", "evidence": [{"notes": "Import systems for amino acids and carboxylic acids were overly abundant in mixotrophs and heterotrophs, supporting the organic-carbon dependency of the trait.", "reference": "DOI:10.1038/s41396-021-01163-x"}], "predicate": "supports", "predicate_id": null, "source": "organic carbon import system", "target": "organic nutrient uptake"}], "graph_id": "chemolithoheterotrophic_inorganic_energy_organic_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced from proton motive force.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cell material formed from organic carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Truncated Sox plus reverse Dsr/Apr/Sat oxidizing thiosulfate via an elemental sulfur intermediate.", "grounding": null, "id": "branched_thiosulfate_oxidation", "is_orphan": false, "label": "branched thiosulfate oxidation pathway", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemical electron donors and organic carbon.", "grounding": "METPO:1000638", "id": "chemolithoheterotrophic_trait", "is_orphan": false, "label": "chemolithoheterotrophic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "S0 intermediate of branched sulfur-compound oxidation.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(II), an inorganic chemical energy source.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid-borne multisubunit uptake hydrogenase used for aerobic H2 oxidation by S. alaskensis RB2256.", "grounding": null, "id": "group_2a_nife_hydrogenase", "is_orphan": false, "label": "group 2a [NiFe]-hydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 98, "evidence": [{"notes": "The primary study measured Sala_3198 expression during aerobic growth and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis RB2256 reference proteome.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "group 2a [NiFe]-hydrogenase large subunit gene (hucL; locus Sala_3198)"}], "gene_symbol": "Sala_3198", "protein_label": "Group 2a [NiFe]-hydrogenase large subunit HucL", "proteome_id": "UP000006578", "retrieved_on": "2026-08-24", "role": "Catalytic large-subunit component of the plasmid-borne group 2a [NiFe]-hydrogenase; this accession is not presented as the complete hydrogenase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:317655", "taxon_label": "Sphingopyxis alaskensis RB2256", "uniprot_id": "UniProtKB:Q1J422"}], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic chemical supplying electrons and energy.", "grounding": null, "id": "inorganic_chemical_donor", "is_orphan": false, "label": "inorganic chemical donor", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic gas oxidized as a supplementary energy source during lithoheterotrophic growth.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Uptake of external organic compounds.", "grounding": null, "id": "nutrient_uptake", "is_orphan": false, "label": "organic nutrient uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Amino acid and carboxylic acid import systems mediating organic carbon uptake.", "grounding": null, "id": "organic_carbon_importer", "is_orphan": false, "label": "organic carbon import system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic carbon source used for biosynthesis.", "grounding": "CHEBI:50860", "id": "organic_compound", "is_orphan": false, "label": "organic compound", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient generated by respiratory electron transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic sulfur electron donor such as sulfide or thiosulfate.", "grounding": null, "id": "reduced_sulfur_compound", "is_orphan": false, "label": "reduced sulfur compound", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer pathway conserving energy from donor oxidation.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#e0e7ff", "description": "soxCDYZAXB gene cluster mediating complete oxidation of thiosulfate to sulfate.", "grounding": null, "id": "sox_pathway", "is_orphan": false, "label": "Sox sulfur-oxidation pathway", "node_type": "PATHWAY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fully oxidized sulfur end product of sulfur-compound oxidation.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic sulfur electron donor oxidized to sulfate.", "grounding": "CHEBI:16094", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 98, "evidence": [{"notes": "The primary study measured Sala_3198 expression during aerobic growth and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis RB2256 reference proteome.", "reference": "DOI:10.1038/s41564-023-01322-0", "snippet": "group 2a [NiFe]-hydrogenase large subunit gene (hucL; locus Sala_3198)"}], "gene_symbol": "Sala_3198", "node_id": "group_2a_nife_hydrogenase", "node_label": "group 2a [NiFe]-hydrogenase", "protein_label": "Group 2a [NiFe]-hydrogenase large subunit HucL", "proteome_id": "UP000006578", "retrieved_on": "2026-08-24", "role": "Catalytic large-subunit component of the plasmid-borne group 2a [NiFe]-hydrogenase; this accession is not presented as the complete hydrogenase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:317655", "taxon_label": "Sphingopyxis alaskensis RB2256", "uniprot_id": "UniProtKB:Q1J422"}], "scope_notes": "This modular graph covers Fe(II), reduced-sulfur, and H2 donor branches coupled to organic-carbon assimilation. The S. alaskensis example anchors only the H2 branch; Q1J422 is the catalytic large-subunit component of its group 2a hydrogenase, not the complete multisubunit enzyme or the sulfur/iron branches.", "scope_status": "MECHANISTIC", "title": "Chemolithoheterotrophic inorganic chemical energy and organic carbon use"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -985,7 +1103,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-07 18:00 UTC from
+      Record as of 2026-08-24 19:50 UTC from
       <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

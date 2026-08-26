@@ -33,6 +33,10 @@ causal_graphs:
   title: 'Obligate piezophily: growth requires elevated hydrostatic pressure'
   description: Evidence-backed causal sketch linking obligate HHP adaptation to inability
     to grow at atmospheric pressure.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: obligate_piezophilic_trait
     label: obligately piezophilic

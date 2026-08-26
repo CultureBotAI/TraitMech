@@ -25,11 +25,20 @@ canonical_examples:
   taxon_label: Vibrio vulnificus
   note: Canonical exemplar of the viable-but-nonculturable (VBNC) state.
   reference: PMID:7618874
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level VBNC model paired to reviewed RpoS based on an rpoS-loss study
+    of K-12-derived E. coli strains.
+  reference: DOI:10.1046/j.1462-2920.2003.00497.x
 causal_graphs:
 - graph_id: vbnc_stress_induced_dormancy
   title: Stress-induced viable-but-nonculturable state
   description: Evidence-backed causal sketch linking stress to a dormant viable-but-nonculturable
     state that resuscitates later.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents a stress-induced VBNC program and subsequent
+    resuscitation. The E. coli K-12 RpoS example anchors the persistence branch and
+    does not imply that one sigma factor is the sole VBNC mechanism across taxa.
   nodes:
   - node_id: vbnc_trait
     label: viable but nonculturable state
@@ -62,6 +71,25 @@ causal_graphs:
     label: RpoS sigma factor
     node_type: GENE_OR_PROTEIN
     description: Stationary-phase/general stress sigma factor expressed in VBNC cells.
+    grounding: InterPro:IPR012761
+    protein_examples:
+    - uniprot_id: UniProtKB:P13445
+      protein_label: RNA polymerase sigma factor RpoS
+      gene_symbol: rpoS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 207
+      sequence_version: 3
+      role: E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation
+        competence under cold oligotrophic stress.
+      evidence:
+      - reference: DOI:10.1046/j.1462-2920.2003.00497.x
+        snippet: rpoS mutants lost culturability earlier and retained resuscitation
+          capability for less time
+        notes: The primary mutant study supports an RpoS-dependent VBNC survival phenotype
+          in E. coli; UniProt verifies the reviewed K-12 RpoS entry.
   - node_id: resuscitation
     label: resuscitation from VBNC
     node_type: BIOLOGICAL_PROCESS
@@ -130,6 +158,18 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12010039
       notes: RpoS is expressed in VBNC cells and required for resuscitation; RpoS
         mutants fail to resuscitate.
+  - subject: rpos
+    predicate: promotes
+    object: vbnc_trait
+    description: RpoS promotes persistence and retained resuscitation competence in
+      the E. coli VBNC state.
+    evidence:
+    - reference: DOI:10.1046/j.1462-2920.2003.00497.x
+      snippet: rpoS mutants lost culturability earlier and retained resuscitation
+        capability for less time
+      notes: The primary loss-of-function comparison supports RpoS involvement in
+        VBNC persistence.
+    predicate_id: RO:0002213
   - subject: atp
     predicate: promotes
     object: resuscitation

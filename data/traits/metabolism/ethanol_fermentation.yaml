@@ -25,11 +25,20 @@ canonical_examples:
   taxon_label: Zymomonas mobilis
   note: Canonical bacterial ethanologen (Entner-Doudoroff route to ethanol).
   reference: PMID:27629544
+- taxon_id: NCBITaxon:264203
+  taxon_label: Zymomonas mobilis subsp. mobilis ZM4
+  note: Strain-level exemplar used to establish the role of its pyruvate decarboxylase
+    in directing pyruvate into ethanol production.
+  reference: DOI:10.1186/s12934-024-02419-9
 causal_graphs:
 - graph_id: ethanol_fermentation_pyruvate_to_ethanol
   title: Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2
   description: Evidence-backed causal sketch linking pyruvate decarboxylation and
     NADH-driven ethanol production to NAD+ regeneration.
+  scope_status: MECHANISTIC
+  scope_notes: Retains the two directly catalyzed steps from pyruvate to ethanol and
+    their redox consequence; the protein exemplar is restricted to the PDC step demonstrated
+    in Z. mobilis ZM4.
   nodes:
   - node_id: ethanol_fermentation_trait
     label: ethanol fermentation
@@ -57,6 +66,26 @@ causal_graphs:
     description: Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and
       CO2.
     grounding: GO:0004737
+    protein_examples:
+    - uniprot_id: UniProtKB:P06672
+      protein_label: Pyruvate decarboxylase
+      gene_symbol: pdc
+      taxon_id: NCBITaxon:264203
+      taxon_label: Zymomonas mobilis subsp. mobilis ZM4
+      entry_status: REVIEWED
+      proteome_id: UP000001173
+      retrieved_on: '2026-08-23'
+      entry_version: 173
+      sequence_version: 1
+      role: Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the
+        ethanol-production pathway; this accession is a protein instance, not the
+        taxon-agnostic grounding for the node.
+      evidence:
+      - reference: DOI:10.1186/s12934-024-02419-9
+        snippet: The key enzyme in the ethanol production pathway is the pyruvate
+          decarboxylase
+        notes: The study used Z. mobilis ZM4 and experimentally controlled the native
+          pdc gateway; UniProtKB P06672 verifies the protein identity and strain taxonomy.
   - node_id: acetaldehyde
     label: acetaldehyde
     node_type: CHEMICAL
@@ -88,6 +117,8 @@ causal_graphs:
     description: Alcoholic fermentation is a class of fermentation metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
+      snippet: fermentation is defined as an anaerobic bacterial redox process of
+        an organic substrate leading to different products
       notes: Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation
         end product.
     predicate_id: biolink:participates_in
@@ -97,6 +128,8 @@ causal_graphs:
     description: Ethanol is the characteristic end product of the pathway.
     evidence:
     - reference: DOI:10.3390/molecules31020333
+      snippet: sugars such as glucose, fructose, and sucrose are converted into ethyl
+        alcohol (ethanol) and carbon dioxide
       notes: Classical-fermentation review describes pyruvate decarboxylation and
         reduction to ethanol.
     predicate_id: METPO:2007800
@@ -107,6 +140,8 @@ causal_graphs:
       + CO2.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: The decarboxylation of pyruvate to acetaldehyde is catalyzed by the
+        enzyme pyruvate decarboxylase (PDC)
       notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
         (PDC), releasing CO2.
   - subject: pyruvate_decarboxylase
@@ -115,6 +150,7 @@ causal_graphs:
     description: Pyruvate decarboxylase yields acetaldehyde from pyruvate.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: converts pyruvate into acetaldehyde
       notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
         (PDC).
     predicate_id: METPO:2007800
@@ -124,6 +160,7 @@ causal_graphs:
     description: Decarboxylation of pyruvate releases CO2.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: This reaction releases one molecule of CO2
       notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
         (PDC), releasing CO2.
     predicate_id: METPO:2007800
@@ -133,6 +170,8 @@ causal_graphs:
     description: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol
+        dehydrogenase (ADH)
       notes: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).
   - subject: alcohol_dehydrogenase
     predicate: produces
@@ -140,6 +179,8 @@ causal_graphs:
     description: Alcohol dehydrogenase produces ethanol from acetaldehyde.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: The final step in ethanol fermentation involves the reduction of acetaldehyde
+        to ethanol
       notes: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).
     predicate_id: METPO:2007800
   - subject: alcohol_dehydrogenase
@@ -148,6 +189,7 @@ causal_graphs:
     description: The ADH reduction step oxidizes NADH.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: regenerates NAD+ from NADH
       notes: ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.
     predicate_id: biolink:consumes
   - subject: alcohol_dehydrogenase
@@ -157,6 +199,7 @@ causal_graphs:
       glycolysis.
     evidence:
     - reference: DOI:10.5376/be.2024.14.0025
+      snippet: This step also regenerates NAD+ from NADH
       notes: Regenerating NAD+ from NADH to sustain glycolysis.
     predicate_id: METPO:2007800
 curation_history:
@@ -239,4 +282,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004022×1).
+  llm_assisted: true
+- timestamp: '2026-08-23T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB
+    P06672 as the Z. mobilis ZM4 pyruvate-decarboxylase exemplar.
   llm_assisted: true

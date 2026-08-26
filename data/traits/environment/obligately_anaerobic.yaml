@@ -32,6 +32,10 @@ causal_graphs:
   title: Obligate anaerobe oxygen-toxicity mechanism
   description: Evidence-backed causal sketch linking obligate anaerobiosis to oxygen-blocked
     growth and oxygen-sensitive metabolic chemistry.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: obligate_anaerobic_trait
     label: obligately anaerobic
@@ -84,14 +88,23 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Irreparable lesions blocking replication caused by hydroxyl radicals.
   - node_id: pyruvate_formate_lyase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: pyruvate formate-lyase (PFL)
     node_type: GENE_OR_PROTEIN
     description: Glycyl-radical enzyme rapidly inactivated by O2.
   - node_id: pyruvate_ferredoxin_oxidoreductase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: pyruvate:ferredoxin oxidoreductase (PFOR)
     node_type: GENE_OR_PROTEIN
     description: O2-sensitive anaerobic metalloenzyme.
   - node_id: fefe_hydrogenase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: '[FeFe]-hydrogenase'
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive low-potential redox enzyme.

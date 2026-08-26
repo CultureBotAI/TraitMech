@@ -33,6 +33,10 @@ causal_graphs:
   title: Facultative alkaliphily sodium-cycle pH homeostasis mechanism
   description: Evidence-backed causal sketch linking facultative alkaliphily to alkaline
     growth capacity, near-neutral growth, and sodium-dependent pH homeostasis.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultatively_alkaphilic_trait
     label: facultatively alkaphilic
@@ -62,6 +66,9 @@ causal_graphs:
     description: Hydrogen ion imported or retained to acidify the cytoplasm under
       alkaline conditions.
   - node_id: sodium_proton_antiporter
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging sodium ions and protons during alkaline pH
@@ -83,6 +90,9 @@ causal_graphs:
     description: Negatively charged secondary cell-wall polymers and S-layer components
       at the cell surface.
   - node_id: f1fo_atp_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: F1Fo-ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Proton-coupled ATP synthase complex operating at alkaline pH.

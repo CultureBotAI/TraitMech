@@ -27,11 +27,20 @@ canonical_examples:
   taxon_label: Escherichia coli
   note: organoheterotroph
   reference: PMID:31778652
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level organoheterotrophic model paired to the reviewed AtpD beta component
+    of its F-type ATP synthase.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: organoheterotrophic_organic_donor_carbon
   title: Organoheterotrophic organic donor and carbon use
   description: DOI-backed graph linking organic compounds as electron donors and carbon
     sources to central metabolism, respiratory energy conservation, ATP, and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This graph models the respiratory branch of organoheterotrophy. The
+    E. coli K-12 AtpD example is one component of F-type ATP synthase and does not
+    denote the full rotary complex or every organoheterotrophic route.
   nodes:
   - node_id: organoheterotrophic_trait
     label: organoheterotrophic
@@ -86,11 +95,37 @@ causal_graphs:
     label: NADH dehydrogenase (complex I)
     node_type: GENE_OR_PROTEIN
     description: Respiratory complex I oxidizing NADH and pumping protons.
+    grounding: GO:0030964
   - node_id: cytochrome_bc1_complex
     label: cytochrome bc1 complex (complex III)
     node_type: GENE_OR_PROTEIN
     description: Respiratory complex III transferring electrons from quinol to cytochrome
       c.
+    grounding: GO:0045275
+  - node_id: atp_synthase
+    label: ATP synthase
+    node_type: GENE_OR_PROTEIN
+    grounding: GO:0045259
+    description: F-type rotary complex producing ATP during oxidative phosphorylation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the E. coli F1 catalytic head; this accession is not
+        presented as the complete F1Fo complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: proton motive force drives rotation and conformational changes in
+          the F1 catalytic sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head; UniProt verifies the reviewed K-12 AtpD
+          entry.
   edges:
   - subject: organoheterotrophic_trait
     predicate: has electron donor
@@ -204,6 +239,17 @@ causal_graphs:
       notes: A complete oxidative phosphorylation pathway is encoded, coupling electron
         transfer to ATP synthesis.
     predicate_id: RO:0002234
+  - subject: atp_synthase
+    predicate: participates in
+    object: oxidative_phosphorylation
+    description: F-type ATP synthase couples the respiratory gradient to ATP production.
+    evidence:
+    - reference: DOI:10.7554/eLife.21598
+      snippet: proton motive force drives rotation and conformational changes in the
+        F1 catalytic sites
+      notes: Supports the beta-containing E. coli F1Fo ATP synthase as the ATP-producing
+        machinery of oxidative phosphorylation.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883809+00:00'
   curator: seed_from_metpo

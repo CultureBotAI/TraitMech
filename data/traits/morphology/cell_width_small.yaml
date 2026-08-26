@@ -19,6 +19,10 @@ evidence:
     0.5–0.65 μm range.
 causal_graphs:
 - graph_id: cell_width_small_mreb_setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-width bin. Its graph illustrates possible
+    rod-system determinants but does not define a universal mechanism for the measured
+    interval.
   title: Small cell-width MreB-Rod set-point
   description: DOI-backed graph linking MreB-organized lateral wall synthesis to a
     narrow rod radius set-point (0.5–0.65 μm).
@@ -34,6 +38,9 @@ causal_graphs:
     grounding: METPO:1000882
     description: Regulated shorter cellular dimension.
   - node_id: mreb_cytoskeleton
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes an assembled cytoskeletal structure,
+      not one exact MreB protein-family entity.
     label: MreB cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB filaments organizing lateral cell-wall synthesis.
@@ -42,6 +49,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized lateral peptidoglycan assembly.
   - node_id: mrec_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual source supports the MreC label, but an exact semantic
+      family term was not verified in this review.
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-complex protein that favors the open, active PBP2

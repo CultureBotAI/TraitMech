@@ -30,6 +30,10 @@ causal_graphs:
   title: Sarcina arrangement via three-plane perpendicular division
   description: Evidence-backed causal sketch linking division in three perpendicular
     planes with incomplete separation to cubic eight-cell packets.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: sarcina_trait
     label: sarcina arrangement
@@ -69,6 +73,9 @@ causal_graphs:
     description: Coordinated synthesis and hydrolysis of peptidoglycan to build the
       septal cross-wall.
   - node_id: pg_synthetases_hydrolases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: peptidoglycan synthetases and hydrolases
     node_type: GENE_OR_PROTEIN
     description: Enzymes that synthesize and degrade peptidoglycan during division.
@@ -83,6 +90,9 @@ causal_graphs:
     description: Formation of the division septum (cross-wall).
     grounding: GO:0000917
   - node_id: pg_hydrolases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: peptidoglycan hydrolases
     node_type: GENE_OR_PROTEIN
     description: Enzymes that cleave peptidoglycan bonds to enable daughter-cell separation.

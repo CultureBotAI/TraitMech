@@ -2,9 +2,16 @@
 
 Date: 2026-08-23
 
+Execution status (2026-08-25): implemented across every editable graph. The
+coverage audit reports 119 mechanistic passes, 233 reviewed nonmechanistic
+dispositions, one protected gap (`spore_germination.yaml`), and zero errors.
+The legacy `GENE_OR_PROTEIN` node type is now restricted to proteins, protein
+families, and protein complexes; gene symbols and operons are metadata rather
+than primary entries.
+
 ## Objective
 
-Review every TraitMech causal graph and its gene/protein grounding. Every
+Review every TraitMech causal graph and its protein grounding. Every
 retained mechanistic graph should contain at least one source-backed protein
 node, at least one cited canonical taxon, and at least one UniProt protein
 example whose organism matches that canonical taxon.
@@ -180,4 +187,3 @@ just audit-uniprot
 just gen-pages
 just audit-derived-reports
 ```
-

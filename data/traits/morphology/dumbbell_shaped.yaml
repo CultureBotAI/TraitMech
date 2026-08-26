@@ -26,6 +26,11 @@ causal_graphs:
   title: Dumbbell-shape snapping division intermediate
   description: DOI-backed graph linking pre-separation septum constriction and snapping/incomplete
     cell division to dumbbell cell pairs.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is retained as a transient morphology classification. The
+    sources support snapping division and discuss RipA/RpfB hydrolases broadly, but
+    do not establish a taxon-matched protein as the determinant of the asserted dumbbell
+    trait; no token protein example is assigned.
   nodes:
   - node_id: dumbbell_shaped_trait
     label: dumbbell shaped
@@ -75,6 +80,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan-cleaving enzymes that cut the septum to separate daughter
       cells.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RipA and RpfB are distinct hydrolase families; this aggregate
+      cannot be represented by one exact protein-family identifier.
   - node_id: polar_growth
     label: polar growth from nascent septum
     node_type: BIOLOGICAL_PROCESS

@@ -31,6 +31,10 @@ causal_graphs:
   title: S-layer crystalline (glyco)protein surface array
   description: Evidence-backed causal sketch linking self-assembly of (glyco)protein
     subunits into a regular 2D array to the S-layer surface coating.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: s_layer_trait
     label: S-layer
@@ -38,6 +42,9 @@ causal_graphs:
     grounding: traitmech:000064
     description: Crystalline 2D (glyco)protein array coating the cell surface.
   - node_id: s_layer_subunits
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: S-layer (glyco)protein subunits
     node_type: GENE_OR_PROTEIN
     description: Self-assembling proteinaceous building blocks of the S-layer.

@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -40,6 +41,26 @@ ERROR_CODES = {
     "UNREVIEWED_EXAMPLE_MISSING_PROTEOME",
     "LABEL_ONLY_STATUS_WITH_GROUNDING",
 }
+
+NONPROTEIN_PRIMARY_RE = re.compile(
+    r"(?:^|[\s/()-])(?:genes?|operons?|gene clusters?|loci|locus)(?:$|[\s/()-])",
+    re.IGNORECASE,
+)
+
+NONPROTEIN_EXACT_LABEL_RE = re.compile(
+    r"^(?:plasmid|prophage|phage[- /]plasmid|(?:cr|m|r|s|t)rna|"
+    r"rna thermometer|shine-dalgarno sequence|promoter)$",
+    re.IGNORECASE,
+)
+
+
+def _is_nonprotein_primary_label(label: object) -> bool:
+    """Return whether a legacy GENE_OR_PROTEIN label is clearly not a protein."""
+    normalized = " ".join(str(label or "").split())
+    return bool(
+        NONPROTEIN_PRIMARY_RE.search(normalized)
+        or NONPROTEIN_EXACT_LABEL_RE.fullmatch(normalized)
+    )
 
 FIELDS = [
     "file",
@@ -102,7 +123,14 @@ def graph_row(
     issues: list[tuple[str, str]] = []
     scope = str(graph.get("scope_status") or "UNREVIEWED")
     nodes = [node for node in graph.get("nodes") or [] if isinstance(node, dict)]
-    protein_nodes = [node for node in nodes if node.get("node_type") == "GENE_OR_PROTEIN"]
+    declared_protein_nodes = [
+        node for node in nodes if node.get("node_type") == "GENE_OR_PROTEIN"
+    ]
+    protein_nodes = [
+        node
+        for node in declared_protein_nodes
+        if not _is_nonprotein_primary_label(node.get("label"))
+    ]
 
     canonical = [
         ex for ex in record.get("canonical_examples") or [] if isinstance(ex, dict)
@@ -127,6 +155,14 @@ def graph_row(
             )
 
         if node.get("node_type") != "GENE_OR_PROTEIN":
+            continue
+
+        if _is_nonprotein_primary_label(node.get("label")):
+            _issue(
+                issues,
+                "GENE_OR_OPERON_PRIMARY_NODE",
+                str(node.get("node_id") or "?"),
+            )
             continue
 
         node_id = str(node.get("node_id") or "?")
@@ -242,7 +278,13 @@ def write_report(rows: list[dict[str, Any]], out: Path) -> None:
             handle, fieldnames=FIELDS, delimiter="\t", lineterminator="\n"
         )
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows(
+            {
+                **row,
+                "unmet_requirements": row.get("unmet_requirements") or "-",
+            }
+            for row in rows
+        )
 
 
 def main() -> int:

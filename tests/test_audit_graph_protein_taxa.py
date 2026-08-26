@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from audit_graph_protein_taxa import coverage_rows  # noqa: E402
+from audit_graph_protein_taxa import coverage_rows, write_report  # noqa: E402
 
 
 def _example(**overrides):
@@ -77,6 +77,13 @@ def test_complete_mechanistic_graph_passes():
     assert row["status"] == "PASS"
     assert row["taxon_matched_examples"] == 1
     assert row["unmet_requirements"] == ""
+
+
+def test_report_uses_a_visible_sentinel_for_no_unmet_requirements(tmp_path):
+    report = tmp_path / "coverage.tsv"
+    write_report([_row(_record())], report)
+
+    assert report.read_text(encoding="utf-8").splitlines()[-1].endswith("\t-")
 
 
 def test_missing_minimum_coverage_is_reported_exactly():
@@ -170,6 +177,34 @@ def test_unreviewed_example_requires_proteome_id():
     }
     row = _row(_record(node=node))
     assert "UNREVIEWED_EXAMPLE_MISSING_PROTEOME" in row["unmet_requirements"]
+
+
+def test_gene_or_operon_primary_node_does_not_satisfy_protein_coverage():
+    node = {
+        "node_id": "ars_operon",
+        "label": "ars operon",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding_status": "REVIEWED_LABEL_ONLY",
+        "grounding_notes": "Legacy genetic context.",
+    }
+    row = _row(_record(node=node))
+
+    assert row["protein_nodes"] == 0
+    assert "GENE_OR_OPERON_PRIMARY_NODE:ars_operon" in row["unmet_requirements"]
+    assert "NO_PROTEIN_NODE" in row["unmet_requirements"]
+
+
+def test_nonprotein_legacy_node_does_not_satisfy_protein_coverage():
+    node = {
+        "node_id": "crrna",
+        "label": "crRNA",
+        "node_type": "GENE_OR_PROTEIN",
+    }
+    row = _row(_record(node=node))
+
+    assert row["protein_nodes"] == 0
+    assert "GENE_OR_OPERON_PRIMARY_NODE:crrna" in row["unmet_requirements"]
+    assert "NO_PROTEIN_NODE" in row["unmet_requirements"]
 
 
 def test_real_corpus_has_one_row_per_graph():

@@ -24,6 +24,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_high_euryphilic_breadth
   title: pH-delta-high euryphilic breadth
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking maximal pH-homeostasis flexibility to a pH
     growth breadth of approximately 5–9 pH units.
   nodes:
@@ -45,6 +49,10 @@ causal_graphs:
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Sodium:proton antiporters, core regulators of cytoplasmic pH across
       changing external pH.
   - node_id: cytoplasmic_ph_homeostasis
@@ -55,11 +63,19 @@ causal_graphs:
   - node_id: respiratory_proton_pumps
     label: respiratory proton-pumping enzymes
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Electron-transport-chain proton pumps that control proton flux during
       pH stress.
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-translocating ATP synthase contributing to proton extrusion/uptake
       in pH homeostasis.
   - node_id: metabolite_decarboxylation

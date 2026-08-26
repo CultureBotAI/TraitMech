@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: gut_associated_microbiota_metabolism
   title: Gut-associated lifestyle in the gastrointestinal microbiota
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking gastrointestinal habitat to persistent
     gut-microbiota membership and host nutritional contributions.
   nodes:
@@ -45,6 +49,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Microbially mediated nutrient harvest and metabolism for the host.
   - node_id: adhesins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: bacterial adhesins
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface adhesins that bind host receptors.

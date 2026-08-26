@@ -22,6 +22,10 @@ evidence:
 causal_graphs:
 - graph_id: gc_high_low_gc_bin
   title: GC-high (METPO ≤42.65%) low-GC bin
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: DOI-backed graph linking AT-biased mutation pressure to a GC content
     at or below ~42.65% (the threshold encoded by the METPO synonym GC_<=42.65 on
     this record).

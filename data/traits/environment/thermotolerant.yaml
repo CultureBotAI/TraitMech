@@ -21,6 +21,10 @@ causal_graphs:
   title: Thermotolerant facultative heat-adaptation mechanism
   description: DOI-backed graph linking thermotolerance to limited heat-stress tolerance
     machinery that permits growth at elevated temperatures without requiring them.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: thermotolerant_trait
     label: thermotolerant
@@ -38,6 +42,9 @@ causal_graphs:
     description: Induction of heat-shock chaperones (GroEL, DnaK) protecting protein
       folding under heat stress.
   - node_id: chaperone_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: chaperone proteins
     node_type: GENE_OR_PROTEIN
     description: Molecular chaperones refolding heat-damaged proteins.
@@ -47,6 +54,9 @@ causal_graphs:
     description: Modest protein and membrane stability at elevated temperatures compared
       with obligate thermophiles.
   - node_id: rpoH_sigma32
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RpoH (sigma-32) heat-shock sigma factor
     node_type: GENE_OR_PROTEIN
     description: Alternative RNA polymerase sigma factor that activates the heat-shock
@@ -57,6 +67,9 @@ causal_graphs:
     description: Induced expression of groEL, dnaKJ, grpE, and clpB chaperone/disaggregase
       genes.
   - node_id: rpoE_envelope_sigma
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RpoE envelope-stress sigma factor
     node_type: GENE_OR_PROTEIN
     description: Extracytoplasmic-stress sigma factor inducing periplasmic proteases

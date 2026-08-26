@@ -21,6 +21,9 @@ causal_graphs:
   description: DOI-backed upper-ontology context graph linking material entities to
     qualities, observations, and processes without asserting a taxon-specific microbial
     mechanism.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is an upper-ontology context graph; protein-mediated causality
+    and taxon-specific protein examples are inapplicable.
   nodes:
   - node_id: material_entity_trait
     label: material entity

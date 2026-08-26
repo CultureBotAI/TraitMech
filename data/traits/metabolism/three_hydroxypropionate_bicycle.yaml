@@ -25,12 +25,17 @@ canonical_examples:
   taxon_label: Chloroflexus aurantiacus
   note: Where the 3-hydroxypropionate bicycle of autotrophic CO2 fixation was discovered
     (filamentous anoxygenic phototroph).
-  reference: PMID:19955419
+  reference: DOI:10.1073/pnas.0908356106
 causal_graphs:
 - graph_id: three_hp_bicycle_chloroflexus
   title: 3-hydroxypropionate bicycle fixes bicarbonate in Chloroflexus
   description: Evidence-backed causal sketch linking bicarbonate fixation via 3-hydroxypropionate
     to glyoxylate and pyruvate in Chloroflexus aurantiacus.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the experimentally completed C. aurantiacus 3HP
+    bicycle. The reviewed mcl/MMC-lyase example supports the terminal trifunctional
+    cleavage node; the other diagnostic multifunctional enzymes remain separately
+    scoped.
   nodes:
   - node_id: three_hp_bicycle_trait
     label: 3-hydroxypropionate bicycle
@@ -72,6 +77,10 @@ causal_graphs:
     label: malonyl-CoA reductase
     node_type: GENE_OR_PROTEIN
     description: EC 1.2.1.75; diagnostic enzyme reducing malonyl-CoA to 3-hydroxypropionate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The Chloroflexus enzyme is a bifunctional fusion, while current
+      GO and InterPro matches are broader oxidoreductase domains rather than an exact
+      malonyl-CoA-reductase family term.
   - node_id: three_hydroxypropionate
     label: 3-hydroxypropionate
     node_type: CHEMICAL
@@ -81,16 +90,42 @@ causal_graphs:
     label: propionyl-CoA synthase
     node_type: GENE_OR_PROTEIN
     description: Multifunctional enzyme converting 3-hydroxypropionate to propionyl-CoA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Propionyl-CoA synthase is a multifunctional enzyme containing
+      several catalytic modules; no single verified GO or InterPro term denotes the
+      complete fusion represented here.
   - node_id: propionyl_coa
     label: propionyl-CoA
     node_type: CHEMICAL
     description: Product of propionyl-CoA synthase; substrate for the second carboxylation.
     grounding: CHEBI:15539
   - node_id: mmc_lyase
-    label: MMC lyase
+    label: malyl-CoA/beta-methylmalyl-CoA/citramalyl-CoA lyase (MMC lyase)
     node_type: GENE_OR_PROTEIN
     description: Multifunctional malyl-CoA/citramalyl-CoA lyase cleaving citramalyl-CoA
       to pyruvate and acetyl-CoA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node denotes three activities of one multifunctional enzyme;
+      available GO terms cover individual reactions and the InterPro family also contains
+      narrower citrate-lyase-beta/Mcl proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:S5N020
+      protein_label: Malyl-CoA/beta-methylmalyl-CoA/citramalyl-CoA lyase
+      gene_symbol: mcl
+      taxon_id: NCBITaxon:1108
+      taxon_label: Chloroflexus aurantiacus
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 45
+      sequence_version: 1
+      role: Trifunctional MMC lyase catalyzing malyl-CoA cleavage, beta-methylmalyl-CoA
+        formation, and citramalyl-CoA cleavage in the C. aurantiacus bicycle.
+      evidence:
+      - reference: DOI:10.1073/pnas.0908356106
+        snippet: (S)-Citramalyl-CoA is cleaved into acetyl-CoA and pyruvate by a tri-functional
+          lyase
+        notes: The primary pathway-completion study identifies mcl as the trifunctional
+          MMC lyase. UniProtKB S5N020 is the reviewed mcl entry from C. aurantiacus.
   - node_id: pyruvate
     label: pyruvate
     node_type: CHEMICAL
@@ -223,4 +258,11 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic
     GO/InterPro terms and retracted 1 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-08-24T09:45:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the C. aurantiacus 3HP bicycle, added a DOI-backed reviewed mcl/MMC-lyase
+    example, and documented the multifunctional MCR, PCS, and MMC-lyase nodes as reviewed
+    label-only where no single exact semantic term represents each fusion.
   llm_assisted: true

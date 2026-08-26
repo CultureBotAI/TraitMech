@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: pressure_delta_breadth_descriptor
   title: 'Pressure delta: breadth of the pressure-tolerance span'
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
     breadth (max − min) of the growth-supporting pressure range.
   nodes:
@@ -71,6 +75,10 @@ causal_graphs:
   - node_id: nuo_complex_i
     label: nuo NADH dehydrogenase I complex
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-translocating NADH dehydrogenase I (Complex I) operon enriched
       in piezophiles.
   - node_id: high_pressure_energy_conservation

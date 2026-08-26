@@ -29,11 +29,19 @@ canonical_examples:
   note: Model PHA/PHB accumulator (strain H16; formerly Ralstonia eutropha / Alcaligenes
     eutrophus).
   reference: PMID:16964242
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: Strain-level PhaC granule-biosynthesis exemplar.
+  reference: PMID:16964242
 causal_graphs:
 - graph_id: pha_granule_carbon_energy_storage
   title: PHA granules store carbon and energy as polyhydroxyalkanoate
   description: Evidence-backed causal sketch linking polyhydroxyalkanoate biosynthesis
     to intracellular storage granules serving as carbon and energy reserves.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: pha_granule_trait
     label: polyhydroxyalkanoate granule
@@ -58,10 +66,34 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular accumulation of PHA/PHB polymer.
   - node_id: pha_synthase_phac
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P23608
+      protein_label: Polyhydroxyalkanoate synthase PhaC
+      gene_symbol: phaC
+      taxon_id: NCBITaxon:381666
+      taxon_label: Cupriavidus necator H16
+      entry_status: REVIEWED
+      proteome_id: UP000008210
+      retrieved_on: '2026-08-25'
+      entry_version: 137
+      sequence_version: 1
+      role: H16 PhaC polymerizes hydroxyacyl-CoA into PHA and directly supplies polymer
+        to storage granules.
+      evidence:
+      - reference: PMID:16964242
+        snippet: PhaC catalyzes polyhydroxyalkanoate polymerization
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: PHA synthase (PhaC)
     node_type: GENE_OR_PROTEIN
     description: Polymerase that condenses (R)-3-hydroxyacyl-CoA into PHA/PHB polymer.
   - node_id: phasin_phap
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: phasin (PhaP)
     node_type: GENE_OR_PROTEIN
     description: Granule-associated protein coating and stabilizing PHB chains at
@@ -71,14 +103,20 @@ causal_graphs:
     node_type: QUALITY
     description: Morphological quality of granule dimensions and count per cell.
   - node_id: phar_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PhaR regulator
     node_type: GENE_OR_PROTEIN
     description: Transcriptional repressor that binds phaP promoters.
-  - node_id: phap_gene
-    label: phaP gene
-    node_type: GENE_OR_PROTEIN
-    description: Gene encoding phasin.
+  - node_id: phap_transcription
+    label: phaP transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcriptional production of phasin-encoding phaP RNA.
   - node_id: pha_depolymerase_phaz
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PHA depolymerase (PhaZ)
     node_type: GENE_OR_PROTEIN
     description: Intracellular depolymerase cleaving PHB to 3-hydroxybutyrate.
@@ -154,12 +192,21 @@ causal_graphs:
     predicate_id: RO:0002211
   - subject: phar_regulator
     predicate: represses transcription of
-    object: phap_gene
+    object: phap_transcription
     description: PhaR binds phaP promoters and represses transcription.
     evidence:
     - reference: DOI:10.1016/j.jbc.2024.107523
+      snippet: PhaR binds phaP promoters and represses their transcription
       notes: PhaR is a transcriptional repressor that binds phaP promoters and represses
         their transcription.
+  - subject: phap_transcription
+    predicate: produces
+    object: phasin_phap
+    description: Expression of phaP produces the phasin protein coating PHA granules.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      snippet: phaP encodes the granule-associated phasin PhaP
+      notes: The study links phaP transcriptional regulation to phasin production.
   - subject: pha_depolymerase_phaz
     predicate: mediates
     object: phb_mobilization

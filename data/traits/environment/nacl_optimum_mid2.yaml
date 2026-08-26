@@ -26,6 +26,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_optimum_mid2_moderate_halophile
   title: NaCl-optimum-mid2 moderate-halophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking pronounced compatible-solute accumulation
     at elevated NaCl to a 3–8% (w/v) NaCl-optimum (moderate halophile).
   nodes:

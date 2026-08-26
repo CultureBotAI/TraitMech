@@ -24,12 +24,21 @@ canonical_examples:
   taxon_label: Streptococcus pneumoniae
   note: Where natural genetic transformation was discovered (Griffith 1928; Avery
     1944). Bacillus subtilis is the competence-regulation (ComK) model.
-  reference: PMID:25445643
+  reference: DOI:10.1016/j.meegid.2014.10.020
+- taxon_id: NCBITaxon:171101
+  taxon_label: Streptococcus pneumoniae R6
+  note: Naturally transformable reference strain in which RecA and DprA were shown
+    to protect and recombine incoming transforming single-stranded DNA.
+  reference: DOI:10.1046/j.1365-2958.2003.03702.x
 causal_graphs:
 - graph_id: natural_competence_dna_uptake
   title: Competence-driven DNA uptake and transformation
   description: Evidence-backed causal sketch linking the competence program to uptake
     of extracellular DNA and genomic integration.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines conserved DNA-uptake and recombination modules
+    while allowing taxon-specific pilus architectures. The S. pneumoniae R6 RecA example
+    supports the post-uptake homologous-recombination branch.
   nodes:
   - node_id: natural_competence_trait
     label: natural competence
@@ -49,6 +58,9 @@ causal_graphs:
     label: type IV competence pilus
     node_type: GENE_OR_PROTEIN
     description: Retractile DNA-binding pilus filament of the competence apparatus.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: A competence pilus is a multisubunit assembly whose major and
+      minor pilins differ among taxa; the graph does not designate one component.
   - node_id: pilus_retraction
     label: competence pilus retraction
     node_type: BIOLOGICAL_PROCESS
@@ -62,11 +74,16 @@ causal_graphs:
     label: ComEC
     node_type: GENE_OR_PROTEIN
     description: Inner-membrane channel required for DNA uptake into the cytoplasm.
+    grounding: InterPro:IPR052159
   - node_id: comea
     label: ComEA
     node_type: GENE_OR_PROTEIN
     description: DNA receptor that binds incoming DNA and mediates transfer toward
       the periplasm.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ComEA proteins have lineage-dependent domain architectures; the
+      available helix-hairpin-helix term denotes only a shared DNA-binding motif,
+      not the complete competence receptor.
   - node_id: periplasm
     label: periplasm
     node_type: CELLULAR_LOCALIZATION
@@ -77,11 +94,36 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Competence ssDNA-binding protein that protects incoming DNA and recruits
       RecA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph identifies the functional DprA ortholog class, but
+      no exact current InterPro or GO term for the complete taxon-agnostic protein
+      was verified during this review.
   - node_id: reca
     label: RecA
     node_type: GENE_OR_PROTEIN
     description: Recombinase that mediates homologous recombination of transforming
       DNA.
+    grounding: InterPro:IPR013765
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A452
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae R6
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-08-24'
+      entry_version: 116
+      sequence_version: 1
+      role: Competence-induced RecA protects transforming single-stranded DNA and
+        catalyzes its homologous integration in pneumococcal strain R6.
+      evidence:
+      - reference: DOI:10.1046/j.1365-2958.2003.03702.x
+        snippet: incoming ssDNA requires active protection prior to the RecA-driven
+          search for homology
+        notes: The R6 transformation study showed rapid donor-DNA degradation and
+          loss of homologous integration in recA mutants; UniProtKB P0A452 is the
+          reviewed R6 RecA entry.
   - node_id: homologous_recombination
     label: homologous recombination of transforming DNA
     node_type: BIOLOGICAL_PROCESS
@@ -207,4 +249,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:15:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed graph scope and every competence protein node, converted the canonical
+    pneumococcal citation to DOI, added cited strain R6, and paired its reviewed RecA
+    with primary transformation evidence.
   llm_assisted: true

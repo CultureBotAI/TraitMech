@@ -28,6 +28,10 @@ causal_graphs:
   title: Moderate halophile compatible-solute mechanism
   description: Evidence-backed causal sketch linking moderate halophily to NaCl stress
     and compatible-solute osmoadaptation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: moderately_halophilic_trait
     label: moderately halophilic
@@ -63,15 +67,24 @@ causal_graphs:
     description: Hydroxylated derivative of ectoine acting as a compatible solute.
     grounding: CHEBI:49432
   - node_id: ectd
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: EctD (ectoine hydroxylase)
     node_type: GENE_OR_PROTEIN
     description: Ectoine hydroxylase converting ectoine to hydroxyectoine.
   - node_id: bcct_transporters
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: BCCT transporters
     node_type: GENE_OR_PROTEIN
     description: Betaine/carnitine/choline transporter family importing compatible
       solutes.
   - node_id: teaabc_transporter
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: TeaABC TRAP transporter
     node_type: GENE_OR_PROTEIN
     description: TRAP transporter importing ectoine and hydroxyectoine.

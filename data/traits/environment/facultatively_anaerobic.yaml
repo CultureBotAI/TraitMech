@@ -36,6 +36,10 @@ causal_graphs:
   title: Facultative anaerobe oxygen-responsive metabolism
   description: Evidence-backed causal sketch linking facultative anaerobiosis to oxygen-responsive
     switching between aerobic and anaerobic metabolism.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultative_anaerobic_trait
     label: facultatively anaerobic
@@ -58,11 +62,17 @@ causal_graphs:
     grounding: GO:0009061
     description: Respiratory energy metabolism using non-oxygen electron acceptors.
   - node_id: fnr_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FNR oxygen-responsive regulator
     node_type: GENE_OR_PROTEIN
     description: Oxygen-dependent transcriptional regulator of anaerobic respiration
       genes in E. coli.
   - node_id: arca_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ArcA/ArcAB two-component regulator
     node_type: GENE_OR_PROTEIN
     description: Two-component regulatory system that represses the aerobic respiration

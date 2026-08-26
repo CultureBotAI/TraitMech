@@ -25,6 +25,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: plant_pathogen_t3ss_effector_program
   title: Plant-pathogen T3SS-effector and wall-degradation program
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking plant-cell-wall degradation, type III secretion
     of effectors, suppression of plant immunity, and plant tissue colonization to
     the plant-pathogen phenotype.
@@ -35,15 +39,24 @@ causal_graphs:
     grounding: METPO:1004003
     description: Pathogen of plant hosts.
   - node_id: cwd_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: plant-cell-wall-degrading enzymes
     node_type: GENE_OR_PROTEIN
     description: Secreted enzymes (e.g., pectinases, cellulases) degrading the plant
       cell wall.
   - node_id: t3ss
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: type III secretion system
     node_type: GENE_OR_PROTEIN
     description: Bacterial T3SS delivering effector proteins into plant cells.
   - node_id: t3ss_effectors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: T3SS effector proteins
     node_type: GENE_OR_PROTEIN
     description: Bacterial effector proteins translocated into plant cells by the
@@ -88,6 +101,9 @@ causal_graphs:
     description: Conventional ER-Golgi secretory pathway delivering apoplastic effectors
       in fungal/oomycete pathogens.
   - node_id: apoplastic_effectors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: apoplastic effectors
     node_type: GENE_OR_PROTEIN
     description: Secreted pathogen effector proteins acting in the host apoplast.

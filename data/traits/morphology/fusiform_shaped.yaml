@@ -30,6 +30,10 @@ causal_graphs:
   title: Fusiform-shape tapered polar growth
   description: DOI-backed graph linking graded polar peptidoglycan growth and reduced
     end-cap radius to fusiform tapered morphology.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: fusiform_shaped_trait
     label: fusiform shaped
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell-body geometry that narrows toward both poles.
   - node_id: mreb
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog that orients peptidoglycan synthesis to maintain
@@ -73,10 +80,16 @@ causal_graphs:
     description: Lateral wall-growth machinery containing MreB, RodA, PBP2, RodZ,
       MreC, MreD.
   - node_id: mrec
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Elongasome component that activates PBP2 and RodA synthesis functions.
   - node_id: pbp2
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PBP2
     node_type: GENE_OR_PROTEIN
     description: Class B PBP in the elongasome coupled to RodA for rod-like wall growth.
@@ -87,6 +100,9 @@ causal_graphs:
       PBP2.
     grounding: InterPro:IPR001182
   - node_id: ftsw
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsW
     node_type: GENE_OR_PROTEIN
     description: SEDS divisome polymerase for septal PG incorporation.

@@ -23,6 +23,10 @@ evidence:
     rates or under nutrient-rich conditions.
 causal_graphs:
 - graph_id: cell_width_large_setpoint_increase
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-width bin. Its graph illustrates possible
+    rod-system perturbations but does not define a universal causal mechanism for
+    the bin.
   title: Large cell-width by elevated wall-radius set-point
   description: DOI-backed graph linking nutrient-rich growth conditions and an elevated
     MreB-driven wall-radius set-point to wide rods (>0.9 μm).
@@ -46,6 +50,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized lateral peptidoglycan assembly.
   - node_id: roda_pbp2_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: RodA and PBP2 are distinct proteins grouped as a complex; one
+      family identifier cannot represent both components.
     label: RodA-PBP2 elongasome complex
     node_type: GENE_OR_PROTEIN
     description: SEDS-bPBP synthase pair driving lateral (sidewall) peptidoglycan
@@ -64,6 +71,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Insertion of new peptidoglycan at dispersed lateral cell-wall sites.
   - node_id: mreb_filaments
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes assembled MreB filaments rather
+      than one exact protein-family entity.
     label: MreB cytoskeletal filaments
     node_type: GENE_OR_PROTEIN
     description: Actin-like filaments guiding circumferential peptidoglycan insertion.
@@ -81,6 +91,9 @@ causal_graphs:
     description: Evenly distributed insertion of peptidoglycan in the cell-surface
       layer.
   - node_id: mrec_mred_balance
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This denotes a balance between distinct MreC and MreD proteins,
+      not one semantically groundable protein entity.
     label: MreC-MreD balance
     node_type: GENE_OR_PROTEIN
     description: Stoichiometric balance of MreC and MreD accessory regulators.

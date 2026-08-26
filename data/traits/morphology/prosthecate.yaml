@@ -34,6 +34,10 @@ causal_graphs:
   title: Prostheca / stalk extends nutrient-uptake surface
   description: Evidence-backed causal sketch linking developmental stalk extension
     to increased uptake surface area and substrate attachment.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: prosthecate_trait
     label: prosthecate
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: QUALITY
     description: Effective transport surface available for nutrient uptake.
   - node_id: mreb
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog cytoskeletal protein.
@@ -58,6 +65,9 @@ causal_graphs:
     description: SEDS family cell-wall synthesis protein.
     grounding: InterPro:IPR001182
   - node_id: bactofilins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: bactofilins
     node_type: GENE_OR_PROTEIN
     description: Cytoskeletal proteins that localize to zones of active cell wall
@@ -71,6 +81,9 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Periodic protein bands traversing the stalk lumen.
   - node_id: stpabcd_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: StpABCD complex
     node_type: GENE_OR_PROTEIN
     description: Four-protein complex (StpA, StpB, StpC, StpD) forming stalk crossbands.

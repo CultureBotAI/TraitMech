@@ -25,19 +25,23 @@ evidence:
   snippet: autotrophic CO2 fixation
   notes: Review supports CO2 fixation as the autotrophic carbon-assimilation process.
 canonical_examples:
-- taxon_id: NCBITaxon:32046
-  taxon_label: Synechococcus elongatus
+- taxon_id: NCBITaxon:1140
+  taxon_label: Synechococcus elongatus PCC 7942
   note: water-splitting photolithoautotroph
-  reference: PMID:21226929
-- taxon_id: NCBITaxon:1097
-  taxon_label: Chlorobaculum tepidum
+  reference: DOI:10.1093/plphys/kiac065
+- taxon_id: NCBITaxon:194439
+  taxon_label: Chlorobaculum tepidum TLS
   note: sulfide-using photolithoautotroph
-  reference: PMID:12093901
+  reference: DOI:10.1073/pnas.132181499
 causal_graphs:
 - graph_id: photolithoautotrophic_light_inorganic_donor_fixation
   title: Photolithoautotrophic light and inorganic-donor mechanism
   description: DOI-backed graph linking light, inorganic electron donors, photosynthetic
     electron transport, and autotrophic CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph spans oxygenic and anoxygenic photolithoautotrophic modules
+    and does not assert that water and sulfide are used by one organism. The S. elongatus
+    PCC 7942 example anchors the CBB/RuBisCO branch.
   nodes:
   - node_id: photolithoautotrophic_trait
     label: photolithoautotrophic
@@ -116,6 +120,26 @@ causal_graphs:
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key autotrophic
       carboxylase.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31NB3
+      protein_label: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: rbcL
+      taxon_id: NCBITaxon:1140
+      taxon_label: Synechococcus elongatus PCC 7942
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 112
+      sequence_version: 1
+      role: Large-chain component of the hexadecameric RbcL/RbcS RuBisCO that fixes
+        CO2 through the CBB cycle; this accession does not denote the complete enzyme.
+      evidence:
+      - reference: DOI:10.1093/plphys/kiac065
+        snippet: Rubisco is a hexadecameric protein complex of large (RbcL) and small
+          (RbcS) subunits that catalyzes the carbon fixation step of the Calvin-Benson-Bassham
+          cycle
+        notes: The primary PCC 7942 carbon-status study identifies the RuBisCO subunit
+          architecture and function; UniProtKB Q31NB3 is the reviewed rbcL entry for
+          that strain.
   edges:
   - subject: photolithoautotrophic_trait
     predicate: has energy source
@@ -404,4 +428,11 @@ curation_history:
     assert biology they specifically do not claim (#400 review). Both forms are named
     routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1
     before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, documented its alternative donor and photosystem
+    scope, upgraded canonical taxa to strain-level DOI citations, and added the reviewed
+    S. elongatus PCC 7942 RbcL component example.
   llm_assisted: true

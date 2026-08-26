@@ -32,6 +32,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking orange microbial pigmentation
     to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible
     orange color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: orange_pigmented_trait
     label: orange pigmented
@@ -39,6 +43,9 @@ causal_graphs:
     grounding: METPO:1003026
     description: Microbial pigmentation appearing orange.
   - node_id: crt_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
@@ -77,6 +84,9 @@ causal_graphs:
       microbes.
     grounding: CHEBI:17579
   - node_id: crt_z_hydroxylase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: beta-carotene hydroxylase (CrtZ)
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting beta-carotene to zeaxanthin.
@@ -86,6 +96,9 @@ causal_graphs:
     description: Oxygenated carotenoid contributing yellow-orange coloration.
     grounding: CHEBI:27547
   - node_id: crt_w_ketolase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: carotenoid ketolase (CrtW)
     node_type: GENE_OR_PROTEIN
     description: Ketolase producing orange/red ketocarotenoids such as canthaxanthin

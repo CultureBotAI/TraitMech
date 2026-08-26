@@ -27,12 +27,17 @@ canonical_examples:
   taxon_label: Sporosarcina pasteurii
   note: Most-used organism for microbially induced calcite precipitation; copious
     constitutive urease (formerly Bacillus pasteurii).
-  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6979283/
+  reference: DOI:10.1186/s12934-020-1281-z
 causal_graphs:
 - graph_id: urease_activity_urea_hydrolysis
   title: Urease-catalyzed urea hydrolysis
   description: Evidence-backed causal sketch linking urease to hydrolysis of urea
     into ammonia, the basis of the urease test.
+  scope_status: MECHANISTIC
+  scope_notes: The core urease reaction is general, whereas the carbonic-anhydrase
+    and calcium-carbonate branch is an application-specific extension. The S. pasteurii
+    example is explicitly the UreA/UreB/UreC heterotrimer and no one accession denotes
+    the complete enzyme.
   nodes:
   - node_id: urease_activity_trait
     label: urease activity
@@ -43,6 +48,65 @@ causal_graphs:
     label: urease
     node_type: GENE_OR_PROTEIN
     description: Nickel metalloenzyme hydrolyzing urea.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial urease is a multisubunit enzyme with taxon-dependent
+      subunit fusions; the exact GO term denotes its activity rather than the protein
+      complex and remains on urease_function.
+    protein_examples:
+    - uniprot_id: UniProtKB:P41020
+      protein_label: Urease subunit alpha
+      gene_symbol: ureC
+      taxon_id: NCBITaxon:1474
+      taxon_label: Sporosarcina pasteurii
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 152
+      sequence_version: 2
+      role: Catalytic alpha component of the S. pasteurii UreA/UreB/UreC urease; it
+        binds the binuclear nickel active site but does not alone denote the complete
+        enzyme.
+      evidence:
+      - reference: DOI:10.1016/S0969-2126(99)80026-4
+        snippet: crystal structures of the native and inhibited enzyme from Bacillus
+          pasteurii
+        notes: The structural study resolves the heteropolymeric S. pasteurii urease
+          and its binuclear nickel catalytic center; P41020 is its reviewed UreC alpha
+          component.
+    - uniprot_id: UniProtKB:P41021
+      protein_label: Urease subunit beta
+      gene_symbol: ureB
+      taxon_id: NCBITaxon:1474
+      taxon_label: Sporosarcina pasteurii
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 127
+      sequence_version: 1
+      role: Beta structural component of the S. pasteurii UreA/UreB/UreC urease; it
+        is recorded explicitly so the accession is not mistaken for the complete enzyme.
+      evidence:
+      - reference: DOI:10.1016/S0969-2126(99)80026-4
+        snippet: crystal structures of the native and inhibited enzyme from Bacillus
+          pasteurii
+        notes: The structure contains the beta component mapped to reviewed UniProtKB
+          P41021 as part of the heteropolymeric urease assembly.
+    - uniprot_id: UniProtKB:P41022
+      protein_label: Urease subunit gamma
+      gene_symbol: ureA
+      taxon_id: NCBITaxon:1474
+      taxon_label: Sporosarcina pasteurii
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 129
+      sequence_version: 1
+      role: Gamma structural component of the S. pasteurii UreA/UreB/UreC urease;
+        it is recorded explicitly so the accession is not mistaken for the complete
+        enzyme.
+      evidence:
+      - reference: DOI:10.1016/S0969-2126(99)80026-4
+        snippet: crystal structures of the native and inhibited enzyme from Bacillus
+          pasteurii
+        notes: The structure contains the gamma component mapped to reviewed UniProtKB
+          P41022 as part of the heteropolymeric urease assembly.
   - node_id: urease_function
     label: urease activity
     node_type: MOLECULAR_FUNCTION
@@ -262,3 +326,10 @@ curation_history:
     to ammonia and carbon dioxide''. Written with the source''s underscores because
     that is the string a consumer must resolve.'
   llm_assisted: false
+- timestamp: '2026-08-24T11:20:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the urease graph scope, converted the S. pasteurii citation to
+    DOI, dispositioned the multisubunit urease node, and added explicit reviewed UreC,
+    UreB, and UreA component examples with structural evidence.
+  llm_assisted: true

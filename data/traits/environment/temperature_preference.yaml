@@ -22,6 +22,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_preference_growth_physiology
   title: Environmental temperature control of growth preference
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is an upper preference, broad tolerance, or central-range
+    classification spanning multiple unrelated adaptations; contextual protein nodes
+    are retained without assigning a misleading token UniProt example.
   description: Evidence-backed causal sketch linking environmental temperature to
     membrane fluidity, protein stability, and growth-rate phenotypes.
   nodes:
@@ -75,7 +79,7 @@ causal_graphs:
       (homeoviscous adaptation).
   - node_id: rna_thermometer
     label: RNA thermometer
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Temperature-responsive RNA structure (ROSE/FourU) in 5-UTRs that
       gates translation by melting with temperature.
   - node_id: heat_shock_gene_translation

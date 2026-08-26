@@ -28,12 +28,21 @@ canonical_examples:
   taxon_label: Wolinella succinogenes
   note: Model organism for respiratory dissimilatory nitrate/nitrite reduction to
     ammonium (DNRA).
-  reference: PMID:14500908
+  reference: DOI:10.1073/pnas.1932838100
+- taxon_id: NCBITaxon:273121
+  taxon_label: Wolinella succinogenes ATCC 29543
+  note: Strain-level source of the structurally characterized NrfA cytochrome c nitrite
+    reductase and the matching reviewed UniProt example.
+  reference: DOI:10.1074/jbc.M006188200
 causal_graphs:
 - graph_id: dnra_nitrate_to_ammonium
   title: DNRA reduces nitrate to ammonium, conserving fixed nitrogen
   description: Evidence-backed causal sketch linking nitrate respiration ending in
     ammonium to nitrogen retention under high donor-to-acceptor ratios.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the canonical Nar/Nrf DNRA route and illustrates its nitrite-to-ammonium
+    step with W. succinogenes NrfA. Regulatory details are broader bacterial modules
+    and are not asserted to be identical in every DNRA organism.
   nodes:
   - node_id: dnra_trait
     label: dissimilatory nitrate reduction to ammonium
@@ -65,26 +74,52 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound nitrate reductase catalyzing the first DNRA step (nitrate
       to nitrite).
+    grounding: GO:0009325
   - node_id: nrfa
     label: NrfA cytochrome c nitrite reductase
     node_type: GENE_OR_PROTEIN
     description: Cytochrome c nitrite reductase catalyzing the canonical second DNRA
       step (nitrite to ammonium).
+    grounding: GO:0042279
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9S1E5
+      protein_label: Cytochrome c-552
+      gene_symbol: nrfA
+      taxon_id: NCBITaxon:273121
+      taxon_label: Wolinella succinogenes ATCC 29543
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 163
+      sequence_version: 2
+      role: Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron
+        nitrite reduction step in W. succinogenes.
+      evidence:
+      - reference: DOI:10.1074/jbc.M006188200
+        snippet: Cytochrome c nitrite reductase catalyzes the 6-electron reduction
+          of nitrite to ammonia.
+        notes: The primary structural and mechanistic study is from W. succinogenes;
+          UniProtKB Q9S1E5 verifies the reviewed NrfA protein and strain taxon.
   - node_id: narx_narl
     label: NarX-NarL two-component system
     node_type: GENE_OR_PROTEIN
     description: Nitrate/nitrite-sensing two-component regulatory system activating
       DNRA operon transcription.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node combines the NarX sensor kinase and NarL response regulator;
+      an exact semantic grounding requires splitting the two components.
   - node_id: fnr
     label: FNR regulator
     node_type: GENE_OR_PROTEIN
     description: O2/NO-sensing global regulator activating nitrate respiration operons
       under anaerobic conditions.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FNR-family regulators vary in sensor chemistry and target scope;
+      the cited evidence does not establish an exact family term for this generic
+      node.
   - node_id: nrf_operon
-    label: nrf operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding cytochrome c nitrite reductase (NrfA) and accessory
-      subunits for DNRA.
+    label: nrf operon transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of the operon encoding NrfA and accessory DNRA proteins.
   - node_id: anaerobic_conditions
     label: anaerobic conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -194,4 +229,11 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×2).
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added a strain-matched W. succinogenes NrfA example and exact GO activity,
+    grounded NarGHI, retyped the nrf operon carrier as transcription, and retained
+    combined NarX-NarL and broad FNR labels with explicit review rationales.
   llm_assisted: true

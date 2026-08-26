@@ -28,11 +28,21 @@ canonical_examples:
   taxon_label: Cupriavidus necator
   note: H2-oxidising lithoautotroph
   reference: PMID:36335362
+- taxon_id: NCBITaxon:228410
+  taxon_label: Nitrosomonas europaea ATCC 19718
+  note: Strain-level ammonia-oxidizing lithoautotroph paired to its RuBisCO large
+    subunit and Calvin-Benson-Bassham carbon-fixation response.
+  reference: DOI:10.1128/AEM.00294-16
 causal_graphs:
 - graph_id: lithoautotrophic_inorganic_donor_co2_fixation
   title: Lithoautotrophic inorganic-donor CO2 fixation
   description: DOI-backed graph linking inorganic electron donors to energy conservation,
     reducing power, and autotrophic CO2 fixation.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines generic donor oxidation, reverse electron flow,
+    and inorganic-carbon acquisition. The N. europaea RuBisCO example anchors the
+    Calvin-Benson-Bassham fixation branch only; Q82TG6 is its large subunit and not
+    the complete L8S8 enzyme or any donor-oxidation complex.
   nodes:
   - node_id: lithoautotrophic_trait
     label: lithoautotrophic
@@ -63,6 +73,32 @@ causal_graphs:
     node_type: PATHWAY
     description: Pathways that assimilate CO2 into cellular carbon.
     grounding: GO:0015977
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Carboxylating enzyme of the Calvin-Benson-Bassham carbon-fixation
+      pathway.
+    grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:Q82TG6
+      protein_label: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea ATCC 19718
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 120
+      sequence_version: 1
+      role: Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle
+        in N. europaea ATCC 19718; it does not denote the complete L8S8 enzyme.
+      evidence:
+      - reference: DOI:10.1128/AEM.00294-16
+        snippet: expression of the entire cbb gene cluster increased, with 7.4- and
+          10.8-fold increases in numbers of genes encoding the small and large subunits
+          of RuBisCO, cbbS (NE1920) and rbcL (NE1921)
+        notes: The primary ATCC 19718 chemostat study identifies NE1921/rbcL and its
+          carbon-fixation response; UniProtKB Q82TG6 is the reviewed NE1921 large-chain
+          entry for that strain.
   - node_id: cellular_carbon
     label: cellular carbon
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +108,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound donor-oxidizing enzymes that reduce the quinone pool
       and drive the ETC.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This generic label spans unrelated hydrogenases and sulfur-,
+      nitrogen-, iron-, and other donor-oxidizing enzyme families; the graph does
+      not specify one exact family.
   - node_id: electron_transport_chain
     label: electron transport chain
     node_type: PATHWAY
@@ -100,11 +140,19 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory complexes that mediate reverse electron transfer from
       the quinone pool to NAD+.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node deliberately combines two distinct multisubunit respiratory
+      complexes, so no single protein-family or whole-complex term exactly represents
+      it.
   - node_id: dic_acquisition_toolkit
     label: carbonic anhydrase and DIC transporters
     node_type: GENE_OR_PROTEIN
     description: DIC transporters and carbonic anhydrase enzymes that supply inorganic
       carbon to fixation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This toolkit combines carbonic-anhydrase enzymes with several
+      unrelated inorganic-carbon transporter families and therefore has no one exact
+      protein grounding.
   edges:
   - subject: lithoautotrophic_trait
     predicate: has electron donor
@@ -144,6 +192,20 @@ causal_graphs:
       snippet: autotrophic CO2 fixation
       notes: Supports CO2 fixation as the autotrophic carbon-assimilation process.
     predicate_id: METPO:2007404
+  - subject: rubisco
+    predicate: catalyzes
+    object: autotrophic_co2_fixation
+    description: RuBisCO catalyzes the carboxylation step in the N. europaea Calvin-Benson-Bassham
+      branch of lithoautotrophic carbon fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.00294-16
+      snippet: expression of the entire cbb gene cluster increased, with 7.4- and
+        10.8-fold increases in numbers of genes encoding the small and large subunits
+        of RuBisCO, cbbS (NE1920) and rbcL (NE1921)
+      notes: The primary ATCC 19718 study directly identifies the RuBisCO genes in
+        the carbon-fixation response; the example grounds the large subunit rather
+        than asserting that one accession is the whole enzyme.
+    predicate_id: biolink:catalyzes
   - subject: reducing_power
     predicate: enables
     object: autotrophic_co2_fixation
@@ -215,6 +277,13 @@ causal_graphs:
       notes: Autotrophs make use of a toolkit of DIC transporters and carbonic anhydrase
         enzymes to facilitate DIC fixation; broad across autotrophs.
 curation_history:
+- timestamp: '2026-08-24T14:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed N. europaea ATCC 19718 canonical example, grounded RuBisCO
+    node, reviewed large-subunit example, and complete-evidence fixation edge; documented
+    three heterogeneous protein-toolkit nodes as reviewed label-only.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.874845+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_range_mid2_baseline_mesophile
   title: Temperature-range-mid2 baseline-mesophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking baseline mesophile adaptation to a temperature
     growth range of approximately 27–30 °C.
   nodes:
@@ -65,7 +69,7 @@ causal_graphs:
     description: Increase in ambient growth temperature.
   - node_id: rna_thermometer
     label: RNA thermometer 5′-UTR structure
-    node_type: GENE_OR_PROTEIN
+    node_type: RNA
     description: Temperature-responsive mRNA 5′-UTR secondary structure controlling
       translation initiation.
   - node_id: temperature_shift
@@ -75,6 +79,10 @@ causal_graphs:
   - node_id: heat_shock_proteins
     label: heat-shock proteins / chaperones
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Molecular chaperones induced by thermal stress that maintain proteostasis.
   - node_id: protein_denaturation
     label: protein denaturation / aggregation

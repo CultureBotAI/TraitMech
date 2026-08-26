@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: salinity_phenotype_numerical_axis
   title: Salinity phenotype numerical-limits axis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking the ambient NaCl concentration axis to the
     three numerical-limit measurement types (optimum, range, delta) that together
     classify halophily.

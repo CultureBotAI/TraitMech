@@ -33,6 +33,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_range_high_extreme_alkaliphile
   title: pH-range-high extreme-alkaliphile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity
     to a pH growth range extending above 10.
   nodes:
@@ -54,13 +58,21 @@ causal_graphs:
   - node_id: mrp_antiporter_complex
     label: Mrp Na+/H+ antiporter complex
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Hetero-oligomeric CPA3-family Na+/H+ antiporter complex essential
       at high external pH.
-  - node_id: mrp_operon
-    label: mrpA-G operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding the seven hydrophobic Mrp proteins that form the
-      antiporter complex.
+    gene_symbols:
+    - mrpA
+    - mrpB
+    - mrpC
+    - mrpD
+    - mrpE
+    - mrpF
+    - mrpG
+    operon: mrpA-G
   - node_id: membrane_potential
     label: transmembrane potential (delta-psi)
     node_type: QUALITY
@@ -69,6 +81,10 @@ causal_graphs:
   - node_id: na_solute_symporters
     label: Na+/solute symporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Symporters re-importing Na+ with solutes to supply cytoplasmic Na+
       for antiport.
   - node_id: cytoplasmic_na
@@ -79,6 +95,10 @@ causal_graphs:
   - node_id: f1fo_atp_synthase
     label: F1Fo-ATP synthase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-translocating ATP synthase whose proton uptake contributes
       to pH homeostasis.
   - node_id: alkaline_ph_homeostasis
@@ -124,16 +144,6 @@ causal_graphs:
       notes: The unusual hetero-oligomeric Mrp antiporter has an indispensable role
         at high pH.
     predicate_id: METPO:2007700
-  - subject: mrp_operon
-    predicate: encodes
-    object: mrp_antiporter_complex
-    description: The mrpA-G operon encodes the seven proteins forming the hetero-oligomeric
-      Mrp complex.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      notes: Mrp antiporters are encoded in operons containing genes for seven hydrophobic
-        proteins; all required to form the hetero-oligomeric complex.
-    predicate_id: METPO:2007813
   - subject: membrane_potential
     predicate: drives
     object: mrp_antiporter_complex

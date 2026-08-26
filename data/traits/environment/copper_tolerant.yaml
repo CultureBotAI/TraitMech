@@ -30,11 +30,19 @@ canonical_examples:
   taxon_label: Cupriavidus metallidurans
   note: copper-resistance determinants
   reference: PMID:37191542
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level CopA2 copper-detoxification exemplar.
+  reference: PMID:37191542
 causal_graphs:
 - graph_id: copper_tolerance_cop_efflux
   title: Copper tolerance via cop/cue/cus/pco efflux systems
   description: Evidence-backed causal sketch linking dedicated copper-efflux machinery
     to cytoplasmic copper detoxification.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: copper_tolerant_trait
     label: copper tolerant
@@ -47,6 +55,9 @@ causal_graphs:
     grounding: CHEBI:29036
     description: Cytoplasmic Cu(II) excess threatening Fenton-like damage.
   - node_id: copper_efflux_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: copper efflux systems (cue/cus/pco/cop)
     node_type: GENE_OR_PROTEIN
     description: ATPase- and RND-driven pumps removing copper from the cytoplasm or
@@ -62,6 +73,27 @@ causal_graphs:
     description: Fenton-like Cu(I) chemistry generating ROS that damage lipids, proteins,
       DNA, and Fe-S clusters.
   - node_id: multicopper_oxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1LBE6
+      protein_label: Copper resistance protein CopA2
+      gene_symbol: copA2
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: UNREVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 99
+      sequence_version: 1
+      role: CH34 CopA2 is a multicopper oxidase participating in periplasmic copper
+        detoxification.
+      evidence:
+      - reference: PMID:37191542
+        snippet: copper-resistance determinants in Cupriavidus metallidurans
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: periplasmic multicopper oxidase (CueO-type)
     node_type: GENE_OR_PROTEIN
     description: Oxygen-dependent multicopper oxidase that oxidizes toxic Cu(I) to

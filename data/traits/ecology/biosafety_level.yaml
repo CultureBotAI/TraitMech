@@ -24,6 +24,10 @@ evidence:
 causal_graphs:
 - graph_id: biosafety_level_hazard_classification
   title: Biosafety-level hazard-classification axis
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph framing biosafety level as a hazard-based classification
     driven by pathogen transmissibility, disease severity, and availability of countermeasures,
     with `is a` edges to the BSL-1 through BSL-5 child classifications.

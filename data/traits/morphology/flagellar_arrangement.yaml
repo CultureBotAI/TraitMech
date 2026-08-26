@@ -23,6 +23,10 @@ evidence:
     whose number and placement define flagellar arrangement.
 causal_graphs:
 - graph_id: flagellar_arrangement_flhf_flhg
+  scope_status: NONMECHANISTIC
+  scope_notes: Flagellar arrangement is a classification axis whose child patterns
+    have different placement programs. The graph is contextual and does not define
+    one protein mechanism shared by every arrangement class.
   title: Flagellar arrangement set by FlhF/FlhG flagellation pattern
   description: Evidence-backed causal sketch linking FlhF/FlhG-regulated flagellar
     placement to the cellular flagellation pattern.
@@ -42,6 +46,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Regulatory system setting flagellar number and cellular position.
   - node_id: flhf
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FlhF is used across divergent flagellar-placement systems; an
+      exact family term was not verified for this upper classification context.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that marks the future flagellar assembly site and
@@ -53,11 +60,17 @@ causal_graphs:
       flagellar number.
     grounding: InterPro:IPR033875
   - node_id: flif_msring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This denotes an assembled MS-ring structure centered on FliF,
+      not one standalone protein-family entity.
     label: FliF (MS-ring protein)
     node_type: GENE_OR_PROTEIN
     description: MS-ring forming protein recruited to the cell pole as the earliest
       basal-body assembly step.
   - node_id: flig
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FliG is retained as contextual rotor machinery; an exact family
+      term was not verified for the broad arrangement-class graph.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein bound by FlhF and engaging FliF during basal-body

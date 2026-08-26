@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: parasitism_host_fitness_cost
   title: Parasitism extracts resources at the host's expense
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking host-resource exploitation to
     reduced host fitness in chronic parasitic association.
   nodes:

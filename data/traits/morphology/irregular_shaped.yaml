@@ -26,6 +26,9 @@ causal_graphs:
   title: Irregular-shape loss of wall patterning
   description: DOI-backed graph linking reduced or stochastic cell-wall patterning
     to inconsistent, irregular cell geometry.
+  scope_status: NONMECHANISTIC
+  scope_notes: Irregular shape is a residual morphology classification with no single
+    taxon-independent protein mechanism in the cited evidence.
   nodes:
   - node_id: irregular_shaped_trait
     label: irregular shaped

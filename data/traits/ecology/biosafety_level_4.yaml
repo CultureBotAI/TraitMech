@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: biosafety_level_4_extreme_hazard
   title: BSL-4 extreme-hazard classification
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking extreme virulence, aerosol transmissibility,
     and absence of available treatments to BSL-4 classification.
   nodes:

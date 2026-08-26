@@ -29,12 +29,22 @@ canonical_examples:
   taxon_label: Cupriavidus necator
   note: Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on
     H2+CO2 (strain H16).
-  reference: PMID:16964242
+  reference: DOI:10.1038/nbt1244
+- taxon_id: NCBITaxon:381666
+  taxon_label: Cupriavidus necator H16
+  note: Strain-level model whose two CBB operons are active during autotrophic carbon
+    fixation; paired here to the reviewed plasmid cbbL2 protein example.
+  reference: DOI:10.1186/s12934-020-01494-y
 causal_graphs:
 - graph_id: cbb_rubisco_co2_fixation
   title: Calvin-Benson-Bassham cycle fixes CO2 via RuBisCO
   description: Evidence-backed causal sketch linking RuBisCO-catalyzed CO2 carboxylation
     of RuBP to the reductive pentose phosphate cycle.
+  scope_status: MECHANISTIC
+  scope_notes: This is a composite bacterial CBB graph. The Cupriavidus example grounds
+    the RuBisCO and cbb-regulatory branch, whereas carboxysome and carbonic-anhydrase
+    edges describe source-backed cyanobacterial or other bacterial CO2-concentrating
+    modules that are not asserted to occur in C. necator H16.
   nodes:
   - node_id: cbb_trait
     label: Calvin-Benson-Bassham cycle
@@ -51,6 +61,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:P42721
+      protein_label: Ribulose bisphosphate carboxylase large chain, plasmid
+      gene_symbol: cbbL2
+      taxon_id: NCBITaxon:381666
+      taxon_label: Cupriavidus necator H16
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 153
+      sequence_version: 3
+      role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
+        active CBB operons of C. necator H16.
+      evidence:
+      - reference: DOI:10.1186/s12934-020-01494-y
+        snippet: both CBB operons were active and contributed almost equally to the
+          carbon fixation process
+        notes: The strain-level perturbation study supports activity of both H16 CBB
+          operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain
+          in that strain.
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -82,20 +111,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carbonic anhydrase within the carboxysome that converts HCO3- to
       CO2 to supply RuBisCO.
+    grounding: GO:0004089
   - node_id: cbbr
     label: CbbR transcriptional regulator
     node_type: GENE_OR_PROTEIN
     description: LysR-type master transcriptional activator of bacterial cbb CO2-fixation
       operons.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: CbbR is a mechanism-specific LysR regulator label; a generic
+      LysR-family term would be broader than the protein role supported by the cited
+      cbb-operon evidence.
   - node_id: cbb_operon
-    label: cbb operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding CBB-cycle CO2-fixation enzymes.
+    label: cbb operon transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of an operon encoding CBB-cycle CO2-fixation enzymes.
   - node_id: cytoplasmic_ca
     label: cytoplasmic carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Non-vectorial cytosolic carbonic anhydrase whose activity can dissipate
       the CO2-concentrating mechanism.
+    grounding: GO:0004089
   - node_id: co2_leakage
     label: CO2 leakage
     node_type: BIOLOGICAL_PROCESS
@@ -249,4 +284,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added a strain-matched C. necator H16 RuBisCO example, grounded both carbonic-anhydrase
+    nodes, retyped the cbb operon carrier as transcription, retained CbbR as reviewed
+    label-only, and documented the composite graph scope.
   llm_assisted: true

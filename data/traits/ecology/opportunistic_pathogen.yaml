@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: opportunistic_pathogen_context_dependent_virulence
   title: Opportunistic pathogenesis under compromised host defense
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking compromised host defenses to
     context-dependent virulence in normally commensal/environmental microbes.
   nodes:

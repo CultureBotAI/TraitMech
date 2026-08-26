@@ -38,6 +38,10 @@ causal_graphs:
   title: Desiccation tolerance via anhydrobiosis and DNA-damage repair
   description: Evidence-backed causal sketch linking near-complete water loss to a
     reversible anhydrobiotic state and post-rehydration DNA-damage repair.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: desiccation_tolerant_trait
     label: desiccation tolerant
@@ -95,6 +99,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Aggregation/denaturation of proteins induced by water loss.
   - node_id: desiccation_idps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: desiccation-related intrinsically disordered proteins
     node_type: GENE_OR_PROTEIN
     description: IDPs (e.g. LEA/CAHS) that protect cellular components during drying.

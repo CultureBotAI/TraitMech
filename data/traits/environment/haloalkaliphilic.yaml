@@ -26,6 +26,10 @@ causal_graphs:
   title: Haloalkaliphilic salt and alkaline-pH adaptation mechanism
   description: Evidence-backed causal sketch linking haloalkaliphily to combined hypersaline
     and alkaline conditions.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: haloalkaliphilic_trait
     label: haloalkaliphilic

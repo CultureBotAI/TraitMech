@@ -23,6 +23,10 @@ evidence:
     whether cells reach larger lengths before constriction.
 causal_graphs:
 - graph_id: cell_length_large_division_delay
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-length bin. Its graph illustrates possible
+    regulators of measured length but is not a single inheritable causal mechanism
+    requiring a protein/taxon exemplar.
   title: Large cell-length from fast growth or division delay
   description: DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction,
     or filamentous growth programs to large cell length (>3 μm).

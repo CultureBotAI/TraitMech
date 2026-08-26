@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_phenotype_numerical_axis
   title: Temperature phenotype numerical-limits axis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking ambient temperature to the three numerical-limit
     measurement types (optimum, range, delta) that together classify psychrophile,
     mesophile, and thermophile physiology.
@@ -80,6 +84,10 @@ causal_graphs:
   - node_id: cold_adapted_enzymes
     label: cold-adapted enzymes
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proteins with structural adaptations conferring activity at low temperature.
   - node_id: high_catalytic_efficiency_low_temp
     label: high catalytic efficiency at low temperature

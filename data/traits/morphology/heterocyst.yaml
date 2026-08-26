@@ -33,6 +33,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking cyanobacterial cell differentiation
     into thick-walled heterocysts to a microoxic interior that accommodates oxygen-sensitive
     nitrogen fixation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: heterocyst_trait
     label: heterocyst
@@ -59,10 +63,34 @@ causal_graphs:
     description: Developmental program producing a mature heterocyst.
     grounding: GO:0043158
   - node_id: hetr_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P27709
+      protein_label: DNA-binding transcriptional activator HetR
+      gene_symbol: hetR
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. PCC 7120
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-08-25'
+      entry_version: 120
+      sequence_version: 3
+      role: HetR is the master positive regulator initiating heterocyst differentiation
+        in PCC 7120.
+      evidence:
+      - reference: PMID:11759840
+        snippet: HetR controls heterocyst differentiation
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: HetR transcriptional regulator
     node_type: GENE_OR_PROTEIN
     description: Master transcriptional regulator of heterocyst development.
   - node_id: furc_perr
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FurC / PerR
     node_type: GENE_OR_PROTEIN
     description: Cyanobacterial Fur-family redox-responsive transcription factor.
@@ -88,10 +116,16 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Multilayered heterocyst cell envelope limiting O2 entry.
   - node_id: pats_peptide
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PatS peptide
     node_type: GENE_OR_PROTEIN
     description: Inhibitory peptide controlling heterocyst pattern/spacing.
   - node_id: hetn_regulator
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: HetN regulator
     node_type: GENE_OR_PROTEIN
     description: Regulator maintaining heterocyst spacing pattern.

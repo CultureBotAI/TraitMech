@@ -32,6 +32,9 @@ causal_graphs:
   title: Triangular-shape planar polygonal envelope growth
   description: DOI-backed graph linking planar anisotropic envelope growth and S-layer-constrained
     polygonal geometry to flat triangular cells.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is a polygonal morphology classification without a taxon-matched
+    protein determinant in the cited evidence; no token protein is added.
   nodes:
   - node_id: triangular_shaped_trait
     label: triangular shaped

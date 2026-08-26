@@ -19,6 +19,10 @@ evidence:
     produces a narrow length distribution at standard growth conditions.
 causal_graphs:
 - graph_id: cell_length_small_size_setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a numerical cell-length bin. Its graph provides contextual
+    examples of division control but does not define a single causal mechanism for
+    every cell in the bin.
   title: Small cell-length size setpoint
   description: DOI-backed graph linking adder-controlled size homeostasis to a small
     cell-length range (1.3–2 μm).
@@ -43,6 +47,9 @@ causal_graphs:
     description: Routine laboratory growth conditions producing typical bacterial
       cell sizes.
   - node_id: ftsz_abundance
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes abundance of a protein family rather
+      than the FtsZ molecular entity itself.
     label: FtsZ abundance
     node_type: GENE_OR_PROTEIN
     description: Cellular level of the tubulin-like division protein FtsZ.
@@ -55,10 +62,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Assembly of the cytokinetic Z ring at the division site.
   - node_id: ftsn
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual source supports the FtsN label, but an exact semantic
+      family term was not verified in this review.
     label: FtsN
     node_type: GENE_OR_PROTEIN
     description: Divisome protein that allosterically activates septal PG synthesis.
   - node_id: ftswi_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FtsW and FtsI are distinct components grouped as a complex; one
+      protein-family identifier cannot denote the pair.
     label: FtsWI septal PG synthase complex
     node_type: GENE_OR_PROTEIN
     description: FtsWI (within FtsQLBWI) septal peptidoglycan synthase complex.
@@ -71,6 +84,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Condensation and stabilization of the FtsZ ring.
   - node_id: ftsz_protoring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This denotes an assembled FtsZ proto-ring structure rather than
+      one exact protein-family entity.
     label: FtsZ proto-ring (with FtsA/ZipA)
     node_type: GENE_OR_PROTEIN
     description: FtsZ proto-ring tethered by FtsA/ZipA initiating divisome assembly.

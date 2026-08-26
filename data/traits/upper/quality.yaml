@@ -19,6 +19,9 @@ causal_graphs:
   description: DOI-backed upper-ontology context graph linking quality to phenotype
     and biosafety-level child classes while excluding the genomic GC content child
     from this batch.
+  scope_status: NONMECHANISTIC
+  scope_notes: Quality is an upper ontology class rather than a protein-mediated microbial
+    mechanism, so no taxon or protein example is applicable.
   nodes:
   - node_id: quality_trait
     label: quality

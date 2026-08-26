@@ -36,6 +36,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking spherical coccus morphology to
     septal peptidoglycan synthesis, FtsZ-directed division, and reduced reliance on
     lateral elongation systems.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: coccus_shaped_trait
     label: coccus shaped
@@ -47,10 +51,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell-wall synthesis localized to the division septum.
   - node_id: ftsZ_division_ring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsZ division ring
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like division scaffold that recruits septal synthesis machinery.
   - node_id: penicillin_binding_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Cell-wall synthesis enzymes recruited to division sites.

@@ -40,6 +40,10 @@ causal_graphs:
   title: Aerobic respiration terminal oxidase mechanism
   description: DOI-backed graph linking oxygen reduction, respiratory electron transport,
     proton motive force, and ATP synthesis.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the cytochrome-c-oxidase branch of aerobic respiration through
+    proton-motive-force-coupled ATP synthesis; it does not assert that this terminal
+    oxidase family is universal across aerobes.
   nodes:
   - node_id: aerobic_respiration_trait
     label: Aerobic respiration
@@ -56,6 +60,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Terminal oxidase that transfers electrons to molecular oxygen.
     grounding: GO:0004129
+    protein_examples:
+    - uniprot_id: UniProtKB:P08306
+      protein_label: Cytochrome c oxidase subunit 2
+      gene_symbol: ctaC
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 167
+      sequence_version: 1
+      role: Subunit II component of the purified P. denitrificans cytochrome c oxidase;
+        this accession is not presented as the complete terminal-oxidase complex.
+      evidence:
+      - reference: DOI:10.1016/S0005-2728(98)00092-9
+        snippet: enzyme containing polypeptides I-IV
+        notes: The primary purification study compares P. denitrificans oxidase complexes
+          and establishes subunit II as a component; UniProtKB P08306 verifies the
+          reviewed protein and taxon.
   - node_id: molecular_oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -75,6 +97,7 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex that uses proton motive force to synthesize ATP.
+    grounding: GO:0045259
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -136,6 +159,13 @@ causal_graphs:
       notes: Supports ATP synthesis driven by the respiratory ion gradient.
     predicate_id: METPO:2007800
 curation_history:
+- timestamp: '2026-08-23T09:08:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, grounded ATP synthase as a complex,
+    and added DOI-backed UniProtKB P08306 as an explicit P. denitrificans cytochrome-c-oxidase
+    subunit-II exemplar.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.911295+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

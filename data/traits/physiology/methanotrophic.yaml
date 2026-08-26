@@ -24,11 +24,21 @@ canonical_examples:
   note: Model aerobic methanotroph (gammaproteobacterial; particulate and soluble
     methane monooxygenase); strain Bath.
   reference: PMID:15383840
+- taxon_id: NCBITaxon:243233
+  taxon_label: Methylococcus capsulatus Bath
+  note: Strain-level aerobic methanotroph paired to reviewed PmoB, the alpha component
+    of its particulate methane monooxygenase.
+  reference: DOI:10.1099/13500872-145-5-1235
 causal_graphs:
 - graph_id: methanotrophic_methane_oxidation
   title: Aerobic methanotrophic methane oxidation mechanism
   description: DOI-backed graph for aerobic methane oxidation from methane to methanol,
     formaldehyde assimilation, and carbon dioxide production.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents aerobic bacterial methanotrophy and explicitly
+    keeps particulate and soluble methane-monooxygenase alternatives separate. The
+    Bath-strain PmoB accession is an alpha component of pMMO, not the complete three-subunit
+    complex.
   nodes:
   - node_id: methanotrophic_trait
     label: methanotrophic
@@ -64,6 +74,10 @@ causal_graphs:
     label: methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing methanol to formaldehyde.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The label spans calcium- and lanthanide-dependent PQQ enzymes
+      and other methanol-dehydrogenase classes; the cited graph does not select one
+      exact family.
   - node_id: formaldehyde
     label: formaldehyde
     node_type: CHEMICAL
@@ -87,27 +101,41 @@ causal_graphs:
     label: particulate methane monooxygenase (pMMO)
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound copper-containing methane monooxygenase complex.
+    grounding: GO:0015050
+    gene_symbols:
+    - pmoA
+    - pmoB
+    - pmoC
+    operon: pmoCAB
+    protein_examples:
+    - uniprot_id: UniProtKB:G1UBD1
+      protein_label: Particulate methane monooxygenase alpha subunit
+      gene_symbol: pmoB1
+      taxon_id: NCBITaxon:243233
+      taxon_label: Methylococcus capsulatus Bath
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 76
+      sequence_version: 1
+      role: PmoB alpha component of the Bath-strain pMMO; this accession is not presented
+        as the full PmoABC complex.
+      evidence:
+      - reference: DOI:10.1099/13500872-145-5-1235
+        snippet: multiple pmo gene copies contribute to particulate methane monooxygenase
+          activity
+        notes: The primary Bath-strain study tests pmo-copy contributions to methane
+          oxidation; UniProt verifies reviewed PmoB G1UBD1 and the strain taxon.
   - node_id: soluble_methane_monooxygenase
     label: soluble methane monooxygenase (sMMO)
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic iron-containing methane monooxygenase, expressed under
       low copper.
-  - node_id: pmocab_operon
-    label: pmoCAB operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding the pMMO subunits PmoA, PmoB and PmoC.
-  - node_id: pmmo_subunits
-    label: PmoA/PmoB/PmoC subunits
-    node_type: GENE_OR_PROTEIN
-    description: Structural subunits of the particulate methane monooxygenase complex.
-  - node_id: mmoxyz_genes
-    label: mmoXYZ genes
-    node_type: GENE_OR_PROTEIN
-    description: Genes encoding the soluble MMO hydroxylase (MMOH) subunits.
-  - node_id: mmoh_subunits
-    label: MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)
-    node_type: GENE_OR_PROTEIN
-    description: Hydroxylase subunits of soluble methane monooxygenase.
+    grounding: GO:0015050
+    gene_symbols:
+    - mmoX
+    - mmoY
+    - mmoZ
+    operon: mmoXYZ
   - node_id: methanobactin
     label: methanobactin
     node_type: CHEMICAL
@@ -210,24 +238,6 @@ causal_graphs:
       notes: high copper favors pMMO and represses sMMO; low copper/biomass favors
         sMMO
     predicate_id: RO:0002212
-  - subject: pmocab_operon
-    predicate: encodes
-    object: pmmo_subunits
-    description: pmoCAB operon encodes the PmoA, PmoB and PmoC subunits of pMMO.
-    evidence:
-    - reference: DOI:10.1039/D3CY00737E
-      notes: pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB
-        operon
-    predicate_id: METPO:2007813
-  - subject: mmoxyz_genes
-    predicate: encodes
-    object: mmoh_subunits
-    description: mmoXYZ genes encode the MMOH alpha/beta/gamma hydroxylase subunits
-      of sMMO.
-    evidence:
-    - reference: DOI:10.1039/D3CY00737E
-      notes: MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes
-    predicate_id: METPO:2007813
   - subject: methanobactin
     predicate: binds
     object: cuprous_ion

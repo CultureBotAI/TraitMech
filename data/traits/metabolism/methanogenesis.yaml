@@ -34,11 +34,20 @@ canonical_examples:
   note: Archetypal hydrogenotrophic methanogen (4 H2 + CO2 -> CH4 + 2 H2O); first
     archaeal genome sequenced.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6616113/
+- taxon_id: NCBITaxon:243232
+  taxon_label: Methanocaldococcus jannaschii DSM 2661
+  note: Genome-strain exemplar paired to the experimentally characterized McrA component
+    of methyl-coenzyme M reductase I.
+  reference: DOI:10.1074/jbc.M503492200
 causal_graphs:
 - graph_id: methanogenesis_c1_reduction
   title: Methanogenesis C1 reduction mechanism
   description: Evidence-backed causal sketch linking anoxic C1 reduction, methyl-coenzyme
     M reductase, and methane formation.
+  scope_status: MECHANISTIC
+  scope_notes: Represents hydrogenotrophic C1 reduction and the terminal methyl-coenzyme
+    M reductase reaction, with branch labels for alternative methanogenic substrates;
+    the exemplar is explicitly the McrA component, not the entire complex.
   nodes:
   - node_id: methanogenesis_trait
     label: Methanogenesis
@@ -64,6 +73,36 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Nickel F430 enzyme catalyzing the terminal methane-forming step.
     grounding: GO:0044674
+    gene_symbols:
+    - mcrA
+    - mcrB
+    - mcrG
+    operon: mcrABG
+    protein_examples:
+    - uniprot_id: UniProtKB:Q58256
+      protein_label: Methyl-coenzyme M reductase I subunit alpha
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii DSM 2661
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-08-23'
+      entry_version: 146
+      sequence_version: 2
+      role: Alpha subunit of methyl-coenzyme M reductase I, the multisubunit enzyme
+        catalyzing the terminal methane-forming step; this accession is not presented
+        as the complete McrABG complex.
+      evidence:
+      - reference: DOI:10.1074/jbc.M503492200
+        snippet: MJ0846 (McrA, 61227 Da)
+        notes: The primary M. jannaschii study identifies the exact McrA component
+          used in its methyl-coenzyme M reductase preparation; UniProtKB Q58256 verifies
+          the reviewed strain-level entry.
+      - reference: DOI:10.1016/S0076-6879(05)97026-2
+        snippet: catalyzes the last step in methanogenesis
+        notes: The mechanistic methods paper establishes the terminal pathway role
+          of methyl-coenzyme M reductase while the first citation establishes the
+          exact M. jannaschii component identity.
   - node_id: coenzyme_f430
     label: coenzyme F430
     node_type: CHEMICAL
@@ -74,10 +113,6 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16183
     description: Primary reduced carbon end product.
-  - node_id: mcr_gene_cluster
-    label: mcrABG gene cluster
-    node_type: GENE_OR_PROTEIN
-    description: Conserved gene cluster encoding the methyl-coenzyme M reductase complex.
   - node_id: acetoclastic_methanogenesis
     label: acetoclastic methanogenesis
     node_type: PATHWAY
@@ -156,35 +191,31 @@ causal_graphs:
       snippet: from CO2 and H2 to methane
       notes: Supports methane as the reduced product of hydrogenotrophic methanogenesis.
     predicate_id: METPO:2007800
-  - subject: mcr_gene_cluster
-    predicate: encodes
-    object: methyl_coenzyme_m_reductase
-    description: The mcrABG gene cluster encodes the methyl-coenzyme M reductase complex.
-    evidence:
-    - reference: DOI:10.1128/mmbr.00024-22
-      notes: A key genetic requirement across these pathways is the presence of mcrABG.
-    predicate_id: METPO:2007813
   - subject: acetate
     predicate: serves as substrate for
     object: acetoclastic_methanogenesis
     description: Acetate is the substrate split to methane and CO2 in acetoclastic
       methanogenesis.
     evidence:
-    - reference: DOI:10.1007/s00253-023-12700-3
+    - reference: DOI:10.3389/fmicb.2017.01198
+      snippet: acetoclastic methanogenesis using acetate
       notes: acetoclastic (splitting acetate to CH4 and CO2).
   - subject: methylated_compounds
     predicate: serves as substrate for
     object: methyl_based_methanogenesis
     description: Methylated compounds are the substrates for methyl-based methanogenesis.
     evidence:
-    - reference: DOI:10.1007/s00253-023-12700-3
+    - reference: DOI:10.3389/fmicb.2017.01198
+      snippet: methylotrophic methanogenesis using methylated compounds
       notes: methylotrophic (using methylated compounds).
   - subject: coenzyme_b
     predicate: is required for
     object: methane
     description: Coenzyme B reacts with methyl-CoM in the terminal step to yield methane.
     evidence:
-    - reference: DOI:10.1128/mmbr.00024-22
+    - reference: DOI:10.1021/ja906367h
+      snippet: It converts the thioether methyl-coenzyme M and the thiol coenzyme
+        B into methane and the heterodisulfide of coenzyme M and coenzyme B.
       notes: methyl-CoM reacts with coenzyme B (CoB) to yield methane.
   - subject: coenzyme_m
     predicate: carries methyl group in
@@ -192,6 +223,8 @@ causal_graphs:
     description: Methyltransferases transfer methyl groups to coenzyme M to form methyl-CoM.
     evidence:
     - reference: DOI:10.1128/mmbr.00024-22
+      snippet: the methyl group first transferred to a substrate-specific corrinoid
+        protein and then to coenzyme M (CoM) to produce methyl-CoM
       notes: methyltransferases transfer methyl groups ultimately to CoM to form methyl-CoM.
   - subject: coenzyme_f420
     predicate: donates electrons to
@@ -200,10 +233,20 @@ causal_graphs:
       derived from CO2.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1296008
+      snippet: Reduced coenzyme F420 (F420H2), generated by an F420-reducing [NiFe]-hydrogenase
+        (Frh) with H2, serves as a direct electron donor for the reduction of methenyl
+        and methylene forms.
       notes: Reduced coenzyme F420 (F420H2) donates electrons for reductions of methenyl/methylene
         intermediates.
     predicate_id: METPO:2007403
 curation_history:
+- timestamp: '2026-08-23T09:07:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the graph as mechanistic, documented the mcrABG cluster as an
+    exact reviewed label-only node, and added DOI-backed UniProtKB Q58256 as the M.
+    jannaschii McrA component exemplar.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.914643+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

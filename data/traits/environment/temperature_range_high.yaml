@@ -44,6 +44,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: temperature_range_high_thermophile
   title: Temperature-range-high thermophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking thermophile thermostability to a temperature
     growth range extending above 40 °C.
   nodes:
@@ -78,6 +82,10 @@ causal_graphs:
   - node_id: dnak_dnaj
     label: DnaK-DnaJ chaperone
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Hsp70 chaperone system assisting ATP-dependent protein folding.
   - node_id: protein_folding
     label: protein folding
@@ -87,6 +95,9 @@ causal_graphs:
   - node_id: groel_groes_htpg
     label: GroEL-GroES / HtpG chaperone
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This aggregate combines GroEL-GroES and HtpG, distinct chaperone
+      systems, as context for a quantitative temperature-range bin.
     description: Chaperonin and Hsp90 systems assisting protein folding under heat
       stress.
   - node_id: proteostasis_high_temp

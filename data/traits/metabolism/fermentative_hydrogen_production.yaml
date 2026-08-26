@@ -25,13 +25,23 @@ canonical_examples:
   taxon_label: Thermotoga maritima
   note: Model dark-fermentative hydrogen producer (near-theoretical 4 H2 per glucose);
     hyperthermophilic anaerobe.
-  reference: PMID:19411328
+  reference: DOI:10.1128/JB.01582-08
+- taxon_id: NCBITaxon:243274
+  taxon_label: Thermotoga maritima MSB8
+  note: Strain-level source of the characterized bifurcating HydABC hydrogenase and
+    its reviewed HydA protein example.
+  reference: DOI:10.1128/JB.01582-08
 causal_graphs:
 - graph_id: fermentative_h2_production
   title: Fermentative H2 production disposes of excess reducing equivalents
   description: Evidence-backed causal sketch linking hydrogenase activity on reduced
     ferredoxin or formate to molecular hydrogen production as a redox-balancing fermentation
     output.
+  scope_status: MECHANISTIC
+  scope_notes: The protein example and protein-to-H2 edge are restricted to the bifurcating
+    HydABC branch characterized in T. maritima, which requires both NADH and reduced
+    ferredoxin. Other fermenters can use distinct hydrogenase or formate-hydrogenlyase
+    routes.
   nodes:
   - node_id: fermentative_h2_trait
     label: fermentative hydrogen production
@@ -49,10 +59,33 @@ causal_graphs:
     grounding: CHEBI:18276
     description: H2 produced by hydrogenases.
   - node_id: fefe_hydrogenase
-    label: '[FeFe] hydrogenase'
+    label: bifurcating [FeFe] hydrogenase HydABC
     node_type: GENE_OR_PROTEIN
-    description: Hydrogenase enzyme that catalyzes reduction of protons to molecular
-      hydrogen in dark fermentation.
+    description: Trimeric electron-bifurcating hydrogenase that couples oxidation
+      of NADH and reduced ferredoxin to H2 production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HydABC is a multisubunit electron-bifurcating complex; the verified
+      HydA family terms describe one component rather than the complete complex represented
+      by this node.
+    protein_examples:
+    - uniprot_id: UniProtKB:O52683
+      protein_label: Bifurcating [FeFe] hydrogenase alpha subunit
+      gene_symbol: hydA
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima MSB8
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 157
+      sequence_version: 1
+      role: HydA alpha component of the trimeric bifurcating hydrogenase; this accession
+        is not presented as the complete HydABC complex.
+      evidence:
+      - reference: DOI:10.1128/JB.01582-08
+        snippet: The enzyme oxidizes NADH and ferredoxin simultaneously in an approximately
+          1:1 ratio and in a synergistic fashion to produce H2.
+        notes: The primary biochemical study characterizes the trimeric T. maritima
+          hydrogenase; UniProtKB O52683 verifies its reviewed HydA alpha component
+          and strain taxon.
   - node_id: low_h2_partial_pressure
     label: low H2 partial pressure
     node_type: ENVIRONMENTAL_FACTOR
@@ -89,10 +122,14 @@ causal_graphs:
   - subject: fefe_hydrogenase
     predicate: produces
     object: molecular_hydrogen
-    description: '[FeFe]-hydrogenases are producers of H2 in dark fermentation.'
+    description: The T. maritima bifurcating HydABC hydrogenase oxidizes NADH and
+      ferredoxin synergistically to produce H2.
     evidence:
-    - reference: DOI:10.3390/en16083321
-      notes: '[FeFe]-hydrogenases explicitly noted as producers of H2 in dark fermentation.'
+    - reference: DOI:10.1128/JB.01582-08
+      snippet: The enzyme oxidizes NADH and ferredoxin simultaneously in an approximately
+        1:1 ratio and in a synergistic fashion to produce H2.
+      notes: Direct biochemical evidence for H2 production by the bifurcating hydrogenase
+        purified from T. maritima; the edge is not generalized to all [FeFe] hydrogenases.
     predicate_id: METPO:2007800
   - subject: low_h2_partial_pressure
     predicate: stimulates
@@ -162,4 +199,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Refined the broad hydrogenase node to the T. maritima bifurcating HydABC
+    mechanism, added a DOI-backed HydA component example and strain taxon, and kept
+    the complex reviewed label-only pending an exact complex term.
   llm_assisted: true

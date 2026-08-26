@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: habitat_association_biogeographic_structure
   title: Habitat association structures microbial biogeography
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking environmental habitat to the
     biogeographic patterning of microbial taxa.
   nodes:
@@ -66,11 +70,14 @@ causal_graphs:
     label: salinity
     node_type: ENVIRONMENTAL_FACTOR
     description: Salt concentration; major abiotic filter structuring aquatic communities.
-  - node_id: osmolyte_genes
-    label: osmolyte transport and synthesis genes
+  - node_id: osmolyte_transport_synthesis_proteins
+    label: osmolyte transport and synthesis proteins
     node_type: GENE_OR_PROTEIN
-    description: Gene repertoire for compatible-solute transport/synthesis enabling
-      salt tolerance.
+    description: Protein systems for compatible-solute transport and synthesis that
+      contribute to salt tolerance.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This aggregate spans multiple transporter and biosynthetic protein
+      families and is retained only as contextual protein information.
   edges:
   - subject: habitat
     predicate: causes
@@ -137,8 +144,9 @@ causal_graphs:
         lakes show distinct taxonomic profiles.
   - subject: salinity
     predicate: enriches
-    object: osmolyte_genes
-    description: Saline habitats enrich for osmolyte transport and synthesis genes.
+    object: osmolyte_transport_synthesis_proteins
+    description: Saline habitats enrich for osmolyte transport and synthesis protein
+      systems.
     evidence:
     - reference: DOI:10.1186/s40168-024-01979-7
       notes: Saline-lake microbiomes possess more genes encoding osmolyte transport

@@ -35,6 +35,10 @@ causal_graphs:
   title: Spiral-shape curvature and cell-wall mechanism
   description: Evidence-backed causal sketch linking spiral morphology to scaffold-mediated
     curvature, peptidoglycan remodeling, and helical/spiral cell geometry.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: spiral_shaped_trait
     label: spiral shaped
@@ -46,6 +50,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Local cell-wall synthesis, relaxation, or crosslink remodeling.
   - node_id: curvature_scaffold
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: curvature scaffold
     node_type: GENE_OR_PROTEIN
     description: Protein scaffold or shape complex that biases cell curvature.

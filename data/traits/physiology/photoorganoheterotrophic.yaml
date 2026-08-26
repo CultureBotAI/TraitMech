@@ -21,19 +21,23 @@ evidence:
   notes: Review table classifies photoorganoheterotrophy by light with organic electron
     and carbon sources.
 canonical_examples:
-- taxon_id: NCBITaxon:1076
-  taxon_label: Rhodopseudomonas palustris
+- taxon_id: NCBITaxon:258594
+  taxon_label: Rhodopseudomonas palustris CGA009
   note: photoorganoheterotroph
-  reference: PMID:14704707
+  reference: DOI:10.1038/nbt923
 - taxon_id: NCBITaxon:1085
   taxon_label: Rhodospirillum rubrum
   note: purple non-sulfur photoorganoheterotroph
-  reference: PMID:6042358
+  reference: DOI:10.1104/pp.42.4.491
 causal_graphs:
 - graph_id: photoorganoheterotrophic_light_organic_electrons
   title: Photoorganoheterotrophic light and organic substrate use
   description: DOI-backed graph for light-driven energy conservation with organic
     compounds serving as electron and carbon sources.
+  scope_status: MECHANISTIC
+  scope_notes: The core graph is a cross-lineage photoorganoheterotrophic mechanism.
+    Its Type I reaction-center and photosynthesis-gene-cluster branches are lineage-specific,
+    while the R. rubrum PufL example anchors the Type II reaction-center branch.
   nodes:
   - node_id: photoorganoheterotrophic_trait
     label: photoorganoheterotrophic
@@ -55,6 +59,33 @@ causal_graphs:
     label: photosynthetic reaction center
     node_type: GENE_OR_PROTEIN
     description: Chlorophyll or bacteriochlorophyll protein complex for photochemistry.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This generic multisubunit complex spans Type I and Type II reaction
+      centers, so no single protein-family grounding exactly represents it.
+    gene_symbols:
+    - pufL
+    - pufM
+    - puhA
+    operon: photosynthesis gene cluster (bch/crt/puf/puh)
+    protein_examples:
+    - uniprot_id: UniProtKB:P10717
+      protein_label: Reaction center protein L chain
+      gene_symbol: pufL
+      taxon_id: NCBITaxon:1085
+      taxon_label: Rhodospirillum rubrum
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 119
+      sequence_version: 2
+      role: L-chain component of the R. rubrum Type II photochemical reaction center;
+        this accession is not presented as the complete reaction-center complex.
+      evidence:
+      - reference: DOI:10.1128/jb.182.5.1200-1207.2000
+        snippet: The proteins of the photochemical components are encoded by the puf
+          operon (LHalpha, LHbeta, RC-L, and RC-M) and by puhA (RC-H)
+        notes: The primary R. rubrum assembly study identifies RC-L as a puf-encoded
+          reaction-center component and reports phototrophic incompetence of puf mutants;
+          UniProtKB P10717 is the reviewed species-level PufL entry.
   - node_id: photosynthetic_electron_transport
     label: photosynthetic electron transport
     node_type: PATHWAY
@@ -83,20 +114,14 @@ causal_graphs:
     label: Type I reaction center
     node_type: GENE_OR_PROTEIN
     description: Fe-S type photosynthetic reaction-center complex.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This is a multisubunit Fe-S reaction-center class with lineage-specific
+      core and peripheral components; no single protein-family term denotes the whole
+      complex.
   - node_id: fe_s_electron_transfer
     label: electron transfer to Fe-S acceptors
     node_type: BIOLOGICAL_PROCESS
     description: Electron transfer from the reaction center to terminal [4Fe-4S] acceptors.
-  - node_id: photosynthesis_gene_cluster
-    label: photosynthesis gene cluster (PGC)
-    node_type: GENE_OR_PROTEIN
-    description: Cluster of bch/crt/puf/puh genes encoding BChl synthesis and photosystem
-      components.
-  - node_id: bchl_photoheterotrophy
-    label: bacteriochlorophyll-based anoxygenic photoheterotrophy
-    node_type: PATHWAY
-    description: Anoxygenic photoheterotrophy using bacteriochlorophyll-a-containing
-      photosystems.
   - node_id: diurnal_cycle
     label: diurnal dark-light cycle
     node_type: ENVIRONMENTAL_FACTOR
@@ -199,16 +224,6 @@ causal_graphs:
     - reference: DOI:10.3390/biom14030311
       notes: Electrons are transferred directly from A0 to FX, with terminal acceptors
         FA and FB [4Fe-4S] clusters.
-    predicate_id: RO:0002327
-  - subject: photosynthesis_gene_cluster
-    predicate: enables
-    object: bchl_photoheterotrophy
-    description: PGCs encoding bch/crt/puf/puh support bacteriochlorophyll-based anoxygenic
-      photoheterotrophy.
-    evidence:
-    - reference: DOI:10.1128/spectrum.01112-23
-      notes: PGCs include bch and crt genes and puf and puh operons and support anoxygenic
-        phototrophy using bacteriochlorophyll-a-containing photosystems.
     predicate_id: RO:0002327
   - subject: diurnal_cycle
     predicate: drives
@@ -351,4 +366,11 @@ curation_history:
     assert biology they specifically do not claim (#400 review). Both forms are named
     routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1
     before this tranche.'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:10:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, documented Type I/Type II lineage scope,
+    reviewed three composite protein nodes as label-only, upgraded canonical examples
+    to DOI citations, and added the reviewed R. rubrum PufL component example.
   llm_assisted: true

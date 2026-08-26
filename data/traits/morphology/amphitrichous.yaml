@@ -25,6 +25,10 @@ causal_graphs:
   title: Amphitrichous flagellation — bipolar flagella
   description: Evidence-backed causal sketch linking bacterial flagella at both poles
     to the amphitrichous arrangement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: amphitrichous_trait
     label: amphitrichous
@@ -41,6 +45,9 @@ causal_graphs:
     node_type: QUALITY
     description: Flagella positioned at both poles of the cell.
   - node_id: flhf_gtpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and recruits flagellar building blocks
@@ -52,15 +59,24 @@ causal_graphs:
       number.
     grounding: InterPro:IPR033875
   - node_id: flig_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein engaged early by FlhF during assembly.
   - node_id: flif_msring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliF (MS-ring)
     node_type: GENE_OR_PROTEIN
     description: Transmembrane MS-ring forming protein, an early flagellar assembly
       intermediate.
   - node_id: fipa_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane protein that facilitates polar recruitment of FlhF.

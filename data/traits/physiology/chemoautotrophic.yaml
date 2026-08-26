@@ -21,19 +21,23 @@ evidence:
   notes: Review supports Calvin-Benson and other microbial autotrophic CO2-fixation
     pathways.
 canonical_examples:
-- taxon_id: NCBITaxon:915
-  taxon_label: Nitrosomonas europaea
-  note: ammonia-oxidising chemoautotroph
-  reference: PMID:12700255
-- taxon_id: NCBITaxon:36861
-  taxon_label: Thiobacillus denitrificans
+- taxon_id: NCBITaxon:228410
+  taxon_label: Nitrosomonas europaea ATCC 19718
+  note: ammonia-oxidizing obligate chemolithoautotroph
+  reference: DOI:10.1128/AEM.00294-16
+- taxon_id: NCBITaxon:292415
+  taxon_label: Thiobacillus denitrificans ATCC 25259
   note: sulfur-oxidising chemoautotroph
-  reference: PMID:16452431
+  reference: DOI:10.1128/JB.188.4.1473-1488.2006
 causal_graphs:
 - graph_id: chemoautotrophic_chemical_energy_co2_fixation
   title: Chemoautotrophic chemical-energy CO2 fixation
   description: DOI-backed graph linking chemical electron donors, energy conservation,
     RuBisCO/Calvin-Benson carbon fixation, and biomass production.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents a modular chemoautotrophic mechanism; electron
+    donors and carbon-concentrating systems vary across lineages. The N. europaea
+    ATCC 19718 example specifically anchors the RuBisCO carbon-fixation branch.
   nodes:
   - node_id: chemoautotrophic_trait
     label: chemoautotrophic
@@ -73,6 +77,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:Q82TG6
+      protein_label: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea ATCC 19718
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 120
+      sequence_version: 1
+      role: Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle
+        in ammonia-oxidizing N. europaea ATCC 19718.
+      evidence:
+      - reference: DOI:10.1128/AEM.00294-16
+        snippet: expression of the entire cbb gene cluster increased, with 7.4- and
+          10.8-fold increases in numbers of genes encoding the small and large subunits
+          of RuBisCO, cbbS (NE1920) and rbcL (NE1921)
+        notes: The primary ATCC 19718 chemostat study identifies NE1921/rbcL and its
+          carbon-fixation response; UniProtKB Q82TG6 is the reviewed NE1921 large-chain
+          entry for that strain.
   - node_id: cellular_biomass
     label: cellular biomass
     node_type: BIOLOGICAL_PROCESS
@@ -100,6 +124,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: CO2/HCO3- transporters that supply inorganic carbon to the carbon-concentrating
       mechanism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This functional node includes unrelated CO2 and bicarbonate transporter
+      families; the graph does not identify one transporter class or membrane complex.
   - node_id: carbon_concentrating_mechanism
     label: carbon-concentrating mechanism
     node_type: BIOLOGICAL_PROCESS
@@ -387,4 +414,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:35:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon
+    transporter node as label-only, upgraded canonical taxa to strain-level DOI citations,
+    and added the reviewed N. europaea ATCC 19718 RuBisCO large-chain example.
   llm_assisted: true

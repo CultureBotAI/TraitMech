@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_delta_low_stenohaline
   title: NaCl-delta-low stenohaline breadth
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking limited osmoadaptive flexibility to a narrow
     NaCl growth breadth (≤ ~1% w/v).
   nodes:
@@ -46,16 +50,28 @@ causal_graphs:
   - node_id: compatible_solute_transporters
     label: compatible-solute transporters (Opu/ProU)
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Opu/ProU-family uptake systems importing compatible solutes during
       osmoadaptation.
   - node_id: trkh_k_uptake
     label: TrkH potassium uptake system
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: TrkH-type K+ uptake transporter supporting intracellular potassium
       homeostasis under salt stress.
   - node_id: nhac_antiporter
     label: NhaC-family Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: NhaC-family Na+/H+ antiporters mediating ion homeostasis under salt
       stress.
   - node_id: intracellular_proline

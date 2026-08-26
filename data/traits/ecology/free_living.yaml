@@ -27,6 +27,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: free_living_environmental_habitat
   title: Free-living lifestyle is independent of host association
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking environmental habitat occupancy
     to a host-independent free-living lifestyle.
   nodes:

@@ -36,6 +36,10 @@ causal_graphs:
   title: Anaerobic growth oxygen-exclusion mechanism
   description: Evidence-backed causal sketch linking anaerobic growth to absence of
     molecular oxygen and oxygen-derived stress.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: anaerobic_trait
     label: anaerobic
@@ -62,6 +66,9 @@ causal_graphs:
     description: Radical chemistry and low-potential metal centers vulnerable to oxygen
       or ROS.
   - node_id: antioxidant_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: antioxidant enzymes (Sod/Cat/peroxidases)
     node_type: GENE_OR_PROTEIN
     description: Superoxide dismutase, catalase, and peroxidases that detoxify reactive
@@ -71,6 +78,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Enzymatic removal of reactive oxygen species to limit oxidative damage.
   - node_id: respiratory_reductases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: respiratory reductases
     node_type: GENE_OR_PROTEIN
     description: Terminal reductases that allow use of non-oxygen molecules as respiratory

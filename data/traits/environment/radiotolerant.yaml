@@ -33,11 +33,19 @@ canonical_examples:
   note: Most radiation-resistant model organism; survives >15 kGy acute gamma (type
     strain R1).
   reference: https://pubmed.ncbi.nlm.nih.gov/11238985/
+- taxon_id: NCBITaxon:243230
+  taxon_label: Deinococcus radiodurans R1
+  note: Strain-level RecA radiation-repair exemplar.
+  reference: PMID:11238985
 causal_graphs:
 - graph_id: radiotolerance_repair_antioxidant
   title: Radiotolerance via DNA repair and Mn-antioxidant proteome protection
   description: Evidence-backed causal sketch linking efficient DNA-damage repair and
     manganese-antioxidant protection to survival of lethal radiation doses.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: radiotolerant_trait
     label: radiotolerant
@@ -72,6 +80,27 @@ causal_graphs:
     node_type: CHEMICAL
     description: Intracellular Fe2+ that propagates ROS through Fenton chemistry.
   - node_id: reca_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P42443
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:243230
+      taxon_label: Deinococcus radiodurans R1
+      entry_status: REVIEWED
+      proteome_id: UP000002524
+      retrieved_on: '2026-08-25'
+      entry_version: 161
+      sequence_version: 2
+      role: R1 RecA mediates homologous-recombination repair of radiation-induced
+        DNA double-strand breaks.
+      evidence:
+      - reference: PMID:11238985
+        snippet: DNA repair underlies Deinococcus radioresistance
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: RecA recombinase
     node_type: GENE_OR_PROTEIN
     description: RecA recombinase central to homologous-recombination repair of radiation-induced

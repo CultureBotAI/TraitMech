@@ -20,6 +20,9 @@ causal_graphs:
     measurement outputs about material entities and qualities. Child observation records
     are deprecated relation/value carriers and are not expanded as mechanistic trait
     nodes here.
+  scope_status: NONMECHANISTIC
+  scope_notes: Observation is a measurement and metadata upper class, not a biological
+    mechanism; no protein node or example is applicable.
   nodes:
   - node_id: observation_trait
     label: observation

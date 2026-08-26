@@ -25,11 +25,21 @@ canonical_examples:
   taxon_label: Pseudomonas aeruginosa
   note: Model biofilm former; paradigm for biofilm development and dispersal.
   reference: PMID:35335624
+- taxon_id: NCBITaxon:208964
+  taxon_label: Pseudomonas aeruginosa PAO1
+  note: Strain-level exemplar for the WspR-dependent c-di-GMP branch represented in
+    the causal graph.
+  reference: DOI:10.1371/journal.ppat.1004480
 causal_graphs:
 - graph_id: biofilm_eps_matrix_community
   title: Biofilm formation builds a matrix-enclosed surface community
   description: Evidence-backed causal sketch linking secretion of extracellular polymeric
     substances to assembly of a surface-attached multicellular biofilm community.
+  scope_status: MECHANISTIC
+  scope_notes: The P. aeruginosa PAO1 WspR example anchors the c-di-GMP-dependent
+    surface-attachment branch. It is not presented as the universal biofilm mechanism
+    or as an example of matrix, quorum-sensing, and dispersal components elsewhere
+    in this broad graph.
   nodes:
   - node_id: biofilm_formation_trait
     label: biofilm formation
@@ -65,6 +75,33 @@ causal_graphs:
     node_type: CHEMICAL
     description: Second messenger that governs the planktonic-to-sessile lifestyle
       switch.
+  - node_id: wspR_diguanylate_cyclase
+    label: WspR diguanylate cyclase
+    node_type: GENE_OR_PROTEIN
+    description: GGDEF-domain enzyme that synthesizes c-di-GMP downstream of the Pseudomonas
+      Wsp surface-sensing system.
+    grounding: InterPro:IPR050469
+    gene_symbols:
+    - wspR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HXT9
+      protein_label: Diguanylate cyclase WspR
+      gene_symbol: wspR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa PAO1
+      entry_status: UNREVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-08-25'
+      entry_version: 152
+      sequence_version: 1
+      role: PAO1 WspR synthesizes the c-di-GMP signal that promotes surface attachment
+        and biofilm-associated behavior.
+      evidence:
+      - reference: DOI:10.1371/journal.ppat.1004480
+        snippet: ethanol did not stimulate surface colonization in the PAO1 ΔwspR
+          mutant
+        notes: The primary PAO1 mutant study directly ties WspR to stimulated surface
+          colonization; UniProtKB Q9HXT9 is the current PAO1 WspR entry.
   - node_id: sessile_state
     label: sessile state
     node_type: STATE
@@ -137,6 +174,15 @@ causal_graphs:
         facilitating the transition from planktonic to sessile state. Broadly accepted
         central regulator.'
     predicate_id: RO:0002213
+  - subject: wspR_diguanylate_cyclase
+    predicate: synthesizes
+    object: c_di_gmp
+    description: WspR uses its GGDEF diguanylate-cyclase activity to produce c-di-GMP.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.0060067
+      snippet: WspR, a diguanylate cyclase from Pseudomonas aeruginosa
+      notes: The primary structural and biochemical study establishes P. aeruginosa
+        WspR as an active diguanylate cyclase controlling biofilm-associated signaling.
   - subject: sessile_state
     predicate: enables
     object: biofilm_formation_process

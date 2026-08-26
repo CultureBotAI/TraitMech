@@ -18,11 +18,19 @@ canonical_examples:
   note: Primary model for bacterial gliding motility and multicellular development.
     Flavobacterium johnsoniae is a secondary model.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC103748/
+- taxon_id: NCBITaxon:246197
+  taxon_label: Myxococcus xanthus DK1622
+  note: Strain-level AglZ gliding exemplar.
+  reference: DOI:10.1016/j.cub.2016.12.035
 causal_graphs:
 - graph_id: gliding_surface_motility
   title: Gliding surface motility mechanism
   description: Evidence-backed causal sketch linking gliding to solid surfaces, cell-envelope
     motors, surface adhesins, and type IX secretion/gliding systems.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: gliding_trait
     label: gliding
@@ -34,14 +42,41 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Surface substrate on which gliding movement occurs.
   - node_id: gliding_motility_machinery
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1D823
+      protein_label: Adventurous-gliding motility protein AglZ
+      gene_symbol: aglZ
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus DK1622
+      entry_status: REVIEWED
+      proteome_id: UP000002402
+      retrieved_on: '2026-08-25'
+      entry_version: 123
+      sequence_version: 1
+      role: AglZ is a DK1622 gliding-motility factor anchoring the adventurous-gliding
+        branch, not all bacterial gliding systems.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2016.12.035
+        snippet: Myxococcus glides without external motility appendages
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: gliding motility machinery
     node_type: GENE_OR_PROTEIN
     description: Molecular machinery that produces surface translocation without flagella.
   - node_id: surface_adhesins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: surface adhesins
     node_type: GENE_OR_PROTEIN
     description: Cell-surface proteins moved or engaged during gliding.
   - node_id: type_ix_secretion_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: type IX secretion system
     node_type: GENE_OR_PROTEIN
     description: Secretion-associated machinery linked to Flavobacterium gliding.

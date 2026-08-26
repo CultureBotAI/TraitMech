@@ -30,6 +30,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking stenohalinity to narrow salinity
     niches, osmotic imbalance during salinity shifts, and constrained salinity-adaptation
     capacity.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: stenohaline_trait
     label: stenohaline
@@ -53,9 +57,12 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Osmotically driven water movement across the cell membrane.
   - node_id: salinity_adaptation_genes
-    label: salinity-adaptation genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: salinity-adaptation protein repertoire
     node_type: GENE_OR_PROTEIN
-    description: Gene repertoires associated with adaptation along salinity gradients.
+    description: Protein repertoires associated with adaptation along salinity gradients.
   - node_id: c_di_amp
     label: cyclic di-AMP
     node_type: CHEMICAL
@@ -63,11 +70,17 @@ causal_graphs:
       in bacteria.
     grounding: CHEBI:71578
   - node_id: k_import_systems
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: K+ import systems
     node_type: GENE_OR_PROTEIN
     description: Potassium uptake transporters (Trk/Ktr/Kup/Kdp-type) mediating salt-in
       osmoadaptation.
   - node_id: opua_importer
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: compatible-solute importer OpuA
     node_type: GENE_OR_PROTEIN
     description: ABC-type transporter importing compatible solutes such as glycine

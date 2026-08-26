@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_optimum_balanced_homeostasis
   title: pH-optimum balanced cytoplasmic homeostasis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking the external pH at which cytoplasmic pH-homeostasis
     machinery operates with minimal load to maximal growth and the pH-optimum phenotype.
   nodes:

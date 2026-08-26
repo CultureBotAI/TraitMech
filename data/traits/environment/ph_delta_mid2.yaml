@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_mid2_broad_breadth
   title: pH-delta-mid2 broad-breadth pH homeostasis
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking broad pH-homeostasis flexibility to a pH growth
     breadth of approximately 3–4 pH units.
   nodes:
@@ -49,6 +53,10 @@ causal_graphs:
   - node_id: respiratory_proton_pumps
     label: proton-pumping respiratory complexes
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Primary respiratory-chain proton pumps that establish the PMF.
   - node_id: pmf_generation
     label: proton motive force generation
@@ -57,6 +65,10 @@ causal_graphs:
   - node_id: f1fo_atpase
     label: F1Fo-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Proton-coupled F1Fo-ATP synthase functioning as a proton pump.
   - node_id: proton_translocation_homeostasis
     label: proton translocation for pH homeostasis

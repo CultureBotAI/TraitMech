@@ -26,6 +26,10 @@ evidence:
 causal_graphs:
 - graph_id: nacl_optimum_low_non_halophile_setpoint
   title: NaCl-optimum-low non-halophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking minimal osmoadaptive load at low ambient NaCl
     to a low NaCl-optimum (≤1% w/v) consistent with non-halophilic or halotolerant
     physiology.
@@ -75,11 +79,19 @@ causal_graphs:
   - node_id: k_uptake_systems
     label: K+ uptake systems (Trk/Ktr/Kup/KimA)
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Potassium uptake transporters whose activity responds to osmotic
       signaling.
   - node_id: opua_opuc_transport
     label: OpuA/OpuC compatible-solute transporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: ABC-type importers of compatible solutes such as glycine betaine.
   edges:
   - subject: low_ambient_nacl

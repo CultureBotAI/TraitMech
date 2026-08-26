@@ -19,6 +19,10 @@ evidence:
     to absent or inducible staphyloxanthin production in a representative bacterium.
 causal_graphs:
 - graph_id: white_pigmented_low_chromophore
+  scope_status: NONMECHANISTIC
+  scope_notes: White pigmentation is a visual color classification produced by several
+    unrelated low-chromophore or regulatory states. The graph is illustrative context,
+    not one universal protein-mediated mechanism.
   title: White pigmentation low-chromophore mechanism
   description: Evidence-backed causal sketch linking white colony pigmentation to
     reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery,
@@ -29,11 +33,20 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1003029
     description: White or nonpigmented microbial colony or cell appearance.
-  - node_id: crtOPQMN_operon
-    label: crtOPQMN operon
+  - node_id: staphyloxanthin_enzyme_module
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This module contains multiple distinct carotenoid-pathway protein
+      families; no single family identifier denotes the full enzyme set.
+    label: CrtOPQMN staphyloxanthin enzyme module
     node_type: GENE_OR_PROTEIN
-    description: S. aureus carotenoid biosynthesis gene cluster for staphyloxanthin
-      production.
+    description: S. aureus carotenoid enzymes for staphyloxanthin production.
+    gene_symbols:
+    - crtO
+    - crtP
+    - crtQ
+    - crtM
+    - crtN
+    operon: crtOPQMN
   - node_id: staphyloxanthin_biosynthesis
     label: staphyloxanthin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -68,20 +81,26 @@ causal_graphs:
     node_type: CHEMICAL
     description: Absent or lowered accumulation of melanin chromophore.
   - node_id: sigB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SigB is a contextual regulatory example and not a universal determinant
+      of the visually classified white phenotype.
     label: SigB (sigma factor B)
     node_type: GENE_OR_PROTEIN
     description: Alternative sigma factor B; positive regulator of staphyloxanthin
       biosynthesis genes.
   - node_id: glmS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: GlmS is a contextual metabolic example and not a universal determinant
+      of the visually classified white phenotype.
     label: GlmS
     node_type: GENE_OR_PROTEIN
     description: Glucosamine-6-phosphate synthase; transcriptional upregulator of
       sigB.
   edges:
-  - subject: crtOPQMN_operon
-    predicate: encodes
+  - subject: staphyloxanthin_enzyme_module
+    predicate: catalyzes
     object: staphyloxanthin_biosynthesis
-    description: The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.
+    description: The CrtOPQMN enzyme module catalyzes staphyloxanthin biosynthesis.
     evidence:
     - reference: DOI:10.1038/s41426-018-0078-1
       snippet: controlled by the crtOPQMN operon

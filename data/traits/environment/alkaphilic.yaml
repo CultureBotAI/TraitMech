@@ -39,6 +39,10 @@ causal_graphs:
   title: Alkaliphilic sodium-cycle pH homeostasis mechanism
   description: Evidence-backed causal sketch linking alkaliphily to high external
     pH, Na+/H+ antiport, and cytoplasmic acidification relative to the medium.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: alkaphilic_trait
     label: alkaphilic
@@ -61,6 +65,9 @@ causal_graphs:
     grounding: CHEBI:15378
     description: Hydrogen ion imported or retained to acidify the cytoplasm.
   - node_id: sodium_proton_antiporter
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Secondary transporter exchanging sodium and protons.
@@ -70,11 +77,17 @@ causal_graphs:
     description: Maintenance of internal pH below highly alkaline external pH.
     grounding: GO:0051453
   - node_id: mrp_antiporter_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Mrp Na+/H+ antiporter complex
     node_type: GENE_OR_PROTEIN
     description: Multisubunit cation/proton antiporter complex with an indispensable
       role in alkaliphile high-pH homeostasis.
   - node_id: atp_synthase_c_subunit_motifs
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ATP synthase c-subunit alkaline-adaptive motifs
     node_type: GENE_OR_PROTEIN
     description: c-subunit motifs that alter rotor shape and promote tight proton

@@ -33,6 +33,10 @@ causal_graphs:
   title: Rod-shape MreB and peptidoglycan mechanism
   description: Evidence-backed causal sketch linking rod shape to MreB-guided peptidoglycan
     synthesis, Rod complex activity, cell-wall elongation, and FtsZ division coupling.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: rod_shaped_trait
     label: rod shaped
@@ -40,10 +44,16 @@ causal_graphs:
     grounding: METPO:1000681
     description: Elongated cylindrical bacterial morphology.
   - node_id: mreB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
   - node_id: rod_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Rod complex
     node_type: GENE_OR_PROTEIN
     description: Cell-wall elongation machinery associated with MreB in rod-shaped
@@ -63,6 +73,9 @@ causal_graphs:
     description: Division-ring protein coordinating septal growth.
     grounding: InterPro:IPR000158
   - node_id: rodA_pbp2_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RodA-PBP2 complex
     node_type: GENE_OR_PROTEIN
     description: Elongation synthase complex (RodA glycosyltransferase + PBP2 transpeptidase)
@@ -82,6 +95,9 @@ causal_graphs:
     description: Transpeptidation crosslinking of peptidoglycan strands during sidewall
       synthesis.
   - node_id: mreC
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-system component that activates PBP2 by promoting

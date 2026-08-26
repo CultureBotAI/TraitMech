@@ -31,6 +31,10 @@ causal_graphs:
   title: Square-shape planar anisotropic envelope growth
   description: DOI-backed graph linking anisotropic planar cell-envelope growth and
     S-layer-constrained right-angle geometry to flat square cells.
+  scope_status: NONMECHANISTIC
+  scope_notes: Square shape is retained as a haloarchaeal morphology classification.
+    The contextual S-layer label spans many subunits and does not justify a token
+    protein example for right-angle geometry.
   nodes:
   - node_id: square_shaped_trait
     label: square shaped
@@ -73,6 +77,9 @@ causal_graphs:
     label: S-layer proteins
     node_type: GENE_OR_PROTEIN
     description: Glycoprotein subunits forming the paracrystalline S-layer lattice.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node denotes taxon-variable S-layer subunits rather than
+      one exact protein family.
   - node_id: cell_shape_size_defect
     label: cell shape and size defect
     node_type: STATE

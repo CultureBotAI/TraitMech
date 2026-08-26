@@ -29,6 +29,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking red microbial pigmentation to
     prodiginine biosynthesis, PigC/RedH condensation, prodigiosin accumulation, and
     visible red color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: red_pigmented_trait
     label: red pigmented
@@ -53,16 +57,26 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Observed red color produced by pigment absorption spectra.
   - node_id: pig_red_gene_cluster
-    label: prodiginine biosynthetic gene cluster (Pig/Red)
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: Pig/Red prodiginine-biosynthesis protein module
     node_type: GENE_OR_PROTEIN
     description: Variable gene cluster (Pig in Serratia, Red in Streptomyces) encoding
       prodiginine biosynthesis.
+    operon: Pig/Red biosynthetic gene cluster
   - node_id: pigC_ligase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PigC ligase
     node_type: GENE_OR_PROTEIN
     description: Key condensing enzyme/ligase encoded by pigC that links MAP and MBC
       to form prodigiosin.
   - node_id: cpxA_cpxR_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CpxA/CpxR two-component system
     node_type: GENE_OR_PROTEIN
     description: Sensor histidine kinase/response regulator system whose activation

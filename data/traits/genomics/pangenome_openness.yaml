@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: pangenome_openness_hgt
   title: Horizontal gene transfer drives open pangenomes
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking HGT and ecological breadth to
     open versus closed pangenome structure.
   nodes:
@@ -48,11 +52,11 @@ causal_graphs:
     description: Strain-variable genes outside the species core.
   - node_id: plasmid
     label: plasmid
-    node_type: GENE_OR_PROTEIN
+    node_type: GENETIC_ELEMENT
     description: Mobile genetic element acting as a vehicle for accessory genes.
   - node_id: prophage
     label: prophage
-    node_type: GENE_OR_PROTEIN
+    node_type: GENETIC_ELEMENT
     description: Integrated bacteriophage genome contributing to gene flux.
   - node_id: gene_gain_loss_dynamics
     label: gene gain and loss dynamics

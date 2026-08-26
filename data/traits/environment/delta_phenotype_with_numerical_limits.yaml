@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: delta_phenotype_breadth_descriptor
   title: Delta phenotype breadth descriptor across environmental axes
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph framing the delta phenotype as a generic derived breadth
     descriptor over any numerical environmental axis, with `is a` edges to the axis-specific
     delta phenotypes for NaCl, pH, and temperature.

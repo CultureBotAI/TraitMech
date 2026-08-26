@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_delta_very_low_stenothermal
   title: Temperature-delta-very-low stenothermal breadth
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking very limited thermal-adaptation flexibility
     to a 1–5 °C temperature growth breadth.
   nodes:
@@ -54,11 +58,19 @@ causal_graphs:
   - node_id: cspa_protein
     label: CspA cold-shock protein
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: RNA chaperone induced upon cold shock that promotes single-stranded
       RNA states.
   - node_id: csda_helicase
     label: CsdA DEAD-box RNA helicase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: DEAD-box RNA helicase that assists ribosomes and RNA remodeling at
       low temperature.
   - node_id: translation_under_cold

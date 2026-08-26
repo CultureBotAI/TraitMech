@@ -31,6 +31,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking spirochete morphology to the
     cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or helical
     cell-body deformation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: spirochete_shaped_trait
     label: spirochete shaped
@@ -60,6 +64,9 @@ causal_graphs:
     description: Distortion and pushing of the spirochete cell body by periplasmic
       flagellar motor action.
   - node_id: flhE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlhE
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Sec-translocated protein preventing ectopic flagellar
@@ -74,6 +81,9 @@ causal_graphs:
     description: Localization of cell-division and elongation complexes required for
       peptidoglycan synthesis.
   - node_id: flgV
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlgV
     node_type: GENE_OR_PROTEIN
     description: Broadly conserved basal-body protein that modulates periplasmic flagellar

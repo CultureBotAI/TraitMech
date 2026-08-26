@@ -35,6 +35,10 @@ causal_graphs:
   title: Ionizing-radiation tolerance via double-strand-break repair
   description: Evidence-backed causal sketch linking gamma-radiation exposure to efficient
     repair of DNA double-strand breaks and Mn-mediated oxidative protection.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: ionizing_tolerant_trait
     label: ionizing radiation tolerant

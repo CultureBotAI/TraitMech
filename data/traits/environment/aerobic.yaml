@@ -36,6 +36,10 @@ causal_graphs:
   title: Aerobic growth oxygen-use mechanism
   description: Evidence-backed causal sketch linking the aerobic trait to oxygen-dependent
     respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: aerobic_trait
     label: aerobic
@@ -58,6 +62,9 @@ causal_graphs:
     description: Functional role played by oxygen in aerobic respiration.
     grounding: METPO:1007504
   - node_id: substrate_dehydrogenases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: substrate dehydrogenases
     node_type: GENE_OR_PROTEIN
     description: Dehydrogenases (e.g. NADH dehydrogenases) that feed electrons into
@@ -68,6 +75,9 @@ causal_graphs:
     description: Membrane quinone pool (ubiquinone/menaquinone) carrying electrons
       in the respiratory chain.
   - node_id: terminal_oxidases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: terminal oxidases
     node_type: GENE_OR_PROTEIN
     description: Respiratory quinol/cytochrome oxidases that reduce O2 to water as
@@ -91,6 +101,9 @@ causal_graphs:
       during aerobic respiration.
     grounding: CHEBI:26523
   - node_id: ros_scavenging_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: ROS-scavenging enzymes
     node_type: GENE_OR_PROTEIN
     description: Superoxide dismutases, catalases and peroxidases that detoxify reactive

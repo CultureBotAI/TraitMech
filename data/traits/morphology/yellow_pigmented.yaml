@@ -28,6 +28,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking yellow microbial pigmentation
     to crt-catalyzed carotenoid biosynthesis, yellow carotenoid accumulation, and
     visible yellow colony color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: yellow_pigmented_trait
     label: yellow pigmented
@@ -35,6 +39,9 @@ causal_graphs:
     grounding: METPO:1003030
     description: Microbial pigmentation appearing yellow.
   - node_id: crt_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
@@ -61,6 +68,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: C20 isoprenoid precursor of carotenoid backbones.
   - node_id: idsa_crte
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: IdsA/CrtE (GGPP synthase)
     node_type: GENE_OR_PROTEIN
     description: Geranylgeranyl diphosphate synthase converting IPP and DMAPP to GGPP.
@@ -70,6 +80,9 @@ causal_graphs:
     description: C40 carotenoid backbone intermediate.
     grounding: CHEBI:15948
   - node_id: crti
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CrtI (phytoene desaturase)
     node_type: GENE_OR_PROTEIN
     description: Phytoene desaturase that produces lycopene in carotenoid biosynthesis.
@@ -79,6 +92,9 @@ causal_graphs:
     description: Pathway steps producing lycopene from phytoene.
     grounding: GO:1901177
   - node_id: crty
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CrtY (lycopene beta-cyclase)
     node_type: GENE_OR_PROTEIN
     description: Lycopene beta-cyclase converting lycopene to beta-carotene.

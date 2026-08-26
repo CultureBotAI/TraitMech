@@ -35,6 +35,10 @@ causal_graphs:
   title: Filament-shape Streptomyces polar growth mechanism
   description: Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy
     polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: filament_shaped_trait
     label: filament shaped
@@ -87,6 +91,9 @@ causal_graphs:
     description: Emergence of new branches via splitting of polarisomes at hyphal
       tips.
   - node_id: cgla
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CglA
     node_type: GENE_OR_PROTEIN
     description: LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to

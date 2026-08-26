@@ -22,6 +22,10 @@ causal_graphs:
   title: Microaerotolerant low-oxygen survival mechanism
   description: Evidence-backed causal sketch linking microaerotolerance to limited
     oxygen exposure and oxidative stress defenses.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: microaerotolerant_trait
     label: microaerotolerant
@@ -38,6 +42,9 @@ causal_graphs:
     grounding: CHEBI:26523
     description: Oxygen-derived oxidants.
   - node_id: oxidative_stress_defense
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: oxidative stress defense enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes such as SOD, catalase, or peroxidase that mitigate ROS.
@@ -65,6 +72,9 @@ causal_graphs:
     description: H2O2, a reactive oxygen species generated during O2 exposure.
     grounding: CHEBI:16240
   - node_id: rubrerythrin_peroxidase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: rubrerythrin/peroxidase
     node_type: GENE_OR_PROTEIN
     description: Rubrerythrin and peroxidase enzymes that reduce H2O2 to water.

@@ -13,12 +13,22 @@ evidence:
 - reference: DOI:10.1089/mdr.2014.0032
   snippet: ovococci that are ellipsoid
   notes: Supports ellipsoidal bacterial morphology as a named ovococcal shape class.
+canonical_examples:
+- taxon_id: NCBITaxon:171101
+  taxon_label: Streptococcus pneumoniae R6
+  note: Strain-level ovococcal model paired to reviewed PBP2b, an essential peripheral
+    peptidoglycan transpeptidase whose depletion alters pneumococcal morphology.
+  reference: DOI:10.1128/JB.00184-13
 causal_graphs:
 - graph_id: ellipsoidal_ovococcal_elongation
   title: Ellipsoidal ovococcal elongation mechanism
   description: Evidence-backed causal sketch linking ellipsoidal morphology to ovococcal
     peripheral peptidoglycan insertion, septal synthesis, PBP2b, and DivIVA-regulated
     elongation.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the pneumococcal septal/peripheral peptidoglycan
+    mechanism. The R6 PBP2b example anchors one protein in the elongasome and is not
+    presented as an accession for the whole protein complex.
   nodes:
   - node_id: ellipsoidal_trait
     label: ellipsoidal
@@ -33,6 +43,25 @@ causal_graphs:
     label: PBP2b
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan synthase implicated in ovococcal elongation.
+    grounding: InterPro:IPR047982
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A3M6
+      protein_label: Penicillin-binding protein 2B
+      gene_symbol: penA
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae R6
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-25'
+      entry_version: 110
+      sequence_version: 1
+      role: R6 PBP2b catalyzes transpeptidation in peripheral peptidoglycan synthesis,
+        contributing to ovococcal elongation and ellipsoidal geometry.
+      evidence:
+      - reference: DOI:10.1128/JB.00184-13
+        snippet: PBP2b is essential for peripheral peptidoglycan synthesis
+        notes: The depletion experiments used R6-derived pneumococcal strains and
+          directly connect PBP2b abundance to cell morphology; UniProt verifies the
+          reviewed R6 entry.
   - node_id: divIVA
     label: DivIVA
     node_type: GENE_OR_PROTEIN
@@ -59,6 +88,9 @@ causal_graphs:
     label: elongasome (PBP2b/RodA)
     node_type: GENE_OR_PROTEIN
     description: Outer peripheral PG synthesis machine including bPBP2b and RodA.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This aggregate denotes the pneumococcal multiprotein elongasome;
+      no single protein-family term represents the complete PBP2b/RodA machinery.
   - node_id: peripheral_pg_synthesis
     label: peripheral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS

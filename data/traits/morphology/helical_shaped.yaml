@@ -28,6 +28,10 @@ causal_graphs:
   title: Helical-shape peptidoglycan relaxation mechanism
   description: Evidence-backed causal sketch linking helical cell shape to H. pylori
     shape proteins, peptidoglycan crosslink relaxation, and curvature plus twist.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: helical_shaped_trait
     label: helical shaped
@@ -35,10 +39,16 @@ causal_graphs:
     grounding: METPO:1000676
     description: Corkscrew-like bacterial morphology with curvature and twist.
   - node_id: csd_shape_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Csd shape proteins
     node_type: GENE_OR_PROTEIN
     description: H. pylori Csd1-Csd3 peptidoglycan endopeptidase homologs.
   - node_id: ccmA
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CcmA
     node_type: GENE_OR_PROTEIN
     description: Bactofilin-like protein implicated in H. pylori helical shape.

@@ -35,6 +35,10 @@ causal_graphs:
   title: Curved-shape scaffolded morphogenesis mechanism
   description: Evidence-backed causal sketch linking curved bacterial morphology to
     scaffold-mediated inner curvature and spatially biased peptidoglycan growth.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: curved_shaped_trait
     label: curved shaped
@@ -42,6 +46,9 @@ causal_graphs:
     grounding: METPO:1000670
     description: Bent or curved bacterial cell-body morphology.
   - node_id: curvature_scaffold
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: curvature scaffold
     node_type: GENE_OR_PROTEIN
     description: Shape-determining scaffold such as crescentin or CrvA that marks
@@ -60,6 +67,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Curving of the bacterial cell body.
   - node_id: mreb_cytoskeletal_guidance
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB cytoskeletal guidance
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein MreB that localizes to curvature regions and directs

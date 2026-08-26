@@ -15,6 +15,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_growth_preference_homeostasis
   title: Environmental pH control of growth preference
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is an upper preference, broad tolerance, or central-range
+    classification spanning multiple unrelated adaptations; contextual protein nodes
+    are retained without assigning a misleading token UniProt example.
   description: Evidence-backed causal sketch linking environmental pH, pH sensing,
     and cytoplasmic pH homeostasis to growth preference phenotypes.
   nodes:
@@ -50,6 +54,10 @@ causal_graphs:
   - node_id: f1f0_atpase
     label: proton-translocating F1F0-ATPase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: F-type ATP synthase/ATPase that translocates protons across the membrane,
       contributing to pH homeostasis.
   - node_id: amino_acid_decarboxylase_systems
@@ -67,15 +75,24 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Sodium/proton antiporter activity (e.g. Mrp system) coupling Na+
       efflux to H+ import.
-  - node_id: proton_consuming_reaction_genes
-    label: proton-consuming reaction genes
+  - node_id: proton_consuming_enzyme_modules
+    label: proton-consuming enzyme modules
     node_type: GENE_OR_PROTEIN
-    description: Gene families for proton-consuming reactions (decarboxylases, deaminases).
-  - node_id: na_h_antiporter_genes
-    label: Na+/H+ antiporter genes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
+    description: Decarboxylase and deaminase protein families carrying out proton-consuming
+      reactions.
+  - node_id: na_h_antiporter_proteins
+    label: Na+/H+ antiporter proteins
     node_type: GENE_OR_PROTEIN
-    description: Na+/H+ antiporter gene families (e.g. Mrp/Mnh/Nha) associated with
-      pH preference.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
+    description: Na+/H+ antiporter protein families (e.g. Mrp/Mnh/Nha) associated
+      with pH preference.
   edges:
   - subject: environmental_ph
     predicate: regulates
@@ -174,21 +191,21 @@ causal_graphs:
       notes: Na+/H+ antiporters (notably the multicomponent Mrp system) are the major
         mechanism for alkaliphile pH homeostasis.
     predicate_id: RO:0002326
-  - subject: proton_consuming_reaction_genes
+  - subject: proton_consuming_enzyme_modules
     predicate: associated with
     object: acidic_external_ph
-    description: Genes for proton-consuming reactions (decarboxylases/deaminases)
+    description: Enzymes for proton-consuming reactions (decarboxylases/deaminases)
       are consistently associated with lower pH preference.
     evidence:
     - reference: DOI:10.1126/sciadv.adf8998
       notes: proton-consuming reactions (decarboxylases, deaminases) consistently
         associated with pH preference across environments.
     predicate_id: biolink:associated_with
-  - subject: na_h_antiporter_genes
+  - subject: na_h_antiporter_proteins
     predicate: associated with
     object: alkaline_external_ph
-    description: Na+/H+ antiporter genes (PhaGF/MnhG/MrpF/YufB) are associated with
-      higher pH preference.
+    description: Na+/H+ antiporter proteins (PhaGF/MnhG/MrpF/YufB) are associated
+      with higher pH preference.
     evidence:
     - reference: DOI:10.1126/sciadv.adf8998
       notes: Na+/H+ antiporters PhaGF, MnhG, MrpF, YufB associated with higher pH

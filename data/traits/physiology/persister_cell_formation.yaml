@@ -24,11 +24,21 @@ canonical_examples:
   note: Paradigm for antibiotic-tolerant persister-cell formation (dormant subpopulation;
     hipA/toxin-antitoxin studies).
   reference: PMID:6348026
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level model in which the hipA7 allele increases persister frequency;
+    paired to the reviewed HipA protein entry.
+  reference: DOI:10.1128/jb.155.2.768-775.1983
 causal_graphs:
 - graph_id: persister_dormancy_tolerance
   title: Persister dormancy and antibiotic tolerance
   description: Evidence-backed causal sketch linking dormancy to stochastic persister
     formation and transient antibiotic tolerance.
+  scope_status: MECHANISTIC
+  scope_notes: The HipA branch is an E. coli K-12 example, not a universal persister
+    mechanism. The original high-persistence result is hipA7-allele-specific, and
+    later growth-arrest evidence uses HipA overexpression; neither establishes that
+    wild-type HipA is required for persistence in every organism or condition.
   nodes:
   - node_id: persister_trait
     label: persister cell formation
@@ -40,6 +50,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0022611
     description: Reversible quiescence underlying persistence.
+  - node_id: hipa_toxin
+    label: HipA toxin and high-persistence HipA variants
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR052028
+    description: HipA serine/threonine kinase toxin; specific variants or elevated
+      activity can arrest growth and increase antibiotic persistence in E. coli.
+    protein_examples:
+    - uniprot_id: UniProtKB:P23874
+      protein_label: Serine/threonine-protein kinase toxin HipA
+      gene_symbol: hipA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 176
+      sequence_version: 2
+      role: Reviewed K-12 HipA sequence instance underlying the experimentally studied
+        hipA7 variant and HipA-overexpression systems; the accession itself denotes
+        the wild-type protein, not the hipA7 allele.
+      evidence:
+      - reference: DOI:10.1128/jb.155.2.768-775.1983
+        snippet: hipA, a newly recognized gene of Escherichia coli K-12 that affects
+          frequency of persistence
+        notes: The primary K-12 study isolates the high-persistence hipA7 allele;
+          UniProtKB P23874 is the reviewed HipA entry for the same taxon, but does
+          not encode the allele distinction.
   - node_id: antibiotic_tolerance
     label: antibiotic tolerance
     node_type: BIOLOGICAL_PROCESS
@@ -81,6 +117,23 @@ causal_graphs:
       starvation.
     grounding: METPO:1007500
   edges:
+  - subject: hipa_toxin
+    predicate: promotes
+    object: dormancy_process
+    description: High-persistence HipA variants and experimentally elevated HipA kinase
+      activity promote growth arrest in the E. coli K-12 persister branch.
+    evidence:
+    - reference: DOI:10.1128/jb.01237-06
+      snippet: Kinase activity of overexpressed HipA is required for growth arrest
+        and multidrug tolerance
+      notes: This experiment supports a causal HipA-to-growth-arrest link under overexpression;
+        it does not establish a universal wild-type requirement.
+    - reference: DOI:10.1128/jb.155.2.768-775.1983
+      snippet: hipA, a newly recognized gene of Escherichia coli K-12 that affects
+        frequency of persistence
+      notes: The original K-12 evidence is specifically for the high-persistence hipA7
+        allele and limits this edge to that strain-specific branch.
+    predicate_id: RO:0002213
   - subject: dormancy_process
     predicate: confers
     object: persister_trait
@@ -153,6 +206,13 @@ causal_graphs:
       notes: Persisters generated PMF via oxidative phosphorylation; ETC components
         maintain PMF underlying tolerance.
 curation_history:
+- timestamp: '2026-08-24T14:00:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed E. coli K-12 canonical example, exact HipA family grounding,
+    reviewed HipA protein example, and an allele/overexpression-qualified growth-arrest
+    edge with complete evidence; documented the non-universal scope.
+  llm_assisted: true
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH

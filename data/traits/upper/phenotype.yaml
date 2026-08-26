@@ -21,6 +21,9 @@ causal_graphs:
   title: Phenotype quality and child-trait context
   description: DOI-backed upper-ontology context graph linking phenotype to its quality
     parent and to non-environmental, non-genomic TraitMech child groupings.
+  scope_status: NONMECHANISTIC
+  scope_notes: Phenotype is an upper classification spanning many unrelated mechanisms;
+    assigning one token protein would be misleading.
   nodes:
   - node_id: phenotype_trait
     label: phenotype

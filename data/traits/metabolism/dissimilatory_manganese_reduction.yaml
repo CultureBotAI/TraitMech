@@ -25,12 +25,21 @@ canonical_examples:
   taxon_label: Shewanella oneidensis
   note: Model dissimilatory metal reducer (strain MR-1 = Manganese Reducer 1); respires
     Mn(IV)/Fe(III) via extracellular electron transfer.
-  reference: PMID:12368813
+  reference: DOI:10.1038/nbt749
+- taxon_id: NCBITaxon:211586
+  taxon_label: Shewanella oneidensis MR-1
+  note: Strain-level metal reducer paired to the MtrC surface decaheme cytochrome
+    example supporting efficient Mn(IV) reduction.
+  reference: DOI:10.1073/pnas.0604517103
 causal_graphs:
 - graph_id: dmr_mn_oxide_respiration
   title: Dissimilatory manganese reduction respires Mn(IV) to Mn(II)
   description: Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron
     acceptor to soluble Mn(II) and anaerobic respiration.
+  scope_status: MECHANISTIC
+  scope_notes: The MtrC protein example and protein-to-Mn(IV) edge are specific to
+    the extracellular metal-reduction route characterized in S. oneidensis MR-1; they
+    are not asserted as universal across manganese reducers.
   nodes:
   - node_id: dmr_trait
     label: dissimilatory manganese reduction
@@ -63,6 +72,33 @@ causal_graphs:
     label: anaerobic methane oxidation
     node_type: BIOLOGICAL_PROCESS
     description: Anaerobic oxidation of methane (AOM) coupled to metal-oxide reduction.
+  - node_id: mtrc
+    label: MtrC-family surface decaheme c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    description: Cell-surface decaheme cytochrome supporting extracellular reduction
+      of manganese oxide in Shewanella.
+    grounding: InterPro:IPR020014
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis MR-1
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: MtrC cell-surface component implicated in efficient Mn(IV) reduction;
+        this accession is not presented as the complete MtrCAB conduit.
+      evidence:
+      - reference: DOI:10.1073/pnas.0604517103
+        snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated
+          in efficient reduction of Fe(III) and Mn(IV) by MR-1.
+        notes: The primary S. oneidensis MR-1 study supports the MtrC role in metal
+          reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference
+          proteome UP000008186 and verifies the strain taxon.
   edges:
   - subject: mn_iv_oxide
     predicate: oxidized to
@@ -116,6 +152,18 @@ causal_graphs:
     - reference: DOI:10.5194/egusphere-2024-1829
       notes: 'Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important
         biogeochemical process with MnO2-coupled AOM reactions.'
+  - subject: mtrc
+    predicate: enables reduction of
+    object: mn_iv_oxide
+    description: Cell-surface MtrC supports efficient extracellular reduction of Mn(IV)
+      acceptors in S. oneidensis MR-1.
+    evidence:
+    - reference: DOI:10.1073/pnas.0604517103
+      snippet: The decaheme c-type cytochrome MtrC (SO1778) had been implicated in
+        efficient reduction of Fe(III) and Mn(IV) by MR-1.
+      notes: This primary-source edge is restricted to the S. oneidensis MR-1 route;
+        methane-coupled and other manganese-reduction mechanisms may use different
+        proteins.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -166,4 +214,12 @@ curation_history:
     donor/acceptor role that PR 300 collapsed onto enables (issue 303); the organism-subject
     problem that forced that collapse does not arise here because these predicates
     take a causal-node domain rather than METPO:2000001's microbe domain (issue 301).
+  llm_assisted: true
+- timestamp: '2026-08-24T08:05:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed S. oneidensis MR-1 MtrC example, an InterPro family
+    grounding, an explicitly strain-scoped MtrC-to-Mn(IV) edge, and mechanistic scope
+    notes. The unreviewed accession is retained only as an exact component from reference
+    proteome UP000008186.
   llm_assisted: true

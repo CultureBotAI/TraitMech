@@ -32,6 +32,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: gi_hgt_accessory_function
   title: Genomic islands acquired by HGT carry accessory functions
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking horizontal gene transfer to acquisition
     of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis,
     metabolism).
@@ -54,6 +58,10 @@ causal_graphs:
   - node_id: mobility_module
     label: integrase/recombinase/transposase mobility module
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
     description: DDE transposases or tyrosine/serine recombinases that mediate island
       integration and mobility.
   - node_id: integrative_conjugative_element

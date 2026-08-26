@@ -30,11 +30,21 @@ canonical_examples:
   taxon_label: Paracoccus denitrificans
   note: respiratory model
   reference: PMID:41591903
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level respiratory model paired to the reviewed AtpD beta component
+    of its F-type ATP synthase.
+  reference: DOI:10.7554/eLife.21598
 causal_graphs:
 - graph_id: respiration_electron_acceptor_energy_conservation
   title: Respiration electron acceptor energy conservation
   description: DOI-backed graph linking electron donors, terminal electron acceptors,
     membrane electron transport, proton motive force, and ATP synthesis.
+  scope_status: MECHANISTIC
+  scope_notes: This graph combines aerobic and anaerobic respiratory branches. The
+    E. coli K-12 AtpD example supports the shared F-type ATP-synthase energy-conservation
+    module; one beta-subunit accession does not denote the complete complex or every
+    respiratory terminal reductase.
   nodes:
   - node_id: respiration_trait
     label: respiration
@@ -78,6 +88,27 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex using proton motive force for ATP synthesis.
+    grounding: GO:0045259
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 155
+      sequence_version: 2
+      role: Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase;
+        this accession is not presented as the complete rotary complex.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: the potential energy of the proton motive force into rotation of
+          the central stalk that drives conformational changes in the F1 catalytic
+          sites
+        notes: The primary cryo-EM study resolves the E. coli F1Fo complex and its
+          beta-containing catalytic head. UniProtKB P0ABB4 verifies the reviewed AtpD
+          beta component and K-12 taxon.
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -88,6 +119,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: NADH dehydrogenase that oxidizes NADH, reduces quinone, and pumps
       protons (~4 H+/2e-).
+    grounding: GO:0030964
   - node_id: anoxic_microsites
     label: anoxic microsites
     node_type: ENVIRONMENTAL_FACTOR
@@ -327,4 +359,11 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-24T08:40:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added a DOI-backed E. coli K-12 AtpD beta-subunit example, grounded the
+    ATP synthase and Complex I nodes to current GO complex terms, and documented the
+    graph's mixed aerobic/anaerobic scope and component-level interpretation.
   llm_assisted: true

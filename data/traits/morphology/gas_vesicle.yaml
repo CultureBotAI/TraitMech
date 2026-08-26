@@ -24,11 +24,19 @@ canonical_examples:
   note: Gas-vacuolate bloom-forming cyanobacterium; Anabaena/Dolichospermum flos-aquae
     is the classic Walsby gas-vesicle research model.
   reference: PMID:15060038
+- taxon_id: NCBITaxon:449447
+  taxon_label: Microcystis aeruginosa NIES-843
+  note: Strain-level GvpA exemplar.
+  reference: PMID:15060038
 causal_graphs:
 - graph_id: gas_vesicle_buoyancy
   title: Gas vesicles provide buoyancy and water-column positioning
   description: Evidence-backed causal sketch linking proteinaceous gas-filled intracellular
     vesicles to buoyancy and vertical positioning in the water column.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: gas_vesicle_trait
     label: gas vesicle
@@ -44,6 +52,27 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Vertical migration of planktonic microbes within the water column.
   - node_id: gvpa_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:B0JPK6
+      protein_label: Gas vesicle protein A
+      gene_symbol: gvpA1
+      taxon_id: NCBITaxon:449447
+      taxon_label: Microcystis aeruginosa NIES-843
+      entry_status: REVIEWED
+      proteome_id: UP000001510
+      retrieved_on: '2026-08-25'
+      entry_version: 76
+      sequence_version: 1
+      role: GvpA is the major structural protein forming the gas-vesicle shell in
+        the matched Microcystis strain.
+      evidence:
+      - reference: PMID:15060038
+        snippet: gas vesicles provide buoyancy to Microcystis
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: GvpA
     node_type: GENE_OR_PROTEIN
     description: Small hydrophobic primary structural protein forming the gas vesicle
@@ -54,6 +83,9 @@ causal_graphs:
     description: Hollow proteinaceous wall enclosing the gas-filled lumen.
     grounding: GO:0033172
   - node_id: gvpc_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: GvpC
     node_type: GENE_OR_PROTEIN
     description: Accessory coat protein that reinforces the gas vesicle shell.
@@ -77,6 +109,9 @@ causal_graphs:
     description: Irreversible structural collapse of the gas vesicle above a critical
       pressure.
   - node_id: gvpd_protein
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: GvpD
     node_type: GENE_OR_PROTEIN
     description: Regulatory protein with an inhibitory effect on gas vesicle formation.

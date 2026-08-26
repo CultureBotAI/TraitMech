@@ -34,6 +34,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_optimum_high_alkaliphile_setpoint
   title: pH-optimum-high alkaliphile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis via
     Na+/H+ antiporters to a pH-optimum above 8 (alkaliphile / extreme alkaliphile).
   nodes:
@@ -55,6 +59,10 @@ causal_graphs:
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Membrane antiporters importing H+ in exchange for Na+ to acidify
       the cytoplasm at high external pH.
   - node_id: alkaliphile_homeostasis
@@ -65,6 +73,10 @@ causal_graphs:
   - node_id: cpa_nha_antiporters
     label: CPA/Nha family Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Monovalent cation/proton antiporter family exporting Na+ and importing
       H+.
   - node_id: intracellular_na
@@ -74,11 +86,19 @@ causal_graphs:
   - node_id: trkah_k_uptake
     label: TrkAH K+ uptake system
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Potassium uptake transport system aiding membrane potential and pH
       homeostasis.
   - node_id: rnf_complex
     label: Rnf complex
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Ferredoxin:NAD oxidoreductase that pumps Na+ to build a transmembrane
       Na+ gradient.
   - node_id: transmembrane_na_gradient
@@ -88,6 +108,10 @@ causal_graphs:
   - node_id: terminal_oxidases
     label: branched respiratory chain terminal oxidases
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Terminal oxidases (aa3/ba3/bb3) that pump protons with differing
       efficiencies.
   - node_id: proton_motive_force

@@ -276,7 +276,7 @@ def test_the_footer_count_equals_the_rows_actually_printed():
 def test_action_filter_narrows_both_rows_and_the_stated_count():
     out = _run(["--action", "ALREADY_DEEP", "--top", "0"])
     printed = _row_count(out)
-    assert printed == 9, printed
+    assert printed == 15, printed
     assert f"{printed} row(s) shown of {printed} matching" in out
 
 

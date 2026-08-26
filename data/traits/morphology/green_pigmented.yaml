@@ -32,6 +32,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking green or blue-green microbial
     pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and visible
     green culture color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: green_pigmented_trait
     label: green pigmented
@@ -39,9 +43,21 @@ causal_graphs:
     grounding: METPO:1003025
     description: Microbial pigmentation appearing green or blue-green.
   - node_id: phz_operons
-    label: phz operons
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: PhzA-G phenazine-biosynthesis enzyme modules
     node_type: GENE_OR_PROTEIN
-    description: Phenazine biosynthesis gene clusters in representative bacteria.
+    description: Phenazine-biosynthesis protein modules in representative bacteria.
+    gene_symbols:
+    - phzA
+    - phzB
+    - phzC
+    - phzD
+    - phzE
+    - phzF
+    - phzG
+    operon: phzA-G
   - node_id: phenazine_biosynthesis
     label: phenazine biosynthesis
     node_type: PATHWAY
@@ -79,6 +95,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: NRPS-driven biosynthesis of the fluorescent siderophore pyoverdine.
   - node_id: pvd_nrps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD)
     node_type: GENE_OR_PROTEIN
     description: Nonribosomal peptide synthetases assembling the pyoverdine peptide

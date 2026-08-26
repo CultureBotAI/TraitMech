@@ -25,12 +25,21 @@ canonical_examples:
   taxon_label: Escherichia coli
   note: Paradigm of bacterial chemotaxis (flagellar run-and-tumble; Che two-component
     signalling).
-  reference: PMID:15573139
+  reference: DOI:10.1038/nrm1524
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Reference strain for the canonical Che phosphorelay; CheY binding to the flagellar
+    switch controls rotational direction.
+  reference: DOI:10.1073/pnas.1000935107
 causal_graphs:
 - graph_id: chemotaxis_gradient_response
   title: Gradient-guided chemotactic movement
   description: Evidence-backed causal sketch linking chemical gradients to biased
     motility via flagellar motor control.
+  scope_status: MECHANISTIC
+  scope_notes: This graph represents the enterobacterial CheA-CheY pathway exemplified
+    by E. coli K-12. Chemotaxis systems in other taxa can omit CheZ, use alternative
+    adaptation proteins, or contain multiple paralogous receptor arrays.
   nodes:
   - node_id: chemotaxis_trait
     label: chemotaxis
@@ -51,10 +60,12 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Methyl-accepting chemotaxis protein that binds attractant/repellent
       ligands.
+    grounding: InterPro:IPR004090
   - node_id: chea_kinase
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Histidine autokinase whose activity is modulated by chemoreceptors.
+    grounding: InterPro:IPR051315
   - node_id: chea_autophosphorylation
     label: CheA autophosphorylation
     node_type: MOLECULAR_FUNCTION
@@ -64,24 +75,49 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Response regulator that, when phosphorylated, controls flagellar
       motor switching.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available receiver-domain terms also cover many non-CheY response
+      regulators; no exact taxon-agnostic CheY family term was verified for this node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AE67
+      protein_label: Chemotaxis protein CheY
+      gene_symbol: cheY
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-08-24'
+      entry_version: 160
+      sequence_version: 2
+      role: Phosphorylated CheY binds the E. coli flagellar switch and raises the
+        probability of clockwise motor rotation.
+      evidence:
+      - reference: DOI:10.1073/pnas.1000935107
+        snippet: Chemotaxis signaling protein CheY binds to the rotor protein FliN
+        notes: The primary E. coli motor study directly links CheY to control of flagellar
+          rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.
   - node_id: cheb
     label: CheB methylesterase
     node_type: GENE_OR_PROTEIN
     description: Phospho-regulated methylesterase that demethylates chemoreceptors
       during adaptation.
+    grounding: InterPro:IPR000673
   - node_id: cher
     label: CheR methyltransferase
     node_type: GENE_OR_PROTEIN
     description: Methyltransferase that methylates chemoreceptors during adaptation.
+    grounding: InterPro:IPR000780
   - node_id: chez
     label: CheZ phosphatase
     node_type: GENE_OR_PROTEIN
     description: Phosphatase that dephosphorylates CheY-P to reset signaling.
+    grounding: InterPro:IPR007439
   - node_id: chew
     label: CheW coupling protein
     node_type: GENE_OR_PROTEIN
     description: Adaptor/scaffold coupling CheA to chemoreceptors in the core signaling
       unit.
+    grounding: InterPro:IPR039315
   - node_id: cw_flagellar_rotation
     label: clockwise flagellar rotation
     node_type: BIOLOGICAL_PROCESS
@@ -220,4 +256,11 @@ curation_history:
     which a trait (a disposition) cannot satisfy, so the previous form entailed trait
     is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:10:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the graph to the enterobacterial Che pathway, added cited E. coli
+    K-12 and reviewed CheY as a taxon-paired example, and reviewed all seven protein
+    nodes against current InterPro families.
   llm_assisted: true

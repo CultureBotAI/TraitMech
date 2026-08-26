@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: rhizosphere_root_exudate
   title: Root exudates structure the rhizosphere microbial habitat
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking root exudates to the high-activity
     rhizosphere community.
   nodes:
@@ -55,6 +59,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Flagella-driven swimming motility that propels cells toward roots.
   - node_id: mcp_chemoreceptor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: methyl-accepting chemotaxis protein (MCP)
     node_type: GENE_OR_PROTEIN
     description: Transmembrane chemoreceptor that senses root exudate compounds and

@@ -23,12 +23,24 @@ evidence:
   snippet: oxidize sulfur to fuel the uptake of organic compounds
   notes: Study supports sulfur oxidation coupled to organic compound uptake in a chemolithoheterotrophic
     symbiont context.
+canonical_examples:
+- taxon_id: NCBITaxon:317655
+  taxon_label: Sphingopyxis alaskensis RB2256
+  note: Strain-level facultative chemolithoheterotrophic example that oxidizes H2
+    during aerobic growth on organic carbon, paired to its group 2a hydrogenase large
+    subunit.
+  reference: DOI:10.1038/s41564-023-01322-0
 causal_graphs:
 - graph_id: chemolithoheterotrophic_inorganic_energy_organic_carbon
   title: Chemolithoheterotrophic inorganic chemical energy and organic carbon use
   description: DOI-backed graph linking inorganic chemical electron donors, Fe(II)
     and reduced sulfur examples, respiratory energy conservation, organic carbon uptake,
     and biomass.
+  scope_status: MECHANISTIC
+  scope_notes: This modular graph covers Fe(II), reduced-sulfur, and H2 donor branches
+    coupled to organic-carbon assimilation. The S. alaskensis example anchors only
+    the H2 branch; Q1J422 is the catalytic large-subunit component of its group 2a
+    hydrogenase, not the complete multisubunit enzyme or the sulfur/iron branches.
   nodes:
   - node_id: chemolithoheterotrophic_trait
     label: chemolithoheterotrophic
@@ -49,6 +61,12 @@ causal_graphs:
     label: reduced sulfur compound
     node_type: CHEMICAL
     description: Inorganic sulfur electron donor such as sulfide or thiosulfate.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Reduced inorganic gas oxidized as a supplementary energy source during
+      lithoheterotrophic growth.
   - node_id: organic_compound
     label: organic compound
     node_type: CHEMICAL
@@ -108,6 +126,38 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Amino acid and carboxylic acid import systems mediating organic carbon
       uptake.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This aggregate node spans unrelated amino-acid, carboxylate,
+      TRAP, ABC, and other uptake systems; the cited comparative study does not identify
+      one transporter family that represents the whole label.
+  - node_id: group_2a_nife_hydrogenase
+    label: group 2a [NiFe]-hydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Plasmid-borne multisubunit uptake hydrogenase used for aerobic H2
+      oxidation by S. alaskensis RB2256.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available InterPro terms cover broad NiFe hydrogenase large-subunit
+      families rather than this complete group 2a multisubunit enzyme; the exact catalytic
+      component is retained as the taxon-paired protein example.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1J422
+      protein_label: Group 2a [NiFe]-hydrogenase large subunit HucL
+      gene_symbol: Sala_3198
+      taxon_id: NCBITaxon:317655
+      taxon_label: Sphingopyxis alaskensis RB2256
+      entry_status: UNREVIEWED
+      proteome_id: UP000006578
+      retrieved_on: '2026-08-24'
+      entry_version: 98
+      sequence_version: 1
+      role: Catalytic large-subunit component of the plasmid-borne group 2a [NiFe]-hydrogenase;
+        this accession is not presented as the complete hydrogenase complex.
+      evidence:
+      - reference: DOI:10.1038/s41564-023-01322-0
+        snippet: group 2a [NiFe]-hydrogenase large subunit gene (hucL; locus Sala_3198)
+        notes: The primary study measured Sala_3198 expression during aerobic growth
+          and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis
+          RB2256 reference proteome.
   edges:
   - subject: chemolithoheterotrophic_trait
     predicate: has electron donor
@@ -137,6 +187,29 @@ causal_graphs:
       notes: Supports sulfur oxidation as an energy source coupled to organic compound
         uptake.
     predicate_id: rdfs:subClassOf
+  - subject: molecular_hydrogen
+    predicate: example of
+    object: inorganic_chemical_donor
+    description: H2 is a reduced inorganic donor that can supplement energy during
+      organic-carbon-supported growth.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01322-0
+      snippet: uses an abundant reduced gas as an energy source
+      notes: The culture study shows that S. alaskensis consumes H2 while growing
+        on organic carbon, supporting H2 as the inorganic energy donor in this branch.
+    predicate_id: rdfs:subClassOf
+  - subject: molecular_hydrogen
+    predicate: oxidized by
+    object: group_2a_nife_hydrogenase
+    description: The group 2a uptake hydrogenase mediates aerobic H2 oxidation in
+      S. alaskensis.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01322-0
+      snippet: encodes a plasmid-borne group 2a [NiFe]-hydrogenase, aerobically consumed
+        H2
+      notes: The primary growth, gas-consumption, and hucL-expression experiments
+        pair the enzyme class with H2 oxidation in strain RB2256; Q1J422 is only its
+        large-subunit component.
   - subject: inorganic_chemical_donor
     predicate: feeds electrons into
     object: respiratory_chain
@@ -360,4 +433,12 @@ curation_history:
     is the documented dividing line: activity subjects take RO:0002234, whose domain
     ''biological process or activity'' they satisfy, rather than the METPO term minted
     for the subjects RO cannot cover.'
+  llm_assisted: true
+- timestamp: '2026-08-24T12:50:00-07:00'
+  curator: codex
+  action: REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON
+  changes: Marked the graph mechanistic, reviewed the broad importer as label-only,
+    added DOI-cited S. alaskensis RB2256 and its H2 branch, and paired the group 2a
+    hydrogenase node with reference-proteome component Q1J422 without treating one
+    large subunit as the complete complex.
   llm_assisted: true

@@ -29,6 +29,10 @@ causal_graphs:
   title: Streptococcus arrangement via parallel division and incomplete separation
   description: Evidence-backed causal sketch linking parallel division planes and
     incomplete daughter-cell separation to coccal chains.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: streptococcus_trait
     label: streptococcus arrangement
@@ -55,15 +59,24 @@ causal_graphs:
     description: Remodeling and cleavage of septal/peripheral peptidoglycan during
       elongation and division.
   - node_id: pg_hydrolases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: peptidoglycan hydrolases
     node_type: GENE_OR_PROTEIN
     description: Septal and peripheral PG hydrolases (e.g. FtsEX-PcsB, CbpD) that
       cleave muropeptides enabling splitting.
   - node_id: pcsb_autolysin
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PcsB autolysin
     node_type: GENE_OR_PROTEIN
     description: Essential PG autolysin coordinating PG remodeling with cell division.
   - node_id: ftsex_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsEX complex
     node_type: GENE_OR_PROTEIN
     description: Membrane complex required for PcsB autolysin function.

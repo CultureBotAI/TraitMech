@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: gc_skew_replication_strand_asymmetry
   title: GC skew arises from replication-strand mutational asymmetry
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking DNA replication to leading-versus-lagging
     strand compositional asymmetry that marks the replication origin and terminus.
   nodes:

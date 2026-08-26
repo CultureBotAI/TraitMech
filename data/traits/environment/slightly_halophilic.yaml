@@ -18,6 +18,10 @@ causal_graphs:
   title: Slight halophile low-salt osmoadaptation mechanism
   description: Evidence-backed causal sketch linking slight halophily to low or moderate
     NaCl and compatible-solute osmoprotection.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: slightly_halophilic_trait
     label: slightly halophilic
@@ -50,9 +54,18 @@ causal_graphs:
       pathway.
     grounding: GO:0019491
   - node_id: ect_gene_cluster
-    label: ectABC/ectBACD gene cluster
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    label: EctABC(D) ectoine-biosynthesis enzyme module
     node_type: GENE_OR_PROTEIN
-    description: Ectoine biosynthesis operon encoding the ectoine pathway enzymes.
+    description: Protein module catalyzing the ectoine biosynthesis pathway.
+    gene_symbols:
+    - ectA
+    - ectB
+    - ectC
+    - ectD
+    operon: ectABC/ectBACD
   - node_id: ectoine
     label: ectoine
     node_type: CHEMICAL

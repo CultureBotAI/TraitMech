@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: host_associated_microbiome
   title: Host association establishes persistent host microbiome membership
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking host habitat to persistent membership
     in a host-associated microbial community.
   nodes:
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Host mucus glycans degradable as a microbial nutrient source.
   - node_id: host_surface_adhesins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: cell appendages and adhesins
     node_type: GENE_OR_PROTEIN
     description: Flagella, pili, fimbriae, and adhesins including mucus-binding proteins.

@@ -35,6 +35,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: pathogenic_to_host_virulence_factor_program
   title: Pathogenic-to-host virulence-factor program
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking encoded virulence factors, secretion-based
     effector delivery, host colonization, and host damage to the pathogenic-to-host
     phenotype.
@@ -45,11 +49,17 @@ causal_graphs:
     grounding: METPO:1004000
     description: Ability to cause disease in a host organism.
   - node_id: virulence_factors
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: virulence factors
     node_type: GENE_OR_PROTEIN
     description: Encoded toxins, adhesins, and effector proteins enabling host colonization
       and damage.
   - node_id: secretion_systems
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Contextual protein family or multiprotein aggregate reviewed
+      for this nonmechanistic classification; no single semantic family captures it.
     label: protein secretion systems
     node_type: GENE_OR_PROTEIN
     description: Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS) delivering

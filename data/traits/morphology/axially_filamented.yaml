@@ -29,6 +29,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking axial filament motility to periplasmic
     flagella, basal motors, cell-envelope localization, torque, and corkscrew-like
     cell movement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: axially_filamented_trait
     label: axially filamented
@@ -40,6 +44,9 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Flagella located between the cell wall and outer membrane.
   - node_id: flagellar_basal_motor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: flagellar basal motor
     node_type: GENE_OR_PROTEIN
     description: Motor embedded in the cytoplasmic membrane and peptidoglycan layer.
@@ -57,16 +64,25 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Helical or undulating movement produced by periplasmic flagella.
   - node_id: flbb_ring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlbB periplasmic ring
     node_type: GENE_OR_PROTEIN
     description: Spirochete-specific FlbB protein ring that forms around the flagellar
       rotor and scaffolds the collar.
   - node_id: flagellar_rotor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: flagellar rotor
     node_type: GENE_OR_PROTEIN
     description: Rotating core of the flagellar motor (MS/C ring) around which the
       FlbB ring forms.
   - node_id: stator_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: stator complex
     node_type: GENE_OR_PROTEIN
     description: Ion-powered torque-generating stator units recruited around the rotor

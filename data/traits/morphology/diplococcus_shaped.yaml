@@ -29,6 +29,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking diplococcus morphology to septal
     peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell separation, and
     retention of daughter-cell pairs.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: diplococcus_shaped_trait
     label: diplococcus shaped
@@ -44,6 +48,9 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Peptidoglycan wall separating daughter cells.
   - node_id: pcsB_hydrolase_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PcsB hydrolase system
     node_type: GENE_OR_PROTEIN
     description: Pneumococcal cell-separation factor involved in cross-wall splitting.
@@ -52,6 +59,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Two cells remaining attached after division.
   - node_id: separation_pg_hydrolase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: septal peptidoglycan hydrolase
     node_type: GENE_OR_PROTEIN
     description: Cell-separation peptidoglycan hydrolase/autolysin dedicated to cleaving
@@ -72,6 +82,9 @@ causal_graphs:
     description: Cell-wall teichoic acid polymer anchored to peptidoglycan; serves
       as recognition determinant for separation hydrolases.
   - node_id: lytr_lcp_enzyme
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: LytR/LCP teichoic acid ligase
     node_type: GENE_OR_PROTEIN
     description: LCP-family enzyme that anchors wall teichoic acid precursor to peptidoglycan.

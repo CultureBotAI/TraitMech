@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_optimum_mid1_lower_mesophile
   title: Temperature-optimum-mid1 lower-mesophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking modest membrane and enzyme adaptation at moderate
     ambient temperature to a temperature optimum between 22 and 27 °C.
   nodes:

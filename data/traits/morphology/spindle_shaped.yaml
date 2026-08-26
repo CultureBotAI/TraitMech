@@ -28,6 +28,9 @@ causal_graphs:
   title: Spindle-shape symmetric polar taper
   description: DOI-backed graph linking symmetric tapered polar wall growth and reduced
     end-cap radius to spindle morphology.
+  scope_status: NONMECHANISTIC
+  scope_notes: This is a geometric shape classification; the cited evidence does not
+    establish a taxon-matched protein determinant for symmetric tapering.
   nodes:
   - node_id: spindle_shaped_trait
     label: spindle shaped

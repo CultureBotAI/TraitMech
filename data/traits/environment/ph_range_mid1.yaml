@@ -29,6 +29,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_range_mid1_neutrophile_range
   title: pH-range-mid1 neutrophile range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking baseline pH-homeostasis at near-neutral external
     pH to a pH growth range of approximately 6–7.
   nodes:
@@ -61,6 +65,10 @@ causal_graphs:
   - node_id: cation_proton_antiporters
     label: cation/proton antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Membrane antiporters (e.g. Na+/H+) whose repertoire sets external-pH
       boundaries for maintaining cytoplasmic pH ~7.
   - node_id: acid_challenge
@@ -70,6 +78,10 @@ causal_graphs:
   - node_id: respiratory_proton_pumping
     label: respiratory proton-pumping complexes
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Respiratory chain complexes that extrude protons, upregulated under
       acid challenge.
   - node_id: alkaline_challenge

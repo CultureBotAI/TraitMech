@@ -28,6 +28,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: predatory_bacterium_prey_killing
   title: Predatory bacteria kill and consume other bacteria
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking prey invasion to bacteriolytic
     killing and predator nutrient acquisition.
   nodes:

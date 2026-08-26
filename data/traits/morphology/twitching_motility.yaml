@@ -26,11 +26,19 @@ canonical_examples:
   note: Canonical type-IV-pilus twitching-motility model. Neisseria gonorrhoeae is
     a parallel model.
   reference: PMID:22746331
+- taxon_id: NCBITaxon:208964
+  taxon_label: Pseudomonas aeruginosa PAO1
+  note: Strain-level PilT twitching-motility exemplar.
+  reference: DOI:10.1128/jb.00359-24
 causal_graphs:
 - graph_id: twitching_type_iv_pilus_retraction
   title: Twitching motility via type IV pilus extension and retraction
   description: Evidence-backed causal sketch linking type-IV-pilus dynamics (extension,
     surface attachment, retraction) to flagella-independent surface translocation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: twitching_trait
     label: twitching motility
@@ -50,10 +58,34 @@ causal_graphs:
     description: Polymerization and disassembly cycles driving pilus extension and
       retraction.
   - node_id: pilb_extension_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PilB extension ATPase
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic motor ATPase that powers type IV pilus filament extension.
   - node_id: pilt_retraction_atpase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24559
+      protein_label: Type IV pilus retraction ATPase PilT
+      gene_symbol: pilT
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa PAO1
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-08-25'
+      entry_version: 147
+      sequence_version: 1
+      role: PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a
+        surface.
+      evidence:
+      - reference: DOI:10.1128/jb.00359-24
+        snippet: retraction is driven by PilT
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: PilT retraction ATPase
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic motor ATPase that powers type IV pilus retraction.
@@ -67,6 +99,9 @@ causal_graphs:
     description: Depolymerization of pilin subunits retracting the pilus and pulling
       the cell.
   - node_id: pilq_secretin
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: PilQ secretin
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane secretin channel through which the pilus filament

@@ -35,6 +35,10 @@ causal_graphs:
   title: Spherical shape septal peptidoglycan mechanism
   description: Evidence-backed causal sketch linking spherical cell shape to FtsZ-associated
     septal synthesis, peptidoglycan remodeling, and limited lateral elongation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: sphere_shaped_trait
     label: sphere shaped
@@ -42,6 +46,9 @@ causal_graphs:
     grounding: METPO:1000683
     description: Spherical bacterial cell morphology.
   - node_id: ftsZ_division_ring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsZ division ring
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like division scaffold.
@@ -59,10 +66,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Sidewall growth mode that lengthens rods.
   - node_id: mreB_elongation_machinery
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB-mediated elongation machinery
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB cytoskeleton directing lateral (rod) elongation.
   - node_id: divisome_pbps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: divisome and PBPs
     node_type: GENE_OR_PROTEIN
     description: Division machinery and penicillin-binding proteins recruited to mid-cell.
@@ -72,6 +85,9 @@ causal_graphs:
     description: Treadmilling of FtsZ polymers distributing PG synthases around the
       Z-ring.
   - node_id: ftsW_flippase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsW lipid II flippase
     node_type: GENE_OR_PROTEIN
     description: Septally localized flippase that translocates lipid II across the

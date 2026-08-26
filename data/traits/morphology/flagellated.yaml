@@ -25,11 +25,19 @@ canonical_examples:
   taxon_label: Salmonella enterica
   note: flagellated enteric
   reference: PMID:26267246
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level flagellin exemplar.
+  reference: PMID:28117390
 causal_graphs:
 - graph_id: flagellated_flagellar_motor
   title: Flagellated locomotion mechanism
   description: Evidence-backed causal sketch linking the flagellated phenotype to
     flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: flagellated_trait
     label: flagellated
@@ -47,10 +55,16 @@ causal_graphs:
     description: Universal-joint-like connector between motor and filament.
     grounding: GO:0009424
   - node_id: flagellar_basal_body
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: flagellar basal body
     node_type: GENE_OR_PROTEIN
     description: Rotary motor complex embedded in the cell envelope.
   - node_id: stator_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: flagellar stator complex
     node_type: GENE_OR_PROTEIN
     description: Force-generating motor units coupled to ion flow.
@@ -64,25 +78,58 @@ causal_graphs:
     description: Regulation of flagellar rotation and movement direction.
     grounding: GO:0006935
   - node_id: ft3ss_export_system
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: flagellar type III secretion system
     node_type: GENE_OR_PROTEIN
     description: fT3SS at the flagellar base that exports structural subunits to the
       assembly site.
   - node_id: flagellar_structural_subunits
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P04949
+      protein_label: Flagellin
+      gene_symbol: fliC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-08-25'
+      entry_version: 183
+      sequence_version: 2
+      role: FliC is the polymerizing E. coli K-12 flagellar-filament subunit, not
+        an example of the complete flagellum.
+      evidence:
+      - reference: PMID:28117390
+        snippet: flagellin is the structural subunit of the flagellar filament
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: flagellar structural subunits
     node_type: GENE_OR_PROTEIN
     description: Axial protein subunits exported through the central channel for distal
       assembly.
   - node_id: flii_atpase_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliH-FliI-FliJ ATPase complex
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic ATPase ring complex providing ATP hydrolysis to drive
       flagellar protein export.
   - node_id: fld_filament_cap
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FliD filament cap
     node_type: GENE_OR_PROTEIN
     description: Pentameric cap at the filament tip that aids flagellin polymerization.
   - node_id: hook_filament_junction
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FlgK/FlgL hook-filament junction
     node_type: GENE_OR_PROTEIN
     description: Adapter proteins connecting hook to filament and required for filament
@@ -97,6 +144,9 @@ causal_graphs:
     description: Proton conduction pathway through the MotA-MotB stator that drives
       torque generation.
   - node_id: chey_p
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CheY-P
     node_type: GENE_OR_PROTEIN
     description: Phosphorylated chemotaxis response regulator that binds the C ring

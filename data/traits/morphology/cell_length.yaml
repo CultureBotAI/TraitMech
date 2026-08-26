@@ -19,6 +19,10 @@ evidence:
     cell-length distributions.
 causal_graphs:
 - graph_id: cell_length_division_growth_control
+  scope_status: NONMECHANISTIC
+  scope_notes: Cell length is a quantitative measurement descriptor rather than one
+    conserved protein-mediated mechanism. The graph is retained only as contextual
+    background on factors that can influence the measured dimension.
   title: Cell-length control by growth and division timing
   description: DOI-backed graph linking growth rate, division-site placement, and
     the adder size-control principle to the observed cell-length phenotype.
@@ -38,6 +42,9 @@ causal_graphs:
     description: Mechanism by which cells add a fixed length increment between consecutive
       divisions.
   - node_id: ftsz_ring
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This contextual node denotes an assembled FtsZ structure rather
+      than one exact protein-family entity.
     label: FtsZ ring (divisome)
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like FtsZ-based contractile ring that organizes division.
@@ -51,6 +58,9 @@ causal_graphs:
     description: Cell division that resets cell length each generation.
     grounding: GO:0000910
   - node_id: elongasome
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The elongasome is a variable multisubunit assembly; no verified
+      single complex term exactly represents this contextual node.
     label: Rod complex (elongasome)
     node_type: GENE_OR_PROTEIN
     description: MreB/RodA/PBP2-based multiprotein complex driving cell elongation.
@@ -59,10 +69,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Lateral/sidewall PG insertion that lengthens the cell prior to division.
   - node_id: ftsa_zipa
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FtsA and ZipA are distinct protein families grouped for contextual
+      explanation, so one family grounding would be incorrect.
     label: FtsA and ZipA (proto-ring tethers)
     node_type: GENE_OR_PROTEIN
     description: Membrane tethers that attach FtsZ to the membrane forming the proto-ring.
   - node_id: ftswi_septal_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FtsW and FtsI are distinct components grouped as a septal synthase
+      module; one protein-family term cannot denote both.
     label: FtsWI septal PG synthase
     node_type: GENE_OR_PROTEIN
     description: FtsW/FtsI complex that drives septal peptidoglycan synthesis.

@@ -23,12 +23,16 @@ canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
   note: Iconic antibiotic-resistance organism (MRSA; methicillin/multidrug resistance).
-  reference: PMID:11418146
+  reference: DOI:10.1016/S0140-6736(00)04403-2
 causal_graphs:
 - graph_id: antibiotic_resistance_mechanisms
   title: Mechanisms of antibiotic resistance
   description: Evidence-backed causal sketch linking resistance determinants (efflux,
     target modification, drug inactivation) to growth under antibiotic exposure.
+  scope_status: MECHANISTIC
+  scope_notes: This is a cross-mechanism graph, not a claim that every resistant strain
+    carries every determinant. The S. aureus PC1 BlaZ example supports the beta-lactamase
+    branch; efflux, porin, and QRDR branches remain antibiotic- and lineage-specific.
   nodes:
   - node_id: antibiotic_resistance_trait
     label: antibiotic resistance
@@ -39,6 +43,9 @@ causal_graphs:
     label: drug efflux pump
     node_type: GENE_OR_PROTEIN
     description: Transporter that expels antibiotics from the cell.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug efflux is performed by multiple unrelated transporter superfamilies;
+      the graph does not identify one pump family, substrate range, or taxon.
   - node_id: antibiotic_response_process
     label: response to antibiotic
     node_type: BIOLOGICAL_PROCESS
@@ -53,6 +60,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane channel mediating antibiotic influx; loss/modification
       reduces permeability.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This mechanism spans several non-equivalent porin families and
+      resistance-associated loss or modification events, so no single family term
+      exactly represents the node.
   - node_id: antibiotic_influx
     label: antibiotic influx
     node_type: BIOLOGICAL_PROCESS
@@ -63,6 +74,25 @@ causal_graphs:
     description: Enzyme that hydrolyzes the beta-lactam ring, inactivating beta-lactam
       antibiotics.
     grounding: GO:0008800
+    protein_examples:
+    - uniprot_id: UniProtKB:P00807
+      protein_label: Beta-lactamase
+      gene_symbol: blaZ
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 171
+      sequence_version: 1
+      role: Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam
+        antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic
+        resistance in S. aureus.
+      evidence:
+      - reference: DOI:10.1042/bj1510197
+        snippet: The amino acid sequence of the penicillinase from Staphylococcus
+          aureus strain PC1 was determined.
+        notes: The primary biochemical sequence study identifies the single-chain
+          PC1 beta-lactamase represented by reviewed UniProtKB P00807.
   - node_id: beta_lactam_antibiotic
     label: beta-lactam antibiotic
     node_type: CHEMICAL
@@ -73,6 +103,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Quinolone resistance-determining region mutation altering the fluoroquinolone
       target.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This composite variant node can denote mutations in distinct
+      GyrA, GyrB, ParC, or ParE targets; a protein-family grounding would erase the
+      mutation and target-subunit distinction.
   - node_id: fluoroquinolone
     label: fluoroquinolone
     node_type: CHEMICAL
@@ -236,4 +270,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T11:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the mechanism scope and all protein nodes, converted the canonical
+    S. aureus citation to DOI, and added the reviewed PC1 BlaZ protein example with
+    primary biochemical evidence.
   llm_assisted: true

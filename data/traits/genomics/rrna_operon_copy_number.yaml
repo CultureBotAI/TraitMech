@@ -32,6 +32,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: rrn_copy_growth_rate
   title: rRNA operon copy number sets ribosome biogenesis and growth rate
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking rrn copy number to ribosome biogenesis
     capacity and maximal growth rate.
   nodes:

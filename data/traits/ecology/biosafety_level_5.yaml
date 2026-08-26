@@ -20,6 +20,10 @@ evidence:
 causal_graphs:
 - graph_id: biosafety_level_5_proposed_enhanced_hazard
   title: BSL-5 proposed enhanced-hazard classification
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4
     thresholds to the proposed BSL-5 enhanced-containment classification.
   nodes:

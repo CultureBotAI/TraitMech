@@ -345,7 +345,10 @@ classes:
         range: CausalEdge
 
   CausalNode:
-    description: A node in a trait causal graph.
+    description: >-
+      A node in a trait causal graph. GENE_OR_PROTEIN is a legacy enum label;
+      within TraitMech it is restricted to proteins and protein complexes.
+      Genes, operons, and gene clusters are metadata, not primary graph nodes.
     attributes:
       node_id:
         description: Stable local node identifier used by graph edges.
@@ -387,6 +390,18 @@ classes:
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
       description:
         description: Optional node-specific scope note.
+        range: string
+      gene_symbols:
+        description: >-
+          Gene symbols encoding this protein or the explicit components of this
+          protein complex. Gene symbols are metadata and do not denote primary
+          causal nodes.
+        multivalued: true
+        range: string
+      operon:
+        description: >-
+          Operon or gene-cluster name encoding this protein or protein-complex
+          module. Operons are metadata and do not denote primary causal nodes.
         range: string
       protein_examples:
         description: >-
@@ -621,7 +636,13 @@ enums:
       EXPERIMENTAL_FACTOR:
         description: An assay, perturbation, or experimental condition.
       GENE_OR_PROTEIN:
-        description: A gene, protein, gene product, or protein complex.
+        description: >-
+          Legacy enum name restricted in TraitMech to a protein, protein family,
+          or protein complex. Genes and operons belong in node metadata.
+      RNA:
+        description: A functional RNA molecule or RNA-containing causal entity.
+      GENETIC_ELEMENT:
+        description: A non-protein mobile or chromosomal genetic element such as a plasmid or prophage.
       CHEMICAL:
         description: A chemical entity.
       ORGANELLE:

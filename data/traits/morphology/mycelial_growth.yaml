@@ -34,6 +34,10 @@ causal_graphs:
   title: Branching hyphal growth produces a bacterial mycelium
   description: Evidence-backed causal sketch linking apical hyphal extension and branching
     to a multicellular mycelium with subsequent aerial-hypha differentiation.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: mycelial_growth_trait
     label: mycelial growth
@@ -49,6 +53,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Developmental transition to aerial hyphae bearing spores (as in Streptomyces).
   - node_id: divIVA_polarisome
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: DivIVA polarisome
     node_type: GENE_OR_PROTEIN
     description: DivIVA-organized polarisome complex marking and driving hyphal tip
@@ -63,6 +70,9 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Initiation of new lateral hyphal branches from daughter polarisomes.
   - node_id: cglA_ligase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: CglA glycopolymer ligase
     node_type: GENE_OR_PROTEIN
     description: LCP-family ligase attaching wall teichoic acids/glycopolymers to
@@ -83,6 +93,9 @@ causal_graphs:
     description: Formation and correct placement of FtsZ rings and division septa
       in hyphae.
   - node_id: ftsz_z_ladders
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: FtsZ Z-ladder arrays
     node_type: GENE_OR_PROTEIN
     description: Ladder-like arrays of multiple FtsZ rings along sporogenic aerial
@@ -93,6 +106,9 @@ causal_graphs:
     description: Synchronous septation of sporogenic hyphae yielding regular spore
       chains.
   - node_id: sapB_chaplins_rodlins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: SapB / chaplins / rodlins
     node_type: GENE_OR_PROTEIN
     description: Surfactant SapB and hydrophobic chaplin/rodlin sheath proteins aiding

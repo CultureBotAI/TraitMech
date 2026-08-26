@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_delta_homeostasis_flexibility
   title: pH-delta homeostasis flexibility
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking the flexibility of pH-homeostasis machinery
     to the breadth of the pH growth range (delta = max − min).
   nodes:

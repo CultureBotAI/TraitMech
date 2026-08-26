@@ -22,11 +22,21 @@ canonical_examples:
   note: Thermophilic hydrogenogenic CO oxidiser (CO + H2O -> CO2 + H2). Afipia/Oligotropha
     carboxidovorans is the aerobic CO-oxidiser model.
   reference: PMID:16311624
+- taxon_id: NCBITaxon:1085
+  taxon_label: Rhodospirillum rubrum
+  note: Canonical hydrogenogenic CO oxidizer with genetically and biochemically characterized
+    cooS CODH and CooA-regulated coo operons.
+  reference: DOI:10.1128/jb.174.16.5284-5294.1992
 causal_graphs:
 - graph_id: carboxydotrophic_co_oxidation
   title: Carboxydotrophic carbon monoxide oxidation mechanism
   description: DOI-backed graph linking carbon monoxide, carbon monoxide dehydrogenase,
     respiratory electron transport, and energy conservation.
+  scope_status: MECHANISTIC
+  scope_notes: Represents distinct aerobic molybdenum-CODH and anaerobic NiFe-CODH
+    branches. The CooS exemplar supports the R. rubrum anaerobic branch; broad operon,
+    CooA, RcoM, and terminal-oxidase labels are retained only with explicit review
+    notes.
   nodes:
   - node_id: carboxydotrophic_trait
     label: carboxydotrophic
@@ -42,10 +52,22 @@ causal_graphs:
     label: carbon monoxide dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: CODH enzyme oxidizing carbon monoxide.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This umbrella node spans unrelated molybdenum- and NiFe-containing
+      CODH classes; one family or activity term would collapse the graph's explicit
+      branch distinction.
   - node_id: molybdenum_hydroxylase
     label: molybdenum hydroxylase
     node_type: GENE_OR_PROTEIN
     description: Aerobic CODH enzyme class described for CO oxidizers.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The label denotes the multisubunit aerobic Cu/Mo CODH enzyme
+      class; no checked whole-complex term exactly matches this graph node.
+    gene_symbols:
+    - coxS
+    - coxM
+    - coxL
+    operon: coxSML
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -60,6 +82,9 @@ causal_graphs:
     label: CO-insensitive terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: Terminal oxidase enabling respiration during CO oxidation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The cited source establishes a CO-insensitive respiratory branch
+      but does not identify an exact terminal-oxidase family or complex.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -73,6 +98,31 @@ causal_graphs:
     label: Ni,Fe-carbon monoxide dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Anaerobic nickel-iron CODH enzyme class.
+    grounding: GO:0043885
+    gene_symbols:
+    - cooS
+    operon: coo
+    protein_examples:
+    - uniprot_id: UniProtKB:P31896
+      protein_label: Carbon monoxide dehydrogenase
+      gene_symbol: cooS
+      taxon_id: NCBITaxon:1085
+      taxon_label: Rhodospirillum rubrum
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      sequence_version: 1
+      role: NiFeS CooS enzyme catalyzing CO oxidation in the hydrogenogenic R. rubrum
+        system; it is not used as the grounding for the umbrella CODH node.
+      evidence:
+      - reference: DOI:10.1021/ja990396i
+        snippet: site-directed mutagenesis of the cooS gene
+        notes: The primary study mutagenized R. rubrum cooS and measured the resulting
+          CODH turnover, linking this exact gene product to catalysis; UniProtKB P31896
+          verifies the reviewed instance.
+      - reference: DOI:10.1128/jb.159.2.693-699.1984
+        snippet: two-electron oxidation of CO to form CO2
+        notes: Purified R. rubrum CODH directly catalyzed the reaction represented
+          by the graph.
   - node_id: oxygen_sensitivity
     label: oxygen sensitivity
     node_type: QUALITY
@@ -81,27 +131,27 @@ causal_graphs:
     label: oxygen tolerance
     node_type: QUALITY
     description: Ability of an enzyme to function in the presence of O2.
-  - node_id: cox_operon
-    label: cox operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding aerobic Mo-CODH structural subunits coxS, coxM, coxL.
-  - node_id: coo_operon
-    label: coo operon
-    node_type: GENE_OR_PROTEIN
-    description: Operon encoding Ni,Fe-CODH and accessory proteins for energy conservation.
   - node_id: cooa_regulator
     label: CooA
     node_type: GENE_OR_PROTEIN
     description: Heme-based CO-sensing transcriptional activator of coo operons.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: CooA is experimentally exact in R. rubrum, but current UniProtKB
+      P72322 is unreviewed and lacks a qualifying reference proteome, while available
+      InterPro terms cover only broader CRP/FNR domains rather than CooA.
   - node_id: rcom_regulator
     label: RcoM
     node_type: GENE_OR_PROTEIN
     description: Heme-dependent high-affinity CO sensor regulating aerobic CO oxidation
       genes.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Available ontology families cover broader heme sensor or DNA-binding
+      domains and do not exactly identify the RcoM regulator represented here.
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion motive force.
+    grounding: GO:0045259
   - node_id: molecular_oxygen
     label: dioxygen
     node_type: CHEMICAL
@@ -184,6 +234,7 @@ causal_graphs:
     description: Ni,Fe-CODHs are oxygen sensitive, restricting them to anaerobic carboxydotrophs.
     evidence:
     - reference: DOI:10.1128/jb.00332-22
+      snippet: coo operons, which encompass O2-sensitive Ni,Fe-CODHs
       notes: Ni,Fe-CODHs are noted as oxygen sensitive and associated with anaerobic
         carboxydotrophs.
   - subject: molybdenum_hydroxylase
@@ -192,40 +243,29 @@ causal_graphs:
     description: Cu,Mo-CODHs are O2-tolerant, enabling aerobic CO metabolism.
     evidence:
     - reference: DOI:10.1128/jb.00332-22
+      snippet: cox operons, which encompass O2-tolerant Cu,Mo-CODHs
       notes: Cu,Mo-CODHs are O2-tolerant (aerobic CO metabolism).
-  - subject: cox_operon
-    predicate: encodes
-    object: molybdenum_hydroxylase
-    description: cox operons encode the coxS/coxM/coxL aerobic Mo-CODH subunits.
-    evidence:
-    - reference: DOI:10.1128/jb.00332-22
-      notes: Mo-CODH is encoded in cox operons that include coxS, coxM, and coxL.
-    predicate_id: METPO:2007813
-  - subject: coo_operon
-    predicate: encodes
-    object: nife_codh
-    description: coo operons encode Ni,Fe-CODH plus accessory proteins for energy
-      conservation.
-    evidence:
-    - reference: DOI:10.1128/jb.00332-22
-      notes: coo operons specifically encode CODH plus accessory proteins for energy
-        conservation.
-    predicate_id: METPO:2007813
   - subject: cooa_regulator
-    predicate: activates transcription of
-    object: coo_operon
-    description: CO binding to CooA Fe(II)-heme allosterically activates coo operon
-      transcription.
+    predicate: activates production of
+    object: nife_codh
+    description: CO-bound CooA activates transcription that produces the Ni,Fe-CODH
+      machinery encoded in the coo operon.
     evidence:
     - reference: DOI:10.1128/jb.00332-22
+      snippet: CO binding to Fe(II) heme in the regulatory domain allosterically activates
+        CooA to bind promoter sites upstream of the coo operon and recruit RNA polymerase
+        (RNAP) for transcription of downstream genes
       notes: CO binding to Fe(II)-heme allosterically activates promoter binding and
         RNAP recruitment of coo operons.
   - subject: rcom_regulator
-    predicate: regulates
-    object: cox_operon
-    description: RcoM is a high-affinity CO sensor regulating aerobic coxMSL genes.
+    predicate: regulates production of
+    object: molybdenum_hydroxylase
+    description: RcoM regulates transcription that produces the aerobic coxSML CODH
+      machinery.
     evidence:
     - reference: DOI:10.1128/jb.00332-22
+      snippet: CooA and RcoM each primarily regulate anaerobic and aerobic CODH expression,
+        respectively.
       notes: RcoM regulates aerobic CO oxidation and was originally identified upstream
         of coxMSL genes.
     predicate_id: RO:0002211
@@ -235,15 +275,26 @@ causal_graphs:
     description: The ion motive force generated by CO oxidation drives ATP synthase.
     evidence:
     - reference: DOI:10.1186/s40643-023-00705-9
+      snippet: The reduction of those electron acceptors causes the formation of an
+        ion motive force, which leads to the synthesis of ATP
       notes: Generates an ion motive force that drives ATP synthesis.
   - subject: molybdenum_hydroxylase
     predicate: coupled to reduction of
     object: molecular_oxygen
     description: Mo-CODH-mediated CO oxidation is coupled to O2 reduction aerobically.
     evidence:
-    - reference: DOI:10.1101/2023.01.17.524042
+    - reference: DOI:10.1128/aem.00185-23
+      snippet: CO oxidation by Mo-CODH was coupled with O2 reduction under aerobic
+        conditions
       notes: Mo-CODH-mediated CO oxidation supports O2 reduction aerobically.
 curation_history:
+- timestamp: '2026-08-23T09:11:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Reviewed the aerobic and anaerobic graph branches, grounded NiFe CODH and
+    ATP synthase, documented exact label-only dispositions including CooA, and added
+    DOI-backed R. rubrum CooS P31896.
+  llm_assisted: true
 - timestamp: '2026-05-05T01:35:46.868229+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO

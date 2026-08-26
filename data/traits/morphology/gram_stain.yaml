@@ -27,6 +27,9 @@ causal_graphs:
   description: Evidence-backed causal sketch linking Gram stain phenotype to crystal
     violet-iodine complex formation, peptidoglycan architecture, outer membrane loss
     during decolorization, and counterstaining.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record describes a differential staining assay and envelope-level
+    classification, for which one inherited protein example would be misleading.
   nodes:
   - node_id: gram_stain_trait
     label: gram stain

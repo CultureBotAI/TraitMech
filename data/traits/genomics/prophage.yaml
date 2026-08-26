@@ -32,6 +32,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: prophage_lysogeny
   title: Prophage maintenance during lysogeny alters host phenotype
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking prophage carriage to lysogenic
     maintenance and lysogenic conversion of the host.
   nodes:
@@ -55,6 +59,10 @@ causal_graphs:
   - node_id: ci_repressor
     label: CI master repressor
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
     description: Phage-encoded cI-family repressor that maintains lysogeny by blocking
       lytic gene expression.
   - node_id: lytic_gene_expression
@@ -75,6 +83,10 @@ causal_graphs:
   - node_id: reca_filament
     label: RecA* nucleoprotein filament
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a nonmechanistic genomics classification; no exact semantic family term was
+      established for this aggregate use.
     description: Activated RecA nucleoprotein filament that promotes autocleavage
       of LexA and phage repressors.
   - node_id: lexa_repressor
@@ -90,7 +102,7 @@ causal_graphs:
     grounding: GO:0098689
   - node_id: phage_plasmid
     label: phage-plasmid
-    node_type: GENE_OR_PROTEIN
+    node_type: GENETIC_ELEMENT
     description: Hybrid mobile genetic element; a temperate phage maintained extrachromosomally
       as a plasmid.
   - node_id: extrachromosomal_maintenance

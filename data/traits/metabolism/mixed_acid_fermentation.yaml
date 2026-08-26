@@ -21,12 +21,21 @@ canonical_examples:
   taxon_label: Escherichia coli
   note: Textbook mixed-acid fermenter (lactate, acetate, succinate, formate, ethanol,
     H2/CO2).
-  reference: PMID:25152889
+  reference: DOI:10.3389/fbioe.2014.00016
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Strain-level source of the reviewed PflB example used for the pyruvate-to-formate
+    and acetyl-CoA branch of mixed-acid fermentation.
+  reference: DOI:10.1016/S0969-2126(99)80098-7
 causal_graphs:
 - graph_id: mixed_acid_fermentation_enterobacterial
   title: Mixed-acid fermentation yields a spectrum of acids plus ethanol and gases
   description: Evidence-backed causal sketch linking glycolytic sugar catabolism to
     mixed acid + ethanol + CO2 + H2 production in enterobacteria.
+  scope_status: MECHANISTIC
+  scope_notes: Represents the enterobacterial branch centered on E. coli. The taxon-paired
+    protein example establishes PflB, while Pta/AckA and FHL remain combined module
+    labels pending component-level curation.
   nodes:
   - node_id: mixed_acid_fermentation_trait
     label: mixed-acid fermentation
@@ -51,6 +60,25 @@ causal_graphs:
     label: pyruvate formate lyase (PflB)
     node_type: GENE_OR_PROTEIN
     description: Enzyme cleaving pyruvate to formate and acetyl-CoA under anaerobiosis.
+    grounding: GO:0008861
+    protein_examples:
+    - uniprot_id: UniProtKB:P09373
+      protein_label: Formate acetyltransferase 1
+      gene_symbol: pflB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 217
+      sequence_version: 2
+      role: PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic
+        glycolysis in E. coli.
+      evidence:
+      - reference: DOI:10.1016/S0969-2126(99)80098-7
+        snippet: The dimeric pyruvate formate lyase is the final enzyme in anaerobic
+          glycolysis in Escherichia coli.
+        notes: The primary structural study establishes the E. coli PFL role; UniProtKB
+          P09373 verifies the reviewed PflB protein and K-12 taxon.
   - node_id: formate
     label: formate
     node_type: CHEMICAL
@@ -63,6 +91,9 @@ causal_graphs:
     label: phosphotransacetylase / acetate kinase (Pta/AckA)
     node_type: GENE_OR_PROTEIN
     description: Enzyme pair converting acetyl-CoA to acetate with ATP generation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node combines two distinct enzymes, phosphotransacetylase
+      and acetate kinase; exact semantic grounding requires splitting Pta and AckA.
   - node_id: acetate
     label: acetate
     node_type: CHEMICAL
@@ -71,6 +102,10 @@ causal_graphs:
     label: formate hydrogenlyase complex (FHL)
     node_type: GENE_OR_PROTEIN
     description: Membrane complex disproportionating formate into CO2 and H2.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Enterobacterial formate hydrogenlyase is multisubunit and occurs
+      in distinct FHL assemblies; the current evidence does not justify one exact
+      complex term for this generic node.
   - node_id: co2
     label: carbon dioxide
     node_type: CHEMICAL
@@ -271,4 +306,11 @@ curation_history:
     label and still retracts ENVO:01001495 if it has been re-applied — the grounder
     keys on (label, node_type), so an un-normalised label is what lets the retracted
     CURIE come back.'
+  llm_assisted: true
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex
+  action: REVIEW_GRAPH_PROTEIN_TAXON
+  changes: Added a DOI-backed E. coli K-12 PflB example and GO activity, converted
+    the species citation to DOI, retained combined Pta/AckA and FHL labels with explicit
+    review rationales, and documented enterobacterial scope.
   llm_assisted: true

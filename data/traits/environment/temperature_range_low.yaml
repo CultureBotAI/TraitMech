@@ -27,6 +27,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_range_low_psychrotolerant
   title: Temperature-range-low psychrotolerant range
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking psychrotolerant adaptation to a temperature
     growth range of approximately 10–22 °C.
   nodes:
@@ -67,6 +71,10 @@ causal_graphs:
   - node_id: cold_shock_proteins
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: CspA/CspC family cold-shock proteins acting as RNA chaperones.
   - node_id: rna_chaperone_activity
     label: RNA chaperone activity
@@ -86,6 +94,10 @@ causal_graphs:
   - node_id: molecular_chaperones
     label: GroEL/DnaK molecular chaperones
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: GroEL and DnaK chaperones assisting protein folding under temperature
       stress.
   - node_id: protein_misfolding

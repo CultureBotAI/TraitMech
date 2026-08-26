@@ -38,6 +38,10 @@ causal_graphs:
   title: Pleomorphic-shape relaxed shape control
   description: DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall
     shape control to multi-morphology populations.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pleomorphism groups multiple unrelated causes and cell states; the
+    contextual cytoskeleton label is not one inherited protein mechanism and receives
+    no token accession.
   nodes:
   - node_id: pleomorphic_shaped_trait
     label: pleomorphic shaped
@@ -48,6 +52,9 @@ causal_graphs:
     label: weak/absent shape-determining cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Reduced MreB or analogous shape-determining cytoskeletal activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node explicitly combines MreB with analogous but unrelated
+      shape systems and therefore has no exact single family grounding.
   - node_id: weak_cell_wall
     label: weak or absent peptidoglycan wall
     node_type: CELLULAR_LOCALIZATION

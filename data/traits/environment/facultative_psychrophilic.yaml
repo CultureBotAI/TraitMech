@@ -24,6 +24,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking facultative psychrophily to low-temperature
     growth, moderate-temperature optima, membrane remodeling, and cold acclimation
     proteins.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: facultative_psychrophilic_trait
     label: facultative psychrophilic
@@ -51,6 +55,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Membrane lipid features that maintain fluidity under cold conditions.
   - node_id: cold_shock_proteins
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins involved in cold shock and cold acclimation responses.

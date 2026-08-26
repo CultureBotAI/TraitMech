@@ -26,12 +26,21 @@ canonical_examples:
   note: Obligately chemolithoautotrophic sulfur-compound oxidizer with a sequenced
     genome anchoring sulfur-oxidation pathways. Beggiatoa is a historic morphological
     exemplar.
-  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1367237/
+  reference: DOI:10.1128/JB.00568-06
+- taxon_id: NCBITaxon:292415
+  taxon_label: Thiobacillus denitrificans ATCC 25259
+  note: Reference strain used for whole-genome transcriptional analysis of sulfur
+    oxidation under aerobic and denitrifying conditions.
+  reference: DOI:10.1128/JB.00568-06
 causal_graphs:
 - graph_id: sulfur_oxidation_sox
   title: Lithotrophic sulfur oxidation to sulfate
   description: Evidence-backed causal sketch linking sulfur-oxidizing enzyme systems
     to oxidation of reduced sulfur compounds to sulfate.
+  scope_status: MECHANISTIC
+  scope_notes: This is a cross-taxon composite of Sox, SQR/PDO, and S4-intermediate
+    sulfur-oxidation routes. The T. denitrificans SQR example supports its denitrifying
+    branch; PDO, TsdA, and TetH branches are not asserted as universal or co-required.
   nodes:
   - node_id: sulfur_oxidation_trait
     label: sulfur oxidation
@@ -42,6 +51,10 @@ causal_graphs:
     label: Sox enzyme system
     node_type: GENE_OR_PROTEIN
     description: Sulfur-oxidizing multienzyme system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The Sox system comprises multiple non-equivalent protein components;
+      no single GO or InterPro term denotes the complete generic system represented
+      here.
   - node_id: hydrogen_sulfide
     label: hydrogen sulfide
     node_type: CHEMICAL
@@ -57,6 +70,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane flavoprotein oxidizing sulfide to sulfane sulfur/polysulfide.
     grounding: GO:0070224
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3SJ10
+      protein_label: Sulfide:quinone oxidoreductase
+      gene_symbol: Tbd_1407
+      taxon_id: NCBITaxon:292415
+      taxon_label: Thiobacillus denitrificans ATCC 25259
+      entry_status: UNREVIEWED
+      proteome_id: UP000008291
+      retrieved_on: '2026-08-24'
+      entry_version: 92
+      sequence_version: 1
+      role: SQR encoded by Tbd_1407 and strongly induced during denitrifying sulfur
+        metabolism in T. denitrificans ATCC 25259.
+      evidence:
+      - reference: DOI:10.1128/JB.00568-06
+        snippet: two copies of sulfide:quinone oxidoreductase
+        notes: Whole-genome transcriptional analysis found Tbd_1407 strongly upregulated
+          under denitrifying conditions and associated it with sulfur-compound oxidation;
+          UniProtKB Q3SJ10 is the exact reference-proteome locus.
   - node_id: sulfane_sulfur
     label: sulfane sulfur
     node_type: CHEMICAL
@@ -66,6 +98,9 @@ causal_graphs:
     label: persulfide dioxygenase (PDO)
     node_type: GENE_OR_PROTEIN
     description: Oxidizes glutathione persulfide to sulfite using O2.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph does not resolve a taxon-specific PDO family, fusion
+      architecture, or glutathione dependence needed for an exact semantic grounding.
   - node_id: glutathione_persulfide
     label: glutathione persulfide (GSSH)
     node_type: CHEMICAL
@@ -95,6 +130,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Hydrolyzes/disproportionates tetrathionate to S0, thiosulfate and
       sulfate.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: TetH proteins are taxon- and acidophile-specific members of broader
+      hydrolase families; no exact verified GO or InterPro term was assigned to this
+      generic pathway label.
   edges:
   - subject: sox_system
     predicate: confers
@@ -248,4 +287,11 @@ curation_history:
     source predicate that changes only the domain, so the claim each edge makes is
     unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9
     and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:30:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cross-taxon sulfur-oxidation mechanism, added a DOI-backed Thiobacillus
+    denitrificans SQR protein example, and documented why the broad Sox, PDO, and
+    TetH labels remain reviewed label-only nodes.
   llm_assisted: true

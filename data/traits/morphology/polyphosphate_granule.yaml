@@ -29,11 +29,19 @@ canonical_examples:
   note: Model polyphosphate-accumulating organism (volutin granules; enhanced biological
     phosphorus removal).
   reference: PMID:22923697
+- taxon_id: NCBITaxon:1032480
+  taxon_label: Microlunatus phosphovorus NM-1
+  note: Strain-level polyphosphate-kinase exemplar.
+  reference: PMID:22923697
 causal_graphs:
 - graph_id: polyphosphate_granule_storage
   title: Polyphosphate granules store phosphate and energy as inorganic polyP
   description: Evidence-backed causal sketch linking inorganic polyphosphate accumulation
     to volutin/metachromatic granules supporting growth and survival.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: polyp_granule_trait
     label: polyphosphate granule
@@ -49,6 +57,24 @@ causal_graphs:
     node_type: QUALITY
     description: Reservoir of phosphate and high-energy phosphoanhydride bonds.
   - node_id: ppk
+    protein_examples:
+    - uniprot_id: UniProtKB:F5XF46
+      protein_label: Polyphosphate kinase
+      gene_symbol: ppk
+      taxon_id: NCBITaxon:1032480
+      taxon_label: Microlunatus phosphovorus NM-1
+      entry_status: UNREVIEWED
+      proteome_id: UP000007947
+      retrieved_on: '2026-08-25'
+      entry_version: 69
+      sequence_version: 1
+      role: The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in
+        intracellular granules.
+      evidence:
+      - reference: PMID:22923697
+        snippet: polyphosphate accumulation by Microlunatus phosphovorus
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
     label: polyphosphate kinase (PPK)
     node_type: GENE_OR_PROTEIN
     description: Enzyme that synthesizes inorganic polyphosphate from ATP.

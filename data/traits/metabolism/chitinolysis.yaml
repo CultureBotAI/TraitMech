@@ -26,12 +26,16 @@ canonical_examples:
   taxon_label: Serratia marcescens
   note: Textbook chitinolytic system (ChiA/ChiB/ChiC1 plus the CBP21 LPMO that founded
     the lytic polysaccharide monooxygenase field).
-  reference: PMID:23398882
+  reference: DOI:10.1002/j.1460-2075.1986.tb04235.x
 causal_graphs:
 - graph_id: chitinolysis_chitinase
   title: Chitinolysis hydrolyzes chitin to N-acetylglucosamine
   description: Evidence-backed causal sketch linking secreted chitinases to chitin
     hydrolysis into N-acetylglucosamine oligomers and monomers.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the experimentally characterized S. marcescens
+    chitinolytic system. ChiA and CBP21 examples support complementary hydrolytic
+    and oxidative branches, respectively.
   nodes:
   - node_id: chitinolysis_trait
     label: chitinolysis
@@ -42,6 +46,24 @@ causal_graphs:
     label: chitinases
     node_type: GENE_OR_PROTEIN
     description: Secreted bacterial chitinases acting on chitin polymer.
+    grounding: GO:0004568
+    protein_examples:
+    - uniprot_id: UniProtKB:P07254
+      protein_label: Chitinase A
+      gene_symbol: chiA
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 158
+      sequence_version: 3
+      role: Secreted GH18 ChiA component of the S. marcescens chitinolytic system.
+      evidence:
+      - reference: DOI:10.1002/j.1460-2075.1986.tb04235.x
+        snippet: chiA and chiB, which encode distinct secreted forms of the enzyme
+          chitinase
+        notes: The primary cloning study identifies secreted S. marcescens ChiA and
+          ChiB genes. UniProtKB P07254 is the reviewed ChiA entry from that species.
   - node_id: n_acetylglucosamine
     label: N-acetylglucosamine
     node_type: CHEMICAL
@@ -65,6 +87,10 @@ causal_graphs:
     label: exochitinase / chitobiosidase
     node_type: GENE_OR_PROTEIN
     description: Processive chain-end hydrolase releasing mainly (GlcNAc)2.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The combined label conflates exo-action, processivity, and chitobiosidase
+      product preference; available GO terms do not encode this complete mechanistic
+      combination.
   - node_id: n_acetylglucosaminidase
     label: beta-N-acetylglucosaminidase
     node_type: GENE_OR_PROTEIN
@@ -74,6 +100,28 @@ causal_graphs:
     label: lytic polysaccharide monooxygenase (LPMO; AA10)
     node_type: GENE_OR_PROTEIN
     description: Oxidatively cleaves crystalline chitin, accelerating hydrolytic depolymerization.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Current InterPro matches for CBP21 describe a binding domain
+      or a broad family containing both catalytic and non-catalytic proteins, not
+      the exact AA10 chitin-active LPMO class asserted here.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WEM3
+      protein_label: AA10 family lytic polysaccharide monooxygenase CBP21
+      gene_symbol: CBP21
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 8
+      sequence_version: 1
+      role: Chitin-active CBP21/SmLPMO10A that oxidatively opens crystalline chitin
+        for the hydrolytic enzymes in the same S. marcescens system.
+      evidence:
+      - reference: DOI:10.1126/science.1193369
+        snippet: CBP21 catalyzes cleavage of glycosidic bonds in crystalline chitin
+        notes: The primary biochemical study established oxidative cleavage by S.
+          marcescens CBP21. UniProtKB P9WEM3 is the reviewed CBP21 entry from that
+          species.
   edges:
   - subject: chitinase
     predicate: confers
@@ -195,4 +243,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T09:15:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the S. marcescens mechanism, added DOI-backed ChiA and CBP21 protein
+    examples, grounded the generic chitinase activity, and documented why the combined
+    exochitinase and AA10 labels remain reviewed label-only.
   llm_assisted: true

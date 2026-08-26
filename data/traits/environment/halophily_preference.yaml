@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: halophily_preference_osmoadaptation
   title: Salinity preference and osmoadaptation mechanism
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is an upper preference, broad tolerance, or central-range
+    classification spanning multiple unrelated adaptations; contextual protein nodes
+    are retained without assigning a misleading token UniProt example.
   description: Evidence-backed causal sketch linking environmental salinity, osmotic
     stress, water flux, ion homeostasis, and compatible-solute accumulation to halophily
     preference.
@@ -64,6 +68,10 @@ causal_graphs:
   - node_id: na_h_antiporter
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Secondary transporter that expels cytoplasmic sodium ions using the
       proton electrochemical gradient.
   - node_id: proton_electrochemical_gradient
@@ -90,6 +98,10 @@ causal_graphs:
   - node_id: mechanosensitive_channels
     label: mechanosensitive channels
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Membrane channels acting as safety valves that open during osmotic
       downshock.
   - node_id: solute_efflux

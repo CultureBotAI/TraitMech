@@ -27,6 +27,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_optimum_low_psychrotolerant_setpoint
   title: Temperature-optimum-low psychrotolerant setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking cold-tolerant membrane and enzyme adaptation
     to a temperature optimum between 10 and 22 °C.
   nodes:
@@ -66,6 +70,10 @@ causal_graphs:
   - node_id: cold_shock_proteins
     label: cold shock proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: CSP family proteins induced during temperature downshifts below 20
       C.
   - node_id: compatible_solutes
@@ -82,6 +90,10 @@ causal_graphs:
   - node_id: ice_binding_proteins
     label: ice-binding/antifreeze proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: IBPs/AFPs that bind ice crystal surfaces and inhibit ice recrystallization.
   - node_id: ice_crystal_growth
     label: ice crystal growth

@@ -29,6 +29,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: endosymbiosis_intracellular_genome_reduction
   title: Intracellular endosymbiosis drives extreme genome reduction
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: Evidence-backed causal sketch linking intracellular host localization
     to long-term genome reduction in obligate endosymbionts.
   nodes:

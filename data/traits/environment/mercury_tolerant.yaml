@@ -34,11 +34,19 @@ canonical_examples:
   taxon_label: Pseudomonas putida
   note: mercury-resistant
   reference: PMID:21751007
+- taxon_id: NCBITaxon:266264
+  taxon_label: Cupriavidus metallidurans CH34
+  note: Strain-level MerA mercury-reduction exemplar.
+  reference: PMID:21423734
 causal_graphs:
 - graph_id: mercury_tolerance_mer_reduction
   title: Mercury tolerance via mer-operon MerA reductase
   description: Evidence-backed causal sketch linking mer-operon mercuric reductase
     to volatilization of Hg(II) into Hg(0).
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors one experimentally supported
+    causal branch; it is not presented as a universal mechanism for every taxon or
+    every contextual branch in this graph.
   nodes:
   - node_id: mercury_tolerant_trait
     label: mercury tolerant
@@ -51,9 +59,32 @@ causal_graphs:
     grounding: CHEBI:25195
     description: Reactive ionic mercury accumulating intracellularly.
   - node_id: mer_operon
-    label: mer operon (MerA reductase)
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1L9Z3
+      protein_label: Mercuric reductase MerA
+      gene_symbol: merA
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans CH34
+      entry_status: UNREVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-08-25'
+      entry_version: 124
+      sequence_version: 1
+      role: CH34 MerA reduces toxic Hg(II) to volatile elemental Hg(0).
+      evidence:
+      - reference: PMID:21423734
+        snippet: mercury resistance in Cupriavidus metallidurans CH34
+        notes: The cited source supports the represented protein-to-trait branch;
+          UniProt verifies this current strain-matched protein entry.
+    label: MerA mercuric reductase
     node_type: GENE_OR_PROTEIN
     description: Mercuric reductase reducing Hg(II) to volatile Hg(0).
+    gene_symbols:
+    - merA
+    operon: mer
   - node_id: mercury_reduction
     label: mercury(II) reduction
     node_type: BIOLOGICAL_PROCESS
@@ -64,6 +95,9 @@ causal_graphs:
     description: Volatile, relatively inert elemental mercury Hg(0).
     grounding: CHEBI:16170
   - node_id: merb_lyase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MerB (organomercurial lyase)
     node_type: GENE_OR_PROTEIN
     description: Organomercury lyase cleaving C-Hg bonds of organomercurials to release
@@ -73,6 +107,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Organic mercury compounds such as methylmercury.
   - node_id: merr_sensor
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MerR (Hg-responsive regulator)
     node_type: GENE_OR_PROTEIN
     description: Mercury-responsive transcription factor controlling mer operon induction.

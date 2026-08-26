@@ -34,6 +34,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: biosafety_level_3_serious_hazard
   title: BSL-3 serious-hazard classification
+  scope_status: NONMECHANISTIC
+  scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
+    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
+    UniProt examples.
   description: DOI-backed graph linking serious/lethal disease potential and aerosol
     transmission risk to BSL-3 classification.
   nodes:

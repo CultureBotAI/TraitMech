@@ -26,11 +26,20 @@ canonical_examples:
   note: Acidophilic Fe(II) oxidiser (bioleaching/AMD). Gallionella ferruginea is the
     neutrophilic stalk-forming Fe oxidiser.
   reference: PMID:22815442
+- taxon_id: NCBITaxon:243159
+  taxon_label: Acidithiobacillus ferrooxidans ATCC 23270
+  note: Reference acidophilic iron oxidizer in which the Cyc2-containing trans-envelope
+    supercomplex was purified and shown to carry iron-oxidase activity.
+  reference: DOI:10.1074/jbc.M802496200
 causal_graphs:
 - graph_id: iron_oxidation_ferrous_to_ferric
   title: Ferrous iron oxidation for energy
   description: Evidence-backed causal sketch linking the iron-oxidation trait to oxidation
     of ferrous iron to ferric iron for energy conservation.
+  scope_status: MECHANISTIC
+  scope_notes: This is a cross-taxon iron-oxidation graph. The A. ferrooxidans Cyc2
+    example supports the acidophilic Cyc2 branch; cbb3, bd, and multiheme proteins
+    represent lineage- and condition-specific alternatives and are not universal markers.
   nodes:
   - node_id: iron_oxidation_trait
     label: iron oxidation
@@ -52,14 +61,43 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane cytochrome c that extracts electrons from extracellular
       Fe(II); the central iron oxidase across many FeOB.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cyc2 homologs fall into functionally heterogeneous phylogenetic
+      clusters, and no exact checked GO or InterPro term distinguishes the experimentally
+      supported iron-oxidase class represented here.
+    protein_examples:
+    - uniprot_id: UniProtKB:B7JAQ7
+      protein_label: Cytochrome c
+      gene_symbol: cyc2
+      taxon_id: NCBITaxon:243159
+      taxon_label: Acidithiobacillus ferrooxidans ATCC 23270
+      entry_status: UNREVIEWED
+      proteome_id: UP000001362
+      retrieved_on: '2026-08-24'
+      entry_version: 60
+      sequence_version: 1
+      role: Outer-membrane Cyc2 component of the iron-oxidizing/O2-reducing supercomplex
+        in A. ferrooxidans ATCC 23270.
+      evidence:
+      - reference: DOI:10.1074/jbc.M802496200
+        snippet: outer membrane-bound cytochrome c Cyc2 was purified
+        notes: The primary biochemical study reports iron-oxidase activity and electron
+          transfer through Cyc2 in the isolated trans-envelope supercomplex; UniProtKB
+          B7JAQ7 is the strain's cyc2 reference-proteome entry.
   - node_id: cbb3_oxidase
     label: cbb3-type terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: High-oxygen-affinity terminal oxidase used by FeOB.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This label denotes a multisubunit cbb3 terminal-oxidase complex
+      across FeOB lineages; exact subunit composition and taxon are not fixed here.
   - node_id: bd_oxidase
     label: cytochrome bd-type terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: High-oxygen-affinity terminal oxidase used by FeOB.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This label denotes a multisubunit cytochrome-bd terminal oxidase
+      across lineages; the graph does not identify a specific complex composition.
   - node_id: microaerobic_conditions
     label: microaerobic conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -82,6 +120,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: FeOB-enriched multiheme cytochromes conducting electrons across long
       distances and wide redox-potential ranges.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Multiheme c-type cytochromes comprise many non-equivalent families
+      and heme architectures; the cited graph claim does not resolve one exact family.
   - node_id: extracellular_electron_transfer
     label: extracellular electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -198,4 +239,11 @@ curation_history:
     that changes only the domain, so the claim each edge makes is unchanged and directions
     are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and
     are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:25:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the cross-taxon iron-oxidation graph, added a DOI-backed A. ferrooxidans
+    Cyc2 example, and documented Cyc2 cluster ambiguity plus the lineage-specific
+    cbb3, bd, and multiheme labels.
   llm_assisted: true

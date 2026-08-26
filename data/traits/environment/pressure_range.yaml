@@ -21,6 +21,10 @@ evidence:
 causal_graphs:
 - graph_id: pressure_range_growth_bounded_span
   title: 'Pressure range: bounded hydrostatic-pressure span supporting growth'
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
     minimum/maximum bounds within which growth is sustained.
   nodes:

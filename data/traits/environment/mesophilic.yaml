@@ -24,6 +24,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: mesophilic_homoviscous_adaptation
   title: Mesophilic homoviscous and enzymatic adaptation mechanism
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is an upper preference, broad tolerance, or central-range
+    classification spanning multiple unrelated adaptations; contextual protein nodes
+    are retained without assigning a misleading token UniProt example.
   description: DOI-backed graph linking mesophily to moderate ambient temperature,
     homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced
     growth at intermediate temperatures.
@@ -51,6 +55,10 @@ causal_graphs:
   - node_id: mesophile_enzyme_repertoire
     label: mesophile enzyme repertoire
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Enzymes with peak activity in the mesophile temperature range.
   - node_id: balanced_growth
     label: balanced mesophilic growth
@@ -73,6 +81,10 @@ causal_graphs:
   - node_id: cspa
     label: CspA cold-shock protein
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Major cold-shock RNA chaperone preventing inhibitory RNA secondary
       structure.
   - node_id: translation
@@ -87,14 +99,26 @@ causal_graphs:
   - node_id: rpoh_sigma32
     label: sigma-32 (RpoH)
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Alternative sigma factor controlling the bacterial heat-shock regulon.
-  - node_id: heat_shock_genes
-    label: heat shock genes
+  - node_id: heat_shock_proteins
+    label: heat-shock response proteins
     node_type: GENE_OR_PROTEIN
-    description: Genes (e.g. chaperones, proteases) induced to mitigate heat stress.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
+    description: Chaperones and proteases induced to mitigate heat stress.
   - node_id: dnak
     label: DnaK chaperone
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label in
+      a broad environmental classification; no single exact family term denotes this
+      aggregate use.
     description: Hsp70 chaperone that sequesters sigma-32, negatively regulating its
       activity.
   edges:
@@ -176,8 +200,8 @@ causal_graphs:
         regulation relevant to mesophiles near the upper temperature range.
   - subject: rpoh_sigma32
     predicate: activates expression of
-    object: heat_shock_genes
-    description: Sigma-32 (RpoH) activates expression of heat-shock genes.
+    object: heat_shock_proteins
+    description: Sigma-32 (RpoH) activates production of heat-shock response proteins.
     evidence:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Heat shock regulation centers on sigma factor RpoH (sigma-32) directing

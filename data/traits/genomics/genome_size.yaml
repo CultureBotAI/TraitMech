@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: genome_size_population_lifestyle
   title: Genome size reflects effective population size and lifestyle
+  scope_status: NONMECHANISTIC
+  scope_notes: This genomics record is a measurement, genomic-element classification,
+    or population-level descriptor rather than one taxon-specific protein mechanism;
+    contextual protein nodes do not receive token UniProt examples.
   description: Evidence-backed causal sketch linking effective population size and
     lifestyle to reductive evolution shaping prokaryotic genome length.
   nodes:

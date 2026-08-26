@@ -15,9 +15,12 @@ synonyms:
   source: DOI:10.1146/annurev.cellbio.21.012704.131001
 evidence:
 - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+  snippet: Bacteria communicate with one another using chemical signal molecules.
   notes: Waters & Bassler review quorum sensing as autoinducer-mediated cell-to-cell
     communication coordinating population-wide behavior.
 - reference: DOI:10.1146/annurev.micro.55.1.165
+  snippet: Quorum sensing is the regulation of gene expression in response to fluctuations
+    in cell-population density.
   notes: Miller & Bassler review quorum sensing across bacteria and its regulatory
     logic.
 canonical_examples:
@@ -26,11 +29,20 @@ canonical_examples:
   note: Where quorum sensing was discovered (LuxI/LuxR autoinduction of bioluminescence);
     the founding QS model. Vibrio harveyi is a parallel model.
   reference: DOI:10.1128/jb.00035-24
+- taxon_id: NCBITaxon:29339
+  taxon_label: Bacillus thuringiensis subsp. kurstaki
+  note: Source taxon for the structurally and mechanistically characterized AiiA AHL
+    lactonase used to establish the quorum-quenching branch.
+  reference: DOI:10.1073/pnas.0504996102
 causal_graphs:
 - graph_id: quorum_sensing_autoinducer
   title: Autoinducer-mediated quorum sensing
   description: Evidence-backed causal sketch linking accumulating autoinducer signals
     to coordinated population-wide gene expression.
+  scope_status: MECHANISTIC
+  scope_notes: This graph is reviewed as the AHL/LuxR branch of quorum sensing plus
+    a specific AiiA lactonase interruption mechanism; it does not generalize AiiA
+    to peptide or AI-2 signaling systems.
   nodes:
   - node_id: quorum_sensing_trait
     label: quorum sensing
@@ -38,7 +50,7 @@ causal_graphs:
     grounding: traitmech:000084
     description: Cell-density-dependent coordinated regulation.
   - node_id: autoinducer
-    label: autoinducer
+    label: N-acyl homoserine lactone autoinducer
     node_type: CHEMICAL
     description: Diffusible signal whose concentration tracks cell density.
     grounding: CHEBI:71338
@@ -53,15 +65,35 @@ causal_graphs:
     description: Threshold accumulated autoinducer concentration (high cell density)
       that triggers QS activation.
   - node_id: signal_receptor
-    label: cognate signal receptor
+    label: LuxR-family AHL receptor
     node_type: GENE_OR_PROTEIN
     description: Cognate sensor protein/receptor that detects accumulated autoinducer
       and alters gene expression.
+    grounding: InterPro:IPR000792
   - node_id: quorum_quenching_enzyme
-    label: quorum-quenching enzyme
+    label: AiiA quorum-quenching AHL lactonase
     node_type: GENE_OR_PROTEIN
-    description: Signal-degrading/inactivating enzyme (e.g., lactonase) that interrupts
-      quorum sensing.
+    description: Metallo-dependent AiiA lactonase that hydrolyzes AHL autoinducers
+      and interrupts quorum sensing.
+    grounding: InterPro:IPR054870
+    protein_examples:
+    - uniprot_id: UniProtKB:P0CJ63
+      protein_label: N-acyl homoserine lactonase AiiA
+      gene_symbol: aiiA
+      taxon_id: NCBITaxon:29339
+      taxon_label: Bacillus thuringiensis subsp. kurstaki
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-23'
+      entry_version: 47
+      sequence_version: 1
+      role: Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone
+        signals, thereby interrupting the AHL/LuxR signaling branch.
+      evidence:
+      - reference: DOI:10.1073/pnas.0504996102
+        snippet: quorum-quenching N-acyl-L-homoserine lactone hydrolase
+        notes: The primary structural, catalytic, and mutagenesis study establishes
+          AiiA-mediated AHL hydrolysis in B. thuringiensis; UniProtKB P0CJ63 verifies
+          the reviewed protein and taxon.
   - node_id: qs_inhibitor
     label: quorum-sensing inhibitor
     node_type: CHEMICAL
@@ -73,35 +105,49 @@ causal_graphs:
     object: quorum_sensing_process
     description: Autoinducer accumulation drives quorum sensing.
     evidence:
-    - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
-      notes: Waters & Bassler review autoinducer-mediated communication.
+    - reference: DOI:10.1007/s10867-010-9186-4
+      snippet: Individual cells release small molecules, known as autoinducers, into
+        their local environment while also responding to the local concentration of
+        the same molecule.
+      notes: The primary confinement study describes production and sensing of the
+        AHL autoinducer in the V. fischeri LuxI/LuxR circuit.
     predicate_id: biolink:participates_in
   - subject: quorum_sensing_process
     predicate: confers
     object: quorum_sensing_trait
     description: The sensing process realizes the quorum-sensing trait.
     evidence:
-    - reference: DOI:10.1146/annurev.micro.55.1.165
-      notes: Miller & Bassler review quorum-sensing regulatory logic.
+    - reference: DOI:10.1007/s10867-010-9186-4
+      snippet: A density of bacteria sufficient to raise the local concentration of
+        AI above a threshold then triggers changes in gene expression throughout the
+        population.
+      notes: The V. fischeri LuxI/LuxR experiment links autoinducer accumulation to
+        the coordinated population response that realizes this trait.
     predicate_id: METPO:2007700
   - subject: threshold_autoinducer_concentration
-    predicate: enables detection by
-    object: signal_receptor
-    description: Once autoinducer reaches a threshold concentration it is detected
-      by cognate sensor proteins, activating QS.
+    predicate: triggers
+    object: quorum_sensing_process
+    description: A threshold autoinducer concentration triggers the population-wide
+      quorum-sensing response.
     evidence:
-    - reference: DOI:10.3390/ijms25052655
-      notes: Once the concentration of secreted AI molecules has reached a threshold
-        level, they are detected by cognate sensor proteins (generic, cross-taxa).
+    - reference: DOI:10.1146/annurev.micro.55.1.165
+      snippet: The detection of a minimal threshold stimulatory concentration of an
+        autoinducer leads to an alteration in gene expression.
+      notes: This review statement supports the threshold-to-response relation across
+        bacterial quorum-sensing systems without assigning it to a single receptor
+        architecture.
   - subject: signal_receptor
     predicate: positively regulates
     object: autoinducer
     description: Activated signal-receptor complex promotes autoinducer synthase transcription,
       forming the autoinduction positive-feedback loop.
     evidence:
-    - reference: DOI:10.3390/ijms25052655
-      notes: AHL-LuxR complex recognises the lux box of luxI to promote luxI transcription,
-        described as a positive feedback loop central to autoinduction.
+    - reference: DOI:10.1128/mbio.01079-17
+      snippet: the P. aeruginosa lasI and rhlI genes are positively autoregulated
+        by their cognate AHLs and LuxR homologs
+      notes: This primary P. aeruginosa study supports the LuxR-family positive-feedback
+        branch; positive signal autoregulation is not universal to all quorum-sensing
+        systems.
     predicate_id: RO:0002213
   - subject: quorum_quenching_enzyme
     predicate: inactivates
@@ -109,19 +155,32 @@ causal_graphs:
     description: Quorum-quenching enzymes degrade/inactivate QS autoinducer signals,
       interrupting quorum sensing.
     evidence:
-    - reference: DOI:10.3390/ijms25052655
-      notes: QQ enzymes that inactivate QS signals (broad inhibitory branch).
+    - reference: DOI:10.1073/pnas.0504996102
+      snippet: lactonases that hydrolyze AHLs into inactive products, thereby blocking
+        the quorum-sensing systems
+      notes: The primary structural and catalytic study demonstrates this relation
+        for AiiA from B. thuringiensis and AHL signals specifically.
   - subject: qs_inhibitor
     predicate: inhibits
     object: signal_receptor
     description: QS inhibitors chemically disrupt quorum sensing by inhibiting signal
       receptors / QS pathways.
     evidence:
-    - reference: DOI:10.3390/ijms25052655
-      notes: QS inhibitors (QSIs) that chemically disrupt QS via inhibition of signal
-        receptors (broad class).
+    - reference: DOI:10.1016/j.molcel.2011.04.003
+      snippet: CviR from Chromobacterium violaceum is potently antagonized by molecules
+        that bind in place of the native acylated homoserine lactone autoinducer
+      notes: The primary structure-function study supports competitive antagonism
+        of the CviR LuxR-family receptor; it does not establish that every quorum-sensing
+        inhibitor acts at a receptor.
     predicate_id: RO:0002212
 curation_history:
+- timestamp: '2026-08-23T09:13:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Narrowed the graph to its cited AHL/LuxR branch, grounded the LuxR receptor
+    and AiiA lactonase families, and added DOI-backed B. thuringiensis P0CJ63 as the
+    quorum-quenching protein exemplar.
+  llm_assisted: true
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH

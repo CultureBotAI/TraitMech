@@ -29,6 +29,10 @@ evidence:
 causal_graphs:
 - graph_id: ph_optimum_mid2_alkaline_tolerant_setpoint
   title: pH-optimum-mid2 alkaline-tolerant setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking modest alkaline pH-homeostasis at slightly
     basic external pH to a pH-optimum between 7 and 8.
   nodes:
@@ -62,6 +66,10 @@ causal_graphs:
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Sodium:proton antiporters that acidify the cytoplasm when internal
       pH is too high.
   - node_id: k_h_antiporters
@@ -86,6 +94,9 @@ causal_graphs:
   - node_id: f0f1_atp_synthase
     label: F0F1-ATP synthase
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual multisubunit ATP-synthase complex in
+      a quantitative pH bin; no one component family represents the whole complex.
     description: Proton-transporting ATP synthase complex that makes ATP from PMF.
   edges:
   - subject: slightly_alkaline_external_ph

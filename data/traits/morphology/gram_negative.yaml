@@ -35,6 +35,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking Gram-negative staining to outer
     membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization,
     and counterstain uptake.
+  scope_status: NONMECHANISTIC
+  scope_notes: Gram-negative is an envelope/staining classification rather than one
+    inherited protein mechanism. Contextual envelope complexes are retained without
+    assigning a token UniProt example.
   nodes:
   - node_id: gram_negative_trait
     label: gram negative
@@ -92,11 +96,17 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Beta-barrel assembly machinery (BamA-E) that folds and inserts OMPs
       into the outer membrane.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: BAM is a multiprotein complex whose composition varies by lineage;
+      no single protein-family term represents the whole node.
   - node_id: beta_barrel_omps
     label: beta-barrel outer membrane proteins
     node_type: GENE_OR_PROTEIN
     description: Beta-barrel outer membrane proteins folded and inserted by the BAM
       complex.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This label denotes a structurally broad collection of unrelated
+      outer-membrane protein families.
   - node_id: mla_pathway
     label: Mla pathway
     node_type: PATHWAY
@@ -112,6 +122,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Envelope-spanning complex safeguarding connectivity of the Gram-negative
       cell envelope.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Tol-Pal is a multiprotein system and cannot be represented by
+      one component family or accession.
   - node_id: cell_envelope_connectivity
     label: cell envelope connectivity
     node_type: QUALITY

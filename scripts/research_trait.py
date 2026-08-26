@@ -83,6 +83,32 @@ def summarize_causal_graphs(doc: dict[str, Any]) -> str:
     return " | ".join(summaries)
 
 
+def summarize_canonical_examples(doc: dict[str, Any]) -> str:
+    summaries = []
+    for example in doc.get("canonical_examples", []) or []:
+        if not isinstance(example, dict):
+            continue
+        label = example.get("taxon_label", "")
+        taxon_id = example.get("taxon_id", "")
+        reference = example.get("reference", "")
+        summaries.append(f"{label} ({taxon_id}; {reference})")
+    return " | ".join(summaries)
+
+
+def summarize_protein_nodes(doc: dict[str, Any]) -> str:
+    summaries = []
+    for graph in doc.get("causal_graphs", []) or []:
+        if not isinstance(graph, dict):
+            continue
+        graph_id = graph.get("graph_id", "")
+        for node in graph.get("nodes", []) or []:
+            if not isinstance(node, dict) or node.get("node_type") != "GENE_OR_PROTEIN":
+                continue
+            grounding = node.get("grounding") or "label-only"
+            summaries.append(f"{graph_id}:{node.get('label', '')} [{grounding}]")
+    return " | ".join(summaries)
+
+
 def template_vars(doc: dict[str, Any], category_slug: str, trait_slug: str) -> dict[str, str]:
     return {
         "trait_label": str(doc.get("label", trait_slug)),
@@ -97,6 +123,8 @@ def template_vars(doc: dict[str, Any], category_slug: str, trait_slug: str) -> d
         "synonyms": summarize_synonyms(doc),
         "evidence_summary": summarize_evidence(doc),
         "causal_graph_summary": summarize_causal_graphs(doc),
+        "canonical_examples_summary": summarize_canonical_examples(doc),
+        "protein_node_summary": summarize_protein_nodes(doc),
     }
 
 

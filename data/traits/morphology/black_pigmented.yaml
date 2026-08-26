@@ -32,6 +32,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking black microbial pigmentation
     to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin polymers,
     and visible black color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: black_pigmented_trait
     label: black pigmented
@@ -44,6 +48,9 @@ causal_graphs:
     description: Tyrosine-derived, DOPA-like, DHN-like, or HGA-like precursors for
       melanin formation.
   - node_id: tyrosinase_laccase_oxidases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: tyrosinase/laccase oxidases
     node_type: GENE_OR_PROTEIN
     description: Oxidative enzymes that can catalyze melanin precursor oxidation.
@@ -103,6 +110,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Black-to-brown eumelanin polymer formed from DOPA-derived intermediates.
   - node_id: hppd
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: HppD (4-hydroxyphenylpyruvate dioxygenase)
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisic acid in
@@ -112,6 +122,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Pyomelanin precursor that auto-oxidizes and polymerizes into pyomelanin.
   - node_id: hmga
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: HmgA (homogentisate 1,2-dioxygenase)
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting HGA to maleylacetoacetate; loss leads to HGA accumulation

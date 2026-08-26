@@ -25,6 +25,11 @@ causal_graphs:
   title: Flask-shape asymmetric polar growth
   description: DOI-backed graph linking unipolar peptidoglycan growth and tapered
     neck extension to flask-shaped cell morphology.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a morphology classification. The cited studies establish
+    polar or prosthecate growth and bactofilin-dependent compartment control, but
+    do not establish an exact protein mechanism for the asserted bulb-plus-neck flask
+    geometry; no token protein example is assigned.
   nodes:
   - node_id: flask_shaped_trait
     label: flask shaped
@@ -73,6 +78,9 @@ causal_graphs:
     label: bactofilin cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Bactofilin polymer scaffold marking sites of asymmetric wall growth.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The contextual node spans different bactofilin paralogues across
+      prosthecate taxa, so no one family or instance precisely denotes it.
   - node_id: asymmetric_compartment_growth
     label: asymmetric compartment growth
     node_type: BIOLOGICAL_PROCESS

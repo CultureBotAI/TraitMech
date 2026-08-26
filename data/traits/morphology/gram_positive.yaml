@@ -34,6 +34,9 @@ causal_graphs:
   description: Evidence-backed causal sketch linking Gram-positive staining to thick
     peptidoglycan, wall teichoic acids, low decolorizer permeability, and crystal
     violet-iodine retention.
+  scope_status: NONMECHANISTIC
+  scope_notes: Gram-positive is an envelope/staining classification spanning many
+    taxa, not a single protein-mediated mechanism; no token protein is appropriate.
   nodes:
   - node_id: gram_positive_trait
     label: gram positive

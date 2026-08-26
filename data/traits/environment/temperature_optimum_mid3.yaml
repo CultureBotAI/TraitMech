@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_optimum_mid3_upper_mesophile
   title: Temperature-optimum-mid3 upper-mesophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking upper-mesophile membrane and enzyme adaptation
     to a temperature optimum between 30 and 34 °C.
   nodes:
@@ -76,6 +80,10 @@ causal_graphs:
   - node_id: chaperone_network
     label: molecular chaperone network
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: DnaK/DnaJ, GroEL/GroES, ClpB, HtpG chaperone system.
   - node_id: proteostasis
     label: proteostasis

@@ -23,6 +23,10 @@ evidence:
 causal_graphs:
 - graph_id: temperature_optimum_very_low_psychrophile_setpoint
   title: Temperature-optimum-very-low psychrophile setpoint
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a quantitative measurement, interval, or bin in the
+    environmental phenotype hierarchy; a token protein example would misrepresent
+    the measured value as one inherited molecular mechanism.
   description: DOI-backed graph linking cold-adapted membrane and enzyme machinery
     to a temperature optimum at or below ~10 °C.
   nodes:
@@ -63,6 +67,10 @@ causal_graphs:
   - node_id: cold_shock_proteins
     label: cold shock proteins / RNA chaperones
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: RNA chaperones that resolve nucleic-acid secondary structure stabilized
       in the cold.
   - node_id: translation_low_temperature
@@ -92,6 +100,10 @@ causal_graphs:
   - node_id: antifreeze_proteins
     label: antifreeze / ice-binding proteins
     node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed as a contextual protein or protein-complex label within
+      a quantitative measurement graph; no exact semantic family term was established
+      for this aggregate use.
     description: Ice-binding proteins that depress freezing point via thermal hysteresis.
   - node_id: thermal_hysteresis
     label: thermal hysteresis / lowered freezing point

@@ -27,12 +27,22 @@ canonical_examples:
   taxon_label: Acetobacterium woodii
   note: Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway
     (Rnf bioenergetics model).
-  reference: PMID:22479398
+  reference: DOI:10.1128/JB.00357-18
+- taxon_id: NCBITaxon:1525
+  taxon_label: Neomoorella thermoacetica
+  note: Model homoacetogen used for biochemical reconstruction of the CODH/ACS convergence
+    step in the Wood-Ljungdahl pathway.
+  reference: DOI:10.1073/pnas.220404397
 causal_graphs:
 - graph_id: homoacetogenesis_wood_ljungdahl_acetate
   title: Homoacetogenesis Wood-Ljungdahl acetate mechanism
   description: DOI-backed graph linking anaerobic CO2 reduction, hydrogen/CO inputs,
     acetyl-CoA synthesis, and acetate as the sole reduced product.
+  scope_status: MECHANISTIC
+  scope_notes: The graph represents the conserved Wood-Ljungdahl core plus taxon-dependent
+    energy-conservation alternatives. The N. thermoacetica AcsB example supports the
+    CODH/ACS convergence step, while the A. woodii canonical example anchors an Rnf-type
+    implementation; Rnf and Ech are not asserted to be simultaneously universal.
   nodes:
   - node_id: homoacetogenesis_trait
     label: Homoacetogenesis
@@ -96,6 +106,7 @@ causal_graphs:
     label: formyl-THF synthetase (Fhs)
     node_type: GENE_OR_PROTEIN
     description: Formate--tetrahydrofolate ligase converting formate to formyl-THF.
+    grounding: GO:0004329
   - node_id: methyl_branch
     label: methyl branch of WLP
     node_type: PATHWAY
@@ -109,6 +120,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Acetyl-CoA synthase / CO dehydrogenase complex where the two WLP
       branches converge.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This node denotes the complete multisubunit ACS/CODH assembly;
+      no single GO or InterPro term exactly represents the combined complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P27988
+      protein_label: Carbon monoxide dehydrogenase/acetyl-CoA synthase subunit alpha
+      gene_symbol: acsB
+      taxon_id: NCBITaxon:1525
+      taxon_label: Neomoorella thermoacetica
+      entry_status: REVIEWED
+      retrieved_on: '2026-08-24'
+      entry_version: 125
+      sequence_version: 1
+      role: AcsB alpha component of CODH/ACS that forms acetyl-CoA; this accession
+        is not presented as the complete complex.
+      evidence:
+      - reference: DOI:10.1073/pnas.220404397
+        snippet: Genes acsA and acsB encode the beta and alpha subunits
+        notes: The primary cloning and reconstitution study identifies acsB as the
+          alpha component of active AcsAB from C. thermoaceticum; UniProtKB P27988
+          verifies the reviewed current N. thermoacetica mapping.
   - node_id: acetate_kinase
     label: acetate kinase
     node_type: GENE_OR_PROTEIN
@@ -124,6 +156,9 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-associated Rnf or Ech complex translocating ions to build
       the transmembrane gradient.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Rnf and Ech are distinct, taxon-dependent multisubunit alternatives;
+      no one complex or family term can ground this deliberately disjunctive node.
   - node_id: transmembrane_ion_gradient
     label: transmembrane ion gradient
     node_type: BIOLOGICAL_PROCESS
@@ -132,6 +167,9 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane enzyme using the ion gradient to synthesize ATP.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The node is intentionally broad across proton- and sodium-coupled
+      F/V-type ATP synthases; an exact complex term requires a taxon-specific architecture.
   edges:
   - subject: homoacetogenesis_trait
     predicate: occurs in
@@ -425,4 +463,11 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-24T10:20:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Scoped the homoacetogenesis mechanism, grounded Fhs, added DOI-backed N.
+    thermoacetica AcsB as an explicit CODH/ACS component, and documented the combined
+    CODH/ACS, Rnf/Ech, and ATP-synthase labels without over-generalizing architecture.
   llm_assisted: true

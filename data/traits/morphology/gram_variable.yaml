@@ -33,6 +33,9 @@ causal_graphs:
   title: Gram-variable peptidoglycan thinning
   description: DOI-backed graph linking culture-age-dependent peptidoglycan thinning
     and autolysis to inconsistent gram-staining within a single bacterial population.
+  scope_status: NONMECHANISTIC
+  scope_notes: Gram variability is a culture-state staining outcome rather than a
+    stable protein-mediated trait; no token protein example is appropriate.
   nodes:
   - node_id: gram_variable_trait
     label: gram variable

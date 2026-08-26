@@ -28,6 +28,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking bacterial carotenoid pigmentation
     to isoprenoid precursors, crt enzymes, conjugated carotenoids, and yellow-orange-red
     visible color.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: carotenoid_pigmentation_trait
     label: carotenoid pigmentation
@@ -39,6 +43,9 @@ causal_graphs:
     node_type: CHEMICAL
     description: Prenyl building blocks used in carotenoid biosynthesis.
   - node_id: crt_enzymes
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes encoded by crt genes.
@@ -56,6 +63,9 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Visible colors associated with carotenoid absorption spectra.
   - node_id: phytoene_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: phytoene synthase
     node_type: GENE_OR_PROTEIN
     description: CrtB-type enzyme condensing prenyl diphosphate to phytoene.
@@ -74,6 +84,9 @@ causal_graphs:
     description: Red C40 carotenoid intermediate formed by desaturation.
     grounding: CHEBI:15948
   - node_id: lycopene_cyclases
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: lycopene cyclases
     node_type: GENE_OR_PROTEIN
     description: CrtY-type enzymes cyclizing lycopene into cyclic carotenes.

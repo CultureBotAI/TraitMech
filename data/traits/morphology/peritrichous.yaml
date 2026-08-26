@@ -26,6 +26,10 @@ causal_graphs:
   title: Peritrichous flagellation — surface-distributed flagella
   description: Evidence-backed causal sketch linking surface-distributed bacterial
     flagella to the peritrichous arrangement.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: peritrichous_trait
     label: peritrichous

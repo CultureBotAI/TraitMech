@@ -27,6 +27,10 @@ causal_graphs:
   title: Bacillus-shape rod elongation mechanism
   description: Evidence-backed causal sketch linking bacillus morphology to MreB-organized
     Rod complexes, lateral peptidoglycan insertion, and FtsZ-coupled division.
+  scope_status: NONMECHANISTIC
+  scope_notes: This record is a broad environmental or morphological classification
+    spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
+    descriptor; contextual protein nodes do not receive token UniProt examples.
   nodes:
   - node_id: bacillus_shaped_trait
     label: bacillus shaped
@@ -34,10 +38,16 @@ causal_graphs:
     grounding: METPO:1000667
     description: Elongated cylindrical rod-like bacterial morphology.
   - node_id: mreB
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
   - node_id: rod_complex
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: Rod complex
     node_type: GENE_OR_PROTEIN
     description: MreB-associated cell-wall elongation machinery.
@@ -61,6 +71,9 @@ causal_graphs:
     description: Peptidoglycan sacculus that protects against osmotic lysis and determines
       cell shape.
   - node_id: rodA_pbp2_synthase
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: RodA-PBP2 synthase (Rod complex)
     node_type: GENE_OR_PROTEIN
     description: Essential elongasome peptidoglycan synthase responsible for bacterial
@@ -81,6 +94,9 @@ causal_graphs:
       glycosyltransferases).
     grounding: CHEBI:28908
   - node_id: class_a_pbps
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
+      family identifier exactly captures this node's represented scope.
     label: class A penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Class A PBPs (aPBPs), a family of peptidoglycan synthases.
