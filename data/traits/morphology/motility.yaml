@@ -330,3 +330,29 @@ curation_history:
     (flagellar_motor, gliding_motility_machinery, pilb_extension_atpase, pilt_retraction_atpase,
     archaellum).'
   llm_assisted: true
+- timestamp: '2026-08-26T19:05:00Z'
+  curator: claude
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Added 2 source-backed canonical example(s) from this record''s own deep-research
+    artifact (issue 444): Salmonella enterica subsp. enterica serovar Typhimurium
+    (NCBITaxon:90371), Pseudomonas aeruginosa (NCBITaxon:287). Each note scopes the
+    exemplar to the single locomotion mechanism the cited source establishes, because
+    this record is an upper class whose graph is NONMECHANISTIC and spans alternative
+    mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every
+    DOI resolved through Crossref. No gene or operon was promoted to a primary entry.'
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  note: 'Flagellar swimming: the structural reference for the ion-driven rotary motor,
+    where MotA-MotB torque generation turns a hook and filament to propel the cell.
+    Exemplifies flagellar propulsion; its peritrichous run-and-tumble pattern is not
+    universal.'
+  reference: DOI:10.3390/biom14121488
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: 'Type IV pilus twitching: PilB-driven extension and PilT-driven retraction
+    pull the cell across a surface, and blocking pilus assembly cuts the twitching
+    zone by 63%. Exemplifies non-flagellar surface motility, a mechanism independent
+    of the flagellar motor.'
+  reference: DOI:10.1038/s41467-024-52732-5

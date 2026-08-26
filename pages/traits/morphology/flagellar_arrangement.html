@@ -416,6 +416,54 @@ This scope is consistent with the current mechanistic literature, which uses “
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Shewanella putrefaciens CN-32</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=319224"
+             rel="nofollow noreferrer"><code>NCBITaxon:319224</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1038/s41467-024-50274-4"
+             rel="nofollow noreferrer"><code>DOI:10.1038/s41467-024-50274-4</code></a>
+          
+          
+          <span class="meta">Monotrichous polar flagellation: 92% of wild-type cells carry a single monopolar flagellum, and disrupting the FlhF FliG-binding region redistributes hooks to subpolar sites. Exemplifies the monotrichous arrangement class, not every flagellation pattern.</span>
+        </li>
+        
+        <li>
+          <em>Helicobacter pylori</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=210"
+             rel="nofollow noreferrer"><code>NCBITaxon:210</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1128/JB.00110-23"
+             rel="nofollow noreferrer"><code>DOI:10.1128/JB.00110-23</code></a>
+          
+          
+          <span class="meta">Multi-flagellate polar tuft: wild-type populations centre on about four flagella per cell, and flhF/flhG deletions shift number and polar placement. Exemplifies a lophotrichous arrangement whose numerical control differs from monotrichous vibrios.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -470,6 +518,12 @@ This scope is consistent with the current mechanistic literature, which uses “
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope flagellar_arrangement_flhf_flhg=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf, flif_msring, flig).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T19:05:00Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 2 source-backed canonical example(s) from this record&#39;s own deep-research artifact (issue 444): Shewanella putrefaciens CN-32 (NCBITaxon:319224), Helicobacter pylori (NCBITaxon:210). Each note scopes the exemplar to the single flagellation pattern the cited source establishes, because this record is an upper class whose graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every DOI resolved through Crossref. No gene or operon was promoted to a primary entry.</p>
         </li>
         
       </ol>
@@ -857,7 +911,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-26 19:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

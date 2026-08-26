@@ -212,3 +212,29 @@ curation_history:
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhf, flif_msring, flig).'
   llm_assisted: true
+- timestamp: '2026-08-26T19:05:00Z'
+  curator: claude
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Added 2 source-backed canonical example(s) from this record''s own deep-research
+    artifact (issue 444): Shewanella putrefaciens CN-32 (NCBITaxon:319224), Helicobacter
+    pylori (NCBITaxon:210). Each note scopes the exemplar to the single flagellation
+    pattern the cited source establishes, because this record is an upper class whose
+    graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels
+    were verified against NCBI taxonomy and every DOI resolved through Crossref. No
+    gene or operon was promoted to a primary entry.'
+  llm_assisted: true
+canonical_examples:
+- taxon_id: NCBITaxon:319224
+  taxon_label: Shewanella putrefaciens CN-32
+  note: 'Monotrichous polar flagellation: 92% of wild-type cells carry a single monopolar
+    flagellum, and disrupting the FlhF FliG-binding region redistributes hooks to
+    subpolar sites. Exemplifies the monotrichous arrangement class, not every flagellation
+    pattern.'
+  reference: DOI:10.1038/s41467-024-50274-4
+- taxon_id: NCBITaxon:210
+  taxon_label: Helicobacter pylori
+  note: 'Multi-flagellate polar tuft: wild-type populations centre on about four flagella
+    per cell, and flhF/flhG deletions shift number and polar placement. Exemplifies
+    a lophotrichous arrangement whose numerical control differs from monotrichous
+    vibrios.'
+  reference: DOI:10.1128/JB.00110-23

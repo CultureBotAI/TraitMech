@@ -463,6 +463,54 @@ Identifiers below are limited to mappings that can be stated confidently. Label-
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Salmonella enterica subsp. enterica serovar Typhimurium</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=90371"
+             rel="nofollow noreferrer"><code>NCBITaxon:90371</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3390/biom14121488"
+             rel="nofollow noreferrer"><code>DOI:10.3390/biom14121488</code></a>
+          
+          
+          <span class="meta">Flagellar swimming: the structural reference for the ion-driven rotary motor, where MotA-MotB torque generation turns a hook and filament to propel the cell. Exemplifies flagellar propulsion; its peritrichous run-and-tumble pattern is not universal.</span>
+        </li>
+        
+        <li>
+          <em>Pseudomonas aeruginosa</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287"
+             rel="nofollow noreferrer"><code>NCBITaxon:287</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1038/s41467-024-52732-5"
+             rel="nofollow noreferrer"><code>DOI:10.1038/s41467-024-52732-5</code></a>
+          
+          
+          <span class="meta">Type IV pilus twitching: PilB-driven extension and PilT-driven retraction pull the cell across a surface, and blocking pilus assembly cuts the twitching zone by 63%. Exemplifies non-flagellar surface motility, a mechanism independent of the flagellar motor.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -577,6 +625,12 @@ Identifiers below are limited to mappings that can be stated confidently. Label-
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope motility_locomotion_machinery=NONMECHANISTIC with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flagellar_motor, gliding_motility_machinery, pilb_extension_atpase, pilt_retraction_atpase, archaellum).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T19:05:00Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added 2 source-backed canonical example(s) from this record&#39;s own deep-research artifact (issue 444): Salmonella enterica subsp. enterica serovar Typhimurium (NCBITaxon:90371), Pseudomonas aeruginosa (NCBITaxon:287). Each note scopes the exemplar to the single locomotion mechanism the cited source establishes, because this record is an upper class whose graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every DOI resolved through Crossref. No gene or operon was promoted to a primary entry.</p>
         </li>
         
       </ol>
@@ -964,7 +1018,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-26 19:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

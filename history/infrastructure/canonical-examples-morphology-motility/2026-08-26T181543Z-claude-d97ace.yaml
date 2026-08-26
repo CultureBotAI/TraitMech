@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_morphology_motility_exemplars.py
+  slug: canonical-examples-morphology-motility
+session:
+  id: 2026-08-26T181543Z-claude-d97ace
+  timestamp: '2026-08-26T18:15:43Z'
+  actors:
+  - type: ai_agent
+    name: claude
+    model: claude-fable-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Add seven canonical examples for three upper morphology and motility classes
+  details: 'One-shot migration (dry-run default, --apply opt-in, record_curation_event plus
+    write_validated_trait). flagellar_arrangement, intracellular_inclusion, and motility are
+    upper classes whose causal graphs are NONMECHANISTIC because each spans alternative mechanisms,
+    which is why earlier tranches left them empty. Every example comes from the record''s
+    own deep-research artifact under research/traits/morphology, names an organism the cited
+    source actually characterizes, and carries a note scoping the claim to the one flagellation
+    pattern, inclusion type, or locomotion mechanism that source establishes: Shewanella putrefaciens
+    CN-32 and Helicobacter pylori for monotrichous and lophotrichous arrangement; Halobacterium
+    salinarum NRC-1, Cupriavidus necator H16, and Magnetospirillum gryphiswaldense MSR-1 for
+    gas vesicle, PHB storage granule, and magnetosome inclusions; Salmonella enterica serovar
+    Typhimurium and Pseudomonas aeruginosa for flagellar swimming and type IV pilus twitching.
+    Myxococcus xanthus was deliberately excluded from motility because the artifact lists
+    it as a taxon label without a cited gliding-mechanism claim, and a token exemplar is the
+    defect review issue 526 objects to. All seven taxon ids and labels were verified against
+    NCBI taxonomy and all seven DOIs resolved through Crossref before writing. Coverage moves
+    from 429 examples across 256 records to 436 across 259; the live NCBI audit resolves all
+    436 with zero errors and the 24 pre-existing label-drift warnings, none on these records.
+    Quantitative bins remain deferred under issues 475 and 478 and no gene or operon was promoted
+    to a primary entry.'
