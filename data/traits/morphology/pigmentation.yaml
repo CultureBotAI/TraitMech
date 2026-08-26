@@ -11,6 +11,13 @@ evidence:
 - reference: DOI:10.1016/j.procbio.2013.06.006
   snippet: bacterial pigments in food, pharmaceuticals, dyeing and other aspects
   notes: Supports bacterial pigments as chemically produced microbial color phenotypes.
+canonical_examples:
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  reference: DOI:10.3389/fmicb.2021.793202
+  note: Wild-type strain SCQ1 formed red colonies through prodigiosin production,
+    providing a direct instance of the parent pigmentation phenotype; the source
+    contrasts this state with stable nonpigmented derivatives.
 causal_graphs:
 - graph_id: pigmentation_biosynthetic_colorants
   scope_status: NONMECHANISTIC
@@ -332,4 +339,11 @@ curation_history:
     (carotenoid_enzyme_module, hppd_gene, hmga_gene); added 1 node(s) and 1 edge(s)
     (carotenoid_enzyme_module); removed 1 node(s) and 1 edge(s) together with their
     evidence (crt_carotenoid_genes).'
+  llm_assisted: true
+- timestamp: '2026-08-26T11:06:05Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: Added Serratia marcescens as a directly observed pigmentation example
+    using wild-type SCQ1 red-colony prodigiosin evidence from DOI:10.3389/fmicb.2021.793202;
+    verified the current species taxon and label through NCBI Taxonomy.
   llm_assisted: true

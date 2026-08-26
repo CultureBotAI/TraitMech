@@ -487,6 +487,35 @@ Identifiers below are deliberately conservative. Label-only nodes are preferable
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Serratia marcescens</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615"
+             rel="nofollow noreferrer"><code>NCBITaxon:615</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2021.793202"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2021.793202</code></a>
+          
+          
+          <span class="meta">Wild-type strain SCQ1 formed red colonies through prodigiosin production, providing a direct instance of the parent pigmentation phenotype; the source contrasts this state with stable nonpigmented derivatives.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -577,6 +606,12 @@ Identifiers below are deliberately conservative. Label-only nodes are preferable
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope pigmentation_biosynthetic_colorants=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (carotenoid_enzyme_module, hppd_gene, hmga_gene); added 1 node(s) and 1 edge(s) (carotenoid_enzyme_module); removed 1 node(s) and 1 edge(s) together with their evidence (crt_carotenoid_genes).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-26T11:06:05Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Added Serratia marcescens as a directly observed pigmentation example using wild-type SCQ1 red-colony prodigiosin evidence from DOI:10.3389/fmicb.2021.793202; verified the current species taxon and label through NCBI Taxonomy.</p>
         </li>
         
       </ol>
@@ -964,7 +999,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-26 11:06 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

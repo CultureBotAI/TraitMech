@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: other
+  path: data/traits
+  slug: canonical-examples-cross-category
+session:
+  id: 2026-08-26T110605Z-codex-fd98b22d
+  timestamp: '2026-08-26T11:06:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Added three source-backed canonical examples across morphology and physiology.
+  details: |-
+    Reviewed pigmentation, white_pigmented, and nutrient_adaptation and added one direct, record-local example to each. DOI:10.3389/fmicb.2021.793202 supports wild-type Serratia marcescens SCQ1 red pigmentation and, separately, the stable white-colony phenotype of its delta-slyA deletion mutant; the record notes preserve that distinction and do not generalize the mutant state to the species. DOI:10.1038/s41586-024-07924-w directly characterizes high-affinity nutrient acquisition in Candidatus Pelagibacter ubique HTCC1062 as an oligotrophic adaptation. Current NCBI Taxonomy identifiers and labels were verified before entry. Quantitative cell-size and environmental-optimum bins remain deferred under issues #475 and #478. No gene or operon was promoted to a primary TraitRecord; gene information appears only as supporting phenotype context.
