@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/aerobic_respiration.yaml
+  slug: aerobic_respiration
+session:
+  id: 2026-08-26T102559Z-codex-25662c6
+  timestamp: '2026-08-26T10:25:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the cytochrome-c-oxidase branch to respiratory electron transport
+  details: >-
+    Added one source-supported part-of edge from cytochrome c oxidase to the electron-transport
+    chain, joining the graph's two existing components. The edge stays within the
+    record's explicit cytochrome-c-oxidase branch scope and does not assert that this
+    terminal-oxidase family is universal across aerobes. The protein remains a supporting
+    causal-graph node in YAML and was not promoted to a primary TraitRecord entry.
