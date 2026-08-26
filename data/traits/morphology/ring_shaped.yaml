@@ -24,6 +24,12 @@ evidence:
   snippet: cell curvature
   notes: Cell-shape review supports curvature-generating wall patterning as the basis
     for closed-ring morphology.
+canonical_examples:
+- taxon_id: NCBITaxon:1067
+  taxon_label: Rhodocyclus purpureus
+  note: Type species described from pure culture with individual half-ring-shaped
+    and ring-shaped cells before division.
+  reference: DOI:10.1099/00207713-28-2-283
 causal_graphs:
 - graph_id: ring_shaped_curved_growth_closure
   title: Ring-shape curved growth and pole closure
@@ -284,4 +290,11 @@ curation_history:
     declared exact synonym(s): ''annular''; upgraded to exact scope: ''ring-shaped''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-26T09:40:27Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: Added Rhodocyclus purpureus as the natural ring-shaped exemplar identified
+    by this record's own research artifact and original species description; NCBITaxon:1067
+    and its current label were verified against NCBI.
   llm_assisted: true

@@ -240,13 +240,13 @@ data/traits/morphology/cream_pigmented.yaml	METPO:1003024	cream pigmented	cream_
 data/traits/morphology/crescent_shaped.yaml	METPO:1000669	crescent shaped	crescent_shaped_crescentin_curvature	MECHANISTIC	1	0	1	2	2	1	1	PASS	0	0	-
 data/traits/morphology/curved_shaped.yaml	METPO:1000670	curved shaped	curved_shaped_scaffolded_curvature	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/diplococcus_shaped.yaml	METPO:1000671	diplococcus shaped	diplococcus_shaped_septal_separation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	disc_shaped_anisotropic_wall_growth	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	disc_shaped_anisotropic_wall_growth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbell_shaped_snapping_division	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/ellipsoidal.yaml	METPO:1000673	ellipsoidal	ellipsoidal_ovococcal_elongation	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/morphology/filament_shaped.yaml	METPO:1000674	filament shaped	filament_shaped_streptomyces_polar_growth	NONMECHANISTIC	4	3	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	flagellar_arrangement_flhf_flhg	NONMECHANISTIC	4	1	3	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/flagellated.yaml	METPO:1000704	flagellated	flagellated_flagellar_motor	MECHANISTIC	8	0	8	3	3	1	1	PASS	0	0	-
-data/traits/morphology/flask_shaped.yaml	METPO:1000675	flask shaped	flask_shaped_asymmetric_polar_growth	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/flask_shaped.yaml	METPO:1000675	flask shaped	flask_shaped_asymmetric_polar_growth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/fusiform_shaped.yaml	METPO:1000690	fusiform shaped	fusiform_shaped_tapered_polar_growth	NONMECHANISTIC	6	2	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/gas_vesicle.yaml	traitmech:000070	gas vesicle	gas_vesicle_buoyancy	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
 data/traits/morphology/gliding.yaml	METPO:1000706	gliding	gliding_surface_motility	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
@@ -278,7 +278,7 @@ data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhy
 data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	polyphosphate granule	polyphosphate_granule_storage	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
 data/traits/morphology/prosthecate.yaml	traitmech:000065	prosthecate	prosthecate_stalk_nutrient_uptake	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/red_pigmented.yaml	METPO:1003028	red pigmented	red_pigmented_prodiginine_pathway	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	5	0	5	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/rod_shaped.yaml	METPO:1000681	rod shaped	rod_shaped_mreB_peptidoglycan	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/s_layer.yaml	traitmech:000064	S-layer	s_layer_2d_protein_array	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/sarcina_arrangement.yaml	traitmech:000120	sarcina arrangement	sarcina_three_plane_division_packet	NONMECHANISTIC	4	2	2	1	1	0	0	NONMECHANISTIC	0	0	-

@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: other
+  path: data/traits
+  slug: canonical-examples-morphology
+session:
+  id: 2026-08-26T094027Z-codex-4c9a61
+  timestamp: '2026-08-26T09:40:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Add three source-verified morphology exemplars from record-local research
+  details: |-
+    Reviewed the next morphology records in the canonical-example backlog under
+    the issue 444 standard. Added Planctopirus limnophila DSM 3776 for flask shaped,
+    Haloferax volcanii for disc shaped, and Rhodocyclus purpureus for ring shaped.
+    Each exemplar is named by its record's own deep-research artifact, supported
+    by a direct primary reference, and resolved to a current NCBI Taxonomy identifier
+    and label. The notes preserve the relevant boundaries: budding is not equated
+    with flask shape, the H. volcanii disk state is growth-phase dependent, and the
+    R. purpureus reference describes individual cells rather than a colony pattern.
+
+    Skipped cream_pigmented because the artifact warns that cream, white,
+    nonpigmented, buff, tan, and pale yellow are not interchangeable. Skipped
+    dumbbell_shaped and irregular_shaped because their named taxa occur only as
+    transient or perturbation phenotypes rather than stable trait instances. Skipped
+    gram_stain because its broad assay record does not establish any contextual taxon
+    as an instance of the parent trait. The quantitative-bin blockers remain tracked
+    by issues 475 and 478; no duplicate follow-up issue was opened.
