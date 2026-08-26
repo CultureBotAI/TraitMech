@@ -204,6 +204,68 @@ causal_graphs:
       notes: The modular nature of the denitrification pathway affects phenotypes
         and transient accumulation of intermediates.
     predicate_id: biolink:causes
+  - subject: nitrate_reduction_to_nitrite
+    predicate: has input
+    object: nitrate
+    description: The first canonical denitrification step takes nitrate as its substrate.
+    evidence:
+    - reference: DOI:10.1128/msystems.00742-23
+      snippet: nitrate reductase which reduces nitrate to nitrite
+      notes: Supports nitrate as the input to the Nar-catalyzed first step of the
+        canonical pathway.
+    predicate_id: RO:0002233
+  - subject: nitrate_reduction_to_nitrite
+    predicate: causally upstream of
+    object: nitrite_reduction_to_no
+    description: Formation of nitrite precedes its reduction to nitric oxide in the
+      canonical pathway.
+    evidence:
+    - reference: DOI:10.1128/msystems.00742-23
+      snippet: the nitrite is further reduced to nitric oxide
+      notes: Supports the order of the nitrate-to-nitrite and nitrite-to-NO process
+        modules.
+    predicate_id: RO:0002411
+  - subject: nitrite_reduction_to_no
+    predicate: causally upstream of
+    object: no_reduction_to_n2o
+    description: Formation of nitric oxide precedes its reduction to nitrous oxide
+      in the canonical pathway.
+    evidence:
+    - reference: DOI:10.1128/msystems.00742-23
+      snippet: nitric oxide to nitrous oxide
+      notes: Supports the order of the nitrite-to-NO and NO-to-N2O process modules.
+    predicate_id: RO:0002411
+  - subject: no_reduction_to_n2o
+    predicate: causally upstream of
+    object: n2o_reduction_to_n2
+    description: Formation of nitrous oxide precedes its terminal reduction to dinitrogen
+      in complete denitrification.
+    evidence:
+    - reference: DOI:10.1128/msystems.00742-23
+      snippet: nitrous oxide to N2
+      notes: Supports the order of the NO-to-N2O and N2O-to-N2 process modules.
+    predicate_id: RO:0002411
+  - subject: n2o_reduction_to_n2
+    predicate: has output
+    object: dinitrogen
+    description: The terminal canonical denitrification step produces dinitrogen.
+    evidence:
+    - reference: DOI:10.1042/BJ20020782
+      snippet: N2OR is a multicopper protein which converts N2O into dinitrogen and
+        water.
+      notes: Supports dinitrogen as the output of the NosZ-catalyzed terminal step.
+    predicate_id: RO:0002234
+  - subject: denitrification_modularity
+    predicate: associated with
+    object: denitrification_trait
+    description: Complete and partial denitrification phenotypes reflect the pathway's
+      modular distribution across organisms.
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01045-2
+      snippet: The denitrification pathway is modular
+      notes: Uses the weakest grounded association predicate to connect this documented
+        pathway quality without implying that modularity defines complete denitrification.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -264,4 +326,13 @@ curation_history:
   changes: Added a DOI-backed P. denitrificans NosZ example, grounded the NarGHI complex,
     retained unresolved Nor family specificity as reviewed label-only, and documented
     complete-pathway scope and modularity.
+  llm_assisted: true
+- timestamp: '2026-08-26T10:19:19Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH
+  changes: Connected the four existing reductase-process modules from nitrate input
+    through dinitrogen output and associated the documented modularity branch with
+    the trait, joining all six graph components. Genes and protein complexes remain
+    supporting YAML graph fields rather than primary TraitRecord entries. Addresses
+    issues 426 and 183.
   llm_assisted: true
