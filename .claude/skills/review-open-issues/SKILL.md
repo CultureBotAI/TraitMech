@@ -2,6 +2,8 @@
 name: review-open-issues
 description: Sweep and triage TraitMech's complete open GitHub issue queue — not just NEXT_TASKS.md — using current schema, curated-record, grounding, provenance, and derived-artifact evidence. Fetches every open issue with its comments, places each at the earliest affected curation stage, checks each claim against the live repository for staleness, flags duplicates, and assigns a priority tier plus a separate cost class. Produces a ranked, dependency-ordered report. Use for full backlog triage or deciding what is genuinely urgent; do not use as permission to close issues, run paid research, apply migrations, or implement fixes.
 category: workflow
+requires_database: false
+requires_internet: true
 version: 2.0.0
 ---
 
@@ -76,11 +78,17 @@ issue body and its comments; for a long queue, inspect related groups in
 parallel but preserve one disposition per issue. For a single ambiguous issue,
 `gh issue view <N> --comments` is the quickest way to see the thread.
 
-**Labels carry meaning here.** `agent-ok` is opt-in ("an agent may pick this
-up"), `needs-human` marks a decision an agent must not make alone, and the
-`*_effort` labels are the author's cost estimate. Report them, and treat an
-unlabeled issue as unclassified rather than as either permission or prohibition
-— only an explicit user instruction authorizes work on one.
+**Labels carry meaning here**, and the label descriptions are authoritative —
+re-read them with `gh label list --limit 200 --json name,description` rather
+than trusting this paragraph. As written today, `agent-ok` says "Opt-in: an
+agent may pick this up. Absence means hands off," and `needs-human` says "Hard
+stop for agents. Ontology minting, deletions, schema changes." So an unlabeled
+issue is *not* pre-authorized for autonomous pickup. That is a statement about
+standing permission, not about triage: this skill ranks every open issue
+regardless of label, and an explicit user instruction to work on one is its own
+authorization. Report each issue's labels so the reader can see which are
+pre-cleared. The `*_effort` labels are the author's estimate and are tied to
+model routing, so treat them as a hint, not a measurement.
 
 ### 2. Place each issue on the curation pipeline before assigning rank
 
@@ -97,8 +105,14 @@ upstream ontology release (METPO, GO, ChEBI, NCBITaxon, UniProt)
 An upstream identity or correctness problem invalidates everything downstream:
 a wrong grounding propagates into every report, page, and downstream KG that
 reads it. Recommend fixing or auditing the root problem before polishing
-downstream output or commissioning new research. Group issues that share a root
-cause, but never hide the individual issue numbers.
+downstream output or commissioning new research.
+
+**Group, then dedupe.** Issues filed by one review pass often describe the same
+root cause from different angles. Group by a shared PR or commit reference, the
+same file or function named, or a near-identical failure scenario. Note the
+group explicitly and keep every issue number visible — never silently merge
+them, because closing a duplicate is a decision for a human to make deliberately
+rather than one to have hidden inside a ranking.
 
 For each issue, record when applicable:
 
@@ -158,19 +172,25 @@ Treat these as P0 when live or outward-facing:
   shipped without its per-record `curation_history` event or repository history
   record (#517/#518);
 - a hand-edited derived artifact made to satisfy a freshness check;
-- **a gate that cannot fail**: an audit flag that ignores its own error class,
-  a ratchet whose baseline froze a regression, or a CI `paths:` filter narrower
-  than what the job reads (#184/#200/#250/#252/#522/#554). These are P0 because
-  they silently disable the detection everything else relies on;
+- **a gate that cannot fail**: an audit flag that ignores its own error class
+  (#522), or a CI `paths:` filter narrower than what the job reads
+  (#184/#200/#250/#252/#554). A third form has no issue behind it yet but the
+  same shape: a ratchet whose baseline has absorbed a real regression — the
+  files under `conf/*_baseline.tsv` freeze known findings by design, so read
+  the baseline before reading a green audit as an all-clear. These are P0
+  because they silently disable the detection everything else relies on;
 - an edit to a record listed in `DO_NOT_WORK.md`;
 - a paid research call or batch that would run without approval or without a
   verified canary.
 
 Prefer the maintained checker over a hand-rolled one: `just validate-strict`
-for closed-schema validity, `just audit-graphs` for graph structure,
-`just audit-canonical-examples --ncbi-api` for exemplar taxonomy, and
-`just qc` for the full chain. Note explicitly when a claim rests on a gate that
-is *not* in `qc`.
+for closed-schema validity, `just audit-graphs` for graph structure, and
+`just audit-canonical-examples --ncbi-api` for exemplar taxonomy. `just qc`
+runs the offline gate chain, but it is **not** everything: `validate-history`,
+`validate-products`, `audit-canonical-examples`, and `audit-uniprot` are all
+outside it, the last two deliberately because they need the network. Read the
+`qc:` dependency list before calling any claim "covered by qc", and say so
+explicitly when a finding rests on a gate that is not in it.
 
 ### 5. Assign priority, then order by readiness and cost
 
@@ -179,7 +199,10 @@ Use priority for consequence and a separate cost annotation for ordering.
 - **P0 — stop the line.** Wrong curated science that is live, corpus corruption,
   evidence or provenance loss, an outward-facing claim the data does not
   support, a disabled or unfailable gate, or a blocker in front of an already
-  planned expensive step.
+  planned expensive step. Also any security-relevant defect — command
+  injection, secret or token exposure, a workflow that executes untrusted
+  input — which this repo is exposed to through generated commands, `gh`
+  automation, and CI, not through a served application.
 - **P1 — important and schedulable.** Real correctness, reproducibility,
   provenance, or coverage gaps; missing guards for a likely workflow;
   test-coverage gaps on safety-critical paths.
@@ -193,9 +216,13 @@ Calibrate P0 sparingly. Then order within and across tiers:
 
 1. upstream unblockers before downstream consumers;
 2. restore a disabled gate before burning down what it should have caught;
-3. **apply research already paid for before commissioning new research** — the
-   corpus routinely holds unapplied artifacts, so "research this trait" is
-   usually the wrong next action;
+3. **apply research already paid for before commissioning new research.**
+   `research/` is tracked precisely because it was expensive, and a report is
+   an input, not curated content — so check what is already on disk against
+   what the records actually carry before treating "research this trait" as the
+   next action. Measure it rather than assuming either way: compare the
+   artifacts under `research/traits/` with the records that cite them, and run
+   `just audit-unapplied-groundings` for the grounding half;
 4. read-only and offline falsifiers before paid or network-dependent work;
 5. provenance and validation readiness before a bulk tranche, so the tranche
    does not need a backfill afterwards;
@@ -231,7 +258,8 @@ A general "yes, go ahead" is not blanket approval for an unattended loop.
 - **Tracker issue** (the `[P0-P2 tracker]` pattern used elsewhere in this org,
   e.g. CommunityMech#669): the search is authoritative, not this note —
   `gh issue list --search "tracker" --state open`. Update one in place if it
-  exists; create one only if asked.
+  exists rather than opening a second. Create one only if asked, using the
+  Step 6 ranking as its body and linking every tracked issue number.
 
 ## Conventions this skill enforces
 
@@ -256,18 +284,27 @@ The recurring failure here is not misreading evidence, it is mismeasuring it.
 Before citing any of the following, confirm how it was obtained:
 
 - **Exit codes through pipes.** `just validate-history 2>&1 | tail -1 && next`
-  reports the pipeline's status, not the recipe's, so a failing gate looks
-  green — this has shipped broken state before. Use
-  `cmd >/tmp/o 2>/tmp/e; echo $?`, or `${PIPESTATUS[0]}`.
-- **Freshness audits use two different comparison bases.**
-  `just audit-derived-reports` diffs most reports against the **working tree**,
-  so regenerating clears the failure at once. But any report that an earlier
-  `qc` step rewrites in place — `causal_graph_audit.tsv` and
-  `graph_protein_taxon_coverage.tsv` — is compared against **`git show HEAD:`**
-  instead, because comparing a file this same run just refreshed would always
-  pass while a stale committed copy sailed through (#223). For those two,
-  a regenerated-but-uncommitted report still reports STALE and only commits
-  clear it. Read the recipe before concluding which case you are in.
+  reports the pipeline's status, not the recipe's, so a failing gate reads as
+  green and the `&&` still fires. Use `cmd >/tmp/o 2>/tmp/e; echo $?`, or
+  `${PIPESTATUS[0]}`. Demonstrate it rather than taking it on faith: any
+  command that exits non-zero here reports 0 once `| tail -1` is appended.
+- **Freshness audits use two comparison bases, and the stricter one is the
+  majority.** `just audit-derived-reports` diffs some reports against the
+  working tree, where regenerating clears the failure at once, and others
+  against **`git show HEAD:`**, where a regenerated-but-uncommitted report
+  still reports STALE until you commit. The justfile states the rule at the
+  recipe's head: the basis "follow[s] from whether anything else in the run
+  mutates the file" — comparing a file this same `qc` run already refreshed
+  would always pass while a stale committed copy sailed through (#223). Do not
+  guess which case a report is in, and do not trust a list in prose; measure it:
+
+  ```bash
+  grep -n 'git show "HEAD:reports/' justfile   # the strict set
+  grep -n 'diff -q "reports/' justfile         # the working-tree set
+  ```
+
+  Note the rule is descriptive, not predictive: at least one report is compared
+  strictly without any `qc` step rewriting it, so the grep is the authority.
 - **Two-dot vs three-dot diffs.** When `main` has advanced,
   `git diff origin/main..HEAD` shows *main's* newer commits reversed and
   attributes them to the branch. Use `origin/main...HEAD` or an explicit
@@ -275,9 +312,15 @@ Before citing any of the following, confirm how it was obtained:
 - **Run repository tooling through `uv`.** `pytest` under the system
   interpreter fails at import with `ModuleNotFoundError: traitmech`, which is
   an environment artifact, not a defect. Use `uv run pytest`.
-- **Truncated output.** A head-truncated `grep` once produced an undercount
-  that shipped in a provenance string. Count with `-c`, or read the whole
-  result, before quoting a number.
+- **Truncated output.** A `grep` piped through `head`, or a tool that elides
+  long lines, yields a number that looks measured and is not — and provenance
+  strings are written from those numbers. Count with `-c`, or read the whole
+  result, before quoting one.
+- **Ignore rules tested by shape.** A regex or `case` check against a
+  `.gitignore` pattern tests what the pattern looks like;
+  `git check-ignore --no-index <path>` tests what it does. Only the second is
+  evidence, and `CLAUDE.md` asks for exactly this before assuming an
+  artifact's tracking policy.
 - **YAML plain scalars.** A space followed by `#` starts a comment mid-scalar
   and can silently break a block mapping. Prefer wording that avoids `#N`
   inside unquoted prose, and re-parse the file after editing.
@@ -319,6 +362,9 @@ curated records as part of triage. A recommended command is a proposal.
 recreating it costs money; a triage pass never spends it. Recommending a
 research call is not permission to make one, and any approved batch is
 canary-first.
+
+Do not open issues in sibling repositories, and do not `@`-mention anyone in a
+comment or report, without explicit per-mention authorization.
 
 ## Related
 
