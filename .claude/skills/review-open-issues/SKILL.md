@@ -66,9 +66,15 @@ gh issue list --state open --limit 5000 \
 gh label list --limit 200
 ```
 
+A high `--limit` is safe: `gh` auto-paginates through the API, so one call
+returns the full set rather than a first page. Omitting `--limit` silently caps
+at 30, which is how a sweep ends up sampling without saying so. Confirm the
+count first, then fetch comfortably above it.
+
 State the exact number reviewed and whether coverage was complete. Read every
 issue body and its comments; for a long queue, inspect related groups in
-parallel but preserve one disposition per issue.
+parallel but preserve one disposition per issue. For a single ambiguous issue,
+`gh issue view <N> --comments` is the quickest way to see the thread.
 
 **Labels carry meaning here.** `agent-ok` is opt-in ("an agent may pick this
 up"), `needs-human` marks a decision an agent must not make alone, and the
@@ -253,10 +259,15 @@ Before citing any of the following, confirm how it was obtained:
   reports the pipeline's status, not the recipe's, so a failing gate looks
   green — this has shipped broken state before. Use
   `cmd >/tmp/o 2>/tmp/e; echo $?`, or `${PIPESTATUS[0]}`.
-- **Freshness audits compare against the COMMITTED copy.**
-  `just audit-derived-reports` diffs a fresh generation against `HEAD`, so a
-  regenerated-but-uncommitted report still reports STALE. Regenerate, commit,
-  then re-run before concluding anything about staleness.
+- **Freshness audits use two different comparison bases.**
+  `just audit-derived-reports` diffs most reports against the **working tree**,
+  so regenerating clears the failure at once. But any report that an earlier
+  `qc` step rewrites in place — `causal_graph_audit.tsv` and
+  `graph_protein_taxon_coverage.tsv` — is compared against **`git show HEAD:`**
+  instead, because comparing a file this same run just refreshed would always
+  pass while a stale committed copy sailed through (#223). For those two,
+  a regenerated-but-uncommitted report still reports STALE and only commits
+  clear it. Read the recipe before concluding which case you are in.
 - **Two-dot vs three-dot diffs.** When `main` has advanced,
   `git diff origin/main..HEAD` shows *main's* newer commits reversed and
   attributes them to the branch. Use `origin/main...HEAD` or an explicit
