@@ -68,10 +68,9 @@ gh issue list --state open --limit 5000 \
 gh label list --limit 200
 ```
 
-A high `--limit` is safe: `gh` auto-paginates through the API, so one call
-returns the full set rather than a first page. Omitting `--limit` silently caps
-at 30, which is how a sweep ends up sampling without saying so. Confirm the
-count first, then fetch comfortably above it.
+A high `--limit` is safe: `gh` auto-paginates, so one call returns the full set.
+Omitting `--limit` silently caps at 30. Confirm the count first, then fetch
+comfortably above it.
 
 State the exact number reviewed and whether coverage was complete. Read every
 issue body and its comments; for a long queue, inspect related groups in
@@ -110,9 +109,7 @@ downstream output or commissioning new research.
 **Group, then dedupe.** Issues filed by one review pass often describe the same
 root cause from different angles. Group by a shared PR or commit reference, the
 same file or function named, or a near-identical failure scenario. Note the
-group explicitly and keep every issue number visible — never silently merge
-them, because closing a duplicate is a decision for a human to make deliberately
-rather than one to have hidden inside a ranking.
+group explicitly and keep every issue number visible; never silently merge them.
 
 For each issue, record when applicable:
 
@@ -185,10 +182,18 @@ Treat these as P0 when live or outward-facing:
 
 Prefer the maintained checker over a hand-rolled one: `just validate-strict`
 for closed-schema validity, `just audit-graphs` for graph structure, and
-`just audit-canonical-examples --ncbi-api` for exemplar taxonomy. `just qc`
-runs the offline gate chain, but it is **not** everything: `validate-history`,
-`validate-products`, `audit-canonical-examples`, and `audit-uniprot` are all
-outside it, the last two deliberately because they need the network. Read the
+`just audit-canonical-examples --ncbi-api` for exemplar taxonomy.
+
+`just qc` runs the offline gate chain, but it is **not** everything, and the
+omission that matters most is **`just test`**: the test suite is a separate
+recipe reached through `just check`, so a green `qc` says nothing about tests.
+That is precisely the shape of #554, cited above — corpus tests that never ran
+on the PRs that broke them. Also outside `qc`: `validate-history`,
+`validate-products`, `audit-canonical-examples`, `audit-uniprot`,
+`audit-history-records`, and `check-biolink-coverage`. The exclusions are
+deliberate but not all for the same reason — `audit-canonical-examples` and
+`validate-products` are out because the default resolver needs a 13 GB OAK
+build, while `audit-uniprot` is out because it needs the network. Read the
 `qc:` dependency list before calling any claim "covered by qc", and say so
 explicitly when a finding rests on a gate that is not in it.
 
@@ -201,8 +206,14 @@ Use priority for consequence and a separate cost annotation for ordering.
   support, a disabled or unfailable gate, or a blocker in front of an already
   planned expensive step. Also any security-relevant defect — command
   injection, secret or token exposure, a workflow that executes untrusted
-  input — which this repo is exposed to through generated commands, `gh`
-  automation, and CI, not through a served application.
+  input. This repo is exposed through generated commands, `gh` automation, and
+  CI, **and through a public site**: GitHub Pages serves `pages/` and `app/`
+  from `main` at <https://culturebotai.github.io/TraitMech/>, and those pages
+  interpolate curated data into the DOM. Escaping is in place today (the
+  `esc()` helpers and Jinja's `select_autoescape`), which is exactly why an
+  escaping regression in a renderer or a `data.js` generator is a live P0
+  class rather than a theoretical one. Confirm with
+  `gh api repos/:owner/:repo/pages` rather than assuming either way.
 - **P1 — important and schedulable.** Real correctness, reproducibility,
   provenance, or coverage gaps; missing guards for a likely workflow;
   test-coverage gaps on safety-critical paths.
@@ -217,12 +228,9 @@ Calibrate P0 sparingly. Then order within and across tiers:
 1. upstream unblockers before downstream consumers;
 2. restore a disabled gate before burning down what it should have caught;
 3. **apply research already paid for before commissioning new research.**
-   `research/` is tracked precisely because it was expensive, and a report is
-   an input, not curated content — so check what is already on disk against
-   what the records actually carry before treating "research this trait" as the
-   next action. Measure it rather than assuming either way: compare the
-   artifacts under `research/traits/` with the records that cite them, and run
-   `just audit-unapplied-groundings` for the grounding half;
+   Compare `research/traits/` against what the records actually cite, and run
+   `just audit-unapplied-groundings` for the grounding half — it sees a mapping
+   that exists and was never applied, which the freshness audit cannot (#460);
 4. read-only and offline falsifiers before paid or network-dependent work;
 5. provenance and validation readiness before a bulk tranche, so the tranche
    does not need a backfill afterwards;
@@ -286,8 +294,8 @@ Before citing any of the following, confirm how it was obtained:
 - **Exit codes through pipes.** `just validate-history 2>&1 | tail -1 && next`
   reports the pipeline's status, not the recipe's, so a failing gate reads as
   green and the `&&` still fires. Use `cmd >/tmp/o 2>/tmp/e; echo $?`, or
-  `${PIPESTATUS[0]}`. Demonstrate it rather than taking it on faith: any
-  command that exits non-zero here reports 0 once `| tail -1` is appended.
+  `${PIPESTATUS[0]}`. One line demonstrates it: `false | tail -1; echo $?`
+  prints `0`.
 - **Freshness audits use two comparison bases, and the stricter one is the
   majority.** `just audit-derived-reports` diffs some reports against the
   working tree, where regenerating clears the failure at once, and others
@@ -296,15 +304,20 @@ Before citing any of the following, confirm how it was obtained:
   recipe's head: the basis "follow[s] from whether anything else in the run
   mutates the file" — comparing a file this same `qc` run already refreshed
   would always pass while a stale committed copy sailed through (#223). Do not
-  guess which case a report is in, and do not trust a list in prose; measure it:
+  guess which case a report is in, and do not trust a list in prose. Locate the
+  comparisons, then **read the recipe around each hit** — the strict ones name
+  shell variables rather than files, and the working-tree ones are not written
+  uniformly:
 
   ```bash
-  grep -n 'git show "HEAD:reports/' justfile   # the strict set
-  grep -n 'diff -q "reports/' justfile         # the working-tree set
+  grep -n 'git show "HEAD:reports/\|diff -q "\?reports/\|diff -rq' justfile
   ```
 
-  Note the rule is descriptive, not predictive: at least one report is compared
-  strictly without any `qc` step rewriting it, so the grep is the authority.
+  Two cautions the narrower greps get wrong: `pages/` is compared against the
+  working tree via `diff -rq`, not a `reports/` path, and one comparison omits
+  the opening quote. The rule is also descriptive, not predictive — at least
+  one report is compared strictly without any `qc` step rewriting it — so the
+  recipe, not the rule, settles it.
 - **Two-dot vs three-dot diffs.** When `main` has advanced,
   `git diff origin/main..HEAD` shows *main's* newer commits reversed and
   attributes them to the branch. Use `origin/main...HEAD` or an explicit
@@ -319,8 +332,8 @@ Before citing any of the following, confirm how it was obtained:
 - **Ignore rules tested by shape.** A regex or `case` check against a
   `.gitignore` pattern tests what the pattern looks like;
   `git check-ignore --no-index <path>` tests what it does. Only the second is
-  evidence, and `CLAUDE.md` asks for exactly this before assuming an
-  artifact's tracking policy.
+  evidence. `CLAUDE.md` tells you to check `.gitignore` before assuming an
+  artifact's tracking policy; this is how to check it correctly.
 - **YAML plain scalars.** A space followed by `#` starts a comment mid-scalar
   and can silently break a block mapping. Prefer wording that avoids `#N`
   inside unquoted prose, and re-parse the file after editing.
@@ -333,11 +346,6 @@ Before citing any of the following, confirm how it was obtained:
 
 ## Notes & limitations
 
-- `gh issue list --json` omits `comments` unless explicitly requested. This
-  repository records corrections and narrowed residual scope in comments, so a
-  body-only fetch will overstate what is open.
-- `gh pr list --search "<N>"` matches the number anywhere in indexed text and
-  returns unrelated PRs; `git log --grep '#<N>'` needs the `\b` anchor.
 - An issue may be fully addressed in code while its acceptance criteria are
   not. Partial fixes stay open with a narrowed residual; say which part is done.
 - Cross-repo defects are common in this org (METPO, CultureMech, claw,
@@ -362,9 +370,6 @@ curated records as part of triage. A recommended command is a proposal.
 recreating it costs money; a triage pass never spends it. Recommending a
 research call is not permission to make one, and any approved batch is
 canary-first.
-
-Do not open issues in sibling repositories, and do not `@`-mention anyone in a
-comment or report, without explicit per-mention authorization.
 
 ## Related
 
