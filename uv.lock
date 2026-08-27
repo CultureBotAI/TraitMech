@@ -5624,7 +5624,7 @@ requires-dist = [
     { name = "deep-research-client", extras = ["cyberian"], marker = "python_full_version >= '3.12' and extra == 'dev'", specifier = ">=0.2.10" },
     { name = "edison-client", marker = "python_full_version >= '3.12' and extra == 'dev'", specifier = ">=0.11.1" },
     { name = "jinja2", specifier = ">=3.1.0" },
-    { name = "linkml", specifier = ">=1.10.0" },
+    { name = "linkml", specifier = ">=1.11.1" },
     { name = "linkml-runtime", specifier = ">=1.7.0" },
     { name = "matplotlib", specifier = ">=3.7" },
     { name = "oaklib", specifier = ">=0.7.2" },

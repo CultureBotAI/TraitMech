@@ -29,7 +29,11 @@ classifiers = [
 ]
 
 dependencies = [
-    "linkml>=1.10.0",
+    # >=1.11.1 because 1.10.0 cannot coexist with oaklib>=0.7.2: linkml 1.10.0
+    # requires click<8.2, while oaklib pulls llm -> sqlite-utils, which requires
+    # click>=8.3.1. The old >=1.10.0 floor named a combination that no longer
+    # resolves (#562).
+    "linkml>=1.11.1",
     "linkml-runtime>=1.7.0",
     # >=0.7.2 is required, not merely preferred: below it, `sqlite:obo:`
     # selectors resolve against the raw semantic-sql S3 bucket, whose public
