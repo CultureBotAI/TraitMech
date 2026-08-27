@@ -31,7 +31,12 @@ classifiers = [
 dependencies = [
     "linkml>=1.10.0",
     "linkml-runtime>=1.7.0",
-    "oaklib>=0.5.0",
+    # >=0.7.2 is required, not merely preferred: below it, `sqlite:obo:`
+    # selectors resolve against the raw semantic-sql S3 bucket, whose public
+    # access INCATools is retiring (#562). 0.7.2 moved the default to
+    # SEMSQL_SQLITE_URL_BASE (https://semanticsql.berkeleybop.io), with
+    # OAKLIB_SEMSQL_SQLITE_URL_BASE as the escape hatch for a mirror.
+    "oaklib>=0.7.2",
     "pyyaml>=6.0",
     "click>=8.1.0",
     "jinja2>=3.1.0",
