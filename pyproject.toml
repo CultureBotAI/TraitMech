@@ -29,9 +29,25 @@ classifiers = [
 ]
 
 dependencies = [
-    "linkml>=1.10.0",
+    # >=1.11.1 because 1.10.0 cannot coexist with oaklib>=0.7.2: linkml 1.10.0
+    # requires click<8.2, while oaklib pulls llm -> sqlite-utils, which requires
+    # click>=8.3.1. The old >=1.10.0 floor named a combination that no longer
+    # resolves (#562).
+    "linkml>=1.11.1",
     "linkml-runtime>=1.7.0",
-    "oaklib>=0.5.0",
+    # A floor at 0.7.2 or above is REQUIRED, not preferred: at 0.7.1 and below,
+    # `sqlite:obo:` selectors resolve against the raw semantic-sql S3 bucket,
+    # whose public access INCATools is retiring (#562). 0.7.2 introduced
+    # SEMSQL_SQLITE_URL_BASE (default https://semanticsql.berkeleybop.io), with
+    # OAKLIB_SEMSQL_SQLITE_URL_BASE as the escape hatch for a mirror.
+    #
+    # The extra step to 0.7.3 is hygiene and fleet consistency, not a second
+    # defect fix: 0.7.2 declares requires_python <3.14 where 0.7.3 widened it
+    # to <3.15, and CultureMech#365 chose 0.7.3 for that reason (#569). It
+    # changes no install outcome here — under uv, both floors resolve to 0.7.4
+    # on every interpreter — and 0.7.3 carries the same CDN default as 0.7.2,
+    # verified from the wheels, so the higher floor cannot readmit #562.
+    "oaklib>=0.7.3",
     "pyyaml>=6.0",
     "click>=8.1.0",
     "jinja2>=3.1.0",
