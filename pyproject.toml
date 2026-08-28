@@ -35,16 +35,18 @@ dependencies = [
     # resolves (#562).
     "linkml>=1.11.1",
     "linkml-runtime>=1.7.0",
-    # >=0.7.3 is required, not merely preferred: below 0.7.2, `sqlite:obo:`
-    # selectors resolve against the raw semantic-sql S3 bucket, whose public
-    # access INCATools is retiring (#562). 0.7.2 moved the default to
-    # SEMSQL_SQLITE_URL_BASE (https://semanticsql.berkeleybop.io), with
+    # A floor at 0.7.2 or above is REQUIRED, not preferred: at 0.7.1 and below,
+    # `sqlite:obo:` selectors resolve against the raw semantic-sql S3 bucket,
+    # whose public access INCATools is retiring (#562). 0.7.2 introduced
+    # SEMSQL_SQLITE_URL_BASE (default https://semanticsql.berkeleybop.io), with
     # OAKLIB_SEMSQL_SQLITE_URL_BASE as the escape hatch for a mirror.
     #
-    # The floor is 0.7.3 rather than 0.7.2 because 0.7.2 declares
-    # requires_python <3.14 while this project's requires-python is an
-    # unbounded >=3.10; a 0.7.2 floor would name a minimum that cannot be
-    # installed on a supported interpreter. 0.7.3 widened it to <3.15 (#569).
+    # The extra step to 0.7.3 is hygiene and fleet consistency, not a second
+    # defect fix: 0.7.2 declares requires_python <3.14 where 0.7.3 widened it
+    # to <3.15, and CultureMech#365 chose 0.7.3 for that reason (#569). It
+    # changes no install outcome here — under uv, both floors resolve to 0.7.4
+    # on every interpreter — and 0.7.3 carries the same CDN default as 0.7.2,
+    # verified from the wheels, so the higher floor cannot readmit #562.
     "oaklib>=0.7.3",
     "pyyaml>=6.0",
     "click>=8.1.0",
