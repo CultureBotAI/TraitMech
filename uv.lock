@@ -5627,7 +5627,7 @@ requires-dist = [
     { name = "linkml", specifier = ">=1.11.1" },
     { name = "linkml-runtime", specifier = ">=1.7.0" },
     { name = "matplotlib", specifier = ">=3.7" },
-    { name = "oaklib", specifier = ">=0.7.2" },
+    { name = "oaklib", specifier = ">=0.7.3" },
     { name = "pacmap", specifier = ">=0.7" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.4" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.1" },
