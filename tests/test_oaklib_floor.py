@@ -18,7 +18,6 @@ binds a fresh install.
 from __future__ import annotations
 
 import re
-import tomllib
 from pathlib import Path
 
 from packaging.requirements import Requirement
@@ -31,8 +30,15 @@ CDN_DEFAULT_FIRST_RELEASE = Version("0.7.2")
 
 
 def _declared(name: str) -> Requirement:
-    data = tomllib.loads((REPO_ROOT / "pyproject.toml").read_text())
-    for raw in data["project"]["dependencies"]:
+    """Return the declared requirement for ``name``.
+
+    Parsed from the raw text rather than with ``tomllib``, which is stdlib only
+    from 3.11 while this project supports 3.10 — the same reason
+    ``test_python_support.py`` reads pyproject with a regex.
+    """
+    text = (REPO_ROOT / "pyproject.toml").read_text()
+    body = text.split("dependencies = [", 1)[-1].split("]", 1)[0]
+    for raw in re.findall(r'"([^"]+)"', body):
         req = Requirement(raw)
         if req.name == name:
             return req
