@@ -1,23 +1,36 @@
-"""Keep the oaklib floor above the raw-S3 code path (#562).
+"""Keep `sqlite:obo:` off the retiring semantic-sql S3 bucket (#562, #568).
 
 At oaklib 0.7.1 and below, `sqlite:obo:` selectors resolve against
 ``https://s3.amazonaws.com/bbop-sqlite``, whose public access INCATools is
 retiring. 0.7.2 moved the default to ``SEMSQL_SQLITE_URL_BASE``. This repo
 reaches OAK from `just validate-products` (a blocking CI gate) and from
-`scripts/audit_canonical_examples.py`, so a floor that admits <=0.7.1 puts
-both back on a bucket that is going away.
+`scripts/audit_canonical_examples.py`, so anything that puts those back on the
+bucket breaks both the moment it goes away.
 
-Nothing else guards that. The floor lives in one line of pyproject.toml, and
-a routine "relax the constraints" edit would silently undo the fix without
-failing any other check — the sibling repo added the same guard for the same
-reason (CultureMech#365). This asserts the declared floor, not the resolved
-version, because the lock can be regenerated while the declaration is what
-binds a fresh install.
+The reversion is invisible until it is catastrophic: on 0.6.23 every lookup
+still succeeds today, so nothing distinguishes a correct pin from a reverted
+one right up until every lookup fails at once.
+
+Two layers, because each covers what the other cannot:
+
+* **Declaration** (`test_oaklib_floor_*`, `test_the_lock_*`) — the floor in
+  pyproject.toml and the lock agreeing with it. This is what we control, and
+  what a routine "relax the constraints" edit would quietly undo. Asserting
+  the declared floor rather than the installed version is deliberate: the lock
+  is regenerable, and the declaration is what binds a fresh install.
+* **Runtime** (`test_the_resolved_default_*`, `test_the_download_path_*`) —
+  the value oaklib will actually resolve against, and that its downloader
+  still reads that value. This is what we care about, and it survives upstream
+  renaming the constant, re-defaulting it, or shipping a version whose number
+  implies a fix it does not contain (#568).
+
+A version number is a proxy; the resolved URL is the property.
 """
 
 from __future__ import annotations
 
 import importlib
+import inspect
 import re
 from pathlib import Path
 
@@ -29,7 +42,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 # The first release carrying the CDN default. Anything below reintroduces #562.
 CDN_DEFAULT_FIRST_RELEASE = Version("0.7.2")
 
-S3_HOST = "s3.amazonaws.com"
+# Match the whole domain, not one host spelling: a virtual-hosted, region
+# qualified URL such as https://bbop-sqlite.s3.us-east-1.amazonaws.com is the
+# same bucket and would slip past a check for "s3.amazonaws.com" alone.
+S3_DOMAIN = ".amazonaws.com"
 OVERRIDE_ENV = "OAKLIB_SEMSQL_SQLITE_URL_BASE"
 
 
@@ -87,9 +103,19 @@ def _shipped_default(monkeypatch) -> str:
     at import time, so a developer or CI job that sets a mirror would otherwise
     have this test assert their override instead of the shipped default — and a
     reverted default would pass unnoticed behind it (#568).
+
+    The reload leaves ``oaklib.constants`` holding the un-overridden value for
+    the rest of the session. Nothing in this repo reads that attribute under
+    pytest, and oaklib's downloader binds its own copy at import, so this is
+    inert today — but it is why the helper stays confined to these tests.
     """
     monkeypatch.delenv(OVERRIDE_ENV, raising=False)
     constants = importlib.import_module("oaklib.constants")
+    assert OVERRIDE_ENV in inspect.getsource(constants), (
+        f"oaklib no longer reads {OVERRIDE_ENV}; clearing it above is now a "
+        "no-op, so this test would silently assert the ambient environment "
+        "rather than the shipped default"
+    )
     return importlib.reload(constants).SEMSQL_SQLITE_URL_BASE
 
 
@@ -103,30 +129,40 @@ def test_the_resolved_default_is_not_the_retiring_bucket(monkeypatch):
     does not contain.
     """
     shipped = _shipped_default(monkeypatch)
-    assert S3_HOST not in shipped, (
+    assert S3_DOMAIN not in shipped, (
         f"oaklib resolves sqlite:obo: against {shipped}, the raw S3 bucket "
         "INCATools/semantic-sql is retiring (semantic-sql#112, #562)"
     )
     assert shipped.startswith("https://"), shipped
 
 
-def test_the_download_path_actually_uses_the_constant(monkeypatch):
+def test_the_download_path_actually_uses_the_constant():
     """A correct constant is worthless if the downloader stopped reading it.
 
     oaklib builds the URL as f"{SEMSQL_SQLITE_URL_BASE}/{prefix}.db.gz". If a
     future release inlined a host there instead, every assertion above would
     still pass while `sqlite:obo:` went back to the bucket.
-    """
-    import inspect
 
+    This asserts the constant is INTERPOLATED, not merely imported. oaklib's
+    source carries the pre-0.7.2 call commented out beside the current one
+    (``ensure_from_s3(s3_bucket="bbop-sqlite", ...)``, labelled "Option 2"), so
+    the cheapest possible revert is a two-line comment swap that leaves the now
+    unused import in place — which a mention-only check would wave through.
+    """
     module = importlib.import_module(
         "oaklib.implementations.sqldb.sql_implementation"
     )
     source = inspect.getsource(module)
-    assert "SEMSQL_SQLITE_URL_BASE" in source, (
-        "oaklib's sqlite implementation no longer references "
-        "SEMSQL_SQLITE_URL_BASE; the download host may be hardcoded again"
+    assert "{SEMSQL_SQLITE_URL_BASE}/" in source, (
+        "oaklib's sqlite implementation no longer interpolates "
+        "SEMSQL_SQLITE_URL_BASE into the download URL; the host may be "
+        "hardcoded or the pre-0.7.2 S3 call re-enabled"
     )
-    assert S3_HOST not in source, (
-        f"oaklib's sqlite implementation mentions {S3_HOST} directly"
+    live = [
+        line for line in source.splitlines()
+        if "ensure_from_s3" in line and not line.lstrip().startswith("#")
+    ]
+    assert not live, (
+        "oaklib's sqlite implementation calls ensure_from_s3 in live code; "
+        f"the pre-0.7.2 raw-bucket path appears to be re-enabled: {live}"
     )
