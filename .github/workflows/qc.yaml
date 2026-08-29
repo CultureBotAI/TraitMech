@@ -23,9 +23,12 @@ on:
       # records instead of gaps (#522), so editing that list changes what qc
       # verifies.
       - "DO_NOT_WORK.md"
+      # sources-check reads download.yaml, so editing the source catalogue
+      # changes what qc verifies. Caught by audit-qc-paths the moment the
+      # recipe joined the chain — which is the guard working as intended.
+      - "download.yaml"
       - "justfile"
       - "pyproject.toml"
-      - "uv.lock"
       - ".github/workflows/qc.yaml"
       # `audit-derived-reports` (#214) compares the tracked reports against a
       # fresh generation, so every input to that generation has to trigger it.

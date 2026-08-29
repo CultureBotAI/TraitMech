@@ -1062,10 +1062,20 @@ audit-derived-reports:
 audit-research-artifacts:
     uv run python scripts/run_trait_graph_audit.py --verify
 
+# Validate download.yaml, the source catalogue: required fields present,
+# status in the allowed set, source ids unique, seeded sources naming a seeder
+# that exists, and licences surfaced rather than assumed. Offline and instant.
+#
+# In `qc` on purpose. ProteinTraitsMech, whose shape this adopts, defines the
+# same recipe and never wired it into a workflow — a gate nobody runs is the
+# same as no gate, which is the #184/#554 lesson in a different costume.
+sources-check:
+    uv run python scripts/check_sources.py
+
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-discussions-data audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts
+qc: lint pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-proposal-coverage audit-biolink-curies audit-graphs audit-graph-protein-taxa audit-predicate-domains audit-discussion-anchors audit-discussions-data audit-snippets audit-justfile-paths audit-qc-paths audit-exact-synonym-collisions audit-derived-reports audit-unapplied-groundings audit-research-artifacts sources-check
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

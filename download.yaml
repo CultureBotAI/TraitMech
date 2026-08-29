@@ -1,0 +1,189 @@
+# Source catalogue for TraitMech.
+#
+# Adopted from ProteinTraitsMech's download.yaml shape so the two repos can be
+# read side by side. A flat YAML list of blocks; each block describes ONE
+# source. `scripts/check_sources.py` (`just sources-check`, wired into
+# `just qc`) enforces the contract below.
+#
+# REQUIRED on every block: url, name, source, license, status.
+# REQUIRED when status is `seeded`: seeder.
+#
+# That is stricter than the sibling, deliberately. There, only `url` is
+# hard-enforced and the docstring's stricter promise is not backed by code, so
+# a block can omit its licence silently — which is the one field this
+# catalogue exists to carry.
+#
+# `status` vocabulary:
+#   candidate   — characterised, not yet ingested
+#   seeded      — records in data/traits/ came from it
+#   enrichment  — used to enrich existing records, not to create them
+#   deferred    — deliberately not pursued for now, reason in `note`
+#   rejected    — evaluated and declined, reason in `note`
+#   superseded  — replaced by a better source, kept for provenance
+#
+# LICENCE NOTE THAT APPLIES TO THIS WHOLE FILE. Several sources here are
+# collaborator projects built over public data, and a permissive licence on the
+# producing repository does not by itself clear the upstream databases the data
+# was derived from. Each block records what is actually known, and
+# `upstream_licenses` links the terms a downstream consumer must consider.
+# Anything published from these must carry those links forward; the exact
+# disposition is being resolved separately.
+
+# --- METPO: the ontology this corpus was seeded from -------------------------
+-
+  url: https://github.com/berkeleybop/metpo
+  local_name: metpo.owl
+  name: METPO (Microbial Ecophysiological Trait and Phenotype Ontology)
+  source: metpo
+  license: CC-BY-4.0
+  status: seeded
+  seeder: seed_from_metpo.py
+  release: 2026-06-12
+  trait_categories: [MORPHOLOGY, PHYSIOLOGY, ENVIRONMENT, METABOLISM, GENOMICS,
+                     ECOLOGY, DETECTION, QUANTITATIVE_PROPERTY, OBSERVATION, UPPER]
+  note: >-
+    ATTRIBUTION OBLIGATION: METPO is CC-BY-4.0 while this repo ships CC0-1.0
+    (pyproject.toml), so attribution must survive into anything published from
+    the corpus. An earlier draft of this entry recorded BSD-3-Clause, which was
+    wrong and would have erased that obligation.
+
+    The origin of the corpus: data/raw/metpo.owl is the vendored release and
+    scripts/seed_from_metpo.py writes data/traits/<category>/<slug>.yaml from
+    it. Registered retrospectively — the seeder predates this catalogue and
+    hardcodes its input path rather than reading this file.
+
+# --- Heterotrophic bacteria genome table (collaborator, unpublished) ---------
+-
+  # No public URL: the data is unpublished and reaches us directly from the
+  # contributor. Recorded as a repo-relative expectation rather than an
+  # absolute path, which would embed one machine's home directory in a public
+  # repository and would not resolve for anyone else (#584).
+  url: unpublished — obtain from the maintainer
+  local_name: heterortrophic_bacteria/Heterotrophic-bacteria-whole-table.csv
+  name: Heterotrophic bacteria whole table (GTDB species representatives)
+  source: heterotrophic_bacteria
+  license: unpublished collaborator data (terms to be settled)
+  upstream_licenses:
+    - https://gtdb.ecogenomic.org/about  # GTDB taxonomy strings
+    - https://www.ncbi.nlm.nih.gov/home/about/policies/  # GenBank assembly accessions
+    - https://www.genome.jp/kegg/kegg1.html  # KEGG KO / module columns
+    - http://www.cazy.org/  # CAZy substrate columns
+  status: candidate
+  release: file mtime 2025-12-09, sha256 unrecorded
+  trait_categories: [ENVIRONMENT, PHYSIOLOGY, GENOMICS, METABOLISM]
+  note: >-
+    PROVENANCE: an unpublished collaborator dataset. There is no publication,
+    DOI, or repository to cite, and the file carries no licence or README of
+    its own — so this entry IS the provenance record.
+
+    The contributor is deliberately NOT named here: this repository is public,
+    and naming a person as the source of unpublished data is their disclosure
+    to make, not ours. The maintainer holds the attribution outside this file.
+    Anything derived from this data needs the contributor's agreement before
+    publication, and any record seeded from it must credit them — ask the
+    maintainer for the name rather than citing a paper that does not exist.
+
+    MEASURED 2026-08-28, not estimated. 41,199 rows x 12,568 columns, 1.14 GB.
+    Comma-delimited despite covering what is colloquially called "the TSV".
+    One row per GTDB species representative: 41,199 distinct species, 8,745
+    genera, all d__Bacteria.
+
+    Column families, counted from the header: 11,951 KEGG KO (^K#####), 194
+    KEGG modules (^M#####), 38 respiratory-complex columns, 38 CAZy columns (19
+    substrates each duplicated .x/.y), 62 substrate-utilisation columns, 98
+    pathway-presence columns, 14 .prediction. columns each with
+    .error./.units./.is_novel./.warning. companions, and ~25 genome-derived
+    scalars. A defensible count of trait-shaped columns is 250+, not the ~28 an
+    earlier draft of this note claimed — that figure counted only the leading
+    block and was wrong.
+
+    ORGANISM IDENTITY resolves against nothing this repo uses: a GTDB lineage
+    string plus a GenBank assembly accession, no NCBITaxon. That is the claim
+    that matters for ingest. It is NOT true that the file carries no CURIEs at
+    all: `ncbi_isolation_source` carries them on 491 rows (481 lines with ENVO:,
+    9 with CHEBI:, 1 with NCBITaxon:), e.g. "saline water (ENVO:00002010)".
+
+    NOT seeded, and `candidate` rather than `seeded` for a substantive reason:
+    almost every trait-shaped column already has a TraitRecord (pH optimum,
+    temperature optimum, NaCl optimum, genome_size, gc_content, oxygen
+    tolerance, fermentation, and the CAZy substrates map onto cellulolysis /
+    chitinolysis / xylan_degradation / starch_degradation). What this source
+    actually supplies is 41,199 PER-ORGANISM VALUES for traits that already
+    exist, and the schema has nowhere to put them: CanonicalExample carries
+    taxon_id, taxon_label, note and reference, with no value slot. Ingest is
+    blocked on that schema decision, not on the data.
+
+    Also note the environmental columns are model predictions
+    (oxygen.prediction, ph_optimum.prediction, salinity_optimum.prediction,
+    temperature_optimum.prediction) and fermentation.probability.of.genus is a
+    genus-level probability with 18,136 NAs — provenance that must survive into
+    any record built from them.
+
+# --- ENIGMA trait-onto-map: the registered catalogue -------------------------
+-
+  url: https://github.com/realmarcin/trait-onto-map
+  local_name: traitontomap/trait_catalog.tsv
+  name: ENIGMA trait-onto-map (genome-annotation trait catalogue)
+  source: trait_onto_map
+  license: MIT (software scope; see upstream_licenses)
+  upstream_licenses:
+    - https://card.mcmaster.ca/about  # RGI / ARO terms are not permissive
+    - https://github.com/WrightonLabCSU/DRAM
+    - https://github.com/bhattlab/gapmind
+    - https://github.com/Ecogenomics/GTDBTk
+  status: rejected
+  release: build 2026-02-16T18:41:35, untracked in git, no tag
+  note: >-
+    MEASURED 2026-08-28. 742,500 rows; `ontology_ids` is EMPTY on 733,095 of
+    them (98.7%). Verified by grep over the whole 120 MB file: 0 lines
+    containing GO:, CHEBI:, METPO:, NCBITaxon: or ENVO:; only ARO: (195)
+    appears. There is no organism column, so it cannot link a trait to a taxon.
+
+    Rejected for TraitMech: no organism axis, and no usable identifier overlap
+    — though "0%" would overstate it. The five-OBO-prefix grep above is exact,
+    but the non-empty rows carry 5,543 distinct UniRef50/UniRef90 accessions,
+    whose suffixes are UniProtKB accessions, and this corpus does use UniProtKB
+    (236 distinct CURIEs across 176 records). The overlap is indirect and would
+    need a mapping step; it is not literally zero. and no version handle (the data is untracked in
+    git and the remote returns 404 unauthenticated, so provenance would be a
+    local path plus an mtime). ProteinTraitsMech reached the same conclusion
+    independently — it marks this `superseded` and deleted the 577 records it
+    had seeded, in favour of ExPASy ENZYME.
+
+    The MIT licence covers the software ("and associated documentation files
+    (the Software)"); it does not visibly clear the annotation databases the
+    catalogue is derived from. See upstream_licenses.
+
+# --- ENIGMA trait-onto-map: the products actually worth having ---------------
+-
+  url: https://github.com/realmarcin/trait-onto-map
+  local_name: traitontomap/gapmind_metpo_relations.tsv
+  name: ENIGMA trait-onto-map GapMind METPO relations
+  source: trait_onto_map_gapmind
+  license: MIT (software scope; see upstream_licenses)
+  upstream_licenses:
+    - https://github.com/bhattlab/gapmind
+    - https://www.ebi.ac.uk/chebi/aboutChebiForward.do
+    - https://github.com/berkeleybop/metpo
+  status: candidate
+  release: file mtime 2026-03-17, untracked in git, no tag
+  trait_categories: [METABOLISM]
+  note: >-
+    MEASURED 2026-08-28. 95,070 rows of organism x METPO predicate x CHEBI
+    object — the TraitMech-shaped product, and NOT the artifact ProteinTraitsMech
+    registered. Columns: subject, subject_type, predicate, predicate_label,
+    object, object_label, confidence, category, source. Example row:
+    FW102-FHT14D07 / genome / METPO:2000032 "uses for aerobic catabolization" /
+    CHEBI:28009 N-acetyl-D-glucosamine / complete / Carbon catabolism / GapMind.
+
+    1,170 distinct genome subjects, 2 distinct METPO predicates
+    (METPO:2000032, METPO:2000202), 66 distinct objects, 100% CHEBI.
+
+    `candidate` not `seeded`, for two reasons that are not licence questions:
+    subjects are ENIGMA field-isolate identifiers (FW102-FHT14D07), NOT
+    NCBITaxon, so every organism needs mapping before it can enter a record;
+    and like the heterotrophic table these are per-organism assertions, which
+    the schema currently cannot hold. Sibling products under the same directory
+    (all_annotations_enriched.tsv, microtraits_enriched_v2.tsv) carry METPO, GO,
+    InterPro and Rhea columns and are worth revisiting once those two are
+    settled.

@@ -10,7 +10,6 @@ on:
       - "scripts/validate_strict.py"
       - ".github/workflows/validate-strict.yaml"
       - "pyproject.toml"
-      - "uv.lock"
   push:
     branches: [main]
     paths:
@@ -20,7 +19,6 @@ on:
       - "scripts/validate_strict.py"
       - ".github/workflows/validate-strict.yaml"
       - "pyproject.toml"
-      - "uv.lock"
   workflow_dispatch:
 
 jobs:
