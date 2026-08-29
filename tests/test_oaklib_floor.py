@@ -29,6 +29,7 @@ A version number is a proxy; the resolved URL is the property.
 
 from __future__ import annotations
 
+import ast
 import importlib
 import inspect
 import re
@@ -96,6 +97,40 @@ def test_the_lock_satisfies_the_declared_floor():
     assert Version(locked) >= CDN_DEFAULT_FIRST_RELEASE
 
 
+def _string_literals(module) -> set[str]:
+    """Return the string literals in ``module``'s live code.
+
+    Parsed rather than grepped, because a substring search cannot tell live
+    code from a comment. oaklib's constants.py names the override variable
+    twice — once in live code and once in a prose comment above it — so an
+    upstream rename that left the comment stale would satisfy a text search
+    while breaking the thing being asserted (#576).
+    """
+    tree = ast.parse(inspect.getsource(module))
+    return {
+        node.value
+        for node in ast.walk(tree)
+        if isinstance(node, ast.Constant) and isinstance(node.value, str)
+    }
+
+
+def _calls_named(module, name: str) -> list[str]:
+    """Return live call sites of ``name`` in ``module``, ignoring comments.
+
+    The previous line-scan treated every non-``#`` line as live code, so a
+    docstring merely MENTIONING the call failed the test, while a call
+    assembled through getattr slipped past it (#576).
+    """
+    tree = ast.parse(inspect.getsource(module))
+    found: list[str] = []
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Attribute) and node.attr == name:
+            found.append(f"attribute access at line {node.lineno}")
+        elif isinstance(node, ast.Name) and node.id == name:
+            found.append(f"name reference at line {node.lineno}")
+    return found
+
+
 def _shipped_default(monkeypatch) -> str:
     """Return the URL base oaklib ships, ignoring any local override.
 
@@ -111,10 +146,10 @@ def _shipped_default(monkeypatch) -> str:
     """
     monkeypatch.delenv(OVERRIDE_ENV, raising=False)
     constants = importlib.import_module("oaklib.constants")
-    assert OVERRIDE_ENV in inspect.getsource(constants), (
-        f"oaklib no longer reads {OVERRIDE_ENV}; clearing it above is now a "
-        "no-op, so this test would silently assert the ambient environment "
-        "rather than the shipped default"
+    assert OVERRIDE_ENV in _string_literals(constants), (
+        f"oaklib no longer reads {OVERRIDE_ENV} in live code; clearing it "
+        "above is now a no-op, so this test would silently assert the ambient "
+        "environment rather than the shipped default"
     )
     return importlib.reload(constants).SEMSQL_SQLITE_URL_BASE
 
@@ -153,16 +188,31 @@ def test_the_download_path_actually_uses_the_constant():
         "oaklib.implementations.sqldb.sql_implementation"
     )
     source = inspect.getsource(module)
+
     assert "{SEMSQL_SQLITE_URL_BASE}/" in source, (
         "oaklib's sqlite implementation no longer interpolates "
-        "SEMSQL_SQLITE_URL_BASE into the download URL; the host may be "
-        "hardcoded or the pre-0.7.2 S3 call re-enabled"
+        "SEMSQL_SQLITE_URL_BASE into the download URL. The likely cause is a "
+        "BENIGN upstream refactor — urljoin(), or binding the base to a local "
+        "first — which still resolves against the CDN. Before relaxing this "
+        "assertion, check the value the other tests here assert and confirm "
+        "the resolved URL: the failure this guards is the pre-0.7.2 S3 call "
+        "being re-enabled, which looks the same from here (#577)."
     )
-    live = [
-        line for line in source.splitlines()
-        if "ensure_from_s3" in line and not line.lstrip().startswith("#")
-    ]
+
+    # Not a substring scan: a docstring merely mentioning the call used to fail
+    # this, and a getattr-assembled call used to pass it (#576).
+    live = _calls_named(module, "ensure_from_s3")
     assert not live, (
-        "oaklib's sqlite implementation calls ensure_from_s3 in live code; "
-        f"the pre-0.7.2 raw-bucket path appears to be re-enabled: {live}"
+        "oaklib's sqlite implementation references ensure_from_s3 in live "
+        f"code; the pre-0.7.2 raw-bucket path appears to be re-enabled: {live}"
+    )
+
+    # Restored: 8cc97120 dropped this while its message described the change as
+    # a widening. Without it, ADDING an inlined S3 URL below the interpolated
+    # line passes every other assertion here, because the constant is still
+    # present — just dead (#575).
+    assert S3_DOMAIN not in source, (
+        f"oaklib's sqlite implementation names {S3_DOMAIN} directly; an S3 URL "
+        "may have been added alongside the CDN interpolation rather than "
+        "replacing it"
     )
