@@ -13,10 +13,6 @@ on:
       - "tests/test_audit_canonical_examples.py"
       - "justfile"
       - ".github/workflows/canonical-example-taxonomy.yaml"
-      # The job runs under `uv sync`, so the resolved environment is an input
-      # to its verdict just as much as the script it runs (#566/#567).
-      - "pyproject.toml"
-      - "uv.lock"
   push:
     branches: [main]
     paths: *trigger_paths
