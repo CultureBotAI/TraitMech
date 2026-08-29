@@ -1,6 +1,15 @@
 # Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
 name: label-correspondence
 
+# This job's body now lives in claw, as a reusable workflow four Mechs share
+# (culturebotai-claw#180, Phase 5 of the standardization program). TraitMech is
+# the canary: this is its first caller, and until this run passes the reusable
+# workflow is unproven -- claw's own CI can check its shape and nothing more,
+# because a `workflow_call` workflow is executed only by a caller.
+#
+# What stays here is what is TraitMech's: the trigger filter below, scoped to
+# this corpus, and the inputs saying how this repository checks it.
+
 # Phase 2 (enforcing): `just validate-products` is a BLOCKING gate — any
 # id↔label MISMATCH / ID_NOT_FOUND / UNKNOWN_PREFIX / ADAPTER_ERROR /
 # MISSING_COLUMN in the ontology grounding tables fails the build. The 15
@@ -42,42 +51,10 @@ permissions:
 
 jobs:
   label-correspondence:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
-      - name: Set up Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
-        with:
-          python-version: "3.12"
-      - name: Install uv
-        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
-        with:
-          enable-cache: true
-      - name: Install dependencies
-        run: uv sync
-
-      # Cache OAK sqlite ontologies (CHEBI/GO/ENVO/PATO/RO) across runs.
-      - name: Cache OAK ontologies
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ~/.data/oaklib
-          key: oaklib-${{ runner.os }}-v1
-
-      # Always generate + upload the drift report first, so the triage artifact
-      # exists even when the enforce step below fails the build.
-      - name: Generate id↔label drift report
-        run: just report-label-drift
-
-      - name: Upload drift report
-        if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: label-drift-report-${{ github.run_id }}
-          path: reports/label_drift.tsv
-          if-no-files-found: warn
-
-      # Phase 2 blocking gate: fail on any id↔label error-class verdict.
-      # Curator-accepted residuals pass as OK_EXCEPTION.
-      - name: Enforce id↔label correspondence
-        run: just validate-products
+    # Pinned to a claw commit, not a branch: a moving ref would change this
+    # gate with no commit in this repository to show for it.
+    uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@5de472d13e20f02ac494878939ba1cae26468a07
+    with:
+      python-version: "3.12"
+      # No prepare-recipe: the mappings this gate reads are committed, so
+      # nothing has to be built first.
