@@ -37,6 +37,10 @@ on:
       - "scripts/validate_history_links.py"
       - "justfile"
       - ".github/workflows/curation-history.yaml"
+      # Runs under `uv sync`; the resolved environment is an input to the
+      # verdict, so a dependency-only change must still run this (#566/#567).
+      - "pyproject.toml"
+      - "uv.lock"
   push:
     branches: [main]
     paths:
@@ -47,6 +51,10 @@ on:
       - "scripts/validate_history_links.py"
       - "justfile"
       - ".github/workflows/curation-history.yaml"
+      # Runs under `uv sync`; the resolved environment is an input to the
+      # verdict, so a dependency-only change must still run this (#566/#567).
+      - "pyproject.toml"
+      - "uv.lock"
   workflow_dispatch:
 
 permissions:

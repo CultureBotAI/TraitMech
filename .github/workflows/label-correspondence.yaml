@@ -25,6 +25,13 @@ on:
       - "scripts/validate_id_label_correspondence.py"
       - "conf/id_label_targets.yaml"
       - ".github/workflows/label-correspondence.yaml"
+      # This job resolves `sqlite:obo:` through OAK, so which oaklib it
+      # installs decides which host it downloads from — the whole subject of
+      # #562. Without these, the blocking gate could not be triggered by the
+      # PR that changed exactly that, and #565 had to be dispatched by hand
+      # to verify it (#566).
+      - "pyproject.toml"
+      - "uv.lock"
   push:
     branches: [main]
     paths: *trigger_paths

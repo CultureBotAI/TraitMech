@@ -25,6 +25,7 @@ on:
       - "DO_NOT_WORK.md"
       - "justfile"
       - "pyproject.toml"
+      - "uv.lock"
       - ".github/workflows/qc.yaml"
       # `audit-derived-reports` (#214) compares the tracked reports against a
       # fresh generation, so every input to that generation has to trigger it.
