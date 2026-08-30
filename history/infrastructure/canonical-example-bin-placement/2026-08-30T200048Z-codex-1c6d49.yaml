@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/move_nacl_optimum_exemplar.py
+  slug: canonical-example-bin-placement
+session:
+  id: 2026-08-30T200048Z-codex-1c6d49
+  timestamp: '2026-08-30T20:00:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/478
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Move measured NaCl exemplar to its most-specific bin
+  details: 'Issues #475 and #478 set the canonical-example source and numeric-placement policies
+    for the #444 queue. Added a dry-run-by-default validated migration and moved Wallemia
+    ichthyophaga from the NaCl-optimum parent to METPO:1000468 because the complete cited
+    15-20% (w/v) optimum is above the bin''s >8% threshold. The same measured claim is not
+    duplicated on the parent. Updated the playbook and priority guidance to allow independent
+    primary measurement sources, exclude perturbed phenotypes, and require most-specific bin
+    placement.'

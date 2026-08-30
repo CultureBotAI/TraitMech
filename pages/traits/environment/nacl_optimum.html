@@ -460,35 +460,6 @@ Recent evidence shows that this dichotomy is not absolute. *Natranaerobius therm
 
     
     
-    <div class="card" id="canonical-examples">
-      <h2>Canonical examples
-        <span class="meta">(1)</span></h2>
-      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
-        NCBITaxon and link out to the NCBI record.</p>
-      <ul class="canonical-examples">
-        
-        <li>
-          <em>Wallemia ichthyophaga</em>
-          
-          
-          
-          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=245174"
-             rel="nofollow noreferrer"><code>NCBITaxon:245174</code></a>
-          
-          
-          
-          
-          
-          <a href="https://doi.org/10.1128/aem.02702-13"
-             rel="nofollow noreferrer"><code>DOI:10.1128/aem.02702-13</code></a>
-          
-          
-          <span class="meta">Extremely halophilic fungus whose NaCl optimum was determined kinetically, from exponential-phase doubling times across a salinity series, giving an optimum of 15-20 percent NaCl. The artifact uses it as the worked example separating optimum from range, because the same organism still grows from 10 percent to saturated (32 percent) NaCl.</span>
-        </li>
-        
-      </ul>
-    </div>
-    
 
     
 
@@ -597,6 +568,12 @@ Recent evidence shows that this dichotomy is not absolute. *Natranaerobius therm
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope nacl_optimum_balanced_osmoadaptation=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (na_h_antiporters).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-30T20:02:00Z</time> ·
+          <strong>MOVE_CANONICAL_EXAMPLE_TO_SPECIFIC_BIN</strong> · codex
+          <p class="changes">Moved Wallemia ichthyophaga (NCBITaxon:245174; DOI:10.1128/aem.02702-13) off the NaCl-optimum parent under the #478 most-specific-placement policy. Its measured 15-20% (w/v) optimum belongs wholly in METPO:1000468; the same claim is not duplicated on parent and bin.</p>
         </li>
         
       </ol>
@@ -984,7 +961,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-30 20:02 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

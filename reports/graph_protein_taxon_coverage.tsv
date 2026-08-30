@@ -65,8 +65,8 @@ data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	nacl_
 data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	nacl_delta_low_stenohaline	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	nacl_delta_mid1_modest_breadth	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	nacl_optimum_high_extreme_halophile	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	nacl_optimum_high_extreme_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	nacl_optimum_low_non_halophile_setpoint	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_mid1.yaml	METPO:1000466	NaCl optimum mid1	nacl_optimum_mid1_slight_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_mid2.yaml	METPO:1000467	NaCl optimum mid2	nacl_optimum_mid2_moderate_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

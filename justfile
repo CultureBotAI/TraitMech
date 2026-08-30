@@ -380,6 +380,11 @@ normalize-trait-emission *args:
 add-morphology-motility-exemplars *args:
     uv run python scripts/add_morphology_motility_exemplars.py {{args}}
 
+# Move the measured W. ichthyophaga optimum from its family parent to the
+# narrowest numeric bin containing the full interval (#478). Default dry-run.
+move-nacl-optimum-exemplar *args:
+    uv run python scripts/move_nacl_optimum_exemplar.py {{args}}
+
 # Backfill per-record curation events the protein-taxon tranche omitted (#517). Default dry-run.
 backfill-protein-taxon-events *args:
     uv run python scripts/backfill_protein_taxon_events.py {{args}}
