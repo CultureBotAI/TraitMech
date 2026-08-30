@@ -279,6 +279,78 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-024-01104-3
       notes: Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic
         sulfur oxidation contexts.
+  - subject: sox_multienzyme_system
+    predicate: participates in
+    object: sulfur_oxidation_process
+    description: The Sox multienzyme system is a prominent pathway for oxidation of
+      reduced sulfur compounds.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11061436
+      snippet: The Sox multienzyme complex, first described using the model organism
+        Paracoccus panthotrophus, is widespread in photo- and chemotrophic sulfur-oxidizing
+        bacteria and appears to be the most prominent sulfur oxidation system
+      notes: The review identifies the multicomponent Sox system as a sulfur-oxidation
+        pathway rather than a single enzyme.
+    predicate_id: biolink:participates_in
+  - subject: soeabc_sulfite_dehydrogenase
+    predicate: participates in
+    object: sulfur_oxidation_process
+    description: Membrane-bound SoeABC participates in sulfur oxidation by oxidizing
+      sulfite to sulfate.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11061436
+      snippet: sulfite, which is subsequently oxidized by the activity of the membrane-bound
+        protein SoeABC (sulfite dehydrogenase) to sulfate
+      notes: The review explicitly places SoeABC in the sulfite-to-sulfate step of
+        sulfur oxidation.
+    predicate_id: biolink:participates_in
+  - subject: sox_multienzyme_system
+    predicate: feeds electrons into
+    object: membrane_electron_transport_chain
+    description: Complete Sox-mediated thiosulfate oxidation supplies electrons to
+      energy-conserving electron transport.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11061436
+      snippet: The yield of the respective reaction is 8 electrons/1 mol of thiosulfate
+        for the electron transport systems
+      notes: The review quantifies the electrons supplied by complete Sox thiosulfate
+        oxidation to electron-transport systems.
+    predicate_id: METPO:2007402
+  - subject: ammonia_monooxygenase
+    predicate: produces
+    object: hydroxylamine
+    description: In bacterial ammonia oxidation, ammonia monooxygenase converts ammonia
+      to hydroxylamine.
+    evidence:
+    - reference: DOI:10.1128/jb.185.9.2759-2773.2003
+      snippet: NH3 + O2 + 2H+ + 2e− → NH2OH + H2O
+      notes: The primary N. europaea genome paper gives the AMO-catalyzed first reaction
+        of ammonia oxidation explicitly.
+    predicate_id: METPO:2007800
+  - subject: hydroxylamine_oxidoreductase
+    predicate: produces
+    object: nitrite
+    description: In the bacterial branch represented here, hydroxylamine oxidoreductase
+      oxidizes hydroxylamine to nitrite.
+    evidence:
+    - reference: DOI:10.1128/jb.185.9.2759-2773.2003
+      snippet: NH2OH + H2O → NO2− + 5H+ + 4e−
+      notes: The primary N. europaea paper gives the HAO-associated second reaction;
+        the graph scope does not project this bacterial route onto ammonia-oxidizing
+        archaea.
+    predicate_id: METPO:2007800
+  - subject: hydroxylamine_oxidoreductase
+    predicate: feeds electrons into
+    object: membrane_electron_transport_chain
+    description: Electrons released during hydroxylamine oxidation enter the respiratory
+      electron-transport chain through cytochromes and ubiquinone.
+    evidence:
+    - reference: DOI:10.1128/jb.185.9.2759-2773.2003
+      snippet: Electrons from hydroxylamine oxidation flow through cytochrome c554
+        and cytochrome cm552 into the electron transport chain at the level of ubiquinone
+      notes: The primary N. europaea study directly connects the HAO branch to membrane
+        electron transport.
+    predicate_id: METPO:2007402
 curation_history:
 - timestamp: '2026-08-24T14:00:00-07:00'
   curator: codex
@@ -397,4 +469,12 @@ curation_history:
     reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other
     chemical occurrences already use, so one id means one sense corpus-wide (issues
     356, 384).'
+  llm_assisted: true
+- timestamp: '2026-08-30T20:34:43Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Connected the seven lithotrophic graph components with six tracked, snippet-backed
+    relations. Sox and SoeABC now join the sulfur-oxidation branch to electron transport;
+    the explicitly bacterial AMO-HAO branch now joins ammonia, hydroxylamine, nitrite,
+    NXR, and electron transport. No new paid research was commissioned (#183, #426).'
   llm_assisted: true
