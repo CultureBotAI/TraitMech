@@ -599,6 +599,12 @@ Identifiers below are deliberately conservative. Where an exact stable identifie
           <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic GO/InterPro terms and retracted 1 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
         
+        <li>
+          <time>2026-08-30T19:21:37Z</time> ·
+          <strong>REVIEW_EVIDENCE_REFERENCE_CHURN</strong> · codex
+          <p class="changes">Offline review for issue 520 retained 2 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1039/d4cb00099d -&gt; DOI:10.3389/fbioe.2024.1395540 (1 edge); DOI:10.1128/AEM.02473-10 -&gt; DOI:10.3389/fbioe.2024.1395540 (1 edge).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -984,7 +990,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-23 09:09 UTC from
+      Record as of 2026-08-30 19:21 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

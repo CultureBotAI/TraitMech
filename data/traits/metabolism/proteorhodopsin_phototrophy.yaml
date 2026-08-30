@@ -270,3 +270,17 @@ curation_history:
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
   llm_assisted: true
+- timestamp: '2026-08-30T19:21:37Z'
+  curator: codex
+  action: REVIEW_EVIDENCE_REFERENCE_CHURN
+  changes: 'Offline review for issue 520 retained 4 evidence-reference replacement(s)
+    that PR 511 made on surviving causal edges outside its stated protein-taxon scope.
+    The pre-tranche evidence entries had references but no snippets; the retained
+    entries supply edge-specific snippets and explanatory notes. Reverting would discard
+    that claim-level provenance, so the scope defect is resolved by documenting the
+    decision instead. This audit changed no causal claim or evidence field. Reviewed
+    replacements: DOI:10.1007/s12275-024-00125-0 -> DOI:10.1073/pnas.0611035104 (1
+    edge); DOI:10.1038/35081051 -> DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.34133/2022/9782712
+    -> DOI:10.1128/MMBR.69.1.51-78.2005 (1 edge); DOI:10.4014/jmb.2410.10034 -> DOI:10.1073/pnas.0611035104
+    (1 edge).'
+  llm_assisted: true
