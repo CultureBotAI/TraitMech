@@ -40,7 +40,12 @@ applying it.
 - `DEEPEN_CAUSAL_GRAPH` is the main queue for applying existing research to a
   thin or fragmented graph.
 - `ADD_CANONICAL_EXAMPLES` identifies graph-bearing records without organism
-  exemplars.
+  exemplars. It is a queue, not proof that the current mechanism artifact can
+  supply one. Quantitative and morphometric records require a direct,
+  unperturbed taxon measurement; the example's own primary citation may come
+  from outside the record's research artifact. For numeric families, put a
+  measurement on the narrowest bin containing its full reported interval and
+  do not duplicate the same claim onto the parent. See the curation playbook.
 - `BUILD_CAUSAL_GRAPH` identifies a mechanism record with no graph.
 - `DROP_NON_MECHANISM` and `DROP_DEPRECATED` are set aside; they are not
   research targets.
@@ -56,6 +61,10 @@ Inspect the selected record, its existing report under `research/traits/`, and
 the historical enrichment-backlog row. Most graph work is application of
 research already on disk. New research is paid: use the provider workflow,
 obtain explicit user approval, and run one canary before any batch.
+
+Canonical-example backfill is separate from paid mechanism research. Use open
+primary measurements or source-backed taxon databases where available; skip a
+record when that evidence is absent rather than buying a new mechanism report.
 
 Related workflows: `research-causal-graphs`, `deep-research-trait`,
 `audit-graphs`, and `audit-canonical-examples`.

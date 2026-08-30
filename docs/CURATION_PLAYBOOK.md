@@ -44,6 +44,39 @@ not a phenotype mechanism. See use case 2 above and the
 - The record's biology is fully covered by a more specific child
   trait and no umbrella-level mechanism is meaningful.
 
+## Canonical-example evidence and numeric bins
+
+`canonical_examples` has its own `reference` field. That citation—not the
+location where a curator first noticed the organism—is the provenance for the
+trait-to-taxon claim. A record's deep-research artifact is a useful lead, but an
+example does not have to appear in that artifact when a direct, source-backed
+trait measurement is available elsewhere (#475).
+
+For morphometric and other quantitative traits:
+
+- require an unperturbed, naturally occurring organism with a reported value or
+  interval; an engineered/depletion phenotype, unnamed taxon, or cultivation
+  condition without a measured phenotype is not a canonical example;
+- prefer the primary species description or measurement paper. A public
+  taxon-oriented database such as BacDive can be used for discovery, but cite
+  the underlying source when it identifies one; do not turn an unattributed
+  aggregate value into primary evidence;
+- verify the NCBITaxon id and label independently from the measurement source,
+  and state the measured value, units, strain, and relevant growth phase or
+  conditions in `note`;
+- do not launch paid research merely to fill this slot. Leave the record empty
+  when the existing public evidence does not meet the bar.
+
+For a quantitative parent/bin family, place a measured example on the
+**narrowest record whose definition contains the complete reported value or
+interval** (#478). Discovery may cross a parent or sibling artifact because the
+example carries the primary citation directly. Do not duplicate the same
+measurement onto both parent and bin: if the interval spans multiple bins,
+touches an unresolved boundary, or cannot be converted to the bin's units, keep
+it on the parent only. A parent may still carry a different source-backed
+family-level exemplar; "most-specific wins" governs placement of the measured
+claim, not whether parent classes may ever have examples.
+
 ## Chemical-use relations: predicate + class composition
 
 METPO carries OBJECT_PROPERTY records for chemical-use relations

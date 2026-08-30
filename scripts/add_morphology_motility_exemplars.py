@@ -7,11 +7,13 @@ mechanisms rather than one shared protein pathway. That is why they were left
 without `canonical_examples` while narrower records were backfilled, and it is
 also what makes a single "the" exemplar wrong for them.
 
-Every example below is taken from the record's OWN deep-research artifact under
-`research/traits/morphology/`, names an organism the cited source actually
-characterizes, and carries a note that scopes the claim to the one arrangement,
-inclusion type, or locomotion mechanism the source establishes. Nothing here
-asserts that the exemplar realizes the whole class.
+Every example in this historical tranche happened to be taken from the record's
+own deep-research artifact under `research/traits/morphology/`, names an organism
+the cited source actually characterizes, and carries a note that scopes the
+claim to the one arrangement, inclusion type, or locomotion mechanism the source
+establishes. Nothing here asserts that the exemplar realizes the whole class.
+The later #475 policy does not require own-artifact discovery: the example's
+primary citation is its provenance.
 
 Deliberately NOT added:
 
@@ -19,7 +21,9 @@ Deliberately NOT added:
     taxon label but retrieves no cited gliding-mechanism claim for it, and the
     report warns against one generic gliding motor. An exemplar with no
     record-local citation is exactly the token entry #526 objects to.
-  - Any quantitative-bin record. Those stay deferred under #475/#478.
+  - Any quantitative-bin record. This tranche predated the #475/#478 policy;
+    later work may use direct, unperturbed measurements and places them on the
+    narrowest bin containing the full reported interval.
   - Any gene or operon as a primary entry; genes appear only in graph metadata.
 
 Taxon ids and labels were verified against NCBI taxonomy — which is what the
