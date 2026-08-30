@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lithotrophic.yaml
+  slug: lithotrophic
+session:
+  id: 2026-08-30T203443Z-codex-06f2aa
+  timestamp: '2026-08-30T20:34:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the lithotrophic donor-oxidation graph
+  details: Applied the existing tracked research artifact without commissioning paid research.
+    Added six source- and verbatim-snippet-backed relations among existing nodes. Sox and
+    SoeABC now join the sulfur-oxidation branches to electron transport; the explicitly bacterial
+    N. europaea AMO-HAO route now joins ammonia, hydroxylamine, nitrite, NXR, and electron
+    transport. The graph remains a cross-donor architecture whose scope notes prevent projecting
+    any one branch onto every lithotroph; proteins remain supporting YAML graph fields and
+    not primary entries.
