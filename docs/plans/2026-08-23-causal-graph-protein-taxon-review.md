@@ -2,12 +2,17 @@
 
 Date: 2026-08-23
 
-Execution status (2026-08-25): implemented across every editable graph. The
-coverage audit reports 119 mechanistic passes, 233 reviewed nonmechanistic
+Execution status (2026-08-25): implemented across every editable graph. At
+completion, the coverage audit reported 119 mechanistic passes, 233 reviewed nonmechanistic
 dispositions, one protected gap (`spore_germination.yaml`), and zero errors.
 The legacy `GENE_OR_PROTEIN` node type is now restricted to proteins, protein
 families, and protein complexes; gene symbols and operons are metadata rather
 than primary entries.
+
+The ten metabolism pilot sidecars are dry-run records only: the pilot made no
+research call, recorded no cost/model/task id, and produced no new report. The
+exemplar work reused the tracked reports and checked DOI sources described in
+phase 6.
 
 ## Objective
 
@@ -21,9 +26,11 @@ InterPro, or NCBIfam. A UniProt accession represents an organism-specific
 protein instance and must therefore be stored as a taxon-paired example, not
 as the generic node grounding.
 
-## Baseline
+## Pre-work baseline (2026-08-23)
 
-The 2026-08-23 corpus inventory found 353 causal graphs in 353 TraitRecords.
+The counts in this section are the frozen inventory used to plan the tranche,
+not current corpus statistics. Re-run the maintained audits for current counts.
+That inventory found 353 causal graphs in 353 TraitRecords.
 
 | Cohort | Graphs |
 |---|---:|
@@ -105,13 +112,17 @@ accession status, entry type, protein name, taxon equality, entry version, and
 deletion/merge state. Add a hard invariant that generic `grounding` fields
 cannot contain `UniProtKB:` values.
 
-### 3. Run a metabolism pilot
+### 3. Run a metabolism curation pilot
 
 Curate a focused batch of ten metabolism records. Metabolism has 49 graphs and
 only six minimum-coverage gaps, so it provides strong enzyme and complex cases
 for testing the model before broad rollout. Include single-chain enzymes,
 multi-subunit complexes, reviewed and carefully justified unreviewed examples,
 and at least one graph requiring node refinement.
+
+Outcome: the ten research sidecars stayed in dry-run status. Curation reused
+pre-existing reports and checked DOI sources; it did not launch a paid or free
+research job.
 
 ### 4. Close graph-level coverage gaps
 
@@ -133,8 +144,8 @@ cohort receives scope review before any graph enrichment.
 
 ### 5. Review every protein node
 
-Review all 818 current protein nodes, not only the minimum one-per-graph
-examples. Each node must end with one of these dispositions:
+Review every protein node in the pre-work inventory, not only the minimum
+one-per-graph examples. Each node must end with one of these dispositions:
 
 - exact GO molecular-function grounding;
 - exact GO cellular-component complex grounding;
@@ -178,9 +189,11 @@ affected trait pages after each batch. The completed corpus must satisfy:
 Run the final gates:
 
 ```bash
+just qc
 just validate-all
 just test
 just audit-graphs
+just audit-graph-protein-taxa --fail-on gaps
 just audit-snippets
 just audit-canonical-examples
 just audit-uniprot
