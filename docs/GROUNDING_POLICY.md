@@ -138,9 +138,9 @@ GO CC complex term or an InterPro/NCBIfam family.
 ## 3. Exemplar taxa and genomes
 
 The exemplar-taxon slot is `canonical_examples` (`NCBITaxon` CURIE + label)
-and it **is** populated: 312 exemplar taxa across 225 of 477 trait files. The
-gap is genomes — **no trait file contains a `GCF_`/`GCA_` assembly accession**,
-and the schema has no slot for one.
+and it **is** populated across the corpus. The gap is genomes — the schema has
+no slot for a versioned `GCF_`/`GCA_` assembly accession. Derive live exemplar
+counts from the corpus rather than copying a count into this policy.
 
 The reproducible anchor is **NCBITaxon ID + a versioned assembly accession**.
 The full chain is machine-resolvable today:
@@ -210,8 +210,8 @@ extension; they are not required for protein/taxon graph coverage.
    | `CANDIDATE_SwissProt` | 10 |
    | `MANUAL_REVIEW` — ambiguous, curator override | 3 |
    | `CURATED_INTERPRO` / `CURATED_GO` / `CURATED_LABEL_ONLY` | 18 / 8 / 13 |
-3. **Add genome accessions** to the 312 existing `canonical_examples`
-   entries, via the UniProt → NCBI chain in §3.
+3. **Add genome accessions** to existing `canonical_examples` entries, via the
+   UniProt → NCBI chain in §3.
 
 Step 3 and the broader label-only grounding backlog remain open. They require
 curation rather than another organism-blind accession-matching pass.

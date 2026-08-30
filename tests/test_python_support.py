@@ -15,7 +15,7 @@ def test_declared_python_versions_are_exercised_in_ci():
     declared = set(re.findall(
         r'"Programming Language :: Python :: (3\.\d+)"', pyproject
     ))
-    assert 'requires-python = ">=3.10"' in pyproject
+    assert 'requires-python = ">=3.10,<3.14"' in pyproject
     assert declared == SUPPORTED
 
     workflow = yaml.safe_load(

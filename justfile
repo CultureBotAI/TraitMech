@@ -768,7 +768,7 @@ audit-derived-reports:
     # report, so compare the fresh temp output with HEAD just like graph audit.
     gpt=graph_protein_taxon_coverage.tsv
     uv run python scripts/audit_graph_protein_taxa.py --out "$tmp/$gpt" \
-      --fail-on none > "$tmp/gen.log" 2>&1
+      --fail-on none > "$tmp/gen.log" 2>&1 || true
     if [ ! -s "$tmp/$gpt" ]; then
       echo "ERROR: audit_graph_protein_taxa.py produced no report. Its output:" >&2
       cat "$tmp/gen.log" >&2

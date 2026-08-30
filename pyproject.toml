@@ -7,7 +7,9 @@ authors = [
 ]
 readme = "README.md"
 license = {text = "CC0-1.0"}
-requires-python = ">=3.10"
+# Support is the set exercised by the CI matrix and advertised by classifiers.
+# Raise this bound together with both; untested future versions are not implied (#570).
+requires-python = ">=3.10,<3.14"
 keywords = [
     "microbiology",
     "phenotype",
@@ -41,12 +43,11 @@ dependencies = [
     # SEMSQL_SQLITE_URL_BASE (default https://semanticsql.berkeleybop.io), with
     # OAKLIB_SEMSQL_SQLITE_URL_BASE as the escape hatch for a mirror.
     #
-    # The extra step to 0.7.3 is hygiene and fleet consistency, not a second
-    # defect fix: 0.7.2 declares requires_python <3.14 where 0.7.3 widened it
-    # to <3.15, and CultureMech#365 chose 0.7.3 for that reason (#569). It
-    # changes no install outcome here — under uv, both floors resolve to 0.7.4
-    # on every interpreter — and 0.7.3 carries the same CDN default as 0.7.2,
-    # verified from the wheels, so the higher floor cannot readmit #562.
+    # The extra step to 0.7.3 is a deliberate policy/fleet floor, not a second
+    # CDN fix: 0.7.2 already changed the default, while 0.7.3 widened oaklib's
+    # own Python metadata and matches CultureMech#365 (#569/#572). This project
+    # now bounds support below 3.14 (#570), so 0.7.2 would be installable here;
+    # retaining 0.7.3 is explicit alignment, guarded by test_oaklib_floor.py.
     "oaklib>=0.7.3",
     "pyyaml>=6.0",
     "click>=8.1.0",

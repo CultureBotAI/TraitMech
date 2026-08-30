@@ -1,8 +1,10 @@
-"""Keep the oaklib floor above the raw-S3 code path (#562).
+"""Keep the oaklib floor at the repository's deliberate policy minimum.
 
 At oaklib 0.7.1 and below, `sqlite:obo:` selectors resolve against
 ``https://s3.amazonaws.com/bbop-sqlite``, whose public access INCATools is
-retiring. 0.7.2 moved the default to ``SEMSQL_SQLITE_URL_BASE``. This repo
+retiring. 0.7.2 moved the default to ``SEMSQL_SQLITE_URL_BASE``; the repository
+deliberately chose 0.7.3 for fleet consistency and wider upstream Python
+metadata (#569/#572). This repo
 reaches OAK from `just validate-products` (a blocking CI gate) and from
 `scripts/audit_canonical_examples.py`, so a floor that admits <=0.7.1 puts
 both back on a bucket that is going away.
@@ -25,8 +27,10 @@ from packaging.version import Version
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# The first release carrying the CDN default. Anything below reintroduces #562.
-CDN_DEFAULT_FIRST_RELEASE = Version("0.7.2")
+# 0.7.2 is the first CDN-default release, but 0.7.3 is the declared policy
+# floor. Guard the actual decision so lowering the declaration cannot pass by
+# satisfying only the narrower raw-S3 invariant (#572).
+MIN_OAKLIB = Version("0.7.3")
 
 
 def _declared(name: str) -> Requirement:
@@ -45,7 +49,7 @@ def _declared(name: str) -> Requirement:
     raise AssertionError(f"{name} is not a declared dependency")
 
 
-def test_oaklib_floor_excludes_the_raw_s3_code_path():
+def test_oaklib_floor_matches_the_declared_policy_minimum():
     req = _declared("oaklib")
     floors = [
         Version(spec.version)
@@ -57,9 +61,9 @@ def test_oaklib_floor_excludes_the_raw_s3_code_path():
         "upper-bound-only specifier admits 0.7.1 and below, which resolve "
         "sqlite:obo: against the retiring raw S3 bucket (#562)"
     )
-    assert min(floors) >= CDN_DEFAULT_FIRST_RELEASE, (
-        f"oaklib floor {min(floors)} is below {CDN_DEFAULT_FIRST_RELEASE}, "
-        "which reintroduces the raw-S3 resolution path (#562)"
+    assert min(floors) >= MIN_OAKLIB, (
+        f"oaklib floor {min(floors)} is below the {MIN_OAKLIB} policy floor; "
+        "0.7.2 fixes raw-S3 resolution but does not match the fleet decision (#572)"
     )
 
 
@@ -73,4 +77,4 @@ def test_the_lock_satisfies_the_declared_floor():
         f"uv.lock pins oaklib {locked}, which does not satisfy the declared "
         f"{req!s}; the lock and the declaration have drifted"
     )
-    assert Version(locked) >= CDN_DEFAULT_FIRST_RELEASE
+    assert Version(locked) >= MIN_OAKLIB
