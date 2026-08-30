@@ -142,6 +142,22 @@ fails on any top-level directory the filter omits (#252). It found the `conf/`
 instance on its first run. It also fails when it cannot inspect anything, since
 a gate that passes while blind is the failure mode the section below is about.
 
+**Project dependency inputs are part of every filtered environment-resolving
+job.** A filtered PR workflow that runs `uv sync`, project-aware `uv run`, or a
+local-project `pip install` must include both root `pyproject.toml` and
+`uv.lock`. `tests/test_workflow_dependency_paths.py` parses job commands rather
+than searching raw YAML text, evaluates ordered negations, accepts a broad
+`**`, and pins the expected workflow-name set so losing five of six call sites
+cannot leave a one-workflow non-vacuity check green (#566–#580).
+
+The escape hatch is semantic, not an allow-list: a standalone tool job should
+use `uv run --no-project` (or another command that does not resolve the local
+project). Merely setting up uv is not treated as reading the lock. An unfiltered
+workflow also needs no dependency entries because it already runs for every
+change. If a composite action or new installer starts resolving this project,
+extend the command discovery and acknowledge the changed expected workflow set
+in the same change; do not silently exempt its filename.
+
 ## Verify the check ran, not that it was green
 
 #182, #184 and #215 were all *green because nothing evaluated them*. A passing
