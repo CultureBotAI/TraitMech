@@ -12,6 +12,12 @@ from typing import Any
 
 import yaml
 
+from deep_research_contract import (
+    ContractError,
+    render_prompt_template,
+    run_codex_research,
+)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 DEFAULT_TEMPLATE = REPO_ROOT / "templates" / "trait_causal_graph_research.md"
@@ -276,6 +282,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--template", type=Path, default=DEFAULT_TEMPLATE)
     parser.add_argument("--research-dir", type=Path, default=DEFAULT_RESEARCH_DIR)
     parser.add_argument("--client-command", default="deep-research-client")
+    parser.add_argument("--timeout", type=int, default=1800)
+    parser.add_argument("--min-chars", type=int, default=1000)
+    parser.add_argument("--min-sources", type=int, default=3)
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -298,6 +307,34 @@ def main(argv: list[str] | None = None) -> int:
     output_dir = args.research_dir / "traits" / category_slug
     output_file = output_dir / f"{args.slug}-deep-research-{provider}.md"
     variables = template_vars(doc, category_slug, args.slug)
+    print(f"Researching: {variables['trait_label']} ({provider}) -> {output_file}")
+    if provider == "codex":
+        if args.passthrough_args:
+            print(
+                "Codex does not accept deep-research-client passthrough arguments",
+                file=sys.stderr,
+            )
+            return 2
+        try:
+            prompt = render_prompt_template(args.template, variables)
+            if args.dry_run:
+                print("codex --search --ask-for-approval never exec [schema validated]")
+                print(f"prompt: {len(prompt)} characters")
+                return 0
+            summary = run_codex_research(
+                prompt,
+                output_file,
+                repo_root=REPO_ROOT,
+                timeout=args.timeout,
+                min_chars=args.min_chars,
+                min_sources=args.min_sources,
+            )
+        except ContractError as exc:
+            print(f"Codex research rejected: {exc}", file=sys.stderr)
+            return 1
+        print(f"Validated {summary.characters} characters and {summary.sources} sources")
+        return 0
+
     command = build_command(
         provider=provider,
         template=args.template,
@@ -307,7 +344,6 @@ def main(argv: list[str] | None = None) -> int:
         client_command=args.client_command,
     )
 
-    print(f"Researching: {variables['trait_label']} ({provider}) -> {output_file}")
     if args.dry_run:
         print(shlex.join(command))
         return 0
