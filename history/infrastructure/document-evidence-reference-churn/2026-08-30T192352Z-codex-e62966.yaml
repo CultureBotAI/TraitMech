@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/document_evidence_reference_churn.py
+  slug: document-evidence-reference-churn
+session:
+  id: 2026-08-30T192352Z-codex-e62966
+  timestamp: '2026-08-30T19:23:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/520
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/511
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Document the decision to retain PR 511 evidence-reference replacements
+  details: This corrects the unresolved issue 520 follow-up recorded in history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml.
+    Offline comparison of the retained pre-tranche and tranche trees found 38 surviving causal
+    edges across 10 records whose evidence references changed; only 3 touched newly added
+    protein exemplars. Every removed evidence entry had a reference but no snippet, while
+    every retained entry has an edge-specific snippet and explanatory notes. The decision
+    is therefore to keep and document rather than revert, because a revert would discard the
+    claim-level provenance now attached to unchanged edges. The migration appends an upserted
+    REVIEW_EVIDENCE_REFERENCE_CHURN event to each affected record and changes no causal claim
+    or evidence field. It dry-ran one canary and all 10 records, guarded all 38 exact edge/reference
+    states, and wrote through write_validated_trait.

@@ -633,6 +633,12 @@ Fermentation mode is also condition-dependent. Carbon limitation, temperature, p
           <p class="changes">Re-grounded 2 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (2 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
         
+        <li>
+          <time>2026-08-30T19:21:37Z</time> ·
+          <strong>REVIEW_EVIDENCE_REFERENCE_CHURN</strong> · codex
+          <p class="changes">Offline review for issue 520 retained 6 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.3390/fermentation10030168 -&gt; DOI:10.3390/molecules31020333 (6 edges).</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -1018,7 +1024,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-23 09:01 UTC from
+      Record as of 2026-08-30 19:21 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

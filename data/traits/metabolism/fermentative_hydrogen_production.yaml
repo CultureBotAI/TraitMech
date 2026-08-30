@@ -207,3 +207,14 @@ curation_history:
     mechanism, added a DOI-backed HydA component example and strain taxon, and kept
     the complex reviewed label-only pending an exact complex term.
   llm_assisted: true
+- timestamp: '2026-08-30T19:21:37Z'
+  curator: codex
+  action: REVIEW_EVIDENCE_REFERENCE_CHURN
+  changes: 'Offline review for issue 520 retained 1 evidence-reference replacement(s)
+    that PR 511 made on surviving causal edges outside its stated protein-taxon scope.
+    The pre-tranche evidence entries had references but no snippets; the retained
+    entries supply edge-specific snippets and explanatory notes. Reverting would discard
+    that claim-level provenance, so the scope defect is resolved by documenting the
+    decision instead. This audit changed no causal claim or evidence field. Reviewed
+    replacements: DOI:10.3390/en16083321 -> DOI:10.1128/JB.01582-08 (1 edge).'
+  llm_assisted: true

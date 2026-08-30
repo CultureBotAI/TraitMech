@@ -324,3 +324,15 @@ curation_history:
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
   llm_assisted: true
+- timestamp: '2026-08-30T19:21:37Z'
+  curator: codex
+  action: REVIEW_EVIDENCE_REFERENCE_CHURN
+  changes: 'Offline review for issue 520 retained 6 evidence-reference replacement(s)
+    that PR 511 made on surviving causal edges outside its stated protein-taxon scope.
+    The pre-tranche evidence entries had references but no snippets; the retained
+    entries supply edge-specific snippets and explanatory notes. Reverting would discard
+    that claim-level provenance, so the scope defect is resolved by documenting the
+    decision instead. This audit changed no causal claim or evidence field. Reviewed
+    replacements: DOI:10.3390/fermentation10030168 -> DOI:10.3390/molecules31020333
+    (6 edges).'
+  llm_assisted: true
