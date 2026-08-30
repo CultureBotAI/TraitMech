@@ -66,6 +66,23 @@ records were attempted briefly (PR #52, reverted) before being
 recognised as off-pattern; see `docs/DEPRECATED_REPLACEMENT_PROPOSAL.md`
 for the history.
 
+The same rule applies to assay and prediction-panel columns (#453, #582):
+
+- enzyme readouts compose `shows activity of` / `does not show activity of`
+  with a GO molecular-function or EC identifier;
+- substrate-utilisation readouts compose the most specific applicable METPO
+  use predicate with a CHEBI class;
+- predicted polymer-degradation capabilities compose `degrades`
+  (`METPO:2000007`) with the polymer's CHEBI class.
+
+The column header and its object mapping belong in a mapping artifact; each
+organism's value belongs in the downstream observation or profile that names
+that organism. Neither becomes a new `TraitRecord`. A source column can still
+match an independently meaningful process class such as `cellulolysis`, but
+that class exists because it has a curated definition and mechanism—not merely
+because a table contains a cellulose column. The four existing polymer-process
+records therefore do not establish a one-record-per-column convention.
+
 What curators **should** do for the OBJECT_PROPERTY relation
 records:
 

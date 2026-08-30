@@ -47,6 +47,17 @@ compose the predicate with the CHEBI substrate at the level where
 each organism's observation is recorded. **No precomposed
 substrate-specific TraitRecords are needed in this corpus.**
 
+This also decides the panel-column question in #453/#582. A panel header is
+not sufficient reason to mint a class. Enzyme-activity headers map to an
+activity relation plus GO/EC object; substrate-use headers map to a METPO use
+relation plus CHEBI object; predicted degradation headers map to
+`METPO:2000007` (`degrades`) plus CHEBI object. The mapping is reusable
+vocabulary alignment, while each positive, negative, or quantitative value is
+an organism-level observation held downstream. Independently curated process
+classes such as `cellulolysis` may coexist with this assertion shape, but they
+require their own biological definition and mechanism rather than inheriting
+class status from a table column.
+
 ## Implications for the DEPRECATED records
 
 The 94 metabolism `OBJECT_PROPERTY` records previously marked
