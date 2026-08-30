@@ -272,6 +272,40 @@ causal_graphs:
     - reference: DOI:10.1111/ppl.14140
       notes: Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes
         (CA produces CO2).
+  - subject: light
+    predicate: enables
+    object: photosynthetic_electron_transport
+    description: Captured light enables the high-energy electron transfer through
+      the photosystems that constitutes photosynthetic electron transport.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      snippet: Photosynthesis in cyanobacteria requires effective light harvesting
+        and the transfer of high-energy electrons through two photosystems
+      notes: The review directly links light harvesting to electron transfer through
+        PSII and PSI in cyanobacterial photosynthesis.
+    predicate_id: RO:0002327
+  - subject: carbon_concentrating_mechanism
+    predicate: includes
+    object: carboxysome
+    description: The cyanobacterial carbon-concentrating mechanism includes the carboxysome
+      microcompartment as a functional component.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adk7283
+      snippet: Proteinaceous microcompartments, called carboxysomes, play a critical
+        role in CCM function
+      notes: A primary structural and biochemical study identifies carboxysomes as
+        a critical component of cyanobacterial CCM function.
+    predicate_id: biolink:has_part
+  - subject: carboxysome
+    predicate: includes
+    object: rubisco
+    description: The carboxysome houses RuBisCO for concentrated CO2 fixation.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adk7283
+      snippet: carboxysomes that house CA and Rubisco
+      notes: The primary study explicitly places RuBisCO within the carboxysome together
+        with carbonic anhydrase.
+    predicate_id: biolink:has_part
 curation_history:
 - timestamp: '2026-05-05T01:35:46.879777+00:00'
   curator: seed_from_metpo
@@ -409,4 +443,12 @@ curation_history:
   changes: Marked the cyanobacterial graph mechanistic, documented its oxygenic scope,
     reviewed carboxysomal carbonic anhydrase as label-only, upgraded canonical examples
     to strain-level DOI citations, and added the reviewed Synechocystis PsbA2 example.
+  llm_assisted: true
+- timestamp: '2026-08-30T20:17:23Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Connected all four components of the oxygenic cyanobacterial photoautotrophy
+    graph with three tracked, snippet-backed relations: light enables photosynthetic
+    electron transport; the CCM includes the carboxysome; and the carboxysome includes
+    RuBisCO. No new paid research was commissioned (#183, #426).'
   llm_assisted: true
