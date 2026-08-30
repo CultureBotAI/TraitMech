@@ -138,17 +138,16 @@ classes:
       replaces:
         description: >-
           dcterms:replaces — CURIEs of records that this trait
-          supersedes. Used to track lineage when a substrate-specific
-          TraitRecord (e.g. traitmech:UCS_GLUCOSE for "uses glucose as
-          carbon source") replaces a generic METPO relation carrier
-          (e.g. METPO:2000006 for "uses as carbon source"). The
-          replaced record itself is left in place with
-          mapping_status: DEPRECATED so downstream references remain
-          resolvable; this field carries the structured forward link
-          from the new record back to the old. The reverse direction
-          (deprecated → replacement) is the OBO/IAO `IAO:0100001`
-          (term replaced by); we use dcterms:replaces here because
-          the field lives on the *new* record and points to the *old*.
+          supersedes. Used to track genuine record lineage, such as a
+          curator splitting one trait into two or replacing a renumbered
+          upstream class. It is not used to precompose a relation and its
+          object: substrate use remains an organism-level METPO predicate
+          composed with a CHEBI class at the assertion site. The replaced
+          record remains resolvable with mapping_status: DEPRECATED; this
+          field carries the structured forward link from the new record to
+          the old. The reverse direction (deprecated → replacement) is the
+          OBO/IAO `IAO:0100001` (term replaced by); we use dcterms:replaces
+          because the field lives on the *new* record and points to the *old*.
         multivalued: true
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"

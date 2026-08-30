@@ -103,15 +103,22 @@
     all: `ncbi_isolation_source` carries them on 491 rows (481 lines with ENVO:,
     9 with CHEBI:, 1 with NCBITaxon:), e.g. "saline water (ENVO:00002010)".
 
-    NOT seeded, and `candidate` rather than `seeded` for a substantive reason:
-    almost every trait-shaped column already has a TraitRecord (pH optimum,
-    temperature optimum, NaCl optimum, genome_size, gc_content, oxygen
-    tolerance, fermentation, and the CAZy substrates map onto cellulolysis /
-    chitinolysis / xylan_degradation / starch_degradation). What this source
-    actually supplies is 41,199 PER-ORGANISM VALUES for traits that already
-    exist, and the schema has nowhere to put them: CanonicalExample carries
-    taxon_id, taxon_label, note and reference, with no value slot. Ingest is
-    blocked on that schema decision, not on the data.
+    NOT seeded, and `candidate` rather than `seeded` for substantive reasons.
+    Many scalar columns already have TraitRecords (pH optimum, temperature
+    optimum, NaCl optimum, genome_size, gc_content, oxygen tolerance,
+    fermentation), but only 4 of the 19 distinct CAZy substrate families have
+    independently curated process records; 15 do not. The table also has 62
+    substrate-utilisation columns without per-substrate records.
+
+    Those 77 headers are not missing TraitRecords (#453/#582). Under the
+    repository's predicate+class policy, CAZy predictions map to `degrades`
+    plus a CHEBI polymer and utilisation columns map to the applicable METPO
+    use predicate plus a CHEBI chemical. The mappings can be curated without
+    inventing relation×substrate classes; the 41,199 values remain
+    PER-ORGANISM assertions, which TraitMech does not store. CanonicalExample
+    carries taxon_id, taxon_label, note and reference, with no value slot.
+    Publishing anything derived from this source also remains contingent on
+    settling the collaborator-data terms recorded above.
 
     Also note the environmental columns are model predictions
     (oxygen.prediction, ph_optimum.prediction, salinity_optimum.prediction,
