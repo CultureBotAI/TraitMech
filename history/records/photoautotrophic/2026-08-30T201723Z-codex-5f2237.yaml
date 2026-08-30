@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photoautotrophic.yaml
+  slug: photoautotrophic
+session:
+  id: 2026-08-30T201723Z-codex-5f2237
+  timestamp: '2026-08-30T20:17:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+  - https://github.com/CultureBotAI/TraitMech/issues/426
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connect the photoautotrophic carbon-fixation graph
+  details: 'Applied the existing tracked research artifact without commissioning paid research.
+    Added three source- and snippet-backed relations among existing nodes: light enables photosynthetic
+    electron transport, the cyanobacterial carbon-concentrating mechanism includes the carboxysome,
+    and the carboxysome includes RuBisCO. These relations join all four components while preserving
+    the graph''s explicit oxygenic-cyanobacterial scope; genes and proteins remain supporting
+    YAML graph fields and are not primary entries.'
