@@ -103,7 +103,7 @@ def test_missing_minimum_coverage_is_reported_exactly():
     assert "SCOPE_NOT_REVIEWED" in requirements
     assert "NO_PROTEIN_NODE" in requirements
     assert "NO_CITED_CANONICAL_TAXON" in requirements
-    assert "NO_TAXON_MATCHED_PROTEIN_EXAMPLE" in requirements
+    assert "NO_PROTEIN_EXAMPLE" in requirements
 
 
 def test_generic_uniprot_grounding_is_an_error():
@@ -119,7 +119,7 @@ def test_generic_uniprot_grounding_is_an_error():
     assert "GENERIC_UNIPROT_GROUNDING:protein" in row["unmet_requirements"]
 
 
-def test_taxon_must_match_a_canonical_example():
+def test_protein_source_taxon_need_not_be_a_canonical_example():
     node = {
         "node_id": "protein",
         "label": "protein",
@@ -128,8 +128,10 @@ def test_taxon_must_match_a_canonical_example():
         "protein_examples": [_example(taxon_id="NCBITaxon:1423")],
     }
     row = _row(_record(node=node))
-    assert "PROTEIN_EXAMPLE_TAXON_NOT_CANONICAL" in row["unmet_requirements"]
-    assert "NO_TAXON_MATCHED_PROTEIN_EXAMPLE" in row["unmet_requirements"]
+    assert row["status"] == "PASS"
+    assert row["protein_examples"] == 1
+    assert row["taxon_matched_examples"] == 0
+    assert row["unmet_requirements"] == ""
 
 
 def test_protein_example_evidence_requires_all_three_fields():

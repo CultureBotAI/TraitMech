@@ -4,8 +4,10 @@
 The causal graph remains taxon-agnostic: a GENE_OR_PROTEIN node is grounded to
 GO, InterPro, NCBIfam, or another semantic family/complex identifier. A
 UniProtKB accession is an organism-specific example and belongs in the node's
-``protein_examples`` list, paired with a canonical taxon and primary-source
-evidence.
+``protein_examples`` list, paired with its source taxon and primary-source
+evidence. Protein-source taxa are independent of ``canonical_examples``: the
+former says where a mechanism was established, while the latter names an
+organism that exemplifies the trait.
 
 Output: ``reports/graph_protein_taxon_coverage.tsv``, one row per graph. The
 default is report-only so the existing backlog can be curated incrementally.
@@ -45,7 +47,6 @@ ERROR_CODES = {
     "PROTEIN_EXAMPLE_ON_NONPROTEIN_NODE",
     "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID",
     "PROTEIN_EXAMPLE_MISSING_TAXON_ID",
-    "PROTEIN_EXAMPLE_TAXON_NOT_CANONICAL",
     "PROTEIN_EXAMPLE_MISSING_EVIDENCE",
     "PROTEIN_EXAMPLE_EVIDENCE_INCOMPLETE",
     "UNREVIEWED_EXAMPLE_MISSING_PROTEOME",
@@ -220,13 +221,7 @@ def graph_row(
                 _issue(issues, "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID", ex_label)
             if not taxon_id.startswith("NCBITaxon:"):
                 _issue(issues, "PROTEIN_EXAMPLE_MISSING_TAXON_ID", ex_label)
-            elif taxon_id not in canonical_taxa:
-                _issue(
-                    issues,
-                    "PROTEIN_EXAMPLE_TAXON_NOT_CANONICAL",
-                    f"{ex_label}={taxon_id}",
-                )
-            else:
+            elif taxon_id in canonical_taxa:
                 taxon_matched_count += 1
 
             evidence = ex.get("evidence")
@@ -248,8 +243,8 @@ def graph_row(
             _issue(issues, "NO_PROTEIN_NODE")
         if not cited_canonical:
             _issue(issues, "NO_CITED_CANONICAL_TAXON")
-        if not taxon_matched_count:
-            _issue(issues, "NO_TAXON_MATCHED_PROTEIN_EXAMPLE")
+        if not protein_example_count:
+            _issue(issues, "NO_PROTEIN_EXAMPLE")
 
     error_count = sum(kind == "ERROR" for kind, _ in issues)
     gap_count = sum(kind == "GAP" for kind, _ in issues)

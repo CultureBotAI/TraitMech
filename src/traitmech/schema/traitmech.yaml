@@ -405,9 +405,10 @@ classes:
       protein_examples:
         description: >-
           Organism-specific UniProt protein instances illustrating this
-          taxon-agnostic GENE_OR_PROTEIN node. Each example must name a
-          canonical taxon on the owning TraitRecord and carry mechanistic
-          evidence; the UniProt record verifies identity and taxonomy but does
+          taxon-agnostic GENE_OR_PROTEIN node. Each example names the source
+          taxon in which its mechanistic role was established and carries
+          mechanistic evidence. That source need not be a canonical example of
+          the trait; the UniProt record verifies identity and taxonomy but does
           not by itself prove the causal role.
         multivalued: true
         inlined_as_list: true
@@ -433,7 +434,9 @@ classes:
         description: Gene symbol used by UniProt or the mechanistic source.
         range: string
       taxon_id:
-        description: UniProt organism taxon, also present in canonical_examples.
+        description: >-
+          UniProt organism taxon for this protein instance. This source taxon
+          need not also be a canonical example of the owning trait.
         required: true
         range: string
         pattern: "^NCBITaxon:[0-9]+$"

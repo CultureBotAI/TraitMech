@@ -176,6 +176,10 @@ release-pinned and treated as commentary, not as the anchor.
    remains the taxon-agnostic GO / InterPro / NCBIfam / complex identifier.
    `protein_examples` carries a UniProt primary accession, its `NCBITaxon`,
    review status, retrieval date, versions, role, and primary-source evidence.
+   Its source taxon records where that protein's role was established; it is
+   independent of `canonical_examples`, which records organisms that exemplify
+   the trait. Requiring the former to appear in the latter can turn an
+   inhibitor's source into a false trait exemplar (#521).
 2. **Generic UniProt groundings are forbidden by audit.**
    `scripts/audit_graph_protein_taxa.py` and
    `scripts/audit_uniprot_grounding.py` both flag a `UniProtKB:` value in a
