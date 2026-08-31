@@ -222,6 +222,40 @@ causal_graphs:
       notes: Energy required depends on whether compounds are directly taken up or
         need enzymatic degradation.
     predicate_id: RO:0002213
+  - subject: respiratory_electron_transport
+    predicate: contributes to
+    object: catabolism
+    description: Respiratory electron transport is an energy-conserving component
+      of catabolism.
+    evidence:
+    - reference: DOI:10.1016/j.heliyon.2023.e22459
+      snippet: The transfer of electrons through the respiratory chain is tied to
+        proton movement
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: carbon_use_efficiency
+    predicate: contributes to
+    object: cellular_growth
+    description: Carbon-use efficiency measures allocation of assimilated carbon to
+      new biomass.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-52160-5
+      snippet: represents the fraction of C uptake allocated to the production of
+        new microbial biomass
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: substrate_uptake
+    predicate: contributes to
+    object: metabolic_energy_cost
+    description: The accessibility of substrates determines the energetic cost of
+      uptake and processing.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-52160-5
+      snippet: Polymeric substrates like lignin and cellulose need depolymerization
+        before cellular uptake, whereas smaller substrates readily diffuse across
+        membranes
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.810665+00:00'
   curator: seed_from_metpo
@@ -362,4 +396,10 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0008152.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

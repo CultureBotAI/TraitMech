@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_final_metabolism_graphs_183.py
+  slug: connect-final-metabolism-graphs-183
+session:
+  id: 2026-08-31T121511Z-codex-c293ef
+  timestamp: '2026-08-31T12:15:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: 'Add reproducible final metabolism graph migration for issue #183'
+  details: Added a guarded, idempotent ten-record migration and regression tests for exact
+    replay, expected component counts, and partial-state refusal. Structural findings fell
+    from 176 to 85, fragmented graphs from 10 to 0, unreachable findings from 81 to 0, components
+    from 148 to 120, and attached coverage rose from 94.9% to 100.0%. Evidence findings stayed
+    at 2592, predicate-domain findings stayed at zero, and no paid research service was called.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/electron_transfer.yaml
+  slug: electron_transfer
+session:
+  id: 2026-08-31T121505Z-codex-c8c185
+  timestamp: '2026-08-31T12:15:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the electron transfer graph
+  details: Added 3 exact public-source connector(s), moving the mechanistic graph from 4 components
+    to one without removing in-scope nodes. The structural, evidence, and predicate-domain
+    audits passed. No paid research service was called.

@@ -258,6 +258,37 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae016
       notes: ATP synthesis via ATP synthases driven by ion gradients during fermentation.
     predicate_id: METPO:2007800
+  - subject: glycolysis_emp
+    predicate: contributes to
+    object: fermentation_trait
+    description: EMP glycolysis supplies pyruvate to downstream fermentation branches.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      snippet: Glycolysis (EMP) and the pentose phosphate pathway feed to pyruvate.
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: pfor
+    predicate: oxidizes
+    object: pyruvate
+    description: Pyruvate:ferredoxin oxidoreductase oxidizes pyruvate while reducing
+      ferredoxin.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      snippet: Pyruvate:ferredoxin oxidoreductase produces reduced ferredoxin; central
+        to redox balancing.
+      notes: Verified against the free public article text.
+    predicate_id: METPO:2007803
+  - subject: fnor
+    predicate: oxidizes
+    object: reduced_ferredoxin
+    description: Ferredoxin-NAD+ reductase oxidizes reduced ferredoxin while reducing
+      NAD+.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      snippet: Ferredoxin-NAD+ reductase transfers electrons from reduced ferredoxin
+        to NAD+; strong redox-balancing edge.
+      notes: Verified against the free public article text.
+    predicate_id: METPO:2007803
 curation_history:
 - timestamp: '2026-05-05T01:35:46.935638+00:00'
   curator: seed_from_metpo
@@ -365,4 +396,10 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006113.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

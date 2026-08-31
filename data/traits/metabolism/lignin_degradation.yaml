@@ -213,6 +213,34 @@ causal_graphs:
     - reference: DOI:10.1186/s13068-023-02447-4
       notes: ALiP-P3 breaks the Calpha-Cbeta bond of the beta-O-4 model compound (Gu
         2024).
+  - subject: oxidative_enzymes
+    predicate: participates in
+    object: lignin_depolymerization
+    description: Oxidative lignin-modifying enzymes carry out lignin depolymerization.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02470-z
+      snippet: LME including laccase (EC 1.10.3.2) participated in depolymerization
+        of large lignin polymers
+      notes: Verified against the free public article text.
+    predicate_id: biolink:participates_in
+  - subject: manganese_peroxidase
+    predicate: example of
+    object: oxidative_enzymes
+    description: Manganese peroxidase is a lignin-modifying oxidative enzyme.
+    evidence:
+    - reference: DOI:10.3390/polym16172388
+      snippet: Manganese peroxidase oxidizes Mn2+ to Mn3+
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
+  - subject: lignin_peroxidase
+    predicate: example of
+    object: oxidative_enzymes
+    description: Lignin peroxidase is a lignin-modifying oxidative enzyme.
+    evidence:
+    - reference: DOI:10.1186/s13068-023-02447-4
+      snippet: ALiP-P3 breaks the Calpha-Cbeta bond of the beta-O-4 model compound
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -298,4 +326,10 @@ curation_history:
     declared exact synonym(s): ''lignin breakdown'', ''lignin catabolism''. Evidence
     is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
     data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

@@ -243,6 +243,38 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       notes: Connecting edge wiring the enrichment node into the graph.
     predicate_id: METPO:2007800
+  - subject: cbb_cycle
+    predicate: contributes to
+    object: carbon_fixation_process
+    description: The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation
+      mechanism.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: The reductive pentose phosphate cycle is the quantitatively most important
+        mechanism of autotrophic CO2 fixation in nature.
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: rtca_cycle
+    predicate: contributes to
+    object: carbon_fixation_process
+    description: The reductive TCA cycle is an autotrophic carbon-dioxide-fixation
+      route.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: the second autotrophic CO2 fixation cycle (the reductive citric acid
+        cycle) had been discovered
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: wood_ljungdahl_pathway
+    predicate: contributes to
+    object: carbon_fixation_process
+    description: The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: The Wood-Ljungdahl pathway is a noncyclic pathway that results in the
+        fixation of two CO2 molecules to form acetyl-CoA
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -342,4 +374,10 @@ curation_history:
     pathway'', ''autotrophy''. Evidence is predicate-scoped in the versioned ontology
     snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas
     and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

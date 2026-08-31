@@ -196,6 +196,50 @@ causal_graphs:
         across a wide range of redox potentials ... which can expand the range of
         usable iron substrates".'
     predicate_id: RO:0002327
+  - subject: cbb3_oxidase
+    predicate: contributes to
+    object: iron_oxidation_trait
+    description: High-affinity terminal oxidation supports iron-oxidizer respiration
+      in microaerobic niches.
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      snippet: These terminal oxidases have high affinity for oxygen and therefore
+        are widely understood to be used under microaerobic conditions
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: low_oxygen_organic_rich
+    predicate: example of
+    object: microaerobic_conditions
+    description: A low-oxygen, organic-rich setting is a specific microaerobic condition.
+    evidence:
+    - reference: DOI:10.1128/mSystems.00038-23
+      snippet: bd-type oxidases have a high affinity for oxygen, and recent studies
+        show they can be more highly expressed than cbb3-type oxidases under low-oxygen,
+        organic-rich conditions
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
+  - subject: enzymatic_iron_oxidation
+    predicate: contributes to
+    object: iron_oxidation_trait
+    description: Enzymatic Fe(II) oxidation realizes the biological iron-oxidation
+      capacity.
+    evidence:
+    - reference: DOI:10.1128/mSystems.00038-23
+      snippet: they bind to hemes, inhibiting the activity of cytochromes, and also
+        directly oxidize Fe(II), thus competing with enzymatic iron oxidation
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: extracellular_electron_transfer
+    predicate: contributes to
+    object: iron_oxidation_trait
+    description: Extracellular electron uptake extends iron oxidation across mineral
+      substrates.
+    evidence:
+    - reference: DOI:10.1128/mSystems.00038-23
+      snippet: multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate
+        extracellular electron uptake and the oxidation of different iron substrates
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -246,4 +290,10 @@ curation_history:
   changes: Scoped the cross-taxon iron-oxidation graph, added a DOI-backed A. ferrooxidans
     Cyc2 example, and documented Cyc2 cluster ambiguity plus the lineage-specific
     cbb3, bd, and multiheme labels.
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) with 4 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true
