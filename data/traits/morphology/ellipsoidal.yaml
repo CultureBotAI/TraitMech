@@ -209,6 +209,18 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       notes: Ovococcal cells, with an ellipsoid shape... ovococci use both septal
         and peripheral peptidoglycan synthesis
+  - subject: septal_pg_synthesis
+    predicate: part of
+    object: combined_septal_peripheral
+    description: Septal peptidoglycan synthesis is one arm of the simultaneous septal
+      and peripheral synthesis program at ovococcal midcell.
+    evidence:
+    - reference: DOI:10.1111/mmi.14659
+      snippet: septal and peripheral (elongation) PG synthesis occur simultaneously
+        at midcell
+      notes: Verified against the open primary article abstract; the connector does
+        not imply that the two synthesis machines are identical.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-05-05T01:35:46.888945+00:00'
   curator: seed_from_metpo
@@ -304,4 +316,10 @@ curation_history:
     (elongasome); added taxon-paired protein example(s) UniProtKB:P0A3M6 on pbp2b
     (NCBITaxon:171101); regrounded 1 node(s) (pbp2b: none->InterPro:IPR047982); added
     canonical example(s) NCBITaxon:171101.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

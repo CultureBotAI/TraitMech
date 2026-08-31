@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/ellipsoidal.yaml
+  slug: ellipsoidal
+session:
+  id: 2026-08-31T061626Z-codex-27113c
+  timestamp: '2026-08-31T06:16:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected the ellipsoidal causal graph
+  details: Joined septal synthesis to the simultaneous septal/peripheral ovococcal program
+    with a primary-source, verbatim-snippet-backed part-of relation; graph moved from two
+    components to one. No paid research service was called.

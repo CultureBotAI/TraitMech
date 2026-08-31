@@ -245,7 +245,7 @@ data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbe
 data/traits/morphology/ellipsoidal.yaml	METPO:1000673	ellipsoidal	ellipsoidal_ovococcal_elongation	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/morphology/filament_shaped.yaml	METPO:1000674	filament shaped	filament_shaped_streptomyces_polar_growth	NONMECHANISTIC	4	3	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	flagellar_arrangement_flhf_flhg	NONMECHANISTIC	4	1	3	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/flagellated.yaml	METPO:1000704	flagellated	flagellated_flagellar_motor	MECHANISTIC	8	0	8	3	3	1	1	PASS	0	0	-
+data/traits/morphology/flagellated.yaml	METPO:1000704	flagellated	flagellated_flagellar_motor	MECHANISTIC	7	0	7	3	3	1	1	PASS	0	0	-
 data/traits/morphology/flask_shaped.yaml	METPO:1000675	flask shaped	flask_shaped_asymmetric_polar_growth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/fusiform_shaped.yaml	METPO:1000690	fusiform shaped	fusiform_shaped_tapered_polar_growth	NONMECHANISTIC	6	2	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/gas_vesicle.yaml	traitmech:000070	gas vesicle	gas_vesicle_buoyancy	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-

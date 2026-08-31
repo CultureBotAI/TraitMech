@@ -59,7 +59,6 @@ roda-pbp2 complex	GENE_OR_PROTEIN	3	data/traits/morphology/cell_length_medium.ya
 crescentin	GENE_OR_PROTEIN	3	data/traits/morphology/cell_shape.yaml|data/traits/morphology/crescent_shaped.yaml|data/traits/morphology/ring_shaped.yaml
 peptidoglycan polymerization and crosslinking	BIOLOGICAL_PROCESS	3	data/traits/morphology/cell_width_large.yaml|data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/cell_width_small.yaml
 planar envelope growth	BIOLOGICAL_PROCESS	3	data/traits/morphology/disc_shaped.yaml|data/traits/morphology/square_shaped.yaml|data/traits/morphology/triangular_shaped.yaml
-ion motive force	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 crystal violet-iodine complex	CHEMICAL	3	data/traits/morphology/gram_negative.yaml|data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
 pilb extension atpase	GENE_OR_PROTEIN	3	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml|data/traits/morphology/twitching_motility.yaml
 pilt retraction atpase	GENE_OR_PROTEIN	3	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml|data/traits/morphology/twitching_motility.yaml
@@ -182,6 +181,7 @@ thin peptidoglycan layer	CELLULAR_LOCALIZATION	2	data/traits/morphology/gram_neg
 alcohol decolorization	EXPERIMENTAL_FACTOR	2	data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
 iodine mordant	CHEMICAL	2	data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
 variable cell geometry	BIOLOGICAL_PROCESS	2	data/traits/morphology/irregular_shaped.yaml|data/traits/morphology/pleomorphic_shaped.yaml
+ion motive force	BIOLOGICAL_PROCESS	2	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 flagellar motor	GENE_OR_PROTEIN	2	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 chey response regulator	GENE_OR_PROTEIN	2	data/traits/morphology/motile.yaml|data/traits/physiology/chemotaxis.yaml
 type iv pilus extension	BIOLOGICAL_PROCESS	2	data/traits/morphology/motile.yaml|data/traits/morphology/twitching_motility.yaml
@@ -1628,14 +1628,12 @@ flhf/flhg flagellar placement regulation	BIOLOGICAL_PROCESS	1	data/traits/morpho
 flif (ms-ring protein)	GENE_OR_PROTEIN	1	data/traits/morphology/flagellar_arrangement.yaml
 marking of future flagellar assembly site	BIOLOGICAL_PROCESS	1	data/traits/morphology/flagellar_arrangement.yaml
 flagellar basal body	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
-flagellar stator complex	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flagellar type iii secretion system	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flagellar structural subunits	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flih-flii-flij atpase complex	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flid filament cap	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flgk/flgl hook-filament junction	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flagellar filament polymerization	BIOLOGICAL_PROCESS	1	data/traits/morphology/flagellated.yaml
-transmembrane h+ channel	MOLECULAR_FUNCTION	1	data/traits/morphology/flagellated.yaml
 chey-p	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
 flagellar rotational switching	BIOLOGICAL_PROCESS	1	data/traits/morphology/flagellated.yaml
 polar neck extension	BIOLOGICAL_PROCESS	1	data/traits/morphology/flask_shaped.yaml

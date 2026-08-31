@@ -192,6 +192,16 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/spectrum.00410-24
       notes: Auto-oxidation followed by self-polymerization to produce pyomelanin.
+  - subject: homogentisic_acid
+    predicate: converted to
+    object: maleylacetoacetate
+    description: HmgA converts homogentisic acid to maleylacetoacetate, diverting
+      substrate away from pyomelanin formation.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      snippet: converts HGA to maleylacetoacetate
+      notes: Verified against the open primary article; this joins the HmgA catabolic
+        branch to its homogentisate substrate.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.943677+00:00'
   curator: seed_from_metpo
@@ -297,4 +307,10 @@ curation_history:
     the tranche: set graph scope brown_pigmented_pyomelanin_pathway=MECHANISTIC with
     scope_notes; added taxon-paired protein example(s) UniProtKB:A0AAE7AGQ2 on hppD
     (NCBITaxon:651); added canonical example(s) NCBITaxon:651.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
