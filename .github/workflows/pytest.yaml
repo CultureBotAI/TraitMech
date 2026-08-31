@@ -9,7 +9,10 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - "uv.lock"
-      - ".github/workflows/pytest.yaml"
+      # Workflow-shape tests inspect every sibling workflow. A workflow-only
+      # migration must therefore run pytest before its expected-set change can
+      # acknowledge the new shape (#586).
+      - ".github/workflows/**"
       # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
       # research/traits/ directly, so an artifact-only PR has to run it (#250).
       - "research/**"
@@ -27,7 +30,8 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - "uv.lock"
-      - ".github/workflows/pytest.yaml"
+      # As above: workflow-shape tests read the whole workflows directory.
+      - ".github/workflows/**"
       # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
       # research/traits/ directly, so an artifact-only PR has to run it (#250).
       - "research/**"
