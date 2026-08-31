@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: other
+  path: research/traits/ecology/free-living-trehalose-external-research.yaml
+  slug: free-living-trehalose-external-research
+session:
+  id: 2026-08-31T203047Z-claude-code-47e2e8
+  timestamp: '2026-08-31T20:30:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-rosalind
+    agent_tool: external
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/409
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - research
+  summary: Record the external GPT Rosalind answer to the free_living compatible-solute hypothesis
+  details: 'Saved research/traits/ecology/free_living-deep-research-rosalind.md, an externally
+    supplied answer to the x-compatible-solute-partitioning proposed experiment on data/traits/ecology/free_living.yaml.
+    Verdict REFUTED: the trehalose knockout is osmotically impaired in Bradyrhizobium diazoefficiens
+    USDA 110, meeting the discussion''s own would_refute criterion, so the trehalose/ectoine
+    split in free_living_environmental_habitat is not a real distinction. NO trait record
+    was changed and the discussion status remains OPEN, because the artifact carries ZERO
+    resolvable citations: CausalEdge.evidence requires a reference and GROUNDING_POLICY requires
+    an edge-specific snippet, neither of which this artifact supplies. Deliberately NOT given
+    a row in reports/trait_graph_audit_manifest.tsv, which is an append-only spend record
+    of pipeline calls; this result was produced outside the pipeline, so an ok row would assert
+    a run that never happened. The file sits outside the resume namespace and cannot suppress
+    a future call; audit-research-artifacts passes with 355 artifacts scanned, and the renderer
+    still selects the falcon report because unknown providers rank behind RESEARCH_PROVIDERS.'
