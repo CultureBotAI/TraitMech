@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lithoautotrophic.yaml
+  slug: lithoautotrophic
+session:
+  id: 2026-08-31T114603Z-codex-6b0c0d
+  timestamp: '2026-08-31T11:46:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the lithoautotrophic causal graph for issue #183'
+  details: Resolved graph fragmentation using two public-source connectors. No paid research
+    service was called.

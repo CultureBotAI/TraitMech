@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lithoheterotrophic.yaml
+  slug: lithoheterotrophic
+session:
+  id: 2026-08-31T114604Z-codex-d65d9b
+  timestamp: '2026-08-31T11:46:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the lithoheterotrophic causal graph for issue #183'
+  details: Resolved graph fragmentation using removal of the disconnected out-of-scope DIET
+    island. No paid research service was called.

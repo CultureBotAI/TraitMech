@@ -300,6 +300,28 @@ causal_graphs:
       notes: Import systems for amino acids and carboxylic acids were overly abundant
         in mixotrophs and heterotrophs, supporting the organic-carbon dependency of
         the trait.
+  - subject: thiosulfate
+    predicate: example of
+    object: reduced_sulfur_compound
+    description: Thiosulfate is a reduced sulfur electron donor oxidized during chemolithomixotrophic
+      growth.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13232
+      snippet: obligate aerobic chemolithomixotroph that can oxidize sulfide, thiosulfate
+        and elemental sulfur
+      notes: Verified against the open primary article.
+    predicate_id: rdfs:subClassOf
+  - subject: branched_thiosulfate_oxidation
+    predicate: contributes to
+    object: respiratory_chain
+    description: Branched thiosulfate oxidation transfers substrate electrons into
+      respiratory cytochromes.
+    evidence:
+    - reference: DOI:10.1128/AEM.00956-13
+      snippet: oxidizes sulfone, as well as sulfane, sulfur atoms to sulfate by transferring
+        electrons to c-type cytochromes
+      notes: Verified against the open primary article.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.870986+00:00'
   curator: seed_from_metpo
@@ -441,4 +463,10 @@ curation_history:
     added DOI-cited S. alaskensis RB2256 and its H2 branch, and paired the group 2a
     hydrogenase node with reference-proteome component Q1J422 without treating one
     large subunit as the complete complex.
+  llm_assisted: true
+- timestamp: '2026-08-31T11:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

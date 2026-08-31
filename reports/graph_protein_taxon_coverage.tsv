@@ -322,7 +322,7 @@ data/traits/physiology/dormancy.yaml	traitmech:000080	dormancy	dormancy_seed_ban
 data/traits/physiology/heterotrophic.yaml	METPO:1000644	heterotrophic	heterotrophic_organic_carbon_assimilation	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/physiology/hydrogenotrophic.yaml	METPO:1000646	hydrogenotrophic	hydrogenotrophic_hydrogen_oxidation_fixation	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/physiology/lithoautotrophic.yaml	METPO:1000647	lithoautotrophic	lithoautotrophic_inorganic_donor_co2_fixation	MECHANISTIC	4	1	3	3	3	1	1	PASS	0	0	-
-data/traits/physiology/lithoheterotrophic.yaml	METPO:1000648	lithoheterotrophic	lithoheterotrophic_inorganic_energy_organic_carbon	MECHANISTIC	4	1	3	1	1	1	1	PASS	0	0	-
+data/traits/physiology/lithoheterotrophic.yaml	METPO:1000648	lithoheterotrophic	lithoheterotrophic_inorganic_energy_organic_carbon	MECHANISTIC	3	1	2	1	1	1	1	PASS	0	0	-
 data/traits/physiology/lithotrophic.yaml	METPO:1000649	lithotrophic	lithotrophic_inorganic_donor_energy	MECHANISTIC	5	2	3	3	3	1	1	PASS	0	0	-
 data/traits/physiology/methanotrophic.yaml	METPO:1000650	methanotrophic	methanotrophic_methane_oxidation	MECHANISTIC	4	3	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/methylotrophic.yaml	METPO:1000651	methylotrophic	methylotrophic_methanol_assimilation	MECHANISTIC	8	1	7	2	2	1	1	PASS	0	0	-
