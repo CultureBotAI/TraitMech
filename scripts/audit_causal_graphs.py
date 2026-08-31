@@ -12,7 +12,7 @@ structural defects the schema cannot catch:
                           disconnected node).                       [ERROR]
   NO_TRAIT_NODE           a graph with no ``node_type: TRAIT`` node, so there
                           is nothing to anchor reachability to.     [ERROR]
-  FRAGMENTED_GRAPH        a graph that splits into several disconnected
+  FRAGMENTED_GRAPH        a MECHANISTIC graph that splits into several disconnected
                           components. Catches what UNREACHABLE_FROM_TRAIT cannot:
                           a split where each side happens to contain a node typed
                           TRAIT, so every node reaches *a* trait but not the one
@@ -66,7 +66,8 @@ structural defects the schema cannot catch:
                           check asks whether one id means one thing, and a
                           curator answering "no, two" resolves it by splitting.
                                                                          [WARN]
-  UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
+  UNREACHABLE_FROM_TRAIT  a node in a MECHANISTIC graph that IS referenced by
+                          some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
                           than one mechanism.                        [WARN]
@@ -83,6 +84,13 @@ Reachability is deliberately **undirected**. Curated predicates mix directions
 directed walk would flag correctly-modelled graphs. The question here is
 "is this one graph or several?", not "does causality flow one way?".
 
+Connectivity is enforced only for ``scope_status: MECHANISTIC`` graphs. A
+``NONMECHANISTIC`` graph explicitly collects several context or classification
+branches that need not form one causal mechanism; treating its declared scope
+as a connectivity defect contradicts the distinction. Dangling edges, orphan
+nodes, missing trait anchors, duplicate groundings, and typing checks still run
+for both scopes.
+
 Because a large fraction of the corpus currently has at least one unreachable
 node, a blocking check would be un-landable as-is. Use ``--write-baseline`` to
 freeze the known set and ratchet: pre-existing fragmentation stays a warning,
@@ -93,7 +101,7 @@ Writes ``reports/causal_graph_audit.tsv``. Exit code is governed by
 
   new    (default) any finding NOT in the baseline fails. Baselined findings
          never fail regardless of severity. This is the ratchet: the corpus
-         cannot get more fragmented than it is today, but today's 1541
+         cannot get more fragmented than it is today, but today's 499
          findings do not block.
   error  only new ERROR-severity findings fail. New fragmentation is still
          reported, but non-blocking — use if the ratchet proves too noisy.
@@ -291,6 +299,8 @@ def connectivity_rows(source: Path | Corpus) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     for rel, doc in _as_corpus(source):
         for graph in (doc.get("causal_graphs") or []):
+            if graph.get("scope_status") == "NONMECHANISTIC":
+                continue
             node_set, referenced, adjacency = _topology(graph)
             wired = node_set & referenced
             if not wired:
@@ -406,19 +416,22 @@ def audit(source: Path | Corpus) -> list[dict[str, str]]:
                 })
                 continue
 
-            reached = _reachable(trait_nodes, adjacency)
-            for n in nodes:
-                nid = n.get("node_id")
-                # ORPHAN_NODE already covers zero-edge nodes; don't double-report.
-                if nid in reached or nid not in referenced:
-                    continue
-                findings.append({
-                    "file": rel, "graph_id": gid, "defect": "UNREACHABLE_FROM_TRAIT",
-                    "severity": SEVERITY["UNREACHABLE_FROM_TRAIT"],
-                    "detail": (f"node_id={nid!r} label={n.get('label')!r} "
-                               f"type={n.get('node_type')} — in an island with no path to "
-                               f"{'/'.join(trait_nodes)}"),
-                })
+            enforce_connectivity = graph.get("scope_status") != "NONMECHANISTIC"
+            if enforce_connectivity:
+                reached = _reachable(trait_nodes, adjacency)
+                for n in nodes:
+                    nid = n.get("node_id")
+                    # ORPHAN_NODE already covers zero-edge nodes; don't double-report.
+                    if nid in reached or nid not in referenced:
+                        continue
+                    findings.append({
+                        "file": rel, "graph_id": gid,
+                        "defect": "UNREACHABLE_FROM_TRAIT",
+                        "severity": SEVERITY["UNREACHABLE_FROM_TRAIT"],
+                        "detail": (f"node_id={nid!r} label={n.get('label')!r} "
+                                   f"type={n.get('node_type')} — in an island with no path to "
+                                   f"{'/'.join(trait_nodes)}"),
+                    })
 
             # One node_id, several node_types across the corpus (#356). Reported
             # on EVERY occurrence rather than on a presumed-wrong minority,
@@ -503,7 +516,7 @@ def audit(source: Path | Corpus) -> list[dict[str, str]]:
             # for one defect, which is the same reason UNREACHABLE_FROM_TRAIT
             # skips unreferenced nodes above.
             components = _components(node_set & referenced, adjacency)
-            if len(components) > 1:
+            if enforce_connectivity and len(components) > 1:
                 sizes = ", ".join(str(len(c)) for c in components)
                 # Detail MUST lead with the component count, because `_key` takes
                 # the leading whitespace-delimited token as the baseline

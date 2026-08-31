@@ -80,9 +80,11 @@ audit-proposals *args:
 
 # Structural-integrity audit of causal graphs: dangling edges (subject/object
 # not a declared node), orphan nodes (declared but unreferenced), graphs with
-# no TRAIT node, and nodes unreachable from the TRAIT node (an island rather
-# than one mechanism). Emits reports/causal_graph_audit.tsv.
-# Ratchets against conf/causal_graph_audit_baseline.tsv: the 1314 pre-existing
+# no TRAIT node, and nodes unreachable from the TRAIT node in graphs explicitly
+# scoped MECHANISTIC (an island rather than one mechanism). NONMECHANISTIC graphs
+# retain all non-connectivity checks without pretending their contextual branches
+# are one mechanism. Emits reports/causal_graph_audit.tsv.
+# Ratchets against conf/causal_graph_audit_baseline.tsv: the 354 pre-existing
 # UNREACHABLE_FROM_TRAIT findings are frozen and never fail, but any NEW finding
 # exits 1 — so the corpus cannot get more fragmented than it is today.
 # Regenerate the baseline with `--write-baseline` (only when the change is
