@@ -97,19 +97,6 @@ causal_graphs:
     label: restriction endonuclease cleavage
     node_type: MOLECULAR_FUNCTION
     description: Sequence-specific cleavage activity of the restriction endonuclease.
-  - node_id: type_iv_restriction_enzyme
-    label: type IV restriction enzyme
-    node_type: GENE_OR_PROTEIN
-    description: Modification-dependent restriction enzyme that cleaves methylated
-      DNA motifs.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Type IV restriction enzymes comprise several distinct protein
-      families and are not represented by the HindII example.
-  - node_id: methylated_dna_motif
-    label: methylated DNA motif
-    node_type: CHEMICAL
-    description: DNA motif carrying a methyl or other base modification, targeted
-      by type IV enzymes.
   - node_id: plasmid_methylase
     label: plasmid-encoded methylase
     node_type: GENE_OR_PROTEIN
@@ -181,14 +168,6 @@ causal_graphs:
     - reference: DOI:10.1093/nar/gkad452
       notes: Incoming foreign DNA lacking host methylation is cleaved (shaw2023).
     predicate_id: METPO:2007407
-  - subject: type_iv_restriction_enzyme
-    predicate: cleaves
-    object: methylated_dna_motif
-    description: Type IV restriction enzymes cleave methylated DNA motifs, complementing
-      Types I-III that cleave unmethylated DNA.
-    evidence:
-    - reference: DOI:10.3390/microorganisms11122962
-      notes: Type IV enzymes cut methylated motifs (kottenhahn2023).
   - subject: plasmid_methylase
     predicate: protects against
     object: endonuclease_cleavage
@@ -254,4 +233,13 @@ curation_history:
     restriction_endonuclease, type_iv_restriction_enzyme, plasmid_methylase, phage_mtase);
     added taxon-paired protein example(s) UniProtKB:P44413 on restriction_endonuclease
     (NCBITaxon:71421); added canonical example(s) NCBITaxon:71421.'
+  llm_assisted: true
+- timestamp: '2026-08-31T05:40:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 0 snippet-backed
+    connector(s) supported by source passages. Removed the explicitly out-of-scope
+    Type IV subtype island; the tracked report identifies modification-dependent restriction
+    as distinct from the canonical Types I-III self/non-self mechanism. No research
+    service was called.'
   llm_assisted: true

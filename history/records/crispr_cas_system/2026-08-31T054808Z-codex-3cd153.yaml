@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/crispr_cas_system.yaml
+  slug: crispr_cas_system
+session:
+  id: 2026-08-31T054808Z-codex-3cd153
+  timestamp: '2026-08-31T05:48:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected the CRISPR-Cas causal graph
+  details: Added two primary-source and verbatim-snippet-backed connectors for interference
+    and Cas1-Cas2 adaptation; graph moved from three components to one. The Cas1-Cas2 quote
+    was verified against the open primary paper. No research service was called.

@@ -226,6 +226,29 @@ causal_graphs:
       notes: 'Erkihun et al.: QS signals (AHLs, AIPs, AI-2) participate in biofilm
         formation.'
     predicate_id: RO:0002211
+  - subject: planktonic_cell
+    predicate: participates in
+    object: biofilm_formation_process
+    description: Attachment of a planktonic cell initiates the biofilm-development
+      process.
+    evidence:
+    - reference: DOI:10.1042/BCJ20210301
+      snippet: biofilm formation begins when a planktonic cell attaches to an amenable
+        surface
+      notes: The source explicitly places the attachment event at the start of biofilm
+        formation.
+    predicate_id: biolink:participates_in
+  - subject: biofilm_dispersal
+    predicate: negatively regulates
+    object: sessile_state
+    description: Dispersal is the lifecycle exit from the sessile biofilm state.
+    evidence:
+    - reference: DOI:10.3390/antibiotics13111047
+      snippet: one of the key anti-biofilm properties of NO is its ability to induce
+        biofilm dispersal
+      notes: The anti-biofilm dispersal claim supports loss of the sessile state,
+        not inhibition of an unrelated pathway.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -283,6 +306,12 @@ curation_history:
     added taxon-paired protein example(s) UniProtKB:Q9HXT9 on wspR_diguanylate_cyclase
     (NCBITaxon:208964); added 1 node(s) and 1 edge(s) (wspR_diguanylate_cyclase);
     added canonical example(s) NCBITaxon:208964.'
+  llm_assisted: true
+- timestamp: '2026-08-31T05:40:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) using 2 snippet-backed
+    connector(s) supported by source passages. No research service was called.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-aa46cc9b34ab

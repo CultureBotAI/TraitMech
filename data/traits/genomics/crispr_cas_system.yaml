@@ -174,6 +174,30 @@ causal_graphs:
       notes: CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids;
         broad ecological selection edge.
     predicate_id: METPO:2007401
+  - subject: crrna_effector_complex
+    predicate: contributes to
+    object: crispr_trait
+    description: crRNA-guided interference by the effector complex realizes the adaptive-defense
+      trait.
+    evidence:
+    - reference: DOI:10.5483/bmbrep.2023-0050
+      snippet: Effector-crRNA complexes perform RNA-guided interference against invading
+        targets
+      notes: The connector is scoped to the interference branch and does not universalize
+        one effector subtype.
+    predicate_id: RO:0002326
+  - subject: cas1_cas2_complex
+    predicate: confers
+    object: crispr_trait
+    description: Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas
+      immunity.
+    evidence:
+    - reference: DOI:10.1038/nsmb.2820
+      snippet: Cas1 and Cas2 from Escherichia coli form a stable complex that is essential
+        for spacer acquisition
+      notes: The primary study directly tests the Cas1-Cas2 adaptation complex; this
+        branch is not projected onto interference-only systems.
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -232,4 +256,10 @@ curation_history:
     retyped 2 node(s) (crrna->RNA, crrna_effector_complex->RNA); added 1 node(s) and
     1 edge(s) (cas9_effector); removed 1 node(s) and 1 edge(s) together with their
     evidence (cas_proteins); added canonical example(s) NCBITaxon:301447.'
+  llm_assisted: true
+- timestamp: '2026-08-31T05:40:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) using 2 snippet-backed
+    connector(s) supported by source passages. No research service was called.'
   llm_assisted: true

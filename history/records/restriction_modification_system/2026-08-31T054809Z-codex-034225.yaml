@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/restriction_modification_system.yaml
+  slug: restriction_modification_system
+session:
+  id: 2026-08-31T054809Z-codex-034225
+  timestamp: '2026-08-31T05:48:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Scoped the restriction-modification causal graph
+  details: Removed the isolated Type IV modification-dependent restriction branch because
+    the tracked report distinguishes it from the graph's canonical Types I-III self/non-self
+    mechanism; graph moved from two components to one without inventing a connector. No research
+    service was called.

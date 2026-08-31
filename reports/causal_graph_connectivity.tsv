@@ -1,5 +1,5 @@
 file	graph_id	wired_nodes	components	largest_component	component_sizes
-data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community	14	3	10	10,2,2
+data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community	14	1	14	14
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation	11	1	11	11
 data/traits/environment/arsenic_tolerant.yaml	arsenic_tolerance_ars_efflux	13	1	13	13
 data/traits/environment/cadmium_tolerant.yaml	cadmium_tolerance_czc_efflux	8	1	8	8
@@ -8,8 +8,8 @@ data/traits/environment/copper_tolerant.yaml	copper_tolerance_cop_efflux	7	1	7	7
 data/traits/environment/mercury_tolerant.yaml	mercury_tolerance_mer_reduction	9	1	9	9
 data/traits/environment/radiotolerant.yaml	radiotolerance_repair_antioxidant	11	1	11	11
 data/traits/environment/zinc_tolerant.yaml	zinc_tolerance_czc_efflux	11	1	11	11
-data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity	10	3	4	4,4,2
-data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense	11	2	9	9,2
+data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity	10	1	10	10
+data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense	9	1	9	9
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl	15	1	15	15
 data/traits/metabolism/aerobic_respiration.yaml	aerobic_respiration_terminal_oxidase	8	1	8	8
 data/traits/metabolism/anaerobic_oxidation_of_methane.yaml	aom_anme_sulfate_consortium	8	1	8	8
