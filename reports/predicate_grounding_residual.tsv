@@ -8,8 +8,8 @@ mediates	28	unmapped		data/traits/ecology/animal_pathogen.yaml|data/traits/envir
 stabilizes	19	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
 converts	19	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/environment/moderately_halophilic.yaml|data/traits/metabolism/biopolymer_degradation.yaml
 protects against	15	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
+causally upstream of	14	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 requires	13	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
-causally upstream of	13	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 is converted to	11	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml
 binds	11	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml
 uses	10	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_delta.yaml|data/traits/environment/nacl_optimum_mid2.yaml
@@ -26,6 +26,7 @@ positively influences	7	unmapped		data/traits/genomics/gc_mid2.yaml|data/traits/
 is substrate for	7	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/metabolism/manganese_oxidation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml
 triggers	6	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/morphology/polyhydroxyalkanoate_granule.yaml
 increases abundance of	6	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
+catalyzes conversion of	6	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/propionic_acid_fermentation.yaml
 initiates	6	unmapped		data/traits/metabolism/photosynthesis.yaml|data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml
 synthesizes	5	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/morphology/intracellular_inclusion.yaml|data/traits/morphology/ovoid_shaped.yaml
 protects	5	unmapped		data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/psychrotolerant.yaml
@@ -34,7 +35,6 @@ cleaves	5	unmapped		data/traits/environment/mercury_tolerant.yaml|data/traits/ge
 results in	5	unmapped		data/traits/environment/nacl_range_high.yaml|data/traits/environment/zinc_tolerant.yaml|data/traits/morphology/ellipsoidal.yaml
 enhances	5	unmapped		data/traits/environment/ph_optimum_high.yaml|data/traits/morphology/carboxysome.yaml|data/traits/physiology/heterotrophic.yaml
 guides	5	unmapped		data/traits/genomics/crispr_cas_system.yaml|data/traits/morphology/curved_shaped.yaml|data/traits/morphology/fusiform_shaped.yaml
-catalyzes conversion of	5	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/black_pigmented.yaml
 positions	5	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/oval_shaped.yaml
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
 acts as	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/temperature_optimum_very_low.yaml|data/traits/metabolism/anaerobic_respiration.yaml

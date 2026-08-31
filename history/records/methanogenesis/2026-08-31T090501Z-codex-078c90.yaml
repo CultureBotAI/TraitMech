@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/methanogenesis.yaml
+  slug: methanogenesis
+session:
+  id: 2026-08-31T090501Z-codex-078c90
+  timestamp: '2026-08-31T09:05:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the methanogenesis graph
+  details: Added three exact public-source bridges for hydrogenotrophic, acetoclastic, and
+    methylotrophic branches. The graph moved from four components to one. No paid research
+    service was called.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+  slug: calvin_benson_bassham_cycle
+session:
+  id: 2026-08-31T090500Z-codex-cae73c
+  timestamp: '2026-08-31T09:05:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the Calvin-Benson-Bassham cycle graph
+  details: Added two exact public-source bridges for the cbb operon and the CO2-leakage branch.
+    The graph moved from three components to one. No paid research service was called.
