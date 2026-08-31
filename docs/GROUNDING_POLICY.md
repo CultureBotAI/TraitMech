@@ -183,15 +183,17 @@ release-pinned and treated as commentary, not as the anchor.
 2. **Generic UniProt groundings are forbidden by audit.**
    `scripts/audit_graph_protein_taxa.py` and
    `scripts/audit_uniprot_grounding.py` both flag a `UniProtKB:` value in a
-   generic node `grounding` field.
+   generic node `grounding` field, regardless of the node's declared type.
 3. **Label-only decisions are explicit.** A protein node retained without an
    exact semantic term uses `grounding_status: REVIEWED_LABEL_ONLY` plus a
    reason in `grounding_notes`.
 4. **Graph scope is explicit.** `scope_status` distinguishes mechanistic
    graphs from reviewed nonmechanistic measurement/classification contexts.
+   The protected legacy gap keeps the schema slot optional, but the completed-
+   corpus coverage recipe fails on every unprotected omission or review gap.
 5. **UniProt metadata is resolvable.** `just audit-uniprot` verifies primary
    accession, entry type, protein/taxon identity, entry version, sequence
-   version, and inactive/merged state.
+   version, declared reference-proteome membership, and inactive/merged state.
 
 Versioned genome accessions on `canonical_examples` remain a separate future
 extension; they are not required for protein/taxon graph coverage.

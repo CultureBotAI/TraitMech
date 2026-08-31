@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Resolve and verify every UniProt accession used by a causal graph.
 
-Generic GENE_OR_PROTEIN node ``grounding`` values must never be UniProtKB
-instances. Organism-specific accessions belong in ``protein_examples``, where
-their declared taxon, entry status, and version metadata can be checked against
-the UniProt REST API.
+Generic causal-node ``grounding`` values must never be UniProtKB instances,
+regardless of node type. Organism-specific accessions belong in
+``protein_examples``, where their declared taxon, entry status, proteome, and
+version metadata can be checked against the UniProt REST API.
 
 Output: ``reports/uniprot_grounding_audit.tsv``, one row per use. The command
 fails on generic UniProt groundings, inactive/error responses, secondary rather
@@ -63,8 +63,8 @@ FIELDS = [
 ]
 
 
-def iter_gene_nodes(traits_dir: Path = TRAITS):
-    """Yield ``(path, graph_id, node)`` for every gene/protein causal node."""
+def iter_nodes(traits_dir: Path = TRAITS):
+    """Yield ``(path, graph_id, node)`` for every causal node."""
     for path in sorted(traits_dir.glob("*/*.yaml")):
         try:
             record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
@@ -73,8 +73,15 @@ def iter_gene_nodes(traits_dir: Path = TRAITS):
             continue
         for graph in record.get("causal_graphs") or []:
             for node in graph.get("nodes") or []:
-                if node.get("node_type") == "GENE_OR_PROTEIN":
+                if isinstance(node, dict):
                     yield path, graph.get("graph_id", ""), node
+
+
+def iter_gene_nodes(traits_dir: Path = TRAITS):
+    """Yield gene/protein nodes for callers that need the legacy subset."""
+    yield from (
+        item for item in iter_nodes(traits_dir) if item[2].get("node_type") == "GENE_OR_PROTEIN"
+    )
 
 
 def iter_uses(
@@ -180,6 +187,14 @@ def _same(declared: Any, resolved: Any) -> str:
     return "YES" if str(declared) == str(resolved) else "NO"
 
 
+def _contains(declared: Any, resolved_csv: Any) -> str:
+    """Compare an optional declaration with a comma-separated resolved set."""
+    if declared in (None, ""):
+        return "SKIPPED"
+    resolved = {item for item in str(resolved_csv or "").split(",") if item}
+    return "YES" if str(declared) in resolved else "NO"
+
+
 def result_row(use: dict[str, Any], resolved: dict[str, Any], reuse: int) -> dict[str, Any]:
     """Combine one declared use with a normalized UniProt response."""
     example = use["example"]
@@ -192,6 +207,7 @@ def result_row(use: dict[str, Any], resolved: dict[str, Any], reuse: int) -> dic
     sequence_version_match = _same(
         example.get("sequence_version"), resolved.get("sequence_version")
     )
+    proteome_match = _contains(example.get("proteome_id"), resolved.get("proteome_ids"))
 
     findings: list[str] = []
     status = resolved.get("status", "error")
@@ -209,6 +225,8 @@ def result_row(use: dict[str, Any], resolved: dict[str, Any], reuse: int) -> dic
         findings.append("ENTRY_VERSION_MISMATCH")
     if sequence_version_match == "NO":
         findings.append("SEQUENCE_VERSION_MISMATCH")
+    if proteome_match == "NO":
+        findings.append("PROTEOME_MISMATCH")
 
     path: Path = use["path"]
     try:
@@ -294,16 +312,17 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    nodes = list(iter_gene_nodes(args.traits_dir))
+    nodes = list(iter_nodes(args.traits_dir))
     uses = iter_uses(nodes)
     rows = audit_uses(uses, delay=args.delay)
     write_report(rows, args.out)
 
+    gene_nodes = [item for item in nodes if item[2].get("node_type") == "GENE_OR_PROTEIN"]
     by_prefix: Counter[str] = Counter()
-    for _, _, node in nodes:
+    for _, _, node in gene_nodes:
         grounding = str(node.get("grounding") or "")
         by_prefix[grounding.split(":", 1)[0] if grounding else "(ungrounded)"] += 1
-    print(f"GENE_OR_PROTEIN nodes: {len(nodes)}")
+    print(f"GENE_OR_PROTEIN nodes: {len(gene_nodes)}")
     print(f"  ungrounded (label only): {by_prefix['(ungrounded)']}")
     for prefix in sorted(p for p in by_prefix if p != "(ungrounded)"):
         print(f"  {prefix + '-grounded:':24s} {by_prefix[prefix]}")

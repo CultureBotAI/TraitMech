@@ -2,14 +2,19 @@
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
+
+import pytest
+import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from audit_graph_protein_taxa import (  # noqa: E402
     coverage_rows,
     gate_exit_code,
+    load_records,
     load_protected,
     write_report,
 )
@@ -119,6 +124,18 @@ def test_generic_uniprot_grounding_is_an_error():
     assert "GENERIC_UNIPROT_GROUNDING:protein" in row["unmet_requirements"]
 
 
+def test_generic_uniprot_grounding_is_an_error_on_every_node_type():
+    node = {
+        "node_id": "rna",
+        "label": "regulatory RNA",
+        "node_type": "RNA",
+        "grounding": "UniProtKB:P0A6Y8",
+    }
+    row = _row(_record(node=node))
+    assert row["status"] == "ERROR"
+    assert "GENERIC_UNIPROT_GROUNDING:rna" in row["unmet_requirements"]
+
+
 def test_protein_source_taxon_need_not_be_a_canonical_example():
     node = {
         "node_id": "protein",
@@ -144,6 +161,32 @@ def test_protein_example_evidence_requires_all_three_fields():
     }
     row = _row(_record(node=node))
     assert "PROTEIN_EXAMPLE_EVIDENCE_INCOMPLETE" in row["unmet_requirements"]
+
+
+def test_protein_example_role_is_required_by_the_standalone_audit():
+    node = {
+        "node_id": "protein",
+        "label": "protein",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding": "GO:0003674",
+        "protein_examples": [_example(role="")],
+    }
+    row = _row(_record(node=node))
+    assert "PROTEIN_EXAMPLE_MISSING_ROLE" in row["unmet_requirements"]
+
+
+@pytest.mark.parametrize("grounding", ["NCBIfam:TIGR00001", "ComplexPortal:CPX-1234"])
+def test_declared_semantic_protein_prefixes_satisfy_grounding_review(grounding):
+    node = {
+        "node_id": "protein",
+        "label": "protein",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding": grounding,
+        "protein_examples": [_example()],
+    }
+    row = _row(_record(node=node))
+    assert row["status"] == "PASS"
+    assert row["semantic_grounded_nodes"] == 1
 
 
 def test_reviewed_label_only_node_satisfies_grounding_review():
@@ -214,6 +257,26 @@ def test_nonprotein_legacy_node_does_not_satisfy_protein_coverage():
     assert "NO_PROTEIN_NODE" in row["unmet_requirements"]
 
 
+def test_examples_on_nonprotein_legacy_nodes_are_still_fully_validated():
+    node = {
+        "node_id": "ars_operon",
+        "label": "ars operon",
+        "node_type": "GENE_OR_PROTEIN",
+        "protein_examples": [
+            _example(uniprot_id="", taxon_id="", role="", evidence=[])
+        ],
+    }
+    row = _row(_record(node=node))
+    requirements = row["unmet_requirements"]
+    assert row["status"] == "ERROR"
+    assert row["protein_examples"] == 0
+    assert "PROTEIN_EXAMPLE_ON_NONPROTEIN_NODE:ars_operon" in requirements
+    assert "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID:ars_operon" in requirements
+    assert "PROTEIN_EXAMPLE_MISSING_TAXON_ID:ars_operon" in requirements
+    assert "PROTEIN_EXAMPLE_MISSING_ROLE:ars_operon" in requirements
+    assert "PROTEIN_EXAMPLE_MISSING_EVIDENCE:ars_operon" in requirements
+
+
 def _gap_record():
     return _record(
         node={"node_id": "chemical", "label": "x", "node_type": "CHEMICAL"},
@@ -262,6 +325,34 @@ def test_gaps_gate_fails_on_errors_and_ignores_protected_gaps():
     assert gate_exit_code(protected_rows, "any") == 1
 
 
+def test_missing_scope_is_blank_in_report_and_blocks_the_completed_corpus_gate():
+    row = _row(_record(graph_updates={"scope_status": None}))
+    assert row["scope_status"] == ""
+    assert "SCOPE_NOT_REVIEWED" in row["unmet_requirements"]
+    assert gate_exit_code([row], "gaps") == 1
+
+
+def test_just_recipe_runs_the_completed_corpus_gap_gate():
+    justfile = Path(__file__).resolve().parent.parent / "justfile"
+    assert (
+        "scripts/audit_graph_protein_taxa.py --fail-on gaps"
+        in justfile.read_text(encoding="utf-8")
+    )
+
+
+def test_unparseable_record_produces_a_gate_visible_error_row(tmp_path):
+    category = tmp_path / "category"
+    category.mkdir()
+    (category / "broken.yaml").write_text("causal_graphs: [\n", encoding="utf-8")
+
+    rows = coverage_rows(load_records(tmp_path), protected=set())
+
+    assert len(rows) == 1
+    assert rows[0]["status"] == "ERROR"
+    assert "TRAIT_RECORD_LOAD_ERROR" in rows[0]["unmet_requirements"]
+    assert gate_exit_code(rows, "errors") == 1
+
+
 def test_load_protected_reads_backticked_trait_paths(tmp_path):
     listing = tmp_path / "DO_NOT_WORK.md"
     listing.write_text(
@@ -284,3 +375,14 @@ def test_real_corpus_protected_records_come_from_do_not_work():
     protected = {row["file"] for row in rows if row["status"] == "PROTECTED"}
     assert protected <= load_protected()
     assert not [row for row in rows if row["status"] == "GAP"]
+
+
+def test_uniprot_schema_pattern_accepts_real_primary_accessions_only():
+    schema_path = Path(__file__).resolve().parent.parent / "src/traitmech/schema/traitmech.yaml"
+    schema = yaml.safe_load(schema_path.read_text(encoding="utf-8"))
+    pattern = schema["classes"]["ProteinExample"]["attributes"]["uniprot_id"]["pattern"]
+
+    assert re.fullmatch(pattern, "UniProtKB:P0A6Y8")
+    assert re.fullmatch(pattern, "UniProtKB:A0A024R161")
+    assert not re.fullmatch(pattern, "UniProtKB:1")
+    assert not re.fullmatch(pattern, "UniProtKB:P0A6Y8-2")

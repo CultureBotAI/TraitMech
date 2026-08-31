@@ -13,16 +13,20 @@ what distinguishes "found nothing" from "cannot find anything".
 
 from __future__ import annotations
 
+import hashlib
+import json
 import sys
 from pathlib import Path
 
 import pytest
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from run_trait_graph_audit import (  # noqa: E402
     MIN_ARTIFACT_BYTES,
+    audit_pilot_artifacts,
     missing_artifacts,
     ok_outputs,
     orphan_reports,
@@ -190,3 +194,78 @@ def test_dry_run_meta_yaml_is_not_counted_as_a_report(tmp_path):
     research.mkdir(parents=True)
     (research / "psychrotolerant-edison-literature-meta.yaml").write_text("status: dry-run\n")
     assert orphan_reports(tmp_path / "research" / "traits", tmp_path, {}) == []
+
+
+# ------------------------------------------ dry-run pilot provenance (#525)
+
+
+def _pilot(tmp_path: Path, targets=("metabolism/example",)) -> tuple[Path, Path]:
+    research = tmp_path / "research"
+    research.mkdir()
+    manifest = research / "2026-08-23-protein-taxon-pilot.json"
+    manifest.write_text(json.dumps(list(targets)), encoding="utf-8")
+
+    query = "offline pilot query"
+    meta_path = (
+        research
+        / "traits"
+        / "metabolism"
+        / "example-edison-literature-protein-taxon-pilot-meta.yaml"
+    )
+    meta_path.parent.mkdir(parents=True)
+    meta_path.write_text(
+        yaml.safe_dump(
+            {
+                "slug": "example",
+                "trait_category": "metabolism",
+                "trait_path": "data/traits/metabolism/example.yaml",
+                "job": "LITERATURE",
+                "label": "protein-taxon-pilot",
+                "template_path": "templates/trait_protein_taxon_research.md",
+                "query": query,
+                "submitted_at": "2026-08-23T00:00:00+00:00",
+                "status": "dry-run",
+                "query_sha256": hashlib.sha256(query.encode()).hexdigest(),
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    return research, meta_path
+
+
+def test_pilot_manifest_and_dry_run_sidecar_are_checked_together(tmp_path):
+    research, _ = _pilot(tmp_path)
+    errors, manifests, sidecars = audit_pilot_artifacts(research)
+
+    assert errors == []
+    assert (manifests, sidecars) == (1, 1)
+
+
+def test_pilot_manifest_missing_and_undeclared_sidecars_are_errors(tmp_path):
+    research, meta = _pilot(tmp_path, targets=("metabolism/missing",))
+
+    errors, _, _ = audit_pilot_artifacts(research)
+
+    assert any("has 0 matching meta sidecars" in error for error in errors)
+    assert any(f"undeclared meta sidecar {meta}" in error for error in errors)
+
+
+def test_pilot_sidecar_hash_and_no_cost_claim_are_enforced(tmp_path):
+    research, meta_path = _pilot(tmp_path)
+    meta = yaml.safe_load(meta_path.read_text(encoding="utf-8"))
+    meta["query_sha256"] = "0" * 64
+    meta["total_cost"] = 1.25
+    meta_path.write_text(yaml.safe_dump(meta, sort_keys=False), encoding="utf-8")
+
+    errors, _, _ = audit_pilot_artifacts(research)
+
+    assert any("query_sha256 does not match query" in error for error in errors)
+    assert any("dry-run unexpectedly has total_cost" in error for error in errors)
+
+
+def test_tracked_pilot_manifest_and_all_ten_sidecars_are_clean():
+    errors, manifests, sidecars = audit_pilot_artifacts(REPO_ROOT / "research")
+
+    assert errors == []
+    assert (manifests, sidecars) == (1, 10)
