@@ -296,6 +296,27 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae016
       notes: Fermentative ATP is produced by substrate-level phosphorylation.
     predicate_id: RO:0002234
+  - subject: aerobic_respiration
+    predicate: contributes to
+    object: respiratory_chain
+    description: Oxygen-dependent respiration is a terminal-acceptor mode of the respiratory
+      chain.
+    evidence:
+    - reference: DOI:10.1099/00221287-98-1-231
+      snippet: both oxygen and nitrate (or nitrite or chlorate) levels were continuously
+        monitored during bacterial respiration
+      notes: Verified against the public primary-study abstract.
+    predicate_id: RO:0002326
+  - subject: anaerobic_respiration
+    predicate: contributes to
+    object: respiratory_chain
+    description: Nitrate reduction provides an anaerobic terminal-acceptor mode of
+      the respiratory chain.
+    evidence:
+    - reference: DOI:10.1099/00221287-98-1-231
+      snippet: commenced nitrate reduction when all the oxygen had been consumed
+      notes: Verified against the public primary-study abstract.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883201+00:00'
   curator: seed_from_metpo
@@ -425,4 +446,10 @@ curation_history:
     with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase
     (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical
     example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-08-31T11:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

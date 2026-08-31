@@ -154,7 +154,6 @@ succinyl-coa	CHEMICAL	2	data/traits/metabolism/propionic_acid_fermentation.yaml|
 sox enzyme system	GENE_OR_PROTEIN	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/physiology/chemolithotrophic.yaml
 sulfane sulfur	CHEMICAL	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/morphology/sulfur_globule.yaml
 persulfide dioxygenase (pdo)	GENE_OR_PROTEIN	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/morphology/sulfur_globule.yaml
-direct interspecies electron transfer	BIOLOGICAL_PROCESS	2	data/traits/metabolism/syntrophy.yaml|data/traits/physiology/lithoheterotrophic.yaml
 fipa	GENE_OR_PROTEIN	2	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/lophotrichous.yaml
 class a penicillin-binding proteins	GENE_OR_PROTEIN	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width_very_small.yaml
 pyomelanin	CHEMICAL	2	data/traits/morphology/brown_pigmented.yaml|data/traits/morphology/pigmentation.yaml
@@ -1419,6 +1418,7 @@ interspecies hydrogen transfer	BIOLOGICAL_PROCESS	1	data/traits/metabolism/syntr
 interspecies formate transfer	BIOLOGICAL_PROCESS	1	data/traits/metabolism/syntrophy.yaml
 low hydrogen partial pressure	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/syntrophy.yaml
 hydrogenase complex	GENE_OR_PROTEIN	1	data/traits/metabolism/syntrophy.yaml
+direct interspecies electron transfer	BIOLOGICAL_PROCESS	1	data/traits/metabolism/syntrophy.yaml
 hydrogen pressure inhibition	STATE	1	data/traits/metabolism/syntrophy.yaml
 conductive pili (e-pili)	CELLULAR_LOCALIZATION	1	data/traits/metabolism/syntrophy.yaml
 malonyl-coa	CHEMICAL	1	data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
@@ -2111,7 +2111,6 @@ nad(h) reducing equivalents	CHEMICAL	1	data/traits/physiology/lithoautotrophic.y
 cytochrome bc1 and nadh dehydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/lithoautotrophic.yaml
 carbonic anhydrase and dic transporters	GENE_OR_PROTEIN	1	data/traits/physiology/lithoautotrophic.yaml
 periplasmic sox system	GENE_OR_PROTEIN	1	data/traits/physiology/lithoheterotrophic.yaml
-conductive pili and c-type cytochromes	GENE_OR_PROTEIN	1	data/traits/physiology/lithoheterotrophic.yaml
 sox multienzyme system	GENE_OR_PROTEIN	1	data/traits/physiology/lithotrophic.yaml
 soeabc sulfite dehydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/lithotrophic.yaml
 nitrite oxidoreductase (nxr)	GENE_OR_PROTEIN	1	data/traits/physiology/lithotrophic.yaml

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_final_physiology_graphs_183.py
+  slug: connect-final-physiology-graphs-183
+session:
+  id: 2026-08-31T114605Z-codex-930854
+  timestamp: '2026-08-31T11:46:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: 'Add final physiology connectivity migration for issue #183'
+  details: Added a guarded five-record migration and regression tests. Structural findings
+    fell from 210 to 176, fragmented graphs from 15 to 10, unreachable findings from 110 to
+    81, and attached coverage rose from 93.0% to 94.9%. Evidence findings fell to 2592, predicate-domain
+    findings stayed zero, and no paid research service was called.

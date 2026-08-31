@@ -131,15 +131,6 @@ causal_graphs:
     grounding_notes: This node denotes a variable multisubunit Sox pathway whose component
       composition differs among taxa; no checked whole-system term exactly represents
       the label.
-  - node_id: conductive_pili_cytochromes
-    label: conductive pili and c-type cytochromes
-    node_type: GENE_OR_PROTEIN
-    description: Surface structures mediating extracellular/direct interspecies electron
-      transfer.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: This is a composite label spanning structurally distinct pili
-      and multiple outer-surface cytochrome families, so one protein-family or complex
-      grounding would be misleading.
   - node_id: group_2a_nife_hydrogenase
     label: group 2a [NiFe]-hydrogenase
     node_type: GENE_OR_PROTEIN
@@ -168,10 +159,6 @@ causal_graphs:
         notes: The primary study measured Sala_3198 expression during aerobic growth
           and H2 oxidation. UniProtKB Q1J422 maps that exact locus to the S. alaskensis
           RB2256 reference proteome.
-  - node_id: diet
-    label: direct interspecies electron transfer
-    node_type: BIOLOGICAL_PROCESS
-    description: Cell-to-cell electron conduction via conductive pili and c-type cytochromes.
   edges:
   - subject: lithoheterotrophic_trait
     predicate: has electron donor
@@ -340,16 +327,6 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-025-56588-1
       notes: periplasmic sox gene clusters encoding for thiosulfate oxidation
     predicate_id: METPO:2007803
-  - subject: conductive_pili_cytochromes
-    predicate: enables
-    object: diet
-    description: Conductive pili and outer-surface c-type cytochromes enable direct
-      interspecies electron transfer.
-    evidence:
-    - reference: DOI:10.3390/life14050591
-      notes: direct interspecies electron transfer (DIET) via conductive pili and
-        outer-surface c-type cytochromes
-    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.875356+00:00'
   curator: seed_from_metpo
@@ -495,4 +472,10 @@ curation_history:
     as label-only, added DOI-cited S. alaskensis RB2256 and its H2 branch, and paired
     the group 2a hydrogenase with reference-proteome component Q1J422 without treating
     one large subunit as the complete complex.
+  llm_assisted: true
+- timestamp: '2026-08-31T11:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1): removed the
+    disconnected, out-of-scope DIET island. No paid research service was called.'
   llm_assisted: true
