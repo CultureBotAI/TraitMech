@@ -267,6 +267,17 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2024.05.011
       notes: enters glycolysis; links upstream sugar catabolism to the glycolytic
         pathway.
+  - subject: mannitol
+    predicate: participates in
+    object: catabolism
+    description: Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate
+      before entering glycolytic catabolism.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002198
+      snippet: mannitol 1P (toxic when accumulating) is oxidized by MtlD to fructose
+        6P, where it enters glycolysis
+      notes: Verified against the open PLOS Biology primary article.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869925+00:00'
   curator: seed_from_metpo
@@ -361,4 +372,10 @@ curation_history:
   changes: Marked the graph mechanistic, scoped its alternative catabolic branches,
     reviewed the multicomponent mannitol PTS as label-only, and added DOI-cited E.
     coli K-12 MtlD P09424 with an exact InterPro family grounding.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

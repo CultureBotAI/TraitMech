@@ -316,6 +316,17 @@ causal_graphs:
     - reference: DOI:10.1039/D4CB00099D
       notes: H2 or CO must be utilized as an energy source to provide reducing equivalents
         for full CO2 reduction.
+  - subject: dissolved_inorganic_carbon
+    predicate: participates in
+    object: co2_fixation_pathway
+    description: The environmental dissolved-inorganic-carbon pool supplies substrate
+      to autotrophic carbon-fixation pathways.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+        DIC fixation
+      notes: Verified against the open Applied and Environmental Microbiology article.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.867544+00:00'
   curator: seed_from_metpo
@@ -466,4 +477,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented the alternative-pathway scope,
     reviewed the composite CODH/ACS node as label-only, upgraded canonical citations
     to DOI references, and added a reviewed C. necator H16 cbbL2 protein example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

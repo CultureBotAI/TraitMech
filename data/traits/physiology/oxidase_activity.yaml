@@ -202,6 +202,16 @@ causal_graphs:
       notes: 'Borisov & Forte 2025: "CO is a potent inhibitor of heme-copper cytochrome
         c oxidase (Ki ~0.3 uM)."'
     predicate_id: RO:0002212
+  - subject: family_a_cytochrome_c_oxidase
+    predicate: example of
+    object: cytochrome_c_oxidase
+    description: Family A heme-copper oxygen reductases are a class of cytochrome
+      c oxidase.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      snippet: Cytochrome c oxidases of the heme–copper oxygen reductase family A
+      notes: Verified against the open Microorganisms review.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -281,4 +291,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented the diagnostic oxidase scope,
     reviewed the family A whole-complex node as label-only, and added DOI-cited Paracoccus
     subunit I-alpha P08305 as an explicit component example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

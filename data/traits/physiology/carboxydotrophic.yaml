@@ -288,6 +288,17 @@ causal_graphs:
       snippet: CO oxidation by Mo-CODH was coupled with O2 reduction under aerobic
         conditions
       notes: Mo-CODH-mediated CO oxidation supports O2 reduction aerobically.
+  - subject: cooa_regulator
+    predicate: regulates production of
+    object: carbon_monoxide_dehydrogenase
+    description: CO-bound CooA transcriptionally regulates production of carbon monoxide
+      dehydrogenase and its accessory machinery.
+    evidence:
+    - reference: DOI:10.1128/jb.00332-22
+      snippet: Transcriptional activation leads to rapid expression of CODH and other
+        accessory proteins
+      notes: Verified against the open Journal of Bacteriology article.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-08-23T09:11:00Z'
   curator: codex
@@ -462,4 +473,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007900×1).
+  llm_assisted: true
+- timestamp: '2026-08-31T10:45:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
