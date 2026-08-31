@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/spore_shaped.yaml
+  slug: spore_shaped
+session:
+  id: 2026-08-31T065203Z-codex-05249f
+  timestamp: '2026-08-31T06:52:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the spore-shaped causal graph
+  details: Added four exact source-verified bridges linking encasement and the inner, outer,
+    and complete coat structures to the mature spore body. The graph moved from five components
+    to one. No paid research service was called.

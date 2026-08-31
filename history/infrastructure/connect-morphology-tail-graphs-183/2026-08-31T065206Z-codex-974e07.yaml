@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_morphology_tail_graphs_183.py
+  slug: connect-morphology-tail-graphs-183
+session:
+  id: 2026-08-31T065206Z-codex-974e07
+  timestamp: '2026-08-31T06:52:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: Completed the morphology graph-connectivity tail
+  details: 'Added a validated dry-run migration and regression tests for six issue #183 morphology
+    records. Twenty-one exact public-source connectors removed six fragmentation findings
+    and forty-six unreachable-node findings without adding an evidence-snippet or predicate-domain
+    defect. No paid research service was called.'

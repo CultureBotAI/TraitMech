@@ -230,6 +230,41 @@ causal_graphs:
       notes: A second negative control is provided by Spo0E-family Spo0A-specific
         phosphatases.
     predicate_id: RO:0002212
+  - subject: forespore_engulfment
+    predicate: contributes to
+    object: resistant_endospore
+    description: Forespore engulfment is a morphogenetic stage leading into maturation
+      of the resistant endospore.
+    evidence:
+    - reference: DOI:10.1101/gad.1335705
+      snippet: engulfment of the forespore by the mother cell; maturation of the developing
+        (fore)spore; and, finally, release of the ripened spore
+      notes: Verified against the freely available primary article full text.
+    predicate_id: RO:0002326
+  - subject: coat_assembly
+    predicate: contributes to
+    object: resistant_endospore
+    description: Assembly of the multilayered coat contributes the protein shell of
+      the resistant endospore.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: 'the spore coat, which consists of four layers: the basement layer
+        (blue), inner coat (orange), outer coat (purple) and crust (red)'
+      notes: Verified against the public PMC author-manuscript full text.
+    predicate_id: RO:0002326
+  - subject: spo0a_phosphorylated
+    predicate: contributes to
+    object: spore_forming_trait
+    description: Accumulation of active Spo0A~P is a required regulatory contribution
+      to entry into the spore-forming program.
+    evidence:
+    - reference: DOI:10.1101/gad.1335705
+      snippet: Evidence indicates that this gradual increase in Spo0A protein and
+        activity plays a critical role in triggering sporulation and requires the
+        action of the phosphorelay
+      notes: Verified against the freely available article; contributes-to does not
+        claim Spo0A~P alone is sufficient.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917323+00:00'
   curator: seed_from_metpo
@@ -325,4 +360,10 @@ curation_history:
     (spoIID, spoIIP, spo0a_phosphorylated, spo0e_phosphatases); added taxon-paired
     protein example(s) UniProtKB:P06534 on spo0a_phosphorylated (NCBITaxon:224308);
     added canonical example(s) NCBITaxon:224308.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

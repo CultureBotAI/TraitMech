@@ -281,6 +281,64 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-024-06521-x
       notes: deposition of cortex, coat and exosporium (conferring heat and chemical
         resistance).
+  - subject: chromosome_translocation
+    predicate: precedes
+    object: forespore_engulfment
+    description: Chromosome translocation after asymmetric division precedes completion
+      of forespore engulfment.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      snippet: After asymmetric division and chromosome translocation, genes in σF
+        and σE regulons drive metabolic and morphological changes to the cell which
+        conclude in forespore engulfment
+      notes: Verified against the open Europe PMC full text.
+  - subject: cell_within_cell_state
+    predicate: contributes to
+    object: forespore_maturation
+    description: The engulfed cell-within-a-cell state permits activation of the late
+      forespore program responsible for maturation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      snippet: This is required for activation of the late sporulation spore specific
+        sigma factor σG responsible for spore maturation, spore DNA protection via
+        Ssp proteins and preparation for germination
+      notes: In the source, 'This' immediately follows the cell-within-a-cell state
+        created by forespore engulfment.
+    predicate_id: RO:0002326
+  - subject: sigma_f
+    predicate: part of
+    object: compartment_sigma_factors
+    description: Sigma F is one of the compartment-specific sporulation factors.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+        for further activation of sporulation genes in the forespore and mother cell
+        respectively
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: biolink:part_of
+  - subject: sigma_g
+    predicate: positively regulates
+    object: forespore_maturation
+    description: Late forespore sigma G drives the spore-maturation program.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      snippet: the late sporulation spore specific sigma factor σG responsible for
+        spore maturation, spore DNA protection via Ssp proteins and preparation for
+        germination
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002213
+  - subject: sigma_k
+    predicate: contributes to
+    object: forespore_maturation
+    description: Late mother-cell sigma K contributes coat and cortex maturation to
+      the developing spore.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      snippet: Finally, the late mother cell σK activation, regulated by σG, results
+        in spore coat and cortex maturation, preparation for germination and eventually,
+        mother cell lysis
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.916642+00:00'
   curator: seed_from_metpo
@@ -392,4 +450,10 @@ curation_history:
     (spo0a_phosphorelay, compartment_sigma_factors, spoiiie_translocase, sigma_f,
     sigma_e, sigma_g, sigma_k); added taxon-paired protein example(s) UniProtKB:P21458
     on spoiiie_translocase (NCBITaxon:224308); added canonical example(s) NCBITaxon:224308.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) using 5 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

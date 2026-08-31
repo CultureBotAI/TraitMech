@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/twitching_motility.yaml
+  slug: twitching_motility
+session:
+  id: 2026-08-31T065205Z-codex-20bb7f
+  timestamp: '2026-08-31T06:52:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the twitching-motility causal graph
+  details: Added three exact source-verified bridges linking pilus extension, surface exposure,
+    and the envelope-spanning type IV pilus machine to pilus assembly and the type IV pilus.
+    The graph moved from four components to one. No paid research service was called.

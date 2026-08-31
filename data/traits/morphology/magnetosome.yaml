@@ -127,17 +127,17 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Habitat with low oxygen and low sulfide favoring magnetite mineralization.
   - node_id: magnetite_magnetosome
-    label: magnetite magnetosome
+    label: magnetite crystal
     node_type: CHEMICAL
-    description: Magnetosome containing a magnetite (Fe3O4) crystal.
+    description: Iron oxide magnetite (Fe3O4) crystal contained within a magnetosome.
   - node_id: sulfide_rich_habitat
     label: sulfide-rich habitat
     node_type: ENVIRONMENTAL_FACTOR
     description: Sulfide-rich habitat favoring greigite mineralization.
   - node_id: greigite_magnetosome
-    label: greigite magnetosome
+    label: greigite crystal
     node_type: CHEMICAL
-    description: Magnetosome containing a greigite (Fe3S4) crystal.
+    description: Iron sulfide greigite (Fe3S4) crystal contained within a magnetosome.
   edges:
   - subject: magnetic_mineral_crystal
     predicate: located in
@@ -224,6 +224,39 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1111/mmi.15330
       notes: Greigite dominates in sulfide-rich habitats.
+  - subject: membrane_invagination
+    predicate: precedes
+    object: biomineralization
+    description: Magnetosome-membrane invagination forms the vesicle before mineral
+      biomineralization begins.
+    evidence:
+    - reference: DOI:10.1111/mmi.15330
+      snippet: Biomineralization of magnetite crystals occurs after the formation
+        of magnetosome vesicles
+      notes: Verified against the public PMC full text; this orders two existing biogenesis
+        stages without asserting simultaneity is impossible.
+  - subject: magnetite_magnetosome
+    predicate: located in
+    object: magnetosome_trait
+    description: Magnetite is one mineral-crystal form contained by magnetosomes.
+    evidence:
+    - reference: DOI:10.1111/mmi.15330
+      snippet: The structure and morphology of magnetosomes differ across all MTB
+        species, with some producing iron oxide magnetite (Fe3O4)
+      notes: Verified against the public PMC full text; the node wording is tightened
+        from a whole organelle to its mineral crystal.
+    predicate_id: biolink:located_in
+  - subject: greigite_magnetosome
+    predicate: located in
+    object: magnetosome_trait
+    description: Greigite is one mineral-crystal form contained by magnetosomes.
+    evidence:
+    - reference: DOI:10.1111/mmi.15330
+      snippet: others synthesizing iron sulfide greigite (Fe3S4), and some capable
+        of producing both, depending on their environmental conditions
+      notes: Verified against the public PMC full text; the environmental preference
+        remains explicitly contextual.
+    predicate_id: biolink:located_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -290,4 +323,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0110143.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
+    and verbatim-snippet-backed connector(s). Clarified the magnetite and greigite
+    nodes as mineral crystals contained within magnetosomes. No paid research service
+    was called.'
   llm_assisted: true

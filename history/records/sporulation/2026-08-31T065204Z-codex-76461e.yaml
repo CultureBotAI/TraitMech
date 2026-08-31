@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/sporulation.yaml
+  slug: sporulation
+session:
+  id: 2026-08-31T065204Z-codex-76461e
+  timestamp: '2026-08-31T06:52:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the sporulation causal graph
+  details: Added five exact source-verified bridges linking chromosome translocation and engulfment
+    to maturation and connecting sigma F, sigma G, and sigma K to the compartment-specific
+    maturation program. The graph moved from six components to one. No paid research service
+    was called.

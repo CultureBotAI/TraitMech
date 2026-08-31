@@ -93,6 +93,7 @@ polymerizes into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/tr
 disrupts	3	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/irregular_shaped.yaml
 scaffolds	3	unmapped		data/traits/morphology/fusiform_shaped.yaml|data/traits/morphology/tetrad_arrangement.yaml|data/traits/physiology/chemotaxis.yaml
 encapsulates	3	unmapped		data/traits/morphology/intracellular_inclusion.yaml|data/traits/physiology/chemoautotrophic.yaml
+precedes	3	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/morphology/sporulation.yaml|data/traits/morphology/tetrad_arrangement.yaml
 broken down by	3	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 captured by	3	unmapped		data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
 is input to	2	unmapped		data/traits/ecology/biosafety_level.yaml
@@ -501,7 +502,6 @@ causes when lost	1	unmapped		data/traits/morphology/square_shaped.yaml
 prevents aberrant placement of	1	unmapped		data/traits/morphology/staphylococcus_arrangement.yaml
 antagonizes	1	unmapped		data/traits/morphology/staphylococcus_arrangement.yaml
 promotes lateral interactions between	1	unmapped		data/traits/morphology/staphylococcus_arrangement.yaml
-precedes	1	unmapped		data/traits/morphology/tetrad_arrangement.yaml
 confers rigidity to	1	unmapped		data/traits/morphology/triangular_shaped.yaml
 does not shape	1	unmapped		data/traits/morphology/triangular_shaped.yaml
 enables surface exposure of	1	unmapped		data/traits/morphology/twitching_motility.yaml
