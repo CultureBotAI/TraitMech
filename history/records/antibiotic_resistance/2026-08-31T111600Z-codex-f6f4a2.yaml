@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/antibiotic_resistance.yaml
+  slug: antibiotic_resistance
+session:
+  id: 2026-08-31T111600Z-codex-f6f4a2
+  timestamp: '2026-08-31T11:16:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the antibiotic-resistance causal graph for issue #183'
+  details: Added four independently public-verified, verbatim-snippet-backed connectors for
+    porin influx, beta-lactamase, QRDR mutation, and 23S rRNA methylation, joining five mechanistic
+    components. No paid research service was called.
