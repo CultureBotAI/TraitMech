@@ -243,6 +243,36 @@ causal_graphs:
         yield through SLP
       notes: Activation of formate consumes one ATP, so substrate-level phosphorylation
         nets zero ATP.
+  - subject: formyl_thf_synthetase
+    predicate: contributes to
+    object: wood_ljungdahl_pathway
+    description: Formyl-THF synthetase performs the ATP-consuming formate step.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: The second step is the reaction of formate with tetrahydrofolate (THF),
+        catalyzed by formyl-THF synthetase (FTS) and consuming one ATP
+      notes: Verified against the freely available article PDF.
+    predicate_id: RO:0002326
+  - subject: methyltransferase
+    predicate: contributes to
+    object: wood_ljungdahl_pathway
+    description: The methyltransferase loads the WLP corrinoid protein.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: the methyl group of methyl-THF is transferred to a corrinoid iron-sulfur-containing
+        protein (CoFeSP) via the methyltransferase (MT)
+      notes: Verified against the freely available article PDF.
+    predicate_id: RO:0002326
+  - subject: acetyl_coa_synthase
+    predicate: contributes to
+    object: wood_ljungdahl_pathway
+    description: CODH/ACS performs the acetyl-CoA-forming WLP step.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      snippet: In the final step of WLP, the bi-functional CODH/ACS enzyme complex
+        catalyzes the reaction that converts CO, methyl-CoFeSP and CoA into acetyl-CoA
+      notes: Verified against the freely available article PDF.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-08-23T09:09:00Z'
   curator: codex
@@ -335,4 +365,10 @@ curation_history:
     decision instead. This audit changed no causal claim or evidence field. Reviewed
     replacements: DOI:10.1039/d4cb00099d -> DOI:10.3389/fbioe.2024.1395540 (1 edge);
     DOI:10.1128/AEM.02473-10 -> DOI:10.3389/fbioe.2024.1395540 (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-08-31T09:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

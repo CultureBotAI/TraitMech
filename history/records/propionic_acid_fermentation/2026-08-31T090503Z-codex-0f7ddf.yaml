@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/propionic_acid_fermentation.yaml
+  slug: propionic_acid_fermentation
+session:
+  id: 2026-08-31T090503Z-codex-0f7ddf
+  timestamp: '2026-08-31T09:05:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the propionic acid fermentation graph
+  details: Added three exact public-source bridges across the Wood-Werkman pyruvate, succinyl-CoA,
+    and carboxytransferase branches. The graph moved from four components to one. No paid
+    research service was called.

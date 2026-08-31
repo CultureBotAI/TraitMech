@@ -208,6 +208,45 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-marine-120709-142712
       notes: producing one pyruvate from three bicarbonates.
+  - subject: acetyl_coa_carboxylase
+    predicate: contributes to
+    object: three_hp_bicycle_trait
+    description: Acetyl-CoA carboxylase is an enzyme of the 3HP bicycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA
+        carboxylase'
+      notes: Verified against the public PMC figure caption.
+    predicate_id: RO:0002326
+  - subject: malonyl_coa_reductase
+    predicate: contributes to
+    object: three_hp_bicycle_trait
+    description: Malonyl-CoA reductase is an enzyme of the 3HP bicycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase'
+      notes: Verified against the public PMC figure caption.
+    predicate_id: RO:0002326
+  - subject: propionyl_coa_synthase
+    predicate: contributes to
+    object: three_hp_bicycle_trait
+    description: Propionyl-CoA synthase is an enzyme of the 3HP bicycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase; 3, propionyl-CoA
+        synthase'
+      notes: Verified against the public PMC figure caption.
+    predicate_id: RO:0002326
+  - subject: propionyl_coa_carboxylase
+    predicate: contributes to
+    object: three_hp_bicycle_trait
+    description: Propionyl-CoA carboxylase is an enzyme of the 3HP bicycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: malonyl-CoA reductase; 3, propionyl-CoA synthase; 4, propionyl-CoA
+        carboxylase
+      notes: Verified against the public PMC figure caption.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -265,4 +304,10 @@ curation_history:
   changes: Scoped the C. aurantiacus 3HP bicycle, added a DOI-backed reviewed mcl/MMC-lyase
     example, and documented the multifunctional MCR, PCS, and MMC-lyase nodes as reviewed
     label-only where no single exact semantic term represents each fusion.
+  llm_assisted: true
+- timestamp: '2026-08-31T09:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

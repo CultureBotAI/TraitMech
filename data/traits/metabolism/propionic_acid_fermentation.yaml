@@ -235,6 +235,36 @@ causal_graphs:
       snippet: accompanied by acetic acid and CO2 formation
       notes: The fermentation is defined as producing propionic acid with acetate
         as a co-product.
+  - subject: pyruvate
+    predicate: contributes to
+    object: wood_werkman_cycle
+    description: Pyruvate carboxylation initiates the Wood-Werkman cycle.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      snippet: 'It starts from pyruvate, generated via glycolysis, which can follow
+        two alternative routes: Carboxylation to oxaloacetate: this initiates the
+        Wood–Werkman cycle and leads to propionic acid'
+      notes: Verified against the public PMC full text.
+    predicate_id: RO:0002326
+  - subject: succinate
+    predicate: causally upstream of
+    object: succinyl_coa
+    description: The propionate pathway converts succinate through succinyl-CoA.
+    evidence:
+    - reference: DOI:10.1186/s12864-016-3367-x
+      snippet: Succinate is then converted into succinyl-CoA, methyl malonyl CoA,
+        propanoyl CoA and propionate by specific enzymes
+      notes: Verified against the open article full text.
+  - subject: mmc_carboxytransferase
+    predicate: catalyzes conversion of
+    object: pyruvate
+    description: Methylmalonyl-CoA carboxytransferase catalyzes the pyruvate-to-oxaloacetate
+      entry reaction.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      snippet: pyruvate is converted to oxaloacetate in a biotin-dependent carboxyl
+        transfer reaction catalyzed by methylmalonyl-CoA carboxytransferase
+      notes: Verified against the public PMC full text.
 curation_history:
 - timestamp: '2026-08-23T09:02:00Z'
   curator: codex
@@ -308,4 +338,10 @@ curation_history:
     each edge makes is unchanged and directions are unchanged. The replacements are
     proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints
     them.
+  llm_assisted: true
+- timestamp: '2026-08-31T09:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

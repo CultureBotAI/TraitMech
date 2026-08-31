@@ -233,6 +233,28 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01557-23
       notes: 'Scott 2024: "cytosolic (non-vectoral) CA activity can dissipate the
         CCM by causing CO2 leakage."'
+  - subject: cbb_operon
+    predicate: part of
+    object: cbb_pathway
+    description: The cbb operon specifies enzymes of the CBB pathway.
+    evidence:
+    - reference: DOI:10.1128/JB.00442-15
+      snippet: cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB)
+        pathway
+      notes: Verified against the public PMC full text.
+    predicate_id: biolink:part_of
+  - subject: co2_leakage
+    predicate: negatively regulates
+    object: cbb_pathway
+    description: CO2 leakage opposes the carboxysome concentration mechanism that
+      supplies Rubisco for the CBB pathway.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0007521
+      snippet: the carboxysome shell constitutes a diffusional barrier for CO2, thereby
+        preventing leakage of this Ci species out of the microcompartment
+      notes: Verified against the public PMC full text; the same introduction identifies
+        Rubisco as catalyzing the first CBB-cycle step.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -291,4 +313,10 @@ curation_history:
   changes: Added a strain-matched C. necator H16 RuBisCO example, grounded both carbonic-anhydrase
     nodes, retyped the cbb operon carrier as transcription, retained CbbR as reviewed
     label-only, and documented the composite graph scope.
+  llm_assisted: true
+- timestamp: '2026-08-31T09:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) using 2 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
