@@ -1204,7 +1204,6 @@ data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defens
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:plasmid_methylase->endonuclease_cleavage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae896 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:restriction_endonuclease->endonuclease_cleavage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad452 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:rm_trait->dna_restriction_modification[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00044-12 has no snippet
-data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:type_iv_restriction_enzyme->methylated_dna_motif[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11122962 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.66.4.1328-1333.2000 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->chemotactic_motility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
@@ -1838,7 +1837,6 @@ data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor:flii_atpase_
 data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor:ft3ss_export_system->flagellar_structural_subunits[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/ecosalplus.esp-0011-2023 has no snippet
 data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor:hook_filament_junction->filament_polymerization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biom14121488 has no snippet
 data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor:rotational_switching->flagellated_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/ecosalplus.esp-0011-2023 has no snippet
-data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor:stator_complex->proton_channel[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biom14121488 has no snippet
 data/traits/morphology/flask_shaped.yaml	flask_shaped_asymmetric_polar_growth:bactofilin_cytoskeleton->asymmetric_compartment_growth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/elife.86577.2 has no snippet
 data/traits/morphology/flask_shaped.yaml	flask_shaped_asymmetric_polar_growth:bactofilin_lmdc_module->cell_wall_biosynthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/elife.86577.2 has no snippet
 data/traits/morphology/flask_shaped.yaml	flask_shaped_asymmetric_polar_growth:pg_growth_zone_position->appendage_position_shape[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pbio.1002565 has no snippet

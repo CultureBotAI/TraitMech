@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/brown_pigmented.yaml
+  slug: brown_pigmented
+session:
+  id: 2026-08-31T061625Z-codex-a7eb5c
+  timestamp: '2026-08-31T06:16:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Connected the brown-pigment causal graph
+  details: Joined the HmgA catabolic branch to homogentisic acid with a primary-source, verbatim-snippet-backed
+    substrate-to-product relation; graph moved from two components to one. No paid research
+    service was called.

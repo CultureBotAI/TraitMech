@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_morphology_graphs_183.py
+  slug: connect-morphology-graphs-183
+session:
+  id: 2026-08-31T061628Z-codex-5b5478
+  timestamp: '2026-08-31T06:16:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: Tightened the morphology graph connectivity ratchet
+  details: 'Added a validated dry-run migration and regression tests for three issue #183
+    morphology records; regenerated graph and evidence baselines after removing three fragmentation
+    findings, eleven unreachable-node findings, and one legacy missing-snippet finding. No
+    paid research service was called.'

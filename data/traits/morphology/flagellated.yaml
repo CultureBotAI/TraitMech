@@ -61,17 +61,6 @@ causal_graphs:
     label: flagellar basal body
     node_type: GENE_OR_PROTEIN
     description: Rotary motor complex embedded in the cell envelope.
-  - node_id: stator_complex
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
-      family identifier exactly captures this node's represented scope.
-    label: flagellar stator complex
-    node_type: GENE_OR_PROTEIN
-    description: Force-generating motor units coupled to ion flow.
-  - node_id: ion_motive_force
-    label: ion motive force
-    node_type: BIOLOGICAL_PROCESS
-    description: Proton or sodium motive force powering motor rotation.
   - node_id: chemotaxis_signaling
     label: chemotaxis signaling
     node_type: BIOLOGICAL_PROCESS
@@ -138,11 +127,6 @@ causal_graphs:
     label: flagellar filament polymerization
     node_type: BIOLOGICAL_PROCESS
     description: Polymerization of flagellin subunits into the helical filament.
-  - node_id: proton_channel
-    label: transmembrane H+ channel
-    node_type: MOLECULAR_FUNCTION
-    description: Proton conduction pathway through the MotA-MotB stator that drives
-      torque generation.
   - node_id: chey_p
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -181,15 +165,6 @@ causal_graphs:
     - reference: DOI:10.1016/S1937-6448(08)01402-0
       snippet: reversible rotary motor
       notes: Supports basal body motor rotation of flagella.
-  - subject: ion_motive_force
-    predicate: powers
-    object: stator_complex
-    description: Ion flux through stator complexes powers torque generation.
-    evidence:
-    - reference: DOI:10.3389/fmicb.2021.659464
-      snippet: relationship between the IMF and the functioning
-      notes: Supports ion motive force coupling to flagellar motor function.
-    predicate_id: METPO:2007900
   - subject: chemotaxis_signaling
     predicate: regulates
     object: flagellated_trait
@@ -247,16 +222,6 @@ causal_graphs:
     - reference: DOI:10.3390/biom14121488
       notes: '"flagellin subunits (~30,000) polymerize into a filament" forming the
         helical filament.'
-  - subject: stator_complex
-    predicate: has function
-    object: proton_channel
-    description: The MotA-MotB stator complex acts as a transmembrane H+ channel powering
-      rotation.
-    evidence:
-    - reference: DOI:10.3390/biom14121488
-      notes: '"stator units formed by MotA and MotB ... act as a transmembrane H+
-        channel"'
-    predicate_id: RO:0000085
   - subject: chey_p
     predicate: regulates
     object: rotational_switching
@@ -277,6 +242,18 @@ causal_graphs:
       notes: '"the C ring switches its conformational state" changing the direction
         of flagella-driven motility.'
     predicate_id: RO:0002211
+  - subject: flagellar_structural_subunits
+    predicate: contributes to
+    object: flagellar_filament
+    description: Exported flagellin structural subunits assemble to form the flagellar
+      filament that realizes the morphology.
+    evidence:
+    - reference: DOI:10.3390/biom11020186
+      snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
+        filament
+      notes: Verified against the open review full text; this connects the exported-subunit
+        module to the assembled structural filament.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.906575+00:00'
   curator: seed_from_metpo
@@ -399,4 +376,13 @@ curation_history:
     fld_filament_cap, hook_filament_junction, chey_p); added taxon-paired protein
     example(s) UniProtKB:P04949 on flagellar_structural_subunits (NCBITaxon:83333);
     added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) using 1 source-
+    and verbatim-snippet-backed connector(s). Removed the isolated stator/ion-channel
+    branch because the tracked report explicitly scopes flagellated to appendage possession
+    and says stator activity is not required for that structural state. No paid research
+    service was called.'
   llm_assisted: true
