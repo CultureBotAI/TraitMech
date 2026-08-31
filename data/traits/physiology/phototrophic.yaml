@@ -224,6 +224,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00863-24
       notes: and powers ATP synthase complexes.
+    predicate_id: METPO:2007900
   - subject: atp_synthase
     predicate: produces
     object: atp
@@ -389,4 +390,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented reaction-center versus rhodopsin
     scope, reviewed the generic reaction center as label-only, grounded the ATP synthase
     complex to GO, upgraded canonical citations to DOIs, and added R. rubrum PufL.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:33:05Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007900×1).
   llm_assisted: true

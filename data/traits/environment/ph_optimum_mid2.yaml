@@ -188,6 +188,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: The proton motive force can be used by F0F1-ATP synthase to make ATP;
         strong general bioenergetic edge.
+    predicate_id: METPO:2007900
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827757+00:00'
   curator: seed_from_metpo
@@ -287,4 +288,10 @@ curation_history:
     canonical example(s): Rubellicoccus peritrichatus (NCBITaxon:3080537; DOI:10.1099/ijsem.0.006325).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:33:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007900×1).
   llm_assisted: true
