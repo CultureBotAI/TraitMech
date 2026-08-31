@@ -261,6 +261,27 @@ causal_graphs:
     - reference: DOI:10.1038/s44222-023-00093-x
       notes: NADPH is the terminal reductant tabulated as reducing equivalent for
         phototrophic biosynthesis.
+  - subject: sulfide
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Sulfide is a reduced inorganic electron donor used by anoxygenic
+      photolithoautotrophs.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: These donors may be reduced sulfur compounds such as hydrogen sulfide
+      notes: Verified against the open Antioxidants article full text.
+    predicate_id: rdfs:subClassOf
+  - subject: bicarbonate
+    predicate: participates in
+    object: autotrophic_co2_fixation
+    description: Transported bicarbonate supplies inorganic carbon for photosynthetic
+      autotrophic fixation.
+    evidence:
+    - reference: DOI:10.1073/pnas.0405211101
+      snippet: cyanobacteria have evolved a very efficient mechanism for capturing
+        CO2 and HCO3- for photosynthetic fixation into sugars
+      notes: Verified against the public PNAS article full text.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884349+00:00'
   curator: seed_from_metpo
@@ -435,4 +456,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented its alternative donor and photosystem
     scope, upgraded canonical taxa to strain-level DOI citations, and added the reviewed
     S. elongatus PCC 7942 RbcL component example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

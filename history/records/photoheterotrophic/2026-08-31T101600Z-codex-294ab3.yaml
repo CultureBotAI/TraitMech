@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photoheterotrophic.yaml
+  slug: photoheterotrophic
+session:
+  id: 2026-08-31T101600Z-codex-294ab3
+  timestamp: '2026-08-31T10:16:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the photoheterotrophic graph
+  details: Linked proteorhodopsin to its proton-pumping process with exact public-source evidence.
+    The graph moved from two components to one. No paid research service was called.

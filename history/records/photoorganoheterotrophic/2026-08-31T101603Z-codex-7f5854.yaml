@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photoorganoheterotrophic.yaml
+  slug: photoorganoheterotrophic
+session:
+  id: 2026-08-31T101603Z-codex-7f5854
+  timestamp: '2026-08-31T10:16:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the photoorganoheterotrophic graph
+  details: Linked Type I Fe-S electron transfer and diel survival modulation to the photoorganoheterotrophic
+    core with exact public-source evidence. The graph moved from three components to one.
+    No paid research service was called.
