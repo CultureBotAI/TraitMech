@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/syntrophy.yaml
+  slug: syntrophy
+session:
+  id: 2026-08-31T082507Z-codex-8fd9eb
+  timestamp: '2026-08-31T08:25:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the syntrophy causal graph
+  details: Added a freely available primary-study, exact-snippet-backed edge identifying direct
+    interspecies electron transfer as one mechanism of syntrophic growth. The graph moved
+    from two components to one. No paid research service was called.

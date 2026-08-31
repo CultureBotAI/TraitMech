@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/mixed_acid_fermentation.yaml
+  slug: mixed_acid_fermentation
+session:
+  id: 2026-08-31T082503Z-codex-534254
+  timestamp: '2026-08-31T08:25:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the mixed-acid fermentation causal graph
+  details: Added a public-source, exact-snippet-backed edge linking acetyl-CoA to its metabolism
+    by the Pta/AckA acetate branch. The graph moved from two components to one. No paid research
+    service was called.

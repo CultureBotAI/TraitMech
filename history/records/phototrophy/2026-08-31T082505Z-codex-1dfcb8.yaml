@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/phototrophy.yaml
+  slug: phototrophy
+session:
+  id: 2026-08-31T082505Z-codex-1dfcb8
+  timestamp: '2026-08-31T08:25:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the phototrophy causal graph
+  details: Added a public-source, exact-snippet-backed edge linking photosystem II to the
+    oxygenic branch of the phototrophy trait. The graph moved from two components to one.
+    No paid research service was called.

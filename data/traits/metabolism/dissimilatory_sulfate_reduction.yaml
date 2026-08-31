@@ -226,6 +226,18 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad058
       notes: A hallmark of SRM is the dissimilatory sulfite reductase encoded by the
         genes dsrAB.
+  - subject: sulfate
+    predicate: participates in
+    object: sulfate_reduction_trait
+    description: Sulfate participates in dissimilatory sulfate reduction as the alternative
+      terminal electron acceptor.
+    evidence:
+    - reference: DOI:10.3390/antiox12030767
+      snippet: Sulfate can be used as an alternative terminal electron acceptor under
+        anaerobic conditions
+      notes: Verified against the public PMC full text; this bridges the named respiratory
+        trait to its existing Sat-Apr-Dsr pathway.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -279,4 +291,10 @@ curation_history:
     declared exact synonym(s): ''dissimilatory sulphate reduction''. Evidence is predicate-scoped
     in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
     release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T08:20:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
