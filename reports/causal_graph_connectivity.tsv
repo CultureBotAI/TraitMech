@@ -109,11 +109,11 @@ data/traits/physiology/oxidase_activity.yaml	oxidase_activity_terminal_oxidase	1
 data/traits/physiology/oxidative_stress_response.yaml	oxidative_stress_response_ros_defense	6	1	6	6
 data/traits/physiology/persister_cell_formation.yaml	persister_dormancy_tolerance	11	1	11	11
 data/traits/physiology/photoautotrophic.yaml	photoautotrophic_cyanobacterial_carbon_fixation	16	1	16	16
-data/traits/physiology/photoheterotrophic.yaml	photoheterotrophic_light_organic_carbon	16	2	14	14,2
-data/traits/physiology/photolithoautotrophic.yaml	photolithoautotrophic_light_inorganic_donor_fixation	15	3	10	10,3,2
-data/traits/physiology/photolithotrophic.yaml	photolithotrophic_inorganic_electron_donors	14	3	10	10,2,2
-data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons	14	3	10	10,2,2
-data/traits/physiology/phototrophic.yaml	phototrophic_light_energy_capture	13	2	11	11,2
+data/traits/physiology/photoheterotrophic.yaml	photoheterotrophic_light_organic_carbon	16	1	16	16
+data/traits/physiology/photolithoautotrophic.yaml	photolithoautotrophic_light_inorganic_donor_fixation	15	1	15	15
+data/traits/physiology/photolithotrophic.yaml	photolithotrophic_inorganic_electron_donors	14	1	14	14
+data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons	14	1	14	14
+data/traits/physiology/phototrophic.yaml	phototrophic_light_energy_capture	13	1	13	13
 data/traits/physiology/quorum_sensing.yaml	quorum_sensing_autoinducer	8	1	8	8
 data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigger	6	1	6	6
 data/traits/physiology/stress_response.yaml	stress_response_induction	11	1	11	11

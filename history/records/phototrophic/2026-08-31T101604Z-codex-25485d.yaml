@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/phototrophic.yaml
+  slug: phototrophic
+session:
+  id: 2026-08-31T101604Z-codex-25485d
+  timestamp: '2026-08-31T10:16:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the phototrophic graph
+  details: Linked rhodopsin-driven ion transport to proton motive force with exact public-source
+    evidence. The graph moved from two components to one. No paid research service was called.

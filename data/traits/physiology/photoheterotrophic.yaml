@@ -268,6 +268,16 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40793-024-00573-6
       notes: they primarily rely on dissolved organic matter as an energy source
+  - subject: proteorhodopsin
+    predicate: enables
+    object: proteorhodopsin_proton_pumping
+    description: Proteorhodopsin directly enables the light-powered proton-pumping
+      process in the retinal phototrophy branch.
+    evidence:
+    - reference: DOI:10.1073/pnas.0611035104
+      snippet: Proteorhodopsin (PR) is a light-powered proton pump
+      notes: Verified against the public PNAS article full text.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.880718+00:00'
   curator: seed_from_metpo
@@ -377,4 +387,10 @@ curation_history:
   changes: Marked the graph mechanistic, separated reaction-center and proteorhodopsin
     scope, reviewed the generic reaction center as label-only, upgraded canonical
     citations to DOIs, and added the reviewed R. rubrum PufL component example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

@@ -241,6 +241,28 @@ causal_graphs:
     - reference: DOI:10.1038/s43705-023-00334-5
       notes: Survival in stationary phase relies on functional reaction centers.
     predicate_id: RO:0002213
+  - subject: fe_s_electron_transfer
+    predicate: contributes to
+    object: photosynthetic_electron_transport
+    description: Electron transfer through Type I reaction-center Fe-S acceptors contributes
+      to photosynthetic electron transport.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.735666
+      snippet: The electron transfer pathway(s) in Type I RCs utilize iron-sulfur
+        ([4Fe-4S]) clusters
+      notes: Verified against the open Frontiers article full text.
+    predicate_id: RO:0002326
+  - subject: diurnal_cycle
+    predicate: modulates
+    object: stationary_phase_survival
+    description: The dark-light regime modulates stationary-phase survival in the
+      facultative phototroph model.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00334-5
+      snippet: bacterial survival in stationary phase relies on functional reaction
+        centers and varies depending on the light regime
+      notes: Verified against the open primary article full text.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881966+00:00'
   curator: seed_from_metpo
@@ -373,4 +395,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented Type I/Type II lineage scope,
     reviewed three composite protein nodes as label-only, upgraded canonical examples
     to DOI citations, and added the reviewed R. rubrum PufL component example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

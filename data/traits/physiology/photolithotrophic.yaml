@@ -247,6 +247,27 @@ causal_graphs:
       notes: Photoferrotrophy is the oxidation of reduced iron via anoxygenic photosynthesis;
         anoxygenic phototrophic Fe(II) oxidizers are photoferrotrophs.
     predicate_id: METPO:2007500
+  - subject: hydrogen_sulfide
+    predicate: participates in
+    object: hydrogen_sulfide_oxidation
+    description: Hydrogen sulfide is the substrate oxidized to elemental sulfur in
+      the sulfur-photolithotrophy branch.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: The process of anoxygenic photosynthesis further involves the oxidation
+        of hydrogen sulfide to atomic sulfur
+      notes: Verified against the open Antioxidants article full text.
+    predicate_id: biolink:participates_in
+  - subject: ferrous_iron
+    predicate: participates in
+    object: ferrous_iron_oxidation
+    description: Ferrous iron is the electron-source substrate oxidized during photoferrotrophy.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2014.00713
+      snippet: photoferrotrophic bacteria use light as energy and Fe(II) as an electron
+        source for carbon fixation and biomass formation
+      notes: Verified against the open Frontiers primary article.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881359+00:00'
   curator: seed_from_metpo
@@ -369,4 +390,10 @@ curation_history:
   changes: Marked the graph mechanistic with explicit anoxygenic scope, reviewed the
     generic reaction center as label-only, upgraded canonical taxa to strain-level
     DOI citations, and added the reviewed C. tepidum PscD component example.
+  llm_assisted: true
+- timestamp: '2026-08-31T10:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
