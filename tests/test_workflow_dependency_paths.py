@@ -39,7 +39,6 @@ EXPECTED_FILTERED_DEPENDENCY_WORKFLOWS = frozenset(
     {
         "canonical-example-taxonomy.yaml",
         "curation-history.yaml",
-        "label-correspondence.yaml",
         "pytest.yaml",
         "qc.yaml",
         "validate-strict.yaml",
