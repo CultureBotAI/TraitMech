@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/quorum_sensing.yaml
+  slug: quorum_sensing
+session:
+  id: 2026-08-31T040925Z-codex-fc7a16
+  timestamp: '2026-08-31T04:09:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/521
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - causal_graphs
+  - grounding
+  - curation_history
+  summary: Separate protein source taxa from trait exemplars
+  details: Removed Bacillus thuringiensis subsp. kurstaki from quorum_sensing canonical_examples
+    because the cited AiiA lactonase inhibits the trait rather than exemplifying it. Retained
+    the AiiA protein example on its inhibitory branch; reused the tracked Aliivibrio fischeri
+    LuxI P12747 example and primary citation from bioluminescence.yaml to anchor the positive
+    LuxI/LuxR mechanism. Updated the schema, policy, and coverage audit so a ProteinExample
+    source taxon is independent of canonical trait exemplars. No paid research or new research
+    call was used. Verified with 898 tests, complete offline QC, 477/477 strict validation,
+    and 353 graph coverage rows with zero gaps or errors.
