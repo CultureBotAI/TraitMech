@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/gas_vesicle.yaml
+  slug: gas_vesicle
+session:
+  id: 2026-08-31T063200Z-codex-e7fca7
+  timestamp: '2026-08-31T06:32:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the gas-vesicle causal graph
+  details: 'Added four exact, snippet-backed relations from public primary sources to connect
+    all five components: shell-to-trait, pressure-collapse inhibition, GvpD inhibition, and
+    the hydrophobic inner surface as part of the shell. The graph now has one component. No
+    paid research service was called.'

@@ -64,9 +64,9 @@ data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating	10	1	10	10
 data/traits/morphology/crescent_shaped.yaml	crescent_shaped_crescentin_curvature	8	1	8	8
 data/traits/morphology/ellipsoidal.yaml	ellipsoidal_ovococcal_elongation	13	1	13	13
 data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor	13	1	13	13
-data/traits/morphology/gas_vesicle.yaml	gas_vesicle_buoyancy	13	5	4	4,3,2,2,2
+data/traits/morphology/gas_vesicle.yaml	gas_vesicle_buoyancy	13	1	13	13
 data/traits/morphology/gliding.yaml	gliding_surface_motility	10	1	10	10
-data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation	14	4	5	5,4,3,2
+data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation	12	1	12	12
 data/traits/morphology/magnetosome.yaml	magnetosome_magnetotaxis	14	4	8	8,2,2,2
 data/traits/morphology/motile.yaml	motile_energy_dependent_locomotion	20	1	20	20
 data/traits/morphology/oval_shaped.yaml	oval_shaped_ovococcal_pg_synthesis	10	1	10	10

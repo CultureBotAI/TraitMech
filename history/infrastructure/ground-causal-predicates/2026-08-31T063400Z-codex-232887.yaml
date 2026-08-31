@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/ground_causal_predicates.py
+  slug: ground-causal-predicates
+session:
+  id: 2026-08-31T063400Z-codex-232887
+  timestamp: '2026-08-31T06:34:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Applied four residual causal-predicate groundings
+  details: 'Applied the repository''s existing predicate-grounding table to four residual
+    edges introduced by prior merged exemplar work: three powers edges mapped to METPO:2007900
+    and one catalyzes edge mapped to biolink:catalyzes. The unapplied-groundings audit now
+    reports zero. This was deterministic and offline; no paid research service was called.'

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/heterocyst.yaml
+  slug: heterocyst
+session:
+  id: 2026-08-31T063201Z-codex-db0293
+  timestamp: '2026-08-31T06:32:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the heterocyst causal graph
+  details: Added exact, snippet-backed primary-source relations for HetR as the master regulator
+    and the heterocyst-specific glycolipid layer as part of the envelope. Removed the isolated
+    FurC-promoter branch because its own source says the direction of FurC regulation of hetR
+    remains unresolved; no unsupported bridge was invented. The graph now has one component.
+    No paid research service was called.

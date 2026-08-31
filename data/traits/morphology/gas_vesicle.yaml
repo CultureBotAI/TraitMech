@@ -200,6 +200,52 @@ causal_graphs:
       notes: GVs scatter US due to the difference in density and compressibility of
         their gaseous interior relative to surrounding aqueous medium.
     predicate_id: RO:0002327
+  - subject: gas_vesicle_shell
+    predicate: part of
+    object: gas_vesicle_trait
+    description: The gas-filled compartment and its protein shell constitute the gas-vesicle
+      structure.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of an
+        internal gas and a protein shell
+      notes: Verified against the open article abstract; the edge represents structural
+        composition, not a functional consequence.
+    predicate_id: biolink:part_of
+  - subject: gas_vesicle_collapse
+    predicate: negatively regulates
+    object: gas_vesicle_trait
+    description: Irreversible pressure collapse eliminates the intact gas-vesicle
+      structural state.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: when GVs are under pressure, there is a critical point at which the
+        GV irreversibly collapses
+      notes: Verified against the open full text's physical-properties section.
+    predicate_id: RO:0002212
+  - subject: gvpd_protein
+    predicate: negatively regulates
+    object: gas_vesicle_trait
+    description: GvpD inhibits formation of the gas-vesicle structure under the reviewed
+      regulatory model.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      snippet: GvpD has an inhibitory effect on GV formation
+      notes: Verified against the open full text; this connects the existing formation-regulation
+        module without asserting a universal mechanism.
+    predicate_id: RO:0002212
+  - subject: hydrophobic_inner_surface
+    predicate: part of
+    object: gas_vesicle_shell
+    description: The hydrophobic luminal face is the inner surface of the gas-vesicle
+      protein shell.
+    evidence:
+    - reference: DOI:10.1038/s44318-024-00178-2
+      snippet: GVs maintain an inner gas compartment by having a hydrophobic inner
+        surface
+      notes: Verified against the open full text; the same passage explains how this
+        surface prevents liquid-water condensation.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -279,4 +325,10 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031411.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:30:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

@@ -87,17 +87,6 @@ causal_graphs:
     label: HetR transcriptional regulator
     node_type: GENE_OR_PROTEIN
     description: Master transcriptional regulator of heterocyst development.
-  - node_id: furc_perr
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
-      family identifier exactly captures this node's represented scope.
-    label: FurC / PerR
-    node_type: GENE_OR_PROTEIN
-    description: Cyanobacterial Fur-family redox-responsive transcription factor.
-  - node_id: hetr_promoter
-    label: hetR promoter
-    node_type: CELLULAR_LOCALIZATION
-    description: Promoter region controlling hetR expression.
   - node_id: glycolipid_layer
     label: heterocyst glycolipid layer (HGL)
     node_type: CELLULAR_LOCALIZATION
@@ -165,14 +154,6 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0289761
       notes: '"hetR, the master regulator of heterocyst development".'
     predicate_id: RO:0002213
-  - subject: furc_perr
-    predicate: binds promoter of
-    object: hetr_promoter
-    description: FurC binds distal and proximal regions of the hetR promoter.
-    evidence:
-    - reference: DOI:10.1371/journal.pone.0289761
-      notes: EMSA detected FurC binding to distal (S1) and proximal (S3) regions of
-        the hetR promoter.
   - subject: glycolipid_layer
     predicate: reduces diffusion of
     object: molecular_oxygen
@@ -219,6 +200,28 @@ causal_graphs:
     - reference: DOI:10.1101/2023.10.04.560878
       notes: '"inactivation of one of the genes patS and hetN" caused the Mch phenotype.'
     predicate_id: RO:0002212
+  - subject: hetr_regulator
+    predicate: contributes to
+    object: heterocyst_trait
+    description: HetR is the central positive regulator of heterocyst development
+      and contributes to realization of the differentiated cell trait.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0289761
+      snippet: hetR, the master regulator of heterocyst development
+      notes: The source supports the central regulatory role; the edge does not claim
+        that HetR alone is sufficient for differentiation.
+    predicate_id: RO:0002326
+  - subject: glycolipid_layer
+    predicate: part of
+    object: het_envelope
+    description: The oxygen-limiting heterocyst glycolipid layer is the inner layer
+      of the specialized heterocyst envelope.
+    evidence:
+    - reference: DOI:10.1101/2023.10.04.560878
+      snippet: the inner heterocyst-specific glycolipid layer (HGL)
+      notes: The contiguous source phrase directly identifies the layer's position
+        in the heterocyst envelope.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -298,4 +301,13 @@ curation_history:
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (hetr_regulator, furc_perr, pats_peptide, hetn_regulator); added taxon-paired
     protein example(s) UniProtKB:P27709 on hetr_regulator (NCBITaxon:103690).'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:30:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 2 source-
+    and verbatim-snippet-backed connector(s). Removed the isolated FurC/hetR-promoter
+    branch: its primary source states that more studies are required to understand
+    the regulation exerted by FurC on hetR expression (DOI:10.1371/journal.pone.0289761),
+    so no directional bridge was asserted. No paid research service was called.'
   llm_assisted: true

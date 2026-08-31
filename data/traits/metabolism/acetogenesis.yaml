@@ -175,6 +175,7 @@ causal_graphs:
       snippet: Genes acsA and acsB encode the beta and alpha subunits
       notes: Active AcsAB was reconstituted in the primary study; the edge is scoped
         to AcsB acting as a component of CODH/ACS, not as a standalone complete complex.
+    predicate_id: biolink:catalyzes
   - subject: wood_ljungdahl_pathway
     predicate: has output
     object: acetyl_coa
@@ -401,4 +402,10 @@ curation_history:
   changes: Scoped the acetogenesis graph, replaced the model-organism URL with a primary
     DOI, and added DOI-backed reviewed AcsB as an explicit N. thermoacetica component
     example with a supported acetyl-CoA-formation edge.
+  llm_assisted: true
+- timestamp: '2026-08-31T06:33:02Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true
