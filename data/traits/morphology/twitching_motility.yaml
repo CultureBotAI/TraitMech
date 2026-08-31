@@ -183,6 +183,41 @@ causal_graphs:
       notes: 'Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting
         of PilP, PilO, PilN, and PilM.'
     predicate_id: biolink:part_of
+  - subject: pilus_extension
+    predicate: contributes to
+    object: pilus_assembly
+    description: Extension polymerizes pilin subunits into the assembled type IV pilus
+      fiber.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      snippet: PilA subunits are ultimately extracted from their reservoir in the
+        cytoplasmic membrane and polymerized to form a pilus fiber
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002326
+  - subject: pilus_filament_surface_exposure
+    predicate: contributes to
+    object: type_iv_pilus
+    description: Extrusion through the secretin exposes the assembled type IV pilus
+      beyond the outer membrane.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      snippet: The pilus is extruded through the periplasm, guided by the cylindrical
+        alignment subcomplex, and finally through a gated secretin pore in the outer
+        membrane
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002326
+  - subject: t4p_machine
+    predicate: enables
+    object: pilus_assembly
+    description: The envelope-spanning type IV pilus machine enables motor-driven
+      assembly and disassembly of the pilus filament.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53638-y
+      snippet: PilC is the inner membrane platform protein that coordinates with ATPase
+        motors to drive assembly and disassembly of major pilin subunits into the
+        extending and retracting pilus, respectively
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -233,4 +268,10 @@ curation_history:
     (pilb_extension_atpase, pilt_retraction_atpase, pilq_secretin); added taxon-paired
     protein example(s) UniProtKB:P24559 on pilt_retraction_atpase (NCBITaxon:208964);
     added canonical example(s) NCBITaxon:208964.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

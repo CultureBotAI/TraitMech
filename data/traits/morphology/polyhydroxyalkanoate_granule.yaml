@@ -228,6 +228,40 @@ causal_graphs:
     - reference: DOI:10.3390/polym15143027
       notes: PHB is degraded during starvation/exogenous carbon depletion or stationary
         phase.
+  - subject: pha_accumulation
+    predicate: contributes to
+    object: pha_granule_trait
+    description: Intracellular accumulation of amorphous PHA produces the polymer
+      body represented by the granule trait.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      snippet: When synthetized, PHA aggregates in an amorphous state surrounded by
+        several PHA granule-associated proteins forming the so called carbonosomes
+      notes: Verified against the open Europe PMC full text.
+    predicate_id: RO:0002326
+  - subject: phb_mobilization
+    predicate: contributes to
+    object: carbon_energy_storage
+    description: Mobilization makes stored PHA available for utilization and is part
+      of the granule's carbon-and-energy reserve function.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      snippet: Phasins and PHA degrading enzymes are important for PHA storage and
+        utilization
+      notes: Verified against the open Europe PMC full text; the edge covers reserve
+        utilization rather than claiming degradation creates storage.
+    predicate_id: RO:0002326
+  - subject: phb_degradation
+    predicate: contributes to
+    object: phb_mobilization
+    description: Degradation of accumulated PHB contributes to reserve mobilization.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      snippet: reduced ppGpp alarmone levels leading to enhanced degradation of PHA
+        suggesting that ppGpp acts as repressor of the PHA mobilization system (PhaZ1)
+      notes: Verified against the open Europe PMC full text; the connector links the
+        existing starvation/degradation and PhaZ/mobilization branches.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -272,4 +306,10 @@ curation_history:
     declared exact synonym(s): ''PHA granule''. Evidence is predicate-scoped in the
     versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
     release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

@@ -246,6 +246,49 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2921
       notes: SafA is necessary for inner coat assembly; SafA and CotE are respectively
         required for the deposition of the inner and outer coat.
+  - subject: spore_encasement
+    predicate: contributes to
+    object: mature_spore_body
+    description: Encasement changes the coat scaffold into the complete shell of the
+      mature spore body.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: SpoVM and SpoVID are crucial for the transition from a single cap to
+        a full spherical shell that encases the spore
+      notes: Verified against the public PMC author-manuscript full text.
+    predicate_id: RO:0002326
+  - subject: outer_coat
+    predicate: part of
+    object: spore_coat_surface
+    description: The outer coat is a structural layer of the spore coat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+        electron microscopy: a lamellar inner coat, a more coarsely layered outer
+        coat and a recently identified layer named the crust'
+      notes: Verified against the public PMC author-manuscript full text.
+    predicate_id: biolink:part_of
+  - subject: inner_coat
+    predicate: part of
+    object: spore_coat_surface
+    description: The inner coat is a structural layer of the spore coat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: The core is protected by the cortex (green) and the spore coat, which
+        consists of four layers
+      notes: Verified against the public PMC author-manuscript full text.
+    predicate_id: biolink:part_of
+  - subject: spore_coat_surface
+    predicate: part of
+    object: mature_spore_body
+    description: The spore coat forms a shell attached around the mature forespore.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: the coat did not form a shell of protein around the forespore and was
+        often found detached from the forespore surface
+      notes: Verified against the public PMC author manuscript; mutant failure defines
+        the normal coat-shell attachment represented by this edge.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893996+00:00'
   curator: seed_from_metpo
@@ -318,4 +361,10 @@ curation_history:
     safa_protein); added taxon-paired protein example(s) UniProtKB:P35149 on spoiva_protein
     (NCBITaxon:224308); regrounded 1 node(s) (spoiva_protein: none->InterPro:IPR014201);
     added canonical example(s) NCBITaxon:224308.'
+  llm_assisted: true
+- timestamp: '2026-08-31T06:48:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 source-
+    and verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
