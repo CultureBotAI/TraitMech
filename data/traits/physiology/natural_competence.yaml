@@ -198,6 +198,38 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3002814
       notes: Transformation is followed by RecA-dependent homologous recombination
         (Mazzamurro et al. 2024).
+  - subject: pilus_retraction
+    predicate: contributes to
+    object: competence_process
+    description: Retraction of DNA-bound competence pili initiates uptake during the
+      competence process.
+    evidence:
+    - reference: DOI:10.1038/s41564-018-0174-y
+      snippet: retraction of DNA-bound type IV competence pili initiates the process
+        of DNA uptake
+      notes: Verified against the open Nature Microbiology primary article.
+    predicate_id: RO:0002326
+  - subject: comea
+    predicate: contributes to
+    object: dna_uptake
+    description: ComEA-dependent molecular ratcheting contributes to DNA uptake into
+      the periplasm.
+    evidence:
+    - reference: DOI:10.1038/s41564-018-0174-y
+      snippet: uptake facilitated by ComEA-dependent molecular ratcheting
+      notes: Verified against the open Nature Microbiology primary article.
+    predicate_id: RO:0002326
+  - subject: homologous_recombination
+    predicate: contributes to
+    object: competence_process
+    description: RecA-mediated homologous recombination integrates incoming DNA and
+      completes natural transformation.
+    evidence:
+    - reference: DOI:10.1128/jb.00156-23
+      snippet: RecA binds to the ssDNA and directs homologous recombination of the
+        incoming ssDNA into the chromosome
+      notes: Verified against the open Journal of Bacteriology primary article.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -256,4 +288,10 @@ curation_history:
   changes: Reviewed graph scope and every competence protein node, converted the canonical
     pneumococcal citation to DOI, added cited strain R6, and paired its reviewed RecA
     with primary transformation evidence.
+  llm_assisted: true
+- timestamp: '2026-08-31T11:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

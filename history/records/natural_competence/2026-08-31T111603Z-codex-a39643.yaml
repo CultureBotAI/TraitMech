@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/natural_competence.yaml
+  slug: natural_competence
+session:
+  id: 2026-08-31T111603Z-codex-a39643
+  timestamp: '2026-08-31T11:16:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the natural-competence causal graph for issue #183'
+  details: Added three public-source, verbatim-snippet-backed connectors for pilus retraction,
+    ComEA ratcheting, and homologous recombination, joining four mechanistic components. No
+    paid research service was called.

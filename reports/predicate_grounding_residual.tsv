@@ -10,10 +10,10 @@ converts	19	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/en
 protects against	15	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
 causally upstream of	14	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 requires	13	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
+oxidized by	12	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
 is converted to	11	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml
 binds	11	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml
 uses	10	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_delta.yaml|data/traits/environment/nacl_optimum_mid2.yaml
-oxidized by	10	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
 represses	9	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
 determines	8	unmapped		data/traits/ecology/mutualism.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/ph_delta_low.yaml

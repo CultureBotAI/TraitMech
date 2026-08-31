@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/methanotrophic.yaml
+  slug: methanotrophic
+session:
+  id: 2026-08-31T111601Z-codex-e4fa78
+  timestamp: '2026-08-31T11:16:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the methanotrophic causal graph for issue #183'
+  details: Added two public-source, verbatim-snippet-backed connectors for particulate MMO
+    classification and formaldehyde production, joining three mechanistic components. No paid
+    research service was called.

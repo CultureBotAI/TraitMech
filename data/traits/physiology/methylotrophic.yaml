@@ -299,6 +299,36 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/b978-0-443-13307-7.00014-1
       notes: MxaF contains a calcium ion in its active site.
+  - subject: mxa_methanol_dehydrogenase
+    predicate: example of
+    object: pqq_dependent_mdh
+    description: The calcium-dependent Mxa enzyme is a PQQ-dependent alcohol dehydrogenase
+      used for methanol oxidation.
+    evidence:
+    - reference: DOI:10.1128/msphere.00685-24
+      snippet: Xox- and Mxa-type MDHs belong to the diverse group of pyrroloquinoline
+        quinone (PQQ)-dependent alcohol dehydrogenases
+      notes: Verified against the open mSphere primary article.
+    predicate_id: rdfs:subClassOf
+  - subject: formaldehyde
+    predicate: oxidized by
+    object: formaldehyde_dehydrogenase
+    description: Formaldehyde dehydrogenase oxidizes formaldehyde to formate in the
+      dissimilatory branch.
+    evidence:
+    - reference: DOI:10.3109/10409238.2012.697865
+      snippet: formaldehyde is then oxidized to formate
+      notes: Verified against the public full text.
+  - subject: formate
+    predicate: oxidized by
+    object: formate_dehydrogenase
+    description: Formate dehydrogenase continues C1 dissimilation by oxidizing formate
+      to carbon dioxide.
+    evidence:
+    - reference: DOI:10.3109/10409238.2012.697865
+      snippet: formate and carbon dioxide by formaldehyde and formate dehydrogenases,
+        respectively
+      notes: Verified against the public full text.
 curation_history:
 - timestamp: '2026-08-25T00:00:00-07:00'
   curator: codex
@@ -422,4 +452,10 @@ curation_history:
     hydroxypyruvate_reductase, formaldehyde_dehydrogenase, mxa_methanol_dehydrogenase);
     added taxon-paired protein example(s) UniProtKB:P16027 on mxa_methanol_dehydrogenase
     (NCBITaxon:272630); added canonical example(s) NCBITaxon:272630.'
+  llm_assisted: true
+- timestamp: '2026-08-31T11:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

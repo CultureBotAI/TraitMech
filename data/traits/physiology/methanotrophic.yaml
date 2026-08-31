@@ -264,6 +264,26 @@ causal_graphs:
       notes: As a required cofactor for pMMO activity ... copper is central to methanotroph
         physiology
     predicate_id: RO:0002213
+  - subject: particulate_methane_monooxygenase
+    predicate: example of
+    object: methane_monooxygenase
+    description: Particulate MMO is one of the two methane-monooxygenase enzyme types.
+    evidence:
+    - reference: DOI:10.3109/10409238.2012.697865
+      snippet: There are two types of MMOs. The soluble form (sMMO)
+      notes: Verified in the public full text, which immediately identifies the membrane-bound
+        particulate MMO as the other type.
+    predicate_id: rdfs:subClassOf
+  - subject: methanol_dehydrogenase
+    predicate: produces
+    object: formaldehyde
+    description: Methanol dehydrogenase converts methanol to formaldehyde, joining
+      methane oxidation to the assimilation branch.
+    evidence:
+    - reference: DOI:10.3109/10409238.2012.697865
+      snippet: Methanol is further converted to formaldehyde by methanol dehydrogenase
+      notes: Verified against the public full text.
+    predicate_id: METPO:2007800
 curation_history:
 - timestamp: '2026-05-05T01:35:46.876493+00:00'
   curator: seed_from_metpo
@@ -395,4 +415,10 @@ curation_history:
     none->GO:0015050); removed 4 node(s) and 2 edge(s) together with their evidence
     (mmoh_subunits, mmoxyz_genes, pmmo_subunits, pmocab_operon); added canonical example(s)
     NCBITaxon:243233.'
+  llm_assisted: true
+- timestamp: '2026-08-31T11:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
