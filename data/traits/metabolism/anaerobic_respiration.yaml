@@ -224,6 +224,38 @@ causal_graphs:
     - reference: DOI:10.1128/msystems.00967-23
       notes: NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.
     predicate_id: METPO:2007800
+  - subject: nitrate_reductase
+    predicate: example of
+    object: denitrification_reductases
+    description: Respiratory NarGHI is one of the reductase systems used in denitrifying
+      respiration.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      snippet: the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction
+        to nitrite, the canonical first step of nitrate respiration.
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
+  - subject: nitrous_oxide_reductase
+    predicate: example of
+    object: denitrification_reductases
+    description: NosZ is the terminal member of the denitrification-reductase set.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: the isolation of the novel enzymes nitric oxide reductase and nitrous
+        oxide reductase
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
+  - subject: denitrification_reductases
+    predicate: contributes to
+    object: denitrification
+    description: The respiratory reductase ensemble executes the sequential reductions
+      of denitrification.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: unexpected relationships among denitrification enzymes and respiratory
+        oxygen reductases
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912036+00:00'
   curator: seed_from_metpo
@@ -316,4 +348,10 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0009061.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

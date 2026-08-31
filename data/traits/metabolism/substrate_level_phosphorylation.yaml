@@ -221,6 +221,26 @@ causal_graphs:
         one ATP molecule
       notes: The carbamate kinase reaction has been reported to be effective for ATP
         production in several acetogens.
+  - subject: kinase_reaction
+    predicate: has input
+    object: high_energy_phosphorylated_intermediate
+    description: The kinase reaction accepts a phosphoryl group from a high-energy
+      metabolic intermediate.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: transferring a phosphate group to ADP
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002233
+  - subject: kinase_reaction
+    predicate: contributes to
+    object: substrate_level_phosphorylation_trait
+    description: Kinase-catalyzed direct phosphoryl transfer realizes substrate-level
+      phosphorylation.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: kinase-catalysed reactions can be applied for SLP
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-08-23T09:03:00Z'
   curator: codex
@@ -338,4 +358,10 @@ curation_history:
     METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and
     deliberately NOT touched here, because retyping a node while carrying a wrong
     CURIE along unchanged would make it look reviewed.'
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

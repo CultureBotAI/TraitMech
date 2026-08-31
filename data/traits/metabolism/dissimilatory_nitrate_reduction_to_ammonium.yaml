@@ -204,6 +204,27 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00292-25
       notes: nap/nrf operon expression activated under anaerobic conditions; DNRA
         proceeds under oxygen-depleted conditions (hird2025).
+  - subject: nrfa
+    predicate: contributes to
+    object: dnra_trait
+    description: NrfA executes the canonical nitrite-to-ammonium step of DNRA.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      snippet: The second step of the pathway is performed by cytochrome c nitrite
+        reductase (NrfA)
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: nrf_operon
+    predicate: contributes to
+    object: dnra_trait
+    description: Regulated expression of the nrf operon supplies the Nrf machinery
+      for DNRA.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      snippet: The regulation of nrf operons is a complex and finely tuned process
+        involving multiple layers of control
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -236,4 +257,10 @@ curation_history:
   changes: Added a strain-matched W. succinogenes NrfA example and exact GO activity,
     grounded NarGHI, retyped the nrf operon carrier as transcription, and retained
     combined NarX-NarL and broad FNR labels with explicit review rationales.
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

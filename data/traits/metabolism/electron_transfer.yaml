@@ -281,6 +281,36 @@ causal_graphs:
       notes: Terminal oxidases (Complex IV) reduce O2 to H2O (broad aerobic respiration
         edge).
     predicate_id: METPO:2007802
+  - subject: membrane_electron_transport_chain
+    predicate: contributes to
+    object: electron_transfer_trait
+    description: A membrane electron-transport chain is a principal cellular electron-transfer
+      system.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: membrane-bound electron transport chain
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: complex_i
+    predicate: participates in
+    object: membrane_electron_transport_chain
+    description: Complex I is an entry enzyme of the membrane respiratory electron-transport
+      chain.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      snippet: Complex I oxidizes NADH using ubiquinone
+      notes: Verified against the free public article text.
+    predicate_id: biolink:participates_in
+  - subject: cytochrome_c
+    predicate: example of
+    object: cytochrome
+    description: Cytochrome c is a mobile member of the cytochrome electron-carrier
+      class.
+    evidence:
+    - reference: DOI:10.1073/pnas.2307093120
+      snippet: electrons flow to the bc1 complex and onward via cytochrome c
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913647+00:00'
   curator: seed_from_metpo
@@ -412,4 +442,10 @@ curation_history:
     to the current GO complex term, recorded explicit reviewed label-only dispositions
     for the remaining broad protein labels, and documented the graph's composite respiratory/EET
     scope.
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true

@@ -186,6 +186,28 @@ causal_graphs:
       notes: Fe(III) has solubility ~10^-9 M at neutral pH and is generally present
         as insoluble or crystalline forms under anaerobic subsurface environments
         (Jiang et al., 2019); environmental/chemical constraint.
+  - subject: fe3_reduction
+    predicate: contributes to
+    object: metal_reduction_trait
+    description: Ferric-iron reduction is a defining process within dissimilatory
+      metal reduction.
+    evidence:
+    - reference: DOI:10.1007/s11783-019-1173-9
+      snippet: FeRB transfers electrons to Fe(III), Fe(III) is reduced to Fe(II),
+        and organic compounds are mineralized
+      notes: Verified against the free public article text.
+    predicate_id: RO:0002326
+  - subject: insoluble_metal_substrate
+    predicate: example of
+    object: extracellular_acceptor
+    description: Oxidized insoluble metals are extracellular respiratory electron
+      acceptors.
+    evidence:
+    - reference: DOI:10.1128/aem.00044-24
+      snippet: oxidized, insoluble metals are an abundant electron acceptor that microbes
+        could potentially utilize as a respiratory substrate
+      notes: Verified against the free public article text.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
@@ -232,4 +254,10 @@ curation_history:
     why the whole MtrCAB complex remains reviewed label-only, and scoped the graph's
     mixed extracellular metal-reduction routes. The unreviewed accession is retained
     only as an exact reference-proteome component.
+  llm_assisted: true
+- timestamp: '2026-08-31T12:15:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
+    connector(s). No paid research service was called.'
   llm_assisted: true
