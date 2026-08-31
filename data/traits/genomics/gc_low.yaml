@@ -19,6 +19,12 @@ evidence:
   snippet: GC content
   notes: Bacterial-genome review supports the mid-range GC content as a distinct genomic-composition
     phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1793963
+  taxon_label: Bacillus nakamurai
+  reference: DOI:10.1099/ijsem.0.001135
+  note: Bacillus nakamurai NRRL B-41091T has 43.8 mol% genomic GC in its primary species
+    description, wholly inside this record's authoritative 42.65-57.0% interval.
 causal_graphs:
 - graph_id: gc_low_mid_low_gc_bin
   title: GC-low (METPO 42.65–57.0%) mid-low GC bin
@@ -177,4 +183,12 @@ curation_history:
   changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gc_low_mid_low_gc_bin=NONMECHANISTIC with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Bacillus nakamurai (NCBITaxon:1793963; DOI:10.1099/ijsem.0.001135).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

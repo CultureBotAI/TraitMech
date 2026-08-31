@@ -21,6 +21,13 @@ evidence:
   snippet: snapping cell division
   notes: Corynebacterineae review supports snapping/V-form division producing transient
     dumbbell pairs.
+canonical_examples:
+- taxon_id: NCBITaxon:1717
+  taxon_label: Corynebacterium diphtheriae
+  reference: DOI:10.1111/j.1574-6976.2011.00298.x
+  note: Corynebacterium diphtheriae undergoes snapping division that leaves daughter
+    cells in V-shaped and transient dumbbell arrangements; the cited review synthesizes
+    the primary corynebacterial division observations.
 causal_graphs:
 - graph_id: dumbbell_shaped_snapping_division
   title: Dumbbell-shape snapping division intermediate
@@ -249,4 +256,12 @@ curation_history:
     the tranche: set graph scope dumbbell_shaped_snapping_division=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (septal_hydrolases).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Corynebacterium diphtheriae (NCBITaxon:1717; DOI:10.1111/j.1574-6976.2011.00298.x).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

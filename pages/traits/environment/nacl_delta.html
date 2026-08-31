@@ -426,6 +426,35 @@ A tractable TraitMech graph should distinguish three levels:
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Lederbergia graminis</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=735518"
+             rel="nofollow noreferrer"><code>NCBITaxon:735518</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1099/ijs.0.023820-0"
+             rel="nofollow noreferrer"><code>DOI:10.1099/ijs.0.023820-0</code></a>
+          
+          
+          <span class="meta">The type strain, published as Bacillus graminis YC6957T, grew at 0-8% (w/v) NaCl. Its 8-point breadth meets a bin boundary, so #591 keeps this claim on the delta parent.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -498,6 +527,12 @@ A tractable TraitMech graph should distinguish three levels:
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope nacl_delta_euryhaline_breadth=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mechanosensitive_channels).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-31T04:43:24Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
         
       </ol>
@@ -885,7 +920,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

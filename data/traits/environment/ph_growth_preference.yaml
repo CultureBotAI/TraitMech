@@ -12,6 +12,17 @@ evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: external pH values that are outside the cytoplasmic pH range
   notes: Supports environmental pH as a growth-relevant condition requiring pH homeostasis.
+canonical_examples:
+- taxon_id: NCBITaxon:46632
+  taxon_label: Picrophilus oshimae
+  reference: DOI:10.1007/s007920050044
+  note: Picrophilus oshimae, with a growth optimum near pH 0.7, exemplifies the acidophilic
+    branch of pH growth preference.
+- taxon_id: NCBITaxon:2069301
+  taxon_label: Evansella tamaricis
+  reference: DOI:10.1099/ijsem.0.002543
+  note: Evansella tamaricis EGI 80668T, published as Bacillus tamaricis, grew at pH
+    8-10 with optimum pH 9 and exemplifies an alkaliphilic branch.
 causal_graphs:
 - graph_id: ph_growth_preference_homeostasis
   title: Environmental pH control of growth preference
@@ -316,4 +327,13 @@ curation_history:
     2 node(s) and 2 edge(s) (proton_consuming_enzyme_modules, na_h_antiporter_proteins);
     removed 2 node(s) and 2 edge(s) together with their evidence (na_h_antiporter_genes,
     proton_consuming_reaction_genes).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed
+    canonical example(s): Picrophilus oshimae (NCBITaxon:46632; DOI:10.1007/s007920050044),
+    Evansella tamaricis (NCBITaxon:2069301; DOI:10.1099/ijsem.0.002543). The note
+    retains the measured value or scopes broad-class examples to the cited branch;
+    no paid research was used.'
   llm_assisted: true

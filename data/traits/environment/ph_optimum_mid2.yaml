@@ -26,6 +26,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports the 7–8 external-pH range as the common neutrophile
     / moderately alkaline-tolerant optimum.
+canonical_examples:
+- taxon_id: NCBITaxon:3080537
+  taxon_label: Rubellicoccus peritrichatus
+  reference: DOI:10.1099/ijsem.0.006325
+  note: Rubellicoccus peritrichatus CR14T had an optimum of pH 7.6, a point value
+    wholly within the approximately pH 7-8 bin; its measured range was pH 6-9.
 causal_graphs:
 - graph_id: ph_optimum_mid2_alkaline_tolerant_setpoint
   title: pH-optimum-mid2 alkaline-tolerant setpoint
@@ -273,4 +279,12 @@ curation_history:
     the tranche: set graph scope ph_optimum_mid2_alkaline_tolerant_setpoint=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (na_h_antiporters, f0f1_atp_synthase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Rubellicoccus peritrichatus (NCBITaxon:3080537; DOI:10.1099/ijsem.0.006325).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

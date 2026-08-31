@@ -21,6 +21,13 @@ evidence:
   snippet: secretion systems
   notes: Secretion-systems review supports effector-mediated host damage as a virulence
     axis informing hazard assessment.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: PMID:21208457
+  note: Escherichia coli K-12 laboratory lineages are handled at BSL-1; this is a
+    concrete low-hazard branch of the biosafety-level classification, not a claim
+    that all E. coli strains share one level.
 causal_graphs:
 - graph_id: biosafety_level_hazard_classification
   title: Biosafety-level hazard-classification axis
@@ -286,6 +293,14 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope biosafety_level_hazard_classification=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; PMID:21208457). The note
+    retains the measured value or scopes broad-class examples to the cited branch;
+    no paid research was used.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-93e87bc8aba3

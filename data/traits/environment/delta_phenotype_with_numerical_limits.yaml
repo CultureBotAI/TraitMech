@@ -17,6 +17,13 @@ evidence:
   snippet: adapted to environments of high temperature
   notes: Thermophile-adaptation review supports thermal-tolerance breadth as a comparable
     derived quantitative descriptor.
+canonical_examples:
+- taxon_id: NCBITaxon:334543
+  taxon_label: Psychrobacter arcticus
+  reference: DOI:10.1128/JB.01377-08
+  note: Psychrobacter arcticus 273-4 grew from -10 to 28 degrees C in the reported
+    experiments (38 degrees C nominal breadth); the example demonstrates an endpoint-derived
+    delta while retaining the source's endpoint caveat.
 causal_graphs:
 - graph_id: delta_phenotype_breadth_descriptor
   title: Delta phenotype breadth descriptor across environmental axes
@@ -220,4 +227,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope delta_phenotype_breadth_descriptor=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Psychrobacter arcticus (NCBITaxon:334543; DOI:10.1128/JB.01377-08).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -1,17 +1,17 @@
 file	trait_id	trait_label	graph_id	scope_status	protein_nodes	semantic_grounded_nodes	reviewed_label_only_nodes	canonical_examples	cited_canonical_examples	protein_examples	taxon_matched_examples	status	error_count	gap_count	unmet_requirements
 data/traits/ecology/animal_pathogen.yaml	METPO:1004002	animal pathogen	animal_pathogen_metazoan_adaptation	NONMECHANISTIC	6	1	5	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biofilm_formation.yaml	traitmech:000053	biofilm formation	biofilm_eps_matrix_community	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
-data/traits/ecology/biosafety_level.yaml	METPO:1001101	biosafety level	biosafety_level_hazard_classification	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/ecology/biosafety_level.yaml	METPO:1001101	biosafety level	biosafety_level_hazard_classification	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_1.yaml	METPO:1001102	biosafety level 1	biosafety_level_1_minimal_hazard	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_2.yaml	METPO:1001103	biosafety level 2	biosafety_level_2_moderate_hazard	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_3.yaml	METPO:1001104	biosafety level 3	biosafety_level_3_serious_hazard	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/ecology/biosafety_level_4.yaml	METPO:1001105	biosafety level 4	biosafety_level_4_extreme_hazard	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/ecology/biosafety_level_4.yaml	METPO:1001105	biosafety level 4	biosafety_level_4_extreme_hazard	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_5.yaml	METPO:1001106	biosafety level 5	biosafety_level_5_proposed_enhanced_hazard	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/commensalism.yaml	traitmech:000042	commensalism	commensalism_neutral_host	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/endosymbiosis.yaml	traitmech:000045	endosymbiosis	endosymbiosis_intracellular_genome_reduction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/free_living.yaml	traitmech:000048	free-living	free_living_environmental_habitat	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/gut_associated.yaml	traitmech:000052	gut-associated	gut_associated_microbiota_metabolism	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/ecology/habitat_association.yaml	traitmech:000047	habitat association	habitat_association_biogeographic_structure	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/ecology/habitat_association.yaml	traitmech:000047	habitat association	habitat_association_biogeographic_structure	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/host_associated.yaml	traitmech:000049	host-associated	host_associated_microbiome	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/human_pathogen.yaml	METPO:1004004	human pathogen	human_pathogen_anthropoid_adaptation	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/mutualism.yaml	traitmech:000041	mutualism	mutualism_reciprocal_benefit	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -36,21 +36,21 @@ data/traits/environment/arsenic_tolerant.yaml	traitmech:000017	arsenic tolerant	
 data/traits/environment/cadmium_tolerant.yaml	traitmech:000013	cadmium tolerant	cadmium_tolerance_czc_efflux	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
 data/traits/environment/cobalt_tolerant.yaml	traitmech:000015	cobalt tolerant	cobalt_tolerance_czc_cnr_efflux	MECHANISTIC	6	0	6	2	2	1	1	PASS	0	0	-
 data/traits/environment/copper_tolerant.yaml	traitmech:000018	copper tolerant	copper_tolerance_cop_efflux	MECHANISTIC	2	0	2	2	2	1	1	PASS	0	0	-
-data/traits/environment/delta_phenotype_with_numerical_limits.yaml	METPO:1000534	delta phenotype with numerical limits	delta_phenotype_breadth_descriptor	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/delta_phenotype_with_numerical_limits.yaml	METPO:1000534	delta phenotype with numerical limits	delta_phenotype_breadth_descriptor	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/desiccation_tolerant.yaml	traitmech:000010	desiccation tolerant	desiccation_anhydrobiosis_repair	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/euryhaline.yaml	METPO:1000627	euryhaline	euryhaline_wide_salinity_tolerance	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/extreme_hyperthermophilic.yaml	METPO:1000721	extreme hyperthermophilic	extreme_hyperthermophilic_archaeal_adaptation	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/extremely_halophilic.yaml	METPO:1000628	extremely halophilic	extreme_halophile_salt_in_acidic_proteome	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultative_oxygen_preference.yaml	METPO:1000612	facultative oxygen preference	facultative_oxygen_preference_switching	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultative_psychrophilic.yaml	METPO:1000720	facultative psychrophilic	facultative_psychrophilic_cold_tolerance	NONMECHANISTIC	2	1	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/facultatively_acidophilic.yaml	METPO:1003007	facultatively acidophilic	facultatively_acidophilic_ph_homeostasis	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/facultatively_acidophilic.yaml	METPO:1003007	facultatively acidophilic	facultatively_acidophilic_ph_homeostasis	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_aerobic.yaml	METPO:1000608	facultatively aerobic	facultative_aerobe_oxygen_flexible_growth	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_alkaphilic.yaml	METPO:1003005	facultatively alkaliphilic	facultatively_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/facultatively_anaerobic.yaml	METPO:1000605	facultatively anaerobic	facultative_anaerobe_oxygen_switch	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml	METPO:1000535	growth range phenotype with numerical limits	growth_range_phenotype_descriptor	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml	METPO:1000535	growth range phenotype with numerical limits	growth_range_phenotype_descriptor	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/haloalkaliphilic.yaml	METPO:1000621	haloalkaliphilic	haloalkaliphilic_salt_alkaline_adaptation	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/halophilic.yaml	METPO:1000620	halophilic	halophilic_osmoadaptation	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/halophily_preference.yaml	METPO:1000629	halophily preference	halophily_preference_osmoadaptation	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/halophily_preference.yaml	METPO:1000629	halophily preference	halophily_preference_osmoadaptation	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/halotolerant.yaml	METPO:1000622	halotolerant	halotolerant_salt_stress_response	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/hyperthermophilic.yaml	METPO:1000617	hyperthermophilic	hyperthermophilic_thermostability	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/ionizing_radiation_tolerant.yaml	traitmech:000008	ionizing radiation tolerant	ionizing_radiation_tolerance_dsb_repair	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -60,21 +60,21 @@ data/traits/environment/metal_tolerant.yaml	traitmech:000012	metal tolerant	meta
 data/traits/environment/microaerophilic.yaml	METPO:1000604	microaerophilic	microaerophile_low_oxygen_respiration	NONMECHANISTIC	6	3	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/microaerotolerant.yaml	METPO:1000610	microaerotolerant	microaerotolerant_low_oxygen_defense	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/moderately_halophilic.yaml	METPO:1000623	moderately halophilic	moderate_halophile_compatible_solutes	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	nacl_delta_euryhaline_breadth	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	nacl_delta_euryhaline_breadth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	nacl_delta_high_extreme_euryhaline	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	nacl_delta_low_stenohaline	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	nacl_delta_mid1_modest_breadth	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	nacl_delta_low_stenohaline	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	nacl_delta_mid1_modest_breadth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	nacl_optimum_high_extreme_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	nacl_optimum_low_non_halophile_setpoint	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum_mid1.yaml	METPO:1000466	NaCl optimum mid1	nacl_optimum_mid1_slight_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_optimum_mid2.yaml	METPO:1000467	NaCl optimum mid2	nacl_optimum_mid2_moderate_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_range.yaml	METPO:1000334	NaCl range	nacl_range_tolerance_breadth	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_range_high.yaml	METPO:1000472	NaCl range high	nacl_range_high_extreme_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_range_low.yaml	METPO:1000469	NaCl range low	nacl_range_low_non_halophile	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_range_mid1.yaml	METPO:1000470	NaCl range mid1	nacl_range_mid1_slight_halophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_range_mid2.yaml	METPO:1000471	NaCl range mid2	nacl_range_mid2_moderate_halophile	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	nacl_optimum_low_non_halophile_setpoint	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum_mid1.yaml	METPO:1000466	NaCl optimum mid1	nacl_optimum_mid1_slight_halophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_optimum_mid2.yaml	METPO:1000467	NaCl optimum mid2	nacl_optimum_mid2_moderate_halophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_range.yaml	METPO:1000334	NaCl range	nacl_range_tolerance_breadth	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_range_high.yaml	METPO:1000472	NaCl range high	nacl_range_high_extreme_halophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_range_low.yaml	METPO:1000469	NaCl range low	nacl_range_low_non_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_range_mid1.yaml	METPO:1000470	NaCl range mid1	nacl_range_mid1_slight_halophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_range_mid2.yaml	METPO:1000471	NaCl range mid2	nacl_range_mid2_moderate_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/neutrophilic.yaml	METPO:1003001	neutrophilic	neutrophilic_neutral_ph_homeostasis	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/non_halophilic.yaml	METPO:1000624	non halophilic	non_halophilic_salt_stress_response	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_acidophilic.yaml	METPO:1003006	obligately acidophilic	obligately_acidophilic_ph_homeostasis	NONMECHANISTIC	5	0	5	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -82,65 +82,65 @@ data/traits/environment/obligately_aerobic.yaml	METPO:1000606	obligately aerobic
 data/traits/environment/obligately_alkaphilic.yaml	METPO:1003004	obligately alkaliphilic	obligately_alkaphilic_sodium_cycle_homeostasis	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_anaerobic.yaml	METPO:1000607	obligately anaerobic	obligate_anaerobe_oxygen_toxicity	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/obligately_piezophilic.yaml	traitmech:000002	obligately piezophilic	obligate_piezophily_high_pressure_requirement	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	METPO:1000536	optimum phenotype with numerical limits	optimum_phenotype_descriptor	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/oxygen_preference.yaml	METPO:1000601	oxygen preference	oxygen_preference_o2_availability_axis	NONMECHANISTIC	2	2	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta.yaml	METPO:1000232	pH delta	ph_delta_homeostasis_flexibility	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_high.yaml	METPO:1000478	pH delta high	ph_delta_high_euryphilic_breadth	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_low.yaml	METPO:1000474	pH delta low	ph_delta_low_limited_breadth	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_mid1.yaml	METPO:1000475	pH delta mid1	ph_delta_mid1_moderate_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_mid2.yaml	METPO:1000476	pH delta mid2	ph_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_mid3.yaml	METPO:1000477	pH delta mid3	ph_delta_mid3_wide_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_delta_very_low.yaml	METPO:1000473	pH delta very low	ph_delta_very_low_stenotopic	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_growth_preference.yaml	METPO:1003000	pH growth preference	ph_growth_preference_homeostasis	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_optimum.yaml	METPO:1000331	pH optimum	ph_optimum_balanced_homeostasis	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/optimum_phenotype_with_numerical_limits.yaml	METPO:1000536	optimum phenotype with numerical limits	optimum_phenotype_descriptor	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/oxygen_preference.yaml	METPO:1000601	oxygen preference	oxygen_preference_o2_availability_axis	NONMECHANISTIC	2	2	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta.yaml	METPO:1000232	pH delta	ph_delta_homeostasis_flexibility	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_high.yaml	METPO:1000478	pH delta high	ph_delta_high_euryphilic_breadth	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_low.yaml	METPO:1000474	pH delta low	ph_delta_low_limited_breadth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_mid1.yaml	METPO:1000475	pH delta mid1	ph_delta_mid1_moderate_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_mid2.yaml	METPO:1000476	pH delta mid2	ph_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_mid3.yaml	METPO:1000477	pH delta mid3	ph_delta_mid3_wide_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_delta_very_low.yaml	METPO:1000473	pH delta very low	ph_delta_very_low_stenotopic	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_growth_preference.yaml	METPO:1003000	pH growth preference	ph_growth_preference_homeostasis	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_optimum.yaml	METPO:1000331	pH optimum	ph_optimum_balanced_homeostasis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/ph_optimum_high.yaml	METPO:1000458	pH optimum high	ph_optimum_high_alkaliphile_setpoint	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_optimum_low.yaml	METPO:1000455	pH optimum low	ph_optimum_low_acidophile_setpoint	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_optimum_mid1.yaml	METPO:1000456	pH optimum mid1	ph_optimum_mid1_neutrophile_setpoint	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_optimum_mid2.yaml	METPO:1000457	pH optimum mid2	ph_optimum_mid2_alkaline_tolerant_setpoint	NONMECHANISTIC	3	1	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_phenotype_with_numerical_limits.yaml	METPO:1000531	pH phenotype with numerical limits	ph_phenotype_numerical_axis	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_range.yaml	METPO:1000332	pH range	ph_range_bounded_homeostasis	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_optimum_low.yaml	METPO:1000455	pH optimum low	ph_optimum_low_acidophile_setpoint	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_optimum_mid1.yaml	METPO:1000456	pH optimum mid1	ph_optimum_mid1_neutrophile_setpoint	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_optimum_mid2.yaml	METPO:1000457	pH optimum mid2	ph_optimum_mid2_alkaline_tolerant_setpoint	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_phenotype_with_numerical_limits.yaml	METPO:1000531	pH phenotype with numerical limits	ph_phenotype_numerical_axis	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_range.yaml	METPO:1000332	pH range	ph_range_bounded_homeostasis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/ph_range_high.yaml	METPO:1000464	pH range high	ph_range_high_extreme_alkaliphile	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/ph_range_low.yaml	METPO:1000460	pH range low	ph_range_low_acidophile_range	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_range_mid1.yaml	METPO:1000461	pH range mid1	ph_range_mid1_neutrophile_range	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_range_mid2.yaml	METPO:1000462	pH range mid2	ph_range_mid2_mild_alkaline_tolerance	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_range_mid3.yaml	METPO:1000463	pH range mid3	ph_range_mid3_alkaliphile_range	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/ph_range_very_low.yaml	METPO:1000459	pH range very low	ph_range_very_low_extreme_acidophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_range_mid1.yaml	METPO:1000461	pH range mid1	ph_range_mid1_neutrophile_range	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_range_mid2.yaml	METPO:1000462	pH range mid2	ph_range_mid2_mild_alkaline_tolerance	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_range_mid3.yaml	METPO:1000463	pH range mid3	ph_range_mid3_alkaliphile_range	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/ph_range_very_low.yaml	METPO:1000459	pH range very low	ph_range_very_low_extreme_acidophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/piezophilic.yaml	traitmech:000001	piezophilic	piezophilic_hhp_membrane_adaptation	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/piezotolerant.yaml	traitmech:000003	piezotolerant	piezotolerance_pressure_range	NONMECHANISTIC	1	0	1	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/pressure_delta.yaml	traitmech:000006	pressure delta	pressure_delta_breadth_descriptor	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/pressure_optimum.yaml	traitmech:000004	pressure optimum	pressure_optimum_balanced_adaptation	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/pressure_range.yaml	traitmech:000005	pressure range	pressure_range_growth_bounded_span	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/pressure_delta.yaml	traitmech:000006	pressure delta	pressure_delta_breadth_descriptor	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/pressure_optimum.yaml	traitmech:000004	pressure optimum	pressure_optimum_balanced_adaptation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/pressure_range.yaml	traitmech:000005	pressure range	pressure_range_growth_bounded_span	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/psychrophilic.yaml	METPO:1000614	psychrophilic	psychrophilic_cold_adaptation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/psychrotolerant.yaml	METPO:1000618	psychrotolerant	psychrotolerant_facultative_cold_adaptation	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/radiotolerant.yaml	traitmech:000007	radiotolerant	radiotolerance_repair_antioxidant	MECHANISTIC	1	0	1	2	2	1	1	PASS	0	0	-
-data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	METPO:1000532	salinity phenotype with numerical limits	salinity_phenotype_numerical_axis	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/slightly_halophilic.yaml	METPO:1000625	slightly halophilic	slight_halophile_low_salt_osmoadaptation	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/salinity_phenotype_with_numerical_limits.yaml	METPO:1000532	salinity phenotype with numerical limits	salinity_phenotype_numerical_axis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/slightly_halophilic.yaml	METPO:1000625	slightly halophilic	slight_halophile_low_salt_osmoadaptation	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/stenohaline.yaml	METPO:1000626	stenohaline	stenohaline_narrow_salinity_tolerance	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/strictly_anaerobic.yaml	METPO:1000611	strictly anaerobic	strict_anaerobe_oxygen_sensitivity	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_delta.yaml	METPO:1000303	temperature delta	temperature_delta_thermal_flexibility	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_delta.yaml	METPO:1000303	temperature delta	temperature_delta_thermal_flexibility	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_delta_high.yaml	METPO:1000487	temperature delta high	temperature_delta_high_eurythermal	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_delta_low.yaml	METPO:1000484	temperature delta low	temperature_delta_low_limited_breadth	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_delta_mid1.yaml	METPO:1000485	temperature delta mid1	temperature_delta_mid1_moderate_breadth	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_delta_mid2.yaml	METPO:1000486	temperature delta mid2	temperature_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_delta_mid1.yaml	METPO:1000485	temperature delta mid1	temperature_delta_mid1_moderate_breadth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_delta_mid2.yaml	METPO:1000486	temperature delta mid2	temperature_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_delta_very_low.yaml	METPO:1000483	temperature delta very low	temperature_delta_very_low_stenothermal	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum.yaml	METPO:1000304	temperature optimum	temperature_optimum_balanced_adaptation	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum.yaml	METPO:1000304	temperature optimum	temperature_optimum_balanced_adaptation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_optimum_high.yaml	METPO:1000447	temperature optimum high	temperature_optimum_high_thermophile_setpoint	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_optimum_low.yaml	METPO:1000442	temperature optimum low	temperature_optimum_low_psychrotolerant_setpoint	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum_mid1.yaml	METPO:1000443	temperature optimum mid1	temperature_optimum_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum_mid2.yaml	METPO:1000444	temperature optimum mid2	temperature_optimum_mid2_mesophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum_mid3.yaml	METPO:1000445	temperature optimum mid3	temperature_optimum_mid3_upper_mesophile	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum_mid4.yaml	METPO:1000446	temperature optimum mid4	temperature_optimum_mid4_warm_mesophile	NONMECHANISTIC	3	1	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_optimum_very_low.yaml	METPO:1000441	temperature optimum very low	temperature_optimum_very_low_psychrophile_setpoint	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_phenotype_with_numerical_limits.yaml	METPO:1000533	temperature phenotype with numerical limits	temperature_phenotype_numerical_axis	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_preference.yaml	METPO:1000613	temperature preference	temperature_preference_growth_physiology	NONMECHANISTIC	1	1	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range.yaml	METPO:1000306	temperature range	temperature_range_bounded_adaptation	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum_mid1.yaml	METPO:1000443	temperature optimum mid1	temperature_optimum_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum_mid2.yaml	METPO:1000444	temperature optimum mid2	temperature_optimum_mid2_mesophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum_mid3.yaml	METPO:1000445	temperature optimum mid3	temperature_optimum_mid3_upper_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum_mid4.yaml	METPO:1000446	temperature optimum mid4	temperature_optimum_mid4_warm_mesophile	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_optimum_very_low.yaml	METPO:1000441	temperature optimum very low	temperature_optimum_very_low_psychrophile_setpoint	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_phenotype_with_numerical_limits.yaml	METPO:1000533	temperature phenotype with numerical limits	temperature_phenotype_numerical_axis	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_preference.yaml	METPO:1000613	temperature preference	temperature_preference_growth_physiology	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range.yaml	METPO:1000306	temperature range	temperature_range_bounded_adaptation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_high.yaml	METPO:1000454	temperature range high	temperature_range_high_thermophile	NONMECHANISTIC	3	1	2	3	3	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_low.yaml	METPO:1000449	temperature range low	temperature_range_low_psychrotolerant	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid1.yaml	METPO:1000450	temperature range mid1	temperature_range_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid2.yaml	METPO:1000451	temperature range mid2	temperature_range_mid2_baseline_mesophile	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	temperature_range_mid4_warm_mesophile	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	temperature_range_very_low_psychrophile	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_low.yaml	METPO:1000449	temperature range low	temperature_range_low_psychrotolerant	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid1.yaml	METPO:1000450	temperature range mid1	temperature_range_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid2.yaml	METPO:1000451	temperature range mid2	temperature_range_mid2_baseline_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	temperature_range_mid4_warm_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	temperature_range_very_low_psychrophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/thermophilic.yaml	METPO:1000616	thermophilic	thermophilic_heat_adaptation	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	thermotolerant_facultative_heat_adaptation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation tolerant	uv_tolerance_excision_repair	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -148,13 +148,13 @@ data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	xerophilic_l
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_tolerance_czc_efflux	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
-data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	gc_low_mid_low_gc_bin	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/gc_mid1.yaml	METPO:1000430	GC mid1	gc_mid1_high_gc_bin	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/gc_mid2.yaml	METPO:1000431	GC mid2	gc_mid2_mid_high_gc_bin	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/gc_skew.yaml	traitmech:000097	GC skew	gc_skew_replication_strand_asymmetry	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	genome_size_population_lifestyle	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	gc_low_mid_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_mid1.yaml	METPO:1000430	GC mid1	gc_mid1_high_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_mid2.yaml	METPO:1000431	GC mid2	gc_mid2_mid_high_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gc_skew.yaml	traitmech:000097	GC skew	gc_skew_replication_strand_asymmetry	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	genome_size_population_lifestyle	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genome_streamlining.yaml	traitmech:000099	genome streamlining	streamlining_oligotrophic_selection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genomic_island.yaml	traitmech:000093	genomic island	gi_hgt_accessory_function	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/mobile_genetic_element.yaml	traitmech:000089	mobile genetic element	mge_horizontal_gene_transfer	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -223,25 +223,25 @@ data/traits/morphology/brown_pigmented.yaml	METPO:1003023	brown pigmented	brown_
 data/traits/morphology/capsule.yaml	traitmech:000063	capsule	capsule_polysaccharide_protection	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/carboxysome.yaml	traitmech:000072	carboxysome	carboxysome_co2_concentrating	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/morphology/carotenoid_pigmentation.yaml	METPO:1003031	carotenoid pigmentation	carotenoid_pigmentation_crt_pathway	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length.yaml	METPO:1000881	cell length	cell_length_division_growth_control	NONMECHANISTIC	4	0	4	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_large.yaml	METPO:1000886	cell length large	cell_length_large_division_delay	NONMECHANISTIC	2	2	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_medium.yaml	METPO:1000885	cell length medium	cell_length_medium_growth_rate	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	4	0	4	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_very_small.yaml	METPO:1000883	cell length very small	cell_length_very_small_streamlining	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_shape.yaml	METPO:1000666	cell shape	cell_shape_peptidoglycan_cytoskeleton	NONMECHANISTIC	5	1	4	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length.yaml	METPO:1000881	cell length	cell_length_division_growth_control	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_large.yaml	METPO:1000886	cell length large	cell_length_large_division_delay	NONMECHANISTIC	2	2	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_medium.yaml	METPO:1000885	cell length medium	cell_length_medium_growth_rate	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_very_small.yaml	METPO:1000883	cell length very small	cell_length_very_small_streamlining	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_shape.yaml	METPO:1000666	cell shape	cell_shape_peptidoglycan_cytoskeleton	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_width.yaml	METPO:1000882	cell width	cell_width_mreb_lateral_wall	NONMECHANISTIC	3	0	3	3	3	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_width_large.yaml	METPO:1000890	cell width large	cell_width_large_setpoint_increase	NONMECHANISTIC	3	0	3	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_width_medium.yaml	METPO:1000889	cell width medium	cell_width_medium_typical_rod	NONMECHANISTIC	5	0	5	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_width_small.yaml	METPO:1000888	cell width small	cell_width_small_mreb_setpoint	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_width_very_small.yaml	METPO:1000887	cell width very small	cell_width_very_small_streamlining	NONMECHANISTIC	2	0	2	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_width_large.yaml	METPO:1000890	cell width large	cell_width_large_setpoint_increase	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_width_medium.yaml	METPO:1000889	cell width medium	cell_width_medium_typical_rod	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_width_small.yaml	METPO:1000888	cell width small	cell_width_small_mreb_setpoint	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_width_very_small.yaml	METPO:1000887	cell width very small	cell_width_very_small_streamlining	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/coccobacillus_shaped.yaml	METPO:1000688	coccobacillus shaped	coccobacillus_shaped_short_rod_morphogenesis	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/coccus_shaped.yaml	METPO:1000668	coccus shaped	coccus_shaped_septal_growth	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cream_pigmented.yaml	METPO:1003024	cream pigmented	cream_pigmented_low_carotenoid_density	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cream_pigmented.yaml	METPO:1003024	cream pigmented	cream_pigmented_low_carotenoid_density	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/crescent_shaped.yaml	METPO:1000669	crescent shaped	crescent_shaped_crescentin_curvature	MECHANISTIC	1	0	1	2	2	1	1	PASS	0	0	-
 data/traits/morphology/curved_shaped.yaml	METPO:1000670	curved shaped	curved_shaped_scaffolded_curvature	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/diplococcus_shaped.yaml	METPO:1000671	diplococcus shaped	diplococcus_shaped_septal_separation	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/disc_shaped.yaml	METPO:1000689	disc shaped	disc_shaped_anisotropic_wall_growth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbell_shaped_snapping_division	NONMECHANISTIC	1	0	1	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/dumbbell_shaped.yaml	METPO:1000672	dumbbell shaped	dumbbell_shaped_snapping_division	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/ellipsoidal.yaml	METPO:1000673	ellipsoidal	ellipsoidal_ovococcal_elongation	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/morphology/filament_shaped.yaml	METPO:1000674	filament shaped	filament_shaped_streptomyces_polar_growth	NONMECHANISTIC	4	3	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/flagellar_arrangement.yaml	traitmech:000056	flagellar arrangement	flagellar_arrangement_flhf_flhg	NONMECHANISTIC	4	1	3	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -252,13 +252,13 @@ data/traits/morphology/gas_vesicle.yaml	traitmech:000070	gas vesicle	gas_vesicle
 data/traits/morphology/gliding.yaml	METPO:1000706	gliding	gliding_surface_motility	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
 data/traits/morphology/gram_negative.yaml	METPO:1000699	gram negative	gram_negative_outer_membrane_dye_loss	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/gram_positive.yaml	METPO:1000698	gram positive	gram_positive_cell_wall_retention	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/gram_stain.yaml	METPO:1000697	gram stain	gram_stain_cell_envelope_retention	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/gram_stain.yaml	METPO:1000697	gram stain	gram_stain_cell_envelope_retention	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/gram_variable.yaml	METPO:1000700	gram variable	gram_variable_wall_thinning	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/green_pigmented.yaml	METPO:1003025	green pigmented	green_pigmented_pyocyanin_phenazine	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/helical_shaped.yaml	METPO:1000676	helical shaped	helical_shaped_pg_relaxation	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/heterocyst.yaml	traitmech:000073	heterocyst	heterocyst_microoxic_nitrogen_fixation	MECHANISTIC	4	0	4	1	1	1	1	PASS	0	0	-
 data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	inclusion_compartmentalization	NONMECHANISTIC	3	1	2	3	3	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	irregular_shaped_loss_of_patterning	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	irregular_shaped_loss_of_patterning	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/lophotrichous.yaml	traitmech:000058	lophotrichous	lophotrichous_polar_tuft	NONMECHANISTIC	5	2	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/magnetosome.yaml	traitmech:000071	magnetosome	magnetosome_magnetotaxis	MECHANISTIC	3	0	3	1	1	1	1	PASS	0	0	-
 data/traits/morphology/monotrichous.yaml	traitmech:000057	monotrichous	monotrichous_single_polar_flagellum	NONMECHANISTIC	5	1	4	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -344,7 +344,7 @@ data/traits/physiology/phototrophic.yaml	METPO:1000660	phototrophic	phototrophic
 data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	quorum_sensing_autoinducer	MECHANISTIC	3	3	0	1	1	2	1	PASS	0	0	-
 data/traits/physiology/spore_germination.yaml	traitmech:000083	spore germination	spore_germination_germinant_trigger		0	0	0	1	1	0	0	PROTECTED	0	3	SCOPE_NOT_REVIEWED|NO_PROTEIN_NODE|NO_PROTEIN_EXAMPLE
 data/traits/physiology/stress_response.yaml	traitmech:000078	stress response	stress_response_induction	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
-data/traits/physiology/trophic_type.yaml	METPO:1000631	trophic type	trophic_type_classification_axes	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/trophic_type.yaml	METPO:1000631	trophic type	trophic_type_classification_axes	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/urease_activity.yaml	traitmech:000077	urease activity	urease_activity_urea_hydrolysis	MECHANISTIC	1	0	1	1	1	3	3	PASS	0	0	-
 data/traits/physiology/viable_but_nonculturable_state.yaml	traitmech:000081	viable but nonculturable state	vbnc_stress_induced_dormancy	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/upper/biological_process.yaml	METPO:1000630	biological process	biological_process_go_upper_context	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

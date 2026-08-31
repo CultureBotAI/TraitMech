@@ -17,6 +17,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports wide pH-homeostasis flexibility as the basis
     of euryphilic pH-tolerance.
+canonical_examples:
+- taxon_id: NCBITaxon:2306023
+  taxon_label: Gemmobacter lutimaris
+  reference: DOI:10.1099/ijsem.0.003375
+  note: Gemmobacter lutimaris YJ-T1-11T grew from pH 5.0 to 9.0; the directly reported
+    four-unit breadth lies in the approximately 4-5 bin.
 causal_graphs:
 - graph_id: ph_delta_mid3_wide_breadth
   title: pH-delta-mid3 wide-breadth pH homeostasis
@@ -312,4 +318,12 @@ curation_history:
     the tranche: set graph scope ph_delta_mid3_wide_breadth=NONMECHANISTIC with scope_notes;
     marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (proton_pumping_respiratory_complexes,
     f0f1_atpase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Gemmobacter lutimaris (NCBITaxon:2306023; DOI:10.1099/ijsem.0.003375).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

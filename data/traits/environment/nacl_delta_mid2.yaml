@@ -17,6 +17,13 @@ evidence:
   snippet: salinity range
   notes: Osmoadaptation review supports broad osmoadaptive breadths as the halotolerant
     / moderately euryhaline phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:718002
+  taxon_label: Peribacillus endoradicis
+  reference: DOI:10.1099/ijs.0.028936-0
+  note: The type strain, published as Bacillus endoradicis CCBAU 05776T and now NCBI-labelled
+    Peribacillus endoradicis, grew from 0 to 7% NaCl, a 7-point breadth inside the
+    3-8% delta bin.
 causal_graphs:
 - graph_id: nacl_delta_mid2_broad_breadth
   title: NaCl-delta-mid2 broad-breadth osmoadaptation
@@ -218,4 +225,12 @@ curation_history:
     the tranche: set graph scope nacl_delta_mid2_broad_breadth=NONMECHANISTIC with
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (potassium_uptake_systems, kdpfabc_complex).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Peribacillus endoradicis (NCBITaxon:718002; DOI:10.1099/ijs.0.028936-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -388,6 +388,35 @@ The best-supported generic model is that increased external NaCl drives water ou
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Spongorhabdus nitratireducens</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2995321"
+             rel="nofollow noreferrer"><code>NCBITaxon:2995321</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1099/ijsem.0.007037"
+             rel="nofollow noreferrer"><code>DOI:10.1099/ijsem.0.007037</code></a>
+          
+          
+          <span class="meta">Spongorhabdus nitratireducens strains XeTr1T and StTr2 grew across the complete reported 1-3% (w/v) NaCl interval, matching this bin without extrapolation.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -436,6 +465,12 @@ The best-supported generic model is that increased external NaCl drives water ou
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope nacl_range_mid1_slight_halophile=NONMECHANISTIC with scope_notes.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-31T04:43:24Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Spongorhabdus nitratireducens (NCBITaxon:2995321; DOI:10.1099/ijsem.0.007037). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
         
       </ol>
@@ -823,7 +858,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

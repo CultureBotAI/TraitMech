@@ -23,6 +23,12 @@ evidence:
   snippet: slight halophile
   notes: Osmoadaptation review supports the 1–3% NaCl optimum range as the slight-halophile
     category.
+canonical_examples:
+- taxon_id: NCBITaxon:2585141
+  taxon_label: Flavicella sediminum
+  reference: DOI:10.1099/ijsem.0.003839
+  note: Type strain ALS 84T had a measured NaCl optimum of 2% (w/v), wholly inside
+    the approximately 1-3% bin; growth occurred at 1-3%.
 causal_graphs:
 - graph_id: nacl_optimum_mid1_slight_halophile
   title: NaCl-optimum-mid1 slight-halophile setpoint
@@ -222,4 +228,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope nacl_optimum_mid1_slight_halophile=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Flavicella sediminum (NCBITaxon:2585141; DOI:10.1099/ijsem.0.003839).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

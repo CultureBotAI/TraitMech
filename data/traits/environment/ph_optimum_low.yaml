@@ -32,6 +32,12 @@ evidence:
   snippet: growing at pH 1.0-3.0
   notes: pH-homeostasis review supports growth at acidic external pH as the acidophilic
     / extreme-acidophilic category.
+canonical_examples:
+- taxon_id: NCBITaxon:46632
+  taxon_label: Picrophilus oshimae
+  reference: DOI:10.1007/s007920050044
+  note: Picrophilus oshimae has a directly measured growth optimum near pH 0.7, wholly
+    below the approximately pH 6 upper bound for this bin.
 causal_graphs:
 - graph_id: ph_optimum_low_acidophile_setpoint
   title: pH-optimum-low acidophile setpoint
@@ -249,4 +255,12 @@ curation_history:
     the tranche: set graph scope ph_optimum_low_acidophile_setpoint=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (proton_pumping_respiratory_complexes).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Picrophilus oshimae (NCBITaxon:46632; DOI:10.1007/s007920050044).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

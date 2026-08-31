@@ -24,6 +24,13 @@ evidence:
   snippet: respiratory quinol:O2 oxidoreductase
   notes: Aerobic respiration review supports terminal oxidases as the enzymatic interface
     between cells and ambient O2.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.1111/1751-7915.70051
+  note: Escherichia coli grows by aerobic respiration when oxygen is present and switches
+    to anaerobic respiration or fermentation without it, exemplifying a facultative
+    branch of oxygen preference.
 causal_graphs:
 - graph_id: oxygen_preference_o2_availability_axis
   title: Oxygen-preference O2-availability axis
@@ -332,4 +339,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope oxygen_preference_o2_availability_axis=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1111/1751-7915.70051).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

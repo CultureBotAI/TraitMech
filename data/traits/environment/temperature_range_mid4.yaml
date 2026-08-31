@@ -24,6 +24,12 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports the 34–40 °C range as the warm-mesophile
     (mammalian-host) growth range.
+canonical_examples:
+- taxon_id: NCBITaxon:3028314
+  taxon_label: Oceanimonas pelagia
+  reference: DOI:10.1007/s10482-024-01948-y
+  note: Oceanimonas pelagia NTOU-MSR1T grew from 10 to 45 degrees C, a directly reported
+    35-degree breadth within the approximately 34-40-degree bin.
 causal_graphs:
 - graph_id: temperature_range_mid4_warm_mesophile
   title: Temperature-range-mid4 warm-mesophile range
@@ -285,4 +291,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

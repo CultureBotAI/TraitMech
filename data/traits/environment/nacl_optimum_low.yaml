@@ -23,6 +23,12 @@ evidence:
   snippet: optimal NaCl
   notes: Osmoadaptation review supports low-salt optima as the non-halophilic / halotolerant
     end of the halophily axis.
+canonical_examples:
+- taxon_id: NCBITaxon:575322
+  taxon_label: Sphingomonas oligoaromativorans
+  reference: DOI:10.1099/ijs.0.052894-0
+  note: Type strain SY-6T grew optimally at 0.01% (w/v) NaCl, wholly within the at-most-1%
+    bin; its full reported growth range was 0-0.5%.
 causal_graphs:
 - graph_id: nacl_optimum_low_non_halophile_setpoint
   title: NaCl-optimum-low non-halophile setpoint
@@ -240,4 +246,12 @@ curation_history:
     the tranche: set graph scope nacl_optimum_low_non_halophile_setpoint=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (k_uptake_systems, opua_opuc_transport).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

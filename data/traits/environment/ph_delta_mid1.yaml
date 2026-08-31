@@ -17,6 +17,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports moderate pH-homeostasis flexibility as common
     among non-extreme microorganisms.
+canonical_examples:
+- taxon_id: NCBITaxon:735518
+  taxon_label: Lederbergia graminis
+  reference: DOI:10.1099/ijs.0.023820-0
+  note: The type strain, published as Bacillus graminis YC6957T, grew from pH 6.0
+    to 8.5, a 2.5-unit breadth wholly inside the approximately 2-3 bin.
 causal_graphs:
 - graph_id: ph_delta_mid1_moderate_breadth
   title: pH-delta-mid1 moderate-breadth pH homeostasis
@@ -290,4 +296,12 @@ curation_history:
     the tranche: set graph scope ph_delta_mid1_moderate_breadth=NONMECHANISTIC with
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (f0f1_atpase, ybas_glutaminase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

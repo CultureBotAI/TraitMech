@@ -19,6 +19,12 @@ evidence:
   snippet: GC-biased gene conversion
   notes: Bacterial-GC-content evolution review supports GC-biased gene conversion
     as the mechanism elevating GC content into the high range.
+canonical_examples:
+- taxon_id: NCBITaxon:100226
+  taxon_label: Streptomyces coelicolor A3(2)
+  reference: DOI:10.1038/417141a
+  note: The complete Streptomyces coelicolor A3(2) genome is approximately 72.1% GC,
+    wholly above this record's authoritative 66.3% threshold.
 causal_graphs:
 - graph_id: gc_mid1_high_gc_bin
   title: GC-mid1 (METPO >66.3%) high-GC bin
@@ -170,4 +176,12 @@ curation_history:
   changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gc_mid1_high_gc_bin=NONMECHANISTIC with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Streptomyces coelicolor A3(2) (NCBITaxon:100226; DOI:10.1038/417141a).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

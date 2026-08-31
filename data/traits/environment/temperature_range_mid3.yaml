@@ -23,6 +23,13 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports the 30–34 °C range as the upper-mesophile
     growth range.
+canonical_examples:
+- taxon_id: NCBITaxon:1793963
+  taxon_label: Bacillus nakamurai
+  reference: DOI:10.1099/ijsem.0.001135
+  note: Bacillus nakamurai NRRL B-41091T grew from 17 to 50 degrees C in its primary
+    species description, a directly reported 33-degree breadth within the approximately
+    30-34-degree range-width bin.
 causal_graphs:
 - graph_id: temperature_range_mid3_upper_mesophile
   title: Temperature-range-mid3 upper-mesophile range
@@ -257,4 +264,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Bacillus nakamurai (NCBITaxon:1793963; DOI:10.1099/ijsem.0.001135).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

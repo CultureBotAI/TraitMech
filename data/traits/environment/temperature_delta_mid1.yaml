@@ -18,6 +18,12 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports moderate homoviscous remodeling capacity
     as common among generalist mesophiles.
+canonical_examples:
+- taxon_id: NCBITaxon:2781979
+  taxon_label: Pontibacterium sinense
+  reference: DOI:10.1099/ijsem.0.006018
+  note: Pontibacterium sinense N1Y112T grew from 20 to 35 degrees C, a 15-degree breadth
+    wholly inside the approximately 10-20-degree delta bin.
 causal_graphs:
 - graph_id: temperature_delta_mid1_moderate_breadth
   title: Temperature-delta-mid1 moderate-breadth thermal adaptation
@@ -233,4 +239,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_delta_mid1_moderate_breadth=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Pontibacterium sinense (NCBITaxon:2781979; DOI:10.1099/ijsem.0.006018).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

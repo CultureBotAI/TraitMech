@@ -17,6 +17,13 @@ evidence:
   snippet: growing well at temperatures around the freezing point of water
   notes: Psychrophile review supports the low end of the temperature axis as a distinct
     quantitative phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:2325
+  taxon_label: Thermoanaerobacter kivui
+  reference: DOI:10.3389/fmicb.2023.1265216
+  note: The study reports a 39 degrees C lower growth boundary, ancestral 66 degrees
+    C optimum, and evolved 60 degrees C optimum for Thermoanaerobacter kivui, directly
+    separating cardinal temperature values.
 causal_graphs:
 - graph_id: temperature_phenotype_numerical_axis
   title: Temperature phenotype numerical-limits axis
@@ -227,4 +234,12 @@ curation_history:
     the tranche: set graph scope temperature_phenotype_numerical_axis=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cold_adapted_enzymes).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Thermoanaerobacter kivui (NCBITaxon:2325; DOI:10.3389/fmicb.2023.1265216).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

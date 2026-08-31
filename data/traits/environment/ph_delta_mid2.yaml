@@ -17,6 +17,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports broad pH-homeostasis flexibility as the basis
     of generalist pH-tolerance physiology.
+canonical_examples:
+- taxon_id: NCBITaxon:3447298
+  taxon_label: Microbaculum mangrovi
+  reference: DOI:10.1099/ijsem.0.006972
+  note: Microbaculum mangrovi FT89T grew from pH 5.5 to 9.0, a 3.5-unit breadth wholly
+    inside the approximately 3-4 bin.
 causal_graphs:
 - graph_id: ph_delta_mid2_broad_breadth
   title: pH-delta-mid2 broad-breadth pH homeostasis
@@ -227,4 +233,12 @@ curation_history:
     the tranche: set graph scope ph_delta_mid2_broad_breadth=NONMECHANISTIC with scope_notes;
     marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (respiratory_proton_pumps,
     f1fo_atpase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Microbaculum mangrovi (NCBITaxon:3447298; DOI:10.1099/ijsem.0.006972).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -17,6 +17,12 @@ evidence:
   snippet: small cells and genomes
   notes: Streamlining review links very narrow cell widths to oligotrophic and streamlined
     lineages.
+canonical_examples:
+- taxon_id: NCBITaxon:324679
+  taxon_label: Spirochaeta dissipatitropha
+  reference: DOI:10.1099/ijs.0.65862-0
+  note: Spirochaeta dissipatitropha ASpC2T cells measured approximately 0.23 micrometres
+    wide, wholly below the at-most-0.5-micrometre threshold.
 causal_graphs:
 - graph_id: cell_width_very_small_streamlining
   scope_status: NONMECHANISTIC
@@ -223,4 +229,12 @@ curation_history:
     the tranche: set graph scope cell_width_very_small_streamlining=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (rod_complex, apbp_proteins).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

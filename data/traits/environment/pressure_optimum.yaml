@@ -18,6 +18,12 @@ evidence:
     to their preference for high pressure
   notes: Pressure-adaptation review supports an organism-specific optimal growth pressure
     as the defining quantity for piezophile classification.
+canonical_examples:
+- taxon_id: NCBITaxon:1513592
+  taxon_label: Colwellia marinimaniae
+  reference: DOI:10.1099/ijsem.0.001671
+  note: Colwellia marinimaniae MTCD1 had a measured optimum of 120 MPa at 6 degrees
+    C in its primary species description.
 causal_graphs:
 - graph_id: pressure_optimum_balanced_adaptation
   title: Pressure-optimum balanced adaptation
@@ -227,4 +233,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope pressure_optimum_balanced_adaptation=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Colwellia marinimaniae (NCBITaxon:1513592; DOI:10.1099/ijsem.0.001671).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

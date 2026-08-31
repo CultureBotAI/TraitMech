@@ -384,6 +384,35 @@ Only identifiers that can be assigned confidently are given. Label-only nodes ar
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Sphingomonas oligoaromativorans</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=575322"
+             rel="nofollow noreferrer"><code>NCBITaxon:575322</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1099/ijs.0.052894-0"
+             rel="nofollow noreferrer"><code>DOI:10.1099/ijs.0.052894-0</code></a>
+          
+          
+          <span class="meta">Sphingomonas oligoaromativorans SY-6T grew from pH 6.0 to 7.0, a directly reported breadth of one pH unit inside the at-most-1 bin.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -432,6 +461,12 @@ Only identifiers that can be assigned confidently are given. Label-only nodes ar
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope ph_delta_very_low_stenotopic=NONMECHANISTIC with scope_notes.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-31T04:43:24Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
         
       </ol>
@@ -819,7 +854,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

@@ -17,6 +17,13 @@ evidence:
   snippet: external pH
   notes: pH-homeostasis review supports the external-pH range over which cytoplasmic
     pH homeostasis sustains growth as an analogous range descriptor on the pH axis.
+canonical_examples:
+- taxon_id: NCBITaxon:375929
+  taxon_label: Natranaerobius thermophilus
+  reference: DOI:10.1128/aem.00145-24
+  note: Natranaerobius thermophilus was reported across 3.1-4.9 M total sodium at
+    pH 9.5 and 53 degrees C; this is a bounded growth range on a salinity axis, not
+    an NaCl conversion or an optimum claim.
 causal_graphs:
 - graph_id: growth_range_phenotype_descriptor
   title: Growth-range phenotype descriptor across environmental axes
@@ -291,4 +298,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope growth_range_phenotype_descriptor=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Natranaerobius thermophilus (NCBITaxon:375929; DOI:10.1128/aem.00145-24).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

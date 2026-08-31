@@ -22,6 +22,13 @@ evidence:
   snippet: bacterial cell wall ... primary role in maintaining cell shape
   notes: Supports bacterial cell shape as determined by cell wall and cytoskeletal
     elements.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.1038/nrmicro1205
+  note: Escherichia coli is a source-backed model in which cell-wall and cytoskeletal
+    systems maintain a rod-shaped cellular form; this scopes the example to one branch
+    of the broad shape class.
 causal_graphs:
 - graph_id: cell_shape_peptidoglycan_cytoskeleton
   scope_status: NONMECHANISTIC
@@ -306,4 +313,12 @@ curation_history:
     the tranche: set graph scope cell_shape_peptidoglycan_cytoskeleton=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (penicillin_binding_proteins, mreB, crescentin, flotillins).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1038/nrmicro1205).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

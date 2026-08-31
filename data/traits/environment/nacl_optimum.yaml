@@ -19,6 +19,13 @@ evidence:
   snippet: ways they cope with the high salt concentrations
   notes: Saline-Systems review supports osmotic balance at the optimal NaCl as the
     mechanistic basis of the NaCl-optimum phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:200904
+  taxon_label: Paraliobacillus ryukyuensis
+  reference: DOI:10.2323/jgam.48.269
+  note: 'Strain O15-7T had a maximum-specific-growth-rate optimum spanning 0.75-3.0%
+    (w/v) NaCl. Because that interval touches the low/mid1 boundary, #591 keeps the
+    complete claim on the parent rather than duplicating it onto a bin.'
 causal_graphs:
 - graph_id: nacl_optimum_balanced_osmoadaptation
   title: NaCl-optimum balanced osmoadaptation
@@ -356,4 +363,12 @@ curation_history:
     off the NaCl-optimum parent under the #478 most-specific-placement policy. Its
     measured 15-20% (w/v) optimum belongs wholly in METPO:1000468; the same claim
     is not duplicated on parent and bin.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Paraliobacillus ryukyuensis (NCBITaxon:200904; DOI:10.2323/jgam.48.269).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

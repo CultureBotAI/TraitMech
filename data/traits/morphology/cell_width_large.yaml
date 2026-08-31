@@ -21,6 +21,12 @@ evidence:
   snippet: cell size scales with growth rate
   notes: Growth-rate-dependent size law supports widening of cells at fast growth
     rates or under nutrient-rich conditions.
+canonical_examples:
+- taxon_id: NCBITaxon:1232683
+  taxon_label: Marinobacterium lacunae
+  reference: DOI:10.1007/s00203-023-03627-4
+  note: Marinobacterium lacunae AK27T cells measured 1.0-1.5 micrometres wide, wholly
+    above the approximately 0.9-micrometre threshold.
 causal_graphs:
 - graph_id: cell_width_large_setpoint_increase
   scope_status: NONMECHANISTIC
@@ -273,4 +279,12 @@ curation_history:
     the tranche: set graph scope cell_width_large_setpoint_increase=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (roda_pbp2_complex, mreb_filaments, mrec_mred_balance).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Marinobacterium lacunae (NCBITaxon:1232683; DOI:10.1007/s00203-023-03627-4).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

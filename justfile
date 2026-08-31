@@ -380,6 +380,11 @@ normalize-trait-emission *args:
 add-morphology-motility-exemplars *args:
     uv run python scripts/add_morphology_motility_exemplars.py {{args}}
 
+# Resolve the final 89-record canonical-example queue under the #591 source/bin
+# policy (#444). Default dry-run; four reviewed evidence gaps remain empty.
+backfill-canonical-examples-444 *args:
+    uv run python scripts/backfill_canonical_examples_444.py {{args}}
+
 # Move the measured W. ichthyophaga optimum from its family parent to the
 # narrowest numeric bin containing the full interval (#478). Default dry-run.
 move-nacl-optimum-exemplar *args:

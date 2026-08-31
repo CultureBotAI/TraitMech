@@ -17,6 +17,12 @@ evidence:
   snippet: GC-biased gene conversion
   notes: Bacterial-GC-content evolution review supports moderate GC-biased gene conversion
     as the mechanism producing mid-high GC content.
+canonical_examples:
+- taxon_id: NCBITaxon:3028314
+  taxon_label: Oceanimonas pelagia
+  reference: DOI:10.1007/s10482-024-01948-y
+  note: The Oceanimonas pelagia NTOU-MSR1T genome has 61.0 mol% GC, wholly inside
+    this record's authoritative 57.0-66.3% interval.
 causal_graphs:
 - graph_id: gc_mid2_mid_high_gc_bin
   title: GC-mid2 (METPO 57.0–66.3%) mid-high GC bin
@@ -193,4 +199,12 @@ curation_history:
   changes: 'Backfilled provenance (review issue 517) for the codex protein-taxon review
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gc_mid2_mid_high_gc_bin=NONMECHANISTIC with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

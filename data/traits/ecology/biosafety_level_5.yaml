@@ -90,3 +90,11 @@ curation_history:
     the tranche: set graph scope biosafety_level_5_proposed_enhanced_hazard=NONMECHANISTIC
     with scope_notes.'
   llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed issue #444 after #591 and left canonical_examples empty: The
+    class is explicitly hypothetical and above every implemented containment level;
+    assigning a real organism would falsely assert an authority-backed BSL-5 classification
+    that does not exist. No paid research was used.'
+  llm_assisted: true

@@ -29,6 +29,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports modest alkaline-tolerance physiology as the
     basis of growth across pH 7–8.
+canonical_examples:
+- taxon_id: NCBITaxon:2086571
+  taxon_label: Solimonas fluminis
+  reference: DOI:10.1099/ijsem.0.002865
+  note: Solimonas fluminis HR-BBT grew at pH 7-8 in the primary species description;
+    the complete reported interval matches this bin.
 causal_graphs:
 - graph_id: ph_range_mid2_mild_alkaline_tolerance
   title: pH-range-mid2 mild-alkaline-tolerance range
@@ -273,4 +279,12 @@ curation_history:
     the tranche: set graph scope ph_range_mid2_mild_alkaline_tolerance=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (f0f1_atpase, proton_ion_antiporters).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Solimonas fluminis (NCBITaxon:2086571; DOI:10.1099/ijsem.0.002865).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

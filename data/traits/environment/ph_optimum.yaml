@@ -18,6 +18,13 @@ evidence:
   snippet: proton motive force
   notes: pH-homeostasis review supports the balanced proton motive force at the optimal
     external pH as the mechanism enabling maximal growth.
+canonical_examples:
+- taxon_id: NCBITaxon:3447298
+  taxon_label: Microbaculum mangrovi
+  reference: DOI:10.1099/ijsem.0.006972
+  note: 'Microbaculum mangrovi FT89T had a reported optimum interval of pH 6.0-7.0.
+    Because the interval touches the low/mid1 boundary, #591 keeps this claim on the
+    optimum parent.'
 causal_graphs:
 - graph_id: ph_optimum_balanced_homeostasis
   title: pH-optimum balanced cytoplasmic homeostasis
@@ -289,4 +296,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope ph_optimum_balanced_homeostasis=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Microbaculum mangrovi (NCBITaxon:3447298; DOI:10.1099/ijsem.0.006972).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

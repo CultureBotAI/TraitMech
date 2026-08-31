@@ -19,6 +19,13 @@ evidence:
   snippet: decreased membrane fluidity
   notes: Psychrophile review supports cold-end membrane stress as a lower-bound growth
     constraint that low-temperature tolerance must overcome.
+canonical_examples:
+- taxon_id: NCBITaxon:735518
+  taxon_label: Lederbergia graminis
+  reference: DOI:10.1099/ijs.0.023820-0
+  note: 'The type strain, published as Bacillus graminis YC6957T, grew from 15 to
+    45 degrees C. Its 30-degree breadth meets a bin boundary, so #591 keeps this claim
+    on the range parent.'
 causal_graphs:
 - graph_id: temperature_range_bounded_adaptation
   title: Temperature-range bounded thermal adaptation
@@ -262,4 +269,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_range_bounded_adaptation=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

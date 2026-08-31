@@ -24,6 +24,13 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports a 34–40 °C optimum as the warm-mesophile
     (mammalian-host) setpoint.
+canonical_examples:
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  reference: DOI:10.1128/AEM.05773-11
+  note: Wild-type E. coli K-12 in the thermal-evolution study had a 37 degrees C growth
+    optimum before the glpF-associated shift, wholly inside the approximately 34-40-degree
+    bin.
 causal_graphs:
 - graph_id: temperature_optimum_mid4_warm_mesophile
   title: Temperature-optimum-mid4 warm-mesophile setpoint
@@ -285,4 +292,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1128/AEM.05773-11).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -21,6 +21,12 @@ evidence:
   snippet: proton motive force
   notes: pH-homeostasis review supports robust proton extrusion and import machinery
     as the basis of very broad pH-tolerance.
+canonical_examples:
+- taxon_id: NCBITaxon:486505
+  taxon_label: Amycolatopsis flava
+  reference: DOI:10.1007/s10482-015-0542-z
+  note: Amycolatopsis flava AFM 10111T grew from pH 5 to 12, a seven-unit breadth
+    wholly inside the approximately 5-9 pH-unit bin.
 causal_graphs:
 - graph_id: ph_delta_high_euryphilic_breadth
   title: pH-delta-high euryphilic breadth
@@ -319,4 +325,12 @@ curation_history:
     the tranche: set graph scope ph_delta_high_euryphilic_breadth=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (na_h_antiporters, respiratory_proton_pumps, f0f1_atpase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Amycolatopsis flava (NCBITaxon:486505; DOI:10.1007/s10482-015-0542-z).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

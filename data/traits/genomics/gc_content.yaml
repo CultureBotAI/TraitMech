@@ -18,6 +18,13 @@ evidence:
   snippet: GC-biased gene conversion
   notes: Bacterial-GC-content evolution review supports GC-biased gene conversion
     and mutation bias as the mechanistic drivers of genomic GC composition.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: PMID:9278503
+  note: The complete E. coli K-12 genome provides a source-backed whole-genome GC-composition
+    measurement and is used here as a family-level exemplar, distinct from the bin-specific
+    taxa below.
 causal_graphs:
 - graph_id: gc_content_composition_drivers
   title: GC content composition drivers
@@ -275,4 +282,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gc_content_composition_drivers=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503). The note
+    retains the measured value or scopes broad-class examples to the cited branch;
+    no paid research was used.'
   llm_assisted: true
