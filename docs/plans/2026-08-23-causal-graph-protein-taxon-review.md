@@ -18,8 +18,9 @@ phase 6.
 
 Review every TraitMech causal graph and its protein grounding. Every
 retained mechanistic graph should contain at least one source-backed protein
-node, at least one cited canonical taxon, and at least one UniProt protein
-example whose organism matches that canonical taxon.
+node, at least one cited canonical taxon, and at least one source-backed
+UniProt protein example. Those are independent requirements: a protein's
+source taxon need not be a canonical example of the trait (#521).
 
 Taxon-agnostic graph nodes must retain semantic groundings such as GO,
 InterPro, or NCBIfam. A UniProt accession represents an organism-specific
@@ -178,7 +179,7 @@ affected trait pages after each batch. The completed corpus must satisfy:
 
 - every retained graph has at least one `GENE_OR_PROTEIN` node;
 - every retained graph has at least one referenced canonical taxon;
-- every retained graph has at least one taxon-matched UniProt protein example;
+- every retained graph has at least one source-backed UniProt protein example;
 - every protein node has a semantic grounding or reviewed label-only
   disposition;
 - no generic node grounding contains a UniProt instance;
