@@ -205,6 +205,17 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.70042
       notes: Persisters generated PMF via oxidative phosphorylation; ETC components
         maintain PMF underlying tolerance.
+  - subject: antibiotic_resistance
+    predicate: is distinct from
+    object: persister_trait
+    description: Genetic antibiotic resistance is explicitly distinct from the phenotypic
+      persistence trait.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0196-3
+      snippet: Resistance, tolerance and persistence are distinct responses to antibiotic
+        treatment
+      notes: Verified against the open consensus statement; this contrast edge does
+        not treat resistance as a persistence mechanism.
 curation_history:
 - timestamp: '2026-08-24T14:00:00-07:00'
   curator: codex
@@ -283,4 +294,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-08-31T09:35:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with one public-source,
+    verbatim-snippet-backed connector. No paid research service was called.'
   llm_assisted: true

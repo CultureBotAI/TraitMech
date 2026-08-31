@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/dormancy.yaml
+  slug: dormancy
+session:
+  id: 2026-08-31T094001Z-codex-aeec31
+  timestamp: '2026-08-31T09:40:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the dormancy graph
+  details: Linked stress-induced ribosome hibernation to dormancy with exact public-source
+    evidence. The graph moved from two components to one. No paid research service was called.

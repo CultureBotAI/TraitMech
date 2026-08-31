@@ -187,6 +187,17 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12081528
       notes: Rpfs reactivate dormant bacteria at very low concentrations.
     predicate_id: RO:0002213
+  - subject: ribosome_hibernation_factors
+    predicate: contributes to
+    object: dormancy_process
+    description: Stress-induced ribosome hibernation contributes translational arrest
+      to the dormancy process.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1386179
+      snippet: environmental stress might govern the formation of 100S ribosomes,
+        which were only detectable during periods of protein synthesis arrest
+      notes: Verified against the open Frontiers article full text.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -237,4 +248,10 @@ curation_history:
     ribosome_hibernation_factors, rpf_proteins); added taxon-paired protein example(s)
     UniProtKB:P9WG29 on rpf_proteins (NCBITaxon:83332); added canonical example(s)
     NCBITaxon:83332.'
+  llm_assisted: true
+- timestamp: '2026-08-31T09:35:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with one public-source,
+    verbatim-snippet-backed connector. No paid research service was called.'
   llm_assisted: true

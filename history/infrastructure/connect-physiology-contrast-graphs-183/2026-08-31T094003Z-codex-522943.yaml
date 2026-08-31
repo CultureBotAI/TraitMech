@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_physiology_contrast_graphs_183.py
+  slug: connect-physiology-contrast-graphs-183
+session:
+  id: 2026-08-31T094003Z-codex-522943
+  timestamp: '2026-08-31T09:40:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: Connected three physiology graphs
+  details: Added a validated migration and seven tests. Three exact public-source connectors
+    removed three fragmentation and fourteen unreachable-node findings without new evidence
+    or predicate-domain defects. No paid research service was called.

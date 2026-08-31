@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/persister_cell_formation.yaml
+  slug: persister_cell_formation
+session:
+  id: 2026-08-31T094002Z-codex-b2cad3
+  timestamp: '2026-08-31T09:40:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the persister-cell graph
+  details: Linked the resistance branch by explicitly distinguishing genetic resistance from
+    phenotypic persistence with exact consensus evidence. The graph moved from two components
+    to one. No paid research service was called.
