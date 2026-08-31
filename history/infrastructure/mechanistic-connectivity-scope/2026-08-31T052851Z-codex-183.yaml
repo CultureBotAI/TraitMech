@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/audit_causal_graphs.py
+  slug: mechanistic-connectivity-scope
+session:
+  id: 2026-08-31T052851Z-codex-183
+  timestamp: '2026-08-31T05:28:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/590
+  - https://github.com/CultureBotAI/TraitMech/pull/591
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - quality_control
+  summary: Enforce one-mechanism connectivity only on graphs scoped MECHANISTIC
+  details: >-
+    NONMECHANISTIC graphs explicitly collect contextual or classification branches
+    that need not form a single causal mechanism, so FRAGMENTED_GRAPH and
+    UNREACHABLE_FROM_TRAIT no longer contradict that reviewed scope disposition.
+    All other structural and typing checks remain active for both scopes. The
+    connectivity report now measures the 120 MECHANISTIC graphs, leaving an exact
+    source-backed repair queue of 60 graphs and 354 unreachable nodes for issue #183.
+    No research service was called.

@@ -341,6 +341,17 @@ def test_connected_graph_is_not_fragmented(tmp_path):
     assert [f for f in audit(d) if f["defect"] == "FRAGMENTED_GRAPH"] == []
 
 
+def test_nonmechanistic_scope_does_not_claim_one_connected_mechanism(tmp_path):
+    body = TWO_TRAIT_BEARING_COMPONENTS.replace(
+        "- graph_id: g\n", "- graph_id: g\n  scope_status: NONMECHANISTIC\n"
+    )
+    d = _write(tmp_path, "context.yaml", body)
+    defects = {f["defect"] for f in audit(d)}
+    assert "UNREACHABLE_FROM_TRAIT" not in defects
+    assert "FRAGMENTED_GRAPH" not in defects
+    assert connectivity_rows(d) == []
+
+
 def test_orphan_node_is_not_also_reported_as_fragmented(tmp_path):
     """A zero-edge node is its own component, but ORPHAN_NODE already owns it.
 
