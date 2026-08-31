@@ -32,8 +32,42 @@ answers_hypothesis:
     route with the other two
 verdict: REFUTED (high confidence, per the supplied analysis)
 citations_resolvable: 0
+citations_recovered_by_hand:
+  - reference: DOI:10.1128/mBio.00390-21
+    pmid: 33785618
+    citation: >-
+      Ledermann R, Emmenegger B, Couzigou J-M, Zamboni N, Kiefer P, Vorholt JA,
+      Fischer H-M. Bradyrhizobium diazoefficiens Requires Chemical Chaperones To
+      Cope with Osmotic Stress during Soybean Infection. mBio 2021.
+    covers: >-
+      The 400 mM sorbitol / 27 mM NaCl / 50 mM MgCl2 / 75 mM MgSO4 free-living
+      phenotype, the TreF-1 trehalase phenocopy, the OtsC-dependent trehalose
+      rescue, and the ectoine/hydroxyectoine-vs-glycine-betaine metabolomics.
+  - reference: DOI:10.1128/AEM.02483-09
+    pmid: 20023090
+    citation: >-
+      Sugawara M, Cytryn EJ, Sadowsky MJ. Functional Role of Bradyrhizobium
+      japonicum Trehalose Biosynthesis and Metabolism Genes during Physiological
+      Stress and Nodulation. Appl Environ Microbiol 2010;76(4):1071-1081.
+    covers: >-
+      The 60 mM NaCl growth inhibition, the absent desiccation defect for the
+      low-trehalose otsA mutants at 50% RH, and the osmoprotectant conclusion.
+corrections_to_this_artifact:
+  - claim: >-
+      "Adding 5 mM exogenous trehalose restored the delta-otsA mutant to nearly
+      wild-type tolerance under sorbitol stress."
+    status: UNVERIFIED CONCENTRATION
+    detail: >-
+      The rescue and its OtsC dependence are confirmed -- "While the otsA mutant
+      was rescued to almost wild-type stress tolerance, trehalose did not enhance
+      osmotolerance of the (otsCB-otsA) and otsCB mutants" -- but the source does
+      not state a trehalose concentration for the free-living sorbitol experiment.
+      The 5 mM figure could not be confirmed and was NOT carried into the record
+      (PR #615). Treat it as unsupported.
 citation_caveat: >-
-  CRITICAL FOR APPLICATION. This artifact names organisms, genotypes and
+  CRITICAL AS SUPPLIED, now partly discharged -- see citations_recovered_by_hand
+  above, and PR #615 which applies the correction. As supplied, this artifact
+  names organisms, genotypes and
   phenotypes but carries NO DOI, PMID, or other resolvable reference, and no
   verbatim source snippet. `CausalEdge.evidence` requires a `reference`, and
   docs/GROUNDING_POLICY.md requires an edge-specific snippet. The graph
