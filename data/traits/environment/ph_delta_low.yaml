@@ -17,6 +17,12 @@ evidence:
   snippet: pH homeostasis
   notes: pH-homeostasis review supports limited pH-homeostasis flexibility as the
     basis for a narrow pH-tolerance breadth.
+canonical_examples:
+- taxon_id: NCBITaxon:1715645
+  taxon_label: Paracoccus mangrovi
+  reference: DOI:10.1099/ijsem.0.001993
+  note: Paracoccus mangrovi gyp-1T grew from pH 5.5 to 7.0, a 1.5-unit breadth wholly
+    inside the approximately 1-2 pH-unit bin.
 causal_graphs:
 - graph_id: ph_delta_low_limited_breadth
   title: pH-delta-low limited-breadth pH homeostasis
@@ -219,4 +225,12 @@ curation_history:
     the tranche: set graph scope ph_delta_low_limited_breadth=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (f1fo_atpase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Paracoccus mangrovi (NCBITaxon:1715645; DOI:10.1099/ijsem.0.001993).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

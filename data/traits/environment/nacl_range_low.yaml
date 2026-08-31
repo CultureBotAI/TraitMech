@@ -24,6 +24,12 @@ evidence:
   snippet: salinity range
   notes: Osmoadaptation review supports growth limited to ≤ ~1% NaCl as the non-halophilic
     / halotolerant range.
+canonical_examples:
+- taxon_id: NCBITaxon:575322
+  taxon_label: Sphingomonas oligoaromativorans
+  reference: DOI:10.1099/ijs.0.052894-0
+  note: Type strain SY-6T grew from 0 to 0.5% (w/v) NaCl, with a 0.01% optimum; the
+    complete reported range lies below the approximately 1% upper bound.
 causal_graphs:
 - graph_id: nacl_range_low_non_halophile
   title: NaCl-range-low non-halophile range
@@ -216,4 +222,12 @@ curation_history:
     the tranche: set graph scope nacl_range_low_non_halophile=NONMECHANISTIC with
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mechanosensitive_channels, opu_solute_importers).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

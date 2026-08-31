@@ -18,6 +18,12 @@ evidence:
     to their preference for high pressure
   notes: Pressure-adaptation review supports the bounded span of growth-permissive
     hydrostatic pressure as a defining quantitative descriptor.
+canonical_examples:
+- taxon_id: NCBITaxon:1513592
+  taxon_label: Colwellia marinimaniae
+  reference: DOI:10.1099/ijsem.0.001671
+  note: Colwellia marinimaniae MTCD1 grew from 80 to 140 MPa at 6 degrees C; the note
+    retains the strain, endpoints, units, and temperature.
 causal_graphs:
 - graph_id: pressure_range_growth_bounded_span
   title: 'Pressure range: bounded hydrostatic-pressure span supporting growth'
@@ -201,4 +207,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope pressure_range_growth_bounded_span=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Colwellia marinimaniae (NCBITaxon:1513592; DOI:10.1099/ijsem.0.001671).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -19,6 +19,13 @@ evidence:
   snippet: ways they cope with the high salt concentrations
   notes: Saline-Systems review supports osmotic-tolerance breadth as the basis of
     the NaCl-range phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:504092
+  taxon_label: Kushneria aurantia
+  reference: DOI:10.1099/ijs.0.001461-0
+  note: 'Kushneria aurantia A10T grew from 5 to 17.5% (w/v) NaCl. The complete interval
+    crosses the mid2/high boundary, so #591 places this distinct claim on the range
+    parent only.'
 causal_graphs:
 - graph_id: nacl_range_tolerance_breadth
   title: NaCl-range osmotic-tolerance breadth
@@ -263,4 +270,12 @@ curation_history:
     the tranche: set graph scope nacl_range_tolerance_breadth=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (trk_ktr_k_influx, kima_kup_k_uptake, opua_solute_importers).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Kushneria aurantia (NCBITaxon:504092; DOI:10.1099/ijs.0.001461-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

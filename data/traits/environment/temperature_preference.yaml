@@ -19,6 +19,17 @@ evidence:
 - reference: DOI:10.1038/sj.jim.2900572
   snippet: growth rate vs temperature
   notes: Supports temperature-dependent microbial growth-rate phenotypes.
+canonical_examples:
+- taxon_id: NCBITaxon:132926
+  taxon_label: Clostridium psychrophilum
+  reference: DOI:10.1016/j.bbalip.2013.02.004
+  note: Clostridium psychrophilum has an optimum near 5 degrees C and exemplifies
+    the cold-adapted branch of the broad temperature-preference class.
+- taxon_id: NCBITaxon:2325
+  taxon_label: Thermoanaerobacter kivui
+  reference: DOI:10.3389/fmicb.2023.1265216
+  note: Thermoanaerobacter kivui had an ancestral 66 degrees C optimum and exemplifies
+    a thermophilic branch of the broad temperature-preference class.
 causal_graphs:
 - graph_id: temperature_preference_growth_physiology
   title: Environmental temperature control of growth preference
@@ -316,4 +327,13 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_preference_growth_physiology=NONMECHANISTIC
     with scope_notes; retyped 1 node(s) (rna_thermometer->RNA).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed
+    canonical example(s): Clostridium psychrophilum (NCBITaxon:132926; DOI:10.1016/j.bbalip.2013.02.004),
+    Thermoanaerobacter kivui (NCBITaxon:2325; DOI:10.3389/fmicb.2023.1265216). The
+    note retains the measured value or scopes broad-class examples to the cited branch;
+    no paid research was used.'
   llm_assisted: true

@@ -17,6 +17,13 @@ evidence:
   snippet: cells grow by a fixed amount between divisions
   notes: Adder-model paper supports an inter-divisional length increment underlying
     cell-length distributions.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: DOI:10.1016/j.cell.2014.11.022
+  note: Escherichia coli is the organism in the cited single-cell adder study, which
+    directly measures and models inter-division cell-length control; this is a family-level,
+    not bin-level, exemplar.
 causal_graphs:
 - graph_id: cell_length_division_growth_control
   scope_status: NONMECHANISTIC
@@ -252,4 +259,12 @@ curation_history:
     the tranche: set graph scope cell_length_division_growth_control=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (ftsz_ring, elongasome, ftsa_zipa, ftswi_septal_synthase).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1016/j.cell.2014.11.022).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

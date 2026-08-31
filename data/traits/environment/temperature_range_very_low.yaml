@@ -20,6 +20,13 @@ evidence:
   snippet: growing well at temperatures around the freezing point of water
   notes: Psychrophile review supports growth at very low temperatures as the psychrophilic
     range.
+canonical_examples:
+- taxon_id: NCBITaxon:357794
+  taxon_label: Psychromonas ingrahamii
+  reference: DOI:10.1099/ijs.0.64068-0
+  note: Psychromonas ingrahamii strain 37T grew from -12 to 10 degrees C in its primary
+    species description, directly establishing growth at and below this bin's 10-degree
+    threshold.
 causal_graphs:
 - graph_id: temperature_range_very_low_psychrophile
   title: Temperature-range-very-low psychrophile range
@@ -238,4 +245,12 @@ curation_history:
     the tranche: set graph scope temperature_range_very_low_psychrophile=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cold_shock_proteins, molecular_chaperones, ice_binding_proteins).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Psychromonas ingrahamii (NCBITaxon:357794; DOI:10.1099/ijs.0.64068-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

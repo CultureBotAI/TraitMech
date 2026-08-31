@@ -18,6 +18,13 @@ evidence:
   snippet: cope with the high salt concentrations
   notes: Saline-Systems review supports broad osmoadaptive capacity as the basis of
     a wide NaCl-delta phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:735518
+  taxon_label: Lederbergia graminis
+  reference: DOI:10.1099/ijs.0.023820-0
+  note: 'The type strain, published as Bacillus graminis YC6957T, grew at 0-8% (w/v)
+    NaCl. Its 8-point breadth meets a bin boundary, so #591 keeps this claim on the
+    delta parent.'
 causal_graphs:
 - graph_id: nacl_delta_euryhaline_breadth
   title: NaCl-delta euryhaline tolerance breadth
@@ -264,4 +271,12 @@ curation_history:
     the tranche: set graph scope nacl_delta_euryhaline_breadth=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mechanosensitive_channels).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

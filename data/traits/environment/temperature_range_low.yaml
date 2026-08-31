@@ -24,6 +24,12 @@ evidence:
   snippet: decreased membrane fluidity
   notes: Psychrophile review supports cool-temperature membrane and enzyme adaptation
     as the basis of growth in the 10–22 °C range.
+canonical_examples:
+- taxon_id: NCBITaxon:3234132
+  taxon_label: Aestuariibius violaceus
+  reference: DOI:10.1099/ijsem.0.006834
+  note: Aestuariibius violaceus 2305UL40-4T grew from 22 to 36 degrees C, a directly
+    reported 14-degree breadth within the approximately 10-22-degree range-width bin.
 causal_graphs:
 - graph_id: temperature_range_low_psychrotolerant
   title: Temperature-range-low psychrotolerant range
@@ -236,4 +242,12 @@ curation_history:
     the tranche: set graph scope temperature_range_low_psychrotolerant=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cold_shock_proteins, molecular_chaperones).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Aestuariibius violaceus (NCBITaxon:3234132; DOI:10.1099/ijsem.0.006834).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

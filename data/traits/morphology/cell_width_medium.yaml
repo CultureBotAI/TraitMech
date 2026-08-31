@@ -17,6 +17,12 @@ evidence:
   snippet: MreB-directed peptidoglycan synthesis
   notes: Supports the MreB/Rod-complex set-point producing typical rod widths in the
     0.65–0.9 μm range.
+canonical_examples:
+- taxon_id: NCBITaxon:3073604
+  taxon_label: Ruixingdingia sedimenti
+  reference: DOI:10.1099/ijsem.0.006350
+  note: Ruixingdingia sedimenti LG-4T cells measured 0.7-0.8 micrometres wide, wholly
+    within the approximately 0.65-0.9-micrometre bin.
 causal_graphs:
 - graph_id: cell_width_medium_typical_rod
   scope_status: NONMECHANISTIC
@@ -259,4 +265,12 @@ curation_history:
     the tranche: set graph scope cell_width_medium_typical_rod=NONMECHANISTIC with
     scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (roda_pbp2_complex, mrec_protein, pbp2_protein, mred_protein, apbp_proteins).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Ruixingdingia sedimenti (NCBITaxon:3073604; DOI:10.1099/ijsem.0.006350).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

@@ -18,6 +18,12 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa) illustrates
     the breadth this phenotype records.
+canonical_examples:
+- taxon_id: NCBITaxon:1513592
+  taxon_label: Colwellia marinimaniae
+  reference: DOI:10.1099/ijsem.0.001671
+  note: The measured 80-140 MPa growth interval of Colwellia marinimaniae MTCD1 at
+    6 degrees C gives a 60 MPa pressure breadth.
 causal_graphs:
 - graph_id: pressure_delta_breadth_descriptor
   title: 'Pressure delta: breadth of the pressure-tolerance span'
@@ -230,4 +236,12 @@ curation_history:
     the tranche: set graph scope pressure_delta_breadth_descriptor=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (nuo_complex_i).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Colwellia marinimaniae (NCBITaxon:1513592; DOI:10.1099/ijsem.0.001671).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

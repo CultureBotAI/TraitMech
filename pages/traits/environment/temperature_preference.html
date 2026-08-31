@@ -494,6 +494,54 @@ Identifiers below are supplied only where the grounding is unambiguous. **Label-
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Clostridium psychrophilum</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=132926"
+             rel="nofollow noreferrer"><code>NCBITaxon:132926</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1016/j.bbalip.2013.02.004"
+             rel="nofollow noreferrer"><code>DOI:10.1016/j.bbalip.2013.02.004</code></a>
+          
+          
+          <span class="meta">Clostridium psychrophilum has an optimum near 5 degrees C and exemplifies the cold-adapted branch of the broad temperature-preference class.</span>
+        </li>
+        
+        <li>
+          <em>Thermoanaerobacter kivui</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2325"
+             rel="nofollow noreferrer"><code>NCBITaxon:2325</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.3389/fmicb.2023.1265216"
+             rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2023.1265216</code></a>
+          
+          
+          <span class="meta">Thermoanaerobacter kivui had an ancestral 66 degrees C optimum and exemplifies a thermophilic branch of the broad temperature-preference class.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -608,6 +656,12 @@ Identifiers below are supplied only where the grounding is unambiguous. **Label-
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope temperature_preference_growth_physiology=NONMECHANISTIC with scope_notes; retyped 1 node(s) (rna_thermometer-&gt;RNA).</p>
+        </li>
+        
+        <li>
+          <time>2026-08-31T04:43:24Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed canonical example(s): Clostridium psychrophilum (NCBITaxon:132926; DOI:10.1016/j.bbalip.2013.02.004), Thermoanaerobacter kivui (NCBITaxon:2325; DOI:10.3389/fmicb.2023.1265216). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
         
       </ol>
@@ -995,7 +1049,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

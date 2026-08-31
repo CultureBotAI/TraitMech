@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/backfill_canonical_examples_444.py
+  slug: canonical-examples-final-queue
+session:
+  id: 2026-08-31T045434Z-codex-444
+  timestamp: '2026-08-31T04:54:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/444
+  - https://github.com/CultureBotAI/TraitMech/issues/591
+  prs: []
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Resolve the 89-record canonical-example queue under the source/bin policy
+  details: >-
+    Added direct, source-backed canonical examples to 85 records and recorded four
+    explicit evidence dispositions where no qualifying natural instance exists or was
+    found. Numeric examples retain the complete reported interval or point and are
+    placed only on the narrowest compatible bin; boundary-crossing claims remain on
+    their parent. The dry-run-first migration asserts the exact 89-record baseline,
+    validates every write through the closed schema, and is idempotent after application.
+    The source review used tracked artifacts and free public literature and taxonomy
+    endpoints only; no paid research was used.

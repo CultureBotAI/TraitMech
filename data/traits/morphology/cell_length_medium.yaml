@@ -17,6 +17,12 @@ evidence:
   snippet: cell size scales with growth rate
   notes: Growth-rate-dependent size law supports medium cell length as a typical outcome
     at moderate growth rates.
+canonical_examples:
+- taxon_id: NCBITaxon:1232683
+  taxon_label: Marinobacterium lacunae
+  reference: DOI:10.1007/s00203-023-03627-4
+  note: Marinobacterium lacunae AK27T cells measured 2.0-3.0 micrometres long in the
+    primary species description, matching this bin.
 causal_graphs:
 - graph_id: cell_length_medium_growth_rate
   scope_status: NONMECHANISTIC
@@ -219,4 +225,12 @@ curation_history:
     the tranche: set graph scope cell_length_medium_growth_rate=NONMECHANISTIC with
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (rodA_pbp2_complex, mreC_mreD_balance).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Marinobacterium lacunae (NCBITaxon:1232683; DOI:10.1007/s00203-023-03627-4).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

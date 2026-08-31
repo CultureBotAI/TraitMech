@@ -23,6 +23,13 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports the 30–34 °C optimum as a typical mesophile
     setpoint near common host body temperatures.
+canonical_examples:
+- taxon_id: NCBITaxon:36080
+  taxon_label: Mucor circinelloides
+  reference: DOI:10.1016/j.heliyon.2024.e30812
+  note: Unperturbed Mucor circinelloides on cheese-based agar had fitted temperature
+    optima of 32.1-32.5 degrees C without added salt, wholly inside the approximately
+    30-34-degree bin.
 causal_graphs:
 - graph_id: temperature_optimum_mid3_upper_mesophile
   title: Temperature-optimum-mid3 upper-mesophile setpoint
@@ -228,4 +235,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Mucor circinelloides (NCBITaxon:36080; DOI:10.1016/j.heliyon.2024.e30812).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

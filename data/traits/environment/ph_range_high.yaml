@@ -275,3 +275,12 @@ curation_history:
     (mrp_antiporter_complex, na_solute_symporters, f1fo_atp_synthase); removed 1 node(s)
     and 1 edge(s) together with their evidence (mrp_operon).'
   llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed issue #444 after #591 and left canonical_examples empty: No retrieved
+    primary source established a natural organism whose complete growth interval is
+    contained in pH 10-14. Sources that merely grow above pH 10 also extend below
+    the bin and therefore remain parent-level evidence under #591. No paid research
+    was used.'
+  llm_assisted: true

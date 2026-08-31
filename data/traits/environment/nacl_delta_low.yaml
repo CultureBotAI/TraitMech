@@ -17,6 +17,12 @@ evidence:
   snippet: salinity range
   notes: Osmoadaptation review supports narrow salinity-tolerance breadths as the
     stenohaline phenotype, contrasted with euryhaline organisms.
+canonical_examples:
+- taxon_id: NCBITaxon:575322
+  taxon_label: Sphingomonas oligoaromativorans
+  reference: DOI:10.1099/ijs.0.052894-0
+  note: Sphingomonas oligoaromativorans SY-6T grew from 0 to 0.5% (w/v) NaCl, a directly
+    reported 0.5-point breadth wholly within the at-most-1% delta bin.
 causal_graphs:
 - graph_id: nacl_delta_low_stenohaline
   title: NaCl-delta-low stenohaline breadth
@@ -225,4 +231,12 @@ curation_history:
     the tranche: set graph scope nacl_delta_low_stenohaline=NONMECHANISTIC with scope_notes;
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (compatible_solute_transporters,
     trkh_k_uptake, nhac_antiporter).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

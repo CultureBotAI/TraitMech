@@ -21,6 +21,17 @@ evidence:
   snippet: retention of a crystal violet:iodine complex
   notes: Supports Gram staining as differential retention of crystal violet-iodine
     complex.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: PMID:9278503
+  note: Escherichia coli exemplifies the Gram-negative outcome of the differential
+    stain and its thin-peptidoglycan, outer-membrane envelope branch.
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  reference: PMID:9384377
+  note: Bacillus subtilis exemplifies the Gram-positive outcome and thick-peptidoglycan
+    envelope branch of this broad stain class.
 causal_graphs:
 - graph_id: gram_stain_cell_envelope_retention
   title: Gram stain cell-envelope retention mechanism
@@ -157,4 +168,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gram_stain_cell_envelope_retention=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503), Bacillus
+    subtilis (NCBITaxon:1423; PMID:9384377). The note retains the measured value or
+    scopes broad-class examples to the cited branch; no paid research was used.'
   llm_assisted: true

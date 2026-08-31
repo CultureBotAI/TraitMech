@@ -207,3 +207,11 @@ curation_history:
     the tranche: set graph scope temperature_delta_low_limited_breadth=NONMECHANISTIC
     with scope_notes.'
   llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed issue #444 after #591 and left canonical_examples empty: The
+    tracked artifact explicitly found no natural organism with both sustained-growth
+    endpoints establishing a non-boundary 5-10 degree C breadth. Stress survival and
+    one-endpoint studies do not qualify under #591. No paid research was used.'
+  llm_assisted: true

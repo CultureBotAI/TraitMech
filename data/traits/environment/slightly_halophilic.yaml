@@ -13,6 +13,13 @@ evidence:
   snippet: A slightly halophilic, extremely halotolerant, alkaliphilic
   notes: 'Organism example: Paraliobacillus ryukyuensis strain O15-7T is described
     as slightly halophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:200904
+  taxon_label: Paraliobacillus ryukyuensis
+  reference: DOI:10.2323/jgam.48.269
+  note: 'Paraliobacillus ryukyuensis O15-7T was explicitly described as slightly halophilic:
+    maximum specific growth rate occurred at 0.75-3.0% NaCl although growth extended
+    from 0 to 22%.'
 causal_graphs:
 - graph_id: slight_halophile_low_salt_osmoadaptation
   title: Slight halophile low-salt osmoadaptation mechanism
@@ -324,4 +331,12 @@ curation_history:
     the tranche: set graph scope slight_halophile_low_salt_osmoadaptation=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (ect_gene_cluster).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Paraliobacillus ryukyuensis (NCBITaxon:200904; DOI:10.2323/jgam.48.269).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

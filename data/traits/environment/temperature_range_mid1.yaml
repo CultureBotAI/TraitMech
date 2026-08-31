@@ -23,6 +23,12 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports the 22–27 °C range as a lower mesophile
     growth range.
+canonical_examples:
+- taxon_id: NCBITaxon:1656892
+  taxon_label: Nakamurella aerolata
+  reference: DOI:10.1007/s00284-020-02274-y
+  note: Nakamurella aerolata DB0629T grew from 10 to 35 degrees C, a directly reported
+    25-degree breadth within the approximately 22-27-degree bin.
 causal_graphs:
 - graph_id: temperature_range_mid1_lower_mesophile
   title: Temperature-range-mid1 lower-mesophile range
@@ -239,4 +245,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Nakamurella aerolata (NCBITaxon:1656892; DOI:10.1007/s00284-020-02274-y).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

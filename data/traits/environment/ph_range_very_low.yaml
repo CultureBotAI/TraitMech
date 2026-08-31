@@ -32,6 +32,13 @@ evidence:
   snippet: growing at pH 1.0-3.0
   notes: pH-homeostasis review supports growth in the pH 1–4 range as the extreme-acidophile
     growth range.
+canonical_examples:
+- taxon_id: NCBITaxon:46632
+  taxon_label: Picrophilus oshimae
+  reference: DOI:10.1007/s007920050044
+  note: Picrophilus oshimae is an extreme acidophile whose measured growth extends
+    from approximately pH 0 to pH 4, with optimum near 0.7; the complete interval
+    is confined to this very-low range bin.
 causal_graphs:
 - graph_id: ph_range_very_low_extreme_acidophile
   title: pH-range-very-low extreme-acidophile range
@@ -248,4 +255,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope ph_range_very_low_extreme_acidophile=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Picrophilus oshimae (NCBITaxon:46632; DOI:10.1007/s007920050044).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

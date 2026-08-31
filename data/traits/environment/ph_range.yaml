@@ -19,6 +19,12 @@ evidence:
   snippet: highly impermeable cell membranes
   notes: pH-homeostasis review supports envelope-based proton barriers as the mechanism
     extending growth into acidic and alkaline extremes.
+canonical_examples:
+- taxon_id: NCBITaxon:3028314
+  taxon_label: Oceanimonas pelagia
+  reference: DOI:10.1007/s10482-024-01948-y
+  note: 'Oceanimonas pelagia NTOU-MSR1T grew at pH 7-10. The complete interval crosses
+    the mid2/mid3 split, so #591 places this distinct claim on the pH-range parent.'
 causal_graphs:
 - graph_id: ph_range_bounded_homeostasis
   title: pH-range bounded cytoplasmic homeostasis
@@ -252,4 +258,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope ph_range_bounded_homeostasis=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

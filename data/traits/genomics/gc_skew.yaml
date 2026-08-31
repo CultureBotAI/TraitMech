@@ -20,6 +20,12 @@ evidence:
 - reference: DOI:10.1016/S0378-1119(99)00297-8
   notes: Frank & Lobry review the mutational and selective mechanisms underlying strand
     compositional asymmetry.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  reference: PMID:9278503
+  note: The complete circular E. coli K-12 chromosome is a source-backed model for
+    leading/lagging-strand GC asymmetry and replication-origin inference.
 causal_graphs:
 - graph_id: gc_skew_replication_strand_asymmetry
   title: GC skew arises from replication-strand mutational asymmetry
@@ -184,4 +190,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gc_skew_replication_strand_asymmetry=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503). The note
+    retains the measured value or scopes broad-class examples to the cited branch;
+    no paid research was used.'
   llm_assisted: true

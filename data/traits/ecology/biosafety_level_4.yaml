@@ -17,6 +17,12 @@ evidence:
   snippet: virulence factors
   notes: Virulence-factor review supports the extreme virulence and absence of countermeasures
     characteristic of BSL-4 agents.
+canonical_examples:
+- taxon_id: NCBITaxon:186538
+  taxon_label: Zaire ebolavirus
+  reference: https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/ebolavirus.html
+  note: Zaire ebolavirus is assigned to the highest existing containment category
+    by the cited national pathogen-safety authority and is a concrete BSL-4 agent.
 causal_graphs:
 - graph_id: biosafety_level_4_extreme_hazard
   title: BSL-4 extreme-hazard classification
@@ -213,6 +219,14 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope biosafety_level_4_extreme_hazard=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Zaire ebolavirus (NCBITaxon:186538; https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/ebolavirus.html).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-e770cf01677c

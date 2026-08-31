@@ -18,6 +18,12 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports homoviscous remodeling capacity as the
     basis of broad versus narrow temperature tolerance.
+canonical_examples:
+- taxon_id: NCBITaxon:504092
+  taxon_label: Kushneria aurantia
+  reference: DOI:10.1099/ijs.0.001461-0
+  note: 'Kushneria aurantia A10T grew from 20 to 40 degrees C, a 20-degree breadth.
+    Because 20 meets the mid1/mid2 boundary, #591 keeps the claim on the delta parent.'
 causal_graphs:
 - graph_id: temperature_delta_thermal_flexibility
   title: Temperature-delta thermal-adaptation flexibility
@@ -188,4 +194,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_delta_thermal_flexibility=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Kushneria aurantia (NCBITaxon:504092; DOI:10.1099/ijs.0.001461-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

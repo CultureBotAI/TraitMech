@@ -23,6 +23,12 @@ evidence:
   snippet: more unsaturated fatty acids
   notes: Membrane-adaptation review supports a 27–30 °C optimum as a typical mesophile
     setpoint maintained by homoviscous membrane composition.
+canonical_examples:
+- taxon_id: NCBITaxon:2781979
+  taxon_label: Pontibacterium sinense
+  reference: DOI:10.1099/ijsem.0.006018
+  note: Pontibacterium sinense N1Y112T had a measured optimum of 28 degrees C, wholly
+    within the approximately 27-30-degree bin; growth occurred at 20-35 degrees C.
 causal_graphs:
 - graph_id: temperature_optimum_mid2_mesophile
   title: Temperature-optimum-mid2 mesophile setpoint
@@ -228,4 +234,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): declared exact synonym(s): ''mesophilic''.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Pontibacterium sinense (NCBITaxon:2781979; DOI:10.1099/ijsem.0.006018).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

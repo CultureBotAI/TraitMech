@@ -367,6 +367,35 @@ Deleting `nucS` caused:
 
     
     
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+        
+        <li>
+          <em>Streptomyces coelicolor A3(2)</em>
+          
+          
+          
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=100226"
+             rel="nofollow noreferrer"><code>NCBITaxon:100226</code></a>
+          
+          
+          
+          
+          
+          <a href="https://doi.org/10.1038/417141a"
+             rel="nofollow noreferrer"><code>DOI:10.1038/417141a</code></a>
+          
+          
+          <span class="meta">The complete Streptomyces coelicolor A3(2) genome is approximately 72.1% GC, wholly above this record&#39;s authoritative 66.3% threshold.</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
 
@@ -415,6 +444,12 @@ Deleting `nucS` caused:
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope gc_mid1_high_gc_bin=NONMECHANISTIC with scope_notes.</p>
+        </li>
+        
+        <li>
+          <time>2026-08-31T04:43:24Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Streptomyces coelicolor A3(2) (NCBITaxon:100226; DOI:10.1038/417141a). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
         
       </ol>
@@ -802,7 +837,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

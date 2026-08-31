@@ -23,6 +23,13 @@ evidence:
   snippet: moderate halophile
   notes: Osmoadaptation review supports the 3–8% NaCl optimum range as the moderate-halophile
     category.
+canonical_examples:
+- taxon_id: NCBITaxon:735518
+  taxon_label: Lederbergia graminis
+  reference: DOI:10.1099/ijs.0.023820-0
+  note: The type strain, published as Bacillus graminis YC6957T and now NCBI-labelled
+    Lederbergia graminis, grew optimally at 4-5% (w/v) NaCl, wholly inside the 3-8%
+    bin.
 causal_graphs:
 - graph_id: nacl_optimum_mid2_moderate_halophile
   title: NaCl-optimum-mid2 moderate-halophile setpoint
@@ -242,4 +249,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope nacl_optimum_mid2_moderate_halophile=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

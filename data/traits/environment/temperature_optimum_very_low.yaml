@@ -20,6 +20,13 @@ evidence:
   snippet: growing well at temperatures around the freezing point of water
   notes: Psychrophile review supports growth at very low temperatures as the psychrophilic
     optimum.
+canonical_examples:
+- taxon_id: NCBITaxon:132926
+  taxon_label: Clostridium psychrophilum
+  reference: DOI:10.1016/j.bbalip.2013.02.004
+  note: Clostridium psychrophilum was cultured near its reported optimal growth temperature
+    of 5 degrees C and also at -5 degrees C for the cited membrane-lipid study; the
+    optimum is wholly inside the at-most-10-degree bin.
 causal_graphs:
 - graph_id: temperature_optimum_very_low_psychrophile_setpoint
   title: Temperature-optimum-very-low psychrophile setpoint
@@ -294,4 +301,12 @@ curation_history:
     the tranche: set graph scope temperature_optimum_very_low_psychrophile_setpoint=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cold_shock_proteins, antifreeze_proteins).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Clostridium psychrophilum (NCBITaxon:132926; DOI:10.1016/j.bbalip.2013.02.004).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

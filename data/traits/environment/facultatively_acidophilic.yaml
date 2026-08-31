@@ -18,6 +18,13 @@ evidence:
   snippet: capable of growth at pH 4.0-7.2
   notes: Species-level example supports acidic-to-near-neutral growth capacity in
     a mildly acidophilic bacterium.
+canonical_examples:
+- taxon_id: NCBITaxon:1473598
+  taxon_label: Paludibaculum fermentans
+  reference: DOI:10.1099/ijs.0.066175-0
+  note: Paludibaculum fermentans P105T was described from acidic peat and grows from
+    pH 4.0 to 7.2, directly establishing acidic growth together with near-neutral
+    capacity.
 causal_graphs:
 - graph_id: facultatively_acidophilic_ph_homeostasis
   title: Facultative acidophily pH homeostasis mechanism
@@ -374,4 +381,12 @@ curation_history:
     the tranche: set graph scope facultatively_acidophilic_ph_homeostasis=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (proton_export_pumps, glutamate_decarboxylase_system).'
+  llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: ADD_CANONICAL_EXAMPLES
+  changes: 'Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed
+    canonical example(s): Paludibaculum fermentans (NCBITaxon:1473598; DOI:10.1099/ijs.0.066175-0).
+    The note retains the measured value or scopes broad-class examples to the cited
+    branch; no paid research was used.'
   llm_assisted: true

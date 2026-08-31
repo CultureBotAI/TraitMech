@@ -192,3 +192,11 @@ curation_history:
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cspa_protein, csda_helicase).'
   llm_assisted: true
+- timestamp: '2026-08-31T04:43:24Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed issue #444 after #591 and left canonical_examples empty: The
+    tracked artifact explicitly found no natural organism with both sustained-growth
+    endpoints establishing a 1-5 degree C breadth. Cold growth, an optimum, or an
+    assay window is not a measured delta under #591. No paid research was used.'
+  llm_assisted: true
