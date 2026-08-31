@@ -236,6 +236,18 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       notes: Review contrasts aerobic respiration with anaerobic use of alternative
         acceptors.
+  - subject: membrane_electron_transport_chain
+    predicate: contributes to
+    object: respiration_trait
+    description: The membrane respiratory chain contributes donor-to-acceptor electron
+      flow to the respiration trait.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      snippet: Ubiquinol, produced by complex I, passes those reducing equivalents
+        down the respiratory chain to the terminal acceptor—oxygen
+      notes: Verified against the public PMC full text; the connector represents the
+        aerobic branch without excluding alternative acceptors.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.910466+00:00'
   curator: seed_from_metpo
@@ -366,4 +378,10 @@ curation_history:
   changes: Added a DOI-backed E. coli K-12 AtpD beta-subunit example, grounded the
     ATP synthase and Complex I nodes to current GO complex terms, and documented the
     graph's mixed aerobic/anaerobic scope and component-level interpretation.
+  llm_assisted: true
+- timestamp: '2026-08-31T08:20:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

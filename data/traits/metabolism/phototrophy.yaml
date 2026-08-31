@@ -208,6 +208,18 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14519
       notes: '"High-energy photons and the generation of free radicals damage PSII";
         strong environmental inhibitor edge.'
+  - subject: photosystem_ii
+    predicate: contributes to
+    object: phototrophy_trait
+    description: Photosystem II contributes the light-sensing and reaction-center
+      machinery of the graph's oxygenic phototrophy branch.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      snippet: Both photosystems bind chlorophylls to sense light, use chlorophylls
+        and other pigments to transfer light to a photosynthetic reaction centre
+      notes: Verified against the public PMC full text; the description keeps this
+        connector scoped to oxygenic phototrophy.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
@@ -301,4 +313,10 @@ curation_history:
   changes: Added a strain-matched Synechocystis PsbA2/D1 example, converted both existing
     canonical citations to DOI, retained microbial rhodopsin as reviewed label-only,
     and documented the parent graph's independent mechanism branches.
+  llm_assisted: true
+- timestamp: '2026-08-31T08:20:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true

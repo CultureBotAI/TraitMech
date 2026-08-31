@@ -4,7 +4,7 @@ induces	34	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecol
 required for	29	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/free_living.yaml|data/traits/ecology/symbiosis.yaml
 drives	29	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/environment/nacl_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 maintains	29	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/acidophilic.yaml|data/traits/environment/acidotolerant.yaml
-mediates	27	unmapped		data/traits/ecology/animal_pathogen.yaml|data/traits/environment/extremely_halophilic.yaml|data/traits/environment/metal_tolerant.yaml
+mediates	28	unmapped		data/traits/ecology/animal_pathogen.yaml|data/traits/environment/extremely_halophilic.yaml|data/traits/environment/metal_tolerant.yaml
 stabilizes	19	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
 converts	19	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/environment/moderately_halophilic.yaml|data/traits/metabolism/biopolymer_degradation.yaml
 protects against	15	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
@@ -384,6 +384,7 @@ reduced with electron donor	1	unmapped		data/traits/metabolism/methanogenesis.ya
 has prosthetic group	1	unmapped		data/traits/metabolism/methanogenesis.yaml
 carries methyl group in	1	unmapped		data/traits/metabolism/methanogenesis.yaml
 induces synthesis of	1	unmapped		data/traits/metabolism/mixed_acid_fermentation.yaml
+is metabolized by	1	unmapped		data/traits/metabolism/mixed_acid_fermentation.yaml
 uses pathway	1	unmapped		data/traits/metabolism/oxidative_phosphorylation.yaml
 used in	1	unmapped		data/traits/metabolism/photosynthesis.yaml
 supplies electrons to	1	unmapped		data/traits/metabolism/phototrophy.yaml

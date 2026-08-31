@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/homoacetogenesis.yaml
+  slug: homoacetogenesis
+session:
+  id: 2026-08-31T082502Z-codex-176f47
+  timestamp: '2026-08-31T08:25:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Connected the homoacetogenesis causal graph
+  details: Added a public-source, exact-snippet-backed part-of edge from the methyl branch
+    to the Wood-Ljungdahl pathway. The graph moved from two components to one. No paid research
+    service was called.

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_metabolism_two_component_graphs_183.py
+  slug: connect-metabolism-two-component-graphs-183
+session:
+  id: 2026-08-31T082508Z-codex-443b58
+  timestamp: '2026-08-31T08:25:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: Connected eight two-component metabolism graphs
+  details: 'Added a validated dry-run migration and seventeen regression tests for eight issue
+    #183 metabolism records. Eight exact public-source connectors removed eight fragmentation
+    findings and thirty-nine unreachable-node findings without adding an evidence-snippet
+    or predicate-domain defect. No paid research service was called.'

@@ -236,6 +236,15 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.703525
       notes: Connecting edge wiring the enrichment node into the graph.
     predicate_id: METPO:2007800
+  - subject: acetyl_coa
+    predicate: is metabolized by
+    object: pta_acka
+    description: The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing
+      branch of mixed-acid fermentation.
+    evidence:
+    - reference: DOI:10.1128/iai.00176-23
+      snippet: Acetyl-CoA is further metabolized by Pta and AckA to generate acetate
+      notes: Verified against the public PMC full text.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -313,4 +322,10 @@ curation_history:
   changes: Added a DOI-backed E. coli K-12 PflB example and GO activity, converted
     the species citation to DOI, retained combined Pta/AckA and FHL labels with explicit
     review rationales, and documented enterobacterial scope.
+  llm_assisted: true
+- timestamp: '2026-08-31T08:20:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
+    verbatim-snippet-backed connector(s). No paid research service was called.'
   llm_assisted: true
