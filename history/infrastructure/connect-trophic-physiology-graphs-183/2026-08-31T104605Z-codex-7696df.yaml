@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/connect_trophic_physiology_graphs_183.py
+  slug: connect-trophic-physiology-graphs-183
+session:
+  id: 2026-08-31T104605Z-codex-7696df
+  timestamp: '2026-08-31T10:46:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - scripts
+  - tests
+  - reports
+  - baseline
+  summary: 'Add reproducible trophic physiology graph migration for issue #183'
+  details: Added a guarded, idempotent five-record migration and regression tests for exact
+    replay, component counts, alternate-state refusal, and metadata drift. Structural findings
+    fell from 264 to 245, fragmented graphs from 24 to 19, unreachable findings from 155 to
+    141, and attached coverage rose from 90.0% to 90.9%. Evidence findings stayed at 2593,
+    predicate-domain findings stayed at zero, and no paid research service was called.

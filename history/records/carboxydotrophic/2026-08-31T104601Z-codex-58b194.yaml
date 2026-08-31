@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/carboxydotrophic.yaml
+  slug: carboxydotrophic
+session:
+  id: 2026-08-31T104601Z-codex-58b194
+  timestamp: '2026-08-31T10:46:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: 'Connect the carboxydotrophic causal graph for issue #183'
+  details: Added one public-source, verbatim-snippet-backed CooA-to-CODH regulatory connector,
+    joining two mechanistic components. No paid research service was called.
