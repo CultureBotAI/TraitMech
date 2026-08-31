@@ -27,6 +27,8 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime as _dt
+import hashlib
+import json
 import os
 import re
 import subprocess
@@ -110,6 +112,11 @@ MALFORMED_CURIE_PATTERNS: tuple[tuple[str, "re.Pattern[str]"], ...] = (
 # is 20,785 bytes (ecology/biosafety_level_4), so 1 KiB leaves a 20x margin and
 # cannot fail on real data while still catching an artifact with nothing in it.
 MIN_ARTIFACT_BYTES = 1024
+
+PILOT_MANIFEST_RE = re.compile(
+    r"^\d{4}-\d{2}-\d{2}-(?P<label>[a-z0-9][a-z0-9-]*-pilot)\.json$"
+)
+PILOT_TARGET_RE = re.compile(r"^(?P<category>[a-z0-9_]+)/(?P<slug>[a-z0-9_]+)$")
 
 # A report on disk with no `ok` manifest row SUPPRESSES A CALL THAT WAS NEVER
 # PAID FOR OR RECORDED — but only if resume would have looked for that name.
@@ -211,6 +218,108 @@ def scan_malformed_curies(paths: list[Path]) -> list[tuple[Path, int, str, str]]
                         continue
                     bad.append((path, line_no, name, text))
     return bad
+
+
+def audit_pilot_artifacts(research_root: Path) -> tuple[list[str], int, int]:
+    """Validate root pilot manifests and their dry-run metadata sidecars (#525).
+
+    A pilot manifest is a dated JSON list of ``category/slug`` targets. Each
+    target must have exactly one matching metadata sidecar, every sidecar must
+    be declared by the manifest, and the captured query hash must still match
+    its query. Dry-run provenance must not claim a task id or cost.
+    """
+    errors: list[str] = []
+    manifest_count = 0
+    sidecars_seen: set[Path] = set()
+
+    for manifest in sorted(research_root.glob("*.json")):
+        match = PILOT_MANIFEST_RE.fullmatch(manifest.name)
+        if not match:
+            continue
+        manifest_count += 1
+        label = match.group("label")
+        manifest_sidecars: set[Path] = set()
+        try:
+            targets = json.loads(manifest.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"{manifest}: invalid JSON: {exc}")
+            continue
+        if not isinstance(targets, list):
+            errors.append(f"{manifest}: expected a JSON list")
+            continue
+
+        declared: set[str] = set()
+        for index, target in enumerate(targets):
+            if not isinstance(target, str) or not (parsed := PILOT_TARGET_RE.fullmatch(target)):
+                errors.append(f"{manifest}: item {index} is not category/slug: {target!r}")
+                continue
+            if target in declared:
+                errors.append(f"{manifest}: duplicate target {target}")
+                continue
+            declared.add(target)
+            category, slug = parsed.group("category"), parsed.group("slug")
+            matches = sorted(
+                (research_root / "traits" / category).glob(
+                    f"{slug}-*-{label}-meta.yaml"
+                )
+            )
+            if len(matches) != 1:
+                errors.append(
+                    f"{manifest}: {target} has {len(matches)} matching meta sidecars"
+                )
+                manifest_sidecars.update(matches)
+                sidecars_seen.update(matches)
+                continue
+            meta_path = matches[0]
+            manifest_sidecars.add(meta_path)
+            sidecars_seen.add(meta_path)
+            try:
+                meta = yaml.safe_load(meta_path.read_text(encoding="utf-8"))
+            except (OSError, yaml.YAMLError) as exc:
+                errors.append(f"{meta_path}: invalid YAML: {exc}")
+                continue
+            if not isinstance(meta, dict):
+                errors.append(f"{meta_path}: expected a YAML mapping")
+                continue
+
+            expected = {
+                "slug": slug,
+                "trait_category": category,
+                "trait_path": f"data/traits/{category}/{slug}.yaml",
+                "label": label,
+                "status": "dry-run",
+            }
+            for field, value in expected.items():
+                if meta.get(field) != value:
+                    errors.append(
+                        f"{meta_path}: {field}={meta.get(field)!r}, expected {value!r}"
+                    )
+            for field in ("job", "template_path", "submitted_at"):
+                if not meta.get(field):
+                    errors.append(f"{meta_path}: missing {field}")
+            if meta.get("task_id") not in (None, ""):
+                errors.append(f"{meta_path}: dry-run unexpectedly has task_id")
+            if meta.get("total_cost") not in (None, ""):
+                errors.append(f"{meta_path}: dry-run unexpectedly has total_cost")
+
+            query = meta.get("query")
+            declared_hash = meta.get("query_sha256")
+            if not isinstance(query, str) or not query:
+                errors.append(f"{meta_path}: missing query")
+            elif not isinstance(declared_hash, str):
+                errors.append(f"{meta_path}: missing query_sha256")
+            elif hashlib.sha256(query.encode("utf-8")).hexdigest() != declared_hash:
+                errors.append(f"{meta_path}: query_sha256 does not match query")
+
+        all_sidecars = set((research_root / "traits").rglob(f"*-{label}-meta.yaml"))
+        for extra in sorted(all_sidecars - manifest_sidecars):
+            errors.append(f"{manifest}: undeclared meta sidecar {extra}")
+        sidecars_seen.update(all_sidecars)
+
+    if manifest_count == 0:
+        errors.append(f"{research_root}: no dated *-pilot.json manifest found")
+
+    return errors, manifest_count, len(sidecars_seen)
 
 
 def main() -> int:
@@ -315,7 +424,20 @@ def main() -> int:
         if len(bad_curies) > 20:
             print(f"  ... and {len(bad_curies) - 20} more", file=sys.stderr)
 
-        return 1 if (missing or undersized or orphans or bad_curies) else 0
+        pilot_errors, pilot_manifests, pilot_sidecars = audit_pilot_artifacts(
+            REPO_ROOT / "research"
+        )
+        print(
+            f"pilot manifests / meta sidecars: {pilot_manifests} / {pilot_sidecars}",
+            file=sys.stderr,
+        )
+        print(f"pilot artifact errors: {len(pilot_errors)}", file=sys.stderr)
+        for error in pilot_errors[:20]:
+            print(f"  {error}", file=sys.stderr)
+        if len(pilot_errors) > 20:
+            print(f"  ... and {len(pilot_errors) - 20} more", file=sys.stderr)
+
+        return 1 if (missing or undersized or orphans or bad_curies or pilot_errors) else 0
 
     # One id for every row this invocation writes. The manifest is append-only
     # and a trait can legitimately appear more than once — a failure and its

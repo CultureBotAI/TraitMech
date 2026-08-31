@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from audit_uniprot_grounding import audit_uses, iter_uses  # noqa: E402
+from audit_uniprot_grounding import audit_uses, iter_nodes, iter_uses  # noqa: E402
 
 
 def _node(example=None, grounding=None):
@@ -87,6 +87,35 @@ def test_generic_uniprot_grounding_is_always_a_finding():
     row = _audit(_node(grounding="UniProtKB:P0A6Y8"))
     assert row["usage"] == "GENERIC_GROUNDING"
     assert "GENERIC_UNIPROT_GROUNDING" in row["finding"]
+
+
+def test_generic_uniprot_grounding_on_rna_is_discovered_from_disk(tmp_path):
+    category = tmp_path / "category"
+    category.mkdir()
+    (category / "record.yaml").write_text(
+        "causal_graphs:\n"
+        "- graph_id: g\n"
+        "  nodes:\n"
+        "  - node_id: rna\n"
+        "    label: regulatory RNA\n"
+        "    node_type: RNA\n"
+        "    grounding: UniProtKB:P0A6Y8\n",
+        encoding="utf-8",
+    )
+
+    uses = iter_uses(iter_nodes(tmp_path))
+
+    assert len(uses) == 1
+    assert uses[0]["node"]["node_type"] == "RNA"
+    assert uses[0]["usage"] == "GENERIC_GROUNDING"
+
+
+def test_declared_proteome_is_compared_with_all_resolved_proteomes():
+    matching = _audit(_node(_example(proteome_id="UP000000625")))
+    assert matching["finding"] == ""
+
+    mismatch = _audit(_node(_example(proteome_id="UP000999999")))
+    assert "PROTEOME_MISMATCH" in mismatch["finding"]
 
 
 def test_resolver_called_once_for_reused_accession():

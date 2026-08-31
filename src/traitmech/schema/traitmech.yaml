@@ -325,7 +325,9 @@ classes:
           Curator disposition for whether this graph represents a biological
           mechanism. NONMECHANISTIC is reserved for an explicitly reviewed
           measurement, classification, or upper-ontology context and must be
-          explained in scope_notes.
+          explained in scope_notes. Omission is treated as REVIEW_NEEDED and is
+          a blocking coverage-audit gap; the slot remains schema-optional only
+          for protected legacy records.
         range: CausalGraphScopeEnum
       scope_notes:
         description: Evidence-based rationale for the graph scope disposition.
@@ -425,7 +427,7 @@ classes:
         description: Current UniProtKB primary accession.
         required: true
         range: string
-        pattern: "^UniProtKB:[A-Z0-9]+$"
+        pattern: "^UniProtKB:(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$"
       protein_label:
         description: Current UniProt protein name or concise source-backed name.
         required: true
@@ -468,6 +470,7 @@ classes:
         description: >-
           Source-backed role in this mechanism, including an explicit
           component role when the causal node denotes a multisubunit complex.
+        required: true
         range: string
       evidence:
         description: >-

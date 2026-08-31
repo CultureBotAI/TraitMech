@@ -43,15 +43,19 @@ PROTECTED_PATH_RE = re.compile(r"`(data/traits/[^`]+\.yaml)`")
 
 SEMANTIC_PROTEIN_PREFIXES = {"ComplexPortal", "GO", "InterPro", "NCBIfam"}
 ERROR_CODES = {
+    "TRAIT_RECORD_LOAD_ERROR",
     "GENERIC_UNIPROT_GROUNDING",
     "PROTEIN_EXAMPLE_ON_NONPROTEIN_NODE",
     "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID",
     "PROTEIN_EXAMPLE_MISSING_TAXON_ID",
+    "PROTEIN_EXAMPLE_MISSING_ROLE",
     "PROTEIN_EXAMPLE_MISSING_EVIDENCE",
     "PROTEIN_EXAMPLE_EVIDENCE_INCOMPLETE",
     "UNREVIEWED_EXAMPLE_MISSING_PROTEOME",
     "LABEL_ONLY_STATUS_WITH_GROUNDING",
 }
+
+LOAD_ERROR_KEY = "__audit_trait_record_load_error__"
 
 NONPROTEIN_PRIMARY_RE = re.compile(
     r"(?:^|[\s/()-])(?:genes?|operons?|gene clusters?|loci|locus)(?:$|[\s/()-])",
@@ -94,20 +98,25 @@ FIELDS = [
 
 
 def load_records(traits_dir: Path = TRAITS) -> list[tuple[str, dict[str, Any]]]:
-    """Load TraitRecords, retaining paths for actionable report rows."""
+    """Load TraitRecords, retaining failures as gate-visible pseudo-records."""
     records: list[tuple[str, dict[str, Any]]] = []
     for path in sorted(traits_dir.glob("*/*.yaml")):
+        try:
+            label = path.relative_to(REPO_ROOT).as_posix()
+        except ValueError:
+            label = path.as_posix()
         try:
             doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         except yaml.YAMLError as exc:
             print(f"WARN: unparseable {path}: {exc}", file=sys.stderr)
+            records.append((label, {LOAD_ERROR_KEY: str(exc)}))
             continue
         if isinstance(doc, dict):
-            try:
-                label = path.relative_to(REPO_ROOT).as_posix()
-            except ValueError:
-                label = path.as_posix()
             records.append((label, doc))
+        else:
+            detail = f"expected a mapping, found {type(doc).__name__}"
+            print(f"WARN: invalid trait record {path}: {detail}", file=sys.stderr)
+            records.append((label, {LOAD_ERROR_KEY: detail}))
     return records
 
 
@@ -132,6 +141,29 @@ def _evidence_is_complete(evidence: Any) -> bool:
     )
 
 
+def _load_error_row(file_label: str, detail: str) -> dict[str, Any]:
+    """Return a report row that makes an unreadable record fail every gate."""
+    compact_detail = " ".join(detail.split())[:240]
+    return {
+        "file": file_label,
+        "trait_id": "",
+        "trait_label": "",
+        "graph_id": "",
+        "scope_status": "",
+        "protein_nodes": 0,
+        "semantic_grounded_nodes": 0,
+        "reviewed_label_only_nodes": 0,
+        "canonical_examples": 0,
+        "cited_canonical_examples": 0,
+        "protein_examples": 0,
+        "taxon_matched_examples": 0,
+        "status": "ERROR",
+        "error_count": 1,
+        "gap_count": 0,
+        "unmet_requirements": f"TRAIT_RECORD_LOAD_ERROR:{compact_detail}",
+    }
+
+
 def graph_row(
     file_label: str,
     record: dict[str, Any],
@@ -146,7 +178,7 @@ def graph_row(
     toward the ``--fail-on gaps`` gate. Errors are never protected.
     """
     issues: list[tuple[str, str]] = []
-    scope = str(graph.get("scope_status") or "UNREVIEWED")
+    scope = str(graph.get("scope_status") or "")
     nodes = [node for node in graph.get("nodes") or [] if isinstance(node, dict)]
     declared_protein_nodes = [
         node for node in nodes if node.get("node_type") == "GENE_OR_PROTEIN"
@@ -169,35 +201,70 @@ def graph_row(
     taxon_matched_count = 0
 
     for node in nodes:
+        node_id = str(node.get("node_id") or "?")
+        node_type = node.get("node_type")
+        nonprotein_label = _is_nonprotein_primary_label(node.get("label"))
+        valid_protein_node = node_type == "GENE_OR_PROTEIN" and not nonprotein_label
+        grounding = str(node.get("grounding") or "")
         examples = [
             ex for ex in node.get("protein_examples") or [] if isinstance(ex, dict)
         ]
-        if examples and node.get("node_type") != "GENE_OR_PROTEIN":
+        if grounding.startswith("UniProtKB:"):
+            _issue(issues, "GENERIC_UNIPROT_GROUNDING", node_id)
+
+        if examples and not valid_protein_node:
             _issue(
                 issues,
                 "PROTEIN_EXAMPLE_ON_NONPROTEIN_NODE",
-                str(node.get("node_id") or "?"),
+                node_id,
             )
 
-        if node.get("node_type") != "GENE_OR_PROTEIN":
+        # Validate every declared example even when the owning node is invalid;
+        # otherwise putting examples on a gene/operon/RNA-shaped legacy node
+        # bypasses every field-level check below (#523).
+        for ex in examples:
+            uniprot_id = str(ex.get("uniprot_id") or "")
+            taxon_id = str(ex.get("taxon_id") or "")
+            ex_label = uniprot_id or node_id
+
+            if not uniprot_id.startswith("UniProtKB:"):
+                _issue(issues, "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID", ex_label)
+            if not taxon_id.startswith("NCBITaxon:"):
+                _issue(issues, "PROTEIN_EXAMPLE_MISSING_TAXON_ID", ex_label)
+            if not ex.get("role"):
+                _issue(issues, "PROTEIN_EXAMPLE_MISSING_ROLE", ex_label)
+
+            evidence = ex.get("evidence")
+            if not isinstance(evidence, list) or not evidence:
+                _issue(issues, "PROTEIN_EXAMPLE_MISSING_EVIDENCE", ex_label)
+            elif any(not _evidence_is_complete(item) for item in evidence):
+                _issue(issues, "PROTEIN_EXAMPLE_EVIDENCE_INCOMPLETE", ex_label)
+
+            if ex.get("entry_status") == "UNREVIEWED" and not ex.get("proteome_id"):
+                _issue(issues, "UNREVIEWED_EXAMPLE_MISSING_PROTEOME", ex_label)
+
+            if valid_protein_node:
+                protein_example_count += 1
+                if taxon_id in canonical_taxa:
+                    taxon_matched_count += 1
+
+        if node_type != "GENE_OR_PROTEIN":
             continue
 
-        if _is_nonprotein_primary_label(node.get("label")):
+        if nonprotein_label:
             _issue(
                 issues,
                 "GENE_OR_OPERON_PRIMARY_NODE",
-                str(node.get("node_id") or "?"),
+                node_id,
             )
             continue
 
-        node_id = str(node.get("node_id") or "?")
-        grounding = str(node.get("grounding") or "")
         prefix = grounding.split(":", 1)[0] if grounding else ""
         status = node.get("grounding_status")
         notes = node.get("grounding_notes")
 
         if grounding.startswith("UniProtKB:"):
-            _issue(issues, "GENERIC_UNIPROT_GROUNDING", node_id)
+            pass  # Already reported for every node type above.
         elif prefix in SEMANTIC_PROTEIN_PREFIXES:
             semantic_grounded += 1
         elif grounding:
@@ -211,29 +278,7 @@ def graph_row(
             else:
                 _issue(issues, "LABEL_ONLY_NODE_NOT_REVIEWED", node_id)
 
-        for ex in examples:
-            protein_example_count += 1
-            uniprot_id = str(ex.get("uniprot_id") or "")
-            taxon_id = str(ex.get("taxon_id") or "")
-            ex_label = uniprot_id or node_id
-
-            if not uniprot_id.startswith("UniProtKB:"):
-                _issue(issues, "PROTEIN_EXAMPLE_MISSING_UNIPROT_ID", ex_label)
-            if not taxon_id.startswith("NCBITaxon:"):
-                _issue(issues, "PROTEIN_EXAMPLE_MISSING_TAXON_ID", ex_label)
-            elif taxon_id in canonical_taxa:
-                taxon_matched_count += 1
-
-            evidence = ex.get("evidence")
-            if not isinstance(evidence, list) or not evidence:
-                _issue(issues, "PROTEIN_EXAMPLE_MISSING_EVIDENCE", ex_label)
-            elif any(not _evidence_is_complete(item) for item in evidence):
-                _issue(issues, "PROTEIN_EXAMPLE_EVIDENCE_INCOMPLETE", ex_label)
-
-            if ex.get("entry_status") == "UNREVIEWED" and not ex.get("proteome_id"):
-                _issue(issues, "UNREVIEWED_EXAMPLE_MISSING_PROTEOME", ex_label)
-
-    if scope == "UNREVIEWED" or scope == "REVIEW_NEEDED":
+    if not scope or scope == "REVIEW_NEEDED":
         _issue(issues, "SCOPE_NOT_REVIEWED")
     elif scope == "NONMECHANISTIC" and not graph.get("scope_notes"):
         _issue(issues, "NONMECHANISTIC_SCOPE_MISSING_NOTES")
@@ -281,11 +326,14 @@ def coverage_rows(
     records: Iterable[tuple[str, dict[str, Any]]] | None = None,
     protected: set[str] | None = None,
 ) -> list[dict[str, Any]]:
-    """Return one coverage row per graph in the supplied or live corpus."""
+    """Return one row per graph, plus one error row per unreadable record."""
     source = load_records() if records is None else records
     shielded = load_protected() if protected is None else protected
     rows: list[dict[str, Any]] = []
     for file_label, record in source:
+        if LOAD_ERROR_KEY in record:
+            rows.append(_load_error_row(file_label, str(record[LOAD_ERROR_KEY])))
+            continue
         for graph in record.get("causal_graphs") or []:
             if isinstance(graph, dict):
                 rows.append(

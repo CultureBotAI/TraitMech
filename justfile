@@ -290,7 +290,7 @@ audit-justfile-paths *args:
 # records listed in DO_NOT_WORK.md report PROTECTED instead of GAP so the
 # gate stays reachable. Offline and deterministic.
 audit-graph-protein-taxa *args:
-    uv run python scripts/audit_graph_protein_taxa.py --fail-on errors {{args}}
+    uv run python scripts/audit_graph_protein_taxa.py --fail-on gaps {{args}}
 
 # Resolve every UniProtKB protein example against the UniProt REST API and
 # verify primary accession, review status, taxon, and entry/sequence versions.

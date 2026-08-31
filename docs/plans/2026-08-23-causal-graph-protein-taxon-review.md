@@ -12,7 +12,9 @@ than primary entries.
 The ten metabolism pilot sidecars are dry-run records only: the pilot made no
 research call, recorded no cost/model/task id, and produced no new report. The
 exemplar work reused the tracked reports and checked DOI sources described in
-phase 6.
+phase 6. `just audit-research-artifacts` now cross-checks the dated root pilot
+manifest against all ten sidecars, validates their dry-run status and query
+hashes, and rejects undeclared, missing, or cost-bearing pilot artifacts (#525).
 
 ## Objective
 
