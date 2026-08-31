@@ -559,6 +559,10 @@ research-providers:
 research-provider provider:
     uv run --extra dev deep-research-client providers --provider {{provider}}
 
+# Non-billing provider checks; see docs/DEEP_RESEARCH_PROVIDERS.md.
+deep-research-canary provider="all" *args="":
+    uv run --extra dev python scripts/deep_research_contract.py {{provider}} {{args}}
+
 # Rank providers for TraitMech causal-mechanism or definition-grounding work.
 deep-research-providers focus="causal_mechanism" *args="":
     uv run --extra dev python scripts/deep_research_provider.py \
