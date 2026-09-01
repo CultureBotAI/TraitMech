@@ -89,6 +89,17 @@ causal_graphs:
     label: primary-fermenter-dominated community
     node_type: STATE
     description: A gut microbial community dominated by anaerobic primary fermenters.
+  - node_id: butyrate
+    label: butyrate
+    node_type: CHEMICAL
+    description: Short-chain fatty acid produced by anaerobic primary fermenters and
+      consumed by colonocytes as their principal respiratory substrate.
+    grounding: CHEBI:17968
+  - node_id: colonocyte_oxidative_metabolism
+    label: colonocyte oxidative metabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Beta-oxidation of butyrate by colonic epithelial cells, which consumes
+      oxygen at the mucosal surface.
   edges:
   - subject: gastrointestinal_habitat
     predicate: confers
@@ -176,6 +187,67 @@ causal_graphs:
       notes: During homeostasis, host functions that limit oxygen diffusion into the
         colonic lumen shelter a community dominated by primary fermenters (Lee et
         al., 2024).
+    predicate_id: RO:0002326
+  - subject: primary_fermenter_community
+    predicate: produces
+    object: butyrate
+    description: The anaerobic primary-fermenter community is the source of luminal
+      butyrate; depleting it collapses butyrate and reconstituting it restores butyrate.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2016.03.004
+      snippet: inoculation with a community of 17 human Clostridia isolates resulted
+        in a significant increase in butyrate levels
+      notes: 'The recolonisation arm of the discussion''s decision rule. The converse
+        was shown in the same study: streptomycin depletion of butyrate-producing
+        Clostridia lowered cecal butyrate.'
+    predicate_id: biolink:produces
+  - subject: butyrate
+    predicate: positively regulates
+    object: colonocyte_oxidative_metabolism
+    description: Butyrate is sensed by epithelial PPAR-gamma and drives colonocyte
+      energy metabolism toward beta-oxidation, raising epithelial oxygen consumption.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2015.03.005
+      snippet: Bacteria-derived butyrate affects epithelial O2 consumption and results
+        in stabilization of hypoxia-inducible factor (HIF), a transcription factor
+        coordinating barrier protection
+      notes: 'Cell-culture work in the same study shows the effect is direct: epithelial
+        metabolism of butyrate depletes local oxygen.'
+    - reference: DOI:10.1126/science.aam9949
+      snippet: the depletion of butyrate-producing microbes by antibiotic treatment
+        reduced epithelial signaling through the intracellular butyrate sensor peroxisome
+        proliferator-activated receptor γ (PPAR-γ)
+      notes: Identifies PPAR-gamma as the epithelial butyrate sensor.
+    predicate_id: RO:0002213
+  - subject: colonocyte_oxidative_metabolism
+    predicate: contributes to
+    object: luminal_oxygen_limitation
+    description: 'Colonocyte beta-oxidation consumes oxygen at the mucosa and so limits
+      the oxygen reaching the lumen. SCOPE: this is a claim about mucosal-to-luminal
+      oxygen flux and bioavailability, NOT about bulk centre-lumen anoxia.'
+    evidence:
+    - reference: DOI:10.1126/science.aam9949
+      snippet: Microbiota-induced PPAR-γ signaling also limits the luminal bioavailability
+        of oxygen by driving the energy metabolism of colonic epithelial cells (colonocytes)
+        toward β-oxidation
+      notes: States the closing step directly, and in terms of BIOAVAILABILITY rather
+        than bulk concentration.
+    - reference: DOI:10.1016/j.chom.2016.03.004
+      snippet: tributyrin supplementation restored epithelial hypoxia in streptomycin-treated
+        mice
+      notes: 'Metabolite rescue: the oxygen change tracks butyrate, not the antibiotic,
+        which is what makes the return arm causal rather than correlational.'
+    - reference: DOI:10.1073/pnas.1718635115
+      snippet: Remarkably, luminal oxygen levels were found to be nearly indistinguishable
+        between conventionally housed and germ-free mice, being close to zero in the
+        cecum in both cases
+      notes: BOUNDING EVIDENCE, attached deliberately. Direct phosphorescent-probe
+        measurement shows the microbiota is NOT responsible for bulk centre-lumen
+        anoxia -- germ-free cecal contents consume oxygen chemically on their own.
+        This edge therefore asserts only that colonocyte metabolism limits oxygen
+        FLUX toward the lumen, which is how the target node is defined. Any future
+        strengthening of this edge into a claim about bulk anoxia would contradict
+        this source.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
@@ -267,6 +339,29 @@ curation_history:
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (adhesins).'
   llm_assisted: true
+- timestamp: '2026-09-01T02:32:12Z'
+  curator: claude
+  action: CONNECT_CAUSAL_GRAPH
+  changes: 'Closed the oxygen/fermenter feedback loop in gut_associated_microbiota_metabolism
+    (#617), resolving the record''s x-gut-oxygen-causal-direction knowledge gap in
+    favour of its would_support criterion. Added nodes butyrate (CHEBI:17968) and
+    colonocyte_oxidative_metabolism, and three edges: primary_fermenter_community
+    -[biolink:produces]-> butyrate -[RO:0002213]-> colonocyte_oxidative_metabolism
+    -[RO:0002326]-> luminal_oxygen_limitation. The return arm is modelled as HOST-MEDIATED
+    rather than as direct microbial oxygen consumption, because that is what the sources
+    show. The closing edge carries DOI:10.1073/pnas.1718635115 as bounding evidence:
+    bulk centre-lumen pO2 is near-identical in germ-free and conventional mice, so
+    the claim is scoped to mucosal-to-luminal oxygen flux and must not drift into
+    bulk anoxia. No connectivity-only edge was invented to attach this component to
+    the trait node.'
+  llm_assisted: true
+- timestamp: '2026-09-01T02:33:06Z'
+  curator: claude
+  action: RESOLVE_DISCUSSION
+  changes: Set the x-gut-oxygen-causal-direction knowledge gap to RESOLVED after both
+    arms of its would_support criterion were met and the mediated loop landed with
+    four verified primary references. See issue 617.
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3
   prompt: This record commits to luminal oxygen limitation contributing to the primary
@@ -274,7 +369,7 @@ discussions:
     epithelium maintain the anoxia -- making this a feedback loop rather than the
     one-way edge drawn?
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   rationale: 'The existing edge is not wrong so much as half: it says the anoxic lumen
     permits the fermenters, and stops. If the return arm also holds, the two nodes
     are a self-reinforcing loop, and losing the fermenters raises luminal oxygen and
@@ -333,3 +428,21 @@ discussions:
     would_refute: oxygen is unchanged by depletion -- the habitat sets the anoxia
       and the single existing edge is the whole story
   posed_date: '2026-08-17'
+  resolved_date: '2026-08-31'
+  resolution_note: 'Supported, with two bounds. The would_support criterion was ''oxygen
+    rises on depletion and falls again on re-colonisation'', and both arms hold: streptomycin
+    depletion of butyrate-producing Clostridia lowers cecal butyrate and raises epithelial
+    oxygenation, tributyrin supplementation reverses it, and recolonisation with 17
+    human Clostridia isolates raises butyrate and restores colonocyte hypoxia (DOI:10.1016/j.chom.2016.03.004),
+    replicated independently by DOI:10.1016/j.chom.2015.03.005. The pair is therefore
+    a feedback loop, now modelled as such. Bound 1: the return arm is HOST-MEDIATED,
+    running through butyrate and colonocyte beta-oxidation rather than direct microbial
+    oxygen consumption (DOI:10.1126/science.aam9949), so the graph routes it through
+    the new butyrate and colonocyte_oxidative_metabolism nodes rather than drawing
+    a direct reverse edge. Bound 2: the community is NOT responsible for bulk centre-lumen
+    anoxia -- direct phosphorescent-probe measurement finds germ-free and conventional
+    mice nearly indistinguishable (DOI:10.1073/pnas.1718635115) -- so the closing
+    edge is scoped to mucosal-to-luminal oxygen flux and carries that source as bounding
+    evidence. Left open and tracked in issue 617: whether abiotic luminal oxygen consumption
+    deserves its own node, and whether this component should attach to the trait node,
+    which no current source supports.'
