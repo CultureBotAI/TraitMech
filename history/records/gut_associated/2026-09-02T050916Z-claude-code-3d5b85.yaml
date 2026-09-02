@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/gut_associated.yaml
+  slug: gut_associated
+session:
+  id: 2026-09-02T050916Z-claude-code-3d5b85
+  timestamp: '2026-09-02T05:09:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/619
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct two fabricated or elided snippets and one overstated note found reviewing
+    PR 618
+  details: 'Adversarial review of my own PR 618 before merge, correcting three defects. Issue
+    619 (critical): the DOI:10.1073/pnas.1718635115 snippet was a PARAPHRASE presented as
+    a verbatim quote; the sentence it claimed does not exist in the source. Replaced with
+    the real abstract sentence retrieved from the Europe PMC REST API, and verified as an
+    exact substring. Issue 620: the DOI:10.1016/j.chom.2016.03.004 snippet on the fermenter-to-butyrate
+    edge silently dropped the statistic (P < 0.05) from mid-quote; restored to the contiguous
+    source text and confirmed against the PMC full text. Issue 621: the notes on the Friedman
+    evidence asserted that the microbiota is NOT responsible for bulk centre-lumen anoxia,
+    which is a stronger negative than the source supports; the paper concludes that both the
+    microbes and the oxidative chemical reactions regulate luminal oxygen levels and credits
+    microbial biomass with the proximal-to-distal gradient, so the note now bounds SOLE causation
+    rather than denying a microbial contribution. No causal claim, edge, node or predicate
+    changed. Root cause recorded in issue 623: the snippets were obtained through a summarising
+    fetch layer that paraphrases and silently drops markup, and audit_evidence_snippets.py
+    checks snippet SHAPE only, so all three defects passed it cleanly. Verification now uses
+    the Europe PMC REST API. Gates after correction: qc 0, validate-strict 0 errors, audit-snippets
+    2592 all baselined with 0 new.'
