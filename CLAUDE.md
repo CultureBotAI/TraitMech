@@ -45,7 +45,11 @@ edit them unless a user removes the entry.
   Use one record per hand-curated target or one record per coherent bulk change.
 - Regenerate every affected derived report, dashboard, graph audit, mapping,
   and rendered page through its maintained `just` recipe. Never hand-edit a
-  generated artifact to make a freshness check pass.
+  generated artifact to make a freshness check pass. This applies again after
+  merging `main` into a branch: two curation PRs will normally conflict on
+  `pages/` by construction, and the resolution is regeneration, never picking a
+  side. See
+  [the playbook](docs/CURATION_PLAYBOOK.md#merging-when-another-curation-pr-lands-first-622).
 - Preserve unrelated work in a dirty tree and keep changes scoped.
 
 ## Required validation
