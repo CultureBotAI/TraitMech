@@ -165,7 +165,7 @@ window.searchData = [
   "discussion_id": "kgscan-d5aefedf82bb",
   "prompt": "Ectoine and glycine betaine both enable osmotic stress tolerance here, but trehalose is wired instead to environmental stress tolerance -- a node with no outgoing edge. Is that split a real distinction, or does trehalose belong on the osmotic route too?",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "free-living",
   "source_id": "traitmech:000048",

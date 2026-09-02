@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: other
+  path: research/traits/ecology/gut-associated-oxygen-external-research.yaml
+  slug: gut-associated-oxygen-external-research
+session:
+  id: 2026-08-31T210233Z-claude-code-4f48fe
+  timestamp: '2026-08-31T21:02:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-rosalind
+    agent_tool: external
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/409
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - research
+  summary: Record the external GPT Rosalind answer to the gut_associated oxygen-direction
+    hypothesis
+  details: 'Saved research/traits/ecology/gut_associated-deep-research-rosalind.md, an externally
+    supplied answer to the x-gut-oxygen-causal-direction proposed experiment on data/traits/ecology/gut_associated.yaml.
+    Verdict SUPPORTED with a scope qualification: depletion of butyrate-producing Clostridia
+    raises epithelial oxygenation and recolonisation with 17 human Clostridia isolates restores
+    hypoxia, meeting both halves of the discussion''s decision rule, but the return arm is
+    host-mediated via butyrate and colonocyte beta-oxidation rather than direct microbial
+    consumption, and a direct-probe study shows bulk centre-lumen pO2 is near-identical in
+    germ-free and conventional mice. As supplied the artifact carried ZERO resolvable citations;
+    all four underlying studies were then identified and verified against the primary sources
+    with verbatim quotes, and recorded in the artifact front matter: DOI:10.1016/j.chom.2016.03.004,
+    DOI:10.1126/science.aam9949, DOI:10.1016/j.chom.2015.03.005 and DOI:10.1073/pnas.1718635115.
+    NO trait record was changed and the discussion remains OPEN; the graph correction is scoped
+    and tracked separately. Deliberately NOT given a row in reports/trait_graph_audit_manifest.tsv,
+    which is an append-only spend record of pipeline calls; this result was produced outside
+    the pipeline. The file sits outside the resume namespace and cannot suppress a future
+    call; audit-research-artifacts passes with 355 artifacts scanned.'
