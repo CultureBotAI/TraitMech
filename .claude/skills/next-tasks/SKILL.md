@@ -31,6 +31,7 @@ through `metpo-proposal`. This skill works the *existing* backlog.
 
 ### Step 1 — Reconcile
 
+<!-- canonical:begin reconcile-commands -->
 ```bash
 sed -n '1,400p' NEXT_TASKS.md
 git log --oneline -20
@@ -39,6 +40,7 @@ gh pr list --state merged --limit 20 --json number,title,mergedAt \
 gh pr list  --state open  --limit 20 2>/dev/null | head
 gh issue list --state open --limit 30 2>/dev/null | head -30
 ```
+<!-- canonical:end reconcile-commands -->
 
 For each pending item: *is its deliverable already in a merged PR or in the
 code?* If yes → DONE. Spot-check any slot/recipe/file the item names
@@ -96,12 +98,13 @@ Review citation truth during curation.
 
 ## Conventions this skill enforces
 
+<!-- canonical:begin conventions -->
 - **Reconcile-before-relay**: the file is a starting point, not ground truth.
 - **Honest classification**: don't recommend upstream-blocked items; don't hide
   them either.
 - **Every invocation updates the file** (at minimum the reconcile date).
 - **Absolute dates**, PR numbers on done items, cold-start context on new items.
-
+<!-- canonical:end conventions -->
 ## Notes & limitations
 
 - `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, and the
