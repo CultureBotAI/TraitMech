@@ -117,3 +117,12 @@ def test_graph_and_umap_use_one_category_filter_and_graph_draws_links():
     assert 'id="category-filter"' not in umap
     assert 'line.graph-edge' in graph
     assert "GRAPH_EDGES" in graph
+
+
+def test_every_landing_stat_is_a_link_to_a_matching_view():
+    landing = (REPO_ROOT / "src/traitmech/templates/index.html").read_text()
+
+    assert '<div class="stat">' not in landing
+    assert landing.count('<a class="stat" href="browse.html">') == 2
+    assert '<a class="stat" href="umap.html">' in landing
+    assert "a.stat:focus-visible" in landing
