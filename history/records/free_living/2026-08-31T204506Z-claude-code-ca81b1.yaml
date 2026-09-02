@@ -1,0 +1,49 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/free_living.yaml
+  slug: free_living
+session:
+  id: 2026-08-31T204506Z-claude-code-ca81b1
+  timestamp: '2026-08-31T20:45:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/614
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Connect trehalose biosynthesis to osmotic stress tolerance in free_living
+  details: 'Resolves the record''s own x-compatible-solute-partitioning knowledge gap against
+    its stated would_refute criterion. Added trehalose_biosynthesis -[RO:0002327 enables]->
+    osmotic_stress_tolerance to free_living_environmental_habitat with two independent experimental
+    references and verbatim snippets: DOI:10.1128/mBio.00390-21 (Bradyrhizobium diazoefficiens
+    USDA 110; the otsCB-otsA deletion loses viability at 400 mM sorbitol, 27 mM NaCl, 50 mM
+    MgCl2 and 75 mM MgSO4, the nonionic sorbitol condition separating osmotic pressure from
+    ion toxicity; a cytoplasmic trehalase phenocopies it and exogenous trehalose rescues the
+    otsA deletion but not the transporter-deficient strains) and DOI:10.1128/AEM.02483-09
+    (independently constructed mutants in the same background inhibited on 60 mM NaCl). Both
+    DOIs and both snippets were verified against the primary sources this session, not taken
+    from the research artifact. The edit merges the graph''s stranded trehalose_biosynthesis/environmental_stress_tolerance
+    component into the main one, taking the graph from 2 wired components to 1 with no unwired
+    nodes; that fragmentation was invisible to audit-graphs because the graph is NONMECHANISTIC,
+    filed as issue 613. The pre-existing trehalose_biosynthesis to environmental_stress_tolerance
+    edge was RETAINED, not deleted: its comparative-genomics evidence is weaker than what
+    is added here and the desiccation result in AEM.02483-09 argues trehalose''s role is specifically
+    osmotic, but removing a cited edge is a semantic decision and evidence removal without
+    provenance is the issue 520 failure mode. Written through write_validated_trait with a
+    CONNECT_CAUSAL_GRAPH curation event. Gates: validate-strict 0 errors, audit-snippets 2592
+    findings all baselined with 0 new, audit-graphs 0 new, audit-derived-reports clean after
+    just gen-pages. Also set the x-compatible-solute-partitioning discussion to RESOLVED with
+    resolved_date 2026-08-31 and a resolution_note recording the verdict, the two references,
+    and the two questions deliberately left open (the retained environmental_stress_tolerance
+    edge, and the absence of a desiccation defect for low-trehalose otsA mutants). Regenerated
+    pages/ via just gen-pages and app/discussions/data.js via just gen-discussions-data. This
+    record is one record for one coherent change to one target, per history/README.md.'
