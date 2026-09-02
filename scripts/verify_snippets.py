@@ -86,6 +86,15 @@ DEFAULT_THRESHOLD = 0.75
 TAG_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
 SENT_RE = re.compile(r"(?<=[.!?])\s+")
+# A fragment ending in one of these is NOT a sentence end: `vs.`, `et al.`,
+# `E. coli`, `Fig. 2`. Naive splitting cut "Microbes vs. chemistry" in half --
+# the title of one of the very papers this tool was built against (#625). This
+# only ever affected LIKELY_PARAPHRASE recall, since VERIFIED is a substring test
+# over the whole abstract, but recall is the one thing this tool adds.
+ABBREV_RE = re.compile(
+    r"(?:^|\s)(?:[A-Za-z]|vs|etc|et\s*al|e\.g|i\.e|cf|ca|approx|Fig|Figs|Tab|"
+    r"No|Nos|St|Dr|Prof|spp|sp|subsp|var|str|ser|pp|ref|refs)\.$",
+    re.IGNORECASE)
 
 
 def normalise(text: str) -> str:
@@ -145,6 +154,18 @@ def europepmc_abstract(ref: str, *, timeout: float = 30.0, retries: int = 3,
     return results[0].get("abstractText") or None
 
 
+def split_sentences(text: str) -> list[str]:
+    """Split into sentences, rejoining breaks caused by an abbreviation (#625)."""
+    parts = SENT_RE.split(text)
+    merged: list[str] = []
+    for part in parts:
+        if merged and ABBREV_RE.search(merged[-1]):
+            merged[-1] = f"{merged[-1]} {part}"
+        else:
+            merged.append(part)
+    return [s.strip() for s in merged if s.strip()]
+
+
 def best_sentence_ratio(snippet: str, abstract: str) -> tuple[float, str]:
     """Similarity of the closest abstract sentence, and that sentence.
 
@@ -153,7 +174,7 @@ def best_sentence_ratio(snippet: str, abstract: str) -> tuple[float, str]:
     to one sentence, which would hide exactly the near-miss this looks for.
     """
     best = (0.0, "")
-    for sentence in SENT_RE.split(abstract):
+    for sentence in split_sentences(abstract):
         sentence = sentence.strip()
         if not sentence:
             continue
@@ -190,6 +211,13 @@ def iter_evidence(doc: dict):
                 tag = f"{gid}:{node.get('node_id')}:{example.get('uniprot_id')}"
                 for index, item in enumerate(example.get("evidence") or []):
                     yield f"{tag}[{index}]", item
+    # Discussion evidence carries the same optional `snippet` under the same
+    # verbatim contract. Zero items today, but #409 step 6 grows this layer, and
+    # a knowledge gap is exactly where a citation gets attached to an argument.
+    for discussion in (doc.get("discussions") or []):
+        did = discussion.get("discussion_id") or "?"
+        for index, item in enumerate(discussion.get("evidence") or []):
+            yield f"discussion:{did}[{index}]", item
 
 
 def main() -> int:
@@ -203,7 +231,9 @@ def main() -> int:
     ap.add_argument("--fail-on", choices=("none", "paraphrase"), default="none",
                     help="'paraphrase' exits 1 on any LIKELY_PARAPHRASE. Opt-in: that "
                          "verdict is a prompt, not proof (full text can resemble the abstract)")
-    ap.add_argument("--delay", type=float, default=0.25, help="seconds between API calls")
+    ap.add_argument("--delay", type=float, default=1.0,
+                    help="seconds between API calls (default 1.0). Europe PMC rate-limits, "
+                         "and a corpus-wide run resolves ~1150 references")
     ap.add_argument("--limit", type=int, help="stop after N distinct references")
     args = ap.parse_args()
 
@@ -213,6 +243,7 @@ def main() -> int:
     rows: list[dict[str, str]] = []
     cache: dict[str, str | None] = {}
     lookup_failures: list[str] = []
+    truncated = False
     for path in paths:
         try:
             doc = yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -222,13 +253,18 @@ def main() -> int:
         if not isinstance(doc, dict):
             continue
         rel = str(path.relative_to(REPO_ROOT)) if path.is_absolute() else str(path)
+        if truncated:
+            break
         for locator, item in iter_evidence(doc):
             snippet, ref = item.get("snippet"), item.get("reference") or ""
             if not snippet or not ref.startswith(("PMID:", "DOI:")):
                 continue
             if ref not in cache:
                 if args.limit is not None and len(cache) >= args.limit:
-                    continue
+                    # STOP, rather than skipping onward and silently under-reporting
+                    # over a corpus the run never finished (#627).
+                    truncated = True
+                    break
                 try:
                     cache[ref] = europepmc_abstract(ref)
                 except LookupFailed as exc:
@@ -246,6 +282,9 @@ def main() -> int:
 
     print("=== snippet source verification (Europe PMC) ===")
     print(f"  checked: {len(rows)} snippet(s) over {len(cache)} distinct reference(s)")
+    if truncated:
+        print(f"  INCOMPLETE: stopped at --limit {args.limit}. This run says nothing "
+              f"about the references it did not reach.")
     for verdict in ("VERIFIED", "LIKELY_PARAPHRASE", "NOT_IN_ABSTRACT", "UNRESOLVED"):
         if counts.get(verdict):
             print(f"    {verdict:<18} {counts[verdict]}")

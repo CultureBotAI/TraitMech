@@ -134,3 +134,58 @@ def test_non_literature_references_are_skipped():
     """CHEBI/GO/METPO references have no abstract and are not literature claims."""
     assert vs.europepmc_abstract("CHEBI:17968") is None
     assert vs.europepmc_abstract("GO:0006635") is None
+
+
+# --- review findings on this script itself (#625, #626, #627) -----------------
+
+def test_abbreviations_do_not_split_a_sentence():
+    """#625. Naive splitting cut the Friedman title in half at 'vs.'."""
+    text = "Microbes vs. chemistry in the origin of the anaerobic gut lumen was studied."
+    assert vs.split_sentences(text) == [text]
+
+
+@pytest.mark.parametrize("text", [
+    "Growth of E. coli was measured here. Levels fell.",
+    "As reported by Smith et al. in that work. Levels fell.",
+    "Shown in Fig. 3 of the paper. Levels fell.",
+])
+def test_common_abbreviation_forms_keep_their_sentence_whole(text):
+    first = vs.split_sentences(text)[0]
+    assert first.endswith("."), first
+    assert "Levels fell." not in first
+    assert len(vs.split_sentences(text)) == 2
+
+
+def test_a_real_sentence_boundary_still_splits():
+    assert len(vs.split_sentences("Oxygen was low. Butyrate was high.")) == 2
+
+
+def test_discussion_evidence_is_walked():
+    """#626. Zero items today, but the layer is slated to grow (#409 step 6)."""
+    doc = {
+        "discussions": [
+            {"discussion_id": "x-gap",
+             "evidence": [{"reference": "PMID:1", "snippet": "a quote"}]}
+        ]
+    }
+    found = dict(vs.iter_evidence(doc))
+    assert "discussion:x-gap[0]" in found
+    assert found["discussion:x-gap[0]"]["snippet"] == "a quote"
+
+
+def test_every_evidence_location_is_walked():
+    doc = {
+        "evidence": [{"reference": "PMID:1", "snippet": "record"}],
+        "causal_graphs": [{
+            "graph_id": "g",
+            "edges": [{"subject": "a", "object": "b",
+                       "evidence": [{"reference": "PMID:2", "snippet": "edge"}]}],
+            "nodes": [{"node_id": "n", "protein_examples": [
+                {"uniprot_id": "UniProtKB:P1",
+                 "evidence": [{"reference": "PMID:3", "snippet": "protein"}]}]}],
+        }],
+        "discussions": [{"discussion_id": "d",
+                         "evidence": [{"reference": "PMID:4", "snippet": "discussion"}]}],
+    }
+    assert {i["snippet"] for _loc, i in vs.iter_evidence(doc)} == {
+        "record", "edge", "protein", "discussion"}
