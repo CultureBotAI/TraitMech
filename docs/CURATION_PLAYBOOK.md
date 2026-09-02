@@ -894,9 +894,16 @@ Then regenerate rather than choosing a side:
 
 ```bash
 just gen-pages
-just gen-discussions-data       # if app/discussions/ conflicted
 just audit-derived-reports      # names exactly which other artifacts are stale
 ```
+
+`app/discussions/data.js` conflicts only when a record's `discussions:` block
+changed — 10 of 477 records carry one, so most curation PRs never touch it. If it
+does conflict, regenerate with `just gen-discussions-data`. **That recipe needs a
+`culturebotai-claw` checkout beside this repo** and fails without one. Without
+claw: confirm your branch changed no `discussions:` block, and if it did not,
+take `main`'s copy. That is regeneration-equivalent rather than picking a side —
+nothing in your branch feeds that file.
 
 `audit-derived-reports` prints **targeted** remediation for whatever actually
 failed — it deliberately does not send you to run grounding scripts when only the
