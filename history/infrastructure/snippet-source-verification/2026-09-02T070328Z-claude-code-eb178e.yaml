@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/snippet-source-verification.yaml
+  slug: snippet-source-verification
+session:
+  id: 2026-09-02T070328Z-claude-code-eb178e
+  timestamp: '2026-09-02T07:03:28Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/623
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - research
+  summary: Add just verify-snippets and write the snippet sourcing rule into the playbook
+  details: 'Addresses issue 623, filed after three snippet defects (619, 620, 621) shipped
+    into PR 618 and passed audit-snippets cleanly. audit_evidence_snippets.py checks snippet
+    SHAPE only, so retrieval was the only real control and it failed: the snippets came from
+    a summarising fetch layer that paraphrases and silently drops markup, returning an abstract
+    with Nos2, Escherichia and Salmonella deleted. Adds scripts/verify_snippets.py and the
+    just verify-snippets recipe, which resolves each PMID/DOI reference through the Europe
+    PMC REST API and reports VERIFIED (exact substring of the abstract, decisive), LIKELY_PARAPHRASE
+    (near-miss, the elision signature), NOT_IN_ABSTRACT (inconclusive, since Europe PMC serves
+    abstracts and many snippets are full-text quotes) or UNRESOLVED. Network-dependent so
+    it is deliberately outside just qc, same placement as audit-uniprot. Three defects in
+    the tool itself were found by its own canary and fixed before landing: the DOI query was
+    quoted, which Europe PMC answers with a non-JSON error page so every DOI came back UNRESOLVED;
+    a transport failure was indistinguishable from an absent record, so a rate-limited run
+    would have printed an all-UNRESOLVED report and exited 0, which is the same cannot-fail
+    shape the tool argues against, and transport failures are now fatal with exit code 2 and
+    retry with backoff; and two lint errors. MEASURED LIMIT, documented rather than papered
+    over: the tool catches the 620 interior elision at similarity 0.97 but does NOT catch
+    the 619 heavy paraphrase, which scores 0.18 sentence similarity and 0.42 token overlap
+    and lands in NOT_IN_ABSTRACT alongside legitimate full-text quotes; a threshold low enough
+    to catch it would flag every full-text quote on the subject. tests/test_verify_snippets.py
+    pins that limit as an explicit test so it cannot be quietly oversold. Also corrected two
+    stale figures in the playbook section being edited: the baseline is 2592 findings not
+    2737, and 2443 of 4410 evidence items (55%) carry no snippet, not 2586 of 4089 (63%),
+    both derived live. Gates: qc 0, lint 0, audit-justfile-paths 0, 1067 tests pass.'

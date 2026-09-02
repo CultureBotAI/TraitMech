@@ -303,6 +303,17 @@ audit-graph-protein-taxa *args:
 audit-uniprot *args:
     uv run python scripts/audit_uniprot_grounding.py {{args}}
 
+# Check `EvidenceItem.snippet` strings against the sources they quote (#623).
+# Resolves each PMID:/DOI: reference through the Europe PMC REST API and reports
+# VERIFIED (exact substring of the abstract -- decisive), LIKELY_PARAPHRASE (a
+# near-miss, the elision signature), NOT_IN_ABSTRACT (inconclusive: Europe PMC
+# serves abstracts and many snippets are full-text quotes), or UNRESOLVED.
+# It does NOT catch a heavy rewrite -- see the script docstring for the measured
+# limit. Opening the source is still the only control that does.
+# Network-dependent, so it is not part of `just qc`.
+verify-snippets *args:
+    uv run python scripts/verify_snippets.py {{args}}
+
 # Retract UniProtKB groundings whose accessions UniProt has DELETED, demoting
 # those nodes to label-only. MERGED accessions are reported, not retracted --
 # they carry a live replacement a curator should apply. Dry-run by default.

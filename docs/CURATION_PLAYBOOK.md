@@ -686,10 +686,52 @@ matter and the `evidence_summary` fed into the prompt — so a finding
 means the text is in the provider's own answer and was never handed to
 it.
 
+#### A summarising fetch is not a snippet source either (#623)
+
+The rule above generalises past deep-research reports, and the next instance
+cost three defects in one PR. Snippets obtained by pointing a
+page-fetching tool at a paper — the kind that answers a prompt about a URL
+using a small model — went into #618 and passed `audit-snippets` cleanly:
+
+| issue | defect |
+|---|---|
+| #619 | a **paraphrase presented as a verbatim quote** — the sentence did not exist in the paper |
+| #620 | an unmarked **interior elision**, dropping `(P < 0.05)` from mid-quote |
+| #621 | a `notes:` line asserting a negative the source did not support |
+
+The same tool returned an abstract with `Nos2`, *Escherichia* and *Salmonella*
+silently deleted, because they were italicised. **A layer that can drop a gene
+name can drop a negation.**
+
+So the rule has two halves:
+
+- **Get the text from an authoritative endpoint.** Europe PMC serves the record
+  as stored, with no model in the path:
+
+  ```bash
+  curl -s "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:<PMID>&resultType=core&format=json"
+  ```
+
+- **Then check what you wrote.** `just verify-snippets --record <path>` resolves
+  every `PMID:`/`DOI:` reference and reports `VERIFIED` (an exact substring of
+  the abstract — decisive), `LIKELY_PARAPHRASE` (a near-miss), `NOT_IN_ABSTRACT`,
+  or `UNRESOLVED`. Network-dependent, so it is not in `qc`.
+
+Two things it deliberately does **not** do, both measured:
+
+- `NOT_IN_ABSTRACT` is **not** a defect. Europe PMC serves abstracts and many
+  good snippets are quoted from full text, so a non-match is inconclusive.
+- It **does not catch a heavy rewrite.** The #619 fabrication scores 0.18
+  sentence similarity and 0.42 token overlap against the sentence it was
+  rewritten from, landing in `NOT_IN_ABSTRACT` alongside every legitimate
+  full-text quote. Tuning the threshold down that far would flag every full-text
+  quote on the subject. It catches edits to a quote; **only opening the source
+  catches a rewrite of one.**
+
 #### What the audit enforces
 
 `just audit-snippets` runs in `qc` as a ratchet against
-`conf/evidence_snippet_baseline.tsv`: today's 2,737 findings never
+`conf/evidence_snippet_baseline.tsv`: today's 2,592 findings never
 fail, anything new exits 1. The corpus cannot get worse while the
 backlog is worked.
 
@@ -701,8 +743,8 @@ backlog is worked.
 | `MISSING_SNIPPET` | a reference with no quote at all |
 | `ECHOES_RESEARCH_REPORT` | also in this trait's report answer — verify against the source |
 
-The standing backlog is worth knowing before you start: **2,586 of
-4,089 evidence items (63%) carry no snippet at all**, almost all of
+The standing backlog is worth knowing before you start: **2,443 of
+4,410 evidence items (55%) carry no snippet at all**, almost all of
 them on causal-graph edges. `snippet:` is schema-optional, so those
 are valid records — they simply assert a mechanism on a bare DOI.
 Burning that down is the same job as #183's backfill, on the same
