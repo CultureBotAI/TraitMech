@@ -859,6 +859,61 @@ Before opening a PR:
 - [ ] `mapping_status` set to `REVIEWED`.
 - [ ] `curation_history` event appended with today's date.
 
+## Merging when another curation PR lands first (#622)
+
+**Expect any two curation PRs to conflict on `pages/`.** This is correct
+behaviour, and knowing why saves you from "fixing" it. (The one escape is two
+curation events landing in the same *minute*, since the stamp is
+minute-granular — do not plan around it.)
+
+Every page carries a `Corpus as of <timestamp>` footer. That stamp is **not** a
+wall clock: `corpus_timestamp()` in `scripts/render_trait_pages.py` derives it
+from the newest `curation_history` entry in the whole corpus, deliberately, so
+that `pages/` can be checked by regenerating and diffing. A wall-clock stamp made
+every page differ on every run, which left the directory uncheckable and let 119
+pages drift four weeks stale before anyone noticed (#228).
+
+The consequence follows directly. Every curation change writes a curation event;
+the newest event moves the corpus stamp; the footer is on every page. So both
+PRs rewrite all of `pages/`, and the second one to merge conflicts. Measured on
+the pair that prompted this: #615 stamped `2026-08-31 20:50 UTC`, #618 stamped
+`2026-09-02 05:05 UTC`, and 12 generated pages collided.
+
+### The protocol
+
+```bash
+git merge main                 # conflicts appear in pages/, app/, reports/
+git diff --name-only --diff-filter=U
+```
+
+**First, confirm every conflicted path is a generated artifact.** If anything
+under `data/traits/` or `history/` conflicts, stop — that is a real content
+conflict and needs curation judgement, not regeneration.
+
+Then regenerate rather than choosing a side:
+
+```bash
+just gen-pages
+just gen-discussions-data       # if app/discussions/ conflicted
+just audit-derived-reports      # names exactly which other artifacts are stale
+```
+
+`audit-derived-reports` prints **targeted** remediation for whatever actually
+failed — it deliberately does not send you to run grounding scripts when only the
+graph audit is stale. Run what it names, then `just qc` and `just test`.
+
+### Never resolve a generated conflict by picking a side
+
+`git checkout --ours` / `--theirs` on a generated file produces a plausible page
+set that matches neither branch's data. `CLAUDE.md` forbids hand-editing a
+generated artifact to satisfy a freshness check, and this is the same thing with
+extra steps. `audit-derived-reports` will catch it, but only after you have
+committed a page set that asserts something untrue.
+
+Checking out one side to clear the conflict *and then regenerating* is fine — the
+regeneration is what makes it correct, and the checkout is only there to let the
+merge complete.
+
 ## Reference: example records to study
 
 - **Concrete phenotype**: `data/traits/environment/halophilic.yaml`,

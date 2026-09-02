@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: docs/derived-artifact-merge-protocol.yaml
+  slug: derived-artifact-merge-protocol
+session:
+  id: 2026-09-02T202957Z-claude-code-590c6a
+  timestamp: '2026-09-02T20:29:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/622
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - research
+  summary: Document the derived-artifact merge protocol after correcting issue 622's own diagnosis
+  details: 'Addresses issue 622, but first corrected its diagnosis, which I had written and
+    which was wrong. The issue proposed coarsening the pages footer timestamp to a date, on
+    the assumption it was a wall-clock stamp. It is not: corpus_timestamp() in scripts/render_trait_pages.py
+    derives it from the newest curation_history entry across the corpus, deliberately, because
+    a wall-clock stamp made every page differ on every run and left pages/ uncheckable by
+    regenerate-and-diff, which let 119 pages drift four weeks stale (issue 228). Measured:
+    the two PRs that collided stamped 2026-08-31 20:50 UTC and 2026-09-02 05:05 UTC, different
+    dates, so date granularity would not have prevented the conflict; and option 3, injecting
+    the stamp at deploy time, would reintroduce the 228 regression. The conflict is inherent
+    and correct, since every curation change writes an event, the newest event moves the global
+    footer, and both PRs therefore rewrite every page. Implemented option 1 only: a new playbook
+    section stating why the conflict happens, the resolution protocol (confirm every conflicted
+    path is generated, stop if data/traits or history conflicts, regenerate rather than choose
+    a side, then follow audit-derived-reports'' own targeted remediation), and an explicit
+    warning that checking out one side of a generated file produces a page set matching neither
+    branch. Cross-referenced from the CLAUDE.md safe mutation contract. Deliberately did NOT
+    add a blanket regen-everything recipe: audit-derived-reports already prints remediation
+    targeted to the specific failure and its code comments say it avoids sending a curator
+    to run unrelated scripts, so a blunt recipe would fight that design. Also softened my
+    own claim that two curation PRs ALWAYS conflict, since two events in the same minute produce
+    an identical footer; the stamp is minute-granular. Gates: qc 0, 1074 tests pass.'
