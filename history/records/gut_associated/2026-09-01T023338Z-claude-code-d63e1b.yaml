@@ -1,0 +1,47 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/gut_associated.yaml
+  slug: gut_associated
+session:
+  id: 2026-09-01T023338Z-claude-code-d63e1b
+  timestamp: '2026-09-01T02:33:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/617
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Close the gut_associated oxygen loop through colonocyte metabolism
+  details: 'Resolves the record''s x-gut-oxygen-causal-direction knowledge gap in favour of
+    its would_support criterion. Added nodes butyrate (CHEBI:17968, CHEMICAL) and colonocyte_oxidative_metabolism
+    (BIOLOGICAL_PROCESS), plus three edges closing the loop against the existing luminal_oxygen_limitation
+    to primary_fermenter_community edge: primary_fermenter_community -[biolink:produces]->
+    butyrate -[RO:0002213 positively regulates]-> colonocyte_oxidative_metabolism -[RO:0002326
+    contributes to]-> luminal_oxygen_limitation. Six evidence items across the three edges,
+    every snippet verbatim and verified against the primary source this session, from four
+    studies: DOI:10.1016/j.chom.2016.03.004 (depletion, tributyrin rescue, 17-strain recolonisation),
+    DOI:10.1126/science.aam9949 (PPAR-gamma and beta-oxidation), DOI:10.1016/j.chom.2015.03.005
+    (independent replication; butyrate raises epithelial oxygen consumption) and DOI:10.1073/pnas.1718635115.
+    That last one is attached as BOUNDING evidence on the closing edge: direct phosphorescent-probe
+    measurement shows bulk centre-lumen pO2 is near-identical in germ-free and conventional
+    mice, so the community does not create bulk anoxia and this edge asserts only a limit
+    on mucosal-to-luminal oxygen flux, which is how the target node is already defined. The
+    return arm is deliberately modelled as host-mediated rather than as direct microbial oxygen
+    consumption. Two things were deliberately NOT done: no abiotic_luminal_oxygen_consumption
+    node was added, and no connectivity-only edge was invented to attach this component to
+    gut_associated_trait, since no source supports one and issue 183 warns explicitly against
+    edges added to satisfy a check. The graph therefore still has three components; that fragmentation
+    is invisible to audit-graphs because the graph is NONMECHANISTIC, which is issue 613.
+    Also set the discussion to RESOLVED with resolved_date 2026-08-31 and a resolution_note
+    recording both bounds. Written through write_validated_trait with CONNECT_CAUSAL_GRAPH
+    and RESOLVE_DISCUSSION events. Gates: validate-strict 0 errors, audit-predicate-domains
+    0 findings, audit-snippets 2592 all baselined with 0 new, audit-graphs 0 new.'

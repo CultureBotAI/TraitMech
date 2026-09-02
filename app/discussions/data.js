@@ -188,7 +188,7 @@ window.searchData = [
   "discussion_id": "kgscan-4fc1a06fa1e3",
   "prompt": "This record commits to luminal oxygen limitation contributing to the primary fermenter community. Does the reverse arm hold too -- do the fermenters and the epithelium maintain the anoxia -- making this a feedback loop rather than the one-way edge drawn?",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "gut-associated",
   "source_id": "traitmech:000052",
