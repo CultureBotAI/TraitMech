@@ -73,6 +73,21 @@ def test_known_provider_beats_alphabetical_order(research_dir):
     assert research_report("ecology", "cellulolysis") == falcon
 
 
+def test_a_hand_supplied_report_is_never_rendered(research_dir):
+    """#643: `pipeline_run: false` marks a pasted-in answer with no manifest
+    row and no prompt echo. Alone it renders nothing; beside a pipeline report
+    of a lower-ranked provider it must not win on provider rank."""
+    pasted = research_dir / "mutualism-deep-research-rosalind.md"
+    pasted.write_text("---\npipeline_run: false\n---\nanswer\n")
+    assert research_report("ecology", "mutualism") is None
+    codex = research_dir / "mutualism-deep-research-codex.md"
+    codex.write_text("codex")
+    assert research_report("ecology", "mutualism") == codex
+    real = research_dir / "mutualism-deep-research-rosalind.md"
+    real.write_text("---\nprovider: openai\n---\nreport\n")
+    assert research_report("ecology", "mutualism") == real
+
+
 def test_unknown_providers_fall_back_to_name_order(research_dir):
     # Deterministic rather than arbitrary — #228 made reproducible output a
     # requirement, and an unrecognised provider must not make the render depend

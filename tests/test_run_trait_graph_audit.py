@@ -25,8 +25,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from run_trait_graph_audit import (  # noqa: E402
+    MANIFEST,
     MIN_ARTIFACT_BYTES,
+    RESEARCH_DIR,
     audit_pilot_artifacts,
+    hand_supplied,
     is_pipeline_report,
     missing_artifacts,
     ok_outputs,
@@ -287,13 +290,15 @@ def test_rosalind_reports_have_their_own_resume_namespace():
     )
 
 
-def test_a_hand_supplied_report_is_not_done_for_resume(tmp_path):
+def test_a_hand_supplied_report_is_neither_done_nor_pending(tmp_path):
     """`pipeline_run: false` marks a pasted-in artifact. It must not suppress a
-    call the pipeline never made, however substantial it is."""
+    call the pipeline never made -- and must not be queued for one either,
+    since that would overwrite it (#638)."""
     path = tmp_path / "x-deep-research-rosalind.md"
     path.write_text("---\nprovider: gpt-rosalind\npipeline_run: false\n---\n\n# body\n" + "x" * 5000)
     assert not is_pipeline_report(path)
     assert not report_done(path)
+    assert hand_supplied(path)
 
 
 def test_a_pipeline_report_is_done_for_resume(tmp_path):
@@ -301,18 +306,9 @@ def test_a_pipeline_report_is_done_for_resume(tmp_path):
     path.write_text("---\nprovider: openai\nmodel: gpt-rosalind\n---\n\n# body\n")
     assert is_pipeline_report(path)
     assert report_done(path)
+    assert not hand_supplied(path)
     assert not report_done(tmp_path / "absent-deep-research-rosalind.md")
-
-
-def test_pipeline_run_false_only_counts_inside_the_front_matter(tmp_path):
-    """The flag is provenance, not a phrase: a report whose BODY quotes the
-    words must still count as the pipeline's own."""
-    path = tmp_path / "x-deep-research-rosalind.md"
-    path.write_text("---\nprovider: openai\n---\n\nThe file says pipeline_run: false\n")
-    assert is_pipeline_report(path)
-    no_front_matter = tmp_path / "y-deep-research-rosalind.md"
-    no_front_matter.write_text("pipeline_run: false\n")
-    assert is_pipeline_report(no_front_matter)
+    assert not hand_supplied(tmp_path / "absent-deep-research-rosalind.md")
 
 
 def test_a_hand_supplied_report_is_not_an_orphan(tmp_path):
@@ -325,21 +321,23 @@ def test_a_hand_supplied_report_is_not_an_orphan(tmp_path):
     assert found == ["research/traits/ecology/stray-deep-research-rosalind.md"]
 
 
-def test_the_two_tracked_rosalind_reports_declare_pipeline_run_false():
+def test_the_rosalind_namespace_has_no_unaccounted_pipeline_report():
     """The invariant the docs promise: nothing in the rosalind namespace claims
-    to be a pipeline run that the manifest cannot account for."""
-    tracked = sorted((REPO_ROOT / "research" / "traits").rglob("*-deep-research-rosalind.md"))
-    assert tracked, "expected the two hand-supplied Rosalind artifacts"
-    assert all(not is_pipeline_report(p) for p in tracked), [
-        p.name for p in tracked if is_pipeline_report(p)
-    ]
+    to be a pipeline run that the manifest cannot account for. Phrased as the
+    orphan gate rather than "every file is hand-supplied", so the lane's first
+    real report (with its `ok` row) does not turn this red (#639)."""
+    tracked = sorted(RESEARCH_DIR.rglob("*-deep-research-rosalind.md"))
+    assert tracked, "expected the hand-supplied Rosalind artifacts"
+    recorded = ok_outputs(MANIFEST) if MANIFEST.exists() else {}
+    assert orphan_reports(RESEARCH_DIR, REPO_ROOT, recorded, "rosalind") == []
 
 
 @pytest.mark.parametrize("provider,env,expected", [
     ("edison", {}, "EDISON_API_KEY"),
     ("edison", {"FUTUREHOUSE_API_KEY": "x"}, None),
+    ("edison", {"EDISON_PLATFORM_API_KEY": "x"}, None),  # #646: research_env aliases it
     ("rosalind", {}, "ROSALIND_API_KEY"),
-    ("rosalind", {"OPENAI_API_KEY": "x"}, None),
+    ("rosalind", {"OPENAI_API_KEY": "x"}, "ROSALIND_API_KEY"),  # #641: not the lane's key
     ("gpt-rosalind", {"ROSALIND_API_KEY": "x"}, None),
     ("rosalind", {"EDISON_API_KEY": "x"}, "ROSALIND_API_KEY"),
     ("openai", {}, "OPENAI_API_KEY"),

@@ -42,7 +42,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import yaml
-from research_trait import ROSALIND_CREDENTIALS, ROSALIND_PROVIDER, resolve_provider
+from research_trait import (
+    ROSALIND_CREDENTIALS,
+    ROSALIND_PROVIDER,
+    is_pipeline_report,
+    resolve_provider,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
@@ -144,27 +149,11 @@ PILOT_TARGET_RE = re.compile(r"^(?P<category>[a-z0-9_]+)/(?P<slug>[a-z0-9_]+)$")
 # `-deep-research-rosalind.md` before `rosalind` became a pipeline provider,
 # and each declares `pipeline_run: false` in its front matter. That flag, not
 # a filename list, is what keeps them out of both sides of the gate: a
-# hand-supplied file never suppresses a call (it is not a `done` for resume)
-# and is never an orphan (no `ok` row was ever owed for it).
-PIPELINE_RUN_FALSE_RE = re.compile(r"^pipeline_run:\s*false\s*$", re.MULTILINE)
-FRONT_MATTER_PROBE_BYTES = 4096
-
-
-def is_pipeline_report(path: Path) -> bool:
-    """False for a report whose front matter declares ``pipeline_run: false``.
-
-    Reads only the head of the file: the flag is front matter, and the sweep
-    consults this for every target on every resume.
-    """
-    try:
-        with path.open("r", encoding="utf-8", errors="replace") as fh:
-            head = fh.read(FRONT_MATTER_PROBE_BYTES)
-    except OSError:
-        return True
-    if not head.startswith("---"):
-        return True
-    front = head.split("\n---", 1)[0]
-    return PIPELINE_RUN_FALSE_RE.search(front) is None
+# hand-supplied file never suppresses a call (it is not a `done` for resume),
+# is never an orphan (no `ok` row was ever owed for it), and is never
+# OVERWRITTEN: the sweep sets such a target aside rather than queueing it, and
+# research_trait.py refuses an existing output without --force (#638).
+# `research_trait.is_pipeline_report` parses the front matter as YAML.
 
 
 def report_done(path: Path) -> bool:
@@ -172,12 +161,19 @@ def report_done(path: Path) -> bool:
     return path.exists() and is_pipeline_report(path)
 
 
+def hand_supplied(path: Path) -> bool:
+    """A report exists at the resume name but was not the pipeline's."""
+    return path.exists() and not is_pipeline_report(path)
+
+
 # What a real (non-dry-run, non-verify) run needs in the environment, per
-# provider. Only the providers this harness has actually been run with are
-# preflighted; anything else is left to deep-research-client, which reports a
-# missing credential on the first call and fails that trait fail-soft.
+# provider. Only the providers this harness documents are preflighted;
+# anything else is left to deep-research-client, which reports a missing
+# credential on the first call and fails that trait fail-soft. Kept in step
+# with research_trait.research_env() and deep_research_provider.provider_status()
+# by hand (#646 asks for one table).
 PREFLIGHT_CREDENTIALS: dict[str, tuple[str, ...]] = {
-    "falcon": ("EDISON_API_KEY", "FUTUREHOUSE_API_KEY"),
+    "falcon": ("EDISON_API_KEY", "EDISON_PLATFORM_API_KEY", "FUTUREHOUSE_API_KEY"),
     "openai": ("OPENAI_API_KEY",),
     ROSALIND_PROVIDER: ROSALIND_CREDENTIALS,
 }
@@ -419,13 +415,26 @@ def main() -> int:
     targets = target_traits()
     if args.category:
         targets = [t for t in targets if t[0] == args.category.lower()]
+    # Three-way, not two: a hand-supplied report is neither done nor callable.
+    # Queueing it would hand research_trait.py an existing output to replace,
+    # and the whole point of the flag is that nothing paid for or recorded
+    # stands behind that file (#638).
+    set_aside = [
+        (cat, slug, label)
+        for cat, slug, label in targets
+        if hand_supplied(output_path(cat, slug, provider))
+    ]
     pending = [
         (cat, slug, label)
         for cat, slug, label in targets
-        if not report_done(output_path(cat, slug, provider))
+        if not output_path(cat, slug, provider).exists()
     ]
-    done_already = len(targets) - len(pending)
-    print(f"targets: {len(targets)}  already-researched: {done_already}  pending: {len(pending)}", file=sys.stderr)
+    done_already = len(targets) - len(pending) - len(set_aside)
+    print(f"targets: {len(targets)}  already-researched: {done_already}  "
+          f"hand-supplied (skipped, not done): {len(set_aside)}  pending: {len(pending)}",
+          file=sys.stderr)
+    for cat, slug, _ in set_aside:
+        print(f"  hand-supplied, left untouched: {cat}/{slug}", file=sys.stderr)
     if args.limit:
         pending = pending[: args.limit]
         print(f"  (limited to {len(pending)} this run)", file=sys.stderr)

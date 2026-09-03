@@ -49,11 +49,32 @@ def test_dedicated_key_is_the_one_probed():
     assert report["ok"] is True
 
 
+def test_a_bare_openai_key_is_not_a_rosalind_credential():
+    """#641: the canary must not pass on a key the lane itself will not use."""
+    calls = []
+    report = rc.canary({"OPENAI_API_KEY": "general"},
+                       list_models=lambda key: calls.append(key) or [DEFAULT_ROSALIND_MODEL],
+                       run_client=_ok_client)
+    assert report["ok"] is False
+    assert _checks(report) == {"credential": False}
+    assert calls == []
+
+
+def test_allow_unlisted_turns_the_model_check_into_a_warning():
+    """#645: for a key known to be entitled, when the listing may not
+    enumerate the gated preview at all."""
+    report = rc.canary({"ROSALIND_API_KEY": "k"}, list_models=lambda key: ["gpt-5"],
+                       run_client=_ok_client, allow_unlisted=True)
+    assert report["ok"] is True
+    assert _checks(report)["model"] is True
+    assert "WARNING" in next(c for c in report["checks"] if c["check"] == "model")["detail"]
+
+
 def test_authentication_failure_is_reported_without_the_key():
     def boom(key):
         raise RuntimeError(f"401 for {key}")
 
-    report = rc.canary({"OPENAI_API_KEY": "sk-secret-value"}, list_models=boom,
+    report = rc.canary({"ROSALIND_API_KEY": "sk-secret-value"}, list_models=boom,
                        run_client=_ok_client)
     assert _checks(report) == {"credential": True, "authenticate": False}
     assert "sk-secret-value" not in json.dumps(report)
@@ -61,7 +82,7 @@ def test_authentication_failure_is_reported_without_the_key():
 
 
 def test_model_absent_is_the_trusted_access_finding():
-    report = rc.canary({"OPENAI_API_KEY": "k"},
+    report = rc.canary({"ROSALIND_API_KEY": "k"},
                        list_models=lambda key: ["gpt-5", "o3-deep-research-2025-06-26"],
                        run_client=_ok_client)
     assert _checks(report) == {"credential": True, "authenticate": True, "model": False}
@@ -70,7 +91,7 @@ def test_model_absent_is_the_trusted_access_finding():
 
 
 def test_a_renamed_preview_id_is_surfaced_for_rosalind_model():
-    report = rc.canary({"OPENAI_API_KEY": "k"},
+    report = rc.canary({"ROSALIND_API_KEY": "k"},
                        list_models=lambda key: ["gpt-rosalind-2026-08-01"],
                        run_client=_ok_client)
     assert _checks(report)["model"] is False
@@ -79,7 +100,7 @@ def test_a_renamed_preview_id_is_surfaced_for_rosalind_model():
 
 
 def test_rosalind_model_override_is_what_gets_checked():
-    report = rc.canary({"OPENAI_API_KEY": "k", "ROSALIND_MODEL": "gpt-rosalind-2026-08-01"},
+    report = rc.canary({"ROSALIND_API_KEY": "k", "ROSALIND_MODEL": "gpt-rosalind-2026-08-01"},
                        list_models=lambda key: ["gpt-rosalind-2026-08-01"],
                        run_client=_ok_client)
     assert report["model"] == "gpt-rosalind-2026-08-01"
@@ -88,7 +109,7 @@ def test_rosalind_model_override_is_what_gets_checked():
 
 
 def test_client_not_discovering_openai_fails_the_canary():
-    report = rc.canary({"OPENAI_API_KEY": "k"},
+    report = rc.canary({"ROSALIND_API_KEY": "k"},
                        list_models=lambda key: [DEFAULT_ROSALIND_MODEL],
                        run_client=lambda cmd, env: (0, "Provider: openai - Not available\n"))
     assert _checks(report)["client"] is False
@@ -102,20 +123,20 @@ def test_client_command_is_split_like_a_shell_would():
         seen.append(command)
         return 0, "Available"
 
-    rc.canary({"OPENAI_API_KEY": "k"}, list_models=lambda key: [DEFAULT_ROSALIND_MODEL],
+    rc.canary({"ROSALIND_API_KEY": "k"}, list_models=lambda key: [DEFAULT_ROSALIND_MODEL],
               run_client=spy, client_command="uv run deep-research-client")
     assert seen == [["uv", "run", "deep-research-client", "providers", "--provider", "openai"]]
 
 
 def test_main_exit_code_follows_the_verdict(monkeypatch, capsys):
-    monkeypatch.setattr(rc, "canary", lambda env, client_command: {
+    monkeypatch.setattr(rc, "canary", lambda env, client_command, allow_unlisted: {
         "provider": "rosalind", "client_provider": "openai", "model": "m",
         "model_source": "default", "credential": None, "checks": [
             {"check": "credential", "ok": False, "detail": "set it"}],
         "rosalind_models_visible": [], "ok": False})
     assert rc.main([]) == 1
     assert "NOT READY" in capsys.readouterr().out
-    monkeypatch.setattr(rc, "canary", lambda env, client_command: {
+    monkeypatch.setattr(rc, "canary", lambda env, client_command, allow_unlisted: {
         "provider": "rosalind", "client_provider": "openai", "model": "m",
         "model_source": "default", "credential": "OPENAI_API_KEY", "checks": [],
         "rosalind_models_visible": ["m"], "ok": True})

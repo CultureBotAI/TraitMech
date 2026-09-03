@@ -288,14 +288,29 @@ def test_rosalind_is_a_provider_distinct_from_openai():
     assert "scientific_literature" in drp.PROVIDERS["rosalind"].capabilities
 
 
-def test_rosalind_credential_is_recognised_under_either_name_without_exposure():
-    for env in ({"ROSALIND_API_KEY": "secret"}, {"OPENAI_API_KEY": "secret"}):
-        status, reason = drp.provider_status("rosalind", env)
-        assert status == drp.CONFIGURED
-        assert "secret" not in reason
-    status, reason = drp.provider_status("rosalind", {})
+def test_rosalind_is_configured_by_its_dedicated_key_only():
+    """#641: an ordinary OPENAI_API_KEY proves nothing about trusted access,
+    and treating it as configuration routed synthesis to rosalind for anyone
+    holding one."""
+    status, reason = drp.provider_status("rosalind", {"ROSALIND_API_KEY": "secret"})
+    assert status == drp.CONFIGURED
+    assert "secret" not in reason
+    status, reason = drp.provider_status("rosalind", {"OPENAI_API_KEY": "secret"})
     assert status == drp.UNAVAILABLE
-    assert "ROSALIND_API_KEY" in reason and "OPENAI_API_KEY" in reason
+    assert reason == "set ROSALIND_API_KEY"
+
+
+def test_a_plain_openai_key_does_not_change_the_causal_mechanism_route():
+    """Same environment as a falcon+openai user on main: routing must be as
+    before, with rosalind absent from every recommendation."""
+    config = drp.load_config(CONFIG_PATH)
+    report = drp.build_report(
+        config, "causal_mechanism", environ={"EDISON_API_KEY": "x", "OPENAI_API_KEY": "x"},
+    )
+    for stage in report["stages"]:
+        for slot in ("recommended_available", "fallback_available"):
+            row = stage[slot]
+            assert row is None or row["provider"] != "rosalind", stage["name"]
 
 
 def test_rosalind_is_weighted_into_the_causal_mechanism_focus():

@@ -80,10 +80,12 @@ maintainer pasted in under `research/traits/ecology/` already use this name and
 declare `pipeline_run: false`, which keeps them out of resume and the orphan
 gate.
 
-Credential: `ROSALIND_API_KEY` (preferred; it overrides `OPENAI_API_KEY` for
-this lane so a general-purpose key cannot silently take the call) or
-`OPENAI_API_KEY`. Model id: `ROSALIND_MODEL`, defaulting to the constant in
-`scripts/research_trait.py`.
+Credential: `ROSALIND_API_KEY`, the only name the lane reads (set it even if
+it equals your `OPENAI_API_KEY`; a general-purpose key is never used for this
+lane). Model id: `ROSALIND_MODEL`, defaulting to the constant in
+`scripts/research_trait.py`; a passthrough `--model` is rejected so the
+`-rosalind` namespace can only ever hold Rosalind answers. Both live in
+`.env`, so drive runs through `just`.
 
 ```bash
 just rosalind-canary        # unbilled: credential set, key lists the model, client sees openai
@@ -94,8 +96,10 @@ The canary is the preflight that matters here. The model is gated per
 organisation, so a key can authenticate and still be refused it; the canary
 lists the models the key may use and fails unless the requested id is among
 them, printing any Rosalind ids it does see so `ROSALIND_MODEL` can be
-corrected. It cannot see quota: run one trait, read the report and resolve its
-DOIs, and only then ask for a bounded batch.
+corrected. It cannot see quota or the request shape: run one trait, read the
+report and resolve its DOIs, and only then ask for a bounded batch. An
+existing report at the output path is never overwritten without `--force`,
+which is what protects the two hand-supplied answers.
 
 Use it for what it is built for: reviewing an existing causal graph against
 the literature and constructing edge-level evidence. The lane carries web
@@ -122,17 +126,23 @@ it requires paid calls. Review and commit the complete output bundle.
 derive the current eligible, completed, and remaining sets.
 
 ```bash
-uv run python scripts/run_trait_graph_audit.py --dry-run
-uv run python scripts/run_trait_graph_audit.py --limit 8          # pilot first
-uv run python scripts/run_trait_graph_audit.py --category metabolism
-uv run python scripts/run_trait_graph_audit.py --provider openai  # non-default
-uv run python scripts/run_trait_graph_audit.py --provider rosalind --dry-run
+just trait-graph-sweep --dry-run
+just trait-graph-sweep --limit 8            # pilot first
+just trait-graph-sweep --category metabolism
+just trait-graph-sweep --provider openai    # non-default
+just trait-graph-sweep --provider rosalind --dry-run
 ```
+
+Always through `just`: the script loads no `.env`, so a bare `uv run` sees
+neither the credential nor a `ROSALIND_MODEL` override and the canary you
+just passed would not have taken the batch's path.
 
 Resume is per provider namespace: `--provider rosalind` skips only traits with
 a pipeline-written `-deep-research-rosalind.md`, so a Rosalind sweep starts
-from zero regardless of the falcon corpus. Preflight is provider-aware too
-(`ROSALIND_API_KEY` / `OPENAI_API_KEY` for rosalind).
+from zero regardless of the falcon corpus. A hand-supplied report
+(`pipeline_run: false`) is set aside with its own count, never queued and
+never overwritten. Preflight is provider-aware too (`ROSALIND_API_KEY` for
+rosalind).
 
 It is **resumable** (skips traits whose output file exists), **fail-soft** (one
 failure doesn't stop the batch), and appends status rows to

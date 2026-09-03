@@ -19,8 +19,12 @@ its `openai` provider under the same environment a real run would get from
 ``research_trait.research_env``.
 
 It does NOT prove a research call will succeed: quota, rate limits, and the
-model's behaviour on the trait template only show up on the first real run,
-which is why the docs require one canary trait before any batch.
+request shape the lane actually sends (a `developer` message plus the
+`web_search_preview` tool) only show up on the first real run, which is why
+the docs require one canary trait before any batch. Nor is it settled that a
+gated research-preview id appears in the model listing at all (#645); if a key
+known to be entitled fails only the `model` check, `--allow-unlisted` turns
+that check into a warning so the single real trait can settle it.
 
 No credential value is ever printed; only the NAME of the variable that was
 used.
@@ -81,6 +85,7 @@ def canary(
     list_models: ListModels = _list_models_openai,
     run_client: RunClient = _run_client,
     client_command: str = "deep-research-client",
+    allow_unlisted: bool = False,
 ) -> dict[str, Any]:
     """Run every check and return a report; ``ok`` is the overall verdict."""
     model = rosalind_model(environ)
@@ -131,9 +136,12 @@ def canary(
             else "no Rosalind id is visible: this credential's organisation has no "
                  "trusted access, or the key is not the Rosalind key"
         )
-        checks.append({"check": "model", "ok": False,
-                       "detail": f"{model} is not listed for this credential; {hint}"})
-        return report
+        detail = f"{model} is not listed for this credential; {hint}"
+        if not allow_unlisted:
+            checks.append({"check": "model", "ok": False, "detail": detail})
+            return report
+        checks.append({"check": "model", "ok": True,
+                       "detail": f"WARNING (--allow-unlisted): {detail}"})
 
     command = [*shlex.split(client_command), "providers", "--provider",
                ROSALIND_CLIENT_PROVIDER]
@@ -181,8 +189,14 @@ def main(argv: list[str] | None = None) -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--client-command", default="deep-research-client")
     parser.add_argument("--json", action="store_true", help="machine-readable report")
+    parser.add_argument(
+        "--allow-unlisted", action="store_true",
+        help="Warn instead of failing when the model id is absent from the "
+             "listing; for a key known to be entitled (#645)",
+    )
     args = parser.parse_args(argv if argv is not None else sys.argv[1:])
-    report = canary(os.environ, client_command=args.client_command)
+    report = canary(os.environ, client_command=args.client_command,
+                    allow_unlisted=args.allow_unlisted)
     if args.json:
         print(json.dumps(report, indent=2))
     else:

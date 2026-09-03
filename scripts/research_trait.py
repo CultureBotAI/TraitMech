@@ -190,9 +190,12 @@ ROSALIND_PROVIDER = "rosalind"
 ROSALIND_CLIENT_PROVIDER = "openai"
 ROSALIND_MODEL_ENV = "ROSALIND_MODEL"
 DEFAULT_ROSALIND_MODEL = "gpt-rosalind"
-# Preferred first so a dedicated Rosalind key wins over a general-purpose
-# OPENAI_API_KEY that belongs to an org without trusted access.
-ROSALIND_CREDENTIALS = ("ROSALIND_API_KEY", "OPENAI_API_KEY")
+# The ONLY credential for this lane, even when it is the same string as
+# OPENAI_API_KEY. The model is gated per organisation, so an ordinary OpenAI
+# key proves nothing about access; accepting it made the triage route
+# causal-mechanism work to a model most keys cannot call (#641). Setting the
+# dedicated name is the operator's statement that this key is entitled.
+ROSALIND_CREDENTIALS = ("ROSALIND_API_KEY",)
 
 
 def resolve_provider(provider: str) -> str:
@@ -243,19 +246,64 @@ def research_env(provider: str, environ: Mapping[str, str] | None = None) -> dic
     ``EDISON_API_KEY`` at all. Alias the platform key so research works on every
     invocation path. FutureHouse Falcon uses its own key.
 
-    For ``rosalind`` the client reads ``OPENAI_API_KEY``. A dedicated
-    ``ROSALIND_API_KEY`` OVERRIDES it (not merely fills it in) so that a
-    general-purpose OpenAI key in the shell cannot silently take the call to an
-    org without trusted access to the model.
+    For ``rosalind`` the client reads ``OPENAI_API_KEY``, so the dedicated
+    ``ROSALIND_API_KEY`` is copied over it -- and when the dedicated key is
+    absent, any ``OPENAI_API_KEY`` in the shell is REMOVED rather than used, so
+    a general-purpose key cannot silently take the call to an org without
+    trusted access (#641). The client then reports a missing credential,
+    which is the accurate message.
     """
     env = dict(os.environ if environ is None else environ)
     if not env.get("EDISON_API_KEY") and env.get("EDISON_PLATFORM_API_KEY"):
         env["EDISON_API_KEY"] = env["EDISON_PLATFORM_API_KEY"]
     if provider == "falcon" and not env.get("EDISON_API_KEY") and env.get("FUTUREHOUSE_API_KEY"):
         env["EDISON_API_KEY"] = env["FUTUREHOUSE_API_KEY"]
-    if provider == ROSALIND_PROVIDER and env.get("ROSALIND_API_KEY"):
-        env["OPENAI_API_KEY"] = env["ROSALIND_API_KEY"]
+    if provider == ROSALIND_PROVIDER:
+        if env.get("ROSALIND_API_KEY"):
+            env["OPENAI_API_KEY"] = env["ROSALIND_API_KEY"]
+        else:
+            env.pop("OPENAI_API_KEY", None)
     return env
+
+
+def front_matter(path: Path) -> dict[str, Any]:
+    """The YAML front matter of a report, or ``{}`` when it has none.
+
+    Parsed with yaml rather than matched by regex, and over the whole head of
+    the file rather than a fixed byte count: the hand-supplied Rosalind
+    reports carry front matter longer than 4 KiB, and a curator may spell a
+    flag ``False`` or ``no`` (#642). A UTF-8 BOM is tolerated.
+    """
+    try:
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+    except OSError:
+        return {}
+    if not text.startswith("---"):
+        return {}
+    parts = text.split("\n---", 1)
+    if len(parts) < 2:
+        return {}
+    try:
+        data = yaml.safe_load(parts[0][3:])
+    except yaml.YAMLError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def is_pipeline_report(path: Path) -> bool:
+    """False for a report whose front matter declares ``pipeline_run: false``.
+
+    That flag marks an artifact a maintainer pasted in by hand (the two
+    GPT-Rosalind answers under research/traits/ecology/). The sweep, the
+    orphan gate, the renderer, and the overwrite guard all consult it, so it
+    lives here with the provider table rather than in any one of them.
+    """
+    return front_matter(path).get("pipeline_run") is not False
+
+
+def passthrough_model_override(passthrough_args: list[str]) -> bool:
+    """True when the caller tried to pass ``--model`` through to the client."""
+    return any(arg == "--model" or arg.startswith("--model=") for arg in passthrough_args)
 
 
 def _repo_relative(path: Path) -> str:
@@ -347,6 +395,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Print the deep-research-client command without running it.",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite an existing report at the output path. Without it an "
+             "existing report -- the pipeline's own or a hand-supplied one -- "
+             "is never replaced (#638).",
+    )
     args, passthrough_args = parser.parse_known_args(argv)
     args.passthrough_args = passthrough_args
     return args
@@ -365,6 +420,27 @@ def main(argv: list[str] | None = None) -> int:
     output_file = output_dir / f"{args.slug}-deep-research-{provider}.md"
     variables = template_vars(doc, category_slug, args.slug)
     print(f"Researching: {variables['trait_label']} ({provider}) -> {output_file}")
+    if provider == ROSALIND_PROVIDER and passthrough_model_override(args.passthrough_args):
+        # The client keeps the LAST --model, so a passthrough one would write
+        # some other model's answer into the rosalind namespace and satisfy its
+        # resume check (#640). The model is set through ROSALIND_MODEL only.
+        print(
+            f"--model is not a passthrough option for {ROSALIND_PROVIDER}; set "
+            f"{ROSALIND_MODEL_ENV} instead so the report namespace stays honest",
+            file=sys.stderr,
+        )
+        return 2
+    if output_file.exists() and not args.force:
+        kind = "the pipeline's own" if is_pipeline_report(output_file) else "a hand-supplied"
+        message = (
+            f"refusing to overwrite {kind} report at {output_file}; pass --force "
+            f"to replace it (#638)"
+        )
+        if args.dry_run:
+            print(f"NOTE: {message}")
+        else:
+            print(f"ERROR: {message}", file=sys.stderr)
+            return 3
     if provider == "codex":
         if args.passthrough_args:
             print(

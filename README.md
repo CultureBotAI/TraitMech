@@ -215,7 +215,7 @@ client's `openai` provider with an explicit model id and written to its own
 
 ```bash
 export EDISON_API_KEY=...        # Edison platform credential; also what falcon needs
-export ROSALIND_API_KEY=...      # GPT-Rosalind (trusted-access OpenAI key)
+export ROSALIND_API_KEY=...      # GPT-Rosalind: the only key the lane reads
 just research-provider falcon
 just rosalind-canary                                  # unbilled: key sees the model?
 just deep-research-providers causal_mechanism

@@ -34,6 +34,7 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -312,6 +313,11 @@ def research_report(category_dir: str, slug: str) -> Path | None:
         # dot-only exclusion, and for an unrecognised provider sorts ahead of its
         # own report ('-' < '.'), so the page would render the bibliography (#259).
         if not re.search(r"[-.]citations\.md$", path.name)
+        # A hand-supplied artifact (`pipeline_run: false`) is not a research
+        # report: it answers a discussion hypothesis, echoes no prompt, and has
+        # no manifest row. Ranking it as the sweep's own would put an
+        # unaccounted-for answer on the page (#643).
+        and is_pipeline_report(path)
     ]
     if not candidates:
         return None

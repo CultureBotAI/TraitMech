@@ -350,10 +350,12 @@ def provider_status(
         "falcon": ("EDISON_API_KEY", "EDISON_PLATFORM_API_KEY", "FUTUREHOUSE_API_KEY"),
         "openscientist": ("OPENSCIENTIST_API_KEY",),
         "openai": ("OPENAI_API_KEY",),
-        # Mirrors research_trait.ROSALIND_CREDENTIALS. A present OPENAI_API_KEY
-        # says even less here than usual: the model is gated by org-level
-        # trusted access, so `just rosalind-canary` is the check that matters.
-        "rosalind": ("ROSALIND_API_KEY", "OPENAI_API_KEY"),
+        # Mirrors research_trait.ROSALIND_CREDENTIALS: the dedicated name only.
+        # An ordinary OPENAI_API_KEY proves nothing about org-level trusted
+        # access to the model, and accepting it routed causal-mechanism work
+        # to rosalind for anyone holding one (#641). `just rosalind-canary` is
+        # still the check that matters even once the dedicated key is set.
+        "rosalind": ("ROSALIND_API_KEY",),
         "perplexity": ("PERPLEXITY_API_KEY",),
         "consensus": ("CONSENSUS_API_KEY",),
         "cborg": ("CBORG_API_KEY",),

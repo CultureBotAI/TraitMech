@@ -33,21 +33,21 @@ The `name:secret` shape is required by the fleet contract. Never commit either
 value or print it in logs.
 
 GPT-Rosalind requires an OpenAI API key for an organisation admitted to
-OpenAI's trusted-access program for the model:
+OpenAI's trusted-access program for the model, under the dedicated name:
 
 ```bash
-export ROSALIND_API_KEY='...'   # preferred; overrides OPENAI_API_KEY for this lane
-# or, if the general-purpose key IS the Rosalind key:
-export OPENAI_API_KEY='...'
+export ROSALIND_API_KEY='...'   # the ONLY credential this lane reads
 # Optional; defaults to the id in scripts/research_trait.py:
 export ROSALIND_MODEL='gpt-rosalind'
 ```
 
-`ROSALIND_API_KEY` deliberately overrides rather than fills in
-`OPENAI_API_KEY`: a general-purpose OpenAI key in the shell must not silently
-take a Rosalind call to an organisation that has no access to the model. The
-key is read by `research_trait.research_env()` and never written by TraitMech
-tooling.
+Set `ROSALIND_API_KEY` even when it is the same string as your
+`OPENAI_API_KEY`. A general-purpose OpenAI key proves nothing about org-level
+access to the model, so the lane does not read it: `research_env()` copies
+the dedicated key over `OPENAI_API_KEY` for the child process and, when the
+dedicated key is absent, removes any `OPENAI_API_KEY` from the child's
+environment rather than let it take the call (#641). The key is never written
+by TraitMech tooling.
 
 ## GPT-Rosalind lane
 
@@ -68,9 +68,17 @@ DOI before curating from it.
 
 Two reports in the `rosalind` namespace predate the lane. They were pasted in
 by the maintainer from a GPT-Rosalind session and declare
-`pipeline_run: false` in their front matter. That flag is what keeps them out
-of the sweep's resume check and orphan gate; do not remove it, and do not
-write it on a report the pipeline produced.
+`pipeline_run: false` in their front matter. That flag, parsed as YAML by
+`research_trait.is_pipeline_report()`, is what keeps them out of the sweep's
+resume check and orphan gate, out of the rendered pages, and safe from being
+overwritten: the sweep sets such targets aside with their own count, and
+`research_trait.py` refuses to replace any existing report without `--force`
+(#638). Do not remove the flag, and do not write it on a report the pipeline
+produced.
+
+Launch a Rosalind sweep through `just trait-graph-sweep --provider rosalind`,
+not a bare `uv run`: only `just` loads `.env`, which is where
+`ROSALIND_API_KEY` and any `ROSALIND_MODEL` override live (#644).
 
 `scripts/deep_research_contract.py` is vendored and cannot carry a Rosalind
 canary, so the lane has its own: `scripts/research_rosalind_canary.py`.
@@ -97,8 +105,14 @@ org-level trusted access, so a key can authenticate and still be refused the
 model. It prints any Rosalind ids the credential does see, which is how a
 renamed or snapshotted preview id is corrected (set `ROSALIND_MODEL`). It then
 confirms `deep-research-client` discovers `openai` under the same environment
-`research_env()` gives a real run. It cannot see quota or rate limits; only
-the first real trait can.
+`research_env()` gives a real run. It cannot see quota, rate limits, or
+whether the model accepts the request shape the lane sends (a `developer`
+message plus the `web_search_preview` tool); only the first real trait can.
+It is also not yet confirmed that the gated preview id appears in the model
+listing at all (#645). If a key known to be entitled fails only the `model`
+check, `just rosalind-canary --allow-unlisted` downgrades that check to a
+warning so the single real trait can settle it; do not use the flag to skip
+past an unknown key.
 
 Before any batch or paid run, execute one real target, inspect the report and
 its cited sources, and only then authorize a bounded batch. Research artifacts
