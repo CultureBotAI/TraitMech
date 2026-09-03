@@ -271,3 +271,44 @@ def test_all_negative_scores_keep_their_relative_order():
     rows = drp.rank_stage(config, focus_name, stage_name)
     assert all(row["fit"] == 0 for row in rows)
     assert [row["provider"] for row in rows] == expected
+
+
+# --- the GPT-Rosalind lane is triaged and credentialed on its own ---
+
+
+@pytest.mark.parametrize("alias", ["rosalind", "gpt-rosalind", "GPT-Rosalind", "gpt_rosalind"])
+def test_rosalind_aliases_resolve_to_rosalind(alias):
+    assert drp.canonical_provider(alias) == "rosalind"
+
+
+def test_rosalind_is_a_provider_distinct_from_openai():
+    """Same API, different evidence: it must rank and route under its own name."""
+    assert "rosalind" in drp.PROVIDERS
+    assert drp.PROVIDERS["rosalind"].name != drp.PROVIDERS["openai"].name
+    assert "scientific_literature" in drp.PROVIDERS["rosalind"].capabilities
+
+
+def test_rosalind_credential_is_recognised_under_either_name_without_exposure():
+    for env in ({"ROSALIND_API_KEY": "secret"}, {"OPENAI_API_KEY": "secret"}):
+        status, reason = drp.provider_status("rosalind", env)
+        assert status == drp.CONFIGURED
+        assert "secret" not in reason
+    status, reason = drp.provider_status("rosalind", {})
+    assert status == drp.UNAVAILABLE
+    assert "ROSALIND_API_KEY" in reason and "OPENAI_API_KEY" in reason
+
+
+def test_rosalind_is_weighted_into_the_causal_mechanism_focus():
+    config = drp.load_config(CONFIG_PATH)
+    adjustments = config["focuses"]["causal_mechanism"]["provider_adjustments"]
+    assert adjustments["rosalind"] == adjustments["falcon"]
+
+
+def test_rosalind_routes_for_synthesis_when_it_is_the_only_configured_provider():
+    config = drp.load_config(CONFIG_PATH)
+    report = drp.build_report(
+        config, "causal_mechanism", environ={"ROSALIND_API_KEY": "x"},
+        allow=frozenset({"rosalind", "falcon", "openai"}),
+    )
+    synthesis = next(s for s in report["stages"] if s["name"] == "synthesis")
+    assert synthesis["recommended_available"]["provider"] == "rosalind"

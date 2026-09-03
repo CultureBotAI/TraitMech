@@ -7,6 +7,7 @@ import os
 import shlex
 import subprocess
 import sys
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
@@ -161,11 +162,45 @@ DEFAULT_PROVIDER = "edison"
 # a separate concern and belongs in its own entry point; do not grow those
 # features here, because they do not exist in deep-research-client to pass
 # through.
-PROVIDER_ALIASES = {"edison": "falcon"}
+PROVIDER_ALIASES = {
+    "edison": "falcon",
+    "gpt-rosalind": "rosalind",
+    "gpt_rosalind": "rosalind",
+}
+
+# GPT-Rosalind is OpenAI's life-sciences reasoning model (research preview,
+# trusted-access program). It is not a deep-research-client provider of its own:
+# it is served by the same OpenAI Responses API the client's `openai` provider
+# already drives, so TraitMech reaches it as `--provider openai --model <id>`.
+#
+# `rosalind` is nevertheless a TraitMech-level provider NAME, not an alias for
+# `openai`, because the two must not share a filename namespace: an
+# `o3-deep-research` report and a GPT-Rosalind report are different evidence
+# and must never satisfy each other's resume check. resolve_provider() therefore
+# returns `rosalind`, the output lands in `-deep-research-rosalind.md` (the
+# namespace the two hand-supplied Rosalind artifacts under research/traits/
+# ecology/ already use), and only provider_args() translates it for the client.
+#
+# The model id is an environment override with a default, not a constant: the
+# id is a research-preview name that OpenAI can snapshot or rename, and
+# `just rosalind-canary` reports which Rosalind ids the credential can actually
+# see, so a wrong default is corrected by setting ROSALIND_MODEL rather than by
+# editing code.
+ROSALIND_PROVIDER = "rosalind"
+ROSALIND_CLIENT_PROVIDER = "openai"
+ROSALIND_MODEL_ENV = "ROSALIND_MODEL"
+DEFAULT_ROSALIND_MODEL = "gpt-rosalind"
+# Preferred first so a dedicated Rosalind key wins over a general-purpose
+# OPENAI_API_KEY that belongs to an org without trusted access.
+ROSALIND_CREDENTIALS = ("ROSALIND_API_KEY", "OPENAI_API_KEY")
 
 
 def resolve_provider(provider: str) -> str:
-    """Map a user-facing provider name to a deep-research-client provider.
+    """Map a user-facing provider name to TraitMech's canonical provider name.
+
+    For most providers the canonical name is the deep-research-client name.
+    `rosalind` is the exception: it is canonical here and translated to the
+    client's `openai` provider plus a model by provider_args().
 
     Canonicalises to lower case on both hit and miss. Returning the caller's
     original casing on a miss would send `Falcon` to a client that only accepts
@@ -177,14 +212,27 @@ def resolve_provider(provider: str) -> str:
     return PROVIDER_ALIASES.get(key, key)
 
 
-def provider_args(provider: str) -> list[str]:
-    """Mirror DisMech's cborg shortcut while allowing named providers such as falcon."""
+def rosalind_model(environ: Mapping[str, str] | None = None) -> str:
+    """The GPT-Rosalind model id to request: ROSALIND_MODEL, else the default."""
+    env = os.environ if environ is None else environ
+    return env.get(ROSALIND_MODEL_ENV) or DEFAULT_ROSALIND_MODEL
+
+
+def provider_args(provider: str, environ: Mapping[str, str] | None = None) -> list[str]:
+    """Mirror DisMech's cborg shortcut while allowing named providers such as falcon.
+
+    `rosalind` becomes the client's `openai` provider with an explicit model, so
+    the client never falls back to its o3-deep-research default under the
+    Rosalind name.
+    """
     if provider == "cborg":
         return ["--use-cborg"]
+    if provider == ROSALIND_PROVIDER:
+        return ["--provider", ROSALIND_CLIENT_PROVIDER, "--model", rosalind_model(environ)]
     return ["--provider", provider]
 
 
-def research_env(provider: str) -> dict[str, str]:
+def research_env(provider: str, environ: Mapping[str, str] | None = None) -> dict[str, str]:
     """Build subprocess environment, aliasing Edison / Falcon keys to EDISON_API_KEY.
 
     This script and the deep-research-client read ``EDISON_API_KEY``, but the
@@ -194,12 +242,19 @@ def research_env(provider: str) -> dict[str, str]:
     (whose ``dotenv-load`` injects the per-repo ``.env``) would otherwise see no
     ``EDISON_API_KEY`` at all. Alias the platform key so research works on every
     invocation path. FutureHouse Falcon uses its own key.
+
+    For ``rosalind`` the client reads ``OPENAI_API_KEY``. A dedicated
+    ``ROSALIND_API_KEY`` OVERRIDES it (not merely fills it in) so that a
+    general-purpose OpenAI key in the shell cannot silently take the call to an
+    org without trusted access to the model.
     """
-    env = os.environ.copy()
+    env = dict(os.environ if environ is None else environ)
     if not env.get("EDISON_API_KEY") and env.get("EDISON_PLATFORM_API_KEY"):
         env["EDISON_API_KEY"] = env["EDISON_PLATFORM_API_KEY"]
     if provider == "falcon" and not env.get("EDISON_API_KEY") and env.get("FUTUREHOUSE_API_KEY"):
         env["EDISON_API_KEY"] = env["FUTUREHOUSE_API_KEY"]
+    if provider == ROSALIND_PROVIDER and env.get("ROSALIND_API_KEY"):
+        env["OPENAI_API_KEY"] = env["ROSALIND_API_KEY"]
     return env
 
 
@@ -275,7 +330,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--provider",
         default=DEFAULT_PROVIDER,
         help=f"provider or alias (default: {DEFAULT_PROVIDER}, the Edison research "
-             "agent, which resolves to deep-research-client's `falcon`)",
+             "agent, which resolves to deep-research-client's `falcon`); "
+             "`rosalind` (alias `gpt-rosalind`) runs OpenAI's GPT-Rosalind through "
+             "the client's `openai` provider",
     )
     parser.add_argument("--category", required=True, help="Trait category directory, e.g. physiology")
     parser.add_argument("--slug", required=True, help="Trait YAML slug without .yaml")

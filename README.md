@@ -209,15 +209,21 @@ inputs, then manually curate only DOI-backed claims into TraitRecord YAML.
 `edison` is the default provider — a TraitMech alias for `deep-research-client`'s
 `falcon`, the Edison Scientific research agent. The client has no provider
 literally named `edison`; see `.claude/skills/research-causal-graphs/SKILL.md`.
+`rosalind` is OpenAI's GPT-Rosalind life-sciences model, driven through the
+client's `openai` provider with an explicit model id and written to its own
+`-deep-research-rosalind.md` namespace; see `docs/DEEP_RESEARCH_PROVIDERS.md`.
 
 ```bash
 export EDISON_API_KEY=...        # Edison platform credential; also what falcon needs
+export ROSALIND_API_KEY=...      # GPT-Rosalind (trusted-access OpenAI key)
 just research-provider falcon
+just rosalind-canary                                  # unbilled: key sees the model?
 just deep-research-providers causal_mechanism
 just deep-research-provider asta definition_grounding
 just research-trait physiology autotrophic            # Edison (default provider)
 just research-trait physiology autotrophic --dry-run
 just research-trait physiology autotrophic --provider openai   # override
+just research-trait ecology gut_associated --provider rosalind  # GPT-Rosalind
 ```
 
 Reports are written under `research/traits/<category>/` with separate citation

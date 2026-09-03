@@ -64,7 +64,13 @@ EMBEDDING_RELEASE = "2026-04-25"
 # the tree with no manifest row and no citations sidecar (#245). Rank by the
 # provider the tracked sweep actually ran, and fall back to name order so an
 # unrecognised provider still renders reproducibly rather than arbitrarily.
-RESEARCH_PROVIDERS = ("falcon",)
+#
+# `rosalind` (OpenAI GPT-Rosalind, a pipeline provider since the rosalind lane
+# landed) ranks after falcon: the tracked sweep corpus is falcon's, so a trait
+# with both keeps rendering the report the manifest accounts for, while a trait
+# researched only through Rosalind renders that rather than falling to name
+# order behind a stray `-codex` file.
+RESEARCH_PROVIDERS = ("falcon", "rosalind")
 
 # How much of a report to embed in the page.
 #

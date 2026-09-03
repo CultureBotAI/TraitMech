@@ -188,3 +188,86 @@ def test_edison_output_filename_stays_in_falcon_namespace(tmp_path, capsys):
     out = capsys.readouterr().out
     assert "autotrophic-deep-research-falcon.md" in out
     assert "-deep-research-edison.md" not in out
+
+
+# --- the GPT-Rosalind lane ---
+#
+# `rosalind` is a TraitMech provider NAME served through the client's `openai`
+# provider with an explicit model. The three things that must hold together:
+# the alias resolves to `rosalind` (not `openai`), the client is told `openai`
+# plus a model, and the output filename stays in the `-rosalind` namespace.
+
+from research_trait import (  # noqa: E402
+    DEFAULT_ROSALIND_MODEL,
+    ROSALIND_CREDENTIALS,
+    rosalind_model,
+)
+
+
+def test_rosalind_aliases_resolve_to_the_traitmech_name_not_to_openai():
+    for alias in ("rosalind", "Rosalind", "gpt-rosalind", "GPT-Rosalind", "gpt_rosalind"):
+        assert resolve_provider(alias) == "rosalind"
+
+
+def test_rosalind_is_sent_to_the_client_as_openai_with_an_explicit_model():
+    assert provider_args("rosalind", {}) == [
+        "--provider", "openai", "--model", DEFAULT_ROSALIND_MODEL,
+    ]
+
+
+def test_rosalind_model_can_be_overridden_without_editing_code():
+    """The preview id can be snapshotted or renamed; the canary tells you the
+    new name and ROSALIND_MODEL is where it goes."""
+    assert rosalind_model({}) == DEFAULT_ROSALIND_MODEL
+    assert rosalind_model({"ROSALIND_MODEL": "gpt-rosalind-2026-08-01"}) == "gpt-rosalind-2026-08-01"
+    assert provider_args("rosalind", {"ROSALIND_MODEL": "x"})[-1] == "x"
+
+
+def test_plain_openai_is_still_plain_openai():
+    """Adding the lane must not touch the documented `--provider openai` path."""
+    assert provider_args("openai", {}) == ["--provider", "openai"]
+
+
+def test_rosalind_output_stays_in_its_own_namespace(tmp_path, capsys):
+    """An o3-deep-research report and a GPT-Rosalind report are different
+    evidence; neither may satisfy the other's resume check."""
+    from research_trait import main as research_main
+
+    rc = research_main([
+        "--provider", "gpt-rosalind", "--category", "ecology", "--slug", "gut_associated",
+        "--research-dir", str(tmp_path), "--dry-run",
+    ])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert "gut_associated-deep-research-rosalind.md" in out
+    assert "-deep-research-openai.md" not in out
+    assert "--provider openai --model" in out
+
+
+def test_dedicated_rosalind_key_overrides_a_general_openai_key():
+    """A general-purpose OPENAI_API_KEY in the shell belongs to whatever org the
+    developer uses day to day; it must not silently take a Rosalind call."""
+    env = research_env("rosalind", {"OPENAI_API_KEY": "general", "ROSALIND_API_KEY": "rosalind"})
+    assert env["OPENAI_API_KEY"] == "rosalind"
+
+
+def test_a_bare_openai_key_still_serves_rosalind():
+    env = research_env("rosalind", {"OPENAI_API_KEY": "general"})
+    assert env["OPENAI_API_KEY"] == "general"
+
+
+def test_rosalind_key_does_not_leak_into_other_providers():
+    env = research_env("openai", {"OPENAI_API_KEY": "general", "ROSALIND_API_KEY": "rosalind"})
+    assert env["OPENAI_API_KEY"] == "general"
+    env = research_env("falcon", {"ROSALIND_API_KEY": "rosalind"})
+    assert "OPENAI_API_KEY" not in env
+
+
+def test_research_env_still_reads_the_process_environment_by_default(monkeypatch):
+    monkeypatch.setenv("ROSALIND_API_KEY", "from-process")
+    assert research_env("rosalind")["OPENAI_API_KEY"] == "from-process"
+
+
+def test_rosalind_credential_order_prefers_the_dedicated_name():
+    assert ROSALIND_CREDENTIALS[0] == "ROSALIND_API_KEY"
+    assert "OPENAI_API_KEY" in ROSALIND_CREDENTIALS

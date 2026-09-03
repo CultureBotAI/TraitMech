@@ -27,9 +27,13 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from run_trait_graph_audit import (  # noqa: E402
     MIN_ARTIFACT_BYTES,
     audit_pilot_artifacts,
+    is_pipeline_report,
     missing_artifacts,
     ok_outputs,
     orphan_reports,
+    output_path,
+    preflight_error,
+    report_done,
     scan_malformed_curies,
     undersized_artifacts,
 )
@@ -269,3 +273,83 @@ def test_tracked_pilot_manifest_and_all_ten_sidecars_are_clean():
 
     assert errors == []
     assert (manifests, sidecars) == (1, 10)
+
+
+# ------------------------------------------ the rosalind namespace and preflight
+
+
+def test_rosalind_reports_have_their_own_resume_namespace():
+    assert output_path("ecology", "gut_associated", "rosalind").name == (
+        "gut_associated-deep-research-rosalind.md"
+    )
+    assert output_path("ecology", "gut_associated", "gpt-rosalind").name == (
+        "gut_associated-deep-research-rosalind.md"
+    )
+
+
+def test_a_hand_supplied_report_is_not_done_for_resume(tmp_path):
+    """`pipeline_run: false` marks a pasted-in artifact. It must not suppress a
+    call the pipeline never made, however substantial it is."""
+    path = tmp_path / "x-deep-research-rosalind.md"
+    path.write_text("---\nprovider: gpt-rosalind\npipeline_run: false\n---\n\n# body\n" + "x" * 5000)
+    assert not is_pipeline_report(path)
+    assert not report_done(path)
+
+
+def test_a_pipeline_report_is_done_for_resume(tmp_path):
+    path = tmp_path / "x-deep-research-rosalind.md"
+    path.write_text("---\nprovider: openai\nmodel: gpt-rosalind\n---\n\n# body\n")
+    assert is_pipeline_report(path)
+    assert report_done(path)
+    assert not report_done(tmp_path / "absent-deep-research-rosalind.md")
+
+
+def test_pipeline_run_false_only_counts_inside_the_front_matter(tmp_path):
+    """The flag is provenance, not a phrase: a report whose BODY quotes the
+    words must still count as the pipeline's own."""
+    path = tmp_path / "x-deep-research-rosalind.md"
+    path.write_text("---\nprovider: openai\n---\n\nThe file says pipeline_run: false\n")
+    assert is_pipeline_report(path)
+    no_front_matter = tmp_path / "y-deep-research-rosalind.md"
+    no_front_matter.write_text("pipeline_run: false\n")
+    assert is_pipeline_report(no_front_matter)
+
+
+def test_a_hand_supplied_report_is_not_an_orphan(tmp_path):
+    research = tmp_path / "research" / "traits" / "ecology"
+    research.mkdir(parents=True)
+    (research / "pasted-deep-research-rosalind.md").write_text(
+        "---\npipeline_run: false\n---\n\nbody\n")
+    (research / "stray-deep-research-rosalind.md").write_text("---\nprovider: openai\n---\nbody\n")
+    found = orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, "rosalind")
+    assert found == ["research/traits/ecology/stray-deep-research-rosalind.md"]
+
+
+def test_the_two_tracked_rosalind_reports_declare_pipeline_run_false():
+    """The invariant the docs promise: nothing in the rosalind namespace claims
+    to be a pipeline run that the manifest cannot account for."""
+    tracked = sorted((REPO_ROOT / "research" / "traits").rglob("*-deep-research-rosalind.md"))
+    assert tracked, "expected the two hand-supplied Rosalind artifacts"
+    assert all(not is_pipeline_report(p) for p in tracked), [
+        p.name for p in tracked if is_pipeline_report(p)
+    ]
+
+
+@pytest.mark.parametrize("provider,env,expected", [
+    ("edison", {}, "EDISON_API_KEY"),
+    ("edison", {"FUTUREHOUSE_API_KEY": "x"}, None),
+    ("rosalind", {}, "ROSALIND_API_KEY"),
+    ("rosalind", {"OPENAI_API_KEY": "x"}, None),
+    ("gpt-rosalind", {"ROSALIND_API_KEY": "x"}, None),
+    ("rosalind", {"EDISON_API_KEY": "x"}, "ROSALIND_API_KEY"),
+    ("openai", {}, "OPENAI_API_KEY"),
+    ("perplexity", {}, None),  # not preflighted: the client reports it
+])
+def test_preflight_is_provider_aware(provider, env, expected):
+    """Before this, `--provider rosalind` demanded EDISON_API_KEY and then ran
+    without checking the key it actually needed."""
+    error = preflight_error(provider, env)
+    if expected is None:
+        assert error is None
+    else:
+        assert error is not None and expected in error

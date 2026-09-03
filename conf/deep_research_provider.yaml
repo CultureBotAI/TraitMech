@@ -10,7 +10,7 @@ focuses:
       - primary microbiology and physiology studies
       - reviews for discovery followed by primary-paper verification
       - UniProt, GO, Rhea, MetaCyc, KEGG, and NCBI for identifier checks
-    provider_adjustments: {openscientist: 4, falcon: 4, asta: 2, cyberian: 2, claude_code: 2, codex: 2}
+    provider_adjustments: {openscientist: 4, falcon: 4, rosalind: 4, asta: 2, cyberian: 2, claude_code: 2, codex: 2}
     stages:
       discovery:
         objective: Retrieve mechanistic studies and candidate entity/edge evidence.
@@ -31,7 +31,7 @@ focuses:
       - source ontologies and authoritative database records
       - primary assay or phenotype literature
       - domain reviews used only to locate primary evidence
-    provider_adjustments: {claude_code: 4, codex: 4, asta: 2, consensus: 2, falcon: 2}
+    provider_adjustments: {claude_code: 4, codex: 4, asta: 2, consensus: 2, falcon: 2, rosalind: 2}
     stages:
       discovery:
         objective: Search ontology pages, database definitions, and phenotype literature.
