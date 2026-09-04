@@ -81,6 +81,23 @@ def test_authentication_failure_is_reported_without_the_key():
     assert "<redacted>" in report["checks"][-1]["detail"]
 
 
+def test_a_masked_key_echo_from_the_provider_is_scrubbed():
+    """#647: seen live. OpenAI's 401 body carries `at-Jk6S****zMaI`, the key's
+    own prefix and suffix; the full-string replace alone let it through."""
+    def boom(key):
+        raise RuntimeError(
+            "Error code: 401 - {'error': {'message': 'Incorrect API key provided: "
+            "at-Jk6SE**********************************zMaI. You can find your API "
+            "key at https://platform.openai.com/account/api-keys.'}}"
+        )
+
+    report = rc.canary({"ROSALIND_API_KEY": "at-Jk6SEfullsecretzMaI"}, list_models=boom,
+                       run_client=_ok_client)
+    detail = report["checks"][-1]["detail"]
+    assert "Jk6SE" not in detail and "zMaI" not in detail
+    assert "401" in detail and "<redacted>" in detail
+
+
 def test_model_absent_is_the_trusted_access_finding():
     report = rc.canary({"ROSALIND_API_KEY": "k"},
                        list_models=lambda key: ["gpt-5", "o3-deep-research-2025-06-26"],

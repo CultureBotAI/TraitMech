@@ -34,6 +34,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shlex
 import subprocess
 import sys
@@ -162,9 +163,22 @@ def canary(
     return report
 
 
+# OpenAI's 401 body echoes the key MASKED -- `at-Jk6S****zMaI` -- which still
+# leaks its prefix and suffix. Seen live on the first real canary (#647).
+_MASKED_KEY_RE = re.compile(r"\S*\*{3,}\S*")
+_KEY_ECHO_RE = re.compile(r"(Incorrect API key provided:)\s*\S+")
+
+
 def _scrub(text: str, secret: str) -> str:
-    """Belt and braces: an SDK message must never carry the key into a log."""
-    return text.replace(secret, "<redacted>") if secret else text
+    """Belt and braces: an SDK message must never carry the key into a log.
+
+    Removes the full key, any masked rendering of it, and the fragment OpenAI
+    places after "Incorrect API key provided:".
+    """
+    if secret:
+        text = text.replace(secret, "<redacted>")
+    text = _KEY_ECHO_RE.sub(r"\1 <redacted>", text)
+    return _MASKED_KEY_RE.sub("<redacted>", text)
 
 
 def print_report(report: Mapping[str, Any]) -> None:
