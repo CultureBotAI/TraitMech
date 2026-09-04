@@ -34,6 +34,7 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -64,7 +65,13 @@ EMBEDDING_RELEASE = "2026-04-25"
 # the tree with no manifest row and no citations sidecar (#245). Rank by the
 # provider the tracked sweep actually ran, and fall back to name order so an
 # unrecognised provider still renders reproducibly rather than arbitrarily.
-RESEARCH_PROVIDERS = ("falcon",)
+#
+# `rosalind` (OpenAI GPT-Rosalind, a pipeline provider since the rosalind lane
+# landed) ranks after falcon: the tracked sweep corpus is falcon's, so a trait
+# with both keeps rendering the report the manifest accounts for, while a trait
+# researched only through Rosalind renders that rather than falling to name
+# order behind a stray `-codex` file.
+RESEARCH_PROVIDERS = ("falcon", "rosalind")
 
 # How much of a report to embed in the page.
 #
@@ -306,6 +313,11 @@ def research_report(category_dir: str, slug: str) -> Path | None:
         # dot-only exclusion, and for an unrecognised provider sorts ahead of its
         # own report ('-' < '.'), so the page would render the bibliography (#259).
         if not re.search(r"[-.]citations\.md$", path.name)
+        # A hand-supplied artifact (`pipeline_run: false`) is not a research
+        # report: it answers a discussion hypothesis, echoes no prompt, and has
+        # no manifest row. Ranking it as the sweep's own would put an
+        # unaccounted-for answer on the page (#643).
+        and is_pipeline_report(path)
     ]
     if not candidates:
         return None

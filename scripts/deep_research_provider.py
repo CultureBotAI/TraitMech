@@ -150,6 +150,26 @@ PROVIDERS: dict[str, Provider] = {
         "comprehensive multi-source synthesis",
         "highest cost and long response times",
     ),
+    "rosalind": Provider(
+        "rosalind",
+        "GPT-Rosalind (OpenAI)",
+        "open web with life-sciences reasoning",
+        "deep",
+        "high",
+        "slow",
+        frozenset(
+            {
+                "web_search",
+                "scientific_literature",
+                "citation_tracking",
+                "synthesis",
+                "hypothesis_tracking",
+            }
+        ),
+        "reviewing and constructing causal graphs and their evidence",
+        "research preview under OpenAI trusted access; the client lane exposes "
+        "web search only, no code or database tools",
+    ),
     "perplexity": Provider(
         "perplexity",
         "Perplexity",
@@ -246,7 +266,16 @@ PROVIDERS: dict[str, Provider] = {
     ),
 }
 
-ALIASES = {"edison": "falcon", "futurehouse": "falcon", "claude-code": "claude_code"}
+ALIASES = {
+    "edison": "falcon",
+    "futurehouse": "falcon",
+    "claude-code": "claude_code",
+    # Same rule as research_trait.PROVIDER_ALIASES: `rosalind` is a TraitMech
+    # provider name (served through the client's `openai` provider with an
+    # explicit model), so it is triaged and credentialed on its own.
+    "gpt-rosalind": "rosalind",
+    "gpt_rosalind": "rosalind",
+}
 _ALL_CAPABILITIES = frozenset(
     capability for provider in PROVIDERS.values() for capability in provider.capabilities
 )
@@ -321,6 +350,12 @@ def provider_status(
         "falcon": ("EDISON_API_KEY", "EDISON_PLATFORM_API_KEY", "FUTUREHOUSE_API_KEY"),
         "openscientist": ("OPENSCIENTIST_API_KEY",),
         "openai": ("OPENAI_API_KEY",),
+        # Mirrors research_trait.ROSALIND_CREDENTIALS: the dedicated name only.
+        # An ordinary OPENAI_API_KEY proves nothing about org-level trusted
+        # access to the model, and accepting it routed causal-mechanism work
+        # to rosalind for anyone holding one (#641). `just rosalind-canary` is
+        # still the check that matters even once the dedicated key is set.
+        "rosalind": ("ROSALIND_API_KEY",),
         "perplexity": ("PERPLEXITY_API_KEY",),
         "consensus": ("CONSENSUS_API_KEY",),
         "cborg": ("CBORG_API_KEY",),

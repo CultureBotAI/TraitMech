@@ -16,6 +16,8 @@ Designed for a long, paid run:
 
 Requires ``EDISON_API_KEY`` (or ``FUTUREHOUSE_API_KEY``) in the environment for
 a real run; ``--dry-run`` needs no key and just lists the planned calls.
+``--provider rosalind`` (OpenAI's GPT-Rosalind) needs ``ROSALIND_API_KEY`` or
+``OPENAI_API_KEY`` instead and writes ``-deep-research-rosalind.md``.
 
 Usage:
     python scripts/run_trait_graph_audit.py --dry-run
@@ -35,11 +37,17 @@ import subprocess
 import sys
 import threading
 import time
+from collections.abc import Mapping
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import yaml
-from research_trait import resolve_provider
+from research_trait import (
+    ROSALIND_CREDENTIALS,
+    ROSALIND_PROVIDER,
+    is_pipeline_report,
+    resolve_provider,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
@@ -134,6 +142,49 @@ PILOT_TARGET_RE = re.compile(r"^(?P<category>[a-z0-9_]+)/(?P<slug>[a-z0-9_]+)$")
 # constant — which is precisely how the `-codex` file came to need one.
 #
 # Scoping to the resume namespace means there is no exception list at all.
+#
+# One artifact kind lives INSIDE a resume namespace without having been paid
+# for through the pipeline: a report a maintainer pasted in by hand. The two
+# GPT-Rosalind answers under research/traits/ecology/ were saved as
+# `-deep-research-rosalind.md` before `rosalind` became a pipeline provider,
+# and each declares `pipeline_run: false` in its front matter. That flag, not
+# a filename list, is what keeps them out of both sides of the gate: a
+# hand-supplied file never suppresses a call (it is not a `done` for resume),
+# is never an orphan (no `ok` row was ever owed for it), and is never
+# OVERWRITTEN: the sweep sets such a target aside rather than queueing it, and
+# research_trait.py refuses an existing output without --force (#638).
+# `research_trait.is_pipeline_report` parses the front matter as YAML.
+
+
+def report_done(path: Path) -> bool:
+    """Resume predicate: the pipeline's own report exists at this name."""
+    return path.exists() and is_pipeline_report(path)
+
+
+def hand_supplied(path: Path) -> bool:
+    """A report exists at the resume name but was not the pipeline's."""
+    return path.exists() and not is_pipeline_report(path)
+
+
+# What a real (non-dry-run, non-verify) run needs in the environment, per
+# provider. Only the providers this harness documents are preflighted;
+# anything else is left to deep-research-client, which reports a missing
+# credential on the first call and fails that trait fail-soft. Kept in step
+# with research_trait.research_env() and deep_research_provider.provider_status()
+# by hand (#646 asks for one table).
+PREFLIGHT_CREDENTIALS: dict[str, tuple[str, ...]] = {
+    "falcon": ("EDISON_API_KEY", "EDISON_PLATFORM_API_KEY", "FUTUREHOUSE_API_KEY"),
+    "openai": ("OPENAI_API_KEY",),
+    ROSALIND_PROVIDER: ROSALIND_CREDENTIALS,
+}
+
+
+def preflight_error(provider: str, environ: Mapping[str, str]) -> str | None:
+    """Return the message to print when ``provider`` cannot be called, else None."""
+    keys = PREFLIGHT_CREDENTIALS.get(resolve_provider(provider), ())
+    if not keys or any(environ.get(key) for key in keys):
+        return None
+    return f"ERROR: {' / '.join(keys)} unset — set it or use --dry-run."
 
 
 def ok_outputs(manifest: Path) -> dict[str, str]:
@@ -194,11 +245,15 @@ def orphan_reports(research_dir: Path, repo_root: Path, recorded: dict[str, str]
     represents NO research (``status: dry-run``, ``cost: None``, ``task_id:
     None`` -- #246), so counting it would let a plan nobody paid for satisfy an
     existence check.
+
+    A report declaring ``pipeline_run: false`` is skipped: it was never owed an
+    ``ok`` row, and ``report_done()`` ignores it for resume, so it cannot cause
+    the harm this gate exists to prevent.
     """
     pattern = f"*-deep-research-{resolve_provider(provider)}.md"
     return sorted(
-        rel for rel in (str(p.relative_to(repo_root)) for p in research_dir.rglob(pattern))
-        if rel not in recorded
+        str(p.relative_to(repo_root)) for p in research_dir.rglob(pattern)
+        if str(p.relative_to(repo_root)) not in recorded and is_pipeline_report(p)
     )
 
 
@@ -334,7 +389,8 @@ def main() -> int:
     ap.add_argument("--category", default="", help="restrict to one category")
     ap.add_argument("--provider", default=DEFAULT_PROVIDER,
                     help=f"provider or alias (default: {DEFAULT_PROVIDER}, the Edison "
-                         "research agent, resolved to deep-research-client's `falcon`)")
+                         "research agent, resolved to deep-research-client's `falcon`; "
+                         "`rosalind` for OpenAI's GPT-Rosalind)")
     args = ap.parse_args()
     provider = args.provider
 
@@ -350,21 +406,35 @@ def main() -> int:
     # Gating the integrity check behind the key would make it unrunnable on a
     # fresh clone and in CI — the two places most likely to notice that an `ok`
     # row has no artifact.
-    if not (args.dry_run or args.verify) and not (
-            os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
-        print("ERROR: EDISON_API_KEY / FUTUREHOUSE_API_KEY unset — set it or use --dry-run.", file=sys.stderr)
-        return 2
+    if not (args.dry_run or args.verify):
+        error = preflight_error(provider, os.environ)
+        if error:
+            print(error, file=sys.stderr)
+            return 2
 
     targets = target_traits()
     if args.category:
         targets = [t for t in targets if t[0] == args.category.lower()]
+    # Three-way, not two: a hand-supplied report is neither done nor callable.
+    # Queueing it would hand research_trait.py an existing output to replace,
+    # and the whole point of the flag is that nothing paid for or recorded
+    # stands behind that file (#638).
+    set_aside = [
+        (cat, slug, label)
+        for cat, slug, label in targets
+        if hand_supplied(output_path(cat, slug, provider))
+    ]
     pending = [
         (cat, slug, label)
         for cat, slug, label in targets
         if not output_path(cat, slug, provider).exists()
     ]
-    done_already = len(targets) - len(pending)
-    print(f"targets: {len(targets)}  already-researched: {done_already}  pending: {len(pending)}", file=sys.stderr)
+    done_already = len(targets) - len(pending) - len(set_aside)
+    print(f"targets: {len(targets)}  already-researched: {done_already}  "
+          f"hand-supplied (skipped, not done): {len(set_aside)}  pending: {len(pending)}",
+          file=sys.stderr)
+    for cat, slug, _ in set_aside:
+        print(f"  hand-supplied, left untouched: {cat}/{slug}", file=sys.stderr)
     if args.limit:
         pending = pending[: args.limit]
         print(f"  (limited to {len(pending)} this run)", file=sys.stderr)

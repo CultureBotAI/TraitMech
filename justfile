@@ -511,10 +511,15 @@ templates_dir := "templates"
 # Deep research on a trait.
 # Provider defaults to `edison` in scripts/research_trait.py (an alias for
 # deep-research-client's `falcon`, the Edison research agent). Override by
-# passing --provider through as a trailing arg.
+# passing --provider through as a trailing arg. `rosalind` is OpenAI's
+# GPT-Rosalind, reached through the client's `openai` provider with an explicit
+# model; it writes `-deep-research-rosalind.md`. Run `just rosalind-canary`
+# first: the model is trusted-access gated, so a key can authenticate and still
+# be refused the model.
 #   just research-trait physiology autotrophic                    # Edison
 #   just research-trait environment aerobic --dry-run
 #   just research-trait environment aerobic --provider openai
+#   just research-trait ecology gut_associated --provider rosalind
 research-trait category slug *args="":
     uv run --extra dev python scripts/research_trait.py \
       --category {{category}} \
@@ -580,6 +585,18 @@ research-provider provider:
 # Non-billing provider checks; see docs/DEEP_RESEARCH_PROVIDERS.md.
 deep-research-canary provider="all" *args="":
     uv run --extra dev python scripts/deep_research_contract.py {{provider}} {{args}}
+
+# Non-billing check of the GPT-Rosalind lane: credential present, the key can
+# list models (authenticated, unbilled), the requested model id is among them,
+# and deep-research-client discovers `openai` under the env a real run gets.
+# Lives here rather than in deep_research_contract.py because that file is
+# vendored byte-for-byte from claw and must not evolve locally.
+# ROSALIND_API_KEY (or OPENAI_API_KEY) comes from .env or the shell; set
+# ROSALIND_MODEL if the canary reports a different Rosalind id than the default.
+#   just rosalind-canary
+#   just rosalind-canary --json
+rosalind-canary *args="":
+    uv run --extra dev python scripts/research_rosalind_canary.py {{args}}
 
 # Rank providers for TraitMech causal-mechanism or definition-grounding work.
 deep-research-providers focus="causal_mechanism" *args="":

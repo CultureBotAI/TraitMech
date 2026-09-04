@@ -12,9 +12,12 @@ manifest_row_reason: >-
   pipeline and cost this repository nothing through it, so writing an `ok` row
   would assert a run that never happened. Deliberately omitted rather than
   overlooked -- this is the #245 question answered in the honest direction.
-  The file is outside the resume namespace (`<slug>-deep-research-falcon.md`),
-  so it cannot suppress a future call and `just audit-research-artifacts`
-  does not flag it.
+  The file is outside the DEFAULT resume namespace
+  (`<slug>-deep-research-falcon.md`). `rosalind` later became a pipeline
+  provider writing this same `-deep-research-rosalind.md` name, so the
+  `pipeline_run: false` flag above is now load-bearing: run_trait_graph_audit.py
+  reads it to keep this file from suppressing a `--provider rosalind` call and
+  from being reported as an orphan by `--verify`.
 answers_hypothesis:
   record: data/traits/ecology/free_living.yaml
   trait_identifier: traitmech:000048

@@ -19,6 +19,10 @@ CREDENTIAL_ENV_VARS = (
     "CBORG_API_KEY",
     "ANTHROPIC_API_KEY",
     "OPENAI_API_KEY",
+    "ROSALIND_API_KEY",
+    # Not a credential, but it selects the GPT-Rosalind model id and a
+    # developer's override must not leak into command-shape assertions.
+    "ROSALIND_MODEL",
 )
 
 

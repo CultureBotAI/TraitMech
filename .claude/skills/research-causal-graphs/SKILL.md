@@ -1,6 +1,6 @@
 ---
 name: research-causal-graphs
-description: Deep-research a trait's causal mechanism against the literature and compare it to the trait's existing causal_graphs. Defaults to the Edison Scientific platform (`edison`, a TraitMech alias for deep-research-client's `falcon`). Use when asked to research a trait mechanism, audit causal-graph completeness, find missing mechanism steps, or run/resume the batch trait-graph research sweep.
+description: Deep-research a trait's causal mechanism against the literature and compare it to the trait's existing causal_graphs. Defaults to the Edison Scientific platform (`edison`, a TraitMech alias for deep-research-client's `falcon`); `rosalind` runs OpenAI's GPT-Rosalind for reviewing and constructing causal graphs and their evidence. Use when asked to research a trait mechanism, audit causal-graph completeness, find missing mechanism steps, or run/resume the batch trait-graph research sweep.
 ---
 
 # Deep research for trait causal graphs
@@ -63,12 +63,56 @@ key first.
 > platform, so that removed the only working path while preflight still looked
 > green. If research starts failing to authenticate, read `research_env()` first.
 
+## Provider: `rosalind` is GPT-Rosalind through `--provider openai --model …`
+
+GPT-Rosalind is OpenAI's life-sciences reasoning model (research preview,
+trusted-access program). deep-research-client has no provider for it; it is
+served by the same Responses API as the client's `openai` provider, so
+`research_trait.provider_args()` turns `rosalind` into
+`--provider openai --model <ROSALIND_MODEL>`. Aliases: `gpt-rosalind`,
+`gpt_rosalind`.
+
+It is a TraitMech provider **name**, not an alias for `openai`, because the
+two must not share a filename namespace: reports land in
+`<slug>-deep-research-rosalind.md`, so an o3-deep-research report can never
+satisfy a Rosalind resume check or vice versa. The two Rosalind answers the
+maintainer pasted in under `research/traits/ecology/` already use this name and
+declare `pipeline_run: false`, which keeps them out of resume and the orphan
+gate.
+
+Credential: `ROSALIND_API_KEY`, the only name the lane reads (set it even if
+it equals your `OPENAI_API_KEY`; a general-purpose key is never used for this
+lane). Model id: `ROSALIND_MODEL`, defaulting to the constant in
+`scripts/research_trait.py`; a passthrough `--model` is rejected so the
+`-rosalind` namespace can only ever hold Rosalind answers. Both live in
+`.env`, so drive runs through `just`.
+
+```bash
+just rosalind-canary        # unbilled: credential set, key lists the model, client sees openai
+just research-trait <category> <slug> --provider rosalind --dry-run
+```
+
+The canary is the preflight that matters here. The model is gated per
+organisation, so a key can authenticate and still be refused it; the canary
+lists the models the key may use and fails unless the requested id is among
+them, printing any Rosalind ids it does see so `ROSALIND_MODEL` can be
+corrected. It cannot see quota or the request shape: run one trait, read the
+report and resolve its DOIs, and only then ask for a bounded batch. An
+existing report at the output path is never overwritten without `--force`,
+which is what protects the two hand-supplied answers.
+
+Use it for what it is built for: reviewing an existing causal graph against
+the literature and constructing edge-level evidence. The lane carries web
+search only, no code or database tools, so identifier checks still go to
+`definition_grounding` providers.
+
 ## Single trait
 
 ```bash
 just research-trait <category> <slug> --dry-run     # provider defaults to edison
 just research-trait <category> <slug>
-just research-trait <category> <slug> --provider openai   # override
+just research-trait <category> <slug> --provider openai     # override
+just research-trait <category> <slug> --provider rosalind   # GPT-Rosalind
 ```
 
 Writes `research/traits/<category>/<slug>-deep-research-falcon.md` plus a
@@ -82,11 +126,23 @@ it requires paid calls. Review and commit the complete output bundle.
 derive the current eligible, completed, and remaining sets.
 
 ```bash
-uv run python scripts/run_trait_graph_audit.py --dry-run
-uv run python scripts/run_trait_graph_audit.py --limit 8          # pilot first
-uv run python scripts/run_trait_graph_audit.py --category metabolism
-uv run python scripts/run_trait_graph_audit.py --provider openai  # non-default
+just trait-graph-sweep --dry-run
+just trait-graph-sweep --limit 8            # pilot first
+just trait-graph-sweep --category metabolism
+just trait-graph-sweep --provider openai    # non-default
+just trait-graph-sweep --provider rosalind --dry-run
 ```
+
+Always through `just`: the script loads no `.env`, so a bare `uv run` sees
+neither the credential nor a `ROSALIND_MODEL` override and the canary you
+just passed would not have taken the batch's path.
+
+Resume is per provider namespace: `--provider rosalind` skips only traits with
+a pipeline-written `-deep-research-rosalind.md`, so a Rosalind sweep starts
+from zero regardless of the falcon corpus. A hand-supplied report
+(`pipeline_run: false`) is set aside with its own count, never queued and
+never overwritten. Preflight is provider-aware too (`ROSALIND_API_KEY` for
+rosalind).
 
 It is **resumable** (skips traits whose output file exists), **fail-soft** (one
 failure doesn't stop the batch), and appends status rows to

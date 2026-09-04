@@ -188,3 +188,153 @@ def test_edison_output_filename_stays_in_falcon_namespace(tmp_path, capsys):
     out = capsys.readouterr().out
     assert "autotrophic-deep-research-falcon.md" in out
     assert "-deep-research-edison.md" not in out
+
+
+# --- the GPT-Rosalind lane ---
+#
+# `rosalind` is a TraitMech provider NAME served through the client's `openai`
+# provider with an explicit model. The three things that must hold together:
+# the alias resolves to `rosalind` (not `openai`), the client is told `openai`
+# plus a model, and the output filename stays in the `-rosalind` namespace.
+
+from research_trait import (  # noqa: E402
+    DEFAULT_ROSALIND_MODEL,
+    ROSALIND_CREDENTIALS,
+    rosalind_model,
+)
+
+
+def test_rosalind_aliases_resolve_to_the_traitmech_name_not_to_openai():
+    for alias in ("rosalind", "Rosalind", "gpt-rosalind", "GPT-Rosalind", "gpt_rosalind"):
+        assert resolve_provider(alias) == "rosalind"
+
+
+def test_rosalind_is_sent_to_the_client_as_openai_with_an_explicit_model():
+    assert provider_args("rosalind", {}) == [
+        "--provider", "openai", "--model", DEFAULT_ROSALIND_MODEL,
+    ]
+
+
+def test_rosalind_model_can_be_overridden_without_editing_code():
+    """The preview id can be snapshotted or renamed; the canary tells you the
+    new name and ROSALIND_MODEL is where it goes."""
+    assert rosalind_model({}) == DEFAULT_ROSALIND_MODEL
+    assert rosalind_model({"ROSALIND_MODEL": "gpt-rosalind-2026-08-01"}) == "gpt-rosalind-2026-08-01"
+    assert provider_args("rosalind", {"ROSALIND_MODEL": "x"})[-1] == "x"
+
+
+def test_plain_openai_is_still_plain_openai():
+    """Adding the lane must not touch the documented `--provider openai` path."""
+    assert provider_args("openai", {}) == ["--provider", "openai"]
+
+
+def test_rosalind_output_stays_in_its_own_namespace(tmp_path, capsys):
+    """An o3-deep-research report and a GPT-Rosalind report are different
+    evidence; neither may satisfy the other's resume check."""
+    from research_trait import main as research_main
+
+    rc = research_main([
+        "--provider", "gpt-rosalind", "--category", "ecology", "--slug", "gut_associated",
+        "--research-dir", str(tmp_path), "--dry-run",
+    ])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert "gut_associated-deep-research-rosalind.md" in out
+    assert "-deep-research-openai.md" not in out
+    assert "--provider openai --model" in out
+
+
+def test_dedicated_rosalind_key_overrides_a_general_openai_key():
+    """A general-purpose OPENAI_API_KEY in the shell belongs to whatever org the
+    developer uses day to day; it must not silently take a Rosalind call."""
+    env = research_env("rosalind", {"OPENAI_API_KEY": "general", "ROSALIND_API_KEY": "rosalind"})
+    assert env["OPENAI_API_KEY"] == "rosalind"
+
+
+def test_a_bare_openai_key_is_removed_rather_than_used_for_rosalind():
+    """#641: the lane reads ROSALIND_API_KEY only. Without it the child must
+    see NO OpenAI key, so the client reports a missing credential instead of
+    billing an unentitled org."""
+    env = research_env("rosalind", {"OPENAI_API_KEY": "general"})
+    assert "OPENAI_API_KEY" not in env
+    assert ROSALIND_CREDENTIALS == ("ROSALIND_API_KEY",)
+
+
+def test_rosalind_key_does_not_leak_into_other_providers():
+    env = research_env("openai", {"OPENAI_API_KEY": "general", "ROSALIND_API_KEY": "rosalind"})
+    assert env["OPENAI_API_KEY"] == "general"
+    env = research_env("falcon", {"ROSALIND_API_KEY": "rosalind"})
+    assert "OPENAI_API_KEY" not in env
+
+
+def test_research_env_still_reads_the_process_environment_by_default(monkeypatch):
+    monkeypatch.setenv("ROSALIND_API_KEY", "from-process")
+    assert research_env("rosalind")["OPENAI_API_KEY"] == "from-process"
+
+
+def test_a_passthrough_model_is_rejected_for_rosalind(tmp_path, capsys):
+    """#640: the client keeps the LAST --model, so a passthrough one would
+    write another model's answer into the rosalind namespace."""
+    from research_trait import main as research_main, passthrough_model_override
+
+    assert passthrough_model_override(["--model", "o3"])
+    assert passthrough_model_override(["--model=o3"])
+    assert not passthrough_model_override(["--param", "max_tokens=1"])
+    rc = research_main([
+        "--provider", "rosalind", "--category", "ecology", "--slug", "gut_associated",
+        "--research-dir", str(tmp_path), "--dry-run", "--model", "o3-deep-research",
+    ])
+    assert rc == 2
+    assert "ROSALIND_MODEL" in capsys.readouterr().err
+
+
+def test_an_existing_report_is_never_overwritten_without_force(tmp_path, capsys, monkeypatch):
+    """#638: a `--provider rosalind` run must not replace the hand-supplied
+    answer sitting at the output path, nor any pipeline report."""
+    from research_trait import main as research_main
+
+    out = tmp_path / "traits" / "ecology"
+    out.mkdir(parents=True)
+    report = out / "gut_associated-deep-research-rosalind.md"
+    report.write_text("---\npipeline_run: false\n---\nhand-supplied\n")
+    monkeypatch.setenv("ROSALIND_API_KEY", "k")
+    argv = ["--provider", "rosalind", "--category", "ecology", "--slug", "gut_associated",
+            "--research-dir", str(tmp_path)]
+    rc = research_main(argv)
+    assert rc == 3
+    assert "hand-supplied" in capsys.readouterr().err
+    assert report.read_text().endswith("hand-supplied\n")
+    # Dry run reports the refusal but stays a dry run.
+    assert research_main([*argv, "--dry-run"]) == 0
+    assert "refusing to overwrite" in capsys.readouterr().out
+
+
+def test_front_matter_is_parsed_as_yaml_not_matched_as_text(tmp_path):
+    """#642: any YAML spelling of false, a flag past 4 KiB, and a BOM all
+    count; a body that merely mentions the words does not."""
+    from research_trait import front_matter, is_pipeline_report
+
+    long_block = "note: >-\n" + "".join(f"  filler line {i}\n" for i in range(400))
+    cases = {
+        "lower": "---\npipeline_run: false\n---\nbody\n",
+        "title": "---\npipeline_run: False\n---\nbody\n",
+        "no": "---\npipeline_run: no\n---\nbody\n",
+        "late": "---\n" + long_block + "pipeline_run: false\n---\nbody\n",
+        "bom": "\ufeff---\npipeline_run: false\n---\nbody\n",
+    }
+    for name, text in cases.items():
+        path = tmp_path / f"{name}.md"
+        path.write_text(text, encoding="utf-8")
+        assert not is_pipeline_report(path), name
+    assert len(cases["late"].split("\n---", 1)[0]) > 4096
+    for name, text in {
+        "body_only": "---\nprovider: openai\n---\n\nThe file says pipeline_run: false\n",
+        "no_front": "pipeline_run: false\n",
+        "quoted": "---\npipeline_run: 'false'\n---\n",  # a string, not the flag
+        "absent": "---\nprovider: openai\n---\n",
+    }.items():
+        path = tmp_path / f"{name}.md"
+        path.write_text(text, encoding="utf-8")
+        assert is_pipeline_report(path), name
+    assert front_matter(tmp_path / "missing.md") == {}
+    assert front_matter(tmp_path / "no_front.md") == {}

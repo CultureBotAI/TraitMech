@@ -25,11 +25,18 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from run_trait_graph_audit import (  # noqa: E402
+    MANIFEST,
     MIN_ARTIFACT_BYTES,
+    RESEARCH_DIR,
     audit_pilot_artifacts,
+    hand_supplied,
+    is_pipeline_report,
     missing_artifacts,
     ok_outputs,
     orphan_reports,
+    output_path,
+    preflight_error,
+    report_done,
     scan_malformed_curies,
     undersized_artifacts,
 )
@@ -269,3 +276,78 @@ def test_tracked_pilot_manifest_and_all_ten_sidecars_are_clean():
 
     assert errors == []
     assert (manifests, sidecars) == (1, 10)
+
+
+# ------------------------------------------ the rosalind namespace and preflight
+
+
+def test_rosalind_reports_have_their_own_resume_namespace():
+    assert output_path("ecology", "gut_associated", "rosalind").name == (
+        "gut_associated-deep-research-rosalind.md"
+    )
+    assert output_path("ecology", "gut_associated", "gpt-rosalind").name == (
+        "gut_associated-deep-research-rosalind.md"
+    )
+
+
+def test_a_hand_supplied_report_is_neither_done_nor_pending(tmp_path):
+    """`pipeline_run: false` marks a pasted-in artifact. It must not suppress a
+    call the pipeline never made -- and must not be queued for one either,
+    since that would overwrite it (#638)."""
+    path = tmp_path / "x-deep-research-rosalind.md"
+    path.write_text("---\nprovider: gpt-rosalind\npipeline_run: false\n---\n\n# body\n" + "x" * 5000)
+    assert not is_pipeline_report(path)
+    assert not report_done(path)
+    assert hand_supplied(path)
+
+
+def test_a_pipeline_report_is_done_for_resume(tmp_path):
+    path = tmp_path / "x-deep-research-rosalind.md"
+    path.write_text("---\nprovider: openai\nmodel: gpt-rosalind\n---\n\n# body\n")
+    assert is_pipeline_report(path)
+    assert report_done(path)
+    assert not hand_supplied(path)
+    assert not report_done(tmp_path / "absent-deep-research-rosalind.md")
+    assert not hand_supplied(tmp_path / "absent-deep-research-rosalind.md")
+
+
+def test_a_hand_supplied_report_is_not_an_orphan(tmp_path):
+    research = tmp_path / "research" / "traits" / "ecology"
+    research.mkdir(parents=True)
+    (research / "pasted-deep-research-rosalind.md").write_text(
+        "---\npipeline_run: false\n---\n\nbody\n")
+    (research / "stray-deep-research-rosalind.md").write_text("---\nprovider: openai\n---\nbody\n")
+    found = orphan_reports(tmp_path / "research" / "traits", tmp_path, {}, "rosalind")
+    assert found == ["research/traits/ecology/stray-deep-research-rosalind.md"]
+
+
+def test_the_rosalind_namespace_has_no_unaccounted_pipeline_report():
+    """The invariant the docs promise: nothing in the rosalind namespace claims
+    to be a pipeline run that the manifest cannot account for. Phrased as the
+    orphan gate rather than "every file is hand-supplied", so the lane's first
+    real report (with its `ok` row) does not turn this red (#639)."""
+    tracked = sorted(RESEARCH_DIR.rglob("*-deep-research-rosalind.md"))
+    assert tracked, "expected the hand-supplied Rosalind artifacts"
+    recorded = ok_outputs(MANIFEST) if MANIFEST.exists() else {}
+    assert orphan_reports(RESEARCH_DIR, REPO_ROOT, recorded, "rosalind") == []
+
+
+@pytest.mark.parametrize("provider,env,expected", [
+    ("edison", {}, "EDISON_API_KEY"),
+    ("edison", {"FUTUREHOUSE_API_KEY": "x"}, None),
+    ("edison", {"EDISON_PLATFORM_API_KEY": "x"}, None),  # #646: research_env aliases it
+    ("rosalind", {}, "ROSALIND_API_KEY"),
+    ("rosalind", {"OPENAI_API_KEY": "x"}, "ROSALIND_API_KEY"),  # #641: not the lane's key
+    ("gpt-rosalind", {"ROSALIND_API_KEY": "x"}, None),
+    ("rosalind", {"EDISON_API_KEY": "x"}, "ROSALIND_API_KEY"),
+    ("openai", {}, "OPENAI_API_KEY"),
+    ("perplexity", {}, None),  # not preflighted: the client reports it
+])
+def test_preflight_is_provider_aware(provider, env, expected):
+    """Before this, `--provider rosalind` demanded EDISON_API_KEY and then ran
+    without checking the key it actually needed."""
+    error = preflight_error(provider, env)
+    if expected is None:
+        assert error is None
+    else:
+        assert error is not None and expected in error

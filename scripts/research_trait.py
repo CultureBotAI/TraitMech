@@ -7,6 +7,7 @@ import os
 import shlex
 import subprocess
 import sys
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
@@ -161,11 +162,48 @@ DEFAULT_PROVIDER = "edison"
 # a separate concern and belongs in its own entry point; do not grow those
 # features here, because they do not exist in deep-research-client to pass
 # through.
-PROVIDER_ALIASES = {"edison": "falcon"}
+PROVIDER_ALIASES = {
+    "edison": "falcon",
+    "gpt-rosalind": "rosalind",
+    "gpt_rosalind": "rosalind",
+}
+
+# GPT-Rosalind is OpenAI's life-sciences reasoning model (research preview,
+# trusted-access program). It is not a deep-research-client provider of its own:
+# it is served by the same OpenAI Responses API the client's `openai` provider
+# already drives, so TraitMech reaches it as `--provider openai --model <id>`.
+#
+# `rosalind` is nevertheless a TraitMech-level provider NAME, not an alias for
+# `openai`, because the two must not share a filename namespace: an
+# `o3-deep-research` report and a GPT-Rosalind report are different evidence
+# and must never satisfy each other's resume check. resolve_provider() therefore
+# returns `rosalind`, the output lands in `-deep-research-rosalind.md` (the
+# namespace the two hand-supplied Rosalind artifacts under research/traits/
+# ecology/ already use), and only provider_args() translates it for the client.
+#
+# The model id is an environment override with a default, not a constant: the
+# id is a research-preview name that OpenAI can snapshot or rename, and
+# `just rosalind-canary` reports which Rosalind ids the credential can actually
+# see, so a wrong default is corrected by setting ROSALIND_MODEL rather than by
+# editing code.
+ROSALIND_PROVIDER = "rosalind"
+ROSALIND_CLIENT_PROVIDER = "openai"
+ROSALIND_MODEL_ENV = "ROSALIND_MODEL"
+DEFAULT_ROSALIND_MODEL = "gpt-rosalind"
+# The ONLY credential for this lane, even when it is the same string as
+# OPENAI_API_KEY. The model is gated per organisation, so an ordinary OpenAI
+# key proves nothing about access; accepting it made the triage route
+# causal-mechanism work to a model most keys cannot call (#641). Setting the
+# dedicated name is the operator's statement that this key is entitled.
+ROSALIND_CREDENTIALS = ("ROSALIND_API_KEY",)
 
 
 def resolve_provider(provider: str) -> str:
-    """Map a user-facing provider name to a deep-research-client provider.
+    """Map a user-facing provider name to TraitMech's canonical provider name.
+
+    For most providers the canonical name is the deep-research-client name.
+    `rosalind` is the exception: it is canonical here and translated to the
+    client's `openai` provider plus a model by provider_args().
 
     Canonicalises to lower case on both hit and miss. Returning the caller's
     original casing on a miss would send `Falcon` to a client that only accepts
@@ -177,14 +215,27 @@ def resolve_provider(provider: str) -> str:
     return PROVIDER_ALIASES.get(key, key)
 
 
-def provider_args(provider: str) -> list[str]:
-    """Mirror DisMech's cborg shortcut while allowing named providers such as falcon."""
+def rosalind_model(environ: Mapping[str, str] | None = None) -> str:
+    """The GPT-Rosalind model id to request: ROSALIND_MODEL, else the default."""
+    env = os.environ if environ is None else environ
+    return env.get(ROSALIND_MODEL_ENV) or DEFAULT_ROSALIND_MODEL
+
+
+def provider_args(provider: str, environ: Mapping[str, str] | None = None) -> list[str]:
+    """Mirror DisMech's cborg shortcut while allowing named providers such as falcon.
+
+    `rosalind` becomes the client's `openai` provider with an explicit model, so
+    the client never falls back to its o3-deep-research default under the
+    Rosalind name.
+    """
     if provider == "cborg":
         return ["--use-cborg"]
+    if provider == ROSALIND_PROVIDER:
+        return ["--provider", ROSALIND_CLIENT_PROVIDER, "--model", rosalind_model(environ)]
     return ["--provider", provider]
 
 
-def research_env(provider: str) -> dict[str, str]:
+def research_env(provider: str, environ: Mapping[str, str] | None = None) -> dict[str, str]:
     """Build subprocess environment, aliasing Edison / Falcon keys to EDISON_API_KEY.
 
     This script and the deep-research-client read ``EDISON_API_KEY``, but the
@@ -194,13 +245,65 @@ def research_env(provider: str) -> dict[str, str]:
     (whose ``dotenv-load`` injects the per-repo ``.env``) would otherwise see no
     ``EDISON_API_KEY`` at all. Alias the platform key so research works on every
     invocation path. FutureHouse Falcon uses its own key.
+
+    For ``rosalind`` the client reads ``OPENAI_API_KEY``, so the dedicated
+    ``ROSALIND_API_KEY`` is copied over it -- and when the dedicated key is
+    absent, any ``OPENAI_API_KEY`` in the shell is REMOVED rather than used, so
+    a general-purpose key cannot silently take the call to an org without
+    trusted access (#641). The client then reports a missing credential,
+    which is the accurate message.
     """
-    env = os.environ.copy()
+    env = dict(os.environ if environ is None else environ)
     if not env.get("EDISON_API_KEY") and env.get("EDISON_PLATFORM_API_KEY"):
         env["EDISON_API_KEY"] = env["EDISON_PLATFORM_API_KEY"]
     if provider == "falcon" and not env.get("EDISON_API_KEY") and env.get("FUTUREHOUSE_API_KEY"):
         env["EDISON_API_KEY"] = env["FUTUREHOUSE_API_KEY"]
+    if provider == ROSALIND_PROVIDER:
+        if env.get("ROSALIND_API_KEY"):
+            env["OPENAI_API_KEY"] = env["ROSALIND_API_KEY"]
+        else:
+            env.pop("OPENAI_API_KEY", None)
     return env
+
+
+def front_matter(path: Path) -> dict[str, Any]:
+    """The YAML front matter of a report, or ``{}`` when it has none.
+
+    Parsed with yaml rather than matched by regex, and over the whole head of
+    the file rather than a fixed byte count: the hand-supplied Rosalind
+    reports carry front matter longer than 4 KiB, and a curator may spell a
+    flag ``False`` or ``no`` (#642). A UTF-8 BOM is tolerated.
+    """
+    try:
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+    except OSError:
+        return {}
+    if not text.startswith("---"):
+        return {}
+    parts = text.split("\n---", 1)
+    if len(parts) < 2:
+        return {}
+    try:
+        data = yaml.safe_load(parts[0][3:])
+    except yaml.YAMLError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def is_pipeline_report(path: Path) -> bool:
+    """False for a report whose front matter declares ``pipeline_run: false``.
+
+    That flag marks an artifact a maintainer pasted in by hand (the two
+    GPT-Rosalind answers under research/traits/ecology/). The sweep, the
+    orphan gate, the renderer, and the overwrite guard all consult it, so it
+    lives here with the provider table rather than in any one of them.
+    """
+    return front_matter(path).get("pipeline_run") is not False
+
+
+def passthrough_model_override(passthrough_args: list[str]) -> bool:
+    """True when the caller tried to pass ``--model`` through to the client."""
+    return any(arg == "--model" or arg.startswith("--model=") for arg in passthrough_args)
 
 
 def _repo_relative(path: Path) -> str:
@@ -275,7 +378,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--provider",
         default=DEFAULT_PROVIDER,
         help=f"provider or alias (default: {DEFAULT_PROVIDER}, the Edison research "
-             "agent, which resolves to deep-research-client's `falcon`)",
+             "agent, which resolves to deep-research-client's `falcon`); "
+             "`rosalind` (alias `gpt-rosalind`) runs OpenAI's GPT-Rosalind through "
+             "the client's `openai` provider",
     )
     parser.add_argument("--category", required=True, help="Trait category directory, e.g. physiology")
     parser.add_argument("--slug", required=True, help="Trait YAML slug without .yaml")
@@ -289,6 +394,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--dry-run",
         action="store_true",
         help="Print the deep-research-client command without running it.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite an existing report at the output path. Without it an "
+             "existing report -- the pipeline's own or a hand-supplied one -- "
+             "is never replaced (#638).",
     )
     args, passthrough_args = parser.parse_known_args(argv)
     args.passthrough_args = passthrough_args
@@ -308,6 +420,27 @@ def main(argv: list[str] | None = None) -> int:
     output_file = output_dir / f"{args.slug}-deep-research-{provider}.md"
     variables = template_vars(doc, category_slug, args.slug)
     print(f"Researching: {variables['trait_label']} ({provider}) -> {output_file}")
+    if provider == ROSALIND_PROVIDER and passthrough_model_override(args.passthrough_args):
+        # The client keeps the LAST --model, so a passthrough one would write
+        # some other model's answer into the rosalind namespace and satisfy its
+        # resume check (#640). The model is set through ROSALIND_MODEL only.
+        print(
+            f"--model is not a passthrough option for {ROSALIND_PROVIDER}; set "
+            f"{ROSALIND_MODEL_ENV} instead so the report namespace stays honest",
+            file=sys.stderr,
+        )
+        return 2
+    if output_file.exists() and not args.force:
+        kind = "the pipeline's own" if is_pipeline_report(output_file) else "a hand-supplied"
+        message = (
+            f"refusing to overwrite {kind} report at {output_file}; pass --force "
+            f"to replace it (#638)"
+        )
+        if args.dry_run:
+            print(f"NOTE: {message}")
+        else:
+            print(f"ERROR: {message}", file=sys.stderr)
+            return 3
     if provider == "codex":
         if args.passthrough_args:
             print(
