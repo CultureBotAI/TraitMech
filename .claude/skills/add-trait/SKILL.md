@@ -85,13 +85,19 @@ TraitMech is METPO-first:
 
    ```bash
    tmp="$(mktemp -d)"
+   trap 'rm -rf "$tmp"' EXIT
    uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
+   target="$(
+     find "$tmp" -name '*.yaml' -print0 \
+       | xargs -0 rg -l '^identifier: <METPO CURIE>$'
+   )"
    mkdir -p data/traits/<category>
-   cp "$tmp"/<category>/<slug>.yaml data/traits/<category>/<slug>.yaml
+   cp "$target" data/traits/<category>/$(basename "$target")
    ```
 
    Never run bare `just seed-apply` for a one-record add; the seeder has no
-   target filter and can emit every missing METPO term.
+   target filter and can emit every missing METPO term. If the seeder appends a
+   collision suffix to the slug, keep its generated file name.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
 5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
@@ -113,8 +119,9 @@ Make the first record small but independently reviewable:
   curator-minted records
 - `trait_category`: the enum matching the filesystem category
 - `term_kind`: `CLASS`, `OBJECT_PROPERTY`, or `DATATYPE_PROPERTY`
-- `mapping_status`: `PROPOSED` for model-drafted local records; promotion to
-  `REVIEWED` is a human curator decision
+- `mapping_status`: leave generated METPO skeletons as `SEEDED`; use
+  `PROPOSED` for first-pass model-drafted `traitmech:` records; set `REVIEWED`
+  only after human curator signoff
 - `synonyms`: exact, broad, narrow, or related labels only when the declared
   scope is defensible
 - `evidence`: DOI/PMID-backed literature that supports the definition or major
@@ -126,6 +133,10 @@ Make the first record small but independently reviewable:
 
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
+
+The `PROPOSED` local-record rule refines the curation playbook's
+`mapping_status: REVIEWED` checklist: that checkbox applies to human-reviewed
+curation, not first-pass model-drafted additions.
 
 ## Causal graphs
 
@@ -140,13 +151,18 @@ A first graph should be readable and source-bounded:
 - 3 to 4 nodes for a quantitative bin or classification-axis record
 - one `TRAIT` node grounded to this record's `identifier`
 - `scope_status` and, for nonmechanistic contexts, `scope_notes`
-- stable local `node_id` and `graph_id` values
+- `node_id` values that mean the same thing everywhere they are reused in the
+  corpus
+- stable local `graph_id` values
 - taxon-agnostic node groundings when exact ontology or database CURIEs exist
 - `protein_examples` only for reviewed UniProt primary accessions paired with
   taxon metadata and direct evidence
 - directed `edges` with `subject`, `predicate`, `object`, `description`, and
   DOI/PMID-backed `evidence`
 - `predicate_id` only when an exact relation CURIE has been curated
+- no orphan nodes: every declared node must be referenced by at least one edge
+- no disconnected mechanistic branches: every node in a `MECHANISTIC` graph
+  must connect back to the `TRAIT` node
 
 Generic states, capacities, and intermediates may stay ungrounded. Do not add a
 node or edge just to make the graph look complete.
@@ -206,7 +222,6 @@ just audit-proposals
 just audit-graphs
 just audit-predicate-domains
 just audit-graph-protein-taxa
-just build-embeddings
 just gen-pages
 just gen-priority-dashboard
 git diff --check
@@ -216,7 +231,10 @@ just qc
 Also run `just verify-snippets --record data/traits/<category>/<slug>.yaml`
 after adding a `snippet`. Run `just validate-products` when adding or editing
 CHEBI formula-bearing chemicals, and run `just audit-uniprot` after adding or
-editing `protein_examples`.
+editing `protein_examples`. Run `just build-embeddings` before `just gen-pages`
+only when the sibling DeepWalk artifacts named by
+`scripts/build_embedding_index.py` are present; otherwise report that embedding
+artifacts were not regenerated.
 
 ## Report
 
