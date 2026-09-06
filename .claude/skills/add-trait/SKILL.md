@@ -89,14 +89,16 @@ TraitMech is METPO-first:
    uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
    target="$(rg --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp")"
    relative="${target#"$tmp"/}"
-   mkdir -p "data/traits/$(dirname "$relative")"
-   cp "$target" "data/traits/$relative"
+   destination="data/traits/$relative"
+   test ! -e "$destination"
+   mkdir -p "$(dirname "$destination")"
+   cp "$target" "$destination"
    ```
 
    Never run bare `just seed-apply` for a one-record add; the seeder has no
    target filter and can emit every missing METPO term. Preserve the
    seeder-chosen category and generated file name, including any slug collision
-   suffix.
+   suffix, and do not overwrite an existing real record.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
 5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
@@ -196,9 +198,9 @@ just new-history \
   --sections identity,evidence,canonical_examples,causal_graphs \
   --summary "<short summary>" \
   --details "<what was added and which sources justify it>" \
-  --actor-name codex \
+  --actor-name <actor> \
   --model <model> \
-  --agent-tool codex
+  --agent-tool <agent-tool>
 ```
 
 ## Validate

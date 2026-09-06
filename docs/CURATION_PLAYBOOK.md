@@ -1,7 +1,7 @@
 # TraitMech Curation Playbook
 
-Conventions for curating a `TraitRecord` YAML up to
-`mapping_status: REVIEWED` with a DOI-backed `causal_graphs` block.
+Conventions for curating a `SEEDED` METPO `TraitRecord` skeleton or a
+`PROPOSED` local draft up to a human-reviewed DOI-backed `causal_graphs` block.
 Extracted from the experience of curating 233 records across PRs
 #24–#46.
 
@@ -505,7 +505,7 @@ definition: ...
 definition_source: DOI:...
 trait_category: ...
 term_kind: CLASS
-mapping_status: PROPOSED      # use REVIEWED only after human curator signoff
+mapping_status: SEEDED        # PROPOSED for new traitmech: drafts
 parent_traits:
 - METPO:XXXXXXX
 synonyms: [...]               # if any
