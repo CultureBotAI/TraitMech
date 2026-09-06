@@ -505,7 +505,7 @@ definition: ...
 definition_source: DOI:...
 trait_category: ...
 term_kind: CLASS
-mapping_status: SEEDED        # PROPOSED for new traitmech: drafts
+mapping_status: REVIEWED      # SEEDED before curation; PROPOSED for drafts
 parent_traits:
 - METPO:XXXXXXX
 synonyms: [...]               # if any
@@ -856,8 +856,9 @@ Before opening a PR:
 - [ ] Definitions match synonym thresholds for bin records.
 - [ ] Every causal edge has at least one DOI/PMID-backed evidence.
 - [ ] Evidence snippets are verbatim and diversified across edges.
-- [ ] `mapping_status` is `PROPOSED` for first-pass model-drafted local records
-      or `REVIEWED` after human curator signoff.
+- [ ] `mapping_status` is `SEEDED` only for uncurated METPO imports,
+      `PROPOSED` for first-pass model-drafted `traitmech:` records, or
+      `REVIEWED` after human curator signoff.
 - [ ] `curation_history` event appended with today's date.
 
 ## Merging when another curation PR lands first (#622)

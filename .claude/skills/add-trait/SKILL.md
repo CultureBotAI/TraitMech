@@ -84,10 +84,12 @@ TraitMech is METPO-first:
    tree:
 
    ```bash
+   set -euo pipefail
    tmp="$(mktemp -d)"
    trap 'rm -rf "$tmp"' EXIT
    uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
-   target="$(rg --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp")"
+   target="$(rg --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp" || :)"
+   test -n "$target"
    relative="${target#"$tmp"/}"
    destination="data/traits/$relative"
    test ! -e "$destination"
@@ -135,9 +137,9 @@ Make the first record small but independently reviewable:
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
-The `PROPOSED` local-record rule refines the curation playbook's
-`mapping_status: REVIEWED` checklist: that checkbox applies to human-reviewed
-curation, not first-pass model-drafted additions.
+Keeping first-pass local records at `PROPOSED` leaves them in the
+`just audit-proposals` two-citation gate until a human curator promotes them to
+`REVIEWED`.
 
 ## Causal graphs
 
@@ -205,13 +207,11 @@ just new-history \
 
 ## Validate
 
-Validate the new record directly with LinkML before broader gates:
+Validate the new record directly with the maintained LinkML wrapper before
+broader gates:
 
 ```bash
-uv run linkml-validate \
-  -s src/traitmech/schema/traitmech.yaml \
-  --target-class TraitRecord \
-  data/traits/<category>/<slug>.yaml
+just validate data/traits/<category>/<slug>.yaml
 ```
 
 Then run the checks whose scope LinkML does not cover:
