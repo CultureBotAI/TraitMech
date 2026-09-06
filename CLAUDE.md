@@ -20,6 +20,7 @@ presenting a guess as fact.
 
 ## Route work to the maintained guidance
 
+- New trait records: [add-trait](.claude/skills/add-trait/SKILL.md)
 - Schema, instance, or writer quality: [audit-schema-gaps](.claude/skills/audit-schema-gaps/SKILL.md)
 - Identifier choice or minting: [manage-identifiers](.claude/skills/manage-identifiers/SKILL.md)
 - METPO proposals: [metpo-proposal](.claude/skills/metpo-proposal/SKILL.md)
