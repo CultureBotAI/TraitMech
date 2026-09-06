@@ -79,9 +79,19 @@ TraitMech is METPO-first:
 
 1. Search `data/raw/metpo.owl` for an exact class or property for the target.
 2. If METPO already has the term, use the METPO CURIE as `identifier`.
-3. If the term is in METPO but missing under `data/traits`, run
-   `just seed-from-metpo` as a dry run, then `just seed-apply` to let
-   `scripts/seed_from_metpo.py` create the source-owned skeleton.
+3. If the term is in METPO but missing under `data/traits`, run the seeder
+   against a temporary output root and copy only the target YAML into the real
+   tree:
+
+   ```bash
+   tmp="$(mktemp -d)"
+   uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
+   mkdir -p data/traits/<category>
+   cp "$tmp"/<category>/<slug>.yaml data/traits/<category>/<slug>.yaml
+   ```
+
+   Never run bare `just seed-apply` for a one-record add; the seeder has no
+   target filter and can emit every missing METPO term.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
 5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
@@ -143,8 +153,9 @@ node or edge just to make the graph look complete.
 
 ## Write the record
 
-For a METPO-owned record, prefer `just seed-apply` so the upstream seeder
-creates the skeleton. For a curator-minted record, create
+For a METPO-owned record, generate a temporary seed tree and copy only the
+target YAML so the upstream seeder creates the skeleton without emitting
+unrelated missing METPO terms. For a curator-minted record, create
 `data/traits/<category>/<slug>.yaml` from a small Python dictionary and write it
 through `write_validated_trait`.
 
