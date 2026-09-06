@@ -31,7 +31,7 @@ ACTION = "REVIEW_CAUSAL_EVIDENCE"
 TIMESTAMP = "2026-09-04T10:00:00Z"
 SOURCE = "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf"
 BEFORE_DEFINITION_SOURCE = "DOI:10.1146/annurev.micro.62.081307.162938"
-AFTER_DEFINITION_SOURCE = SOURCE
+AFTER_DEFINITION_SOURCE = BEFORE_DEFINITION_SOURCE
 
 BEFORE_RECORD_EVIDENCE: list[dict[str, Any]] = [
     {
@@ -46,6 +46,15 @@ BEFORE_RECORD_EVIDENCE: list[dict[str, Any]] = [
 ]
 
 AFTER_RECORD_EVIDENCE: list[dict[str, Any]] = [
+    {
+        "reference": "DOI:10.1146/annurev.micro.62.081307.162938",
+        "snippet": "virulence factors",
+        "notes": (
+            "Virulence-factor review supports the framing of pathogen hazard above "
+            "existing BSL-4 thresholds (the rationale underlying the proposed "
+            "BSL-5 classification)."
+        ),
+    },
     {
         "reference": SOURCE,
         "snippet": "Planetary Protection Level Alpha",
@@ -409,10 +418,6 @@ def _has_after_record_evidence(doc: dict[str, Any]) -> bool:
     return doc.get("evidence") == AFTER_RECORD_EVIDENCE
 
 
-def _has_after_definition_source(doc: dict[str, Any]) -> bool:
-    return doc.get("definition_source") == AFTER_DEFINITION_SOURCE
-
-
 def _has_after_graph(doc: dict[str, Any]) -> bool:
     return doc.get("causal_graphs") == [AFTER_GRAPH]
 
@@ -421,21 +426,20 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
     if slug != SLUG:
         raise ValueError(f"expected {SLUG}, got {slug}")
 
+    if doc.get("definition_source") != AFTER_DEFINITION_SOURCE:
+        raise ValueError(f"{SLUG}: source definition_source drifted")
+
     has_after_record_evidence = _has_after_record_evidence(doc)
-    has_after_definition_source = _has_after_definition_source(doc)
     has_after_graph = _has_after_graph(doc)
-    if has_after_record_evidence and has_after_definition_source and has_after_graph:
+    if has_after_record_evidence and has_after_graph:
         return False
-    if has_after_record_evidence or has_after_definition_source or has_after_graph:
+    if has_after_record_evidence or has_after_graph:
         raise ValueError(
             f"{SLUG}: partial evidence replay: "
             f"record_evidence={has_after_record_evidence} "
-            f"definition_source={has_after_definition_source} "
             f"graph={has_after_graph}"
         )
 
-    if doc.get("definition_source") != BEFORE_DEFINITION_SOURCE:
-        raise ValueError(f"{SLUG}: source definition_source drifted")
     if doc.get("evidence") != BEFORE_RECORD_EVIDENCE:
         raise ValueError(f"{SLUG}: source record evidence drifted")
     if doc.get("causal_graphs") != [BEFORE_GRAPH]:
@@ -453,10 +457,11 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
             "Reviewed the biosafety_level_5_ppl_alpha_containment graph for issue "
             "#183: replaced the unsupported generalized enhanced-pathogen-hazard "
             "graph with an 8-edge Mars returned sample handling graph grounded in "
-            "the open Cohen 2002 SAE paper, moved definition_source to that "
-            "same source, added exact snippets to record and edge evidence, and "
-            "kept BSL-5 scoped as an explicitly hypothetical nonmechanistic "
-            "planetary-protection proposal. No paid research service was called."
+            "the open Cohen 2002 SAE paper, kept definition_source on the DOI "
+            "that backs the proposed pathogen-hazard definition, added exact "
+            "snippets to record and edge evidence, and kept BSL-5 scoped as an "
+            "explicitly hypothetical nonmechanistic planetary-protection proposal. "
+            "No paid research service was called."
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,

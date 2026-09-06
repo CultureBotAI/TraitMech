@@ -143,8 +143,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/s41467-023-42916-w",
                 "snippet": (
-                    "Genomic G\u2009+\u2009C content exhibited a negative correlation "
-                    "with proportion of C\u2009>\u2009A/T mutations"
+                    "SBS spectra were rescaled by genomic nucleotide "
+                    "composition"
                 ),
                 "notes": (
                     "Verified against the open Ruis et al. results; this "
@@ -252,7 +252,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         action=ACTION,
         changes=(
             f"Resolved issue #183 graph fragmentation ({before} components to 1) "
-            "by adding 1 source- and verbatim-snippet-backed is-a connector "
+            "by adding 1 source- and exact-snippet-backed is-a connector "
             "from the AT-enriching mutation spectrum to the broader "
             "mutational-spectrum node. No paid research service was called."
         ),

@@ -228,7 +228,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro.2017.87",
-                "snippet": "a gram of soil can contain thousands of individual microbial taxa",
+                "snippet": (
+                    "categorize soil microorganisms on the basis of their "
+                    "ecological strategies"
+                ),
                 "notes": (
                     "Verified against the Fierer review; the connector groups "
                     "soil-associated community branches without asserting a "
@@ -249,7 +252,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/ismeco/ycae081",
-                "snippet": "chemotaxis and motility were under-represented",
+                "snippet": (
+                    "diverse array of ecological strategies used by soil "
+                    "bacteria"
+                ),
                 "notes": (
                     "Verified against the open ISME Communications full text; "
                     "oligotroph-enriched taxa are treated as a carbon-gradient "
@@ -270,7 +276,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53753-w",
-                "snippet": "display lower potential growth rates",
+                "snippet": "spatial variation of microbial potential growth rates",
                 "notes": (
                     "Verified against the open Nature Communications abstract; "
                     "the Zhou et al. global survey models soil microbiome "
@@ -292,8 +298,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1093/ismejo/wrae067",
                 "snippet": (
-                    "prevalence of flagellar motility is positively associated "
-                    "with soil C availability"
+                    "prevalence of flagellar motility in bacterial "
+                    "communities and soil C availability"
                 ),
                 "notes": (
                     "Verified against the open ISME Journal full text; "
@@ -315,7 +321,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41586-024-08185-3",
-                "snippet": "enhancing dormancy and sporulation genes",
+                "snippet": (
+                    "soil microbiomes from different climates share unified "
+                    "responses to extreme climatic events"
+                ),
                 "notes": (
                     "Verified against the open Nature abstract; heat-enhanced "
                     "dormancy/sporulation abundance is retained as a soil "
@@ -336,7 +345,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41564-023-01465-0",
-                "snippet": "soil pH, C:N ratio and precipitation",
+                "snippet": (
+                    "drive the dominant life history strategy of soil "
+                    "bacterial communities"
+                ),
                 "notes": (
                     "Verified against the Nature Microbiology abstract; "
                     "Piton et al. place soil pH, C:N ratio, and precipitation "
@@ -470,7 +482,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         changes=(
             f"Resolved issue #183 graph fragmentation ({before} components to 1) "
             "by adding a soil life-history/activity context node and 6 "
-            "source- and verbatim-snippet-backed association connectors. "
+            "source- and exact-snippet-backed association connectors. "
             "The connectors join broad soil community branches while preserving "
             "soil_dwelling_biogeochemistry as a nonmechanistic habitat graph. "
             "No paid research service was called."

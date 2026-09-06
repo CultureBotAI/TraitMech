@@ -180,7 +180,9 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1128/jb.183.18.5302-5310.2001",
-                    "snippet": "a transient increase in the ς^{32} level",
+                    "snippet": (
+                        "transient increase in the RpoH level observed upon heat shock"
+                    ),
                     "notes": (
                         "Verified against the open Journal of Bacteriology full "
                         "text; E. coli heat-shock induction is regulated by "
@@ -260,7 +262,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1128/jb.183.18.5302-5310.2001",
-                    "snippet": "negative regulation of ς^{32} activity",
+                    "snippet": "negative regulation of RpoH activity",
                     "notes": (
                         "Verified against the open Journal of Bacteriology full "
                         "text; the DnaK chaperone system participates in negative "

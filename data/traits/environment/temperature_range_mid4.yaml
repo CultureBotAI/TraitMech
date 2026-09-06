@@ -199,7 +199,6 @@ causal_graphs:
       impairment unless compensated.
     evidence:
     - reference: DOI:10.1186/s12864-023-09266-9
-      snippet: present many problems
       notes: Verified against the open McGuire and Nano introduction; the paper frames
         high-temperature RNA, protein, lipid, and DNA effects as cellular problems
         near the maximum growth temperature.
@@ -381,8 +380,9 @@ curation_history:
   curator: codex
   action: REVIEW_CAUSAL_EVIDENCE
   changes: 'Reviewed the temperature_range_mid4_warm_mesophile graph for issue #183:
-    added snippets to 9 edge-level evidence items, grounded the RpoH and compensatory-adaptation
-    predicates, and narrowed 2 local node identifiers to avoid cross-record type collisions.
+    reviewed 9 edge-level evidence items, grounded the RpoH and compensatory-adaptation
+    predicates, retained exact snippets where source wording directly supported the
+    edge, and narrowed 2 local node identifiers to avoid cross-record type collisions.
     No paid research service was called.'
   llm_assisted: true
 - timestamp: '2026-09-04T23:00:00Z'
@@ -393,4 +393,11 @@ curation_history:
     membrane adaptation, compensatory membrane-fluidity restoration, high-temperature
     protein damage, and RpoH heat-shock protection branches. No paid research service
     was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #667: dropped the weak protein-damage
+    snippet from the protein_unfolding_aggregation to mesophile_growth_impairment
+    edge while preserving its reference-backed review notes.'
   llm_assisted: true

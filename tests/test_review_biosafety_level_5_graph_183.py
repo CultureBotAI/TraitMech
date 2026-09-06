@@ -21,6 +21,7 @@ from review_biosafety_level_5_graph_183 import (  # noqa: E402
     BEFORE_GRAPH,
     BEFORE_RECORD_EVIDENCE,
     SLUG,
+    TIMESTAMP,
     transform,
 )
 
@@ -45,11 +46,18 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str, timestamp: str) -> bool:
+    return any(
+        event.get("action") == action and event.get("timestamp") == timestamp
+        for event in doc["curation_history"]
+    )
+
+
 def test_review_replaces_generalized_hazard_graph_with_ppl_alpha_context():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION, TIMESTAMP)
     assert doc["definition_source"] == AFTER_DEFINITION_SOURCE
     assert doc["evidence"] == AFTER_RECORD_EVIDENCE
     assert graph == AFTER_GRAPH

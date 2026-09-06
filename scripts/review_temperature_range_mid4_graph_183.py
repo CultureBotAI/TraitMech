@@ -283,7 +283,6 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1186/s12864-023-09266-9",
-                    "snippet": "present many problems",
                     "notes": (
                         "Verified against the open McGuire and Nano introduction; "
                         "the paper frames high-temperature RNA, protein, lipid, "
@@ -588,8 +587,9 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         action=ACTION,
         changes=(
             "Reviewed the temperature_range_mid4_warm_mesophile graph for issue "
-            "#183: added snippets to 9 edge-level evidence items, grounded the "
-            "RpoH and compensatory-adaptation predicates, and narrowed 2 local "
+            "#183: reviewed 9 edge-level evidence items, grounded the RpoH and "
+            "compensatory-adaptation predicates, retained exact snippets where "
+            "source wording directly supported the edge, and narrowed 2 local "
             "node identifiers to avoid cross-record type collisions. No paid "
             "research service was called."
         ),

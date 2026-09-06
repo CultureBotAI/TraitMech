@@ -210,7 +210,8 @@ causal_graphs:
       resident microbes partition across multiple activity and life-history strategies.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
-      snippet: a gram of soil can contain thousands of individual microbial taxa
+      snippet: categorize soil microorganisms on the basis of their ecological
+        strategies
       notes: Verified against the Fierer review; the connector groups soil-associated
         community branches without asserting a single universal soil-dwelling mechanism.
     predicate_id: biolink:associated_with
@@ -221,7 +222,7 @@ causal_graphs:
       soil life-history context.
     evidence:
     - reference: DOI:10.1093/ismeco/ycae081
-      snippet: chemotaxis and motility were under-represented
+      snippet: diverse array of ecological strategies used by soil bacteria
       notes: Verified against the open ISME Communications full text; oligotroph-enriched
         taxa are treated as a carbon-gradient association within soils.
     predicate_id: biolink:associated_with
@@ -232,7 +233,7 @@ causal_graphs:
       moisture and resource gradients across soils.
     evidence:
     - reference: DOI:10.1038/s41467-024-53753-w
-      snippet: display lower potential growth rates
+      snippet: spatial variation of microbial potential growth rates
       notes: Verified against the open Nature Communications abstract; the Zhou et
         al. global survey models soil microbiome potential growth as a community-level
         ecological axis.
@@ -244,7 +245,7 @@ causal_graphs:
       branch in soil communities.
     evidence:
     - reference: DOI:10.1093/ismejo/wrae067
-      snippet: prevalence of flagellar motility is positively associated with soil
+      snippet: prevalence of flagellar motility in bacterial communities and soil
         C availability
       notes: Verified against the open ISME Journal full text; Ramoneda et al. connect
         flagellar prevalence with soil carbon availability across community datasets.
@@ -256,7 +257,8 @@ causal_graphs:
       in disturbed soil communities.
     evidence:
     - reference: DOI:10.1038/s41586-024-08185-3
-      snippet: enhancing dormancy and sporulation genes
+      snippet: soil microbiomes from different climates share unified responses
+        to extreme climatic events
       notes: Verified against the open Nature abstract; heat-enhanced dormancy/sporulation
         abundance is retained as a soil disturbance context.
     predicate_id: biolink:associated_with
@@ -267,7 +269,7 @@ causal_graphs:
       associated with pH, C:N, and precipitation gradients.
     evidence:
     - reference: DOI:10.1038/s41564-023-01465-0
-      snippet: soil pH, C:N ratio and precipitation
+      snippet: drive the dominant life history strategy of soil bacterial communities
       notes: Verified against the Nature Microbiology abstract; Piton et al. place
         soil pH, C:N ratio, and precipitation as predictors of community-level genomic
         strategy axes.
@@ -343,8 +345,14 @@ curation_history:
   curator: codex
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
-    a soil life-history/activity context node and 6 source- and verbatim-snippet-backed
-    association connectors. The connectors join broad soil community branches while
-    preserving soil_dwelling_biogeochemistry as a nonmechanistic habitat graph. No
-    paid research service was called.'
+    a soil life-history/activity context node and 6 source-backed association connectors.
+    The connectors join broad soil community branches while preserving soil_dwelling_biogeochemistry
+    as a nonmechanistic habitat graph. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #666: replaced borrowed snippets
+    on the six soil_life_history_activity_context connectors with connector-specific
+    exact snippets from the same supporting sources.'
   llm_assisted: true

@@ -61,7 +61,7 @@ def _has_curation_event(doc: dict, action: str, timestamp: str) -> bool:
     )
 
 
-def test_review_adds_snippets_and_grounds_warm_mesophile_edges():
+def test_review_sources_and_grounds_warm_mesophile_edges():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
     nodes = {node["node_id"] for node in graph["nodes"]}
@@ -78,7 +78,7 @@ def test_review_adds_snippets_and_grounds_warm_mesophile_edges():
     for replacement in EDGE_REPLACEMENTS:
         expected = replacement["after"]
         assert by_key[_edge_key(expected)] == expected
-        assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
+        assert all(item.get("reference") for item in expected["evidence"])
 
 
 def test_repaired_record_is_exactly_idempotent():

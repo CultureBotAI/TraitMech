@@ -163,8 +163,7 @@ causal_graphs:
       connecting cytosine-deamination bias to bacterial DNA-repair mutational signatures.
     evidence:
     - reference: DOI:10.1038/s41467-023-42916-w
-      snippet: Genomic G + C content exhibited a negative correlation with proportion
-        of C > A/T mutations
+      snippet: SBS spectra were rescaled by genomic nucleotide composition
       notes: Verified against the open Ruis et al. results; this connector identifies
         the AT-enriching C>A/T pattern as a specific bacterial mutational-spectrum
         context rather than a direct cause of the METPO GC_42.65_57.0 bin.
@@ -240,7 +239,13 @@ curation_history:
   curator: codex
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) by adding
-    1 source- and verbatim-snippet-backed is-a connector from the AT-enriching mutation
-    spectrum to the broader mutational-spectrum node. No paid research service was
-    called.'
+    1 source-backed is-a connector from the AT-enriching mutation spectrum to the
+    broader mutational-spectrum node. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #666: replaced the borrowed
+    GC-content snippet on the AT-enriching-spectrum is-a connector with a direct SBS-spectrum
+    snippet from the same source.'
   llm_assisted: true

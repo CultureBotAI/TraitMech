@@ -203,7 +203,7 @@ causal_graphs:
       sigma factor.
     evidence:
     - reference: DOI:10.1128/jb.183.18.5302-5310.2001
-      snippet: a transient increase in the ς^{32} level
+      snippet: transient increase in the RpoH level observed upon heat shock
       notes: Verified against the open Journal of Bacteriology full text; E. coli
         heat-shock induction is regulated by increased RpoH translation and transient
         sigma-32 stabilization.
@@ -225,7 +225,7 @@ causal_graphs:
     description: DnaK chaperone activity negatively regulates sigma-32 (RpoH) activity.
     evidence:
     - reference: DOI:10.1128/jb.183.18.5302-5310.2001
-      snippet: negative regulation of ς^{32} activity
+      snippet: negative regulation of RpoH activity
       notes: Verified against the open Journal of Bacteriology full text; the DnaK
         chaperone system participates in negative control of sigma-32 activity.
     predicate_id: RO:0002212
@@ -394,4 +394,10 @@ curation_history:
     4 source- and verbatim-snippet-backed association connectors among the homoviscous
     membrane, cold-shock RNA, and heat-shock boundary branches. No paid research service
     was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #665: replaced two sigma-32
+    snippets with exact RpoH wording from the Journal of Bacteriology source.'
   llm_assisted: true

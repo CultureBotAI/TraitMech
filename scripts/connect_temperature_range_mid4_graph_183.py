@@ -151,7 +151,6 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1186/s12864-023-09266-9",
-                "snippet": "present many problems",
                 "notes": (
                     "Verified against the open McGuire and Nano introduction; "
                     "the paper frames high-temperature RNA, protein, lipid, "

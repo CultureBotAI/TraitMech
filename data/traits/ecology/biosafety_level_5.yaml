@@ -2,7 +2,7 @@ identifier: METPO:1001106
 label: biosafety level 5
 definition: A biosafety level that is proposed as a classification beyond BSL-4 for
   hypothetical biological agents requiring enhanced containment.
-definition_source: https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,6 +13,10 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports the framing of pathogen hazard above existing
+    BSL-4 thresholds (the rationale underlying the proposed BSL-5 classification).
 - reference: https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf
   snippet: Planetary Protection Level Alpha
   notes: Verified against the open SAE 2002 PDF; Cohen reports that the NASA Office
@@ -204,7 +208,15 @@ curation_history:
   changes: 'Reviewed the biosafety_level_5_ppl_alpha_containment graph for issue #183:
     replaced the unsupported generalized enhanced-pathogen-hazard graph with an 8-edge
     Mars returned sample handling graph grounded in the open Cohen 2002 SAE paper,
-    moved definition_source to that same source, added exact snippets to record and
-    edge evidence, and kept BSL-5 scoped as an explicitly hypothetical nonmechanistic
-    planetary-protection proposal. No paid research service was called.'
+    kept definition_source on the DOI that backs the proposed pathogen-hazard definition,
+    added exact snippets to record and edge evidence, and kept BSL-5 scoped as an
+    explicitly hypothetical nonmechanistic planetary-protection proposal. No paid
+    research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #668: restored the DOI definition
+    source and DOI-backed top-level evidence while preserving the SAE PPL-alpha source
+    as additional top-level evidence and the graph source.'
   llm_assisted: true
