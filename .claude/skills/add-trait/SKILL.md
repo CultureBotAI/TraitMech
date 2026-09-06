@@ -87,17 +87,16 @@ TraitMech is METPO-first:
    tmp="$(mktemp -d)"
    trap 'rm -rf "$tmp"' EXIT
    uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
-   target="$(
-     find "$tmp" -name '*.yaml' -print0 \
-       | xargs -0 rg -l '^identifier: <METPO CURIE>$'
-   )"
-   mkdir -p data/traits/<category>
-   cp "$target" data/traits/<category>/$(basename "$target")
+   target="$(rg --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp")"
+   relative="${target#"$tmp"/}"
+   mkdir -p "data/traits/$(dirname "$relative")"
+   cp "$target" "data/traits/$relative"
    ```
 
    Never run bare `just seed-apply` for a one-record add; the seeder has no
-   target filter and can emit every missing METPO term. If the seeder appends a
-   collision suffix to the slug, keep its generated file name.
+   target filter and can emit every missing METPO term. Preserve the
+   seeder-chosen category and generated file name, including any slug collision
+   suffix.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
 5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
@@ -170,8 +169,8 @@ node or edge just to make the graph look complete.
 ## Write the record
 
 For a METPO-owned record, generate a temporary seed tree and copy only the
-target YAML so the upstream seeder creates the skeleton without emitting
-unrelated missing METPO terms. For a curator-minted record, create
+target YAML into `data/traits` so unrelated emitted METPO skeletons stay
+disposable. For a curator-minted record, create
 `data/traits/<category>/<slug>.yaml` from a small Python dictionary and write it
 through `write_validated_trait`.
 
@@ -220,8 +219,11 @@ just validate-strict data/traits/<category>/<slug>.yaml
 just validate-history history/records/<slug>
 just audit-proposals
 just audit-graphs
+just ground-predicates
+just ground-nodes
 just audit-predicate-domains
 just audit-graph-protein-taxa
+just check-biolink-coverage
 just gen-pages
 just gen-priority-dashboard
 git diff --check
@@ -235,6 +237,9 @@ editing `protein_examples`. Run `just build-embeddings` before `just gen-pages`
 only when the sibling DeepWalk artifacts named by
 `scripts/build_embedding_index.py` are present; otherwise report that embedding
 artifacts were not regenerated.
+
+When `just ground-predicates` or `just ground-nodes` proposes exact CURIEs you
+accept, rerun that recipe with `--apply` before repeating downstream audits.
 
 ## Report
 

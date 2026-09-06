@@ -505,7 +505,7 @@ definition: ...
 definition_source: DOI:...
 trait_category: ...
 term_kind: CLASS
-mapping_status: REVIEWED      # promote from SEEDED when curating
+mapping_status: PROPOSED      # use REVIEWED only after human curator signoff
 parent_traits:
 - METPO:XXXXXXX
 synonyms: [...]               # if any
@@ -856,7 +856,8 @@ Before opening a PR:
 - [ ] Definitions match synonym thresholds for bin records.
 - [ ] Every causal edge has at least one DOI/PMID-backed evidence.
 - [ ] Evidence snippets are verbatim and diversified across edges.
-- [ ] `mapping_status` set to `REVIEWED`.
+- [ ] `mapping_status` is `PROPOSED` for first-pass model-drafted local records
+      or `REVIEWED` after human curator signoff.
 - [ ] `curation_history` event appended with today's date.
 
 ## Merging when another curation PR lands first (#622)
