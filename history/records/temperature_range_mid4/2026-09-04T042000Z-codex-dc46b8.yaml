@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_range_mid4.yaml
+  slug: temperature_range_mid4
+session:
+  id: 2026-09-04T042000Z-codex-dc46b8
+  timestamp: '2026-09-04T04:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed temperature_range_mid4 causal evidence
+  details: 'Reviewed data/traits/environment/temperature_range_mid4.yaml for issue #183. Added
+    exact snippets to nine edge-level evidence entries from Hoogerland et al. 2024, Berdejo
+    et al. 2024, and McGuire and Nano 2023, grounded the RpoH and compensatory-adaptation
+    predicates, and narrowed two local node identifiers to avoid cross-record type collisions.
+    No paid research service was called.'

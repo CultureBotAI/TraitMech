@@ -11,11 +11,14 @@ parent_traits:
 - traitmech:000078
 evidence:
 - reference: DOI:10.1038/nrmicro3032
-  notes: Imlay reviews the molecular mechanisms and physiological consequences of
-    oxidative stress and the cellular defenses against reactive oxygen species.
+  snippet: scavenging enzymes and repair systems
+  notes: Verified against the public Imlay abstract; the review summarizes oxidative
+    damage from superoxide and hydrogen peroxide plus induced detoxification and repair
+    defenses.
 - reference: DOI:10.1007/s00018-003-3206-5
-  notes: Chelikani, Fita & Loewen support catalases as core enzymes of the oxidative-stress
-    defense.
+  snippet: hydrogen peroxide to water and molecular oxygen, serving to protect cells
+  notes: Verified against the public Europe PMC abstract; Chelikani et al. review
+    catalase enzymes that detoxify hydrogen peroxide.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
@@ -93,18 +96,24 @@ causal_graphs:
   - subject: hydrogen_peroxide
     predicate: causes
     object: oxidative_stress_process
-    description: Reactive oxygen species trigger the oxidative-stress response.
+    description: Hydrogen peroxide damages cells and triggers ROS defense.
     evidence:
     - reference: DOI:10.1038/nrmicro3032
-      notes: Imlay reviews ROS damage and induced defenses.
+      snippet: hydrogen peroxide. These species can destroy the activities of metalloenzymes
+        and the integrity of DNA
+      notes: Verified against the public Imlay abstract; hydrogen peroxide is retained
+        as a representative ROS damaging metalloenzymes and DNA.
     predicate_id: biolink:causes
   - subject: oxidative_stress_process
     predicate: confers
     object: oxidative_stress_response_trait
     description: The induced defense realizes the oxidative-stress-response trait.
     evidence:
-    - reference: DOI:10.1007/s00018-003-3206-5
-      notes: Chelikani et al. support catalases as core oxidative-stress enzymes.
+    - reference: DOI:10.1038/nrmicro3032
+      snippet: forcing organisms to protect themselves with scavenging enzymes and
+        repair systems
+      notes: Verified against the public Imlay abstract; the edge connects ROS-induced
+        scavenging and repair defenses to the broad oxidative-stress-response trait.
     predicate_id: METPO:2007700
   - subject: oxyr_regulator
     predicate: positively regulates
@@ -113,8 +122,10 @@ causal_graphs:
       oxidative stress.
     evidence:
     - reference: DOI:10.1099/mic.0.001481
-      notes: OxyR is widely conserved in bacteria and activates transcription of a
-        set of genes that influence cellular defence against oxidative stress.
+      snippet: activates the transcription of a set of genes that influence cellular
+        defence against oxidative stress
+      notes: Verified against the open Bientz et al. abstract; this supports OxyR
+        as a bacterial transcriptional regulator of oxidative-stress defense genes.
     predicate_id: RO:0002213
   - subject: rpos_sigma_factor
     predicate: positively regulates
@@ -123,8 +134,9 @@ causal_graphs:
       outputs; its loss increases sensitivity to oxidative stress.
     evidence:
     - reference: DOI:10.1128/mmbr.00151-22
-      notes: Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon
-        includes oxidative-stress genes (dps, catalases, sodA, osmC).
+      snippet: are sensitive to oxidative stress
+      notes: Verified against the ASM article preview; RpoS is retained as a broad
+        E. coli general-stress regulator whose loss increases oxidative-stress sensitivity.
     predicate_id: RO:0002213
   - subject: thioredoxin_system
     predicate: contributes to
@@ -133,8 +145,9 @@ causal_graphs:
       stress, including in anaerobes and spores.
     evidence:
     - reference: DOI:10.1371/journal.ppat.1012001
-      notes: Multiple thioredoxin systems are involved in the response to oxidative
-        stresses, broadening thiol-repair scope beyond classic aerobes.
+      snippet: ubiquitous system for thiol and protein repair
+      notes: Verified against the open Anjou et al. abstract; the thioredoxin system
+        is retained as a bacterial thiol and protein repair branch.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
@@ -182,4 +195,11 @@ curation_history:
   changes: Marked the graph mechanistic, bounded it to an E. coli-like peroxide branch,
     reviewed OxyR as label-only because available terms are shared LysR domains, grounded
     RpoS to its exact InterPro family, and added DOI-cited OxyR P0ACQ4.
+  llm_assisted: true
+- timestamp: '2026-09-04T06:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the oxidative_stress_response_ros_defense graph for issue #183:
+    added exact snippets to 2 record-level evidence items and 5 peroxide, OxyR, RpoS,
+    and thioredoxin causal-edge evidence entries. No paid research service was called.'
   llm_assisted: true

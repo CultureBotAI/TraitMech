@@ -33,9 +33,9 @@ causal_graphs:
   scope_notes: This record is a numerical cell-length bin. Its graph illustrates possible
     regulators of measured length but is not a single inheritable causal mechanism
     requiring a protein/taxon exemplar.
-  title: Large cell-length from fast growth or division delay
-  description: DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction,
-    or filamentous growth programs to large cell length (>3 μm).
+  title: Large cell-length via FtsZ division delay
+  description: DOI-backed graph linking fast elongation, SOS/SulA-mediated FtsZ inhibition,
+    FtsZ Z-ring control, and delayed constriction to large cell length (>3 μm).
   nodes:
   - node_id: cell_length_large_trait
     label: cell length large
@@ -113,32 +113,71 @@ causal_graphs:
       notes: Supports large length as a value within the regulated cell-length distribution.
     predicate_id: rdfs:subClassOf
   - subject: sos_response
-    predicate: induces
+    predicate: positively regulates
     object: sula_division_inhibition
-    description: DNA damage/stress activates the SOS program, inducing division inhibitors
-      that halt septation and promote elongation.
+    description: The SOS response increases SulA-mediated division inhibition after
+      DNA damage or replication stress.
     evidence:
-    - reference: DOI:10.1101/2025.05.13.653778
-      notes: SOS regulon upregulates sulA; SulA prevents Z-ring formation and halts
-        division.
+    - reference: DOI:10.1002/advs.202203260
+      snippet: SOS response is activated
+      notes: Verified against the open Wiley full text; DNA damage activates the RecA/LexA
+        SOS response and enables expression of SOS regulon genes, including sulA.
+    predicate_id: RO:0002213
   - subject: sula_protein
-    predicate: inhibits assembly of
+    predicate: negatively regulates
     object: ftsz_zring
-    description: SulA blocks FtsZ polymerization/assembly, delaying cytokinesis and
-      allowing continued elongation.
+    description: SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.
     evidence:
-    - reference: DOI:10.1101/2025.05.13.653778
-      notes: 'Canonical edge for many bacteria: SulA inhibits FtsZ assembly by sequestering
-        monomers, directly blocking polymerization.'
+    - reference: DOI:10.1002/advs.202203260
+      snippet: cell division inhibitor, sulA, blocks FtsZ
+      notes: Verified against the open Wiley full text; the source links SOS activation
+        to SulA blocking FtsZ polymerization.
+    predicate_id: RO:0002212
   - subject: ftsz_protein
-    predicate: delays
+    predicate: positively regulates
     object: constriction_onset
-    description: FtsZ copy number is rate-limiting for division; reduced FtsZ delays
-      septation and can increase cell length before division.
+    description: FtsZ accumulation in the Z-ring is a rate-limiting driver for onset
+      of constriction at faster growth rates.
     evidence:
     - reference: DOI:10.1038/s41467-024-54242-w
-      notes: FtsZ numbers are rate-limiting for cell division; ~20% downregulation
-        may delay division.
+      snippet: rate limit the onset of constriction
+      notes: Verified against the open Nature Communications full text; FtsZ numbers
+        were rate-limiting for constriction onset in moderately fast E. coli growth.
+    predicate_id: RO:0002213
+  - subject: sula_protein
+    predicate: contributes to
+    object: sula_division_inhibition
+    description: SOS-induced SulA is the inhibitory protein mediating this division-arrest
+      branch.
+    evidence:
+    - reference: DOI:10.1002/advs.202203260
+      snippet: cell division inhibitor sulA
+      notes: Verified against the open Wiley full text; the study frames SulA as the
+        SOS-linked cell-division inhibitor.
+    predicate_id: RO:0002326
+  - subject: sula_division_inhibition
+    predicate: contributes to
+    object: division_timing_delay
+    description: SulA-mediated inhibition of septation contributes to delayed division
+      and continued elongation.
+    evidence:
+    - reference: DOI:10.1002/advs.202203260
+      snippet: contributes to non-septate cellular filamentation
+      notes: Verified against the open Wiley full text; SulA-mediated FtsZ inhibition
+        is linked to blocked septation and filamentation.
+    predicate_id: RO:0002326
+  - subject: ftsz_zring
+    predicate: positively regulates
+    object: constriction_onset
+    description: FtsZ bundles promote the FtsA/FtsN/core-divisome transition that
+      starts constriction.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54242-w
+      snippet: starts the onset of constriction
+      notes: Verified against the open Nature Communications full text; the proposed
+        model routes FtsZ bundles through FtsA antiparallel filaments, FtsN recruitment,
+        and core-divisome activation.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.920780+00:00'
   curator: seed_from_metpo
@@ -203,4 +242,12 @@ curation_history:
     canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (4 components to 1) by re-citing
+    the SOS/SulA branch to peer-reviewed evidence, grounding the two residual FtsZ/SulA
+    predicates, and adding 3 source- and verbatim-snippet-backed connectors. No paid
+    research service was called.'
   llm_assisted: true

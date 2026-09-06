@@ -40,7 +40,6 @@ mrp na+/h+ antiporter complex	GENE_OR_PROTEIN	3	data/traits/environment/alkaphil
 numerical environmental axis	ENVIRONMENTAL_FACTOR	3	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 compatible-solute transport	MOLECULAR_FUNCTION	3	data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml|data/traits/environment/halotolerant.yaml
 cold-shock proteins	GENE_OR_PROTEIN	3	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml|data/traits/environment/temperature_range_low.yaml
-na+/h+ antiport activity	MOLECULAR_FUNCTION	3	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_range_mid3.yaml
 ectabc ectoine-biosynthesis enzyme module	GENE_OR_PROTEIN	3	data/traits/environment/halophilic.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/nacl_range_mid2.yaml
 water flux across cytoplasmic membrane	BIOLOGICAL_PROCESS	3	data/traits/environment/halophily_preference.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
 osmotic upshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/nacl_delta_mid1.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
@@ -85,6 +84,7 @@ extracellular polymeric substances (eps)	CHEMICAL	2	data/traits/environment/facu
 proton export pumps and antiporters	GENE_OR_PROTEIN	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 cytoplasmic buffering	BIOLOGICAL_PROCESS	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/ph_range_mid2.yaml
 anaerobic metabolism	BIOLOGICAL_PROCESS	2	data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
+na+/h+ antiport activity	MOLECULAR_FUNCTION	2	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/ph_range_mid3.yaml
 f1fo-atp synthase	GENE_OR_PROTEIN	2	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/ph_range_high.yaml
 oxidative stress	BIOLOGICAL_PROCESS	2	data/traits/environment/halophilic.yaml|data/traits/environment/temperature_optimum_low.yaml
 salt-out strategy	BIOLOGICAL_PROCESS	2	data/traits/environment/halotolerant.yaml|data/traits/environment/nacl_delta.yaml
@@ -97,6 +97,7 @@ elevated nacl	ENVIRONMENTAL_FACTOR	2	data/traits/environment/moderately_halophil
 hypoosmotic shock	ENVIRONMENTAL_FACTOR	2	data/traits/environment/nacl_delta.yaml|data/traits/environment/nacl_range_low.yaml
 intracellular k+ accumulation	BIOLOGICAL_PROCESS	2	data/traits/environment/nacl_delta_high.yaml|data/traits/environment/nacl_optimum.yaml
 ambient nacl concentration	ENVIRONMENTAL_FACTOR	2	data/traits/environment/nacl_optimum.yaml|data/traits/environment/nacl_range.yaml
+hyperosmotic stress	ENVIRONMENTAL_FACTOR	2	data/traits/environment/nacl_range_low.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 cyclopropane fatty acids	CHEMICAL	2	data/traits/environment/obligately_acidophilic.yaml|data/traits/environment/ph_range_low.yaml
 trkah k+ uptake system	GENE_OR_PROTEIN	2	data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/ph_optimum_high.yaml
 proton motive force generation	BIOLOGICAL_PROCESS	2	data/traits/environment/ph_delta.yaml|data/traits/environment/ph_delta_mid2.yaml
@@ -264,7 +265,13 @@ positive-pressure air-supplied suit	EXPERIMENTAL_FACTOR	1	data/traits/ecology/bi
 airlock	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
 decontamination shower	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
 specialized waste disposal	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
-enhanced pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_5.yaml
+planetary protection level alpha	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+mars returned sample handling	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+two-way contamination control	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+backward-contamination prevention for earth	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+forward-contamination prevention for samples	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+closed-system sample handling	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
+automation and remote manipulation	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
 neutral host fitness effect	QUALITY	1	data/traits/ecology/commensalism.yaml
 secretory iga	GENE_OR_PROTEIN	1	data/traits/ecology/commensalism.yaml
 host mucus / mucins	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/commensalism.yaml
@@ -407,10 +414,11 @@ soil resource availability and moisture	ENVIRONMENTAL_FACTOR	1	data/traits/ecolo
 soil aridity	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/soil_dwelling.yaml
 soil microbiome potential growth rate	QUALITY	1	data/traits/ecology/soil_dwelling.yaml
 high soil carbon availability	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/soil_dwelling.yaml
-extreme climatic event	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/soil_dwelling.yaml
+extreme heat event	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/soil_dwelling.yaml
 dormancy and sporulation gene program	BIOLOGICAL_PROCESS	1	data/traits/ecology/soil_dwelling.yaml
 soil ph, precipitation and c:n	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/soil_dwelling.yaml
 soil bacterial life-history strategy axes	STATE	1	data/traits/ecology/soil_dwelling.yaml
+soil life-history and activity context	STATE	1	data/traits/ecology/soil_dwelling.yaml
 host organism	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/symbiosis.yaml
 host metabolites / exudates	CHEMICAL	1	data/traits/ecology/symbiosis.yaml
 chemotaxis machinery	PATHWAY	1	data/traits/ecology/symbiosis.yaml
@@ -630,16 +638,17 @@ robust osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nac
 potassium uptake systems	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_mid2.yaml
 cell volume regulation	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
 osmolality	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_delta_mid2.yaml
-kdpfabc complex	GENE_OR_PROTEIN	1	data/traits/environment/nacl_delta_mid2.yaml
-compatible-solute accumulation/transport	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
+kdpfabc expression	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
+compatible-solute accumulation and transport	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
 osmoprotection	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
-exopolysaccharide matrix	CELLULAR_LOCALIZATION	1	data/traits/environment/nacl_delta_mid2.yaml
+exopolysaccharide matrix	CHEMICAL	1	data/traits/environment/nacl_delta_mid2.yaml
 water retention / reduced pericellular na+ toxicity	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
 osmotic balance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
 protein stability at high salt	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
 compatible solute uptake	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
 lower energetic cost than de novo synthesis	QUALITY	1	data/traits/environment/nacl_optimum.yaml
-cytoplasmic na+ homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
+na+/k+/h+ transporter activity	MOLECULAR_FUNCTION	1	data/traits/environment/nacl_optimum.yaml
+cellular ion homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
 hypersaline nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_optimum_high.yaml
 intracellular kcl concentration	CHEMICAL	1	data/traits/environment/nacl_optimum_high.yaml
 potassium uptake system	GENE_OR_PROTEIN	1	data/traits/environment/nacl_optimum_high.yaml
@@ -678,7 +687,6 @@ intracellular compatible solutes	CHEMICAL	1	data/traits/environment/nacl_range_h
 protein stabilization under salt stress	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_high.yaml
 limited high-salt tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_low.yaml
 nacl concentration	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_range_low.yaml
-hyperosmotic stress	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_low.yaml
 mechanosensitive channels mscl/mscs	GENE_OR_PROTEIN	1	data/traits/environment/nacl_range_low.yaml
 opua/opuc compatible-solute importers	GENE_OR_PROTEIN	1	data/traits/environment/nacl_range_low.yaml
 choline uptake	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_low.yaml
@@ -737,7 +745,6 @@ maintenance of membrane fluidity under hhp	BIOLOGICAL_PROCESS	1	data/traits/envi
 f1f0-atp synthase	GENE_OR_PROTEIN	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 opua compatible-solute transporter	GENE_OR_PROTEIN	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 intracellular glycine betaine	CHEMICAL	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
-hyperosmotic stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 o2 as terminal electron acceptor	MOLECULAR_FUNCTION	1	data/traits/environment/oxygen_preference.yaml
 oxygen / reactive oxygen species stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_preference.yaml
 detoxifying-enzyme gene expression	BIOLOGICAL_PROCESS	1	data/traits/environment/oxygen_preference.yaml
@@ -855,7 +862,7 @@ external ph 7-8	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_range_mid2.yam
 external ph 5-8	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_range_mid2.yaml
 membrane potential / δph rebalancing	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid2.yaml
 proton:ion antiporters	GENE_OR_PROTEIN	1	data/traits/environment/ph_range_mid2.yaml
-membrane potential (δψ)	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid2.yaml
+membrane potential (δψ)	STATE	1	data/traits/environment/ph_range_mid2.yaml
 alkaliphile ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid3.yaml
 cytoplasm acidification during alkaline growth	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid3.yaml
 acidic cell-wall polymers (teichuronic acid)	CHEMICAL	1	data/traits/environment/ph_range_mid3.yaml
@@ -967,9 +974,12 @@ rpos sigma factor (sigma-s)	GENE_OR_PROTEIN	1	data/traits/environment/temperatur
 otsab trehalose biosynthesis operon	PATHWAY	1	data/traits/environment/temperature_delta_mid2.yaml
 cold / cold-shock tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
 very limited thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
-unsaturated fatty acid content	CHEMICAL	1	data/traits/environment/temperature_delta_very_low.yaml
+unsaturated fatty acid content	QUALITY	1	data/traits/environment/temperature_delta_very_low.yaml
 csda dead-box rna helicase	GENE_OR_PROTEIN	1	data/traits/environment/temperature_delta_very_low.yaml
-translation under cold shock	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
+50s ribosomal subunit biogenesis	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
+membrane phase-transition temperature	QUALITY	1	data/traits/environment/temperature_delta_very_low.yaml
+membrane transport at low temperature	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
+rna metabolism at low temperature	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
 enzyme kinetics	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum.yaml
 arrhenius plot deviation from linearity	EXPERIMENTAL_FACTOR	1	data/traits/environment/temperature_optimum.yaml
 stress / non-physiological growth regime	STATE	1	data/traits/environment/temperature_optimum.yaml
@@ -1066,7 +1076,7 @@ membrane fatty acyl chains	CHEMICAL	1	data/traits/environment/temperature_range_
 membrane rigidification and increased thickness	QUALITY	1	data/traits/environment/temperature_range_mid3.yaml
 fabi/fabb fatty-acid branchpoint valve	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid4.yaml
 faba/fabi/fabb competition for c10:1 pool	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid4.yaml
-membrane lipid composition	QUALITY	1	data/traits/environment/temperature_range_mid4.yaml
+saturated/unsaturated membrane lipid composition	QUALITY	1	data/traits/environment/temperature_range_mid4.yaml
 membrane fluidity restoration	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid4.yaml
 growth after temperature shock	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid4.yaml
 heat stress	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_range_mid4.yaml
@@ -1078,7 +1088,7 @@ dnak/dnaj/grpe and groes/groel chaperone systems	GENE_OR_PROTEIN	1	data/traits/e
 protection against heat stress	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid4.yaml
 membrane fatty-acid desaturation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_very_low.yaml
 cold-shock proteins (cspa-family)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_range_very_low.yaml
-mrna/rna secondary structure	CHEMICAL	1	data/traits/environment/temperature_range_very_low.yaml
+cold-stabilized mrna/rna secondary structure	QUALITY	1	data/traits/environment/temperature_range_very_low.yaml
 molecular chaperones (dnak/groel/groes/clp/tf)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_range_very_low.yaml
 protein folding and proteostasis in the cold	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_very_low.yaml
 compatible solutes (glycine betaine/trehalose/glycerol)	CHEMICAL	1	data/traits/environment/temperature_range_very_low.yaml
@@ -1168,9 +1178,8 @@ metabolic cross-feeding	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streaml
 reduced cofactor/vitamin biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streamlining.yaml
 dependence on exogenous b-vitamin precursors	BIOLOGICAL_PROCESS	1	data/traits/genomics/genome_streamlining.yaml
 integrase/recombinase/transposase mobility module	GENE_OR_PROTEIN	1	data/traits/genomics/genomic_island.yaml
-integrative conjugative element (ice)	BIOLOGICAL_PROCESS	1	data/traits/genomics/genomic_island.yaml
-conjugation	BIOLOGICAL_PROCESS	1	data/traits/genomics/genomic_island.yaml
-integrative mobilizable element (ime)	BIOLOGICAL_PROCESS	1	data/traits/genomics/genomic_island.yaml
+integrative conjugative element (ice)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
+integrative mobilizable element (ime)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
 genome plasticity	QUALITY	1	data/traits/genomics/mobile_genetic_element.yaml
 relaxase	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
 origin of transfer (orit)	CELLULAR_LOCALIZATION	1	data/traits/genomics/mobile_genetic_element.yaml
@@ -1521,7 +1530,7 @@ peptidoglycan density / mechanical strength	QUALITY	1	data/traits/morphology/cel
 rod shape	TRAIT	1	data/traits/morphology/cell_length_medium.yaml
 membrane synthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_medium.yaml
 pg-membrane envelope balance	STATE	1	data/traits/morphology/cell_length_medium.yaml
-ftsz abundance	GENE_OR_PROTEIN	1	data/traits/morphology/cell_length_small.yaml
+ftsz abundance	QUALITY	1	data/traits/morphology/cell_length_small.yaml
 cell division timing	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_small.yaml
 ftsz ring formation	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_small.yaml
 ftsn	GENE_OR_PROTEIN	1	data/traits/morphology/cell_length_small.yaml
@@ -1689,6 +1698,7 @@ d-alanine esters on teichoic acids	CHEMICAL	1	data/traits/morphology/gram_positi
 teichoic-acid negative charge	QUALITY	1	data/traits/morphology/gram_positive.yaml
 d-alanylation of teichoic acids	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_positive.yaml
 positively charged cell surface	QUALITY	1	data/traits/morphology/gram_positive.yaml
+crystal violet-iodine retention	QUALITY	1	data/traits/morphology/gram_stain.yaml
 culture aging	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/gram_variable.yaml
 peptidoglycan thinning	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_variable.yaml
 crystal-violet retention loss	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_variable.yaml
@@ -1878,7 +1888,7 @@ toroidal geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
 mreb filaments	GENE_OR_PROTEIN	1	data/traits/morphology/ring_shaped.yaml
 rate of cell wall growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
 peptidoglycan insertion perpendicular to long axis	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
-bactofilin-m23 peptidase module	GENE_OR_PROTEIN	1	data/traits/morphology/ring_shaped.yaml
+bactofilin-m23 peptidase module	PATHWAY	1	data/traits/morphology/ring_shaped.yaml
 local change in cell wall biosynthesis mode	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
 crva polymer	GENE_OR_PROTEIN	1	data/traits/morphology/ring_shaped.yaml
 skewed peptidoglycan synthesis rates	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml

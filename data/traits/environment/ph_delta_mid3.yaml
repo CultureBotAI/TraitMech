@@ -25,13 +25,15 @@ canonical_examples:
     four-unit breadth lies in the approximately 4-5 bin.
 causal_graphs:
 - graph_id: ph_delta_mid3_wide_breadth
-  title: pH-delta-mid3 wide-breadth pH homeostasis
+  title: pH-delta-mid3 wide pH-homeostasis context
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking wide pH-homeostasis flexibility to a pH growth
-    breadth of approximately 4–5 pH units.
+  description: DOI-backed nonmechanistic graph connecting wide pH-homeostasis flexibility,
+    PMF regulation and generation, alkaline Na+/H+ antiport, ATPase support, phosphate
+    buffering, amino-acid decarboxylation, and membrane proton-permeability branches
+    to the 4-5 pH-unit breadth bin.
   nodes:
   - node_id: ph_delta_mid3_trait
     label: pH delta mid3
@@ -126,55 +128,67 @@ causal_graphs:
     description: pH delta mid3 is a quantitative bin of the pH-delta phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: external pH
-      notes: Supports the 4–5 unit breadth as a value within the pH-delta distribution.
+      snippet: grow at external pH values
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        pH breadth is represented as a quantitative external-growth-pH bin under the
+        pH-delta phenotype.
     predicate_id: rdfs:subClassOf
   - subject: external_alkaline_ph
-    predicate: increases reliance on
+    predicate: regulates
     object: na_h_antiport
-    description: High external pH increases reliance on electrogenic Na+/H+ antiport
-      for cytoplasmic pH homeostasis.
+    description: High external pH modulates the contribution of electrogenic Na+/H+
+      antiport to cytoplasmic pH homeostasis.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Multiple Na+/H+ and K+/H+ antiporters are critical for alkaline homeostasis,
-        driven by membrane potential.
+      snippet: energize active proton uptake
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        cation/proton antiporters use PMF from respiration or ATPases to drive proton
+        uptake under alkaline stress.
+    predicate_id: RO:0002211
   - subject: pmf_regulation
-    predicate: supports
+    predicate: contributes to
     object: cytoplasmic_ph_maintenance
-    description: Regulation of Delta-psi and Delta-pH supports maintenance of cytoplasmic
-      pH across external pH changes.
+    description: Regulation of Delta-psi and Delta-pH contributes to maintenance of
+      cytoplasmic pH across external pH changes.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: PMF (Delta-pH and Delta-psi) is central to pH homeostasis; neutralophiles
-        keep cytoplasmic pH near 7.5 across external pH ~5.5-9.0.
+      snippet: relative magnitudes of the two PMF components
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        bacterial pH-homeostasis demands determine how delta-psi and delta-pH contribute
+        to the PMF.
+    predicate_id: RO:0002326
   - subject: proton_pumping_respiratory_complexes
-    predicate: contribute to
+    predicate: generates
     object: proton_motive_force
-    description: Proton-pumping respiratory complexes contribute to the PMF used for
-      pH homeostasis.
+    description: Proton-pumping respiratory complexes generate proton motive force.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Cells use primary proton pumps including respiratory-chain pumps to create
-        PMF for transport and pH regulation.
+      snippet: Primary proton pumps generate the PMF
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        respiratory-chain complexes are listed among the proton pumps that establish
+        bacterial PMF.
+    predicate_id: biolink:produces
   - subject: f0f1_atpase
     predicate: contributes to
     object: cytoplasmic_ph_maintenance
-    description: F0F1-ATPase can extrude protons and contributes to pH homeostasis
-      under acid stress.
+    description: F0F1-ATPase proton pumping contributes to bacterial pH homeostasis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: F1Fo-ATPase hydrolytic activity can drive H+ extrusion; key regulator
-        in low-pH contexts.
+      snippet: Key regulators of bacterial pH homeostasis
+      notes: Verified against the open Poolman review; proton-pumping enzymes, including
+        F0F1-ATPase in lactic acid bacteria, are listed as bacterial pH-homeostasis
+        regulators.
     predicate_id: RO:0002326
   - subject: phosphate_buffering
-    predicate: stabilizes
+    predicate: contributes to
     object: intracellular_ph_stability
-    description: Cytoplasmic phosphate buffering capacity stabilizes intracellular
-      pH.
+    description: Cytoplasmic phosphate buffering contributes to intracellular pH stability.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: At pH ~7.2 only ~10 free protons present; cytoplasmic phosphate buffering
-        (~100 mM) makes buffering essential.
+      snippet: buffering capacity of the cytoplasm
+      notes: Verified against the open Poolman review; cytoplasmic buffering is described
+        as important for absorbing pH fluctuations.
+    predicate_id: RO:0002326
   - subject: aa_decarboxylation
     predicate: contributes to
     object: proton_motive_force
@@ -182,8 +196,9 @@ causal_graphs:
       to PMF and intracellular pH control.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Decarboxylation releases ~20 kJ/mol that can be stored as PMF; decarboxylation
-        pathways are key pH regulators.
+      snippet: Proton motive force generation by substrate decarboxylation
+      notes: Verified against the open Poolman review; substrate decarboxylation is
+        linked to bacterial PMF generation in pH homeostasis.
     predicate_id: RO:0002326
   - subject: membrane_lipid_remodeling
     predicate: decreases
@@ -191,9 +206,67 @@ causal_graphs:
     description: Membrane lipid composition shifts reduce proton permeability.
     evidence:
     - reference: DOI:10.3389/fmicb.2022.1034164
-      notes: Membrane composition adjustments limit proton permeability and alter
-        phospholipid headgroups under high pH.
+      snippet: higher content of saturated fatty acids
+      notes: Verified against the open Frontiers methanotroph review; saturated bacterial
+        membranes are described as lowering proton permeability under acid stress.
     predicate_id: RO:0002212
+  - subject: proton_motive_force
+    predicate: associated with
+    object: wide_ph_homeostasis
+    description: PMF generation and amino-acid decarboxylation are associated with
+      wide pH-homeostasis flexibility.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: Proton motive force generation by substrate decarboxylation
+      notes: Verified against the open Poolman review; the connector joins the decarboxylation
+        and PMF branch as pH-homeostasis support without asserting direct causation
+        of a 4-5 pH-unit growth breadth.
+    predicate_id: biolink:associated_with
+  - subject: cytoplasmic_ph_maintenance
+    predicate: associated with
+    object: wide_ph_homeostasis
+    description: Cytoplasmic pH maintenance is associated with wide pH-homeostasis
+      flexibility across external pH changes.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: relative magnitudes of the two PMF components
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        PMF regulation is retained as one energetic arm of the wide pH-breadth context.
+    predicate_id: biolink:associated_with
+  - subject: na_h_antiport
+    predicate: associated with
+    object: wide_ph_homeostasis
+    description: Electrogenic Na+/H+ antiport is associated with alkaline-side support
+      for wide pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: energize active proton uptake
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        the connector keeps antiport as alkaline-side support rather than a universal
+        breadth cause.
+    predicate_id: biolink:associated_with
+  - subject: intracellular_ph_stability
+    predicate: associated with
+    object: wide_ph_homeostasis
+    description: Cytoplasmic phosphate buffering is associated with stable intracellular
+      pH during pH-homeostasis challenges.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: buffering capacity of the cytoplasm
+      notes: Verified against the open Poolman review; phosphate buffering remains
+        one passive branch of pH-homeostasis support.
+    predicate_id: biolink:associated_with
+  - subject: proton_permeability
+    predicate: associated with
+    object: wide_ph_homeostasis
+    description: Membrane proton permeability is associated with acid-side envelope
+      support for wide pH homeostasis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034164
+      snippet: higher content of saturated fatty acids
+      notes: Verified against the open Frontiers methanotroph review; lipid remodeling
+        is retained as an acid-side proton-permeability branch.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839862+00:00'
   curator: seed_from_metpo
@@ -326,4 +399,21 @@ curation_history:
     canonical example(s): Gemmobacter lutimaris (NCBITaxon:2306023; DOI:10.1099/ijsem.0.003375).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T01:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the wide ph_delta_mid3_wide_breadth graph for issue #183: added
+    snippets to 8 edge-level evidence items and grounded 4 unmapped pH-homeostasis
+    predicates to RO:0002211, RO:0002326, or biolink:produces. No paid research service
+    was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T16:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    5 source- and verbatim-snippet-backed association connectors among the PMF generation,
+    PMF regulation, alkaline Na+/H+ antiport, ATPase, phosphate-buffering, amino-acid
+    decarboxylation, and membrane proton-permeability branches. No paid research service
+    was called.'
   llm_assisted: true

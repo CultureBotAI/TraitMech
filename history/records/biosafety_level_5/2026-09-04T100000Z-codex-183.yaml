@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/biosafety_level_5.yaml
+  slug: biosafety_level_5
+session:
+  id: 2026-09-04T100000Z-codex-183
+  timestamp: '2026-09-04T10:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source
+  - evidence
+  - causal_graphs
+  summary: Reviewed biosafety_level_5 causal evidence
+  details: 'Reviewed data/traits/ecology/biosafety_level_5.yaml for issue #183.
+    Replaced the unsupported generalized enhanced-pathogen-hazard graph with an
+    8-edge Mars returned sample handling graph grounded in the open Cohen 2002
+    SAE paper, moved definition_source to that same source, added exact snippets
+    to record and edge evidence, and kept BSL-5 scoped as an explicitly hypothetical
+    nonmechanistic planetary-protection proposal. No paid research service was
+    called.'

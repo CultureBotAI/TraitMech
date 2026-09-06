@@ -32,13 +32,14 @@ canonical_examples:
     30-34-degree range-width bin.
 causal_graphs:
 - graph_id: temperature_range_mid3_upper_mesophile
-  title: Temperature-range-mid3 upper-mesophile range
+  title: Temperature-range-mid3 upper-mesophile context
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking upper-mesophile adaptation to a temperature
-    growth range of approximately 30–34 °C.
+  description: DOI-backed nonmechanistic graph connecting upper-mesophile growth-range
+    context, the DesK/DesR membrane-order sensor, des expression, cooling-induced
+    membrane rigidification, and homeoviscous liquid-crystalline membrane maintenance.
   nodes:
   - node_id: temperature_range_mid3_trait
     label: temperature range mid3
@@ -139,57 +140,130 @@ causal_graphs:
       notes: Supports the 30–34 °C range as a value within the temperature-range distribution.
     predicate_id: rdfs:subClassOf
   - subject: membrane_order
-    predicate: drives
+    predicate: positively regulates
     object: desk_kinase_state
-    description: Increased membrane order (reduced fluidity) drives DesK to a kinase-dominant
+    description: Increased membrane order (reduced fluidity) promotes the DesK kinase-dominant
       state; membrane physical state is the proximate signal.
     evidence:
-    - reference: DOI:10.1128/mmbr.00069-23
-      notes: increased membrane order (reduced fluidity) drives DesK to a kinase-dominant
-        state
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: kinase-dominant state of DesK
+      notes: Verified against the open Sidarta et al. introduction; the current Des
+        model links temperature-decrease-driven membrane rigidification/thickening
+        to the active kinase-dominant state.
+    predicate_id: RO:0002213
   - subject: desk
-    predicate: phosphorylates
+    predicate: positively regulates
     object: desr
-    description: Core two-component signaling step linking membrane physical state
-      to transcriptional response.
+    description: DesK controls DesR phosphorylation in the core two-component signaling
+      step linking membrane physical state to transcriptional response.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      notes: DesK autophosphorylates (His188) and phosphorylates DesR
+      snippet: phosphorylating or dephosphorylating DesR
+      notes: Verified against the open Sidarta et al. introduction; DesK is described
+        as a membrane-associated histidine kinase that phosphorylates or dephosphorylates
+        DesR in a temperature-dependent manner.
+    predicate_id: RO:0002213
   - subject: phospho_desr
-    predicate: activates transcription of
+    predicate: positively regulates
     object: des_gene
-    description: DesR-P tetramerizes, binds the des promoter and induces lipid desaturation
-      to restore membrane fluidity.
+    description: DesR-P tetramerizes, binds the des promoter, and positively regulates
+      des expression for lipid desaturation.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      notes: P-DesR tetramerizes, binds Pdes, and activates des expression
+      snippet: activating expression of the des gene
+      notes: Verified against the open Sidarta et al. introduction; phosphorylated
+        DesR tetramers bind Pdes and activate des transcription.
+    predicate_id: RO:0002213
   - subject: des_gene
-    predicate: introduces double bonds into
+    predicate: regulates
     object: membrane_fatty_acyl_chains
-    description: Des-mediated unsaturation fluidizes the membrane and reduces bilayer
-      thickness.
+    description: Des-mediated unsaturation regulates membrane fatty acyl chains, fluidizing
+      the membrane and reducing bilayer thickness.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      notes: Des introduces double bonds into fatty acyl chains, fluidizing the membrane
-        and reducing thickness
+      snippet: desaturates the fatty acyl chains
+      notes: Verified against the open Sidarta et al. introduction; Des desaturates
+        membrane-lipid fatty acyl chains as the effector of the DesK/DesR temperature-sensing
+        system.
+    predicate_id: RO:0002211
   - subject: temperature_decrease
     predicate: causes
     object: membrane_rigidity
-    description: General physical trigger underlying homeoviscous adaptation across
-      microbes.
+    description: A temperature decrease causes membrane rigidification and increased
+      thickness, a physical trigger for homeoviscous adaptation.
     evidence:
-    - reference: DOI:10.1007/s42770-023-01057-4
-      notes: membrane rigidification and increased thickness are proposed as sensing
-        signals that trigger adaptive responses
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: rigidification and concomitant thickening
+      notes: Verified against the open Sidarta et al. introduction; temperature decrease
+        is described as causing cell-membrane rigidification and thickening.
     predicate_id: biolink:causes
   - subject: homeoviscous_adaptation
-    predicate: maintains
+    predicate: contributes to
     object: liquid_crystalline_membrane
-    description: 'Broad mechanism relevant to upper-mesophile growth: cells preserve
-      membrane function across temperature fluctuations.'
+    description: Homeoviscous adaptation contributes to a functional liquid-crystalline
+      membrane state at low temperature.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
-      notes: maintain the liquid-crystalline phase at low temperature
+      snippet: maintain the liquid crystalline phase
+      notes: Verified against the open Ramón et al. review; organisms in cold environments
+        are described as adapting their membrane composition to maintain a liquid-crystalline
+        state.
+    predicate_id: RO:0002326
+  - subject: membrane_rigidity
+    predicate: associated with
+    object: membrane_order
+    description: Cooling-induced membrane rigidification is associated with the ordered
+      membrane state sensed by DesK.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: rigidification and concomitant thickening
+      notes: Verified against the open Sidarta et al. introduction; this connector
+        joins the cooling membrane signal to the DesK kinase-state branch.
+    predicate_id: biolink:associated_with
+  - subject: desk_kinase_state
+    predicate: associated with
+    object: desk
+    description: The DesK kinase-dominant state is associated with the DesK/DesR temperature-sensing
+      step.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: phosphorylating or dephosphorylating DesR
+      notes: Verified against the open Sidarta et al. introduction; this connector
+        keeps DesK kinase activity as two-component signaling context.
+    predicate_id: biolink:associated_with
+  - subject: desr
+    predicate: associated with
+    object: phospho_desr
+    description: DesR regulation is associated with phosphorylated DesR promoter activation
+      in the DesK/DesR branch.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: activating expression of the des gene
+      notes: Verified against the open Sidarta et al. introduction; this connector
+        joins DesR to its phosphorylated transcription-activation context.
+    predicate_id: biolink:associated_with
+  - subject: membrane_fatty_acyl_chains
+    predicate: associated with
+    object: homeoviscous_adaptation
+    description: Des-mediated fatty-acyl-chain unsaturation is associated with homeoviscous
+      membrane adaptation.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: desaturates the fatty acyl chains
+      notes: Verified against the open Sidarta et al. introduction; this connector
+        keeps des expression as membrane-fatty-acyl remodeling context.
+    predicate_id: biolink:associated_with
+  - subject: liquid_crystalline_membrane
+    predicate: associated with
+    object: upper_mesophile_adaptation
+    description: Maintenance of a liquid-crystalline membrane state is associated
+      with upper-mesophile range adaptation.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      snippet: maintain the liquid crystalline phase
+      notes: Verified against the open Ramón et al. review; this connector keeps homeoviscous
+        membrane-state maintenance as range-bin context.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.824789+00:00'
   curator: seed_from_metpo
@@ -272,4 +346,20 @@ curation_history:
     canonical example(s): Bacillus nakamurai (NCBITaxon:1793963; DOI:10.1099/ijsem.0.001135).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T04:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the temperature_range_mid3_upper_mesophile graph for issue #183:
+    added snippets to 6 edge-level evidence items and grounded the DesK/DesR thermosensing
+    predicates to RO:0002213, RO:0002211, or RO:0002326. No paid research service
+    was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T22:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    5 source- and verbatim-snippet-backed association connectors among DesK/DesR membrane-order
+    sensing, des expression, cooling-induced membrane rigidification, and homeoviscous
+    liquid-crystalline membrane branches. No paid research service was called.'
   llm_assisted: true

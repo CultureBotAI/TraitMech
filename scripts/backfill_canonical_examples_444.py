@@ -881,7 +881,7 @@ def apply(write: bool = False) -> int:
     validate_ledger()
     planned = set(TRANCHE) | set(DEFERRED)
     queue = expected_queue()
-    post_apply_queue = set(DEFERRED)
+    post_apply_queue: set[str] = set()
     if queue not in (planned, post_apply_queue):
         missing = sorted(queue - planned)
         stale = sorted(planned - queue)

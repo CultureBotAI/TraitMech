@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Temperature-optimum-very-low psychrophile setpoint</h2>
-      <p class="meta">DOI-backed graph linking cold-adapted membrane and enzyme machinery to a temperature optimum at or below ~10 °C.</p>
+      <h2>Temperature-optimum-very-low psychrophile context</h2>
+      <p class="meta">DOI-backed nonmechanistic graph connecting cold-adapted membranes, cold-shock RNA chaperones, compatible-solute cryoprotection, antifreeze-protein ice binding, and flexible enzyme branches to the at-or-below-10-degrees-C optimum bin.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Temperature-optimum-very-low psychrophile setpoint</title>
+          <title>Temperature-optimum-very-low psychrophile context</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for temperature optimum very low.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -112,16 +112,16 @@
           
           <li id="pathograph-1-edge-4">
             <strong>fatty acid desaturase activity</strong>
-            <span class="edge-predicate">increases abundance of</span>
+            <span class="edge-predicate">increases</span>
             <strong>unsaturated fatty acids</strong>
-            
+            <code>RO:0002213</code>
             <p>Fatty acid desaturase activity increases unsaturated acyl chains.</p>
             <ul>
               
               <li>
                 <code>DOI:10.17159/sajs.2018/20170254</code>
-                
-                <span class="meta">activation of desaturases, increased unsaturated acyl chains</span>
+                <span class="evidence-snippet">increase in the proportion of unsaturated acyl chains</span>
+                <span class="meta">Verified against the open Hamdan review; lower growth temperatures are described as activating desaturases that convert saturated acyl fatty acids to unsaturated ones.</span>
               </li>
               
             </ul>
@@ -129,16 +129,22 @@
           
           <li id="pathograph-1-edge-5">
             <strong>unsaturated fatty acids</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>membrane fluidity at low temperature</strong>
-            
-            <p>Increased unsaturated fatty acids maintain membrane fluidity at low temperature.</p>
+            <code>RO:0002326</code>
+            <p>Increased unsaturated fatty acids contribute to membrane fluidity at low temperature.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1128/AEM.01928-22</code>
-                
-                <span class="meta">maintain membrane fluidity by improving the ratio of unsaturated fatty acids</span>
+                <span class="evidence-snippet">proportion of unsaturated fatty acids was higher</span>
+                <span class="meta">Verified against the open Yang et al. abstract; Bacillus simplex H-b cultured at low temperature carried a higher unsaturated-fatty-acid proportion.</span>
+              </li>
+              
+              <li>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">maintain optimum membrane fluidity</span>
+                <span class="meta">Verified against the open Hamdan review; fatty-acyl-chain modifications are described as preserving membrane fluidity in freezing environments.</span>
               </li>
               
             </ul>
@@ -146,16 +152,16 @@
           
           <li id="pathograph-1-edge-6">
             <strong>membrane fluidity at low temperature</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>psychrophile cold-adapted machinery</strong>
-            
-            <p>Maintained membrane fluidity supports cold-adapted cellular machinery.</p>
+            <code>RO:0002326</code>
+            <p>Maintained membrane fluidity contributes to cold-adapted cellular machinery.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1128/AEM.01928-22</code>
-                
-                <span class="meta">maintained membrane fluidity sustains function at low temperature</span>
+                <span class="evidence-snippet">contribute to the survival of the strain under cold conditions</span>
+                <span class="meta">Verified against the open Yang et al. abstract; the cold adaptation model includes membrane transport adjustment among mechanisms supporting Bacillus simplex H-b survival under cold conditions.</span>
               </li>
               
             </ul>
@@ -163,16 +169,16 @@
           
           <li id="pathograph-1-edge-7">
             <strong>cold shock proteins / RNA chaperones</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>translation at low temperature</strong>
-            
-            <p>Cold shock proteins / RNA chaperones support transcription and translation in the cold.</p>
+            <code>RO:0002326</code>
+            <p>Cold shock proteins / RNA chaperones contribute to transcription and translation in the cold.</p>
             <ul>
               
               <li>
                 <code>DOI:10.17159/sajs.2018/20170254</code>
-                
-                <span class="meta">Cold-shock proteins are major cold responses, functioning in regulation of transcription/translation</span>
+                <span class="evidence-snippet">regulation of cellular protein synthesis</span>
+                <span class="meta">Verified against the open Hamdan review; cold-shock proteins are linked to cellular protein-synthesis regulation, including transcription and translation initiation.</span>
               </li>
               
             </ul>
@@ -180,16 +186,16 @@
           
           <li id="pathograph-1-edge-8">
             <strong>glycine betaine</strong>
-            <span class="edge-predicate">stabilizes</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>protein and membrane stabilization under cold stress</strong>
-            
-            <p>Glycine betaine prevents protein aggregation and stabilizes membranes during cold stress.</p>
+            <code>RO:0002326</code>
+            <p>Glycine betaine contributes to protein and membrane stabilization during cold stress.</p>
             <ul>
               
               <li>
                 <code>DOI:10.17159/sajs.2018/20170254</code>
-                
-                <span class="meta">including glycine betaine and trehalose - prevent protein aggregation and stabilize membranes</span>
+                <span class="evidence-snippet">growth-enhancing effect of glycine betaine</span>
+                <span class="meta">Verified against the open Hamdan review; the glycine betaine paragraph cites low-temperature growth enhancement and discusses compatible solutes as cold cryoprotectants.</span>
               </li>
               
             </ul>
@@ -197,16 +203,16 @@
           
           <li id="pathograph-1-edge-9">
             <strong>trehalose</strong>
-            <span class="edge-predicate">acts as</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>cryoprotection</strong>
-            
-            <p>Trehalose acts as a cryoprotectant.</p>
+            <code>RO:0002326</code>
+            <p>Trehalose contributes to cryoprotection.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1038/sj.embor.7400662</code>
-                
-                <span class="meta">Compatible solutes (trehalose) and extracellular polysaccharides act as cryoprotectants</span>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">preventing protein denaturation and aggregation</span>
+                <span class="meta">Verified against the open Hamdan review; trehalose is reported as preventing protein denaturation and aggregation in psychrophilic bacteria.</span>
               </li>
               
             </ul>
@@ -222,8 +228,8 @@
               
               <li>
                 <code>DOI:10.1007/s42770-023-01057-4</code>
-                
-                <span class="meta">AFPs lower freezing point via thermal hysteresis</span>
+                <span class="evidence-snippet">lower the water freezing point</span>
+                <span class="meta">Verified against the open Ramón et al. abstract and review text; anti-freeze proteins are described as lowering the water freezing point via thermal hysteresis or ice-recrystallization inhibition.</span>
               </li>
               
             </ul>
@@ -239,8 +245,93 @@
               
               <li>
                 <code>DOI:10.17159/sajs.2018/20170254</code>
-                
-                <span class="meta">Cold-adapted enzymes display increased structural flexibility and higher catalytic efficiency</span>
+                <span class="evidence-snippet">up to 10-fold higher specific activity</span>
+                <span class="meta">Verified against the open Hamdan review; psychrophiles are described as producing structurally flexible enzymes with higher low-temperature specific activity than mesophilic homologues.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>translation at low temperature</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Cold-shock protein support for translation is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">regulation of cellular protein synthesis</span>
+                <span class="meta">Verified against the open Hamdan review; this connector keeps cold-shock RNA chaperones as protein-synthesis context for psychrophile physiology.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>protein and membrane stabilization under cold stress</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Compatible-solute protein and membrane stabilization is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">growth-enhancing effect of glycine betaine</span>
+                <span class="meta">Verified against the open Hamdan review; this connector keeps glycine-betaine compatible-solute effects as broad cold-stress context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>cryoprotection</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>protein and membrane stabilization under cold stress</strong>
+            <code>biolink:associated_with</code>
+            <p>Trehalose-linked cryoprotection is associated with protein and membrane stabilization during cold stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">preventing protein denaturation and aggregation</span>
+                <span class="meta">Verified against the open Hamdan review; this connector keeps trehalose as a compatible-solute cryoprotection branch.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-15">
+            <strong>thermal hysteresis / lowered freezing point</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>cryoprotection</strong>
+            <code>biolink:associated_with</code>
+            <p>Antifreeze-protein thermal hysteresis is associated with cryoprotection near freezing.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                <span class="evidence-snippet">lower the water freezing point</span>
+                <span class="meta">Verified against the open Ramón et al. abstract and review text; this connector keeps antifreeze proteins as ice-binding cryoprotection context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-16">
+            <strong>catalytic activity at low temperature</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Flexible-enzyme catalytic activity is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.17159/sajs.2018/20170254</code>
+                <span class="evidence-snippet">up to 10-fold higher specific activity</span>
+                <span class="meta">Verified against the open Hamdan review; this connector keeps low-temperature enzyme flexibility as contextual psychrophile machinery.</span>
               </li>
               
             </ul>
@@ -561,6 +652,18 @@ Bao et al. (July 2023) identified 124 candidate cold-adaptation genes in psychro
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Clostridium psychrophilum (NCBITaxon:132926; DOI:10.1016/j.bbalip.2013.02.004). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T03:40:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the temperature_optimum_very_low_psychrophile_setpoint graph for issue #183: added snippets to 8 edge-level evidence items and grounded the desaturase, membrane-fluidity, cold-shock, glycine-betaine, and trehalose predicates to RO:0002213 or RO:0002326. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T21:00:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (6 components to 1) by adding 5 source- and verbatim-snippet-backed association connectors among cold-shock RNA support, compatible-solute cryoprotection, antifreeze protein ice-binding, and low-temperature flexible-enzyme branches. No paid research service was called.</p>
         </li>
         
       </ol>
@@ -925,7 +1028,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking cold-adapted membrane and enzyme machinery to a temperature optimum at or below ~10 \u00b0C.", "edges": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold_environment", "target": "psychrophile_machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile_machinery", "target": "temperature_optimum_very_low_trait"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_very_low_trait", "target": "temperature_optimum"}, {"description": "Fatty acid desaturase activity increases unsaturated acyl chains.", "evidence": [{"notes": "activation of desaturases, increased unsaturated acyl chains", "reference": "DOI:10.17159/sajs.2018/20170254"}], "id": "edge-4", "is_orphan": false, "predicate": "increases abundance of", "predicate_id": null, "source": "fatty_acid_desaturase_activity", "target": "unsaturated_fatty_acids"}, {"description": "Increased unsaturated fatty acids maintain membrane fluidity at low temperature.", "evidence": [{"notes": "maintain membrane fluidity by improving the ratio of unsaturated fatty acids", "reference": "DOI:10.1128/AEM.01928-22"}], "id": "edge-5", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Maintained membrane fluidity supports cold-adapted cellular machinery.", "evidence": [{"notes": "maintained membrane fluidity sustains function at low temperature", "reference": "DOI:10.1128/AEM.01928-22"}], "id": "edge-6", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "membrane_fluidity", "target": "psychrophile_machinery"}, {"description": "Cold shock proteins / RNA chaperones support transcription and translation in the cold.", "evidence": [{"notes": "Cold-shock proteins are major cold responses, functioning in regulation of transcription/translation", "reference": "DOI:10.17159/sajs.2018/20170254"}], "id": "edge-7", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "cold_shock_proteins", "target": "translation_low_temperature"}, {"description": "Glycine betaine prevents protein aggregation and stabilizes membranes during cold stress.", "evidence": [{"notes": "including glycine betaine and trehalose - prevent protein aggregation and stabilize membranes", "reference": "DOI:10.17159/sajs.2018/20170254"}], "id": "edge-8", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "glycine_betaine", "target": "protein_membrane_stabilization"}, {"description": "Trehalose acts as a cryoprotectant.", "evidence": [{"notes": "Compatible solutes (trehalose) and extracellular polysaccharides act as cryoprotectants", "reference": "DOI:10.1038/sj.embor.7400662"}], "id": "edge-9", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "trehalose", "target": "cryoprotection"}, {"description": "Antifreeze proteins lower the freezing point via thermal hysteresis.", "evidence": [{"notes": "AFPs lower freezing point via thermal hysteresis", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-10", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "antifreeze_proteins", "target": "thermal_hysteresis"}, {"description": "Increased enzyme structural flexibility increases catalytic activity at low temperature.", "evidence": [{"notes": "Cold-adapted enzymes display increased structural flexibility and higher catalytic efficiency", "reference": "DOI:10.17159/sajs.2018/20170254"}], "id": "edge-11", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "enzyme_structural_flexibility", "target": "catalytic_activity_low_temperature"}], "evidence_rows": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold environment", "target": "psychrophile cold-adapted machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile cold-adapted machinery", "target": "temperature optimum very low"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum very low", "target": "temperature optimum"}, {"description": "Fatty acid desaturase activity increases unsaturated acyl chains.", "edge_id": "edge-4", "evidence": [{"notes": "activation of desaturases, increased unsaturated acyl chains", "reference": "DOI:10.17159/sajs.2018/20170254"}], "predicate": "increases abundance of", "predicate_id": null, "source": "fatty acid desaturase activity", "target": "unsaturated fatty acids"}, {"description": "Increased unsaturated fatty acids maintain membrane fluidity at low temperature.", "edge_id": "edge-5", "evidence": [{"notes": "maintain membrane fluidity by improving the ratio of unsaturated fatty acids", "reference": "DOI:10.1128/AEM.01928-22"}], "predicate": "maintains", "predicate_id": null, "source": "unsaturated fatty acids", "target": "membrane fluidity at low temperature"}, {"description": "Maintained membrane fluidity supports cold-adapted cellular machinery.", "edge_id": "edge-6", "evidence": [{"notes": "maintained membrane fluidity sustains function at low temperature", "reference": "DOI:10.1128/AEM.01928-22"}], "predicate": "supports", "predicate_id": null, "source": "membrane fluidity at low temperature", "target": "psychrophile cold-adapted machinery"}, {"description": "Cold shock proteins / RNA chaperones support transcription and translation in the cold.", "edge_id": "edge-7", "evidence": [{"notes": "Cold-shock proteins are major cold responses, functioning in regulation of transcription/translation", "reference": "DOI:10.17159/sajs.2018/20170254"}], "predicate": "supports", "predicate_id": null, "source": "cold shock proteins / RNA chaperones", "target": "translation at low temperature"}, {"description": "Glycine betaine prevents protein aggregation and stabilizes membranes during cold stress.", "edge_id": "edge-8", "evidence": [{"notes": "including glycine betaine and trehalose - prevent protein aggregation and stabilize membranes", "reference": "DOI:10.17159/sajs.2018/20170254"}], "predicate": "stabilizes", "predicate_id": null, "source": "glycine betaine", "target": "protein and membrane stabilization under cold stress"}, {"description": "Trehalose acts as a cryoprotectant.", "edge_id": "edge-9", "evidence": [{"notes": "Compatible solutes (trehalose) and extracellular polysaccharides act as cryoprotectants", "reference": "DOI:10.1038/sj.embor.7400662"}], "predicate": "acts as", "predicate_id": null, "source": "trehalose", "target": "cryoprotection"}, {"description": "Antifreeze proteins lower the freezing point via thermal hysteresis.", "edge_id": "edge-10", "evidence": [{"notes": "AFPs lower freezing point via thermal hysteresis", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "antifreeze / ice-binding proteins", "target": "thermal hysteresis / lowered freezing point"}, {"description": "Increased enzyme structural flexibility increases catalytic activity at low temperature.", "edge_id": "edge-11", "evidence": [{"notes": "Cold-adapted enzymes display increased structural flexibility and higher catalytic efficiency", "reference": "DOI:10.17159/sajs.2018/20170254"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "increased enzyme structural flexibility", "target": "catalytic activity at low temperature"}], "graph_id": "temperature_optimum_very_low_psychrophile_setpoint", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Ice-binding proteins that depress freezing point via thermal hysteresis.", "grounding": null, "id": "antifreeze_proteins", "is_orphan": false, "label": "antifreeze / ice-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "Retention of catalytic efficiency at low temperature.", "grounding": null, "id": "catalytic_activity_low_temperature", "is_orphan": false, "label": "catalytic activity at low temperature", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature near the freezing point of water.", "grounding": "ENVO:01000309", "id": "cold_environment", "is_orphan": false, "label": "cold environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA chaperones that resolve nucleic-acid secondary structure stabilized in the cold.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold shock proteins / RNA chaperones", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection of cellular structures against freezing and freeze-thaw damage.", "grounding": null, "id": "cryoprotection", "is_orphan": false, "label": "cryoprotection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Greater conformational flexibility of cold-adapted enzymes.", "grounding": null, "id": "enzyme_structural_flexibility", "is_orphan": false, "label": "increased enzyme structural flexibility", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "Desaturase activity introducing double bonds into fatty acyl chains.", "grounding": null, "id": "fatty_acid_desaturase_activity", "is_orphan": false, "label": "fatty acid desaturase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute stabilizing proteins and membranes under cold stress.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained membrane fluidity sustaining transport and function in the cold.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity at low temperature", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Prevention of protein aggregation and stabilization of membranes during cold stress.", "grounding": null, "id": "protein_membrane_stabilization", "is_orphan": false, "label": "protein and membrane stabilization under cold stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes sustaining function at very low temperature.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum at or below ~10 \u00b0C.", "grounding": "METPO:1000441", "id": "temperature_optimum_very_low_trait", "is_orphan": false, "label": "temperature optimum very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lowering of the freezing point separating melting and freezing temperatures.", "grounding": null, "id": "thermal_hysteresis", "is_orphan": false, "label": "thermal hysteresis / lowered freezing point", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of transcription and translation under low-temperature conditions.", "grounding": null, "id": "translation_low_temperature", "is_orphan": false, "label": "translation at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Disaccharide compatible solute acting as a cryoprotectant.", "grounding": null, "id": "trehalose", "is_orphan": false, "label": "trehalose", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Unsaturated acyl chains that lower membrane melting point.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-optimum-very-low psychrophile setpoint"}];
+  var graphs = [{"description": "DOI-backed nonmechanistic graph connecting cold-adapted membranes, cold-shock RNA chaperones, compatible-solute cryoprotection, antifreeze-protein ice binding, and flexible enzyme branches to the at-or-below-10-degrees-C optimum bin.", "edges": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold_environment", "target": "psychrophile_machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile_machinery", "target": "temperature_optimum_very_low_trait"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_very_low_trait", "target": "temperature_optimum"}, {"description": "Fatty acid desaturase activity increases unsaturated acyl chains.", "evidence": [{"notes": "Verified against the open Hamdan review; lower growth temperatures are described as activating desaturases that convert saturated acyl fatty acids to unsaturated ones.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "increase in the proportion of unsaturated acyl chains"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "fatty_acid_desaturase_activity", "target": "unsaturated_fatty_acids"}, {"description": "Increased unsaturated fatty acids contribute to membrane fluidity at low temperature.", "evidence": [{"notes": "Verified against the open Yang et al. abstract; Bacillus simplex H-b cultured at low temperature carried a higher unsaturated-fatty-acid proportion.", "reference": "DOI:10.1128/AEM.01928-22", "snippet": "proportion of unsaturated fatty acids was higher"}, {"notes": "Verified against the open Hamdan review; fatty-acyl-chain modifications are described as preserving membrane fluidity in freezing environments.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "maintain optimum membrane fluidity"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Maintained membrane fluidity contributes to cold-adapted cellular machinery.", "evidence": [{"notes": "Verified against the open Yang et al. abstract; the cold adaptation model includes membrane transport adjustment among mechanisms supporting Bacillus simplex H-b survival under cold conditions.", "reference": "DOI:10.1128/AEM.01928-22", "snippet": "contribute to the survival of the strain under cold conditions"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane_fluidity", "target": "psychrophile_machinery"}, {"description": "Cold shock proteins / RNA chaperones contribute to transcription and translation in the cold.", "evidence": [{"notes": "Verified against the open Hamdan review; cold-shock proteins are linked to cellular protein-synthesis regulation, including transcription and translation initiation.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "regulation of cellular protein synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_shock_proteins", "target": "translation_low_temperature"}, {"description": "Glycine betaine contributes to protein and membrane stabilization during cold stress.", "evidence": [{"notes": "Verified against the open Hamdan review; the glycine betaine paragraph cites low-temperature growth enhancement and discusses compatible solutes as cold cryoprotectants.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "growth-enhancing effect of glycine betaine"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycine_betaine", "target": "protein_membrane_stabilization"}, {"description": "Trehalose contributes to cryoprotection.", "evidence": [{"notes": "Verified against the open Hamdan review; trehalose is reported as preventing protein denaturation and aggregation in psychrophilic bacteria.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "preventing protein denaturation and aggregation"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trehalose", "target": "cryoprotection"}, {"description": "Antifreeze proteins lower the freezing point via thermal hysteresis.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. abstract and review text; anti-freeze proteins are described as lowering the water freezing point via thermal hysteresis or ice-recrystallization inhibition.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "lower the water freezing point"}], "id": "edge-10", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "antifreeze_proteins", "target": "thermal_hysteresis"}, {"description": "Increased enzyme structural flexibility increases catalytic activity at low temperature.", "evidence": [{"notes": "Verified against the open Hamdan review; psychrophiles are described as producing structurally flexible enzymes with higher low-temperature specific activity than mesophilic homologues.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "up to 10-fold higher specific activity"}], "id": "edge-11", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "enzyme_structural_flexibility", "target": "catalytic_activity_low_temperature"}, {"description": "Cold-shock protein support for translation is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps cold-shock RNA chaperones as protein-synthesis context for psychrophile physiology.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "regulation of cellular protein synthesis"}], "id": "edge-12", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "translation_low_temperature", "target": "psychrophile_machinery"}, {"description": "Compatible-solute protein and membrane stabilization is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps glycine-betaine compatible-solute effects as broad cold-stress context.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "growth-enhancing effect of glycine betaine"}], "id": "edge-13", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "protein_membrane_stabilization", "target": "psychrophile_machinery"}, {"description": "Trehalose-linked cryoprotection is associated with protein and membrane stabilization during cold stress.", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps trehalose as a compatible-solute cryoprotection branch.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "preventing protein denaturation and aggregation"}], "id": "edge-14", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "cryoprotection", "target": "protein_membrane_stabilization"}, {"description": "Antifreeze-protein thermal hysteresis is associated with cryoprotection near freezing.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. abstract and review text; this connector keeps antifreeze proteins as ice-binding cryoprotection context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "lower the water freezing point"}], "id": "edge-15", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "thermal_hysteresis", "target": "cryoprotection"}, {"description": "Flexible-enzyme catalytic activity is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps low-temperature enzyme flexibility as contextual psychrophile machinery.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "up to 10-fold higher specific activity"}], "id": "edge-16", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "catalytic_activity_low_temperature", "target": "psychrophile_machinery"}], "evidence_rows": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold environment", "target": "psychrophile cold-adapted machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile cold-adapted machinery", "target": "temperature optimum very low"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum very low", "target": "temperature optimum"}, {"description": "Fatty acid desaturase activity increases unsaturated acyl chains.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Hamdan review; lower growth temperatures are described as activating desaturases that convert saturated acyl fatty acids to unsaturated ones.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "increase in the proportion of unsaturated acyl chains"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "fatty acid desaturase activity", "target": "unsaturated fatty acids"}, {"description": "Increased unsaturated fatty acids contribute to membrane fluidity at low temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Yang et al. abstract; Bacillus simplex H-b cultured at low temperature carried a higher unsaturated-fatty-acid proportion.", "reference": "DOI:10.1128/AEM.01928-22", "snippet": "proportion of unsaturated fatty acids was higher"}, {"notes": "Verified against the open Hamdan review; fatty-acyl-chain modifications are described as preserving membrane fluidity in freezing environments.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "maintain optimum membrane fluidity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "unsaturated fatty acids", "target": "membrane fluidity at low temperature"}, {"description": "Maintained membrane fluidity contributes to cold-adapted cellular machinery.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Yang et al. abstract; the cold adaptation model includes membrane transport adjustment among mechanisms supporting Bacillus simplex H-b survival under cold conditions.", "reference": "DOI:10.1128/AEM.01928-22", "snippet": "contribute to the survival of the strain under cold conditions"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane fluidity at low temperature", "target": "psychrophile cold-adapted machinery"}, {"description": "Cold shock proteins / RNA chaperones contribute to transcription and translation in the cold.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Hamdan review; cold-shock proteins are linked to cellular protein-synthesis regulation, including transcription and translation initiation.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "regulation of cellular protein synthesis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold shock proteins / RNA chaperones", "target": "translation at low temperature"}, {"description": "Glycine betaine contributes to protein and membrane stabilization during cold stress.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Hamdan review; the glycine betaine paragraph cites low-temperature growth enhancement and discusses compatible solutes as cold cryoprotectants.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "growth-enhancing effect of glycine betaine"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "glycine betaine", "target": "protein and membrane stabilization under cold stress"}, {"description": "Trehalose contributes to cryoprotection.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Hamdan review; trehalose is reported as preventing protein denaturation and aggregation in psychrophilic bacteria.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "preventing protein denaturation and aggregation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trehalose", "target": "cryoprotection"}, {"description": "Antifreeze proteins lower the freezing point via thermal hysteresis.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. abstract and review text; anti-freeze proteins are described as lowering the water freezing point via thermal hysteresis or ice-recrystallization inhibition.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "lower the water freezing point"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "antifreeze / ice-binding proteins", "target": "thermal hysteresis / lowered freezing point"}, {"description": "Increased enzyme structural flexibility increases catalytic activity at low temperature.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Hamdan review; psychrophiles are described as producing structurally flexible enzymes with higher low-temperature specific activity than mesophilic homologues.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "up to 10-fold higher specific activity"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "increased enzyme structural flexibility", "target": "catalytic activity at low temperature"}, {"description": "Cold-shock protein support for translation is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps cold-shock RNA chaperones as protein-synthesis context for psychrophile physiology.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "regulation of cellular protein synthesis"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "translation at low temperature", "target": "psychrophile cold-adapted machinery"}, {"description": "Compatible-solute protein and membrane stabilization is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps glycine-betaine compatible-solute effects as broad cold-stress context.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "growth-enhancing effect of glycine betaine"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "protein and membrane stabilization under cold stress", "target": "psychrophile cold-adapted machinery"}, {"description": "Trehalose-linked cryoprotection is associated with protein and membrane stabilization during cold stress.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps trehalose as a compatible-solute cryoprotection branch.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "preventing protein denaturation and aggregation"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "cryoprotection", "target": "protein and membrane stabilization under cold stress"}, {"description": "Antifreeze-protein thermal hysteresis is associated with cryoprotection near freezing.", "edge_id": "edge-15", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. abstract and review text; this connector keeps antifreeze proteins as ice-binding cryoprotection context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "lower the water freezing point"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "thermal hysteresis / lowered freezing point", "target": "cryoprotection"}, {"description": "Flexible-enzyme catalytic activity is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-16", "evidence": [{"notes": "Verified against the open Hamdan review; this connector keeps low-temperature enzyme flexibility as contextual psychrophile machinery.", "reference": "DOI:10.17159/sajs.2018/20170254", "snippet": "up to 10-fold higher specific activity"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "catalytic activity at low temperature", "target": "psychrophile cold-adapted machinery"}], "graph_id": "temperature_optimum_very_low_psychrophile_setpoint", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Ice-binding proteins that depress freezing point via thermal hysteresis.", "grounding": null, "id": "antifreeze_proteins", "is_orphan": false, "label": "antifreeze / ice-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "Retention of catalytic efficiency at low temperature.", "grounding": null, "id": "catalytic_activity_low_temperature", "is_orphan": false, "label": "catalytic activity at low temperature", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature near the freezing point of water.", "grounding": "ENVO:01000309", "id": "cold_environment", "is_orphan": false, "label": "cold environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA chaperones that resolve nucleic-acid secondary structure stabilized in the cold.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold shock proteins / RNA chaperones", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection of cellular structures against freezing and freeze-thaw damage.", "grounding": null, "id": "cryoprotection", "is_orphan": false, "label": "cryoprotection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Greater conformational flexibility of cold-adapted enzymes.", "grounding": null, "id": "enzyme_structural_flexibility", "is_orphan": false, "label": "increased enzyme structural flexibility", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "Desaturase activity introducing double bonds into fatty acyl chains.", "grounding": null, "id": "fatty_acid_desaturase_activity", "is_orphan": false, "label": "fatty acid desaturase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute stabilizing proteins and membranes under cold stress.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained membrane fluidity sustaining transport and function in the cold.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity at low temperature", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Prevention of protein aggregation and stabilization of membranes during cold stress.", "grounding": null, "id": "protein_membrane_stabilization", "is_orphan": false, "label": "protein and membrane stabilization under cold stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes sustaining function at very low temperature.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum at or below ~10 \u00b0C.", "grounding": "METPO:1000441", "id": "temperature_optimum_very_low_trait", "is_orphan": false, "label": "temperature optimum very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lowering of the freezing point separating melting and freezing temperatures.", "grounding": null, "id": "thermal_hysteresis", "is_orphan": false, "label": "thermal hysteresis / lowered freezing point", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of transcription and translation under low-temperature conditions.", "grounding": null, "id": "translation_low_temperature", "is_orphan": false, "label": "translation at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Disaccharide compatible solute acting as a cryoprotectant.", "grounding": null, "id": "trehalose", "is_orphan": false, "label": "trehalose", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Unsaturated acyl chains that lower membrane melting point.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-optimum-very-low psychrophile context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -948,7 +1051,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-04 21:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

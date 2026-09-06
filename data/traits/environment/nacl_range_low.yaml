@@ -60,8 +60,8 @@ causal_graphs:
     description: External sodium chloride concentration in the environment.
   - node_id: hyperosmotic_stress
     label: hyperosmotic stress
-    node_type: BIOLOGICAL_PROCESS
-    description: Cellular stress from elevated external osmolarity (osmotic upshift).
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External hypertonicity causing cell shrinkage and plasmolysis.
   - node_id: compatible_solute_accumulation
     label: compatible solute accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -126,34 +126,44 @@ causal_graphs:
     description: Increased external NaCl concentration causes hyperosmotic stress.
     evidence:
     - reference: DOI:10.1093/femsml/uqad020
-      notes: Hyperosmotic upshift elicits rapid K+ import as an emergency response;
-        general bacterial osmotic-stress edge.
+      snippet: hyperosmotic stress by addition of either non-ionic osmolyte sucrose
+        or ionic solute NaCl
+      notes: Verified against the open Bhowmick et al. review; the edge is retained
+        as a broad NaCl-to-hyperosmotic-stress step, not as a direct determinant of
+        the <=1% range bin.
     predicate_id: biolink:causes
   - subject: hyperosmotic_stress
-    predicate: induces
+    predicate: increases
     object: compatible_solute_accumulation
-    description: Hyperosmotic stress induces accumulation of compatible solutes.
+    description: Hyperosmotic stress increases compatible-solute accumulation as a
+      later osmoadaptive response.
     evidence:
     - reference: DOI:10.1093/femsml/uqad020
-      notes: After K+ import, cells synthesize or import compatible solutes and export
-        K+ to reduce cytoplasmic ionic strength.
-  - subject: hypoosmotic_shock
-    predicate: opens
-    object: mechanosensitive_channels
-    description: Hypoosmotic shock opens mechanosensitive channels MscL/MscS to prevent
-      rupture.
+      snippet: external osmotic upshifts by increasing the cellular concentration
+        of cations
+      notes: Verified against the open Bhowmick et al. review; this keeps compatible-solute
+        accumulation as a broad osmotic-upshift response.
+    predicate_id: RO:0002213
+  - subject: mechanosensitive_channels
+    predicate: mitigates
+    object: hypoosmotic_shock
+    description: Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic
+      shocks at the low-salinity end of the range.
     evidence:
     - reference: DOI:10.1093/femsml/uqad020
-      notes: Hypoosmotic shock triggers transient opening of mechanosensitive channels
-        (MscL/MscS) to prevent turgor-driven cell rupture; broad across bacteria.
+      snippet: emergency reaction essential for preventing turgor increase
+      notes: Verified against the open Bhowmick et al. review; the edge is reversed
+        from ungrounded shock-opens-channel wording to a grounded mitigation predicate.
+    predicate_id: METPO:2007407
   - subject: c_di_amp
     predicate: inhibits
     object: opu_solute_importers
     description: c-di-AMP binds and inhibits OpuA/OpuC compatible-solute importers.
     evidence:
     - reference: DOI:10.1128/mmbr.00181-23
-      notes: c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates
-        their transport activity.
+      snippet: Cyclic di-AMP binds to the CBS domains of compatible solute importers
+      notes: Verified against public Foster et al. text; OpuA/OpuC are retained as
+        representative CBS-domain osmolyte importers.
     predicate_id: RO:0002212
   - subject: choline_uptake
     predicate: enables
@@ -162,8 +172,10 @@ causal_graphs:
       solute.
     evidence:
     - reference: DOI:10.1126/sciadv.ado6229
-      notes: BetT mediates uptake of external choline used to synthesize glycine betaine,
-        a key compatible solute in hyperosmotic environments.
+      snippet: uptake of external choline for synthesizing the osmoprotective glycine
+        betaine
+      notes: Verified against public Yang et al. abstract text; choline uptake is
+        retained as the substrate-supply step for glycine-betaine biosynthesis.
     predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835809+00:00'
@@ -230,4 +242,11 @@ curation_history:
     canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T08:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the nacl_range_low_non_halophile graph for issue #183: added
+    exact snippets to 5 causal-edge evidence items, grounded 2 residual predicates,
+    and repaired 1 local node-type conflict. No paid research service was called.'
   llm_assisted: true

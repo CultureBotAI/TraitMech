@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_range_very_low.yaml
+  slug: temperature_range_very_low
+session:
+  id: 2026-09-04T232000Z-codex-183
+  timestamp: '2026-09-04T23:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect temperature-range-very-low causal graph components
+  details: Resolved issue 183 graph fragmentation for data/traits/environment/temperature_range_very_low.yaml
+    by adding 6 source- and verbatim-snippet-backed association connectors among
+    membrane desaturation, two-component cold signaling, CspA-family RNA chaperone,
+    cold proteostasis, compatible-solute, and ice-binding protein branches, connecting
+    the temperature-range-very-low nonmechanistic graph from 7 components to 1. Validated
+    via the write-time LinkML gate in scripts/connect_temperature_range_very_low_graph_183.py.

@@ -31,13 +31,15 @@ canonical_examples:
     growth at both endpoints rather than mere survival.
 causal_graphs:
 - graph_id: temperature_delta_high_eurythermal
-  title: Temperature-delta-high eurythermal breadth
+  title: Temperature-delta-high eurythermal context
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking maximal thermal-adaptation flexibility to
-    a temperature growth breadth above 30 °C.
+  description: DOI-backed nonmechanistic graph connecting maximal thermal-adaptation
+    flexibility, cold-side homoviscous membrane remodeling, high-temperature membrane-viscosity
+    shifts, and thermostable-enzyme context to the above-30-degrees-C temperature-delta
+    bin.
   nodes:
   - node_id: temperature_delta_high_trait
     label: temperature delta high
@@ -137,36 +139,45 @@ causal_graphs:
       acids (homoviscous adaptation).
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      notes: Bacteria remodel membrane fluidity via proportionally more unsaturated
-        fatty acids as growth temperature decreases.
+      snippet: incorporation of proportionally more unsaturated fatty acids
+      notes: Verified against the de Mendoza Annual Review abstract; bacterial membranes
+        remodel by incorporating proportionally more unsaturated fatty acids as growth
+        temperature decreases.
     predicate_id: RO:0002213
   - subject: homoviscous_adaptation
-    predicate: maintains
+    predicate: contributes to
     object: membrane_fluidity_homeostasis
-    description: Homoviscous adaptation maintains membrane fluidity/permeability homeostasis
-      across thermal shifts.
+    description: Homoviscous adaptation contributes to membrane fluidity/permeability
+      homeostasis across thermal shifts.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      notes: Homoviscous adaptation disrupts lipid bilayer order and optimizes cellular
-        processes at the new temperature.
+      snippet: remodel the fluidity of their membrane bilayer
+      notes: Verified against the de Mendoza Annual Review abstract; homoviscous adaptation
+        is the named membrane-fluidity remodeling process used after growth temperature
+        decreases.
+    predicate_id: RO:0002326
   - subject: decreased_membrane_fluidity
-    predicate: upregulates
+    predicate: positively regulates
     object: unsaturated_fatty_acid_biosynthesis
-    description: Reduced membrane fluidity is sensed and upregulates unsaturated fatty
-      acid biosynthesis.
+    description: Reduced membrane fluidity is sensed and positively regulates unsaturated
+      fatty acid biosynthesis.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      notes: Microbes sense decreased membrane fluidity and initiate responses that
-        upregulate unsaturated fatty acid biosynthesis.
+      snippet: upregulate the biosynthesis of unsaturated fatty acids
+      notes: Verified against the de Mendoza Annual Review abstract; bacteria sense
+        decreased membrane fluidity and initiate responses that upregulate unsaturated
+        fatty acid biosynthesis.
+    predicate_id: RO:0002213
   - subject: lipid_desaturase_activity
     predicate: increases
     object: membrane_fluidity
-    description: Lipid desaturases introduce cis double bonds (~30 deg kink) creating
-      packing defects that increase fluidity.
+    description: Lipid desaturases introduce cis double bonds that loosen packing
+      and increase fluidity.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      notes: Organisms maintain membrane fluidity by activating lipid desaturases
-        that introduce cis double bonds to increase packing defects and fluidity.
+      snippet: cis-double bonds, result in looser packing and increased fluidity
+      notes: Verified against the Wu et al. Cells review; lipid desaturase-generated
+        cis double bonds loosen acyl-chain packing and increase membrane-bilayer fluidity.
     predicate_id: RO:0002213
   - subject: cis_trans_isomerase_activity
     predicate: increases
@@ -175,8 +186,9 @@ causal_graphs:
       SFAs, raising membrane viscosity during warming.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      notes: Cis-trans isomerase converts UFAs; trans-UFAs resemble SFAs and raise
-        membrane viscosity, compensating at higher temperature.
+      snippet: properties that resemble SFAs
+      notes: Verified against the Wu et al. Cells review; converting cis-UFAs to trans-UFAs
+        makes them more SFA-like and closer packing at higher temperature.
     predicate_id: RO:0002213
   - subject: increased_fatty_acid_diversity
     predicate: increases
@@ -185,18 +197,80 @@ causal_graphs:
       membrane fluidity at lower temperatures.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      notes: Membrane composition adjustments (SCFA, BCFA, unsaturation, lysophospholipids)
-        can increase membrane fluidity at lower temperatures.
+      snippet: increase the proportion of UFAs and short-chain fatty acids
+      notes: Verified against the Wu et al. Cells review; cold-adapted membranes can
+        increase unsaturated and short-chain fatty acid proportions and modify branched-chain
+        fatty-acid content.
     predicate_id: RO:0002213
   - subject: thermostable_enzyme
-    predicate: resists
+    predicate: prevents
     object: irreversible_protein_inactivation
-    description: Intrinsic enzyme thermostability resists irreversible inactivation,
+    description: Intrinsic enzyme thermostability prevents irreversible inactivation,
       extending upper growth limits.
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
-      notes: Enzymes from hyperthermophiles are typically thermostable, i.e., resistant
-        to irreversible inactivation at high temperatures.
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Verified against the open Vieille and Zeikus review; hyperthermophilic
+        enzymes are described as thermostable and resistant to irreversible inactivation
+        at high temperatures.
+    predicate_id: RO:0002212
+  - subject: unsaturated_fatty_acid_biosynthesis
+    predicate: contributes to
+    object: homoviscous_adaptation
+    description: Unsaturated-fatty-acid biosynthesis contributes to cold-side homoviscous
+      membrane remodeling.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: termed homoviscous adaptation
+      notes: Verified against the de Mendoza Annual Review abstract; this connector
+        keeps unsaturated-fatty-acid biosynthesis as one component of homoviscous
+        adaptation rather than the whole response.
+    predicate_id: RO:0002326
+  - subject: membrane_fluidity
+    predicate: associated with
+    object: membrane_fluidity_homeostasis
+    description: Membrane fluidity is associated with the homoviscous homeostasis
+      branch of broad thermal adaptation.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      snippet: cis-double bonds, result in looser packing and increased fluidity
+      notes: Verified against the Wu et al. Cells review; this connector keeps desaturase-linked
+        fluidity as a physical membrane state associated with homeostasis.
+    predicate_id: biolink:associated_with
+  - subject: membrane_viscosity_high_temperature
+    predicate: associated with
+    object: membrane_fluidity_homeostasis
+    description: High-temperature membrane viscosity is associated with the warming-side
+      boundary of membrane-fluidity homeostasis.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      snippet: properties that resemble SFAs
+      notes: Verified against the Wu et al. Cells review; this connector keeps cis-trans
+        isomerization as warming-side membrane context.
+    predicate_id: biolink:associated_with
+  - subject: membrane_fluidity_homeostasis
+    predicate: associated with
+    object: maximal_thermal_adaptation
+    description: Membrane-fluidity homeostasis is associated with the broad thermal-adaptation
+      context used to represent an extreme temperature-growth breadth.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: remodel the fluidity of their membrane bilayer
+      notes: Verified against the de Mendoza Annual Review abstract; this connector
+        scopes homoviscous adaptation as membrane context for the eurythermal bin.
+    predicate_id: biolink:associated_with
+  - subject: thermostable_enzyme
+    predicate: associated with
+    object: maximal_thermal_adaptation
+    description: Thermostable-enzyme protection is associated with the high-temperature
+      side of broad thermal adaptation.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: hyperthermophilic enzymes, are typically thermostable
+      notes: Verified against the open Vieille and Zeikus review; this connector keeps
+        thermostable enzymes as high-temperature context rather than direct proof
+        of an above-30-degrees-C growth breadth.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845441+00:00'
   curator: seed_from_metpo
@@ -288,4 +362,21 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope temperature_delta_high_eurythermal=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-09-04T03:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the temperature_delta_high_eurythermal graph for issue #183:
+    added snippets to 7 edge-level evidence items and grounded 3 unmapped homoviscous-adaptation
+    and thermostability predicates to RO:0002326, RO:0002213, or RO:0002212. No paid
+    research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T19:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    5 source- and verbatim-snippet-backed association or contribution connectors among
+    cold UFA synthesis, homoviscous adaptation, membrane-fluidity, high-temperature
+    membrane-viscosity, and thermostable-enzyme branches. No paid research service
+    was called.'
   llm_assisted: true

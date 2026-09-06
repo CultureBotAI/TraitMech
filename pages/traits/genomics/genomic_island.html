@@ -69,8 +69,8 @@
               
               <li>
                 <code>DOI:10.1111/j.1574-6976.2008.00136.x</code>
-                
-                <span class="meta">Juhas et al. review genomic islands as tools of bacterial HGT.</span>
+                <span class="evidence-snippet">acquisition by horizontal gene transfer; (2) integration into the host&#39;s chromosome</span>
+                <span class="meta">Verified against the open Juhas et al. full text; the review&#39;s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.</span>
               </li>
               
             </ul>
@@ -86,8 +86,8 @@
               
               <li>
                 <code>DOI:10.1038/nrmicro884</code>
-                
-                <span class="meta">Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.</span>
+                <span class="evidence-snippet">GEIs contribute to fitness and adaptation</span>
+                <span class="meta">Verified against the public Nature article preview; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.</span>
               </li>
               
             </ul>
@@ -95,16 +95,16 @@
           
           <li id="pathograph-1-edge-3">
             <strong>genomic island</strong>
-            <span class="edge-predicate">carries</span>
+            <span class="edge-predicate">includes</span>
             <strong>integrase/recombinase/transposase mobility module</strong>
-            
-            <p>Genomic islands often encode a dedicated mobility module (DDE transposase or tyrosine/serine recombinase).</p>
+            <code>biolink:has_part</code>
+            <p>Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/nar/gkad644</code>
-                
-                <span class="meta">Intracellular mobility is often mediated by dedicated DDE transposases or integrases belonging to serine or tyrosine recombinases.</span>
+                <span class="evidence-snippet">tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases</span>
+                <span class="meta">Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.</span>
               </li>
               
             </ul>
@@ -112,33 +112,33 @@
           
           <li id="pathograph-1-edge-4">
             <strong>integrative conjugative element (ICE)</strong>
-            <span class="edge-predicate">disseminates by</span>
+            <span class="edge-predicate">enables</span>
             <strong>conjugation</strong>
-            
-            <p>ICE-type genomic islands spread by conjugation.</p>
+            <code>RO:0002327</code>
+            <p>Self-transmissible ICE-type genomic islands disseminate by conjugation.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/nar/gkad644</code>
-                
-                <span class="meta">ICEs disseminate by conjugation.</span>
+                <span class="evidence-snippet">ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell</span>
+                <span class="meta">Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-5">
-            <strong>integrative conjugative element (ICE)</strong>
-            <span class="edge-predicate">requires</span>
             <strong>type IV secretion system (T4SS)</strong>
-            
-            <p>ICE conjugative transfer requires a type IV secretion system.</p>
+            <span class="edge-predicate">enables</span>
+            <strong>conjugation</strong>
+            <code>RO:0002327</code>
+            <p>ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/nar/gkad644</code>
-                
-                <span class="meta">ICEs disseminate by conjugation using a type IV secretion system (T4SS).</span>
+                <span class="evidence-snippet">the DNA is translocated between mating cells in direct contact by a type IV secretion system</span>
+                <span class="meta">Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.</span>
               </li>
               
             </ul>
@@ -146,16 +146,16 @@
           
           <li id="pathograph-1-edge-6">
             <strong>integrative mobilizable element (IME)</strong>
-            <span class="edge-predicate">uses</span>
+            <span class="edge-predicate">depends on</span>
             <strong>conjugation</strong>
-            
-            <p>IME-type islands lack their own apparatus and spread via the conjugative apparatus of a helper ICE or conjugative plasmid.</p>
+            <code>RO:0002502</code>
+            <p>IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/nar/gkad644</code>
-                
-                <span class="meta">IMEs spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid.</span>
+                <span class="evidence-snippet">spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid</span>
+                <span class="meta">Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.</span>
               </li>
               
             </ul>
@@ -457,6 +457,12 @@ Possession of a **genomic island** represents the microbial capacity to harbor a
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope gi_hgt_accessory_function=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mobility_module).</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T05:20:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the gi_hgt_accessory_function graph for issue #183: added exact snippets to 8 genomic-island evidence items, grounded 4 residual predicates, retyped ICE/IME nodes as GENETIC_ELEMENT, and grounded the conjugation process. No paid research service was called.</p>
         </li>
         
       </ol>
@@ -821,7 +827,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}, {"description": "Genomic islands often encode a dedicated mobility module (DDE transposase or tyrosine/serine recombinase).", "evidence": [{"notes": "Intracellular mobility is often mediated by dedicated DDE transposases or integrases belonging to serine or tyrosine recombinases.", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-3", "is_orphan": false, "predicate": "carries", "predicate_id": null, "source": "gi_trait", "target": "mobility_module"}, {"description": "ICE-type genomic islands spread by conjugation.", "evidence": [{"notes": "ICEs disseminate by conjugation.", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-4", "is_orphan": false, "predicate": "disseminates by", "predicate_id": null, "source": "integrative_conjugative_element", "target": "conjugation"}, {"description": "ICE conjugative transfer requires a type IV secretion system.", "evidence": [{"notes": "ICEs disseminate by conjugation using a type IV secretion system (T4SS).", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-5", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "integrative_conjugative_element", "target": "type_iv_secretion_system"}, {"description": "IME-type islands lack their own apparatus and spread via the conjugative apparatus of a helper ICE or conjugative plasmid.", "evidence": [{"notes": "IMEs spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid.", "reference": "DOI:10.1093/nar/gkad644"}], "id": "edge-6", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "integrative_mobilizable_element", "target": "conjugation"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "genomic island"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "target": "accessory function"}, {"description": "Genomic islands often encode a dedicated mobility module (DDE transposase or tyrosine/serine recombinase).", "edge_id": "edge-3", "evidence": [{"notes": "Intracellular mobility is often mediated by dedicated DDE transposases or integrases belonging to serine or tyrosine recombinases.", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "carries", "predicate_id": null, "source": "genomic island", "target": "integrase/recombinase/transposase mobility module"}, {"description": "ICE-type genomic islands spread by conjugation.", "edge_id": "edge-4", "evidence": [{"notes": "ICEs disseminate by conjugation.", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "disseminates by", "predicate_id": null, "source": "integrative conjugative element (ICE)", "target": "conjugation"}, {"description": "ICE conjugative transfer requires a type IV secretion system.", "edge_id": "edge-5", "evidence": [{"notes": "ICEs disseminate by conjugation using a type IV secretion system (T4SS).", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "requires", "predicate_id": null, "source": "integrative conjugative element (ICE)", "target": "type IV secretion system (T4SS)"}, {"description": "IME-type islands lack their own apparatus and spread via the conjugative apparatus of a helper ICE or conjugative plasmid.", "edge_id": "edge-6", "evidence": [{"notes": "IMEs spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid.", "reference": "DOI:10.1093/nar/gkad644"}], "predicate": "uses", "predicate_id": null, "source": "integrative mobilizable element (IME)", "target": "conjugation"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Contact-dependent transfer of DNA between cells.", "grounding": null, "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self-transmissible genomic island subclass that excises, transfers by conjugation, and reintegrates.", "grounding": null, "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element (ICE)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Genomic island subclass that lacks its own conjugation apparatus and spreads using a helper ICE or conjugative plasmid.", "grounding": null, "id": "integrative_mobilizable_element", "is_orphan": false, "label": "integrative mobilizable element (IME)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DDE transposases or tyrosine/serine recombinases that mediate island integration and mobility.", "grounding": null, "id": "mobility_module", "is_orphan": false, "label": "integrase/recombinase/transposase mobility module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion apparatus that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "type_iv_secretion_system", "is_orphan": false, "label": "type IV secretion system (T4SS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genomic islands acquired by HGT carry accessory functions"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Verified against the public Nature article preview; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "id": "edge-3", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "gi_trait", "target": "mobility_module"}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative_conjugative_element", "target": "conjugation"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_secretion_system", "target": "conjugation"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative_mobilizable_element", "target": "conjugation"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "genomic island"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the public Nature article preview; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "target": "accessory function"}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "genomic island", "target": "integrase/recombinase/transposase mobility module"}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative conjugative element (ICE)", "target": "conjugation"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV secretion system (T4SS)", "target": "conjugation"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative mobilizable element (IME)", "target": "conjugation"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Contact-dependent transfer of DNA between cells.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Self-transmissible genomic island subclass that excises, transfers by conjugation, and reintegrates.", "grounding": null, "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element (ICE)", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Genomic island subclass that lacks its own conjugation apparatus and spreads using a helper ICE or conjugative plasmid.", "grounding": null, "id": "integrative_mobilizable_element", "is_orphan": false, "label": "integrative mobilizable element (IME)", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DDE transposases or tyrosine/serine recombinases that mediate island integration and mobility.", "grounding": null, "id": "mobility_module", "is_orphan": false, "label": "integrase/recombinase/transposase mobility module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion apparatus that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "type_iv_secretion_system", "is_orphan": false, "label": "type IV secretion system (T4SS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genomic islands acquired by HGT carry accessory functions"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -844,7 +850,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-09-04 05:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

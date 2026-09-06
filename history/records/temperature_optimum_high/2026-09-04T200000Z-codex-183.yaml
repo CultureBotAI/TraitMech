@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_optimum_high.yaml
+  slug: temperature_optimum_high
+session:
+  id: 2026-09-04T200000Z-codex-183
+  timestamp: '2026-09-04T20:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect temperature-optimum-high causal graph components
+  details: Resolved issue 183 graph fragmentation for data/traits/environment/temperature_optimum_high.yaml
+    by adding 5 source- and verbatim-snippet-backed association connectors among
+    genome thermostability, small-HSP/thermosome protein quality control, and membrane-thermostability
+    branches, connecting the temperature-optimum-high nonmechanistic graph from 6
+    components to 1. Validated via the write-time LinkML gate in scripts/connect_temperature_optimum_high_graph_183.py.

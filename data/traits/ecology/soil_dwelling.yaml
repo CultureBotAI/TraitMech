@@ -15,11 +15,14 @@ synonyms:
   source: DOI:10.1038/nrmicro.2017.87
 evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
-  notes: Fierer, "Embracing the unknown", characterizes the soil microbiome as a distinct,
-    complex microbial habitat.
+  snippet: a gram of soil can contain thousands of individual microbial taxa
+  notes: Verified against the Fierer review; it frames soil as a diverse, complex
+    microbial habitat rather than a single uniform niche.
 - reference: DOI:10.1038/nrmicro1341
-  notes: Martiny et al. support soil communities as biogeographically structured microbial
-    habitats.
+  snippet: free-living microbial taxa exhibit biogeographic patterns
+  notes: Verified against the Martiny et al. abstract; environmental selection and
+    spatial structure support treating soil association as habitat ecology, not simple
+    taxonomic membership.
 canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
@@ -35,13 +38,14 @@ canonical_examples:
   reference: PMID:23350846
 causal_graphs:
 - graph_id: soil_dwelling_biogeochemistry
-  title: Soil-dwelling microbes drive terrestrial biogeochemical cycling
+  title: Soil-dwelling microbes in soil life-history contexts
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
     spans multiple taxa and mechanisms; contextual protein nodes do not receive token
     UniProt examples.
-  description: Evidence-backed causal sketch linking soil habitat to participation
-    in biogeochemical cycling.
+  description: Evidence-backed nonmechanistic sketch connecting soil habitat, biogeochemical
+    cycling, and community-level oligotrophy, growth, motility, dormancy, and genomic
+    life-history axes.
   nodes:
   - node_id: soil_dwelling_trait
     label: soil-dwelling
@@ -86,9 +90,9 @@ causal_graphs:
     description: Flagellum-dependent cell motility.
     grounding: GO:0071973
   - node_id: climate_extreme_event
-    label: extreme climatic event
+    label: extreme heat event
     node_type: ENVIRONMENTAL_FACTOR
-    description: Heat, flood, or freeze disturbance events in soil.
+    description: Experimental heat disturbance in soil.
   - node_id: dormancy_sporulation
     label: dormancy and sporulation gene program
     node_type: BIOLOGICAL_PROCESS
@@ -103,80 +107,171 @@ causal_graphs:
     node_type: STATE
     description: Genomic life-history strategy axes (MCOA1/MCOA2) of soil bacterial
       communities.
+  - node_id: soil_life_history_activity_context
+    label: soil life-history and activity context
+    node_type: STATE
+    description: Community-level soil microbial context spanning oligotrophy, growth
+      potential, motility, dormancy/sporulation, and genomic life-history axes.
   edges:
   - subject: soil_habitat
     predicate: confers
     object: soil_dwelling_trait
-    description: Soil substrate and pore-water chemistry sustain soil-resident microbes.
+    description: The terrestrial soil environment hosts soil-resident microbes.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
-      notes: Fierer characterizes the soil microbiome as a distinct microbial habitat.
+      snippet: a broad diversity of microbial taxa
+      notes: Verified against the Fierer review; the claim is habitat-level and does
+        not assert a universal molecular mechanism for all soil microbes.
     predicate_id: METPO:2007700
   - subject: soil_dwelling_trait
     predicate: contributes to
     object: biogeochemical_cycling
-    description: Soil microbes drive terrestrial biogeochemical cycling.
+    description: Soil microbes contribute to terrestrial biogeochemical cycling.
     evidence:
-    - reference: DOI:10.1038/nrmicro1341
-      notes: Martiny et al. show soil communities are biogeographically structured
-        habitats central to ecosystem function.
+    - reference: DOI:10.1038/nrmicro.2017.87
+      snippet: specific microbial controls on soil processes
+      notes: Verified against the Fierer review; soil microbial processes include
+        nutrient transformations and organic carbon-pool dynamics.
     predicate_id: RO:0002326
   - subject: low_organic_carbon
-    predicate: enriches for
+    predicate: associated with
     object: oligotrophic_lifestyle
-    description: Carbon-limited soils enrich oligotrophic taxa with small genomes
-      and reduced motility/chemotaxis.
+    description: Low-carbon soil gradients are associated with oligotrophic taxa carrying
+      small genomes, lower potential growth rates, and fewer chemotaxis/motility genes.
     evidence:
     - reference: DOI:10.1093/ismeco/ycae081
-      notes: 'Dragone et al.: oligotroph-enriched taxa in carbon-limited soils had
-        smaller genomes, slower growth, carbon-storage pathways, and under-represented
-        chemotaxis/motility genes.'
+      snippet: chemotaxis and motility were under-represented
+      notes: Verified against the open ISME Communications full text; the edge is
+        retained as an ecological association rather than a deterministic carbon-to-genome
+        mechanism.
+    predicate_id: biolink:associated_with
   - subject: soil_resource_availability
-    predicate: increases
+    predicate: associated with
     object: potential_growth_rate
-    description: Resource-rich, humid, acid-neutral soils support higher microbiome
-      potential growth.
+    description: Resource-rich, humid, acid-neutral soils are associated with higher
+      microbiome potential growth.
     evidence:
     - reference: DOI:10.1038/s41467-024-53753-w
-      notes: 'Zhou et al.: high potential growth in resource-rich, acid-neutral soils
-        of cold, humid regions (18O-H2O DNA incorporation).'
-    predicate_id: RO:0002213
+      snippet: exhibit high potential growth rates
+      notes: Verified against the open Nature Communications abstract; the global
+        pattern is observational, so the edge no longer uses a direct positive-regulation
+        predicate.
+    predicate_id: biolink:associated_with
   - subject: aridity
-    predicate: decreases
+    predicate: associated with
     object: potential_growth_rate
-    description: Aridity lowers soil microbiome potential growth rate.
+    description: Dry and resource-poor soils are associated with lower soil microbiome
+      potential growth rates.
     evidence:
     - reference: DOI:10.1038/s41467-024-53753-w
-      notes: 'Zhou et al.: aridity was a stronger predictor of community growth than
-        temperature; dry soils had lower potential growth.'
-    predicate_id: RO:0002212
+      snippet: display lower potential growth rates
+      notes: Verified against the open Nature Communications abstract; the study reports
+        a macroscale association across soil microbiomes.
+    predicate_id: biolink:associated_with
   - subject: soil_carbon_availability
-    predicate: increases prevalence of
+    predicate: associated with
     object: flagellar_motility
-    description: High soil carbon availability raises prevalence of flagellar motility.
+    description: High soil carbon availability is associated with greater community-level
+      prevalence of flagellar motility genes.
     evidence:
     - reference: DOI:10.1093/ismejo/wrae067
-      notes: 'Ramoneda et al.: rhizosphere ~11.5% higher flagellar prevalence (P=0.012);
-        glucose amendment increased prevalence (P=0.017).'
+      snippet: prevalence of flagellar motility is positively associated with soil
+        C availability
+      notes: Verified against the open ISME Journal full text; glucose amendment and
+        four field gradients support the association.
+    predicate_id: biolink:associated_with
   - subject: climate_extreme_event
     predicate: increases
     object: dormancy_sporulation
-    description: Heat, flood and freeze extremes increase dormancy and sporulation
+    description: Experimental heat treatment increased soil dormancy and sporulation
       gene abundance.
     evidence:
     - reference: DOI:10.1038/s41586-024-08185-3
-      notes: 'Knight et al.: dormancy and sporulation genes increased across flood,
-        freeze and heat; 46% of annotated genes shifted at disturbance end.'
+      snippet: enhancing dormancy and sporulation genes
+      notes: Verified against the open Nature abstract; the curated edge is narrowed
+        to heat because the abstract identifies heat, not all imposed extremes, as
+        the treatment enhancing dormancy and sporulation genes.
     predicate_id: RO:0002213
   - subject: soil_pH_precip_cn
-    predicate: predicts
+    predicate: associated with
     object: life_history_axes
-    description: Soil pH, precipitation and C:N predict soil bacterial life-history
-      genomic axes.
+    description: Soil pH, precipitation and C:N are associated with soil bacterial
+      life-history genomic axes in random-forest models.
     evidence:
     - reference: DOI:10.1038/s41564-023-01465-0
-      notes: 'Piton et al.: random-forest models using pH, precipitation and C:N predicted
-        MCOA1/MCOA2 (R2=0.80, 0.58); pH and precipitation top predictors.'
+      snippet: Random forest analyses show that soil pH
+      notes: Verified against the PubMed abstract for the Nature Microbiology article;
+        the edge is scoped as community-level statistical association.
+    predicate_id: biolink:associated_with
+  - subject: soil_habitat
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: Soil habitat provides the heterogeneous ecological context in which
+      resident microbes partition across multiple activity and life-history strategies.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      snippet: a gram of soil can contain thousands of individual microbial taxa
+      notes: Verified against the Fierer review; the connector groups soil-associated
+        community branches without asserting a single universal soil-dwelling mechanism.
+    predicate_id: biolink:associated_with
+  - subject: oligotrophic_lifestyle
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: Oligotrophic taxa in low-carbon soils are one branch of the community-level
+      soil life-history context.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae081
+      snippet: chemotaxis and motility were under-represented
+      notes: Verified against the open ISME Communications full text; oligotroph-enriched
+        taxa are treated as a carbon-gradient association within soils.
+    predicate_id: biolink:associated_with
+  - subject: potential_growth_rate
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: Potential community growth rate is an activity axis associated with
+      moisture and resource gradients across soils.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53753-w
+      snippet: display lower potential growth rates
+      notes: Verified against the open Nature Communications abstract; the Zhou et
+        al. global survey models soil microbiome potential growth as a community-level
+        ecological axis.
+    predicate_id: biolink:associated_with
+  - subject: flagellar_motility
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: Flagellar-motility gene prevalence is a carbon-associated mobility
+      branch in soil communities.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae067
+      snippet: prevalence of flagellar motility is positively associated with soil
+        C availability
+      notes: Verified against the open ISME Journal full text; Ramoneda et al. connect
+        flagellar prevalence with soil carbon availability across community datasets.
+    predicate_id: biolink:associated_with
+  - subject: dormancy_sporulation
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: Dormancy and sporulation gene programs are stress-response branches
+      in disturbed soil communities.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-08185-3
+      snippet: enhancing dormancy and sporulation genes
+      notes: Verified against the open Nature abstract; heat-enhanced dormancy/sporulation
+        abundance is retained as a soil disturbance context.
+    predicate_id: biolink:associated_with
+  - subject: life_history_axes
+    predicate: associated with
+    object: soil_life_history_activity_context
+    description: The soil bacterial MCOA axes summarize genomic life-history strategies
+      associated with pH, C:N, and precipitation gradients.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01465-0
+      snippet: soil pH, C:N ratio and precipitation
+      notes: Verified against the Nature Microbiology abstract; Piton et al. place
+        soil pH, C:N ratio, and precipitation as predictors of community-level genomic
+        strategy axes.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -234,4 +329,22 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope soil_dwelling_biogeochemistry=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-09-04T00:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the broad soil_dwelling_biogeochemistry graph for issue #183:
+    added verbatim snippets to 2 record-level and 8 edge-level evidence items, regrounded
+    5 broad ecological association edges to biolink:associated_with, and narrowed
+    the extreme-climate statement to heat-induced dormancy/sporulation. No paid research
+    service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T12:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    a soil life-history/activity context node and 6 source- and verbatim-snippet-backed
+    association connectors. The connectors join broad soil community branches while
+    preserving soil_dwelling_biogeochemistry as a nonmechanistic habitat graph. No
+    paid research service was called.'
   llm_assisted: true

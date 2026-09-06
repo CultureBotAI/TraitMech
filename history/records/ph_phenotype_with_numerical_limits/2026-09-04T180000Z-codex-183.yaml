@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  slug: ph_phenotype_with_numerical_limits
+session:
+  id: 2026-09-04T180000Z-codex-183
+  timestamp: '2026-09-04T18:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect pH numerical-limits causal graph components
+  details: Resolved issue 183 graph fragmentation for data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    by adding 4 source- and verbatim-snippet-backed association connectors among
+    PMF, F0F1-ATPase/ATP-synthesis, antiporter, amino-acid-decarboxylase, and phosphate-buffering
+    branches, connecting the pH numerical-limits nonmechanistic graph from 5 components
+    to 1. Validated via the write-time LinkML gate in scripts/connect_ph_phenotype_graph_183.py.

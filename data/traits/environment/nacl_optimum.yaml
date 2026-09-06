@@ -28,13 +28,14 @@ canonical_examples:
     complete claim on the parent rather than duplicating it onto a bin.'
 causal_graphs:
 - graph_id: nacl_optimum_balanced_osmoadaptation
-  title: NaCl-optimum balanced osmoadaptation
+  title: NaCl optimum with salt-in, salt-out, and transporter support
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking ambient NaCl, osmotic balance via compatible
-    solutes and ion homeostasis, and maximal growth rate to the NaCl-optimum phenotype.
+  description: DOI-backed nonmechanistic graph connecting ambient NaCl, osmotic balance,
+    salt-in K+ accumulation, acidic-proteome support, compatible-solute accumulation
+    and uptake, cation transport, and maximal growth rate for the NaCl-optimum phenotype.
   nodes:
   - node_id: nacl_optimum_trait
     label: NaCl optimum
@@ -111,15 +112,16 @@ causal_graphs:
     node_type: QUALITY
     description: Reduced metabolic energy expenditure relative to synthesizing compatible
       solutes de novo.
-  - node_id: na_antiport_activity
-    label: Na+/H+ antiport activity
+  - node_id: na_k_h_transport_activity
+    label: Na+/K+/H+ transporter activity
     node_type: MOLECULAR_FUNCTION
-    description: Antiporter-mediated Na+ extrusion lowering cytoplasmic Na+ to prevent
-      toxicity.
-  - node_id: cytoplasmic_na_homeostasis
-    label: cytoplasmic Na+ homeostasis
+    description: Cation/proton transporter activity preserving intracellular K+ concentration
+      and broader ion homeostasis under varying salinities.
+  - node_id: cellular_ion_homeostasis
+    label: cellular ion homeostasis
     node_type: BIOLOGICAL_PROCESS
-    description: Maintenance of low cytoplasmic Na+ concentration to prevent ion toxicity.
+    description: Maintenance of cytoplasmic potassium concentration and broader cellular
+      ion balance during salinity change.
   edges:
   - subject: ambient_nacl
     predicate: causes
@@ -171,63 +173,120 @@ causal_graphs:
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
   - subject: ambient_nacl
-    predicate: induces
+    predicate: causes
     object: osmotic_stress
-    description: External NaCl concentration imposes osmotic stress that drives osmoadaptation.
+    description: External NaCl creates the osmotic imbalance that requires osmoadaptive
+      compensation.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
-      notes: Halophilic microorganisms use two strategies to balance their cytoplasm
-        osmotically with their medium (broad review-level mechanism).
+      snippet: cytoplasm has to be at least isoosmotic
+      notes: Verified against the open Oren review; halophilic cells must osmotically
+        balance the cytoplasm against high-salt medium.
+    predicate_id: biolink:causes
   - subject: salt_in_strategy
     predicate: increases
     object: intracellular_k_accumulation
-    description: The salt-in strategy accumulates molar concentrations of KCl in the
-      cytoplasm.
+    description: The salt-in strategy accumulates molar potassium and chloride concentrations
+      in the cytoplasm.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
-      notes: The first involves accumulation of molar concentrations of KCl; strong
-        general mechanism across extreme halophiles.
+      snippet: accumulation of molar concentrations of potassium and chloride
+      notes: Verified against the open Oren review; high-salt-in organisms balance
+        external salt primarily with intracellular KCl.
     predicate_id: RO:0002213
   - subject: acidic_proteome
     predicate: enables
     object: protein_stability_high_salt
-    description: An acidic proteome enables protein stability and enzymatic function
-      at high intracellular salt.
+    description: An acidic proteome enables protein folding and enzymatic function
+      under near-saturating intracellular salt.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
-      notes: The proteome of such organisms is highly acidic; requires adaptation
-        of the intracellular enzymatic machinery at near-saturating salt.
+      snippet: extensive adaptation of the intracellular enzymatic machinery
+      notes: Verified against the open Oren review; high-salt-in strategists require
+        intracellular enzymatic machinery adapted to molar salt.
     predicate_id: RO:0002327
   - subject: compatible_solute_accumulation
     predicate: regulates
     object: osmotic_balance
-    description: Accumulation of organic compatible solutes maintains osmotic balance
-      without interfering with enzyme activity.
+    description: Organic compatible-solute accumulation regulates osmotic balance
+      while limiting inorganic salt in the cytoplasm.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
-      notes: Exclude salt from the cytoplasm and synthesize/accumulate organic compatible
-        solutes that do not interfere with enzymatic activity; broad canonical mechanism.
+      snippet: exclude salt from their cytoplasm as much as possible
+      notes: Verified against the open Oren review; the salt-out strategy excludes
+        salt from the cytoplasm and accumulates organic solutes that minimally perturb
+        enzymatic activity.
     predicate_id: RO:0002211
   - subject: compatible_solute_uptake
     predicate: associated with
     object: lower_energetic_cost
-    description: Uptake of compatible solutes from the medium is energetically favored
-      over de novo synthesis.
+    description: Compatible-solute uptake is associated with lower energetic cost
+      than de novo compatible-solute synthesis.
     evidence:
     - reference: DOI:10.3389/fmicb.2022.846677
-      notes: Uptake of compatible solute from the medium is preferred over de novo
-        synthesis, reflecting an energetically favored mechanism.
+      snippet: uptake of compatible solute from the medium is preferred
+      notes: Verified against the open Halomonas elongata review; external compatible-solute
+        uptake is energetically preferred over de novo synthesis.
     predicate_id: biolink:associated_with
-  - subject: na_antiport_activity
+  - subject: na_k_h_transport_activity
     predicate: regulates
-    object: cytoplasmic_na_homeostasis
-    description: Na+/H+ antiport activity lowers cytoplasmic Na+ to maintain ion homeostasis
-      and prevent toxicity.
+    object: cellular_ion_homeostasis
+    description: Na+/K+/H+ transporter activity contributes to cellular ion homeostasis
+      under varying salinities.
     evidence:
     - reference: DOI:10.1128/aem.00145-24
-      notes: Na+/H+ antiporters function to lower cytoplasmic Na+ to prevent toxicity
-        and contribute to salt acclimation.
+      snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
+      notes: Verified against the Xing et al. long-term salinity-stress study; the
+        edge was broadened from Na+ homeostasis to match the reported Na+/K+/H+ transporter
+        and intracellular K+ response.
     predicate_id: RO:0002211
+  - subject: intracellular_k_accumulation
+    predicate: contributes to
+    object: osmotic_balance
+    description: Intracellular KCl accumulation is a salt-in osmoadaptation route
+      that contributes to balancing external salt.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: accumulation of molar concentrations of potassium and chloride
+      notes: Verified against the open Oren review; the connector links KCl accumulation
+        to osmotic balance without making the salt-in strategy universal for every
+        NaCl optimum.
+    predicate_id: RO:0002326
+  - subject: salt_in_strategy
+    predicate: associated with
+    object: acidic_proteome
+    description: Salt-in osmoadaptation is associated with proteome-scale acidic adaptation
+      for molar intracellular KCl.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: extensive adaptation of the intracellular enzymatic machinery
+      notes: Verified against the open Oren review; the connector keeps acidic-proteome
+        stability scoped to salt-in strategists.
+    predicate_id: biolink:associated_with
+  - subject: compatible_solute_uptake
+    predicate: associated with
+    object: compatible_solute_accumulation
+    description: External compatible-solute uptake is associated with the salt-out
+      branch that accumulates organic osmolytes for osmoadaptation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.846677
+      snippet: uptake of compatible solute from the medium is preferred
+      notes: Verified against the open Halomonas elongata review; the connector treats
+        uptake as an accumulation branch with a lower energetic cost than de novo
+        synthesis.
+    predicate_id: biolink:associated_with
+  - subject: cellular_ion_homeostasis
+    predicate: associated with
+    object: osmotic_balance
+    description: Na+/K+/H+ transporter control of cellular ion homeostasis is associated
+      with osmotic balancing during salinity change.
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
+      notes: Verified against the Xing et al. long-term salinity-stress study; the
+        connector places the species-specific transporter response inside the osmotic-balance
+        context.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815612+00:00'
   curator: seed_from_metpo
@@ -371,4 +430,21 @@ curation_history:
     canonical example(s): Paraliobacillus ryukyuensis (NCBITaxon:200904; DOI:10.2323/jgam.48.269).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T01:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the broad nacl_optimum_balanced_osmoadaptation graph for issue
+    #183: added snippets to 6 edge-level evidence items, regrounded the ambient-NaCl
+    osmotic-stress edge to biolink:causes, and broadened one transporter edge from
+    Na+ homeostasis to Na+/K+/H+ transporter control of cellular ion homeostasis.
+    No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T14:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) by adding
+    4 source- and verbatim-snippet-backed connectors among the salt-in KCl, acidic
+    proteome, compatible-solute uptake, cation homeostasis, and osmotic-balance branches.
+    No paid research service was called.'
   llm_assisted: true

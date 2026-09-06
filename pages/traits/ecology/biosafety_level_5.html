@@ -40,16 +40,16 @@
     
     
     <div class="card causal-graph-card">
-      <h2>BSL-5 proposed enhanced-hazard classification</h2>
-      <p class="meta">DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification.</p>
+      <h2>BSL-5 as draft PPL-alpha containment</h2>
+      <p class="meta">Open SAE 2002 graph grounding BSL-5 to draft Planetary Protection Level Alpha, a Mars returned sample handling standard that extends BSL-4-class containment to bidirectional Earth and sample protection.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · This record names a proposed, planetary-protection-specific containment standard rather than a microbial phenotype, so its graph is contextual and intentionally carries no organism or token UniProt examples.</p>
 
       
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>BSL-5 proposed enhanced-hazard classification</title>
+          <title>BSL-5 as draft PPL-alpha containment</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for biosafety level 5.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -60,34 +60,136 @@
         <ul>
           
           <li id="pathograph-1-edge-1">
-            <strong>enhanced pathogen hazard</strong>
-            <span class="edge-predicate">motivates</span>
+            <strong>Planetary Protection Level Alpha</strong>
+            <span class="edge-predicate">was informally called</span>
             <strong>biosafety level 5</strong>
             
-            <p>Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.</p>
+            <p>Draft PPL-alpha was the concrete planetary-protection standard once informally called BSL-5.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1146/annurev.micro.62.081307.162938</code>
-                <span class="evidence-snippet">virulence factors</span>
-                <span class="meta">Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.</span>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">informally called BSL-5</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; Cohen links the BSL-5 label specifically to the draft PPL-alpha standard.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-2">
-            <strong>biosafety level 5</strong>
-            <span class="edge-predicate">is a</span>
-            <strong>biosafety level</strong>
-            <code>rdfs:subClassOf</code>
-            <p>BSL-5 is a proposed member of the biosafety-level classification.</p>
+            <strong>Planetary Protection Level Alpha</strong>
+            <span class="edge-predicate">exceeds</span>
+            <strong>biosafety level 4 standard</strong>
+            
+            <p>PPL-alpha is described as more stringent than BSL-4 because it adds forward sample-protection requirements to backward biosphere containment.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1146/annurev.micro.62.081307.162938</code>
-                <span class="evidence-snippet">virulence factors</span>
-                <span class="meta">Supports BSL-5 as a proposed extension of the biosafety-level classification axis.</span>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">more stringent</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; PPL-alpha is contrasted with the CDC BSL-4 standard and framed as a stricter two-way protection regime.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-3">
+            <strong>Planetary Protection Level Alpha</strong>
+            <span class="edge-predicate">requires</span>
+            <strong>two-way contamination control</strong>
+            
+            <p>PPL-alpha requires both returned-sample containment and protection of the samples from terrestrial contamination.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">bioisolation and containment</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; the draft standard requires a high-reliability bioisolation and containment system for planetary samples.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>two-way contamination control</strong>
+            <span class="edge-predicate">includes</span>
+            <strong>forward-contamination prevention for samples</strong>
+            <code>biolink:has_part</code>
+            <p>The draft standard includes forward-contamination control to keep Earth organisms out of returned Mars samples.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">terrestrial forward contamination</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; Cohen&#39;s candidate MRSH scenario lists PPL-alpha protection of Mars returned samples from terrestrial forward contamination.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>two-way contamination control</strong>
+            <span class="edge-predicate">includes</span>
+            <strong>backward-contamination prevention for Earth</strong>
+            <code>biolink:has_part</code>
+            <p>The draft standard includes backward-contamination control to keep returned Mars material out of Earth&#39;s biosphere.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">backward contamination</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; Cohen&#39;s candidate MRSH scenario lists PPL-alpha protection of Earth from backward contamination by Mars and Mars samples.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>Planetary Protection Level Alpha</strong>
+            <span class="edge-predicate">applies to</span>
+            <strong>Mars returned sample handling</strong>
+            
+            <p>The draft protocol extends PPL-alpha beyond a receiving facility to the whole Mars Sample Return mission.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">Mars Sample Return mission</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; Cohen reports that the draft protocol applied to all portions of Mars Sample Return, not only one sample receiving facility.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>closed-system sample handling</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Mars returned sample handling</strong>
+            <code>RO:0002326</code>
+            <p>Closed storage and retrieval are part of the required architecture for safe handling of returned Mars samples.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">closed system</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; closed-system sample storage and retrieval is one MRSH architecture criterion listed in the abstract.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>automation and remote manipulation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>closed-system sample handling</strong>
+            <code>RO:0002326</code>
+            <p>Automation and remote manipulation support sample transfer without the leaky glove interfaces that conventional gloveboxes present.</p>
+            <ul>
+              
+              <li>
+                <code>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</code>
+                <span class="evidence-snippet">automation and remote manipulation</span>
+                <span class="meta">Verified against the open SAE 2002 PDF; Cohen names automation and remote manipulation as an alternative to conventional gloveboxes for sample handling and transfer.</span>
               </li>
               
             </ul>
@@ -111,7 +213,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         
-        <dt>Definition source</dt><dd>DOI:10.1146/annurev.micro.62.081307.162938</dd>
+        <dt>Definition source</dt><dd>https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf</dd>
         
         
       </dl>
@@ -335,6 +437,12 @@ The node inventory below focuses on **hazard properties**, **biorisk decision pr
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed issue #444 after #591 and left canonical_examples empty: The class is explicitly hypothetical and above every implemented containment level; assigning a real organism would falsely assert an authority-backed BSL-5 classification that does not exist. No paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T10:00:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the biosafety_level_5_ppl_alpha_containment graph for issue #183: replaced the unsupported generalized enhanced-pathogen-hazard graph with an 8-edge Mars returned sample handling graph grounded in the open Cohen 2002 SAE paper, moved definition_source to that same source, added exact snippets to record and edge evidence, and kept BSL-5 scoped as an explicitly hypothetical nonmechanistic planetary-protection proposal. No paid research service was called.</p>
         </li>
         
       </ol>
@@ -699,7 +807,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification.", "edges": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "motivates", "predicate_id": null, "source": "enhanced_pathogen_hazard", "target": "bsl5_trait"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl5_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "motivates", "predicate_id": null, "source": "enhanced pathogen hazard", "target": "biosafety level 5"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 5", "target": "biosafety level"}], "graph_id": "biosafety_level_5_proposed_enhanced_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Proposed enhanced-containment classification beyond BSL-4 for hypothetical extreme-hazard agents.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hypothetical pathogen hazards judged to exceed the transmissibility, severity, or treatability thresholds covered by BSL-4.", "grounding": null, "id": "enhanced_pathogen_hazard", "is_orphan": false, "label": "enhanced pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 proposed enhanced-hazard classification"}];
+  var graphs = [{"description": "Open SAE 2002 graph grounding BSL-5 to draft Planetary Protection Level Alpha, a Mars returned sample handling standard that extends BSL-4-class containment to bidirectional Earth and sample protection.", "edges": [{"description": "Draft PPL-alpha was the concrete planetary-protection standard once informally called BSL-5.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen links the BSL-5 label specifically to the draft PPL-alpha standard.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "informally called BSL-5"}], "id": "edge-1", "is_orphan": false, "predicate": "was informally called", "predicate_id": null, "source": "planetary_protection_level_alpha", "target": "bsl5_trait"}, {"description": "PPL-alpha is described as more stringent than BSL-4 because it adds forward sample-protection requirements to backward biosphere containment.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; PPL-alpha is contrasted with the CDC BSL-4 standard and framed as a stricter two-way protection regime.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "more stringent"}], "id": "edge-2", "is_orphan": false, "predicate": "exceeds", "predicate_id": null, "source": "planetary_protection_level_alpha", "target": "bsl4_standard"}, {"description": "PPL-alpha requires both returned-sample containment and protection of the samples from terrestrial contamination.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; the draft standard requires a high-reliability bioisolation and containment system for planetary samples.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "bioisolation and containment"}], "id": "edge-3", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "planetary_protection_level_alpha", "target": "two_way_contamination_control"}, {"description": "The draft standard includes forward-contamination control to keep Earth organisms out of returned Mars samples.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen\u0027s candidate MRSH scenario lists PPL-alpha protection of Mars returned samples from terrestrial forward contamination.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "terrestrial forward contamination"}], "id": "edge-4", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "two_way_contamination_control", "target": "sample_forward_contamination_prevention"}, {"description": "The draft standard includes backward-contamination control to keep returned Mars material out of Earth\u0027s biosphere.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen\u0027s candidate MRSH scenario lists PPL-alpha protection of Earth from backward contamination by Mars and Mars samples.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "backward contamination"}], "id": "edge-5", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "two_way_contamination_control", "target": "earth_backward_contamination_prevention"}, {"description": "The draft protocol extends PPL-alpha beyond a receiving facility to the whole Mars Sample Return mission.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen reports that the draft protocol applied to all portions of Mars Sample Return, not only one sample receiving facility.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "Mars Sample Return mission"}], "id": "edge-6", "is_orphan": false, "predicate": "applies to", "predicate_id": null, "source": "planetary_protection_level_alpha", "target": "mars_returned_sample_handling"}, {"description": "Closed storage and retrieval are part of the required architecture for safe handling of returned Mars samples.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; closed-system sample storage and retrieval is one MRSH architecture criterion listed in the abstract.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "closed system"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "closed_system_sample_handling", "target": "mars_returned_sample_handling"}, {"description": "Automation and remote manipulation support sample transfer without the leaky glove interfaces that conventional gloveboxes present.", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen names automation and remote manipulation as an alternative to conventional gloveboxes for sample handling and transfer.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "automation and remote manipulation"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "automation_remote_manipulation", "target": "closed_system_sample_handling"}], "evidence_rows": [{"description": "Draft PPL-alpha was the concrete planetary-protection standard once informally called BSL-5.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen links the BSL-5 label specifically to the draft PPL-alpha standard.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "informally called BSL-5"}], "predicate": "was informally called", "predicate_id": null, "source": "Planetary Protection Level Alpha", "target": "biosafety level 5"}, {"description": "PPL-alpha is described as more stringent than BSL-4 because it adds forward sample-protection requirements to backward biosphere containment.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; PPL-alpha is contrasted with the CDC BSL-4 standard and framed as a stricter two-way protection regime.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "more stringent"}], "predicate": "exceeds", "predicate_id": null, "source": "Planetary Protection Level Alpha", "target": "biosafety level 4 standard"}, {"description": "PPL-alpha requires both returned-sample containment and protection of the samples from terrestrial contamination.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; the draft standard requires a high-reliability bioisolation and containment system for planetary samples.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "bioisolation and containment"}], "predicate": "requires", "predicate_id": null, "source": "Planetary Protection Level Alpha", "target": "two-way contamination control"}, {"description": "The draft standard includes forward-contamination control to keep Earth organisms out of returned Mars samples.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen\u0027s candidate MRSH scenario lists PPL-alpha protection of Mars returned samples from terrestrial forward contamination.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "terrestrial forward contamination"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "two-way contamination control", "target": "forward-contamination prevention for samples"}, {"description": "The draft standard includes backward-contamination control to keep returned Mars material out of Earth\u0027s biosphere.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen\u0027s candidate MRSH scenario lists PPL-alpha protection of Earth from backward contamination by Mars and Mars samples.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "backward contamination"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "two-way contamination control", "target": "backward-contamination prevention for Earth"}, {"description": "The draft protocol extends PPL-alpha beyond a receiving facility to the whole Mars Sample Return mission.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen reports that the draft protocol applied to all portions of Mars Sample Return, not only one sample receiving facility.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "Mars Sample Return mission"}], "predicate": "applies to", "predicate_id": null, "source": "Planetary Protection Level Alpha", "target": "Mars returned sample handling"}, {"description": "Closed storage and retrieval are part of the required architecture for safe handling of returned Mars samples.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; closed-system sample storage and retrieval is one MRSH architecture criterion listed in the abstract.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "closed system"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "closed-system sample handling", "target": "Mars returned sample handling"}, {"description": "Automation and remote manipulation support sample transfer without the leaky glove interfaces that conventional gloveboxes present.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open SAE 2002 PDF; Cohen names automation and remote manipulation as an alternative to conventional gloveboxes for sample handling and transfer.", "reference": "https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf", "snippet": "automation and remote manipulation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "automation and remote manipulation", "target": "closed-system sample handling"}], "graph_id": "biosafety_level_5_ppl_alpha_containment", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Robotic or remotely manipulated sample handling that avoids leaky conventional glovebox interfaces.", "grounding": null, "id": "automation_remote_manipulation", "is_orphan": false, "label": "automation and remote manipulation", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "CDC maximum-containment biosafety level used as the comparison point for PPL-alpha.", "grounding": "METPO:1001105", "id": "bsl4_standard", "is_orphan": false, "label": "biosafety level 4 standard", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Informal name formerly applied to draft PPL-alpha, a proposed containment level for Mars returned sample handling.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Sample storage and retrieval inside a closed system.", "grounding": null, "id": "closed_system_sample_handling", "is_orphan": false, "label": "closed-system sample handling", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Containment preventing potentially hazardous returned material from escaping into Earth\u0027s biosphere.", "grounding": null, "id": "earth_backward_contamination_prevention", "is_orphan": false, "label": "backward-contamination prevention for Earth", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Receiving, handling, analyzing, storing, and releasing samples returned from Mars.", "grounding": null, "id": "mars_returned_sample_handling", "is_orphan": false, "label": "Mars returned sample handling", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Draft NASA planetary-protection standard requiring demonstrable bioisolation and containment for returned Mars samples.", "grounding": null, "id": "planetary_protection_level_alpha", "is_orphan": false, "label": "Planetary Protection Level Alpha", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Clean handling preventing terrestrial organisms or organic molecules from contaminating returned samples.", "grounding": null, "id": "sample_forward_contamination_prevention", "is_orphan": false, "label": "forward-contamination prevention for samples", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Coordinated backward-contamination protection for Earth and forward-contamination protection for pristine samples.", "grounding": null, "id": "two_way_contamination_control", "is_orphan": false, "label": "two-way contamination control", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record names a proposed, planetary-protection-specific containment standard rather than a microbial phenotype, so its graph is contextual and intentionally carries no organism or token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 as draft PPL-alpha containment"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -722,7 +830,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-04 10:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

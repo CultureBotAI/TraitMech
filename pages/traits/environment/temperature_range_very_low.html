@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Temperature-range-very-low psychrophile range</h2>
-      <p class="meta">DOI-backed graph linking psychrophile cold-adapted machinery to a temperature growth range reaching ≤ ~10 °C.</p>
+      <h2>Temperature-range-very-low psychrophile context</h2>
+      <p class="meta">DOI-backed nonmechanistic graph connecting membrane desaturation, two-component cold signaling, CspA-family RNA chaperones, cold proteostasis, compatible-solute stabilization, and ice-binding protein branches to the at-or-below-10-degrees-C growth-range bin.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Temperature-range-very-low psychrophile range</title>
+          <title>Temperature-range-very-low psychrophile context</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for temperature range very low.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -103,8 +103,8 @@
               
               <li>
                 <code>DOI:10.1007/s42770-023-01057-4</code>
-                
-                <span class="meta">Cells adapt membrane composition (increasing double bonds in lipids) to maintain fluidity and function.</span>
+                <span class="evidence-snippet">production of double bonds in lipids</span>
+                <span class="meta">Verified against the open Ramón et al. PubMed abstract; the multifactorial cold-adaptation model lists membrane composition adaptation by producing lipid double bonds.</span>
               </li>
               
             </ul>
@@ -120,8 +120,8 @@
               
               <li>
                 <code>DOI:10.1007/s42770-023-01057-4</code>
-                
-                <span class="meta">Cold sensing occurs via changes in the liquid-crystalline state of membranes that activate two-component signaling systems.</span>
+                <span class="evidence-snippet">activation of a two-component system</span>
+                <span class="meta">Verified against the open Ramón et al. PubMed abstract; cold sensing is described as occurring mainly through liquid-crystalline membrane-state changes that activate a two-component signal-transduction system.</span>
               </li>
               
             </ul>
@@ -129,16 +129,16 @@
           
           <li id="pathograph-1-edge-5">
             <strong>cold-shock proteins (CspA-family)</strong>
-            <span class="edge-predicate">acts on</span>
-            <strong>mRNA/RNA secondary structure</strong>
-            
-            <p>CspA-family RNA chaperones resolve cold-stabilized RNA structures to sustain translation.</p>
+            <span class="edge-predicate">regulates</span>
+            <strong>cold-stabilized mRNA/RNA secondary structure</strong>
+            <code>RO:0002211</code>
+            <p>CspA-family RNA chaperones regulate cold-stabilized RNA structures to sustain translation.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s42770-023-01057-4</code>
-                
-                <span class="meta">Cold-shock proteins (CSPs) act on mRNAs; increased levels of nucleic-acid-binding CspA-related proteins.</span>
+                <code>DOI:10.4161/rna.7.6.13482</code>
+                <span class="evidence-snippet">through their RNA chaperoning function</span>
+                <span class="meta">Verified against the open Phadtare and Severinov PubMed abstract; CspA-family cold-shock proteins are described as RNA-modulating proteins affecting low-temperature transcription and possibly translation through RNA chaperoning.</span>
               </li>
               
             </ul>
@@ -146,16 +146,16 @@
           
           <li id="pathograph-1-edge-6">
             <strong>molecular chaperones (DnaK/GroEL/GroES/Clp/TF)</strong>
-            <span class="edge-predicate">preserves</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>protein folding and proteostasis in the cold</strong>
-            
-            <p>Chaperone/protease systems counter cold-slowed folding and misfolding risk.</p>
+            <code>RO:0002326</code>
+            <p>Chaperone/protease systems contribute to proteostasis by countering cold-slowed folding and misfolding risk.</p>
             <ul>
               
               <li>
                 <code>DOI:10.3389/fmicb.2023.1197797</code>
-                
-                <span class="meta">Psychrophiles constitutively synthesize molecular chaperones; Clp/GroEL/DnaK/GroES/TF upregulated during cold shock.</span>
+                <span class="evidence-snippet">heat shock proteins associated to folding</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; the Antarctic psychrophile review discusses heat-shock proteins associated with protein folding in 4 °C versus 18 °C Pseudoalteromonas haloplanktis TAC125.</span>
               </li>
               
             </ul>
@@ -163,16 +163,16 @@
           
           <li id="pathograph-1-edge-7">
             <strong>compatible solutes (glycine betaine/trehalose/glycerol)</strong>
-            <span class="edge-predicate">stabilizes</span>
+            <span class="edge-predicate">contributes to</span>
             <strong>protein and membrane stabilization</strong>
-            
-            <p>Osmolytes lower freezing damage and stabilize proteins and membranes.</p>
+            <code>RO:0002326</code>
+            <p>Osmolytes contribute to protein and membrane stabilization while lowering freezing damage.</p>
             <ul>
               
               <li>
                 <code>DOI:10.3389/fmicb.2023.1197797</code>
-                
-                <span class="meta">Accumulation of compatible osmolytes prevents cell shrinkage, lowers cytoplasmic freezing point, and stabilizes proteins and membranes.</span>
+                <span class="evidence-snippet">stabilizing membranes and proteins at chilling temperatures</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; Antarctic compatible osmolytes are described as restoring osmotic balance, scavenging free radicals, counteracting protein aggregation, improving protein folding, and stabilizing membranes and proteins.</span>
               </li>
               
             </ul>
@@ -188,8 +188,110 @@
               
               <li>
                 <code>DOI:10.3389/fmicb.2023.1197797</code>
-                
-                <span class="meta">AFPs bind ice, inhibit ice-crystal growth, produce thermal hysteresis, and show IRI activity.</span>
+                <span class="evidence-snippet">inhibits the growth of ice crystals</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; ice binding proteins are described as antifreeze proteins that bind ice, inhibit ice-crystal growth, lower freezing temperature, create a thermal hysteresis gap, and display ice-recrystallization inhibition activity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>membrane fluidity</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Membrane fatty-acid desaturation is associated with the cold-adapted machinery supporting psychrophile growth ranges.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                <span class="evidence-snippet">production of double bonds in lipids</span>
+                <span class="meta">Verified against the open Ramón et al. PubMed abstract; this connector keeps membrane desaturation as cold membrane-adaptation context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>two-component cold signaling</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Two-component cold signaling is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                <span class="evidence-snippet">activation of a two-component system</span>
+                <span class="meta">Verified against the open Ramón et al. PubMed abstract; this connector keeps low-temperature membrane sensing as cold-acclimation context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>cold-stabilized mRNA/RNA secondary structure</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>CspA-family regulation of cold-stabilized RNA structure is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.4161/rna.7.6.13482</code>
+                <span class="evidence-snippet">through their RNA chaperoning function</span>
+                <span class="meta">Verified against the open Phadtare and Severinov PubMed abstract; this connector keeps CspA-family RNA chaperones as low-temperature transcript context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>protein folding and proteostasis in the cold</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Cold proteostasis support is associated with the psychrophile machinery context.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1197797</code>
+                <span class="evidence-snippet">heat shock proteins associated to folding</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; this connector keeps chaperone/protease systems as protein-folding context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>protein and membrane stabilization</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Compatible-solute stabilization is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1197797</code>
+                <span class="evidence-snippet">stabilizing membranes and proteins at chilling temperatures</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; this connector keeps compatible osmolytes as stabilization context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>ice-crystal growth/recrystallization</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>psychrophile cold-adapted machinery</strong>
+            <code>biolink:associated_with</code>
+            <p>Ice-binding protein inhibition of ice-crystal growth is associated with psychrophile cold-adapted machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1197797</code>
+                <span class="evidence-snippet">inhibits the growth of ice crystals</span>
+                <span class="meta">Verified against the open Ramasamy et al. PMC text; this connector keeps ice-binding proteins as freezing-protection context.</span>
               </li>
               
             </ul>
@@ -492,6 +594,18 @@ Very-low-temperature growth is a systems phenotype rather than a single pathway.
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Psychromonas ingrahamii (NCBITaxon:357794; DOI:10.1099/ijs.0.64068-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T04:40:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the temperature_range_very_low_psychrophile graph for issue #183: added snippets to 6 edge-level evidence items, grounded 3 residual predicates, and narrowed 1 local node identifier and type for cold-stabilized RNA secondary structure. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T23:20:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (7 components to 1) by adding 6 source- and verbatim-snippet-backed association connectors among membrane desaturation, two-component cold signaling, CspA-family RNA chaperone, cold proteostasis, compatible-solute, and ice-binding protein branches. No paid research service was called.</p>
         </li>
         
       </ol>
@@ -856,7 +970,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking psychrophile cold-adapted machinery to a temperature growth range reaching \u2264 ~10 \u00b0C.", "edges": [{"description": "Psychrophile cold-adapted machinery enables growth at \u2264 10 \u00b0C.", "evidence": [{"notes": "Supports cold-adapted membranes and enzymes as enablers of growth at very low temperatures.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile_machinery", "target": "temperature_range_very_low_trait"}, {"description": "Temperature range very low is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_very_low_trait", "target": "temperature_range"}, {"description": "Homeoviscous adaptation via lipid desaturation maintains membrane fluidity in the cold.", "evidence": [{"notes": "Cells adapt membrane composition (increasing double bonds in lipids) to maintain fluidity and function.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "membrane_fatty_acid_desaturation", "target": "membrane_fluidity"}, {"description": "Cold-induced membrane state changes activate two-component cold signaling.", "evidence": [{"notes": "Cold sensing occurs via changes in the liquid-crystalline state of membranes that activate two-component signaling systems.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-4", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "low_temperature", "target": "two_component_cold_signaling"}, {"description": "CspA-family RNA chaperones resolve cold-stabilized RNA structures to sustain translation.", "evidence": [{"notes": "Cold-shock proteins (CSPs) act on mRNAs; increased levels of nucleic-acid-binding CspA-related proteins.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-5", "is_orphan": false, "predicate": "acts on", "predicate_id": null, "source": "cold_shock_proteins", "target": "rna_secondary_structure"}, {"description": "Chaperone/protease systems counter cold-slowed folding and misfolding risk.", "evidence": [{"notes": "Psychrophiles constitutively synthesize molecular chaperones; Clp/GroEL/DnaK/GroES/TF upregulated during cold shock.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "id": "edge-6", "is_orphan": false, "predicate": "preserves", "predicate_id": null, "source": "molecular_chaperones", "target": "proteostasis_cold"}, {"description": "Osmolytes lower freezing damage and stabilize proteins and membranes.", "evidence": [{"notes": "Accumulation of compatible osmolytes prevents cell shrinkage, lowers cytoplasmic freezing point, and stabilizes proteins and membranes.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solutes", "target": "protein_membrane_stabilization"}, {"description": "AFPs/IBPs bind ice and inhibit ice-crystal growth and recrystallization.", "evidence": [{"notes": "AFPs bind ice, inhibit ice-crystal growth, produce thermal hysteresis, and show IRI activity.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "id": "edge-8", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ice_binding_proteins", "target": "ice_crystal_growth"}], "evidence_rows": [{"description": "Psychrophile cold-adapted machinery enables growth at \u2264 10 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-adapted membranes and enzymes as enablers of growth at very low temperatures.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile cold-adapted machinery", "target": "temperature range very low"}, {"description": "Temperature range very low is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a \u226410 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range very low", "target": "temperature range"}, {"description": "Homeoviscous adaptation via lipid desaturation maintains membrane fluidity in the cold.", "edge_id": "edge-3", "evidence": [{"notes": "Cells adapt membrane composition (increasing double bonds in lipids) to maintain fluidity and function.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "membrane fatty-acid desaturation", "target": "membrane fluidity"}, {"description": "Cold-induced membrane state changes activate two-component cold signaling.", "edge_id": "edge-4", "evidence": [{"notes": "Cold sensing occurs via changes in the liquid-crystalline state of membranes that activate two-component signaling systems.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "low temperature", "target": "two-component cold signaling"}, {"description": "CspA-family RNA chaperones resolve cold-stabilized RNA structures to sustain translation.", "edge_id": "edge-5", "evidence": [{"notes": "Cold-shock proteins (CSPs) act on mRNAs; increased levels of nucleic-acid-binding CspA-related proteins.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "acts on", "predicate_id": null, "source": "cold-shock proteins (CspA-family)", "target": "mRNA/RNA secondary structure"}, {"description": "Chaperone/protease systems counter cold-slowed folding and misfolding risk.", "edge_id": "edge-6", "evidence": [{"notes": "Psychrophiles constitutively synthesize molecular chaperones; Clp/GroEL/DnaK/GroES/TF upregulated during cold shock.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "predicate": "preserves", "predicate_id": null, "source": "molecular chaperones (DnaK/GroEL/GroES/Clp/TF)", "target": "protein folding and proteostasis in the cold"}, {"description": "Osmolytes lower freezing damage and stabilize proteins and membranes.", "edge_id": "edge-7", "evidence": [{"notes": "Accumulation of compatible osmolytes prevents cell shrinkage, lowers cytoplasmic freezing point, and stabilizes proteins and membranes.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "predicate": "stabilizes", "predicate_id": null, "source": "compatible solutes (glycine betaine/trehalose/glycerol)", "target": "protein and membrane stabilization"}, {"description": "AFPs/IBPs bind ice and inhibit ice-crystal growth and recrystallization.", "edge_id": "edge-8", "evidence": [{"notes": "AFPs bind ice, inhibit ice-crystal growth, produce thermal hysteresis, and show IRI activity.", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ice-binding/antifreeze proteins", "target": "ice-crystal growth/recrystallization"}], "graph_id": "temperature_range_very_low_psychrophile", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "CspA-family RNA chaperones that bind nucleic acids during cold acclimation.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins (CspA-family)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Osmolytes that lower freezing damage and stabilize macromolecules.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes (glycine betaine/trehalose/glycerol)", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "AFPs/IBPs that bind ice and inhibit ice-crystal growth.", "grounding": null, "id": "ice_binding_proteins", "is_orphan": false, "label": "ice-binding/antifreeze proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Damaging ice-crystal growth and recrystallization around cells.", "grounding": null, "id": "ice_crystal_growth", "is_orphan": false, "label": "ice-crystal growth/recrystallization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature at or below ~10 C imposing cold stress.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Introduction of double bonds into membrane lipids during cold adaptation.", "grounding": null, "id": "membrane_fatty_acid_desaturation", "is_orphan": false, "label": "membrane fatty-acid desaturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the membrane bilayer required for function in the cold.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Chaperone and protease systems maintaining proteostasis under cold.", "grounding": null, "id": "molecular_chaperones", "is_orphan": false, "label": "molecular chaperones (DnaK/GroEL/GroES/Clp/TF)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of proteins and membranes against cold/freezing damage.", "grounding": null, "id": "protein_membrane_stabilization", "is_orphan": false, "label": "protein and membrane stabilization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of correct protein folding despite cold-slowed folding kinetics.", "grounding": null, "id": "proteostasis_cold", "is_orphan": false, "label": "protein folding and proteostasis in the cold", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes that sustain function near freezing.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cold-stabilized RNA secondary structures impeding translation.", "grounding": null, "id": "rna_secondary_structure", "is_orphan": false, "label": "mRNA/RNA secondary structure", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range reaching \u2264 ~10 \u00b0C.", "grounding": "METPO:1000448", "id": "temperature_range_very_low_trait", "is_orphan": false, "label": "temperature range very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Two-component regulatory systems triggered by cold-induced membrane state changes.", "grounding": null, "id": "two_component_cold_signaling", "is_orphan": false, "label": "two-component cold signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-range-very-low psychrophile range"}];
+  var graphs = [{"description": "DOI-backed nonmechanistic graph connecting membrane desaturation, two-component cold signaling, CspA-family RNA chaperones, cold proteostasis, compatible-solute stabilization, and ice-binding protein branches to the at-or-below-10-degrees-C growth-range bin.", "edges": [{"description": "Psychrophile cold-adapted machinery enables growth at \u2264 10 \u00b0C.", "evidence": [{"notes": "Supports cold-adapted membranes and enzymes as enablers of growth at very low temperatures.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile_machinery", "target": "temperature_range_very_low_trait"}, {"description": "Temperature range very low is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_very_low_trait", "target": "temperature_range"}, {"description": "Homeoviscous adaptation via lipid desaturation maintains membrane fluidity in the cold.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; the multifactorial cold-adaptation model lists membrane composition adaptation by producing lipid double bonds.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "membrane_fatty_acid_desaturation", "target": "membrane_fluidity"}, {"description": "Cold-induced membrane state changes activate two-component cold signaling.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; cold sensing is described as occurring mainly through liquid-crystalline membrane-state changes that activate a two-component signal-transduction system.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "activation of a two-component system"}], "id": "edge-4", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "low_temperature", "target": "two_component_cold_signaling"}, {"description": "CspA-family RNA chaperones regulate cold-stabilized RNA structures to sustain translation.", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PubMed abstract; CspA-family cold-shock proteins are described as RNA-modulating proteins affecting low-temperature transcription and possibly translation through RNA chaperoning.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "through their RNA chaperoning function"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cold_shock_proteins", "target": "cold_stabilized_rna_secondary_structure"}, {"description": "Chaperone/protease systems contribute to proteostasis by countering cold-slowed folding and misfolding risk.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; the Antarctic psychrophile review discusses heat-shock proteins associated with protein folding in 4 \u00b0C versus 18 \u00b0C Pseudoalteromonas haloplanktis TAC125.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "heat shock proteins associated to folding"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular_chaperones", "target": "proteostasis_cold"}, {"description": "Osmolytes contribute to protein and membrane stabilization while lowering freezing damage.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; Antarctic compatible osmolytes are described as restoring osmotic balance, scavenging free radicals, counteracting protein aggregation, improving protein folding, and stabilizing membranes and proteins.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "stabilizing membranes and proteins at chilling temperatures"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible_solutes", "target": "protein_membrane_stabilization"}, {"description": "AFPs/IBPs bind ice and inhibit ice-crystal growth and recrystallization.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; ice binding proteins are described as antifreeze proteins that bind ice, inhibit ice-crystal growth, lower freezing temperature, create a thermal hysteresis gap, and display ice-recrystallization inhibition activity.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "inhibits the growth of ice crystals"}], "id": "edge-8", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ice_binding_proteins", "target": "ice_crystal_growth"}, {"description": "Membrane fatty-acid desaturation is associated with the cold-adapted machinery supporting psychrophile growth ranges.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; this connector keeps membrane desaturation as cold membrane-adaptation context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "id": "edge-9", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "membrane_fluidity", "target": "psychrophile_machinery"}, {"description": "Two-component cold signaling is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; this connector keeps low-temperature membrane sensing as cold-acclimation context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "activation of a two-component system"}], "id": "edge-10", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "two_component_cold_signaling", "target": "psychrophile_machinery"}, {"description": "CspA-family regulation of cold-stabilized RNA structure is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PubMed abstract; this connector keeps CspA-family RNA chaperones as low-temperature transcript context.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "through their RNA chaperoning function"}], "id": "edge-11", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "cold_stabilized_rna_secondary_structure", "target": "psychrophile_machinery"}, {"description": "Cold proteostasis support is associated with the psychrophile machinery context.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps chaperone/protease systems as protein-folding context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "heat shock proteins associated to folding"}], "id": "edge-12", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "proteostasis_cold", "target": "psychrophile_machinery"}, {"description": "Compatible-solute stabilization is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps compatible osmolytes as stabilization context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "stabilizing membranes and proteins at chilling temperatures"}], "id": "edge-13", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "protein_membrane_stabilization", "target": "psychrophile_machinery"}, {"description": "Ice-binding protein inhibition of ice-crystal growth is associated with psychrophile cold-adapted machinery.", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps ice-binding proteins as freezing-protection context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "inhibits the growth of ice crystals"}], "id": "edge-14", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "ice_crystal_growth", "target": "psychrophile_machinery"}], "evidence_rows": [{"description": "Psychrophile cold-adapted machinery enables growth at \u2264 10 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-adapted membranes and enzymes as enablers of growth at very low temperatures.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "psychrophile cold-adapted machinery", "target": "temperature range very low"}, {"description": "Temperature range very low is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a \u226410 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range very low", "target": "temperature range"}, {"description": "Homeoviscous adaptation via lipid desaturation maintains membrane fluidity in the cold.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; the multifactorial cold-adaptation model lists membrane composition adaptation by producing lipid double bonds.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "membrane fatty-acid desaturation", "target": "membrane fluidity"}, {"description": "Cold-induced membrane state changes activate two-component cold signaling.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; cold sensing is described as occurring mainly through liquid-crystalline membrane-state changes that activate a two-component signal-transduction system.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "activation of a two-component system"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "low temperature", "target": "two-component cold signaling"}, {"description": "CspA-family RNA chaperones regulate cold-stabilized RNA structures to sustain translation.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PubMed abstract; CspA-family cold-shock proteins are described as RNA-modulating proteins affecting low-temperature transcription and possibly translation through RNA chaperoning.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "through their RNA chaperoning function"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cold-shock proteins (CspA-family)", "target": "cold-stabilized mRNA/RNA secondary structure"}, {"description": "Chaperone/protease systems contribute to proteostasis by countering cold-slowed folding and misfolding risk.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; the Antarctic psychrophile review discusses heat-shock proteins associated with protein folding in 4 \u00b0C versus 18 \u00b0C Pseudoalteromonas haloplanktis TAC125.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "heat shock proteins associated to folding"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular chaperones (DnaK/GroEL/GroES/Clp/TF)", "target": "protein folding and proteostasis in the cold"}, {"description": "Osmolytes contribute to protein and membrane stabilization while lowering freezing damage.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; Antarctic compatible osmolytes are described as restoring osmotic balance, scavenging free radicals, counteracting protein aggregation, improving protein folding, and stabilizing membranes and proteins.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "stabilizing membranes and proteins at chilling temperatures"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible solutes (glycine betaine/trehalose/glycerol)", "target": "protein and membrane stabilization"}, {"description": "AFPs/IBPs bind ice and inhibit ice-crystal growth and recrystallization.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; ice binding proteins are described as antifreeze proteins that bind ice, inhibit ice-crystal growth, lower freezing temperature, create a thermal hysteresis gap, and display ice-recrystallization inhibition activity.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "inhibits the growth of ice crystals"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ice-binding/antifreeze proteins", "target": "ice-crystal growth/recrystallization"}, {"description": "Membrane fatty-acid desaturation is associated with the cold-adapted machinery supporting psychrophile growth ranges.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; this connector keeps membrane desaturation as cold membrane-adaptation context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "membrane fluidity", "target": "psychrophile cold-adapted machinery"}, {"description": "Two-component cold signaling is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Ram\u00f3n et al. PubMed abstract; this connector keeps low-temperature membrane sensing as cold-acclimation context.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "activation of a two-component system"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "two-component cold signaling", "target": "psychrophile cold-adapted machinery"}, {"description": "CspA-family regulation of cold-stabilized RNA structure is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PubMed abstract; this connector keeps CspA-family RNA chaperones as low-temperature transcript context.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "through their RNA chaperoning function"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "cold-stabilized mRNA/RNA secondary structure", "target": "psychrophile cold-adapted machinery"}, {"description": "Cold proteostasis support is associated with the psychrophile machinery context.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps chaperone/protease systems as protein-folding context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "heat shock proteins associated to folding"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "protein folding and proteostasis in the cold", "target": "psychrophile cold-adapted machinery"}, {"description": "Compatible-solute stabilization is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps compatible osmolytes as stabilization context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "stabilizing membranes and proteins at chilling temperatures"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "protein and membrane stabilization", "target": "psychrophile cold-adapted machinery"}, {"description": "Ice-binding protein inhibition of ice-crystal growth is associated with psychrophile cold-adapted machinery.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the open Ramasamy et al. PMC text; this connector keeps ice-binding proteins as freezing-protection context.", "reference": "DOI:10.3389/fmicb.2023.1197797", "snippet": "inhibits the growth of ice crystals"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "ice-crystal growth/recrystallization", "target": "psychrophile cold-adapted machinery"}], "graph_id": "temperature_range_very_low_psychrophile", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "CspA-family RNA chaperones that bind nucleic acids during cold acclimation.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins (CspA-family)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cold-stabilized RNA secondary structures impeding translation.", "grounding": null, "id": "cold_stabilized_rna_secondary_structure", "is_orphan": false, "label": "cold-stabilized mRNA/RNA secondary structure", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Osmolytes that lower freezing damage and stabilize macromolecules.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes (glycine betaine/trehalose/glycerol)", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "AFPs/IBPs that bind ice and inhibit ice-crystal growth.", "grounding": null, "id": "ice_binding_proteins", "is_orphan": false, "label": "ice-binding/antifreeze proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Damaging ice-crystal growth and recrystallization around cells.", "grounding": null, "id": "ice_crystal_growth", "is_orphan": false, "label": "ice-crystal growth/recrystallization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature at or below ~10 C imposing cold stress.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Introduction of double bonds into membrane lipids during cold adaptation.", "grounding": null, "id": "membrane_fatty_acid_desaturation", "is_orphan": false, "label": "membrane fatty-acid desaturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the membrane bilayer required for function in the cold.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Chaperone and protease systems maintaining proteostasis under cold.", "grounding": null, "id": "molecular_chaperones", "is_orphan": false, "label": "molecular chaperones (DnaK/GroEL/GroES/Clp/TF)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of proteins and membranes against cold/freezing damage.", "grounding": null, "id": "protein_membrane_stabilization", "is_orphan": false, "label": "protein and membrane stabilization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of correct protein folding despite cold-slowed folding kinetics.", "grounding": null, "id": "proteostasis_cold", "is_orphan": false, "label": "protein folding and proteostasis in the cold", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes that sustain function near freezing.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range reaching \u2264 ~10 \u00b0C.", "grounding": "METPO:1000448", "id": "temperature_range_very_low_trait", "is_orphan": false, "label": "temperature range very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Two-component regulatory systems triggered by cold-induced membrane state changes.", "grounding": null, "id": "two_component_cold_signaling", "is_orphan": false, "label": "two-component cold signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-range-very-low psychrophile context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -879,7 +993,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-04 23:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

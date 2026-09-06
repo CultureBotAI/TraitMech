@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_high.yaml
+  slug: temperature_delta_high
+session:
+  id: 2026-09-04T190000Z-codex-183
+  timestamp: '2026-09-04T19:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect temperature-delta-high causal graph components
+  details: Resolved issue 183 graph fragmentation for data/traits/environment/temperature_delta_high.yaml
+    by adding 5 source- and verbatim-snippet-backed association or contribution connectors
+    among cold unsaturated-fatty-acid synthesis, homoviscous adaptation, membrane-fluidity,
+    high-temperature membrane-viscosity, and thermostable-enzyme branches, connecting
+    the temperature-delta-high nonmechanistic graph from 6 components to 1. Validated
+    via the write-time LinkML gate in scripts/connect_temperature_delta_high_graph_183.py.

@@ -16,7 +16,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from trait_priority import (  # noqa: E402
     ACTIONS,
+    REVIEWED_EMPTY_CANONICAL_EXAMPLES_ACTION,
     build_queue,
+    canonical_examples_satisfied,
     family_stem,
     is_grouping_term,
     jaccard,
@@ -51,6 +53,7 @@ def _rec(**kw) -> Record:
         has_definition_source=True,
         has_synonyms=True,
         has_evidence=True,
+        canonical_examples_reviewed_empty=False,
     )
     base.update(kw)
     return Record(**base)
@@ -199,6 +202,17 @@ def test_a_graph_without_examples_asks_for_examples():
     assert _act(_rec(edges=10, examples=0)) == "ADD_CANONICAL_EXAMPLES"
 
 
+def test_a_reviewed_empty_canonical_example_slot_is_not_actionable():
+    rec = _rec(
+        edges=10,
+        examples=0,
+        canonical_examples_reviewed_empty=True,
+    )
+
+    assert canonical_examples_satisfied(rec, CFG)
+    assert _act(rec) == "CURATE_ROOT"
+
+
 def test_a_thin_or_fragmented_graph_asks_to_be_deepened():
     assert _act(_rec(edges=4, examples=1)) == "DEEPEN_CAUSAL_GRAPH"
     assert _act(_rec(edges=10, examples=1, components=3)) == "DEEPEN_CAUSAL_GRAPH"
@@ -255,6 +269,18 @@ def test_deep_records_are_deprioritised_not_hidden():
     deep, _ = score(_rec(edges=20, examples=5), CFG)
     thin, _ = score(_rec(edges=2, examples=0), CFG)
     assert deep < thin
+
+
+def test_reviewed_empty_canonical_example_slot_is_not_scored_as_missing():
+    missing, missing_why = score(_rec(examples=0), CFG)
+    reviewed, reviewed_why = score(
+        _rec(examples=0, canonical_examples_reviewed_empty=True),
+        CFG,
+    )
+
+    assert missing - reviewed == CFG["weights"]["missing_canonical_examples"]
+    assert any("no canonical_examples" in reason for reason in missing_why)
+    assert any("reviewed empty" in reason for reason in reviewed_why)
 
 
 # --- queue + meta ------------------------------------------------------------
@@ -379,6 +405,28 @@ def test_unresearched_filter_does_not_return_non_mechanism_records():
     out = _run(["--unresearched-only", "--top", "0"])
     assert _row_count(out) == 0
     assert "0 row(s) shown of 0 matching" in out
+
+
+def test_reviewed_empty_canonical_examples_are_read_from_curation_history(tmp_path):
+    category = tmp_path / "environment"
+    category.mkdir()
+    (category / "temperature_delta_very_low.yaml").write_text(
+        "\n".join(
+            [
+                "identifier: METPO:1000483",
+                "label: temperature delta very low",
+                "trait_category: ENVIRONMENT",
+                "term_kind: CLASS",
+                "mapping_status: REVIEWED",
+                "curation_history:",
+                f"- action: {REVIEWED_EMPTY_CANONICAL_EXAMPLES_ACTION}",
+            ]
+        ),
+    )
+
+    row = build_queue(category.parent)[0][0]
+    assert row["canonical_examples_reviewed_empty"] is True
+    assert row["action"] == "BUILD_CAUSAL_GRAPH"
 
 
 def test_nothing_reads_the_historical_completeness_snapshot():

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gc_low.yaml
+  slug: gc_low
+session:
+  id: 2026-09-04T050000Z-codex-2acaab
+  timestamp: '2026-09-04T05:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed gc_low causal evidence
+  details: 'Reviewed data/traits/genomics/gc_low.yaml for issue #183. Replaced the unsupported
+    record-level GC-content evidence, added exact snippets to six causal-edge evidence entries,
+    grounded residual predicates in the gc_low_mid_low_gc_bin graph, moved mutational-spectrum
+    and mutation-bias edges onto continuous genome-wide GC content rather than the METPO:1000429
+    bin, and preserved the METPO GC_42.65_57.0 interval as a nonmechanistic whole-genome GC-content
+    classification. No paid research service was called.'
