@@ -277,7 +277,10 @@ AFTER_GRAPH: dict[str, Any] = {
             "evidence": [
                 {
                     "reference": SOURCE,
-                    "snippet": "more stringent",
+                    "snippet": (
+                        "order of magnitude more stringent than the Center for "
+                        "Disease Control"
+                    ),
                     "notes": (
                         "Verified against the open SAE 2002 PDF; PPL-alpha is "
                         "contrasted with the CDC BSL-4 standard and framed as a "
@@ -379,7 +382,7 @@ AFTER_GRAPH: dict[str, Any] = {
             "evidence": [
                 {
                     "reference": SOURCE,
-                    "snippet": "closed system",
+                    "snippet": "sample storage and retrieval within a closed system",
                     "notes": (
                         "Verified against the open SAE 2002 PDF; closed-system "
                         "sample storage and retrieval is one MRSH architecture "

@@ -259,12 +259,11 @@ causal_graphs:
     description: Cold-shock maintenance of translation is a lower-temperature boundary-support
       branch for balanced mesophilic growth.
     evidence:
-    - reference: DOI:10.1046/j.1365-2958.1999.01284.x
-      snippet: facilitates translation by destabilizing mRNA secondary structures
-        formed at low temperature
-      notes: Verified against the open Molecular Microbiology full text; the connector
-        keeps CspA-mediated translation support as a boundary branch, not as a definition
-        of mesophily.
+    - reference: DOI:10.4161/rna.7.6.13482
+      snippet: facilitating transcription and translation at low temperature
+      notes: Verified against the open Phadtare and Severinov PMC abstract; the connector
+        keeps CspA-family RNA chaperones as low-temperature translation context, not
+        as a definition of mesophily.
     predicate_id: biolink:associated_with
   - subject: heat_shock_proteins
     predicate: associated with
@@ -272,10 +271,10 @@ causal_graphs:
     description: RpoH-regulated heat-shock response proteins form an upper-temperature
       boundary-support branch for balanced mesophilic growth.
     evidence:
-    - reference: DOI:10.1128/jb.183.18.5302-5310.2001
-      snippet: enhancing transcription of the heat shock genes
-      notes: Verified against the open Journal of Bacteriology full text; the connector
-        keeps RpoH-regulated heat-shock proteins as a boundary branch, not as a definition
+    - reference: DOI:10.1128/mbio.02174-23
+      snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+      notes: Verified against the open Grunberger et al. PMC text; the connector keeps
+        heat-shock chaperones as an upper-boundary proteostasis branch, not as a definition
         of mesophily.
     predicate_id: biolink:associated_with
 curation_history:
@@ -400,4 +399,11 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review issue #665: replaced two sigma-32
     snippets with exact RpoH wording from the Journal of Bacteriology source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

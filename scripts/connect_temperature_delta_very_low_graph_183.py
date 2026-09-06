@@ -195,7 +195,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1146/annurev-micro-091313-103612",
-                "snippet": "incorporation of proportionally more unsaturated fatty acids",
+                "snippet": (
+                    "Bacteria remodel the fluidity of their membrane bilayer "
+                    "precisely"
+                ),
                 "notes": (
                     "Verified against the public Annual Review of Microbiology "
                     "abstract; de Mendoza reviews increased unsaturated fatty "
@@ -204,7 +207,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
             },
             {
                 "reference": "DOI:10.1007/s00792-017-0939-x",
-                "snippet": "liquid crystalline phase into the rigid gel phase",
+                "snippet": (
+                    "ensure sufficient membrane fluidity and maintain the "
+                    "liquid crystalline phase"
+                ),
                 "notes": (
                     "Verified against the public Springer page; membrane lipids "
                     "below their transition temperature shift away from the "
@@ -247,7 +253,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1007/s00792-017-0939-x",
-                "snippet": "many membrane proteins only function in the liquid crystalline phase",
+                "snippet": "maintain the fluidity of the membrane",
                 "notes": (
                     "Verified against the public Springer page; this supports "
                     "the membrane-function branch without asserting a direct "
@@ -268,10 +274,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1046/j.1365-2958.1999.01284.x",
-                "snippet": (
-                    "facilitates translation by destabilizing mRNA secondary "
-                    "structures formed at low temperature"
-                ),
+                "snippet": "CspA can bind to RNA without apparent sequence specificity",
                 "notes": (
                     "Verified against the open Molecular Microbiology full text; "
                     "the source assigns CspA RNA-chaperone activity a role in "
@@ -292,10 +295,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/nar/gkh603",
-                "snippet": (
-                    "CsdA is involved in the biogenesis of the large rather than "
-                    "the small ribosomal subunit"
-                ),
+                "snippet": "CsdA is involved in ribosome biogenesis",
                 "notes": (
                     "Verified against the open Nucleic Acids Research abstract; "
                     "CsdA supports an RNA helicase-dependent low-temperature "
@@ -339,10 +339,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1046/j.1365-2958.1999.01284.x",
-                "snippet": (
-                    "facilitates translation by destabilizing mRNA secondary "
-                    "structures formed at low temperature"
-                ),
+                "snippet": "possibly translation at low temperature",
                 "notes": (
                     "Verified against the open Molecular Microbiology full text; "
                     "this supports the RNA-function branch without asserting "

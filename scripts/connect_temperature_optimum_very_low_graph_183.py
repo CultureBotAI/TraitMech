@@ -239,8 +239,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.17159/sajs.2018/20170254",
-                "snippet": "regulation of cellular protein synthesis",
+                "reference": "DOI:10.4161/rna.7.6.13482",
+                "snippet": "facilitating transcription and translation at low temperature",
                 "notes": (
                     "Verified against the open Hamdan review; this connector "
                     "keeps cold-shock RNA chaperones as protein-synthesis "
@@ -261,7 +261,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.17159/sajs.2018/20170254",
-                "snippet": "growth-enhancing effect of glycine betaine",
+                "snippet": "compatible solutes such as trehalose and glycine-betaine",
                 "notes": (
                     "Verified against the open Hamdan review; this connector "
                     "keeps glycine-betaine compatible-solute effects as broad "
@@ -282,7 +282,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.17159/sajs.2018/20170254",
-                "snippet": "preventing protein denaturation and aggregation",
+                "snippet": (
+                    "counteracting protein aggregation, improving protein "
+                    "folding and stabilizing membranes and proteins at "
+                    "chilling temperatures"
+                ),
                 "notes": (
                     "Verified against the open Hamdan review; this connector "
                     "keeps trehalose as a compatible-solute cryoprotection "
@@ -303,7 +307,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1007/s42770-023-01057-4",
-                "snippet": "lower the water freezing point",
+                "snippet": (
+                    "AFPs lower the water freezing point, avoiding frostbite "
+                    "due to their thermal hysteresis"
+                ),
                 "notes": (
                     "Verified against the open Ram\u00f3n et al. abstract and "
                     "review text; this connector keeps antifreeze proteins as "
@@ -324,7 +331,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.17159/sajs.2018/20170254",
-                "snippet": "up to 10-fold higher specific activity",
+                "snippet": "adapted to function at low temperatures, with high catalytic constants",
                 "notes": (
                     "Verified against the open Hamdan review; this connector "
                     "keeps low-temperature enzyme flexibility as contextual "

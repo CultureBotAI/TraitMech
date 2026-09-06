@@ -159,7 +159,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "PMF for nutrient uptake and ATP synthesis",
+                "snippet": "drive the synthesis of ATP and the transport of solutes",
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps PMF-driven ATP synthesis as bioenergetic context "
@@ -180,7 +180,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "Na+/H+ and K+/H+ antiporters",
+                "snippet": (
+                    "simultaneously maintain a relatively constant PMF and "
+                    "internal pH"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis "
@@ -201,7 +204,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "Proton motive force generation by substrate decarboxylation",
+                "snippet": "metabolite decarboxylation pathways",
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps amino-acid decarboxylation as cytoplasmic proton "
@@ -222,7 +225,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "buffering capacity of the cytoplasm",
+                "snippet": "free protons at pH 7.2 is only about 10",
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps phosphate buffering as internal-pH context rather "

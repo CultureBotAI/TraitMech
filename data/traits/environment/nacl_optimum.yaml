@@ -246,9 +246,10 @@ causal_graphs:
     description: Intracellular KCl accumulation is a salt-in osmoadaptation route
       that contributes to balancing external salt.
     evidence:
-    - reference: DOI:10.1186/1746-1448-4-2
-      snippet: accumulation of molar concentrations of potassium and chloride
-      notes: Verified against the open Oren review; the connector links KCl accumulation
+    - reference: DOI:10.3389/fmicb.2013.00315
+      snippet: Extremely halophilic microorganisms that accumulate KCl for osmotic
+        balance
+      notes: Verified against the open Oren minireview; the connector links KCl accumulation
         to osmotic balance without making the salt-in strategy universal for every
         NaCl optimum.
     predicate_id: RO:0002326
@@ -258,10 +259,10 @@ causal_graphs:
     description: Salt-in osmoadaptation is associated with proteome-scale acidic adaptation
       for molar intracellular KCl.
     evidence:
-    - reference: DOI:10.1186/1746-1448-4-2
-      snippet: extensive adaptation of the intracellular enzymatic machinery
-      notes: Verified against the open Oren review; the connector keeps acidic-proteome
-        stability scoped to salt-in strategists.
+    - reference: DOI:10.3389/fmicb.2013.00315
+      snippet: have a large excess of acidic amino acids in their proteins
+      notes: Verified against the open Oren minireview; the connector keeps acidic-proteome
+        composition scoped to salt-in strategists.
     predicate_id: biolink:associated_with
   - subject: compatible_solute_uptake
     predicate: associated with
@@ -270,7 +271,8 @@ causal_graphs:
       branch that accumulates organic osmolytes for osmoadaptation.
     evidence:
     - reference: DOI:10.3389/fmicb.2022.846677
-      snippet: uptake of compatible solute from the medium is preferred
+      snippet: Uptake of ectoine from the medium is facilitated by the osmoregulated
+        TRAP transporter TeaABC
       notes: Verified against the open Halomonas elongata review; the connector treats
         uptake as an accumulation branch with a lower energetic cost than de novo
         synthesis.
@@ -282,7 +284,7 @@ causal_graphs:
       with osmotic balancing during salinity change.
     evidence:
     - reference: DOI:10.1128/aem.00145-24
-      snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
+      snippet: ensuring cellular ion homeostasis under varying salinities
       notes: Verified against the Xing et al. long-term salinity-stress study; the
         connector places the species-specific transporter response inside the osmotic-balance
         context.
@@ -447,4 +449,11 @@ curation_history:
     4 source- and verbatim-snippet-backed connectors among the salt-in KCl, acidic
     proteome, compatible-solute uptake, cation homeostasis, and osmotic-balance branches.
     No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

@@ -211,15 +211,13 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1046/j.1365-2958.1999.01284.x",
-                "snippet": (
-                    "facilitates translation by destabilizing mRNA secondary "
-                    "structures formed at low temperature"
-                ),
+                "reference": "DOI:10.4161/rna.7.6.13482",
+                "snippet": "facilitating transcription and translation at low temperature",
                 "notes": (
-                    "Verified against the open Molecular Microbiology full text; "
-                    "the connector keeps CspA-mediated translation support as a "
-                    "boundary branch, not as a definition of mesophily."
+                    "Verified against the open Phadtare and Severinov PMC "
+                    "abstract; the connector keeps CspA-family RNA chaperones "
+                    "as low-temperature translation context, not as a "
+                    "definition of mesophily."
                 ),
             }
         ],
@@ -235,12 +233,12 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1128/jb.183.18.5302-5310.2001",
-                "snippet": "enhancing transcription of the heat shock genes",
+                "reference": "DOI:10.1128/mbio.02174-23",
+                "snippet": "heat shock genes encoding chaperones, such as DnaK and GroEL",
                 "notes": (
-                    "Verified against the open Journal of Bacteriology full text; "
-                    "the connector keeps RpoH-regulated heat-shock proteins as a "
-                    "boundary branch, not as a definition of mesophily."
+                    "Verified against the open Grunberger et al. PMC text; the "
+                    "connector keeps heat-shock chaperones as an upper-boundary "
+                    "proteostasis branch, not as a definition of mesophily."
                 ),
             }
         ],

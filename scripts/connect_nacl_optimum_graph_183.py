@@ -194,12 +194,15 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1186/1746-1448-4-2",
-                "snippet": "accumulation of molar concentrations of potassium and chloride",
+                "reference": "DOI:10.3389/fmicb.2013.00315",
+                "snippet": (
+                    "Extremely halophilic microorganisms that accumulate KCl "
+                    "for osmotic balance"
+                ),
                 "notes": (
-                    "Verified against the open Oren review; the connector links "
-                    "KCl accumulation to osmotic balance without making the "
-                    "salt-in strategy universal for every NaCl optimum."
+                    "Verified against the open Oren minireview; the connector "
+                    "links KCl accumulation to osmotic balance without making "
+                    "the salt-in strategy universal for every NaCl optimum."
                 ),
             }
         ],
@@ -215,11 +218,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1186/1746-1448-4-2",
-                "snippet": "extensive adaptation of the intracellular enzymatic machinery",
+                "reference": "DOI:10.3389/fmicb.2013.00315",
+                "snippet": "have a large excess of acidic amino acids in their proteins",
                 "notes": (
-                    "Verified against the open Oren review; the connector "
-                    "keeps acidic-proteome stability scoped to salt-in "
+                    "Verified against the open Oren minireview; the connector "
+                    "keeps acidic-proteome composition scoped to salt-in "
                     "strategists."
                 ),
             }
@@ -237,7 +240,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2022.846677",
-                "snippet": "uptake of compatible solute from the medium is preferred",
+                "snippet": (
+                    "Uptake of ectoine from the medium is facilitated by the "
+                    "osmoregulated TRAP transporter TeaABC"
+                ),
                 "notes": (
                     "Verified against the open Halomonas elongata review; the "
                     "connector treats uptake as an accumulation branch with a "
@@ -258,7 +264,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/aem.00145-24",
-                "snippet": "transport systems that regulate intracellular Na+/K+/H+ concentration",
+                "snippet": "ensuring cellular ion homeostasis under varying salinities",
                 "notes": (
                     "Verified against the Xing et al. long-term salinity-stress "
                     "study; the connector places the species-specific "

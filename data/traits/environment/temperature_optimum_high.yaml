@@ -243,7 +243,7 @@ causal_graphs:
       thermophile genome-thermostability context.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
-      snippet: prevents the thermal denaturation of DNA
+      snippet: protect genomes at high temperatures
       notes: Verified against the open Takemata minireview; this connector keeps positive
         DNA supercoiling as one genome thermostability branch.
     predicate_id: biolink:associated_with
@@ -254,7 +254,7 @@ causal_graphs:
       context.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
-      snippet: increase the melting temperature of DNA
+      snippet: enhancing the thermostability of DNA in thermophiles
       notes: Verified against the open Takemata minireview; this connector keeps nucleoid-associated
         proteins as DNA thermostability context.
     predicate_id: biolink:associated_with
@@ -265,7 +265,7 @@ causal_graphs:
       refolding are associated heat-shock protein-quality-control branches.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      snippet: protecting them from aggregation
+      snippet: Small HSPs (sHSPs) and prefoldin bind to denaturing proteins
       notes: Verified against the open Baes et al. introduction; this connector joins
         complementary small-HSP protection and thermosome refolding context for heat-damaged
         proteins.
@@ -277,7 +277,8 @@ causal_graphs:
       the broad thermophile-thermostability context.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      snippet: refolds denatured proteins in an ATP-dependent manner
+      snippet: thermosome complexes with different subunit compositions and substrate
+        specificities
       notes: Verified against the open Baes et al. introduction; this connector keeps
         thermosome refolding as protein-quality context.
     predicate_id: biolink:associated_with
@@ -288,7 +289,8 @@ causal_graphs:
       thermophile-thermostability context.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      snippet: altered lipid composition of the cytoplasmic membrane
+      snippet: A sudden increase in temperature above the already high optimal growth
+        temperature could lead to detrimental cellular damage
       notes: Verified against the open Baes et al. introduction; this connector keeps
         high-temperature membrane lipid remodeling as a contextual thermophile branch.
     predicate_id: biolink:associated_with
@@ -442,4 +444,11 @@ curation_history:
     5 source- and verbatim-snippet-backed association connectors among genome thermostability,
     small-HSP/thermosome protein quality control, and membrane-thermostability branches.
     No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

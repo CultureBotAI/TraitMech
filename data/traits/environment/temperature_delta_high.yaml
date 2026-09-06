@@ -233,7 +233,8 @@ causal_graphs:
       branch of broad thermal adaptation.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      snippet: cis-double bonds, result in looser packing and increased fluidity
+      snippet: increase of unsaturated fatty acids in membrane phospholipids, which
+        promotes membrane fluidity
       notes: Verified against the Wu et al. Cells review; this connector keeps desaturase-linked
         fluidity as a physical membrane state associated with homeostasis.
     predicate_id: biolink:associated_with
@@ -244,7 +245,7 @@ causal_graphs:
       boundary of membrane-fluidity homeostasis.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      snippet: properties that resemble SFAs
+      snippet: trans -UFA generation elevates the viscosity of the membrane
       notes: Verified against the Wu et al. Cells review; this connector keeps cis-trans
         isomerization as warming-side membrane context.
     predicate_id: biolink:associated_with
@@ -255,7 +256,7 @@ causal_graphs:
       context used to represent an extreme temperature-growth breadth.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      snippet: remodel the fluidity of their membrane bilayer
+      snippet: molecular strategies to sense changes in membrane fluidity
       notes: Verified against the de Mendoza Annual Review abstract; this connector
         scopes homoviscous adaptation as membrane context for the eurythermal bin.
     predicate_id: biolink:associated_with
@@ -266,7 +267,8 @@ causal_graphs:
       side of broad thermal adaptation.
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
-      snippet: hyperthermophilic enzymes, are typically thermostable
+      snippet: are typically thermostable (i.e., resistant to irreversible inactivation
+        at high temperatures) and are optimally active at high temperatures
       notes: Verified against the open Vieille and Zeikus review; this connector keeps
         thermostable enzymes as high-temperature context rather than direct proof
         of an above-30-degrees-C growth breadth.
@@ -379,4 +381,11 @@ curation_history:
     cold UFA synthesis, homoviscous adaptation, membrane-fluidity, high-temperature
     membrane-viscosity, and thermostable-enzyme branches. No paid research service
     was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

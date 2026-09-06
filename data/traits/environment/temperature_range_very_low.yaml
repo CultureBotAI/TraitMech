@@ -219,7 +219,7 @@ causal_graphs:
       machinery supporting psychrophile growth ranges.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
-      snippet: production of double bonds in lipids
+      snippet: maintain the liquid crystalline phase
       notes: Verified against the open Ramón et al. PubMed abstract; this connector
         keeps membrane desaturation as cold membrane-adaptation context.
     predicate_id: biolink:associated_with
@@ -230,7 +230,8 @@ causal_graphs:
       machinery.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
-      snippet: activation of a two-component system
+      snippet: When the temperature drops, DesK/DesR is the two-component system involved
+        in membrane adaptation
       notes: Verified against the open Ramón et al. PubMed abstract; this connector
         keeps low-temperature membrane sensing as cold-acclimation context.
     predicate_id: biolink:associated_with
@@ -241,7 +242,7 @@ causal_graphs:
       with psychrophile cold-adapted machinery.
     evidence:
     - reference: DOI:10.4161/rna.7.6.13482
-      snippet: through their RNA chaperoning function
+      snippet: CspA, the main cold shock protein, and its homologs act as RNA chaperones
       notes: Verified against the open Phadtare and Severinov PubMed abstract; this
         connector keeps CspA-family RNA chaperones as low-temperature transcript context.
     predicate_id: biolink:associated_with
@@ -252,7 +253,8 @@ causal_graphs:
       context.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: heat shock proteins associated to folding
+      snippet: ice binding, cold shock and heat shock proteins to sustain their physiological
+        state
       notes: Verified against the open Ramasamy et al. PMC text; this connector keeps
         chaperone/protease systems as protein-folding context.
     predicate_id: biolink:associated_with
@@ -263,7 +265,7 @@ causal_graphs:
       machinery.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: stabilizing membranes and proteins at chilling temperatures
+      snippet: compatible solutes such as trehalose and glycine-betaine
       notes: Verified against the open Ramasamy et al. PMC text; this connector keeps
         compatible osmolytes as stabilization context.
     predicate_id: biolink:associated_with
@@ -274,7 +276,8 @@ causal_graphs:
       with psychrophile cold-adapted machinery.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: inhibits the growth of ice crystals
+      snippet: AFPs lower the water freezing point, avoiding frostbite due to their
+        thermal hysteresis
       notes: Verified against the open Ramasamy et al. PMC text; this connector keeps
         ice-binding proteins as freezing-protection context.
     predicate_id: biolink:associated_with
@@ -355,4 +358,11 @@ curation_history:
     6 source- and verbatim-snippet-backed association connectors among membrane desaturation,
     two-component cold signaling, CspA-family RNA chaperone, cold proteostasis, compatible-solute,
     and ice-binding protein branches. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

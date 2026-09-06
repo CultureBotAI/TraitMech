@@ -181,7 +181,8 @@ causal_graphs:
       that bounds a very narrow external-pH growth interval.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: relative magnitudes of the two PMF components
+      snippet: demands of pH homeostasis for particular bacteria determine the relative
+        magnitudes
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         the connector keeps PMF partitioning as pH-homeostasis context rather than
         direct proof of the at-most-1-unit breadth.
@@ -193,7 +194,7 @@ causal_graphs:
       is associated with boundary constraints on very narrow pH breadth.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: energetic cost of expressing proteins
+      snippet: preparedness often negatively impacts growth at near neutral pH
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         the connector represents a cost-of-preparedness branch, not a universal cause
         of stenotopic pH breadth.
@@ -205,7 +206,7 @@ causal_graphs:
       branch of limited pH-homeostasis flexibility.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: proton entry driven by the transmembrane potential
+      snippet: active transport of protons inward is a crucial adaptation
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         alkaline proton import support is retained as one boundary branch.
     predicate_id: biolink:associated_with
@@ -216,7 +217,7 @@ causal_graphs:
       boundary of limited pH homeostasis.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: ATP-dependent H+ extrusion under acidic conditions
+      snippet: promotes ATP-dependent H+ extrusion under acidic conditions
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         ATP-dependent proton pumping is kept as acid-side support rather than a direct
         breadth mechanism.
@@ -228,7 +229,7 @@ causal_graphs:
       pH-homeostasis support.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: consumes a proton during decarboxylation
+      snippet: The consumption of the proton supports acid pH homeostasis
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         Gad-mediated proton consumption is scoped as an acid-side support branch.
     predicate_id: biolink:associated_with
@@ -306,4 +307,11 @@ curation_history:
     5 source- and verbatim-snippet-backed association connectors among PMF partitioning,
     constitutive cost, alkaline antiport, F1Fo acid-survival support, and Gad proton-consumption
     branches. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

@@ -168,7 +168,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "relative magnitudes of the two PMF components",
+                "snippet": (
+                    "demands of pH homeostasis for particular bacteria determine "
+                    "the relative magnitudes"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; the connector keeps PMF partitioning as "
@@ -191,7 +194,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "energetic cost of expressing proteins",
+                "snippet": "preparedness often negatively impacts growth at near neutral pH",
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; the connector represents a "
@@ -213,7 +216,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "proton entry driven by the transmembrane potential",
+                "snippet": "active transport of protons inward is a crucial adaptation",
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; alkaline proton import support is retained "
@@ -234,7 +237,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "ATP-dependent H+ extrusion under acidic conditions",
+                "snippet": "promotes ATP-dependent H+ extrusion under acidic conditions",
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; ATP-dependent proton pumping is kept as "
@@ -255,7 +258,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "consumes a proton during decarboxylation",
+                "snippet": "The consumption of the proton supports acid pH homeostasis",
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; Gad-mediated proton consumption is scoped "

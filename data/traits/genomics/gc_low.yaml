@@ -163,7 +163,8 @@ causal_graphs:
       connecting cytosine-deamination bias to bacterial DNA-repair mutational signatures.
     evidence:
     - reference: DOI:10.1038/s41467-023-42916-w
-      snippet: SBS spectra were rescaled by genomic nucleotide composition
+      snippet: context-dependent patterns of base substitutions termed mutational
+        signatures, which combine to form a mutational spectrum
       notes: Verified against the open Ruis et al. results; this connector identifies
         the AT-enriching C>A/T pattern as a specific bacterial mutational-spectrum
         context rather than a direct cause of the METPO GC_42.65_57.0 bin.
@@ -248,4 +249,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #666: replaced the borrowed
     GC-content snippet on the AT-enriching-spectrum is-a connector with a direct SBS-spectrum
     snippet from the same source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced the copied GC-low connector
+    snippet with exact Ruis et al. wording defining a mutational spectrum as combined
+    context-dependent substitution signatures.'
   llm_assisted: true

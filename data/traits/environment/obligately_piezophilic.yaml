@@ -135,10 +135,11 @@ causal_graphs:
       machinery underlying obligate piezophily.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      snippet: HHP impacts protein folding, metabolic rate, and membrane stability,
-        leading to cell disruption
-      notes: Verified against the open Tamby et al. introduction; the edge is retained
-        as a high-level bridge from homeoviscous adaptation to HHP-dependent machinery.
+      snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+        key strategies to maintain the integrity of their lipid membrane
+      notes: Verified against the open Tamby et al. abstract; the edge is retained
+        as a high-level bridge from high-pressure membrane adaptation to HHP-dependent
+        machinery.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
@@ -189,4 +190,11 @@ curation_history:
   changes: 'Reviewed the obligate_piezophily_high_pressure_requirement graph for issue
     #183: added exact snippets to 6 causal-edge evidence items and grounded 2 residual
     predicates. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced the HHP-damage snippet
+    with exact Tamby et al. wording that supports high-pressure lipid-membrane integrity
+    as piezophile adaptation.'
   llm_assisted: true

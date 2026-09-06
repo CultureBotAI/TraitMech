@@ -258,8 +258,8 @@ causal_graphs:
     description: Cold-shock protein support for translation is associated with psychrophile
       cold-adapted machinery.
     evidence:
-    - reference: DOI:10.17159/sajs.2018/20170254
-      snippet: regulation of cellular protein synthesis
+    - reference: DOI:10.4161/rna.7.6.13482
+      snippet: facilitating transcription and translation at low temperature
       notes: Verified against the open Hamdan review; this connector keeps cold-shock
         RNA chaperones as protein-synthesis context for psychrophile physiology.
     predicate_id: biolink:associated_with
@@ -270,7 +270,7 @@ causal_graphs:
       with psychrophile cold-adapted machinery.
     evidence:
     - reference: DOI:10.17159/sajs.2018/20170254
-      snippet: growth-enhancing effect of glycine betaine
+      snippet: compatible solutes such as trehalose and glycine-betaine
       notes: Verified against the open Hamdan review; this connector keeps glycine-betaine
         compatible-solute effects as broad cold-stress context.
     predicate_id: biolink:associated_with
@@ -281,7 +281,8 @@ causal_graphs:
       stabilization during cold stress.
     evidence:
     - reference: DOI:10.17159/sajs.2018/20170254
-      snippet: preventing protein denaturation and aggregation
+      snippet: counteracting protein aggregation, improving protein folding and stabilizing
+        membranes and proteins at chilling temperatures
       notes: Verified against the open Hamdan review; this connector keeps trehalose
         as a compatible-solute cryoprotection branch.
     predicate_id: biolink:associated_with
@@ -292,7 +293,8 @@ causal_graphs:
       near freezing.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
-      snippet: lower the water freezing point
+      snippet: AFPs lower the water freezing point, avoiding frostbite due to their
+        thermal hysteresis
       notes: Verified against the open Ramón et al. abstract and review text; this
         connector keeps antifreeze proteins as ice-binding cryoprotection context.
     predicate_id: biolink:associated_with
@@ -303,7 +305,7 @@ causal_graphs:
       cold-adapted machinery.
     evidence:
     - reference: DOI:10.17159/sajs.2018/20170254
-      snippet: up to 10-fold higher specific activity
+      snippet: adapted to function at low temperatures, with high catalytic constants
       notes: Verified against the open Hamdan review; this connector keeps low-temperature
         enzyme flexibility as contextual psychrophile machinery.
     predicate_id: biolink:associated_with
@@ -410,4 +412,11 @@ curation_history:
     5 source- and verbatim-snippet-backed association connectors among cold-shock
     RNA support, compatible-solute cryoprotection, antifreeze protein ice-binding,
     and low-temperature flexible-enzyme branches. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

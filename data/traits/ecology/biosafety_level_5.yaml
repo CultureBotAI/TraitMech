@@ -97,7 +97,7 @@ causal_graphs:
       forward sample-protection requirements to backward biosphere containment.
     evidence:
     - reference: https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf
-      snippet: more stringent
+      snippet: order of magnitude more stringent than the Center for Disease Control
       notes: Verified against the open SAE 2002 PDF; PPL-alpha is contrasted with
         the CDC BSL-4 standard and framed as a stricter two-way protection regime.
   - subject: planetary_protection_level_alpha
@@ -152,7 +152,7 @@ causal_graphs:
       for safe handling of returned Mars samples.
     evidence:
     - reference: https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf
-      snippet: closed system
+      snippet: sample storage and retrieval within a closed system
       notes: Verified against the open SAE 2002 PDF; closed-system sample storage
         and retrieval is one MRSH architecture criterion listed in the abstract.
     predicate_id: RO:0002326
@@ -219,4 +219,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #668: restored the DOI definition
     source and DOI-backed top-level evidence while preserving the SAE PPL-alpha source
     as additional top-level evidence and the graph source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: expanded two terse SAE 2002 PPL-alpha
+    snippets so the BSL-5 edge evidence identifies the exact BSL-4 comparison and
+    closed-system sample-handling context.'
   llm_assisted: true

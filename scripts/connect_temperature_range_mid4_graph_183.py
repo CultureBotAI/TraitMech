@@ -261,7 +261,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "compete for a common pool of substrates",
+                "snippet": (
+                    "homeostatically maintain the fluidity of their membranes by "
+                    "adapting lipid composition"
+                ),
                 "notes": (
                     "Verified against the open Hoogerland et al. Figure 1 legend; "
                     "this connector keeps the FabA/FabI/FabB C10:1 branch as "
@@ -282,7 +285,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "restores optimal membrane fluidity within a single generation",
+                "snippet": (
+                    "accelerates membrane adaptation by causing a transient "
+                    "overshoot"
+                ),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps the Fab branchpoint valve as membrane-fluidity "
@@ -303,7 +309,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "allocates flux between the saturated and unsaturated",
+                "snippet": (
+                    "temperature-sensitive metabolic valve that allocates flux "
+                    "between the saturated and unsaturated"
+                ),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps fatty-acid flux allocation as membrane "
@@ -323,12 +332,12 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1186/s12864-023-09266-9",
-                "snippet": "cause increased membrane fluidity",
+                "reference": "DOI:10.1038/s41467-024-53677-5",
+                "snippet": "maintain constant fluidity across temperatures",
                 "notes": (
-                    "Verified against the open McGuire and Nano introduction; "
-                    "this connector keeps high-temperature membrane fluidity as "
-                    "context for compensatory membrane adaptation."
+                    "Verified against the open Hoogerland et al. abstract; this "
+                    "connector keeps membrane-fluidity maintenance as context "
+                    "for compensatory membrane adaptation."
                 ),
             }
         ],
@@ -344,12 +353,16 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1128/mbio.03105-23",
-                "snippet": "protective heat shock proteins",
+                "reference": "DOI:10.1186/s12864-023-09266-9",
+                "snippet": (
+                    "reduce protein unfolding or misfolding and subsequent "
+                    "protein aggregation in the cell at high incubation "
+                    "temperatures"
+                ),
                 "notes": (
-                    "Verified against the open Berdejo et al. introduction; this "
-                    "connector keeps DnaK/DnaJ/GrpE and GroES/GroEL as protective "
-                    "heat-shock context."
+                    "Verified against the open McGuire and Nano introduction; "
+                    "this connector keeps DnaK/DnaJ/GrpE and GroES/GroEL as "
+                    "protective heat-shock context."
                 ),
             }
         ],

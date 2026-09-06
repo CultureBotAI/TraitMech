@@ -216,7 +216,7 @@ causal_graphs:
       branch of pH numerical-limit context.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: PMF for nutrient uptake and ATP synthesis
+      snippet: drive the synthesis of ATP and the transport of solutes
       notes: Verified against the open Poolman review; this connector keeps PMF-driven
         ATP synthesis as bioenergetic context rather than direct proof of a pH numerical
         limit.
@@ -228,7 +228,7 @@ causal_graphs:
       PMF branch of pH numerical-limit context.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Na+/H+ and K+/H+ antiporters
+      snippet: simultaneously maintain a relatively constant PMF and internal pH
       notes: Verified against the open Poolman review; this connector keeps Na+/H+
         and K+/H+ antiport activity as pH-homeostasis context rather than a universal
         mechanism for every pH bin.
@@ -240,7 +240,7 @@ causal_graphs:
       homeostasis in the pH numerical-limit context.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton motive force generation by substrate decarboxylation
+      snippet: metabolite decarboxylation pathways
       notes: Verified against the open Poolman review; this connector keeps amino-acid
         decarboxylation as cytoplasmic proton control context.
     predicate_id: biolink:associated_with
@@ -251,7 +251,7 @@ causal_graphs:
       phenotypes.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: buffering capacity of the cytoplasm
+      snippet: free protons at pH 7.2 is only about 10
       notes: Verified against the open Poolman review; this connector keeps phosphate
         buffering as internal-pH context rather than direct proof of a measured external-pH
         limit.
@@ -357,4 +357,11 @@ curation_history:
     4 source- and verbatim-snippet-backed association connectors among PMF, F0F1-ATPase/ATP-synthesis,
     antiporter, amino-acid-decarboxylase, and phosphate-buffering branches. No paid
     research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

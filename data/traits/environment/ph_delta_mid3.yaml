@@ -217,7 +217,7 @@ causal_graphs:
       wide pH-homeostasis flexibility.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton motive force generation by substrate decarboxylation
+      snippet: utilization of the PMF for nutrient uptake
       notes: Verified against the open Poolman review; the connector joins the decarboxylation
         and PMF branch as pH-homeostasis support without asserting direct causation
         of a 4-5 pH-unit growth breadth.
@@ -229,7 +229,7 @@ causal_graphs:
       flexibility across external pH changes.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: relative magnitudes of the two PMF components
+      snippet: Bacterial pH homeostasis is important for physiology, ecology and pathogenesis
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         PMF regulation is retained as one energetic arm of the wide pH-breadth context.
     predicate_id: biolink:associated_with
@@ -240,7 +240,7 @@ causal_graphs:
       for wide pH homeostasis.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: energize active proton uptake
+      snippet: active transport of protons inward is a crucial adaptation
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         the connector keeps antiport as alkaline-side support rather than a universal
         breadth cause.
@@ -252,7 +252,8 @@ causal_graphs:
       pH during pH-homeostasis challenges.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: buffering capacity of the cytoplasm
+      snippet: large impact on the internal pH if there would not be sufficient buffering
+        capacity
       notes: Verified against the open Poolman review; phosphate buffering remains
         one passive branch of pH-homeostasis support.
     predicate_id: biolink:associated_with
@@ -263,7 +264,7 @@ causal_graphs:
       support for wide pH homeostasis.
     evidence:
     - reference: DOI:10.3389/fmicb.2022.1034164
-      snippet: higher content of saturated fatty acids
+      snippet: saturated membrane to minimize proton permeability
       notes: Verified against the open Frontiers methanotroph review; lipid remodeling
         is retained as an acid-side proton-permeability branch.
     predicate_id: biolink:associated_with
@@ -416,4 +417,11 @@ curation_history:
     PMF regulation, alkaline Na+/H+ antiport, ATPase, phosphate-buffering, amino-acid
     decarboxylation, and membrane proton-permeability branches. No paid research service
     was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

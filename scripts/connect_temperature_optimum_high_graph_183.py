@@ -213,7 +213,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1264/jsme2.me23087",
-                "snippet": "prevents the thermal denaturation of DNA",
+                "snippet": "protect genomes at high temperatures",
                 "notes": (
                     "Verified against the open Takemata minireview; this "
                     "connector keeps positive DNA supercoiling as one genome "
@@ -234,7 +234,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1264/jsme2.me23087",
-                "snippet": "increase the melting temperature of DNA",
+                "snippet": "enhancing the thermostability of DNA in thermophiles",
                 "notes": (
                     "Verified against the open Takemata minireview; this "
                     "connector keeps nucleoid-associated proteins as DNA "
@@ -256,7 +256,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/mbio.03593-22",
-                "snippet": "protecting them from aggregation",
+                "snippet": "Small HSPs (sHSPs) and prefoldin bind to denaturing proteins",
                 "notes": (
                     "Verified against the open Baes et al. introduction; this "
                     "connector joins complementary small-HSP protection and "
@@ -277,7 +277,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/mbio.03593-22",
-                "snippet": "refolds denatured proteins in an ATP-dependent manner",
+                "snippet": (
+                    "thermosome complexes with different subunit compositions "
+                    "and substrate specificities"
+                ),
                 "notes": (
                     "Verified against the open Baes et al. introduction; this "
                     "connector keeps thermosome refolding as protein-quality "
@@ -298,7 +301,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/mbio.03593-22",
-                "snippet": "altered lipid composition of the cytoplasmic membrane",
+                "snippet": (
+                    "A sudden increase in temperature above the already high "
+                    "optimal growth temperature could lead to detrimental "
+                    "cellular damage"
+                ),
                 "notes": (
                     "Verified against the open Baes et al. introduction; this "
                     "connector keeps high-temperature membrane lipid remodeling "

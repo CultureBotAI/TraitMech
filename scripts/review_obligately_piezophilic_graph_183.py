@@ -262,8 +262,9 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "predicate": "contributes to",
             "object": "pressure_dependent_machinery",
             "description": (
-                "Maintained membrane fluidity supports the pressure-dependent "
-                "cellular machinery underlying obligate piezophily."
+                "Membrane adaptation under high hydrostatic pressure supports "
+                "the pressure-dependent cellular machinery underlying "
+                "obligate piezophily."
             ),
             "evidence": [
                 {
@@ -289,13 +290,15 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                 {
                     "reference": "DOI:10.3389/fmolb.2022.1058381",
                     "snippet": (
-                        "HHP impacts protein folding, metabolic rate, and "
-                        "membrane stability, leading to cell disruption"
+                        "Piezophiles, microorganisms adapted to high pressure, "
+                        "have developed key strategies to maintain the integrity "
+                        "of their lipid membrane"
                     ),
                     "notes": (
-                        "Verified against the open Tamby et al. introduction; "
-                        "the edge is retained as a high-level bridge from "
-                        "homeoviscous adaptation to HHP-dependent machinery."
+                        "Verified against the open Tamby et al. abstract; the "
+                        "edge is retained as a high-level bridge from "
+                        "high-pressure membrane adaptation to HHP-dependent "
+                        "machinery."
                     ),
                 }
             ],

@@ -197,7 +197,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1007/s42770-023-01057-4",
-                "snippet": "production of double bonds in lipids",
+                "snippet": "maintain the liquid crystalline phase",
                 "notes": (
                     "Verified against the open Ram\u00f3n et al. PubMed abstract; "
                     "this connector keeps membrane desaturation as cold "
@@ -218,7 +218,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1007/s42770-023-01057-4",
-                "snippet": "activation of a two-component system",
+                "snippet": (
+                    "When the temperature drops, DesK/DesR is the two-component "
+                    "system involved in membrane adaptation"
+                ),
                 "notes": (
                     "Verified against the open Ram\u00f3n et al. PubMed abstract; "
                     "this connector keeps low-temperature membrane sensing as "
@@ -239,7 +242,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.4161/rna.7.6.13482",
-                "snippet": "through their RNA chaperoning function",
+                "snippet": (
+                    "CspA, the main cold shock protein, and its homologs act as "
+                    "RNA chaperones"
+                ),
                 "notes": (
                     "Verified against the open Phadtare and Severinov PubMed "
                     "abstract; this connector keeps CspA-family RNA chaperones "
@@ -260,7 +266,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": "heat shock proteins associated to folding",
+                "snippet": (
+                    "ice binding, cold shock and heat shock proteins to sustain "
+                    "their physiological state"
+                ),
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; this "
                     "connector keeps chaperone/protease systems as protein-folding "
@@ -281,7 +290,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": "stabilizing membranes and proteins at chilling temperatures",
+                "snippet": "compatible solutes such as trehalose and glycine-betaine",
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; this "
                     "connector keeps compatible osmolytes as stabilization "
@@ -302,7 +311,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": "inhibits the growth of ice crystals",
+                "snippet": (
+                    "AFPs lower the water freezing point, avoiding frostbite "
+                    "due to their thermal hysteresis"
+                ),
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; this "
                     "connector keeps ice-binding proteins as freezing-protection "

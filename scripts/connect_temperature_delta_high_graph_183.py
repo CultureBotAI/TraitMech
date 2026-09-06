@@ -239,7 +239,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3390/cells12101353",
-                "snippet": "cis-double bonds, result in looser packing and increased fluidity",
+                "snippet": (
+                    "increase of unsaturated fatty acids in membrane "
+                    "phospholipids, which promotes membrane fluidity"
+                ),
                 "notes": (
                     "Verified against the Wu et al. Cells review; this connector "
                     "keeps desaturase-linked fluidity as a physical membrane "
@@ -260,7 +263,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3390/cells12101353",
-                "snippet": "properties that resemble SFAs",
+                "snippet": "trans -UFA generation elevates the viscosity of the membrane",
                 "notes": (
                     "Verified against the Wu et al. Cells review; this connector "
                     "keeps cis-trans isomerization as warming-side membrane "
@@ -282,7 +285,9 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1146/annurev-micro-091313-103612",
-                "snippet": "remodel the fluidity of their membrane bilayer",
+                "snippet": (
+                    "molecular strategies to sense changes in membrane fluidity"
+                ),
                 "notes": (
                     "Verified against the de Mendoza Annual Review abstract; "
                     "this connector scopes homoviscous adaptation as membrane "
@@ -303,7 +308,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/MMBR.65.1.1-43.2001",
-                "snippet": "hyperthermophilic enzymes, are typically thermostable",
+                "snippet": (
+                    "are typically thermostable (i.e., resistant to irreversible "
+                    "inactivation at high temperatures) and are optimally active "
+                    "at high temperatures"
+                ),
                 "notes": (
                     "Verified against the open Vieille and Zeikus review; this "
                     "connector keeps thermostable enzymes as high-temperature "

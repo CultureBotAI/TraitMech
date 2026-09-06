@@ -203,7 +203,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "Proton motive force generation by substrate decarboxylation",
+                "snippet": "utilization of the PMF for nutrient uptake",
                 "notes": (
                     "Verified against the open Poolman review; the connector "
                     "joins the decarboxylation and PMF branch as pH-homeostasis "
@@ -225,7 +225,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "relative magnitudes of the two PMF components",
+                "snippet": (
+                    "Bacterial pH homeostasis is important for physiology, "
+                    "ecology and pathogenesis"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; PMF regulation is retained as one energetic "
@@ -246,7 +249,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "energize active proton uptake",
+                "snippet": "active transport of protons inward is a crucial adaptation",
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; the connector keeps antiport as "
@@ -268,7 +271,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "buffering capacity of the cytoplasm",
+                "snippet": (
+                    "large impact on the internal pH if there would not be "
+                    "sufficient buffering capacity"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; phosphate "
                     "buffering remains one passive branch of pH-homeostasis "
@@ -289,7 +295,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2022.1034164",
-                "snippet": "higher content of saturated fatty acids",
+                "snippet": "saturated membrane to minimize proton permeability",
                 "notes": (
                     "Verified against the open Frontiers methanotroph review; "
                     "lipid remodeling is retained as an acid-side "

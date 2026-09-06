@@ -216,7 +216,7 @@ causal_graphs:
       membrane state sensed by DesK.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      snippet: rigidification and concomitant thickening
+      snippet: membrane rigidifies and increases in thickness
       notes: Verified against the open Sidarta et al. introduction; this connector
         joins the cooling membrane signal to the DesK kinase-state branch.
     predicate_id: biolink:associated_with
@@ -227,7 +227,7 @@ causal_graphs:
       step.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      snippet: phosphorylating or dephosphorylating DesR
+      snippet: DesK is a molecular sensor that directly detects membrane thickness
       notes: Verified against the open Sidarta et al. introduction; this connector
         keeps DesK kinase activity as two-component signaling context.
     predicate_id: biolink:associated_with
@@ -238,7 +238,7 @@ causal_graphs:
       in the DesK/DesR branch.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      snippet: activating expression of the des gene
+      snippet: DesR is a DNA-binding response regulator (transcriptional activator)
       notes: Verified against the open Sidarta et al. introduction; this connector
         joins DesR to its phosphorylated transcription-activation context.
     predicate_id: biolink:associated_with
@@ -249,7 +249,8 @@ causal_graphs:
       membrane adaptation.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      snippet: desaturates the fatty acyl chains
+      snippet: resulting in membrane fluidization and concomitant decrease of bilayer
+        thickness
       notes: Verified against the open Sidarta et al. introduction; this connector
         keeps des expression as membrane-fatty-acyl remodeling context.
     predicate_id: biolink:associated_with
@@ -259,10 +260,11 @@ causal_graphs:
     description: Maintenance of a liquid-crystalline membrane state is associated
       with upper-mesophile range adaptation.
     evidence:
-    - reference: DOI:10.1007/s42770-023-01057-4
-      snippet: maintain the liquid crystalline phase
-      notes: Verified against the open Ramón et al. review; this connector keeps homeoviscous
-        membrane-state maintenance as range-bin context.
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: homeostatically maintain the fluidity of their membranes by adapting
+        lipid composition
+      notes: Verified against the open Hoogerland et al. abstract; this connector
+        keeps lipid-composition adaptation as range-bin context.
     predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.824789+00:00'
@@ -362,4 +364,11 @@ curation_history:
     5 source- and verbatim-snippet-backed association connectors among DesK/DesR membrane-order
     sensing, des expression, cooling-induced membrane rigidification, and homeoviscous
     liquid-crystalline membrane branches. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

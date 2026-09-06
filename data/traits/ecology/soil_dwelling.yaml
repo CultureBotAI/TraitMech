@@ -210,8 +210,7 @@ causal_graphs:
       resident microbes partition across multiple activity and life-history strategies.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
-      snippet: categorize soil microorganisms on the basis of their ecological
-        strategies
+      snippet: categorize soil microorganisms on the basis of their ecological strategies
       notes: Verified against the Fierer review; the connector groups soil-associated
         community branches without asserting a single universal soil-dwelling mechanism.
     predicate_id: biolink:associated_with
@@ -257,8 +256,8 @@ causal_graphs:
       in disturbed soil communities.
     evidence:
     - reference: DOI:10.1038/s41586-024-08185-3
-      snippet: soil microbiomes from different climates share unified responses
-        to extreme climatic events
+      snippet: soil microbiomes from different climates share unified responses to
+        extreme climatic events
       notes: Verified against the open Nature abstract; heat-enhanced dormancy/sporulation
         abundance is retained as a soil disturbance context.
     predicate_id: biolink:associated_with

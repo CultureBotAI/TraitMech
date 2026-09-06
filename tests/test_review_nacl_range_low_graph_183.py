@@ -53,6 +53,10 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str) -> bool:
+    return any(event.get("action") == action for event in doc["curation_history"])
+
+
 def test_review_adds_snippets_and_repairs_nacl_range_low_graph():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
@@ -60,7 +64,7 @@ def test_review_adds_snippets_and_repairs_nacl_range_low_graph():
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
     assert graph["scope_status"] == "NONMECHANISTIC"
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION)
 
     for replacement in NODE_REPLACEMENTS:
         expected = replacement["after"]

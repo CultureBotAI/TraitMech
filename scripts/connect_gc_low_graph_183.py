@@ -143,8 +143,9 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/s41467-023-42916-w",
                 "snippet": (
-                    "SBS spectra were rescaled by genomic nucleotide "
-                    "composition"
+                    "context-dependent patterns of base substitutions termed "
+                    "mutational signatures, which combine to form a "
+                    "mutational spectrum"
                 ),
                 "notes": (
                     "Verified against the open Ruis et al. results; this "

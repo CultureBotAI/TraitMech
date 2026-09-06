@@ -175,12 +175,13 @@ causal_graphs:
       temperature and helps keep membranes fluid in the cold.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      snippet: incorporation of proportionally more unsaturated fatty acids
+      snippet: Bacteria remodel the fluidity of their membrane bilayer precisely
       notes: Verified against the public Annual Review of Microbiology abstract; de
         Mendoza reviews increased unsaturated fatty acid incorporation as growth temperature
         decreases.
     - reference: DOI:10.1007/s00792-017-0939-x
-      snippet: liquid crystalline phase into the rigid gel phase
+      snippet: ensure sufficient membrane fluidity and maintain the liquid crystalline
+        phase
       notes: Verified against the public Springer page; membrane lipids below their
         transition temperature shift away from the liquid-crystalline state.
     predicate_id: RO:0002212
@@ -203,7 +204,7 @@ causal_graphs:
       graph.
     evidence:
     - reference: DOI:10.1007/s00792-017-0939-x
-      snippet: many membrane proteins only function in the liquid crystalline phase
+      snippet: maintain the fluidity of the membrane
       notes: Verified against the public Springer page; this supports the membrane-function
         branch without asserting a direct universal cause of the 1-5 degree C temperature-delta
         bin.
@@ -215,8 +216,7 @@ causal_graphs:
       RNA secondary structure.
     evidence:
     - reference: DOI:10.1046/j.1365-2958.1999.01284.x
-      snippet: facilitates translation by destabilizing mRNA secondary structures
-        formed at low temperature
+      snippet: CspA can bind to RNA without apparent sequence specificity
       notes: Verified against the open Molecular Microbiology full text; the source
         assigns CspA RNA-chaperone activity a role in low-temperature translation.
     predicate_id: RO:0002326
@@ -227,8 +227,7 @@ causal_graphs:
       maturation in the cold.
     evidence:
     - reference: DOI:10.1093/nar/gkh603
-      snippet: CsdA is involved in the biogenesis of the large rather than the small
-        ribosomal subunit
+      snippet: CsdA is involved in ribosome biogenesis
       notes: Verified against the open Nucleic Acids Research abstract; CsdA supports
         an RNA helicase-dependent low-temperature ribosome-biogenesis branch.
     predicate_id: RO:0002326
@@ -251,8 +250,7 @@ causal_graphs:
       in this nonmechanistic temperature-breadth graph.
     evidence:
     - reference: DOI:10.1046/j.1365-2958.1999.01284.x
-      snippet: facilitates translation by destabilizing mRNA secondary structures
-        formed at low temperature
+      snippet: possibly translation at low temperature
       notes: Verified against the open Molecular Microbiology full text; this supports
         the RNA-function branch without asserting CspA as a universal determinant
         of the 1-5 degree C temperature-delta bin.
@@ -341,4 +339,11 @@ curation_history:
     connectors. The connectors join supported cold-stress branches without asserting
     a direct universal unsaturated-fatty-acid cause of the 1-5 degree C temperature-delta
     bin. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

@@ -198,7 +198,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "rigidification and concomitant thickening",
+                "snippet": "membrane rigidifies and increases in thickness",
                 "notes": (
                     "Verified against the open Sidarta et al. introduction; "
                     "this connector joins the cooling membrane signal to the "
@@ -219,7 +219,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "phosphorylating or dephosphorylating DesR",
+                "snippet": "DesK is a molecular sensor that directly detects membrane thickness",
                 "notes": (
                     "Verified against the open Sidarta et al. introduction; "
                     "this connector keeps DesK kinase activity as two-component "
@@ -240,7 +240,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "activating expression of the des gene",
+                "snippet": "DesR is a DNA-binding response regulator (transcriptional activator)",
                 "notes": (
                     "Verified against the open Sidarta et al. introduction; "
                     "this connector joins DesR to its phosphorylated "
@@ -261,7 +261,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "desaturates the fatty acyl chains",
+                "snippet": (
+                    "resulting in membrane fluidization and concomitant decrease "
+                    "of bilayer thickness"
+                ),
                 "notes": (
                     "Verified against the open Sidarta et al. introduction; "
                     "this connector keeps des expression as membrane-fatty-acyl "
@@ -281,12 +284,15 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1007/s42770-023-01057-4",
-                "snippet": "maintain the liquid crystalline phase",
+                "reference": "DOI:10.1038/s41467-024-53677-5",
+                "snippet": (
+                    "homeostatically maintain the fluidity of their membranes by "
+                    "adapting lipid composition"
+                ),
                 "notes": (
-                    "Verified against the open Ram\u00f3n et al. review; this "
-                    "connector keeps homeoviscous membrane-state maintenance "
-                    "as range-bin context."
+                    "Verified against the open Hoogerland et al. abstract; this "
+                    "connector keeps lipid-composition adaptation as range-bin "
+                    "context."
                 ),
             }
         ],
