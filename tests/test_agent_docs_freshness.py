@@ -23,6 +23,7 @@ def test_root_claude_guidance_routes_to_canonical_workflows():
     assert "just qc" in guidance
     assert "just new-history" in guidance
     assert "explicit user approval" in guidance
+    assert ".claude/skills/add-trait/SKILL.md" in guidance
     assert ".claude/skills/audit-schema-gaps/SKILL.md" in guidance
     assert ".claude/skills/trait-priority/SKILL.md" in guidance
     assert "traitmech_dataclasses.py" in guidance
