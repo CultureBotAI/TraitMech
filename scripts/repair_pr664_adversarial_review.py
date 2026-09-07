@@ -37,6 +37,7 @@ FOLLOWUP_TIMESTAMP = "2026-09-07T02:20:00Z"
 FINAL_FOLLOWUP_TIMESTAMP = "2026-09-07T03:40:00Z"
 SNIPPET_FOLLOWUP_TIMESTAMP = "2026-09-07T04:24:00Z"
 PRIMARY_SNIPPET_TIMESTAMP = "2026-09-07T06:14:00Z"
+STRUCTURE_FOLLOWUP_TIMESTAMP = "2026-09-07T07:24:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -71,6 +72,7 @@ EDGE_REVIEW_MODULES = [
     "review_ring_shaped_graph_183",
     "review_saprotrophy_graph_183",
     "review_soil_dwelling_graph_183",
+    "review_temperature_range_mid3_graph_183",
     "review_temperature_range_mid4_graph_183",
     "review_temperature_range_very_low_graph_183",
 ]
@@ -111,6 +113,46 @@ PRIMARY_SNIPPET_SLUGS = {
     "environment/ph_delta_very_low",
     "environment/ph_phenotype_with_numerical_limits",
     "environment/temperature_range_mid4",
+}
+
+STRUCTURE_FOLLOWUP_SLUGS = {
+    "ecology/biosafety_level_5",
+    "environment/ph_range_mid2",
+    "environment/temperature_delta_high",
+    "environment/temperature_range_mid3",
+}
+
+CANONICAL_EVENT_CHANGES: dict[str, list[dict[str, str]]] = {
+    "ecology/biosafety_level_5": [
+        {
+            "action": "REVIEW_CAUSAL_EVIDENCE",
+            "timestamp": "2026-09-04T10:00:00Z",
+            "changes": (
+                "Reviewed the biosafety_level_5_proposed_enhanced_hazard graph "
+                "for issue #183: kept the generic proposed enhanced-hazard "
+                "BSL-5 graph grounded in the pathogen-hazard definition DOI, "
+                "added DOI-backed historical PPL-alpha name-use evidence from "
+                "the Cohen 2002 SAE paper, added exact snippets to record and "
+                "edge evidence, and kept BSL-5 scoped as an explicitly "
+                "hypothetical nonmechanistic containment proposal. No paid "
+                "research service was called."
+            ),
+        },
+    ],
+    "environment/temperature_range_mid3": [
+        {
+            "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
+            "timestamp": "2026-09-04T22:00:00Z",
+            "changes": (
+                "Resolved issue #183 graph fragmentation (5 components to 1) by "
+                "adding 4 source- and verbatim-snippet-backed association "
+                "connectors among DesK/DesR membrane-order sensing, des "
+                "expression, cooling-induced membrane rigidification, and "
+                "homeoviscous liquid-crystalline membrane branches. No paid "
+                "research service was called."
+            ),
+        },
+    ],
 }
 
 
@@ -229,9 +271,20 @@ def _cell_length_large_edges(module_name: str) -> tuple[str, list[dict[str, Any]
 
 def _review_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
+    repair_addition_keys = {
+        _edge_key(edge) for edge in getattr(module, "REPAIR_EDGE_ADDITIONS", [])
+    }
     return module.SLUG, [
-        *[replacement["after"] for replacement in module.EDGE_REPLACEMENTS],
-        *getattr(module, "EDGE_ADDITIONS", []),
+        *[
+            edge
+            for edge in [replacement["after"] for replacement in module.EDGE_REPLACEMENTS]
+            if _edge_key(edge) not in repair_addition_keys
+        ],
+        *[
+            edge
+            for edge in getattr(module, "EDGE_ADDITIONS", [])
+            if _edge_key(edge) not in repair_addition_keys
+        ],
     ]
 
 
@@ -245,6 +298,31 @@ def _path_for_slug(slug: str) -> Path:
 
 
 def _event_changes(slug: str) -> str:
+    if slug == "ecology/biosafety_level_5":
+        return (
+            "Addressed PR #664 adversarial review issue #694: upserted the "
+            "original issue-183 review event so BSL-5 provenance describes the "
+            "generic two-edge enhanced-hazard graph that shipped."
+        )
+    if slug == "environment/ph_range_mid2":
+        return (
+            "Addressed PR #664 adversarial review issue #692: normalized the "
+            "Poolman PMF snippet to quote the source's uppercase membrane "
+            "potential symbol."
+        )
+    if slug == "environment/temperature_delta_high":
+        return (
+            "Addressed PR #664 adversarial review issue #692: requoted the Wu "
+            "et al. trans-UFA connector snippet without the markup-flattening "
+            "space before the hyphen."
+        )
+    if slug == "environment/temperature_range_mid3":
+        return (
+            "Addressed PR #664 adversarial review issue #693: replaced weak "
+            "DesK/DesR connector edges by routing DesK directly to "
+            "phosphorylated DesR, removed the redundant unphosphorylated DesR "
+            "node, and updated the original connector history."
+        )
     if slug in {
         "environment/ph_delta_mid2",
         "environment/ph_delta_very_low",
@@ -402,6 +480,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in STRUCTURE_FOLLOWUP_SLUGS:
+        return STRUCTURE_FOLLOWUP_TIMESTAMP
     if slug in PRIMARY_SNIPPET_SLUGS:
         return PRIMARY_SNIPPET_TIMESTAMP
     if slug in SNIPPET_FOLLOWUP_SLUGS:
@@ -473,6 +553,16 @@ def repair(write: bool = False) -> int:
             timestamp=_event_timestamp(slug),
             upsert=True,
         )
+        for event in CANONICAL_EVENT_CHANGES.get(slug, []):
+            record_curation_event(
+                doc,
+                curator="codex",
+                action=event["action"],
+                changes=event["changes"],
+                llm_assisted=True,
+                timestamp=event["timestamp"],
+                upsert=True,
+            )
 
         if doc == before:
             continue

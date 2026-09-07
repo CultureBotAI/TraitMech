@@ -245,7 +245,7 @@ causal_graphs:
       boundary of membrane-fluidity homeostasis.
     evidence:
     - reference: DOI:10.3390/cells12101353
-      snippet: trans -UFA generation elevates the viscosity of the membrane
+      snippet: trans-UFA generation elevates the viscosity of the membrane
       notes: Verified against the Wu et al. Cells review; this connector keeps cis-trans
         isomerization as warming-side membrane context.
     predicate_id: biolink:associated_with
@@ -387,4 +387,10 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review: requoted the de Mendoza membrane-fluidity
     adaptation evidence with the exact homeoviscous spelling from the cited source.'
+  llm_assisted: true
+- timestamp: '2026-09-07T07:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #692: requoted the Wu et al.
+    trans-UFA connector snippet without the markup-flattening space before the hyphen.'
   llm_assisted: true

@@ -63,6 +63,7 @@ def test_review_adds_snippets_and_grounds_upper_mesophile_edges():
     assert {
         ("membrane_order", "drives", "desk_kinase_state"),
         ("desk", "phosphorylates", "desr"),
+        ("desk", "positively regulates", "desr"),
         ("phospho_desr", "activates transcription of", "des_gene"),
         ("des_gene", "introduces double bonds into", "membrane_fatty_acyl_chains"),
         ("homeoviscous_adaptation", "maintains", "liquid_crystalline_membrane"),
@@ -72,6 +73,7 @@ def test_review_adds_snippets_and_grounds_upper_mesophile_edges():
         expected = replacement["after"]
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
+    assert "desr" not in {node["node_id"] for node in graph["nodes"]}
 
 
 def test_repaired_record_is_exactly_idempotent():

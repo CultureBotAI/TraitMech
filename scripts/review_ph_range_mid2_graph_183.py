@@ -238,7 +238,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "interconvert the Δψ and ΔpH",
+                    "snippet": "interconvert the ΔΨ and ΔpH",
                     "notes": (
                         "Verified against the open Poolman review; transport "
                         "mechanisms are described as interconverting membrane "

@@ -192,7 +192,7 @@ causal_graphs:
     description: Rebalancing of ΔpH and Δψ with external pH regulates PMF.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: interconvert the Δψ and ΔpH
+      snippet: interconvert the ΔΨ and ΔpH
       notes: Verified against the open Poolman review; transport mechanisms are described
         as interconverting membrane potential and ΔpH to maintain PMF and internal
         pH.
@@ -317,4 +317,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #685: replaced weak pH edge
     snippets with exact source spans that carry their edge claims, and left derived
     pH-axis bin membership in notes instead of fragment snippets.'
+  llm_assisted: true
+- timestamp: '2026-09-07T07:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #692: normalized the Poolman
+    PMF snippet to quote the source''s uppercase membrane potential symbol.'
   llm_assisted: true

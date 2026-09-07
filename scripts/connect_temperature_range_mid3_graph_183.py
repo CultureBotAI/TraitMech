@@ -32,7 +32,10 @@ SLUG = "environment/temperature_range_mid3"
 GRAPH_ID = "temperature_range_mid3_upper_mesophile"
 ACTION = "CONNECT_CAUSAL_GRAPH_COMPONENTS"
 TIMESTAMP = "2026-09-04T22:00:00Z"
-EXPECTED_COMPONENTS = 6
+EXPECTED_COMPONENTS = 5
+STALE_EDGE_KEYS = {
+    ("desr", "associated with", "phospho_desr"),
+}
 
 GRAPH_METADATA_BEFORE = {
     "title": "Temperature-range-mid3 upper-mesophile range",
@@ -78,10 +81,10 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
     },
     {
         "subject": "desk",
-        "predicate": "positively regulates",
-        "object": "desr",
+        "predicate": "regulates",
+        "object": "phospho_desr",
         "description": (
-            "DesK controls DesR phosphorylation in the core two-component "
+            "DesK regulates DesR phosphorylation in the core two-component "
             "signaling step linking membrane physical state to transcriptional "
             "response."
         ),
@@ -97,7 +100,7 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
                 ),
             }
         ],
-        "predicate_id": "RO:0002213",
+        "predicate_id": "RO:0002211",
     },
     {
         "subject": "phospho_desr",
@@ -224,27 +227,6 @@ ADDED_EDGES: list[dict[str, Any]] = [
                     "Verified against the open Sidarta et al. introduction; "
                     "this connector keeps DesK kinase activity as two-component "
                     "signaling context."
-                ),
-            }
-        ],
-        "predicate_id": "biolink:associated_with",
-    },
-    {
-        "subject": "desr",
-        "predicate": "associated with",
-        "object": "phospho_desr",
-        "description": (
-            "DesR regulation is associated with phosphorylated DesR promoter "
-            "activation in the DesK/DesR branch."
-        ),
-        "evidence": [
-            {
-                "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "DesR is a DNA-binding response regulator (transcriptional activator)",
-                "notes": (
-                    "Verified against the open Sidarta et al. introduction; "
-                    "this connector joins DesR to its phosphorylated "
-                    "transcription-activation context."
                 ),
             }
         ],
@@ -391,7 +373,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         action=ACTION,
         changes=(
             f"Resolved issue #183 graph fragmentation ({before} components to 1) "
-            "by adding 5 source- and verbatim-snippet-backed association "
+            "by adding 4 source- and verbatim-snippet-backed association "
             "connectors among DesK/DesR membrane-order sensing, des expression, "
             "cooling-induced membrane rigidification, and homeoviscous "
             "liquid-crystalline membrane branches. No paid research service was "

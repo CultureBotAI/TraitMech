@@ -30,6 +30,7 @@ SLUG = "environment/temperature_range_mid3"
 GRAPH_ID = "temperature_range_mid3_upper_mesophile"
 ACTION = "REVIEW_CAUSAL_EVIDENCE"
 TIMESTAMP = "2026-09-04T04:00:00Z"
+STALE_NODE_IDS = {"desr"}
 
 EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
     {
@@ -94,10 +95,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
         },
         "after": {
             "subject": "desk",
-            "predicate": "positively regulates",
-            "object": "desr",
+            "predicate": "regulates",
+            "object": "phospho_desr",
             "description": (
-                "DesK controls DesR phosphorylation in the core two-component "
+                "DesK regulates DesR phosphorylation in the core two-component "
                 "signaling step linking membrane physical state to transcriptional "
                 "response."
             ),
@@ -113,7 +114,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                     ),
                 }
             ],
-            "predicate_id": "RO:0002213",
+            "predicate_id": "RO:0002211",
         },
     },
     {
@@ -276,6 +277,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
     },
 ]
 
+STALE_EDGE_KEYS = {
+    ("desk", "positively regulates", "desr"),
+}
+REPAIR_EDGE_ADDITIONS = [EDGE_REPLACEMENTS[1]["after"]]
+
 
 def _edge_key(edge: dict[str, Any]) -> tuple[str | None, str | None, str | None]:
     return edge.get("subject"), edge.get("predicate"), edge.get("object")
@@ -321,6 +327,12 @@ def _has_exact_edges(
     return all(existing_by_key.get(key) == edge for key, edge in edges.items())
 
 
+def _drop_stale_nodes(graph: dict[str, Any]) -> None:
+    graph["nodes"] = [
+        node for node in graph.get("nodes") or [] if node.get("node_id") not in STALE_NODE_IDS
+    ]
+
+
 def transform(slug: str, doc: dict[str, Any]) -> bool:
     if slug != SLUG:
         raise ValueError(f"expected {SLUG}, got {slug}")
@@ -351,6 +363,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         copy.deepcopy(after_by_before_key.get(_edge_key(edge), edge))
         for edge in graph.get("edges") or []
     ]
+    _drop_stale_nodes(graph)
 
     record_curation_event(
         doc,

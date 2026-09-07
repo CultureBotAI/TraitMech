@@ -138,7 +138,7 @@ data/traits/environment/temperature_range_high.yaml	METPO:1000454	temperature ra
 data/traits/environment/temperature_range_low.yaml	METPO:1000449	temperature range low	temperature_range_low_psychrotolerant	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid1.yaml	METPO:1000450	temperature range mid1	temperature_range_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid2.yaml	METPO:1000451	temperature range mid2	temperature_range_mid2_baseline_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	temperature_range_mid4_warm_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	temperature_range_very_low_psychrophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/thermophilic.yaml	METPO:1000616	thermophilic	thermophilic_heat_adaptation	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-

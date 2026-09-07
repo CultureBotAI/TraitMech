@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T072600Z-codex-694abc
+  timestamp: '2026-09-07T07:26:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/694
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Corrected BSL-5 shipped provenance
+  details: 'Updated the issue-183 biosafety_level_5 history so it describes the
+    generic two-edge enhanced-hazard graph and DOI-backed PPL-alpha name-use
+    evidence that PR #664 ships, not the intermediate Mars-sample-return graph.
+    This addresses adversarial PR review issue #694.'

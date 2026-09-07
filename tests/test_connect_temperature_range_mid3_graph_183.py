@@ -74,6 +74,7 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edges():
     for expected in ADDED_EDGES:
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
+    assert ("desr", "associated with", "phospho_desr") not in by_key
     assert _has_curation_event(doc, ACTION, TIMESTAMP)
 
 

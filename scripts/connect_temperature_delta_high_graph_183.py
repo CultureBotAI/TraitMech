@@ -263,7 +263,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3390/cells12101353",
-                "snippet": "trans -UFA generation elevates the viscosity of the membrane",
+                "snippet": "trans-UFA generation elevates the viscosity of the membrane",
                 "notes": (
                     "Verified against the Wu et al. Cells review; this connector "
                     "keeps cis-trans isomerization as warming-side membrane "
