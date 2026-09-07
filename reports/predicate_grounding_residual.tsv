@@ -1,53 +1,46 @@
 predicate_label	edge_count	status	blocked_by	example_files
-supports	37	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/ecology/symbiosis.yaml|data/traits/environment/alkalotolerant.yaml
-induces	34	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/host_associated.yaml|data/traits/environment/cadmium_tolerant.yaml
+supports	32	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/ecology/symbiosis.yaml|data/traits/environment/alkalotolerant.yaml
 required for	29	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/free_living.yaml|data/traits/ecology/symbiosis.yaml
-drives	29	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/environment/nacl_delta_high.yaml|data/traits/environment/ph_optimum.yaml
-maintains	29	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/acidophilic.yaml|data/traits/environment/acidotolerant.yaml
 mediates	28	unmapped		data/traits/ecology/animal_pathogen.yaml|data/traits/environment/extremely_halophilic.yaml|data/traits/environment/metal_tolerant.yaml
-stabilizes	19	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
+drives	28	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/environment/nacl_delta_high.yaml|data/traits/environment/ph_optimum.yaml
+induces	27	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/ecology/host_associated.yaml|data/traits/environment/cadmium_tolerant.yaml
+maintains	24	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/acidophilic.yaml|data/traits/environment/acidotolerant.yaml
 converts	19	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/environment/moderately_halophilic.yaml|data/traits/metabolism/biopolymer_degradation.yaml
-protects against	15	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
+protects against	14	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
 causally upstream of	14	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
-requires	13	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
+stabilizes	13	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
 oxidized by	12	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
-is converted to	11	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml
-binds	11	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml
-uses	10	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_delta.yaml|data/traits/environment/nacl_optimum_mid2.yaml
-represses	9	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml
+requires	11	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
+is converted to	10	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/orange_pigmented.yaml
+binds	10	unmapped		data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
-determines	8	unmapped		data/traits/ecology/mutualism.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/ph_delta_low.yaml
+represses	8	unmapped		data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml
+uses	8	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/metabolism/anaerobic_respiration.yaml
 inactivates	8	unmapped		data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
 precursor of	8	unmapped		data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/green_pigmented.yaml|data/traits/morphology/pigmentation.yaml
 recruits	8	unmapped		data/traits/morphology/axially_filamented.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/filament_shaped.yaml
-upregulates	7	unmapped		data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/oxygen_preference.yaml
+determines	7	unmapped		data/traits/ecology/mutualism.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/ph_delta_low.yaml
 engages	7	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 positively influences	7	unmapped		data/traits/genomics/gc_mid2.yaml|data/traits/morphology/oval_shaped.yaml
 is substrate for	7	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/metabolism/manganese_oxidation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml
 triggers	6	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/morphology/polyhydroxyalkanoate_granule.yaml
-increases abundance of	6	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
 catalyzes conversion of	6	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/propionic_acid_fermentation.yaml
 initiates	6	unmapped		data/traits/metabolism/photosynthesis.yaml|data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml
 synthesizes	5	unmapped		data/traits/ecology/biofilm_formation.yaml|data/traits/morphology/intracellular_inclusion.yaml|data/traits/morphology/ovoid_shaped.yaml
 protects	5	unmapped		data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/psychrotolerant.yaml
 provides	5	unmapped		data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/psychrotolerant.yaml|data/traits/environment/temperature_range_low.yaml
 cleaves	5	unmapped		data/traits/environment/mercury_tolerant.yaml|data/traits/genomics/crispr_cas_system.yaml|data/traits/metabolism/biopolymer_degradation.yaml
+upregulates	5	unmapped		data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/oxygen_preference.yaml|data/traits/environment/zinc_tolerant.yaml
 results in	5	unmapped		data/traits/environment/nacl_range_high.yaml|data/traits/environment/zinc_tolerant.yaml|data/traits/morphology/ellipsoidal.yaml
+increases abundance of	5	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
 enhances	5	unmapped		data/traits/environment/ph_optimum_high.yaml|data/traits/morphology/carboxysome.yaml|data/traits/physiology/heterotrophic.yaml
-guides	5	unmapped		data/traits/genomics/crispr_cas_system.yaml|data/traits/morphology/curved_shaped.yaml|data/traits/morphology/fusiform_shaped.yaml
-positions	5	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/oval_shaped.yaml
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
-acts as	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/temperature_optimum_very_low.yaml|data/traits/metabolism/anaerobic_respiration.yaml
 detoxifies	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/anaerobic.yaml|data/traits/environment/microaerophilic.yaml
 damages	4	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
-activates transcription of	4	unmapped		data/traits/environment/cobalt_tolerant.yaml|data/traits/environment/temperature_range_mid3.yaml|data/traits/metabolism/calvin_benson_bassham_cycle.yaml
-activates expression of	4	unmapped		data/traits/environment/mesophilic.yaml|data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml|data/traits/physiology/bioluminescence.yaml
 induces accumulation of	4	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/piezophilic.yaml|data/traits/environment/piezotolerant.yaml
-has characteristic	4	unmapped		data/traits/environment/obligately_piezophilic.yaml|data/traits/physiology/persister_cell_formation.yaml
 supplies	4	unmapped		data/traits/environment/ph_range_high.yaml|data/traits/physiology/bioluminescence.yaml|data/traits/physiology/heterotrophic.yaml
-phosphorylates	4	unmapped		data/traits/environment/temperature_range_mid3.yaml|data/traits/morphology/motile.yaml|data/traits/physiology/chemotaxis.yaml
+guides	4	unmapped		data/traits/genomics/crispr_cas_system.yaml|data/traits/morphology/curved_shaped.yaml|data/traits/morphology/fusiform_shaped.yaml
 causally promotes	4	unmapped		data/traits/genomics/gc_high.yaml
-shapes	4	unmapped		data/traits/genomics/gc_low.yaml|data/traits/genomics/pangenome_openness.yaml|data/traits/morphology/cell_shape.yaml
 positively associated with	4	unmapped		data/traits/genomics/genome_size.yaml|data/traits/genomics/pangenome_openness.yaml|data/traits/genomics/rrna_operon_copy_number.yaml
 reduced to	4	unmapped		data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
 contains	4	unmapped		data/traits/metabolism/calvin_benson_bassham_cycle.yaml|data/traits/metabolism/cellulolysis.yaml|data/traits/physiology/autotrophic.yaml
@@ -56,7 +49,7 @@ converted to	4	unmapped		data/traits/metabolism/homoacetogenesis.yaml|data/trait
 realizes	4	unmapped		data/traits/metabolism/metabolism.yaml|data/traits/morphology/axially_filamented.yaml|data/traits/morphology/gliding.yaml
 has part	4	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/traits/morphology/red_pigmented.yaml|data/traits/physiology/photolithoautotrophic.yaml
 stimulates GTPase activity of	4	unmapped		data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
-organizes	4	unmapped		data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/magnetosome.yaml
+positions	4	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/oval_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
 establishes	4	unmapped		data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/spiral_shaped.yaml|data/traits/morphology/spore_shaped.yaml
 favors	4	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/physiology/oligotrophic.yaml
 can proceed through	4	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
@@ -65,36 +58,39 @@ requires containment level	3	unmapped		data/traits/ecology/biosafety_level_4.yam
 confers	3	blocked_by_node_type	METPO:2007700	data/traits/ecology/commensalism.yaml|data/traits/morphology/spirochete_shaped.yaml|data/traits/morphology/sporulation.yaml
 leads to	3	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/morphology/spore_shaped.yaml|data/traits/physiology/chemoorganotrophic.yaml
 delivers	3	unmapped		data/traits/ecology/pathogenic_to_host.yaml|data/traits/ecology/plant_pathogen.yaml
-depolymerizes	3	unmapped		data/traits/ecology/saprotrophy.yaml|data/traits/metabolism/biopolymer_degradation.yaml
-predicts	3	unmapped		data/traits/ecology/soil_dwelling.yaml|data/traits/morphology/gliding.yaml|data/traits/morphology/non_spore_forming.yaml
 limits influx of	3	unmapped		data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml|data/traits/morphology/carboxysome.yaml
-removes	3	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml|data/traits/morphology/gram_stain.yaml
+acts as	3	unmapped		data/traits/environment/aerobic.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/morphology/motile.yaml
 powers	3	blocked_by_node_type	METPO:2007900	data/traits/environment/aerobic.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
+activates transcription of	3	unmapped		data/traits/environment/cobalt_tolerant.yaml|data/traits/metabolism/calvin_benson_bassham_cycle.yaml|data/traits/morphology/vibrio_shaped.yaml
 has alternative process	3	unmapped		data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
 positively correlates with	3	unmapped		data/traits/environment/ionizing_radiation_tolerant.yaml|data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/nutrient_adaptation.yaml
 scavenges	3	unmapped		data/traits/environment/microaerophilic.yaml|data/traits/environment/radiotolerant.yaml|data/traits/metabolism/disproportionation.yaml
 imposes	3	unmapped		data/traits/environment/nacl_optimum_low.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/genomics/plasmid_carriage.yaml
 characterizes	3	unmapped		data/traits/environment/nacl_range_mid1.yaml|data/traits/environment/temperature_range_mid2.yaml|data/traits/upper/quality.yaml
-alters	3	unmapped		data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml|data/traits/morphology/spirochete_shaped.yaml
 counteracts	3	unmapped		data/traits/environment/ph_optimum_low.yaml|data/traits/environment/temperature_delta_low.yaml|data/traits/environment/temperature_range_mid2.yaml
 lowers	3	unmapped		data/traits/environment/ph_range_low.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/physiology/photoautotrophic.yaml
 restricts	3	unmapped		data/traits/environment/pressure_delta.yaml|data/traits/morphology/amphitrichous.yaml
 influences	3	unmapped		data/traits/genomics/codon_usage_bias.yaml|data/traits/genomics/gc_mid2.yaml|data/traits/morphology/gram_positive.yaml
 negatively associated with	3	unmapped		data/traits/genomics/genome_size.yaml|data/traits/genomics/pangenome_openness.yaml|data/traits/morphology/coccus_shaped.yaml
+shapes	3	unmapped		data/traits/genomics/pangenome_openness.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/triangular_shaped.yaml
 has mechanistic pathway	3	unmapped		data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/homoacetogenesis.yaml
 serves as terminal electron acceptor for	3	unmapped		data/traits/metabolism/anaerobic_oxidation_of_methane.yaml
 hydrolyzes to	3	unmapped		data/traits/metabolism/chitinolysis.yaml
+activates expression of	3	unmapped		data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml|data/traits/physiology/bioluminescence.yaml
 translocates	3	unmapped		data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml
 feeds into	3	unmapped		data/traits/metabolism/fermentation.yaml|data/traits/morphology/cell_length_medium.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 transfers electron to	3	unmapped		data/traits/metabolism/nitrogen_fixation.yaml
 has quality	3	unmapped		data/traits/metabolism/wood_ljungdahl_pathway.yaml|data/traits/physiology/carboxydotrophic.yaml
 feed into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
 polymerizes into	3	unmapped		data/traits/morphology/black_pigmented.yaml|data/traits/morphology/magnetosome.yaml
+organizes	3	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/magnetosome.yaml|data/traits/morphology/staphylococcus_arrangement.yaml
 disrupts	3	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphology/irregular_shaped.yaml
 scaffolds	3	unmapped		data/traits/morphology/fusiform_shaped.yaml|data/traits/morphology/tetrad_arrangement.yaml|data/traits/physiology/chemotaxis.yaml
 encapsulates	3	unmapped		data/traits/morphology/intracellular_inclusion.yaml|data/traits/physiology/chemoautotrophic.yaml
 precedes	3	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/morphology/sporulation.yaml|data/traits/morphology/tetrad_arrangement.yaml
+phosphorylates	3	unmapped		data/traits/morphology/motile.yaml|data/traits/physiology/chemotaxis.yaml
 broken down by	3	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
+has characteristic	3	unmapped		data/traits/physiology/persister_cell_formation.yaml
 captured by	3	unmapped		data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
 is input to	2	unmapped		data/traits/ecology/biosafety_level.yaml
 qualifies for	2	unmapped		data/traits/ecology/biosafety_level_1.yaml
@@ -104,9 +100,9 @@ necessitates	2	unmapped		data/traits/ecology/biosafety_level_3.yaml|data/traits/
 implemented by	2	unmapped		data/traits/ecology/biosafety_level_3.yaml
 structures	2	unmapped		data/traits/ecology/habitat_association.yaml
 enriches	2	unmapped		data/traits/ecology/habitat_association.yaml|data/traits/genomics/mobile_genetic_element.yaml
-buffers	2	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/ph_delta_mid2.yaml
 sensed by	2	unmapped		data/traits/ecology/symbiosis.yaml
 catalyzes active transport of	2	unmapped		data/traits/environment/acidophilic.yaml
+removes	2	unmapped		data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_optimum_low.yaml
 can generate	2	unmapped		data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 helps maintain	2	unmapped		data/traits/environment/alkalotolerant.yaml|data/traits/environment/ph_delta_high.yaml
 confers resistance to	2	unmapped		data/traits/environment/cobalt_tolerant.yaml|data/traits/physiology/antibiotic_resistance.yaml
@@ -122,26 +118,22 @@ biosynthesizes	2	unmapped		data/traits/environment/haloalkaliphilic.yaml|data/tr
 tolerated by	2	unmapped		data/traits/environment/halotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 repairs	2	unmapped		data/traits/environment/ionizing_radiation_tolerant.yaml|data/traits/environment/uv_radiation_tolerant.yaml
 defined as	2	unmapped		data/traits/environment/nacl_optimum_low.yaml|data/traits/environment/nacl_range_mid1.yaml
-opens	2	unmapped		data/traits/environment/nacl_range_low.yaml|data/traits/environment/temperature_range_mid2.yaml
 distinct from	2	unmapped		data/traits/environment/nacl_range_mid1.yaml|data/traits/physiology/chemoautolithotrophic.yaml
 positively contributes to	2	unmapped		data/traits/environment/nacl_range_mid2.yaml
-increases amount of	2	unmapped		data/traits/environment/obligately_piezophilic.yaml|data/traits/morphology/non_motile.yaml
 perturbs	2	unmapped		data/traits/environment/ph_delta_low.yaml|data/traits/morphology/spirochete_shaped.yaml
 binds to	2	unmapped		data/traits/environment/psychrophilic.yaml|data/traits/metabolism/cellulolysis.yaml
 shifts	2	unmapped		data/traits/environment/temperature_delta_low.yaml|data/traits/morphology/cell_width_large.yaml
 indicates	2	unmapped		data/traits/environment/temperature_optimum.yaml|data/traits/physiology/copiotrophic.yaml
-refolds	2	unmapped		data/traits/environment/temperature_optimum_high.yaml|data/traits/environment/thermophilic.yaml
 restores	2	unmapped		data/traits/environment/temperature_optimum_mid3.yaml|data/traits/physiology/viable_but_nonculturable_state.yaml
 melts	2	unmapped		data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml
 introduces	2	unmapped		data/traits/environment/temperature_range_high.yaml|data/traits/environment/thermophilic.yaml
 assists	2	unmapped		data/traits/environment/temperature_range_high.yaml
-acts on	2	unmapped		data/traits/environment/temperature_range_very_low.yaml|data/traits/morphology/motile.yaml
 absorbs	2	unmapped		data/traits/environment/uv_radiation_tolerant.yaml|data/traits/metabolism/anoxygenic_photosynthesis.yaml
-carries	2	unmapped		data/traits/genomics/gc_content.yaml|data/traits/genomics/genomic_island.yaml
 opposes	2	unmapped		data/traits/genomics/gc_high.yaml|data/traits/morphology/branched_shaped.yaml
 biases estimate of	2	unmapped		data/traits/genomics/pangenome_openness.yaml
 promotes autocleavage of	2	unmapped		data/traits/genomics/prophage.yaml
 methylates	2	unmapped		data/traits/genomics/restriction_modification_system.yaml|data/traits/physiology/chemotaxis.yaml
+depolymerizes	2	unmapped		data/traits/metabolism/biopolymer_degradation.yaml
 oxidized during	2	unmapped		data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/physiology/chemoorganotrophic.yaml
 substrate of	2	unmapped		data/traits/metabolism/calvin_benson_bassham_cycle.yaml
 is cosubstrate for	2	unmapped		data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml
@@ -166,6 +158,7 @@ reduced in	2	unmapped		data/traits/morphology/coccus_shaped.yaml|data/traits/mor
 incomplete separation yields	2	unmapped		data/traits/morphology/diplococcus_shaped.yaml
 carries out	2	unmapped		data/traits/morphology/ellipsoidal.yaml
 combines with	2	unmapped		data/traits/morphology/flask_shaped.yaml|data/traits/morphology/oval_shaped.yaml
+predicts	2	unmapped		data/traits/morphology/gliding.yaml|data/traits/morphology/non_spore_forming.yaml
 dephosphorylates	2	unmapped		data/traits/morphology/non_spore_forming.yaml|data/traits/physiology/chemotaxis.yaml
 has component	2	unmapped		data/traits/morphology/ovoid_shaped.yaml
 provides precursor for	2	unmapped		data/traits/morphology/pigmentation.yaml
@@ -205,6 +198,7 @@ mitigates risk in	1	unmapped		data/traits/ecology/biosafety_level_2.yaml
 verified by	1	unmapped		data/traits/ecology/biosafety_level_3.yaml
 utilizes	1	unmapped		data/traits/ecology/biosafety_level_3.yaml
 motivates	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
+is informally called	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
 provides resources for	1	unmapped		data/traits/ecology/commensalism.yaml
 operationalizes	1	unmapped		data/traits/ecology/commensalism.yaml
 prerequisite for	1	unmapped		data/traits/ecology/gut_associated.yaml
@@ -212,15 +206,11 @@ exerts antimicrobial pressure on	1	unmapped		data/traits/ecology/gut_associated.
 serves as nutrient source for	1	unmapped		data/traits/ecology/host_associated.yaml
 provides nutrient source for	1	unmapped		data/traits/ecology/host_associated.yaml
 induces production of	1	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+buffers	1	unmapped		data/traits/ecology/nitrogen_fixing_symbiosis.yaml
 progresses to under host susceptibility	1	unmapped		data/traits/ecology/opportunistic_pathogen.yaml
 exacerbates	1	unmapped		data/traits/ecology/parasitism.yaml
 seals	1	unmapped		data/traits/ecology/predatory_bacterium.yaml
 provides environment for	1	unmapped		data/traits/ecology/predatory_bacterium.yaml
-converts insoluble organic matter into	1	unmapped		data/traits/ecology/saprotrophy.yaml
-oxidizes and depolymerizes	1	unmapped		data/traits/ecology/saprotrophy.yaml
-catalyzes H2O2-dependent oxidation of	1	unmapped		data/traits/ecology/saprotrophy.yaml
-enriches for	1	unmapped		data/traits/ecology/soil_dwelling.yaml
-increases prevalence of	1	unmapped		data/traits/ecology/soil_dwelling.yaml
 mitigates influx of	1	unmapped		data/traits/environment/acidophilic.yaml
 reduces influx of	1	unmapped		data/traits/environment/acidophilic.yaml
 increases influx pressure of	1	unmapped		data/traits/environment/acidotolerant.yaml
@@ -275,19 +265,11 @@ interrupts flux through	1	unmapped		data/traits/environment/obligately_aerobic.y
 increases attraction to	1	unmapped		data/traits/environment/obligately_alkaphilic.yaml
 poisons	1	unmapped		data/traits/environment/obligately_anaerobic.yaml
 serves as	1	unmapped		data/traits/environment/oxygen_preference.yaml
-increases reliance on	1	unmapped		data/traits/environment/ph_delta_mid3.yaml
-contribute to	1	unmapped		data/traits/environment/ph_delta_mid3.yaml
-imposes energetic cost on	1	unmapped		data/traits/environment/ph_delta_very_low.yaml
 compensates for	1	unmapped		data/traits/environment/ph_range.yaml
 extends	1	unmapped		data/traits/environment/ph_range.yaml
 alkalinizes	1	unmapped		data/traits/environment/ph_range.yaml
 shifts speciation toward	1	unmapped		data/traits/environment/ph_range_high.yaml
 undergoes	1	unmapped		data/traits/environment/ph_range_low.yaml
-permits maintenance of	1	unmapped		data/traits/environment/ph_range_mid2.yaml
-acidifies	1	unmapped		data/traits/environment/ph_range_mid2.yaml
-remains relatively constant across	1	unmapped		data/traits/environment/ph_range_mid2.yaml
-couples	1	unmapped		data/traits/environment/ph_range_mid2.yaml
-maintain	1	unmapped		data/traits/environment/ph_range_mid2.yaml
 enables observation of	1	unmapped		data/traits/environment/ph_range_mid3.yaml
 is evidence for	1	unmapped		data/traits/environment/ph_range_mid3.yaml
 enables maintenance of	1	unmapped		data/traits/environment/ph_range_very_low.yaml
@@ -299,9 +281,7 @@ expands	1	unmapped		data/traits/environment/pressure_range.yaml
 acts as antioxidant against	1	unmapped		data/traits/environment/radiotolerant.yaml
 constrains	1	unmapped		data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
 exceeds tolerance of	1	unmapped		data/traits/environment/stenohaline.yaml
-resists	1	unmapped		data/traits/environment/temperature_delta_high.yaml
 positively regulates expression of	1	unmapped		data/traits/environment/temperature_delta_mid2.yaml
-decreased by reduced unsaturated fatty acids	1	unmapped		data/traits/environment/temperature_delta_very_low.yaml
 promotes accumulation of	1	unmapped		data/traits/environment/temperature_optimum_low.yaml
 is sensed as input to	1	unmapped		data/traits/environment/temperature_optimum_mid1.yaml
 remodels toward increased	1	unmapped		data/traits/environment/temperature_optimum_mid1.yaml
@@ -313,19 +293,18 @@ controls abundance of	1	unmapped		data/traits/environment/temperature_optimum_mi
 permits translation of	1	unmapped		data/traits/environment/temperature_preference.yaml
 precursor for	1	unmapped		data/traits/environment/temperature_range_mid1.yaml
 exposes	1	unmapped		data/traits/environment/temperature_range_mid1.yaml
-introduces double bonds into	1	unmapped		data/traits/environment/temperature_range_mid3.yaml
-preserves	1	unmapped		data/traits/environment/temperature_range_very_low.yaml
+opens	1	unmapped		data/traits/environment/temperature_range_mid2.yaml
+refolds	1	unmapped		data/traits/environment/thermophilic.yaml
 quenches	1	unmapped		data/traits/environment/uv_radiation_tolerant.yaml
 strengthens selection for	1	unmapped		data/traits/genomics/codon_usage_bias.yaml
 integrates spacers via	1	unmapped		data/traits/genomics/crispr_cas_system.yaml
-shifts toward	1	unmapped		data/traits/genomics/gc_low.yaml
+carries	1	unmapped		data/traits/genomics/gc_content.yaml
 positively correlated with	1	unmapped		data/traits/genomics/gc_mid1.yaml
 strongly correlated with	1	unmapped		data/traits/genomics/gc_mid1.yaml
 may increase	1	unmapped		data/traits/genomics/gc_mid1.yaml
 negatively influences	1	unmapped		data/traits/genomics/gc_mid2.yaml
 can distort measurement of	1	unmapped		data/traits/genomics/gc_mid2.yaml
 increases dependence on	1	unmapped		data/traits/genomics/genome_streamlining.yaml
-disseminates by	1	unmapped		data/traits/genomics/genomic_island.yaml
 nicks/unwinds at	1	unmapped		data/traits/genomics/mobile_genetic_element.yaml
 recruits substrate to	1	unmapped		data/traits/genomics/mobile_genetic_element.yaml
 promotes retention of	1	unmapped		data/traits/genomics/plasmid_carriage.yaml
@@ -426,10 +405,7 @@ elevates local concentration of	1	unmapped		data/traits/morphology/carboxysome.y
 form	1	unmapped		data/traits/morphology/carboxysome.yaml
 assembles at	1	unmapped		data/traits/morphology/cell_length.yaml
 resets	1	unmapped		data/traits/morphology/cell_length.yaml
-inhibits assembly of	1	unmapped		data/traits/morphology/cell_length_large.yaml
-delays	1	unmapped		data/traits/morphology/cell_length_large.yaml
 balances with PG synthesis to maintain	1	unmapped		data/traits/morphology/cell_length_medium.yaml
-rate_limiting_for	1	unmapped		data/traits/morphology/cell_length_small.yaml
 enhances fitness in	1	unmapped		data/traits/morphology/cell_length_very_small.yaml
 balances	1	unmapped		data/traits/morphology/cell_width.yaml
 orients	1	unmapped		data/traits/morphology/cell_width_large.yaml
@@ -459,8 +435,6 @@ safeguards	1	unmapped		data/traits/morphology/gram_negative.yaml
 retains	1	unmapped		data/traits/morphology/gram_positive.yaml
 fails to remove	1	unmapped		data/traits/morphology/gram_positive.yaml
 neutralizes	1	unmapped		data/traits/morphology/gram_positive.yaml
-reacts with	1	unmapped		data/traits/morphology/gram_stain.yaml
-is retained by	1	unmapped		data/traits/morphology/gram_stain.yaml
 modifies	1	unmapped		data/traits/morphology/green_pigmented.yaml
 reduces diffusion of	1	unmapped		data/traits/morphology/heterocyst.yaml
 provides mechanical support to	1	unmapped		data/traits/morphology/heterocyst.yaml
@@ -472,8 +446,10 @@ sufficient for	1	unmapped		data/traits/morphology/magnetosome.yaml
 promotes localization of	1	unmapped		data/traits/morphology/monotrichous.yaml
 regulates number of	1	unmapped		data/traits/morphology/monotrichous.yaml
 hinders interaction of	1	unmapped		data/traits/morphology/monotrichous.yaml
+acts on	1	unmapped		data/traits/morphology/motile.yaml
 drives extension of	1	unmapped		data/traits/morphology/motility.yaml
 drives retraction of	1	unmapped		data/traits/morphology/motility.yaml
+increases amount of	1	unmapped		data/traits/morphology/non_motile.yaml
 decreases activation of	1	unmapped		data/traits/morphology/non_spore_forming.yaml
 has material basis in	1	unmapped		data/traits/morphology/orange_pigmented.yaml
 assembles as	1	unmapped		data/traits/morphology/ovoid_shaped.yaml
@@ -487,9 +463,6 @@ drives proliferation of	1	unmapped		data/traits/morphology/pleomorphic_shaped.ya
 limits or kills	1	unmapped		data/traits/morphology/pleomorphic_shaped.yaml
 produces	1	blocked_by_node_type	METPO:2007800	data/traits/morphology/polyhydroxyalkanoate_granule.yaml
 composes	1	unmapped		data/traits/morphology/prosthecate.yaml
-correlates with	1	unmapped		data/traits/morphology/ring_shaped.yaml
-spatially regulates	1	unmapped		data/traits/morphology/ring_shaped.yaml
-skews	1	unmapped		data/traits/morphology/ring_shaped.yaml
 attaches Z ring to	1	unmapped		data/traits/morphology/sarcina_arrangement.yaml
 cooperate in	1	unmapped		data/traits/morphology/sarcina_arrangement.yaml
 degrade	1	unmapped		data/traits/morphology/sarcina_arrangement.yaml
@@ -498,6 +471,7 @@ biases	1	unmapped		data/traits/morphology/spiral_shaped.yaml
 distorts	1	unmapped		data/traits/morphology/spiral_shaped.yaml
 distort and push	1	unmapped		data/traits/morphology/spirochete_shaped.yaml
 mislocalizes	1	unmapped		data/traits/morphology/spirochete_shaped.yaml
+alters	1	unmapped		data/traits/morphology/spirochete_shaped.yaml
 anchors	1	unmapped		data/traits/morphology/spore_shaped.yaml
 causes when lost	1	unmapped		data/traits/morphology/square_shaped.yaml
 prevents aberrant placement of	1	unmapped		data/traits/morphology/staphylococcus_arrangement.yaml

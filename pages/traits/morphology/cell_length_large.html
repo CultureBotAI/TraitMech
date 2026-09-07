@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Large cell-length from fast growth or division delay</h2>
-      <p class="meta">DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction, or filamentous growth programs to large cell length (&gt;3 μm).</p>
+      <h2>Large cell-length via FtsZ division delay</h2>
+      <p class="meta">DOI-backed graph linking fast elongation, SOS/SulA-mediated FtsZ inhibition, FtsZ Z-ring control, and delayed constriction to large cell length (&gt;3 μm).</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a numerical cell-length bin. Its graph illustrates possible regulators of measured length but is not a single inheritable causal mechanism requiring a protein/taxon exemplar.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Large cell-length from fast growth or division delay</title>
+          <title>Large cell-length via FtsZ division delay</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for cell length large.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -112,16 +112,16 @@
           
           <li id="pathograph-1-edge-4">
             <strong>SOS response</strong>
-            <span class="edge-predicate">induces</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>SulA-mediated division inhibition</strong>
-            
-            <p>DNA damage/stress activates the SOS program, inducing division inhibitors that halt septation and promote elongation.</p>
+            <code>RO:0002213</code>
+            <p>The SOS response increases SulA-mediated division inhibition after DNA damage or replication stress.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1101/2025.05.13.653778</code>
-                
-                <span class="meta">SOS regulon upregulates sulA; SulA prevents Z-ring formation and halts division.</span>
+                <code>DOI:10.1002/advs.202203260</code>
+                <span class="evidence-snippet">SOS response is activated</span>
+                <span class="meta">Verified against the open Wiley full text; DNA damage activates the RecA/LexA SOS response and enables expression of SOS regulon genes, including sulA.</span>
               </li>
               
             </ul>
@@ -129,16 +129,16 @@
           
           <li id="pathograph-1-edge-5">
             <strong>SulA</strong>
-            <span class="edge-predicate">inhibits assembly of</span>
+            <span class="edge-predicate">negatively regulates</span>
             <strong>FtsZ Z-ring</strong>
-            
-            <p>SulA blocks FtsZ polymerization/assembly, delaying cytokinesis and allowing continued elongation.</p>
+            <code>RO:0002212</code>
+            <p>SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1101/2025.05.13.653778</code>
-                
-                <span class="meta">Canonical edge for many bacteria: SulA inhibits FtsZ assembly by sequestering monomers, directly blocking polymerization.</span>
+                <code>DOI:10.1002/advs.202203260</code>
+                <span class="evidence-snippet">cell division inhibitor, sulA, blocks FtsZ</span>
+                <span class="meta">Verified against the open Wiley full text; the source links SOS activation to SulA blocking FtsZ polymerization.</span>
               </li>
               
             </ul>
@@ -146,16 +146,67 @@
           
           <li id="pathograph-1-edge-6">
             <strong>FtsZ</strong>
-            <span class="edge-predicate">delays</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>onset of constriction</strong>
-            
-            <p>FtsZ copy number is rate-limiting for division; reduced FtsZ delays septation and can increase cell length before division.</p>
+            <code>RO:0002213</code>
+            <p>FtsZ accumulation in the Z-ring is a rate-limiting driver for onset of constriction at faster growth rates.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/s41467-024-54242-w</code>
-                
-                <span class="meta">FtsZ numbers are rate-limiting for cell division; ~20% downregulation may delay division.</span>
+                <span class="evidence-snippet">rate limit the onset of constriction</span>
+                <span class="meta">Verified against the open Nature Communications full text; FtsZ numbers were rate-limiting for constriction onset in moderately fast E. coli growth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>SulA</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>SulA-mediated division inhibition</strong>
+            <code>RO:0002326</code>
+            <p>SOS-induced SulA is the inhibitory protein mediating this division-arrest branch.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/advs.202203260</code>
+                <span class="evidence-snippet">cell division inhibitor sulA</span>
+                <span class="meta">Verified against the open Wiley full text; the study frames SulA as the SOS-linked cell-division inhibitor.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>SulA-mediated division inhibition</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>division-timing delay</strong>
+            <code>RO:0002326</code>
+            <p>SulA-mediated inhibition of septation contributes to delayed division and continued elongation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/advs.202203260</code>
+                <span class="evidence-snippet">contributes to non-septate cellular filamentation</span>
+                <span class="meta">Verified against the open Wiley full text; SulA-mediated FtsZ inhibition is linked to blocked septation and filamentation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>FtsZ Z-ring</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>onset of constriction</strong>
+            <code>RO:0002213</code>
+            <p>FtsZ bundles promote the FtsA/FtsN/core-divisome transition that starts constriction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-54242-w</code>
+                <span class="evidence-snippet">starts the onset of constriction</span>
+                <span class="meta">Verified against the open Nature Communications full text; the proposed model routes FtsZ bundles through FtsA antiparallel filaments, FtsN recruitment, and core-divisome activation.</span>
               </li>
               
             </ul>
@@ -462,6 +513,12 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T00:00:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) by re-citing the SOS/SulA branch to peer-reviewed evidence, grounding the two residual FtsZ/SulA predicates, and adding 3 source- and verbatim-snippet-backed connectors. No paid research service was called.</p>
         </li>
         
       </ol>
@@ -826,7 +883,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction, or filamentous growth programs to large cell length (\u003e3 \u03bcm).", "edges": [{"description": "Fast elongation between divisions yields longer cells.", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast_elongation", "target": "cell_length_large_trait"}, {"description": "Delaying division allows continued elongation past the typical size.", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division_timing_delay", "target": "cell_length_large_trait"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_large_trait", "target": "cell_length_trait"}, {"description": "DNA damage/stress activates the SOS program, inducing division inhibitors that halt septation and promote elongation.", "evidence": [{"notes": "SOS regulon upregulates sulA; SulA prevents Z-ring formation and halts division.", "reference": "DOI:10.1101/2025.05.13.653778"}], "id": "edge-4", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "sos_response", "target": "sula_division_inhibition"}, {"description": "SulA blocks FtsZ polymerization/assembly, delaying cytokinesis and allowing continued elongation.", "evidence": [{"notes": "Canonical edge for many bacteria: SulA inhibits FtsZ assembly by sequestering monomers, directly blocking polymerization.", "reference": "DOI:10.1101/2025.05.13.653778"}], "id": "edge-5", "is_orphan": false, "predicate": "inhibits assembly of", "predicate_id": null, "source": "sula_protein", "target": "ftsz_zring"}, {"description": "FtsZ copy number is rate-limiting for division; reduced FtsZ delays septation and can increase cell length before division.", "evidence": [{"notes": "FtsZ numbers are rate-limiting for cell division; ~20% downregulation may delay division.", "reference": "DOI:10.1038/s41467-024-54242-w"}], "id": "edge-6", "is_orphan": false, "predicate": "delays", "predicate_id": null, "source": "ftsz_protein", "target": "constriction_onset"}], "evidence_rows": [{"description": "Fast elongation between divisions yields longer cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast elongation rate", "target": "cell length large"}, {"description": "Delaying division allows continued elongation past the typical size.", "edge_id": "edge-2", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division-timing delay", "target": "cell length large"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length large", "target": "cell length"}, {"description": "DNA damage/stress activates the SOS program, inducing division inhibitors that halt septation and promote elongation.", "edge_id": "edge-4", "evidence": [{"notes": "SOS regulon upregulates sulA; SulA prevents Z-ring formation and halts division.", "reference": "DOI:10.1101/2025.05.13.653778"}], "predicate": "induces", "predicate_id": null, "source": "SOS response", "target": "SulA-mediated division inhibition"}, {"description": "SulA blocks FtsZ polymerization/assembly, delaying cytokinesis and allowing continued elongation.", "edge_id": "edge-5", "evidence": [{"notes": "Canonical edge for many bacteria: SulA inhibits FtsZ assembly by sequestering monomers, directly blocking polymerization.", "reference": "DOI:10.1101/2025.05.13.653778"}], "predicate": "inhibits assembly of", "predicate_id": null, "source": "SulA", "target": "FtsZ Z-ring"}, {"description": "FtsZ copy number is rate-limiting for division; reduced FtsZ delays septation and can increase cell length before division.", "edge_id": "edge-6", "evidence": [{"notes": "FtsZ numbers are rate-limiting for cell division; ~20% downregulation may delay division.", "reference": "DOI:10.1038/s41467-024-54242-w"}], "predicate": "delays", "predicate_id": null, "source": "FtsZ", "target": "onset of constriction"}], "graph_id": "cell_length_large_division_delay", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length exceeding approximately 3 \u03bcm.", "grounding": "METPO:1000886", "id": "cell_length_large_trait", "is_orphan": false, "label": "cell length large", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Initiation of septal constriction during cytokinesis.", "grounding": null, "id": "constriction_onset", "is_orphan": false, "label": "onset of constriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Postponement of FtsZ-ring constriction extending elongation.", "grounding": null, "id": "division_timing_delay", "is_orphan": false, "label": "division-timing delay", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid axial elongation between divisions.", "grounding": null, "id": "fast_elongation", "is_orphan": false, "label": "fast elongation rate", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial tubulin homolog whose abundance is rate-limiting for division.", "grounding": "InterPro:IPR000158", "id": "ftsz_protein", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of the FtsZ ring at midcell that initiates cytokinesis.", "grounding": null, "id": "ftsz_zring", "is_orphan": false, "label": "FtsZ Z-ring", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "DNA-damage/stress-activated regulatory program that induces division inhibitors.", "grounding": "GO:0009432", "id": "sos_response", "is_orphan": false, "label": "SOS response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of cell division mediated by the SOS-induced inhibitor SulA.", "grounding": null, "id": "sula_division_inhibition", "is_orphan": false, "label": "SulA-mediated division inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.", "grounding": "InterPro:IPR004596", "id": "sula_protein", "is_orphan": false, "label": "SulA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a numerical cell-length bin. Its graph illustrates possible regulators of measured length but is not a single inheritable causal mechanism requiring a protein/taxon exemplar.", "scope_status": "NONMECHANISTIC", "title": "Large cell-length from fast growth or division delay"}];
+  var graphs = [{"description": "DOI-backed graph linking fast elongation, SOS/SulA-mediated FtsZ inhibition, FtsZ Z-ring control, and delayed constriction to large cell length (\u003e3 \u03bcm).", "edges": [{"description": "Fast elongation between divisions yields longer cells.", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast_elongation", "target": "cell_length_large_trait"}, {"description": "Delaying division allows continued elongation past the typical size.", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division_timing_delay", "target": "cell_length_large_trait"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_large_trait", "target": "cell_length_trait"}, {"description": "The SOS response increases SulA-mediated division inhibition after DNA damage or replication stress.", "evidence": [{"notes": "Verified against the open Wiley full text; DNA damage activates the RecA/LexA SOS response and enables expression of SOS regulon genes, including sulA.", "reference": "DOI:10.1002/advs.202203260", "snippet": "SOS response is activated"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "sos_response", "target": "sula_division_inhibition"}, {"description": "SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.", "evidence": [{"notes": "Verified against the open Wiley full text; the source links SOS activation to SulA blocking FtsZ polymerization.", "reference": "DOI:10.1002/advs.202203260", "snippet": "cell division inhibitor, sulA, blocks FtsZ"}], "id": "edge-5", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "sula_protein", "target": "ftsz_zring"}, {"description": "FtsZ accumulation in the Z-ring is a rate-limiting driver for onset of constriction at faster growth rates.", "evidence": [{"notes": "Verified against the open Nature Communications full text; FtsZ numbers were rate-limiting for constriction onset in moderately fast E. coli growth.", "reference": "DOI:10.1038/s41467-024-54242-w", "snippet": "rate limit the onset of constriction"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "ftsz_protein", "target": "constriction_onset"}, {"description": "SOS-induced SulA is the inhibitory protein mediating this division-arrest branch.", "evidence": [{"notes": "Verified against the open Wiley full text; the study frames SulA as the SOS-linked cell-division inhibitor.", "reference": "DOI:10.1002/advs.202203260", "snippet": "cell division inhibitor sulA"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sula_protein", "target": "sula_division_inhibition"}, {"description": "SulA-mediated inhibition of septation contributes to delayed division and continued elongation.", "evidence": [{"notes": "Verified against the open Wiley full text; SulA-mediated FtsZ inhibition is linked to blocked septation and filamentation.", "reference": "DOI:10.1002/advs.202203260", "snippet": "contributes to non-septate cellular filamentation"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sula_division_inhibition", "target": "division_timing_delay"}, {"description": "FtsZ bundles promote the FtsA/FtsN/core-divisome transition that starts constriction.", "evidence": [{"notes": "Verified against the open Nature Communications full text; the proposed model routes FtsZ bundles through FtsA antiparallel filaments, FtsN recruitment, and core-divisome activation.", "reference": "DOI:10.1038/s41467-024-54242-w", "snippet": "starts the onset of constriction"}], "id": "edge-9", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "ftsz_zring", "target": "constriction_onset"}], "evidence_rows": [{"description": "Fast elongation between divisions yields longer cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast elongation rate", "target": "cell length large"}, {"description": "Delaying division allows continued elongation past the typical size.", "edge_id": "edge-2", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division-timing delay", "target": "cell length large"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length large", "target": "cell length"}, {"description": "The SOS response increases SulA-mediated division inhibition after DNA damage or replication stress.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Wiley full text; DNA damage activates the RecA/LexA SOS response and enables expression of SOS regulon genes, including sulA.", "reference": "DOI:10.1002/advs.202203260", "snippet": "SOS response is activated"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "SOS response", "target": "SulA-mediated division inhibition"}, {"description": "SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Wiley full text; the source links SOS activation to SulA blocking FtsZ polymerization.", "reference": "DOI:10.1002/advs.202203260", "snippet": "cell division inhibitor, sulA, blocks FtsZ"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "SulA", "target": "FtsZ Z-ring"}, {"description": "FtsZ accumulation in the Z-ring is a rate-limiting driver for onset of constriction at faster growth rates.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Nature Communications full text; FtsZ numbers were rate-limiting for constriction onset in moderately fast E. coli growth.", "reference": "DOI:10.1038/s41467-024-54242-w", "snippet": "rate limit the onset of constriction"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "FtsZ", "target": "onset of constriction"}, {"description": "SOS-induced SulA is the inhibitory protein mediating this division-arrest branch.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Wiley full text; the study frames SulA as the SOS-linked cell-division inhibitor.", "reference": "DOI:10.1002/advs.202203260", "snippet": "cell division inhibitor sulA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SulA", "target": "SulA-mediated division inhibition"}, {"description": "SulA-mediated inhibition of septation contributes to delayed division and continued elongation.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Wiley full text; SulA-mediated FtsZ inhibition is linked to blocked septation and filamentation.", "reference": "DOI:10.1002/advs.202203260", "snippet": "contributes to non-septate cellular filamentation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SulA-mediated division inhibition", "target": "division-timing delay"}, {"description": "FtsZ bundles promote the FtsA/FtsN/core-divisome transition that starts constriction.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Nature Communications full text; the proposed model routes FtsZ bundles through FtsA antiparallel filaments, FtsN recruitment, and core-divisome activation.", "reference": "DOI:10.1038/s41467-024-54242-w", "snippet": "starts the onset of constriction"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "FtsZ Z-ring", "target": "onset of constriction"}], "graph_id": "cell_length_large_division_delay", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length exceeding approximately 3 \u03bcm.", "grounding": "METPO:1000886", "id": "cell_length_large_trait", "is_orphan": false, "label": "cell length large", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Initiation of septal constriction during cytokinesis.", "grounding": null, "id": "constriction_onset", "is_orphan": false, "label": "onset of constriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Postponement of FtsZ-ring constriction extending elongation.", "grounding": null, "id": "division_timing_delay", "is_orphan": false, "label": "division-timing delay", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid axial elongation between divisions.", "grounding": null, "id": "fast_elongation", "is_orphan": false, "label": "fast elongation rate", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial tubulin homolog whose abundance is rate-limiting for division.", "grounding": "InterPro:IPR000158", "id": "ftsz_protein", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of the FtsZ ring at midcell that initiates cytokinesis.", "grounding": null, "id": "ftsz_zring", "is_orphan": false, "label": "FtsZ Z-ring", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "DNA-damage/stress-activated regulatory program that induces division inhibitors.", "grounding": "GO:0009432", "id": "sos_response", "is_orphan": false, "label": "SOS response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of cell division mediated by the SOS-induced inhibitor SulA.", "grounding": null, "id": "sula_division_inhibition", "is_orphan": false, "label": "SulA-mediated division inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.", "grounding": "InterPro:IPR004596", "id": "sula_protein", "is_orphan": false, "label": "SulA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a numerical cell-length bin. Its graph illustrates possible regulators of measured length but is not a single inheritable causal mechanism requiring a protein/taxon exemplar.", "scope_status": "NONMECHANISTIC", "title": "Large cell-length via FtsZ division delay"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -849,7 +906,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-04 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

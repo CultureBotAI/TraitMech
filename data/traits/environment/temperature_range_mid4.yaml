@@ -32,13 +32,15 @@ canonical_examples:
     35-degree breadth within the approximately 34-40-degree bin.
 causal_graphs:
 - graph_id: temperature_range_mid4_warm_mesophile
-  title: Temperature-range-mid4 warm-mesophile range
+  title: Temperature-range-mid4 warm-mesophile context
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking warm-mesophile adaptation to a temperature
-    growth range of approximately 34–40 °C.
+  description: DOI-backed nonmechanistic graph connecting warm-mesophile growth-range
+    context, Fab-mediated homeoviscous membrane adaptation, compensatory membrane-fluidity
+    restoration, high-temperature protein damage, and RpoH-governed heat-shock protection
+    branches.
   nodes:
   - node_id: temperature_range_mid4_trait
     label: temperature range mid4
@@ -69,8 +71,8 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: FabA, FabI and FabB compete for a common C10:1 acyl-ACP pool, shifting
       flux between saturated and unsaturated fatty acids.
-  - node_id: membrane_lipid_composition
-    label: membrane lipid composition
+  - node_id: saturated_unsaturated_membrane_lipid_composition
+    label: saturated/unsaturated membrane lipid composition
     node_type: QUALITY
     description: Saturated/unsaturated phospholipid makeup of the cell membrane.
   - node_id: membrane_fluidity_restoration
@@ -110,7 +112,7 @@ causal_graphs:
     label: sigma-32 (RpoH) heat-shock regulon
     node_type: BIOLOGICAL_PROCESS
     description: Heat-shock regulon driven by the alternative sigma factor sigma-32/RpoH.
-  - node_id: chaperone_systems
+  - node_id: heat_shock_chaperone_systems
     label: DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems
     node_type: GENE_OR_PROTEIN
     grounding_status: REVIEWED_LABEL_ONLY
@@ -150,87 +152,163 @@ causal_graphs:
       and unsaturated fatty acid synthesis, enabling homeoviscous adaptation.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      notes: A temperature-sensitive metabolic valve at the fatty-acid branchpoint
-        reallocates flux between saturated and unsaturated fatty acid synthesis via
-        FabI and FabB.
+      snippet: allocates flux between the saturated and unsaturated
+      notes: Verified against the open Hoogerland et al. abstract; the E. coli temperature-sensitive
+        metabolic valve allocates fatty-acid synthesis flux through FabI and FabB.
     predicate_id: RO:0002327
   - subject: fab_c10_competition
     predicate: regulates
-    object: membrane_lipid_composition
+    object: saturated_unsaturated_membrane_lipid_composition
     description: Competition of FabA/FabI/FabB for the common C10:1 pool shifts flux
-      between saturated and unsaturated fatty acids, changing membrane lipid composition.
+      between saturated and unsaturated fatty acids, changing saturated/unsaturated
+      membrane lipid composition.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      notes: FabA, FabI and FabB compete for a common C10:1 pool forming a metabolic
-        valve that shifts flux between saturated and unsaturated fatty acids.
+      snippet: compete for a common pool of substrates
+      notes: Verified against the open Hoogerland et al. Figure 1 legend; FabA interconverts
+        the C10:1 acyl-ACP substrates used by FabI and FabB, making the enzymes indirectly
+        compete for one pool.
     predicate_id: RO:0002211
   - subject: membrane_fluidity_restoration
-    predicate: enables
+    predicate: contributes to
     object: growth_after_temperature_shock
     description: Valve plus transcriptional feedback restores optimal membrane fluidity
-      within a single generation, supporting growth after a temperature shock.
+      within a single generation, contributing to growth after a temperature shock.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      notes: Restores optimal membrane fluidity within a single generation after a
-        temperature shock.
-    predicate_id: RO:0002327
+      snippet: restores optimal membrane fluidity within a single generation
+      notes: Verified against the open Hoogerland et al. abstract; the measured E.
+        coli fatty-acid and phospholipid pathway connects membrane-fluidity restoration
+        to recovery from temperature shock.
+    predicate_id: RO:0002326
   - subject: heat_stress
     predicate: causes
     object: protein_unfolding_aggregation
     description: High temperatures cause protein unfolding and aggregation.
     evidence:
     - reference: DOI:10.1186/s12864-023-09266-9
-      notes: High temperatures cause a suite of problems for cells, including protein
-        unfolding and aggregation.
+      snippet: unfold or misfold proteins
+      notes: Verified against the open McGuire and Nano introduction; the review context
+        lists unfolding, misfolding, and aggregation among the high-temperature cellular
+        problems near TMAX.
     predicate_id: biolink:causes
   - subject: protein_unfolding_aggregation
-    predicate: causes
+    predicate: contributes to
     object: mesophile_growth_impairment
-    description: Protein unfolding and aggregation impairs mesophile growth unless
-      compensated.
+    description: Protein unfolding and aggregation contributes to mesophile growth
+      impairment unless compensated.
     evidence:
     - reference: DOI:10.1186/s12864-023-09266-9
-      notes: General mechanistic background applicable to the warm-mesophile upper
-        range; protein damage impairs growth unless compensated.
-    predicate_id: biolink:causes
+      notes: Verified against the open McGuire and Nano introduction; the paper frames
+        high-temperature RNA, protein, lipid, and DNA effects as cellular problems
+        near the maximum growth temperature.
+    predicate_id: RO:0002326
   - subject: heat_stress
-    predicate: causes
+    predicate: positively regulates
     object: membrane_fluidity
     description: High temperatures increase membrane fluidity, requiring compensatory
       adaptation.
     evidence:
     - reference: DOI:10.1186/s12864-023-09266-9
-      notes: High temperatures cause a suite of problems for cells, including increased
-        membrane fluidity.
-    predicate_id: biolink:causes
-  - subject: membrane_fluidity
-    predicate: requires
-    object: compensatory_adaptation
-    description: Temperature-driven increase in membrane fluidity requires compensatory
-      adaptation.
+      snippet: cause increased membrane fluidity
+      notes: Verified against the open McGuire and Nano introduction; increased membrane
+        fluidity is listed as a high-temperature effect on cells.
+    predicate_id: RO:0002213
+  - subject: compensatory_adaptation
+    predicate: regulates
+    object: membrane_fluidity
+    description: Compensatory membrane adaptation regulates temperature-driven membrane-fluidity
+      changes.
     evidence:
-    - reference: DOI:10.1186/s12864-023-09266-9
-      notes: Increased membrane fluidity at high temperature requires compensatory
-        adaptation to maintain function.
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: maintains cell membranes at a fixed viscosity level
+      notes: Verified against the open Hoogerland et al. introduction; homeoviscous
+        adaptation counteracts temperature by varying unsaturated, branched-chain,
+        or chain-length lipid features to stabilize viscosity.
+    predicate_id: RO:0002211
   - subject: rpoh_regulon
-    predicate: induces
-    object: chaperone_systems
-    description: The sigma-32/RpoH regulon induces the DnaK/DnaJ/GrpE and GroES/GroEL
-      chaperone systems.
+    predicate: positively regulates
+    object: heat_shock_chaperone_systems
+    description: The sigma-32/RpoH regulon positively regulates the DnaK/DnaJ/GrpE
+      and GroES/GroEL chaperone systems.
     evidence:
     - reference: DOI:10.1128/mbio.03105-23
-      notes: The alternative sigma factor sigma-32 (RpoH) drives protective heat shock
-        proteins including the DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems.
-  - subject: chaperone_systems
+      snippet: RpoH) that drives the expression
+      notes: Verified against the open Berdejo et al. introduction; RpoH is described
+        as the main governor of the Salmonella Typhimurium heat-shock response and
+        as driving protective heat-shock-protein expression.
+    predicate_id: RO:0002213
+  - subject: heat_shock_chaperone_systems
     predicate: enables
     object: heat_stress_protection
     description: The DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems protect against
       heat stress.
     evidence:
     - reference: DOI:10.1128/mbio.03105-23
-      notes: 'Canonical heat-response: chaperone systems refold stress-damaged proteins
-        to protect against heat stress.'
+      snippet: protective heat shock proteins
+      notes: Verified against the open Berdejo et al. introduction; DnaK/DnaJ/GrpE
+        and GroES/GroEL are named as molecular chaperone systems in the protective
+        heat-shock-protein response.
     predicate_id: RO:0002327
+  - subject: saturated_unsaturated_membrane_lipid_composition
+    predicate: associated with
+    object: homeoviscous_adaptation
+    description: Fab-mediated saturated/unsaturated lipid composition is associated
+      with homeoviscous adaptation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: homeostatically maintain the fluidity of their membranes by adapting
+        lipid composition
+      notes: Verified against the open Hoogerland et al. Figure 1 legend; this connector
+        keeps the FabA/FabI/FabB C10:1 branch as membrane-lipid composition context.
+    predicate_id: biolink:associated_with
+  - subject: homeoviscous_adaptation
+    predicate: associated with
+    object: membrane_fluidity_restoration
+    description: Homeoviscous adaptation is associated with rapid membrane-fluidity
+      restoration after temperature shock.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: accelerates membrane adaptation by causing a transient overshoot
+      notes: Verified against the open Hoogerland et al. abstract; this connector
+        keeps the Fab branchpoint valve as membrane-fluidity restoration context.
+    predicate_id: biolink:associated_with
+  - subject: membrane_fluidity_restoration
+    predicate: associated with
+    object: warm_mesophile_adaptation
+    description: Rapid membrane-fluidity restoration is associated with warm-mesophile
+      adaptation after temperature shock.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: temperature-sensitive metabolic valve that allocates flux between the
+        saturated and unsaturated
+      notes: Verified against the open Hoogerland et al. abstract; this connector
+        keeps fatty-acid flux allocation as membrane context for the broad warm-mesophile
+        range bin.
+    predicate_id: biolink:associated_with
+  - subject: membrane_fluidity
+    predicate: associated with
+    object: homeoviscous_adaptation
+    description: Temperature-driven membrane fluidity is associated with the homeoviscous
+      adaptation branch.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      snippet: maintain constant fluidity across temperatures
+      notes: Verified against the open Hoogerland et al. abstract; this connector
+        keeps membrane-fluidity maintenance as context for compensatory membrane adaptation.
+    predicate_id: biolink:associated_with
+  - subject: heat_stress_protection
+    predicate: associated with
+    object: protein_unfolding_aggregation
+    description: RpoH-governed chaperone protection is associated with heat-induced
+      protein unfolding and aggregation.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09266-9
+      snippet: reduce protein unfolding or misfolding and subsequent protein aggregation
+        in the cell at high incubation temperatures
+      notes: Verified against the open McGuire and Nano introduction; this connector
+        keeps DnaK/DnaJ/GrpE and GroES/GroEL as protective heat-shock context.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825319+00:00'
   curator: seed_from_metpo
@@ -299,4 +377,36 @@ curation_history:
     canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T04:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the temperature_range_mid4_warm_mesophile graph for issue #183:
+    reviewed 9 edge-level evidence items, grounded the RpoH and compensatory-adaptation
+    predicates, retained exact snippets where source wording directly supported the
+    edge, and narrowed 2 local node identifiers to avoid cross-record type collisions.
+    No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T23:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    5 source- and verbatim-snippet-backed association connectors among Fab-mediated
+    membrane adaptation, compensatory membrane-fluidity restoration, high-temperature
+    protein damage, and RpoH heat-shock protection branches. No paid research service
+    was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #667: dropped the weak protein-damage
+    snippet from the protein_unfolding_aggregation to mesophile_growth_impairment
+    edge while preserving its reference-backed review notes.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

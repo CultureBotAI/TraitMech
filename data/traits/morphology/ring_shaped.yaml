@@ -86,12 +86,9 @@ causal_graphs:
     description: Spatially regulated synthesis of the peptidoglycan cell wall.
   - node_id: bactofilin_lmdc_module
     label: bactofilin-M23 peptidase module
-    node_type: GENE_OR_PROTEIN
+    node_type: PATHWAY
     description: Conserved bactofilin and M23 peptidase functional module remodeling
       the wall locally.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: This is a multi-protein bactofilin/M23 module, not one protein
-      family or accession.
   - node_id: wall_biosynthesis_mode_change
     label: local change in cell wall biosynthesis mode
     node_type: BIOLOGICAL_PROCESS
@@ -149,30 +146,37 @@ causal_graphs:
       notes: Supports the trait endpoint via curvature-driven closure.
     predicate_id: METPO:2007400
   - subject: mreb_filaments
-    predicate: correlates with
+    predicate: associated with
     object: cell_wall_growth_rate
-    description: MreB filament motion correlates with the rate of cell-wall growth.
+    description: MreB filament motion is associated with the rate of cell-wall growth.
     evidence:
     - reference: DOI:10.3390/microorganisms12071309
-      notes: the motion of MreB filaments correlates with the rate of cell wall growth;
-        general shape-control edge.
+      snippet: motion of MreB filaments correlates with the rate of cell wall growth
+      notes: Verified against the open Dersch et al. text; the edge remains associative
+        and contextual rather than direct ring-shape evidence.
+    predicate_id: biolink:associated_with
   - subject: mreb_filaments
-    predicate: guides
+    predicate: regulates
     object: pg_insertion_perpendicular
-    description: MreB double filaments guide peptidoglycan insertion perpendicular
-      to the long axis.
+    description: MreB double filaments guide the orientation of peptidoglycan insertion
+      perpendicular to the long axis.
     evidence:
     - reference: DOI:10.1038/s41467-024-49785-x
-      notes: These cytoskeletal structures guide peptidoglycan insertion perpendicular
-        to the long axis of the cell.
+      snippet: guide peptidoglycan insertion perpendicular to the long axis of the
+        cell
+      notes: Verified against the open Middlemiss et al. text; the edge supports contextual
+        MreB-guided peptidoglycan insertion.
+    predicate_id: RO:0002211
   - subject: bactofilin_polymers
-    predicate: spatially regulates
+    predicate: regulates
     object: cell_wall_biosynthesis
-    description: Bactofilin polymers spatially regulate cell-wall biosynthesis.
+    description: Bactofilin polymers regulate cell-wall biosynthesis.
     evidence:
     - reference: DOI:10.7554/eLife.86577.2
-      notes: bactofilin polymers... indicating a central role in the spatial regulation
-        of cell wall biosynthesis.
+      snippet: central role in the spatial regulation of cell wall biosynthesis
+      notes: Verified against the open Pohl et al. abstract; bactofilin spatial wall-biosynthesis
+        regulation is retained as comparative Hyphomonas morphogenesis evidence.
+    predicate_id: RO:0002211
   - subject: bactofilin_lmdc_module
     predicate: promotes
     object: wall_biosynthesis_mode_change
@@ -180,26 +184,30 @@ causal_graphs:
       in cell-wall biosynthesis mode.
     evidence:
     - reference: DOI:10.7554/eLife.86577.2
-      notes: bactofilins and M23 peptidases form a conserved functional module that
-        promotes local changes in the mode of cell wall biosynthesis; cross-taxon.
+      snippet: promotes local changes in the mode of cell wall biosynthesis
+      notes: Verified against the open Pohl et al. abstract; the conserved bactofilin/M23
+        module is retained as comparative cell-wall morphogenesis evidence.
     predicate_id: RO:0002213
   - subject: crva_polymer
-    predicate: skews
+    predicate: regulates
     object: pg_synthesis_rate_skew
-    description: CrvA polymer formation skews peptidoglycan synthesis rates to generate
-      curvature.
+    description: CrvA polymer formation regulates skewed peptidoglycan synthesis rates
+      to generate curvature.
     evidence:
     - reference: DOI:10.1038/s41467-024-45196-0
-      notes: CrvA in Vibrio cholerae... skews peptidoglycan synthesis rates; curvature-generating
-        wall patterning.
+      snippet: CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates
+      notes: Verified against the open Schiller et al. article text; CrvA is retained
+        as a comparative bacterial curvature module.
+    predicate_id: RO:0002211
   - subject: crescentin
     predicate: promotes
     object: cell_curvature
     description: Crescentin promotes cell curvature.
     evidence:
     - reference: DOI:10.1038/s41467-024-45196-0
-      notes: the intermediate filament-like protein crescentin in C. crescentus generates
-        curvature; canonical curvature determinant.
+      snippet: components that promote curvature
+      notes: Verified against the open Schiller et al. article text; Schiller et al.
+        list crescentin in the same bacterial curvature-component statement.
     predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.892873+00:00'
@@ -297,4 +305,12 @@ curation_history:
   changes: Added Rhodocyclus purpureus as the natural ring-shaped exemplar identified
     by this record's own research artifact and original species description; NCBITaxon:1067
     and its current label were verified against NCBI.
+  llm_assisted: true
+- timestamp: '2026-09-04T06:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the ring_shaped_curved_growth_closure graph for issue #183: added
+    exact snippets to 6 comparative curvature and wall-patterning evidence entries,
+    grounded 4 residual predicates, and retyped the bactofilin-M23 module as a pathway.
+    No paid research service was called.'
   llm_assisted: true

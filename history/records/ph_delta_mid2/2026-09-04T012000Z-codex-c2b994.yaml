@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_mid2.yaml
+  slug: ph_delta_mid2
+session:
+  id: 2026-09-04T012000Z-codex-c2b994
+  timestamp: '2026-09-04T01:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Review pH-delta-mid2 causal graph evidence
+  details: 'Reviewed data/traits/environment/ph_delta_mid2.yaml for issue #183. Added snippets
+    to six edge-level evidence items in ph_delta_mid2_broad_breadth and grounded the external-pH,
+    Na+/H+ antiporter, and cytoplasmic-buffer edges to existing RO predicates. Existing deep-research
+    findings were reused alongside the open PMC manuscript for the Krulwich et al. bacterial
+    pH-homeostasis review and the open Rebelo et al. review; no paid research provider was
+    called.'

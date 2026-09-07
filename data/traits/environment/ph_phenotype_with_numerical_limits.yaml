@@ -10,9 +10,10 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: DOI:10.1038/nrmicro2549
-  snippet: external pH
-  notes: pH-homeostasis review supports external pH as the quantitative axis underlying
-    acidophile, neutrophile, and alkaliphile classification.
+  snippet: grow at external pH values
+  notes: Verified against the open PMC manuscript of the Krulwich et al. review; external
+    pH is the quantitative environmental axis represented by pH-growth numerical-limit
+    phenotypes.
 - reference: DOI:10.1016/j.tim.2007.02.005
   snippet: proton motive force
   notes: pH-homeostasis review supports the proton motive force across the cell envelope
@@ -26,14 +27,14 @@ canonical_examples:
     a quantitative pH-growth phenotype.
 causal_graphs:
 - graph_id: ph_phenotype_numerical_axis
-  title: pH phenotype numerical-limits axis
+  title: pH numerical-limits and homeostasis context axis
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking the external pH (H+ activity) axis to the
-    three numerical-limit measurement types (optimum, range, delta) that together
-    classify acidophile, neutrophile, and alkaliphile physiology.
+  description: DOI-backed nonmechanistic graph connecting the external-pH measurement
+    axis and pH optimum, range, and delta subclasses with contextual PMF, F0F1-ATPase,
+    antiporter, amino-acid decarboxylase, and cytoplasmic-buffering branches.
   nodes:
   - node_id: ph_phenotype_trait
     label: pH phenotype with numerical limits
@@ -111,9 +112,10 @@ causal_graphs:
     description: External pH is the quantitative axis defining pH phenotypes.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: external pH
-      notes: Supports external pH as the standard descriptor axis for microbial pH
-        phenotypes.
+      snippet: external pH values that are outside
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        microbial pH phenotypes are expressed relative to external growth pH values
+        and internal pH-homeostatic limits.
     predicate_id: METPO:2007500
   - subject: ph_optimum
     predicate: is a
@@ -146,21 +148,25 @@ causal_graphs:
         pH-homeostasis flexibility.
     predicate_id: rdfs:subClassOf
   - subject: external_ph_axis
-    predicate: determines
+    predicate: regulates
     object: proton_motive_force
-    description: External pH determines the proton motive force across the cell envelope.
+    description: External pH influences the proton motive force across the cell envelope.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Neutralophilic bacteria maintain a relatively constant proton motive
-        force across external pH ~5-8.
+      snippet: pH gradient is largely determined
+      notes: Verified against the open Poolman review; maintaining near-neutral cytoplasmic
+        pH makes external pH a major determinant of the transmembrane pH-gradient
+        component of the PMF.
+    predicate_id: RO:0002211
   - subject: f0f1_atpase
     predicate: enables
     object: atp_synthesis_from_pmf
     description: F0F1-ATPase couples the proton motive force to ATP synthesis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: F0F1-ATP synthase typically uses 3-5 protons per ATP, linking PMF to
-        ATP synthesis and pH homeostasis.
+      snippet: PMF for nutrient uptake and ATP synthesis
+      notes: Verified against the open Poolman review; the PMF links proton translocation
+        by the F0F1-ATPase to ATP synthesis.
     predicate_id: RO:0002327
   - subject: na_h_antiport_activity
     predicate: regulates
@@ -168,8 +174,9 @@ causal_graphs:
     description: Na+/H+ antiporter activity regulates internal pH and PMF.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
-        (general bacteria).
+      snippet: maintain a relatively constant PMF and internal pH
+      notes: Verified against the open Poolman review; Na+/H+ antiporters are listed
+        as key bacterial pH-homeostasis regulators.
     predicate_id: RO:0002211
   - subject: k_h_antiporter
     predicate: regulates
@@ -177,8 +184,9 @@ causal_graphs:
     description: K+/H+ antiporter activity regulates internal pH and PMF.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
-        (general bacteria).
+      snippet: Na+/H+ and K+/H+ antiporters
+      notes: Verified against the open Poolman review; K+/H+ antiporters are listed
+        as key bacterial pH-homeostasis regulators.
     predicate_id: RO:0002211
   - subject: aa_decarboxylase_antiporter
     predicate: consumes
@@ -187,19 +195,67 @@ causal_graphs:
       protons, raising internal pH.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Decarboxylation reaction consumes a proton, raising internal pH; the
-        equivalent of 1 proton is pumped per molecule decarboxylated. Broad across
-        amino-acid decarboxylase systems.
+      snippet: Proton motive force generation by substrate decarboxylation
+      notes: Verified against the open Poolman review; substrate decarboxylation is
+        linked to bacterial PMF generation in pH homeostasis.
     predicate_id: biolink:consumes
   - subject: phosphate_buffering
-    predicate: stabilizes
+    predicate: contributes to
     object: internal_ph
-    description: Cytoplasmic phosphate pools buffer protons and stabilize internal
-      pH.
+    description: Cytoplasmic phosphate pools contribute to internal-pH stability.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Cytoplasmic buffering is important; L. lactis has ~100 mM organic/inorganic
-        phosphates (general bacteria).
+      snippet: buffering capacity of the cytoplasm
+      notes: Verified against the open Poolman review; cytoplasmic buffering is described
+        as important for absorbing pH fluctuations.
+    predicate_id: RO:0002326
+  - subject: atp_synthesis_from_pmf
+    predicate: associated with
+    object: proton_motive_force
+    description: F0F1-coupled ATP synthesis from the PMF is associated with the PMF
+      branch of pH numerical-limit context.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: drive the synthesis of ATP and the transport of solutes
+      notes: Verified against the open Poolman review; this connector keeps PMF-driven
+        ATP synthesis as bioenergetic context rather than direct proof of a pH numerical
+        limit.
+    predicate_id: biolink:associated_with
+  - subject: internal_ph_pmf
+    predicate: associated with
+    object: proton_motive_force
+    description: Regulated internal pH and PMF homeostasis is associated with the
+      PMF branch of pH numerical-limit context.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: simultaneously maintain a relatively constant PMF and internal pH
+      notes: Verified against the open Poolman review; this connector keeps Na+/H+
+        and K+/H+ antiport activity as pH-homeostasis context rather than a universal
+        mechanism for every pH bin.
+    predicate_id: biolink:associated_with
+  - subject: intracellular_proton
+    predicate: associated with
+    object: internal_ph
+    description: Intracellular proton consumption is associated with cytoplasmic pH
+      homeostasis in the pH numerical-limit context.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: metabolite decarboxylation pathways
+      notes: Verified against the open Poolman review; this connector keeps amino-acid
+        decarboxylation as cytoplasmic proton control context.
+    predicate_id: biolink:associated_with
+  - subject: internal_ph
+    predicate: associated with
+    object: ph_phenotype_trait
+    description: Cytoplasmic pH homeostasis is associated with external-pH numerical-limit
+      phenotypes.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: free protons at pH 7.2 is only about 10
+      notes: Verified against the open Poolman review; this connector keeps phosphate
+        buffering as internal-pH context rather than direct proof of a measured external-pH
+        limit.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845918+00:00'
   curator: seed_from_metpo
@@ -286,4 +342,26 @@ curation_history:
     canonical example(s): Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1371/journal.pone.0018960).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T02:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the ph_phenotype_numerical_axis graph for issue #183: added snippets
+    to 1 record-level and 7 edge-level evidence items, and grounded 2 unmapped pH-axis
+    predicates to RO:0002211 or RO:0002326. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T18:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) by adding
+    4 source- and verbatim-snippet-backed association connectors among PMF, F0F1-ATPase/ATP-synthesis,
+    antiporter, amino-acid-decarboxylase, and phosphate-buffering branches. No paid
+    research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

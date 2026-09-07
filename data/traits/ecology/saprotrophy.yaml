@@ -17,11 +17,16 @@ synonyms:
   source: DOI:10.3389/fmicb.2012.00348
 evidence:
 - reference: DOI:10.3389/fmicb.2012.00348
-  notes: Schimel & Schaeffer, "Microbial control over carbon cycling in soil", support
-    microbial decomposition of organic matter as a central ecosystem process.
+  snippet: soil microbial community structure influences C cycling
+  notes: Verified against the open Schimel and Schaeffer abstract; the review frames
+    microbial organic-matter breakdown and extracellular enzymes as controls on soil
+    carbon cycling.
 - reference: DOI:10.1038/nrmicro.2017.87
-  notes: Fierer supports decomposer/saprotrophic activity as a key function of soil
-    microbial communities.
+  snippet: crucial roles in nutrient cycling, the maintenance of soil fertility and
+    soil carbon sequestration
+  notes: Verified against a public copy of Fierer; the review supports the broad ecosystem
+    role of soil microbial communities in nutrient cycling, fertility, and carbon
+    storage.
 canonical_examples:
 - taxon_id: NCBITaxon:1902
   taxon_label: Streptomyces coelicolor
@@ -120,45 +125,55 @@ causal_graphs:
     description: Saprotrophic activity breaks down dead organic matter.
     evidence:
     - reference: DOI:10.3389/fmicb.2012.00348
-      notes: Schimel & Schaeffer support microbial decomposition of organic matter
-        as a central ecosystem process.
+      snippet: rate of OM breakdown in the rhizosphere and in detritus
+      notes: Verified against the open Schimel and Schaeffer abstract; the edge links
+        decomposer activity to organic matter turnover without asserting a single
+        mechanism.
     predicate_id: RO:0002327
   - subject: decomposition
     predicate: consumes
     object: dead_organic_matter
     description: Decomposition uses dead organic matter as substrate.
     evidence:
-    - reference: DOI:10.1038/nrmicro.2017.87
-      notes: Fierer supports decomposer activity as a key function of soil microbial
-        communities.
+    - reference: DOI:10.3389/fmicb.2012.00348
+      snippet: exoenzyme breakdown is necessary for microbes to metabolize them
+      notes: Verified against the open Schimel and Schaeffer text; dead detrital organic
+        structures are retained as substrates that require extracellular breakdown.
     predicate_id: biolink:consumes
   - subject: extracellular_exoenzymes
-    predicate: converts insoluble organic matter into
+    predicate: contributes to
     object: soluble_organic_compounds
-    description: Saprotrophs use secreted exoenzymes to hydrolyze/oxidize insoluble
-      dead organic matter into soluble compounds for uptake.
+    description: Extracellular exoenzymes contribute soluble decomposition products
+      by acting on complex organic compounds.
     evidence:
     - reference: DOI:10.1093/ismejo/wrae073
-      notes: Saprotrophic microbes obtain carbon and energy by hydrolyzing/oxidizing
-        dead organic matter into soluble compounds; insoluble compounds require extracellular
-        enzymes.
+      snippet: products released by extracellular reactions of exoenzymes produced
+        by another group
+      notes: Verified against the open Wang et al. text; the edge keeps a broad substrate-cross-feeding
+        claim about diffusible exoenzyme products in soil.
+    predicate_id: RO:0002326
   - subject: cellulolytic_enzymes
-    predicate: depolymerizes
+    predicate: hydrolyzes
     object: cellulose
     description: Cellobiohydrolases, endoglucanases, and beta-glucosidases act in
       concert to break down cellulose.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: Complete degradation of cellulose into glucose involves concerted action
-        of cellobiohydrolases, endoglucanases, and beta-glucosidases.
+      snippet: degradation of cellulose into glucose involves a concerted action of
+        several enzymes
+      notes: Verified against the open Gurovic et al. text; cellobiohydrolases, endoglucanases,
+        and beta-glucosidases are retained as a cellulolytic enzyme-system node.
+    predicate_id: METPO:2007808
   - subject: cellulose
-    predicate: is converted to
+    predicate: is hydrolyzed to
     object: glucose
-    description: Cellulose depolymerization yields glucose.
+    description: Cellulose hydrolysis yields glucose.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: Complete degradation of cellulose into glucose by the cellulolytic enzyme
-        system.
+      snippet: The complete degradation of cellulose into glucose
+      notes: Verified against the open Gurovic et al. text; cellulose is retained
+        as a substrate that derives into glucose after enzymatic hydrolysis.
+    predicate_id: RO:0001001
   - subject: cazymes
     predicate: hydrolyzes
     object: hemicellulose
@@ -166,36 +181,44 @@ causal_graphs:
       glycosidic bonds.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: CAZymes act on glycosidic bonds; hemicellulose is targeted by xylanases,
-        beta-mannanases, pectate lyases and related enzymes.
+      snippet: Cellulose and hemicelluloses are substrates for these enzymes
+      notes: Verified against the open Gurovic et al. figure text; the broad CAZyme
+        node is retained for hemicellulose-active enzymes.
     predicate_id: METPO:2007808
   - subject: laccase
-    predicate: oxidizes and depolymerizes
+    predicate: oxidizes
     object: lignin
-    description: Laccase oxidatively depolymerizes lignin and phenolic substrates
-      via electron transfer.
+    description: Laccase oxidatively degrades lignin and phenolic substrates via electron
+      transfer.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: Laccases and peroxidases degrade lignin and the corresponding monomers;
-        laccases modify lignin via hydrogen atom abstraction or electron transfer.
+      snippet: Laccases and peroxidases degrade not only lignin
+      notes: Verified against the open Gurovic et al. figure text; laccase is retained
+        as a contextual fungal and bacterial ligninolytic enzyme.
+    predicate_id: METPO:2007803
   - subject: manganese_peroxidase
-    predicate: catalyzes H2O2-dependent oxidation of
+    predicate: oxidizes
     object: lignin
     description: Manganese peroxidase performs H2O2-dependent oxidative degradation
       of lignin.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: Fungal ligninolytic enzymes are mainly manganese peroxidases (MnP) and
-        lignin peroxidases (LiP) catalyzing oxidative reactions dependent on H2O2.
+      snippet: manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing a
+        variety of oxidative reactions
+      notes: Verified against the open Gurovic et al. text; the edge is grounded to
+        the canonical oxidative predicate for the fungal MnP ligninolysis claim.
+    predicate_id: METPO:2007803
   - subject: glucose
-    predicate: represses
+    predicate: negatively regulates
     object: lignocellulolytic_gene_expression
     description: Simple sugars/glucose trigger carbon catabolite repression that represses
       lignocellulolytic gene expression.
     evidence:
     - reference: DOI:10.1093/jambio/lxac002
-      notes: Glucose is a repressor of fungal cellulolytic enzymes; preferred simple
-        carbon sources cause CreA/Cre1-mediated repression.
+      snippet: glucose is a repressor of fungal cellulolytic enzymes
+      notes: Verified against the open Gurovic et al. text; the edge is a broad carbon-catabolite-repression
+        regulatory edge.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -272,4 +295,13 @@ curation_history:
     the tranche: set graph scope saprotrophy_decomposition_cycling=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (extracellular_exoenzymes, cellulolytic_enzymes, cazymes).'
+  llm_assisted: true
+- timestamp: '2026-09-04T07:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the saprotrophy_decomposition_cycling graph for issue #183: added
+    exact snippets to 2 record-level evidence items and 9 decomposition and lignocellulose
+    causal-edge evidence entries, grounded 6 residual predicates, and preserved the
+    graph as a nonmechanistic saprotrophy classification. No paid research service
+    was called.'
   llm_assisted: true

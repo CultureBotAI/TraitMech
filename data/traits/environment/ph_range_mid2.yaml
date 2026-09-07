@@ -80,11 +80,6 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Coupled Na+/H+ exchange that acidifies the cytoplasm when internal
       pH rises.
-  - node_id: cytoplasm
-    label: cytoplasm
-    node_type: CELLULAR_LOCALIZATION
-    description: Intracellular compartment whose pH is regulated by antiport activity.
-    grounding: GO:0005737
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -124,7 +119,7 @@ causal_graphs:
     description: Antiporters with a direct role in sustaining membrane potential.
   - node_id: membrane_potential
     label: membrane potential (Δψ)
-    node_type: BIOLOGICAL_PROCESS
+    node_type: STATE
     description: Transmembrane electrical potential contributing to PMF.
   edges:
   - subject: modest_alkaline_tolerance
@@ -147,63 +142,81 @@ causal_graphs:
       notes: Supports the pH 7–8 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
   - subject: external_ph_7_8
-    predicate: permits maintenance of
+    predicate: associated with
     object: cytoplasmic_ph_homeostasis
-    description: External pH 7-8 permits cells to keep internal pH near 7.0-7.5.
+    description: External pH 7-8 is associated with cells maintaining internal pH
+      near 7.0-7.5.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Internal pH kept within 7.0-7.5 and PMF relatively constant across external
-        pH 5-8.
+      snippet: internal pH of many cell types is kept within the range of 7.0 to 7.5
+      notes: Verified against the open Poolman review; bacterial internal pH is kept
+        near 7.0-7.5 while neutralophilic bacteria maintain PMF across mildly acidic
+        to mildly alkaline external pH.
+    predicate_id: biolink:associated_with
   - subject: cytoplasmic_buffering
-    predicate: stabilizes
+    predicate: contributes to
     object: cytoplasmic_ph_homeostasis
-    description: Cytoplasmic buffering stabilizes internal pH given very low free
-      proton count.
+    description: Cytoplasmic buffering contributes to internal pH homeostasis despite
+      very low free-proton counts.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: A ~1 fL cytoplasm at pH 7.2 contains only ~10 free protons, so buffering
-        is critical.
+      snippet: buffering capacity of the cytoplasm
+      notes: Verified against the open Poolman review; cytoplasmic buffering is described
+        as important for absorbing pH fluctuations.
+    predicate_id: RO:0002326
   - subject: na_h_antiport_activity
-    predicate: acidifies
-    object: cytoplasm
-    description: Na+/H+ antiporter activity acidifies the cytoplasm when internal
-      pH rises.
+    predicate: regulates
+    object: cytoplasmic_ph_homeostasis
+    description: Na+/H+ antiporter activity regulates cytoplasmic pH homeostasis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: Na+/H+ and K+/H+ antiporters acidify the cytoplasm by exchanging exported
-        cations for H+.
-  - subject: proton_motive_force
-    predicate: remains relatively constant across
-    object: external_ph_5_8
-    description: Neutralophiles keep PMF relatively constant across external pH ~5-8.
-    evidence:
-    - reference: DOI:10.1093/femsre/fuad033
-      notes: Neutralophilic bacteria adjust ΔpH vs Δψ so PMF stays relatively constant
-        across external pH ~5-8.
-  - subject: dpsi_dph_rebalancing
-    predicate: maintains
+      snippet: Na+/H+ and K+/H+ antiporters
+      notes: Verified against the open Poolman review; Na+/H+ antiporters are listed
+        as key bacterial pH-homeostasis regulators and acidifying exchangers when
+        internal pH gets too high.
+    predicate_id: RO:0002211
+  - subject: external_ph_5_8
+    predicate: associated with
     object: proton_motive_force
-    description: Rebalancing of ΔpH and Δψ with external pH maintains PMF.
+    description: Neutralophiles keep PMF relatively constant across external pH 5-8.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: The relative contribution of ΔpH and Δψ shifts with external pH to preserve
-        PMF.
+      snippet: kept relatively constant in the pH range from 5 to 8
+      notes: Verified against the open Poolman review; neutralophilic bacteria are
+        described as maintaining a relatively constant PMF across external pH 5-8.
+    predicate_id: biolink:associated_with
+  - subject: dpsi_dph_rebalancing
+    predicate: regulates
+    object: proton_motive_force
+    description: Rebalancing of ΔpH and Δψ with external pH regulates PMF.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: interconvert the Δψ and ΔpH
+      notes: Verified against the open Poolman review; transport mechanisms are described
+        as interconverting membrane potential and ΔpH to maintain PMF and internal
+        pH.
+    predicate_id: RO:0002211
   - subject: f0f1_atpase
-    predicate: couples
+    predicate: enables
     object: atp_synthesis
     description: F0F1-ATPase couples the proton motive force to ATP synthesis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      notes: PMF drives ATP synthesis; F0F1 uses ~3-5 H+ per ATP.
+      snippet: PMF for nutrient uptake and ATP synthesis
+      notes: Verified against the open Poolman review; the PMF links proton translocation
+        by the F0F1-ATPase to ATP synthesis.
+    predicate_id: RO:0002327
   - subject: proton_ion_antiporters
-    predicate: maintain
+    predicate: generates
     object: membrane_potential
-    description: Proton:ion antiporters have a direct role in maintaining membrane
-      potential.
+    description: Proton:ion antiporters generate membrane potential in the E. coli
+      pH-homeostasis model.
     evidence:
-    - reference: DOI:10.1146/annurev-biophys-030822-032215
-      notes: Antiporters have a direct role in maintaining membrane potential in E.
-        coli.
+    - reference: DOI:10.1103/PRXLife.2.043015
+      snippet: use antiporters to generate the plasma membrane potential
+      notes: Verified against the open PRX Life abstract; Terradot et al. model proton-ion
+        antiporters as generators of membrane potential and thus PMF in E. coli.
+    predicate_id: biolink:produces
 curation_history:
 - timestamp: '2026-05-05T01:35:46.831107+00:00'
   curator: seed_from_metpo
@@ -287,4 +300,12 @@ curation_history:
     canonical example(s): Solimonas fluminis (NCBITaxon:2086571; DOI:10.1099/ijsem.0.002865).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T02:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the ph_range_mid2_mild_alkaline_tolerance graph for issue #183:
+    added snippets to 7 edge-level evidence items, grounded 7 unmapped pH-homeostasis
+    predicates, retyped membrane_potential to STATE, and removed the no-longer-used
+    cytoplasm node. No paid research service was called.'
   llm_assisted: true

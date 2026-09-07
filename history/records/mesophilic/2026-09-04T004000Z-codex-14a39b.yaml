@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/mesophilic.yaml
+  slug: mesophilic
+session:
+  id: 2026-09-04T004000Z-codex-14a39b
+  timestamp: '2026-09-04T00:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Review mesophilic causal graph evidence
+  details: 'Reviewed data/traits/environment/mesophilic.yaml for issue #183. Added snippets
+    to six edge-level evidence items in mesophilic_homoviscous_adaptation and regrounded the
+    cold_shock to CspA, heat_shock to RpoH, and RpoH to heat-shock protein edges to RO:0002213
+    positive regulation. Existing deep-research findings were reused alongside primary open
+    full-text CspA and RpoH/DnaK sources; no paid research provider was called.'

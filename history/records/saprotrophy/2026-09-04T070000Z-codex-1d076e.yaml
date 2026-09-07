@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/saprotrophy.yaml
+  slug: saprotrophy
+session:
+  id: 2026-09-04T070000Z-codex-1d076e
+  timestamp: '2026-09-04T07:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed saprotrophy causal evidence
+  details: 'Reviewed data/traits/ecology/saprotrophy.yaml for issue #183. Added exact snippets
+    to 2 record-level and 9 causal-edge evidence entries, grounded 6 residual predicates in
+    the saprotrophy_decomposition_cycling graph, switched the decomposition substrate edge
+    from a broad Fierer soil-microbiome reference to direct Schimel & Schaeffer detritus-breakdown
+    evidence, and preserved the graph as a nonmechanistic saprotrophy classification. No paid
+    research service was called.'

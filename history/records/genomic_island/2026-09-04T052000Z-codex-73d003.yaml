@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/genomic_island.yaml
+  slug: genomic_island
+session:
+  id: 2026-09-04T052000Z-codex-73d003
+  timestamp: '2026-09-04T05:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed genomic_island causal evidence
+  details: 'Reviewed data/traits/genomics/genomic_island.yaml for issue #183. Added exact
+    public snippets to record-level genomic-island evidence and all 6 gi_hgt_accessory_function
+    edge evidence entries, grounded residual predicates in the graph, retyped ICE/IME nodes
+    as genetic elements, grounded conjugation, and preserved the graph as a nonmechanistic
+    genomic-element classification. No paid research service was called.'

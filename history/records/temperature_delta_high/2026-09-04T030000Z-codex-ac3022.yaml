@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_high.yaml
+  slug: temperature_delta_high
+session:
+  id: 2026-09-04T030000Z-codex-ac3022
+  timestamp: '2026-09-04T03:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Review temperature delta high causal evidence
+  details: Reviewed data/traits/environment/temperature_delta_high.yaml for issue 183. Added
+    seven source-checked edge-level snippets, replaced three ungrounded homoviscous-adaptation
+    and thermostability predicates with grounded RO:0002326, RO:0002213, or RO:0002212 predicates,
+    and kept the graph NONMECHANISTIC because the record is a temperature numerical-limit
+    bin rather than a taxon-specific molecular mechanism. Validated via the write-time LinkML
+    gate in scripts/review_temperature_delta_high_graph_183.py.

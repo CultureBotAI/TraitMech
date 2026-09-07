@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-06T171100Z-codex-09604a
+  timestamp: '2026-09-06T17:11:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/669
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Replaced copied PR 664 connector snippets
+  details: 'Replaced copied nonmechanistic bridge evidence snippets in the dirty issue-183
+    batch with independent exact source snippets, then regenerated the affected records through
+    scripts/repair_pr664_adversarial_review.py. This addresses adversarial PR review issue
+    #669.'

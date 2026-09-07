@@ -41,7 +41,7 @@
     
     <div class="card causal-graph-card">
       <h2>BSL-5 proposed enhanced-hazard classification</h2>
-      <p class="meta">DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification.</p>
+      <p class="meta">DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha retained only as historical BSL-5 name-use evidence.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
@@ -88,6 +88,23 @@
                 <code>DOI:10.1146/annurev.micro.62.081307.162938</code>
                 <span class="evidence-snippet">virulence factors</span>
                 <span class="meta">Supports BSL-5 as a proposed extension of the biosafety-level classification axis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-3">
+            <strong>Planetary Protection Level Alpha</strong>
+            <span class="edge-predicate">is informally called</span>
+            <strong>biosafety level 5</strong>
+            
+            <p>PPL-alpha has been informally called BSL-5, providing historical name-use evidence without narrowing the BSL-5 class to Mars sample handling.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.4271/2002-01-2469</code>
+                <span class="evidence-snippet">informally called BSL-5</span>
+                <span class="meta">Verified against the open Cohen 2002 SAE paper; the PPL-alpha source supports a historical naming association only.</span>
               </li>
               
             </ul>
@@ -335,6 +352,24 @@ The node inventory below focuses on **hazard properties**, **biorisk decision pr
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed issue #444 after #591 and left canonical_examples empty: The class is explicitly hypothetical and above every implemented containment level; assigning a real organism would falsely assert an authority-backed BSL-5 classification that does not exist. No paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T10:00:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the biosafety_level_5_ppl_alpha_containment graph for issue #183: replaced the unsupported generalized enhanced-pathogen-hazard graph with an 8-edge Mars returned sample handling graph grounded in the open Cohen 2002 SAE paper, kept definition_source on the DOI that backs the proposed pathogen-hazard definition, added exact snippets to record and edge evidence, and kept BSL-5 scoped as an explicitly hypothetical nonmechanistic planetary-protection proposal. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T13:30:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review issue #668: restored the DOI definition source and DOI-backed top-level evidence while preserving the SAE PPL-alpha source as additional top-level evidence and the graph source.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T17:10:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review: expanded two terse SAE 2002 PPL-alpha snippets, replaced the bare SAE PDF URL with its DOI, and rescoped the BSL-5 graph so PPL-alpha remains historical name-use evidence for the generic METPO class instead of the graph focus.</p>
         </li>
         
       </ol>
@@ -699,7 +734,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification.", "edges": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "motivates", "predicate_id": null, "source": "enhanced_pathogen_hazard", "target": "bsl5_trait"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl5_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "motivates", "predicate_id": null, "source": "enhanced pathogen hazard", "target": "biosafety level 5"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 5", "target": "biosafety level"}], "graph_id": "biosafety_level_5_proposed_enhanced_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Proposed enhanced-containment classification beyond BSL-4 for hypothetical extreme-hazard agents.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hypothetical pathogen hazards judged to exceed the transmissibility, severity, or treatability thresholds covered by BSL-4.", "grounding": null, "id": "enhanced_pathogen_hazard", "is_orphan": false, "label": "enhanced pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 proposed enhanced-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha retained only as historical BSL-5 name-use evidence.", "edges": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "motivates", "predicate_id": null, "source": "enhanced_pathogen_hazard", "target": "bsl5_trait"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl5_trait", "target": "biosafety_level"}, {"description": "PPL-alpha has been informally called BSL-5, providing historical name-use evidence without narrowing the BSL-5 class to Mars sample handling.", "evidence": [{"notes": "Verified against the open Cohen 2002 SAE paper; the PPL-alpha source supports a historical naming association only.", "reference": "DOI:10.4271/2002-01-2469", "snippet": "informally called BSL-5"}], "id": "edge-3", "is_orphan": false, "predicate": "is informally called", "predicate_id": null, "source": "planetary_protection_level_alpha", "target": "bsl5_trait"}], "evidence_rows": [{"description": "Hazards exceeding BSL-4 thresholds motivate the proposed BSL-5 enhanced-containment classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports increasingly severe virulence-factor combinations as the rationale for hazard classes above BSL-4.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "motivates", "predicate_id": null, "source": "enhanced pathogen hazard", "target": "biosafety level 5"}, {"description": "BSL-5 is a proposed member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-5 as a proposed extension of the biosafety-level classification axis.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 5", "target": "biosafety level"}, {"description": "PPL-alpha has been informally called BSL-5, providing historical name-use evidence without narrowing the BSL-5 class to Mars sample handling.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Cohen 2002 SAE paper; the PPL-alpha source supports a historical naming association only.", "reference": "DOI:10.4271/2002-01-2469", "snippet": "informally called BSL-5"}], "predicate": "is informally called", "predicate_id": null, "source": "Planetary Protection Level Alpha", "target": "biosafety level 5"}], "graph_id": "biosafety_level_5_proposed_enhanced_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Proposed enhanced-containment classification beyond BSL-4 for hypothetical extreme-hazard agents.", "grounding": "METPO:1001106", "id": "bsl5_trait", "is_orphan": false, "label": "biosafety level 5", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Hypothetical pathogen hazards judged to exceed the transmissibility, severity, or treatability thresholds covered by BSL-4.", "grounding": null, "id": "enhanced_pathogen_hazard", "is_orphan": false, "label": "enhanced pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Draft planetary-protection standard historically associated with the BSL-5 label by Cohen.", "grounding": null, "id": "planetary_protection_level_alpha", "is_orphan": false, "label": "Planetary Protection Level Alpha", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-5 proposed enhanced-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -722,7 +757,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-06 17:10 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

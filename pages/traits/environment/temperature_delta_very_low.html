@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Temperature-delta-very-low stenothermal breadth</h2>
-      <p class="meta">DOI-backed graph linking very limited thermal-adaptation flexibility to a 1–5 °C temperature growth breadth.</p>
+      <h2>Very-low temperature-delta contextual cold-stress branches</h2>
+      <p class="meta">DOI-backed contextual graph connecting cold-induced membrane rigidification, unsaturated-fatty-acid membrane remodeling, CspA/CsdA RNA support, and very limited thermal-adaptation flexibility to the 1–5 °C temperature-delta bin.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Temperature-delta-very-low stenothermal breadth</title>
+          <title>Very-low temperature-delta contextual cold-stress branches</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for temperature delta very low.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -95,67 +95,198 @@
           
           <li id="pathograph-1-edge-3">
             <strong>unsaturated fatty acid content</strong>
-            <span class="edge-predicate">increases</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>membrane fluidity</strong>
             <code>RO:0002213</code>
-            <p>Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.</p>
+            <p>A higher unsaturated-fatty-acid proportion fluidizes bacterial cytoplasmic membranes and counteracts cold rigidification.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1146/annurev-micro-091313-103612</code>
-                
-                <span class="meta">Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.</span>
+                <span class="evidence-snippet">incorporation of proportionally more unsaturated fatty acids</span>
+                <span class="meta">Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as part of homeoviscous adaptation to decreasing growth temperature.</span>
+              </li>
+              
+              <li>
+                <code>DOI:10.1111/mmi.15323</code>
+                <span class="evidence-snippet">increases with temperature or an increase in the proportion of unsaturated fatty acids and vice versa</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; Singh and Harinarayanan use E. coli unsaturated-fatty-acid perturbations as a route to membrane-fluidity loss.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-4">
-            <strong>membrane fluidity</strong>
-            <span class="edge-predicate">decreased by reduced unsaturated fatty acids</span>
-            <strong>unsaturated fatty acid content</strong>
-            
-            <p>Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.</p>
+            <strong>cold shock</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>CspA cold-shock protein</strong>
+            <code>RO:0002213</code>
+            <p>Cold shock strongly increases CspA cold-shock protein synthesis.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1111/mmi.15323</code>
-                
-                <span class="meta">Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.</span>
+                <code>DOI:10.1046/j.1365-2958.1999.01284.x</code>
+                <span class="evidence-snippet">more than 10% of the total cellular protein synthesis</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-5">
-            <strong>cold shock</strong>
-            <span class="edge-predicate">induces</span>
-            <strong>CspA cold-shock protein</strong>
-            
-            <p>Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.</p>
+            <strong>CsdA DEAD-box RNA helicase</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>50S ribosomal subunit biogenesis</strong>
+            <code>RO:0002326</code>
+            <p>CsdA DEAD-box RNA helicase contributes to 50S ribosomal-subunit biogenesis at low temperature.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.</span>
+                <code>DOI:10.1093/nar/gkh603</code>
+                <span class="evidence-snippet">CsdA is involved in the biogenesis of the large rather than the small ribosomal subunit</span>
+                <span class="meta">Verified against the open Nucleic Acids Research abstract; Charollais et al. place the E. coli CsdA helicase in 50S ribosomal-subunit biogenesis at low temperatures.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-6">
-            <strong>CsdA DEAD-box RNA helicase</strong>
-            <span class="edge-predicate">maintains</span>
-            <strong>translation under cold shock</strong>
-            
-            <p>CsdA binds ribosomes to maintain translation under cold shock.</p>
+            <strong>cold shock</strong>
+            <span class="edge-predicate">negatively regulates</span>
+            <strong>membrane fluidity</strong>
+            <code>RO:0002212</code>
+            <p>Cold exposure drives membrane lipids toward ordered gel states and thereby decreases functional membrane fluidity.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">CsdA binds ribosomes to maintain translation under cold shock.</span>
+                <code>DOI:10.1007/s00792-017-0939-x</code>
+                <span class="evidence-snippet">liquid crystalline phase into the rigid gel phase</span>
+                <span class="meta">Verified against the public Springer page; Siliakus et al. review low-temperature shifts from liquid-crystalline to rigid gel membrane phases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>unsaturated fatty acid content</strong>
+            <span class="edge-predicate">negatively regulates</span>
+            <strong>membrane phase-transition temperature</strong>
+            <code>RO:0002212</code>
+            <p>A higher cis-unsaturated-fatty-acid fraction lowers membrane phase-transition temperature and helps keep membranes fluid in the cold.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                <span class="evidence-snippet">Bacteria remodel the fluidity of their membrane bilayer precisely</span>
+                <span class="meta">Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as growth temperature decreases.</span>
+              </li>
+              
+              <li>
+                <code>DOI:10.1007/s00792-017-0939-x</code>
+                <span class="evidence-snippet">ensure sufficient membrane fluidity and maintain the liquid crystalline phase</span>
+                <span class="meta">Verified against the public Springer page; membrane lipids below their transition temperature shift away from the liquid-crystalline state.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>membrane fluidity</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>membrane transport at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>Liquid-crystalline membrane fluidity supports permeability, diffusion, and membrane-protein function at low temperature.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s00792-017-0939-x</code>
+                <span class="evidence-snippet">many membrane proteins only function in the liquid crystalline phase</span>
+                <span class="meta">Verified against the public Springer page; Siliakus et al. link low-temperature membrane phase to membrane-protein function.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>membrane transport at low temperature</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>very limited thermal-adaptation flexibility</strong>
+            <code>RO:0002326</code>
+            <p>Cold preservation of membrane transport is one contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s00792-017-0939-x</code>
+                <span class="evidence-snippet">maintain the fluidity of the membrane</span>
+                <span class="meta">Verified against the public Springer page; this supports the membrane-function branch without asserting a direct universal cause of the 1-5 degree C temperature-delta bin.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>CspA cold-shock protein</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RNA metabolism at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>CspA RNA chaperone activity supports translation by reducing low-temperature RNA secondary structure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1046/j.1365-2958.1999.01284.x</code>
+                <span class="evidence-snippet">CspA can bind to RNA without apparent sequence specificity</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; the source assigns CspA RNA-chaperone activity a role in low-temperature translation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>CsdA DEAD-box RNA helicase</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RNA metabolism at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>CsdA DEAD-box helicase activity supports RNA handling and large ribosomal-subunit maturation in the cold.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/nar/gkh603</code>
+                <span class="evidence-snippet">CsdA is involved in ribosome biogenesis</span>
+                <span class="meta">Verified against the open Nucleic Acids Research abstract; CsdA supports an RNA helicase-dependent low-temperature ribosome-biogenesis branch.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>50S ribosomal subunit biogenesis</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RNA metabolism at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>50S ribosomal-subunit biogenesis is part of the RNA-processing and translation-support module required during cold stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/nar/gkh603</code>
+                <span class="evidence-snippet">deficit in free 50S subunits at low temperatures</span>
+                <span class="meta">Verified against the open Nucleic Acids Research abstract; CsdA defects in the cold appear as impaired 50S subunit accumulation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>RNA metabolism at low temperature</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>very limited thermal-adaptation flexibility</strong>
+            <code>RO:0002326</code>
+            <p>Cold-supportive RNA chaperone and ribosome-biogenesis functions are a second contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1046/j.1365-2958.1999.01284.x</code>
+                <span class="evidence-snippet">possibly translation at low temperature</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; this supports the RNA-function branch without asserting CspA as a universal determinant of the 1-5 degree C temperature-delta bin.</span>
               </li>
               
             </ul>
@@ -427,6 +558,24 @@ A 2023 genome/proteome/metabolome study of the snow-blight fungus *Phacidium inf
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed issue #444 after #591 and left canonical_examples empty: The tracked artifact explicitly found no natural organism with both sustained-growth endpoints establishing a 1-5 degree C breadth. Cold growth, an optimum, or an assay window is not a measured delta under #591. No paid research was used.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T09:00:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the temperature_delta_very_low_stenothermal graph for issue #183: added exact snippets to 4 membrane and cold-shock evidence items, grounded 3 residual predicates, collapsed 1 backwards membrane-fluidity edge into the supported unsaturated-fatty-acid edge, and retyped unsaturated fatty acid content as a QUALITY node. The record remains an explicitly reviewed nonmechanistic 1-5 degree C temperature-breadth bin. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T11:00:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) by adding 3 contextual cold membrane and RNA nodes plus 8 source- and verbatim-snippet-backed connectors. The connectors join supported cold-stress branches without asserting a direct universal unsaturated-fatty-acid cause of the 1-5 degree C temperature-delta bin. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T17:10:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge snippets with independent exact source snippets while preserving the existing connector edge scope.</p>
         </li>
         
       </ol>
@@ -791,7 +940,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking very limited thermal-adaptation flexibility to a 1\u20135 \u00b0C temperature growth breadth.", "edges": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "very_limited_thermal_adaptation", "target": "temperature_delta_very_low_trait"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_very_low_trait", "target": "temperature_delta"}, {"description": "Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.", "evidence": [{"notes": "Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated_fatty_acid_content", "target": "membrane_fluidity"}, {"description": "Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.", "evidence": [{"notes": "Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.", "reference": "DOI:10.1111/mmi.15323"}], "id": "edge-4", "is_orphan": false, "predicate": "decreased by reduced unsaturated fatty acids", "predicate_id": null, "source": "membrane_fluidity", "target": "unsaturated_fatty_acid_content"}, {"description": "Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.", "evidence": [{"notes": "Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-5", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "cold_shock", "target": "cspa_protein"}, {"description": "CsdA binds ribosomes to maintain translation under cold shock.", "evidence": [{"notes": "CsdA binds ribosomes to maintain translation under cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-6", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "csda_helicase", "target": "translation_under_cold"}], "evidence_rows": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "very limited thermal-adaptation flexibility", "target": "temperature delta very low"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta very low", "target": "temperature delta"}, {"description": "Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.", "edge_id": "edge-3", "evidence": [{"notes": "Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "unsaturated fatty acid content", "target": "membrane fluidity"}, {"description": "Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.", "edge_id": "edge-4", "evidence": [{"notes": "Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.", "reference": "DOI:10.1111/mmi.15323"}], "predicate": "decreased by reduced unsaturated fatty acids", "predicate_id": null, "source": "membrane fluidity", "target": "unsaturated fatty acid content"}, {"description": "Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.", "edge_id": "edge-5", "evidence": [{"notes": "Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "induces", "predicate_id": null, "source": "cold shock", "target": "CspA cold-shock protein"}, {"description": "CsdA binds ribosomes to maintain translation under cold shock.", "edge_id": "edge-6", "evidence": [{"notes": "CsdA binds ribosomes to maintain translation under cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "maintains", "predicate_id": null, "source": "CsdA DEAD-box RNA helicase", "target": "translation under cold shock"}], "graph_id": "temperature_delta_very_low_stenothermal", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Abrupt decrease in ambient temperature.", "grounding": null, "id": "cold_shock", "is_orphan": false, "label": "cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DEAD-box RNA helicase that assists ribosomes and RNA remodeling at low temperature.", "grounding": null, "id": "csda_helicase", "is_orphan": false, "label": "CsdA DEAD-box RNA helicase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA chaperone induced upon cold shock that promotes single-stranded RNA states.", "grounding": null, "id": "cspa_protein", "is_orphan": false, "label": "CspA cold-shock protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the cell membrane, central to homeoviscous adaptation.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 1\u20135 \u00b0C.", "grounding": "METPO:1000483", "id": "temperature_delta_very_low_trait", "is_orphan": false, "label": "temperature delta very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of protein synthesis at low temperature.", "grounding": null, "id": "translation_under_cold", "is_orphan": false, "label": "translation under cold shock", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Proportion of unsaturated fatty acids in membrane phospholipids.", "grounding": null, "id": "unsaturated_fatty_acid_content", "is_orphan": false, "label": "unsaturated fatty acid content", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel membrane lipid composition and enzyme repertoire across temperature shifts.", "grounding": null, "id": "very_limited_thermal_adaptation", "is_orphan": false, "label": "very limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Temperature-delta-very-low stenothermal breadth"}];
+  var graphs = [{"description": "DOI-backed contextual graph connecting cold-induced membrane rigidification, unsaturated-fatty-acid membrane remodeling, CspA/CsdA RNA support, and very limited thermal-adaptation flexibility to the 1\u20135 \u00b0C temperature-delta bin.", "edges": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "very_limited_thermal_adaptation", "target": "temperature_delta_very_low_trait"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_very_low_trait", "target": "temperature_delta"}, {"description": "A higher unsaturated-fatty-acid proportion fluidizes bacterial cytoplasmic membranes and counteracts cold rigidification.", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as part of homeoviscous adaptation to decreasing growth temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}, {"notes": "Verified against the open Molecular Microbiology full text; Singh and Harinarayanan use E. coli unsaturated-fatty-acid perturbations as a route to membrane-fluidity loss.", "reference": "DOI:10.1111/mmi.15323", "snippet": "increases with temperature or an increase in the proportion of unsaturated fatty acids and vice versa"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated_fatty_acid_content", "target": "membrane_fluidity"}, {"description": "Cold shock strongly increases CspA cold-shock protein synthesis.", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "more than 10% of the total cellular protein synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold_shock", "target": "cspa_protein"}, {"description": "CsdA DEAD-box RNA helicase contributes to 50S ribosomal-subunit biogenesis at low temperature.", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; Charollais et al. place the E. coli CsdA helicase in 50S ribosomal-subunit biogenesis at low temperatures.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "CsdA is involved in the biogenesis of the large rather than the small ribosomal subunit"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "csda_helicase", "target": "large_ribosomal_subunit_biogenesis"}, {"description": "Cold exposure drives membrane lipids toward ordered gel states and thereby decreases functional membrane fluidity.", "evidence": [{"notes": "Verified against the public Springer page; Siliakus et al. review low-temperature shifts from liquid-crystalline to rigid gel membrane phases.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "liquid crystalline phase into the rigid gel phase"}], "id": "edge-6", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "cold_shock", "target": "membrane_fluidity"}, {"description": "A higher cis-unsaturated-fatty-acid fraction lowers membrane phase-transition temperature and helps keep membranes fluid in the cold.", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "Bacteria remodel the fluidity of their membrane bilayer precisely"}, {"notes": "Verified against the public Springer page; membrane lipids below their transition temperature shift away from the liquid-crystalline state.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "ensure sufficient membrane fluidity and maintain the liquid crystalline phase"}], "id": "edge-7", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "unsaturated_fatty_acid_content", "target": "membrane_phase_transition_temperature"}, {"description": "Liquid-crystalline membrane fluidity supports permeability, diffusion, and membrane-protein function at low temperature.", "evidence": [{"notes": "Verified against the public Springer page; Siliakus et al. link low-temperature membrane phase to membrane-protein function.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "many membrane proteins only function in the liquid crystalline phase"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane_fluidity", "target": "low_temperature_membrane_transport"}, {"description": "Cold preservation of membrane transport is one contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.", "evidence": [{"notes": "Verified against the public Springer page; this supports the membrane-function branch without asserting a direct universal cause of the 1-5 degree C temperature-delta bin.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "maintain the fluidity of the membrane"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "low_temperature_membrane_transport", "target": "very_limited_thermal_adaptation"}, {"description": "CspA RNA chaperone activity supports translation by reducing low-temperature RNA secondary structure.", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; the source assigns CspA RNA-chaperone activity a role in low-temperature translation.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "CspA can bind to RNA without apparent sequence specificity"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cspa_protein", "target": "cold_rna_metabolism"}, {"description": "CsdA DEAD-box helicase activity supports RNA handling and large ribosomal-subunit maturation in the cold.", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; CsdA supports an RNA helicase-dependent low-temperature ribosome-biogenesis branch.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "CsdA is involved in ribosome biogenesis"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "csda_helicase", "target": "cold_rna_metabolism"}, {"description": "50S ribosomal-subunit biogenesis is part of the RNA-processing and translation-support module required during cold stress.", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; CsdA defects in the cold appear as impaired 50S subunit accumulation.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "deficit in free 50S subunits at low temperatures"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "large_ribosomal_subunit_biogenesis", "target": "cold_rna_metabolism"}, {"description": "Cold-supportive RNA chaperone and ribosome-biogenesis functions are a second contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; this supports the RNA-function branch without asserting CspA as a universal determinant of the 1-5 degree C temperature-delta bin.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "possibly translation at low temperature"}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_rna_metabolism", "target": "very_limited_thermal_adaptation"}], "evidence_rows": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "very limited thermal-adaptation flexibility", "target": "temperature delta very low"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta very low", "target": "temperature delta"}, {"description": "A higher unsaturated-fatty-acid proportion fluidizes bacterial cytoplasmic membranes and counteracts cold rigidification.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as part of homeoviscous adaptation to decreasing growth temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}, {"notes": "Verified against the open Molecular Microbiology full text; Singh and Harinarayanan use E. coli unsaturated-fatty-acid perturbations as a route to membrane-fluidity loss.", "reference": "DOI:10.1111/mmi.15323", "snippet": "increases with temperature or an increase in the proportion of unsaturated fatty acids and vice versa"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "unsaturated fatty acid content", "target": "membrane fluidity"}, {"description": "Cold shock strongly increases CspA cold-shock protein synthesis.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "more than 10% of the total cellular protein synthesis"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold shock", "target": "CspA cold-shock protein"}, {"description": "CsdA DEAD-box RNA helicase contributes to 50S ribosomal-subunit biogenesis at low temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; Charollais et al. place the E. coli CsdA helicase in 50S ribosomal-subunit biogenesis at low temperatures.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "CsdA is involved in the biogenesis of the large rather than the small ribosomal subunit"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CsdA DEAD-box RNA helicase", "target": "50S ribosomal subunit biogenesis"}, {"description": "Cold exposure drives membrane lipids toward ordered gel states and thereby decreases functional membrane fluidity.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the public Springer page; Siliakus et al. review low-temperature shifts from liquid-crystalline to rigid gel membrane phases.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "liquid crystalline phase into the rigid gel phase"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "cold shock", "target": "membrane fluidity"}, {"description": "A higher cis-unsaturated-fatty-acid fraction lowers membrane phase-transition temperature and helps keep membranes fluid in the cold.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; de Mendoza reviews increased unsaturated fatty acid incorporation as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "Bacteria remodel the fluidity of their membrane bilayer precisely"}, {"notes": "Verified against the public Springer page; membrane lipids below their transition temperature shift away from the liquid-crystalline state.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "ensure sufficient membrane fluidity and maintain the liquid crystalline phase"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "unsaturated fatty acid content", "target": "membrane phase-transition temperature"}, {"description": "Liquid-crystalline membrane fluidity supports permeability, diffusion, and membrane-protein function at low temperature.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the public Springer page; Siliakus et al. link low-temperature membrane phase to membrane-protein function.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "many membrane proteins only function in the liquid crystalline phase"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane fluidity", "target": "membrane transport at low temperature"}, {"description": "Cold preservation of membrane transport is one contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the public Springer page; this supports the membrane-function branch without asserting a direct universal cause of the 1-5 degree C temperature-delta bin.", "reference": "DOI:10.1007/s00792-017-0939-x", "snippet": "maintain the fluidity of the membrane"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane transport at low temperature", "target": "very limited thermal-adaptation flexibility"}, {"description": "CspA RNA chaperone activity supports translation by reducing low-temperature RNA secondary structure.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; the source assigns CspA RNA-chaperone activity a role in low-temperature translation.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "CspA can bind to RNA without apparent sequence specificity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CspA cold-shock protein", "target": "RNA metabolism at low temperature"}, {"description": "CsdA DEAD-box helicase activity supports RNA handling and large ribosomal-subunit maturation in the cold.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; CsdA supports an RNA helicase-dependent low-temperature ribosome-biogenesis branch.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "CsdA is involved in ribosome biogenesis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CsdA DEAD-box RNA helicase", "target": "RNA metabolism at low temperature"}, {"description": "50S ribosomal-subunit biogenesis is part of the RNA-processing and translation-support module required during cold stress.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open Nucleic Acids Research abstract; CsdA defects in the cold appear as impaired 50S subunit accumulation.", "reference": "DOI:10.1093/nar/gkh603", "snippet": "deficit in free 50S subunits at low temperatures"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "50S ribosomal subunit biogenesis", "target": "RNA metabolism at low temperature"}, {"description": "Cold-supportive RNA chaperone and ribosome-biogenesis functions are a second contextual branch of the thermal-acclimation flexibility represented in this nonmechanistic temperature-breadth graph.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; this supports the RNA-function branch without asserting CspA as a universal determinant of the 1-5 degree C temperature-delta bin.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "possibly translation at low temperature"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RNA metabolism at low temperature", "target": "very limited thermal-adaptation flexibility"}], "graph_id": "temperature_delta_very_low_stenothermal", "issues": [], "nodes": [{"color": "#ecfccb", "description": "RNA chaperone and helicase activity that preserves translation and ribosomal-subunit biogenesis during cold stress.", "grounding": null, "id": "cold_rna_metabolism", "is_orphan": false, "label": "RNA metabolism at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Abrupt decrease in ambient temperature.", "grounding": null, "id": "cold_shock", "is_orphan": false, "label": "cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DEAD-box RNA helicase that assists ribosomes and RNA remodeling at low temperature.", "grounding": null, "id": "csda_helicase", "is_orphan": false, "label": "CsdA DEAD-box RNA helicase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "RNA chaperone induced upon cold shock that promotes single-stranded RNA states.", "grounding": null, "id": "cspa_protein", "is_orphan": false, "label": "CspA cold-shock protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biogenesis of the bacterial large ribosomal subunit at low temperature.", "grounding": null, "id": "large_ribosomal_subunit_biogenesis", "is_orphan": false, "label": "50S ribosomal subunit biogenesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of membrane permeability, diffusion, and membrane-protein function under low-temperature stress.", "grounding": null, "id": "low_temperature_membrane_transport", "is_orphan": false, "label": "membrane transport at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the cell membrane, central to homeoviscous adaptation.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Temperature at which membrane lipids shift between liquid-crystalline and ordered gel phases.", "grounding": null, "id": "membrane_phase_transition_temperature", "is_orphan": false, "label": "membrane phase-transition temperature", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 1\u20135 \u00b0C.", "grounding": "METPO:1000483", "id": "temperature_delta_very_low_trait", "is_orphan": false, "label": "temperature delta very low", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Relative proportion of unsaturated fatty acids in membrane phospholipids.", "grounding": null, "id": "unsaturated_fatty_acid_content", "is_orphan": false, "label": "unsaturated fatty acid content", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel membrane lipid composition and enzyme repertoire across temperature shifts.", "grounding": null, "id": "very_limited_thermal_adaptation", "is_orphan": false, "label": "very limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Very-low temperature-delta contextual cold-stress branches"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -814,7 +963,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 04:43 UTC from
+      Record as of 2026-09-06 17:10 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

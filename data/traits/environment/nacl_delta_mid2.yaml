@@ -71,16 +71,13 @@ causal_graphs:
     label: osmolality
     node_type: ENVIRONMENTAL_FACTOR
     description: External solute concentration / osmotic pressure.
-  - node_id: kdpfabc_complex
-    label: KdpFABC complex
-    node_type: GENE_OR_PROTEIN
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Reviewed as a contextual protein or protein-complex label within
-      a quantitative measurement graph; no exact semantic family term was established
-      for this aggregate use.
-    description: High-affinity potassium uptake P-type ATPase complex.
-  - node_id: compatible_solute_transport
-    label: compatible-solute accumulation/transport
+  - node_id: kdpfabc_expression
+    label: kdpFABC expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Expression of the kdpFABC high-affinity K+ uptake operon via KdpD
+      under osmotic upshift.
+  - node_id: compatible_solute_accumulation_transport
+    label: compatible-solute accumulation and transport
     node_type: BIOLOGICAL_PROCESS
     description: Biosynthesis and uptake of compatible solutes/osmolytes.
   - node_id: osmoprotection
@@ -89,7 +86,7 @@ causal_graphs:
     description: Response to osmotic stress conferring protection.
   - node_id: eps_matrix
     label: exopolysaccharide matrix
-    node_type: CELLULAR_LOCALIZATION
+    node_type: CHEMICAL
     description: Extracellular polymeric substance matrix surrounding cells.
   - node_id: sodium_ion
     label: sodium ion
@@ -124,9 +121,12 @@ causal_graphs:
     object: potassium_uptake_systems
     description: c-di-AMP binding to transporters/riboswitches inhibits K+ import.
     evidence:
-    - reference: DOI:10.1128/mmbr.00181-23
-      notes: Binding of c-di-AMP to transporters and riboswitches inhibits potassium
-        import (KupA/KupB, KimA, kdp operon).
+    - reference: DOI:10.1371/journal.pgen.1007574
+      snippet: A high level of c-di-AMP has been found to repress K+ and carnitine
+        uptake
+      notes: Verified against the open Pham et al. introduction; c-di-AMP is retained
+        as a broad regulator of bacterial K+ import rather than a direct determinant
+        of this NaCl-breadth bin.
     predicate_id: RO:0002212
   - subject: cyclic_di_amp
     predicate: modulates
@@ -134,31 +134,42 @@ causal_graphs:
     description: c-di-AMP signaling acts as a master regulator of cell volume.
     evidence:
     - reference: DOI:10.1128/mmbr.00181-23
-      notes: Review argues cyclic di-AMP is a master regulator of cell volume.
+      snippet: cyclic di-AMP is a master regulator of cell volume
+      notes: Verified against public Foster et al. text; the edge is kept at the level
+        of broad second-messenger control over cell-volume regulation.
     predicate_id: RO:0002211
   - subject: osmolality
-    predicate: upregulates
-    object: kdpfabc_complex
-    description: Elevated osmolality upregulates kdpFABC expression.
+    predicate: increases
+    object: kdpfabc_expression
+    description: Ionic-strength changes can increase kdpFABC expression via KdpD during
+      osmotic upshift.
     evidence:
-    - reference: DOI:10.1128/mmbr.00181-23
-      notes: Osmolality upregulates kdpFABC expression (review-level, broadly useful).
-  - subject: compatible_solute_transport
+    - reference: DOI:10.1046/j.1365-2958.2002.02894.x
+      snippet: increase the expression of kdpFABC under conditions of osmotic upshift
+      notes: Verified against the open Poolman et al. review; the edge is moved from
+        a protein-complex object to a kdpFABC-expression process.
+    predicate_id: RO:0002213
+  - subject: compatible_solute_accumulation_transport
     predicate: causes
     object: osmoprotection
     description: Accumulation/transport of compatible solutes confers osmoprotection.
     evidence:
-    - reference: DOI:10.1111/mec.16316
-      notes: Compatible-solute biosynthesis/uptake and transporter genes -> osmotic
-        protection.
+    - reference: DOI:10.3389/fmicb.2018.00108
+      snippet: accumulated by microorganisms under high salinity growth conditions
+        as stress protectants
+      notes: Verified against the open Leon et al. text; compatible solute accumulation
+        and uptake are retained as a broad osmoprotective process.
     predicate_id: biolink:causes
   - subject: eps_matrix
-    predicate: binds
+    predicate: interacts with
     object: sodium_ion
-    description: The EPS matrix binds Na+ cations.
+    description: The EPS matrix physically interacts with Na+ cations.
     evidence:
     - reference: DOI:10.1093/femsre/fuaf020
-      notes: The EPS matrix binds cations such as Na+ ions.
+      snippet: the EPS matrix binds cations such as Na+ ions
+      notes: Verified against the open Goszcz et al. review; exopolysaccharide matrices
+        are typed with the existing CHEMICAL convention from the biofilm graph.
+    predicate_id: biolink:interacts_with
   - subject: eps_matrix
     predicate: promotes
     object: water_retention
@@ -166,7 +177,9 @@ causal_graphs:
       toxicity.
     evidence:
     - reference: DOI:10.1093/femsre/fuaf020
-      notes: Lowering effective pericellular Na+ and retaining water.
+      snippet: It also retains water, which helps in reducing the osmotic gradient
+      notes: Verified against the open Goszcz et al. review; this EPS edge is kept
+        as a contextual pericellular salt-stress mitigation mechanism.
     predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842087+00:00'
@@ -233,4 +246,11 @@ curation_history:
     canonical example(s): Peribacillus endoradicis (NCBITaxon:718002; DOI:10.1099/ijs.0.028936-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T07:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the nacl_delta_mid2_broad_breadth graph for issue #183: added
+    exact snippets to 6 causal-edge evidence items, grounded 2 residual predicates,
+    and repaired 2 local node-type conflicts. No paid research service was called.'
   llm_assisted: true

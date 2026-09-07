@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  slug: ph_phenotype_with_numerical_limits
+session:
+  id: 2026-09-04T022000Z-codex-73fbda
+  timestamp: '2026-09-04T02:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Review pH numerical-limits causal evidence
+  details: Reviewed data/traits/environment/ph_phenotype_with_numerical_limits.yaml for issue
+    183. Added a source-checked record-level pH-axis snippet and seven source-checked edge-level
+    snippets, replaced two unmapped pH-axis predicates with grounded RO:0002211 or RO:0002326
+    predicates, and kept the graph NONMECHANISTIC because the record is a pH numerical-limit
+    superclass rather than a taxon-specific molecular mechanism. Validated via the write-time
+    LinkML gate in scripts/review_ph_phenotype_graph_183.py.

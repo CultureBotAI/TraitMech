@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Mesophilic homoviscous and enzymatic adaptation mechanism</h2>
-      <p class="meta">DOI-backed graph linking mesophily to moderate ambient temperature, homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced growth at intermediate temperatures.</p>
+      <h2>Mesophilic growth with membrane and temperature-boundary support</h2>
+      <p class="meta">DOI-backed nonmechanistic graph connecting mesophily to moderate temperature, balanced growth, homoviscous membrane fluidity, and cold- and heat-shock boundary-support branches.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Mesophilic homoviscous and enzymatic adaptation mechanism</title>
+          <title>Mesophilic growth with membrane and temperature-boundary support</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for mesophilic.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -132,13 +132,13 @@
             <span class="edge-predicate">increases</span>
             <strong>unsaturated fatty acids</strong>
             <code>RO:0002213</code>
-            <p>Temperature downshift increases membrane unsaturated fatty acid content (homeoviscous adaptation).</p>
+            <p>Temperature downshift increases membrane unsaturated fatty acid content through homeoviscous adaptation.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1007/s42770-023-01057-4</code>
-                
-                <span class="meta">Low-temperature adaptation includes increased unsaturation of membrane acyl chains; broad bacterial homeoviscous adaptation.</span>
+                <span class="evidence-snippet">production of double bonds in lipids</span>
+                <span class="meta">Verified against the Ramón et al. cold-adaptation review; low-temperature adaptation includes membrane-composition remodeling through lipid double-bond production.</span>
               </li>
               
             </ul>
@@ -146,16 +146,16 @@
           
           <li id="pathograph-1-edge-6">
             <strong>cold shock</strong>
-            <span class="edge-predicate">induces</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>CspA cold-shock protein</strong>
-            
-            <p>Cold shock induces the cold-shock protein CspA.</p>
+            <code>RO:0002213</code>
+            <p>Cold shock strongly increases CspA cold-shock protein synthesis.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">Cold shock responses include induction of Csp proteins, notably CspA (~15% of protein synthesis after cold shock).</span>
+                <code>DOI:10.1046/j.1365-2958.1999.01284.x</code>
+                <span class="evidence-snippet">more than 10% of the total cellular protein synthesis</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.</span>
               </li>
               
             </ul>
@@ -166,13 +166,13 @@
             <span class="edge-predicate">promotes</span>
             <strong>translation</strong>
             <code>RO:0002213</code>
-            <p>CspA acts as an RNA chaperone preventing RNA secondary structure, promoting translation during cold shock.</p>
+            <p>CspA RNA chaperone activity destabilizes inhibitory mRNA secondary structures, promoting translation during cold shock.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">CspA binds/unwinds RNA to promote single-strandedness and translation during cold shock.</span>
+                <code>DOI:10.1046/j.1365-2958.1999.01284.x</code>
+                <span class="evidence-snippet">facilitates translation by destabilizing mRNA secondary structures</span>
+                <span class="meta">Verified against the open Molecular Microbiology full text; CspA acts as an RNA chaperone that counters low-temperature mRNA secondary structure.</span>
               </li>
               
             </ul>
@@ -180,16 +180,16 @@
           
           <li id="pathograph-1-edge-8">
             <strong>heat shock</strong>
-            <span class="edge-predicate">induces</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>sigma-32 (RpoH)</strong>
-            
-            <p>Heat shock induces synthesis of sigma-32 (RpoH).</p>
+            <code>RO:0002213</code>
+            <p>Heat shock transiently increases cellular sigma-32 (RpoH), the heat-shock sigma factor.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">Heat-induced synthesis of sigma-32 (rpoH); canonical bacterial heat-shock regulation relevant to mesophiles near the upper temperature range.</span>
+                <code>DOI:10.1128/jb.183.18.5302-5310.2001</code>
+                <span class="evidence-snippet">transient increase in the RpoH level observed upon heat shock</span>
+                <span class="meta">Verified against the open Journal of Bacteriology full text; E. coli heat-shock induction is regulated by increased RpoH translation and transient sigma-32 stabilization.</span>
               </li>
               
             </ul>
@@ -197,16 +197,16 @@
           
           <li id="pathograph-1-edge-9">
             <strong>sigma-32 (RpoH)</strong>
-            <span class="edge-predicate">activates expression of</span>
+            <span class="edge-predicate">positively regulates</span>
             <strong>heat-shock response proteins</strong>
-            
-            <p>Sigma-32 (RpoH) activates production of heat-shock response proteins.</p>
+            <code>RO:0002213</code>
+            <p>Sigma-32 (RpoH) positively regulates heat-shock response protein expression.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">Heat shock regulation centers on sigma factor RpoH (sigma-32) directing heat-shock gene expression.</span>
+                <code>DOI:10.1128/jb.183.18.5302-5310.2001</code>
+                <span class="evidence-snippet">enhancing transcription of the heat shock genes</span>
+                <span class="meta">Verified against the open Journal of Bacteriology full text; RpoH-dependent sigma-32 activity drives heat-shock-gene transcription.</span>
               </li>
               
             </ul>
@@ -217,13 +217,81 @@
             <span class="edge-predicate">negatively regulates</span>
             <strong>sigma-32 (RpoH)</strong>
             <code>RO:0002212</code>
-            <p>DnaK chaperone sequesters sigma-32, negatively regulating its activity.</p>
+            <p>DnaK chaperone activity negatively regulates sigma-32 (RpoH) activity.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1007/s12275-023-00031-x</code>
-                
-                <span class="meta">RpoH is controlled by DnaK chaperone sequestration; canonical negative regulation in Gram-negative bacteria.</span>
+                <code>DOI:10.1128/jb.183.18.5302-5310.2001</code>
+                <span class="evidence-snippet">negative regulation of RpoH activity</span>
+                <span class="meta">Verified against the open Journal of Bacteriology full text; the DnaK chaperone system participates in negative control of sigma-32 activity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>unsaturated fatty acids</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>homoviscous lipid composition</strong>
+            <code>biolink:associated_with</code>
+            <p>Unsaturated fatty-acid changes are associated with the homeoviscous lipid composition branch in this mesophilic temperature-response graph.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                <span class="evidence-snippet">incorporation of proportionally more unsaturated fatty acids</span>
+                <span class="meta">Verified against the public Annual Review of Microbiology abstract; unsaturated fatty-acid incorporation is part of homeoviscous membrane remodeling as growth temperature decreases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>membrane fluidity</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>balanced mesophilic growth</strong>
+            <code>biolink:associated_with</code>
+            <p>Mesophilic balanced growth is associated with maintenance of target cytoplasmic-membrane fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                <span class="evidence-snippet">remodel the fluidity of their membrane bilayer</span>
+                <span class="meta">Verified against the public Annual Review of Microbiology abstract; the connector links membrane-fluidity remodeling to growth-temperature acclimation without making a single lipid ratio define mesophily.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>translation</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>balanced mesophilic growth</strong>
+            <code>biolink:associated_with</code>
+            <p>Cold-shock maintenance of translation is a lower-temperature boundary-support branch for balanced mesophilic growth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.4161/rna.7.6.13482</code>
+                <span class="evidence-snippet">facilitating transcription and translation at low temperature</span>
+                <span class="meta">Verified against the open Phadtare and Severinov PMC abstract; the connector keeps CspA-family RNA chaperones as low-temperature translation context, not as a definition of mesophily.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>heat-shock response proteins</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>balanced mesophilic growth</strong>
+            <code>biolink:associated_with</code>
+            <p>RpoH-regulated heat-shock response proteins form an upper-temperature boundary-support branch for balanced mesophilic growth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.02174-23</code>
+                <span class="evidence-snippet">heat shock genes encoding chaperones, such as DnaK and GroEL</span>
+                <span class="meta">Verified against the open Grunberger et al. PMC text; the connector keeps heat-shock chaperones as an upper-boundary proteostasis branch, not as a definition of mesophily.</span>
               </li>
               
             </ul>
@@ -557,6 +625,30 @@ Only identifiers that can be stated confidently are included. Labels should be r
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope mesophilic_homoviscous_adaptation=NONMECHANISTIC with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mesophile_enzyme_repertoire, cspa, rpoh_sigma32, heat_shock_proteins, dnak); added 1 node(s) and 1 edge(s) (heat_shock_proteins); removed 1 node(s) and 1 edge(s) together with their evidence (heat_shock_genes).</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T00:40:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the broad mesophilic_homoviscous_adaptation graph for issue #183: added snippets to 6 edge-level evidence items and regrounded 3 heat/cold shock response edges from legacy free-text predicates to RO:0002213 positive regulation. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T13:00:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (5 components to 1) by adding 4 source- and verbatim-snippet-backed association connectors among the homoviscous membrane, cold-shock RNA, and heat-shock boundary branches. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T13:30:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review issue #665: replaced two sigma-32 snippets with exact RpoH wording from the Journal of Bacteriology source.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T17:10:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge snippets with independent exact source snippets while preserving the existing connector edge scope.</p>
         </li>
         
       </ol>
@@ -921,7 +1013,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking mesophily to moderate ambient temperature, homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced growth at intermediate temperatures.", "edges": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate_temperature", "target": "mesophilic_trait"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile_enzyme_repertoire", "target": "balanced_growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced_growth", "target": "mesophilic_trait"}, {"description": "Temperature downshift increases membrane unsaturated fatty acid content (homeoviscous adaptation).", "evidence": [{"notes": "Low-temperature adaptation includes increased unsaturation of membrane acyl chains; broad bacterial homeoviscous adaptation.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "temperature_decrease", "target": "unsaturated_fatty_acids"}, {"description": "Cold shock induces the cold-shock protein CspA.", "evidence": [{"notes": "Cold shock responses include induction of Csp proteins, notably CspA (~15% of protein synthesis after cold shock).", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "cold_shock", "target": "cspa"}, {"description": "CspA acts as an RNA chaperone preventing RNA secondary structure, promoting translation during cold shock.", "evidence": [{"notes": "CspA binds/unwinds RNA to promote single-strandedness and translation during cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "cspa", "target": "translation"}, {"description": "Heat shock induces synthesis of sigma-32 (RpoH).", "evidence": [{"notes": "Heat-induced synthesis of sigma-32 (rpoH); canonical bacterial heat-shock regulation relevant to mesophiles near the upper temperature range.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-8", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "heat_shock", "target": "rpoh_sigma32"}, {"description": "Sigma-32 (RpoH) activates production of heat-shock response proteins.", "evidence": [{"notes": "Heat shock regulation centers on sigma factor RpoH (sigma-32) directing heat-shock gene expression.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-9", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "rpoh_sigma32", "target": "heat_shock_proteins"}, {"description": "DnaK chaperone sequesters sigma-32, negatively regulating its activity.", "evidence": [{"notes": "RpoH is controlled by DnaK chaperone sequestration; canonical negative regulation in Gram-negative bacteria.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-10", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "dnak", "target": "rpoh_sigma32"}], "evidence_rows": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate ambient temperature", "target": "mesophilic"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile enzyme repertoire", "target": "balanced mesophilic growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced mesophilic growth", "target": "mesophilic"}, {"description": "Temperature downshift increases membrane unsaturated fatty acid content (homeoviscous adaptation).", "edge_id": "edge-5", "evidence": [{"notes": "Low-temperature adaptation includes increased unsaturation of membrane acyl chains; broad bacterial homeoviscous adaptation.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "temperature decrease", "target": "unsaturated fatty acids"}, {"description": "Cold shock induces the cold-shock protein CspA.", "edge_id": "edge-6", "evidence": [{"notes": "Cold shock responses include induction of Csp proteins, notably CspA (~15% of protein synthesis after cold shock).", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "induces", "predicate_id": null, "source": "cold shock", "target": "CspA cold-shock protein"}, {"description": "CspA acts as an RNA chaperone preventing RNA secondary structure, promoting translation during cold shock.", "edge_id": "edge-7", "evidence": [{"notes": "CspA binds/unwinds RNA to promote single-strandedness and translation during cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "CspA cold-shock protein", "target": "translation"}, {"description": "Heat shock induces synthesis of sigma-32 (RpoH).", "edge_id": "edge-8", "evidence": [{"notes": "Heat-induced synthesis of sigma-32 (rpoH); canonical bacterial heat-shock regulation relevant to mesophiles near the upper temperature range.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "induces", "predicate_id": null, "source": "heat shock", "target": "sigma-32 (RpoH)"}, {"description": "Sigma-32 (RpoH) activates production of heat-shock response proteins.", "edge_id": "edge-9", "evidence": [{"notes": "Heat shock regulation centers on sigma factor RpoH (sigma-32) directing heat-shock gene expression.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "activates expression of", "predicate_id": null, "source": "sigma-32 (RpoH)", "target": "heat-shock response proteins"}, {"description": "DnaK chaperone sequesters sigma-32, negatively regulating its activity.", "edge_id": "edge-10", "evidence": [{"notes": "RpoH is controlled by DnaK chaperone sequestration; canonical negative regulation in Gram-negative bacteria.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "DnaK chaperone", "target": "sigma-32 (RpoH)"}], "graph_id": "mesophilic_homoviscous_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Sustained growth rate at intermediate temperatures.", "grounding": null, "id": "balanced_growth", "is_orphan": false, "label": "balanced mesophilic growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Abrupt temperature downshift triggering the cold-shock response.", "grounding": null, "id": "cold_shock", "is_orphan": false, "label": "cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Major cold-shock RNA chaperone preventing inhibitory RNA secondary structure.", "grounding": null, "id": "cspa", "is_orphan": false, "label": "CspA cold-shock protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Hsp70 chaperone that sequesters sigma-32, negatively regulating its activity.", "grounding": null, "id": "dnak", "is_orphan": false, "label": "DnaK chaperone", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Temperature upshift triggering the heat-shock response.", "grounding": null, "id": "heat_shock", "is_orphan": false, "label": "heat shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Chaperones and proteases induced to mitigate heat stress.", "grounding": null, "id": "heat_shock_proteins", "is_orphan": false, "label": "heat-shock response proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain target membrane fluidity at mesophilic temperatures.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with peak activity in the mesophile temperature range.", "grounding": null, "id": "mesophile_enzyme_repertoire", "is_orphan": false, "label": "mesophile enzyme repertoire", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at intermediate temperatures (~20\u201345 \u00b0C).", "grounding": "METPO:1000615", "id": "mesophilic_trait", "is_orphan": false, "label": "mesophilic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature in the ~20\u201345 \u00b0C mesophilic range.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Alternative sigma factor controlling the bacterial heat-shock regulon.", "grounding": null, "id": "rpoh_sigma32", "is_orphan": false, "label": "sigma-32 (RpoH)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "A downshift in ambient temperature within the mesophilic regime.", "grounding": null, "id": "temperature_decrease", "is_orphan": false, "label": "temperature decrease", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protein synthesis from mRNA, maintained during cold shock.", "grounding": "GO:0006412", "id": "translation", "is_orphan": false, "label": "translation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Membrane acyl chains with cis double bonds that increase membrane fluidity.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Mesophilic homoviscous and enzymatic adaptation mechanism"}];
+  var graphs = [{"description": "DOI-backed nonmechanistic graph connecting mesophily to moderate temperature, balanced growth, homoviscous membrane fluidity, and cold- and heat-shock boundary-support branches.", "edges": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate_temperature", "target": "mesophilic_trait"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile_enzyme_repertoire", "target": "balanced_growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced_growth", "target": "mesophilic_trait"}, {"description": "Temperature downshift increases membrane unsaturated fatty acid content through homeoviscous adaptation.", "evidence": [{"notes": "Verified against the Ram\u00f3n et al. cold-adaptation review; low-temperature adaptation includes membrane-composition remodeling through lipid double-bond production.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "temperature_decrease", "target": "unsaturated_fatty_acids"}, {"description": "Cold shock strongly increases CspA cold-shock protein synthesis.", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "more than 10% of the total cellular protein synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold_shock", "target": "cspa"}, {"description": "CspA RNA chaperone activity destabilizes inhibitory mRNA secondary structures, promoting translation during cold shock.", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA acts as an RNA chaperone that counters low-temperature mRNA secondary structure.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "facilitates translation by destabilizing mRNA secondary structures"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "cspa", "target": "translation"}, {"description": "Heat shock transiently increases cellular sigma-32 (RpoH), the heat-shock sigma factor.", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; E. coli heat-shock induction is regulated by increased RpoH translation and transient sigma-32 stabilization.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "transient increase in the RpoH level observed upon heat shock"}], "id": "edge-8", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat_shock", "target": "rpoh_sigma32"}, {"description": "Sigma-32 (RpoH) positively regulates heat-shock response protein expression.", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; RpoH-dependent sigma-32 activity drives heat-shock-gene transcription.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "enhancing transcription of the heat shock genes"}], "id": "edge-9", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "rpoh_sigma32", "target": "heat_shock_proteins"}, {"description": "DnaK chaperone activity negatively regulates sigma-32 (RpoH) activity.", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; the DnaK chaperone system participates in negative control of sigma-32 activity.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "negative regulation of RpoH activity"}], "id": "edge-10", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "dnak", "target": "rpoh_sigma32"}, {"description": "Unsaturated fatty-acid changes are associated with the homeoviscous lipid composition branch in this mesophilic temperature-response graph.", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; unsaturated fatty-acid incorporation is part of homeoviscous membrane remodeling as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "id": "edge-11", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "unsaturated_fatty_acids", "target": "homoviscous_lipid_composition"}, {"description": "Mesophilic balanced growth is associated with maintenance of target cytoplasmic-membrane fluidity.", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; the connector links membrane-fluidity remodeling to growth-temperature acclimation without making a single lipid ratio define mesophily.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "remodel the fluidity of their membrane bilayer"}], "id": "edge-12", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "membrane_fluidity", "target": "balanced_growth"}, {"description": "Cold-shock maintenance of translation is a lower-temperature boundary-support branch for balanced mesophilic growth.", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PMC abstract; the connector keeps CspA-family RNA chaperones as low-temperature translation context, not as a definition of mesophily.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "facilitating transcription and translation at low temperature"}], "id": "edge-13", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "translation", "target": "balanced_growth"}, {"description": "RpoH-regulated heat-shock response proteins form an upper-temperature boundary-support branch for balanced mesophilic growth.", "evidence": [{"notes": "Verified against the open Grunberger et al. PMC text; the connector keeps heat-shock chaperones as an upper-boundary proteostasis branch, not as a definition of mesophily.", "reference": "DOI:10.1128/mbio.02174-23", "snippet": "heat shock genes encoding chaperones, such as DnaK and GroEL"}], "id": "edge-14", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "heat_shock_proteins", "target": "balanced_growth"}], "evidence_rows": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate ambient temperature", "target": "mesophilic"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile enzyme repertoire", "target": "balanced mesophilic growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced mesophilic growth", "target": "mesophilic"}, {"description": "Temperature downshift increases membrane unsaturated fatty acid content through homeoviscous adaptation.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the Ram\u00f3n et al. cold-adaptation review; low-temperature adaptation includes membrane-composition remodeling through lipid double-bond production.", "reference": "DOI:10.1007/s42770-023-01057-4", "snippet": "production of double bonds in lipids"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "temperature decrease", "target": "unsaturated fatty acids"}, {"description": "Cold shock strongly increases CspA cold-shock protein synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA is the major E. coli cold-shock protein and its synthesis rises sharply after temperature downshift.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "more than 10% of the total cellular protein synthesis"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold shock", "target": "CspA cold-shock protein"}, {"description": "CspA RNA chaperone activity destabilizes inhibitory mRNA secondary structures, promoting translation during cold shock.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Molecular Microbiology full text; CspA acts as an RNA chaperone that counters low-temperature mRNA secondary structure.", "reference": "DOI:10.1046/j.1365-2958.1999.01284.x", "snippet": "facilitates translation by destabilizing mRNA secondary structures"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "CspA cold-shock protein", "target": "translation"}, {"description": "Heat shock transiently increases cellular sigma-32 (RpoH), the heat-shock sigma factor.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; E. coli heat-shock induction is regulated by increased RpoH translation and transient sigma-32 stabilization.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "transient increase in the RpoH level observed upon heat shock"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat shock", "target": "sigma-32 (RpoH)"}, {"description": "Sigma-32 (RpoH) positively regulates heat-shock response protein expression.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; RpoH-dependent sigma-32 activity drives heat-shock-gene transcription.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "enhancing transcription of the heat shock genes"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "sigma-32 (RpoH)", "target": "heat-shock response proteins"}, {"description": "DnaK chaperone activity negatively regulates sigma-32 (RpoH) activity.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Journal of Bacteriology full text; the DnaK chaperone system participates in negative control of sigma-32 activity.", "reference": "DOI:10.1128/jb.183.18.5302-5310.2001", "snippet": "negative regulation of RpoH activity"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "DnaK chaperone", "target": "sigma-32 (RpoH)"}, {"description": "Unsaturated fatty-acid changes are associated with the homeoviscous lipid composition branch in this mesophilic temperature-response graph.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; unsaturated fatty-acid incorporation is part of homeoviscous membrane remodeling as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "unsaturated fatty acids", "target": "homoviscous lipid composition"}, {"description": "Mesophilic balanced growth is associated with maintenance of target cytoplasmic-membrane fluidity.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the public Annual Review of Microbiology abstract; the connector links membrane-fluidity remodeling to growth-temperature acclimation without making a single lipid ratio define mesophily.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "remodel the fluidity of their membrane bilayer"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "membrane fluidity", "target": "balanced mesophilic growth"}, {"description": "Cold-shock maintenance of translation is a lower-temperature boundary-support branch for balanced mesophilic growth.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the open Phadtare and Severinov PMC abstract; the connector keeps CspA-family RNA chaperones as low-temperature translation context, not as a definition of mesophily.", "reference": "DOI:10.4161/rna.7.6.13482", "snippet": "facilitating transcription and translation at low temperature"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "translation", "target": "balanced mesophilic growth"}, {"description": "RpoH-regulated heat-shock response proteins form an upper-temperature boundary-support branch for balanced mesophilic growth.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the open Grunberger et al. PMC text; the connector keeps heat-shock chaperones as an upper-boundary proteostasis branch, not as a definition of mesophily.", "reference": "DOI:10.1128/mbio.02174-23", "snippet": "heat shock genes encoding chaperones, such as DnaK and GroEL"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "heat-shock response proteins", "target": "balanced mesophilic growth"}], "graph_id": "mesophilic_homoviscous_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Sustained growth rate at intermediate temperatures.", "grounding": null, "id": "balanced_growth", "is_orphan": false, "label": "balanced mesophilic growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Abrupt temperature downshift triggering the cold-shock response.", "grounding": null, "id": "cold_shock", "is_orphan": false, "label": "cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Major cold-shock RNA chaperone preventing inhibitory RNA secondary structure.", "grounding": null, "id": "cspa", "is_orphan": false, "label": "CspA cold-shock protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Hsp70 chaperone that sequesters sigma-32, negatively regulating its activity.", "grounding": null, "id": "dnak", "is_orphan": false, "label": "DnaK chaperone", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Temperature upshift triggering the heat-shock response.", "grounding": null, "id": "heat_shock", "is_orphan": false, "label": "heat shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Chaperones and proteases induced to mitigate heat stress.", "grounding": null, "id": "heat_shock_proteins", "is_orphan": false, "label": "heat-shock response proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain target membrane fluidity at mesophilic temperatures.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with peak activity in the mesophile temperature range.", "grounding": null, "id": "mesophile_enzyme_repertoire", "is_orphan": false, "label": "mesophile enzyme repertoire", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at intermediate temperatures (~20\u201345 \u00b0C).", "grounding": "METPO:1000615", "id": "mesophilic_trait", "is_orphan": false, "label": "mesophilic", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature in the ~20\u201345 \u00b0C mesophilic range.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Alternative sigma factor controlling the bacterial heat-shock regulon.", "grounding": null, "id": "rpoh_sigma32", "is_orphan": false, "label": "sigma-32 (RpoH)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "A downshift in ambient temperature within the mesophilic regime.", "grounding": null, "id": "temperature_decrease", "is_orphan": false, "label": "temperature decrease", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protein synthesis from mRNA, maintained during cold shock.", "grounding": "GO:0006412", "id": "translation", "is_orphan": false, "label": "translation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#fef3c7", "description": "Membrane acyl chains with cis double bonds that increase membrane fluidity.", "grounding": "CHEBI:27208", "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This record is an upper preference, broad tolerance, or central-range classification spanning multiple unrelated adaptations; contextual protein nodes are retained without assigning a misleading token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Mesophilic growth with membrane and temperature-boundary support"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -944,7 +1036,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-09-06 17:10 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

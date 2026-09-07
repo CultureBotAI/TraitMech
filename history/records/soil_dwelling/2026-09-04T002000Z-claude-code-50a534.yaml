@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/soil_dwelling.yaml
+  slug: soil_dwelling
+session:
+  id: 2026-09-04T002000Z-claude-code-50a534
+  timestamp: '2026-09-04T00:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: REVIEW
+  outcome: changed
+  summary: 'Reviewed soil-dwelling causal evidence for issue #183'
+  details: 'Reviewed data/traits/ecology/soil_dwelling.yaml after the issue #183 priority
+    pass. Added source-verified verbatim snippets to the two record-level evidence items and
+    all eight causal-edge evidence items in soil_dwelling_biogeochemistry; regrounded the
+    five broad observational ecology edges to biolink:associated_with; and narrowed the climate-extreme
+    edge to the heat treatment supported by DOI:10.1038/s41586-024-08185-3. The transform
+    is dry-run by default, uses write_validated_trait for LinkML validation before writes,
+    and has focused regression tests for idempotence, source drift, migrated drift, and partial
+    replay.'

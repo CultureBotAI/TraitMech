@@ -16,10 +16,13 @@ synonyms:
   source: DOI:10.1038/nrmicro884
 evidence:
 - reference: DOI:10.1038/nrmicro884
-  notes: Dobrindt et al. review genomic islands in pathogenic and environmental microorganisms.
+  snippet: widely distributed in pathogenic, non-pathogenic and environmental microorganisms
+  notes: Verified against the public Nature article preview; Dobrindt et al. frame
+    genomic islands across pathogenic, non-pathogenic, and environmental microorganisms.
 - reference: DOI:10.1111/j.1574-6976.2008.00136.x
-  notes: Juhas et al. review genomic islands as tools of bacterial horizontal gene
-    transfer and evolution.
+  snippet: horizontal gene transfer is or has been facilitated by genomic islands
+  notes: Verified against the open Juhas et al. abstract; the review summarizes genomic
+    islands as mediators of bacterial horizontal gene transfer and evolution.
 canonical_examples:
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
@@ -66,12 +69,13 @@ causal_graphs:
       integration and mobility.
   - node_id: integrative_conjugative_element
     label: integrative conjugative element (ICE)
-    node_type: BIOLOGICAL_PROCESS
+    node_type: GENETIC_ELEMENT
     description: Self-transmissible genomic island subclass that excises, transfers
       by conjugation, and reintegrates.
   - node_id: conjugation
     label: conjugation
     node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009291
     description: Contact-dependent transfer of DNA between cells.
   - node_id: type_iv_secretion_system
     label: type IV secretion system (T4SS)
@@ -80,7 +84,7 @@ causal_graphs:
     grounding: GO:0043684
   - node_id: integrative_mobilizable_element
     label: integrative mobilizable element (IME)
-    node_type: BIOLOGICAL_PROCESS
+    node_type: GENETIC_ELEMENT
     description: Genomic island subclass that lacks its own conjugation apparatus
       and spreads using a helper ICE or conjugative plasmid.
   edges:
@@ -90,7 +94,10 @@ causal_graphs:
     description: Genomic islands are integrated into host chromosomes via HGT.
     evidence:
     - reference: DOI:10.1111/j.1574-6976.2008.00136.x
-      notes: Juhas et al. review genomic islands as tools of bacterial HGT.
+      snippet: acquisition by horizontal gene transfer; (2) integration into the host's
+        chromosome
+      notes: Verified against the open Juhas et al. full text; the review's mobile-genomic-island
+        life cycle places HGT acquisition before chromosomal integration.
     predicate_id: biolink:causes
   - subject: gi_trait
     predicate: contributes to
@@ -99,41 +106,60 @@ causal_graphs:
       to the host.
     evidence:
     - reference: DOI:10.1038/nrmicro884
-      notes: Dobrindt et al. review genomic islands carrying virulence and metabolic
-        functions in pathogens and environmental microbes.
+      snippet: GEIs contribute to fitness and adaptation
+      notes: Verified against the public Nature article preview; Dobrindt et al. describe
+        genomic islands as gain-of-function elements affecting ecological and pathogenic
+        traits.
     predicate_id: RO:0002326
   - subject: gi_trait
-    predicate: carries
+    predicate: includes
     object: mobility_module
-    description: Genomic islands often encode a dedicated mobility module (DDE transposase
-      or tyrosine/serine recombinase).
+    description: Genomic islands often include integration modules made up of DDE
+      transposases or tyrosine/serine recombinases.
     evidence:
     - reference: DOI:10.1093/nar/gkad644
-      notes: Intracellular mobility is often mediated by dedicated DDE transposases
-        or integrases belonging to serine or tyrosine recombinases.
+      snippet: tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser)
+        recombinases, as well as DDE transposases
+      notes: Verified against the open Bioteau et al. methods; the AtollGenDB integrase
+        module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase
+        families used for genomic-island mobility classification.
+    predicate_id: biolink:has_part
   - subject: integrative_conjugative_element
-    predicate: disseminates by
+    predicate: enables
     object: conjugation
-    description: ICE-type genomic islands spread by conjugation.
+    description: Self-transmissible ICE-type genomic islands disseminate by conjugation.
     evidence:
     - reference: DOI:10.1093/nar/gkad644
-      notes: ICEs disseminate by conjugation.
-  - subject: integrative_conjugative_element
-    predicate: requires
-    object: type_iv_secretion_system
-    description: ICE conjugative transfer requires a type IV secretion system.
+      snippet: ICEs disseminate by conjugation, a mechanism involving the secretion
+        of DNA from the donor cell
+      notes: Verified against the open Bioteau et al. introduction; ICEs are presented
+        as self-transmissible genomic islands that disseminate DNA by conjugation.
+    predicate_id: RO:0002327
+  - subject: type_iv_secretion_system
+    predicate: enables
+    object: conjugation
+    description: ICE-encoded type IV secretion systems translocate DNA between mating
+      cells in direct contact.
     evidence:
     - reference: DOI:10.1093/nar/gkad644
-      notes: ICEs disseminate by conjugation using a type IV secretion system (T4SS).
+      snippet: the DNA is translocated between mating cells in direct contact by a
+        type IV secretion system
+      notes: Verified against the open Bioteau et al. introduction; the paper describes
+        ICE conjugation as direct-contact DNA translocation mediated by a T4SS.
+    predicate_id: RO:0002327
   - subject: integrative_mobilizable_element
-    predicate: uses
+    predicate: depends on
     object: conjugation
-    description: IME-type islands lack their own apparatus and spread via the conjugative
-      apparatus of a helper ICE or conjugative plasmid.
+    description: IME-type genomic islands depend on helper ICE or conjugative-plasmid
+      transfer machinery for conjugative mobilization.
     evidence:
     - reference: DOI:10.1093/nar/gkad644
-      notes: IMEs spread via the conjugative apparatus encoded by a helper ICE or
-        conjugative plasmid.
+      snippet: spread via the conjugative apparatus encoded by a helper ICE or conjugative
+        plasmid
+      notes: Verified against the open Bioteau et al. introduction; IMEs are framed
+        as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid
+        apparatus.
+    predicate_id: RO:0002502
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -172,4 +198,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope gi_hgt_accessory_function=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mobility_module).'
+  llm_assisted: true
+- timestamp: '2026-09-04T05:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the gi_hgt_accessory_function graph for issue #183: added exact
+    snippets to 8 genomic-island evidence items, grounded 4 residual predicates, retyped
+    ICE/IME nodes as GENETIC_ELEMENT, and grounded the conjugation process. No paid
+    research service was called.'
   llm_assisted: true

@@ -64,7 +64,7 @@ data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	nacl_delta_eury
 data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	nacl_delta_high_extreme_euryhaline	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	nacl_delta_low_stenohaline	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	nacl_delta_mid1_modest_breadth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	nacl_optimum_high_extreme_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	nacl_optimum_low_non_halophile_setpoint	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -226,7 +226,7 @@ data/traits/morphology/carotenoid_pigmentation.yaml	METPO:1003031	carotenoid pig
 data/traits/morphology/cell_length.yaml	METPO:1000881	cell length	cell_length_division_growth_control	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_large.yaml	METPO:1000886	cell length large	cell_length_large_division_delay	NONMECHANISTIC	2	2	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_medium.yaml	METPO:1000885	cell length medium	cell_length_medium_growth_rate	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_very_small.yaml	METPO:1000883	cell length very small	cell_length_very_small_streamlining	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_shape.yaml	METPO:1000666	cell shape	cell_shape_peptidoglycan_cytoskeleton	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_width.yaml	METPO:1000882	cell width	cell_width_mreb_lateral_wall	NONMECHANISTIC	3	0	3	3	3	0	0	NONMECHANISTIC	0	0	-
@@ -278,7 +278,7 @@ data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhy
 data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	polyphosphate granule	polyphosphate_granule_storage	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
 data/traits/morphology/prosthecate.yaml	traitmech:000065	prosthecate	prosthecate_stalk_nutrient_uptake	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/red_pigmented.yaml	METPO:1003028	red pigmented	red_pigmented_prodiginine_pathway	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/rod_shaped.yaml	METPO:1000681	rod shaped	rod_shaped_mreB_peptidoglycan	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/s_layer.yaml	traitmech:000064	S-layer	s_layer_2d_protein_array	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/sarcina_arrangement.yaml	traitmech:000120	sarcina arrangement	sarcina_three_plane_division_packet	NONMECHANISTIC	4	2	2	1	1	0	0	NONMECHANISTIC	0	0	-

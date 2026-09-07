@@ -25,13 +25,15 @@ canonical_examples:
     inside the approximately 3-4 bin.
 causal_graphs:
 - graph_id: ph_delta_mid2_broad_breadth
-  title: pH-delta-mid2 broad-breadth pH homeostasis
+  title: pH-delta-mid2 contextual pH-homeostasis breadth
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking broad pH-homeostasis flexibility to a pH growth
-    breadth of approximately 3–4 pH units.
+  description: DOI-backed nonmechanistic graph connecting broad pH-homeostasis flexibility,
+    PMF component balancing, respiratory proton pumping, ATPase-mediated proton translocation,
+    alkaline antiport, acid-side decarboxylation, and passive cytoplasmic buffering
+    to the 3-4 pH-unit breadth bin.
   nodes:
   - node_id: ph_delta_mid2_trait
     label: pH delta mid2
@@ -126,62 +128,145 @@ causal_graphs:
       notes: Supports the 3–4 unit breadth as a value within the pH-delta distribution.
     predicate_id: rdfs:subClassOf
   - subject: external_ph_stress
-    predicate: alters
+    predicate: regulates
     object: pmf_component_balance
-    description: External pH stress alters the balance/orientation of PMF components
-      (delta-pH, delta-psi).
+    description: External pH stress modulates the relative balance of proton-motive
+      force components.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Relative magnitudes and even orientation of PMF components change with
-        external pH; under strong pH stress a component can reverse orientation.
+      snippet: relative magnitudes of the two PMF components
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        bacterial pH-homeostasis demands determine how delta-psi and delta-pH contribute
+        to the PMF.
+    predicate_id: RO:0002211
   - subject: respiratory_proton_pumps
     predicate: generates
     object: pmf_generation
-    description: Primary respiratory-chain proton pumps generate the proton motive
-      force.
+    description: Primary respiratory-chain proton pumps generate proton motive force.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Primary proton pumps (respiratory chain pumps) generate PMF; broad mechanism
-        across bacteria.
+      snippet: Primary proton pumps generate the PMF
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        respiratory-chain complexes are listed among the proton pumps that establish
+        bacterial PMF.
     predicate_id: biolink:produces
   - subject: f1fo_atpase
     predicate: contributes to
     object: proton_translocation_homeostasis
-    description: Proton-coupled F1Fo-ATPase contributes to proton translocation supporting
-      pH homeostasis.
+    description: F1Fo-ATPase contributes to pH homeostasis by coupling ATP turnover
+      to proton translocation.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Proton-coupled ATPases are a primary strategy; F1-F0 ATPase proton pump
-        is an active pH-homeostasis mechanism.
+      snippet: ATP-dependent H+ extrusion under acidic conditions
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        F1Fo-ATPase can drive proton efflux in acid-stressed non-respiratory neutralophiles.
     predicate_id: RO:0002326
   - subject: na_h_antiporter_activity
-    predicate: supports
+    predicate: contributes to
     object: alkaline_ph_homeostasis
-    description: Na+/H+ antiporter activity imports H+ and extrudes Na+ to support
+    description: Na+/H+ antiporter activity imports H+ and extrudes Na+ as part of
       alkaline pH homeostasis.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      notes: Cation/proton antiporters are transcriptionally up-regulated for inward
-        proton transport under alkaline stress.
+      snippet: proton entry driven by the transmembrane potential
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        electrogenic cation/proton antiport supports proton entry during alkaline
+        stress.
+    predicate_id: RO:0002326
   - subject: glutamate_decarboxylase_system
     predicate: consumes
     object: intracellular_proton
     description: The glutamate decarboxylase system consumes intracellular protons
-      during decarboxylation.
+      during acid-stress decarboxylation.
     evidence:
-    - reference: DOI:10.3390/antibiotics12091474
-      notes: Glutamate decarboxylase (GadB with its antiporter) is a proton-consuming
-        acid-tolerance mechanism (GDAR), broadly curated in Gram-negatives.
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: consumes a proton during decarboxylation
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        GadB consumes a cytoplasmic proton when it decarboxylates glutamate in the
+        E. coli acid-resistance cycle.
     predicate_id: biolink:consumes
   - subject: cytoplasmic_buffers
-    predicate: buffers
+    predicate: contributes to
     object: cytoplasmic_ph_buffering
-    description: Small molecules (polyamines, amino acids, phosphate) passively buffer
-      cytoplasmic pH.
+    description: Small molecules, including polyamines, amino acids, and phosphate,
+      contribute to passive cytoplasmic pH buffering.
     evidence:
     - reference: DOI:10.3390/antibiotics12091474
-      notes: Passive buffering of cytoplasmic pH is provided by small molecules (amino
-        acids, proteins, polyamines, polyphosphate, inorganic phosphate).
+      snippet: Cytoplasmic pH is buffered by small molecules
+      notes: Verified against the open Rebelo et al. review; small molecules contribute
+        passive cytoplasmic buffering in pH homeostasis.
+    predicate_id: RO:0002326
+  - subject: pmf_component_balance
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: Proton-motive-force component balancing is associated with broad
+      pH homeostasis across external pH stress.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: the demands of pH homeostasis for particular bacteria determine
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        the connector keeps PMF balancing as one contextual arm of broad pH homeostasis.
+    predicate_id: biolink:associated_with
+  - subject: pmf_generation
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: Respiratory proton pumping is associated with the PMF generation
+      that supports pH-homeostasis flexibility.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: In respiratory bacteria the PMF is generated by the respiratory chain
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        respiratory-chain proton pumps establish the PMF used by bacterial pH-homeostasis
+        systems.
+    predicate_id: biolink:associated_with
+  - subject: proton_translocation_homeostasis
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: ATPase-mediated proton translocation is associated with acid-stress
+      pH-homeostasis flexibility.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: promotes ATP-dependent H+ extrusion under acidic conditions
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        F1Fo-ATPase proton efflux is one acid-side branch of pH homeostasis.
+    predicate_id: biolink:associated_with
+  - subject: alkaline_ph_homeostasis
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: Na+/H+ antiporter-dependent alkaline pH homeostasis is one branch
+      of broader pH-homeostasis flexibility.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: Antiporters with roles in alkaline pH homeostasis catalyze electrogenic
+        antiport
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        electrogenic antiport is retained as an alkaline-side branch, not a universal
+        breadth determinant.
+    predicate_id: biolink:associated_with
+  - subject: glutamate_decarboxylase_system
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: The Gad proton-consuming acid-resistance system is associated with
+      acid-side support for broad pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: Glutamate and arginine decarboxylases are a corner-stone of the acid-resistance
+        response
+      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
+        the Gad branch supports acid-side cytoplasmic proton consumption rather than
+        directly defining a 3-4 pH-unit growth breadth.
+    predicate_id: biolink:associated_with
+  - subject: cytoplasmic_ph_buffering
+    predicate: associated with
+    object: broad_ph_homeostasis
+    description: Passive cytoplasmic buffering is associated with broad pH-homeostasis
+      flexibility.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      snippet: representing a passive system in regulating pH homeostasis
+      notes: Verified against the open Rebelo et al. review; small molecule buffering
+        is retained as passive pH-homeostasis support.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839415+00:00'
   curator: seed_from_metpo
@@ -241,4 +326,26 @@ curation_history:
     canonical example(s): Microbaculum mangrovi (NCBITaxon:3447298; DOI:10.1099/ijsem.0.006972).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T01:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the broad ph_delta_mid2_broad_breadth graph for issue #183: added
+    snippets to 6 edge-level evidence items and grounded 3 unmapped pH-homeostasis
+    predicates to RO:0002211 or RO:0002326. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T15:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (7 components to 1) by adding
+    6 source-backed association connectors among PMF balancing, respiratory proton
+    pumping, ATPase-mediated proton translocation, alkaline antiport, Gad acid-side
+    support, and cytoplasmic buffering. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #666: replaced borrowed snippets
+    on the six broad_ph_homeostasis connectors with connector-specific exact snippets
+    from the same supporting sources.'
   llm_assisted: true

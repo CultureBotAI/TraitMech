@@ -40,8 +40,8 @@
     
     
     <div class="card causal-graph-card">
-      <h2>Soil-dwelling microbes drive terrestrial biogeochemical cycling</h2>
-      <p class="meta">Evidence-backed causal sketch linking soil habitat to participation in biogeochemical cycling.</p>
+      <h2>Soil-dwelling microbes in soil life-history contexts</h2>
+      <p class="meta">Evidence-backed nonmechanistic sketch connecting soil habitat, biogeochemical cycling, and community-level oligotrophy, growth, motility, dormancy, and genomic life-history axes.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.</p>
 
@@ -49,7 +49,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Soil-dwelling microbes drive terrestrial biogeochemical cycling</title>
+          <title>Soil-dwelling microbes in soil life-history contexts</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for soil-dwelling.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -64,13 +64,13 @@
             <span class="edge-predicate">confers</span>
             <strong>soil-dwelling</strong>
             <code>METPO:2007700</code>
-            <p>Soil substrate and pore-water chemistry sustain soil-resident microbes.</p>
+            <p>The terrestrial soil environment hosts soil-resident microbes.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/nrmicro.2017.87</code>
-                
-                <span class="meta">Fierer characterizes the soil microbiome as a distinct microbial habitat.</span>
+                <span class="evidence-snippet">a broad diversity of microbial taxa</span>
+                <span class="meta">Verified against the Fierer review; the claim is habitat-level and does not assert a universal molecular mechanism for all soil microbes.</span>
               </li>
               
             </ul>
@@ -81,13 +81,13 @@
             <span class="edge-predicate">contributes to</span>
             <strong>biogeochemical cycling</strong>
             <code>RO:0002326</code>
-            <p>Soil microbes drive terrestrial biogeochemical cycling.</p>
+            <p>Soil microbes contribute to terrestrial biogeochemical cycling.</p>
             <ul>
               
               <li>
-                <code>DOI:10.1038/nrmicro1341</code>
-                
-                <span class="meta">Martiny et al. show soil communities are biogeographically structured habitats central to ecosystem function.</span>
+                <code>DOI:10.1038/nrmicro.2017.87</code>
+                <span class="evidence-snippet">specific microbial controls on soil processes</span>
+                <span class="meta">Verified against the Fierer review; soil microbial processes include nutrient transformations and organic carbon-pool dynamics.</span>
               </li>
               
             </ul>
@@ -95,16 +95,16 @@
           
           <li id="pathograph-1-edge-3">
             <strong>low available organic carbon</strong>
-            <span class="edge-predicate">enriches for</span>
+            <span class="edge-predicate">associated with</span>
             <strong>oligotrophic lifestyle</strong>
-            
-            <p>Carbon-limited soils enrich oligotrophic taxa with small genomes and reduced motility/chemotaxis.</p>
+            <code>biolink:associated_with</code>
+            <p>Low-carbon soil gradients are associated with oligotrophic taxa carrying small genomes, lower potential growth rates, and fewer chemotaxis/motility genes.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/ismeco/ycae081</code>
-                
-                <span class="meta">Dragone et al.: oligotroph-enriched taxa in carbon-limited soils had smaller genomes, slower growth, carbon-storage pathways, and under-represented chemotaxis/motility genes.</span>
+                <span class="evidence-snippet">chemotaxis and motility were under-represented</span>
+                <span class="meta">Verified against the open ISME Communications full text; the edge is retained as an ecological association rather than a deterministic carbon-to-genome mechanism.</span>
               </li>
               
             </ul>
@@ -112,16 +112,16 @@
           
           <li id="pathograph-1-edge-4">
             <strong>soil resource availability and moisture</strong>
-            <span class="edge-predicate">increases</span>
+            <span class="edge-predicate">associated with</span>
             <strong>soil microbiome potential growth rate</strong>
-            <code>RO:0002213</code>
-            <p>Resource-rich, humid, acid-neutral soils support higher microbiome potential growth.</p>
+            <code>biolink:associated_with</code>
+            <p>Resource-rich, humid, acid-neutral soils are associated with higher microbiome potential growth.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/s41467-024-53753-w</code>
-                
-                <span class="meta">Zhou et al.: high potential growth in resource-rich, acid-neutral soils of cold, humid regions (18O-H2O DNA incorporation).</span>
+                <span class="evidence-snippet">exhibit high potential growth rates</span>
+                <span class="meta">Verified against the open Nature Communications abstract; the global pattern is observational, so the edge no longer uses a direct positive-regulation predicate.</span>
               </li>
               
             </ul>
@@ -129,16 +129,16 @@
           
           <li id="pathograph-1-edge-5">
             <strong>soil aridity</strong>
-            <span class="edge-predicate">decreases</span>
+            <span class="edge-predicate">associated with</span>
             <strong>soil microbiome potential growth rate</strong>
-            <code>RO:0002212</code>
-            <p>Aridity lowers soil microbiome potential growth rate.</p>
+            <code>biolink:associated_with</code>
+            <p>Dry and resource-poor soils are associated with lower soil microbiome potential growth rates.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/s41467-024-53753-w</code>
-                
-                <span class="meta">Zhou et al.: aridity was a stronger predictor of community growth than temperature; dry soils had lower potential growth.</span>
+                <span class="evidence-snippet">display lower potential growth rates</span>
+                <span class="meta">Verified against the open Nature Communications abstract; the study reports a macroscale association across soil microbiomes.</span>
               </li>
               
             </ul>
@@ -146,33 +146,33 @@
           
           <li id="pathograph-1-edge-6">
             <strong>high soil carbon availability</strong>
-            <span class="edge-predicate">increases prevalence of</span>
+            <span class="edge-predicate">associated with</span>
             <strong>flagellar motility</strong>
-            
-            <p>High soil carbon availability raises prevalence of flagellar motility.</p>
+            <code>biolink:associated_with</code>
+            <p>High soil carbon availability is associated with greater community-level prevalence of flagellar motility genes.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1093/ismejo/wrae067</code>
-                
-                <span class="meta">Ramoneda et al.: rhizosphere ~11.5% higher flagellar prevalence (P=0.012); glucose amendment increased prevalence (P=0.017).</span>
+                <span class="evidence-snippet">prevalence of flagellar motility is positively associated with soil C availability</span>
+                <span class="meta">Verified against the open ISME Journal full text; glucose amendment and four field gradients support the association.</span>
               </li>
               
             </ul>
           </li>
           
           <li id="pathograph-1-edge-7">
-            <strong>extreme climatic event</strong>
+            <strong>extreme heat event</strong>
             <span class="edge-predicate">increases</span>
             <strong>dormancy and sporulation gene program</strong>
             <code>RO:0002213</code>
-            <p>Heat, flood and freeze extremes increase dormancy and sporulation gene abundance.</p>
+            <p>Experimental heat treatment increased soil dormancy and sporulation gene abundance.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/s41586-024-08185-3</code>
-                
-                <span class="meta">Knight et al.: dormancy and sporulation genes increased across flood, freeze and heat; 46% of annotated genes shifted at disturbance end.</span>
+                <span class="evidence-snippet">enhancing dormancy and sporulation genes</span>
+                <span class="meta">Verified against the open Nature abstract; the curated edge is narrowed to heat because the abstract identifies heat, not all imposed extremes, as the treatment enhancing dormancy and sporulation genes.</span>
               </li>
               
             </ul>
@@ -180,16 +180,118 @@
           
           <li id="pathograph-1-edge-8">
             <strong>soil pH, precipitation and C:N</strong>
-            <span class="edge-predicate">predicts</span>
+            <span class="edge-predicate">associated with</span>
             <strong>soil bacterial life-history strategy axes</strong>
-            
-            <p>Soil pH, precipitation and C:N predict soil bacterial life-history genomic axes.</p>
+            <code>biolink:associated_with</code>
+            <p>Soil pH, precipitation and C:N are associated with soil bacterial life-history genomic axes in random-forest models.</p>
             <ul>
               
               <li>
                 <code>DOI:10.1038/s41564-023-01465-0</code>
-                
-                <span class="meta">Piton et al.: random-forest models using pH, precipitation and C:N predicted MCOA1/MCOA2 (R2=0.80, 0.58); pH and precipitation top predictors.</span>
+                <span class="evidence-snippet">Random forest analyses show that soil pH</span>
+                <span class="meta">Verified against the PubMed abstract for the Nature Microbiology article; the edge is scoped as community-level statistical association.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>soil habitat</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>Soil habitat provides the heterogeneous ecological context in which resident microbes partition across multiple activity and life-history strategies.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro.2017.87</code>
+                <span class="evidence-snippet">categorize soil microorganisms on the basis of their ecological strategies</span>
+                <span class="meta">Verified against the Fierer review; the connector groups soil-associated community branches without asserting a single universal soil-dwelling mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>oligotrophic lifestyle</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>Oligotrophic taxa in low-carbon soils are one branch of the community-level soil life-history context.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/ismeco/ycae081</code>
+                <span class="evidence-snippet">diverse array of ecological strategies used by soil bacteria</span>
+                <span class="meta">Verified against the open ISME Communications full text; oligotroph-enriched taxa are treated as a carbon-gradient association within soils.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>soil microbiome potential growth rate</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>Potential community growth rate is an activity axis associated with moisture and resource gradients across soils.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-53753-w</code>
+                <span class="evidence-snippet">spatial variation of microbial potential growth rates</span>
+                <span class="meta">Verified against the open Nature Communications abstract; the Zhou et al. global survey models soil microbiome potential growth as a community-level ecological axis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>flagellar motility</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>Flagellar-motility gene prevalence is a carbon-associated mobility branch in soil communities.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/ismejo/wrae067</code>
+                <span class="evidence-snippet">prevalence of flagellar motility in bacterial communities and soil C availability</span>
+                <span class="meta">Verified against the open ISME Journal full text; Ramoneda et al. connect flagellar prevalence with soil carbon availability across community datasets.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>dormancy and sporulation gene program</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>Dormancy and sporulation gene programs are stress-response branches in disturbed soil communities.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41586-024-08185-3</code>
+                <span class="evidence-snippet">soil microbiomes from different climates share unified responses to extreme climatic events</span>
+                <span class="meta">Verified against the open Nature abstract; heat-enhanced dormancy/sporulation abundance is retained as a soil disturbance context.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>soil bacterial life-history strategy axes</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>soil life-history and activity context</strong>
+            <code>biolink:associated_with</code>
+            <p>The soil bacterial MCOA axes summarize genomic life-history strategies associated with pH, C:N, and precipitation gradients.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01465-0</code>
+                <span class="evidence-snippet">drive the dominant life history strategy of soil bacterial communities</span>
+                <span class="meta">Verified against the Nature Microbiology abstract; Piton et al. place soil pH, C:N ratio, and precipitation as predictors of community-level genomic strategy axes.</span>
               </li>
               
             </ul>
@@ -522,6 +624,24 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope soil_dwelling_biogeochemistry=NONMECHANISTIC with scope_notes.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T00:20:00Z</time> ·
+          <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
+          <p class="changes">Reviewed the broad soil_dwelling_biogeochemistry graph for issue #183: added verbatim snippets to 2 record-level and 8 edge-level evidence items, regrounded 5 broad ecological association edges to biolink:associated_with, and narrowed the extreme-climate statement to heat-induced dormancy/sporulation. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-04T12:00:00Z</time> ·
+          <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
+          <p class="changes">Resolved issue #183 graph fragmentation (6 components to 1) by adding a soil life-history/activity context node and 6 source-backed association connectors. The connectors join broad soil community branches while preserving soil_dwelling_biogeochemistry as a nonmechanistic habitat graph. No paid research service was called.</p>
+        </li>
+        
+        <li>
+          <time>2026-09-06T13:30:00Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Addressed PR #664 adversarial review issue #666: replaced borrowed snippets on the six soil_life_history_activity_context connectors with connector-specific exact snippets from the same supporting sources.</p>
         </li>
         
       </ol>
@@ -886,7 +1006,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking soil habitat to participation in biogeochemical cycling.", "edges": [{"description": "Soil substrate and pore-water chemistry sustain soil-resident microbes.", "evidence": [{"notes": "Fierer characterizes the soil microbiome as a distinct microbial habitat.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "soil_habitat", "target": "soil_dwelling_trait"}, {"description": "Soil microbes drive terrestrial biogeochemical cycling.", "evidence": [{"notes": "Martiny et al. show soil communities are biogeographically structured habitats central to ecosystem function.", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "soil_dwelling_trait", "target": "biogeochemical_cycling"}, {"description": "Carbon-limited soils enrich oligotrophic taxa with small genomes and reduced motility/chemotaxis.", "evidence": [{"notes": "Dragone et al.: oligotroph-enriched taxa in carbon-limited soils had smaller genomes, slower growth, carbon-storage pathways, and under-represented chemotaxis/motility genes.", "reference": "DOI:10.1093/ismeco/ycae081"}], "id": "edge-3", "is_orphan": false, "predicate": "enriches for", "predicate_id": null, "source": "low_organic_carbon", "target": "oligotrophic_lifestyle"}, {"description": "Resource-rich, humid, acid-neutral soils support higher microbiome potential growth.", "evidence": [{"notes": "Zhou et al.: high potential growth in resource-rich, acid-neutral soils of cold, humid regions (18O-H2O DNA incorporation).", "reference": "DOI:10.1038/s41467-024-53753-w"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "soil_resource_availability", "target": "potential_growth_rate"}, {"description": "Aridity lowers soil microbiome potential growth rate.", "evidence": [{"notes": "Zhou et al.: aridity was a stronger predictor of community growth than temperature; dry soils had lower potential growth.", "reference": "DOI:10.1038/s41467-024-53753-w"}], "id": "edge-5", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "aridity", "target": "potential_growth_rate"}, {"description": "High soil carbon availability raises prevalence of flagellar motility.", "evidence": [{"notes": "Ramoneda et al.: rhizosphere ~11.5% higher flagellar prevalence (P=0.012); glucose amendment increased prevalence (P=0.017).", "reference": "DOI:10.1093/ismejo/wrae067"}], "id": "edge-6", "is_orphan": false, "predicate": "increases prevalence of", "predicate_id": null, "source": "soil_carbon_availability", "target": "flagellar_motility"}, {"description": "Heat, flood and freeze extremes increase dormancy and sporulation gene abundance.", "evidence": [{"notes": "Knight et al.: dormancy and sporulation genes increased across flood, freeze and heat; 46% of annotated genes shifted at disturbance end.", "reference": "DOI:10.1038/s41586-024-08185-3"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "climate_extreme_event", "target": "dormancy_sporulation"}, {"description": "Soil pH, precipitation and C:N predict soil bacterial life-history genomic axes.", "evidence": [{"notes": "Piton et al.: random-forest models using pH, precipitation and C:N predicted MCOA1/MCOA2 (R2=0.80, 0.58); pH and precipitation top predictors.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "id": "edge-8", "is_orphan": false, "predicate": "predicts", "predicate_id": null, "source": "soil_pH_precip_cn", "target": "life_history_axes"}], "evidence_rows": [{"description": "Soil substrate and pore-water chemistry sustain soil-resident microbes.", "edge_id": "edge-1", "evidence": [{"notes": "Fierer characterizes the soil microbiome as a distinct microbial habitat.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "soil habitat", "target": "soil-dwelling"}, {"description": "Soil microbes drive terrestrial biogeochemical cycling.", "edge_id": "edge-2", "evidence": [{"notes": "Martiny et al. show soil communities are biogeographically structured habitats central to ecosystem function.", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "soil-dwelling", "target": "biogeochemical cycling"}, {"description": "Carbon-limited soils enrich oligotrophic taxa with small genomes and reduced motility/chemotaxis.", "edge_id": "edge-3", "evidence": [{"notes": "Dragone et al.: oligotroph-enriched taxa in carbon-limited soils had smaller genomes, slower growth, carbon-storage pathways, and under-represented chemotaxis/motility genes.", "reference": "DOI:10.1093/ismeco/ycae081"}], "predicate": "enriches for", "predicate_id": null, "source": "low available organic carbon", "target": "oligotrophic lifestyle"}, {"description": "Resource-rich, humid, acid-neutral soils support higher microbiome potential growth.", "edge_id": "edge-4", "evidence": [{"notes": "Zhou et al.: high potential growth in resource-rich, acid-neutral soils of cold, humid regions (18O-H2O DNA incorporation).", "reference": "DOI:10.1038/s41467-024-53753-w"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "soil resource availability and moisture", "target": "soil microbiome potential growth rate"}, {"description": "Aridity lowers soil microbiome potential growth rate.", "edge_id": "edge-5", "evidence": [{"notes": "Zhou et al.: aridity was a stronger predictor of community growth than temperature; dry soils had lower potential growth.", "reference": "DOI:10.1038/s41467-024-53753-w"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "soil aridity", "target": "soil microbiome potential growth rate"}, {"description": "High soil carbon availability raises prevalence of flagellar motility.", "edge_id": "edge-6", "evidence": [{"notes": "Ramoneda et al.: rhizosphere ~11.5% higher flagellar prevalence (P=0.012); glucose amendment increased prevalence (P=0.017).", "reference": "DOI:10.1093/ismejo/wrae067"}], "predicate": "increases prevalence of", "predicate_id": null, "source": "high soil carbon availability", "target": "flagellar motility"}, {"description": "Heat, flood and freeze extremes increase dormancy and sporulation gene abundance.", "edge_id": "edge-7", "evidence": [{"notes": "Knight et al.: dormancy and sporulation genes increased across flood, freeze and heat; 46% of annotated genes shifted at disturbance end.", "reference": "DOI:10.1038/s41586-024-08185-3"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "extreme climatic event", "target": "dormancy and sporulation gene program"}, {"description": "Soil pH, precipitation and C:N predict soil bacterial life-history genomic axes.", "edge_id": "edge-8", "evidence": [{"notes": "Piton et al.: random-forest models using pH, precipitation and C:N predicted MCOA1/MCOA2 (R2=0.80, 0.58); pH and precipitation top predictors.", "reference": "DOI:10.1038/s41564-023-01465-0"}], "predicate": "predicts", "predicate_id": null, "source": "soil pH, precipitation and C:N", "target": "soil bacterial life-history strategy axes"}], "graph_id": "soil_dwelling_biogeochemistry", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Dry soil moisture conditions / water limitation.", "grounding": null, "id": "aridity", "is_orphan": false, "label": "soil aridity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Microbially mediated cycling of C, N, S, and other elements in soils.", "grounding": null, "id": "biogeochemical_cycling", "is_orphan": false, "label": "biogeochemical cycling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Heat, flood, or freeze disturbance events in soil.", "grounding": null, "id": "climate_extreme_event", "is_orphan": false, "label": "extreme climatic event", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Genetic programs for dormancy and spore formation.", "grounding": null, "id": "dormancy_sporulation", "is_orphan": false, "label": "dormancy and sporulation gene program", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Flagellum-dependent cell motility.", "grounding": "GO:0071973", "id": "flagellar_motility", "is_orphan": false, "label": "flagellar motility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Genomic life-history strategy axes (MCOA1/MCOA2) of soil bacterial communities.", "grounding": null, "id": "life_history_axes", "is_orphan": false, "label": "soil bacterial life-history strategy axes", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Carbon-limited (oligotrophic) soil conditions.", "grounding": null, "id": "low_organic_carbon", "is_orphan": false, "label": "low available organic carbon", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Slow-growing, streamlined small-genome strategy with reduced motility/chemotaxis.", "grounding": null, "id": "oligotrophic_lifestyle", "is_orphan": false, "label": "oligotrophic lifestyle", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Community-level potential growth rate of soil microbes.", "grounding": null, "id": "potential_growth_rate", "is_orphan": false, "label": "soil microbiome potential growth rate", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Carbon-rich soil microsites such as rhizosphere/surface soil.", "grounding": null, "id": "soil_carbon_availability", "is_orphan": false, "label": "high soil carbon availability", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Persistent residence in soil habitat.", "grounding": "traitmech:000050", "id": "soil_dwelling_trait", "is_orphan": false, "label": "soil-dwelling", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Complex terrestrial soil environment.", "grounding": null, "id": "soil_habitat", "is_orphan": false, "label": "soil habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Edaphic and climatic drivers (pH, annual precipitation, soil C:N ratio).", "grounding": null, "id": "soil_pH_precip_cn", "is_orphan": false, "label": "soil pH, precipitation and C:N", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Resource-rich, humid, acid-neutral soil conditions favoring growth.", "grounding": null, "id": "soil_resource_availability", "is_orphan": false, "label": "soil resource availability and moisture", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Soil-dwelling microbes drive terrestrial biogeochemical cycling"}];
+  var graphs = [{"description": "Evidence-backed nonmechanistic sketch connecting soil habitat, biogeochemical cycling, and community-level oligotrophy, growth, motility, dormancy, and genomic life-history axes.", "edges": [{"description": "The terrestrial soil environment hosts soil-resident microbes.", "evidence": [{"notes": "Verified against the Fierer review; the claim is habitat-level and does not assert a universal molecular mechanism for all soil microbes.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "a broad diversity of microbial taxa"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "soil_habitat", "target": "soil_dwelling_trait"}, {"description": "Soil microbes contribute to terrestrial biogeochemical cycling.", "evidence": [{"notes": "Verified against the Fierer review; soil microbial processes include nutrient transformations and organic carbon-pool dynamics.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "specific microbial controls on soil processes"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "soil_dwelling_trait", "target": "biogeochemical_cycling"}, {"description": "Low-carbon soil gradients are associated with oligotrophic taxa carrying small genomes, lower potential growth rates, and fewer chemotaxis/motility genes.", "evidence": [{"notes": "Verified against the open ISME Communications full text; the edge is retained as an ecological association rather than a deterministic carbon-to-genome mechanism.", "reference": "DOI:10.1093/ismeco/ycae081", "snippet": "chemotaxis and motility were under-represented"}], "id": "edge-3", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "low_organic_carbon", "target": "oligotrophic_lifestyle"}, {"description": "Resource-rich, humid, acid-neutral soils are associated with higher microbiome potential growth.", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the global pattern is observational, so the edge no longer uses a direct positive-regulation predicate.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "exhibit high potential growth rates"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil_resource_availability", "target": "potential_growth_rate"}, {"description": "Dry and resource-poor soils are associated with lower soil microbiome potential growth rates.", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the study reports a macroscale association across soil microbiomes.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "display lower potential growth rates"}], "id": "edge-5", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "aridity", "target": "potential_growth_rate"}, {"description": "High soil carbon availability is associated with greater community-level prevalence of flagellar motility genes.", "evidence": [{"notes": "Verified against the open ISME Journal full text; glucose amendment and four field gradients support the association.", "reference": "DOI:10.1093/ismejo/wrae067", "snippet": "prevalence of flagellar motility is positively associated with soil C availability"}], "id": "edge-6", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil_carbon_availability", "target": "flagellar_motility"}, {"description": "Experimental heat treatment increased soil dormancy and sporulation gene abundance.", "evidence": [{"notes": "Verified against the open Nature abstract; the curated edge is narrowed to heat because the abstract identifies heat, not all imposed extremes, as the treatment enhancing dormancy and sporulation genes.", "reference": "DOI:10.1038/s41586-024-08185-3", "snippet": "enhancing dormancy and sporulation genes"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "climate_extreme_event", "target": "dormancy_sporulation"}, {"description": "Soil pH, precipitation and C:N are associated with soil bacterial life-history genomic axes in random-forest models.", "evidence": [{"notes": "Verified against the PubMed abstract for the Nature Microbiology article; the edge is scoped as community-level statistical association.", "reference": "DOI:10.1038/s41564-023-01465-0", "snippet": "Random forest analyses show that soil pH"}], "id": "edge-8", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil_pH_precip_cn", "target": "life_history_axes"}, {"description": "Soil habitat provides the heterogeneous ecological context in which resident microbes partition across multiple activity and life-history strategies.", "evidence": [{"notes": "Verified against the Fierer review; the connector groups soil-associated community branches without asserting a single universal soil-dwelling mechanism.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "categorize soil microorganisms on the basis of their ecological strategies"}], "id": "edge-9", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil_habitat", "target": "soil_life_history_activity_context"}, {"description": "Oligotrophic taxa in low-carbon soils are one branch of the community-level soil life-history context.", "evidence": [{"notes": "Verified against the open ISME Communications full text; oligotroph-enriched taxa are treated as a carbon-gradient association within soils.", "reference": "DOI:10.1093/ismeco/ycae081", "snippet": "diverse array of ecological strategies used by soil bacteria"}], "id": "edge-10", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "oligotrophic_lifestyle", "target": "soil_life_history_activity_context"}, {"description": "Potential community growth rate is an activity axis associated with moisture and resource gradients across soils.", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the Zhou et al. global survey models soil microbiome potential growth as a community-level ecological axis.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "spatial variation of microbial potential growth rates"}], "id": "edge-11", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "potential_growth_rate", "target": "soil_life_history_activity_context"}, {"description": "Flagellar-motility gene prevalence is a carbon-associated mobility branch in soil communities.", "evidence": [{"notes": "Verified against the open ISME Journal full text; Ramoneda et al. connect flagellar prevalence with soil carbon availability across community datasets.", "reference": "DOI:10.1093/ismejo/wrae067", "snippet": "prevalence of flagellar motility in bacterial communities and soil C availability"}], "id": "edge-12", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "flagellar_motility", "target": "soil_life_history_activity_context"}, {"description": "Dormancy and sporulation gene programs are stress-response branches in disturbed soil communities.", "evidence": [{"notes": "Verified against the open Nature abstract; heat-enhanced dormancy/sporulation abundance is retained as a soil disturbance context.", "reference": "DOI:10.1038/s41586-024-08185-3", "snippet": "soil microbiomes from different climates share unified responses to extreme climatic events"}], "id": "edge-13", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "dormancy_sporulation", "target": "soil_life_history_activity_context"}, {"description": "The soil bacterial MCOA axes summarize genomic life-history strategies associated with pH, C:N, and precipitation gradients.", "evidence": [{"notes": "Verified against the Nature Microbiology abstract; Piton et al. place soil pH, C:N ratio, and precipitation as predictors of community-level genomic strategy axes.", "reference": "DOI:10.1038/s41564-023-01465-0", "snippet": "drive the dominant life history strategy of soil bacterial communities"}], "id": "edge-14", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "life_history_axes", "target": "soil_life_history_activity_context"}], "evidence_rows": [{"description": "The terrestrial soil environment hosts soil-resident microbes.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the Fierer review; the claim is habitat-level and does not assert a universal molecular mechanism for all soil microbes.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "a broad diversity of microbial taxa"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "soil habitat", "target": "soil-dwelling"}, {"description": "Soil microbes contribute to terrestrial biogeochemical cycling.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the Fierer review; soil microbial processes include nutrient transformations and organic carbon-pool dynamics.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "specific microbial controls on soil processes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "soil-dwelling", "target": "biogeochemical cycling"}, {"description": "Low-carbon soil gradients are associated with oligotrophic taxa carrying small genomes, lower potential growth rates, and fewer chemotaxis/motility genes.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open ISME Communications full text; the edge is retained as an ecological association rather than a deterministic carbon-to-genome mechanism.", "reference": "DOI:10.1093/ismeco/ycae081", "snippet": "chemotaxis and motility were under-represented"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "low available organic carbon", "target": "oligotrophic lifestyle"}, {"description": "Resource-rich, humid, acid-neutral soils are associated with higher microbiome potential growth.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the global pattern is observational, so the edge no longer uses a direct positive-regulation predicate.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "exhibit high potential growth rates"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil resource availability and moisture", "target": "soil microbiome potential growth rate"}, {"description": "Dry and resource-poor soils are associated with lower soil microbiome potential growth rates.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the study reports a macroscale association across soil microbiomes.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "display lower potential growth rates"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil aridity", "target": "soil microbiome potential growth rate"}, {"description": "High soil carbon availability is associated with greater community-level prevalence of flagellar motility genes.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open ISME Journal full text; glucose amendment and four field gradients support the association.", "reference": "DOI:10.1093/ismejo/wrae067", "snippet": "prevalence of flagellar motility is positively associated with soil C availability"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "high soil carbon availability", "target": "flagellar motility"}, {"description": "Experimental heat treatment increased soil dormancy and sporulation gene abundance.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Nature abstract; the curated edge is narrowed to heat because the abstract identifies heat, not all imposed extremes, as the treatment enhancing dormancy and sporulation genes.", "reference": "DOI:10.1038/s41586-024-08185-3", "snippet": "enhancing dormancy and sporulation genes"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "extreme heat event", "target": "dormancy and sporulation gene program"}, {"description": "Soil pH, precipitation and C:N are associated with soil bacterial life-history genomic axes in random-forest models.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the PubMed abstract for the Nature Microbiology article; the edge is scoped as community-level statistical association.", "reference": "DOI:10.1038/s41564-023-01465-0", "snippet": "Random forest analyses show that soil pH"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil pH, precipitation and C:N", "target": "soil bacterial life-history strategy axes"}, {"description": "Soil habitat provides the heterogeneous ecological context in which resident microbes partition across multiple activity and life-history strategies.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the Fierer review; the connector groups soil-associated community branches without asserting a single universal soil-dwelling mechanism.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "categorize soil microorganisms on the basis of their ecological strategies"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil habitat", "target": "soil life-history and activity context"}, {"description": "Oligotrophic taxa in low-carbon soils are one branch of the community-level soil life-history context.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open ISME Communications full text; oligotroph-enriched taxa are treated as a carbon-gradient association within soils.", "reference": "DOI:10.1093/ismeco/ycae081", "snippet": "diverse array of ecological strategies used by soil bacteria"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "oligotrophic lifestyle", "target": "soil life-history and activity context"}, {"description": "Potential community growth rate is an activity axis associated with moisture and resource gradients across soils.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Nature Communications abstract; the Zhou et al. global survey models soil microbiome potential growth as a community-level ecological axis.", "reference": "DOI:10.1038/s41467-024-53753-w", "snippet": "spatial variation of microbial potential growth rates"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil microbiome potential growth rate", "target": "soil life-history and activity context"}, {"description": "Flagellar-motility gene prevalence is a carbon-associated mobility branch in soil communities.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the open ISME Journal full text; Ramoneda et al. connect flagellar prevalence with soil carbon availability across community datasets.", "reference": "DOI:10.1093/ismejo/wrae067", "snippet": "prevalence of flagellar motility in bacterial communities and soil C availability"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "flagellar motility", "target": "soil life-history and activity context"}, {"description": "Dormancy and sporulation gene programs are stress-response branches in disturbed soil communities.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the open Nature abstract; heat-enhanced dormancy/sporulation abundance is retained as a soil disturbance context.", "reference": "DOI:10.1038/s41586-024-08185-3", "snippet": "soil microbiomes from different climates share unified responses to extreme climatic events"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "dormancy and sporulation gene program", "target": "soil life-history and activity context"}, {"description": "The soil bacterial MCOA axes summarize genomic life-history strategies associated with pH, C:N, and precipitation gradients.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the Nature Microbiology abstract; Piton et al. place soil pH, C:N ratio, and precipitation as predictors of community-level genomic strategy axes.", "reference": "DOI:10.1038/s41564-023-01465-0", "snippet": "drive the dominant life history strategy of soil bacterial communities"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "soil bacterial life-history strategy axes", "target": "soil life-history and activity context"}], "graph_id": "soil_dwelling_biogeochemistry", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Dry soil moisture conditions / water limitation.", "grounding": null, "id": "aridity", "is_orphan": false, "label": "soil aridity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Microbially mediated cycling of C, N, S, and other elements in soils.", "grounding": null, "id": "biogeochemical_cycling", "is_orphan": false, "label": "biogeochemical cycling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Experimental heat disturbance in soil.", "grounding": null, "id": "climate_extreme_event", "is_orphan": false, "label": "extreme heat event", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Genetic programs for dormancy and spore formation.", "grounding": null, "id": "dormancy_sporulation", "is_orphan": false, "label": "dormancy and sporulation gene program", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Flagellum-dependent cell motility.", "grounding": "GO:0071973", "id": "flagellar_motility", "is_orphan": false, "label": "flagellar motility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Genomic life-history strategy axes (MCOA1/MCOA2) of soil bacterial communities.", "grounding": null, "id": "life_history_axes", "is_orphan": false, "label": "soil bacterial life-history strategy axes", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Carbon-limited (oligotrophic) soil conditions.", "grounding": null, "id": "low_organic_carbon", "is_orphan": false, "label": "low available organic carbon", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Slow-growing, streamlined small-genome strategy with reduced motility/chemotaxis.", "grounding": null, "id": "oligotrophic_lifestyle", "is_orphan": false, "label": "oligotrophic lifestyle", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Community-level potential growth rate of soil microbes.", "grounding": null, "id": "potential_growth_rate", "is_orphan": false, "label": "soil microbiome potential growth rate", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Carbon-rich soil microsites such as rhizosphere/surface soil.", "grounding": null, "id": "soil_carbon_availability", "is_orphan": false, "label": "high soil carbon availability", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Persistent residence in soil habitat.", "grounding": "traitmech:000050", "id": "soil_dwelling_trait", "is_orphan": false, "label": "soil-dwelling", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Complex terrestrial soil environment.", "grounding": null, "id": "soil_habitat", "is_orphan": false, "label": "soil habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Community-level soil microbial context spanning oligotrophy, growth potential, motility, dormancy/sporulation, and genomic life-history axes.", "grounding": null, "id": "soil_life_history_activity_context", "is_orphan": false, "label": "soil life-history and activity context", "node_type": "STATE", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Edaphic and climatic drivers (pH, annual precipitation, soil C:N ratio).", "grounding": null, "id": "soil_pH_precip_cn", "is_orphan": false, "label": "soil pH, precipitation and C:N", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "Resource-rich, humid, acid-neutral soil conditions favoring growth.", "grounding": null, "id": "soil_resource_availability", "is_orphan": false, "label": "soil resource availability and moisture", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Soil-dwelling microbes in soil life-history contexts"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -909,7 +1029,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC from
+      Record as of 2026-09-06 13:30 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 477 TraitRecords
       · embedding coverage 100.0%

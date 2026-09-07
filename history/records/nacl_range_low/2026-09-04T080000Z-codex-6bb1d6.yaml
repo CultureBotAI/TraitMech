@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_range_low.yaml
+  slug: nacl_range_low
+session:
+  id: 2026-09-04T080000Z-codex-6bb1d6
+  timestamp: '2026-09-04T08:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed nacl_range_low causal evidence
+  details: 'Reviewed data/traits/environment/nacl_range_low.yaml for issue #183. Added exact
+    snippets to 5 causal-edge evidence items, grounded 2 residual predicates in the nacl_range_low_non_halophile
+    graph, repaired the local hyperosmotic-stress node-type conflict, and preserved the METPO
+    NaR_<=1 interval as a nonmechanistic NaCl-range classification. No paid research service
+    was called.'

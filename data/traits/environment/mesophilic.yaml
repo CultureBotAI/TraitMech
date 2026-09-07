@@ -23,14 +23,14 @@ canonical_examples:
   reference: DOI:10.1021/acsomega.2c04786
 causal_graphs:
 - graph_id: mesophilic_homoviscous_adaptation
-  title: Mesophilic homoviscous and enzymatic adaptation mechanism
+  title: Mesophilic growth with membrane and temperature-boundary support
   scope_status: NONMECHANISTIC
   scope_notes: This record is an upper preference, broad tolerance, or central-range
     classification spanning multiple unrelated adaptations; contextual protein nodes
     are retained without assigning a misleading token UniProt example.
-  description: DOI-backed graph linking mesophily to moderate ambient temperature,
-    homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced
-    growth at intermediate temperatures.
+  description: DOI-backed nonmechanistic graph connecting mesophily to moderate temperature,
+    balanced growth, homoviscous membrane fluidity, and cold- and heat-shock boundary-support
+    branches.
   nodes:
   - node_id: mesophilic_trait
     label: mesophilic
@@ -166,55 +166,117 @@ causal_graphs:
     predicate: increases
     object: unsaturated_fatty_acids
     description: Temperature downshift increases membrane unsaturated fatty acid content
-      (homeoviscous adaptation).
+      through homeoviscous adaptation.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
-      notes: Low-temperature adaptation includes increased unsaturation of membrane
-        acyl chains; broad bacterial homeoviscous adaptation.
+      snippet: production of double bonds in lipids
+      notes: Verified against the Ramón et al. cold-adaptation review; low-temperature
+        adaptation includes membrane-composition remodeling through lipid double-bond
+        production.
     predicate_id: RO:0002213
   - subject: cold_shock
-    predicate: induces
+    predicate: positively regulates
     object: cspa
-    description: Cold shock induces the cold-shock protein CspA.
+    description: Cold shock strongly increases CspA cold-shock protein synthesis.
     evidence:
-    - reference: DOI:10.1007/s12275-023-00031-x
-      notes: Cold shock responses include induction of Csp proteins, notably CspA
-        (~15% of protein synthesis after cold shock).
+    - reference: DOI:10.1046/j.1365-2958.1999.01284.x
+      snippet: more than 10% of the total cellular protein synthesis
+      notes: Verified against the open Molecular Microbiology full text; CspA is the
+        major E. coli cold-shock protein and its synthesis rises sharply after temperature
+        downshift.
+    predicate_id: RO:0002213
   - subject: cspa
     predicate: promotes
     object: translation
-    description: CspA acts as an RNA chaperone preventing RNA secondary structure,
-      promoting translation during cold shock.
+    description: CspA RNA chaperone activity destabilizes inhibitory mRNA secondary
+      structures, promoting translation during cold shock.
     evidence:
-    - reference: DOI:10.1007/s12275-023-00031-x
-      notes: CspA binds/unwinds RNA to promote single-strandedness and translation
-        during cold shock.
+    - reference: DOI:10.1046/j.1365-2958.1999.01284.x
+      snippet: facilitates translation by destabilizing mRNA secondary structures
+      notes: Verified against the open Molecular Microbiology full text; CspA acts
+        as an RNA chaperone that counters low-temperature mRNA secondary structure.
     predicate_id: RO:0002213
   - subject: heat_shock
-    predicate: induces
+    predicate: positively regulates
     object: rpoh_sigma32
-    description: Heat shock induces synthesis of sigma-32 (RpoH).
+    description: Heat shock transiently increases cellular sigma-32 (RpoH), the heat-shock
+      sigma factor.
     evidence:
-    - reference: DOI:10.1007/s12275-023-00031-x
-      notes: Heat-induced synthesis of sigma-32 (rpoH); canonical bacterial heat-shock
-        regulation relevant to mesophiles near the upper temperature range.
+    - reference: DOI:10.1128/jb.183.18.5302-5310.2001
+      snippet: transient increase in the RpoH level observed upon heat shock
+      notes: Verified against the open Journal of Bacteriology full text; E. coli
+        heat-shock induction is regulated by increased RpoH translation and transient
+        sigma-32 stabilization.
+    predicate_id: RO:0002213
   - subject: rpoh_sigma32
-    predicate: activates expression of
+    predicate: positively regulates
     object: heat_shock_proteins
-    description: Sigma-32 (RpoH) activates production of heat-shock response proteins.
+    description: Sigma-32 (RpoH) positively regulates heat-shock response protein
+      expression.
     evidence:
-    - reference: DOI:10.1007/s12275-023-00031-x
-      notes: Heat shock regulation centers on sigma factor RpoH (sigma-32) directing
-        heat-shock gene expression.
+    - reference: DOI:10.1128/jb.183.18.5302-5310.2001
+      snippet: enhancing transcription of the heat shock genes
+      notes: Verified against the open Journal of Bacteriology full text; RpoH-dependent
+        sigma-32 activity drives heat-shock-gene transcription.
+    predicate_id: RO:0002213
   - subject: dnak
     predicate: negatively regulates
     object: rpoh_sigma32
-    description: DnaK chaperone sequesters sigma-32, negatively regulating its activity.
+    description: DnaK chaperone activity negatively regulates sigma-32 (RpoH) activity.
     evidence:
-    - reference: DOI:10.1007/s12275-023-00031-x
-      notes: RpoH is controlled by DnaK chaperone sequestration; canonical negative
-        regulation in Gram-negative bacteria.
+    - reference: DOI:10.1128/jb.183.18.5302-5310.2001
+      snippet: negative regulation of RpoH activity
+      notes: Verified against the open Journal of Bacteriology full text; the DnaK
+        chaperone system participates in negative control of sigma-32 activity.
     predicate_id: RO:0002212
+  - subject: unsaturated_fatty_acids
+    predicate: associated with
+    object: homoviscous_lipid_composition
+    description: Unsaturated fatty-acid changes are associated with the homeoviscous
+      lipid composition branch in this mesophilic temperature-response graph.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: incorporation of proportionally more unsaturated fatty acids
+      notes: Verified against the public Annual Review of Microbiology abstract; unsaturated
+        fatty-acid incorporation is part of homeoviscous membrane remodeling as growth
+        temperature decreases.
+    predicate_id: biolink:associated_with
+  - subject: membrane_fluidity
+    predicate: associated with
+    object: balanced_growth
+    description: Mesophilic balanced growth is associated with maintenance of target
+      cytoplasmic-membrane fluidity.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: remodel the fluidity of their membrane bilayer
+      notes: Verified against the public Annual Review of Microbiology abstract; the
+        connector links membrane-fluidity remodeling to growth-temperature acclimation
+        without making a single lipid ratio define mesophily.
+    predicate_id: biolink:associated_with
+  - subject: translation
+    predicate: associated with
+    object: balanced_growth
+    description: Cold-shock maintenance of translation is a lower-temperature boundary-support
+      branch for balanced mesophilic growth.
+    evidence:
+    - reference: DOI:10.4161/rna.7.6.13482
+      snippet: facilitating transcription and translation at low temperature
+      notes: Verified against the open Phadtare and Severinov PMC abstract; the connector
+        keeps CspA-family RNA chaperones as low-temperature translation context, not
+        as a definition of mesophily.
+    predicate_id: biolink:associated_with
+  - subject: heat_shock_proteins
+    predicate: associated with
+    object: balanced_growth
+    description: RpoH-regulated heat-shock response proteins form an upper-temperature
+      boundary-support branch for balanced mesophilic growth.
+    evidence:
+    - reference: DOI:10.1128/mbio.02174-23
+      snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+      notes: Verified against the open Grunberger et al. PMC text; the connector keeps
+        heat-shock chaperones as an upper-boundary proteostasis branch, not as a definition
+        of mesophily.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
@@ -315,4 +377,33 @@ curation_history:
     (mesophile_enzyme_repertoire, cspa, rpoh_sigma32, heat_shock_proteins, dnak);
     added 1 node(s) and 1 edge(s) (heat_shock_proteins); removed 1 node(s) and 1 edge(s)
     together with their evidence (heat_shock_genes).'
+  llm_assisted: true
+- timestamp: '2026-09-04T00:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the broad mesophilic_homoviscous_adaptation graph for issue #183:
+    added snippets to 6 edge-level evidence items and regrounded 3 heat/cold shock
+    response edges from legacy free-text predicates to RO:0002213 positive regulation.
+    No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T13:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (5 components to 1) by adding
+    4 source- and verbatim-snippet-backed association connectors among the homoviscous
+    membrane, cold-shock RNA, and heat-shock boundary branches. No paid research service
+    was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #665: replaced two sigma-32
+    snippets with exact RpoH wording from the Journal of Bacteriology source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true

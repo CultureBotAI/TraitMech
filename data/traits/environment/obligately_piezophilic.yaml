@@ -74,8 +74,10 @@ causal_graphs:
       obligatory for growth.
     evidence:
     - reference: DOI:10.1099/ijsem.0.001671
-      notes: Colwellia marinimaniae MTCD1 has a growth range of 80-140 MPa (optimum
-        120 MPa) and does not grow at atmospheric pressure.
+      snippet: grew at extremely high hydrostatic pressures, with a growth range of
+        80-140 MPa
+      notes: Verified against public Kusube et al. abstract text; Colwellia marinimaniae
+        MTCD1 is retained as a hyperpiezophilic obligate-HHP exemplar.
     predicate_id: biolink:causes
   - subject: pressure_dependent_machinery
     predicate: confers
@@ -84,26 +86,36 @@ causal_graphs:
       phenotype.
     evidence:
     - reference: DOI:10.1038/srep27289
-      notes: Pyrococcus yayanosii is an obligate piezophile requiring HHP for growth.
+      snippet: hydrostatic pressure-responsive genes involved in translation, chemotaxis,
+        energy metabolism
+      notes: Verified against the open Michoud and Jebbar abstract; the edge is kept
+        as a broad cellular-machinery dependency in an obligate piezophile.
     predicate_id: METPO:2007700
-  - subject: obligate_piezophilic_trait
-    predicate: has characteristic
-    object: ambient_pressure_growth_failure
-    description: The obligate-piezophile phenotype is defined by inability to grow
-      at ambient pressure (0.1 MPa).
+  - subject: ambient_pressure_growth_failure
+    predicate: manifests as
+    object: obligate_piezophilic_trait
+    description: Inability to grow at 0.1 MPa is the diagnostic pressure-growth failure
+      state represented by obligate piezophily.
     evidence:
     - reference: DOI:10.1038/s41396-021-00930-0
-      notes: Obligate piezophiles (or hyperpiezophiles) are unable to grow at ambient
-        pressure (0.1 MPa).
+      snippet: obligate piezophiles (or hyperpiezophiles) unable to grow at ambient
+        pressure
+      notes: Verified against public Scoma et al. text; the edge is reversed from
+        ungrounded trait-to-quality wording to a grounded manifestation relation.
+    predicate_id: METPO:2007400
   - subject: obligate_hhp
-    predicate: increases amount of
+    predicate: increases
     object: membrane_unsaturated_branched_lipids
     description: Elevated hydrostatic pressure increases the requirement for and abundance
       of unsaturated/branched-chain membrane lipids.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      notes: The abundance of specific membrane lipids, such as those containing unsaturated
-        and branched-chain fatty acids, rises with increasing HHP across marine piezophiles.
+      snippet: specific membrane lipids, such as those containing unsaturated and
+        branched-chain fatty acids, rises with increasing HHP
+      notes: Verified against the open Tamby et al. abstract; the edge is retained
+        as a broad pressure-associated lipid adaptation, not a universal claim for
+        all piezophiles.
+    predicate_id: RO:0002213
   - subject: membrane_unsaturated_branched_lipids
     predicate: enables
     object: membrane_fluidity_maintenance
@@ -111,8 +123,10 @@ causal_graphs:
       HHP (homeoviscous adaptation).
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      notes: Membrane lipid adaptation (unsaturated/branched fatty acids) is a homeoviscous
-        response maintaining membrane fluidity under high hydrostatic pressure.
+      snippet: can be adapted by modifying the degree of lipid packing
+      notes: Verified against the open Tamby et al. introduction; membrane unsaturation
+        and branching are retained as contextual ways to remodel lipid packing under
+        HHP.
     predicate_id: RO:0002327
   - subject: membrane_fluidity_maintenance
     predicate: contributes to
@@ -121,8 +135,11 @@ causal_graphs:
       machinery underlying obligate piezophily.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      notes: Membrane fluidity maintenance via lipid adaptation underlies the pressure-adapted
-        membrane systems of piezophiles.
+      snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+        key strategies to maintain the integrity of their lipid membrane
+      notes: Verified against the open Tamby et al. abstract; the edge is retained
+        as a high-level bridge from high-pressure membrane adaptation to HHP-dependent
+        machinery.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
@@ -166,4 +183,18 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope obligate_piezophily_high_pressure_requirement=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-09-04T08:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the obligate_piezophily_high_pressure_requirement graph for issue
+    #183: added exact snippets to 6 causal-edge evidence items and grounded 2 residual
+    predicates. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced the HHP-damage snippet
+    with exact Tamby et al. wording that supports high-pressure lipid-membrane integrity
+    as piezophile adaptation.'
   llm_assisted: true

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_delta_mid2.yaml
+  slug: nacl_delta_mid2
+session:
+  id: 2026-09-04T074000Z-codex-0fe1eb
+  timestamp: '2026-09-04T07:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed NaCl delta mid2 causal evidence
+  details: 'Reviewed data/traits/environment/nacl_delta_mid2.yaml for issue #183. Added exact
+    snippets to 6 NaCl-delta-mid2 causal-edge evidence entries, grounded the binds and upregulates
+    residual predicates, repaired local node typing for compatible-solute and exopolysaccharide-matrix
+    nodes, and preserved the graph as a nonmechanistic NaCl-range-breadth bin. No paid research
+    service was called.'

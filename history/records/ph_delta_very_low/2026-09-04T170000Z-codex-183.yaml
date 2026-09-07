@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_very_low.yaml
+  slug: ph_delta_very_low
+session:
+  id: 2026-09-04T170000Z-codex-183
+  timestamp: '2026-09-04T17:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected pH-delta-very-low causal-graph components
+  details: 'Resolved issue #183 graph fragmentation in data/traits/environment/ph_delta_very_low.yaml.
+    Added 5 source- and verbatim-snippet-backed association connectors to collapse
+    the reviewed nonmechanistic graph from 6 components to 1 while keeping PMF
+    partitioning, constitutive cost, alkaline antiport, F1Fo acid-survival support,
+    and Gad proton-consumption branches scoped as support for the at-most-1 pH-unit
+    breadth bin. No paid research service was called.'

@@ -76,34 +76,48 @@ causal_graphs:
     node_type: EXPERIMENTAL_FACTOR
     description: Decolorization step that differentiates Gram-positive and Gram-negative
       staining.
+  - node_id: crystal_violet_iodine_retention
+    label: crystal violet-iodine retention
+    node_type: QUALITY
+    description: Retention of the crystal violet-iodine complex after Gram decolorization.
   edges:
   - subject: crystal_violet
-    predicate: reacts with
-    object: iodine_mordant
-    description: Crystal violet and iodine form a dye complex during the Gram stain.
+    predicate: contributes to
+    object: crystal_violet_iodine_complex
+    description: Crystal violet contributes the dye cation to the insoluble crystal
+      violet-iodide precipitate formed during the Gram stain.
     evidence:
     - reference: DOI:10.1128/jb.156.2.837-845.1983
-      snippet: produce a chemical precipitate
-      notes: Supports chemical formation of the crystal violet-iodine precipitate.
-  - subject: crystal_violet_iodine_complex
-    predicate: is retained by
-    object: peptidoglycan_cell_wall
-    description: Cell-wall architecture determines whether the dye complex remains
-      after decolorization.
+      snippet: interacts with aqueous KI-I2 during the Gram stain via a simple metathetical
+        anion exchange
+      notes: Verified against the open Davies et al. abstract; crystal violet reacts
+        with the iodide mordant during Gram staining to form the insoluble dye-iodide
+        precipitate.
+    predicate_id: RO:0002326
+  - subject: peptidoglycan_cell_wall
+    predicate: contributes to
+    object: crystal_violet_iodine_retention
+    description: Peptidoglycan wall architecture determines whether the dye complex
+      remains after decolorization.
     evidence:
     - reference: DOI:10.3109/10520299609117151
-      snippet: cell wall ... responsible for retention
-      notes: Review supports the Gram-positive cell wall as responsible for retaining
-        the dye-iodine complex.
+      snippet: responsible for retention of a crystal violet:iodine complex
+      notes: Verified against the public Popescu and Doyle abstract; the Gram-positive
+        cell wall is the structural determinant for retaining the dye-iodine complex.
+    predicate_id: RO:0002326
   - subject: alcohol_decolorization
-    predicate: removes
-    object: outer_membrane
-    description: Decolorization disrupts the Gram-negative outer membrane and helps
-      remove dye complex.
+    predicate: contributes to
+    object: gram_stain_trait
+    description: Decolorization contributes to the differential Gram reaction by damaging
+      Gram-negative cell surfaces and causing dye-complex loss.
     evidence:
-    - reference: DOI:10.1128/jb.156.2.837-845.1983
-      snippet: alcohol-acetone decolorization
-      notes: Supports decolorization as a chemical step differentiating Gram reactions.
+    - reference: DOI:10.3109/10520299609117151
+      snippet: staining procedures damage the cell surface resulting in loss of dye
+        complexes
+      notes: Verified against the public Popescu and Doyle abstract; decolorization
+        is retained as an assay step contributing to the broad Gram stain phenotype
+        rather than asserted as complete outer-membrane removal.
+    predicate_id: RO:0002326
   - subject: outer_membrane
     predicate: regulates
     object: gram_stain_trait
@@ -117,13 +131,49 @@ causal_graphs:
   - subject: peptidoglycan_cell_wall
     predicate: causes
     object: gram_stain_trait
-    description: Peptidoglycan thickness and envelope architecture determine Gram
-      stain outcome.
+    description: Peptidoglycan wall structure is the major structural determinant
+      of differential Gram-stain retention.
     evidence:
     - reference: DOI:10.3109/10520299609117151
-      snippet: mechanism of the Gram stain
-      notes: Supports cell-wall mediated Gram reaction.
+      snippet: Gram-stainability is a function of the cell wall
+      notes: Verified against the public Popescu and Doyle abstract; the review ties
+        the Gram reaction to the cell wall rather than chemistry of intracellular
+        constituents.
     predicate_id: biolink:causes
+  - subject: iodine_mordant
+    predicate: contributes to
+    object: crystal_violet_iodine_complex
+    description: The iodide mordant supplies the bulky anion that reacts with crystal
+      violet to form the dye-iodide precipitate.
+    evidence:
+    - reference: DOI:10.1128/jb.156.2.837-845.1983
+      snippet: apparent 1:1 stoichiometry between anion (I-) and cation
+      notes: Verified against the open Davies et al. abstract; the iodide anion and
+        crystal-violet cation react stoichiometrically in the Gram stain.
+    predicate_id: RO:0002326
+  - subject: crystal_violet_iodine_complex
+    predicate: contributes to
+    object: crystal_violet_iodine_retention
+    description: The insoluble crystal violet-iodine complex is the retained dye precipitate
+      that initiates the Gram reaction.
+    evidence:
+    - reference: DOI:10.1128/jb.156.2.837-845.1983
+      snippet: same precipitate which forms in the cellular substance of bacteria
+      notes: Verified against the open Davies et al. abstract; the crystal violet-iodide
+        precipitate forms inside both Gram-positive and Gram-negative bacteria before
+        the differential decolorization step.
+    predicate_id: RO:0002326
+  - subject: crystal_violet_iodine_retention
+    predicate: confers
+    object: gram_stain_trait
+    description: Differential retention of the dye-iodine complex is the proximal
+      assay state for the Gram stain phenotype.
+    evidence:
+    - reference: DOI:10.3109/10520299609117151
+      snippet: retention of a crystal violet:iodine complex
+      notes: Verified against the public Popescu and Doyle abstract; the review frames
+        Gram staining around retention of the crystal violet-iodine complex.
+    predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901879+00:00'
   curator: seed_from_metpo
@@ -176,4 +226,12 @@ curation_history:
     canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503), Bacillus
     subtilis (NCBITaxon:1423; PMID:9384377). The note retains the measured value or
     scopes broad-class examples to the cited branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T06:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the gram_stain_cell_envelope_retention graph for issue #183:
+    added exact snippets to 4 assay evidence entries, replaced 3 residual predicates,
+    added a dye-retention node with 3 grounded connector edges, and connected the
+    reagent chemistry to the retention phenotype. No paid research service was called.'
   llm_assisted: true

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_optimum.yaml
+  slug: nacl_optimum
+session:
+  id: 2026-09-04T010000Z-codex-5941be
+  timestamp: '2026-09-04T01:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Review NaCl-optimum causal graph evidence
+  details: 'Reviewed data/traits/environment/nacl_optimum.yaml for issue #183. Added snippets
+    to six edge-level evidence items in nacl_optimum_balanced_osmoadaptation, regrounded the
+    ambient-NaCl to osmotic-stress edge to biolink:causes, and broadened one 2024 transporter
+    edge from Na+ homeostasis to Na+/K+/H+ transporter control of cellular ion homeostasis.
+    Existing deep-research findings were reused alongside the open Oren and Halomonas elongata
+    reviews and the 2024 long-term salinity-stress source; no paid research provider was called.'

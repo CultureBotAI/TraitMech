@@ -33,13 +33,14 @@ canonical_examples:
     the multi-omics study contrasts that optimum against 66 degrees C cold stress.
 causal_graphs:
 - graph_id: temperature_optimum_high_thermophile_setpoint
-  title: Temperature-optimum-high thermophile setpoint
+  title: Temperature-optimum-high thermophile context
   scope_status: NONMECHANISTIC
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed graph linking thermophile membrane and protein thermostability
-    adaptation to a temperature optimum above 40 °C.
+  description: DOI-backed nonmechanistic graph connecting thermophile thermostability,
+    genome thermostability, heat-shock protein-quality control, membrane-lipid remodeling,
+    and amino-acid composition branches to the above-40-degrees-C optimum bin.
   nodes:
   - node_id: temperature_optimum_high_trait
     label: temperature optimum high
@@ -161,8 +162,10 @@ causal_graphs:
       hallmark.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
-      notes: Reverse gyrase introduces positive supercoils into DNA and is a hallmark
-        of many thermophiles.
+      snippet: introduces positive supercoils into DNA
+      notes: Verified against the open Takemata minireview; reverse gyrase is described
+        as the characteristic thermophile topoisomerase that introduces positive supercoils
+        into DNA.
     predicate_id: RO:0002213
   - subject: dna_positive_supercoiling
     predicate: decreases
@@ -170,8 +173,9 @@ causal_graphs:
     description: Positive supercoiling limits DNA melting and prevents thermal denaturation.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
-      notes: Reverse gyrase / positive supercoiling proposed to limit DNA melting
-        and prevent thermal denaturation.
+      snippet: prevents the thermal denaturation of DNA
+      notes: Verified against the open Takemata minireview; the review presents reverse-gyrase-dependent
+        positive supercoiling as the accepted route limiting DNA thermal denaturation.
     predicate_id: RO:0002212
   - subject: nucleoid_associated_proteins
     predicate: increases
@@ -179,8 +183,10 @@ causal_graphs:
     description: Nucleoid-associated proteins enhance DNA/genome thermostability.
     evidence:
     - reference: DOI:10.1264/jsme2.me23087
-      notes: NAPs affect 3D genome organization and enhance DNA thermostability; abundance
-        correlates with growth temperature.
+      snippet: increase the melting temperature of DNA
+      notes: Verified against the open Takemata minireview; in vitro studies of NAPs
+        from prokaryotes show increased DNA melting temperature, and archaeal NAP
+        abundance is correlated with growth temperature.
     predicate_id: RO:0002213
   - subject: small_heat_shock_proteins
     predicate: prevents
@@ -189,25 +195,35 @@ causal_graphs:
       aggregation.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      notes: Small HSPs bind denaturing proteins and protect them from aggregation
-        under heat stress.
+      snippet: protecting them from aggregation
+      notes: Verified against the open Baes et al. introduction; small archaeal heat-shock
+        proteins are described as binding denaturing proteins to protect them from
+        aggregation.
     predicate_id: RO:0002212
   - subject: thermosome
-    predicate: refolds
+    predicate: enables
     object: denatured_protein_refolding
-    description: Thermosome refolds denatured proteins in an ATP-dependent manner.
+    description: The thermosome enables ATP-dependent refolding of denatured proteins.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      notes: Thermosome refolds denatured proteins in an ATP-dependent manner.
+      snippet: refolds denatured proteins in an ATP-dependent manner
+      notes: Verified against the open Baes et al. introduction; the archaeal thermosome
+        is described as the group-II chaperonin complex that performs ATP-dependent
+        refolding of denatured proteins.
+    predicate_id: RO:0002327
   - subject: membrane_lipid_composition
-    predicate: stabilizes
+    predicate: contributes to
     object: membrane_thermostability
-    description: Altered membrane lipid composition stabilizes the cytoplasmic membrane
-      at high temperature.
+    description: Altered membrane lipid composition contributes to cytoplasmic membrane
+      thermostability at high temperature.
     evidence:
     - reference: DOI:10.1128/mbio.03593-22
-      notes: Heat shock leads to an altered lipid composition of the cytoplasmic membrane;
-        unique membrane composition is a recognized thermophile adaptation.
+      snippet: altered lipid composition of the cytoplasmic membrane
+      notes: Verified against the open Baes et al. introduction; Sulfolobales heat
+        shock is described as altering cytoplasmic-membrane lipid composition, matching
+        this as a membrane-stabilization response branch rather than a single determinant
+        of thermophily.
+    predicate_id: RO:0002326
   - subject: aa_composition_thermostability
     predicate: increases
     object: thermophile_thermostability
@@ -215,9 +231,69 @@ causal_graphs:
       thermostability.
     evidence:
     - reference: DOI:10.1128/mbio.02174-23
-      notes: Thermophiles show enrichment in hydrophobic and charged amino acids contributing
-        to intrinsic protein thermostability.
+      snippet: enrichment in hydrophobic and charged amino acids
+      notes: Verified against the open Grünberger et al. introduction; the review
+        context lists hydrophobic and charged amino-acid enrichment among molecular
+        mechanisms used by hyperthermophilic archaea.
     predicate_id: RO:0002213
+  - subject: dna_positive_supercoiling
+    predicate: associated with
+    object: genome_thermostability
+    description: Reverse-gyrase-linked positive DNA supercoiling is associated with
+      thermophile genome-thermostability context.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      snippet: protect genomes at high temperatures
+      notes: Verified against the open Takemata minireview; this connector keeps positive
+        DNA supercoiling as one genome thermostability branch.
+    predicate_id: biolink:associated_with
+  - subject: genome_thermostability
+    predicate: associated with
+    object: thermophile_thermostability
+    description: DNA and genome thermostability are associated with the broad thermophile-thermostability
+      context.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      snippet: enhancing the thermostability of DNA in thermophiles
+      notes: Verified against the open Takemata minireview; this connector keeps nucleoid-associated
+        proteins as DNA thermostability context.
+    predicate_id: biolink:associated_with
+  - subject: protein_aggregation_heat
+    predicate: associated with
+    object: denatured_protein_refolding
+    description: Heat-induced protein-aggregation prevention and denatured-protein
+      refolding are associated heat-shock protein-quality-control branches.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      snippet: Small HSPs (sHSPs) and prefoldin bind to denaturing proteins
+      notes: Verified against the open Baes et al. introduction; this connector joins
+        complementary small-HSP protection and thermosome refolding context for heat-damaged
+        proteins.
+    predicate_id: biolink:associated_with
+  - subject: denatured_protein_refolding
+    predicate: associated with
+    object: thermophile_thermostability
+    description: Thermosome-linked refolding of denatured proteins is associated with
+      the broad thermophile-thermostability context.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      snippet: thermosome complexes with different subunit compositions and substrate
+        specificities
+      notes: Verified against the open Baes et al. introduction; this connector keeps
+        thermosome refolding as protein-quality context.
+    predicate_id: biolink:associated_with
+  - subject: membrane_thermostability
+    predicate: associated with
+    object: thermophile_thermostability
+    description: Cytoplasmic membrane thermostability is associated with the broad
+      thermophile-thermostability context.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      snippet: A sudden increase in temperature above the already high optimal growth
+        temperature could lead to detrimental cellular damage
+      notes: Verified against the open Baes et al. introduction; this connector keeps
+        high-temperature membrane lipid remodeling as a contextual thermophile branch.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822120+00:00'
   curator: seed_from_metpo
@@ -352,4 +428,27 @@ curation_history:
     the tranche: set graph scope temperature_optimum_high_thermophile_setpoint=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (nucleoid_associated_proteins, small_heat_shock_proteins, thermosome).'
+  llm_assisted: true
+- timestamp: '2026-09-04T03:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the temperature_optimum_high_thermophile_setpoint graph for issue
+    #183: added snippets to 7 edge-level evidence items and grounded the thermosome
+    and membrane-lipid predicates to RO:0002327 or RO:0002326. No paid research service
+    was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T20:00:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (6 components to 1) by adding
+    5 source- and verbatim-snippet-backed association connectors among genome thermostability,
+    small-HSP/thermosome protein quality control, and membrane-thermostability branches.
+    No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
+    snippets with independent exact source snippets while preserving the existing
+    connector edge scope.'
   llm_assisted: true
