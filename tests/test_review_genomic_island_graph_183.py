@@ -17,6 +17,7 @@ from review_genomic_island_graph_183 import (  # noqa: E402
     EDGE_REPLACEMENTS,
     NODE_REPLACEMENTS,
     RECORD_EVIDENCE_REPLACEMENTS,
+    REPAIR_EDGE_ADDITIONS,
     SLUG,
     _edge_key,
     transform,
@@ -86,6 +87,15 @@ def test_review_adds_snippets_and_grounds_genomic_island_edges():
 
     for replacement in EDGE_REPLACEMENTS:
         expected = replacement["after"]
+        assert by_key[_edge_key(expected)] == expected
+        assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
+
+
+def test_pr664_repair_reconnects_ice_branch_to_trait_node():
+    doc = _current()
+    by_key = {_edge_key(edge): edge for edge in doc["causal_graphs"][0]["edges"]}
+
+    for expected in REPAIR_EDGE_ADDITIONS:
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
 

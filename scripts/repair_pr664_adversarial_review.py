@@ -34,6 +34,7 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 ACTION = "ADVERSARIAL_REVIEW_REPAIR"
 TIMESTAMP = "2026-09-06T17:10:00Z"
 FOLLOWUP_TIMESTAMP = "2026-09-07T02:20:00Z"
+FINAL_FOLLOWUP_TIMESTAMP = "2026-09-07T03:40:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -75,6 +76,11 @@ FOLLOWUP_SLUGS = {
     "genomics/genomic_island",
     "morphology/gram_stain",
     "physiology/oxidative_stress_response",
+}
+
+FINAL_FOLLOWUP_SLUGS = {
+    "environment/ph_delta_mid3",
+    "genomics/genomic_island",
 }
 
 
@@ -162,6 +168,22 @@ def _drop_stale_edges(
     graph["edges"] = [edge for edge in graph.get("edges") or [] if _edge_key(edge) not in edge_keys]
 
 
+def _add_repair_edges(slug: str, doc: dict[str, Any], edges: list[dict[str, Any]]) -> None:
+    if not edges:
+        return
+
+    graph = _find_graph(slug, doc)
+    existing_by_key = {_edge_key(edge): edge for edge in graph.get("edges") or []}
+    for edge in edges:
+        key = _edge_key(edge)
+        existing = existing_by_key.get(key)
+        if existing == edge:
+            continue
+        if existing is not None:
+            raise ValueError(f"{slug}: repair edge drifted: {key}")
+        graph.setdefault("edges", []).append(copy.deepcopy(edge))
+
+
 def _connector_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
     return module.SLUG, module.ADDED_EDGES
@@ -215,9 +237,9 @@ def _event_changes(slug: str) -> str:
         )
     if slug == "environment/ph_delta_mid3":
         return (
-            "Addressed PR #664 adversarial review: replaced the weak Poolman "
-            "section-heading snippets with exact text supporting F0F1-ATPase "
-            "pH-homeostasis and decarboxylation-driven PMF edges."
+            "Addressed PR #664 adversarial review issue #683: normalized the "
+            "Poolman F0F1-ATPase evidence snippet by removing MathML brace "
+            "markup so the snippet matches the source text."
         )
     if slug == "environment/ph_phenotype_with_numerical_limits":
         return (
@@ -266,9 +288,9 @@ def _event_changes(slug: str) -> str:
         )
     if slug == "genomics/genomic_island":
         return (
-            "Addressed PR #664 adversarial review issue #681: replaced generic "
-            "Dobrindt article-preview notes with Nature Reviews Microbiology "
-            "publisher-abstract verification notes."
+            "Addressed PR #664 adversarial review issue #684: added a "
+            "Bioteau-backed ICE subclass edge to reconnect the "
+            "ICE/IME/T4SS/conjugation branch to the genomic island trait."
         )
     if slug == "morphology/gram_stain":
         return (
@@ -290,6 +312,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in FINAL_FOLLOWUP_SLUGS:
+        return FINAL_FOLLOWUP_TIMESTAMP
     if slug in FOLLOWUP_SLUGS:
         return FOLLOWUP_TIMESTAMP
     return TIMESTAMP
@@ -342,6 +366,7 @@ def repair(write: bool = False) -> int:
                 )
             _drop_stale_edges(slug, doc, getattr(module, "STALE_EDGE_KEYS", set()))
             _drop_stale_nodes(slug, doc, getattr(module, "STALE_NODE_IDS", set()))
+            _add_repair_edges(slug, doc, getattr(module, "REPAIR_EDGE_ADDITIONS", []))
 
         record_curation_event(
             doc,

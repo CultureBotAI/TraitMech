@@ -218,7 +218,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "F_{0}F_{1}-ATPase in lactic acid bacteria",
+                    "snippet": "F0F1-ATPase in lactic acid bacteria",
                     "notes": (
                         "Verified against the open Poolman review; proton-pumping "
                         "enzymes, including F0F1-ATPase in lactic acid bacteria, are "
