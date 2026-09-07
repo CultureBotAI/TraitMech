@@ -57,6 +57,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
+                    "snippet": (
+                        "tolerate or grow at external pH values that are "
+                        "outside the cytoplasmic pH range"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; pH breadth is represented as a quantitative "
@@ -265,11 +269,14 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "buffering capacity of the cytoplasm",
+                    "snippet": (
+                        "sufficient buffering capacity (e.g. inorganic and "
+                        "organic phosphates)"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; cytoplasmic "
-                        "buffering is described as important for absorbing pH "
-                        "fluctuations."
+                        "phosphate pools are named as sufficient buffering "
+                        "capacity needed for internal-pH stability."
                     ),
                 }
             ],

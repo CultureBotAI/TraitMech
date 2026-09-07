@@ -128,6 +128,8 @@ causal_graphs:
     description: pH delta mid3 is a quantitative bin of the pH-delta phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
+      snippet: tolerate or grow at external pH values that are outside the cytoplasmic
+        pH range
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         pH breadth is represented as a quantitative external-growth-pH bin under the
         pH-delta phenotype.
@@ -187,9 +189,9 @@ causal_graphs:
     description: Cytoplasmic phosphate buffering contributes to intracellular pH stability.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: buffering capacity of the cytoplasm
-      notes: Verified against the open Poolman review; cytoplasmic buffering is described
-        as important for absorbing pH fluctuations.
+      snippet: sufficient buffering capacity (e.g. inorganic and organic phosphates)
+      notes: Verified against the open Poolman review; cytoplasmic phosphate pools
+        are named as sufficient buffering capacity needed for internal-pH stability.
     predicate_id: RO:0002326
   - subject: aa_decarboxylation
     predicate: contributes to
@@ -442,4 +444,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #685: replaced weak pH edge
     snippets with exact source spans that carry their edge claims, and left derived
     pH-axis bin membership in notes instead of fragment snippets.'
+  llm_assisted: true
+- timestamp: '2026-09-07T06:14:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #688 and #690: restored a
+    supporting Krulwich snippet on the pH-delta bin membership edge and requoted the
+    Poolman phosphate-buffering edge from the primary source text.'
   llm_assisted: true

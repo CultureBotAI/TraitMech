@@ -113,7 +113,13 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/s41467-024-53677-5",
-                    "snippet": "allocates flux between the saturated and unsaturated",
+                    "snippet": (
+                        "A first element of this regulatory system is a "
+                        "temperature-sensitive metabolic valve that allocates "
+                        "flux between the saturated and unsaturated fatty acid "
+                        "synthesis pathways via the branchpoint enzymes FabI "
+                        "and FabB"
+                    ),
                     "notes": (
                         "Verified against the open Hoogerland et al. abstract; the "
                         "E. coli temperature-sensitive metabolic valve allocates "

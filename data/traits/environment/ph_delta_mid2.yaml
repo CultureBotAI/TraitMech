@@ -157,7 +157,8 @@ causal_graphs:
       to proton translocation.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: ATP-dependent H+ extrusion under acidic conditions
+      snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes ATP-dependent
+        H+ extrusion under acidic conditions
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         F1Fo-ATPase can drive proton efflux in acid-stressed non-respiratory neutralophiles.
     predicate_id: RO:0002326
@@ -225,10 +226,10 @@ causal_graphs:
     description: ATPase-mediated proton translocation is associated with acid-stress
       pH-homeostasis flexibility.
     evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: promotes ATP-dependent H+ extrusion under acidic conditions
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        F1Fo-ATPase proton efflux is one acid-side branch of pH homeostasis.
+    - reference: DOI:10.1016/j.abb.2019.03.014
+      snippet: F-ATPase plays an important role in acid tolerance of this bacterium
+      notes: Verified against the PubMed abstract of Sekiya et al.; the connector
+        keeps F1Fo-ATPase proton efflux as one acid-side branch of pH homeostasis.
     predicate_id: biolink:associated_with
   - subject: alkaline_ph_homeostasis
     predicate: associated with
@@ -348,4 +349,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #666: replaced borrowed snippets
     on the six broad_ph_homeostasis connectors with connector-specific exact snippets
     from the same supporting sources.'
+  llm_assisted: true
+- timestamp: '2026-09-07T06:14:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #688 and #689: requoted the
+    F1Fo-ATPase acid-stress edge with a longer Krulwich span and replaced its connector
+    quote with distinct Sekiya F-ATPase acid-tolerance support.'
   llm_assisted: true

@@ -65,7 +65,13 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "allocates flux between the saturated and unsaturated",
+                "snippet": (
+                    "A first element of this regulatory system is a "
+                    "temperature-sensitive metabolic valve that allocates flux "
+                    "between the saturated and unsaturated fatty acid "
+                    "synthesis pathways via the branchpoint enzymes FabI and "
+                    "FabB"
+                ),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; the E. "
                     "coli temperature-sensitive metabolic valve allocates fatty-acid "
@@ -311,12 +317,13 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
                 "snippet": (
-                    "temperature-sensitive metabolic valve that allocates flux "
-                    "between the saturated and unsaturated"
+                    "All free-living microorganisms homeostatically maintain "
+                    "the fluidity of their membranes by adapting lipid "
+                    "composition to environmental temperatures"
                 ),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
-                    "connector keeps fatty-acid flux allocation as membrane "
+                    "connector keeps homeoviscous membrane adaptation as "
                     "context for the broad warm-mesophile range bin."
                 ),
             }

@@ -152,7 +152,9 @@ causal_graphs:
       and unsaturated fatty acid synthesis, enabling homeoviscous adaptation.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: allocates flux between the saturated and unsaturated
+      snippet: A first element of this regulatory system is a temperature-sensitive
+        metabolic valve that allocates flux between the saturated and unsaturated
+        fatty acid synthesis pathways via the branchpoint enzymes FabI and FabB
       notes: Verified against the open Hoogerland et al. abstract; the E. coli temperature-sensitive
         metabolic valve allocates fatty-acid synthesis flux through FabI and FabB.
     predicate_id: RO:0002327
@@ -282,10 +284,10 @@ causal_graphs:
       adaptation after temperature shock.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: temperature-sensitive metabolic valve that allocates flux between the
-        saturated and unsaturated
+      snippet: All free-living microorganisms homeostatically maintain the fluidity
+        of their membranes by adapting lipid composition to environmental temperatures
       notes: Verified against the open Hoogerland et al. abstract; this connector
-        keeps fatty-acid flux allocation as membrane context for the broad warm-mesophile
+        keeps homeoviscous membrane adaptation as context for the broad warm-mesophile
         range bin.
     predicate_id: biolink:associated_with
   - subject: membrane_fluidity
@@ -418,4 +420,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #686: replaced fragmented ring-shape,
     soil-life-history, heat-shock, and ligninolysis snippets with exact source spans
     that carry their edge claims.'
+  llm_assisted: true
+- timestamp: '2026-09-07T06:14:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #689: expanded the Hoogerland
+    FabI/FabB branch quote and replaced the warm-mesophile connector quote with an
+    independent homeoviscous-adaptation span.'
   llm_assisted: true

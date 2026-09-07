@@ -122,7 +122,10 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "ATP-dependent H+ extrusion under acidic conditions",
+                "snippet": (
+                    "up-regulation of the hydrolytic activity of F1Fo-ATPase "
+                    "promotes ATP-dependent H+ extrusion under acidic conditions"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; F1Fo-ATPase can drive proton efflux in "
@@ -236,11 +239,14 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "promotes ATP-dependent H+ extrusion under acidic conditions",
+                "reference": "DOI:10.1016/j.abb.2019.03.014",
+                "snippet": (
+                    "F-ATPase plays an important role in acid tolerance of "
+                    "this bacterium"
+                ),
                 "notes": (
-                    "Verified against the open PMC manuscript of the Krulwich "
-                    "et al. review; ATP-dependent proton pumping is kept as "
+                    "Verified against the PubMed abstract of Sekiya et al.; "
+                    "ATP-dependent proton pumping is kept as "
                     "acid-side support rather than a direct breadth mechanism."
                 ),
             }

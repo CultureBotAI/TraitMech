@@ -54,6 +54,10 @@ RECORD_EVIDENCE_BEFORE: list[dict[str, Any]] = [
 RECORD_EVIDENCE_AFTER: list[dict[str, Any]] = [
     {
         "reference": "DOI:10.1038/nrmicro2549",
+        "snippet": (
+            "Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis "
+            "enable most bacteria to tolerate or grow at external pH values"
+        ),
         "notes": (
             "Verified against the open PMC manuscript of the Krulwich et al. review; "
             "external pH is the quantitative environmental axis represented by "
@@ -205,7 +209,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "maintain a relatively constant PMF and internal pH",
+                    "snippet": (
+                        "Proton-sensing ion/H+ antiporters acidify the "
+                        "cytoplasm by exporting K+ or Na+ in exchange for "
+                        "protons when the internal pH gets too high"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; Na+/H+ "
                         "antiporters are listed as key bacterial pH-homeostasis "
@@ -324,11 +332,14 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "buffering capacity of the cytoplasm",
+                    "snippet": (
+                        "sufficient buffering capacity (e.g. inorganic and "
+                        "organic phosphates)"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; cytoplasmic "
-                        "buffering is described as important for absorbing pH "
-                        "fluctuations."
+                        "phosphate pools are named as sufficient buffering "
+                        "capacity needed for internal-pH stability."
                     ),
                 }
             ],

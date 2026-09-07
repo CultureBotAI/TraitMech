@@ -10,6 +10,8 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: DOI:10.1038/nrmicro2549
+  snippet: Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis enable
+    most bacteria to tolerate or grow at external pH values
   notes: Verified against the open PMC manuscript of the Krulwich et al. review; external
     pH is the quantitative environmental axis represented by pH-growth numerical-limit
     phenotypes.
@@ -174,7 +176,8 @@ causal_graphs:
     description: Na+/H+ antiporter activity regulates internal pH and PMF.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: maintain a relatively constant PMF and internal pH
+      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+        K+ or Na+ in exchange for protons when the internal pH gets too high
       notes: Verified against the open Poolman review; Na+/H+ antiporters are listed
         as key bacterial pH-homeostasis regulators.
     predicate_id: RO:0002211
@@ -205,9 +208,9 @@ causal_graphs:
     description: Cytoplasmic phosphate pools contribute to internal-pH stability.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: buffering capacity of the cytoplasm
-      notes: Verified against the open Poolman review; cytoplasmic buffering is described
-        as important for absorbing pH fluctuations.
+      snippet: sufficient buffering capacity (e.g. inorganic and organic phosphates)
+      notes: Verified against the open Poolman review; cytoplasmic phosphate pools
+        are named as sufficient buffering capacity needed for internal-pH stability.
     predicate_id: RO:0002326
   - subject: atp_synthesis_from_pmf
     predicate: associated with
@@ -228,7 +231,8 @@ causal_graphs:
       PMF branch of pH numerical-limit context.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: simultaneously maintain a relatively constant PMF and internal pH
+      snippet: Cells use different transport mechanisms to interconvert the ΔΨ and
+        ΔpH to simultaneously maintain a relatively constant PMF and internal pH
       notes: Verified against the open Poolman review; this connector keeps Na+/H+
         and K+/H+ antiport activity as pH-homeostasis context rather than a universal
         mechanism for every pH bin.
@@ -379,4 +383,12 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #685: replaced weak pH edge
     snippets with exact source spans that carry their edge claims, and left derived
     pH-axis bin membership in notes instead of fragment snippets.'
+  llm_assisted: true
+- timestamp: '2026-09-07T06:14:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #688, #689, and #690: restored
+    record-level Krulwich pH-axis support, replaced cross-trait Poolman antiporter
+    and phosphate-buffering fragments with primary-source spans, and made the PMF
+    connector snippet distinct.'
   llm_assisted: true

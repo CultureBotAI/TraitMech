@@ -149,11 +149,14 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "buffering capacity of the cytoplasm",
+                "snippet": (
+                    "sufficient buffering capacity (e.g. inorganic and "
+                    "organic phosphates)"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; cytoplasmic "
-                    "buffering is described as important for absorbing pH "
-                    "fluctuations."
+                    "phosphate pools are named as sufficient buffering "
+                    "capacity needed for internal-pH stability."
                 ),
             }
         ],

@@ -183,7 +183,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "ATP-dependent H+ extrusion under acidic conditions",
+                    "snippet": (
+                        "up-regulation of the hydrolytic activity of "
+                        "F1Fo-ATPase promotes ATP-dependent H+ extrusion under "
+                        "acidic conditions"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; F1Fo-ATPase can drive proton efflux in "

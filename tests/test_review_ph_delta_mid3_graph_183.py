@@ -21,11 +21,6 @@ from review_ph_delta_mid3_graph_183 import (  # noqa: E402
     transform,
 )
 
-SNIPPET_OPTIONAL_EDGE_KEYS = {
-    ("ph_delta_mid3_trait", "is a", "ph_delta"),
-}
-
-
 def _current() -> dict:
     path = ROOT / "data" / "traits" / f"{SLUG}.yaml"
     return yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -75,8 +70,7 @@ def test_review_adds_snippets_and_grounds_ph_homeostasis_edges():
         expected = replacement["after"]
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") for item in expected["evidence"])
-        if _edge_key(expected) not in SNIPPET_OPTIONAL_EDGE_KEYS:
-            assert all(item.get("snippet") for item in expected["evidence"])
+        assert all(item.get("snippet") for item in expected["evidence"])
 
 
 def test_repaired_record_is_exactly_idempotent():

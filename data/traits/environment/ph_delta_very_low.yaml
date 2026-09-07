@@ -158,7 +158,8 @@ causal_graphs:
       survival.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: ATP-dependent H+ extrusion under acidic conditions
+      snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes ATP-dependent
+        H+ extrusion under acidic conditions
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         F1Fo-ATPase can drive proton efflux in acid-stressed non-respiratory neutralophiles.
     predicate_id: RO:0002326
@@ -216,11 +217,10 @@ causal_graphs:
     description: F1Fo-ATPase acid-stress survival support is associated with the acid-side
       boundary of limited pH homeostasis.
     evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: promotes ATP-dependent H+ extrusion under acidic conditions
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        ATP-dependent proton pumping is kept as acid-side support rather than a direct
-        breadth mechanism.
+    - reference: DOI:10.1016/j.abb.2019.03.014
+      snippet: F-ATPase plays an important role in acid tolerance of this bacterium
+      notes: Verified against the PubMed abstract of Sekiya et al.; ATP-dependent
+        proton pumping is kept as acid-side support rather than a direct breadth mechanism.
     predicate_id: biolink:associated_with
   - subject: cytoplasmic_proton_consumption
     predicate: associated with
@@ -314,4 +314,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
     snippets with independent exact source snippets while preserving the existing
     connector edge scope.'
+  llm_assisted: true
+- timestamp: '2026-09-07T06:14:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #688 and #689: requoted the
+    F1Fo-ATPase acid-stress edge with a longer Krulwich span and replaced its connector
+    quote with distinct Sekiya F-ATPase acid-tolerance support.'
   llm_assisted: true

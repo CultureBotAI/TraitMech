@@ -82,7 +82,11 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "maintain a relatively constant PMF and internal pH",
+                "snippet": (
+                    "Proton-sensing ion/H+ antiporters acidify the cytoplasm "
+                    "by exporting K+ or Na+ in exchange for protons when the "
+                    "internal pH gets too high"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; Na+/H+ "
                     "antiporters are listed as key bacterial pH-homeostasis "
@@ -140,11 +144,14 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "buffering capacity of the cytoplasm",
+                "snippet": (
+                    "sufficient buffering capacity (e.g. inorganic and "
+                    "organic phosphates)"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; cytoplasmic "
-                    "buffering is described as important for absorbing pH "
-                    "fluctuations."
+                    "phosphate pools are named as sufficient buffering "
+                    "capacity needed for internal-pH stability."
                 ),
             }
         ],
@@ -185,7 +192,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": ("simultaneously maintain a relatively constant PMF and internal pH"),
+                "snippet": (
+                    "Cells use different transport mechanisms to interconvert "
+                    "the ΔΨ and ΔpH to simultaneously maintain a relatively "
+                    "constant PMF and internal pH"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis "

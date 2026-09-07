@@ -36,12 +36,14 @@ TIMESTAMP = "2026-09-06T17:10:00Z"
 FOLLOWUP_TIMESTAMP = "2026-09-07T02:20:00Z"
 FINAL_FOLLOWUP_TIMESTAMP = "2026-09-07T03:40:00Z"
 SNIPPET_FOLLOWUP_TIMESTAMP = "2026-09-07T04:24:00Z"
+PRIMARY_SNIPPET_TIMESTAMP = "2026-09-07T06:14:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
     "connect_gc_low_graph_183",
     "connect_mesophilic_graph_183",
     "connect_nacl_optimum_graph_183",
+    "connect_ph_delta_mid2_graph_183",
     "connect_ph_delta_mid3_graph_183",
     "connect_ph_delta_very_low_graph_183",
     "connect_ph_phenotype_graph_183",
@@ -60,7 +62,9 @@ EDGE_REVIEW_MODULES = [
     "review_gram_stain_graph_183",
     "review_nacl_range_low_graph_183",
     "review_obligately_piezophilic_graph_183",
+    "review_ph_delta_mid2_graph_183",
     "review_ph_delta_mid3_graph_183",
+    "review_ph_delta_very_low_graph_183",
     "review_ph_phenotype_graph_183",
     "review_ph_range_mid2_graph_183",
     "review_oxidative_stress_response_graph_183",
@@ -99,6 +103,14 @@ SNIPPET_FOLLOWUP_SLUGS = {
     "environment/temperature_range_mid4",
     "morphology/cell_length_large",
     "morphology/ring_shaped",
+}
+
+PRIMARY_SNIPPET_SLUGS = {
+    "environment/ph_delta_mid2",
+    "environment/ph_delta_mid3",
+    "environment/ph_delta_very_low",
+    "environment/ph_phenotype_with_numerical_limits",
+    "environment/temperature_range_mid4",
 }
 
 
@@ -234,6 +246,37 @@ def _path_for_slug(slug: str) -> Path:
 
 def _event_changes(slug: str) -> str:
     if slug in {
+        "environment/ph_delta_mid2",
+        "environment/ph_delta_very_low",
+    }:
+        return (
+            "Addressed PR #664 adversarial review issues #688 and #689: "
+            "requoted the F1Fo-ATPase acid-stress edge with a longer Krulwich "
+            "span and replaced its connector quote with distinct Sekiya "
+            "F-ATPase acid-tolerance support."
+        )
+    if slug == "environment/ph_delta_mid3":
+        return (
+            "Addressed PR #664 adversarial review issues #688 and #690: "
+            "restored a supporting Krulwich snippet on the pH-delta bin "
+            "membership edge and requoted the Poolman phosphate-buffering edge "
+            "from the primary source text."
+        )
+    if slug == "environment/ph_phenotype_with_numerical_limits":
+        return (
+            "Addressed PR #664 adversarial review issues #688, #689, and "
+            "#690: restored record-level Krulwich pH-axis support, replaced "
+            "cross-trait Poolman antiporter and phosphate-buffering fragments "
+            "with primary-source spans, and made the PMF connector snippet "
+            "distinct."
+        )
+    if slug == "environment/temperature_range_mid4":
+        return (
+            "Addressed PR #664 adversarial review issue #689: expanded the "
+            "Hoogerland FabI/FabB branch quote and replaced the warm-mesophile "
+            "connector quote with an independent homeoviscous-adaptation span."
+        )
+    if slug in {
         "environment/ph_delta_mid3",
         "environment/ph_phenotype_with_numerical_limits",
         "environment/ph_range_mid2",
@@ -359,6 +402,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in PRIMARY_SNIPPET_SLUGS:
+        return PRIMARY_SNIPPET_TIMESTAMP
     if slug in SNIPPET_FOLLOWUP_SLUGS:
         return SNIPPET_FOLLOWUP_TIMESTAMP
     if slug in FINAL_FOLLOWUP_SLUGS:
