@@ -117,11 +117,11 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "Proton motive force generation by substrate decarboxylation",
+                "snippet": "the chemistry of the decarboxylation reaction requires a proton",
                 "notes": (
                     "Verified against the open Poolman review; substrate "
-                    "decarboxylation is linked to bacterial PMF generation in "
-                    "pH homeostasis."
+                    "decarboxylation consumes a cytoplasmic proton and raises "
+                    "internal pH."
                 ),
             }
         ],
@@ -204,7 +204,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "metabolite decarboxylation pathways",
+                "snippet": "the internal pH is increased",
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps amino-acid decarboxylation as cytoplasmic proton "
@@ -225,11 +225,15 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "free protons at pH 7.2 is only about 10",
+                "snippet": (
+                    "the magnitude of the pH gradient is largely determined by "
+                    "the external pH"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; this connector "
-                    "keeps phosphate buffering as internal-pH context rather "
-                    "than direct proof of a measured external-pH limit."
+                    "keeps internal-pH homeostasis as measured external-pH "
+                    "phenotype context rather than direct proof of a measured "
+                    "external-pH limit."
                 ),
             }
         ],

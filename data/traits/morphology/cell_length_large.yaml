@@ -151,9 +151,9 @@ causal_graphs:
       branch.
     evidence:
     - reference: DOI:10.1002/advs.202203260
-      snippet: cell division inhibitor sulA
-      notes: Verified against the open Wiley full text; the study frames SulA as the
-        SOS-linked cell-division inhibitor.
+      snippet: cell division inhibitor, sulA, blocks FtsZ
+      notes: Verified against the open Wiley full text; the source frames SulA as
+        the SOS-linked inhibitor that blocks FtsZ polymerization.
     predicate_id: RO:0002326
   - subject: sula_division_inhibition
     predicate: contributes to
@@ -250,4 +250,10 @@ curation_history:
     the SOS/SulA branch to peer-reviewed evidence, grounding the two residual FtsZ/SulA
     predicates, and adding 3 source- and verbatim-snippet-backed connectors. No paid
     research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: corrected the SulA cell-division-inhibitor
+    snippet to match the exact peer-reviewed Wiley text with comma punctuation.'
   llm_assisted: true

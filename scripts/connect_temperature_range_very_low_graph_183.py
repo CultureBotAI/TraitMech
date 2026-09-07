@@ -149,13 +149,12 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": "stabilizing membranes and proteins at chilling temperatures",
+                "snippet": "counteracting protein aggregation, improving protein folding",
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; "
-                    "Antarctic compatible osmolytes are described as restoring "
-                    "osmotic balance, scavenging free radicals, counteracting "
-                    "protein aggregation, improving protein folding, and "
-                    "stabilizing membranes and proteins."
+                    "Antarctic compatible osmolytes are described as "
+                    "counteracting protein aggregation and improving protein "
+                    "folding."
                 ),
             }
         ],
@@ -290,7 +289,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": "compatible solutes such as trehalose and glycine-betaine",
+                "snippet": "scavenging free radicals, counteracting protein aggregation",
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; this "
                     "connector keeps compatible osmolytes as stabilization "
@@ -311,10 +310,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3389/fmicb.2023.1197797",
-                "snippet": (
-                    "AFPs lower the water freezing point, avoiding frostbite "
-                    "due to their thermal hysteresis"
-                ),
+                "snippet": "This ceases ice growth by creating a thermal hysteresis gap",
                 "notes": (
                     "Verified against the open Ramasamy et al. PMC text; this "
                     "connector keeps ice-binding proteins as freezing-protection "

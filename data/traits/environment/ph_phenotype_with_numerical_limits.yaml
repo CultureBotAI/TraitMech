@@ -195,9 +195,9 @@ causal_graphs:
       protons, raising internal pH.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton motive force generation by substrate decarboxylation
-      notes: Verified against the open Poolman review; substrate decarboxylation is
-        linked to bacterial PMF generation in pH homeostasis.
+      snippet: the chemistry of the decarboxylation reaction requires a proton
+      notes: Verified against the open Poolman review; substrate decarboxylation consumes
+        a cytoplasmic proton and raises internal pH.
     predicate_id: biolink:consumes
   - subject: phosphate_buffering
     predicate: contributes to
@@ -240,7 +240,7 @@ causal_graphs:
       homeostasis in the pH numerical-limit context.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: metabolite decarboxylation pathways
+      snippet: the internal pH is increased
       notes: Verified against the open Poolman review; this connector keeps amino-acid
         decarboxylation as cytoplasmic proton control context.
     predicate_id: biolink:associated_with
@@ -251,10 +251,11 @@ causal_graphs:
       phenotypes.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: free protons at pH 7.2 is only about 10
-      notes: Verified against the open Poolman review; this connector keeps phosphate
-        buffering as internal-pH context rather than direct proof of a measured external-pH
-        limit.
+      snippet: the magnitude of the pH gradient is largely determined by the external
+        pH
+      notes: Verified against the open Poolman review; this connector keeps internal-pH
+        homeostasis as measured external-pH phenotype context rather than direct proof
+        of a measured external-pH limit.
     predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845918+00:00'
@@ -361,7 +362,7 @@ curation_history:
 - timestamp: '2026-09-06T17:10:00Z'
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
-  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
-    snippets with independent exact source snippets while preserving the existing
-    connector edge scope.'
+  changes: 'Addressed PR #664 adversarial review: replaced the weak Poolman pH-homeostasis
+    snippets with exact text supporting decarboxylation-linked proton consumption
+    and internal pH context.'
   llm_assisted: true

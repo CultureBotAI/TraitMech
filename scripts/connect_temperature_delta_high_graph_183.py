@@ -217,12 +217,12 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1146/annurev-micro-091313-103612",
-                "snippet": "termed homoviscous adaptation",
+                "snippet": "termed homeoviscous adaptation",
                 "notes": (
                     "Verified against the de Mendoza Annual Review abstract; "
                     "this connector keeps unsaturated-fatty-acid biosynthesis as "
-                    "one component of homoviscous adaptation rather than the "
-                    "whole response."
+                    "one component of the named membrane-fluidity adaptation "
+                    "rather than the whole response."
                 ),
             }
         ],

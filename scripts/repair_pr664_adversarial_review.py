@@ -35,6 +35,7 @@ ACTION = "ADVERSARIAL_REVIEW_REPAIR"
 TIMESTAMP = "2026-09-06T17:10:00Z"
 
 CONNECTOR_MODULES = [
+    "connect_cell_length_large_graph_183",
     "connect_gc_low_graph_183",
     "connect_mesophilic_graph_183",
     "connect_nacl_optimum_graph_183",
@@ -53,6 +54,9 @@ CONNECTOR_MODULES = [
 EDGE_REVIEW_MODULES = [
     "review_nacl_range_low_graph_183",
     "review_obligately_piezophilic_graph_183",
+    "review_ph_delta_mid3_graph_183",
+    "review_ph_phenotype_graph_183",
+    "review_temperature_range_very_low_graph_183",
 ]
 
 GRAPH_REVIEW_MODULES = [
@@ -101,6 +105,14 @@ def _connector_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     return module.SLUG, module.ADDED_EDGES
 
 
+def _cell_length_large_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
+    module = importlib.import_module(module_name)
+    return module.SLUG, [
+        *[replacement["after"] for replacement in module.EDGE_REPLACEMENTS],
+        *module.ADDITIONS,
+    ]
+
+
 def _review_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
     return module.SLUG, [
@@ -138,6 +150,42 @@ def _event_changes(slug: str) -> str:
             "snippet with exact Tamby et al. wording that supports "
             "high-pressure lipid-membrane integrity as piezophile adaptation."
         )
+    if slug == "environment/ph_delta_mid3":
+        return (
+            "Addressed PR #664 adversarial review: replaced the weak Poolman "
+            "section-heading snippets with exact text supporting F0F1-ATPase "
+            "pH-homeostasis and decarboxylation-driven PMF edges."
+        )
+    if slug == "environment/ph_phenotype_with_numerical_limits":
+        return (
+            "Addressed PR #664 adversarial review: replaced the weak Poolman "
+            "pH-homeostasis snippets with exact text supporting "
+            "decarboxylation-linked proton consumption and internal pH context."
+        )
+    if slug == "environment/temperature_delta_high":
+        return (
+            "Addressed PR #664 adversarial review: requoted the de Mendoza "
+            "membrane-fluidity adaptation evidence with the exact "
+            "homeoviscous spelling from the cited source."
+        )
+    if slug == "environment/temperature_optimum_very_low":
+        return (
+            "Addressed PR #664 adversarial review: corrected the Phadtare and "
+            "Severinov cold-shock connector note so it names the DOI-matched "
+            "source instead of the Hamdan psychrophile review."
+        )
+    if slug == "environment/temperature_range_very_low":
+        return (
+            "Addressed PR #664 adversarial review: replaced copied Ramasamy "
+            "cold-adaptation snippets with independent exact text supporting "
+            "compatible-osmolyte and ice-binding-protein context edges."
+        )
+    if slug == "morphology/cell_length_large":
+        return (
+            "Addressed PR #664 adversarial review: corrected the SulA "
+            "cell-division-inhibitor snippet to match the exact peer-reviewed "
+            "Wiley text with comma punctuation."
+        )
     if slug == "genomics/gc_low":
         return (
             "Addressed PR #664 adversarial review: replaced the copied GC-low "
@@ -164,7 +212,14 @@ def repair(write: bool = False) -> int:
     changed: list[Path] = []
     graph_modules = {module: _graph for module in GRAPH_REVIEW_MODULES}
     edge_modules = {
-        **{module: _connector_edges for module in CONNECTOR_MODULES},
+        **{
+            module: (
+                _cell_length_large_edges
+                if module == "connect_cell_length_large_graph_183"
+                else _connector_edges
+            )
+            for module in CONNECTOR_MODULES
+        },
         **{module: _review_edges for module in EDGE_REVIEW_MODULES},
     }
 
@@ -200,6 +255,7 @@ def repair(write: bool = False) -> int:
         _write_or_validate(path, doc, write)
         changed.append(path)
 
+    changed = list(dict.fromkeys(changed))
     for path in changed:
         print(f"  repair {path.relative_to(REPO_ROOT)}")
     print(

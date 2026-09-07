@@ -221,9 +221,9 @@ causal_graphs:
       membrane remodeling.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      snippet: termed homoviscous adaptation
+      snippet: termed homeoviscous adaptation
       notes: Verified against the de Mendoza Annual Review abstract; this connector
-        keeps unsaturated-fatty-acid biosynthesis as one component of homoviscous
+        keeps unsaturated-fatty-acid biosynthesis as one component of the named membrane-fluidity
         adaptation rather than the whole response.
     predicate_id: RO:0002326
   - subject: membrane_fluidity
@@ -385,7 +385,6 @@ curation_history:
 - timestamp: '2026-09-06T17:10:00Z'
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
-  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
-    snippets with independent exact source snippets while preserving the existing
-    connector edge scope.'
+  changes: 'Addressed PR #664 adversarial review: requoted the de Mendoza membrane-fluidity
+    adaptation evidence with the exact homeoviscous spelling from the cited source.'
   llm_assisted: true

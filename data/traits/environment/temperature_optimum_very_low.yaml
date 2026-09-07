@@ -260,8 +260,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.4161/rna.7.6.13482
       snippet: facilitating transcription and translation at low temperature
-      notes: Verified against the open Hamdan review; this connector keeps cold-shock
-        RNA chaperones as protein-synthesis context for psychrophile physiology.
+      notes: Verified against the open Phadtare and Severinov PubMed abstract; this
+        connector keeps cold-shock RNA chaperones as protein-synthesis context for
+        psychrophile physiology.
     predicate_id: biolink:associated_with
   - subject: protein_membrane_stabilization
     predicate: associated with
@@ -416,7 +417,7 @@ curation_history:
 - timestamp: '2026-09-06T17:10:00Z'
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
-  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
-    snippets with independent exact source snippets while preserving the existing
-    connector edge scope.'
+  changes: 'Addressed PR #664 adversarial review: corrected the Phadtare and Severinov
+    cold-shock connector note so it names the DOI-matched source instead of the Hamdan
+    psychrophile review.'
   llm_assisted: true

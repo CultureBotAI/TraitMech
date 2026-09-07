@@ -20,6 +20,7 @@ from connect_cell_length_large_graph_183 import (  # noqa: E402
     GRAPH_METADATA_AFTER,
     GRAPH_METADATA_BEFORE,
     SLUG,
+    TIMESTAMP,
     _components,
     _edge_key,
     transform,
@@ -57,6 +58,13 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str, timestamp: str) -> bool:
+    return any(
+        event.get("action") == action and event.get("timestamp") == timestamp
+        for event in doc["curation_history"]
+    )
+
+
 def test_repair_reaches_one_component_with_exact_snippet_backed_edges():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
@@ -75,7 +83,7 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edges():
     for expected in ADDITIONS:
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION, TIMESTAMP)
 
 
 def test_repaired_record_is_exactly_idempotent():

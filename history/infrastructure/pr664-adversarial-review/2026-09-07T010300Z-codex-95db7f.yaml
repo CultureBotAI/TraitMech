@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T010300Z-codex-95db7f
+  timestamp: '2026-09-07T01:03:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/677
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Strengthened pH Poolman snippets
+  details: 'Replaced weak Poolman section-heading and bare-term snippets in
+    ph_delta_mid3 and ph_phenotype_with_numerical_limits with exact source wording
+    that supports F0F1-ATPase, decarboxylation-linked PMF, proton-consumption, and
+    internal-pH context edges. This addresses adversarial PR review issue #677.'

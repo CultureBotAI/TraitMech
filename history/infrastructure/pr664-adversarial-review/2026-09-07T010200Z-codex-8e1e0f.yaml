@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T010200Z-codex-8e1e0f
+  timestamp: '2026-09-07T01:02:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/676
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Requoted temperature_delta_high homeoviscous evidence
+  details: 'Requoted the temperature_delta_high de Mendoza connector with the exact
+    source spelling "homeoviscous" instead of the misspelled "homoviscous"
+    substring. This addresses adversarial PR review issue #676.'

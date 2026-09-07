@@ -174,7 +174,7 @@ causal_graphs:
     description: F0F1-ATPase proton pumping contributes to bacterial pH homeostasis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Key regulators of bacterial pH homeostasis
+      snippet: F_{0}F_{1}-ATPase in lactic acid bacteria
       notes: Verified against the open Poolman review; proton-pumping enzymes, including
         F0F1-ATPase in lactic acid bacteria, are listed as bacterial pH-homeostasis
         regulators.
@@ -196,7 +196,8 @@ causal_graphs:
       to PMF and intracellular pH control.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton motive force generation by substrate decarboxylation
+      snippet: free energy change from decarboxylation reactions can be stored in
+        the form of a proton motive force
       notes: Verified against the open Poolman review; substrate decarboxylation is
         linked to bacterial PMF generation in pH homeostasis.
     predicate_id: RO:0002326
@@ -421,7 +422,7 @@ curation_history:
 - timestamp: '2026-09-06T17:10:00Z'
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
-  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
-    snippets with independent exact source snippets while preserving the existing
-    connector edge scope.'
+  changes: 'Addressed PR #664 adversarial review: replaced the weak Poolman section-heading
+    snippets with exact text supporting F0F1-ATPase pH-homeostasis and decarboxylation-driven
+    PMF edges.'
   llm_assisted: true

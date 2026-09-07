@@ -194,11 +194,10 @@ causal_graphs:
       lowering freezing damage.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: stabilizing membranes and proteins at chilling temperatures
+      snippet: counteracting protein aggregation, improving protein folding
       notes: Verified against the open Ramasamy et al. PMC text; Antarctic compatible
-        osmolytes are described as restoring osmotic balance, scavenging free radicals,
-        counteracting protein aggregation, improving protein folding, and stabilizing
-        membranes and proteins.
+        osmolytes are described as counteracting protein aggregation and improving
+        protein folding.
     predicate_id: RO:0002326
   - subject: ice_binding_proteins
     predicate: inhibits
@@ -265,7 +264,7 @@ causal_graphs:
       machinery.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: compatible solutes such as trehalose and glycine-betaine
+      snippet: scavenging free radicals, counteracting protein aggregation
       notes: Verified against the open Ramasamy et al. PMC text; this connector keeps
         compatible osmolytes as stabilization context.
     predicate_id: biolink:associated_with
@@ -276,8 +275,7 @@ causal_graphs:
       with psychrophile cold-adapted machinery.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1197797
-      snippet: AFPs lower the water freezing point, avoiding frostbite due to their
-        thermal hysteresis
+      snippet: This ceases ice growth by creating a thermal hysteresis gap
       notes: Verified against the open Ramasamy et al. PMC text; this connector keeps
         ice-binding proteins as freezing-protection context.
     predicate_id: biolink:associated_with
@@ -362,7 +360,7 @@ curation_history:
 - timestamp: '2026-09-06T17:10:00Z'
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
-  changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
-    snippets with independent exact source snippets while preserving the existing
-    connector edge scope.'
+  changes: 'Addressed PR #664 adversarial review: replaced copied Ramasamy cold-adaptation
+    snippets with independent exact text supporting compatible-osmolyte and ice-binding-protein
+    context edges.'
   llm_assisted: true

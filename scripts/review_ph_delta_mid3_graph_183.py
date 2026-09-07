@@ -218,7 +218,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Key regulators of bacterial pH homeostasis",
+                    "snippet": "F_{0}F_{1}-ATPase in lactic acid bacteria",
                     "notes": (
                         "Verified against the open Poolman review; proton-pumping "
                         "enzymes, including F0F1-ATPase in lactic acid bacteria, are "
@@ -299,7 +299,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Proton motive force generation by substrate decarboxylation",
+                    "snippet": (
+                        "free energy change from decarboxylation reactions can be "
+                        "stored in the form of a proton motive force"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; substrate "
                         "decarboxylation is linked to bacterial PMF generation in "

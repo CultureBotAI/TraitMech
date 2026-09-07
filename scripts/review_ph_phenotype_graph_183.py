@@ -203,7 +203,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Na+/H+ and K+/H+ antiporters",
+                    "snippet": "maintain a relatively constant PMF and internal pH",
                     "notes": (
                         "Verified against the open Poolman review; Na+/H+ "
                         "antiporters are listed as key bacterial pH-homeostasis "
@@ -282,11 +282,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Proton motive force generation by substrate decarboxylation",
+                    "snippet": "the chemistry of the decarboxylation reaction requires a proton",
                     "notes": (
                         "Verified against the open Poolman review; substrate "
-                        "decarboxylation is linked to bacterial PMF generation in "
-                        "pH homeostasis."
+                        "decarboxylation consumes a cytoplasmic proton and raises "
+                        "internal pH."
                     ),
                 }
             ],

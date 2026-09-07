@@ -248,13 +248,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2023.1197797",
-                    "snippet": ("stabilizing membranes and proteins at chilling temperatures"),
+                    "snippet": "counteracting protein aggregation, improving protein folding",
                     "notes": (
                         "Verified against the open Ramasamy et al. PMC text; "
-                        "Antarctic compatible osmolytes are described as restoring "
-                        "osmotic balance, scavenging free radicals, counteracting "
-                        "protein aggregation, improving protein folding, and "
-                        "stabilizing membranes and proteins."
+                        "Antarctic compatible osmolytes are described as "
+                        "counteracting protein aggregation and improving protein "
+                        "folding."
                     ),
                 }
             ],

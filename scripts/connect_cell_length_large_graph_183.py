@@ -183,10 +183,11 @@ ADDITIONS: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1002/advs.202203260",
-                "snippet": "cell division inhibitor sulA",
+                "snippet": "cell division inhibitor, sulA, blocks FtsZ",
                 "notes": (
-                    "Verified against the open Wiley full text; the study frames "
-                    "SulA as the SOS-linked cell-division inhibitor."
+                    "Verified against the open Wiley full text; the source frames "
+                    "SulA as the SOS-linked inhibitor that blocks FtsZ "
+                    "polymerization."
                 ),
             }
         ],

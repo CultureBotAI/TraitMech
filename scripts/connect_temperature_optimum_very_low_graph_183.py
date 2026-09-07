@@ -242,9 +242,9 @@ ADDED_EDGES: list[dict[str, Any]] = [
                 "reference": "DOI:10.4161/rna.7.6.13482",
                 "snippet": "facilitating transcription and translation at low temperature",
                 "notes": (
-                    "Verified against the open Hamdan review; this connector "
-                    "keeps cold-shock RNA chaperones as protein-synthesis "
-                    "context for psychrophile physiology."
+                    "Verified against the open Phadtare and Severinov PubMed "
+                    "abstract; this connector keeps cold-shock RNA chaperones "
+                    "as protein-synthesis context for psychrophile physiology."
                 ),
             }
         ],
