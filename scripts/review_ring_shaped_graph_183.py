@@ -289,7 +289,13 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/s41467-024-45196-0",
-                    "snippet": "components that promote curvature",
+                    "snippet": (
+                        "Helical cells require components that promote curvature, "
+                        "such as the polymer and filament-forming CrvA in Vibrio "
+                        "cholerae, which skews peptidoglycan synthesis rates, or "
+                        "the intermediate filament-like protein crescentin in C. "
+                        "crescentus"
+                    ),
                     "notes": (
                         "Verified against the open Schiller et al. article text; "
                         "Schiller et al. list crescentin in the same bacterial "

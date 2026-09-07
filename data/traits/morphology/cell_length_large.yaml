@@ -129,7 +129,8 @@ causal_graphs:
     description: SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.
     evidence:
     - reference: DOI:10.1002/advs.202203260
-      snippet: cell division inhibitor, sulA, blocks FtsZ
+      snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of bacterial
+        cell division and responsible for the Z ring formation at mid-cell) polymerization
       notes: Verified against the open Wiley full text; the source links SOS activation
         to SulA blocking FtsZ polymerization.
     predicate_id: RO:0002212
@@ -151,7 +152,7 @@ causal_graphs:
       branch.
     evidence:
     - reference: DOI:10.1002/advs.202203260
-      snippet: cell division inhibitor, sulA, blocks FtsZ
+      snippet: As a result, a cell division inhibitor, sulA, blocks FtsZ
       notes: Verified against the open Wiley full text; the source frames SulA as
         the SOS-linked inhibitor that blocks FtsZ polymerization.
     predicate_id: RO:0002326
@@ -256,4 +257,11 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review: corrected the SulA cell-division-inhibitor
     snippet to match the exact peer-reviewed Wiley text with comma punctuation.'
+  llm_assisted: true
+- timestamp: '2026-09-07T04:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #687: gave the two SulA edges
+    distinct exact snippets, separating the FtsZ-polymerization claim from the SulA
+    division-inhibitor connector.'
   llm_assisted: true

@@ -406,7 +406,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1128/mbio.03105-23",
-                    "snippet": "RpoH) that drives the expression",
+                    "snippet": (
+                        "the alternative sigma factor σ32 (RpoH) that drives the "
+                        "expression of protective heat shock proteins (HSPs), such "
+                        "as the molecular chaperone systems DnaK/DnaJ/GrpE and "
+                        "GroES/GroEL"
+                    ),
                     "notes": (
                         "Verified against the open Berdejo et al. introduction; "
                         "RpoH is described as the main governor of the Salmonella "

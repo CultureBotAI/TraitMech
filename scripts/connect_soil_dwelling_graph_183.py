@@ -162,8 +162,7 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "predicate": "increases",
         "object": "dormancy_sporulation",
         "description": (
-            "Experimental heat treatment increased soil dormancy and "
-            "sporulation gene abundance."
+            "Experimental heat treatment increased soil dormancy and sporulation gene abundance."
         ),
         "evidence": [
             {
@@ -190,7 +189,12 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41564-023-01465-0",
-                "snippet": "Random forest analyses show that soil pH",
+                "snippet": (
+                    "Random forest analyses show that soil pH, C:N ratio and "
+                    "precipitation patterns together drive the dominant life "
+                    "history strategy of soil bacterial communities and their "
+                    "biogeographic distribution"
+                ),
                 "notes": (
                     "Verified against the PubMed abstract for the Nature "
                     "Microbiology article; the edge is scoped as "
@@ -229,8 +233,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/nrmicro.2017.87",
                 "snippet": (
-                    "categorize soil microorganisms on the basis of their "
-                    "ecological strategies"
+                    "categorize soil microorganisms on the basis of their ecological strategies"
                 ),
                 "notes": (
                     "Verified against the Fierer review; the connector groups "
@@ -252,10 +255,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/ismeco/ycae081",
-                "snippet": (
-                    "diverse array of ecological strategies used by soil "
-                    "bacteria"
-                ),
+                "snippet": ("diverse array of ecological strategies used by soil bacteria"),
                 "notes": (
                     "Verified against the open ISME Communications full text; "
                     "oligotroph-enriched taxa are treated as a carbon-gradient "
@@ -346,8 +346,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/s41564-023-01465-0",
                 "snippet": (
-                    "drive the dominant life history strategy of soil "
-                    "bacterial communities"
+                    "drive the dominant life history strategy of soil bacterial communities"
                 ),
                 "notes": (
                     "Verified against the Nature Microbiology abstract; "
@@ -377,9 +376,9 @@ def _nodes_by_id(nodes: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {node["node_id"]: node for node in nodes}
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 
@@ -450,8 +449,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
 
     before = _components(graph)
     if before == 1 and (
-        present_added_node_ids == added_node_ids
-        and present_added_edge_keys == added_edge_keys
+        present_added_node_ids == added_node_ids and present_added_edge_keys == added_edge_keys
     ):
         _assert_graph_metadata(graph, GRAPH_METADATA_AFTER, "migrated")
         _assert_exact_nodes(graph, added_nodes, "migrated")

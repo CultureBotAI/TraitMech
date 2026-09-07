@@ -62,7 +62,10 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "PMF for nutrient uptake and ATP synthesis",
+                "snippet": (
+                    "stored in the form of a proton motive force, which "
+                    "subsequently can be used by F0F1-ATP synthase to make ATP"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; the PMF links "
                     "proton translocation by the F0F1-ATPase to ATP synthesis."
@@ -97,7 +100,9 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": "Na+/H+ and K+/H+ antiporters",
+                "snippet": (
+                    "Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters"
+                ),
                 "notes": (
                     "Verified against the open Poolman review; K+/H+ antiporters "
                     "are listed as key bacterial pH-homeostasis regulators."
@@ -180,10 +185,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
-                "snippet": (
-                    "simultaneously maintain a relatively constant PMF and "
-                    "internal pH"
-                ),
+                "snippet": ("simultaneously maintain a relatively constant PMF and internal pH"),
                 "notes": (
                     "Verified against the open Poolman review; this connector "
                     "keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis "
@@ -219,15 +221,13 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "predicate": "associated with",
         "object": "ph_phenotype_trait",
         "description": (
-            "Cytoplasmic pH homeostasis is associated with external-pH "
-            "numerical-limit phenotypes."
+            "Cytoplasmic pH homeostasis is associated with external-pH numerical-limit phenotypes."
         ),
         "evidence": [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
                 "snippet": (
-                    "the magnitude of the pH gradient is largely determined by "
-                    "the external pH"
+                    "the magnitude of the pH gradient is largely determined by the external pH"
                 ),
                 "notes": (
                     "Verified against the open Poolman review; this connector "
@@ -254,9 +254,9 @@ def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     return graph
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 

@@ -170,7 +170,8 @@ causal_graphs:
     description: Na+/H+ antiporter activity regulates cytoplasmic pH homeostasis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Na+/H+ and K+/H+ antiporters
+      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+        K+ or Na+ in exchange for protons when the internal pH gets too high
       notes: Verified against the open Poolman review; Na+/H+ antiporters are listed
         as key bacterial pH-homeostasis regulators and acidifying exchangers when
         internal pH gets too high.
@@ -202,7 +203,8 @@ causal_graphs:
     description: F0F1-ATPase couples the proton motive force to ATP synthesis.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: PMF for nutrient uptake and ATP synthesis
+      snippet: stored in the form of a proton motive force, which subsequently can
+        be used by F0F1-ATP synthase to make ATP
       notes: Verified against the open Poolman review; the PMF links proton translocation
         by the F0F1-ATPase to ATP synthesis.
     predicate_id: RO:0002327
@@ -308,4 +310,11 @@ curation_history:
     added snippets to 7 edge-level evidence items, grounded 7 unmapped pH-homeostasis
     predicates, retyped membrane_potential to STATE, and removed the no-longer-used
     cytoplasm node. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-07T04:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #685: replaced weak pH edge
+    snippets with exact source spans that carry their edge claims, and left derived
+    pH-axis bin membership in notes instead of fragment snippets.'
   llm_assisted: true

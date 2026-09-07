@@ -214,7 +214,12 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/mbio.03105-23",
-                "snippet": "RpoH) that drives the expression",
+                "snippet": (
+                    "the alternative sigma factor σ32 (RpoH) that drives the "
+                    "expression of protective heat shock proteins (HSPs), such "
+                    "as the molecular chaperone systems DnaK/DnaJ/GrpE and "
+                    "GroES/GroEL"
+                ),
                 "notes": (
                     "Verified against the open Berdejo et al. introduction; "
                     "RpoH is described as the main governor of the Salmonella "
@@ -230,8 +235,7 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "predicate": "enables",
         "object": "heat_stress_protection",
         "description": (
-            "The DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems protect "
-            "against heat stress."
+            "The DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems protect against heat stress."
         ),
         "evidence": [
             {
@@ -285,10 +289,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": (
-                    "accelerates membrane adaptation by causing a transient "
-                    "overshoot"
-                ),
+                "snippet": ("accelerates membrane adaptation by causing a transient overshoot"),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps the Fab branchpoint valve as membrane-fluidity "
@@ -383,9 +384,9 @@ def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     return graph
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 

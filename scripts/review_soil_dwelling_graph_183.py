@@ -400,7 +400,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/s41564-023-01465-0",
-                    "snippet": "Random forest analyses show that soil pH",
+                    "snippet": (
+                        "Random forest analyses show that soil pH, C:N ratio and "
+                        "precipitation patterns together drive the dominant life "
+                        "history strategy of soil bacterial communities and their "
+                        "biogeographic distribution"
+                    ),
                     "notes": (
                         "Verified against the PubMed abstract for the Nature "
                         "Microbiology article; the edge is scoped as "

@@ -57,13 +57,17 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str) -> bool:
+    return any(event.get("action") == action for event in doc["curation_history"])
+
+
 def test_review_adds_snippets_grounds_edges_and_fixes_nodes():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
     edge_by_key = {_edge_key(edge): edge for edge in graph["edges"]}
     node_by_key = {_node_key(node): node for node in graph["nodes"]}
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION)
     assert "cytoplasm" not in node_by_key
     assert node_by_key["membrane_potential"]["node_type"] == "STATE"
     assert {

@@ -54,7 +54,6 @@ RECORD_EVIDENCE_BEFORE: list[dict[str, Any]] = [
 RECORD_EVIDENCE_AFTER: list[dict[str, Any]] = [
     {
         "reference": "DOI:10.1038/nrmicro2549",
-        "snippet": "grow at external pH values",
         "notes": (
             "Verified against the open PMC manuscript of the Krulwich et al. review; "
             "external pH is the quantitative environmental axis represented by "
@@ -168,7 +167,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "PMF for nutrient uptake and ATP synthesis",
+                    "snippet": (
+                        "stored in the form of a proton motive force, which "
+                        "subsequently can be used by F0F1-ATP synthase to make ATP"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; the PMF links "
                         "proton translocation by the F0F1-ATPase to ATP synthesis."
@@ -239,7 +241,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Na+/H+ and K+/H+ antiporters",
+                    "snippet": (
+                        "Key regulators of bacterial pH homeostasis are Na+/H+ "
+                        "and K+/H+ antiporters"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; K+/H+ antiporters "
                         "are listed as key bacterial pH-homeostasis regulators."

@@ -199,7 +199,9 @@ causal_graphs:
       life-history genomic axes in random-forest models.
     evidence:
     - reference: DOI:10.1038/s41564-023-01465-0
-      snippet: Random forest analyses show that soil pH
+      snippet: Random forest analyses show that soil pH, C:N ratio and precipitation
+        patterns together drive the dominant life history strategy of soil bacterial
+        communities and their biogeographic distribution
       notes: Verified against the PubMed abstract for the Nature Microbiology article;
         the edge is scoped as community-level statistical association.
     predicate_id: biolink:associated_with
@@ -354,4 +356,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #666: replaced borrowed snippets
     on the six soil_life_history_activity_context connectors with connector-specific
     exact snippets from the same supporting sources.'
+  llm_assisted: true
+- timestamp: '2026-09-07T04:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #686: replaced fragmented ring-shape,
+    soil-life-history, heat-shock, and ligninolysis snippets with exact source spans
+    that carry their edge claims.'
   llm_assisted: true

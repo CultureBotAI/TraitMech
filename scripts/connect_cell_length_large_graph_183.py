@@ -121,7 +121,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1002/advs.202203260",
-                    "snippet": "cell division inhibitor, sulA, blocks FtsZ",
+                    "snippet": (
+                        "cell division inhibitor, sulA, blocks FtsZ (a master "
+                        "regulator of bacterial cell division and responsible for "
+                        "the Z ring formation at mid-cell) polymerization"
+                    ),
                     "notes": (
                         "Verified against the open Wiley full text; the source "
                         "links SOS activation to SulA blocking FtsZ polymerization."
@@ -183,7 +187,7 @@ ADDITIONS: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1002/advs.202203260",
-                "snippet": "cell division inhibitor, sulA, blocks FtsZ",
+                "snippet": "As a result, a cell division inhibitor, sulA, blocks FtsZ",
                 "notes": (
                     "Verified against the open Wiley full text; the source frames "
                     "SulA as the SOS-linked inhibitor that blocks FtsZ "

@@ -164,7 +164,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "Na+/H+ and K+/H+ antiporters",
+                    "snippet": (
+                        "Proton-sensing ion/H+ antiporters acidify the cytoplasm "
+                        "by exporting K+ or Na+ in exchange for protons when the "
+                        "internal pH gets too high"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; Na+/H+ antiporters "
                         "are listed as key bacterial pH-homeostasis regulators and "
@@ -266,7 +270,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "PMF for nutrient uptake and ATP synthesis",
+                    "snippet": (
+                        "stored in the form of a proton motive force, which "
+                        "subsequently can be used by F0F1-ATP synthase to make ATP"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; the PMF links "
                         "proton translocation by the F0F1-ATPase to ATP synthesis."

@@ -674,6 +674,7 @@ data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:aa_decarbo
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:external_alkaline_ph->na_h_antiport[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:f0f1_atpase->cytoplasmic_ph_maintenance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:membrane_lipid_remodeling->proton_permeability[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2022.1034164 has no snippet
+data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:ph_delta_mid3_trait->ph_delta[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:ph_delta_mid3_trait->ph_delta[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'external pH'
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:phosphate_buffering->intracellular_ph_stability[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_delta_mid3.yaml	ph_delta_mid3_wide_breadth:pmf_regulation->cytoplasmic_ph_maintenance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
@@ -720,6 +721,7 @@ data/traits/environment/ph_optimum_mid2.yaml	ph_optimum_mid2_alkaline_tolerant_s
 data/traits/environment/ph_optimum_mid2.yaml	ph_optimum_mid2_alkaline_tolerant_setpoint:na_h_antiporters->intracellular_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_optimum_mid2.yaml	ph_optimum_mid2_alkaline_tolerant_setpoint:proton_motive_force->f0f1_atp_synthase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_optimum_mid2.yaml	ph_optimum_mid2_alkaline_tolerant_setpoint:respiratory_proton_pumping->intracellular_ph_homeostasis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
+data/traits/environment/ph_phenotype_with_numerical_limits.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2549 has no snippet
 data/traits/environment/ph_phenotype_with_numerical_limits.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'external pH'
 data/traits/environment/ph_phenotype_with_numerical_limits.yaml	ph_phenotype_numerical_axis:aa_decarboxylase_antiporter->intracellular_proton[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuad033 has no snippet
 data/traits/environment/ph_phenotype_with_numerical_limits.yaml	ph_phenotype_numerical_axis:external_ph_axis->ph_phenotype_trait[0]	UNSUPPORTIVE_SNIPPET	WARN	11 chars, supports nothing specific: 'external pH'

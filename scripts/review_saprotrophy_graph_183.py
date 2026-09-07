@@ -345,7 +345,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/jambio/lxac002",
-                    "snippet": "Laccases and peroxidases degrade not only lignin",
+                    "snippet": (
+                        "Laccases and peroxidases degrade not only lignin but also "
+                        "the corresponding monomers and other phenolic substrates"
+                    ),
                     "notes": (
                         "Verified against the open Gurovic et al. figure text; "
                         "laccase is retained as a contextual fungal and "

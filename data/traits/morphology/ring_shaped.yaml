@@ -205,7 +205,10 @@ causal_graphs:
     description: Crescentin promotes cell curvature.
     evidence:
     - reference: DOI:10.1038/s41467-024-45196-0
-      snippet: components that promote curvature
+      snippet: Helical cells require components that promote curvature, such as the
+        polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
+        synthesis rates, or the intermediate filament-like protein crescentin in C.
+        crescentus
       notes: Verified against the open Schiller et al. article text; Schiller et al.
         list crescentin in the same bacterial curvature-component statement.
     predicate_id: RO:0002213
@@ -313,4 +316,11 @@ curation_history:
     exact snippets to 6 comparative curvature and wall-patterning evidence entries,
     grounded 4 residual predicates, and retyped the bactofilin-M23 module as a pathway.
     No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-07T04:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #686: replaced fragmented ring-shape,
+    soil-life-history, heat-shock, and ligninolysis snippets with exact source spans
+    that carry their edge claims.'
   llm_assisted: true

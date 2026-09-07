@@ -57,7 +57,6 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "grow at external pH values",
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; pH breadth is represented as a quantitative "
@@ -98,7 +97,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "energize active proton uptake",
+                    "snippet": (
+                        "For pH homeostasis under alkaline conditions, active "
+                        "transport of protons inward is a crucial adaptation, which "
+                        "usually involves activation and transcriptional "
+                        "up-regulation of key cation/proton antiporters"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; cation/proton antiporters use PMF from "
@@ -218,7 +222,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "F0F1-ATPase in lactic acid bacteria",
+                    "snippet": (
+                        "the F0F1-ATPase (fermentative bacteria), or "
+                        "decarboxylation pathways (next paragraph) prevent the "
+                        "internal pH from becoming too low"
+                    ),
                     "notes": (
                         "Verified against the open Poolman review; proton-pumping "
                         "enzymes, including F0F1-ATPase in lactic acid bacteria, are "
@@ -338,7 +346,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2022.1034164",
-                    "snippet": "higher content of saturated fatty acids",
+                    "snippet": (
+                        "required a saturated membrane to minimize proton "
+                        "permeability in an extremely acidic environment"
+                    ),
                     "notes": (
                         "Verified against the open Frontiers methanotroph review; "
                         "saturated bacterial membranes are described as lowering "

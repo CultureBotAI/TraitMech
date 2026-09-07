@@ -53,6 +53,10 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str) -> bool:
+    return any(event.get("action") == action for event in doc["curation_history"])
+
+
 def test_review_adds_snippets_and_grounds_ring_shaped_edges():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
@@ -64,7 +68,7 @@ def test_review_adds_snippets_and_grounds_ring_shaped_edges():
         if _edge_key(replacement["before"]) != _edge_key(replacement["after"])
     }
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION)
     assert nodes["bactofilin_lmdc_module"]["node_type"] == "PATHWAY"
     assert "grounding_status" not in nodes["bactofilin_lmdc_module"]
     assert "grounding_notes" not in nodes["bactofilin_lmdc_module"]

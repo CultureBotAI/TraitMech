@@ -35,6 +35,7 @@ ACTION = "ADVERSARIAL_REVIEW_REPAIR"
 TIMESTAMP = "2026-09-06T17:10:00Z"
 FOLLOWUP_TIMESTAMP = "2026-09-07T02:20:00Z"
 FINAL_FOLLOWUP_TIMESTAMP = "2026-09-07T03:40:00Z"
+SNIPPET_FOLLOWUP_TIMESTAMP = "2026-09-07T04:24:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -44,6 +45,7 @@ CONNECTOR_MODULES = [
     "connect_ph_delta_mid3_graph_183",
     "connect_ph_delta_very_low_graph_183",
     "connect_ph_phenotype_graph_183",
+    "connect_soil_dwelling_graph_183",
     "connect_temperature_delta_high_graph_183",
     "connect_temperature_delta_very_low_graph_183",
     "connect_temperature_optimum_high_graph_183",
@@ -60,7 +62,12 @@ EDGE_REVIEW_MODULES = [
     "review_obligately_piezophilic_graph_183",
     "review_ph_delta_mid3_graph_183",
     "review_ph_phenotype_graph_183",
+    "review_ph_range_mid2_graph_183",
     "review_oxidative_stress_response_graph_183",
+    "review_ring_shaped_graph_183",
+    "review_saprotrophy_graph_183",
+    "review_soil_dwelling_graph_183",
+    "review_temperature_range_mid4_graph_183",
     "review_temperature_range_very_low_graph_183",
 ]
 
@@ -81,6 +88,17 @@ FOLLOWUP_SLUGS = {
 FINAL_FOLLOWUP_SLUGS = {
     "environment/ph_delta_mid3",
     "genomics/genomic_island",
+}
+
+SNIPPET_FOLLOWUP_SLUGS = {
+    "ecology/soil_dwelling",
+    "ecology/saprotrophy",
+    "environment/ph_delta_mid3",
+    "environment/ph_phenotype_with_numerical_limits",
+    "environment/ph_range_mid2",
+    "environment/temperature_range_mid4",
+    "morphology/cell_length_large",
+    "morphology/ring_shaped",
 }
 
 
@@ -215,6 +233,35 @@ def _path_for_slug(slug: str) -> Path:
 
 
 def _event_changes(slug: str) -> str:
+    if slug in {
+        "environment/ph_delta_mid3",
+        "environment/ph_phenotype_with_numerical_limits",
+        "environment/ph_range_mid2",
+    }:
+        return (
+            "Addressed PR #664 adversarial review issue #685: replaced weak pH "
+            "edge snippets with exact source spans that carry their edge claims, "
+            "and left derived pH-axis bin membership in notes instead of fragment "
+            "snippets."
+        )
+    if slug in {
+        "ecology/saprotrophy",
+        "ecology/soil_dwelling",
+        "environment/temperature_range_mid4",
+        "morphology/ring_shaped",
+    }:
+        return (
+            "Addressed PR #664 adversarial review issue #686: replaced "
+            "fragmented ring-shape, soil-life-history, heat-shock, and "
+            "ligninolysis snippets with exact source spans that carry their edge "
+            "claims."
+        )
+    if slug == "morphology/cell_length_large":
+        return (
+            "Addressed PR #664 adversarial review issue #687: gave the two SulA "
+            "edges distinct exact snippets, separating the FtsZ-polymerization "
+            "claim from the SulA division-inhibitor connector."
+        )
     if slug == "ecology/biosafety_level_5":
         return (
             "Addressed PR #664 adversarial review issue #679: moved the PPL-alpha "
@@ -312,6 +359,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in SNIPPET_FOLLOWUP_SLUGS:
+        return SNIPPET_FOLLOWUP_TIMESTAMP
     if slug in FINAL_FOLLOWUP_SLUGS:
         return FINAL_FOLLOWUP_TIMESTAMP
     if slug in FOLLOWUP_SLUGS:
@@ -364,6 +413,8 @@ def repair(write: bool = False) -> int:
                     doc,
                     [replacement["after"] for replacement in module.RECORD_EVIDENCE_REPLACEMENTS],
                 )
+            elif hasattr(module, "RECORD_EVIDENCE_AFTER"):
+                doc["evidence"] = copy.deepcopy(module.RECORD_EVIDENCE_AFTER)
             _drop_stale_edges(slug, doc, getattr(module, "STALE_EDGE_KEYS", set()))
             _drop_stale_nodes(slug, doc, getattr(module, "STALE_NODE_IDS", set()))
             _add_repair_edges(slug, doc, getattr(module, "REPAIR_EDGE_ADDITIONS", []))
