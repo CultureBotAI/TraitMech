@@ -140,7 +140,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsml/uqad020
       snippet: external osmotic upshifts by increasing the cellular concentration
-        of cations (e.g. K + ) and compatible solutes
+        of cations (e.g. K+) and compatible solutes
       notes: Verified against the open Bhowmick et al. review; this keeps compatible-solute
         accumulation as a broad osmotic-upshift response.
     predicate_id: RO:0002213
@@ -254,6 +254,7 @@ curation_history:
   curator: codex
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review: replaced the unsupported compatible-solute
-    bridge snippet with exact Bhowmick et al. wording that names both cation and compatible-solute
-    accumulation after an external osmotic upshift.'
+    bridge snippet with exact Bhowmick et al. wording that normalizes the K+ superscript
+    and names both cation and compatible-solute accumulation after an external osmotic
+    upshift.'
   llm_assisted: true

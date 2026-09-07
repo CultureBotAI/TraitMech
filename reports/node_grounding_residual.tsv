@@ -265,13 +265,8 @@ positive-pressure air-supplied suit	EXPERIMENTAL_FACTOR	1	data/traits/ecology/bi
 airlock	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
 decontamination shower	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
 specialized waste disposal	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_4.yaml
+enhanced pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_5.yaml
 planetary protection level alpha	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-mars returned sample handling	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-two-way contamination control	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-backward-contamination prevention for earth	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-forward-contamination prevention for samples	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-closed-system sample handling	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
-automation and remote manipulation	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level_5.yaml
 neutral host fitness effect	QUALITY	1	data/traits/ecology/commensalism.yaml
 secretory iga	GENE_OR_PROTEIN	1	data/traits/ecology/commensalism.yaml
 host mucus / mucins	ENVIRONMENTAL_FACTOR	1	data/traits/ecology/commensalism.yaml

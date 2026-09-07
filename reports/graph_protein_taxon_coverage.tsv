@@ -6,7 +6,7 @@ data/traits/ecology/biosafety_level_1.yaml	METPO:1001102	biosafety level 1	biosa
 data/traits/ecology/biosafety_level_2.yaml	METPO:1001103	biosafety level 2	biosafety_level_2_moderate_hazard	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_3.yaml	METPO:1001104	biosafety level 3	biosafety_level_3_serious_hazard	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/biosafety_level_4.yaml	METPO:1001105	biosafety level 4	biosafety_level_4_extreme_hazard	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/ecology/biosafety_level_5.yaml	METPO:1001106	biosafety level 5	biosafety_level_5_ppl_alpha_containment	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/ecology/biosafety_level_5.yaml	METPO:1001106	biosafety level 5	biosafety_level_5_proposed_enhanced_hazard	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/commensalism.yaml	traitmech:000042	commensalism	commensalism_neutral_host	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/endosymbiosis.yaml	traitmech:000045	endosymbiosis	endosymbiosis_intracellular_genome_reduction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/ecology/free_living.yaml	traitmech:000048	free-living	free_living_environmental_habitat	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-

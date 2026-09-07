@@ -9,8 +9,8 @@ converts	19	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/en
 protects against	14	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
 causally upstream of	14	blocked_by_node_type	RO:0002411	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 stabilizes	13	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
-requires	12	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/ecology/biosafety_level_5.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
 oxidized by	12	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
+requires	11	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
 is converted to	10	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/orange_pigmented.yaml
 binds	10	unmapped		data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
@@ -197,9 +197,8 @@ supports assignment to	1	unmapped		data/traits/ecology/biosafety_level_2.yaml
 mitigates risk in	1	unmapped		data/traits/ecology/biosafety_level_2.yaml
 verified by	1	unmapped		data/traits/ecology/biosafety_level_3.yaml
 utilizes	1	unmapped		data/traits/ecology/biosafety_level_3.yaml
-was informally called	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
-exceeds	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
-applies to	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
+motivates	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
+is informally called	1	unmapped		data/traits/ecology/biosafety_level_5.yaml
 provides resources for	1	unmapped		data/traits/ecology/commensalism.yaml
 operationalizes	1	unmapped		data/traits/ecology/commensalism.yaml
 prerequisite for	1	unmapped		data/traits/ecology/gut_associated.yaml

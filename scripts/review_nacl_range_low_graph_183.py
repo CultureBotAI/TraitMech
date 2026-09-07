@@ -117,7 +117,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                     "reference": "DOI:10.1093/femsml/uqad020",
                     "snippet": (
                         "external osmotic upshifts by increasing the cellular "
-                        "concentration of cations (e.g. K + ) and compatible "
+                        "concentration of cations (e.g. K+) and compatible "
                         "solutes"
                     ),
                     "notes": (

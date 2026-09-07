@@ -121,15 +121,16 @@ def _event_changes(slug: str) -> str:
     if slug == "ecology/biosafety_level_5":
         return (
             "Addressed PR #664 adversarial review: expanded two terse SAE 2002 "
-            "PPL-alpha snippets so the BSL-5 edge evidence identifies the exact "
-            "BSL-4 comparison and closed-system sample-handling context."
+            "PPL-alpha snippets, replaced the bare SAE PDF URL with its DOI, and "
+            "rescoped the BSL-5 graph so PPL-alpha remains historical name-use "
+            "evidence for the generic METPO class instead of the graph focus."
         )
     if slug == "environment/nacl_range_low":
         return (
             "Addressed PR #664 adversarial review: replaced the unsupported "
             "compatible-solute bridge snippet with exact Bhowmick et al. wording "
-            "that names both cation and compatible-solute accumulation after an "
-            "external osmotic upshift."
+            "that normalizes the K+ superscript and names both cation and "
+            "compatible-solute accumulation after an external osmotic upshift."
         )
     if slug == "environment/obligately_piezophilic":
         return (
@@ -175,6 +176,11 @@ def repair(write: bool = False) -> int:
 
         if module_name in graph_modules:
             doc["causal_graphs"] = copy.deepcopy(replacements)
+            module = importlib.import_module(module_name)
+            if hasattr(module, "AFTER_DEFINITION_SOURCE"):
+                doc["definition_source"] = module.AFTER_DEFINITION_SOURCE
+            if hasattr(module, "AFTER_RECORD_EVIDENCE"):
+                doc["evidence"] = copy.deepcopy(module.AFTER_RECORD_EVIDENCE)
         else:
             _replace_edges(slug, doc, replacements)
 

@@ -53,7 +53,7 @@ def _has_curation_event(doc: dict, action: str, timestamp: str) -> bool:
     )
 
 
-def test_review_replaces_generalized_hazard_graph_with_ppl_alpha_context():
+def test_review_keeps_generic_bsl5_graph_with_ppl_alpha_name_usage():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
 
@@ -67,14 +67,18 @@ def test_review_replaces_generalized_hazard_graph_with_ppl_alpha_context():
         (edge["subject"], edge["predicate"], edge["object"])
         for edge in graph["edges"]
     }
-    assert ("enhanced_pathogen_hazard", "motivates", "bsl5_trait") not in edge_keys
+    assert ("enhanced_pathogen_hazard", "motivates", "bsl5_trait") in edge_keys
+    assert ("bsl5_trait", "is a", "biosafety_level") in edge_keys
     assert (
         "planetary_protection_level_alpha",
-        "was informally called",
+        "is informally called",
         "bsl5_trait",
     ) in edge_keys
 
-    assert len(graph["edges"]) == 8
+    assert graph["graph_id"] == "biosafety_level_5_proposed_enhanced_hazard"
+    assert graph["nodes"][0]["description"].startswith("Proposed enhanced-containment")
+    assert "Mars" not in graph["nodes"][0]["description"]
+    assert len(graph["edges"]) == 3
     assert all(
         item.get("reference") and item.get("snippet")
         for edge in graph["edges"]
