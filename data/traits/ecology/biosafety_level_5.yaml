@@ -18,7 +18,7 @@ evidence:
   notes: Virulence-factor review supports the framing of pathogen hazard above existing
     BSL-4 thresholds (the rationale underlying the proposed BSL-5 classification).
 - reference: DOI:10.4271/2002-01-2469
-  snippet: Planetary Protection Level Alpha
+  snippet: informally called BSL-5
   notes: Verified against the open Cohen 2002 SAE paper; PPL-alpha is retained as
     historical BSL-5 name-use evidence, not as the scope of the generic METPO class.
 causal_graphs:
@@ -30,7 +30,7 @@ causal_graphs:
     UniProt examples.
   description: DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4
     thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha
-    retained only as historical BSL-5 name-use evidence.
+    retained only as record-level historical name-use evidence.
   nodes:
   - node_id: bsl5_trait
     label: biosafety level 5
@@ -48,11 +48,6 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Hypothetical pathogen hazards judged to exceed the transmissibility,
       severity, or treatability thresholds covered by BSL-4.
-  - node_id: planetary_protection_level_alpha
-    label: Planetary Protection Level Alpha
-    node_type: EXPERIMENTAL_FACTOR
-    description: Draft planetary-protection standard historically associated with
-      the BSL-5 label by Cohen.
   edges:
   - subject: enhanced_pathogen_hazard
     predicate: motivates
@@ -74,16 +69,6 @@ causal_graphs:
       notes: Supports BSL-5 as a proposed extension of the biosafety-level classification
         axis.
     predicate_id: rdfs:subClassOf
-  - subject: planetary_protection_level_alpha
-    predicate: is informally called
-    object: bsl5_trait
-    description: PPL-alpha has been informally called BSL-5, providing historical
-      name-use evidence without narrowing the BSL-5 class to Mars sample handling.
-    evidence:
-    - reference: DOI:10.4271/2002-01-2469
-      snippet: informally called BSL-5
-      notes: Verified against the open Cohen 2002 SAE paper; the PPL-alpha source
-        supports a historical naming association only.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.934696+00:00'
   curator: seed_from_metpo
@@ -143,4 +128,11 @@ curation_history:
     snippets, replaced the bare SAE PDF URL with its DOI, and rescoped the BSL-5 graph
     so PPL-alpha remains historical name-use evidence for the generic METPO class
     instead of the graph focus.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #679: moved the PPL-alpha historical
+    naming support to DOI-backed record-level evidence and removed the ungrounded
+    lexical naming edge from the BSL-5 graph.'
   llm_assisted: true

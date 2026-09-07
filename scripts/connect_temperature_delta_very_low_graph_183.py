@@ -133,15 +133,6 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
 
 ADDED_NODES: list[dict[str, Any]] = [
     {
-        "node_id": "membrane_phase_transition_temperature",
-        "label": "membrane phase-transition temperature",
-        "node_type": "QUALITY",
-        "description": (
-            "Temperature at which membrane lipids shift between "
-            "liquid-crystalline and ordered gel phases."
-        ),
-    },
-    {
         "node_id": "low_temperature_membrane_transport",
         "label": "membrane transport at low temperature",
         "node_type": "BIOLOGICAL_PROCESS",
@@ -175,48 +166,11 @@ ADDED_EDGES: list[dict[str, Any]] = [
                 "reference": "DOI:10.1007/s00792-017-0939-x",
                 "snippet": "liquid crystalline phase into the rigid gel phase",
                 "notes": (
-                    "Verified against the public Springer page; Siliakus et al. "
-                    "review low-temperature shifts from liquid-crystalline to "
-                    "rigid gel membrane phases."
+                    "Verified against the Siliakus et al. Springer full text; "
+                    "the review describes low-temperature shifts from "
+                    "liquid-crystalline to rigid gel membrane phases."
                 ),
             }
-        ],
-        "predicate_id": "RO:0002212",
-    },
-    {
-        "subject": "unsaturated_fatty_acid_content",
-        "predicate": "negatively regulates",
-        "object": "membrane_phase_transition_temperature",
-        "description": (
-            "A higher cis-unsaturated-fatty-acid fraction lowers membrane "
-            "phase-transition temperature and helps keep membranes fluid in "
-            "the cold."
-        ),
-        "evidence": [
-            {
-                "reference": "DOI:10.1146/annurev-micro-091313-103612",
-                "snippet": (
-                    "Bacteria remodel the fluidity of their membrane bilayer "
-                    "precisely"
-                ),
-                "notes": (
-                    "Verified against the public Annual Review of Microbiology "
-                    "abstract; de Mendoza reviews increased unsaturated fatty "
-                    "acid incorporation as growth temperature decreases."
-                ),
-            },
-            {
-                "reference": "DOI:10.1007/s00792-017-0939-x",
-                "snippet": (
-                    "ensure sufficient membrane fluidity and maintain the "
-                    "liquid crystalline phase"
-                ),
-                "notes": (
-                    "Verified against the public Springer page; membrane lipids "
-                    "below their transition temperature shift away from the "
-                    "liquid-crystalline state."
-                ),
-            },
         ],
         "predicate_id": "RO:0002212",
     },
@@ -233,9 +187,9 @@ ADDED_EDGES: list[dict[str, Any]] = [
                 "reference": "DOI:10.1007/s00792-017-0939-x",
                 "snippet": "many membrane proteins only function in the liquid crystalline phase",
                 "notes": (
-                    "Verified against the public Springer page; Siliakus et al. "
-                    "link low-temperature membrane phase to membrane-protein "
-                    "function."
+                    "Verified against the Siliakus et al. Springer full text; "
+                    "the review links low-temperature membrane phase to "
+                    "membrane-protein function."
                 ),
             }
         ],
@@ -255,9 +209,10 @@ ADDED_EDGES: list[dict[str, Any]] = [
                 "reference": "DOI:10.1007/s00792-017-0939-x",
                 "snippet": "maintain the fluidity of the membrane",
                 "notes": (
-                    "Verified against the public Springer page; this supports "
-                    "the membrane-function branch without asserting a direct "
-                    "universal cause of the 1-5 degree C temperature-delta bin."
+                    "Verified against the Siliakus et al. Springer full text; "
+                    "this supports the membrane-function branch without "
+                    "asserting a direct universal cause of the 1-5 degree C "
+                    "temperature-delta bin."
                 ),
             }
         ],
@@ -338,19 +293,31 @@ ADDED_EDGES: list[dict[str, Any]] = [
         ),
         "evidence": [
             {
-                "reference": "DOI:10.1046/j.1365-2958.1999.01284.x",
-                "snippet": "possibly translation at low temperature",
+                "reference": "DOI:10.1046/j.1365-2958.1999.01541.x",
+                "snippet": (
+                    "RNA chaperone to prevent the formation of secondary "
+                    "structures in RNA molecules"
+                ),
                 "notes": (
-                    "Verified against the open Molecular Microbiology full text; "
-                    "this supports the RNA-function branch without asserting "
-                    "CspA as a universal determinant of the 1-5 degree C "
-                    "temperature-delta bin."
+                    "Verified against the Europe PMC Phadtare and Inouye "
+                    "abstract; this supports the RNA-function branch without "
+                    "asserting CspA as a universal determinant of the 1-5 "
+                    "degree C temperature-delta bin."
                 ),
             }
         ],
         "predicate_id": "RO:0002326",
     },
 ]
+
+STALE_NODE_IDS = {"membrane_phase_transition_temperature"}
+STALE_EDGE_KEYS = {
+    (
+        "unsaturated_fatty_acid_content",
+        "negatively regulates",
+        "membrane_phase_transition_temperature",
+    )
+}
 
 
 def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
@@ -369,9 +336,9 @@ def _nodes_by_id(nodes: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {node["node_id"]: node for node in nodes}
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 
@@ -442,8 +409,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
 
     before = _components(graph)
     if before == 1 and (
-        present_added_node_ids == added_node_ids
-        and present_added_edge_keys == added_edge_keys
+        present_added_node_ids == added_node_ids and present_added_edge_keys == added_edge_keys
     ):
         _assert_graph_metadata(graph, GRAPH_METADATA_AFTER, "migrated")
         _assert_exact_nodes(graph, added_nodes, "migrated")
@@ -473,7 +439,7 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
         action=ACTION,
         changes=(
             f"Resolved issue #183 graph fragmentation ({before} components to 1) "
-            "by adding 3 contextual cold membrane and RNA nodes plus 8 "
+            "by adding 2 contextual cold membrane and RNA nodes plus 7 "
             "source- and verbatim-snippet-backed connectors. The connectors "
             "join supported cold-stress branches without asserting a direct "
             "universal unsaturated-fatty-acid cause of the 1-5 degree C "

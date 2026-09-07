@@ -153,7 +153,7 @@ causal_graphs:
     description: External pH influences the proton motive force across the cell envelope.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: pH gradient is largely determined
+      snippet: cells maintain their cytoplasmic pH around neutral
       notes: Verified against the open Poolman review; maintaining near-neutral cytoplasmic
         pH makes external pH a major determinant of the transmembrane pH-gradient
         component of the PMF.
@@ -365,4 +365,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced the weak Poolman pH-homeostasis
     snippets with exact text supporting decarboxylation-linked proton consumption
     and internal pH context.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #682: replaced the short Poolman
+    PMF snippet nested inside another connector snippet with exact near-neutral cytoplasmic-pH
+    wording.'
   llm_assisted: true

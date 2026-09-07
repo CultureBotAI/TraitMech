@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T022400Z-codex-682abc
+  timestamp: '2026-09-07T02:24:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/682
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Removed nested duplicate snippets
+  details: 'Replaced nested Popescu, Imlay, and Poolman snippets in gram_stain,
+    oxidative_stress_response, and ph_phenotype_with_numerical_limits with
+    distinct exact wording from the same sources. This addresses adversarial PR
+    review issue #682.'

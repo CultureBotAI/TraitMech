@@ -131,7 +131,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
-                    "snippet": "pH gradient is largely determined",
+                    "snippet": "cells maintain their cytoplasmic pH around neutral",
                     "notes": (
                         "Verified against the open Poolman review; maintaining "
                         "near-neutral cytoplasmic pH makes external pH a major "

@@ -55,13 +55,17 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str) -> bool:
+    return any(event.get("action") == action for event in doc["curation_history"])
+
+
 def test_review_connects_chemistry_and_retention_edges():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
     nodes = {node["node_id"]: node for node in graph["nodes"]}
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION)
     assert nodes["crystal_violet_iodine_retention"] == NODE_ADDITIONS[0]
     assert {
         ("crystal_violet", "reacts with", "iodine_mordant"),

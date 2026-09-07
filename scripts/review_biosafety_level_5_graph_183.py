@@ -57,7 +57,7 @@ AFTER_RECORD_EVIDENCE: list[dict[str, Any]] = [
     },
     {
         "reference": SOURCE,
-        "snippet": "Planetary Protection Level Alpha",
+        "snippet": "informally called BSL-5",
         "notes": (
             "Verified against the open Cohen 2002 SAE paper; PPL-alpha is retained "
             "as historical BSL-5 name-use evidence, not as the scope of the "
@@ -131,9 +131,7 @@ BEFORE_GRAPH: dict[str, Any] = {
             "subject": "bsl5_trait",
             "predicate": "is a",
             "object": "biosafety_level",
-            "description": (
-                "BSL-5 is a proposed member of the biosafety-level classification."
-            ),
+            "description": ("BSL-5 is a proposed member of the biosafety-level classification."),
             "evidence": [
                 {
                     "reference": "DOI:10.1146/annurev.micro.62.081307.162938",
@@ -161,7 +159,7 @@ AFTER_GRAPH: dict[str, Any] = {
     "description": (
         "DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4 "
         "thresholds to the proposed BSL-5 enhanced-containment classification, with "
-        "PPL-alpha retained only as historical BSL-5 name-use evidence."
+        "PPL-alpha retained only as record-level historical name-use evidence."
     ),
     "nodes": [
         {
@@ -190,15 +188,6 @@ AFTER_GRAPH: dict[str, Any] = {
                 "severity, or treatability thresholds covered by BSL-4."
             ),
         },
-        {
-            "node_id": "planetary_protection_level_alpha",
-            "label": "Planetary Protection Level Alpha",
-            "node_type": "EXPERIMENTAL_FACTOR",
-            "description": (
-                "Draft planetary-protection standard historically associated "
-                "with the BSL-5 label by Cohen."
-            ),
-        },
     ],
     "edges": [
         {
@@ -224,9 +213,7 @@ AFTER_GRAPH: dict[str, Any] = {
             "subject": "bsl5_trait",
             "predicate": "is a",
             "object": "biosafety_level",
-            "description": (
-                "BSL-5 is a proposed member of the biosafety-level classification."
-            ),
+            "description": ("BSL-5 is a proposed member of the biosafety-level classification."),
             "evidence": [
                 {
                     "reference": "DOI:10.1146/annurev.micro.62.081307.162938",
@@ -238,27 +225,6 @@ AFTER_GRAPH: dict[str, Any] = {
                 },
             ],
             "predicate_id": "rdfs:subClassOf",
-        },
-        {
-            "subject": "planetary_protection_level_alpha",
-            "predicate": "is informally called",
-            "object": "bsl5_trait",
-            "description": (
-                "PPL-alpha has been informally called BSL-5, providing historical "
-                "name-use evidence without narrowing the BSL-5 class to Mars "
-                "sample handling."
-            ),
-            "evidence": [
-                {
-                    "reference": SOURCE,
-                    "snippet": "informally called BSL-5",
-                    "notes": (
-                        "Verified against the open Cohen 2002 SAE paper; the "
-                        "PPL-alpha source supports a historical naming "
-                        "association only."
-                    ),
-                },
-            ],
         },
     ],
 }

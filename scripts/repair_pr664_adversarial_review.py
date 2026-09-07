@@ -33,6 +33,7 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 
 ACTION = "ADVERSARIAL_REVIEW_REPAIR"
 TIMESTAMP = "2026-09-06T17:10:00Z"
+FOLLOWUP_TIMESTAMP = "2026-09-07T02:20:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -52,16 +53,29 @@ CONNECTOR_MODULES = [
 ]
 
 EDGE_REVIEW_MODULES = [
+    "review_genomic_island_graph_183",
+    "review_gram_stain_graph_183",
     "review_nacl_range_low_graph_183",
     "review_obligately_piezophilic_graph_183",
     "review_ph_delta_mid3_graph_183",
     "review_ph_phenotype_graph_183",
+    "review_oxidative_stress_response_graph_183",
     "review_temperature_range_very_low_graph_183",
 ]
 
 GRAPH_REVIEW_MODULES = [
     "review_biosafety_level_5_graph_183",
 ]
+
+FOLLOWUP_SLUGS = {
+    "ecology/biosafety_level_5",
+    "environment/obligately_piezophilic",
+    "environment/ph_phenotype_with_numerical_limits",
+    "environment/temperature_delta_very_low",
+    "genomics/genomic_island",
+    "morphology/gram_stain",
+    "physiology/oxidative_stress_response",
+}
 
 
 def _edge_key(edge: dict[str, Any]) -> tuple[str | None, str | None, str | None]:
@@ -100,6 +114,54 @@ def _replace_edges(
     graph["edges"] = replaced_edges
 
 
+def _replace_record_evidence(
+    slug: str,
+    doc: dict[str, Any],
+    replacements: list[dict[str, Any]],
+) -> None:
+    by_reference = {item["reference"]: item for item in replacements}
+    seen: set[str] = set()
+
+    replaced_evidence = []
+    for item in doc.get("evidence") or []:
+        reference = item.get("reference")
+        if reference in by_reference:
+            if reference in seen:
+                raise ValueError(f"{slug}: duplicate record evidence: {reference}")
+            seen.add(reference)
+            replaced_evidence.append(copy.deepcopy(by_reference[reference]))
+        else:
+            replaced_evidence.append(item)
+
+    missing = set(by_reference) - seen
+    if missing:
+        raise ValueError(f"{slug}: missing replacement record evidence: {sorted(missing)}")
+
+    doc["evidence"] = replaced_evidence
+
+
+def _drop_stale_nodes(slug: str, doc: dict[str, Any], node_ids: set[str]) -> None:
+    if not node_ids:
+        return
+
+    graph = _find_graph(slug, doc)
+    graph["nodes"] = [
+        node for node in graph.get("nodes") or [] if node.get("node_id") not in node_ids
+    ]
+
+
+def _drop_stale_edges(
+    slug: str,
+    doc: dict[str, Any],
+    edge_keys: set[tuple[str, str, str]],
+) -> None:
+    if not edge_keys:
+        return
+
+    graph = _find_graph(slug, doc)
+    graph["edges"] = [edge for edge in graph.get("edges") or [] if _edge_key(edge) not in edge_keys]
+
+
 def _connector_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
     return module.SLUG, module.ADDED_EDGES
@@ -116,7 +178,8 @@ def _cell_length_large_edges(module_name: str) -> tuple[str, list[dict[str, Any]
 def _review_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
     return module.SLUG, [
-        replacement["after"] for replacement in module.EDGE_REPLACEMENTS
+        *[replacement["after"] for replacement in module.EDGE_REPLACEMENTS],
+        *getattr(module, "EDGE_ADDITIONS", []),
     ]
 
 
@@ -132,10 +195,9 @@ def _path_for_slug(slug: str) -> Path:
 def _event_changes(slug: str) -> str:
     if slug == "ecology/biosafety_level_5":
         return (
-            "Addressed PR #664 adversarial review: expanded two terse SAE 2002 "
-            "PPL-alpha snippets, replaced the bare SAE PDF URL with its DOI, and "
-            "rescoped the BSL-5 graph so PPL-alpha remains historical name-use "
-            "evidence for the generic METPO class instead of the graph focus."
+            "Addressed PR #664 adversarial review issue #679: moved the PPL-alpha "
+            "historical naming support to DOI-backed record-level evidence and "
+            "removed the ungrounded lexical naming edge from the BSL-5 graph."
         )
     if slug == "environment/nacl_range_low":
         return (
@@ -146,9 +208,10 @@ def _event_changes(slug: str) -> str:
         )
     if slug == "environment/obligately_piezophilic":
         return (
-            "Addressed PR #664 adversarial review: replaced the HHP-damage "
-            "snippet with exact Tamby et al. wording that supports "
-            "high-pressure lipid-membrane integrity as piezophile adaptation."
+            "Addressed PR #664 adversarial review issue #680: replaced the "
+            "subjectless HHP lipid-packing connector snippet with exact Tamby "
+            "et al. wording that names unsaturation and branching as membrane "
+            "adaptations to HHP and extreme temperature."
         )
     if slug == "environment/ph_delta_mid3":
         return (
@@ -158,9 +221,9 @@ def _event_changes(slug: str) -> str:
         )
     if slug == "environment/ph_phenotype_with_numerical_limits":
         return (
-            "Addressed PR #664 adversarial review: replaced the weak Poolman "
-            "pH-homeostasis snippets with exact text supporting "
-            "decarboxylation-linked proton consumption and internal pH context."
+            "Addressed PR #664 adversarial review issue #682: replaced the "
+            "short Poolman PMF snippet nested inside another connector snippet "
+            "with exact near-neutral cytoplasmic-pH wording."
         )
     if slug == "environment/temperature_delta_high":
         return (
@@ -193,11 +256,43 @@ def _event_changes(slug: str) -> str:
             "mutational spectrum as combined context-dependent substitution "
             "signatures."
         )
+    if slug == "environment/temperature_delta_very_low":
+        return (
+            "Addressed PR #664 adversarial review issues #678 and #681: removed "
+            "the unsupported membrane phase-transition temperature branch, "
+            "requoted the cold RNA connector with exact Phadtare and Inouye "
+            "wording, and replaced generic Springer endpoint notes with the "
+            "specific Siliakus et al. full-text endpoint."
+        )
+    if slug == "genomics/genomic_island":
+        return (
+            "Addressed PR #664 adversarial review issue #681: replaced generic "
+            "Dobrindt article-preview notes with Nature Reviews Microbiology "
+            "publisher-abstract verification notes."
+        )
+    if slug == "morphology/gram_stain":
+        return (
+            "Addressed PR #664 adversarial review issue #682: replaced nested "
+            "Popescu and Doyle dye-retention snippets with distinct exact "
+            "cell-wall and dye-retention wording."
+        )
+    if slug == "physiology/oxidative_stress_response":
+        return (
+            "Addressed PR #664 adversarial review issues #680 through #682: "
+            "requoted the RpoS edge and Imlay record evidence, and replaced the "
+            "generic ASM endpoint note with Europe PMC abstract verification."
+        )
     return (
         "Addressed PR #664 adversarial review: replaced copied "
         "nonmechanistic bridge snippets with independent exact source snippets "
         "while preserving the existing connector edge scope."
     )
+
+
+def _event_timestamp(slug: str) -> str:
+    if slug in FOLLOWUP_SLUGS:
+        return FOLLOWUP_TIMESTAMP
+    return TIMESTAMP
 
 
 def _write_or_validate(path: Path, doc: dict[str, Any], write: bool) -> None:
@@ -238,6 +333,15 @@ def repair(write: bool = False) -> int:
                 doc["evidence"] = copy.deepcopy(module.AFTER_RECORD_EVIDENCE)
         else:
             _replace_edges(slug, doc, replacements)
+            module = importlib.import_module(module_name)
+            if hasattr(module, "RECORD_EVIDENCE_REPLACEMENTS"):
+                _replace_record_evidence(
+                    slug,
+                    doc,
+                    [replacement["after"] for replacement in module.RECORD_EVIDENCE_REPLACEMENTS],
+                )
+            _drop_stale_edges(slug, doc, getattr(module, "STALE_EDGE_KEYS", set()))
+            _drop_stale_nodes(slug, doc, getattr(module, "STALE_NODE_IDS", set()))
 
         record_curation_event(
             doc,
@@ -245,7 +349,7 @@ def repair(write: bool = False) -> int:
             action=ACTION,
             changes=_event_changes(slug),
             llm_assisted=True,
-            timestamp=TIMESTAMP,
+            timestamp=_event_timestamp(slug),
             upsert=True,
         )
 
@@ -258,9 +362,7 @@ def repair(write: bool = False) -> int:
     changed = list(dict.fromkeys(changed))
     for path in changed:
         print(f"  repair {path.relative_to(REPO_ROOT)}")
-    print(
-        f"{'applied' if write else 'dry run'}: repaired {len(changed)} record(s)"
-    )
+    print(f"{'applied' if write else 'dry run'}: repaired {len(changed)} record(s)")
     return 0
 
 

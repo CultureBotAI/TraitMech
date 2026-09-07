@@ -115,7 +115,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.3109/10520299609117151",
-                    "snippet": ("responsible for retention of a crystal violet:iodine complex"),
+                    "snippet": "Gram-positive microorganisms require a relatively thick cell wall",
                     "notes": (
                         "Verified against the public Popescu and Doyle abstract; "
                         "the Gram-positive cell wall is the structural determinant "
@@ -267,11 +267,11 @@ EDGE_ADDITIONS: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.3109/10520299609117151",
-                "snippet": "retention of a crystal violet:iodine complex",
+                "snippet": "irrespective of composition, to retain the dye",
                 "notes": (
                     "Verified against the public Popescu and Doyle abstract; the "
-                    "review frames Gram staining around retention of the "
-                    "crystal violet-iodine complex."
+                    "review frames dye retention as the proximal state in the "
+                    "Gram-stain assay."
                 ),
             }
         ],

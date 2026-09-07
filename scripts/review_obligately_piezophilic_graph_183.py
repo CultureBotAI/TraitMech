@@ -245,11 +245,14 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmolb.2022.1058381",
-                    "snippet": "can be adapted by modifying the degree of lipid packing",
+                    "snippet": (
+                        "modulate the degrees of unsaturation and branching of their acyl chain"
+                    ),
                     "notes": (
-                        "Verified against the open Tamby et al. introduction; "
-                        "membrane unsaturation and branching are retained as "
-                        "contextual ways to remodel lipid packing under HHP."
+                        "Verified against the open Tamby et al. Frontiers/PMC "
+                        "full text; the source directly names unsaturation and "
+                        "branching as membrane adaptations to HHP and extreme "
+                        "temperature."
                     ),
                 }
             ],

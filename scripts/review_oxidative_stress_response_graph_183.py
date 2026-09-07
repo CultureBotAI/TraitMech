@@ -43,9 +43,9 @@ RECORD_EVIDENCE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
         },
         "after": {
             "reference": "DOI:10.1038/nrmicro3032",
-            "snippet": "scavenging enzymes and repair systems",
+            "snippet": "In response, bacteria activate elegant adaptive strategies",
             "notes": (
-                "Verified against the public Imlay abstract; the review "
+                "Verified against the Europe PMC Imlay abstract; the review "
                 "summarizes oxidative damage from superoxide and hydrogen "
                 "peroxide plus induced detoxification and repair defenses."
             ),
@@ -219,17 +219,18 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "predicate": "positively regulates",
             "object": "oxidative_stress_process",
             "description": (
-                "The general stress sigma factor RpoS controls oxidative-stress "
-                "defense outputs; its loss increases sensitivity to oxidative stress."
+                "The general stress sigma factor RpoS controls a broad stress "
+                "regulon that includes oxidative-stress defense outputs."
             ),
             "evidence": [
                 {
                     "reference": "DOI:10.1128/mmbr.00151-22",
-                    "snippet": "are sensitive to oxidative stress",
+                    "snippet": "The alternative sigma factor RpoS is the central GSR regulator",
                     "notes": (
-                        "Verified against the ASM article preview; RpoS is "
-                        "retained as a broad E. coli general-stress regulator "
-                        "whose loss increases oxidative-stress sensitivity."
+                        "Verified against the Europe PMC Bouillet et al. "
+                        "abstract; RpoS is retained as a broad general-stress "
+                        "regulator rather than an OxyR-like peroxide-specific "
+                        "switch."
                     ),
                 }
             ],

@@ -46,8 +46,9 @@ RECORD_EVIDENCE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                 "widely distributed in pathogenic, non-pathogenic and environmental microorganisms"
             ),
             "notes": (
-                "Verified against the public Nature article preview; Dobrindt et "
-                "al. frame genomic islands across pathogenic, non-pathogenic, and "
+                "Verified against the Nature Reviews Microbiology publisher "
+                "abstract; Dobrindt et al. frame genomic islands across "
+                "pathogenic, non-pathogenic, and "
                 "environmental microorganisms."
             ),
         },
@@ -201,8 +202,9 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                     "reference": "DOI:10.1038/nrmicro884",
                     "snippet": "GEIs contribute to fitness and adaptation",
                     "notes": (
-                        "Verified against the public Nature article preview; "
-                        "Dobrindt et al. describe genomic islands as "
+                        "Verified against the Nature Reviews Microbiology "
+                        "publisher abstract; Dobrindt et al. describe genomic "
+                        "islands as "
                         "gain-of-function elements affecting ecological and "
                         "pathogenic traits."
                     ),

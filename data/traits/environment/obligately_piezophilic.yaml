@@ -123,10 +123,10 @@ causal_graphs:
       HHP (homeoviscous adaptation).
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      snippet: can be adapted by modifying the degree of lipid packing
-      notes: Verified against the open Tamby et al. introduction; membrane unsaturation
-        and branching are retained as contextual ways to remodel lipid packing under
-        HHP.
+      snippet: modulate the degrees of unsaturation and branching of their acyl chain
+      notes: Verified against the open Tamby et al. Frontiers/PMC full text; the source
+        directly names unsaturation and branching as membrane adaptations to HHP and
+        extreme temperature.
     predicate_id: RO:0002327
   - subject: membrane_fluidity_maintenance
     predicate: contributes to
@@ -197,4 +197,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced the HHP-damage snippet
     with exact Tamby et al. wording that supports high-pressure lipid-membrane integrity
     as piezophile adaptation.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #680: replaced the subjectless
+    HHP lipid-packing connector snippet with exact Tamby et al. wording that names
+    unsaturation and branching as membrane adaptations to HHP and extreme temperature.'
   llm_assisted: true

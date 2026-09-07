@@ -62,13 +62,17 @@ def _transform_from_before() -> dict:
     return doc
 
 
+def _has_curation_event(doc: dict, action: str) -> bool:
+    return any(event.get("action") == action for event in doc["curation_history"])
+
+
 def test_review_adds_snippets_and_grounds_genomic_island_edges():
     doc = _transform_from_before()
     graph = doc["causal_graphs"][0]
     nodes = {node["node_id"]: node for node in graph["nodes"]}
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert _has_curation_event(doc, ACTION)
     assert all("snippet" in evidence for evidence in doc["evidence"])
     assert nodes["integrative_conjugative_element"]["node_type"] == "GENETIC_ELEMENT"
     assert nodes["integrative_mobilizable_element"]["node_type"] == "GENETIC_ELEMENT"

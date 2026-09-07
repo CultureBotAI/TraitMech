@@ -17,8 +17,9 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro884
   snippet: widely distributed in pathogenic, non-pathogenic and environmental microorganisms
-  notes: Verified against the public Nature article preview; Dobrindt et al. frame
-    genomic islands across pathogenic, non-pathogenic, and environmental microorganisms.
+  notes: Verified against the Nature Reviews Microbiology publisher abstract; Dobrindt
+    et al. frame genomic islands across pathogenic, non-pathogenic, and environmental
+    microorganisms.
 - reference: DOI:10.1111/j.1574-6976.2008.00136.x
   snippet: horizontal gene transfer is or has been facilitated by genomic islands
   notes: Verified against the open Juhas et al. abstract; the review summarizes genomic
@@ -107,9 +108,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro884
       snippet: GEIs contribute to fitness and adaptation
-      notes: Verified against the public Nature article preview; Dobrindt et al. describe
-        genomic islands as gain-of-function elements affecting ecological and pathogenic
-        traits.
+      notes: Verified against the Nature Reviews Microbiology publisher abstract;
+        Dobrindt et al. describe genomic islands as gain-of-function elements affecting
+        ecological and pathogenic traits.
     predicate_id: RO:0002326
   - subject: gi_trait
     predicate: includes
@@ -206,4 +207,11 @@ curation_history:
     snippets to 8 genomic-island evidence items, grounded 4 residual predicates, retyped
     ICE/IME nodes as GENETIC_ELEMENT, and grounded the conjugation process. No paid
     research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #681: replaced generic Dobrindt
+    article-preview notes with Nature Reviews Microbiology publisher-abstract verification
+    notes.'
   llm_assisted: true

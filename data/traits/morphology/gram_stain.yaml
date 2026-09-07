@@ -101,7 +101,7 @@ causal_graphs:
       remains after decolorization.
     evidence:
     - reference: DOI:10.3109/10520299609117151
-      snippet: responsible for retention of a crystal violet:iodine complex
+      snippet: Gram-positive microorganisms require a relatively thick cell wall
       notes: Verified against the public Popescu and Doyle abstract; the Gram-positive
         cell wall is the structural determinant for retaining the dye-iodine complex.
     predicate_id: RO:0002326
@@ -170,9 +170,9 @@ causal_graphs:
       assay state for the Gram stain phenotype.
     evidence:
     - reference: DOI:10.3109/10520299609117151
-      snippet: retention of a crystal violet:iodine complex
+      snippet: irrespective of composition, to retain the dye
       notes: Verified against the public Popescu and Doyle abstract; the review frames
-        Gram staining around retention of the crystal violet-iodine complex.
+        dye retention as the proximal state in the Gram-stain assay.
     predicate_id: METPO:2007700
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901879+00:00'
@@ -234,4 +234,11 @@ curation_history:
     added exact snippets to 4 assay evidence entries, replaced 3 residual predicates,
     added a dye-retention node with 3 grounded connector edges, and connected the
     reagent chemistry to the retention phenotype. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #682: replaced nested Popescu
+    and Doyle dye-retention snippets with distinct exact cell-wall and dye-retention
+    wording.'
   llm_assisted: true
