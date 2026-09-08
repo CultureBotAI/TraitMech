@@ -30,22 +30,22 @@
     </p>
     <h1>growth range phenotype with numerical limits</h1>
     <p class="curie"><code>METPO:1000535</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A phenotype characterized by the span of values within which an organism can maintain growth.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Growth-range phenotype descriptor across environmental axes</h2>
       <p class="meta">DOI-backed graph framing the growth-range phenotype as a generic bounded-span descriptor over any numerical environmental axis, with `is a` edges to the axis-specific growth-range phenotypes for NaCl, pH, and temperature.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>numerical environmental axis</strong>
             <span class="edge-predicate">defines</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007500</code>
             <p>A numerical environmental axis defines the values whose bounded growth-supporting span yields the growth-range phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuy009</code>
                 <span class="evidence-snippet">salinity range</span>
                 <span class="meta">Supports a numerical environmental axis as the axis on which a bounded growth-supporting span is measured.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>NaCl range</strong>
             <span class="edge-predicate">is a</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>NaCl range is an axis-specific growth-range phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuy009</code>
                 <span class="evidence-snippet">salinity range</span>
                 <span class="meta">Supports NaCl range as a growth-range phenotype defined over the salinity axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>pH range</strong>
             <span class="edge-predicate">is a</span>
@@ -100,16 +100,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH range is an axis-specific growth-range phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">external pH</span>
                 <span class="meta">Supports pH range as a growth-range phenotype defined over the external-pH axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>temperature range</strong>
             <span class="edge-predicate">is a</span>
@@ -117,33 +117,33 @@
             <code>rdfs:subClassOf</code>
             <p>Temperature range is an axis-specific growth-range phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/s0300-9629(97)00003-0</code>
                 <span class="evidence-snippet">adapted to environments of high temperature</span>
                 <span class="meta">Supports temperature range as a growth-range phenotype defined over the ambient-temperature axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>pH range</strong>
             <span class="edge-predicate">requires</span>
             <strong>maintenance of near-neutral cytoplasmic pH</strong>
-            
+
             <p>Growth across an external pH range requires maintenance of near-neutral cytoplasmic pH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external pH of about 5-8 to sustain growth.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>K+/H+ or Na+/H+ antiporter activity</strong>
             <span class="edge-predicate">contributes to</span>
@@ -151,16 +151,16 @@
             <code>RO:0002326</code>
             <p>K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting growth at alkaline external pH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons when internal pH gets too high.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>cytoplasmic acidification</strong>
             <span class="edge-predicate">contributes to</span>
@@ -168,16 +168,16 @@
             <code>RO:0002326</code>
             <p>Antiporter-driven cytoplasmic acidification supports growth at the alkaline end of the pH range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Cytoplasmic acidification counters alkaline external pH, extending the upper pH growth boundary.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>F0F1-ATPase / proton-pumping respiratory chain activity</strong>
             <span class="edge-predicate">enables</span>
@@ -185,16 +185,16 @@
             <code>RO:0002327</code>
             <p>F0F1-ATPase and proton-pumping respiratory chains prevent cytoplasmic acidification, supporting growth across the external pH range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Activation/upregulation of proton-pumping respiratory chains and the F0F1-ATPase prevents cytoplasmic acidification.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>amino-acid decarboxylase/antiporter system</strong>
             <span class="edge-predicate">enables</span>
@@ -202,16 +202,16 @@
             <code>RO:0002327</code>
             <p>Amino-acid decarboxylase/antiporter systems generate PMF and raise internal pH, enabling growth under acidic external pH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Each decarboxylation pumps one proton equivalent; decarboxylases increase activity when internal pH falls, extending the acid-side boundary.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>hypertonic salinity increase</strong>
             <span class="edge-predicate">causes</span>
@@ -219,16 +219,16 @@
             <code>biolink:causes</code>
             <p>A hypertonic salinity increase causes cell shrinkage and lowered turgor; growth ceases below the turgor limit, setting the upper salinity boundary.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Hypertonicity leads to cell shrinkage and lowering of turgor; the lower turgor limit is reached before cell growth ceases.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>OpuA-mediated glycine betaine uptake</strong>
             <span class="edge-predicate">enables</span>
@@ -236,16 +236,16 @@
             <code>RO:0002327</code>
             <p>OpuA-mediated glycine betaine uptake drives compatible-solute accumulation that counteracts hyperosmotic stress and supports salinity-range growth.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">OpuA accumulates the compatible solute glycine betaine to (sub)molar levels to counteract hyperosmotic stress.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>compatible solute accumulation</strong>
             <span class="edge-predicate">contributes to</span>
@@ -253,26 +253,26 @@
             <code>RO:0002326</code>
             <p>Compatible-solute accumulation counteracts hyperosmotic stress, supporting growth across the NaCl salinity range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
-                
+
                 <span class="meta">Compatible-solute accumulation offsets hyperosmotic stress, broadening the salinity growth range.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -280,118 +280,118 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1093/femsre/fuy009</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (3)</h2>
       <ul>
-        
+
         <li><a href="../../traits/environment/nacl_range.html">NaCl range <code>METPO:1000334</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_range.html">pH range <code>METPO:1000332</code></a></li>
-        
+
         <li><a href="../../traits/environment/temperature_range.html">temperature range <code>METPO:1000306</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000535</code> <span class="dim-preview">[-2.537, -1.642, -2.853, +0.728, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_range.html">NaCl range</a>
           <span class="sim">0.957</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range.html">temperature range</a>
           <span class="sim">0.939</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range.html">pH range</a>
           <span class="sim">0.931</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
           <span class="sim">0.927</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_phenotype_with_numerical_limits.html">pH phenotype with numerical limits</a>
           <span class="sim">0.917</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/delta_phenotype_with_numerical_limits.html">delta phenotype with numerical limits</a>
           <span class="sim">0.914</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/optimum_phenotype_with_numerical_limits.html">optimum phenotype with numerical limits</a>
           <span class="sim">0.902</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_phenotype_with_numerical_limits.html">temperature phenotype with numerical limits</a>
           <span class="sim">0.900</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -462,117 +462,117 @@ A 2024 fungal study illustrates these distinctions. For *Mucor circinelloides* o
 - Incubation duration, detection threshold, medium composition, inoculum, and primary/secondary growth model — experimental-factor nodes.
 
 ### 2.2 Environmental and physicochemical nodes</pre>
-      
+
       <p class="meta">Showing the first 60 of
         285 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/environment/growth_range_phenotype_with_numerical_limits-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Natranaerobius thermophilus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=375929"
              rel="nofollow noreferrer"><code>NCBITaxon:375929</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/aem.00145-24"
              rel="nofollow noreferrer"><code>DOI:10.1128/aem.00145-24</code></a>
-          
-          
+
+
           <span class="meta">Natranaerobius thermophilus was reported across 3.1-4.9 M total sodium at pH 9.5 and 53 degrees C; this is a bounded growth range on a salinity axis, not an NaCl conversion or an optimum claim.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.847733+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-13T12:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing the growth-range phenotype as a cross-axis bounded-span descriptor with axis-specific children for NaCl, pH, and temperature.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:29Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T07:37:39Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:10Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×4, RO:0002326×2, biolink:causes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T05:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the edge from enables/RO:0002327 to RO:0002326 (contributes to), issue 334. biolink declares enables range &#39;biological process or activity&#39; and the object is a STATE, which does not satisfy it. Unlike the tolerance/capacity nodes in this same pass, this object is a genuine state rather than a mis-typed disposition - a gradient, a community composition, an internal environment - so retyping it to TRAIT would be wrong. contributes to fits because the subject genuinely contributes to the OCCURRENCE OR GENERATION of the object, which is biolink&#39;s definition; that is the same test the motive-force edges FAILED in issue 341, where the subject powers a machine it does not generate. RO:0002326 declares no rdfs:domain or rdfs:range.</p>
         </li>
-        
+
         <li>
           <time>2026-08-15T06:00:00Z</time> ·
           <strong>SPLIT_PROTEIN_FROM_ACTIVITY</strong> · claude
           <p class="changes">Separated the protein sense from the activity sense so one node_id means one thing (issue 356): renamed cation_proton_antiporter -&gt; cation_proton_antiporter_activity (MOLECULAR_FUNCTION sense). Described as &#39;Ion/H+ antiporter ACTIVITY that exports K+ or Na+ in exchange for protons&#39;, against &#39;Antiporter exchanging cations for protons during pH stress&#39; for the protein occurrences. cation_proton_antiporter_activity already exists corpus-wide as MOLECULAR_FUNCTION.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope growth_range_phenotype_descriptor=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Natranaerobius thermophilus (NCBITaxon:375929; DOI:10.1128/aem.00145-24). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -601,12 +601,12 @@ A 2024 fungal study illustrates these distinctions. For *Mucor circinelloides* o
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -957,8 +957,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

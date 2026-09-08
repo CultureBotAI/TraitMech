@@ -30,22 +30,22 @@
     </p>
     <h1>observation</h1>
     <p class="curie"><code>METPO:1001000</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A data-collection or measurement context in which trait-relevant qualities of organisms, samples, or conditions are recorded.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Observation measurement upper-class context</h2>
       <p class="meta">DOI-backed upper-ontology context graph for observations as assay or measurement outputs about material entities and qualities. Child observation records are deprecated relation/value carriers and are not expanded as mechanistic trait nodes here.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · Observation is a measurement and metadata upper class, not a biological mechanism; no protein node or example is applicable.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>assay or measurement process</strong>
             <span class="edge-predicate">has output</span>
@@ -66,84 +66,84 @@
             <code>RO:0002234</code>
             <p>Assays and measurements generate data items.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1371/journal.pone.0154556</code>
                 <span class="evidence-snippet">the output of an assay is typically a data item</span>
                 <span class="meta">Supports assay outputs as data items.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>data item</strong>
             <span class="edge-predicate">records</span>
             <strong>measured quality</strong>
-            
+
             <p>Observation data record a measured quality.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1371/journal.pone.0154556</code>
                 <span class="evidence-snippet">measuring its glucose concentration</span>
                 <span class="meta">Supports measurement outputs as records of qualities.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>observation</strong>
             <span class="edge-predicate">is about</span>
             <strong>material entity</strong>
-            
+
             <p>Observation records are about material entities or samples and their qualities.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1371/journal.pone.0154556</code>
                 <span class="evidence-snippet">can be about any material entity</span>
                 <span class="meta">Supports observations and study outputs as about material entities.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>observation</strong>
             <span class="edge-predicate">has context</span>
             <strong>geographic location</strong>
-            
+
             <p>Observation data items require contextual information about time and place of measurement.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3233/sw-223096</code>
-                
+
                 <span class="meta">An observation data item requires a data structure to encompass the contextual information about the time and place etc. of a measurement.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>assay or measurement process</strong>
             <span class="edge-predicate">has specified input</span>
             <strong>material entity with evaluant role</strong>
-            
+
             <p>An assay has a material entity with evaluant role as specified input.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3233/sw-223096</code>
-                
+
                 <span class="meta">OBI: assay and has_specified_input some (material entity and has role some evaluant role); generalized, not microbe-specific.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>assay or measurement process</strong>
             <span class="edge-predicate">has output</span>
@@ -151,77 +151,77 @@
             <code>RO:0002234</code>
             <p>An assay produces a measurement datum as output of the observation process.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3233/sw-223096</code>
-                
+
                 <span class="meta">SOSA Result and IAO measurement datum are comparable outputs of an observation process.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>planned process</strong>
             <span class="edge-predicate">has specified input</span>
             <strong>sample</strong>
-            
+
             <p>A planned process takes material entities such as samples as specified inputs.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3233/sw-223096</code>
-                
+
                 <span class="meta">OBI has specified input/output pertain to planned process with material entities (for assays) as targets.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>metadata</strong>
             <span class="edge-predicate">recorded in</span>
             <strong>MIxS reporting standard</strong>
-            
+
             <p>Sample/source-environment metadata is recorded using MIxS metadata elements.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/978-1-0716-3838-5_20</code>
-                
+
                 <span class="meta">MIxS consists of a number of metadata elements that describe a particular characteristic of the sample or its source environment.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>FAIR principles</strong>
             <span class="edge-predicate">requires metadata</span>
             <strong>unique identifier</strong>
-            
+
             <p>FAIR requires each object or dataset to have a unique identifier and rich metadata.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fcimb.2024.1384809</code>
-                
+
                 <span class="meta">FAIR requires each FAIR object or dataset have a unique identifier and be described with rich metadata.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -229,143 +229,143 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1371/journal.pone.0154556</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
 
-    
+
+
     <div class="card">
       <h2>Children (20)</h2>
       <ul>
-        
+
         <li><a href="../../traits/observation/nacl_delta_observation.html">NaCl delta observation <code>METPO:1001008</code></a></li>
-        
+
         <li><a href="../../traits/observation/nacl_observation.html">NaCl observation <code>METPO:1001022</code></a></li>
-        
+
         <li><a href="../../traits/observation/nacl_range_observation.html">NaCl range observation <code>METPO:1001009</code></a></li>
-        
+
         <li><a href="../../traits/observation/growth_nacl_observation.html">growth NaCl observation <code>METPO:1001007</code></a></li>
-        
+
         <li><a href="../../traits/observation/growth_oxygen_observation.html">growth oxygen observation <code>METPO:1001017</code></a></li>
-        
+
         <li><a href="../../traits/observation/growth_ph_observation.html">growth pH observation <code>METPO:1001012</code></a></li>
-        
+
         <li><a href="../../traits/observation/growth_temperature_observation.html">growth temperature observation <code>METPO:1001002</code></a></li>
-        
+
         <li><a href="../../traits/observation/optimum_nacl_observation.html">optimum NaCl observation <code>METPO:1001010</code></a></li>
-        
+
         <li><a href="../../traits/observation/optimum_oxygen_observation.html">optimum oxygen observation <code>METPO:1001016</code></a></li>
-        
+
         <li><a href="../../traits/observation/optimum_ph_observation.html">optimum pH observation <code>METPO:1001013</code></a></li>
-        
+
         <li><a href="../../traits/observation/optimum_temperature_observation.html">optimum temperature observation <code>METPO:1001001</code></a></li>
-        
+
         <li><a href="../../traits/observation/oxygen_delta_observation.html">oxygen delta observation <code>METPO:1001019</code></a></li>
-        
+
         <li><a href="../../traits/observation/oxygen_observation.html">oxygen observation <code>METPO:1001020</code></a></li>
-        
+
         <li><a href="../../traits/observation/oxygen_range_observation.html">oxygen range observation <code>METPO:1001018</code></a></li>
-        
+
         <li><a href="../../traits/observation/ph_delta_observation.html">pH delta observation <code>METPO:1001014</code></a></li>
-        
+
         <li><a href="../../traits/observation/ph_observation.html">pH observation <code>METPO:1001023</code></a></li>
-        
+
         <li><a href="../../traits/observation/ph_range_observation.html">pH range observation <code>METPO:1001015</code></a></li>
-        
+
         <li><a href="../../traits/observation/temperature_delta_observation.html">temperature delta observation <code>METPO:1001004</code></a></li>
-        
+
         <li><a href="../../traits/observation/temperature_observation.html">temperature observation <code>METPO:1001021</code></a></li>
-        
+
         <li><a href="../../traits/observation/temperature_range_observation.html">temperature range observation <code>METPO:1001003</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1001000</code> <span class="dim-preview">[-0.035, -0.074, +0.047, +0.096, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gram_positive.html">gram positive</a>
           <span class="sim">0.085</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/has_optimum_oxygen_observation.html">has optimum oxygen observation</a>
           <span class="sim">0.085</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/coccus_shaped.html">coccus shaped</a>
           <span class="sim">0.083</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">observation</span>
           <a href="../../traits/observation/temperature_range_observation.html">temperature range observation</a>
           <span class="sim">0.079</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/has_range_nacl_observation.html">has range NaCl observation</a>
           <span class="sim">0.075</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/non_motile.html">non motile</a>
           <span class="sim">0.072</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/has_growth_nacl_observation.html">has growth NaCl observation</a>
           <span class="sim">0.070</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">observation</span>
           <a href="../../traits/observation/nacl_observation.html">NaCl observation</a>
           <span class="sim">0.068</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -436,76 +436,76 @@ OBI’s input–process–output pattern directly supports this interpretation: 
 - culture
 - environmental sample
 - reference material</pre>
-      
+
       <p class="meta">Showing the first 60 of
         276 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/upper/observation-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
+
     </div>
-    
 
-    
-    
 
-    
 
-    
+
+
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.923123+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-15T00:35:00-07:00</time> ·
           <strong>CURATED_UPPER_CONTEXT</strong> · codex
           <p class="changes">Added definition, DOI-backed evidence, and a measurement-context graph for observation; deprecated observation child records were reviewed as relation/value carriers rather than standalone mechanistic traits.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:32Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T04:29:06Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002234×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T04:35:00Z</time> ·
           <strong>RETYPE_CAUSAL_NODE</strong> · claude
           <p class="changes">Retyped assay_measurement from EXPERIMENTAL_FACTOR to BIOLOGICAL_PROCESS and moved its data_item edge from produces to has output (RO:0002234), issue 301. The node&#39;s own description calls it an investigation process and the record already carried a second has-output edge from it, so the EXPERIMENTAL_FACTOR typing was inconsistent with both. While it stood, the edge routed around the produces/has-output split - that split is spelled as node types, and the exclusion named only the three activity types - and landed on METPO:2007800, whose definition is about producing a chemical entity. Retyping also let the previously blocked measurement_datum has-output edge ground.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope observation_measurement_upper_context=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -534,12 +534,12 @@ OBI’s input–process–output pattern directly supports this interpretation: 
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -890,8 +890,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

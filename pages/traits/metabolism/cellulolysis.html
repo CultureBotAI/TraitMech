@@ -30,22 +30,22 @@
     </p>
     <h1>cellulolysis</h1>
     <p class="curie"><code>traitmech:000111</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A biopolymer-degradation metabolism in which an organism hydrolyzes cellulose to cellodextrins and glucose using cellulase systems, sometimes organized into cellulosomes.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Cellulolysis hydrolyzes cellulose to glucose</h2>
       <p class="meta">Evidence-backed causal sketch linking cellulase systems (cellulosomes / free enzymes) to cellulose hydrolysis into cellodextrins and glucose.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph combines free cellulases and cellulosome organization. The A. thermocellus CelS example supports the cellobiohydrolase and cellulosome branch, not every cellulase or regulatory component in the graph.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>cellulase systems</strong>
             <span class="edge-predicate">confers</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007700</code>
             <p>Cellulase systems hydrolyze cellulose extracellularly.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/MMBR.66.3.506-577.2002</code>
-                
+
                 <span class="meta">Lynd et al. review microbial cellulose utilization and the cellulase systems involved.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>cellulolysis</strong>
             <span class="edge-predicate">produces</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007800</code>
             <p>Cellulose hydrolysis yields cellodextrins and glucose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cbpa.2015.10.018</code>
-                
+
                 <span class="meta">Cragg et al. place cellulose deconstruction within lignocellulose degradation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>endoglucanase</strong>
             <span class="edge-predicate">degrades</span>
@@ -100,16 +100,16 @@
             <code>METPO:2007809</code>
             <p>Endoglucanase participates in concerted hydrolysis of cellulose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
-                
+
                 <span class="meta">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>cellobiohydrolase / exoglucanase</strong>
             <span class="edge-predicate">degrades</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007809</code>
             <p>Cellobiohydrolase/exoglucanase participates in concerted hydrolysis of cellulose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
-                
+
                 <span class="meta">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>beta-glucosidase</strong>
             <span class="edge-predicate">hydrolyzes</span>
@@ -134,16 +134,16 @@
             <code>METPO:2007808</code>
             <p>Beta-glucosidase hydrolyzes cellobiose in the downstream saccharification step.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13568-023-01658-0</code>
-                
+
                 <span class="meta">Beta-glucosidase activity converting cellobiose into glucose.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>beta-glucosidase</strong>
             <span class="edge-predicate">produces</span>
@@ -151,84 +151,84 @@
             <code>METPO:2007800</code>
             <p>Beta-glucosidase releases glucose from cellobiose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13568-023-01658-0</code>
-                
+
                 <span class="meta">Beta-glucosidase activity converting cellobiose into glucose; product edge directly stated.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>cellulosome</strong>
             <span class="edge-predicate">has backbone component</span>
             <strong>scaffoldin</strong>
-            
+
             <p>Cellulosomes are multienzyme complexes built on scaffoldins.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
-                
+
                 <span class="meta">They are multienzyme complexes built on scaffoldins.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>scaffoldin</strong>
             <span class="edge-predicate">contains</span>
             <strong>cohesin domain</strong>
-            
+
             <p>Scaffoldins bear cohesin modules.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2023.1288286</code>
-                
+
                 <span class="meta">Scaffoldins are the non-catalytic backbone and bear modules called cohesin.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>dockerin domain</strong>
             <span class="edge-predicate">binds to</span>
             <strong>cohesin domain</strong>
-            
+
             <p>Dockerin-cohesin interaction assembles enzymes onto the scaffoldin.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
-                
+
                 <span class="meta">Dockerin modules interacting with scaffoldin cohesin modules; canonical assembly interaction.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>carbon catabolite repression</strong>
             <span class="edge-predicate">represses production of</span>
             <strong>cellulase systems</strong>
-            
+
             <p>Carbon catabolite repression lowers production of the cellulase machinery when glucose signals are high.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
                 <span class="evidence-snippet">transcription of lignocellulose-catabolic genes</span>
                 <span class="meta">CcpA recognition of CRE sites represses transcription of the genes encoding lignocellulose-catabolic proteins; the genes are metadata rather than graph nodes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>cellulose</strong>
             <span class="edge-predicate">is hydrolyzed to</span>
@@ -236,16 +236,16 @@
             <code>RO:0001001</code>
             <p>Cellulose depolymerization yields cellobiose as the principal soluble disaccharide product, completing the substrate-to-product cascade.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1742-4658.2010.07585.x</code>
                 <span class="evidence-snippet">cleave off cellobiose</span>
                 <span class="meta">Substrate-product step of the catalytic cascade; cellobiose is the dominant but not the only soluble product (cellodextrins of higher DP also occur).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>cellobiohydrolase / exoglucanase</strong>
             <span class="edge-predicate">produces</span>
@@ -253,16 +253,16 @@
             <code>METPO:2007800</code>
             <p>Cellobiohydrolase processively releases cellobiose from cellulose chain ends.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.01742-24</code>
                 <span class="evidence-snippet">GH48, GH6 with CBM2 domains … release glucose and cellobiose from chain ends</span>
                 <span class="meta">Enzyme-product edge that links the chain-end-acting cellulases to the downstream beta-glucosidase step. Exact product ratio is enzyme-dependent.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>endoglucanase</strong>
             <span class="edge-predicate">part of</span>
@@ -270,16 +270,16 @@
             <code>biolink:part_of</code>
             <p>Endoglucanase is a component activity of the concerted cellulase system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
                 <span class="evidence-snippet">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
                 <span class="meta">Establishes the three component activities as members of one cellulase system rather than independent actors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>cellobiohydrolase / exoglucanase</strong>
             <span class="edge-predicate">part of</span>
@@ -287,16 +287,16 @@
             <code>biolink:part_of</code>
             <p>Cellobiohydrolase/exoglucanase is a component activity of the concerted cellulase system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
                 <span class="evidence-snippet">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
                 <span class="meta">Establishes the three component activities as members of one cellulase system rather than independent actors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>beta-glucosidase</strong>
             <span class="edge-predicate">part of</span>
@@ -304,16 +304,16 @@
             <code>biolink:part_of</code>
             <p>Beta-glucosidase is a component activity of the concerted cellulase system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/jambio/lxac002</code>
                 <span class="evidence-snippet">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
                 <span class="meta">Establishes the three component activities as members of one cellulase system rather than independent actors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-16">
             <strong>cellulosome</strong>
             <span class="edge-predicate">confers</span>
@@ -321,19 +321,19 @@
             <code>METPO:2007700</code>
             <p>Cellulosomes are one of the alternative cellulase-system architectures that confer cellulolysis; they are taxonomically restricted, not universal.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/MMBR.66.3.506-577.2002</code>
                 <span class="evidence-snippet">complexed cellulase systems</span>
                 <span class="meta">Lynd et al. distinguish noncomplexed (free-enzyme) from complexed (cellulosomal) systems as alternative implementations of cellulose utilization. Cellulosomes occur only in restricted lineages; this edge must not be read as a requirement.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -343,16 +343,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>cellobiohydrolase / exoglucanase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0C2S5/entry" rel="nofollow noreferrer"><code>UniProtKB:P0C2S5</code></a>
                   <br>Cellulose 1,4-beta-cellobiosidase (reducing end) CelS <span class="meta">(celS)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1515" rel="nofollow noreferrer">Acetivibrio thermocellus</a>
                   <br><code>NCBITaxon:1515</code>
                 </td>
@@ -363,31 +363,31 @@
                 <td>
                   <p>Catalytic CelS component of the A. thermocellus cellulosome; this accession denotes the cellobiohydrolase component, not the complete cellulosome.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0022-2836(02)00497-7" rel="nofollow noreferrer"><code>DOI:10.1016/S0022-2836(02)00497-7</code></a>
-                      
+
                       <span class="evidence-snippet">Cellobiohydrolase CelS plays an important role in the cellulosome</span>
                       <span class="meta">The primary structural and catalytic study identifies CelS as the major enzymatic component of the A. thermocellus cellulosome. UniProtKB P0C2S5 is the reviewed CelS entry from that species.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -395,116 +395,116 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1128/MMBR.66.3.506-577.2002</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/biopolymer_degradation.html" >biopolymer degradation <code>traitmech:000110</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>cellulolytic <span class="meta">RELATED_SYNONYM · DOI:10.1128/MMBR.66.3.506-577.2002</span></li>
-        
+
         <li>cellulose degradation <span class="meta">RELATED_SYNONYM · DOI:10.1128/MMBR.66.3.506-577.2002</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -575,153 +575,153 @@ The trait can be aerobic or anaerobic. Free secreted enzymes, cell-surface syste
 - cellulose 1,4-β-cellobiosidase/cellobiohydrolase — `EC:3.2.1.91`
 - β-glucosidase — `EC:3.2.1.21`
 - processive GH9 endoglucanase; GH6/GH48 exoglucanase; GH3 β-glucosidase</pre>
-      
+
       <p class="meta">Showing the first 60 of
         240 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/cellulolysis-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Acetivibrio thermocellus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1515"
              rel="nofollow noreferrer"><code>NCBITaxon:1515</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1016/S0022-2836(02)00497-7"
              rel="nofollow noreferrer"><code>DOI:10.1016/S0022-2836(02)00497-7</code></a>
-          
-          
+
+
           <span class="meta">Thermophilic anaerobe secreting the paradigm cellulosome (formerly Clostridium thermocellum). Ruminococcus is the mesophilic rumen model.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-08T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (cellulolysis); sub-variant of biopolymer degradation.</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (cellulase hydrolysis of cellulose) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17234×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:32Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:18246×1, GO:0043263×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:38Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000007×2, METPO:2000013×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A060H8L4×1, UniProtKB:A0A031JNC1×1, UniProtKB:A0A174EJP3×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:11Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:53Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0008422×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-30T00:00:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Deep-research audit (Edison/PaperQA3 + Codex) found the graph split into 4 disconnected components with 9 of 14 nodes unreachable from the trait node. Added 7 evidence-backed edges to merge them into one connected graph: cellulose→cellobiose, cellobiohydrolase→cellobiose, endoglucanase/cellobiohydrolase/beta_glucosidase part_of cellulase, cellulosome→enables→trait, cellulolytic_genes→encodes→cellulase. Grounded cellobiose (CHEBI:17057). Retyped cellulosome CELLULAR_LOCALIZATION→GENE_OR_PROTEIN (a complex, not a location; GO:0043263 grounding retained). Deferred to a follow-up pass: LPMO/CBM/transport/phosphorolysis branches, splitting cellobiohydrolase by chain end, and replacing the generic CCR edge with taxon-specific cip-cel evidence.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 6 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (2 to degrades, 1 to hydrolyzes, 3 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T05:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the cellulose is-hydrolyzed-to cellobiose edge from METPO:2000013 to RO:0001001 (derives into), issue 327. METPO:2000013 reads agent-to-substrate, so grounding a substrate-to-product edge to it asserted that cellulose hydrolyses cellobiose; it also inherits rdfs:domain METPO:1000525 (microbe) via METPO:2000001, which no causal node type can satisfy (issue 301). RO:0001001 holds between an old and a new material entity where the new inherits the significant portion of the old&#39;s matter, which is exactly what depolymerisation does, and it declares no domain. The label is kept because it names the mechanism, which the general relation does not. This was the last of the 366 edges in issue 301.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T04:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813, issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so the CURIE resolved to nothing upstream while looking like an upstream term to anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv, which is not read at the point of use. RO:0002205 (has gene product) is the nearest real term but relates a GENE to a gene product, whereas these edges relate a gene cluster or operon to a protein complex or a biosynthetic process, which its range does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it, which puts it in the same state as the rest of that cohort rather than in a category of its own.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T09:10:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the cellulase-system graph, added a DOI-backed A. thermocellus CelS example, grounded cellulase activities and cohesin/dockerin modules, and documented the remaining system-level labels as reviewed label-only.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -750,12 +750,12 @@ The trait can be aerobic or anaerobic. Free secreted enzymes, cell-surface syste
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1106,8 +1106,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-24 09:10 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

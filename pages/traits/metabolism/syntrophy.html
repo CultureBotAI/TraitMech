@@ -30,22 +30,22 @@
     </p>
     <h1>Syntrophy</h1>
     <p class="curie"><code>METPO:1002006</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metabolism in which the metabolism of one species is thermodynamically dependent on the removal of its products by another species.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Syntrophy interspecies electron transfer mechanism</h2>
       <p class="meta">DOI-backed graph for product removal and electron transfer between fermenting syntrophs and methanogenic partners.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This broad graph covers hydrogen-, formate-, and direct-electron-transfer branches that are not universal to every syntrophic partnership. The S. wolfei Swol_1933 example specifically supports syntrophic butyrate oxidation and does not establish the taxon-general DIET branch.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,28 +54,28 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>Syntrophy</strong>
             <span class="edge-predicate">requires partner interaction</span>
             <strong>methanogenic product consumption</strong>
-            
+
             <p>Syntrophic metabolism depends on a partner that consumes products.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">metabolic abilities of their syntrophic partner</span>
                 <span class="meta">Supports partner dependence in syntrophic communities.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>syntrophic product formation</strong>
             <span class="edge-predicate">transfers electrons via</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007600</code>
             <p>Hydrogen can carry reducing equivalents between syntrophic partners.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">Hydrogen and formate are key components</span>
                 <span class="meta">Supports hydrogen as a key interspecies electron-transfer carrier.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>syntrophic product formation</strong>
             <span class="edge-predicate">transfers electrons via</span>
@@ -100,16 +100,16 @@
             <code>METPO:2007600</code>
             <p>Formate can carry reducing equivalents between syntrophic partners.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">transfer of hydrogen and formate</span>
                 <span class="meta">Supports formate-mediated interspecies electron transfer.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>methanogenic product consumption</strong>
             <span class="edge-predicate">consumes</span>
@@ -117,16 +117,16 @@
             <code>biolink:consumes</code>
             <p>Methanogens keep hydrogen concentrations low enough for syntrophic metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">low hydrogen concentrations, which are created by the methanogen</span>
                 <span class="meta">Supports product removal by methanogens as a thermodynamic driver.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>methanogenic product consumption</strong>
             <span class="edge-predicate">creates</span>
@@ -134,16 +134,16 @@
             <code>biolink:produces</code>
             <p>Hydrogen consumption creates the product-removal condition needed by the syntroph.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">live at the limits of what is thermodynamically possible</span>
                 <span class="meta">Supports the thermodynamic constraint that product removal relieves.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>molecular hydrogen</strong>
             <span class="edge-predicate">participates in</span>
@@ -151,16 +151,16 @@
             <code>biolink:participates_in</code>
             <p>Hydrogen can feed methanogenesis in syntrophic communities.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2166</code>
                 <span class="evidence-snippet">syntrophic methanogenic communities</span>
                 <span class="meta">Supports hydrogen-linked electron flow into methanogenic partners.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>butyryl-CoA dehydrogenase Swol_1933</strong>
             <span class="edge-predicate">participates in</span>
@@ -168,16 +168,16 @@
             <code>biolink:participates_in</code>
             <p>Swol_1933 catalyzes the butyryl-CoA oxidation step of syntrophic butyrate degradation in S. wolfei.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/JB.01605-08</code>
                 <span class="evidence-snippet">syntrophic oxidation of butyrate in S. wolfei involves butyryl-CoA dehydrogenases</span>
                 <span class="meta">Purified Bcd activity and peptide mass fingerprinting identified Swol_1933 in butyrate-grown cells, directly supporting this strain-specific mechanistic edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>low hydrogen partial pressure</strong>
             <span class="edge-predicate">enables</span>
@@ -185,155 +185,155 @@
             <code>RO:0002327</code>
             <p>H2-mediated transfer is thermodynamically feasible only at extremely low H2 partial pressure.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/fermentation9050467</code>
-                
+
                 <span class="meta">H2-mediated transfer thermodynamically feasible only when H2 &lt; 10^-4 atm.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>interspecies hydrogen transfer</strong>
             <span class="edge-predicate">mediates</span>
             <strong>Syntrophy</strong>
-            
+
             <p>Interspecies hydrogen transfer is a core mechanistic sub-process of syntrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/fermentation9050467</code>
-                
+
                 <span class="meta">H2-mediated MIET (IHT) is a main interspecies electron transfer mode relevant to syntrophy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>interspecies formate transfer</strong>
             <span class="edge-predicate">mediates</span>
             <strong>Syntrophy</strong>
-            
+
             <p>Interspecies formate transfer is a core mechanistic sub-process of syntrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuab057</code>
-                
+
                 <span class="meta">Interspecies formate transfer is one of three IET mechanisms in syntrophic propionate oxidation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>formate dehydrogenase complex</strong>
             <span class="edge-predicate">mediates</span>
             <strong>interspecies formate transfer</strong>
-            
+
             <p>Formate dehydrogenases provide the enzymatic basis for formate production/consumption in syntrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40168-020-00885-y</code>
-                
+
                 <span class="meta">Formate dehydrogenases and formate transporters expressed by FA-degrading syntrophic species.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>hydrogenase complex</strong>
             <span class="edge-predicate">mediates</span>
             <strong>interspecies hydrogen transfer</strong>
-            
+
             <p>Hydrogenases provide the enzymatic basis for H2 production/consumption in syntrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41396-023-01504-y</code>
-                
+
                 <span class="meta">Hydrogen-mediated transfer supported by expression of hydrogenases in syntrophic communities.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>direct interspecies electron transfer</strong>
             <span class="edge-predicate">bypasses</span>
             <strong>hydrogen pressure inhibition</strong>
-            
+
             <p>DIET can overcome inhibition by hydrogen pressure, enabling syntrophy without soluble carriers.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/fermentation9100884</code>
-                
+
                 <span class="meta">DIET can overcome the inhibition of hydrogen pressure and formate concentration.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>conductive pili (e-pili)</strong>
             <span class="edge-predicate">mediates</span>
             <strong>direct interspecies electron transfer</strong>
-            
+
             <p>Conductive pili (e-pili) are a canonical DIET conduit.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1134/S0026261720020101</code>
-                
+
                 <span class="meta">DIET occurs via conductive pili (e-pili).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>multiheme c-type cytochromes</strong>
             <span class="edge-predicate">mediates</span>
             <strong>direct interspecies electron transfer</strong>
-            
+
             <p>Outer-surface multiheme c-type cytochromes are a core DIET redox conduit.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/life14050591</code>
-                
+
                 <span class="meta">DIET operates via outer-surface c-type cytochromes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-16">
             <strong>direct interspecies electron transfer</strong>
             <span class="edge-predicate">mediates</span>
             <strong>Syntrophy</strong>
-            
+
             <p>Direct interspecies electron transfer is one mechanism that can mediate syntrophic growth without diffusible hydrogen or formate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2016.00236</code>
                 <span class="evidence-snippet">Direct interspecies electron transfer (DIET) has been recognized as an alternative to interspecies H2 transfer as a mechanism for syntrophic growth</span>
                 <span class="meta">Verified against the freely available primary-study abstract; the edge does not assert that DIET occurs in every syntrophic pair.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -343,16 +343,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>butyryl-CoA dehydrogenase Swol_1933</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q0AVM4/entry" rel="nofollow noreferrer"><code>UniProtKB:Q0AVM4</code></a>
                   <br>Butyryl-CoA dehydrogenase Swol_1933 <span class="meta">(Swol_1933)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335541" rel="nofollow noreferrer">Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)</a>
                   <br><code>NCBITaxon:335541</code>
                 </td>
@@ -363,31 +363,31 @@
                 <td>
                   <p>One of the experimentally identified butyryl-CoA dehydrogenases active during syntrophic butyrate oxidation; this example is not a hydrogenase or a marker for every syntrophic metabolism.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1128/JB.01605-08" rel="nofollow noreferrer"><code>DOI:10.1128/JB.01605-08</code></a>
-                      
+
                       <span class="evidence-snippet">peptide mass fingerprinting revealed two Bcd proteins</span>
                       <span class="meta">The primary study maps one purified approximately 65-kDa protein to Swol_1933 during syntrophic growth on butyrate; UniProtKB Q0AVM4 is the reviewed protein entry for that locus and strain.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -397,103 +397,103 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Jed Dongjin Kim-Ozaeta</dd>
         <dt>Definition source</dt><dd>DOI:10.1038/nrmicro2166</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
 
-    
+
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1002006</code> <span class="dim-preview">[-0.312, -0.639, -1.585, +0.222, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
           <span class="sim">0.975</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxidative_phosphorylation.html">Oxidative phosphorylation</a>
           <span class="sim">0.974</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
           <span class="sim">0.973</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
           <span class="sim">0.972</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
           <span class="sim">0.971</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.969</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/nitrogen_fixation.html">nitrogen fixation</a>
           <span class="sim">0.938</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxygenic_photosynthesis.html">oxygenic photosynthesis</a>
           <span class="sim">0.938</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -564,148 +564,148 @@ Identifiers below are deliberately conservative. Labels without a CURIE require 
 
 - Syntrophy — **METPO:1002006**
 - Interspecies hydrogen transfer</pre>
-      
+
       <p class="meta">Showing the first 60 of
         349 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/syntrophy-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Syntrophomonas wolfei</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=863"
              rel="nofollow noreferrer"><code>NCBITaxon:863</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/AEM.41.4.1029-1039.1981"
              rel="nofollow noreferrer"><code>DOI:10.1128/AEM.41.4.1029-1039.1981</code></a>
-          
-          
+
+
           <span class="meta">Type species of Syntrophomonas; original syntrophic fatty-acid oxidiser (coculture with Methanospirillum hungatei).</span>
         </li>
-        
+
         <li>
           <em>Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335541"
              rel="nofollow noreferrer"><code>NCBITaxon:335541</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/JB.01605-08"
              rel="nofollow noreferrer"><code>DOI:10.1128/JB.01605-08</code></a>
-          
-          
+
+
           <span class="meta">Reference-proteome strain in which Swol_1933 was identified as one of two butyryl-CoA dehydrogenases expressed during syntrophic growth on butyrate.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.936190+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for hydrogen/formate interspecies electron transfer and methanogenic product removal in syntrophy.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T05:49:24Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:consumes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:48Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: input to → participates in ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:participates_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T07:26:19Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007600×2).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:54Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009326×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T10:35:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the cross-taxon syntrophy graph, replaced the canonical species URL with its DOI, added the S. wolfei DSM 2245B canonical strain and reviewed Swol_1933 protein example, added its evidence-backed butyrate-oxidation edge, and dispositioned broad hydrogenase and multiheme-cytochrome labels.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T08:20:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -734,12 +734,12 @@ Identifiers below are deliberately conservative. Labels without a CURIE require 
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1090,8 +1090,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 08:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

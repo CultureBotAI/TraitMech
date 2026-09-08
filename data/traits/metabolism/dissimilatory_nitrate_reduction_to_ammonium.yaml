@@ -8,7 +8,7 @@ trait_category: METABOLISM
 term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
-- METPO:1000802
+- traitmech:000121
 synonyms:
 - synonym_text: DNRA
   synonym_type: EXACT_SYNONYM
@@ -263,4 +263,9 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: REFINE_PARENT_TRAIT
+  changes: Narrowed parent from anaerobic respiration to nitrogen respiration.
   llm_assisted: true

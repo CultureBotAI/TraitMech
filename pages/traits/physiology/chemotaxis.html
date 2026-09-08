@@ -30,22 +30,22 @@
     </p>
     <h1>chemotaxis</h1>
     <p class="curie"><code>traitmech:000086</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A behavioral physiology in which cells bias their movement toward attractants or away from repellents by modulating flagellar motor switching in response to chemical gradients.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Gradient-guided chemotactic movement</h2>
       <p class="meta">Evidence-backed causal sketch linking chemical gradients to biased motility via flagellar motor control.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents the enterobacterial CheA-CheY pathway exemplified by E. coli K-12. Chemotaxis systems in other taxa can omit CheZ, use alternative adaptation proteins, or contain multiple paralogous receptor arrays.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>chemical gradient</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>A chemical gradient drives the chemotaxis signaling response.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrm1524</code>
-                
+
                 <span class="meta">Wadhams &amp; Armitage review gradient-guided chemotaxis signaling.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>chemotaxis</strong>
             <span class="edge-predicate">confers</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007700</code>
             <p>The chemotaxis signaling process realizes the trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2505</code>
-                
+
                 <span class="meta">Porter et al. review chemotaxis signal processing.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>chemoreceptor (MCP)</strong>
             <span class="edge-predicate">modulates</span>
@@ -100,135 +100,135 @@
             <code>RO:0002211</code>
             <p>Effector binding to chemoreceptors modulates CheA autophosphorylation activity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">Upon effector binding to the receptor, the autophosphorylation activity of CheA is modulated by chemoreceptors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>CheA histidine kinase</strong>
             <span class="edge-predicate">phosphorylates</span>
             <strong>CheY response regulator</strong>
-            
+
             <p>Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>CheA histidine kinase</strong>
             <span class="edge-predicate">phosphorylates</span>
             <strong>CheB methylesterase</strong>
-            
+
             <p>Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>CheY response regulator</strong>
             <span class="edge-predicate">induces</span>
             <strong>clockwise flagellar rotation</strong>
-            
+
             <p>Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">CheY-P interacts with the flagella to induce clockwise rotation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>CheZ phosphatase</strong>
             <span class="edge-predicate">dephosphorylates</span>
             <strong>CheY response regulator</strong>
-            
+
             <p>CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of CheY is available.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>CheR methyltransferase</strong>
             <span class="edge-predicate">methylates</span>
             <strong>chemoreceptor (MCP)</strong>
-            
+
             <p>CheR methylates chemoreceptors as part of the reversible adaptation system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">CheB, along with CheR, constitutes an adaptation system that reversibly methylates receptors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>CheB methylesterase</strong>
             <span class="edge-predicate">demethylates</span>
             <strong>chemoreceptor (MCP)</strong>
-            
+
             <p>CheB demethylates chemoreceptors as part of the reversible adaptation system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">CheB, along with CheR, constitutes an adaptation system that reversibly methylates/demethylates receptors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>CheW coupling protein</strong>
             <span class="edge-predicate">scaffolds</span>
             <strong>CheA histidine kinase</strong>
-            
+
             <p>CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-032421-110850</code>
-                
+
                 <span class="meta">The coupling protein CheW secures CheA; the baseplate consists of the chemoreceptor PIR, CheA, and CheW.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>chemoreceptor (MCP)</strong>
             <span class="edge-predicate">contributes to</span>
@@ -236,19 +236,19 @@
             <code>RO:0002326</code>
             <p>Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.tim.2022.10.007</code>
                 <span class="evidence-snippet">The chemoreceptor nanoarray complexes with the cytosolic histidine kinase chemotaxis protein A (CheA) and regulates its autophosphorylation based on chemoreceptor ligand occupancy</span>
                 <span class="meta">Verified against the public PMC author manuscript.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -258,16 +258,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>CheY response regulator</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0AE67/entry" rel="nofollow noreferrer"><code>UniProtKB:P0AE67</code></a>
                   <br>Chemotaxis protein CheY <span class="meta">(cheY)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
                   <br><code>NCBITaxon:83333</code>
                 </td>
@@ -278,31 +278,31 @@
                 <td>
                   <p>Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1073/pnas.1000935107" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1000935107</code></a>
-                      
+
                       <span class="evidence-snippet">Chemotaxis signaling protein CheY binds to the rotor protein FliN</span>
                       <span class="meta">The primary E. coli motor study directly links CheY to control of flagellar rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -310,123 +310,123 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrm1524</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>chemotactic <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrm1524</span></li>
-        
+
         <li>taxis in response to chemical stimulus <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0006935</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -497,136 +497,136 @@ Ontology assignments below are deliberately conservative. Identifiers are sugges
 
 ### Chemicals and molecular states
 </pre>
-      
+
       <p class="meta">Showing the first 60 of
         202 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/chemotaxis-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1038/nrm1524"
              rel="nofollow noreferrer"><code>DOI:10.1038/nrm1524</code></a>
-          
-          
+
+
           <span class="meta">Paradigm of bacterial chemotaxis (flagellar run-and-tumble; Che two-component signalling).</span>
         </li>
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1073/pnas.1000935107"
              rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1000935107</code></a>
-          
-          
+
+
           <span class="meta">Reference strain for the canonical Che phosphorelay; CheY binding to the flagellar switch controls rotational direction.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-04T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate PHYSIOLOGY trait (chemotaxis), a behavioral response; distinct from the morphological motility apparatus.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (gradient-guided chemotaxis) with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:G0HQV3×1, UniProtKB:A0A2X5A7X5×1, UniProtKB:A0A100WWV3×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T11:10:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the graph to the enterobacterial Che pathway, added cited E. coli K-12 and reviewed CheY as a taxon-paired example, and reviewed all seven protein nodes against current InterPro families.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T06:15:41Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006935; declared exact synonym(s): &#39;taxis in response to chemical stimulus&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T09:35:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) with one public-source, verbatim-snippet-backed connector. No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -655,12 +655,12 @@ Ontology assignments below are deliberately conservative. Identifiers are sugges
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1011,8 +1011,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 09:35 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

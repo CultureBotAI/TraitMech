@@ -30,22 +30,22 @@
     </p>
     <h1>restriction-modification system</h1>
     <p class="curie"><code>traitmech:000095</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A genomics trait describing possession of a restriction-modification system that distinguishes self from non-self DNA through sequence-specific methylation and cleavage of unmethylated DNA by a restriction endonuclease.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Restriction-modification distinguishes self from non-self DNA</h2>
       <p class="meta">Evidence-backed causal sketch linking R-M system possession to sequence-specific cleavage of unmethylated foreign DNA.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The HindII accession anchors the type II restriction-endonuclease branch in H. influenzae Rd. It is not presented as an example of the cognate methyltransferase, type IV enzymes, or mobile-element counterdefense proteins.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>restriction-modification system</strong>
             <span class="edge-predicate">enables</span>
@@ -66,16 +66,16 @@
             <code>RO:0002327</code>
             <p>R-M systems realize self-vs-non-self discrimination by paired methylation and restriction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/MMBR.00044-12</code>
-                
+
                 <span class="meta">Vasu &amp; Nagaraja review R-M systems and their defense functions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>DNA restriction-modification system</strong>
             <span class="edge-predicate">mitigates</span>
@@ -83,50 +83,50 @@
             <code>METPO:2007407</code>
             <p>Restriction endonuclease cleavage destroys unmethylated foreign DNA before it can establish.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2015.00528</code>
-                
+
                 <span class="meta">R-M systems as engines of genomic diversity through differential cleavage of foreign DNA.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>cognate DNA methyltransferase</strong>
             <span class="edge-predicate">methylates</span>
             <strong>host recognition site methylation</strong>
-            
+
             <p>The cognate methyltransferase methylates host recognition sites, marking self DNA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkad452</code>
-                
+
                 <span class="meta">A methyltransferase methylates those sites to protect host DNA (shaw2023).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>host recognition site methylation</strong>
             <span class="edge-predicate">protects against</span>
             <strong>restriction endonuclease cleavage</strong>
-            
+
             <p>Methylation of host recognition sites protects self DNA from cognate restriction endonuclease cleavage.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkad452</code>
-                
+
                 <span class="meta">Host DNA is protected while incoming foreign DNA lacking the same methylation is cleaved (shaw2023).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>restriction endonuclease</strong>
             <span class="edge-predicate">has function</span>
@@ -134,16 +134,16 @@
             <code>RO:0000085</code>
             <p>The restriction endonuclease cleaves unmethylated foreign double-stranded DNA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkad452</code>
-                
+
                 <span class="meta">A restriction endonuclease cuts double-stranded DNA; unmethylated foreign DNA is cleaved (shaw2023).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>restriction endonuclease cleavage</strong>
             <span class="edge-predicate">mitigates</span>
@@ -151,53 +151,53 @@
             <code>METPO:2007407</code>
             <p>Restriction endonuclease cleavage destroys unmethylated foreign DNA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkad452</code>
-                
+
                 <span class="meta">Incoming foreign DNA lacking host methylation is cleaved (shaw2023).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>plasmid-encoded methylase</strong>
             <span class="edge-predicate">protects against</span>
             <strong>restriction endonuclease cleavage</strong>
-            
+
             <p>Plasmid-encoded methylases pre-methylate plasmid DNA, protecting it from host restriction activity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkae896</code>
-                
+
                 <span class="meta">Some plasmids encode methylases that protect against restriction activity (dimitriu2024).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>phage-encoded DNA methyltransferase</strong>
             <span class="edge-predicate">protects against</span>
             <strong>restriction endonuclease cleavage</strong>
-            
+
             <p>Phage-encoded DNA methyltransferases methylate the phage genome to reduce host RM restriction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/MMBR.00044-12</code>
-                
+
                 <span class="meta">Phages encode DNA methyltransferases to protect their genomes from restriction (vasu2013).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -207,16 +207,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>restriction endonuclease</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P44413/entry" rel="nofollow noreferrer"><code>UniProtKB:P44413</code></a>
                   <br>Type II restriction enzyme HindII <span class="meta">(hindIIR)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=71421" rel="nofollow noreferrer">Haemophilus influenzae Rd KW20</a>
                   <br><code>NCBITaxon:71421</code>
                 </td>
@@ -227,31 +227,31 @@
                 <td>
                   <p>HindII recognizes its target sequence and cleaves foreign double-stranded DNA as the restriction component of the HindII system.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://pubmed.ncbi.nlm.nih.gov/5312500/" rel="nofollow noreferrer"><code>PMID:5312500</code></a>
-                      
+
                       <span class="evidence-snippet">restriction enzyme from Hemophilus influenzae</span>
                       <span class="meta">The original H. influenzae work characterized the sequence-specific restriction activity; UniProt verifies the reviewed Rd HindII protein.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -259,114 +259,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1128/MMBR.00044-12</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>R-M system <span class="meta">RELATED_SYNONYM · DOI:10.1128/MMBR.00044-12</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/gc_skew.html">GC skew</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -437,124 +437,124 @@ Type II systems are especially clear examples: an REase cuts double-stranded DNA
 - Type III Mod subunit — label-only
 - Type III Res subunit — label-only
 - controller protein / C protein — optional, system-specific label-only node; no general edge should be curated without locus-specific evidence</pre>
-      
+
       <p class="meta">Showing the first 60 of
         224 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/genomics/restriction_modification_system-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Haemophilus influenzae</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=727"
              rel="nofollow noreferrer"><code>NCBITaxon:727</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/5312500/"
              rel="nofollow noreferrer"><code>PMID:5312500</code></a>
-          
-          
+
+
           <span class="meta">Source of HindII, the first type II restriction endonuclease characterized; classic restriction-modification model.</span>
         </li>
-        
+
         <li>
           <em>Haemophilus influenzae Rd KW20</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=71421"
              rel="nofollow noreferrer"><code>NCBITaxon:71421</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/5312500/"
              rel="nofollow noreferrer"><code>PMID:5312500</code></a>
-          
-          
+
+
           <span class="meta">Genome-strain exemplar paired to reviewed HindII, the historically characterized type II restriction endonuclease.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-05T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate GENOMICS trait (restriction-modification system) from literature research to fill the genome-defense-system gap.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (R-M self / non-self defense) with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0000085×1, METPO:2007407×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A015ZKG4×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:11Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope rm_self_nonself_defense=MECHANISTIC with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (cognate_mtase, restriction_endonuclease, type_iv_restriction_enzyme, plasmid_methylase, phage_mtase); added taxon-paired protein example(s) UniProtKB:P44413 on restriction_endonuclease (NCBITaxon:71421); added canonical example(s) NCBITaxon:71421.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T05:40:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) using 0 snippet-backed connector(s) supported by source passages. Removed the explicitly out-of-scope Type IV subtype island; the tracked report identifies modification-dependent restriction as distinct from the canonical Types I-III self/non-self mechanism. No research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -583,12 +583,12 @@ Type II systems are especially clear examples: an REase cuts double-stranded DNA
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -939,8 +939,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 05:40 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

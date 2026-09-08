@@ -1,0 +1,27 @@
+identifier: traitmech:000122
+label: nitrate respiration
+definition: A nitrogen respiration in which nitrate is the terminal electron acceptor,
+  reduced to nitrite or further reduced products.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000121
+- traitmech:000134
+synonyms:
+- synonym_text: nitrate_respiration
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+evidence:
+- reference: DOI:10.1126/science.1254070
+  snippet: bacterial nitrate respiration
+  notes: Kraft et al. support nitrate respiration as a bacterial nitrogen-oxide respiration
+    branch with denitrification or DNRA endpoints.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

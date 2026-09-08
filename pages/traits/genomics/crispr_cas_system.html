@@ -30,22 +30,22 @@
     </p>
     <h1>CRISPR-Cas system</h1>
     <p class="curie"><code>traitmech:000094</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A genomics trait describing possession of a CRISPR-Cas adaptive immune system that records fragments of invading nucleic acids in CRISPR arrays and uses Cas proteins to recognize and cleave matching sequences.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>CRISPR-Cas adaptive immunity against invading nucleic acids</h2>
       <p class="meta">Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery to defense against invading mobile genetic elements.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The protein example anchors the experimentally resolved S. pyogenes type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and the Cas9 accession is not presented as an example of every CRISPR-Cas type.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>Cas9 effector protein</strong>
             <span class="edge-predicate">confers</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007700</code>
             <p>Cas9 together with CRISPR-derived guide RNAs realizes the type II adaptive immune interference system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41579-019-0299-x</code>
-                
+
                 <span class="meta">Makarova et al. classify type II CRISPR-Cas systems by Cas9 content; the protein example is restricted to this branch.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>CRISPR-Cas system</strong>
             <span class="edge-predicate">participates in</span>
@@ -83,33 +83,33 @@
             <code>biolink:participates_in</code>
             <p>CRISPR-Cas mounts sequence-specific defense against invading genetic elements.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.molcel.2014.03.011</code>
-                
+
                 <span class="meta">Barrangou &amp; Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>Cas1-Cas2 complex</strong>
             <span class="edge-predicate">integrates spacers via</span>
             <strong>spacer acquisition (adaptation)</strong>
-            
+
             <p>Cas1-Cas2 complexes act as molecular recorders that integrate new spacers into the CRISPR array during adaptation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.5483/bmbrep.2023-0050</code>
-                
+
                 <span class="meta">Cas1-Cas2 complexes function as molecular recorders to integrate spacers; core adaptation edge, broad across canonical CRISPR-Cas systems.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>CRISPR array transcription and processing</strong>
             <span class="edge-predicate">has output</span>
@@ -117,50 +117,50 @@
             <code>RO:0002234</code>
             <p>Transcription and processing of the CRISPR array yields mature crRNAs.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.heliyon.2024.e39538</code>
-                
+
                 <span class="meta">CRISPR arrays are transcribed and processed into crRNAs; general edge across systems.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>crRNA</strong>
             <span class="edge-predicate">guides</span>
             <strong>crRNA-Cas effector complex</strong>
-            
+
             <p>crRNA assembles with Cas effector(s) to form the interference-competent effector complex.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.5483/bmbrep.2023-0050</code>
-                
+
                 <span class="meta">Effector-crRNA complexes drive the RNA-guided interference pathways.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>crRNA-Cas effector complex</strong>
             <span class="edge-predicate">cleaves</span>
             <strong>invading nucleic acid target</strong>
-            
+
             <p>The crRNA-Cas effector complex recognizes and cleaves complementary invading nucleic acid targets.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.5483/bmbrep.2023-0050</code>
-                
+
                 <span class="meta">Effector-crRNA complexes perform RNA-guided interference against invading targets; high-level interference edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>phage and plasmid pressure</strong>
             <span class="edge-predicate">selects for</span>
@@ -168,16 +168,16 @@
             <code>METPO:2007401</code>
             <p>Selective pressure from invading phages and plasmids favors maintenance of CRISPR-Cas immunity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.5483/bmbrep.2023-0050</code>
-                
+
                 <span class="meta">CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids; broad ecological selection edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>crRNA-Cas effector complex</strong>
             <span class="edge-predicate">contributes to</span>
@@ -185,16 +185,16 @@
             <code>RO:0002326</code>
             <p>crRNA-guided interference by the effector complex realizes the adaptive-defense trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.5483/bmbrep.2023-0050</code>
                 <span class="evidence-snippet">Effector-crRNA complexes perform RNA-guided interference against invading targets</span>
                 <span class="meta">The connector is scoped to the interference branch and does not universalize one effector subtype.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Cas1-Cas2 complex</strong>
             <span class="edge-predicate">confers</span>
@@ -202,19 +202,19 @@
             <code>METPO:2007700</code>
             <p>Cas1-Cas2 spacer acquisition realizes the adaptation branch of CRISPR-Cas immunity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nsmb.2820</code>
                 <span class="evidence-snippet">Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition</span>
                 <span class="meta">The primary study directly tests the Cas1-Cas2 adaptation complex; this branch is not projected onto interference-only systems.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -224,16 +224,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>Cas9 effector protein</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q99ZW2/entry" rel="nofollow noreferrer"><code>UniProtKB:Q99ZW2</code></a>
                   <br>CRISPR-associated endonuclease Cas9 <span class="meta">(cas9)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=301447" rel="nofollow noreferrer">Streptococcus pyogenes serotype M1</a>
                   <br><code>NCBITaxon:301447</code>
                 </td>
@@ -244,31 +244,31 @@
                 <td>
                   <p>S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1126/science.1225829" rel="nofollow noreferrer"><code>DOI:10.1126/science.1225829</code></a>
-                      
+
                       <span class="evidence-snippet">Cas9 endonuclease family can be programmed</span>
                       <span class="meta">The primary biochemical study purified S. pyogenes Cas9 and established dual-RNA-guided target-DNA cleavage; UniProt verifies the reviewed protein.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -276,114 +276,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/s41579-019-0299-x</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>CRISPR array <span class="meta">RELATED_SYNONYM · DOI:10.1038/s41579-019-0299-x</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/gc_skew.html">GC skew</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -454,124 +454,124 @@ A recent example of strong taxonomic enrichment is *L. crispatus*: CRISPR loci o
 | plasmid | Foreign DNA target/source | `GO:0005727` (extrachromosomal circular DNA) may be useful only where biologically appropriate |
 
 ### Nucleic acids and chemicals</pre>
-      
+
       <p class="meta">Showing the first 60 of
         264 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/genomics/crispr_cas_system-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Streptococcus thermophilus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1308"
              rel="nofollow noreferrer"><code>NCBITaxon:1308</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/17379808/"
              rel="nofollow noreferrer"><code>PMID:17379808</code></a>
-          
-          
+
+
           <span class="meta">Organism in which CRISPR-Cas adaptive immunity was experimentally demonstrated (Barrangou et al. 2007); dairy model for CRISPR biology.</span>
         </li>
-        
+
         <li>
           <em>Streptococcus pyogenes serotype M1</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=301447"
              rel="nofollow noreferrer"><code>NCBITaxon:301447</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1126/science.1225829"
              rel="nofollow noreferrer"><code>DOI:10.1126/science.1225829</code></a>
-          
-          
+
+
           <span class="meta">Type II CRISPR-Cas exemplar paired to reviewed Cas9 used to demonstrate dual-RNA-guided target-DNA cleavage.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-05T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate GENOMICS trait (CRISPR-Cas system) from literature research to fill the genome-defense-system gap.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (CRISPR adaptive immunity) with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 5 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, METPO:2007401×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope crispr_adaptive_immunity=MECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (cas1_cas2_complex); added taxon-paired protein example(s) UniProtKB:Q99ZW2 on cas9_effector (NCBITaxon:301447); retyped 2 node(s) (crrna-&gt;RNA, crrna_effector_complex-&gt;RNA); added 1 node(s) and 1 edge(s) (cas9_effector); removed 1 node(s) and 1 edge(s) together with their evidence (cas_proteins); added canonical example(s) NCBITaxon:301447.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T05:40:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (3 components to 1) using 2 snippet-backed connector(s) supported by source passages. No research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -600,12 +600,12 @@ A recent example of strong taxonomic enrichment is *L. crispatus*: CRISPR loci o
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -956,8 +956,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 05:40 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

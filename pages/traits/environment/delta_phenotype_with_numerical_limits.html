@@ -30,22 +30,22 @@
     </p>
     <h1>delta phenotype with numerical limits</h1>
     <p class="curie"><code>METPO:1000534</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A phenotype characterized by the difference between maximum and minimum values of a growth parameter.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Delta phenotype breadth descriptor across environmental axes</h2>
       <p class="meta">DOI-backed graph framing the delta phenotype as a generic derived breadth descriptor over any numerical environmental axis, with `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and temperature.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>numerical environmental axis</strong>
             <span class="edge-predicate">defines</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007500</code>
             <p>A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuy009</code>
                 <span class="evidence-snippet">salinity range</span>
                 <span class="meta">Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>NaCl delta</strong>
             <span class="edge-predicate">is a</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>NaCl delta is an axis-specific delta phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuy009</code>
                 <span class="evidence-snippet">salinity range</span>
                 <span class="meta">Supports NaCl delta as a delta phenotype defined over the salinity axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>pH delta</strong>
             <span class="edge-predicate">is a</span>
@@ -100,16 +100,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH delta is an axis-specific delta phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">pH homeostasis</span>
                 <span class="meta">Supports pH delta as a delta phenotype defined over the external-pH axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>temperature delta</strong>
             <span class="edge-predicate">is a</span>
@@ -117,33 +117,33 @@
             <code>rdfs:subClassOf</code>
             <p>Temperature delta is an axis-specific delta phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/s0300-9629(97)00003-0</code>
                 <span class="evidence-snippet">adapted to environments of high temperature</span>
                 <span class="meta">Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>homeoviscous adaptation</strong>
             <span class="edge-predicate">maintains</span>
             <strong>membrane fluidity/stability</strong>
-            
+
             <p>Homeoviscous adaptation regulates lipid composition to maintain membrane fluidity/structure under temperature, salinity, and pH stress.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/d4cc03114h</code>
-                
+
                 <span class="meta">Key strategies include homeoviscous adaptation (HVA), involving the regulation of lipid composition; linked to tolerance of temperature, salinity, and pH extremes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>membrane fluidity/stability</strong>
             <span class="edge-predicate">confers</span>
@@ -151,33 +151,33 @@
             <code>METPO:2007700</code>
             <p>Maintaining membrane fluidity/integrity across conditions widens the growth-supporting range whose span defines the delta phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/d4cc03114h</code>
-                
+
                 <span class="meta">HVA framed as a universal paradigm of membrane adaptation spanning diverse extremophiles and stressors, supporting breadth of growth-supporting conditions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>compatible solutes / osmolytes</strong>
             <span class="edge-predicate">stabilizes</span>
             <strong>membrane fluidity/stability</strong>
-            
+
             <p>Compatible solutes stabilize proteins and membranes and restore osmotic balance, broadening tolerance across temperature and osmotic conditions.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.37256/amtt.5220244537</code>
-                
+
                 <span class="meta">Compatible solutes depress the freezing point, stabilize proteins and membranes, restore osmotic balance; broad cold + osmotic support, not species-specific.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>saturated:unsaturated fatty-acid ratio</strong>
             <span class="edge-predicate">modulates</span>
@@ -185,43 +185,43 @@
             <code>RO:0002211</code>
             <p>Alteration of the saturated:unsaturated fatty-acid ratio modulates membrane stability across temperatures.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s12275-023-00031-x</code>
-                
+
                 <span class="meta">Membrane stability is modulated by alteration of the ratio of saturated and unsaturated fatty acids; maintenance across temperature shifts.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>core central metabolism</strong>
             <span class="edge-predicate">maintained across</span>
             <strong>temperature delta</strong>
-            
+
             <p>Regulatory-metabolic cross talk buffers core central metabolism across a wide temperature range, supporting a broad temperature delta.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msystems.01124-22</code>
-                
+
                 <span class="meta">Different growth temperatures induce broad transcriptional changes, yet most key central metabolites show overlapping trends via intense regulatory-metabolic cross talk; maintenance across 0 and 15C.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -229,118 +229,118 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1093/femsre/fuy009</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (3)</h2>
       <ul>
-        
+
         <li><a href="../../traits/environment/nacl_delta.html">NaCl delta <code>METPO:1000335</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_delta.html">pH delta <code>METPO:1000232</code></a></li>
-        
+
         <li><a href="../../traits/environment/temperature_delta.html">temperature delta <code>METPO:1000303</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000534</code> <span class="dim-preview">[-3.799, -1.882, -3.281, +0.097, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_delta.html">NaCl delta</a>
           <span class="sim">0.944</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_delta.html">temperature delta</a>
           <span class="sim">0.934</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_delta.html">pH delta</a>
           <span class="sim">0.930</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits</a>
           <span class="sim">0.914</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_phenotype_with_numerical_limits.html">temperature phenotype with numerical limits</a>
           <span class="sim">0.911</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_phenotype_with_numerical_limits.html">pH phenotype with numerical limits</a>
           <span class="sim">0.907</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range.html">temperature range</a>
           <span class="sim">0.905</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
           <span class="sim">0.905</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -411,111 +411,111 @@ Only identifiers that can be supplied confidently are included. Gene symbols are
 ### Environmental and experimental factors
 
 - Temperature; external pH; NaCl concentration/salinity.</pre>
-      
+
       <p class="meta">Showing the first 60 of
         281 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/environment/delta_phenotype_with_numerical_limits-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Psychrobacter arcticus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=334543"
              rel="nofollow noreferrer"><code>NCBITaxon:334543</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/JB.01377-08"
              rel="nofollow noreferrer"><code>DOI:10.1128/JB.01377-08</code></a>
-          
-          
+
+
           <span class="meta">Psychrobacter arcticus 273-4 grew from -10 to 28 degrees C in the reported experiments (38 degrees C nominal breadth); the example demonstrates an endpoint-derived delta while retaining the source&#39;s endpoint caveat.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.847283+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-13T12:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing the delta phenotype as a cross-axis breadth descriptor with axis-specific children for NaCl, pH, and temperature.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:29Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T07:37:39Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 5 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:09Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope delta_phenotype_breadth_descriptor=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Psychrobacter arcticus (NCBITaxon:334543; DOI:10.1128/JB.01377-08). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -544,12 +544,12 @@ Only identifiers that can be supplied confidently are included. Gene symbols are
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -900,8 +900,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

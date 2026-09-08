@@ -30,22 +30,22 @@
     </p>
     <h1>pH range mid1</h1>
     <p class="curie"><code>METPO:1000461</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A pH range phenotype in which the growth-supporting external pH range spans approximately 6–7, characteristic of neutrophilic physiology.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>pH-range-mid1 neutrophile range</h2>
       <p class="meta">DOI-backed graph linking baseline pH-homeostasis at near-neutral external pH to a pH growth range of approximately 6–7.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>baseline pH homeostasis</strong>
             <span class="edge-predicate">confers</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007700</code>
             <p>Baseline pH-homeostasis enables growth across pH 6–7.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">pH homeostasis</span>
                 <span class="meta">Supports baseline pH-homeostasis as the neutrophilic range mechanism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>pH range mid1</strong>
             <span class="edge-predicate">is a</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH range mid1 is a quantitative bin of the pH-range phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">external pH</span>
                 <span class="meta">Supports the pH 6–7 range as a value within the pH-range distribution.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>proton motive force</strong>
             <span class="edge-predicate">enables</span>
@@ -100,16 +100,16 @@
             <code>RO:0002327</code>
             <p>PMF (membrane potential) is required to maintain cytoplasmic pH homeostasis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1103/PRXLife.2.043015</code>
-                
+
                 <span class="meta">Terradot et al. 2024: decreasing the PMF&#39;s strength impairs the cells&#39; ability to maintain pH.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>cytoplasmic pH homeostasis</strong>
             <span class="edge-predicate">confers</span>
@@ -117,33 +117,33 @@
             <code>METPO:2007700</code>
             <p>Maintaining near-neutral cytoplasmic pH supports the neutrophilic pH 6-7 growth range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1103/PRXLife.2.043015</code>
-                
+
                 <span class="meta">Cytoplasmic pH held near neutral underlies the neutralophile growth range.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>cation/proton antiporters</strong>
             <span class="edge-predicate">determines</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+
             <p>Transporter repertoire (ClcA/NhaB/NhaA-like antiporters) sets the external-pH boundaries over which cytoplasmic pH ~7 is maintained.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1103/PRXLife.2.043015</code>
-                
+
                 <span class="meta">Terradot et al. 2024: ClcA-like ~pHe 2-5, NhaB-like ~5-9, NhaA-like ~9-12 maintain pHi ~7.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>acid challenge</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -151,16 +151,16 @@
             <code>RO:0002213</code>
             <p>Under acid challenge cells upregulate proton-pumping respiratory complexes (and downregulate ATP synthase) to support pH homeostasis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
-                
+
                 <span class="meta">Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping respiratory complexes and down-regulates ATP synthase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>respiratory proton-pumping complexes</strong>
             <span class="edge-predicate">enables</span>
@@ -168,16 +168,16 @@
             <code>RO:0002327</code>
             <p>Proton-pumping respiratory activity contributes to baseline pH homeostasis on the acidic side of the range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
-                
+
                 <span class="meta">Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance under acid challenge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>alkaline challenge</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -185,26 +185,26 @@
             <code>RO:0002213</code>
             <p>Under alkaline challenge cells activate cation/proton antiporters and F1Fo-ATP synthase proton-capture to support pH homeostasis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
-                
+
                 <span class="meta">Krulwich et al. 2011: under alkaline stress cells activate inward proton transport via cation/proton antiporters and increase ATP synthase expression.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -212,120 +212,120 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrmicro2549</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/environment/ph_range.html" >pH range <code>METPO:1000332</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (4)</h2>
       <ul class="synonyms">
-        
+
         <li>Alkali Tolerant <span class="meta">EXACT_SYNONYM · metpo.owl</span></li>
-        
+
         <li>Facultative acidophile <span class="meta">EXACT_SYNONYM · metpo.owl</span></li>
-        
+
         <li>Neutrophile <span class="meta">EXACT_SYNONYM · metpo.owl</span></li>
-        
+
         <li>pHR_6_to_7 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000461</code> <span class="dim-preview">[-1.688, -1.528, -1.234, +3.477, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
           <span class="sim">0.915</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_low.html">pH range low</a>
           <span class="sim">0.912</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
           <span class="sim">0.879</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid1.html">temperature range mid1</a>
           <span class="sim">0.812</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_low.html">temperature range low</a>
           <span class="sim">0.807</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_optimum_mid2.html">pH optimum mid2</a>
           <span class="sim">0.785</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_delta_mid2.html">temperature delta mid2</a>
           <span class="sim">0.780</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_optimum_mid1.html">pH optimum mid1</a>
           <span class="sim">0.770</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -396,129 +396,129 @@ PMF comprises ΔpH and electrical potential Δψ. Under standard conventions, ba
 
 - Cytoplasm — **GO:0005737**
 - Plasma membrane — **GO:0005886**</pre>
-      
+
       <p class="meta">Showing the first 60 of
         192 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/environment/ph_range_mid1-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Sphingomonas oligoaromativorans</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=575322"
              rel="nofollow noreferrer"><code>NCBITaxon:575322</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1099/ijs.0.052894-0"
              rel="nofollow noreferrer"><code>DOI:10.1099/ijs.0.052894-0</code></a>
-          
-          
+
+
           <span class="meta">Sphingomonas oligoaromativorans SY-6T grew only at pH 6.0-7.0 in the type-strain study, with optimum pH 7.0; the complete interval matches this bin.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.830444+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking baseline pH-homeostasis at near-neutral external pH to the neutrophilic pH-range-mid1 bin.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:10Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×3).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:17Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0051453×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-04T03:08:13Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×2).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-15T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Normalised causal-node type(s) so one node_id means one thing corpus-wide (issue 356): proton_motive_force: BIOLOGICAL_PROCESS -&gt; STATE. The schema&#39;s OWN example of STATE: &#39;a bioenergetic or molecular state of the cell (e.g. proton motive force ...) ... the state is the gradient / steady-value, not its establishment&#39;. All 35 occurrences describe the gradient -- every description across all four types reads &#39;electrochemical proton gradient&#39;, including the 13 typed BIOLOGICAL_PROCESS (&#39;Transmembrane electrochemical gradient generated by respiration&#39;), which name the gradient and its provenance rather than the generating process. Nothing here means the establishment, so this is a retype and not a rename; records that DO mean the process already use a separate id (proton_motive_force_generation in ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml&#39;s CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.</p>
         </li>
-        
+
         <li>
           <time>2026-08-20T07:10:31Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope ph_range_mid1_neutrophile_range=NONMECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (cation_proton_antiporters, respiratory_proton_pumping).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -547,12 +547,12 @@ PMF comprises ΔpH and electrical potential Δψ. Under standard conventions, ba
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -903,8 +903,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

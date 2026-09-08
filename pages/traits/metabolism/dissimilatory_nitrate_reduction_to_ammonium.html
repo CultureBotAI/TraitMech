@@ -30,22 +30,22 @@
     </p>
     <h1>dissimilatory nitrate reduction to ammonium</h1>
     <p class="curie"><code>traitmech:000030</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">An anaerobic respiratory metabolism in which nitrate is reduced via nitrite to ammonium (rather than to N2), conserving fixed nitrogen within the ecosystem. It is favored over denitrification under nitrate-limited, high-electron-donor conditions.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>DNRA reduces nitrate to ammonium, conserving fixed nitrogen</h2>
       <p class="meta">Evidence-backed causal sketch linking nitrate respiration ending in ammonium to nitrogen retention under high donor-to-acceptor ratios.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the canonical Nar/Nrf DNRA route and illustrates its nitrite-to-ammonium step with W. succinogenes NrfA. Regulatory details are broader bacterial modules and are not asserted to be identical in every DNRA organism.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>nitrate</strong>
             <span class="edge-predicate">oxidized to</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007405</code>
             <p>Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1126/science.1254070</code>
-                
+
                 <span class="meta">Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited conditions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>high donor-to-acceptor ratio</strong>
             <span class="edge-predicate">selects for</span>
@@ -83,33 +83,33 @@
             <code>METPO:2007401</code>
             <p>High donor-to-acceptor ratio favors DNRA over denitrification.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s11157-025-09719-5</code>
-                
+
                 <span class="meta">DNRA review supports its competitive advantage and N-retaining role under nitrate-limited conditions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>nitrate</strong>
             <span class="edge-predicate">reduced to</span>
             <strong>nitrite</strong>
-            
+
             <p>NarGHI nitrate reductase catalyzes the canonical first DNRA step, reducing nitrate to nitrite.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msystems.00967-23</code>
-                
+
                 <span class="meta">Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic NarGHI (egas2024).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>NarGHI nitrate reductase</strong>
             <span class="edge-predicate">catalyzes</span>
@@ -117,33 +117,33 @@
             <code>biolink:catalyzes</code>
             <p>NarGHI nitrate reductase catalyzes production of nitrite from nitrate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msystems.00967-23</code>
-                
+
                 <span class="meta">Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI catalyzing the first step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>nitrite</strong>
             <span class="edge-predicate">reduced to</span>
             <strong>ammonium</strong>
-            
+
             <p>NrfA cytochrome c nitrite reductase catalyzes the canonical second DNRA step, reducing nitrite to ammonium.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
-                
+
                 <span class="meta">Second step performed by cytochrome c nitrite reductase (NrfA): reduction of nitrite to ammonium (hird2025).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>NrfA cytochrome c nitrite reductase</strong>
             <span class="edge-predicate">catalyzes</span>
@@ -151,67 +151,67 @@
             <code>biolink:catalyzes</code>
             <p>NrfA reduces nitrite to ammonium, the final DNRA product.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
-                
+
                 <span class="meta">Cytochrome c nitrite reductase (NrfA) performs the canonical reduction of nitrite to ammonium.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>NarX-NarL two-component system</strong>
             <span class="edge-predicate">activates expression of</span>
             <strong>nrf operon transcription</strong>
-            
+
             <p>NarX-NarL nitrate/nitrite sensing activates transcription of the nrf operon.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
-                
+
                 <span class="meta">Expression of nap and nrf operons is tightly regulated by NarX-NarL and NarQ-NarP, activating transcription under appropriate conditions (hird2025).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>FNR regulator</strong>
             <span class="edge-predicate">activates expression of</span>
             <strong>nrf operon transcription</strong>
-            
+
             <p>FNR activates nrf operon transcription under anaerobic conditions.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
-                
+
                 <span class="meta">FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich conditions (hird2025).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>anaerobic conditions</strong>
             <span class="edge-predicate">permits</span>
             <strong>dissimilatory nitrate reduction to ammonium</strong>
-            
+
             <p>Anaerobic conditions, sensed via FNR, permit DNRA respiration.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
-                
+
                 <span class="meta">nap/nrf operon expression activated under anaerobic conditions; DNRA proceeds under oxygen-depleted conditions (hird2025).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>NrfA cytochrome c nitrite reductase</strong>
             <span class="edge-predicate">contributes to</span>
@@ -219,16 +219,16 @@
             <code>RO:0002326</code>
             <p>NrfA executes the canonical nitrite-to-ammonium step of DNRA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
                 <span class="evidence-snippet">The second step of the pathway is performed by cytochrome c nitrite reductase (NrfA)</span>
                 <span class="meta">Verified against the free public article text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>nrf operon transcription</strong>
             <span class="edge-predicate">contributes to</span>
@@ -236,19 +236,19 @@
             <code>RO:0002326</code>
             <p>Regulated expression of the nrf operon supplies the Nrf machinery for DNRA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00292-25</code>
                 <span class="evidence-snippet">The regulation of nrf operons is a complex and finely tuned process involving multiple layers of control</span>
                 <span class="meta">Verified against the free public article text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -258,16 +258,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>NrfA cytochrome c nitrite reductase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q9S1E5/entry" rel="nofollow noreferrer"><code>UniProtKB:Q9S1E5</code></a>
                   <br>Cytochrome c-552 <span class="meta">(nrfA)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=273121" rel="nofollow noreferrer">Wolinella succinogenes ATCC 29543</a>
                   <br><code>NCBITaxon:273121</code>
                 </td>
@@ -278,31 +278,31 @@
                 <td>
                   <p>Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron nitrite reduction step in W. succinogenes.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1074/jbc.M006188200" rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M006188200</code></a>
-                      
+
                       <span class="evidence-snippet">Cytochrome c nitrite reductase catalyzes the 6-electron reduction of nitrite to ammonia.</span>
                       <span class="meta">The primary structural and mechanistic study is from W. succinogenes; UniProtKB Q9S1E5 verifies the reviewed NrfA protein and strain taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -310,116 +310,116 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1126/science.1254070</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
-        <li><a href="../../traits/metabolism/anaerobic_respiration.html" >Anaerobic respiration <code>METPO:1000802</code></a></li>
-        
+
+        <li><a href="../../traits/metabolism/nitrogen_respiration.html" >nitrogen respiration <code>traitmech:000121</code></a></li>
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>DNRA <span class="meta">EXACT_SYNONYM · DOI:10.1126/science.1254070</span></li>
-        
+
         <li>nitrate ammonification <span class="meta">RELATED_SYNONYM · DOI:10.1007/s11157-025-09719-5</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000802</code> <span class="dim-preview">[-0.426, -1.069, -1.023, +1.207, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/denitrification.html">denitrification</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dissimilatory_manganese_reduction.html">dissimilatory manganese reduction</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/respiration.html">respiration</a>
           <span class="sim">0.968</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -490,112 +490,118 @@ A concise set of the strongest graph-ready relationships is provided below.
 | nitrite accumulation | upregulates / promotes | DNRA in “Ca. Alkanivorans nitratireducens” | moderate to strong but taxon-specific consortium evidence (wu2024anaerobicoxidationof pages 1-2) | 10.1093/ismejo/wrae063 |
 | increased short-chain gaseous alkane supply | promotes | DNRA in “Ca. Alkanivorans nitratireducens” | moderate to strong but taxon-specific; electron-donor increase favored DNRA (wu2024anaerobicoxidationof pages 1-2) | 10.1093/ismejo/wrae063 |
 | 40 mT static magnetic field | increases | DNRA potential rate and nrfA enrichment | strong for engineered application; reactor-specific, not general ecology (xie2024usingstaticmagnetic pages 1-2) | 10.1038/s41545-024-00352-3 |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         276 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Wolinella succinogenes</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=844"
              rel="nofollow noreferrer"><code>NCBITaxon:844</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1073/pnas.1932838100"
              rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1932838100</code></a>
-          
-          
+
+
           <span class="meta">Model organism for respiratory dissimilatory nitrate/nitrite reduction to ammonium (DNRA).</span>
         </li>
-        
+
         <li>
           <em>Wolinella succinogenes ATCC 29543</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=273121"
              rel="nofollow noreferrer"><code>NCBITaxon:273121</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1074/jbc.M006188200"
              rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M006188200</code></a>
-          
-          
+
+
           <span class="meta">Strain-level source of the structurally characterized NrfA cytochrome c nitrite reductase and the matching reviewed UniProt example.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-30T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (dissimilatory nitrate reduction to ammonium) from literature research to fill the nitrogen-cycling gap.</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (DNRA nitrate → ammonium retention) with CHEBI node groundings and METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×2).</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T00:00:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Added a strain-matched W. succinogenes NrfA example and exact GO activity, grounded NarGHI, retyped the nrf operon carrier as transcription, and retained combined NarX-NarL and broad FNR labels with explicit review rationales.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T12:15:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source connector(s). No paid research service was called.</p>
         </li>
-        
+
+        <li>
+          <time>2026-09-08T00:00:00Z</time> ·
+          <strong>REFINE_PARENT_TRAIT</strong> · codex
+          <p class="changes">Narrowed parent from anaerobic respiration to nitrogen respiration.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -624,12 +630,12 @@ A concise set of the strongest graph-ready relationships is provided below.
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -978,10 +984,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-31 12:15 UTC from
+      Record as of 2026-09-08 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

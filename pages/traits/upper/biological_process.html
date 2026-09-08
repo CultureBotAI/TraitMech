@@ -30,22 +30,22 @@
     </p>
     <h1>biological process</h1>
     <p class="curie"><code>METPO:1000630</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Biological process upper-class context</h2>
       <p class="meta">DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This is an upper-ontology context graph, not a taxon-specific biological mechanism. Gene products are described by the remaining GO-CAM context but are not modeled as primary causal nodes or token protein examples.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>molecular function</strong>
             <span class="edge-predicate">contributes to</span>
@@ -66,16 +66,16 @@
             <code>RO:0002326</code>
             <p>Molecular functions collectively accomplish broader biological processes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/database/bat054</code>
                 <span class="evidence-snippet">Molecular Function, Biological Process and Cellular Component</span>
                 <span class="meta">Supports GO annotation across molecular functions and biological processes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>metabolism</strong>
             <span class="edge-predicate">specializes</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>In TraitMech, metabolism is the non-environmental child class under biological process.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/database/bat054</code>
                 <span class="evidence-snippet">child term is a subtype of the parent term</span>
                 <span class="meta">Supports parent-child is-a interpretation for GO-style process hierarchies.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>molecular function</strong>
             <span class="edge-predicate">part of</span>
@@ -100,16 +100,16 @@
             <code>biolink:part_of</code>
             <p>GO Molecular Functions are linked to Biological Processes by mereological part_of relations.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40708-023-00208-5</code>
-                
+
                 <span class="meta">a GO Molecular Function and a GO Biological Process (BP) are linked by mereological (part_of) relations</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>molecular function</strong>
             <span class="edge-predicate">occurs in</span>
@@ -117,16 +117,16 @@
             <code>biolink:occurs_in</code>
             <p>A molecular activity occurs in a cellular component (BFO:0000066).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40708-023-00208-5</code>
-                
+
                 <span class="meta">Occurs in [BFO:0000066]; example &#34;glucokinase activity occurs in cytosol&#34;.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>molecular function</strong>
             <span class="edge-predicate">has input</span>
@@ -134,16 +134,16 @@
             <code>RO:0002233</code>
             <p>A molecular activity has a chemical entity as input (RO:0002233).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40708-023-00208-5</code>
-                
+
                 <span class="meta">Has input [RO:0002233]</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>molecular function</strong>
             <span class="edge-predicate">has output</span>
@@ -151,43 +151,43 @@
             <code>RO:0002234</code>
             <p>A molecular activity has a chemical entity as output (RO:0002234).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40708-023-00208-5</code>
-                
+
                 <span class="meta">Has output [RO:0002234]</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>molecular function</strong>
             <span class="edge-predicate">causally upstream of or within</span>
             <strong>downstream molecular function</strong>
-            
+
             <p>GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40708-023-00208-5</code>
-                
+
                 <span class="meta">GO-CAMs arrange GO annotations into structured models of biological processes by causally linking GO Molecular Functions</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -195,121 +195,121 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1093/database/bat054</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
 
-    
+
+
     <div class="card">
       <h2>Children (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html">metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>physiological process <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0008150</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000630</code> <span class="dim-preview">[-0.906, -0.897, -0.035, -0.552, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
           <span class="sim">0.932</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxidative_phosphorylation.html">Oxidative phosphorylation</a>
           <span class="sim">0.931</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
           <span class="sim">0.927</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
           <span class="sim">0.927</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
           <span class="sim">0.925</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.923</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
           <span class="sim">0.920</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/three_hydroxypropionate_bicycle.html">3-hydroxypropionate bicycle</a>
           <span class="sim">0.873</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -380,94 +380,94 @@ ProkFunFind represented flagellar function using **18 genes/gene families in fiv
 - **Complex-carbohydrate degradation:** CAZymes including GH13, GH43, GH16, GH5 and PL1; polysaccharide substrates and oligosaccharide products.
 - **Environmental context:** biofloc microbial aggregate, high carbon-to-nitrogen management, oxygenated bulk water, localized low-oxygen microniches, starch/cellulose inputs, and toxic nitrogen/sulfide burden.
 - **Taxa:** Rhodobacteraceae, Flavobacteriaceae, Saprospiraceae, Nitrosomonas, Nitrospirota, Nitrococcus, and Arenicellales. Ground these to `NCBITaxon` only after exact species or accepted taxon concepts are verified.</pre>
-      
+
       <p class="meta">Showing the first 60 of
         210 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/upper/biological_process-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
+
     </div>
-    
 
-    
-    
 
-    
 
-    
+
+
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.866352+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-15T00:35:00-07:00</time> ·
           <strong>CURATED_UPPER_CONTEXT</strong> · codex
           <p class="changes">Reviewed biological process as an upper classifier and added a DOI-backed context graph linking molecular functions, gene products, and the metabolism child class.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:32Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:15Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:part_of×1, biolink:occurs_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:35Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0005575×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T03:49:24Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002234×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T09:03:55Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002233×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope biological_process_go_upper_context=NONMECHANISTIC with scope_notes; removed 1 node(s) and 2 edge(s) together with their evidence (gene_product).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T06:15:41Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): declared exact synonym(s): &#39;physiological process&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -496,12 +496,12 @@ ProkFunFind represented flagellar function using **18 genes/gene families in fiv
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -852,8 +852,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -1,0 +1,27 @@
+identifier: traitmech:000129
+label: aromatic hydrocarbon degradation
+definition: A hydrocarbon degradation in which the substrate carries at least one
+  aromatic ring.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000128
+- traitmech:000130
+synonyms:
+- synonym_text: aromatic_hydrocarbon_degradation
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+evidence:
+- reference: DOI:10.1007/BF00058836
+  snippet: The biodegradation of aromatic hydrocarbons by bacteria
+  notes: Smith reviews bacterial biodegradation of aromatic hydrocarbons as a distinct
+    hydrocarbon-degradation branch.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

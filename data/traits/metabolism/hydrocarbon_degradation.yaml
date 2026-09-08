@@ -1,0 +1,28 @@
+identifier: traitmech:000128
+label: hydrocarbon degradation
+definition: A metabolism in which an organism catabolizes a hydrocarbon, using it
+  as a carbon and energy source.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: hydrocarbon_degradation
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+xrefs:
+- GO:0120253
+evidence:
+- reference: DOI:10.1128/MR.54.3.305-315.1990
+  snippet: Microbial degradation of hydrocarbons in the environment
+  notes: Leahy and Colwell review microbial hydrocarbon degradation across environmental
+    microorganisms.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

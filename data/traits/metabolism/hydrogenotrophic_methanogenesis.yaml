@@ -1,0 +1,31 @@
+identifier: traitmech:000127
+label: hydrogenotrophic methanogenesis
+definition: A methanogenesis in which carbon dioxide is reduced to methane using molecular
+  hydrogen as the electron donor.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000844
+synonyms:
+- synonym_text: hydrogenotrophic_methanogenesis
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+- synonym_text: methanogenesis_by_CO2_reduction_with_H2
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+xrefs:
+- GO:0019386
+evidence:
+- reference: DOI:10.1146/annurev-micro-011720-122807
+  snippet: from CO2 and H2 to methane
+  notes: The methanogenesis review supports the H2/CO2 branch of archaeal methane
+    production.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

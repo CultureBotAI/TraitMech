@@ -30,22 +30,22 @@
     </p>
     <h1>cell length small</h1>
     <p class="curie"><code>METPO:1000884</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A cell-length phenotype in which the longer cell dimension lies approximately between 1.3 and 2 micrometers.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Small cell-length size setpoint</h2>
       <p class="meta">DOI-backed graph linking adder-controlled size homeostasis to a small cell-length range (1.3–2 μm).</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a numerical cell-length bin. Its graph provides contextual examples of division control but does not define a single causal mechanism for every cell in the bin.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>standard growth conditions</strong>
             <span class="edge-predicate">enables</span>
@@ -66,16 +66,16 @@
             <code>RO:0002327</code>
             <p>Standard nutrient/temperature regimes maintain adder size control.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cell.2014.11.022</code>
                 <span class="evidence-snippet">cells grow by a fixed amount between divisions</span>
                 <span class="meta">Supports adder control under typical growth regimes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>adder size control</strong>
             <span class="edge-predicate">confers</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007700</code>
             <p>Adder homeostasis under standard conditions yields a narrow length distribution in the small range.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cell.2014.11.022</code>
                 <span class="evidence-snippet">cells grow by a fixed amount between divisions</span>
                 <span class="meta">Supports small length as a typical adder-controlled outcome.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>cell length small</strong>
             <span class="edge-predicate">is a</span>
@@ -100,16 +100,16 @@
             <code>rdfs:subClassOf</code>
             <p>Small cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cub.2014.07.022</code>
                 <span class="evidence-snippet">cell size is tightly controlled</span>
                 <span class="meta">Supports small length as a value within the regulated cell-length distribution.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>FtsZ abundance</strong>
             <span class="edge-predicate">contributes to</span>
@@ -117,16 +117,16 @@
             <code>RO:0002326</code>
             <p>FtsZ abundance is a rate-limiting factor for E. coli cell division timing.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-024-54242-w</code>
                 <span class="evidence-snippet">FtsZ numbers in the cell are one of the rate-limiting factors for cell divisions in E. coli</span>
                 <span class="meta">Verified against the public Nature Communications abstract; Männik et al. identify FtsZ number as a rate-limiting factor for E. coli cell division.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>FtsZ ring formation</strong>
             <span class="edge-predicate">modulates</span>
@@ -134,16 +134,16 @@
             <code>RO:0002211</code>
             <p>Delayed FtsZ ring formation delays division until the cell reaches a larger size, increasing cell length.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-023-41487-0</code>
                 <span class="evidence-snippet">delays the FtsZ ring formation, which in turn allows the cell to grow for a longer time</span>
                 <span class="meta">Verified against the open Nature Communications introduction; Vashistha et al. describe Min-imbalance delaying FtsZ ring formation and giving cells more time to grow before division.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>FtsN</strong>
             <span class="edge-predicate">activates</span>
@@ -151,16 +151,16 @@
             <code>RO:0002213</code>
             <p>FtsN allosterically activates the FtsWI septal PG synthase complex.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-024-52217-5</code>
                 <span class="evidence-snippet">FtsN activates sPG synthesis by switching FtsA and the FtsQLBWI complex to the active state</span>
                 <span class="meta">Verified against the open Nature Communications full text; Gong et al. route FtsN-mediated septal peptidoglycan synthesis through the active FtsQLBWI complex that contains FtsW and FtsI.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>septal peptidoglycan synthesis</strong>
             <span class="edge-predicate">promotes</span>
@@ -168,16 +168,16 @@
             <code>RO:0002213</code>
             <p>Septal peptidoglycan synthesis feeds back to promote Z-ring condensation and stability.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-024-52217-5</code>
                 <span class="evidence-snippet">sPG synthesis in turn promotes Z ring condensation and stability</span>
                 <span class="meta">Verified against the open Nature Communications full text; Gong et al. show a positive-feedback loop from septal peptidoglycan synthesis to the Z ring.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>FtsZ proto-ring (with FtsA/ZipA)</strong>
             <span class="edge-predicate">enables</span>
@@ -185,16 +185,16 @@
             <code>RO:0002327</code>
             <p>The FtsZ proto-ring with FtsA/ZipA localizes and organizes divisome assembly at midcell.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41579-023-00942-x</code>
                 <span class="evidence-snippet">FtsZ, to localize and organize the cell division machinery, the divisome</span>
                 <span class="meta">Verified against the public PubMed abstract for the Nature Reviews Microbiology article; Cameron and Margolin review FtsZ as the tubulin homolog that organizes the divisome.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Min system and nucleoid occlusion</strong>
             <span class="edge-predicate">regulates</span>
@@ -202,26 +202,26 @@
             <code>RO:0002211</code>
             <p>Min and nucleoid-occlusion systems regulate FtsZ placement at midcell for proper division-site selection.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s42003-024-07279-y</code>
                 <span class="evidence-snippet">Min or nucleoid occlusion systems for positioning FtsZ at mid cell division sites</span>
                 <span class="meta">Verified against the public Communications Biology abstract; Hayashi et al. require at least one of the Min or nucleoid-occlusion systems for midcell FtsZ positioning in E. coli L-forms.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -229,114 +229,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1016/j.cell.2014.11.022</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/cell_length.html" >cell length <code>METPO:1000881</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>L_1.3_2 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000884</code> <span class="dim-preview">[-1.814, -0.837, -3.570, +2.198, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/cell_width_very_small.html">cell width very small</a>
           <span class="sim">0.657</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_low.html">pH range low</a>
           <span class="sim">0.627</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid2.html">temperature range mid2</a>
           <span class="sim">0.603</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_low.html">temperature range low</a>
           <span class="sim">0.601</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
           <span class="sim">0.600</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
           <span class="sim">0.599</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid1.html">temperature range mid1</a>
           <span class="sim">0.598</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid4.html">temperature range mid4</a>
           <span class="sim">0.591</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -407,135 +407,135 @@ Amino-acid starvation and ppGpp accumulation reduce both length and width. Becau
 Central-carbon screens found that perturbations of acetate/acetyl-CoA-associated genes, including *aceE*, *ackA*, and *pta*, can strongly reduce growth and cell size; possible mediators include fatty-acid synthesis and ppGpp. These are valuable candidate nodes, but the mechanistic route to absolute small length remains unresolved. (westfall2018comprehensiveanalysisof pages 17-18)
 
 ## 3. Candidate nodes grouped by type</pre>
-      
+
       <p class="meta">Showing the first 60 of
         236 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/morphology/cell_length_small-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Oceanimonas pelagia</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3028314"
              rel="nofollow noreferrer"><code>NCBITaxon:3028314</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1007/s10482-024-01948-y"
              rel="nofollow noreferrer"><code>DOI:10.1007/s10482-024-01948-y</code></a>
-          
-          
+
+
           <span class="meta">Oceanimonas pelagia NTOU-MSR1T cells measured approximately 1.8-2.0 micrometres long, within the approximately 1.3-2.0-micrometre bin.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.919890+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking adder size control under standard growth conditions to small cell length (1.3–2 μm).</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:19Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:13Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×2, RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:19Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A3RWZ4×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to confers), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope cell_length_small_size_setpoint=NONMECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ftsz_abundance, ftsn, ftswi_complex, ftsz_protoring).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
         <li>
           <time>2026-09-04T05:40:00Z</time> ·
           <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
           <p class="changes">Reviewed the cell_length_small_size_setpoint graph for issue #183: added exact snippets to 6 FtsZ/divisome evidence items, grounded 3 residual predicates, and retyped FtsZ abundance as a QUALITY node. The METPO 1.3-2 micrometre length bin remains a nonmechanistic classification. No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -564,12 +564,12 @@ Central-carbon screens found that perturbations of acetate/acetyl-CoA-associated
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -920,8 +920,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-04 05:40 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

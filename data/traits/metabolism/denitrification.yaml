@@ -8,7 +8,7 @@ trait_category: METABOLISM
 term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
-- METPO:1000802
+- traitmech:000121
 synonyms:
 - synonym_text: denitrifying
   synonym_type: RELATED_SYNONYM
@@ -335,4 +335,9 @@ curation_history:
     the trait, joining all six graph components. Genes and protein complexes remain
     supporting YAML graph fields rather than primary TraitRecord entries. Addresses
     issues 426 and 183.
+  llm_assisted: true
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: REFINE_PARENT_TRAIT
+  changes: Narrowed parent from anaerobic respiration to nitrogen respiration.
   llm_assisted: true

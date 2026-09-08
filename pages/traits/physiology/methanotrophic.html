@@ -30,22 +30,22 @@
     </p>
     <h1>methanotrophic</h1>
     <p class="curie"><code>METPO:1000650</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A trophic type in which an organism uses methane as the primary carbon and energy source through oxidation of methane to carbon dioxide.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Aerobic methanotrophic methane oxidation mechanism</h2>
       <p class="meta">DOI-backed graph for aerobic methane oxidation from methane to methanol, formaldehyde assimilation, and carbon dioxide production.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents aerobic bacterial methanotrophy and explicitly keeps particulate and soluble methane-monooxygenase alternatives separate. The Bath-strain PmoB accession is an alpha component of pMMO, not the complete three-subunit complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,28 +54,28 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>methanotrophic</strong>
             <span class="edge-predicate">uses substrate</span>
             <strong>methane</strong>
-            
+
             <p>Methane is the defining carbon and energy source for methanotrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">methane as carbon and energy sources</span>
                 <span class="meta">Review places methane among C1 compounds used by methanotrophs.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>methane monooxygenase</strong>
             <span class="edge-predicate">oxidizes</span>
@@ -83,33 +83,33 @@
             <code>METPO:2007803</code>
             <p>Methane monooxygenase catalyzes methane oxidation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">methane oxidation ... catalyzed by two types of methane monooxygenases</span>
                 <span class="meta">Supports MMO as the enzyme for the first oxidation step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>methane monooxygenase</strong>
             <span class="edge-predicate">uses oxidant</span>
             <strong>molecular oxygen</strong>
-            
+
             <p>Aerobic methane monooxygenases activate oxygen during methane oxidation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">activation of molecular oxygen</span>
                 <span class="meta">Supports oxygen involvement in MMO catalysis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>methane</strong>
             <span class="edge-predicate">oxidized to</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007405</code>
             <p>The first aerobic methane oxidation product is methanol.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">convert methane to methanol</span>
                 <span class="meta">Supports methane-to-methanol conversion by MMO.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>methane monooxygenase</strong>
             <span class="edge-predicate">located in</span>
@@ -134,16 +134,16 @@
             <code>biolink:located_in</code>
             <p>Particulate methane monooxygenase is membrane associated in methanotrophs.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">pMMO is located in the characteristic intracellular membrane</span>
                 <span class="meta">Supports subcellular localization for pMMO.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>methanol dehydrogenase</strong>
             <span class="edge-predicate">oxidizes</span>
@@ -151,16 +151,16 @@
             <code>METPO:2007803</code>
             <p>Methanol dehydrogenase converts methanol onward to formaldehyde.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">Methanol is oxidized to formaldehyde</span>
                 <span class="meta">Supports methanol dehydrogenase as the next step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>formaldehyde</strong>
             <span class="edge-predicate">participates in</span>
@@ -168,16 +168,16 @@
             <code>biolink:participates_in</code>
             <p>Formaldehyde can be assimilated through RuMP or serine pathways.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">RuMP pathway and the serine pathway</span>
                 <span class="meta">Supports formaldehyde assimilation routes in methanotrophs.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>methanotrophic</strong>
             <span class="edge-predicate">produces</span>
@@ -185,16 +185,16 @@
             <code>METPO:2007800</code>
             <p>Methane oxidation can continue to carbon dioxide for energy metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
                 <span class="evidence-snippet">methane cycle between ... methane and CO2</span>
                 <span class="meta">Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>copper</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -202,16 +202,16 @@
             <code>RO:0002213</code>
             <p>High copper favors pMMO expression (the copper switch).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
-                
+
                 <span class="meta">high copper favors pMMO and represses sMMO</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>copper</strong>
             <span class="edge-predicate">negatively regulates</span>
@@ -219,33 +219,33 @@
             <code>RO:0002212</code>
             <p>High copper represses sMMO; low copper favors sMMO (the copper switch).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
-                
+
                 <span class="meta">high copper favors pMMO and represses sMMO; low copper/biomass favors sMMO</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>methanobactin</strong>
             <span class="edge-predicate">binds</span>
             <strong>Cu(I)</strong>
-            
+
             <p>Methanobactin binds Cu(I) with high affinity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.chemrev.3c00727</code>
-                
+
                 <span class="meta">Mbns are ribosomally synthesized ... that bind Cu(I) with particularly high affinity</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>methanobactin</strong>
             <span class="edge-predicate">enables</span>
@@ -253,16 +253,16 @@
             <code>RO:0002327</code>
             <p>Methanobactin-mediated copper chelation enables copper uptake.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1039/D3CY00737E</code>
-                
+
                 <span class="meta">some methanotrophs produce methanobactin (high affinity for Cu(I)) for copper collection</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>copper acquisition</strong>
             <span class="edge-predicate">promotes</span>
@@ -270,16 +270,16 @@
             <code>RO:0002213</code>
             <p>Copper acquisition supplies the cofactor required for pMMO activity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.chemrev.3c00727</code>
-                
+
                 <span class="meta">As a required cofactor for pMMO activity ... copper is central to methanotroph physiology</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>particulate methane monooxygenase (pMMO)</strong>
             <span class="edge-predicate">example of</span>
@@ -287,16 +287,16 @@
             <code>rdfs:subClassOf</code>
             <p>Particulate MMO is one of the two methane-monooxygenase enzyme types.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3109/10409238.2012.697865</code>
                 <span class="evidence-snippet">There are two types of MMOs. The soluble form (sMMO)</span>
                 <span class="meta">Verified in the public full text, which immediately identifies the membrane-bound particulate MMO as the other type.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>methanol dehydrogenase</strong>
             <span class="edge-predicate">produces</span>
@@ -304,19 +304,19 @@
             <code>METPO:2007800</code>
             <p>Methanol dehydrogenase converts methanol to formaldehyde, joining methane oxidation to the assimilation branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3109/10409238.2012.697865</code>
                 <span class="evidence-snippet">Methanol is further converted to formaldehyde by methanol dehydrogenase</span>
                 <span class="meta">Verified against the public full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -326,16 +326,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>particulate methane monooxygenase (pMMO)</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/G1UBD1/entry" rel="nofollow noreferrer"><code>UniProtKB:G1UBD1</code></a>
                   <br>Particulate methane monooxygenase alpha subunit <span class="meta">(pmoB1)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243233" rel="nofollow noreferrer">Methylococcus capsulatus Bath</a>
                   <br><code>NCBITaxon:243233</code>
                 </td>
@@ -346,31 +346,31 @@
                 <td>
                   <p>PmoB alpha component of the Bath-strain pMMO; this accession is not presented as the full PmoABC complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1099/13500872-145-5-1235" rel="nofollow noreferrer"><code>DOI:10.1099/13500872-145-5-1235</code></a>
-                      
+
                       <span class="evidence-snippet">multiple pmo gene copies contribute to particulate methane monooxygenase activity</span>
                       <span class="meta">The primary Bath-strain study tests pmo-copy contributions to methane oxidation; UniProt verifies reviewed PmoB G1UBD1 and the strain taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -380,112 +380,112 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
         <dt>Definition source</dt><dd>DOI:10.1039/D3CY00737E</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/trophic_type.html" >trophic type <code>METPO:1000631</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>methanotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000650</code> <span class="dim-preview">[-1.873, -2.718, -3.631, -1.154, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/trophic_type.html">trophic type</a>
           <span class="sim">0.808</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/hydrogenotrophic.html">hydrogenotrophic</a>
           <span class="sim">0.807</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photolithoautotrophic.html">photolithoautotrophic</a>
           <span class="sim">0.802</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/carboxydotrophic.html">carboxydotrophic</a>
           <span class="sim">0.797</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithoautotrophic.html">lithoautotrophic</a>
           <span class="sim">0.764</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoorganoheterotrophic.html">photoorganoheterotrophic</a>
           <span class="sim">0.738</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photolithotrophic.html">photolithotrophic</a>
           <span class="sim">0.714</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoautotrophic.html">chemoautotrophic</a>
           <span class="sim">0.703</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -556,190 +556,190 @@ Additional label-only candidates pending identifier verification include nitrate
 - formate dehydrogenase
 - methyl-coenzyme M reductase, **MCR**; `mcrABG`
 - nitrate reductase; nitrite reductase</pre>
-      
+
       <p class="meta">Showing the first 60 of
         281 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/methanotrophic-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Methylococcus capsulatus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=414"
              rel="nofollow noreferrer"><code>NCBITaxon:414</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/15383840/"
              rel="nofollow noreferrer"><code>PMID:15383840</code></a>
-          
-          
+
+
           <span class="meta">Model aerobic methanotroph (gammaproteobacterial; particulate and soluble methane monooxygenase); strain Bath.</span>
         </li>
-        
+
         <li>
           <em>Methylococcus capsulatus Bath</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243233"
              rel="nofollow noreferrer"><code>NCBITaxon:243233</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1099/13500872-145-5-1235"
              rel="nofollow noreferrer"><code>DOI:10.1099/13500872-145-5-1235</code></a>
-          
-          
+
+
           <span class="meta">Strain-level aerobic methanotroph paired to reviewed PmoB, the alpha component of its particulate methane monooxygenase.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.876493+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for aerobic methane oxidation by methane monooxygenase and downstream C1 metabolism.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000016×2, METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T05:49:25Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007405×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T05:05:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A0A3YNQ7×1, UniProtKB:A0A010SCY7×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:48Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: input to → participates in ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:51Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:participates_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T05:51:47Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0019649×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:encodes×2, RO:0002327×1, RO:0002213×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:34Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0031090×1, CHEBI:222862×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:55Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0015050×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-04T03:08:16Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×1, RO:0002212×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 3 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (2 to oxidizes, 1 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T04:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813, issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so the CURIE resolved to nothing upstream while looking like an upstream term to anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv, which is not read at the point of use. RO:0002205 (has gene product) is the nearest real term but relates a GENE to a gene product, whereas these edges relate a gene cluster or operon to a protein complex or a biosynthetic process, which its range does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it, which puts it in the same state as the rest of that cohort rather than in a category of its own.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope methanotrophic_methane_oxidation=MECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (methanol_dehydrogenase); added taxon-paired protein example(s) UniProtKB:G1UBD1 on particulate_methane_monooxygenase (NCBITaxon:243233); regrounded 2 node(s) (particulate_methane_monooxygenase: none-&gt;GO:0015050, soluble_methane_monooxygenase: none-&gt;GO:0015050); removed 4 node(s) and 2 edge(s) together with their evidence (mmoh_subunits, mmoxyz_genes, pmmo_subunits, pmocab_operon); added canonical example(s) NCBITaxon:243233.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T11:15:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -768,12 +768,12 @@ Additional label-only candidates pending identifier verification include nitrate
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1124,8 +1124,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 11:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

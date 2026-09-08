@@ -30,22 +30,22 @@
     </p>
     <h1>carboxydotrophic</h1>
     <p class="curie"><code>METPO:1000633</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A trophic type in which an organism derives energy from the oxidation of carbon monoxide.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Carboxydotrophic carbon monoxide oxidation mechanism</h2>
       <p class="meta">DOI-backed graph linking carbon monoxide, carbon monoxide dehydrogenase, respiratory electron transport, and energy conservation.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents distinct aerobic molybdenum-CODH and anaerobic NiFe-CODH branches. The CooS exemplar supports the R. rubrum anaerobic branch; broad operon, CooA, RcoM, and terminal-oxidase labels are retained only with explicit review notes.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,28 +54,28 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>carboxydotrophic</strong>
             <span class="edge-predicate">uses energy substrate</span>
             <strong>carbon monoxide</strong>
-            
+
             <p>Carboxydotrophs use carbon monoxide to support growth or metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro1595</code>
                 <span class="evidence-snippet">CO supports the growth and metabolism</span>
                 <span class="meta">Supports carbon monoxide as an energy-supporting substrate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>carbon monoxide dehydrogenase</strong>
             <span class="edge-predicate">oxidizes</span>
@@ -83,33 +83,33 @@
             <code>METPO:2007803</code>
             <p>CODH catalyzes carbon monoxide oxidation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro1595</code>
                 <span class="evidence-snippet">CO dehydrogenase (CODH), to oxidize CO</span>
                 <span class="meta">Supports CODH-mediated CO oxidation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>molybdenum hydroxylase</strong>
             <span class="edge-predicate">enzyme class for</span>
             <strong>carbon monoxide dehydrogenase</strong>
-            
+
             <p>Aerobic CO oxidizers use a molybdenum hydroxylase CODH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro1595</code>
                 <span class="evidence-snippet">use a molybdenum hydroxylase</span>
                 <span class="meta">Supports molybdenum hydroxylase classification of aerobic CODH.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>carbon monoxide</strong>
             <span class="edge-predicate">oxidized to</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007405</code>
             <p>CO oxidation yields carbon dioxide.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s00775-018-1541-0</code>
                 <span class="evidence-snippet">oxidation of CO to CO2</span>
                 <span class="meta">Supports CO-to-CO2 conversion by CODH.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>carbon monoxide dehydrogenase</strong>
             <span class="edge-predicate">feeds electrons into</span>
@@ -134,16 +134,16 @@
             <code>METPO:2007402</code>
             <p>CO oxidation is coupled to respiratory electron transfer.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1574-6968.1986.tb01858.x</code>
                 <span class="evidence-snippet">branched respiratory chain</span>
                 <span class="meta">Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">depends on</span>
@@ -151,16 +151,16 @@
             <code>RO:0002502</code>
             <p>CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1574-6968.1986.tb01858.x</code>
                 <span class="evidence-snippet">CO-insensitive terminal oxidase</span>
                 <span class="meta">Supports terminal oxidase adaptation for CO metabolism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">generates</span>
@@ -168,16 +168,16 @@
             <code>biolink:produces</code>
             <p>Respiratory CO oxidation conserves energy as proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1574-6968.1986.tb01858.x</code>
                 <span class="evidence-snippet">pmf-driven reversed electron transfer</span>
                 <span class="meta">Supports pmf involvement in aerobic carboxydotrophic energy metabolism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives formation of</span>
@@ -185,67 +185,67 @@
             <code>biolink:produces</code>
             <p>Reverse electron transfer can form reduced pyridine nucleotides.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1574-6968.1986.tb01858.x</code>
                 <span class="evidence-snippet">formation of reduced pyridine nucleotides</span>
                 <span class="meta">Supports pmf-driven reverse electron transfer output.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Ni,Fe-carbon monoxide dehydrogenase</strong>
             <span class="edge-predicate">has quality</span>
             <strong>oxygen sensitivity</strong>
-            
+
             <p>Ni,Fe-CODHs are oxygen sensitive, restricting them to anaerobic carboxydotrophs.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00332-22</code>
                 <span class="evidence-snippet">coo operons, which encompass O2-sensitive Ni,Fe-CODHs</span>
                 <span class="meta">Ni,Fe-CODHs are noted as oxygen sensitive and associated with anaerobic carboxydotrophs.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>molybdenum hydroxylase</strong>
             <span class="edge-predicate">has quality</span>
             <strong>oxygen tolerance</strong>
-            
+
             <p>Cu,Mo-CODHs are O2-tolerant, enabling aerobic CO metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00332-22</code>
                 <span class="evidence-snippet">cox operons, which encompass O2-tolerant Cu,Mo-CODHs</span>
                 <span class="meta">Cu,Mo-CODHs are O2-tolerant (aerobic CO metabolism).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>CooA</strong>
             <span class="edge-predicate">activates production of</span>
             <strong>Ni,Fe-carbon monoxide dehydrogenase</strong>
-            
+
             <p>CO-bound CooA activates transcription that produces the Ni,Fe-CODH machinery encoded in the coo operon.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00332-22</code>
                 <span class="evidence-snippet">CO binding to Fe(II) heme in the regulatory domain allosterically activates CooA to bind promoter sites upstream of the coo operon and recruit RNA polymerase (RNAP) for transcription of downstream genes</span>
                 <span class="meta">CO binding to Fe(II)-heme allosterically activates promoter binding and RNAP recruitment of coo operons.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>RcoM</strong>
             <span class="edge-predicate">regulates production of</span>
@@ -253,16 +253,16 @@
             <code>RO:0002211</code>
             <p>RcoM regulates transcription that produces the aerobic coxSML CODH machinery.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00332-22</code>
                 <span class="evidence-snippet">CooA and RcoM each primarily regulate anaerobic and aerobic CODH expression, respectively.</span>
                 <span class="meta">RcoM regulates aerobic CO oxidation and was originally identified upstream of coxMSL genes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>proton motive force</strong>
             <span class="edge-predicate">powers</span>
@@ -270,33 +270,33 @@
             <code>METPO:2007900</code>
             <p>The ion motive force generated by CO oxidation drives ATP synthase.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s40643-023-00705-9</code>
                 <span class="evidence-snippet">The reduction of those electron acceptors causes the formation of an ion motive force, which leads to the synthesis of ATP</span>
                 <span class="meta">Generates an ion motive force that drives ATP synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>molybdenum hydroxylase</strong>
             <span class="edge-predicate">coupled to reduction of</span>
             <strong>dioxygen</strong>
-            
+
             <p>Mo-CODH-mediated CO oxidation is coupled to O2 reduction aerobically.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/aem.00185-23</code>
                 <span class="evidence-snippet">CO oxidation by Mo-CODH was coupled with O2 reduction under aerobic conditions</span>
                 <span class="meta">Mo-CODH-mediated CO oxidation supports O2 reduction aerobically.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>CooA</strong>
             <span class="edge-predicate">regulates production of</span>
@@ -304,19 +304,19 @@
             <code>RO:0002211</code>
             <p>CO-bound CooA transcriptionally regulates production of carbon monoxide dehydrogenase and its accessory machinery.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00332-22</code>
                 <span class="evidence-snippet">Transcriptional activation leads to rapid expression of CODH and other accessory proteins</span>
                 <span class="meta">Verified against the open Journal of Bacteriology article.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -326,16 +326,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>Ni,Fe-carbon monoxide dehydrogenase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P31896/entry" rel="nofollow noreferrer"><code>UniProtKB:P31896</code></a>
                   <br>Carbon monoxide dehydrogenase <span class="meta">(cooS)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1085" rel="nofollow noreferrer">Rhodospirillum rubrum</a>
                   <br><code>NCBITaxon:1085</code>
                 </td>
@@ -346,40 +346,40 @@
                 <td>
                   <p>NiFeS CooS enzyme catalyzing CO oxidation in the hydrogenogenic R. rubrum system; it is not used as the grounding for the umbrella CODH node.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1021/ja990396i" rel="nofollow noreferrer"><code>DOI:10.1021/ja990396i</code></a>
-                      
+
                       <span class="evidence-snippet">site-directed mutagenesis of the cooS gene</span>
                       <span class="meta">The primary study mutagenized R. rubrum cooS and measured the resulting CODH turnover, linking this exact gene product to catalysis; UniProtKB P31896 verifies the reviewed instance.</span>
                     </li>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1128/jb.159.2.693-699.1984" rel="nofollow noreferrer"><code>DOI:10.1128/jb.159.2.693-699.1984</code></a>
-                      
+
                       <span class="evidence-snippet">two-electron oxidation of CO to form CO2</span>
                       <span class="meta">Purified R. rubrum CODH directly catalyzed the reaction represented by the graph.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -387,105 +387,105 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrmicro1595</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/trophic_type.html" >trophic type <code>METPO:1000631</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
 
-    
+
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000633</code> <span class="dim-preview">[-2.124, -2.915, -5.468, -0.095, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/hydrogenotrophic.html">hydrogenotrophic</a>
           <span class="sim">0.960</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photolithoautotrophic.html">photolithoautotrophic</a>
           <span class="sim">0.958</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/trophic_type.html">trophic type</a>
           <span class="sim">0.956</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoorganoheterotrophic.html">photoorganoheterotrophic</a>
           <span class="sim">0.900</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithoautotrophic.html">lithoautotrophic</a>
           <span class="sim">0.899</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photolithotrophic.html">photolithotrophic</a>
           <span class="sim">0.884</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoautotrophic.html">chemoautotrophic</a>
           <span class="sim">0.871</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/mixotrophic.html">mixotrophic</a>
           <span class="sim">0.869</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -556,232 +556,232 @@ Identifiers below are deliberately conservative. Labels are retained where an ex
 - `CHEBI:15377` — water
 - `CHEBI:15378` — proton
 - `CHEBI:15379` — dioxygen</pre>
-      
+
       <p class="meta">Showing the first 60 of
         265 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/carboxydotrophic-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Carboxydothermus hydrogenoformans</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=129958"
              rel="nofollow noreferrer"><code>NCBITaxon:129958</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/16311624/"
              rel="nofollow noreferrer"><code>PMID:16311624</code></a>
-          
-          
+
+
           <span class="meta">Thermophilic hydrogenogenic CO oxidiser (CO + H2O -&gt; CO2 + H2). Afipia/Oligotropha carboxidovorans is the aerobic CO-oxidiser model.</span>
         </li>
-        
+
         <li>
           <em>Rhodospirillum rubrum</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1085"
              rel="nofollow noreferrer"><code>NCBITaxon:1085</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/jb.174.16.5284-5294.1992"
              rel="nofollow noreferrer"><code>DOI:10.1128/jb.174.16.5284-5294.1992</code></a>
-          
-          
+
+
           <span class="meta">Canonical hydrogenogenic CO oxidizer with genetically and biochemically characterized cooS CODH and CooA-regulated coo operons.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-08-23T09:11:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Reviewed the aerobic and anaerobic graph branches, grounded NiFe CODH and ATP synthase, documented exact label-only dispositions including CooA, and added DOI-backed R. rubrum CooS P31896.</p>
         </li>
-        
+
         <li>
           <time>2026-05-05T01:35:46.868229+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for CODH-mediated carbon monoxide oxidation, respiratory-chain coupling, and energy conservation.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000016×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007405×1, METPO:2007402×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:38:01Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022904×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:41:04Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T05:05:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A061JSS8×1, UniProtKB:A0A099I9V3×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T02:30:13Z</time> ·
           <strong>RETYPE_CAUSAL_NODES</strong> · claude
           <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:48Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: requires → depends on ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:51Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002502×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-13T21:03:27Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:encodes×2, RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A415TT77×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:34Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:15379×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A1D7QXJ2×1, UniProtKB:A0A0D5N3T8×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 4 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to oxidizes), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T04:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813, issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so the CURIE resolved to nothing upstream while looking like an upstream term to anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv, which is not read at the point of use. RO:0002205 (has gene product) is the nearest real term but relates a GENE to a gene product, whereas these edges relate a gene cluster or operon to a protein complex or a biosynthetic process, which its range does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it, which puts it in the same state as the rest of that cohort rather than in a category of its own.</p>
         </li>
-        
+
         <li>
           <time>2026-08-17T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_SENSE</strong> · claude
           <p class="changes">One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical sense here. A third id for the same molecule, grounded CHEBI:15379 like the rest. Folded into molecular_oxygen: #384 reported two ids for oxygen, and there were four.</p>
         </li>
-        
+
         <li>
           <time>2026-08-22T04:26:16Z</time> ·
           <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
           <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic GO/InterPro terms and retracted 1 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
-        
+
         <li>
           <time>2026-08-30T19:21:37Z</time> ·
           <strong>REVIEW_EVIDENCE_REFERENCE_CHURN</strong> · codex
           <p class="changes">Offline review for issue 520 retained 1 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1101/2023.01.17.524042 -&gt; DOI:10.1128/aem.00185-23 (1 edge).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T06:33:04Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007900×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T10:45:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -810,12 +810,12 @@ Identifiers below are deliberately conservative. Labels are retained where an ex
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1166,8 +1166,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 10:45 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
