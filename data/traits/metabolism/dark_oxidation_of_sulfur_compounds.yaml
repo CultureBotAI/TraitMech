@@ -12,6 +12,8 @@ synonyms:
 - synonym_text: dark_oxidation_of_sulfur_compounds
   synonym_type: EXACT_SYNONYM
   source: DOI:10.1126/science.aaf4507
+xrefs:
+- GO:0019417
 evidence:
 - reference: DOI:10.1111/j.1574-6976.2009.00187.x
   snippet: Lithotrophic sulfur oxidation is an ancient metabolic process

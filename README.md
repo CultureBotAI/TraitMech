@@ -71,7 +71,8 @@ just validate-all             # validate every TraitRecord YAML
   plus `DETECTION` and `OTHER`).
 - **TermKindEnum** — `CLASS` / `DATATYPE_PROPERTY` /
   `OBJECT_PROPERTY` / `ANNOTATION_PROPERTY`.
-- **MappingStatusEnum** — `SEEDED` / `REVIEWED` / `DEPRECATED`.
+- **MappingStatusEnum** — `SEEDED` / `PROPOSED` / `REVIEWED` /
+  `DEPRECATED`.
 - **PriorityEnum**, **SynonymTypeEnum**.
 
 ## Layout

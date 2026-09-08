@@ -28,5 +28,5 @@ events:
     parents, and added xylanolysis as an exact synonym of traitmech:000113 after duplicate
     review found GO:0045493 was already grounded. Every new record carries the FAPROTAX DOI
     plus one additional DOI-backed literature citation; verified the candidate labels, slugs,
-    and IDs with rg --no-ignore --hidden, and kept sequence-feature and chemical-column labels
-    out of scope.
+    and IDs with rg --no-ignore --hidden, kept sequence-feature and chemical-column labels
+    out of scope, and kept the writer non-destructive for existing same-ID records.

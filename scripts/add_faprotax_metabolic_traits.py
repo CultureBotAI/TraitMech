@@ -420,6 +420,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
                     "source": FAPROTAX,
                 },
             ],
+            "xrefs": ["GO:0019417"],
             "evidence": [
                 {
                     "reference": "DOI:10.1111/j.1574-6976.2009.00187.x",
@@ -534,13 +535,16 @@ def _load_trait(slug: str) -> tuple[Path, dict]:
 
 def _replace_parent(doc: dict, old: str, new: str) -> bool:
     parents = list(doc.get("parent_traits") or [])
-    if new in parents:
+    updated = []
+    for parent in parents:
+        replacement = new if parent == old else parent
+        if replacement not in updated:
+            updated.append(replacement)
+    if new not in updated:
+        updated.append(new)
+    if updated == parents:
         return False
-    if old in parents:
-        parents[parents.index(old)] = new
-    else:
-        parents.append(new)
-    doc["parent_traits"] = parents
+    doc["parent_traits"] = updated
     return True
 
 
@@ -583,10 +587,11 @@ def _new_records() -> list[tuple[Path, dict]]:
         path = METABOLISM_DIR / f"{slug}.yaml"
         record = copy.deepcopy(raw)
         identifier = record["identifier"]
-        if path.exists() and yaml.safe_load(
-            path.read_text(encoding="utf-8")
-        )["identifier"] != identifier:
-            raise SystemExit(f"{path.relative_to(REPO_ROOT)} already exists")
+        if path.exists():
+            existing = yaml.safe_load(path.read_text(encoding="utf-8"))
+            if existing["identifier"] != identifier:
+                raise SystemExit(f"{path.relative_to(REPO_ROOT)} already exists")
+            continue
         if identifier in existing_ids and existing_ids[identifier] != path:
             taken = existing_ids[identifier].relative_to(REPO_ROOT)
             raise SystemExit(f"{identifier} is already used by {taken}")
