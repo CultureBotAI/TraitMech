@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-06T202900Z-codex-eaa821
+  timestamp: '2026-09-06T20:29:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/673
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Rescoped biosafety_level_5 as the generic METPO class
+  details: 'Replaced the PR 664 BSL-5 PPL-alpha-focused graph with a DOI-backed
+    graph centered on the generic METPO class for a proposed enhanced-containment
+    classification beyond BSL-4. PPL-alpha remains only as DOI-backed historical
+    name-use evidence. This addresses adversarial PR review issue #673.'

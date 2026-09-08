@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_range_mid2.yaml
+  slug: ph_range_mid2
+session:
+  id: 2026-09-04T024000Z-codex-3036b8
+  timestamp: '2026-09-04T02:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Review pH range mid2 causal evidence
+  details: Reviewed data/traits/environment/ph_range_mid2.yaml for issue 183. Added seven
+    source-checked edge-level snippets, replaced ungrounded pH-homeostasis predicates with
+    grounded biolink:associated_with, RO:0002326, RO:0002211, RO:0002327, or biolink:produces
+    predicates, retyped the membrane_potential node to STATE, removed the no-longer-used cytoplasm
+    node, and kept the graph NONMECHANISTIC because the record is a pH numerical-limit bin
+    rather than a taxon-specific molecular mechanism. Validated via the write-time LinkML
+    gate in scripts/review_ph_range_mid2_graph_183.py.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/soil_dwelling.yaml
+  slug: soil_dwelling
+session:
+  id: 2026-09-06T133000Z-codex-0f1048
+  timestamp: '2026-09-06T13:30:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/666
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Repair PR 664 soil connector evidence
+  details: 'Addressed adversarial review issue #666 by replacing borrowed snippets on the
+    six soil_life_history_activity_context connectors with connector-specific exact snippets
+    from the same supporting sources; the focused replay tests verify the patched script
+    and curated YAML stay in sync.'

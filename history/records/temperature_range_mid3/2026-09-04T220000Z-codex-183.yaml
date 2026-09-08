@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_range_mid3.yaml
+  slug: temperature_range_mid3
+session:
+  id: 2026-09-04T220000Z-codex-183
+  timestamp: '2026-09-04T22:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connect temperature-range-mid3 causal graph components
+  details: Resolved issue 183 graph fragmentation for data/traits/environment/temperature_range_mid3.yaml
+    by adding 5 source- and verbatim-snippet-backed association connectors among
+    DesK/DesR membrane-order sensing, des expression, cooling-induced membrane rigidification,
+    and homeoviscous liquid-crystalline membrane branches, connecting the temperature-range-mid3
+    nonmechanistic graph from 6 components to 1. Validated via the write-time LinkML
+    gate in scripts/connect_temperature_range_mid3_graph_183.py.

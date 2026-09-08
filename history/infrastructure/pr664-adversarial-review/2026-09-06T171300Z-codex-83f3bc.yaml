@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-06T171300Z-codex-83f3bc
+  timestamp: '2026-09-06T17:13:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/671
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Expanded terse BSL-5 PR 664 snippets
+  details: 'Expanded the terse SAE 2002 PPL-alpha snippets on biosafety_level_5 edges so the
+    evidence identifies the exact BSL-4 comparison and closed-system sample-handling context.
+    This addresses adversarial PR review issue #671.'

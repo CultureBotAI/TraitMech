@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_mid3.yaml
+  slug: ph_delta_mid3
+session:
+  id: 2026-09-04T014000Z-codex-398efe
+  timestamp: '2026-09-04T01:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Review ph_delta_mid3 causal evidence
+  details: Reviewed data/traits/environment/ph_delta_mid3.yaml for issue 183. Added source-checked
+    snippets to eight edge-level evidence items, replaced four ungrounded pH-homeostasis predicates
+    with grounded RO:0002211, RO:0002326, or biolink:produces predicates, and kept the graph
+    NONMECHANISTIC because the record is a pH-breadth bin rather than a taxon-specific molecular
+    mechanism. Validated via the write-time LinkML gate in scripts/review_ph_delta_mid3_graph_183.py.

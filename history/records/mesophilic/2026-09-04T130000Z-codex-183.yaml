@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/mesophilic.yaml
+  slug: mesophilic
+session:
+  id: 2026-09-04T130000Z-codex-183
+  timestamp: '2026-09-04T13:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected mesophilic causal-graph components
+  details: 'Resolved issue #183 graph fragmentation in data/traits/environment/mesophilic.yaml.
+    Added 4 source- and verbatim-snippet-backed association connectors to collapse
+    the reviewed nonmechanistic temperature-preference graph from 5 components to
+    1 while keeping cold-shock and heat-shock edges as boundary-support branches.
+    No paid research service was called.'

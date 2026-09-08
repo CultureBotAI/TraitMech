@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/cell_length_small.yaml
+  slug: cell_length_small
+session:
+  id: 2026-09-04T054000Z-codex-b8e2dd
+  timestamp: '2026-09-04T05:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed cell_length_small causal evidence
+  details: 'Reviewed data/traits/morphology/cell_length_small.yaml for issue #183. Added exact
+    public snippets to 6 FtsZ/divisome causal-edge evidence entries, grounded residual predicates
+    in the cell_length_small_size_setpoint graph, retyped FtsZ abundance as a quality, and
+    preserved the METPO 1.3-2 micrometre interval as a nonmechanistic cell-length classification.
+    No paid research service was called.'

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_mid3.yaml
+  slug: ph_delta_mid3
+session:
+  id: 2026-09-08T033000Z-codex-b36abc
+  timestamp: '2026-09-08T03:30:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/702
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: EDIT
+  outcome: changed
+  summary: Correct ph_delta_mid3 component provenance
+  details: 'Appended corrective issue-183 provenance after PR #664 adversarial review issue
+    #702 identified a stale 6 components to 1 claim. The unsupported pH-breadth hub connectors
+    have been pruned, so this NONMECHANISTIC graph intentionally ships with 6 disconnected
+    components pending independently supported pH-specific connectors. Validated with scripts/repair_pr664_adversarial_review.py
+    and LinkML write-time validation.'

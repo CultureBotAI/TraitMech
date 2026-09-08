@@ -134,13 +134,13 @@ causal_graphs:
   - subject: compatible_solute_accumulation
     predicate: enables
     object: osmoadaptation
-    description: Accumulation of neutral compatible solutes enables osmoadaptation
-      and broader salt-supported growth.
+    description: Compatible-solute uptake or synthesis enables osmoadaptation after
+      an osmotic upshift.
     evidence:
-    - reference: DOI:10.1128/MMBR.00181-23
-      notes: To avoid K+-induced cytotoxicity and high ionic strength, cells accumulate
-        or synthesize neutral compatible solutes (glycine betaine, trehalose, ectoine,
-        proline).
+    - reference: DOI:10.1371/journal.pgen.1007574
+      snippet: secondary response involving uptake or synthesis of compatible solutes
+      notes: Verified against the open Pham et al. introduction; compatible-solute
+        uptake and synthesis are retained as a broad bacterial osmotic-upshift response.
     predicate_id: RO:0002327
   - subject: hyperosmotic_upshift
     predicate: causes
@@ -148,9 +148,11 @@ causal_graphs:
     description: Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive
       response.
     evidence:
-    - reference: DOI:10.1128/MMBR.00181-23
-      notes: Cells import large amounts of K+ during osmotic upshift; potassium is
-        the principal cytoplasmic cation.
+    - reference: DOI:10.1371/journal.pgen.1007574
+      snippet: In response to an osmotic upshift (hyperosmotic stress), bacteria import
+        potassium ions
+      notes: Verified against the open Pham et al. introduction; K+ uptake is retained
+        as the immediate bacterial response to hyperosmotic stress.
     predicate_id: biolink:causes
   - subject: potassium_uptake
     predicate: contributes to
@@ -158,37 +160,48 @@ causal_graphs:
     description: K+ accumulation is a core early osmoadaptive response to increased
       NaCl.
     evidence:
-    - reference: DOI:10.1128/MMBR.00181-23
-      notes: Cytoplasmic K+ levels ~250 mM (E. coli) to ~500 mM (C. glutamicum, L.
-        lactis) accumulate as a core osmoadaptive response.
+    - reference: DOI:10.1371/journal.pgen.1007574
+      snippet: This allows the cell to limit the loss of water and maintain turgor
+      notes: Verified against the open Pham et al. introduction; the early K+ import
+        and later compatible-solute response are framed as limiting water loss and
+        maintaining turgor.
     predicate_id: RO:0002326
-  - subject: salt_out_strategy
-    predicate: uses
-    object: compatible_solute_accumulation
-    description: The salt-out strategy relies on accumulation of organic compatible
-      solutes.
+  - subject: compatible_solute_accumulation
+    predicate: part of
+    object: salt_out_strategy
+    description: Compatible-solute import or synthesis is part of the salt-out osmoadaptation
+      strategy.
     evidence:
     - reference: DOI:10.3390/microorganisms12081738
-      notes: Salt-out excludes Na+ while accumulating organic compatible solutes like
-        sugars, polyalcohols, ectoine, trehalose, glycine-betaine.
+      snippet: The second phase starts with the import or de novo synthesis of the
+        compatible solute
+      notes: Verified against public Bonnaud et al. text; the edge is reversed to
+        ground the component-process relation.
+    predicate_id: biolink:part_of
   - subject: salt_in_strategy
-    predicate: supports
+    predicate: contributes to
     object: high_maximal_nacl_tolerance
-    description: The salt-in strategy supports very high maximal salinity tolerance,
-      extending the upper NaCl limit.
+    description: The salt-in strategy contributes to growth under very high ambient
+      NaCl in haloarchaeal lineages.
     evidence:
     - reference: DOI:10.3390/microorganisms12081738
-      notes: Salt-out is energetically costly and less suited to saturating salinities;
-        salt-in is favored at very high salt.
+      snippet: haloarchaea favors the salt-in strategy at high salt concentrations
+        in the medium
+      notes: Verified against public Bonnaud et al. text; salt-in is retained as a
+        high-salt osmoadaptation strategy, not as a direct determinant of an exact
+        NaCl-delta interval.
+    predicate_id: RO:0002326
   - subject: mechanosensitive_channels
-    predicate: protects against
+    predicate: mitigates
     object: hypoosmotic_shock
-    description: Mechanosensitive channels act as safety valves protecting cells against
-      sudden hypoosmotic shocks at the low-salinity end of the range.
+    description: Mechanosensitive channels mitigate turgor stress during sudden hypoosmotic
+      shocks at the low-salinity end of the range.
     evidence:
     - reference: DOI:10.3390/microorganisms12081738
-      notes: Mechanosensitive (Msc) channels and compatible-solute efflux systems
-        act as safety valves during sudden hypoosmotic shocks.
+      snippet: mechanosensitive channels, which serve as safety valves
+      notes: Verified against public Bonnaud et al. text; the broad MscL/MscS label
+        is kept reviewed-label-only in this nonmechanistic quantitative graph.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816534+00:00'
   curator: seed_from_metpo
@@ -279,4 +292,12 @@ curation_history:
     canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T07:20:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the nacl_delta_euryhaline_breadth graph for issue #183: added
+    exact snippets to 6 causal-edge evidence items, grounded 3 residual predicates,
+    and preserved the graph as a nonmechanistic quantitative NaCl-range-breadth classification.
+    No paid research service was called.'
   llm_assisted: true

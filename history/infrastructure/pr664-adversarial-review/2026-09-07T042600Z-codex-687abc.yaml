@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T042600Z-codex-687abc
+  timestamp: '2026-09-07T04:26:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/687
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Split duplicated SulA snippets
+  details: 'Gave the cell_length_large FtsZ inhibition edge and SulA
+    division-inhibitor connector distinct Wiley snippets so each quote carries
+    its own edge claim without reusing the same fragment. This addresses
+    adversarial PR review issue #687.'

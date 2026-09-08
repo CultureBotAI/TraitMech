@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-06T202800Z-codex-7d3f87
+  timestamp: '2026-09-06T20:28:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/672
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Normalized nacl_range_low K+ snippet evidence
+  details: 'Replaced the PR 664 nacl_range_low compatible-solute evidence snippet
+    with exact Bhowmick et al. wording that normalizes the K+ superscript in
+    cation examples instead of retaining the HTML-flattening artifact that rendered
+    with a spaced plus sign. This addresses adversarial PR review issue #672.'

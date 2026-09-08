@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_range_very_low.yaml
+  slug: temperature_range_very_low
+session:
+  id: 2026-09-04T044000Z-codex-3e9ace
+  timestamp: '2026-09-04T04:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed temperature_range_very_low causal evidence
+  details: 'Reviewed data/traits/environment/temperature_range_very_low.yaml for issue #183.
+    Added exact snippets to six edge-level evidence entries from Ramón et al. 2023, Ramasamy
+    et al. 2023, and Phadtare and Severinov 2010, grounded three residual predicates, and
+    narrowed the RNA secondary-structure node identifier and type. No paid research service
+    was called.'

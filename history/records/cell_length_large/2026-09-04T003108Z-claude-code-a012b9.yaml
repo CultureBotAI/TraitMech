@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/cell_length_large.yaml
+  slug: cell_length_large
+session:
+  id: 2026-09-04T003108Z-claude-code-a012b9
+  timestamp: '2026-09-04T00:31:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connect cell_length_large FtsZ graph
+  details: Repaired data/traits/morphology/cell_length_large.yaml after ranking it as the
+    highest-score DEEPEN_CAUSAL_GRAPH target in scripts/trait_priority.py. The edit re-cited
+    the SOS/SulA branch to DOI:10.1002/advs.202203260, replaced the residual ungrounded FtsZ/SulA
+    predicates with RO:0002212/RO:0002213 groundings, and added three DOI-backed connector
+    edges so the nonmechanistic FtsZ/SOS division-delay graph moves from four disconnected
+    components to one. Existing paid Falcon research at research/traits/morphology/cell_length_large-deep-research-falcon.md
+    was used as a lead. No paid research service was called. Validation used write_validated_trait,
+    linkml-validate for the edited YAML, validate_strict.py, audit_causal_graphs.py, audit_predicate_domains.py,
+    audit_evidence_snippets.py, audit_graph_protein_taxa.py, the record-repair regression
+    tests, and the trait-priority regression tests.

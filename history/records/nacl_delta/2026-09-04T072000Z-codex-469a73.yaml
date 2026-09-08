@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_delta.yaml
+  slug: nacl_delta
+session:
+  id: 2026-09-04T072000Z-codex-469a73
+  timestamp: '2026-09-04T07:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed NaCl delta causal evidence
+  details: 'Reviewed data/traits/environment/nacl_delta.yaml for issue #183. Added exact snippets
+    to 6 NaCl-delta causal-edge evidence entries, grounded 3 residual predicates in the nacl_delta_euryhaline_breadth
+    graph, and preserved the graph as a nonmechanistic quantitative NaCl-range-breadth classification.
+    No paid research service was called.'

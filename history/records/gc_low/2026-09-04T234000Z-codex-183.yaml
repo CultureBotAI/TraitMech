@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gc_low.yaml
+  slug: gc_low
+session:
+  id: 2026-09-04T234000Z-codex-183
+  timestamp: '2026-09-04T23:40:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Connected the gc_low causal graph
+  details: 'Reviewed data/traits/genomics/gc_low.yaml graph fragmentation for issue
+    #183. Added one source- and verbatim-snippet-backed is-a connector from the AT-enriching
+    mutation spectrum to the broader mutational-spectrum node, connecting the DNA-repair-defect
+    and GC-content branches from 2 components to 1 while preserving the nonmechanistic
+    GC_42.65_57.0 bin. No paid research service was called.'

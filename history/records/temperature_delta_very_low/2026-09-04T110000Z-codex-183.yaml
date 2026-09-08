@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_very_low.yaml
+  slug: temperature_delta_very_low
+session:
+  id: 2026-09-04T110000Z-codex-183
+  timestamp: '2026-09-04T11:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected temperature_delta_very_low causal-graph components
+  details: 'Resolved issue #183 graph fragmentation in data/traits/environment/temperature_delta_very_low.yaml.
+    Added 3 contextual cold membrane and RNA nodes plus 8 source- and verbatim-snippet-backed
+    connectors to collapse the reviewed graph from 4 components to 1 while preserving
+    temperature_delta_very_low as a nonmechanistic 1-5 degree C temperature-breadth
+    bin. No paid research service was called.'

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/nacl_optimum.yaml
+  slug: nacl_optimum
+session:
+  id: 2026-09-04T140000Z-codex-183
+  timestamp: '2026-09-04T14:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected NaCl-optimum causal-graph components
+  details: 'Resolved issue #183 graph fragmentation in data/traits/environment/nacl_optimum.yaml.
+    Added 4 source- and verbatim-snippet-backed connectors to collapse the reviewed
+    nonmechanistic graph from 5 components to 1 while keeping salt-in KCl, acidic
+    proteome, compatible-solute uptake, and Na+/K+/H+ transporter branches scoped
+    as NaCl-optimum osmoadaptation support. No paid research service was called.'

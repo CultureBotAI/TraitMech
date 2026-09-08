@@ -38,8 +38,8 @@ def test_all_populated_records_match_the_source_ledger() -> None:
         ), slug
 
 
-def test_only_the_four_reviewed_evidence_gaps_remain_in_the_live_queue() -> None:
-    assert migration.expected_queue() == set(migration.DEFERRED)
+def test_the_four_reviewed_evidence_gaps_leave_the_live_queue() -> None:
+    assert migration.expected_queue() == set()
     for slug in migration.DEFERRED:
         doc = _trait(slug)
         assert not doc.get("canonical_examples"), slug

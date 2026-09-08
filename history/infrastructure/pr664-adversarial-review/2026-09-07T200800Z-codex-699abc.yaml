@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T200800Z-codex-699abc
+  timestamp: '2026-09-07T20:08:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/699
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Pruned unsupported hub connectors
+  details: 'Removed empty association connectors from the pH-breadth,
+    upper-mesophile, and warm-mesophile graphs when generic review evidence
+    only joined contextual branches to bin labels or damage hubs. This addresses
+    adversarial PR review issue #699.'

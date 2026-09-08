@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T010000Z-codex-60bca2
+  timestamp: '2026-09-07T01:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/674
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Requoted copied psychrophile cold-adaptation snippets
+  details: 'Replaced copied Ramasamy compatible-osmolyte and ice-binding-protein
+    snippets on temperature_range_very_low with independent exact wording from the
+    DOI-backed source, and corrected a temperature_optimum_very_low cold-shock note
+    that named Hamdan where the evidence cites Phadtare and Severinov. This addresses
+    adversarial PR review issue #674.'

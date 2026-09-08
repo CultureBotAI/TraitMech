@@ -64,7 +64,7 @@ data/traits/environment/nacl_delta.yaml	METPO:1000335	NaCl delta	nacl_delta_eury
 data/traits/environment/nacl_delta_high.yaml	METPO:1000482	NaCl delta high	nacl_delta_high_extreme_euryhaline	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_low.yaml	METPO:1000479	NaCl delta low	nacl_delta_low_stenohaline	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_delta_mid1.yaml	METPO:1000480	NaCl delta mid1	nacl_delta_mid1_modest_breadth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/nacl_delta_mid2.yaml	METPO:1000481	NaCl delta mid2	nacl_delta_mid2_broad_breadth	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum.yaml	METPO:1000333	NaCl optimum	nacl_optimum_balanced_osmoadaptation	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_high.yaml	METPO:1000468	NaCl optimum high	nacl_optimum_high_extreme_halophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/nacl_optimum_low.yaml	METPO:1000465	NaCl optimum low	nacl_optimum_low_non_halophile_setpoint	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -138,7 +138,7 @@ data/traits/environment/temperature_range_high.yaml	METPO:1000454	temperature ra
 data/traits/environment/temperature_range_low.yaml	METPO:1000449	temperature range low	temperature_range_low_psychrotolerant	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid1.yaml	METPO:1000450	temperature range mid1	temperature_range_mid1_lower_mesophile	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid2.yaml	METPO:1000451	temperature range mid2	temperature_range_mid2_baseline_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/environment/temperature_range_mid3.yaml	METPO:1000452	temperature range mid3	temperature_range_mid3_upper_mesophile	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_mid4.yaml	METPO:1000453	temperature range mid4	temperature_range_mid4_warm_mesophile	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/temperature_range_very_low.yaml	METPO:1000448	temperature range very low	temperature_range_very_low_psychrophile	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/thermophilic.yaml	METPO:1000616	thermophilic	thermophilic_heat_adaptation	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -226,7 +226,7 @@ data/traits/morphology/carotenoid_pigmentation.yaml	METPO:1003031	carotenoid pig
 data/traits/morphology/cell_length.yaml	METPO:1000881	cell length	cell_length_division_growth_control	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_large.yaml	METPO:1000886	cell length large	cell_length_large_division_delay	NONMECHANISTIC	2	2	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_medium.yaml	METPO:1000885	cell length medium	cell_length_medium_growth_rate	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/cell_length_small.yaml	METPO:1000884	cell length small	cell_length_small_size_setpoint	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_length_very_small.yaml	METPO:1000883	cell length very small	cell_length_very_small_streamlining	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_shape.yaml	METPO:1000666	cell shape	cell_shape_peptidoglycan_cytoskeleton	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/cell_width.yaml	METPO:1000882	cell width	cell_width_mreb_lateral_wall	NONMECHANISTIC	3	0	3	3	3	0	0	NONMECHANISTIC	0	0	-

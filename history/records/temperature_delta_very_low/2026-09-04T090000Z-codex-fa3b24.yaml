@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_very_low.yaml
+  slug: temperature_delta_very_low
+session:
+  id: 2026-09-04T090000Z-codex-fa3b24
+  timestamp: '2026-09-04T09:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Reviewed temperature_delta_very_low causal evidence
+  details: 'Reviewed data/traits/environment/temperature_delta_very_low.yaml for issue #183.
+    Added exact public snippets to 4 membrane and cold-shock causal-edge evidence items, grounded
+    3 residual predicates, collapsed one backwards membrane-fluidity edge into the supported
+    unsaturated-fatty-acid edge, retyped unsaturated fatty acid content as a quality, and
+    kept the METPO 1-5 degree C temperature-breadth interval as a nonmechanistic classification.
+    No paid research service was called.'

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/ring_shaped.yaml
+  slug: ring_shaped
+session:
+  id: 2026-09-04T062000Z-codex-37b20b
+  timestamp: '2026-09-04T06:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed ring_shaped causal evidence
+  details: 'Reviewed data/traits/morphology/ring_shaped.yaml for issue #183. Added exact public
+    snippets to 6 comparative curvature and wall-patterning causal-edge evidence entries,
+    grounded residual predicates in the ring_shaped_curved_growth_closure graph, retyped the
+    bactofilin-M23 module as a pathway, and preserved the record as a nonmechanistic ring-shape
+    classification. No paid research service was called.'

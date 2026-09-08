@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/obligately_piezophilic.yaml
+  slug: obligately_piezophilic
+session:
+  id: 2026-09-04T082000Z-codex-7cf93a
+  timestamp: '2026-09-04T08:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reviewed obligately_piezophilic causal evidence
+  details: 'Reviewed data/traits/environment/obligately_piezophilic.yaml for issue #183. Added
+    exact snippets to 6 causal-edge evidence items, grounded 2 residual predicates in the
+    obligate_piezophily_high_pressure_requirement graph, and preserved the trait as a nonmechanistic
+    high-hydrostatic-pressure growth requirement. No paid research service was called.'

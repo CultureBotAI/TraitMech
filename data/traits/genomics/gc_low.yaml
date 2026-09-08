@@ -15,10 +15,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: DOI:10.1038/nrg2358
-  snippet: GC content
-  notes: Bacterial-genome review supports the mid-range GC content as a distinct genomic-composition
-    phenotype.
+- reference: DOI:10.1371/journal.pgen.1001107
+  snippet: The genomic GC-content of bacteria varies dramatically, from less than
+    20% to more than 70%
+  notes: Verified against the open Hildebrand et al. abstract; bacterial genome-wide
+    GC content spans the METPO 42.65-57.0% bin, whose cutpoints come from this record's
+    METPO synonym.
 canonical_examples:
 - taxon_id: NCBITaxon:1793963
   taxon_label: Bacillus nakamurai
@@ -27,14 +29,15 @@ canonical_examples:
     description, wholly inside this record's authoritative 42.65-57.0% interval.
 causal_graphs:
 - graph_id: gc_low_mid_low_gc_bin
-  title: GC-low (METPO 42.65–57.0%) mid-low GC bin
+  title: GC-low METPO 42.65-57.0% genome-composition context
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
     contextual protein nodes do not receive token UniProt examples.
-  description: DOI-backed graph linking moderate mutation bias to a GC content of
-    ~42.65–57.0% (the threshold encoded by the METPO synonym GC_42.65_57.0 on this
-    record).
+  description: DOI-backed nonmechanistic graph connecting DNA-repair defects, mutational
+    spectra, cytosine-deamination context, AT-enriching spectrum context, replication/repair
+    enzyme bias, and moderate mutation bias to continuous genome-wide GC content and
+    the METPO GC_42.65_57.0 bin.
   nodes:
   - node_id: gc_low_trait
     label: GC low
@@ -78,22 +81,29 @@ causal_graphs:
       to genome base composition.
   edges:
   - subject: moderate_mutation_bias
-    predicate: confers
-    object: gc_low_trait
-    description: Moderate mutation-bias balance yields mid-range GC composition.
+    predicate: contributes to
+    object: gc_content
+    description: Moderate mutation-bias balance contributes to continuous genome-wide
+      GC composition.
     evidence:
-    - reference: DOI:10.1186/1471-2148-10-374
-      snippet: mutation bias
-      notes: Supports mutation-bias balance as the basis of mid-range GC bins.
-    predicate_id: METPO:2007700
+    - reference: DOI:10.3389/fmicb.2024.1412318
+      snippet: The GC% of genomes depends in part on the mutation rates between each
+        nucleotide
+      notes: Verified against the open Delgado et al. introduction; mutation rates
+        are described as one component of genome GC percent, with selection pressures
+        and codon-usage effects also contributing.
+    predicate_id: RO:0002326
   - subject: gc_low_trait
     predicate: is a
     object: gc_content
     description: GC low is a quantitative bin of the GC-content phenotype.
     evidence:
-    - reference: DOI:10.1038/nrg2358
-      snippet: GC content
-      notes: Supports the 42.65–57.0% bin as a value within the GC-content distribution.
+    - reference: DOI:10.1371/journal.pgen.1001107
+      snippet: The genomic GC-content of bacteria varies dramatically, from less than
+        20% to more than 70%
+      notes: Verified against the open Hildebrand et al. abstract; the public source
+        supports genome-wide GC content as a continuous bacterial genome-composition
+        measurement, while the METPO synonym supplies this bin's cutpoints.
     predicate_id: rdfs:subClassOf
   - subject: dna_repair_defect
     predicate: causes
@@ -102,37 +112,63 @@ causal_graphs:
       mutational signatures.
     evidence:
     - reference: DOI:10.1038/s41467-023-42916-w
-      notes: Defects in DNA repair create distinctive mutational signatures attributable
-        to MMR, BER, or HR genes.
+      snippet: defects in DNA repair create distinctive mutational signatures
+      notes: Verified against the open Ruis et al. abstract and results; hypermutator
+        lineages with mutations in MMR, BER, or HR DNA-repair genes were used to extract
+        pathway-specific bacterial signatures.
     predicate_id: biolink:causes
   - subject: cytosine_deamination
-    predicate: shifts toward
+    predicate: contributes to
     object: at_enriching_spectrum
-    description: Cytosine deamination / C>T transition bias shifts the spectrum toward
-      AT-enriching substitutions.
+    description: Cytosine deamination and the resulting C>T transitions contribute
+      to an AT-enriching bacterial mutation spectrum.
     evidence:
     - reference: DOI:10.1038/s41467-023-42916-w
-      notes: C>T was the most common mutation type in 69 of 84 SBS spectra, potentially
-        due to cytosine deamination.
+      snippet: cytosine to thymine (C > T) was typically the most common mutation
+        type identified
+      notes: Verified against the open Ruis et al. results; C>T was the most common
+        mutation type in 69 of 84 bacterial single-base-substitution spectra and is
+        discussed as potentially arising from cytosine deamination.
+    predicate_id: RO:0002326
   - subject: at_enriching_spectrum
     predicate: associated with
-    object: gc_low_trait
-    description: A spectrum enriched for C>A/T and depleted for C>G is associated
-      with lower genomic G+C content.
+    object: gc_content
+    description: AT-enriching C>A/T and depleted C>G mutation spectra are associated
+      with continuous genome-wide G+C content.
     evidence:
     - reference: DOI:10.1038/s41467-023-42916-w
-      notes: Genomic G+C content negatively correlates with C>A/T proportion and positively
-        with C>G mutations.
+      snippet: Genomic G + C content exhibited a negative correlation with proportion
+        of C > A/T mutations
+      notes: Verified against the open Ruis et al. results; the spectrum-to-composition
+        association is left on the continuous GC-content node rather than asserted
+        as specific causation of this METPO numeric bin.
     predicate_id: biolink:associated_with
   - subject: repair_enzyme_bias
-    predicate: shapes
+    predicate: contributes to
     object: gc_content
     description: Biases of DNA replication/repair enzymes and inter-nucleotide mutation
-      rates shape genomic GC percent.
+      rates contribute to genomic GC percent.
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1412318
-      notes: Genome GC% depends in part on mutation rates between nucleotides; replication/repair
-        enzymes present biases.
+      snippet: enzymes involved in DNA replication and/or repair are known to present
+        biases
+      notes: Verified against the open Delgado et al. introduction; DNA replication
+        and repair enzyme biases are framed as mutation-rate effects that help determine
+        genome GC percent.
+    predicate_id: RO:0002326
+  - subject: at_enriching_spectrum
+    predicate: is a
+    object: mutational_spectrum
+    description: The AT-enriching C>A/T spectrum is a mutational-spectrum context
+      connecting cytosine-deamination bias to bacterial DNA-repair mutational signatures.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-42916-w
+      snippet: context-dependent patterns of base substitutions termed mutational
+        signatures, which combine to form a mutational spectrum
+      notes: Verified against the open Ruis et al. results; this connector identifies
+        the AT-enriching C>A/T pattern as a specific bacterial mutational-spectrum
+        context rather than a direct cause of the METPO GC_42.65_57.0 bin.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
@@ -191,4 +227,33 @@ curation_history:
     canonical example(s): Bacillus nakamurai (NCBITaxon:1793963; DOI:10.1099/ijsem.0.001135).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T05:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the gc_low_mid_low_gc_bin graph for issue #183: added exact snippets
+    to GC-low evidence and 6 causal-edge evidence items, grounded 2 residual predicates,
+    and preserved the METPO GC_42.65_57.0 interval as a nonmechanistic whole-genome
+    GC-content classification. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-04T23:40:00Z'
+  curator: codex
+  action: CONNECT_CAUSAL_GRAPH_COMPONENTS
+  changes: 'Resolved issue #183 graph fragmentation (2 components to 1) by adding
+    1 source-backed is-a connector from the AT-enriching mutation spectrum to the
+    broader mutational-spectrum node. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #666: replaced the borrowed
+    GC-content snippet on the AT-enriching-spectrum is-a connector with a direct SBS-spectrum
+    snippet from the same source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: replaced the copied GC-low connector
+    snippet with exact Ruis et al. wording defining a mutational spectrum as combined
+    context-dependent substitution signatures.'
   llm_assisted: true

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: report
+  path: app/dashboard/priority.json
+  slug: priority-dashboard
+session:
+  id: 2026-09-08T033500Z-codex-4d075b
+  timestamp: '2026-09-08T03:35:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/703
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: EDIT
+  outcome: changed
+  summary: Regenerate PR 664 priority dashboard
+  details: 'Regenerated app/dashboard/priority.json and app/dashboard/priority.html after
+    PR #664 adversarial review issue #703 found that they still reflected connector edges
+    pruned from data/traits. The refreshed dashboard now reports the shipped component counts
+    and recommends DEEPEN_CAUSAL_GRAPH for the intentionally fragmented records. Validated
+    by rerunning just gen-priority-dashboard.'

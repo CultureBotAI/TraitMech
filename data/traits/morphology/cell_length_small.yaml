@@ -53,12 +53,9 @@ causal_graphs:
     description: Routine laboratory growth conditions producing typical bacterial
       cell sizes.
   - node_id: ftsz_abundance
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: This contextual node denotes abundance of a protein family rather
-      than the FtsZ molecular entity itself.
     label: FtsZ abundance
-    node_type: GENE_OR_PROTEIN
-    description: Cellular level of the tubulin-like division protein FtsZ.
+    node_type: QUALITY
+    description: Relative cellular level of the tubulin-like division protein FtsZ.
   - node_id: division_timing
     label: cell division timing
     node_type: BIOLOGICAL_PROCESS
@@ -138,14 +135,17 @@ causal_graphs:
       notes: Supports small length as a value within the regulated cell-length distribution.
     predicate_id: rdfs:subClassOf
   - subject: ftsz_abundance
-    predicate: rate_limiting_for
+    predicate: contributes to
     object: division_timing
-    description: FtsZ levels are a rate-limiting factor for division timing; higher
-      FtsZ promotes earlier division.
+    description: FtsZ abundance is a rate-limiting factor for E. coli cell division
+      timing.
     evidence:
     - reference: DOI:10.1038/s41467-024-54242-w
-      notes: FtsZ numbers are identified as one of the rate-limiting factors for cell
-        divisions.
+      snippet: FtsZ numbers in the cell are one of the rate-limiting factors for cell
+        divisions in E. coli
+      notes: Verified against the public Nature Communications abstract; Männik et
+        al. identify FtsZ number as a rate-limiting factor for E. coli cell division.
+    predicate_id: RO:0002326
   - subject: ftsz_ring_formation
     predicate: modulates
     object: cell_length_trait
@@ -153,7 +153,11 @@ causal_graphs:
       a larger size, increasing cell length.
     evidence:
     - reference: DOI:10.1038/s41467-023-41487-0
-      notes: Delay cell division until the cell reaches a larger size.
+      snippet: delays the FtsZ ring formation, which in turn allows the cell to grow
+        for a longer time
+      notes: Verified against the open Nature Communications introduction; Vashistha
+        et al. describe Min-imbalance delaying FtsZ ring formation and giving cells
+        more time to grow before division.
     predicate_id: RO:0002211
   - subject: ftsn
     predicate: activates
@@ -161,8 +165,11 @@ causal_graphs:
     description: FtsN allosterically activates the FtsWI septal PG synthase complex.
     evidence:
     - reference: DOI:10.1038/s41467-024-52217-5
-      notes: Activation of the sPG synthase (FtsWI within the FtsQLBWI complex) depends
-        on FtsN.
+      snippet: FtsN activates sPG synthesis by switching FtsA and the FtsQLBWI complex
+        to the active state
+      notes: Verified against the open Nature Communications full text; Gong et al.
+        route FtsN-mediated septal peptidoglycan synthesis through the active FtsQLBWI
+        complex that contains FtsW and FtsI.
     predicate_id: RO:0002213
   - subject: septal_pg_synthesis
     predicate: promotes
@@ -171,25 +178,36 @@ causal_graphs:
       and stability.
     evidence:
     - reference: DOI:10.1038/s41467-024-52217-5
-      notes: Septal cell wall synthesis feeds back to promote Z ring condensation
-        and stability.
+      snippet: sPG synthesis in turn promotes Z ring condensation and stability
+      notes: Verified against the open Nature Communications full text; Gong et al.
+        show a positive-feedback loop from septal peptidoglycan synthesis to the Z
+        ring.
     predicate_id: RO:0002213
   - subject: ftsz_protoring
-    predicate: organizes
+    predicate: enables
     object: divisome_assembly
-    description: The FtsZ proto-ring with FtsA/ZipA organizes divisome assembly and
-      is required for localization of other divisome proteins.
+    description: The FtsZ proto-ring with FtsA/ZipA localizes and organizes divisome
+      assembly at midcell.
     evidence:
     - reference: DOI:10.1038/s41579-023-00942-x
-      notes: FtsZ is required for localization of all other divisome proteins.
+      snippet: FtsZ, to localize and organize the cell division machinery, the divisome
+      notes: Verified against the public PubMed abstract for the Nature Reviews Microbiology
+        article; Cameron and Margolin review FtsZ as the tubulin homolog that organizes
+        the divisome.
+    predicate_id: RO:0002327
   - subject: min_nucleoid_occlusion
-    predicate: positions
+    predicate: regulates
     object: ftsz_midcell_positioning
-    description: Min system and nucleoid occlusion position FtsZ at midcell for proper
-      division-site placement.
+    description: Min and nucleoid-occlusion systems regulate FtsZ placement at midcell
+      for proper division-site selection.
     evidence:
     - reference: DOI:10.1038/s42003-024-07279-y
-      notes: For positioning FtsZ at mid cell division sites.
+      snippet: Min or nucleoid occlusion systems for positioning FtsZ at mid cell
+        division sites
+      notes: Verified against the public Communications Biology abstract; Hayashi
+        et al. require at least one of the Min or nucleoid-occlusion systems for midcell
+        FtsZ positioning in E. coli L-forms.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.919890+00:00'
   curator: seed_from_metpo
@@ -273,4 +291,12 @@ curation_history:
     canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T05:40:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the cell_length_small_size_setpoint graph for issue #183: added
+    exact snippets to 6 FtsZ/divisome evidence items, grounded 3 residual predicates,
+    and retyped FtsZ abundance as a QUALITY node. The METPO 1.3-2 micrometre length
+    bin remains a nonmechanistic classification. No paid research service was called.'
   llm_assisted: true

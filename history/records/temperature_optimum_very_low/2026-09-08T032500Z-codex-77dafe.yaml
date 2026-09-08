@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_optimum_very_low.yaml
+  slug: temperature_optimum_very_low
+session:
+  id: 2026-09-08T032500Z-codex-77dafe
+  timestamp: '2026-09-08T03:25:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/704
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: EDIT
+  outcome: changed
+  summary: Restore temperature_optimum_very_low membrane branch
+  details: 'Restored the membrane-fluidity branch as a DOI-backed association to psychrophile
+    cold-adapted machinery after PR #664 adversarial review issue #704 found that the final
+    connector prune over-deleted a pre-existing edge. The record now has 15 edges in 1 component
+    and keeps only the unsupported glycine-betaine edge as pruned stale material. Validated
+    with scripts/repair_pr664_adversarial_review.py and LinkML write-time validation.'

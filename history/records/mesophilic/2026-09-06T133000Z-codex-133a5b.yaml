@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/mesophilic.yaml
+  slug: mesophilic
+session:
+  id: 2026-09-06T133000Z-codex-133a5b
+  timestamp: '2026-09-06T13:30:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/665
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Repair PR 664 mesophilic snippets
+  details: 'Addressed adversarial review issue #665 by replacing two sigma-32 snippets in
+    the mesophilic graph with exact RpoH wording from DOI:10.1128/jb.183.18.5302-5310.2001;
+    the focused replay tests verify the patched script and curated YAML stay in sync.'

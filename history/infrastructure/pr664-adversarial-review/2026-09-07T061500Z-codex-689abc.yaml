@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T061500Z-codex-689abc
+  timestamp: '2026-09-07T06:15:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/689
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Requoted nested connector snippets
+  details: 'Gave pH and temperature connector edges independent snippets rather
+    than branch-edge superstrings: pH F1Fo connectors now use Sekiya
+    acid-tolerance support, the pH numerical-limit PMF connector now quotes the
+    transport-interconversion sentence, and the warm-mesophile connector now
+    quotes Hoogerland homeoviscous-adaptation context. This addresses
+    adversarial PR review issue #689.'

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_very_low.yaml
+  slug: ph_delta_very_low
+session:
+  id: 2026-09-04T020000Z-codex-70a688
+  timestamp: '2026-09-04T02:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  summary: Review ph_delta_very_low causal evidence
+  details: Reviewed data/traits/environment/ph_delta_very_low.yaml for issue 183. Added source-checked
+    snippets to five edge-level evidence items, replaced two unmapped pH-homeostasis predicates
+    with grounded RO:0002211 or biolink:causes predicates, narrowed three review-level acid
+    and alkaline pH-homeostasis predicates to RO:0002326, and kept the graph NONMECHANISTIC
+    because the record is a pH-breadth bin rather than a taxon-specific molecular mechanism.
+    Validated via the write-time LinkML gate in scripts/review_ph_delta_very_low_graph_183.py.

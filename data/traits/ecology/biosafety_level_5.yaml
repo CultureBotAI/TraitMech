@@ -17,6 +17,10 @@ evidence:
   snippet: virulence factors
   notes: Virulence-factor review supports the framing of pathogen hazard above existing
     BSL-4 thresholds (the rationale underlying the proposed BSL-5 classification).
+- reference: DOI:10.4271/2002-01-2469
+  snippet: informally called BSL-5
+  notes: Verified against the open Cohen 2002 SAE paper; PPL-alpha is retained as
+    historical BSL-5 name-use evidence, not as the scope of the generic METPO class.
 causal_graphs:
 - graph_id: biosafety_level_5_proposed_enhanced_hazard
   title: BSL-5 proposed enhanced-hazard classification
@@ -25,7 +29,8 @@ causal_graphs:
     spans multiple taxa and mechanisms; contextual protein nodes do not receive token
     UniProt examples.
   description: DOI-backed graph linking hypothetical pathogen hazards exceeding BSL-4
-    thresholds to the proposed BSL-5 enhanced-containment classification.
+    thresholds to the proposed BSL-5 enhanced-containment classification, with PPL-alpha
+    retained only as record-level historical name-use evidence.
   nodes:
   - node_id: bsl5_trait
     label: biosafety level 5
@@ -97,4 +102,43 @@ curation_history:
     class is explicitly hypothetical and above every implemented containment level;
     assigning a real organism would falsely assert an authority-backed BSL-5 classification
     that does not exist. No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-04T10:00:00Z'
+  curator: codex
+  action: REVIEW_CAUSAL_EVIDENCE
+  changes: 'Reviewed the biosafety_level_5_proposed_enhanced_hazard graph for issue
+    #183: kept the generic proposed enhanced-hazard BSL-5 graph grounded in the pathogen-hazard
+    definition DOI, added DOI-backed historical PPL-alpha name-use evidence from the
+    Cohen 2002 SAE paper, added exact snippets to record and edge evidence, and kept
+    BSL-5 scoped as an explicitly hypothetical nonmechanistic containment proposal.
+    No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-06T13:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #668: restored the DOI definition
+    source and DOI-backed top-level evidence while preserving the SAE PPL-alpha source
+    as additional top-level evidence and the graph source.'
+  llm_assisted: true
+- timestamp: '2026-09-06T17:10:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review: expanded two terse SAE 2002 PPL-alpha
+    snippets, replaced the bare SAE PDF URL with its DOI, and rescoped the BSL-5 graph
+    so PPL-alpha remains historical name-use evidence for the generic METPO class
+    instead of the graph focus.'
+  llm_assisted: true
+- timestamp: '2026-09-07T02:20:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #679: moved the PPL-alpha historical
+    naming support to DOI-backed record-level evidence and removed the ungrounded
+    lexical naming edge from the BSL-5 graph.'
+  llm_assisted: true
+- timestamp: '2026-09-07T07:24:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #694: upserted the original
+    issue-183 review event so BSL-5 provenance describes the generic two-edge enhanced-hazard
+    graph that shipped.'
   llm_assisted: true

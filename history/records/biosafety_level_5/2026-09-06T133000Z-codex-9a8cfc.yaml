@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/ecology/biosafety_level_5.yaml
+  slug: biosafety_level_5
+session:
+  id: 2026-09-06T133000Z-codex-9a8cfc
+  timestamp: '2026-09-06T13:30:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/668
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Repair PR 664 BSL-5 definition evidence
+  details: 'Addressed adversarial review issue #668 by restoring DOI:10.1146/annurev.micro.62.081307.162938
+    as the biosafety_level_5 definition source and DOI-backed top-level evidence while keeping
+    the SAE PPL-alpha source as additional record and graph evidence; the focused replay tests
+    verify the patched script and curated YAML stay in sync.'

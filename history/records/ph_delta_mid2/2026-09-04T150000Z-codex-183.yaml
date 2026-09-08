@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/ph_delta_mid2.yaml
+  slug: ph_delta_mid2
+session:
+  id: 2026-09-04T150000Z-codex-183
+  timestamp: '2026-09-04T15:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected pH-delta-mid2 causal-graph components
+  details: 'Resolved issue #183 graph fragmentation in data/traits/environment/ph_delta_mid2.yaml.
+    Added 6 source- and verbatim-snippet-backed association connectors to collapse
+    the reviewed nonmechanistic graph from 7 components to 1 while keeping PMF,
+    respiratory proton pumping, ATPase-mediated proton translocation, alkaline
+    antiport, Gad acid-side support, and cytoplasmic buffering scoped as support
+    branches for a 3-4 pH-unit growth breadth. No paid research service was called.'

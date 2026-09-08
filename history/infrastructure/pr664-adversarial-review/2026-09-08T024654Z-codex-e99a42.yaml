@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-08T024654Z-codex-e99a42
+  timestamp: '2026-09-08T02:46:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/701
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Removed ICE trait subclass edge
+  details: 'Removed the PR #664 Bioteau-backed ICE rdfs:subClassOf gi_trait repair edge after
+    adversarial review issue #701 flagged it as a category error: ICE is a genomic-island
+    genetic-element subclass, not a subclass of the genomic-island possession trait.'

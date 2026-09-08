@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T200700Z-codex-698abc
+  timestamp: '2026-09-07T20:07:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/698
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Replaced sliced source snippets
+  details: 'Replaced sliced Krulwich, Hoogerland, and Schiller snippet
+    fragments with distinct evidence spans so repeated adjacent edges no longer
+    reuse the same sentence in smaller pieces. This addresses adversarial PR
+    review issue #698.'

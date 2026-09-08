@@ -77,6 +77,7 @@ DEFAULT_RESEARCH = Path("research/traits")
 # apps (app/discussions/), which is also where DisMech keeps its dashboard.
 DEFAULT_HTML = Path("app/dashboard/priority.html")
 DEFAULT_JSON = Path("app/dashboard/priority.json")
+REVIEWED_EMPTY_CANONICAL_EXAMPLES_ACTION = "REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP"
 
 # Ordered most- to least-specific: the first matching rule wins, exactly as in
 # DisMech's `_recommend_action` ladder.
@@ -115,6 +116,7 @@ class Record:
     has_definition_source: bool = False
     has_synonyms: bool = False
     has_evidence: bool = False
+    canonical_examples_reviewed_empty: bool = False
     researched: bool = False
 
 
@@ -146,6 +148,8 @@ def read_records(
     for rel, doc in _as_corpus(source):
         p = Path(rel)
         graphs = doc.get("causal_graphs") or []
+        examples = doc.get("canonical_examples") or []
+        events = doc.get("curation_history") or []
         nodes = [n for g in graphs for n in (g.get("nodes") or [])]
         edges = [e for g in graphs for e in (g.get("edges") or [])]
         wired = {e.get("subject") for e in edges} | {e.get("object") for e in edges}
@@ -161,7 +165,7 @@ def read_records(
             nodes=len(nodes),
             orphans=sum(1 for n in nodes if n.get("node_id") not in wired),
             components=_components(nodes, edges),
-            examples=len(doc.get("canonical_examples") or []),
+            examples=len(examples),
             node_labels={(n.get("label") or "").lower() for n in nodes} - {""},
             edge_signatures={
                 (
@@ -177,6 +181,13 @@ def read_records(
             has_definition_source=bool(doc.get("definition_source")),
             has_synonyms=bool(doc.get("synonyms")),
             has_evidence=bool(doc.get("evidence")),
+            canonical_examples_reviewed_empty=(
+                not examples
+                and any(
+                    event.get("action") == REVIEWED_EMPTY_CANONICAL_EXAMPLES_ACTION
+                    for event in events
+                )
+            ),
             researched=(p.parent.name, p.stem) in researched,
         )
         out[rec.identifier] = rec
@@ -245,10 +256,9 @@ def sibling_overlap(members: list[Record]) -> float:
     """Mean pairwise node-label Jaccard across a series.
 
     This is the measurement that decides whether lumping is defensible, rather
-    than the assumption that a shared label prefix implies shared content. On
-    a shared label prefix implies shared content. The current value is emitted
-    in the generated metadata, so corpus drift cannot make this explanation
-    disagree with the measurement (#481).
+    than the assumption that a shared label prefix implies shared content. The
+    current value is emitted in the generated metadata, so corpus drift cannot
+    make this explanation disagree with the measurement (#481).
     """
     pairs = [
         jaccard(members[i].node_labels, members[j].node_labels)
@@ -312,6 +322,14 @@ def overlap_measurements(
 # --- scoring -----------------------------------------------------------------
 
 
+def canonical_examples_satisfied(rec: Record, cfg: dict[str, Any]) -> bool:
+    """True once exemplars exist or were explicitly reviewed as unfillable."""
+    return (
+        rec.examples >= cfg["thresholds"]["deep_graph_min_examples"]
+        or rec.canonical_examples_reviewed_empty
+    )
+
+
 def score(rec: Record, cfg: dict[str, Any]) -> tuple[float, list[str]]:
     """Return (score, reasons). Reasons are printed so the score is arguable."""
     w, caps, th = cfg["weights"], cfg["caps"], cfg["thresholds"]
@@ -335,8 +353,10 @@ def score(rec: Record, cfg: dict[str, Any]) -> tuple[float, list[str]]:
         add(w["missing_causal_graph"], "no causal graph")
     elif rec.edges <= th["thin_graph_max_edges"]:
         add(w["thin_causal_graph"], f"thin graph ({rec.edges} edges)")
-    if not rec.examples:
+    if not rec.examples and not rec.canonical_examples_reviewed_empty:
         add(w["missing_canonical_examples"], "no canonical_examples")
+    elif rec.canonical_examples_reviewed_empty:
+        why.append("canonical_examples reviewed empty +0")
     if rec.edges and not rec.edges_with_evidence:
         add(w["edges_without_evidence"], "no edge carries evidence")
 
@@ -354,10 +374,7 @@ def score(rec: Record, cfg: dict[str, Any]) -> tuple[float, list[str]]:
     if not rec.has_evidence:
         add(w["missing_evidence"], "no record-level evidence")
 
-    if (
-        rec.edges >= th["deep_graph_min_edges"]
-        and rec.examples >= th["deep_graph_min_examples"]
-    ):
+    if rec.edges >= th["deep_graph_min_edges"] and canonical_examples_satisfied(rec, cfg):
         add(w["already_deep"], "already deep")
     return total, why
 
@@ -390,14 +407,11 @@ def recommend(
         return "CURATE_ROOT_WITH_SUBTYPES"
     if not rec.edges:
         return "BUILD_CAUSAL_GRAPH"
-    if not rec.examples:
+    if not rec.examples and not rec.canonical_examples_reviewed_empty:
         return "ADD_CANONICAL_EXAMPLES"
     if rec.edges <= th["thin_graph_max_edges"] or rec.components > 1:
         return "DEEPEN_CAUSAL_GRAPH"
-    if (
-        rec.edges >= th["deep_graph_min_edges"]
-        and rec.examples >= th["deep_graph_min_examples"]
-    ):
+    if rec.edges >= th["deep_graph_min_edges"] and canonical_examples_satisfied(rec, cfg):
         return "ALREADY_DEEP"
     return "CURATE_ROOT"
 
@@ -446,6 +460,7 @@ def build_queue(
                 "components": r.components,
                 "orphans": r.orphans,
                 "examples": r.examples,
+                "canonical_examples_reviewed_empty": r.canonical_examples_reviewed_empty,
                 "children": child_count[r.identifier],
                 "series": stem,
                 "series_size": len(fam) if stem else 0,

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-07T010100Z-codex-bca6c8
+  timestamp: '2026-09-07T01:01:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/675
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Corrected cell_length_large SulA snippet punctuation
+  details: 'Corrected the cell_length_large added SulA connector so its snippet
+    matches the exact peer-reviewed Wiley text, including the comma in "cell
+    division inhibitor, sulA". This addresses adversarial PR review issue #675.'
