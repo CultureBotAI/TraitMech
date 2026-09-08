@@ -282,18 +282,6 @@ causal_graphs:
       notes: Verified against the open Baes et al. introduction; this connector keeps
         thermosome refolding as protein-quality context.
     predicate_id: biolink:associated_with
-  - subject: membrane_thermostability
-    predicate: associated with
-    object: thermophile_thermostability
-    description: Cytoplasmic membrane thermostability is associated with the broad
-      thermophile-thermostability context.
-    evidence:
-    - reference: DOI:10.1128/mbio.03593-22
-      snippet: A sudden increase in temperature above the already high optimal growth
-        temperature could lead to detrimental cellular damage
-      notes: Verified against the open Baes et al. introduction; this connector keeps
-        high-temperature membrane lipid remodeling as a contextual thermophile branch.
-    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822120+00:00'
   curator: seed_from_metpo
@@ -451,4 +439,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
     snippets with independent exact source snippets while preserving the existing
     connector edge scope.'
+  llm_assisted: true
+- timestamp: '2026-09-08T03:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #700: removed the membrane-thermostability
+    to thermophile-thermostability connector whose Baes et al. quote only supported
+    broad heat-damage context.'
   llm_assisted: true

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/repair_pr664_adversarial_review.py
+  slug: pr664-adversarial-review
+session:
+  id: 2026-09-08T024648Z-codex-72994f
+  timestamp: '2026-09-08T02:46:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/700
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/664
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Removed weak temperature connector edges
+  details: 'Removed three weak temperature source edges and one added membrane-thermostability
+    connector from PR #664 repair output after adversarial review issue #700 found that their
+    snippets did not carry the curated edge claims.'

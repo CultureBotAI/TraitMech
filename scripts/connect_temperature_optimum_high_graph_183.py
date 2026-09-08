@@ -33,6 +33,9 @@ GRAPH_ID = "temperature_optimum_high_thermophile_setpoint"
 ACTION = "CONNECT_CAUSAL_GRAPH_COMPONENTS"
 TIMESTAMP = "2026-09-04T20:00:00Z"
 EXPECTED_COMPONENTS = 6
+STALE_EDGE_KEYS = {
+    ("membrane_thermostability", "associated with", "thermophile_thermostability"),
+}
 
 GRAPH_METADATA_BEFORE = {
     "title": "Temperature-optimum-high thermophile setpoint",

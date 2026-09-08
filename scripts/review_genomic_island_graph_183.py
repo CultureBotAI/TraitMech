@@ -383,34 +383,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
     },
 ]
 
-REPAIR_EDGE_ADDITIONS: list[dict[str, Any]] = [
-    {
-        "subject": "integrative_conjugative_element",
-        "predicate": "is a",
-        "object": "gi_trait",
-        "description": (
-            "Integrative conjugative elements are genomic-island mobile genetic "
-            "elements."
-        ),
-        "evidence": [
-            {
-                "reference": "DOI:10.1093/nar/gkad644",
-                "snippet": (
-                    "including prophages, transposons, integrated plasmids, "
-                    "integrative and mobilizable elements (IMEs), and integrative "
-                    "and conjugative elements (ICEs)"
-                ),
-                "notes": (
-                    "Verified against the open Bioteau et al. introduction; the "
-                    "authors include integrative and conjugative elements among "
-                    "the mobile genetic element types encompassed by genomic "
-                    "islands."
-                ),
-            }
-        ],
-        "predicate_id": "rdfs:subClassOf",
-    },
-]
+STALE_EDGE_KEYS = {
+    ("integrative_conjugative_element", "is a", "gi_trait"),
+}
+REPAIR_EDGE_ADDITIONS: list[dict[str, Any]] = []
 
 
 def _edge_key(edge: dict[str, Any]) -> tuple[str | None, str | None, str | None]:

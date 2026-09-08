@@ -161,20 +161,6 @@ causal_graphs:
         as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid
         apparatus.
     predicate_id: RO:0002502
-  - subject: integrative_conjugative_element
-    predicate: is a
-    object: gi_trait
-    description: Integrative conjugative elements are genomic-island mobile genetic
-      elements.
-    evidence:
-    - reference: DOI:10.1093/nar/gkad644
-      snippet: including prophages, transposons, integrated plasmids, integrative
-        and mobilizable elements (IMEs), and integrative and conjugative elements
-        (ICEs)
-      notes: Verified against the open Bioteau et al. introduction; the authors include
-        integrative and conjugative elements among the mobile genetic element types
-        encompassed by genomic islands.
-    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -235,4 +221,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #684: added a Bioteau-backed
     ICE subclass edge to reconnect the ICE/IME/T4SS/conjugation branch to the genomic
     island trait.'
+  llm_assisted: true
+- timestamp: '2026-09-08T03:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #701: removed the ICE rdfs:subClassOf
+    genomic-island-trait edge because the source supports ICE as a genomic-island
+    genetic element, not a subclass of the possession trait.'
   llm_assisted: true

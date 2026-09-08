@@ -87,11 +87,6 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of transcription and translation under low-temperature
       conditions.
-  - node_id: glycine_betaine
-    label: glycine betaine
-    node_type: CHEMICAL
-    description: Compatible solute stabilizing proteins and membranes under cold stress.
-    grounding: CHEBI:17750
   - node_id: protein_membrane_stabilization
     label: protein and membrane stabilization under cold stress
     node_type: BIOLOGICAL_PROCESS
@@ -183,18 +178,6 @@ causal_graphs:
       notes: Verified against the open Hamdan review; fatty-acyl-chain modifications
         are described as preserving membrane fluidity in freezing environments.
     predicate_id: RO:0002326
-  - subject: membrane_fluidity
-    predicate: contributes to
-    object: psychrophile_machinery
-    description: Maintained membrane fluidity contributes to cold-adapted cellular
-      machinery.
-    evidence:
-    - reference: DOI:10.1128/AEM.01928-22
-      snippet: contribute to the survival of the strain under cold conditions
-      notes: Verified against the open Yang et al. abstract; the cold adaptation model
-        includes membrane transport adjustment among mechanisms supporting Bacillus
-        simplex H-b survival under cold conditions.
-    predicate_id: RO:0002326
   - subject: cold_shock_proteins
     predicate: contributes to
     object: translation_low_temperature
@@ -206,18 +189,6 @@ causal_graphs:
       notes: Verified against the open Hamdan review; cold-shock proteins are linked
         to cellular protein-synthesis regulation, including transcription and translation
         initiation.
-    predicate_id: RO:0002326
-  - subject: glycine_betaine
-    predicate: contributes to
-    object: protein_membrane_stabilization
-    description: Glycine betaine contributes to protein and membrane stabilization
-      during cold stress.
-    evidence:
-    - reference: DOI:10.17159/sajs.2018/20170254
-      snippet: growth-enhancing effect of glycine betaine
-      notes: Verified against the open Hamdan review; the glycine betaine paragraph
-        cites low-temperature growth enhancement and discusses compatible solutes
-        as cold cryoprotectants.
     predicate_id: RO:0002326
   - subject: trehalose
     predicate: contributes to
@@ -420,4 +391,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: corrected the Phadtare and Severinov
     cold-shock connector note so it names the DOI-matched source instead of the Hamdan
     psychrophile review.'
+  llm_assisted: true
+- timestamp: '2026-09-08T03:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #700: removed the unsupported
+    membrane-fluidity and glycine-betaine psychrophile edges, and removed the abandoned
+    glycine-betaine node.'
   llm_assisted: true

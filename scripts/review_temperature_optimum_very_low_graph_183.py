@@ -348,6 +348,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
     },
 ]
 
+STALE_EDGE_KEYS = {
+    ("membrane_fluidity", "contributes to", "psychrophile_machinery"),
+    ("glycine_betaine", "contributes to", "protein_membrane_stabilization"),
+}
+STALE_NODE_IDS = {"glycine_betaine"}
+
 
 def _edge_key(edge: dict[str, Any]) -> tuple[str | None, str | None, str | None]:
     return edge.get("subject"), edge.get("predicate"), edge.get("object")

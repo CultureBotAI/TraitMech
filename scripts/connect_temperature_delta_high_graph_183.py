@@ -33,6 +33,10 @@ GRAPH_ID = "temperature_delta_high_eurythermal"
 ACTION = "CONNECT_CAUSAL_GRAPH_COMPONENTS"
 TIMESTAMP = "2026-09-04T19:00:00Z"
 EXPECTED_COMPONENTS = 6
+STALE_EDGE_KEYS = {
+    ("cis_trans_isomerase_activity", "increases", "membrane_viscosity_high_temperature"),
+}
+STALE_NODE_IDS = {"cis_trans_isomerase_activity"}
 
 GRAPH_METADATA_BEFORE = {
     "title": "Temperature-delta-high eurythermal breadth",

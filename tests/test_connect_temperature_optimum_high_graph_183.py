@@ -20,6 +20,7 @@ from connect_temperature_optimum_high_graph_183 import (  # noqa: E402
     GRAPH_METADATA_BEFORE,
     SLUG,
     SOURCE_CONNECTOR_EDGES,
+    STALE_EDGE_KEYS,
     TIMESTAMP,
     _components,
     _edge_key,
@@ -75,6 +76,11 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edges():
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
     assert _has_curation_event(doc, ACTION, TIMESTAMP)
+
+
+def test_current_pr664_repair_drops_stale_connectors():
+    graph = _current()["causal_graphs"][0]
+    assert STALE_EDGE_KEYS.isdisjoint({_edge_key(edge) for edge in graph["edges"]})
 
 
 def test_repaired_record_is_exactly_idempotent():

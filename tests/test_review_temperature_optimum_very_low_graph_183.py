@@ -16,6 +16,8 @@ from review_temperature_optimum_very_low_graph_183 import (  # noqa: E402
     ACTION,
     EDGE_REPLACEMENTS,
     SLUG,
+    STALE_EDGE_KEYS,
+    STALE_NODE_IDS,
     TIMESTAMP,
     _edge_key,
     transform,
@@ -37,6 +39,13 @@ def _before() -> dict:
     graph["edges"] = [
         copy.deepcopy(after_by_key.get(_edge_key(edge), edge)) for edge in graph["edges"]
     ]
+    existing_keys = {_edge_key(edge) for edge in graph["edges"]}
+    graph["edges"].extend(
+        copy.deepcopy(replacement["before"])
+        for replacement in EDGE_REPLACEMENTS
+        if _edge_key(replacement["after"]) in STALE_EDGE_KEYS
+        and _edge_key(replacement["before"]) not in existing_keys
+    )
     return doc
 
 
@@ -73,6 +82,12 @@ def test_review_adds_snippets_and_grounds_psychrophile_edges():
         expected = replacement["after"]
         assert by_key[_edge_key(expected)] == expected
         assert all(item.get("reference") and item.get("snippet") for item in expected["evidence"])
+
+
+def test_current_pr664_repair_drops_stale_edges():
+    graph = _current()["causal_graphs"][0]
+    assert STALE_EDGE_KEYS.isdisjoint({_edge_key(edge) for edge in graph["edges"]})
+    assert STALE_NODE_IDS.isdisjoint({node["node_id"] for node in graph["nodes"]})
 
 
 def test_repaired_record_is_exactly_idempotent():

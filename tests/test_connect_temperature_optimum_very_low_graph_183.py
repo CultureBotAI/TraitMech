@@ -20,11 +20,23 @@ from connect_temperature_optimum_very_low_graph_183 import (  # noqa: E402
     GRAPH_METADATA_BEFORE,
     SLUG,
     SOURCE_CONNECTOR_EDGES,
+    STALE_EDGE_KEYS,
+    STALE_NODE_IDS,
     TIMESTAMP,
     _components,
     _edge_key,
     transform,
 )
+
+STALE_SOURCE_NODES = [
+    {
+        "node_id": "glycine_betaine",
+        "label": "glycine betaine",
+        "node_type": "CHEMICAL",
+        "description": "Compatible solute stabilizing proteins and membranes under cold stress.",
+        "grounding": "CHEBI:17750",
+    },
+]
 
 
 def _current() -> dict:
@@ -44,6 +56,18 @@ def _before() -> dict:
         for edge in graph["edges"]
         if _edge_key(edge) not in addition_keys
     ]
+    existing_node_ids = {node["node_id"] for node in graph["nodes"]}
+    graph["nodes"].extend(
+        copy.deepcopy(node)
+        for node in STALE_SOURCE_NODES
+        if node["node_id"] in STALE_NODE_IDS and node["node_id"] not in existing_node_ids
+    )
+    existing_edge_keys = {_edge_key(edge) for edge in graph["edges"]}
+    graph["edges"].extend(
+        copy.deepcopy(edge)
+        for edge in SOURCE_CONNECTOR_EDGES
+        if _edge_key(edge) in STALE_EDGE_KEYS and _edge_key(edge) not in existing_edge_keys
+    )
     return doc
 
 

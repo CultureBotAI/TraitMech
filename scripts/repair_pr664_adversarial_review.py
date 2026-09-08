@@ -39,6 +39,7 @@ SNIPPET_FOLLOWUP_TIMESTAMP = "2026-09-07T04:24:00Z"
 PRIMARY_SNIPPET_TIMESTAMP = "2026-09-07T06:14:00Z"
 STRUCTURE_FOLLOWUP_TIMESTAMP = "2026-09-07T07:24:00Z"
 FINAL_REVIEW_TIMESTAMP = "2026-09-07T20:05:00Z"
+CONNECTOR_PRUNE_TIMESTAMP = "2026-09-08T03:05:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -134,6 +135,13 @@ FINAL_REVIEW_SLUGS = {
     "environment/temperature_range_mid4",
     "morphology/cell_length_large",
     "morphology/ring_shaped",
+}
+
+CONNECTOR_PRUNE_SLUGS = {
+    "environment/temperature_delta_high",
+    "environment/temperature_optimum_high",
+    "environment/temperature_optimum_very_low",
+    "genomics/genomic_island",
 }
 
 CANONICAL_EVENT_CHANGES: dict[str, list[dict[str, str]]] = {
@@ -375,6 +383,31 @@ def _path_for_slug(slug: str) -> Path:
 
 
 def _event_changes(slug: str) -> str:
+    if slug == "environment/temperature_delta_high":
+        return (
+            "Addressed PR #664 adversarial review issue #700: removed the "
+            "unsupported cis-trans-isomerase high-temperature "
+            "membrane-viscosity edge and its abandoned isomerase node."
+        )
+    if slug == "environment/temperature_optimum_high":
+        return (
+            "Addressed PR #664 adversarial review issue #700: removed the "
+            "membrane-thermostability to thermophile-thermostability connector "
+            "whose Baes et al. quote only supported broad heat-damage context."
+        )
+    if slug == "environment/temperature_optimum_very_low":
+        return (
+            "Addressed PR #664 adversarial review issue #700: removed the "
+            "unsupported membrane-fluidity and glycine-betaine psychrophile "
+            "edges, and removed the abandoned glycine-betaine node."
+        )
+    if slug == "genomics/genomic_island":
+        return (
+            "Addressed PR #664 adversarial review issue #701: removed the ICE "
+            "rdfs:subClassOf genomic-island-trait edge because the source "
+            "supports ICE as a genomic-island genetic element, not a subclass "
+            "of the possession trait."
+        )
     if slug in {
         "environment/ph_delta_mid2",
         "environment/ph_delta_mid3",
@@ -606,6 +639,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in CONNECTOR_PRUNE_SLUGS:
+        return CONNECTOR_PRUNE_TIMESTAMP
     if slug in FINAL_REVIEW_SLUGS:
         return FINAL_REVIEW_TIMESTAMP
     if slug in STRUCTURE_FOLLOWUP_SLUGS:

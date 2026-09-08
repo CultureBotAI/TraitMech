@@ -33,6 +33,11 @@ GRAPH_ID = "temperature_optimum_very_low_psychrophile_setpoint"
 ACTION = "CONNECT_CAUSAL_GRAPH_COMPONENTS"
 TIMESTAMP = "2026-09-04T21:00:00Z"
 EXPECTED_COMPONENTS = 6
+STALE_EDGE_KEYS = {
+    ("membrane_fluidity", "contributes to", "psychrophile_machinery"),
+    ("glycine_betaine", "contributes to", "protein_membrane_stabilization"),
+}
+STALE_NODE_IDS = {"glycine_betaine"}
 
 GRAPH_METADATA_BEFORE = {
     "title": "Temperature-optimum-very-low psychrophile setpoint",

@@ -88,11 +88,6 @@ causal_graphs:
     node_type: QUALITY
     description: Physical fluidity of the membrane lipid bilayer.
     grounding: METPO:1007505
-  - node_id: cis_trans_isomerase_activity
-    label: cis-trans isomerase activity
-    node_type: MOLECULAR_FUNCTION
-    description: Isomerization of existing unsaturated fatty acids to trans configuration.
-    grounding: GO:0016859
   - node_id: membrane_viscosity_high_temperature
     label: membrane viscosity at higher temperature
     node_type: QUALITY
@@ -178,17 +173,6 @@ causal_graphs:
       snippet: cis-double bonds, result in looser packing and increased fluidity
       notes: Verified against the Wu et al. Cells review; lipid desaturase-generated
         cis double bonds loosen acyl-chain packing and increase membrane-bilayer fluidity.
-    predicate_id: RO:0002213
-  - subject: cis_trans_isomerase_activity
-    predicate: increases
-    object: membrane_viscosity_high_temperature
-    description: Cis-trans isomerization of existing UFAs yields trans-UFAs resembling
-      SFAs, raising membrane viscosity during warming.
-    evidence:
-    - reference: DOI:10.3390/cells12101353
-      snippet: properties that resemble SFAs
-      notes: Verified against the Wu et al. Cells review; converting cis-UFAs to trans-UFAs
-        makes them more SFA-like and closer packing at higher temperature.
     predicate_id: RO:0002213
   - subject: increased_fatty_acid_diversity
     predicate: increases
@@ -393,4 +377,11 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review issue #692: requoted the Wu et al.
     trans-UFA connector snippet without the markup-flattening space before the hyphen.'
+  llm_assisted: true
+- timestamp: '2026-09-08T03:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #700: removed the unsupported
+    cis-trans-isomerase high-temperature membrane-viscosity edge and its abandoned
+    isomerase node.'
   llm_assisted: true
