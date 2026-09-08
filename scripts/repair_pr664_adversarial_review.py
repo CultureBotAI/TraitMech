@@ -40,6 +40,8 @@ PRIMARY_SNIPPET_TIMESTAMP = "2026-09-07T06:14:00Z"
 STRUCTURE_FOLLOWUP_TIMESTAMP = "2026-09-07T07:24:00Z"
 FINAL_REVIEW_TIMESTAMP = "2026-09-07T20:05:00Z"
 CONNECTOR_PRUNE_TIMESTAMP = "2026-09-08T03:05:00Z"
+MEMBRANE_RESTORE_TIMESTAMP = "2026-09-08T03:25:00Z"
+COMPONENT_CORRECTION_TIMESTAMP = "2026-09-08T03:30:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -143,6 +145,45 @@ CONNECTOR_PRUNE_SLUGS = {
     "environment/temperature_optimum_very_low",
     "genomics/genomic_island",
 }
+
+COMPONENT_CORRECTION_COUNTS = {
+    "environment/ph_delta_mid2": 7,
+    "environment/ph_delta_mid3": 6,
+    "environment/ph_delta_very_low": 6,
+    "environment/temperature_range_mid4": 6,
+    "environment/temperature_range_mid3": 3,
+    "environment/temperature_optimum_high": 2,
+}
+
+ADDITIONAL_REPAIR_EVENTS: dict[str, list[dict[str, str]]] = {
+    slug: [
+        {
+            "action": ACTION,
+            "timestamp": COMPONENT_CORRECTION_TIMESTAMP,
+            "changes": (
+                "Addressed PR #664 adversarial review issue #702: appended "
+                "corrective issue-183 provenance after evidence-weak "
+                f"connectors were pruned; this NONMECHANISTIC graph "
+                f"intentionally ships with {components} disconnected "
+                "components until independent trait-specific connectors are "
+                "curated."
+            ),
+        }
+    ]
+    for slug, components in COMPONENT_CORRECTION_COUNTS.items()
+}
+ADDITIONAL_REPAIR_EVENTS["environment/temperature_optimum_very_low"] = [
+    {
+        "action": ACTION,
+        "timestamp": MEMBRANE_RESTORE_TIMESTAMP,
+        "changes": (
+            "Addressed PR #664 adversarial review issue #704: restored the "
+            "pre-existing membrane-fluidity branch as a DOI-backed association "
+            "to psychrophile cold-adapted machinery after the final connector "
+            "prune over-deleted it."
+        ),
+    }
+]
 
 CANONICAL_EVENT_CHANGES: dict[str, list[dict[str, str]]] = {
     "ecology/biosafety_level_5": [
@@ -719,6 +760,16 @@ def repair(write: bool = False) -> int:
             upsert=True,
         )
         for event in CANONICAL_EVENT_CHANGES.get(slug, []):
+            record_curation_event(
+                doc,
+                curator="codex",
+                action=event["action"],
+                changes=event["changes"],
+                llm_assisted=True,
+                timestamp=event["timestamp"],
+                upsert=True,
+            )
+        for event in ADDITIONAL_REPAIR_EVENTS.get(slug, []):
             record_curation_event(
                 doc,
                 curator="codex",

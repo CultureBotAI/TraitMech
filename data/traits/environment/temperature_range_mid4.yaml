@@ -377,3 +377,11 @@ curation_history:
     Hoogerland and heat-protection hub connectors and requoted the remaining compensatory
     membrane-fluidity edge.'
   llm_assisted: true
+- timestamp: '2026-09-08T03:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #702: appended corrective issue-183
+    provenance after evidence-weak connectors were pruned; this NONMECHANISTIC graph
+    intentionally ships with 6 disconnected components until independent trait-specific
+    connectors are curated.'
+  llm_assisted: true

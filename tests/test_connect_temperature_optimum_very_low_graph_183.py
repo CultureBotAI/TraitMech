@@ -18,6 +18,7 @@ from connect_temperature_optimum_very_low_graph_183 import (  # noqa: E402
     EXPECTED_COMPONENTS,
     GRAPH_METADATA_AFTER,
     GRAPH_METADATA_BEFORE,
+    REPAIR_EDGE_ADDITIONS,
     SLUG,
     SOURCE_CONNECTOR_EDGES,
     STALE_EDGE_KEYS,
@@ -49,12 +50,13 @@ def _before() -> dict:
     graph = doc["causal_graphs"][0]
 
     addition_keys = {_edge_key(edge) for edge in ADDED_EDGES}
+    repair_addition_keys = {_edge_key(edge) for edge in REPAIR_EDGE_ADDITIONS}
 
     graph.update(GRAPH_METADATA_BEFORE)
     graph["edges"] = [
         copy.deepcopy(edge)
         for edge in graph["edges"]
-        if _edge_key(edge) not in addition_keys
+        if _edge_key(edge) not in addition_keys | repair_addition_keys
     ]
     existing_node_ids = {node["node_id"] for node in graph["nodes"]}
     graph["nodes"].extend(
@@ -147,6 +149,15 @@ def test_refuses_missing_endpoint():
 
     with pytest.raises(ValueError, match="connector endpoint missing"):
         transform(SLUG, doc)
+
+
+def test_current_pr664_repair_restores_membrane_branch():
+    graph = _current()["causal_graphs"][0]
+    by_key = {_edge_key(edge): edge for edge in graph["edges"]}
+
+    for edge in REPAIR_EDGE_ADDITIONS:
+        assert by_key[_edge_key(edge)] == edge
+    assert _components(graph) == 1
 
 
 def test_refuses_partial_replay():

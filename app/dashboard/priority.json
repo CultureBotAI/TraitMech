@@ -11,7 +11,7 @@
     "child_parent_pairs": 51,
     "mean_child_parent_overlap": 0.083,
     "max_child_parent_overlap": 0.2,
-    "child_edges_compared": 491,
+    "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
     "unresearched_mechanism_records": 0,
@@ -23,12 +23,100 @@
       "CURATE_ROOT_WITH_SUBTYPES": 0,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 0,
-      "DEEPEN_CAUSAL_GRAPH": 139,
+      "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 150
+      "CURATE_ROOT": 143
     }
   },
   "rows": [
+    {
+      "identifier": "METPO:1000476",
+      "label": "pH delta mid2",
+      "category": "environment",
+      "slug": "ph_delta_mid2",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 8,
+      "nodes": 15,
+      "components": 7,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "pH delta",
+      "series_size": 6,
+      "series_overlap": 0.089,
+      "researched": true,
+      "reasons": [
+        "7 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1000477",
+      "label": "pH delta mid3",
+      "category": "environment",
+      "slug": "ph_delta_mid3",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 9,
+      "nodes": 15,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "pH delta",
+      "series_size": 6,
+      "series_overlap": 0.089,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1000473",
+      "label": "pH delta very low",
+      "category": "environment",
+      "slug": "ph_delta_very_low",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 7,
+      "nodes": 13,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "pH delta",
+      "series_size": 6,
+      "series_overlap": 0.089,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1000453",
+      "label": "temperature range mid4",
+      "category": "environment",
+      "slug": "temperature_range_mid4",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 11,
+      "nodes": 17,
+      "components": 6,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "temperature range",
+      "series_size": 7,
+      "series_overlap": 0.068,
+      "researched": true,
+      "reasons": [
+        "6 components +15"
+      ]
+    },
     {
       "identifier": "traitmech:000093",
       "label": "genomic island",
@@ -117,6 +205,29 @@
       "reasons": [
         "thin graph (5 edges) +12",
         "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1001106",
+      "label": "biosafety level 5",
+      "category": "ecology",
+      "slug": "biosafety_level_5",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": true,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "canonical_examples reviewed empty +0"
       ]
     },
     {
@@ -425,7 +536,7 @@
       "children": 0,
       "series": "temperature range",
       "series_size": 7,
-      "series_overlap": 0.067,
+      "series_overlap": 0.068,
       "researched": true,
       "reasons": [
         "5 components +12"
@@ -447,7 +558,7 @@
       "children": 0,
       "series": "temperature range",
       "series_size": 7,
-      "series_overlap": 0.067,
+      "series_overlap": 0.068,
       "researched": true,
       "reasons": [
         "5 components +12"
@@ -1826,7 +1937,29 @@
       "children": 0,
       "series": "temperature range",
       "series_size": 7,
-      "series_overlap": 0.067,
+      "series_overlap": 0.068,
+      "researched": true,
+      "reasons": [
+        "3 components +6"
+      ]
+    },
+    {
+      "identifier": "METPO:1000452",
+      "label": "temperature range mid3",
+      "category": "environment",
+      "slug": "temperature_range_mid3",
+      "score": 6.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 10,
+      "nodes": 13,
+      "components": 3,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "temperature range",
+      "series_size": 7,
+      "series_overlap": 0.068,
       "researched": true,
       "reasons": [
         "3 components +6"
@@ -2887,7 +3020,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.067,
+      "series_overlap": 0.07,
       "researched": true,
       "reasons": [
         "2 components +3"
@@ -2909,7 +3042,29 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.067,
+      "series_overlap": 0.07,
+      "researched": true,
+      "reasons": [
+        "2 components +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1000447",
+      "label": "temperature optimum high",
+      "category": "environment",
+      "slug": "temperature_optimum_high",
+      "score": 3.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 14,
+      "nodes": 16,
+      "components": 2,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": "temperature optimum",
+      "series_size": 7,
+      "series_overlap": 0.065,
       "researched": true,
       "reasons": [
         "2 components +3"
@@ -3420,28 +3575,6 @@
       "reasons": []
     },
     {
-      "identifier": "METPO:1001106",
-      "label": "biosafety level 5",
-      "category": "ecology",
-      "slug": "biosafety_level_5",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 8,
-      "nodes": 9,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": true,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": true,
-      "reasons": [
-        "canonical_examples reviewed empty +0"
-      ]
-    },
-    {
       "identifier": "traitmech:000042",
       "label": "commensalism",
       "category": "ecology",
@@ -3782,66 +3915,6 @@
       "reasons": []
     },
     {
-      "identifier": "METPO:1000476",
-      "label": "pH delta mid2",
-      "category": "environment",
-      "slug": "ph_delta_mid2",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 14,
-      "nodes": 15,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "pH delta",
-      "series_size": 6,
-      "series_overlap": 0.089,
-      "researched": true,
-      "reasons": []
-    },
-    {
-      "identifier": "METPO:1000477",
-      "label": "pH delta mid3",
-      "category": "environment",
-      "slug": "ph_delta_mid3",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 14,
-      "nodes": 15,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "pH delta",
-      "series_size": 6,
-      "series_overlap": 0.089,
-      "researched": true,
-      "reasons": []
-    },
-    {
-      "identifier": "METPO:1000473",
-      "label": "pH delta very low",
-      "category": "environment",
-      "slug": "ph_delta_very_low",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 12,
-      "nodes": 13,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "pH delta",
-      "series_size": 6,
-      "series_overlap": 0.089,
-      "researched": true,
-      "reasons": []
-    },
-    {
       "identifier": "METPO:1000456",
       "label": "pH optimum mid1",
       "category": "environment",
@@ -3968,8 +4041,8 @@
       "slug": "temperature_delta_high",
       "score": 0.0,
       "action": "CURATE_ROOT",
-      "edges": 14,
-      "nodes": 15,
+      "edges": 13,
+      "nodes": 14,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -3977,7 +4050,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.067,
+      "series_overlap": 0.07,
       "researched": true,
       "reasons": []
     },
@@ -3997,31 +4070,11 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.067,
+      "series_overlap": 0.07,
       "researched": true,
       "reasons": [
         "canonical_examples reviewed empty +0"
       ]
-    },
-    {
-      "identifier": "METPO:1000447",
-      "label": "temperature optimum high",
-      "category": "environment",
-      "slug": "temperature_optimum_high",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 15,
-      "nodes": 16,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "temperature optimum",
-      "series_size": 7,
-      "series_overlap": 0.065,
-      "researched": true,
-      "reasons": []
     },
     {
       "identifier": "METPO:1000443",
@@ -4050,8 +4103,8 @@
       "slug": "temperature_optimum_very_low",
       "score": 0.0,
       "action": "CURATE_ROOT",
-      "edges": 16,
-      "nodes": 17,
+      "edges": 15,
+      "nodes": 16,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -4079,47 +4132,7 @@
       "children": 0,
       "series": "temperature range",
       "series_size": 7,
-      "series_overlap": 0.067,
-      "researched": true,
-      "reasons": []
-    },
-    {
-      "identifier": "METPO:1000452",
-      "label": "temperature range mid3",
-      "category": "environment",
-      "slug": "temperature_range_mid3",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 13,
-      "nodes": 14,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "temperature range",
-      "series_size": 7,
-      "series_overlap": 0.067,
-      "researched": true,
-      "reasons": []
-    },
-    {
-      "identifier": "METPO:1000453",
-      "label": "temperature range mid4",
-      "category": "environment",
-      "slug": "temperature_range_mid4",
-      "score": 0.0,
-      "action": "CURATE_ROOT",
-      "edges": 16,
-      "nodes": 17,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": "temperature range",
-      "series_size": 7,
-      "series_overlap": 0.067,
+      "series_overlap": 0.068,
       "researched": true,
       "reasons": []
     },
@@ -4139,7 +4152,7 @@
       "children": 0,
       "series": "temperature range",
       "series_size": 7,
-      "series_overlap": 0.067,
+      "series_overlap": 0.068,
       "researched": true,
       "reasons": []
     },
@@ -6588,8 +6601,8 @@
       "slug": "temperature_delta_very_low",
       "score": -20.0,
       "action": "ALREADY_DEEP",
-      "edges": 13,
-      "nodes": 12,
+      "edges": 12,
+      "nodes": 11,
       "components": 1,
       "orphans": 0,
       "examples": 0,
@@ -6597,7 +6610,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.067,
+      "series_overlap": 0.07,
       "researched": true,
       "reasons": [
         "canonical_examples reviewed empty +0",

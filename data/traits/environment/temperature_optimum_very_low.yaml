@@ -281,6 +281,18 @@ causal_graphs:
       notes: Verified against the open Hamdan review; this connector keeps low-temperature
         enzyme flexibility as contextual psychrophile machinery.
     predicate_id: biolink:associated_with
+  - subject: membrane_fluidity
+    predicate: associated with
+    object: psychrophile_machinery
+    description: Membrane-fluidity regulation is associated with psychrophile cold-adapted
+      machinery.
+    evidence:
+    - reference: DOI:10.17159/sajs.2018/20170254
+      snippet: regulate or modulate the fluidity of the membrane in freezing environments
+      notes: Verified against the open Hamdan review; the membrane-fluidity section
+        names membrane-fluidity modulation in freezing environments as a frequent
+        psychrophile cold-adaptation strategy.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818713+00:00'
   curator: seed_from_metpo
@@ -398,4 +410,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #700: removed the unsupported
     membrane-fluidity and glycine-betaine psychrophile edges, and removed the abandoned
     glycine-betaine node.'
+  llm_assisted: true
+- timestamp: '2026-09-08T03:25:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #704: restored the pre-existing
+    membrane-fluidity branch as a DOI-backed association to psychrophile cold-adapted
+    machinery after the final connector prune over-deleted it.'
   llm_assisted: true

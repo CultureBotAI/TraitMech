@@ -348,6 +348,34 @@ ADDED_EDGES: list[dict[str, Any]] = [
     },
 ]
 
+MEMBRANE_FLUIDITY_REPAIR_EDGE = {
+    "subject": "membrane_fluidity",
+    "predicate": "associated with",
+    "object": "psychrophile_machinery",
+    "description": (
+        "Membrane-fluidity regulation is associated with psychrophile "
+        "cold-adapted machinery."
+    ),
+    "evidence": [
+        {
+            "reference": "DOI:10.17159/sajs.2018/20170254",
+            "snippet": (
+                "regulate or modulate the fluidity of the membrane in "
+                "freezing environments"
+            ),
+            "notes": (
+                "Verified against the open Hamdan review; the membrane-fluidity "
+                "section names membrane-fluidity modulation in freezing "
+                "environments as a frequent psychrophile cold-adaptation "
+                "strategy."
+            ),
+        }
+    ],
+    "predicate_id": "biolink:associated_with",
+}
+
+REPAIR_EDGE_ADDITIONS: list[dict[str, Any]] = [MEMBRANE_FLUIDITY_REPAIR_EDGE]
+
 
 def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     graphs = doc.get("causal_graphs") or []
