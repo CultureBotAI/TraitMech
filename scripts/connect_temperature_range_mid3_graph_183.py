@@ -34,7 +34,9 @@ ACTION = "CONNECT_CAUSAL_GRAPH_COMPONENTS"
 TIMESTAMP = "2026-09-04T22:00:00Z"
 EXPECTED_COMPONENTS = 5
 STALE_EDGE_KEYS = {
+    ("desk_kinase_state", "associated with", "desk"),
     ("desr", "associated with", "phospho_desr"),
+    ("liquid_crystalline_membrane", "associated with", "upper_mesophile_adaptation"),
 }
 
 GRAPH_METADATA_BEFORE = {
@@ -48,12 +50,13 @@ GRAPH_METADATA_BEFORE = {
 GRAPH_METADATA_AFTER = {
     "title": "Temperature-range-mid3 upper-mesophile context",
     "description": (
-        "DOI-backed nonmechanistic graph connecting upper-mesophile "
+        "DOI-backed nonmechanistic graph annotating upper-mesophile "
         "growth-range context, the DesK/DesR membrane-order sensor, des "
         "expression, cooling-induced membrane rigidification, and "
         "homeoviscous liquid-crystalline membrane maintenance."
     ),
 }
+GRAPH_METADATA_REPAIR = GRAPH_METADATA_AFTER
 
 SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
     {
@@ -68,7 +71,11 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1128/spectrum.03925-23",
-                "snippet": "kinase-dominant state of DesK",
+                "snippet": (
+                    "Upon temperature decrease, the membrane rigidifies and "
+                    "increases in thickness, resulting in activation of the "
+                    "kinase-dominant state of DesK"
+                ),
                 "notes": (
                     "Verified against the open Sidarta et al. introduction; "
                     "the current Des model links temperature-decrease-driven "
@@ -267,10 +274,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": (
-                    "homeostatically maintain the fluidity of their membranes by "
-                    "adapting lipid composition"
-                ),
+                "snippet": "adapting lipid composition to environmental temperatures",
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps lipid-composition adaptation as range-bin "
@@ -295,9 +299,9 @@ def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     return graph
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 

@@ -45,13 +45,14 @@ GRAPH_METADATA_BEFORE = {
 GRAPH_METADATA_AFTER = {
     "title": "Temperature-range-mid4 warm-mesophile context",
     "description": (
-        "DOI-backed nonmechanistic graph connecting warm-mesophile "
+        "DOI-backed nonmechanistic graph annotating warm-mesophile "
         "growth-range context, Fab-mediated homeoviscous membrane "
         "adaptation, compensatory membrane-fluidity restoration, "
         "high-temperature protein damage, and RpoH-governed heat-shock "
         "protection branches."
     ),
 }
+GRAPH_METADATA_REPAIR = GRAPH_METADATA_AFTER
 
 SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
     {
@@ -198,7 +199,10 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "maintains cell membranes at a fixed viscosity level",
+                "snippet": (
+                    "hard-wired parameters calibrate the system to generate "
+                    "membrane compositions that maintain constant fluidity"
+                ),
                 "notes": (
                     "Verified against the open Hoogerland et al. introduction; "
                     "homeoviscous adaptation counteracts temperature by varying "
@@ -272,8 +276,9 @@ ADDED_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
                 "snippet": (
-                    "homeostatically maintain the fluidity of their membranes by "
-                    "adapting lipid composition"
+                    "allocates flux between the saturated and unsaturated fatty "
+                    "acid synthesis pathways via the branchpoint enzymes FabI and "
+                    "FabB"
                 ),
                 "notes": (
                     "Verified against the open Hoogerland et al. Figure 1 legend; "
@@ -316,11 +321,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": (
-                    "All free-living microorganisms homeostatically maintain "
-                    "the fluidity of their membranes by adapting lipid "
-                    "composition to environmental temperatures"
-                ),
+                "snippet": ("the E. coli fatty acid and phospholipid synthesis pathways"),
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps homeoviscous membrane adaptation as "
@@ -341,7 +342,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/s41467-024-53677-5",
-                "snippet": "maintain constant fluidity across temperatures",
+                "snippet": "generate membrane compositions that maintain constant fluidity",
                 "notes": (
                     "Verified against the open Hoogerland et al. abstract; this "
                     "connector keeps membrane-fluidity maintenance as context "
@@ -377,6 +378,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "predicate_id": "biolink:associated_with",
     },
 ]
+
+STALE_EDGE_KEYS = {_edge_key(edge) for edge in ADDED_EDGES}
 
 
 def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:

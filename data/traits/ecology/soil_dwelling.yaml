@@ -113,16 +113,6 @@ causal_graphs:
     description: Community-level soil microbial context spanning oligotrophy, growth
       potential, motility, dormancy/sporulation, and genomic life-history axes.
   edges:
-  - subject: soil_habitat
-    predicate: confers
-    object: soil_dwelling_trait
-    description: The terrestrial soil environment hosts soil-resident microbes.
-    evidence:
-    - reference: DOI:10.1038/nrmicro.2017.87
-      snippet: a broad diversity of microbial taxa
-      notes: Verified against the Fierer review; the claim is habitat-level and does
-        not assert a universal molecular mechanism for all soil microbes.
-    predicate_id: METPO:2007700
   - subject: soil_dwelling_trait
     predicate: contributes to
     object: biogeochemical_cycling
@@ -275,6 +265,16 @@ causal_graphs:
         soil pH, C:N ratio, and precipitation as predictors of community-level genomic
         strategy axes.
     predicate_id: biolink:associated_with
+  - subject: soil_habitat
+    predicate: associated with
+    object: soil_dwelling_trait
+    description: Soil habitat is associated with soil-resident microbes.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      snippet: a gram of soil can contain thousands of individual microbial taxa
+      notes: Verified against the Fierer review; the claim is habitat-level and does
+        not assert a universal molecular mechanism for all soil microbes.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -363,4 +363,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #686: replaced fragmented ring-shape,
     soil-life-history, heat-shock, and ligninolysis snippets with exact source spans
     that carry their edge claims.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #696: weakened the soil-habitat
+    connector to an ecological association and requoted it with exact Fierer soil-diversity
+    support.'
   llm_assisted: true

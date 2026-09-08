@@ -38,6 +38,7 @@ FINAL_FOLLOWUP_TIMESTAMP = "2026-09-07T03:40:00Z"
 SNIPPET_FOLLOWUP_TIMESTAMP = "2026-09-07T04:24:00Z"
 PRIMARY_SNIPPET_TIMESTAMP = "2026-09-07T06:14:00Z"
 STRUCTURE_FOLLOWUP_TIMESTAMP = "2026-09-07T07:24:00Z"
+FINAL_REVIEW_TIMESTAMP = "2026-09-07T20:05:00Z"
 
 CONNECTOR_MODULES = [
     "connect_cell_length_large_graph_183",
@@ -122,6 +123,19 @@ STRUCTURE_FOLLOWUP_SLUGS = {
     "environment/temperature_range_mid3",
 }
 
+FINAL_REVIEW_SLUGS = {
+    "ecology/saprotrophy",
+    "ecology/soil_dwelling",
+    "environment/ph_delta_mid2",
+    "environment/ph_delta_mid3",
+    "environment/ph_delta_very_low",
+    "environment/ph_phenotype_with_numerical_limits",
+    "environment/temperature_range_mid3",
+    "environment/temperature_range_mid4",
+    "morphology/cell_length_large",
+    "morphology/ring_shaped",
+}
+
 CANONICAL_EVENT_CHANGES: dict[str, list[dict[str, str]]] = {
     "ecology/biosafety_level_5": [
         {
@@ -150,6 +164,19 @@ CANONICAL_EVENT_CHANGES: dict[str, list[dict[str, str]]] = {
                 "expression, cooling-induced membrane rigidification, and "
                 "homeoviscous liquid-crystalline membrane branches. No paid "
                 "research service was called."
+            ),
+        },
+    ],
+    "morphology/ring_shaped": [
+        {
+            "action": "REVIEW_CAUSAL_EVIDENCE",
+            "timestamp": "2026-09-04T06:20:00Z",
+            "changes": (
+                "Reviewed the ring_shaped_curved_growth_closure graph for issue "
+                "#183: added exact snippets to 6 comparative curvature and "
+                "wall-patterning evidence entries, grounded 4 residual predicates, "
+                "and kept the bactofilin-M23 module as a reviewed label-only "
+                "protein aggregate. No paid research service was called."
             ),
         },
     ],
@@ -190,6 +217,46 @@ def _replace_edges(
         raise ValueError(f"{slug}: missing replacement edge(s): {sorted(missing)}")
 
     graph["edges"] = replaced_edges
+
+
+def _replace_nodes(
+    slug: str,
+    doc: dict[str, Any],
+    replacements: list[dict[str, dict[str, Any]]],
+) -> None:
+    if not replacements:
+        return
+
+    graph = _find_graph(slug, doc)
+    before_by_id = {
+        replacement["before"]["node_id"]: replacement["before"] for replacement in replacements
+    }
+    after_by_id = {
+        replacement["before"]["node_id"]: replacement["after"] for replacement in replacements
+    }
+    seen: set[str] = set()
+
+    replaced_nodes = []
+    for node in graph.get("nodes") or []:
+        node_id = node.get("node_id")
+        if node_id in before_by_id:
+            after = after_by_id[node_id]
+            if node == after:
+                seen.add(node_id)
+                replaced_nodes.append(node)
+                continue
+            if node != before_by_id[node_id]:
+                raise ValueError(f"{slug}: repair node drifted: {node_id}")
+            seen.add(node_id)
+            replaced_nodes.append(copy.deepcopy(after))
+        else:
+            replaced_nodes.append(node)
+
+    missing = set(before_by_id) - seen
+    if missing:
+        raise ValueError(f"{slug}: missing repair node(s): {sorted(missing)}")
+
+    graph["nodes"] = replaced_nodes
 
 
 def _replace_record_evidence(
@@ -256,9 +323,19 @@ def _add_repair_edges(slug: str, doc: dict[str, Any], edges: list[dict[str, Any]
         graph.setdefault("edges", []).append(copy.deepcopy(edge))
 
 
+def _update_graph_metadata(slug: str, doc: dict[str, Any], metadata: dict[str, Any]) -> None:
+    if not metadata:
+        return
+
+    _find_graph(slug, doc).update(copy.deepcopy(metadata))
+
+
 def _connector_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
     module = importlib.import_module(module_name)
-    return module.SLUG, module.ADDED_EDGES
+    stale_edge_keys = getattr(module, "STALE_EDGE_KEYS", set())
+    return module.SLUG, [
+        edge for edge in module.ADDED_EDGES if _edge_key(edge) not in stale_edge_keys
+    ]
 
 
 def _cell_length_large_edges(module_name: str) -> tuple[str, list[dict[str, Any]]]:
@@ -298,6 +375,55 @@ def _path_for_slug(slug: str) -> Path:
 
 
 def _event_changes(slug: str) -> str:
+    if slug in {
+        "environment/ph_delta_mid2",
+        "environment/ph_delta_mid3",
+        "environment/ph_delta_very_low",
+        "environment/ph_phenotype_with_numerical_limits",
+    }:
+        return (
+            "Addressed PR #664 adversarial review issues #696, #698, and "
+            "#699: requoted weak Krulwich pH-homeostasis edge snippets and "
+            "removed unsupported pH-breadth hub connectors that only joined "
+            "generic review branches to quantitative bin nodes."
+        )
+    if slug == "environment/temperature_range_mid3":
+        return (
+            "Addressed PR #664 adversarial review issues #696, #698, and "
+            "#699: strengthened the DesK kinase-state snippet and removed "
+            "weak association connectors to DesK and upper-mesophile adaptation."
+        )
+    if slug == "environment/temperature_range_mid4":
+        return (
+            "Addressed PR #664 adversarial review issues #698 and #699: "
+            "removed sliced Hoogerland and heat-protection hub connectors and "
+            "requoted the remaining compensatory membrane-fluidity edge."
+        )
+    if slug == "morphology/ring_shaped":
+        return (
+            "Addressed PR #664 adversarial review issues #697 and #698: "
+            "restored the bactofilin-M23 module as a reviewed label-only "
+            "protein aggregate and gave the crescentin curvature edge a "
+            "distinct Schiller snippet."
+        )
+    if slug == "morphology/cell_length_large":
+        return (
+            "Addressed PR #664 adversarial review issue #696: expanded the "
+            "SOS-to-SulA division-inhibition evidence so the snippet carries "
+            "SOS-regulon expression instead of only naming SOS activation."
+        )
+    if slug == "ecology/saprotrophy":
+        return (
+            "Addressed PR #664 adversarial review issue #696: requoted the "
+            "CAZyme hemicellulose edge with Cragg et al. enzymatic "
+            "cellulose-and-hemicellulose depolymerization support."
+        )
+    if slug == "ecology/soil_dwelling":
+        return (
+            "Addressed PR #664 adversarial review issue #696: weakened the "
+            "soil-habitat connector to an ecological association and requoted "
+            "it with exact Fierer soil-diversity support."
+        )
     if slug == "ecology/biosafety_level_5":
         return (
             "Addressed PR #664 adversarial review issue #694: upserted the "
@@ -480,6 +606,8 @@ def _event_changes(slug: str) -> str:
 
 
 def _event_timestamp(slug: str) -> str:
+    if slug in FINAL_REVIEW_SLUGS:
+        return FINAL_REVIEW_TIMESTAMP
     if slug in STRUCTURE_FOLLOWUP_SLUGS:
         return STRUCTURE_FOLLOWUP_TIMESTAMP
     if slug in PRIMARY_SNIPPET_SLUGS:
@@ -532,6 +660,8 @@ def repair(write: bool = False) -> int:
         else:
             _replace_edges(slug, doc, replacements)
             module = importlib.import_module(module_name)
+            _replace_nodes(slug, doc, getattr(module, "REPAIR_NODE_REPLACEMENTS", []))
+            _update_graph_metadata(slug, doc, getattr(module, "GRAPH_METADATA_REPAIR", {}))
             if hasattr(module, "RECORD_EVIDENCE_REPLACEMENTS"):
                 _replace_record_evidence(
                     slug,

@@ -37,7 +37,7 @@ causal_graphs:
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed nonmechanistic graph connecting upper-mesophile growth-range
+  description: DOI-backed nonmechanistic graph annotating upper-mesophile growth-range
     context, the DesK/DesR membrane-order sensor, des expression, cooling-induced
     membrane rigidification, and homeoviscous liquid-crystalline membrane maintenance.
   nodes:
@@ -138,7 +138,8 @@ causal_graphs:
       state; membrane physical state is the proximate signal.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
-      snippet: kinase-dominant state of DesK
+      snippet: Upon temperature decrease, the membrane rigidifies and increases in
+        thickness, resulting in activation of the kinase-dominant state of DesK
       notes: Verified against the open Sidarta et al. introduction; the current Des
         model links temperature-decrease-driven membrane rigidification/thickening
         to the active kinase-dominant state.
@@ -200,17 +201,6 @@ causal_graphs:
       notes: Verified against the open Sidarta et al. introduction; this connector
         joins the cooling membrane signal to the DesK kinase-state branch.
     predicate_id: biolink:associated_with
-  - subject: desk_kinase_state
-    predicate: associated with
-    object: desk
-    description: The DesK kinase-dominant state is associated with the DesK/DesR temperature-sensing
-      step.
-    evidence:
-    - reference: DOI:10.1128/spectrum.03925-23
-      snippet: DesK is a molecular sensor that directly detects membrane thickness
-      notes: Verified against the open Sidarta et al. introduction; this connector
-        keeps DesK kinase activity as two-component signaling context.
-    predicate_id: biolink:associated_with
   - subject: membrane_fatty_acyl_chains
     predicate: associated with
     object: homeoviscous_adaptation
@@ -222,18 +212,6 @@ causal_graphs:
         thickness
       notes: Verified against the open Sidarta et al. introduction; this connector
         keeps des expression as membrane-fatty-acyl remodeling context.
-    predicate_id: biolink:associated_with
-  - subject: liquid_crystalline_membrane
-    predicate: associated with
-    object: upper_mesophile_adaptation
-    description: Maintenance of a liquid-crystalline membrane state is associated
-      with upper-mesophile range adaptation.
-    evidence:
-    - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: homeostatically maintain the fluidity of their membranes by adapting
-        lipid composition
-      notes: Verified against the open Hoogerland et al. abstract; this connector
-        keeps lipid-composition adaptation as range-bin context.
     predicate_id: biolink:associated_with
   - subject: desk
     predicate: regulates
@@ -359,4 +337,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #693: replaced weak DesK/DesR
     connector edges by routing DesK directly to phosphorylated DesR, removed the redundant
     unphosphorylated DesR node, and updated the original connector history.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #696, #698, and #699: strengthened
+    the DesK kinase-state snippet and removed weak association connectors to DesK
+    and upper-mesophile adaptation.'
   llm_assisted: true

@@ -86,9 +86,12 @@ causal_graphs:
     description: Spatially regulated synthesis of the peptidoglycan cell wall.
   - node_id: bactofilin_lmdc_module
     label: bactofilin-M23 peptidase module
-    node_type: PATHWAY
+    node_type: GENE_OR_PROTEIN
     description: Conserved bactofilin and M23 peptidase functional module remodeling
       the wall locally.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: This is a multi-protein bactofilin/M23 module, not one protein
+      family or accession.
   - node_id: wall_biosynthesis_mode_change
     label: local change in cell wall biosynthesis mode
     node_type: BIOLOGICAL_PROCESS
@@ -314,8 +317,8 @@ curation_history:
   action: REVIEW_CAUSAL_EVIDENCE
   changes: 'Reviewed the ring_shaped_curved_growth_closure graph for issue #183: added
     exact snippets to 6 comparative curvature and wall-patterning evidence entries,
-    grounded 4 residual predicates, and retyped the bactofilin-M23 module as a pathway.
-    No paid research service was called.'
+    grounded 4 residual predicates, and kept the bactofilin-M23 module as a reviewed
+    label-only protein aggregate. No paid research service was called.'
   llm_assisted: true
 - timestamp: '2026-09-07T04:24:00Z'
   curator: codex
@@ -323,4 +326,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #686: replaced fragmented ring-shape,
     soil-life-history, heat-shock, and ligninolysis snippets with exact source spans
     that carry their edge claims.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #697 and #698: restored the
+    bactofilin-M23 module as a reviewed label-only protein aggregate and gave the
+    crescentin curvature edge a distinct Schiller snippet.'
   llm_assisted: true

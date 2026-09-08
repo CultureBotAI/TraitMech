@@ -37,7 +37,7 @@ causal_graphs:
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed nonmechanistic graph connecting warm-mesophile growth-range
+  description: DOI-backed nonmechanistic graph annotating warm-mesophile growth-range
     context, Fab-mediated homeoviscous membrane adaptation, compensatory membrane-fluidity
     restoration, high-temperature protein damage, and RpoH-governed heat-shock protection
     branches.
@@ -223,7 +223,8 @@ causal_graphs:
       changes.
     evidence:
     - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: maintains cell membranes at a fixed viscosity level
+      snippet: hard-wired parameters calibrate the system to generate membrane compositions
+        that maintain constant fluidity
       notes: Verified against the open Hoogerland et al. introduction; homeoviscous
         adaptation counteracts temperature by varying unsaturated, branched-chain,
         or chain-length lipid features to stabilize viscosity.
@@ -254,65 +255,6 @@ causal_graphs:
         and GroES/GroEL are named as molecular chaperone systems in the protective
         heat-shock-protein response.
     predicate_id: RO:0002327
-  - subject: saturated_unsaturated_membrane_lipid_composition
-    predicate: associated with
-    object: homeoviscous_adaptation
-    description: Fab-mediated saturated/unsaturated lipid composition is associated
-      with homeoviscous adaptation.
-    evidence:
-    - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: homeostatically maintain the fluidity of their membranes by adapting
-        lipid composition
-      notes: Verified against the open Hoogerland et al. Figure 1 legend; this connector
-        keeps the FabA/FabI/FabB C10:1 branch as membrane-lipid composition context.
-    predicate_id: biolink:associated_with
-  - subject: homeoviscous_adaptation
-    predicate: associated with
-    object: membrane_fluidity_restoration
-    description: Homeoviscous adaptation is associated with rapid membrane-fluidity
-      restoration after temperature shock.
-    evidence:
-    - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: accelerates membrane adaptation by causing a transient overshoot
-      notes: Verified against the open Hoogerland et al. abstract; this connector
-        keeps the Fab branchpoint valve as membrane-fluidity restoration context.
-    predicate_id: biolink:associated_with
-  - subject: membrane_fluidity_restoration
-    predicate: associated with
-    object: warm_mesophile_adaptation
-    description: Rapid membrane-fluidity restoration is associated with warm-mesophile
-      adaptation after temperature shock.
-    evidence:
-    - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: All free-living microorganisms homeostatically maintain the fluidity
-        of their membranes by adapting lipid composition to environmental temperatures
-      notes: Verified against the open Hoogerland et al. abstract; this connector
-        keeps homeoviscous membrane adaptation as context for the broad warm-mesophile
-        range bin.
-    predicate_id: biolink:associated_with
-  - subject: membrane_fluidity
-    predicate: associated with
-    object: homeoviscous_adaptation
-    description: Temperature-driven membrane fluidity is associated with the homeoviscous
-      adaptation branch.
-    evidence:
-    - reference: DOI:10.1038/s41467-024-53677-5
-      snippet: maintain constant fluidity across temperatures
-      notes: Verified against the open Hoogerland et al. abstract; this connector
-        keeps membrane-fluidity maintenance as context for compensatory membrane adaptation.
-    predicate_id: biolink:associated_with
-  - subject: heat_stress_protection
-    predicate: associated with
-    object: protein_unfolding_aggregation
-    description: RpoH-governed chaperone protection is associated with heat-induced
-      protein unfolding and aggregation.
-    evidence:
-    - reference: DOI:10.1186/s12864-023-09266-9
-      snippet: reduce protein unfolding or misfolding and subsequent protein aggregation
-        in the cell at high incubation temperatures
-      notes: Verified against the open McGuire and Nano introduction; this connector
-        keeps DnaK/DnaJ/GrpE and GroES/GroEL as protective heat-shock context.
-    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825319+00:00'
   curator: seed_from_metpo
@@ -427,4 +369,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #689: expanded the Hoogerland
     FabI/FabB branch quote and replaced the warm-mesophile connector quote with an
     independent homeoviscous-adaptation span.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #698 and #699: removed sliced
+    Hoogerland and heat-protection hub connectors and requoted the remaining compensatory
+    membrane-fluidity edge.'
   llm_assisted: true

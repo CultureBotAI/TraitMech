@@ -149,7 +149,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "relative magnitudes of the two PMF components",
+                    "snippet": (
+                        "the demands of pH homeostasis for particular bacteria "
+                        "determine the relative magnitudes of the two PMF components"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; bacterial pH-homeostasis demands determine "
@@ -270,8 +273,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                 {
                     "reference": "DOI:10.1093/femsre/fuad033",
                     "snippet": (
-                        "sufficient buffering capacity (e.g. inorganic and "
-                        "organic phosphates)"
+                        "sufficient buffering capacity (e.g. inorganic and organic phosphates)"
                     ),
                     "notes": (
                         "Verified against the open Poolman review; cytoplasmic "

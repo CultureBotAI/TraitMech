@@ -45,12 +45,13 @@ GRAPH_METADATA_BEFORE = {
 GRAPH_METADATA_AFTER = {
     "title": "pH-delta-mid3 wide pH-homeostasis context",
     "description": (
-        "DOI-backed nonmechanistic graph connecting wide pH-homeostasis "
+        "DOI-backed nonmechanistic graph annotating wide pH-homeostasis "
         "flexibility, PMF regulation and generation, alkaline Na+/H+ antiport, "
         "ATPase support, phosphate buffering, amino-acid decarboxylation, and "
         "membrane proton-permeability branches to the 4-5 pH-unit breadth bin."
     ),
 }
+GRAPH_METADATA_REPAIR = GRAPH_METADATA_AFTER
 
 SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
     {
@@ -91,7 +92,10 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "relative magnitudes of the two PMF components",
+                "snippet": (
+                    "the demands of pH homeostasis for particular bacteria "
+                    "determine the relative magnitudes of the two PMF components"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; bacterial pH-homeostasis demands determine "
@@ -150,8 +154,7 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
             {
                 "reference": "DOI:10.1093/femsre/fuad033",
                 "snippet": (
-                    "sufficient buffering capacity (e.g. inorganic and "
-                    "organic phosphates)"
+                    "sufficient buffering capacity (e.g. inorganic and organic phosphates)"
                 ),
                 "notes": (
                     "Verified against the open Poolman review; cytoplasmic "
@@ -323,6 +326,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "predicate_id": "biolink:associated_with",
     },
 ]
+
+STALE_EDGE_KEYS = {_edge_key(edge) for edge in ADDED_EDGES}
 
 
 def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:

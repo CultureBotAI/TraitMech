@@ -303,12 +303,16 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             ),
             "evidence": [
                 {
-                    "reference": "DOI:10.1093/jambio/lxac002",
-                    "snippet": "Cellulose and hemicelluloses are substrates for these enzymes",
+                    "reference": "DOI:10.1016/j.cbpa.2015.10.018",
+                    "snippet": (
+                        "The enzymatic degradation of cellulose and hemicellulose "
+                        "is accomplished in Nature via the collective action of "
+                        "multiple carbohydrate-active enzymes"
+                    ),
                     "notes": (
-                        "Verified against the open Gurovic et al. figure text; "
-                        "the broad CAZyme node is retained for "
-                        "hemicellulose-active enzymes."
+                        "Verified against the open Cragg et al. full text; the "
+                        "broad CAZyme node is retained for hemicellulose-active "
+                        "enzymes."
                     ),
                 }
             ],

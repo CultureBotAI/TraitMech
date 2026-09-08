@@ -278,7 +278,7 @@ data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhy
 data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	polyphosphate granule	polyphosphate_granule_storage	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
 data/traits/morphology/prosthecate.yaml	traitmech:000065	prosthecate	prosthecate_stalk_nutrient_uptake	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/red_pigmented.yaml	METPO:1003028	red pigmented	red_pigmented_prodiginine_pathway	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/rod_shaped.yaml	METPO:1000681	rod shaped	rod_shaped_mreB_peptidoglycan	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/s_layer.yaml	traitmech:000064	S-layer	s_layer_2d_protein_array	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/sarcina_arrangement.yaml	traitmech:000120	sarcina arrangement	sarcina_three_plane_division_packet	NONMECHANISTIC	4	2	2	1	1	0	0	NONMECHANISTIC	0	0	-

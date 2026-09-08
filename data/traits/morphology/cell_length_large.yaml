@@ -119,7 +119,9 @@ causal_graphs:
       DNA damage or replication stress.
     evidence:
     - reference: DOI:10.1002/advs.202203260
-      snippet: SOS response is activated
+      snippet: the SOS response is activated through the binding of recA with single
+        stranded DNA and the self-cleavage of the lexA repressor, enabling expression
+        of SOS regulon genes
       notes: Verified against the open Wiley full text; DNA damage activates the RecA/LexA
         SOS response and enables expression of SOS regulon genes, including sulA.
     predicate_id: RO:0002213
@@ -264,4 +266,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #687: gave the two SulA edges
     distinct exact snippets, separating the FtsZ-polymerization claim from the SulA
     division-inhibitor connector.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issue #696: expanded the SOS-to-SulA
+    division-inhibition evidence so the snippet carries SOS-regulon expression instead
+    of only naming SOS activation.'
   llm_assisted: true

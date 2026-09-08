@@ -54,6 +54,7 @@ data/traits/morphology/cell_shape.yaml	cell_shape_peptidoglycan_cytoskeleton	INC
 data/traits/morphology/cell_shape.yaml	cell_shape_peptidoglycan_cytoskeleton	INCONSISTENT_NODE_TYPE	WARN	node_id='rod_shape' type=QUALITY here — also TRAIT×1 elsewhere in the corpus
 data/traits/morphology/cell_width_very_small.yaml	cell_width_very_small_streamlining	INCONSISTENT_NODE_TYPE	WARN	node_id='rod_complex' type=GENE_OR_PROTEIN here — also PATHWAY×2 elsewhere in the corpus
 data/traits/morphology/ellipsoidal.yaml	ellipsoidal_ovococcal_elongation	INCONSISTENT_NODE_TYPE	WARN	node_id='elongasome' type=GENE_OR_PROTEIN here — also CELLULAR_LOCALIZATION×1 elsewhere in the corpus
+data/traits/morphology/flask_shaped.yaml	flask_shaped_asymmetric_polar_growth	INCONSISTENT_NODE_TYPE	WARN	node_id='bactofilin_lmdc_module' type=PATHWAY here — also GENE_OR_PROTEIN×1 elsewhere in the corpus
 data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth	INCONSISTENT_NODE_TYPE	WARN	node_id='elongasome' type=CELLULAR_LOCALIZATION here — also GENE_OR_PROTEIN×2 elsewhere in the corpus
 data/traits/morphology/motile.yaml	motile_energy_dependent_locomotion	INCONSISTENT_NODE_TYPE	WARN	node_id='type_iv_pilus' type=GENE_OR_PROTEIN here — also CELLULAR_LOCALIZATION×1 elsewhere in the corpus
 data/traits/morphology/motile.yaml	motile_energy_dependent_locomotion	INCONSISTENT_NODE_TYPE	WARN	node_id='twitching_motility' type=BIOLOGICAL_PROCESS here — also TRAIT×1 elsewhere in the corpus
@@ -61,6 +62,7 @@ data/traits/morphology/motility.yaml	motility_locomotion_machinery	INCONSISTENT_
 data/traits/morphology/motility.yaml	motility_locomotion_machinery	INCONSISTENT_NODE_TYPE	WARN	node_id='twitching_motility' type=TRAIT here — also BIOLOGICAL_PROCESS×1 elsewhere in the corpus
 data/traits/morphology/orange_pigmented.yaml	orange_pigmented_carotenoid_accumulation	INCONSISTENT_NODE_TYPE	WARN	node_id='oxidative_stress' type=ENVIRONMENTAL_FACTOR here — also BIOLOGICAL_PROCESS×4 elsewhere in the corpus
 data/traits/morphology/ovoid_shaped.yaml	ovoid_shaped_midcell_pg_assembly	INCONSISTENT_NODE_TYPE	WARN	node_id='ftsz_ring' type=CELLULAR_LOCALIZATION here — also GENE_OR_PROTEIN×1 elsewhere in the corpus
+data/traits/morphology/ring_shaped.yaml	ring_shaped_curved_growth_closure	INCONSISTENT_NODE_TYPE	WARN	node_id='bactofilin_lmdc_module' type=GENE_OR_PROTEIN here — also PATHWAY×1 elsewhere in the corpus
 data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan	INCONSISTENT_NODE_TYPE	WARN	node_id='rod_complex' type=GENE_OR_PROTEIN here — also PATHWAY×2 elsewhere in the corpus
 data/traits/morphology/spiral_shaped.yaml	spiral_shaped_curvature_mechanisms	INCONSISTENT_NODE_TYPE	WARN	node_id='periplasmic_flagella' type=ORGANELLE here — also CELLULAR_LOCALIZATION×1 elsewhere in the corpus
 data/traits/morphology/spirochete_shaped.yaml	spirochete_shaped_periplasmic_flagella	INCONSISTENT_NODE_TYPE	WARN	node_id='periplasmic_flagella' type=ORGANELLE here — also CELLULAR_LOCALIZATION×1 elsewhere in the corpus

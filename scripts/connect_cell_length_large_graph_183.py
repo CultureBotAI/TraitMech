@@ -82,7 +82,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1002/advs.202203260",
-                    "snippet": "SOS response is activated",
+                    "snippet": (
+                        "the SOS response is activated through the binding of "
+                        "recA with single stranded DNA and the self-cleavage of "
+                        "the lexA repressor, enabling expression of SOS regulon "
+                        "genes"
+                    ),
                     "notes": (
                         "Verified against the open Wiley full text; DNA damage "
                         "activates the RecA/LexA SOS response and enables "

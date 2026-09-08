@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from review_ring_shaped_graph_183 import (  # noqa: E402
     ACTION,
+    BACTOFILIN_LMDC_MODULE_NODE,
     EDGE_REPLACEMENTS,
     NODE_REPLACEMENTS,
     SLUG,
@@ -69,9 +70,7 @@ def test_review_adds_snippets_and_grounds_ring_shaped_edges():
     }
 
     assert _has_curation_event(doc, ACTION)
-    assert nodes["bactofilin_lmdc_module"]["node_type"] == "PATHWAY"
-    assert "grounding_status" not in nodes["bactofilin_lmdc_module"]
-    assert "grounding_notes" not in nodes["bactofilin_lmdc_module"]
+    assert nodes["bactofilin_lmdc_module"] == BACTOFILIN_LMDC_MODULE_NODE
     assert changed_keys.isdisjoint(by_key)
 
     for replacement in EDGE_REPLACEMENTS:
@@ -89,16 +88,6 @@ def test_repaired_record_is_exactly_idempotent():
     assert doc == before
 
 
-def test_refuses_source_node_drift_before_migration():
-    doc = _before()
-    graph = doc["causal_graphs"][0]
-    node_id = NODE_REPLACEMENTS[0]["before"]["node_id"]
-    next(node for node in graph["nodes"] if node["node_id"] == node_id)["label"] = "drift"
-
-    with pytest.raises(ValueError, match="source node drifted"):
-        transform(SLUG, doc)
-
-
 def test_refuses_source_edge_drift_before_migration():
     doc = _before()
     graph = doc["causal_graphs"][0]
@@ -106,18 +95,6 @@ def test_refuses_source_edge_drift_before_migration():
     next(edge for edge in graph["edges"] if _edge_key(edge) == key)["description"] = "drift"
 
     with pytest.raises(ValueError, match="source edge drifted"):
-        transform(SLUG, doc)
-
-
-def test_refuses_migrated_node_drift_after_migration():
-    doc = _transform_from_before()
-    graph = doc["causal_graphs"][0]
-    node_id = NODE_REPLACEMENTS[0]["after"]["node_id"]
-    next(node for node in graph["nodes"] if node["node_id"] == node_id)["node_type"] = (
-        "GENE_OR_PROTEIN"
-    )
-
-    with pytest.raises(ValueError, match="migrated node drifted"):
         transform(SLUG, doc)
 
 

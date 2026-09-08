@@ -30,7 +30,7 @@ causal_graphs:
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed nonmechanistic graph connecting very limited pH-homeostasis
+  description: DOI-backed nonmechanistic graph annotating very limited pH-homeostasis
     flexibility, PMF partitioning, constitutive pH-homeostatic expression cost, alkaline
     antiport, F1Fo acid-side pumping, and Gad proton-consumption branches to the at-most-1
     pH-unit breadth bin.
@@ -123,7 +123,8 @@ causal_graphs:
       between Delta-pH and Delta-psi.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: relative magnitudes of the two PMF components
+      snippet: Under significant pH stress conditions, both neutralophiles and extremophiles
+        exhibit reversal of the orientation of a PMF component
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         bacterial pH-homeostasis demands determine how delta-psi and delta-pH contribute
         to the PMF.
@@ -146,7 +147,9 @@ causal_graphs:
     description: Na+/H+ antiporter activity contributes to alkaline pH homeostasis.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: proton entry driven by the transmembrane potential
+      snippet: active transport of protons inward is a crucial adaptation, which usually
+        involves activation and transcriptional up-regulation of key cation/proton
+        antiporters
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         electrogenic cation/proton antiport supports proton entry during alkaline
         stress.
@@ -175,64 +178,6 @@ causal_graphs:
         GadB consumes a cytoplasmic proton when it decarboxylates glutamate in the
         E. coli acid-resistance cycle.
     predicate_id: RO:0002326
-  - subject: pmf_partitioning
-    predicate: associated with
-    object: very_limited_ph_homeostasis
-    description: PMF partitioning is associated with the pH-homeostasis flexibility
-      that bounds a very narrow external-pH growth interval.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: demands of pH homeostasis for particular bacteria determine the relative
-        magnitudes
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        the connector keeps PMF partitioning as pH-homeostasis context rather than
-        direct proof of the at-most-1-unit breadth.
-    predicate_id: biolink:associated_with
-  - subject: energetic_cost
-    predicate: associated with
-    object: very_limited_ph_homeostasis
-    description: The energetic cost of constitutive extremophile pH-homeostatic machinery
-      is associated with boundary constraints on very narrow pH breadth.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: preparedness often negatively impacts growth at near neutral pH
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        the connector represents a cost-of-preparedness branch, not a universal cause
-        of stenotopic pH breadth.
-    predicate_id: biolink:associated_with
-  - subject: alkaline_ph_homeostasis
-    predicate: associated with
-    object: very_limited_ph_homeostasis
-    description: Na+/H+ antiporter-linked alkaline pH homeostasis is a contextual
-      branch of limited pH-homeostasis flexibility.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: active transport of protons inward is a crucial adaptation
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        alkaline proton import support is retained as one boundary branch.
-    predicate_id: biolink:associated_with
-  - subject: acid_stress_survival
-    predicate: associated with
-    object: very_limited_ph_homeostasis
-    description: F1Fo-ATPase acid-stress survival support is associated with the acid-side
-      boundary of limited pH homeostasis.
-    evidence:
-    - reference: DOI:10.1016/j.abb.2019.03.014
-      snippet: F-ATPase plays an important role in acid tolerance of this bacterium
-      notes: Verified against the PubMed abstract of Sekiya et al.; ATP-dependent
-        proton pumping is kept as acid-side support rather than a direct breadth mechanism.
-    predicate_id: biolink:associated_with
-  - subject: cytoplasmic_proton_consumption
-    predicate: associated with
-    object: very_limited_ph_homeostasis
-    description: Gad-linked cytoplasmic proton consumption is associated with acid-side
-      pH-homeostasis support.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: The consumption of the proton supports acid pH homeostasis
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        Gad-mediated proton consumption is scoped as an acid-side support branch.
-    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838042+00:00'
   curator: seed_from_metpo
@@ -321,4 +266,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issues #688 and #689: requoted the
     F1Fo-ATPase acid-stress edge with a longer Krulwich span and replaced its connector
     quote with distinct Sekiya F-ATPase acid-tolerance support.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #696, #698, and #699: requoted
+    weak Krulwich pH-homeostasis edge snippets and removed unsupported pH-breadth
+    hub connectors that only joined generic review branches to quantitative bin nodes.'
   llm_assisted: true

@@ -65,7 +65,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1128/spectrum.03925-23",
-                    "snippet": "kinase-dominant state of DesK",
+                    "snippet": (
+                        "Upon temperature decrease, the membrane rigidifies and "
+                        "increases in thickness, resulting in activation of the "
+                        "kinase-dominant state of DesK"
+                    ),
                     "notes": (
                         "Verified against the open Sidarta et al. introduction; "
                         "the current Des model links temperature-decrease-driven "

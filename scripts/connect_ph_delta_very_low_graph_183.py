@@ -45,13 +45,14 @@ GRAPH_METADATA_BEFORE = {
 GRAPH_METADATA_AFTER = {
     "title": "pH-delta-very-low stenotopic pH-homeostasis context",
     "description": (
-        "DOI-backed nonmechanistic graph connecting very limited "
+        "DOI-backed nonmechanistic graph annotating very limited "
         "pH-homeostasis flexibility, PMF partitioning, constitutive "
         "pH-homeostatic expression cost, alkaline antiport, F1Fo acid-side "
         "pumping, and Gad proton-consumption branches to the at-most-1 "
         "pH-unit breadth bin."
     ),
 }
+GRAPH_METADATA_REPAIR = GRAPH_METADATA_AFTER
 
 SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
     {
@@ -65,7 +66,11 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "relative magnitudes of the two PMF components",
+                "snippet": (
+                    "Under significant pH stress conditions, both neutralophiles "
+                    "and extremophiles exhibit reversal of the orientation of a "
+                    "PMF component"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; bacterial pH-homeostasis demands determine "
@@ -104,7 +109,12 @@ SOURCE_CONNECTOR_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1038/nrmicro2549",
-                "snippet": "proton entry driven by the transmembrane potential",
+                "snippet": (
+                    "active transport of protons inward is a crucial "
+                    "adaptation, which usually involves activation and "
+                    "transcriptional up-regulation of key cation/proton "
+                    "antiporters"
+                ),
                 "notes": (
                     "Verified against the open PMC manuscript of the Krulwich "
                     "et al. review; electrogenic cation/proton antiport supports "
@@ -240,10 +250,7 @@ ADDED_EDGES: list[dict[str, Any]] = [
         "evidence": [
             {
                 "reference": "DOI:10.1016/j.abb.2019.03.014",
-                "snippet": (
-                    "F-ATPase plays an important role in acid tolerance of "
-                    "this bacterium"
-                ),
+                "snippet": ("F-ATPase plays an important role in acid tolerance of this bacterium"),
                 "notes": (
                     "Verified against the PubMed abstract of Sekiya et al.; "
                     "ATP-dependent proton pumping is kept as "
@@ -276,6 +283,8 @@ ADDED_EDGES: list[dict[str, Any]] = [
     },
 ]
 
+STALE_EDGE_KEYS = {_edge_key(edge) for edge in ADDED_EDGES}
+
 
 def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     graphs = doc.get("causal_graphs") or []
@@ -289,9 +298,9 @@ def _find_graph(doc: dict[str, Any]) -> dict[str, Any]:
     return graph
 
 
-def _edges_by_key(edges: list[dict[str, Any]]) -> dict[
-    tuple[str | None, str | None, str | None], dict[str, Any]
-]:
+def _edges_by_key(
+    edges: list[dict[str, Any]],
+) -> dict[tuple[str | None, str | None, str | None], dict[str, Any]]:
     return {_edge_key(edge): edge for edge in edges}
 
 

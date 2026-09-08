@@ -31,23 +31,24 @@ GRAPH_ID = "ring_shaped_curved_growth_closure"
 ACTION = "REVIEW_CAUSAL_EVIDENCE"
 TIMESTAMP = "2026-09-04T06:20:00Z"
 
-NODE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
+BACTOFILIN_LMDC_MODULE_NODE: dict[str, Any] = {
+    "node_id": "bactofilin_lmdc_module",
+    "label": "bactofilin-M23 peptidase module",
+    "node_type": "GENE_OR_PROTEIN",
+    "description": (
+        "Conserved bactofilin and M23 peptidase functional module remodeling the wall locally."
+    ),
+    "grounding_status": "REVIEWED_LABEL_ONLY",
+    "grounding_notes": (
+        "This is a multi-protein bactofilin/M23 module, not one protein family or accession."
+    ),
+}
+
+NODE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = []
+
+REPAIR_NODE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
     {
         "before": {
-            "node_id": "bactofilin_lmdc_module",
-            "label": "bactofilin-M23 peptidase module",
-            "node_type": "GENE_OR_PROTEIN",
-            "description": (
-                "Conserved bactofilin and M23 peptidase functional module "
-                "remodeling the wall locally."
-            ),
-            "grounding_status": "REVIEWED_LABEL_ONLY",
-            "grounding_notes": (
-                "This is a multi-protein bactofilin/M23 module, not one protein "
-                "family or accession."
-            ),
-        },
-        "after": {
             "node_id": "bactofilin_lmdc_module",
             "label": "bactofilin-M23 peptidase module",
             "node_type": "PATHWAY",
@@ -56,6 +57,7 @@ NODE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                 "remodeling the wall locally."
             ),
         },
+        "after": BACTOFILIN_LMDC_MODULE_NODE,
     },
 ]
 
@@ -387,15 +389,16 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
     migrated_edge_keys = set(after_edges) - set(before_edges)
     existing_edge_keys = {_edge_key(edge) for edge in graph.get("edges") or []}
     present_migrated_edge_keys = existing_edge_keys & migrated_edge_keys
-    has_after_nodes = _has_exact_nodes(graph, after_nodes)
+    has_after_nodes = bool(after_nodes) and _has_exact_nodes(graph, after_nodes)
     has_after_edges = _has_exact_edges(graph, after_edges)
 
-    if has_after_nodes and has_after_edges:
+    if (not after_nodes or has_after_nodes) and has_after_edges:
         _assert_exact_edges(graph, after_edges, "migrated")
         return False
 
     if present_migrated_edge_keys == migrated_edge_keys and migrated_edge_keys:
-        _assert_exact_nodes(graph, after_nodes, "migrated")
+        if after_nodes:
+            _assert_exact_nodes(graph, after_nodes, "migrated")
         _assert_exact_edges(graph, after_edges, "migrated")
         return False
 
@@ -431,7 +434,8 @@ def transform(slug: str, doc: dict[str, Any]) -> bool:
             "Reviewed the ring_shaped_curved_growth_closure graph for issue "
             "#183: added exact snippets to 6 comparative curvature and "
             "wall-patterning evidence entries, grounded 4 residual predicates, "
-            "and retyped the bactofilin-M23 module as a pathway. No paid "
+            "and kept the bactofilin-M23 module as a reviewed label-only "
+            "protein aggregate. No paid "
             "research service was called."
         ),
         llm_assisted=True,

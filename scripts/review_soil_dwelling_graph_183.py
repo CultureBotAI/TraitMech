@@ -104,13 +104,13 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
         },
         "after": {
             "subject": "soil_habitat",
-            "predicate": "confers",
+            "predicate": "associated with",
             "object": "soil_dwelling_trait",
-            "description": "The terrestrial soil environment hosts soil-resident microbes.",
+            "description": "Soil habitat is associated with soil-resident microbes.",
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro.2017.87",
-                    "snippet": "a broad diversity of microbial taxa",
+                    "snippet": "a gram of soil can contain thousands of individual microbial taxa",
                     "notes": (
                         "Verified against the Fierer review; the claim is "
                         "habitat-level and does not assert a universal molecular "
@@ -118,7 +118,7 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
                     ),
                 }
             ],
-            "predicate_id": "METPO:2007700",
+            "predicate_id": "biolink:associated_with",
         },
     },
     {
@@ -417,6 +417,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
         },
     },
 ]
+
+STALE_EDGE_KEYS = {
+    ("soil_habitat", "confers", "soil_dwelling_trait"),
+}
+REPAIR_EDGE_ADDITIONS = [EDGE_REPLACEMENTS[0]["after"]]
 
 
 def _edge_key(edge: dict[str, Any]) -> tuple[str | None, str | None, str | None]:

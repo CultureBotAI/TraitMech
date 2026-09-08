@@ -30,7 +30,7 @@ causal_graphs:
   scope_notes: This record is a quantitative measurement, interval, or bin in the
     environmental phenotype hierarchy; a token protein example would misrepresent
     the measured value as one inherited molecular mechanism.
-  description: DOI-backed nonmechanistic graph connecting wide pH-homeostasis flexibility,
+  description: DOI-backed nonmechanistic graph annotating wide pH-homeostasis flexibility,
     PMF regulation and generation, alkaline Na+/H+ antiport, ATPase support, phosphate
     buffering, amino-acid decarboxylation, and membrane proton-permeability branches
     to the 4-5 pH-unit breadth bin.
@@ -155,7 +155,8 @@ causal_graphs:
       cytoplasmic pH across external pH changes.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
-      snippet: relative magnitudes of the two PMF components
+      snippet: the demands of pH homeostasis for particular bacteria determine the
+        relative magnitudes of the two PMF components
       notes: Verified against the open PMC manuscript of the Krulwich et al. review;
         bacterial pH-homeostasis demands determine how delta-psi and delta-pH contribute
         to the PMF.
@@ -216,64 +217,6 @@ causal_graphs:
       notes: Verified against the open Frontiers methanotroph review; saturated bacterial
         membranes are described as lowering proton permeability under acid stress.
     predicate_id: RO:0002212
-  - subject: proton_motive_force
-    predicate: associated with
-    object: wide_ph_homeostasis
-    description: PMF generation and amino-acid decarboxylation are associated with
-      wide pH-homeostasis flexibility.
-    evidence:
-    - reference: DOI:10.1093/femsre/fuad033
-      snippet: utilization of the PMF for nutrient uptake
-      notes: Verified against the open Poolman review; the connector joins the decarboxylation
-        and PMF branch as pH-homeostasis support without asserting direct causation
-        of a 4-5 pH-unit growth breadth.
-    predicate_id: biolink:associated_with
-  - subject: cytoplasmic_ph_maintenance
-    predicate: associated with
-    object: wide_ph_homeostasis
-    description: Cytoplasmic pH maintenance is associated with wide pH-homeostasis
-      flexibility across external pH changes.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: Bacterial pH homeostasis is important for physiology, ecology and pathogenesis
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        PMF regulation is retained as one energetic arm of the wide pH-breadth context.
-    predicate_id: biolink:associated_with
-  - subject: na_h_antiport
-    predicate: associated with
-    object: wide_ph_homeostasis
-    description: Electrogenic Na+/H+ antiport is associated with alkaline-side support
-      for wide pH homeostasis.
-    evidence:
-    - reference: DOI:10.1038/nrmicro2549
-      snippet: active transport of protons inward is a crucial adaptation
-      notes: Verified against the open PMC manuscript of the Krulwich et al. review;
-        the connector keeps antiport as alkaline-side support rather than a universal
-        breadth cause.
-    predicate_id: biolink:associated_with
-  - subject: intracellular_ph_stability
-    predicate: associated with
-    object: wide_ph_homeostasis
-    description: Cytoplasmic phosphate buffering is associated with stable intracellular
-      pH during pH-homeostasis challenges.
-    evidence:
-    - reference: DOI:10.1093/femsre/fuad033
-      snippet: large impact on the internal pH if there would not be sufficient buffering
-        capacity
-      notes: Verified against the open Poolman review; phosphate buffering remains
-        one passive branch of pH-homeostasis support.
-    predicate_id: biolink:associated_with
-  - subject: proton_permeability
-    predicate: associated with
-    object: wide_ph_homeostasis
-    description: Membrane proton permeability is associated with acid-side envelope
-      support for wide pH homeostasis.
-    evidence:
-    - reference: DOI:10.3389/fmicb.2022.1034164
-      snippet: saturated membrane to minimize proton permeability
-      notes: Verified against the open Frontiers methanotroph review; lipid remodeling
-        is retained as an acid-side proton-permeability branch.
-    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839862+00:00'
   curator: seed_from_metpo
@@ -451,4 +394,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issues #688 and #690: restored a
     supporting Krulwich snippet on the pH-delta bin membership edge and requoted the
     Poolman phosphate-buffering edge from the primary source text.'
+  llm_assisted: true
+- timestamp: '2026-09-07T20:05:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Addressed PR #664 adversarial review issues #696, #698, and #699: requoted
+    weak Krulwich pH-homeostasis edge snippets and removed unsupported pH-breadth
+    hub connectors that only joined generic review branches to quantitative bin nodes.'
   llm_assisted: true

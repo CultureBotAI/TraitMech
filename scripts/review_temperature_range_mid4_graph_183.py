@@ -369,7 +369,10 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/s41467-024-53677-5",
-                    "snippet": "maintains cell membranes at a fixed viscosity level",
+                    "snippet": (
+                        "hard-wired parameters calibrate the system to generate "
+                        "membrane compositions that maintain constant fluidity"
+                    ),
                     "notes": (
                         "Verified against the open Hoogerland et al. introduction; "
                         "homeoviscous adaptation counteracts temperature by "

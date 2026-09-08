@@ -64,7 +64,11 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "relative magnitudes of the two PMF components",
+                    "snippet": (
+                        "Under significant pH stress conditions, both neutralophiles "
+                        "and extremophiles exhibit reversal of the orientation of a "
+                        "PMF component"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; bacterial pH-homeostasis demands determine "
@@ -144,7 +148,12 @@ EDGE_REPLACEMENTS: list[dict[str, dict[str, Any]]] = [
             "evidence": [
                 {
                     "reference": "DOI:10.1038/nrmicro2549",
-                    "snippet": "proton entry driven by the transmembrane potential",
+                    "snippet": (
+                        "active transport of protons inward is a crucial "
+                        "adaptation, which usually involves activation and "
+                        "transcriptional up-regulation of key cation/proton "
+                        "antiporters"
+                    ),
                     "notes": (
                         "Verified against the open PMC manuscript of the Krulwich "
                         "et al. review; electrogenic cation/proton antiport supports "
