@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import csv
 import sys
 from pathlib import Path
 
@@ -80,3 +81,14 @@ def test_dark_sulfur_oxidation_refines_sulfur_oxidation_without_go_close_match_x
 
     assert dark_sulfur_oxidation["parent_traits"] == ["traitmech:000106"]
     assert "GO:0019417" not in dark_sulfur_oxidation.get("xrefs", [])
+
+
+def test_metpo_v11_dark_sulfur_parent_matches_lifted_sulfur_oxidation():
+    proposal_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_classes_robot.tsv"
+    with proposal_tsv.open(encoding="utf-8") as stream:
+        rows = list(csv.DictReader(stream, delimiter="\t"))
+    dark_sulfur_oxidation = next(
+        row for row in rows if row["proposed_id"] == "METPO:1008812"
+    )
+
+    assert dark_sulfur_oxidation["parent"] == "METPO:1007705"

@@ -123,7 +123,7 @@ actually asserted when they could not specify the acceptor.
 (140) name the same process from opposite ends — the electron donor and the carbon
 substrate. Proposing both would put a synonym pair in the hierarchy as siblings.
 
-### Degradation and oxidation capabilities — parent `METPO:1000060`
+### Degradation and oxidation capabilities
 
 | ID | label | parent |
 |---|---|---|
@@ -132,19 +132,23 @@ substrate. Proposing both would put a synonym pair in the hierarchy as siblings.
 | `METPO:1008809` | aromatic compound degradation | `METPO:1000060` |
 | `METPO:1008810` | xylanolysis | `METPO:1000060` |
 | `METPO:1008811` | dark hydrogen oxidation | `METPO:1000060` |
-| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1000060` |
+| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1007705` |
 | `METPO:1008813` | methanol oxidation | `METPO:1000060` |
 | `METPO:1008814` | nitrate reduction | `METPO:1000060` |
 
-These hang off `METPO:1000060 metabolism`, not `METPO:1000630 biological process`.
-The first draft used the latter and that was wrong (#468): `METPO:1000630` has
-exactly **one** child, `metabolism`, and every real process in METPO —
-`respiration`, `Methanogenesis`, `Acetogenesis`, `Oxidative phosphorylation`,
-`Disproportionation` — sits below it. Parenting to `1000630` would have made these
-seven siblings of `metabolism` itself, a level above the processes they belong with.
-The definitions take `metabolism` as their genus to match, which is how METPO's
-existing children of that class are written ("A metabolism in which methane is
-produced…").
+These stay inside the `METPO:1000060 metabolism` branch, not the
+`METPO:1000630 biological process` branch. The first draft used the latter and that
+was wrong (#468): `METPO:1000630` has exactly **one** child, `metabolism`, and
+every real process in METPO — `respiration`, `Methanogenesis`, `Acetogenesis`,
+`Oxidative phosphorylation`, `Disproportionation` — sits below it. Parenting to
+`1000630` would have made these seven siblings of `metabolism` itself, a level
+above the processes they belong with. The definitions take `metabolism` as their
+genus to match, which is how METPO's existing children of that class are written
+("A metabolism in which methane is produced…").
+
+`METPO:1008812 dark oxidation of sulfur compounds` is nested under the v5
+`METPO:1007705 sulfur oxidation` lift so the light-independent term is a species
+of the broader reduced-inorganic-sulfur oxidation process rather than a sibling.
 
 ### Two second parents, both left for a maintainer
 
