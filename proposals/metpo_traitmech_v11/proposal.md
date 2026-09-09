@@ -179,10 +179,14 @@ mapping instead.
 
 ## Cross-ontology mappings
 
-`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 3 `skos:exactMatch` to GO and 1
-`skos:closeMatch`. Emitted only where a GO term genuinely denotes the same process —
-per the skill's rule, a cross-ontology equivalent is a mapping, not a
-`definition_source`.
+`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 2 `skos:exactMatch` to GO,
+1 `skos:broadMatch`, and 1 `skos:closeMatch`. Emitted where GO genuinely denotes
+the same process or a useful broader neighbor — per the skill's rule, a
+cross-ontology equivalent is a mapping, not a `definition_source`.
+
+The broadMatch is `hydrogenotrophic methanogenesis` → `GO:0019386 methanogenesis,
+from carbon dioxide`: GO names CO2 reduction to methane but does not constrain the
+electron donor to H2, so the FAPROTAX term is narrower.
 
 The closeMatch is `dark oxidation of sulfur compounds` → `GO:0019417 sulfur
 oxidation`: GO admits phototrophic sulfur oxidation, which the FAPROTAX "dark"

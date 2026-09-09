@@ -224,7 +224,6 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
                 faprotax_group_key("hydrogenotrophic_methanogenesis"),
                 faprotax_group_key("methanogenesis_by_CO2_reduction_with_H2"),
             ],
-            "xrefs": ["GO:0019386"],
             "evidence": [
                 {
                     "reference": "DOI:10.1146/annurev-micro-011720-122807",
@@ -366,9 +365,9 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "identifier": "traitmech:000132",
             "label": "dark oxidation of sulfur compounds",
             "definition": (
-                "A metabolism in which an organism oxidizes a reduced inorganic "
-                "sulfur compound as an electron donor for energy conservation "
-                "independently of light."
+                "A sulfur oxidation in which an organism oxidizes a reduced "
+                "inorganic sulfur compound as an electron donor for energy "
+                "conservation independently of light."
             ),
             "definition_source": FAPROTAX,
             "trait_category": "METABOLISM",
