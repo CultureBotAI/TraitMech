@@ -143,3 +143,15 @@ def test_metpo_v11_nitrate_second_parent_note_does_not_claim_nitrite():
     proposal = _v11_proposal_text()
 
     assert "The same holds for" not in proposal
+
+
+def test_metpo_v11_documents_scope_a_round_trip_plan():
+    proposal = _v11_proposal_text()
+
+    assert (
+        "| A — synthetic trait class lift | 14 | every proposed class is now "
+        "loaded locally as `traitmech:000121`–`traitmech:000134` |"
+    ) in proposal
+    assert "## Round-trip plan (Scope A)" in proposal
+    assert "## Change log" in proposal
+    assert "METPO:1008810` withdrawn" in proposal

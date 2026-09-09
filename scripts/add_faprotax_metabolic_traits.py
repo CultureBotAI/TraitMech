@@ -229,8 +229,8 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
                     "reference": "DOI:10.1146/annurev-micro-011720-122807",
                     "snippet": "from CO2 and H2 to methane",
                     "notes": (
-                        "The methanogenesis review supports the H2/CO2 branch of "
-                        "archaeal methane production."
+                        "Shima et al. support the H2/CO2 branch of archaeal "
+                        "methane production."
                     ),
                 },
             ],

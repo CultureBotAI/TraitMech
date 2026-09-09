@@ -19,7 +19,8 @@ microbial capability for which METPO has no class.
 
 ## ID block
 
-`METPO:1008800`–`METPO:1008814` (classes). No predicates proposed.
+`METPO:1008800`–`METPO:1008814` (classes), with `METPO:1008810` withdrawn
+after xylanolysis was confirmed as a duplicate. No predicates proposed.
 
 The highest placeholder in use across cohorts v1–v10 is `METPO:1007721` (classes) and
 `METPO:2007900` (predicates), so the next contiguous class block would be
@@ -38,9 +39,13 @@ Subset tag: `metpo_traitmech_2026_14`.
 
 | Scope | Rows | Why it belongs in METPO |
 |---|---:|---|
-| A — synthetic trait class lift | 0 | no `traitmech:` identifiers were minted for these; they have no local record yet |
+| A — synthetic trait class lift | 14 | every proposed class is now loaded locally as `traitmech:000121`–`traitmech:000134` |
 | B — causal-graph predicate lift | 0 | nothing here is a relation |
 | **New metabolic-capability classes** | **14** | FAPROTAX strategies with no METPO home, already loaded as synonyms elsewhere in METPO's trophic-type branch |
+
+Scope-A answer: each class row is already minted locally as a PROPOSED TraitRecord
+because METPO has no equivalent, and is cited in the `traits_addressed` column of
+`metpo_proposal_classes_robot.tsv`.
 
 ## The two highest-frequency labels are NOT proposed here
 
@@ -250,6 +255,25 @@ index size so an empty index cannot pass silently.
    the highest-value part of this cohort by occurrence count and need no new IDs.
 3. On mint, replace the `METPO:1008800+` placeholders with the assigned IDs.
 4. Re-seed `data/raw/metpo.owl` and create the corresponding TraitMech trait records.
+
+## Round-trip plan (Scope A)
+
+Once upstream mints real IDs for the 14 classes: refresh `data/raw/metpo.owl`, re-seed,
+and swap each record's `identifier:` from `traitmech:000121`–`traitmech:000134` to
+the corresponding new `METPO:` CURIE, preserving the old `traitmech:` ID as a synonym
+for traceability. Until then the `traitmech:` IDs remain authoritative locally.
+
+## Change log
+
+- v11, 2026-08: first Scope-A cohort after v5 — lifts 14 FAPROTAX metabolic
+  strategies into the `METPO:1008800`–`1008814` block, with `METPO:1008810`
+  withdrawn after `xylanolysis` was confirmed as a duplicate of existing
+  `METPO:1007712` xylan degradation.
+- v11 revision, 2026-09: reparented dark oxidation of sulfur compounds under
+  sulfur oxidation, downgraded hydrogenotrophic methanogenesis to a `skos:broadMatch`,
+  documented reparents for existing DNRA, denitrification, and dissimilatory sulfate
+  reduction rows from the v5 cohort, and recorded `xylanolysis` as a synonym edit
+  instead of a new class.
 
 ## What is still unresolved after this cohort
 
