@@ -28,6 +28,12 @@ def _write_yaml(path: Path, doc: dict) -> None:
     path.write_text(yaml.safe_dump(doc, sort_keys=False), encoding="utf-8")
 
 
+def _v11_proposal_rows() -> list[dict[str, str]]:
+    proposal_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_classes_robot.tsv"
+    with proposal_tsv.open(encoding="utf-8") as stream:
+        return list(csv.DictReader(stream, delimiter="\t"))
+
+
 def test_new_records_skip_existing_same_id_records(metabolism_dir: Path):
     slug, raw = add_faprotax.NEW_RECORDS[0]
     path = metabolism_dir / f"{slug}.yaml"
@@ -84,11 +90,19 @@ def test_dark_sulfur_oxidation_refines_sulfur_oxidation_without_go_close_match_x
 
 
 def test_metpo_v11_dark_sulfur_parent_matches_lifted_sulfur_oxidation():
-    proposal_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_classes_robot.tsv"
-    with proposal_tsv.open(encoding="utf-8") as stream:
-        rows = list(csv.DictReader(stream, delimiter="\t"))
     dark_sulfur_oxidation = next(
-        row for row in rows if row["proposed_id"] == "METPO:1008812"
+        row for row in _v11_proposal_rows() if row["proposed_id"] == "METPO:1008812"
     )
 
     assert dark_sulfur_oxidation["parent"] == "METPO:1007705"
+
+
+def test_metpo_v11_skips_duplicate_xylanolysis_class():
+    proposed = {
+        row["proposed_id"]: row["label"]
+        for row in _v11_proposal_rows()
+        if row["proposed_id"].startswith("METPO:")
+    }
+
+    assert "METPO:1008810" not in proposed
+    assert "xylanolysis" not in proposed.values()

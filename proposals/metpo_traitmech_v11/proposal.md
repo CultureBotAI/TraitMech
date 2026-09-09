@@ -40,7 +40,7 @@ Subset tag: `metpo_traitmech_2026_14`.
 |---|---:|---|
 | A — synthetic trait class lift | 0 | no `traitmech:` identifiers were minted for these; they have no local record yet |
 | B — causal-graph predicate lift | 0 | nothing here is a relation |
-| **New metabolic-capability classes** | **15** | FAPROTAX strategies with no METPO home, already loaded as synonyms elsewhere in METPO's trophic-type branch |
+| **New metabolic-capability classes** | **14** | FAPROTAX strategies with no METPO home, already loaded as synonyms elsewhere in METPO's trophic-type branch |
 
 ## The two highest-frequency labels are NOT proposed here
 
@@ -86,9 +86,9 @@ METPO:1000651 methylotrophic    — methylotrophy
 ```
 
 So the underscored FAPROTAX spelling is already an accepted synonym form here, which
-is why the 15 proposed classes below carry theirs the same way.
+is why the 14 proposed classes below carry theirs the same way.
 
-## The 15 proposed classes
+## The 14 proposed classes
 
 Three families, each hung off a parent METPO already has.
 
@@ -130,7 +130,6 @@ substrate. Proposing both would put a synonym pair in the hierarchy as siblings.
 | `METPO:1008807` | hydrocarbon degradation | `METPO:1000060` |
 | `METPO:1008808` | aromatic hydrocarbon degradation | `METPO:1008807` |
 | `METPO:1008809` | aromatic compound degradation | `METPO:1000060` |
-| `METPO:1008810` | xylanolysis | `METPO:1000060` |
 | `METPO:1008811` | dark hydrogen oxidation | `METPO:1000060` |
 | `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1007705` |
 | `METPO:1008813` | methanol oxidation | `METPO:1000060` |
@@ -141,7 +140,7 @@ These stay inside the `METPO:1000060 metabolism` branch, not the
 was wrong (#468): `METPO:1000630` has exactly **one** child, `metabolism`, and
 every real process in METPO — `respiration`, `Methanogenesis`, `Acetogenesis`,
 `Oxidative phosphorylation`, `Disproportionation` — sits below it. Parenting to
-`1000630` would have made these seven siblings of `metabolism` itself, a level
+`1000630` would have made these processes siblings of `metabolism` itself, a level
 above the processes they belong with. The definitions take `metabolism` as their
 genus to match, which is how METPO's existing children of that class are written
 ("A metabolism in which methane is produced…").
@@ -149,6 +148,11 @@ genus to match, which is how METPO's existing children of that class are written
 `METPO:1008812 dark oxidation of sulfur compounds` is nested under the v5
 `METPO:1007705 sulfur oxidation` lift so the light-independent term is a species
 of the broader reduced-inorganic-sulfur oxidation process rather than a sibling.
+
+`xylanolysis` is not minted here because v5 already lifts `traitmech:000113 xylan
+degradation` as `METPO:1007712`, with the same `GO:0045493 xylan catabolic process`
+exact match. The remaining v11 action is to add `xylanolysis` as an exact
+FAPROTAX synonym on `METPO:1007712`.
 
 ### Two second parents, both left for a maintainer
 
@@ -175,7 +179,7 @@ mapping instead.
 
 ## Cross-ontology mappings
 
-`metpo_proposal_mappings.sssom.tsv` carries 5 rows: 4 `skos:exactMatch` to GO and 1
+`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 3 `skos:exactMatch` to GO and 1
 `skos:closeMatch`. Emitted only where a GO term genuinely denotes the same process —
 per the skill's rule, a cross-ontology equivalent is a mapping, not a
 `definition_source`.
@@ -184,7 +188,7 @@ The closeMatch is `dark oxidation of sulfur compounds` → `GO:0019417 sulfur
 oxidation`: GO admits phototrophic sulfur oxidation, which the FAPROTAX "dark"
 qualifier exists to exclude, and GO has no light-independent sibling to point at.
 
-**Ten of the fifteen get no mapping**, and that is a finding rather than an omission.
+**Ten of the fourteen get no mapping**, and that is a finding rather than an omission.
 The anaerobic-respiration-by-acceptor family has no GO equivalents — searching
 "nitrate respiration" returns `GO:0008940 nitrate reductase activity`, an enzyme
 function, not the respiratory process. GO models the catalysis; FAPROTAX models the
