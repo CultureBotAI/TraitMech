@@ -10,13 +10,13 @@ parent_traits:
 - METPO:1000060
 synonyms:
 - synonym_text: nitrate_reduction
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
-- reference: DOI:10.1038/nrmicro.2018.9
-  snippet: The microbial nitrogen-cycling network
-  notes: Kuypers et al. review dissimilatory and assimilatory nitrate-reducing steps
-    in the microbial nitrogen cycle.
+- reference: DOI:10.1042/BST20110688
+  snippet: Nitrate is further reduced to nitrite
+  notes: Luque-Almagro et al. review nitrate uptake and nitrate-to-nitrite reduction
+    during bacterial nitrate assimilation.
 curation_history:
 - timestamp: '2026-09-08T00:00:00Z'
   curator: codex

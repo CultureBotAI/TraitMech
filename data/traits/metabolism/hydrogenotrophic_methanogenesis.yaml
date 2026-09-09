@@ -10,10 +10,10 @@ parent_traits:
 - METPO:1000844
 synonyms:
 - synonym_text: hydrogenotrophic_methanogenesis
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 - synonym_text: methanogenesis_by_CO2_reduction_with_H2
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 xrefs:
 - GO:0019386

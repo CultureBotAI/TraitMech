@@ -11,11 +11,11 @@ parent_traits:
 - traitmech:000130
 synonyms:
 - synonym_text: aromatic_hydrocarbon_degradation
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1007/BF00058836
-  snippet: The biodegradation of aromatic hydrocarbons by bacteria
+  snippet: benzene, certain arenes, biphenyl and selected fused aromatic hydrocarbons
   notes: Smith reviews bacterial biodegradation of aromatic hydrocarbons as a distinct
     hydrocarbon-degradation branch.
 curation_history:

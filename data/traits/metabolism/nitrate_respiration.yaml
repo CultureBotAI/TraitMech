@@ -11,11 +11,11 @@ parent_traits:
 - traitmech:000134
 synonyms:
 - synonym_text: nitrate_respiration
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1126/science.1254070
-  snippet: bacterial nitrate respiration
+  snippet: anaerobic nitrate-reducing processes
   notes: Kraft et al. support nitrate respiration as a bacterial nitrogen-oxide respiration
     branch with denitrification or DNRA endpoints.
 curation_history:

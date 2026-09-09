@@ -55,7 +55,17 @@ def test_replace_parent_removes_old_when_new_is_already_present():
     assert doc["parent_traits"] == ["traitmech:000121"]
 
 
-def test_dark_sulfur_oxidation_carries_the_v11_go_xref():
+def test_faprotax_group_key_synonyms_are_related():
     records = dict(add_faprotax.NEW_RECORDS)
 
-    assert records["dark_oxidation_of_sulfur_compounds"]["xrefs"] == ["GO:0019417"]
+    for record in records.values():
+        for synonym in record.get("synonyms", []):
+            assert synonym["synonym_type"] == "RELATED_SYNONYM"
+
+
+def test_dark_sulfur_oxidation_refines_sulfur_oxidation_without_go_close_match_xref():
+    records = dict(add_faprotax.NEW_RECORDS)
+    dark_sulfur_oxidation = records["dark_oxidation_of_sulfur_compounds"]
+
+    assert dark_sulfur_oxidation["parent_traits"] == ["traitmech:000106"]
+    assert "GO:0019417" not in dark_sulfur_oxidation.get("xrefs", [])

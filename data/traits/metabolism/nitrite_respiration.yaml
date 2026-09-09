@@ -9,11 +9,11 @@ parent_traits:
 - traitmech:000121
 synonyms:
 - synonym_text: nitrite_respiration
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1128/aem.00292-25
-  snippet: nitrite respiration continues unimpaired
+  snippet: reduction of nitrite to ammonium
   notes: Hird et al. review cytochrome c nitrite reductase as the nitrite-to-ammonium
     step in respiratory DNRA.
 curation_history:

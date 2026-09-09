@@ -22,6 +22,15 @@ TIMESTAMP = "2026-09-08T00:00:00Z"
 FAPROTAX = "DOI:10.1126/science.aaf4507"
 CURATOR = "codex"
 
+
+def faprotax_group_key(text: str) -> dict[str, str]:
+    return {
+        "synonym_text": text,
+        "synonym_type": "RELATED_SYNONYM",
+        "source": FAPROTAX,
+    }
+
+
 NEW_RECORDS: tuple[tuple[str, dict], ...] = (
     (
         "nitrogen_respiration",
@@ -38,13 +47,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000802"],
-            "synonyms": [
-                {
-                    "synonym_text": "nitrogen_respiration",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("nitrogen_respiration")],
             "evidence": [
                 {
                     "reference": "DOI:10.1128/mmbr.61.4.533-616.1997",
@@ -71,17 +74,11 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["traitmech:000121", "traitmech:000134"],
-            "synonyms": [
-                {
-                    "synonym_text": "nitrate_respiration",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("nitrate_respiration")],
             "evidence": [
                 {
                     "reference": "DOI:10.1126/science.1254070",
-                    "snippet": "bacterial nitrate respiration",
+                    "snippet": "anaerobic nitrate-reducing processes",
                     "notes": (
                         "Kraft et al. support nitrate respiration as a bacterial "
                         "nitrogen-oxide respiration branch with denitrification "
@@ -105,17 +102,11 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["traitmech:000121"],
-            "synonyms": [
-                {
-                    "synonym_text": "nitrite_respiration",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("nitrite_respiration")],
             "evidence": [
                 {
                     "reference": "DOI:10.1128/aem.00292-25",
-                    "snippet": "nitrite respiration continues unimpaired",
+                    "snippet": "reduction of nitrite to ammonium",
                     "notes": (
                         "Hird et al. review cytochrome c nitrite reductase as the "
                         "nitrite-to-ammonium step in respiratory DNRA."
@@ -139,13 +130,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000802"],
-            "synonyms": [
-                {
-                    "synonym_text": "respiration_of_sulfur_compounds",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("respiration_of_sulfur_compounds")],
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2023.1108245",
@@ -173,13 +158,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["traitmech:000124"],
-            "synonyms": [
-                {
-                    "synonym_text": "sulfur_respiration",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("sulfur_respiration")],
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2023.1108245",
@@ -206,13 +185,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["traitmech:000124"],
-            "synonyms": [
-                {
-                    "synonym_text": "thiosulfate_respiration",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("thiosulfate_respiration")],
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2023.1108245",
@@ -240,16 +213,8 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000844"],
             "synonyms": [
-                {
-                    "synonym_text": "hydrogenotrophic_methanogenesis",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-                {
-                    "synonym_text": "methanogenesis_by_CO2_reduction_with_H2",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
+                faprotax_group_key("hydrogenotrophic_methanogenesis"),
+                faprotax_group_key("methanogenesis_by_CO2_reduction_with_H2"),
             ],
             "xrefs": ["GO:0019386"],
             "evidence": [
@@ -278,18 +243,14 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "hydrocarbon_degradation",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("hydrocarbon_degradation")],
             "xrefs": ["GO:0120253"],
             "evidence": [
                 {
                     "reference": "DOI:10.1128/MR.54.3.305-315.1990",
-                    "snippet": "Microbial degradation of hydrocarbons in the environment",
+                    "snippet": (
+                        "Hydrocarbons are degraded primarily by bacteria and fungi"
+                    ),
                     "notes": (
                         "Leahy and Colwell review microbial hydrocarbon "
                         "degradation across environmental microorganisms."
@@ -312,17 +273,14 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["traitmech:000128", "traitmech:000130"],
-            "synonyms": [
-                {
-                    "synonym_text": "aromatic_hydrocarbon_degradation",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("aromatic_hydrocarbon_degradation")],
             "evidence": [
                 {
                     "reference": "DOI:10.1007/BF00058836",
-                    "snippet": "The biodegradation of aromatic hydrocarbons by bacteria",
+                    "snippet": (
+                        "benzene, certain arenes, biphenyl and selected fused "
+                        "aromatic hydrocarbons"
+                    ),
                     "notes": (
                         "Smith reviews bacterial biodegradation of aromatic "
                         "hydrocarbons as a distinct hydrocarbon-degradation branch."
@@ -345,17 +303,14 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "aromatic_compound_degradation",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("aromatic_compound_degradation")],
             "evidence": [
                 {
                     "reference": "DOI:10.3390/ijerph6010278",
-                    "snippet": "Bacterial Degradation of Aromatic Compounds",
+                    "snippet": (
+                        "bacterial degradation pathways of selected aromatic "
+                        "compounds"
+                    ),
                     "notes": (
                         "Seo et al. review bacterial pathways for degradation of "
                         "aromatic compounds."
@@ -378,13 +333,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "dark_hydrogen_oxidation",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("dark_hydrogen_oxidation")],
             "evidence": [
                 {
                     "reference": "DOI:10.21775/cimb.006.159",
@@ -412,15 +361,8 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "trait_category": "METABOLISM",
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
-            "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "dark_oxidation_of_sulfur_compounds",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
-            "xrefs": ["GO:0019417"],
+            "parent_traits": ["traitmech:000106"],
+            "synonyms": [faprotax_group_key("dark_oxidation_of_sulfur_compounds")],
             "evidence": [
                 {
                     "reference": "DOI:10.1111/j.1574-6976.2009.00187.x",
@@ -450,13 +392,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "methanol_oxidation",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("methanol_oxidation")],
             "xrefs": ["GO:0015946"],
             "evidence": [
                 {
@@ -485,20 +421,14 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "term_kind": "CLASS",
             "mapping_status": "PROPOSED",
             "parent_traits": ["METPO:1000060"],
-            "synonyms": [
-                {
-                    "synonym_text": "nitrate_reduction",
-                    "synonym_type": "EXACT_SYNONYM",
-                    "source": FAPROTAX,
-                },
-            ],
+            "synonyms": [faprotax_group_key("nitrate_reduction")],
             "evidence": [
                 {
-                    "reference": "DOI:10.1038/nrmicro.2018.9",
-                    "snippet": "The microbial nitrogen-cycling network",
+                    "reference": "DOI:10.1042/BST20110688",
+                    "snippet": "Nitrate is further reduced to nitrite",
                     "notes": (
-                        "Kuypers et al. review dissimilatory and assimilatory "
-                        "nitrate-reducing steps in the microbial nitrogen cycle."
+                        "Luque-Almagro et al. review nitrate uptake and nitrate-to-"
+                        "nitrite reduction during bacterial nitrate assimilation."
                     ),
                 },
             ],

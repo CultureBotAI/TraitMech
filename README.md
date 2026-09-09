@@ -14,18 +14,18 @@ METPO source class and (optionally) to literature evidence.
 
 **Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
 
-| Category | REVIEWED | DEPRECATED | causal_graphs | Total |
-|---|---:|---:|---:|---:|
-| MORPHOLOGY | 88 | 0 | 88 | 88 |
-| PHYSIOLOGY | 45 | 0 | 45 | 45 |
-| ENVIRONMENT | 121 | 0 | 121 | 121 |
-| ECOLOGY | 26 | 0 | 26 | 26 |
-| GENOMICS | 19 | 0 | 19 | 19 |
-| UPPER | 8 | 0 | 5 | 8 |
-| METABOLISM | 120 | 23 | 49 | 157 |
-| OBSERVATION | 0 | 20 | 0 | 20 |
-| QUANTITATIVE_PROPERTY | 0 | 7 | 0 | 7 |
-| **TOTAL** | **427** | **50** | **353** | **491** |
+| Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
+|---|---:|---:|---:|---:|---:|
+| MORPHOLOGY | 88 | 0 | 0 | 88 | 88 |
+| PHYSIOLOGY | 45 | 0 | 0 | 45 | 45 |
+| ENVIRONMENT | 121 | 0 | 0 | 121 | 121 |
+| ECOLOGY | 26 | 0 | 0 | 26 | 26 |
+| GENOMICS | 19 | 0 | 0 | 19 | 19 |
+| UPPER | 8 | 0 | 0 | 5 | 8 |
+| METABOLISM | 120 | 14 | 23 | 49 | 157 |
+| OBSERVATION | 0 | 0 | 20 | 0 | 20 |
+| QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
+| **TOTAL** | **427** | **14** | **50** | **353** | **491** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; 14 newer metabolism records are `PROPOSED`. Of the reviewed
