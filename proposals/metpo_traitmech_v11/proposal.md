@@ -112,6 +112,18 @@ nitrate and nitrite cases, `respiration_of_sulfur_compounds` the union of the su
 and thiosulfate cases. Flattening them would lose the generalisation an annotator
 actually asserted when they could not specify the acceptor.
 
+### Existing v5 classes narrowed under the new respiration groupings
+
+The v5 proposal introduced three anaerobic-respiration classes before these
+intermediate terms existed. Leave the historical v5 rows self-contained, but move
+their asserted parents when applying this v11 cohort:
+
+| existing ID | label | v5 parent | v11 parent |
+|---|---|---|---|
+| `METPO:1007629` | dissimilatory nitrate reduction to ammonium | `METPO:1000802` | `METPO:1008801` |
+| `METPO:1007703` | denitrification | `METPO:1000802` | `METPO:1008801` |
+| `METPO:1007704` | dissimilatory sulfate reduction | `METPO:1000802` | `METPO:1008803` |
+
 ### Methanogenesis — parent `METPO:1000844`
 
 | ID | label | parent |
@@ -163,8 +175,8 @@ here rather than silently dropped:
   (asserted) and `aromatic compound degradation` — an aromatic hydrocarbon is both.
 - **`nitrate respiration`** is a child of both `nitrogen respiration` (asserted, by
   mechanism) and `nitrate reduction` (by chemistry — respiratory reduction of nitrate
-  is still reduction of nitrate). The same holds for `nitrite respiration`. This one
-  was missed in the first draft (#469), which flagged only the aromatic case and so
+  is still reduction of nitrate). This one was missed in the first draft (#469),
+  which flagged only the aromatic case and so
   implied the nitrogen case had been considered and rejected.
 
 `nitrate reduction` is deliberately **not** placed *under* `nitrate respiration`.

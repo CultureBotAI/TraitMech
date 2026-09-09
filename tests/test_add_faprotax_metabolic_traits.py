@@ -34,6 +34,12 @@ def _v11_proposal_rows() -> list[dict[str, str]]:
         return list(csv.DictReader(stream, delimiter="\t"))
 
 
+def _v11_proposal_text() -> str:
+    return (
+        REPO_ROOT / "proposals/metpo_traitmech_v11/proposal.md"
+    ).read_text(encoding="utf-8")
+
+
 def test_new_records_skip_existing_same_id_records(metabolism_dir: Path):
     slug, raw = add_faprotax.NEW_RECORDS[0]
     path = metabolism_dir / f"{slug}.yaml"
@@ -114,3 +120,26 @@ def test_metpo_v11_skips_duplicate_xylanolysis_class():
 
     assert "METPO:1008810" not in proposed
     assert "xylanolysis" not in proposed.values()
+
+
+def test_metpo_v11_documents_existing_respiration_reparents():
+    proposal = _v11_proposal_text()
+
+    assert (
+        "| `METPO:1007629` | dissimilatory nitrate reduction to ammonium | "
+        "`METPO:1000802` | `METPO:1008801` |"
+    ) in proposal
+    assert (
+        "| `METPO:1007703` | denitrification | `METPO:1000802` | "
+        "`METPO:1008801` |"
+    ) in proposal
+    assert (
+        "| `METPO:1007704` | dissimilatory sulfate reduction | "
+        "`METPO:1000802` | `METPO:1008803` |"
+    ) in proposal
+
+
+def test_metpo_v11_nitrate_second_parent_note_does_not_claim_nitrite():
+    proposal = _v11_proposal_text()
+
+    assert "The same holds for" not in proposal
