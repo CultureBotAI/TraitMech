@@ -78,7 +78,11 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "evidence": [
                 {
                     "reference": "DOI:10.1126/science.1254070",
-                    "snippet": "anaerobic nitrate-reducing processes",
+                    "snippet": (
+                        "Denitrification converts nitrate into nitrogenous gas "
+                        "and thus removes fixed nitrogen from the biosphere, "
+                        "whereas ammonification converts nitrate into ammonium"
+                    ),
                     "notes": (
                         "Kraft et al. support nitrate respiration as a bacterial "
                         "nitrogen-oxide respiration branch with denitrification "
@@ -162,7 +166,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "evidence": [
                 {
                     "reference": "DOI:10.3389/fmicb.2023.1108245",
-                    "snippet": "Iron or sulfur respiration",
+                    "snippet": "using sulfur as an alternative electron acceptor",
                     "notes": (
                         "Zavarzina et al. analyze a natronophilic bacterium capable "
                         "of reducing zero-valent sulfur during anaerobic respiration."
@@ -424,11 +428,15 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "synonyms": [faprotax_group_key("nitrate_reduction")],
             "evidence": [
                 {
-                    "reference": "DOI:10.1042/BST20110688",
-                    "snippet": "Nitrate is further reduced to nitrite",
+                    "reference": "DOI:10.1128/JB.181.21.6573-6584.1999",
+                    "snippet": (
+                        "Nitrate reduction can be performed with three different "
+                        "purposes"
+                    ),
                     "notes": (
-                        "Luque-Almagro et al. review nitrate uptake and nitrate-to-"
-                        "nitrite reduction during bacterial nitrate assimilation."
+                        "Moreno-Vivian et al. review prokaryotic nitrate reduction "
+                        "across nitrate assimilation, nitrate respiration, and "
+                        "nitrate dissimilation."
                     ),
                 },
             ],
@@ -439,9 +447,9 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
 REPARENTS: tuple[tuple[str, str | tuple[str, ...], str, str], ...] = (
     (
         "denitrification",
-        "METPO:1000802",
-        "traitmech:000121",
-        "Narrowed parent from anaerobic respiration to nitrogen respiration.",
+        ("METPO:1000802", "traitmech:000121"),
+        "traitmech:000122",
+        "Narrowed parent from anaerobic respiration to nitrate respiration.",
     ),
     (
         "dissimilatory_nitrate_reduction_to_ammonium",
