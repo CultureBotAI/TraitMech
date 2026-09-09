@@ -611,7 +611,7 @@ def render_pages(args: argparse.Namespace) -> int:
 
 
 def write_html(path: Path, text: str) -> None:
-    """Write rendered HTML without whitespace-only spacer lines."""
+    """Write rendered HTML with whitespace-only rendered lines blanked."""
     path.write_text("\n".join("" if not line.strip() else line
                               for line in text.split("\n")))
 

@@ -49,10 +49,14 @@ def test_new_records_skip_existing_same_id_records(metabolism_dir: Path):
 
 
 def test_replace_parent_removes_old_when_new_is_already_present():
-    doc = {"parent_traits": ["METPO:1000802", "traitmech:000121"]}
+    doc = {"parent_traits": ["METPO:1000802", "traitmech:000121", "traitmech:000122"]}
 
-    assert add_faprotax._replace_parent(doc, "METPO:1000802", "traitmech:000121")
-    assert doc["parent_traits"] == ["traitmech:000121"]
+    assert add_faprotax._replace_parent(
+        doc,
+        ("METPO:1000802", "traitmech:000121"),
+        "traitmech:000122",
+    )
+    assert doc["parent_traits"] == ["traitmech:000122"]
 
 
 def test_faprotax_group_key_synonyms_are_related():

@@ -436,7 +436,7 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
     ),
 )
 
-REPARENTS: tuple[tuple[str, str, str, str], ...] = (
+REPARENTS: tuple[tuple[str, str | tuple[str, ...], str, str], ...] = (
     (
         "denitrification",
         "METPO:1000802",
@@ -445,9 +445,9 @@ REPARENTS: tuple[tuple[str, str, str, str], ...] = (
     ),
     (
         "dissimilatory_nitrate_reduction_to_ammonium",
-        "METPO:1000802",
-        "traitmech:000121",
-        "Narrowed parent from anaerobic respiration to nitrogen respiration.",
+        ("METPO:1000802", "traitmech:000121"),
+        "traitmech:000122",
+        "Narrowed parent from anaerobic respiration to nitrate respiration.",
     ),
     (
         "dissimilatory_sulfate_reduction",
@@ -463,11 +463,12 @@ def _load_trait(slug: str) -> tuple[Path, dict]:
     return path, yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
-def _replace_parent(doc: dict, old: str, new: str) -> bool:
+def _replace_parent(doc: dict, old: str | tuple[str, ...], new: str) -> bool:
+    old_parents = {old} if isinstance(old, str) else set(old)
     parents = list(doc.get("parent_traits") or [])
     updated = []
     for parent in parents:
-        replacement = new if parent == old else parent
+        replacement = new if parent in old_parents else parent
         if replacement not in updated:
             updated.append(replacement)
     if new not in updated:
