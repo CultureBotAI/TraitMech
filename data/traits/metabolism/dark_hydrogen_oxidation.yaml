@@ -13,10 +13,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
-- reference: DOI:10.21775/cimb.006.159
-  snippet: reversible oxidation of hydrogen gas
-  notes: The hydrogenotrophy review supports hydrogenase-catalyzed oxidation of molecular
-    hydrogen for microbial energy metabolism.
+- reference: DOI:10.3389/fmicb.2018.02873
+  snippet: hydrogen-oxidizing organisms play a key role in deep-sea hydrothermal vent
+    ecosystems as they can be considerably involved in light-independent primary biomass
+    production
+  notes: Adam and Perner review hydrogen oxidation in deep-sea hydrothermal vents
+    as a light-independent microbial energy metabolism.
 curation_history:
 - timestamp: '2026-09-08T00:00:00Z'
   curator: codex

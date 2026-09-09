@@ -13,9 +13,10 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
-- reference: DOI:10.1111/j.1574-6976.2009.00187.x
-  snippet: Lithotrophic sulfur oxidation is an ancient metabolic process
-  notes: Ghosh and Dam review lithotrophic oxidation of reduced inorganic sulfur compounds.
+- reference: DOI:10.1111/1462-2920.14543
+  snippet: dark sulfide oxidation was coupled to high oxygen consumption rates
+  notes: Berg et al. experimentally couple dark aerobic sulfide oxidation to oxygen
+    consumption in anoxygenic phototrophs.
 curation_history:
 - timestamp: '2026-09-08T00:00:00Z'
   curator: codex

@@ -12,10 +12,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1126/science.aaf4507
 evidence:
-- reference: DOI:10.1128/aem.00292-25
-  snippet: reduction of nitrite to ammonium
-  notes: Hird et al. review cytochrome c nitrite reductase as the nitrite-to-ammonium
-    step in respiratory DNRA.
+- reference: DOI:10.1074/jbc.M709090200
+  snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a well
+    established role in the respiratory reduction of nitrite to ammonium
+  notes: van Wonderen et al. describe NrfA-catalyzed respiratory reduction of nitrite
+    to ammonium.
 curation_history:
 - timestamp: '2026-09-08T00:00:00Z'
   curator: codex

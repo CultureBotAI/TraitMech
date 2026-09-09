@@ -109,11 +109,15 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "synonyms": [faprotax_group_key("nitrite_respiration")],
             "evidence": [
                 {
-                    "reference": "DOI:10.1128/aem.00292-25",
-                    "snippet": "reduction of nitrite to ammonium",
+                    "reference": "DOI:10.1074/jbc.M709090200",
+                    "snippet": (
+                        "Cytochrome c nitrite reductase (NrfA) from Escherichia "
+                        "coli has a well established role in the respiratory "
+                        "reduction of nitrite to ammonium"
+                    ),
                     "notes": (
-                        "Hird et al. review cytochrome c nitrite reductase as the "
-                        "nitrite-to-ammonium step in respiratory DNRA."
+                        "van Wonderen et al. describe NrfA-catalyzed respiratory "
+                        "reduction of nitrite to ammonium."
                     ),
                 },
             ],
@@ -340,12 +344,17 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "synonyms": [faprotax_group_key("dark_hydrogen_oxidation")],
             "evidence": [
                 {
-                    "reference": "DOI:10.21775/cimb.006.159",
-                    "snippet": "reversible oxidation of hydrogen gas",
+                    "reference": "DOI:10.3389/fmicb.2018.02873",
+                    "snippet": (
+                        "hydrogen-oxidizing organisms play a key role in "
+                        "deep-sea hydrothermal vent ecosystems as they can be "
+                        "considerably involved in light-independent primary "
+                        "biomass production"
+                    ),
                     "notes": (
-                        "The hydrogenotrophy review supports hydrogenase-catalyzed "
-                        "oxidation of molecular hydrogen for microbial energy "
-                        "metabolism."
+                        "Adam and Perner review hydrogen oxidation in deep-sea "
+                        "hydrothermal vents as a light-independent microbial "
+                        "energy metabolism."
                     ),
                 },
             ],
@@ -369,14 +378,14 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "synonyms": [faprotax_group_key("dark_oxidation_of_sulfur_compounds")],
             "evidence": [
                 {
-                    "reference": "DOI:10.1111/j.1574-6976.2009.00187.x",
+                    "reference": "DOI:10.1111/1462-2920.14543",
                     "snippet": (
-                        "Lithotrophic sulfur oxidation is an ancient metabolic "
-                        "process"
+                        "dark sulfide oxidation was coupled to high oxygen "
+                        "consumption rates"
                     ),
                     "notes": (
-                        "Ghosh and Dam review lithotrophic oxidation of reduced "
-                        "inorganic sulfur compounds."
+                        "Berg et al. experimentally couple dark aerobic sulfide "
+                        "oxidation to oxygen consumption in anoxygenic phototrophs."
                     ),
                 },
             ],
