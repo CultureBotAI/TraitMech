@@ -40,6 +40,12 @@ def _v11_proposal_text() -> str:
     ).read_text(encoding="utf-8")
 
 
+def _v11_mapping_rows() -> list[dict[str, str]]:
+    mapping_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_mappings.sssom.tsv"
+    with mapping_tsv.open(encoding="utf-8") as stream:
+        return list(csv.DictReader(stream, delimiter="\t"))
+
+
 def test_new_records_skip_existing_same_id_records(metabolism_dir: Path):
     slug, raw = add_faprotax.NEW_RECORDS[0]
     path = metabolism_dir / f"{slug}.yaml"
@@ -170,8 +176,17 @@ def test_metpo_v11_group_keys_are_related_in_robot_template():
 
 
 def test_metpo_v11_drops_dark_sulfur_go_closematch():
-    mapping_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_mappings.sssom.tsv"
+    mapping_rows = _v11_mapping_rows()
     proposal = _v11_proposal_text()
 
-    assert "GO:0019417" not in mapping_tsv.read_text(encoding="utf-8")
+    assert all(row["object_id"] != "GO:0019417" for row in mapping_rows)
     assert "phototrophic sulfur oxidation" not in proposal
+
+
+def test_metpo_v11_rehomes_xylan_go_mapping_to_existing_v5_lift():
+    mapping_rows = _v11_mapping_rows()
+
+    assert {
+        (row["subject_id"], row["predicate_id"], row["object_id"])
+        for row in mapping_rows
+    } >= {("METPO:1007712", "skos:exactMatch", "GO:0045493")}

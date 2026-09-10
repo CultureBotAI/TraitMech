@@ -1,4 +1,5 @@
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	mapping_source	comment
 METPO:1008806	hydrogenotrophic methanogenesis	skos:broadMatch	GO:0019386	methanogenesis, from carbon dioxide	semapv:ManualMappingCuration	medium	metpo_traitmech_v11	broadMatch rather than exact: GO names CO2 reduction to methane but does not constrain the electron donor to H2; FAPROTAX's hydrogenotrophic methanogenesis class is narrower.
+METPO:1007712	xylan degradation	skos:exactMatch	GO:0045493	xylan catabolic process	semapv:ManualMappingCuration	high	metpo_traitmech_v11	Existing v5 xylan degradation lift shares the TraitRecord's GO exact xref; v11 rehomes this mapping after withdrawing the duplicate xylanolysis candidate.
 METPO:1008807	hydrocarbon degradation	skos:exactMatch	GO:0120253	hydrocarbon catabolic process	semapv:ManualMappingCuration	high	metpo_traitmech_v11	Direct equivalent. GO uses 'catabolic process' where FAPROTAX uses 'degradation'.
 METPO:1008813	methanol oxidation	skos:exactMatch	GO:0015946	methanol oxidation	semapv:ManualMappingCuration	high	metpo_traitmech_v11	Label-identical and sense-identical.

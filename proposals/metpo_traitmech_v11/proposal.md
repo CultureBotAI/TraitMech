@@ -167,9 +167,10 @@ genus to match, which is how METPO's existing children of that class are written
 of the broader reduced-inorganic-sulfur oxidation process rather than a sibling.
 
 `xylanolysis` is not minted here because v5 already lifts `traitmech:000113 xylan
-degradation` as `METPO:1007712`, with the same `GO:0045493 xylan catabolic process`
-exact match. The remaining v11 action is to add `xylanolysis` as an exact
-FAPROTAX synonym on `METPO:1007712`.
+degradation` as `METPO:1007712`. The v5 ROBOT row does not carry the
+TraitRecord's `GO:0045493 xylan catabolic process` xref, so v11 re-homes that
+exactMatch onto `METPO:1007712` in SSSOM and asks maintainers to add
+`xylanolysis` as an exact FAPROTAX synonym on the same existing class.
 
 ### Two second parents, both left for a maintainer
 
@@ -196,8 +197,11 @@ mapping instead.
 
 ## Cross-ontology mappings
 
-`metpo_proposal_mappings.sssom.tsv` carries 3 rows: 2 `skos:exactMatch` to GO and
-1 `skos:broadMatch`. Emitted where GO genuinely denotes the same process or a useful
+`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 3 `skos:exactMatch` to GO
+and 1 `skos:broadMatch`. Three rows map proposed v11 classes; the fourth re-homes
+the `GO:0045493 xylan catabolic process` exactMatch onto the existing v5
+`METPO:1007712 xylan degradation` row after v11 withdraws duplicate `xylanolysis`.
+These rows are emitted where GO genuinely denotes the same process or a useful
 broader neighbor — per the skill's rule, a cross-ontology equivalent is a mapping,
 not a `definition_source`.
 
@@ -210,12 +214,12 @@ oxidation` was rejected for the broader `sulfur oxidation` record because GO is
 restricted to oxygen addition to elemental sulfur, while METPO/FAPROTAX sulfur
 oxidation spans multiple reduced inorganic sulfur compounds.
 
-**Eleven of the fourteen get no mapping**, and that is a finding rather than an omission.
-The anaerobic-respiration-by-acceptor family has no GO equivalents — searching
-"nitrate respiration" returns `GO:0008940 nitrate reductase activity`, an enzyme
-function, not the respiratory process. GO models the catalysis; FAPROTAX models the
-organism-level strategy. That gap is the substantive argument for these six classes
-existing in METPO at all.
+**Eleven of the fourteen new v11 classes get no mapping**, and that is a finding
+rather than an omission. The anaerobic-respiration-by-acceptor family has no GO
+equivalents — searching "nitrate respiration" returns `GO:0008940 nitrate
+reductase activity`, an enzyme function, not the respiratory process. GO models
+the catalysis; FAPROTAX models the organism-level strategy. That gap is the
+substantive argument for these six classes existing in METPO at all.
 
 `aromatic compound degradation` has no mapping for a different reason:
 `GO:0019439 aromatic compound catabolic process` is **obsolete**.
@@ -274,8 +278,9 @@ for traceability. Until then the `traitmech:` IDs remain authoritative locally.
   sulfur oxidation, downgraded hydrogenotrophic methanogenesis to a `skos:broadMatch`,
   documented reparents for existing DNRA, denitrification, and dissimilatory sulfate
   reduction rows from the v5 cohort, moved FAPROTAX group keys to related synonyms,
-  dropped the dark-sulfur `GO:0019417` closeMatch, and recorded `xylanolysis` as a
-  synonym edit instead of a new class.
+  dropped the dark-sulfur `GO:0019417` closeMatch, recorded `xylanolysis` as a
+  synonym edit instead of a new class, and re-homed the `GO:0045493` exactMatch
+  onto the existing v5 `METPO:1007712` xylan degradation row.
 
 ## What is still unresolved after this cohort
 
