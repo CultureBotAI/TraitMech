@@ -99,6 +99,7 @@ def test_dark_sulfur_oxidation_refines_sulfur_oxidation_without_go_close_match_x
 
     assert dark_sulfur_oxidation["parent_traits"] == ["traitmech:000106"]
     assert dark_sulfur_oxidation["definition"].startswith("A sulfur oxidation in which")
+    assert "to sulfate" in dark_sulfur_oxidation["definition"]
     assert "GO:0019417" not in dark_sulfur_oxidation.get("xrefs", [])
 
 
@@ -115,6 +116,7 @@ def test_metpo_v11_dark_sulfur_parent_matches_lifted_sulfur_oxidation():
     )
 
     assert dark_sulfur_oxidation["parent"] == "METPO:1007705"
+    assert "to sulfate" in dark_sulfur_oxidation["definition"]
 
 
 def test_metpo_v11_skips_duplicate_xylanolysis_class():
