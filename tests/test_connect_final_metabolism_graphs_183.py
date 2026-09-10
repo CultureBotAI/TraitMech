@@ -15,6 +15,7 @@ from connect_final_metabolism_graphs_183 import (  # noqa: E402
     ACTION,
     ADDITIONS,
     EXPECTED_COMPONENTS,
+    TIMESTAMP,
     _components,
     _edge_key,
     transform,
@@ -39,7 +40,18 @@ def test_repair_reaches_one_component(slug: str):
     assert _components(doc["causal_graphs"][0]) == EXPECTED_COMPONENTS[slug]
     assert transform(slug, doc)
     assert _components(doc["causal_graphs"][0]) == 1
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert {
+        "timestamp": TIMESTAMP,
+        "curator": "codex",
+        "action": ACTION,
+    } in [
+        {
+            "timestamp": event.get("timestamp"),
+            "curator": event.get("curator"),
+            "action": event.get("action"),
+        }
+        for event in doc["curation_history"]
+    ]
 
 
 @pytest.mark.parametrize("slug", sorted(ADDITIONS))

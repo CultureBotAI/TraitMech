@@ -30,22 +30,22 @@
     </p>
     <h1>codon usage bias</h1>
     <p class="curie"><code>traitmech:000096</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A genome-sequence property describing non-uniform usage of synonymous codons across a genome, shaped by mutational bias and translational selection and correlated with gene expression level.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Codon usage bias shapes translation efficiency and gene expression</h2>
       <p class="meta">Evidence-backed causal sketch linking biased synonymous-codon usage to translation rates and gene expression level.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>codon usage bias</strong>
             <span class="edge-predicate">regulates</span>
@@ -66,16 +66,16 @@
             <code>RO:0002211</code>
             <p>Biased codon usage tunes elongation rate via tRNA availability.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrg2899</code>
-                
+
                 <span class="meta">Plotkin &amp; Kudla review how synonymous codon bias modulates translation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>codon usage bias</strong>
             <span class="edge-predicate">associated with</span>
@@ -83,56 +83,56 @@
             <code>biolink:associated_with</code>
             <p>Codon bias is strongest in highly expressed genes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev.genet.42.110807.091442</code>
-                
+
                 <span class="meta">Hershberg &amp; Petrov review translational selection on codon bias correlating with expression level.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>gene expression level</strong>
             <span class="edge-predicate">strengthens selection for</span>
             <strong>codon usage bias</strong>
-            
+
             <p>Selection on synonymous codons scales with protein production; highly expressed genes show stronger codon preferences.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev.genet.42.110807.091442</code>
-                
+
                 <span class="meta">Hershberg &amp; Petrov: codon bias correlates most strongly with gene expression level.</span>
               </li>
-              
+
               <li>
                 <code>DOI:10.32942/x2802v</code>
-                
+
                 <span class="meta">Cope et al.: codon-specific selection scales with per-gene protein production rate (ROC-SEMPPR).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>tRNA abundance</strong>
             <span class="edge-predicate">influences</span>
             <strong>codon usage bias</strong>
-            
+
             <p>Synonymous codons decoded by more abundant tRNAs tend to be more adapted and often preferred.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrg2899</code>
-                
+
                 <span class="meta">Plotkin &amp; Kudla define tAI from relative tRNA gene copy numbers; the more abundant the decoding tRNA, the more adapted the codon.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>5&#39; mRNA secondary structure</strong>
             <span class="edge-predicate">inhibits</span>
@@ -140,16 +140,16 @@
             <code>RO:0002212</code>
             <p>Start-region RNA folding can limit ribosome access and dominate expression effects of synonymous codons.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrg2899</code>
-                
+
                 <span class="meta">Plotkin &amp; Kudla: 5&#39; structure generally disadvantageous; GFP expression in E. coli strongly inhibited when 5&#39; folding energy below ~-10 kcal/mol (RBS/SD/start-codon occlusion).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>translation initiation</strong>
             <span class="edge-predicate">part of</span>
@@ -157,26 +157,26 @@
             <code>biolink:part_of</code>
             <p>Initiation is the first stage of translation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrg2899</code>
-                
+
                 <span class="meta">Plotkin &amp; Kudla discuss translation initiation as a major mechanism linking 5&#39; sequence features to expression.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -184,114 +184,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrg2899</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>codon bias <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrg2899</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/gc_skew.html">GC skew</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -362,93 +362,93 @@ The following table presents candidate nodes for the expanded TraitMech causal g
 | cotranslational_protein_folding | process | GO:0090150 | Folding of nascent polypeptides during translation; modulated by codon-dependent elongation kinetics and pause placement (liu2021synonymousbutnot pages 11-12, hanson2018codonoptimalitybias pages 6-7). |
 | ribosome_stalling | process | GO:0043241 | Slowdown or pausing of elongating ribosomes caused by poorly decoded codons, starvation, or problematic sequence contexts (liu2021synonymousbutnot pages 26-29, duviau2023whentranslationelongation pages 1-2). |
 | codon_optimality_mediated_mRNA_decay | process | GO:0006402 | Candidate composite process in which nonoptimal codons slow ribosomes and promote transcript destabilization; label-level node for TraitMech curation (hanson2018codonoptimalitybias pages 1-2, hanson2018codonoptimalitybias pages 12-13). |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         242 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/genomics/codon_usage_bias-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/6175758/"
              rel="nofollow noreferrer"><code>PMID:6175758</code></a>
-          
-          
+
+
           <span class="meta">Reference organism for codon usage bias (translational selection on synonymous codons in highly expressed genes).</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-05T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate GENOMICS trait (codon usage bias) from literature research to fill the genome-sequence-composition gap.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (codon bias / translation efficiency) with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 4 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002212×1, biolink:part_of×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:32Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006413×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope codon_bias_translation_efficiency=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -477,12 +477,12 @@ The following table presents candidate nodes for the expanded TraitMech causal g
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -833,8 +833,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -30,22 +30,22 @@
     </p>
     <h1>dormancy</h1>
     <p class="curie"><code>traitmech:000080</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A reversible physiological state of greatly reduced metabolic activity that allows a cell to survive unfavorable conditions and later resuscitate, generating a microbial seed bank.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Reversible dormancy and resuscitation</h2>
       <p class="meta">Evidence-backed causal sketch linking unfavorable conditions to a reversible dormant state forming a microbial seed bank.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph combines several bacterial dormancy modules rather than asserting one universal pathway. The H37Rv RpfB example anchors the resuscitation branch and is one Rpf-family protein, not a stand-in for toxin-antitoxin or ribosome-hibernation systems.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>unfavorable conditions</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>Adverse conditions induce entry into dormancy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2504</code>
-                
+
                 <span class="meta">Lennon &amp; Jones review entry/exit from dormancy (seed banks).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>dormancy process</strong>
             <span class="edge-predicate">confers</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007700</code>
             <p>The dormancy process realizes the dormancy trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro1557</code>
-                
+
                 <span class="meta">Lewis links dormancy to long-term survival.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>nutrient limitation or heat stress</strong>
             <span class="edge-predicate">activates</span>
@@ -100,16 +100,16 @@
             <code>RO:0002213</code>
             <p>Nutrient limitation and heat stress activate the (p)ppGpp stringent response.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s12866-024-03628-3</code>
-                
+
                 <span class="meta">The stringent response mediated by (p)ppGpp is activated by nutrient/heat stresses.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>(p)ppGpp stringent response</strong>
             <span class="edge-predicate">causes</span>
@@ -117,67 +117,67 @@
             <code>biolink:causes</code>
             <p>(p)ppGpp reprograms cellular activity, resulting in slow growth or dormancy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s12866-024-03628-3</code>
-                
+
                 <span class="meta">(p)ppGpp can reprogram cellular life activities resulting in slow cell growth or dormancy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>(p)ppGpp stringent response</strong>
             <span class="edge-predicate">upregulates</span>
             <strong>toxin-antitoxin modules</strong>
-            
+
             <p>(p)ppGpp upregulates multiple toxin-antitoxin modules.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s12866-024-03628-3</code>
-                
+
                 <span class="meta">(p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA, relBE, yafNO and hokB).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>ribosome hibernation factors (RMF/HPF/RaiA)</strong>
             <span class="edge-predicate">turns off</span>
             <strong>protein synthesis</strong>
-            
+
             <p>Ribosome hibernation factors turn off protein synthesis during dormancy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2024.1386179</code>
-                
+
                 <span class="meta">Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>ribosome hibernation factors (RMF/HPF/RaiA)</strong>
             <span class="edge-predicate">protects</span>
             <strong>ribosome</strong>
-            
+
             <p>Hibernation factor binding protects ribosomes from ribonuclease degradation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2024.1386179</code>
-                
+
                 <span class="meta">Hibernation factors directly block ribonucleases from entering the ribosome in response to starvation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>resuscitation-promoting factors (Rpf)</strong>
             <span class="edge-predicate">promotes</span>
@@ -185,16 +185,16 @@
             <code>RO:0002213</code>
             <p>Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/microorganisms12081528</code>
-                
+
                 <span class="meta">Rpfs reactivate dormant bacteria at very low concentrations.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>ribosome hibernation factors (RMF/HPF/RaiA)</strong>
             <span class="edge-predicate">contributes to</span>
@@ -202,19 +202,19 @@
             <code>RO:0002326</code>
             <p>Stress-induced ribosome hibernation contributes translational arrest to the dormancy process.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2024.1386179</code>
                 <span class="evidence-snippet">environmental stress might govern the formation of 100S ribosomes, which were only detectable during periods of protein synthesis arrest</span>
                 <span class="meta">Verified against the open Frontiers article full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -224,16 +224,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>resuscitation-promoting factors (Rpf)</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P9WG29/entry" rel="nofollow noreferrer"><code>UniProtKB:P9WG29</code></a>
                   <br>Resuscitation-promoting factor RpfB <span class="meta">(rpfB)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83332" rel="nofollow noreferrer">Mycobacterium tuberculosis H37Rv</a>
                   <br><code>NCBITaxon:83332</code>
                 </td>
@@ -244,31 +244,31 @@
                 <td>
                   <p>H37Rv RpfB component of the Rpf family that contributes to recovery from dormancy; it does not denote all five paralogues.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1111/j.1365-2958.2007.06078.x" rel="nofollow noreferrer"><code>DOI:10.1111/j.1365-2958.2007.06078.x</code></a>
-                      
+
                       <span class="evidence-snippet">Rpf-like proteins are implicated in resuscitation through peptidoglycan hydrolysis</span>
                       <span class="meta">Sequential deletion and complementation establish a resuscitation phenotype and place RpfB high in the functional hierarchy; UniProt verifies the reviewed H37Rv RpfB entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -276,125 +276,125 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrmicro2504</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (2)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/persister_cell_formation.html">persister cell formation <code>traitmech:000082</code></a></li>
-        
+
         <li><a href="../../traits/physiology/viable_but_nonculturable_state.html">viable but nonculturable state <code>traitmech:000081</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>dormant state <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrmicro2504</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -465,124 +465,124 @@ Dormancy is an umbrella trait representing reversible, low-metabolic/non-growing
 - **Peptidoglycan cell wall**: Target of Rpf lytic transglycosylases; progressive depletion during *L. monocytogenes* VBNC transition (carvalho2024aquaticenvironmentdrives pages 3-4, carvalho2024aquaticenvironmentdrives pages 2-3, sexton2020rolesoflysm pages 1-2). CURIE: **GO:0009274** (peptidoglycan-based cell wall).
 - **Plasma membrane rigidification**: Membrane fluidity decreases prior to cell-wall loss in *L. monocytogenes* VBNC cells, measured by laurdan generalized polarization and Nile red TIR-FCS (carvalho2024aquaticenvironmentdrives pages 3-4). CURIE: **GO:0016020** (membrane) + **PATO:0001546** (quality of rigidity).
 - **Translational deficiency**: &#34;Dominant signature&#34; of persister cells across genetic and physiological models; tetracycline-induced translation inhibition phenocopies persister transcriptome (blattman2024identificationandgenetic pages 1-2, blattman2024identificationandgenetic pages 3-4). CURIE: **GO:0006412** (translation) + negative regulation.</pre>
-      
+
       <p class="meta">Showing the first 60 of
         347 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/dormancy-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Mycobacterium tuberculosis</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1773"
              rel="nofollow noreferrer"><code>NCBITaxon:1773</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/8675308/"
              rel="nofollow noreferrer"><code>PMID:8675308</code></a>
-          
-          
+
+
           <span class="meta">Paradigm of bacterial dormancy/non-replicating persistence (latent infection; DosR regulon).</span>
         </li>
-        
+
         <li>
           <em>Mycobacterium tuberculosis H37Rv</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83332"
              rel="nofollow noreferrer"><code>NCBITaxon:83332</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1111/j.1365-2958.2007.06078.x"
              rel="nofollow noreferrer"><code>DOI:10.1111/j.1365-2958.2007.06078.x</code></a>
-          
-          
+
+
           <span class="meta">Strain-level dormancy model paired to reviewed RpfB, one member of the resuscitation-promoting-factor family.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-04T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate PHYSIOLOGY axis class (dormancy) to parent the VBNC and persister-cell sub-variants.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (reversible dormancy) with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×2, biolink:causes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:34Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006412×1, GO:0005840×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope dormancy_seed_bank=MECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (toxin_antitoxin_modules, ribosome_hibernation_factors, rpf_proteins); added taxon-paired protein example(s) UniProtKB:P9WG29 on rpf_proteins (NCBITaxon:83332); added canonical example(s) NCBITaxon:83332.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T09:35:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) with one public-source, verbatim-snippet-backed connector. No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -611,12 +611,12 @@ Dormancy is an umbrella trait representing reversible, low-metabolic/non-growing
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -967,8 +967,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 09:35 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

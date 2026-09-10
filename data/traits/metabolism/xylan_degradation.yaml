@@ -22,6 +22,9 @@ synonyms:
 - synonym_text: xylan catabolism
   synonym_type: EXACT_SYNONYM
   source: http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo
+- synonym_text: xylanolysis
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aaf4507
 xrefs:
 - GO:0045493
 evidence:
@@ -276,4 +279,10 @@ curation_history:
     to the core xylan-degradation mechanism with two source-verified has-output edges;
     genes remain supporting graph fields rather than primary records (issues 426 and
     183).
+  llm_assisted: true
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: ADD_EXACT_SYNONYM
+  changes: Added xylanolysis as an exact FAPROTAX synonym rather than minting the
+    duplicate v11 candidate because GO:0045493 already grounds xylan degradation.
   llm_assisted: true

@@ -344,11 +344,11 @@ def _row_count(out: str) -> int:
 def test_top_zero_means_all_rows():
     """The documented zero sentinel must print the complete live queue."""
     out = _run(["--top", "0"])
-    assert _row_count(out) == 477
+    assert _row_count(out) == 491
 
 
 def test_the_footer_count_equals_the_rows_actually_printed():
-    """The footer used to report the pre-slice list, so it claimed 477 and showed 0."""
+    """The footer used to report the pre-slice list while showing no rows."""
     for top in ("3", "10", "0"):
         out = _run(["--top", top])
         printed = _row_count(out)
@@ -395,16 +395,16 @@ def test_missing_research_directory_is_empty_not_an_error():
     assert researched_slugs(Path("/nonexistent")) == set()
 
 
-def test_no_mechanism_record_awaits_a_first_research_pass():
-    """A failure means a new trait should jump the paid-research queue."""
+def test_proposed_mechanism_records_await_a_first_research_pass():
+    """New FAPROTAX proposals should jump the paid-research queue."""
     _, meta = build_queue()
-    assert meta["unresearched_mechanism_records"] == 0, meta
+    assert meta["unresearched_mechanism_records"] == 14, meta
 
 
 def test_unresearched_filter_does_not_return_non_mechanism_records():
     out = _run(["--unresearched-only", "--top", "0"])
-    assert _row_count(out) == 0
-    assert "0 row(s) shown of 0 matching" in out
+    assert _row_count(out) == 14
+    assert "14 row(s) shown of 14 matching" in out
 
 
 def test_reviewed_empty_canonical_examples_are_read_from_curation_history(tmp_path):

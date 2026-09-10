@@ -77,15 +77,16 @@ def test_readme_corpus_table_matches_the_trait_artifacts() -> None:
         actual[(category, "total")] += 1
 
     rows = re.findall(
-        r"^\| ([A-Z_]+) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \|$",
+        r"^\| ([A-Z_]+) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \| (\d+) \|$",
         README.read_text(encoding="utf-8"),
         re.MULTILINE,
     )
     documented = {
         (category, key): value
-        for category, reviewed, deprecated, graphs, total in rows
+        for category, reviewed, proposed, deprecated, graphs, total in rows
         for key, value in (
             ("REVIEWED", int(reviewed)),
+            ("PROPOSED", int(proposed)),
             ("DEPRECATED", int(deprecated)),
             ("causal_graphs", int(graphs)),
             ("total", int(total)),
@@ -100,6 +101,7 @@ def test_readme_corpus_table_matches_the_trait_artifacts() -> None:
 
     total_match = re.search(
         r"^\| \*\*TOTAL\*\* \| \*\*(\d+)\*\* \| \*\*(\d+)\*\* "
+        r"\| \*\*(\d+)\*\* "
         r"\| \*\*(\d+)\*\* \| \*\*(\d+)\*\* \|$",
         README.read_text(encoding="utf-8"),
         re.MULTILINE,
@@ -107,6 +109,7 @@ def test_readme_corpus_table_matches_the_trait_artifacts() -> None:
     assert total_match, "README corpus table has no TOTAL row"
     assert tuple(map(int, total_match.groups())) == (
         sum(value for (category, key), value in actual.items() if key == "REVIEWED"),
+        sum(value for (category, key), value in actual.items() if key == "PROPOSED"),
         sum(value for (category, key), value in actual.items() if key == "DEPRECATED"),
         sum(value for (category, key), value in actual.items() if key == "causal_graphs"),
         sum(value for (category, key), value in actual.items() if key == "total"),

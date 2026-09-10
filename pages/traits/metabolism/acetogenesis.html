@@ -30,22 +30,22 @@
     </p>
     <h1>Acetogenesis</h1>
     <p class="curie"><code>METPO:1000845</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metabolism that produces acetate as the primary end product through the reduction of carbon dioxide or other carbon compounds using the Wood-Ljungdahl pathway, typically performed by acetogenic bacteria under anaerobic conditions.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Acetogenesis Wood-Ljungdahl mechanism</h2>
       <p class="meta">Evidence-backed causal sketch linking anaerobic carbon fixation through the Wood-Ljungdahl pathway to acetate production.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph represents canonical Wood-Ljungdahl acetogenesis. The AcsB example is one component of the CODH/ACS complex and supports acetyl-CoA formation; it is not presented as a marker sufficient by itself to infer acetogenesis.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>Acetogenesis</strong>
             <span class="edge-predicate">occurs in</span>
@@ -66,33 +66,33 @@
             <code>biolink:occurs_in</code>
             <p>Acetogenesis is typically an anaerobic metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbapap.2008.08.012</code>
                 <span class="evidence-snippet">grow organisms and work with enzymes under strictly oxygen-free conditions</span>
                 <span class="meta">Review emphasizes oxygen-free handling for acetogenic enzymes and organisms.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>Acetogenesis</strong>
             <span class="edge-predicate">has mechanistic pathway</span>
             <strong>Wood-Ljungdahl pathway</strong>
-            
+
             <p>The Wood-Ljungdahl pathway is the central acetogenic carbon-fixation route.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbapap.2008.08.012</code>
                 <span class="evidence-snippet">Wood-Ljungdahl Pathway of CO2 Fixation</span>
                 <span class="meta">Review title and scope support pathway assignment.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">participates in</span>
@@ -100,16 +100,16 @@
             <code>biolink:participates_in</code>
             <p>Carbon dioxide is fixed through the Wood-Ljungdahl pathway.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbapap.2008.08.012</code>
                 <span class="evidence-snippet">CO2 Fixation</span>
                 <span class="meta">Supports CO2 as a pathway substrate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>carbon monoxide</strong>
             <span class="edge-predicate">participates in</span>
@@ -117,16 +117,16 @@
             <code>biolink:participates_in</code>
             <p>Carbon monoxide can be converted through the acetogenic pathway.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1196/annals.1419.015</code>
                 <span class="evidence-snippet">convert carbon dioxide and CO into acetyl-CoA</span>
                 <span class="meta">Supports CO as a substrate for acetogenic acetyl-CoA synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>acetyl-CoA synthase (ACS)</strong>
             <span class="edge-predicate">catalyzes formation of</span>
@@ -134,16 +134,16 @@
             <code>biolink:catalyzes</code>
             <p>The AcsB component of CODH/ACS catalyzes acetyl-CoA formation at convergence of the Wood-Ljungdahl pathway branches.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1073/pnas.220404397</code>
                 <span class="evidence-snippet">Genes acsA and acsB encode the beta and alpha subunits</span>
                 <span class="meta">Active AcsAB was reconstituted in the primary study; the edge is scoped to AcsB acting as a component of CODH/ACS, not as a standalone complete complex.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>Wood-Ljungdahl pathway</strong>
             <span class="edge-predicate">has output</span>
@@ -151,152 +151,152 @@
             <code>RO:0002234</code>
             <p>The Wood-Ljungdahl pathway synthesizes acetyl-CoA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1196/annals.1419.015</code>
                 <span class="evidence-snippet">convert carbon dioxide and CO into acetyl-CoA</span>
                 <span class="meta">Supports acetyl-CoA as pathway product.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>acetyl-CoA</strong>
             <span class="edge-predicate">precursor of</span>
             <strong>acetate</strong>
-            
+
             <p>Acetyl-CoA is converted onward to acetate in acetogenesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbapap.2008.08.012</code>
                 <span class="evidence-snippet">Energy metabolism associated with acetogenesis</span>
                 <span class="meta">Review discusses acetogenic energy metabolism downstream of acetyl-CoA synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>formate</strong>
-            
+
             <p>CO2 is reduced to formate by formate dehydrogenase / HDCR, the first methyl-branch step.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">FDH reduces CO2 to formate; HDCR catalyzes hydrogen-dependent CO2 reduction to formate (methyl-branch core step).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>formate</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>10-formyl-tetrahydrofolate</strong>
-            
+
             <p>Formate is condensed onto tetrahydrofolate by formyl-THF synthetase (Fhs).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">FTS (formyl-THF synthetase) converts formate to formyl-THF consuming 1 ATP; canonical WLP methyl-branch step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>10-formyl-tetrahydrofolate</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>5,10-methylene-tetrahydrofolate</strong>
-            
+
             <p>Formyl-THF is processed by cyclohydrolase and methylene-THF dehydrogenase (FolD) to methylene-THF.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.34726/hss.2024.114566</code>
-                
+
                 <span class="meta">5,10-methenyl-THF cyclohydrolase and NAD-dependent 5,10-methylene-THF dehydrogenase convert formyl-THF to methylene-THF.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>5,10-methylene-tetrahydrofolate</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>5-methyl-tetrahydrofolate</strong>
-            
+
             <p>Methylene-THF is reduced to methyl-THF by methylene-THF reductase (MTHFR).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">MTHFR reduces methenyl-THF to methylene-THF to methyl-THF; common acetogen methyl-branch step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>carbon monoxide</strong>
-            
+
             <p>CO2 is reduced to CO by carbon monoxide dehydrogenase (CODH) in the carbonyl branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.34726/hss.2024.114566</code>
-                
+
                 <span class="meta">In the carbonyl branch CODH reduces CO2 to CO; central carbonyl-branch step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>acetyl-CoA</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>acetyl phosphate</strong>
-            
+
             <p>Acetyl-CoA is converted to acetyl phosphate by phosphotransacetylase (PTA).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">PTA and ACK convert acetyl-CoA to acetate; PTA yields acetyl phosphate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>acetyl phosphate</strong>
             <span class="edge-predicate">is converted to</span>
             <strong>acetate</strong>
-            
+
             <p>Acetyl phosphate is converted to acetate by acetate kinase (ACK), yielding ATP by substrate-level phosphorylation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">ACK (acetate kinase) converts acetyl-phosphate to acetate, yielding ATP via SLP; trait-defining end-product step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>acetate kinase step</strong>
             <span class="edge-predicate">has input</span>
@@ -304,16 +304,16 @@
             <code>RO:0002233</code>
             <p>Acetate kinase consumes acetyl phosphate in the substrate-level phosphorylation step.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">ACK convert acetyl-phosphate to acetate, yielding ATP via SLP.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-16">
             <strong>acetate kinase step</strong>
             <span class="edge-predicate">has output</span>
@@ -321,19 +321,19 @@
             <code>RO:0002234</code>
             <p>The acetate kinase step generates ATP via substrate-level phosphorylation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fbioe.2024.1395540</code>
-                
+
                 <span class="meta">ACK convert acetyl-phosphate to acetate, yielding ATP via SLP.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -343,16 +343,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>acetyl-CoA synthase (ACS)</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P27988/entry" rel="nofollow noreferrer"><code>UniProtKB:P27988</code></a>
                   <br>Carbon monoxide dehydrogenase/acetyl-CoA synthase subunit alpha <span class="meta">(acsB)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1525" rel="nofollow noreferrer">Neomoorella thermoacetica</a>
                   <br><code>NCBITaxon:1525</code>
                 </td>
@@ -363,31 +363,31 @@
                 <td>
                   <p>AcsB alpha component that combines CO, CoA, and the CoFeSP-borne methyl group to form acetyl-CoA; this accession is not the complete CODH/ACS complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1073/pnas.220404397" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.220404397</code></a>
-                      
+
                       <span class="evidence-snippet">Genes acsA and acsB encode the beta and alpha subunits</span>
                       <span class="meta">The primary cloning and reconstitution study identifies acsB as the alpha component of active CODH/ACS from C. thermoaceticum; UniProtKB P27988 verifies the reviewed current N. thermoacetica taxon mapping.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -397,112 +397,112 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Jed Dongjin Kim-Ozaeta</dd>
         <dt>Definition source</dt><dd>DOI:10.1016/j.bbapap.2008.08.012</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>Acetate fermentation <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000845</code> <span class="dim-preview">[-0.195, -1.369, -0.856, +1.197, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/chitinolysis.html">chitinolysis</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/wood_ljungdahl_pathway.html">Wood-Ljungdahl pathway</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.html">3-hydroxypropionate/4-hydroxybutyrate cycle</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/three_hydroxypropionate_bicycle.html">3-hydroxypropionate bicycle</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
           <span class="sim">0.692</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
           <span class="sim">0.692</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -573,159 +573,159 @@ Identifiers below are conservative suggestions. Labels without a verified stable
 | coenzyme A | CHEBI:15346 |
 | ATP | CHEBI:15422 |
 | ADP | CHEBI:16761 |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         220 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/acetogenesis-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Neomoorella thermoacetica</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1525"
              rel="nofollow noreferrer"><code>NCBITaxon:1525</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1073/pnas.220404397"
              rel="nofollow noreferrer"><code>DOI:10.1073/pnas.220404397</code></a>
-          
-          
+
+
           <span class="meta">THE model acetogen used to elucidate the Wood-Ljungdahl pathway (formerly Moorella/Clostridium thermoaceticum). Acetobacterium woodii is the modern bioenergetics model.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.915402+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-07T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for anaerobic Wood-Ljungdahl carbon fixation and acetate production.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:38:00Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01001057×1, GO:0046358×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:47Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 3 causal-edge predicate label(s) to align with existing groundings: input to → participates in ×2; occurs under → occurs in ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:participates_in×2, biolink:occurs_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-15T07:19:08Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label fix; verified vs OAK).</p>
         </li>
-        
+
         <li>
           <time>2026-06-15T07:20:37Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -&gt; corrected, verified vs OAK).</p>
         </li>
-        
+
         <li>
           <time>2026-06-17T04:09:44Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:15350×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T07:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Modelled the acetate kinase step as an explicit BIOLOGICAL_PROCESS node and split `acetyl_phosphate produces atp` into `acetate_kinase_step has input acetyl_phosphate` (RO:0002233) and `acetate_kinase_step has output atp` (RO:0002234), issue 331. The old edge had a CHEMICAL subject on METPO:2007800, whose definition is that the activity or state of the subject brings the object into existence - a chemical has neither in that sense. RO:0001001 (derives into) did not fit either, because ATP&#39;s matter comes mostly from ADP and only the phosphoryl group transfers, failing that relation&#39;s inherits-the-significant-portion-of-the-matter test. The process the edge description already named was simply not in the graph; both new edges are range-correct and the step is wired on both sides so nothing is orphaned. This was the last CHEMICAL-subject produces edge, which let METPO:2007800&#39;s subject_types gate drop CHEMICAL. Two modelling choices are recorded here as decisions rather than left as omissions (issue 331 review). The node is typed BIOLOGICAL_PROCESS rather than MOLECULAR_FUNCTION, which would have grounded to GO:0008776 (acetate kinase activity) via mappings/node_grounding.tsv - this trait&#39;s own research report asks for a process label plus explicit reaction edges for the substrate-level phosphorylation step, and that is what this is. And the step carries has-output atp but deliberately not has-output acetate, because the existing acetyl_phosphate is-converted-to acetate edge already states that half of the reaction on the chemical chain; asserting it again at the process level is the duplication at two levels of description that issue 303 criticised in dissimilatory_iron_reduction.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T10:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the acetogenesis graph, replaced the model-organism URL with a primary DOI, and added DOI-backed reviewed AcsB as an explicit N. thermoacetica component example with a supported acetyl-CoA-formation edge.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T06:33:02Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1).</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -754,12 +754,12 @@ Identifiers below are conservative suggestions. Labels without a verified stable
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1110,8 +1110,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 06:33 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

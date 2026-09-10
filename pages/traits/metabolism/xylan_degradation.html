@@ -30,22 +30,22 @@
     </p>
     <h1>xylan degradation</h1>
     <p class="curie"><code>traitmech:000113</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A biopolymer-degradation metabolism in which an organism hydrolyzes xylan, the most abundant hemicellulose, into xylose and xylo-oligosaccharides using xylanases and accessory enzymes.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Xylan degradation hydrolyzes hemicellulose to xylose</h2>
       <p class="meta">Evidence-backed causal sketch linking xylanases and accessory enzymes to xylan hydrolysis into xylose and xylo-oligosaccharides.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph combines core xylanase activity, carbon-catabolite regulation, and accessory CE15 enzymes. The C. saccharolyticus XynA example supports the core xylanase branch only.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>xylanase systems</strong>
             <span class="edge-predicate">confers</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007700</code>
             <p>Xylanase systems drive xylan depolymerization extracellularly.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/j.1757-1707.2009.01004.x</code>
-                
+
                 <span class="meta">Dodd &amp; Cann review enzymatic deconstruction of xylan.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>xylan degradation</strong>
             <span class="edge-predicate">produces</span>
@@ -83,33 +83,33 @@
             <code>METPO:2007800</code>
             <p>Xylan hydrolysis yields xylose and xylo-oligosaccharides.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cbpa.2015.10.018</code>
-                
+
                 <span class="meta">Cragg et al. include hemicellulose (xylan) degradation within lignocellulose breakdown across organisms.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>carbon catabolite repression</strong>
             <span class="edge-predicate">represses</span>
             <strong>hemicellulase gene expression</strong>
-            
+
             <p>CCR (HPr/CcpA) represses hemicellulase gene expression when glucose is available.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s00253-023-12977-4</code>
-                
+
                 <span class="meta">Novak &amp; Gardner 2024: carbon catabolite repression (HPr/CcpA) mediates glucose-dependent repression of hemicellulase expression; broad regulatory edge directly relevant to trait expression conditions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>hemicellulase gene expression</strong>
             <span class="edge-predicate">has output</span>
@@ -117,16 +117,16 @@
             <code>RO:0002234</code>
             <p>Expression of hemicellulase-encoding genes yields the xylanase systems that act on non-preferred hemicellulosic carbon sources.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s00253-023-12977-4</code>
                 <span class="evidence-snippet">genes that encode the proteins responsible for the metabolism of non-preferred carbon sources</span>
                 <span class="meta">Novak &amp; Gardner describe this output of carbon-catabolite-regulated gene expression in their xylanase and hemicellulase regulatory review.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>CE15 glucuronoyl esterases</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -134,16 +134,16 @@
             <code>RO:0002213</code>
             <p>CE15 glucuronoyl esterases synergistically increase xylanase saccharification of pretreated biomass.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13068-025-02639-0</code>
-                
+
                 <span class="meta">Pentari et al. 2025: CE15 glucuronoyl esterases increased saccharification by xylanases (57-61 uM xylose equivalents) on pretreated lignocellulose; accessory-enzyme synergy edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>CE15 glucuronoyl esterases</strong>
             <span class="edge-predicate">produces</span>
@@ -151,16 +151,16 @@
             <code>METPO:2007800</code>
             <p>CE15 glucuronoyl esterases promote GH30 glucuronoxylanase release of aldouronic acids.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13068-025-02639-0</code>
-                
+
                 <span class="meta">Pentari et al. 2025: CE15 esterases led to up to three-times higher release of aldouronic acids by GH30 glucuronoxylanase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>xylan saccharification</strong>
             <span class="edge-predicate">has output</span>
@@ -168,19 +168,19 @@
             <code>RO:0002234</code>
             <p>Xylan saccharification releases xylose-equivalent soluble sugars.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13068-025-02639-0</code>
                 <span class="evidence-snippet">increasing saccharification by 57 ± 1 μM and 61 ± 3 μM of xylose equivalents, respectively</span>
                 <span class="meta">Pentari et al. directly quantified xylose-equivalent output during CE15-assisted xylan saccharification.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -190,16 +190,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>xylanase systems</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P23556/entry" rel="nofollow noreferrer"><code>UniProtKB:P23556</code></a>
                   <br>Endo-1,4-beta-xylanase A <span class="meta">(xynA)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=44001" rel="nofollow noreferrer">Caldicellulosiruptor saccharolyticus</a>
                   <br><code>NCBITaxon:44001</code>
                 </td>
@@ -210,31 +210,31 @@
                 <td>
                   <p>XynA endo-xylanase representing the core hydrolytic component of the broader xylanase-system node.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1128/aem.56.4.1017-1024.1990" rel="nofollow noreferrer"><code>DOI:10.1128/aem.56.4.1017-1024.1990</code></a>
-                      
+
                       <span class="evidence-snippet">ORF1 appears to code for a xylanase (XynA)</span>
                       <span class="meta">The primary cloning and expression study identifies active XynA from C. saccharolyticus. UniProtKB P23556 is the reviewed XynA entry from the same species.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -242,127 +242,129 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1111/j.1757-1707.2009.01004.x</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/biopolymer_degradation.html" >biopolymer degradation <code>traitmech:000110</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
-      <h2>Synonyms (4)</h2>
+      <h2>Synonyms (5)</h2>
       <ul class="synonyms">
-        
+
         <li>xylanolytic <span class="meta">RELATED_SYNONYM · DOI:10.1111/j.1757-1707.2009.01004.x</span></li>
-        
+
         <li>hemicellulose degradation <span class="meta">BROAD_SYNONYM · DOI:10.1016/j.cbpa.2015.10.018</span></li>
-        
+
         <li>xylan breakdown <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
         <li>xylan catabolism <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
+        <li>xylanolysis <span class="meta">EXACT_SYNONYM · DOI:10.1126/science.aaf4507</span></li>
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0045493</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -433,148 +435,154 @@ The following table provides all candidate nodes for the xylan degradation causa
 | Cytoplasm | cellular localization | GO:0005737 | Site of Xua-mediated AXOS degradation and xylose catabolic pathways such as xylA/xylB or Weimberg (liu2022selfishuptakeversus pages 9-12, liu2023theweimbergpathway pages 1-3) |
 | Cell surface (outer membrane) | cellular localization | GO:0009279 | Site of SusC/SusD-like binding, outer-membrane transport, and initial glycan capture in Bacteroidetes (martin2025metabolismofhemicelluloses pages 3-5, zhang2014xylanutilizationin pages 6-7) |
 </pre>
-      
+
       <p class="meta">Showing the first 60 of
         226 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/xylan_degradation-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Caldicellulosiruptor saccharolyticus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=44001"
              rel="nofollow noreferrer"><code>NCBITaxon:44001</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/18776029/"
              rel="nofollow noreferrer"><code>PMID:18776029</code></a>
-          
-          
+
+
           <span class="meta">thermophilic hemicellulose degrader</span>
         </li>
-        
+
         <li>
           <em>Bacteroides ovatus</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28116"
              rel="nofollow noreferrer"><code>NCBITaxon:28116</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/1444385/"
              rel="nofollow noreferrer"><code>PMID:1444385</code></a>
-          
-          
+
+
           <span class="meta">gut xylan utiliser</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-08T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (xylan / hemicellulose degradation); sub-variant of biopolymer degradation.</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (xylanase hydrolysis of xylan) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:18222×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 3 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-04T03:08:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 2 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (2 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T09:30:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Scoped the composite xylan-degradation mechanism, added a DOI-backed C. saccharolyticus XynA example, and documented reviewed label-only dispositions for the multi-family xylanase-system and CE15 accessory-enzyme nodes.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:24:00Z</time> ·
           <strong>RESTORE_CANONICAL_CITATION</strong> · claude
           <p class="changes">Restored the canonical-example citation for NCBITaxon:44001 from DOI:10.1128/aem.56.4.1017-1024.1990 back to PMID:18776029 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T06:15:40Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0045493; declared exact synonym(s): &#39;xylan breakdown&#39;, &#39;xylan catabolism&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T09:15:30Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Connected the carbon-catabolite-regulation and CE15-saccharification branches to the core xylan-degradation mechanism with two source-verified has-output edges; genes remain supporting graph fields rather than primary records (issues 426 and 183).</p>
         </li>
-        
+
+        <li>
+          <time>2026-09-08T00:00:00Z</time> ·
+          <strong>ADD_EXACT_SYNONYM</strong> · codex
+          <p class="changes">Added xylanolysis as an exact FAPROTAX synonym rather than minting the duplicate v11 candidate because GO:0045493 already grounds xylan degradation.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -603,12 +611,12 @@ The following table provides all candidate nodes for the xylan degradation causa
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -957,10 +965,10 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 09:15 UTC from
+      Record as of 2026-09-08 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -30,22 +30,22 @@
     </p>
     <h1>arsenic tolerant</h1>
     <p class="curie"><code>traitmech:000017</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metalloid tolerance in which an organism grows in the presence of elevated arsenic (arsenite/arsenate) concentrations, typically via the ars operon, whose ArsB pump extrudes arsenite from the cytoplasm.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Arsenic tolerance via ars-operon arsenite efflux</h2>
       <p class="meta">Evidence-backed causal sketch linking the ars operon and ArsB pump to extrusion of cytoplasmic arsenite.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>arsenite(3-)</strong>
             <span class="edge-predicate">challenges</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007406</code>
             <p>Cytoplasmic arsenite is the toxic challenge the trait counters.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2020.00047</code>
-                
+
                 <span class="meta">Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>ArsB arsenite-efflux protein module</strong>
             <span class="edge-predicate">enables</span>
@@ -83,16 +83,16 @@
             <code>RO:0002327</code>
             <p>ArsB pumps arsenite out of the cytoplasm.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2018.02473</code>
-                
+
                 <span class="meta">ArsB is an integral membrane protein extruding arsenite from the cell cytoplasm.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>arsenite transmembrane transport</strong>
             <span class="edge-predicate">mitigates</span>
@@ -100,50 +100,50 @@
             <code>METPO:2007407</code>
             <p>Active export depletes the cytoplasmic arsenite pool.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2018.02473</code>
-                
+
                 <span class="meta">The ars operon is the near-ubiquitous arsenic-resistance determinant.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>ArsR transcriptional repressor</strong>
             <span class="edge-predicate">represses</span>
             <strong>ars promoter</strong>
-            
+
             <p>ArsR represses ars-operon transcription in the absence of arsenite.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/antibiotics12091474</code>
-                
+
                 <span class="meta">ArsR is a trans-acting transcriptional repressor that binds the ars promoter.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>arsenite(3-)</strong>
             <span class="edge-predicate">relieves repression by</span>
             <strong>ArsR transcriptional repressor</strong>
-            
+
             <p>Arsenite binding changes ArsR conformation and de-represses ars transcription.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2024.1494872</code>
-                
+
                 <span class="meta">Binding of As(III) to ArsR changes its conformation and relieves repression of the ars operon.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>ArsC arsenate reductase</strong>
             <span class="edge-predicate">enables</span>
@@ -151,16 +151,16 @@
             <code>RO:0002327</code>
             <p>ArsC reduces intracellular arsenate to arsenite.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/antibiotics12091474</code>
-                
+
                 <span class="meta">ArsC is an arsenate reductase that converts intracellular As(V) to As(III).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>arsenate reduction to arsenite</strong>
             <span class="edge-predicate">has output</span>
@@ -168,16 +168,16 @@
             <code>RO:0002234</code>
             <p>Arsenate reduction yields arsenite, the substrate for efflux.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/antibiotics12091474</code>
-                
+
                 <span class="meta">ArsC converts intracellular As(V) to As(III), feeding the efflux route.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>ArsB arsenite efflux permease</strong>
             <span class="edge-predicate">enables</span>
@@ -185,16 +185,16 @@
             <code>RO:0002327</code>
             <p>ArsB is an integral membrane pump extruding arsenite from the cytoplasm.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/antibiotics12091474</code>
-                
+
                 <span class="meta">ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+ from the cytoplasm.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Acr3 arsenite efflux permease</strong>
             <span class="edge-predicate">enables</span>
@@ -202,16 +202,16 @@
             <code>RO:0002327</code>
             <p>Acr3 is an alternative inorganic arsenite efflux pump.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/microorganisms12010074</code>
-                
+
                 <span class="meta">Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>ArsM arsenite S-adenosylmethionine methyltransferase</strong>
             <span class="edge-predicate">enables</span>
@@ -219,16 +219,16 @@
             <code>RO:0002327</code>
             <p>ArsM methylates arsenite to volatile methylated arsenicals.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.7717/peerj.18383</code>
-                
+
                 <span class="meta">arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile methylated arsenicals.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>arsenite methylation</strong>
             <span class="edge-predicate">mitigates</span>
@@ -236,16 +236,16 @@
             <code>METPO:2007407</code>
             <p>Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.7717/peerj.18383</code>
-                
+
                 <span class="meta">Produced arsenite is methylated by arsM to volatile methylated arsenic, removing it from the cell.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>ArsC arsenate reductase</strong>
             <span class="edge-predicate">reduces</span>
@@ -253,19 +253,19 @@
             <code>METPO:2007802</code>
             <p>Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2020.00047</code>
-                
+
                 <span class="meta">Connecting edge wiring the enrichment node into the graph.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -275,16 +275,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>ArsC arsenate reductase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q1LRL1/entry" rel="nofollow noreferrer"><code>UniProtKB:Q1LRL1</code></a>
                   <br>Arsenate reductase ArsC1 <span class="meta">(arsC1)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266264" rel="nofollow noreferrer">Cupriavidus metallidurans CH34</a>
                   <br><code>NCBITaxon:266264</code>
                 </td>
@@ -295,31 +295,31 @@
                 <td>
                   <p>CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://pubmed.ncbi.nlm.nih.gov/20463976/" rel="nofollow noreferrer"><code>PMID:20463976</code></a>
-                      
+
                       <span class="evidence-snippet">arsenic resistance determinants in Cupriavidus metallidurans CH34</span>
                       <span class="meta">The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -327,114 +327,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.3389/fmicb.2018.02473</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/environment/metal_tolerant.html" >metal tolerant <code>traitmech:000012</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>arsenic resistant <span class="meta">RELATED_SYNONYM · DOI:10.3389/fmicb.2018.02473</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -505,149 +505,149 @@ These experimental variables should be retained as evidence qualifiers rather th
 - glutaredoxin and thioredoxin reducing equivalents
 - molecular oxygen for AioBA/ArsH-dependent oxidation
 - iron oxide and sulfide as downstream arsenic-immobilization agents</pre>
-      
+
       <p class="meta">Showing the first 60 of
         228 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/environment/arsenic_tolerant-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Cupriavidus metallidurans</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=119219"
              rel="nofollow noreferrer"><code>NCBITaxon:119219</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/20463976/"
              rel="nofollow noreferrer"><code>PMID:20463976</code></a>
-          
-          
+
+
           <span class="meta">broad heavy-metal/metalloid resistance</span>
         </li>
-        
+
         <li>
           <em>Pseudomonas putida</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=303"
              rel="nofollow noreferrer"><code>NCBITaxon:303</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/25646541/"
              rel="nofollow noreferrer"><code>PMID:25646541</code></a>
-          
-          
+
+
           <span class="meta">metal-tolerant soil bacterium</span>
         </li>
-        
+
         <li>
           <em>Cupriavidus metallidurans CH34</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266264"
              rel="nofollow noreferrer"><code>NCBITaxon:266264</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/20463976/"
              rel="nofollow noreferrer"><code>PMID:20463976</code></a>
-          
-          
+
+
           <span class="meta">Strain-level ArsC arsenate-reduction exemplar.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-28T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate ENVIRONMENT trait (arsenic/metalloid tolerance) from literature research; sub-variant of metal tolerant.</p>
         </li>
-        
+
         <li>
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (ars-operon arsenite efflux) with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>FIX_ORPHAN_NODE</strong> · claude
           <p class="changes">Connected orphaned node &#39;arsenate&#39; via arsC_reductase -[reduces]-&gt; arsenate.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:09Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×4, METPO:2000202×1, METPO:2007407×1, METPO:2000017×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:30Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:29125×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to reduces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope arsenic_tolerance_ars_efflux=MECHANISTIC with scope_notes; marked 6 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ars_operon, arsR_repressor, arsC_reductase, arsB_pump, acr3_pump, arsM_methyltransferase); added taxon-paired protein example(s) UniProtKB:Q1LRL1 on arsC_reductase (NCBITaxon:266264); retyped 1 node(s) (ars_promoter-&gt;GENETIC_ELEMENT); added canonical example(s) NCBITaxon:266264.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -676,12 +676,12 @@ These experimental variables should be retained as evidence qualifiers rather th
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1032,8 +1032,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

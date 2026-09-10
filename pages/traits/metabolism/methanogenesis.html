@@ -30,22 +30,22 @@
     </p>
     <h1>Methanogenesis</h1>
     <p class="curie"><code>METPO:1000844</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metabolism in which methane is produced as the primary end product through the reduction of carbon-containing compounds, formate, methanol, or acetate, exclusively performed by methanogenic archaea under strictly anaerobic conditions.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Methanogenesis C1 reduction mechanism</h2>
       <p class="meta">Evidence-backed causal sketch linking anoxic C1 reduction, methyl-coenzyme M reductase, and methane formation.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents hydrogenotrophic C1 reduction and the terminal methyl-coenzyme M reductase reaction, with branch labels for alternative methanogenic substrates; the exemplar is explicitly the McrA component, not the entire complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>Methanogenesis</strong>
             <span class="edge-predicate">occurs in</span>
@@ -66,50 +66,50 @@
             <code>biolink:occurs_in</code>
             <p>Hydrogenotrophic methanogenesis is associated with anoxic habitats.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-011720-122807</code>
                 <span class="evidence-snippet">terminal step of microbial biomass degradation in anoxic habitats</span>
                 <span class="meta">Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">reduced with electron donor</span>
             <strong>molecular hydrogen</strong>
-            
+
             <p>Carbon dioxide is reduced using electrons derived from hydrogen.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-011720-122807</code>
                 <span class="evidence-snippet">from CO2 and H2 to methane</span>
                 <span class="meta">Supports the CO2 plus H2 substrate relationship.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>methyl-coenzyme M reductase</strong>
             <span class="edge-predicate">has prosthetic group</span>
             <strong>coenzyme F430</strong>
-            
+
             <p>Methyl-coenzyme M reductase contains nickel coenzyme F430.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.biochem.9b00164</code>
                 <span class="evidence-snippet">harbors the nickel(I) hydrocorphin coenzyme F-430</span>
                 <span class="meta">Supports F430 as the prosthetic group of the enzyme.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>methyl-coenzyme M reductase</strong>
             <span class="edge-predicate">catalyzes formation of</span>
@@ -117,16 +117,16 @@
             <code>biolink:catalyzes</code>
             <p>Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.biochem.9b00164</code>
                 <span class="evidence-snippet">catalyzes the reversible reduction of methyl-coenzyme M</span>
                 <span class="meta">Source describes methane formation by methyl-coenzyme M reductase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>Methanogenesis</strong>
             <span class="edge-predicate">produces</span>
@@ -134,84 +134,84 @@
             <code>METPO:2007800</code>
             <p>The defining output of methanogenesis is methane.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-011720-122807</code>
                 <span class="evidence-snippet">from CO2 and H2 to methane</span>
                 <span class="meta">Supports methane as the reduced product of hydrogenotrophic methanogenesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>acetate</strong>
             <span class="edge-predicate">serves as substrate for</span>
             <strong>acetoclastic methanogenesis</strong>
-            
+
             <p>Acetate is the substrate split to methane and CO2 in acetoclastic methanogenesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2017.01198</code>
                 <span class="evidence-snippet">acetoclastic methanogenesis using acetate</span>
                 <span class="meta">acetoclastic (splitting acetate to CH4 and CO2).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>methylated compounds</strong>
             <span class="edge-predicate">serves as substrate for</span>
             <strong>methyl-based methanogenesis</strong>
-            
+
             <p>Methylated compounds are the substrates for methyl-based methanogenesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2017.01198</code>
                 <span class="evidence-snippet">methylotrophic methanogenesis using methylated compounds</span>
                 <span class="meta">methylotrophic (using methylated compounds).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>coenzyme B</strong>
             <span class="edge-predicate">is required for</span>
             <strong>methane</strong>
-            
+
             <p>Coenzyme B reacts with methyl-CoM in the terminal step to yield methane.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/ja906367h</code>
                 <span class="evidence-snippet">It converts the thioether methyl-coenzyme M and the thiol coenzyme B into methane and the heterodisulfide of coenzyme M and coenzyme B.</span>
                 <span class="meta">methyl-CoM reacts with coenzyme B (CoB) to yield methane.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>coenzyme M</strong>
             <span class="edge-predicate">carries methyl group in</span>
             <strong>Methanogenesis</strong>
-            
+
             <p>Methyltransferases transfer methyl groups to coenzyme M to form methyl-CoM.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mmbr.00024-22</code>
                 <span class="evidence-snippet">the methyl group first transferred to a substrate-specific corrinoid protein and then to coenzyme M (CoM) to produce methyl-CoM</span>
                 <span class="meta">methyltransferases transfer methyl groups ultimately to CoM to form methyl-CoM.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>coenzyme F420 (F420H2)</strong>
             <span class="edge-predicate">donates electrons to</span>
@@ -219,16 +219,16 @@
             <code>METPO:2007403</code>
             <p>Reduced coenzyme F420 donates electrons for reduction of C1 intermediates derived from CO2.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2023.1296008</code>
                 <span class="evidence-snippet">Reduced coenzyme F420 (F420H2), generated by an F420-reducing [NiFe]-hydrogenase (Frh) with H2, serves as a direct electron donor for the reduction of methenyl and methylene forms.</span>
                 <span class="meta">Reduced coenzyme F420 (F420H2) donates electrons for reductions of methenyl/methylene intermediates.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">participates in</span>
@@ -236,16 +236,16 @@
             <code>biolink:participates_in</code>
             <p>CO2 is the carbon substrate of hydrogenotrophic methanogenesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2017.01198</code>
                 <span class="evidence-snippet">Three major methanogenic pathways are known based on the type of carbon sources catabolized, i.e., hydrogenotrophic methanogenesis using CO2 and H2</span>
                 <span class="meta">Verified against the freely available article full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>acetoclastic methanogenesis</strong>
             <span class="edge-predicate">part of</span>
@@ -253,16 +253,16 @@
             <code>biolink:part_of</code>
             <p>Acetoclastic methanogenesis is an acetate-using branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2017.01198</code>
                 <span class="evidence-snippet">hydrogenotrophic methanogenesis using CO2 and H2, acetoclastic methanogenesis using acetate</span>
                 <span class="meta">Verified against the freely available article full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>methyl-based methanogenesis</strong>
             <span class="edge-predicate">part of</span>
@@ -270,19 +270,19 @@
             <code>biolink:part_of</code>
             <p>Methylotrophic methanogenesis is a methyl-substrate branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2017.01198</code>
                 <span class="evidence-snippet">acetoclastic methanogenesis using acetate, and methylotrophic methanogenesis using methylated compounds, such as methanol, methylamines</span>
                 <span class="meta">Verified against the freely available article full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -292,16 +292,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>methyl-coenzyme M reductase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q58256/entry" rel="nofollow noreferrer"><code>UniProtKB:Q58256</code></a>
                   <br>Methyl-coenzyme M reductase I subunit alpha <span class="meta">(mcrA)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243232" rel="nofollow noreferrer">Methanocaldococcus jannaschii DSM 2661</a>
                   <br><code>NCBITaxon:243232</code>
                 </td>
@@ -312,40 +312,40 @@
                 <td>
                   <p>Alpha subunit of methyl-coenzyme M reductase I, the multisubunit enzyme catalyzing the terminal methane-forming step; this accession is not presented as the complete McrABG complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1074/jbc.M503492200" rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M503492200</code></a>
-                      
+
                       <span class="evidence-snippet">MJ0846 (McrA, 61227 Da)</span>
                       <span class="meta">The primary M. jannaschii study identifies the exact McrA component used in its methyl-coenzyme M reductase preparation; UniProtKB Q58256 verifies the reviewed strain-level entry.</span>
                     </li>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0076-6879(05)97026-2" rel="nofollow noreferrer"><code>DOI:10.1016/S0076-6879(05)97026-2</code></a>
-                      
+
                       <span class="evidence-snippet">catalyzes the last step in methanogenesis</span>
                       <span class="meta">The mechanistic methods paper establishes the terminal pathway role of methyl-coenzyme M reductase while the first citation establishes the exact M. jannaschii component identity.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -355,127 +355,136 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
         <dt>Definition source</dt><dd>DOI:10.1146/annurev-micro-011720-122807</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+    <div class="card">
+      <h2>Children (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/metabolism/hydrogenotrophic_methanogenesis.html">hydrogenotrophic methanogenesis <code>traitmech:000127</code></a></li>
+
+      </ul>
+    </div>
+
+
+
     <div class="card">
       <h2>Synonyms (5)</h2>
       <ul class="synonyms">
-        
+
         <li>Biological methanation <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>Biomethanation <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>Carbonate respiration <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>methane biosynthesis <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
         <li>methane biosynthetic process <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0015948</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000844</code> <span class="dim-preview">[+2.183, -3.599, -0.641, +0.610, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
           <span class="sim">0.488</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
           <span class="sim">0.482</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
           <span class="sim">0.477</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
           <span class="sim">0.475</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
           <span class="sim">0.472</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.467</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxidative_phosphorylation.html">Oxidative phosphorylation</a>
           <span class="sim">0.466</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.html">3-hydroxypropionate/4-hydroxybutyrate cycle</a>
           <span class="sim">0.460</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -546,193 +555,193 @@ Conservative candidate grounding includes methane **CHEBI:16183**, carbon dioxid
 - Formylmethanofuran:H₄MPT formyltransferase, **Ftr**
 - Methenyl-H₄MPT cyclohydrolase, **Mch**
 - F₄₂₀-dependent methylene-H₄MPT dehydrogenase, **Mtd**</pre>
-      
+
       <p class="meta">Showing the first 60 of
         249 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/methanogenesis-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Methanocaldococcus jannaschii</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2190"
              rel="nofollow noreferrer"><code>NCBITaxon:2190</code></a>
-          
-          
-          
-          
+
+
+
+
           <code>https://pmc.ncbi.nlm.nih.gov/articles/PMC6616113/</code>
-          
+
           <span class="meta">Archetypal hydrogenotrophic methanogen (4 H2 + CO2 -&gt; CH4 + 2 H2O); first archaeal genome sequenced.</span>
         </li>
-        
+
         <li>
           <em>Methanocaldococcus jannaschii DSM 2661</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243232"
              rel="nofollow noreferrer"><code>NCBITaxon:243232</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1074/jbc.M503492200"
              rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M503492200</code></a>
-          
-          
+
+
           <span class="meta">Genome-strain exemplar paired to the experimentally characterized McrA component of methyl-coenzyme M reductase I.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-08-23T09:07:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Reviewed the graph as mechanistic, documented the mcrABG cluster as an exact reviewed label-only node, and added DOI-backed UniProtKB Q58256 as the M. jannaschii McrA component exemplar.</p>
         </li>
-        
+
         <li>
           <time>2026-05-05T01:35:46.914643+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-07T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for anoxic C1 reduction to methane and the methyl-coenzyme M reductase terminal step.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T05:05:14Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A099T5Q9×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:48Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: occurs under → occurs in ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:occurs_in×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T05:51:46Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:28265×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-17T04:09:44Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, METPO:2007403×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T08:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded causal edge(s) off enables/RO:0002327 onto encodes (biolink:encodes), issue 334. biolink declares enables range &#39;biological process or activity&#39;, which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN entailed a false type. The replacements are chosen per idiom rather than swept: a gene cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being removed.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T09:30:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Correction to the REGROUND_CAUSAL_EDGE event above, issue 334 review. That event claimed &#34;All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being removed&#34;. For biolink:encodes that justification was vacuous: the term is ABSENT from the pinned biolink 4.4.0 model, so it trivially declares nothing, and the check used could not distinguish absent from unconstrained. reports/biolink_coverage.tsv already recorded it as the only applied biolink: CURIE with no backing slot. The grounding is retained because a gene CLUSTER to protein COMPLEX edge does not fit `has gene product`&#39;s range of gene product mixin, so repointing would trade a missing term for a wrong range; mappings/predicate_grounding.tsv now states plainly that it is a local coinage. Tracked in issue 342. The edge itself is unchanged and is still an improvement on enables, whose declared range it genuinely violated.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T04:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the `encodes` edge(s) from biolink:encodes to METPO:2007813, issue 342. biolink:encodes is NOT a slot in the pinned biolink 4.4.0 model, so the CURIE resolved to nothing upstream while looking like an upstream term to anyone reading this record -- the disclaimer saying otherwise lived in mappings/predicate_grounding.tsv, which is not read at the point of use. RO:0002205 (has gene product) is the nearest real term but relates a GENE to a gene product, whereas these edges relate a gene cluster or operon to a protein complex or a biosynthetic process, which its range does not admit; that mismatch is why the coinage existed. METPO:2007813 is proposed in proposals/metpo_traitmech_v9 and is a placeholder id until METPO mints it, which puts it in the same state as the rest of that cohort rather than in a category of its own.</p>
         </li>
-        
+
         <li>
           <time>2026-08-22T04:26:15Z</time> ·
           <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
           <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic GO/InterPro terms and retracted 0 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T01:14:58Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0015948; declared exact synonym(s): &#39;methane biosynthesis&#39;, &#39;methane biosynthetic process&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
         <li>
           <time>2026-08-30T19:21:37Z</time> ·
           <strong>REVIEW_EVIDENCE_REFERENCE_CHURN</strong> · codex
           <p class="changes">Offline review for issue 520 retained 3 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1007/s00253-023-12700-3 -&gt; DOI:10.3389/fmicb.2017.01198 (2 edges); DOI:10.1128/mmbr.00024-22 -&gt; DOI:10.1021/ja906367h (1 edge).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T09:00:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) using 3 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -761,12 +770,12 @@ Conservative candidate grounding includes methane **CHEBI:16183**, carbon dioxid
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1117,8 +1126,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 09:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

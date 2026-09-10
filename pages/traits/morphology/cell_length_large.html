@@ -30,22 +30,22 @@
     </p>
     <h1>cell length large</h1>
     <p class="curie"><code>METPO:1000886</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A cell-length phenotype in which the longer cell dimension exceeds approximately 3 micrometers.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Large cell-length via FtsZ division delay</h2>
       <p class="meta">DOI-backed graph linking fast elongation, SOS/SulA-mediated FtsZ inhibition, FtsZ Z-ring control, and delayed constriction to large cell length (&gt;3 μm).</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a numerical cell-length bin. Its graph illustrates possible regulators of measured length but is not a single inheritable causal mechanism requiring a protein/taxon exemplar.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>fast elongation rate</strong>
             <span class="edge-predicate">contributes to</span>
@@ -66,16 +66,16 @@
             <code>RO:0002326</code>
             <p>Fast elongation between divisions yields longer cells.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1126/science.aaa1313</code>
                 <span class="evidence-snippet">cell size scales with growth rate</span>
                 <span class="meta">Supports fast growth as a producer of larger cell sizes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>division-timing delay</strong>
             <span class="edge-predicate">contributes to</span>
@@ -83,16 +83,16 @@
             <code>RO:0002326</code>
             <p>Delaying division allows continued elongation past the typical size.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2671</code>
                 <span class="evidence-snippet">directs cell division</span>
                 <span class="meta">Supports division timing as a control point for cell length.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>cell length large</strong>
             <span class="edge-predicate">is a</span>
@@ -100,16 +100,16 @@
             <code>rdfs:subClassOf</code>
             <p>Large cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cub.2014.07.022</code>
                 <span class="evidence-snippet">cell size is tightly controlled</span>
                 <span class="meta">Supports large length as a value within the regulated cell-length distribution.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>SOS response</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -117,16 +117,16 @@
             <code>RO:0002213</code>
             <p>The SOS response increases SulA-mediated division inhibition after DNA damage or replication stress.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1002/advs.202203260</code>
                 <span class="evidence-snippet">the SOS response is activated through the binding of recA with single stranded DNA and the self-cleavage of the lexA repressor, enabling expression of SOS regulon genes</span>
                 <span class="meta">Verified against the open Wiley full text; DNA damage activates the RecA/LexA SOS response and enables expression of SOS regulon genes, including sulA.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>SulA</strong>
             <span class="edge-predicate">negatively regulates</span>
@@ -134,16 +134,16 @@
             <code>RO:0002212</code>
             <p>SulA inhibits FtsZ polymerization, blocking productive Z-ring assembly.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1002/advs.202203260</code>
                 <span class="evidence-snippet">cell division inhibitor, sulA, blocks FtsZ (a master regulator of bacterial cell division and responsible for the Z ring formation at mid-cell) polymerization</span>
                 <span class="meta">Verified against the open Wiley full text; the source links SOS activation to SulA blocking FtsZ polymerization.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>FtsZ</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -151,16 +151,16 @@
             <code>RO:0002213</code>
             <p>FtsZ accumulation in the Z-ring is a rate-limiting driver for onset of constriction at faster growth rates.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-024-54242-w</code>
                 <span class="evidence-snippet">rate limit the onset of constriction</span>
                 <span class="meta">Verified against the open Nature Communications full text; FtsZ numbers were rate-limiting for constriction onset in moderately fast E. coli growth.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>SulA</strong>
             <span class="edge-predicate">contributes to</span>
@@ -168,16 +168,16 @@
             <code>RO:0002326</code>
             <p>SOS-induced SulA is the inhibitory protein mediating this division-arrest branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1002/advs.202203260</code>
                 <span class="evidence-snippet">As a result, a cell division inhibitor, sulA, blocks FtsZ</span>
                 <span class="meta">Verified against the open Wiley full text; the source frames SulA as the SOS-linked inhibitor that blocks FtsZ polymerization.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>SulA-mediated division inhibition</strong>
             <span class="edge-predicate">contributes to</span>
@@ -185,16 +185,16 @@
             <code>RO:0002326</code>
             <p>SulA-mediated inhibition of septation contributes to delayed division and continued elongation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1002/advs.202203260</code>
                 <span class="evidence-snippet">contributes to non-septate cellular filamentation</span>
                 <span class="meta">Verified against the open Wiley full text; SulA-mediated FtsZ inhibition is linked to blocked septation and filamentation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>FtsZ Z-ring</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -202,26 +202,26 @@
             <code>RO:0002213</code>
             <p>FtsZ bundles promote the FtsA/FtsN/core-divisome transition that starts constriction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41467-024-54242-w</code>
                 <span class="evidence-snippet">starts the onset of constriction</span>
                 <span class="meta">Verified against the open Nature Communications full text; the proposed model routes FtsZ bundles through FtsA antiparallel filaments, FtsN recruitment, and core-divisome activation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -229,114 +229,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1126/science.aaa1313</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/cell_length.html" >cell length <code>METPO:1000881</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>L_&gt;3 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000886</code> <span class="dim-preview">[-0.375, -2.130, -2.643, +3.325, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
           <span class="sim">0.591</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_low.html">pH range low</a>
           <span class="sim">0.571</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
           <span class="sim">0.570</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_delta_mid2.html">temperature delta mid2</a>
           <span class="sim">0.555</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid1.html">temperature range mid1</a>
           <span class="sim">0.552</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/cell_width.html">cell width</a>
           <span class="sim">0.549</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
           <span class="sim">0.549</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/cell_width_medium.html">cell width medium</a>
           <span class="sim">0.538</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -407,141 +407,141 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
 | FtsZ | Tubulin-family GTPase; Z-ring scaffold and organizer of septal synthesis | Use a species-specific UniProt CURIE when taxon is known; molecular function may use `GO:0005525` (GTP binding), but verify annotation before YAML insertion. |
 | Z-ring | Supramolecular division structure | `GO:0000940` is a candidate; verify against the current GO release. |
 | divisome | Cell-division complex | `GO:0032153` is a candidate; verify before curation. |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         187 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/morphology/cell_length_large-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Spirochaeta dissipatitropha</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=324679"
              rel="nofollow noreferrer"><code>NCBITaxon:324679</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1099/ijs.0.65862-0"
              rel="nofollow noreferrer"><code>DOI:10.1099/ijs.0.65862-0</code></a>
-          
-          
+
+
           <span class="meta">Spirochaeta dissipatitropha ASpC2T cells measured 8-18 micrometres long, wholly above the approximately 3-micrometre threshold.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.920780+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking fast elongation and division-timing delay to large cell length (&gt;3 μm).</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×2, rdfs:subClassOf×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 3 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:19Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:C0LUM8×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009432×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:19Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:H8YHZ0×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-22T04:26:15Z</time> ·
           <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
           <p class="changes">Reviewed 2 organism-specific UniProtKB grounding(s): replaced 2 with taxon-agnostic GO/InterPro terms and retracted 0 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope cell_length_large_division_delay=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
         <li>
           <time>2026-09-04T00:00:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) by re-citing the SOS/SulA branch to peer-reviewed evidence, grounding the two residual FtsZ/SulA predicates, and adding 3 source- and verbatim-snippet-backed connectors. No paid research service was called.</p>
         </li>
-        
+
         <li>
           <time>2026-09-06T17:10:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review: corrected the SulA cell-division-inhibitor snippet to match the exact peer-reviewed Wiley text with comma punctuation.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T04:24:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issue #687: gave the two SulA edges distinct exact snippets, separating the FtsZ-polymerization claim from the SulA division-inhibitor connector.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T20:05:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issue #696: expanded the SOS-to-SulA division-inhibition evidence so the snippet carries SOS-regulon expression instead of only naming SOS activation.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -570,12 +570,12 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -926,8 +926,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-07 20:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

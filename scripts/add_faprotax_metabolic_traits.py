@@ -1,0 +1,602 @@
+#!/usr/bin/env python3
+"""Add FAPROTAX metabolic capability records from proposal cohort v11."""
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+from pathlib import Path
+
+import yaml
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+
+TRAIT_DIR = REPO_ROOT / "data" / "traits"
+METABOLISM_DIR = TRAIT_DIR / "metabolism"
+
+TIMESTAMP = "2026-09-08T00:00:00Z"
+FAPROTAX = "DOI:10.1126/science.aaf4507"
+CURATOR = "codex"
+
+
+def faprotax_group_key(text: str) -> dict[str, str]:
+    return {
+        "synonym_text": text,
+        "synonym_type": "RELATED_SYNONYM",
+        "source": FAPROTAX,
+    }
+
+
+NEW_RECORDS: tuple[tuple[str, dict], ...] = (
+    (
+        "nitrogen_respiration",
+        {
+            "identifier": "traitmech:000121",
+            "label": "nitrogen respiration",
+            "definition": (
+                "An anaerobic respiration in which an organism conserves energy by "
+                "transferring electrons to an oxidized nitrogen compound as the "
+                "terminal electron acceptor."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000802"],
+            "synonyms": [faprotax_group_key("nitrogen_respiration")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/mmbr.61.4.533-616.1997",
+                    "snippet": "N oxides as terminal electron acceptors",
+                    "notes": (
+                        "Zumft reviews denitrification as anaerobic respiration "
+                        "with oxidized nitrogen compounds as electron acceptors."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "nitrate_respiration",
+        {
+            "identifier": "traitmech:000122",
+            "label": "nitrate respiration",
+            "definition": (
+                "A nitrogen respiration in which nitrate is the terminal electron "
+                "acceptor, reduced to nitrite or further reduced products."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000121", "traitmech:000134"],
+            "synonyms": [faprotax_group_key("nitrate_respiration")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1126/science.1254070",
+                    "snippet": (
+                        "Denitrification converts nitrate into nitrogenous gas "
+                        "and thus removes fixed nitrogen from the biosphere, "
+                        "whereas ammonification converts nitrate into ammonium"
+                    ),
+                    "notes": (
+                        "Kraft et al. support nitrate respiration as a bacterial "
+                        "nitrogen-oxide respiration branch with denitrification "
+                        "or DNRA endpoints."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "nitrite_respiration",
+        {
+            "identifier": "traitmech:000123",
+            "label": "nitrite respiration",
+            "definition": (
+                "A nitrogen respiration in which nitrite is the terminal electron "
+                "acceptor."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000121"],
+            "synonyms": [faprotax_group_key("nitrite_respiration")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1074/jbc.M709090200",
+                    "snippet": (
+                        "Cytochrome c nitrite reductase (NrfA) from Escherichia "
+                        "coli has a well established role in the respiratory "
+                        "reduction of nitrite to ammonium"
+                    ),
+                    "notes": (
+                        "van Wonderen et al. describe NrfA-catalyzed respiratory "
+                        "reduction of nitrite to ammonium."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "respiration_of_sulfur_compounds",
+        {
+            "identifier": "traitmech:000124",
+            "label": "respiration of sulfur compounds",
+            "definition": (
+                "An anaerobic respiration in which an organism conserves energy by "
+                "transferring electrons to an inorganic sulfur compound as the "
+                "terminal electron acceptor."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000802"],
+            "synonyms": [faprotax_group_key("respiration_of_sulfur_compounds")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3389/fmicb.2023.1108245",
+                    "snippet": "sulfate, sulfur, or thiosulfate respiration",
+                    "notes": (
+                        "Zavarzina et al. experimentally compare iron respiration "
+                        "with sulfur/thiosulfate respiration in Dethiobacter "
+                        "alkaliphilus."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "sulfur_respiration",
+        {
+            "identifier": "traitmech:000125",
+            "label": "sulfur respiration",
+            "definition": (
+                "A respiration of sulfur compounds in which elemental sulfur is "
+                "the terminal electron acceptor and is reduced to sulfide."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000124"],
+            "synonyms": [faprotax_group_key("sulfur_respiration")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3389/fmicb.2023.1108245",
+                    "snippet": "using sulfur as an alternative electron acceptor",
+                    "notes": (
+                        "Zavarzina et al. analyze a natronophilic bacterium capable "
+                        "of reducing zero-valent sulfur during anaerobic respiration."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "thiosulfate_respiration",
+        {
+            "identifier": "traitmech:000126",
+            "label": "thiosulfate respiration",
+            "definition": (
+                "A respiration of sulfur compounds in which thiosulfate is the "
+                "terminal electron acceptor."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000124"],
+            "synonyms": [faprotax_group_key("thiosulfate_respiration")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3389/fmicb.2023.1108245",
+                    "snippet": "sulfur- and thiosulfate reducing type strain",
+                    "notes": (
+                        "Zavarzina et al. analyze thiosulfate respiration in "
+                        "Dethiobacter alkaliphilus as an anaerobic energy metabolism."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "hydrogenotrophic_methanogenesis",
+        {
+            "identifier": "traitmech:000127",
+            "label": "hydrogenotrophic methanogenesis",
+            "definition": (
+                "A methanogenesis in which carbon dioxide is reduced to methane "
+                "using molecular hydrogen as the electron donor."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000844"],
+            "synonyms": [
+                faprotax_group_key("hydrogenotrophic_methanogenesis"),
+                faprotax_group_key("methanogenesis_by_CO2_reduction_with_H2"),
+            ],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1146/annurev-micro-011720-122807",
+                    "snippet": "from CO2 and H2 to methane",
+                    "notes": (
+                        "Shima et al. support the H2/CO2 branch of archaeal "
+                        "methane production."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "hydrocarbon_degradation",
+        {
+            "identifier": "traitmech:000128",
+            "label": "hydrocarbon degradation",
+            "definition": (
+                "A metabolism in which an organism catabolizes a hydrocarbon, using "
+                "it as a carbon and energy source."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000060"],
+            "synonyms": [faprotax_group_key("hydrocarbon_degradation")],
+            "xrefs": ["GO:0120253"],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/MR.54.3.305-315.1990",
+                    "snippet": (
+                        "Hydrocarbons are degraded primarily by bacteria and fungi"
+                    ),
+                    "notes": (
+                        "Leahy and Colwell review microbial hydrocarbon "
+                        "degradation across environmental microorganisms."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "aromatic_hydrocarbon_degradation",
+        {
+            "identifier": "traitmech:000129",
+            "label": "aromatic hydrocarbon degradation",
+            "definition": (
+                "A hydrocarbon degradation in which the substrate carries at least "
+                "one aromatic ring."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000128", "traitmech:000130"],
+            "synonyms": [faprotax_group_key("aromatic_hydrocarbon_degradation")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1007/BF00058836",
+                    "snippet": (
+                        "benzene, certain arenes, biphenyl and selected fused "
+                        "aromatic hydrocarbons"
+                    ),
+                    "notes": (
+                        "Smith reviews bacterial biodegradation of aromatic "
+                        "hydrocarbons as a distinct hydrocarbon-degradation branch."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "aromatic_compound_degradation",
+        {
+            "identifier": "traitmech:000130",
+            "label": "aromatic compound degradation",
+            "definition": (
+                "A metabolism in which an organism catabolizes an aromatic "
+                "compound, whether or not that compound is a hydrocarbon."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000060"],
+            "synonyms": [faprotax_group_key("aromatic_compound_degradation")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3390/ijerph6010278",
+                    "snippet": (
+                        "bacterial degradation pathways of selected aromatic "
+                        "compounds"
+                    ),
+                    "notes": (
+                        "Seo et al. review bacterial pathways for degradation of "
+                        "aromatic compounds."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "dark_hydrogen_oxidation",
+        {
+            "identifier": "traitmech:000131",
+            "label": "dark hydrogen oxidation",
+            "definition": (
+                "A metabolism in which an organism oxidizes molecular hydrogen as "
+                "an electron donor for energy conservation independently of light."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000060"],
+            "synonyms": [faprotax_group_key("dark_hydrogen_oxidation")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3389/fmicb.2018.02873",
+                    "snippet": (
+                        "hydrogen-oxidizing organisms play a key role in "
+                        "deep-sea hydrothermal vent ecosystems as they can be "
+                        "considerably involved in light-independent primary "
+                        "biomass production"
+                    ),
+                    "notes": (
+                        "Adam and Perner review hydrogen oxidation in deep-sea "
+                        "hydrothermal vents as a light-independent microbial "
+                        "energy metabolism."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "dark_oxidation_of_sulfur_compounds",
+        {
+            "identifier": "traitmech:000132",
+            "label": "dark oxidation of sulfur compounds",
+            "definition": (
+                "A sulfur oxidation in which an organism oxidizes a reduced "
+                "inorganic sulfur compound as an electron donor for energy "
+                "conservation independently of light."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["traitmech:000106"],
+            "synonyms": [faprotax_group_key("dark_oxidation_of_sulfur_compounds")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1111/1462-2920.14543",
+                    "snippet": (
+                        "dark sulfide oxidation was coupled to high oxygen "
+                        "consumption rates"
+                    ),
+                    "notes": (
+                        "Berg et al. experimentally couple dark aerobic sulfide "
+                        "oxidation to oxygen consumption in anoxygenic phototrophs."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "methanol_oxidation",
+        {
+            "identifier": "traitmech:000133",
+            "label": "methanol oxidation",
+            "definition": (
+                "A metabolism in which an organism oxidizes methanol, typically to "
+                "formaldehyde, as a carbon and energy source."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000060"],
+            "synonyms": [faprotax_group_key("methanol_oxidation")],
+            "xrefs": ["GO:0015946"],
+            "evidence": [
+                {
+                    "reference": "DOI:10.3389/fbioe.2021.787791",
+                    "snippet": "methanol utilization in methylotrophy",
+                    "notes": (
+                        "Le et al. review methanol dehydrogenases as primary "
+                        "enzymes that convert methanol to formaldehyde during "
+                        "methylotrophy."
+                    ),
+                },
+            ],
+        },
+    ),
+    (
+        "nitrate_reduction",
+        {
+            "identifier": "traitmech:000134",
+            "label": "nitrate reduction",
+            "definition": (
+                "A metabolism in which an organism reduces nitrate, whether for "
+                "energy conservation or for assimilation into biomass."
+            ),
+            "definition_source": FAPROTAX,
+            "trait_category": "METABOLISM",
+            "term_kind": "CLASS",
+            "mapping_status": "PROPOSED",
+            "parent_traits": ["METPO:1000060"],
+            "synonyms": [faprotax_group_key("nitrate_reduction")],
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/JB.181.21.6573-6584.1999",
+                    "snippet": (
+                        "Nitrate reduction can be performed with three different "
+                        "purposes"
+                    ),
+                    "notes": (
+                        "Moreno-Vivian et al. review prokaryotic nitrate reduction "
+                        "across nitrate assimilation, nitrate respiration, and "
+                        "nitrate dissimilation."
+                    ),
+                },
+            ],
+        },
+    ),
+)
+
+REPARENTS: tuple[tuple[str, str | tuple[str, ...], str, str], ...] = (
+    (
+        "denitrification",
+        ("METPO:1000802", "traitmech:000121"),
+        "traitmech:000122",
+        "Narrowed parent from anaerobic respiration to nitrate respiration.",
+    ),
+    (
+        "dissimilatory_nitrate_reduction_to_ammonium",
+        ("METPO:1000802", "traitmech:000121"),
+        "traitmech:000122",
+        "Narrowed parent from anaerobic respiration to nitrate respiration.",
+    ),
+    (
+        "dissimilatory_sulfate_reduction",
+        "METPO:1000802",
+        "traitmech:000124",
+        "Narrowed parent from anaerobic respiration to respiration of sulfur compounds.",
+    ),
+)
+
+
+def _load_trait(slug: str) -> tuple[Path, dict]:
+    path = METABOLISM_DIR / f"{slug}.yaml"
+    return path, yaml.safe_load(path.read_text(encoding="utf-8"))
+
+
+def _replace_parent(doc: dict, old: str | tuple[str, ...], new: str) -> bool:
+    old_parents = {old} if isinstance(old, str) else set(old)
+    parents = list(doc.get("parent_traits") or [])
+    updated = []
+    for parent in parents:
+        replacement = new if parent in old_parents else parent
+        if replacement not in updated:
+            updated.append(replacement)
+    if new not in updated:
+        updated.append(new)
+    if updated == parents:
+        return False
+    doc["parent_traits"] = updated
+    return True
+
+
+def _add_xylanolysis_synonym() -> tuple[Path, dict] | None:
+    path, doc = _load_trait("xylan_degradation")
+    synonyms = list(doc.get("synonyms") or [])
+    if any(s.get("synonym_text") == "xylanolysis" for s in synonyms):
+        return None
+    synonyms.append(
+        {
+            "synonym_text": "xylanolysis",
+            "synonym_type": "EXACT_SYNONYM",
+            "source": FAPROTAX,
+        }
+    )
+    doc["synonyms"] = synonyms
+    record_curation_event(
+        doc,
+        curator=CURATOR,
+        action="ADD_EXACT_SYNONYM",
+        changes=(
+            "Added xylanolysis as an exact FAPROTAX synonym rather than minting "
+            "the duplicate v11 candidate because GO:0045493 already grounds "
+            "xylan degradation."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+    return path, doc
+
+
+def _new_records() -> list[tuple[Path, dict]]:
+    existing_ids: dict[str, Path] = {}
+    for path in TRAIT_DIR.rglob("*.yaml"):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        existing_ids[doc["identifier"]] = path
+
+    records = []
+    for slug, raw in NEW_RECORDS:
+        path = METABOLISM_DIR / f"{slug}.yaml"
+        record = copy.deepcopy(raw)
+        identifier = record["identifier"]
+        if path.exists():
+            existing = yaml.safe_load(path.read_text(encoding="utf-8"))
+            if existing["identifier"] != identifier:
+                raise SystemExit(f"{path.relative_to(REPO_ROOT)} already exists")
+            continue
+        if identifier in existing_ids and existing_ids[identifier] != path:
+            taken = existing_ids[identifier].relative_to(REPO_ROOT)
+            raise SystemExit(f"{identifier} is already used by {taken}")
+        record_curation_event(
+            record,
+            curator=CURATOR,
+            action="PROPOSED_FROM_RESEARCH",
+            changes=(
+                "Proposed a DOI-backed FAPROTAX metabolic capability from "
+                "proposals/metpo_traitmech_v11 after repository-wide duplicate "
+                "review."
+            ),
+            llm_assisted=True,
+            timestamp=TIMESTAMP,
+        )
+        records.append((path, record))
+    return records
+
+
+def _reparent_records() -> list[tuple[Path, dict]]:
+    outputs = []
+    for slug, old, new, changes in REPARENTS:
+        path, doc = _load_trait(slug)
+        if not _replace_parent(doc, old, new):
+            continue
+        record_curation_event(
+            doc,
+            curator=CURATOR,
+            action="REFINE_PARENT_TRAIT",
+            changes=changes,
+            llm_assisted=True,
+            timestamp=TIMESTAMP,
+        )
+        outputs.append((path, doc))
+    return outputs
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true", help="write the YAML files")
+    args = parser.parse_args()
+
+    outputs = _new_records()
+    outputs.extend(_reparent_records())
+    xylan = _add_xylanolysis_synonym()
+    if xylan:
+        outputs.append(xylan)
+
+    for path, doc in outputs:
+        rel = path.relative_to(REPO_ROOT)
+        if args.apply:
+            write_validated_trait(doc, path)
+            print(f"wrote {rel}")
+        else:
+            print(f"would write {rel}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

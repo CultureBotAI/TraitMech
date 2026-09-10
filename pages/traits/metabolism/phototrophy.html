@@ -30,22 +30,22 @@
     </p>
     <h1>phototrophy</h1>
     <p class="curie"><code>traitmech:000037</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metabolism in which an organism captures light as its energy source. It encompasses chlorophyll-based photosynthesis (with photochemical reaction centers) and retinal-based (rhodopsin) light-driven ion pumping.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Phototrophy captures light as cellular energy</h2>
       <p class="meta">Evidence-backed causal sketch linking light input to ATP/PMF generation across chlorophyll- and retinal-based phototrophic mechanisms.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This parent-trait graph intentionally combines independent chlorophyll-based and microbial-rhodopsin branches. The Synechocystis protein example supports only the photosystem II branch; no rhodopsin protein is implied for the canonical taxa.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>light</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>Light availability is the input the phototrophic trait realizes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.tim.2006.09.001</code>
-                
+
                 <span class="meta">Bryant &amp; Frigaard frame phototrophy as the broad use of light for energy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>phototrophy</strong>
             <span class="edge-predicate">contributes to</span>
@@ -83,16 +83,16 @@
             <code>RO:0002326</code>
             <p>Chlorophyll- and retinal-based phototrophy generate proton motive force from absorbed light.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1126/science.289.5486.1902</code>
-                
+
                 <span class="meta">Béjà et al. established retinal-based proteorhodopsin phototrophy as a light-driven proton pump, complementing chlorophyll-based photosynthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>light</strong>
             <span class="edge-predicate">activates</span>
@@ -100,16 +100,16 @@
             <code>RO:0002213</code>
             <p>Visible light activates the microbial rhodopsin photocycle across taxa.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/ismejo/wrae175</code>
-                
+
                 <span class="meta">&#34;All rhodopsins are activated by visible light and return to their original state through a photocycle&#34;; broad rhodopsin mechanism, not limited to one taxon.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>microbial rhodopsin</strong>
             <span class="edge-predicate">enables</span>
@@ -117,50 +117,50 @@
             <code>RO:0002327</code>
             <p>During the photocycle, microbial rhodopsins exhibit ion-transport function.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/ismejo/wrae175</code>
-                
+
                 <span class="meta">&#34;During the photocycle, they exhibit their cognate protein functions such as ion transport&#34;; general mechanistic edge for rhodopsin phototrophy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives</span>
             <strong>ATP synthesis</strong>
-            
+
             <p>The proton gradient drives ATP synthesis, conserving light-derived energy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/spectrum.02177-23</code>
-                
+
                 <span class="meta">&#34;creating a proton gradient to drive the synthesis of ATP&#34;; direct support for rhodopsin-based energy conservation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>photosystem II</strong>
             <span class="edge-predicate">supplies electrons to</span>
             <strong>photosynthetic electron transport chain</strong>
-            
+
             <p>PSII water oxidation supplies electrons to the photosynthetic electron transport chain.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/1751-7915.14519</code>
-                
+
                 <span class="meta">&#34;electrons from the photo-oxidation of water in PSII are transferred through plastoquinone to cytochrome b6f&#34;; canonical oxygenic phototrophy edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>photosynthetic electron transport chain</strong>
             <span class="edge-predicate">has output</span>
@@ -168,16 +168,16 @@
             <code>RO:0002234</code>
             <p>Electron flow through cytochrome b6f and PSI reduces ferredoxin/NADP+ to NADPH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/1751-7915.14519</code>
-                
+
                 <span class="meta">&#34;These electrons are eventually transferred to ferredoxin and NADP+ to form NADPH&#34;; canonical oxygenic phototrophy edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>photosynthetic electron transport chain</strong>
             <span class="edge-predicate">has output</span>
@@ -185,33 +185,33 @@
             <code>RO:0002234</code>
             <p>Photosynthetic electron transfer establishes a proton gradient that produces ATP.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/1751-7915.14519</code>
-                
+
                 <span class="meta">&#34;NADPH and ATP are produced from a proton gradient&#34;; canonical oxygenic phototrophy edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>high light intensity</strong>
             <span class="edge-predicate">damages</span>
             <strong>photosystem II</strong>
-            
+
             <p>High light intensity and resulting free radicals damage PSII (photoinhibition).</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/1751-7915.14519</code>
-                
+
                 <span class="meta">&#34;High-energy photons and the generation of free radicals damage PSII&#34;; strong environmental inhibitor edge.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>photosystem II</strong>
             <span class="edge-predicate">contributes to</span>
@@ -219,19 +219,19 @@
             <code>RO:0002326</code>
             <p>Photosystem II contributes the light-sensing and reaction-center machinery of the graph&#39;s oxygenic phototrophy branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1111/1751-7915.14519</code>
                 <span class="evidence-snippet">Both photosystems bind chlorophylls to sense light, use chlorophylls and other pigments to transfer light to a photosynthetic reaction centre</span>
                 <span class="meta">Verified against the public PMC full text; the description keeps this connector scoped to oxygenic phototrophy.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -241,16 +241,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>photosystem II</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P16033/entry" rel="nofollow noreferrer"><code>UniProtKB:P16033</code></a>
                   <br>Photosystem II protein D1 2 <span class="meta">(psbA2)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1111708" rel="nofollow noreferrer">Synechocystis sp. PCC 6803</a>
                   <br><code>NCBITaxon:1111708</code>
                 </td>
@@ -261,31 +261,31 @@
                 <td>
                   <p>D1 reaction-center component of photosystem II in the oxygenic phototrophy branch; this accession is not the complete PSII complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1074/jbc.M806116200" rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M806116200</code></a>
-                      
+
                       <span class="evidence-snippet">the PsbA (D1) subunit of photosystem II (PSII)</span>
                       <span class="meta">A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -293,125 +293,125 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1016/j.tim.2006.09.001</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (2)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/photosynthesis.html">photosynthesis <code>traitmech:000038</code></a></li>
-        
+
         <li><a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy <code>traitmech:000036</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>phototrophic metabolism <span class="meta">RELATED_SYNONYM · DOI:10.1016/j.tim.2006.09.001</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxygenic_photosynthesis.html">oxygenic photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -482,167 +482,167 @@ The graph should have `traitmech:000037` as the phenotype endpoint and two paral
 - availability of H₂S, sulfur, thiosulfate, H₂, or Fe²⁺
 - availability of retinal or retinal precursors
 - exogenous trans-retinal — assay-specific</pre>
-      
+
       <p class="meta">Showing the first 60 of
         247 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/phototrophy-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Synechocystis sp. PCC 6803</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1148"
              rel="nofollow noreferrer"><code>NCBITaxon:1148</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.3390/md11082894"
              rel="nofollow noreferrer"><code>DOI:10.3390/md11082894</code></a>
-          
-          
+
+
           <span class="meta">photolithotroph</span>
         </li>
-        
+
         <li>
           <em>Rhodospirillum rubrum</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1085"
              rel="nofollow noreferrer"><code>NCBITaxon:1085</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.4056/sigs.1804360"
              rel="nofollow noreferrer"><code>DOI:10.4056/sigs.1804360</code></a>
-          
-          
+
+
           <span class="meta">photoorganotroph</span>
         </li>
-        
+
         <li>
           <em>Synechocystis sp. PCC 6803</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1111708"
              rel="nofollow noreferrer"><code>NCBITaxon:1111708</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1074/jbc.M806116200"
              rel="nofollow noreferrer"><code>DOI:10.1074/jbc.M806116200</code></a>
-          
-          
+
+
           <span class="meta">Strain-level oxygenic phototroph paired to the reviewed PsbA2/D1 example in the photosystem II branch.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-31T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Minted intermediate axis class (phototrophy) to parent the photosynthesis and proteorhodopsin-phototrophy traits, replacing their direct attachment to METPO:1000060 (metabolism).</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (phototrophy / light → PMF) with PATO/METPO node groundings and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×2, RO:0002213×1, RO:0002327×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:16474×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006754×1, GO:0009767×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:54Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009523×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 2 causal edge(s) off microbe-domain METPO predicates (2 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T05:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded the edge from enables/RO:0002327 to RO:0002326 (contributes to), issue 334. biolink declares enables range &#39;biological process or activity&#39; and the object is a STATE, which does not satisfy it. Unlike the tolerance/capacity nodes in this same pass, this object is a genuine state rather than a mis-typed disposition - a gradient, a community composition, an internal environment - so retyping it to TRAIT would be wrong. contributes to fits because the subject genuinely contributes to the OCCURRENCE OR GENERATION of the object, which is biolink&#39;s definition; that is the same test the motive-force edges FAILED in issue 341, where the subject powers a machine it does not generate. RO:0002326 declares no rdfs:domain or rdfs:range.</p>
         </li>
-        
+
         <li>
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): photosynthetic_electron_transport is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route in every record that carries it, though NOT THE SAME ROUTE, which is why no single step list belongs in this rationale. metabolism/phototrophy.yaml enumerates the oxygenic form (&#39;Electron flow from water through PSII, cytochrome b6f and PSI&#39;); photoheterotrophic.yaml and photoorganoheterotrophic.yaml cover ANOXYGENIC phototrophy -- one reaction centre, cyclic flow, no water oxidation -- and say the neutral thing on purpose. Quoting the oxygenic steps at them would assert biology they specifically do not claim (#400 review). Both forms are named routes whose steps a curator could list, which is the test. Was 5 PATHWAY to 1 before this tranche.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T00:00:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Added a strain-matched Synechocystis PsbA2/D1 example, converted both existing canonical citations to DOI, retained microbial rhodopsin as reviewed label-only, and documented the parent graph&#39;s independent mechanism branches.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T08:20:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -671,12 +671,12 @@ The graph should have `traitmech:000037` as the phenotype endpoint and two paral
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1027,8 +1027,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 08:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

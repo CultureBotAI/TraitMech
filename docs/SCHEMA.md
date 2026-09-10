@@ -26,7 +26,7 @@ One YAML file per record under `data/traits/<category>/<slug>.yaml`.
 | `created_by` | string |  | IAO:0000117 — original author |
 | `contributors` | string[] |  | Local curator names |
 | `evidence` | EvidenceItem[] |  | Optional literature support |
-| `mapping_status` | MappingStatusEnum |  | SEEDED / REVIEWED / DEPRECATED |
+| `mapping_status` | MappingStatusEnum |  | SEEDED / PROPOSED / REVIEWED / DEPRECATED |
 | `curation_history` | CurationEvent[] |  | Append-only audit trail |
 
 ## Enums
@@ -50,6 +50,7 @@ One YAML file per record under `data/traits/<category>/<slug>.yaml`.
 
 ### MappingStatusEnum
 - `SEEDED` — fresh from `metpo.owl`, not yet curator-reviewed
+- `PROPOSED` — proposed for METPO, backed by local curation while awaiting review upstream
 - `REVIEWED` — curator has signed off
 - `DEPRECATED` — superseded; retained for traceability
 

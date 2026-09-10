@@ -19,7 +19,8 @@ microbial capability for which METPO has no class.
 
 ## ID block
 
-`METPO:1008800`–`METPO:1008814` (classes). No predicates proposed.
+`METPO:1008800`–`METPO:1008814` (classes), with `METPO:1008810` withdrawn
+after xylanolysis was confirmed as a duplicate. No predicates proposed.
 
 The highest placeholder in use across cohorts v1–v10 is `METPO:1007721` (classes) and
 `METPO:2007900` (predicates), so the next contiguous class block would be
@@ -38,9 +39,13 @@ Subset tag: `metpo_traitmech_2026_14`.
 
 | Scope | Rows | Why it belongs in METPO |
 |---|---:|---|
-| A — synthetic trait class lift | 0 | no `traitmech:` identifiers were minted for these; they have no local record yet |
+| A — synthetic trait class lift | 14 | every proposed class is now loaded locally as `traitmech:000121`–`traitmech:000134` |
 | B — causal-graph predicate lift | 0 | nothing here is a relation |
-| **New metabolic-capability classes** | **15** | FAPROTAX strategies with no METPO home, already loaded as synonyms elsewhere in METPO's trophic-type branch |
+| **New metabolic-capability classes** | **14** | FAPROTAX strategies with no METPO home, already loaded as synonyms elsewhere in METPO's trophic-type branch |
+
+Scope-A answer: each class row is already minted locally as a PROPOSED TraitRecord
+because METPO has no equivalent, and is cited in the `traits_addressed` column of
+`metpo_proposal_classes_robot.tsv`.
 
 ## The two highest-frequency labels are NOT proposed here
 
@@ -63,9 +68,9 @@ second label** — `aerobic_chemo_heterotrophy` differs from
 An exact-match check missed this, because `chemoheterotrophy` ≠ `chemoheterotrophic`
 under normalisation. Only reading METPO's trophic-type branch surfaced it.
 
-**Requested instead: two synonym additions to an existing class.**
+**Requested instead: two related-synonym additions to an existing class.**
 
-| target | add as `oboInOwl:hasExactSynonym` | occurrences |
+| target | add as `oboInOwl:hasRelatedSynonym` | occurrences |
 |---|---|---:|
 | `METPO:1000636` chemoheterotrophic | `chemoheterotrophy` | 10,493 |
 | `METPO:1000636` chemoheterotrophic | `aerobic_chemoheterotrophy` | 7,875 |
@@ -85,10 +90,10 @@ METPO:1000660 phototrophic      — aerobic_anoxygenic_phototrophy
 METPO:1000651 methylotrophic    — methylotrophy
 ```
 
-So the underscored FAPROTAX spelling is already an accepted synonym form here, which
-is why the 15 proposed classes below carry theirs the same way.
+So the underscored FAPROTAX spelling is already an accepted related-synonym form
+here, which is why the 14 proposed classes below carry theirs the same way.
 
-## The 15 proposed classes
+## The 14 proposed classes
 
 Three families, each hung off a parent METPO already has.
 
@@ -112,6 +117,18 @@ nitrate and nitrite cases, `respiration_of_sulfur_compounds` the union of the su
 and thiosulfate cases. Flattening them would lose the generalisation an annotator
 actually asserted when they could not specify the acceptor.
 
+### Existing v5 classes narrowed under the new respiration groupings
+
+The v5 proposal introduced three anaerobic-respiration classes before these
+intermediate terms existed. Leave the historical v5 rows self-contained, but move
+their asserted parents when applying this v11 cohort:
+
+| existing ID | label | v5 parent | v11 parent |
+|---|---|---|---|
+| `METPO:1007629` | dissimilatory nitrate reduction to ammonium | `METPO:1000802` | `METPO:1008801` |
+| `METPO:1007703` | denitrification | `METPO:1000802` | `METPO:1008801` |
+| `METPO:1007704` | dissimilatory sulfate reduction | `METPO:1000802` | `METPO:1008803` |
+
 ### Methanogenesis — parent `METPO:1000844`
 
 | ID | label | parent |
@@ -123,28 +140,37 @@ actually asserted when they could not specify the acceptor.
 (140) name the same process from opposite ends — the electron donor and the carbon
 substrate. Proposing both would put a synonym pair in the hierarchy as siblings.
 
-### Degradation and oxidation capabilities — parent `METPO:1000060`
+### Degradation and oxidation capabilities
 
 | ID | label | parent |
 |---|---|---|
 | `METPO:1008807` | hydrocarbon degradation | `METPO:1000060` |
 | `METPO:1008808` | aromatic hydrocarbon degradation | `METPO:1008807` |
 | `METPO:1008809` | aromatic compound degradation | `METPO:1000060` |
-| `METPO:1008810` | xylanolysis | `METPO:1000060` |
 | `METPO:1008811` | dark hydrogen oxidation | `METPO:1000060` |
-| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1000060` |
+| `METPO:1008812` | dark oxidation of sulfur compounds | `METPO:1007705` |
 | `METPO:1008813` | methanol oxidation | `METPO:1000060` |
 | `METPO:1008814` | nitrate reduction | `METPO:1000060` |
 
-These hang off `METPO:1000060 metabolism`, not `METPO:1000630 biological process`.
-The first draft used the latter and that was wrong (#468): `METPO:1000630` has
-exactly **one** child, `metabolism`, and every real process in METPO —
-`respiration`, `Methanogenesis`, `Acetogenesis`, `Oxidative phosphorylation`,
-`Disproportionation` — sits below it. Parenting to `1000630` would have made these
-seven siblings of `metabolism` itself, a level above the processes they belong with.
-The definitions take `metabolism` as their genus to match, which is how METPO's
-existing children of that class are written ("A metabolism in which methane is
-produced…").
+These stay inside the `METPO:1000060 metabolism` branch, not the
+`METPO:1000630 biological process` branch. The first draft used the latter and that
+was wrong (#468): `METPO:1000630` has exactly **one** child, `metabolism`, and
+every real process in METPO — `respiration`, `Methanogenesis`, `Acetogenesis`,
+`Oxidative phosphorylation`, `Disproportionation` — sits below it. Parenting to
+`1000630` would have made these processes siblings of `metabolism` itself, a level
+above the processes they belong with. The definitions take `metabolism` as their
+genus to match, which is how METPO's existing children of that class are written
+("A metabolism in which methane is produced…").
+
+`METPO:1008812 dark oxidation of sulfur compounds` is nested under the v5
+`METPO:1007705 sulfur oxidation` lift so the light-independent term is a species
+of the broader reduced-inorganic-sulfur oxidation process rather than a sibling.
+
+`xylanolysis` is not minted here because v5 already lifts `traitmech:000113 xylan
+degradation` as `METPO:1007712`. The v5 ROBOT row does not carry the
+TraitRecord's `GO:0045493 xylan catabolic process` xref, so v11 re-homes that
+exactMatch onto `METPO:1007712` in SSSOM and asks maintainers to add
+`xylanolysis` as an exact FAPROTAX synonym on the same existing class.
 
 ### Two second parents, both left for a maintainer
 
@@ -155,8 +181,8 @@ here rather than silently dropped:
   (asserted) and `aromatic compound degradation` — an aromatic hydrocarbon is both.
 - **`nitrate respiration`** is a child of both `nitrogen respiration` (asserted, by
   mechanism) and `nitrate reduction` (by chemistry — respiratory reduction of nitrate
-  is still reduction of nitrate). The same holds for `nitrite respiration`. This one
-  was missed in the first draft (#469), which flagged only the aromatic case and so
+  is still reduction of nitrate). This one was missed in the first draft (#469),
+  which flagged only the aromatic case and so
   implied the nitrogen case had been considered and rejected.
 
 `nitrate reduction` is deliberately **not** placed *under* `nitrate respiration`.
@@ -171,21 +197,29 @@ mapping instead.
 
 ## Cross-ontology mappings
 
-`metpo_proposal_mappings.sssom.tsv` carries 5 rows: 4 `skos:exactMatch` to GO and 1
-`skos:closeMatch`. Emitted only where a GO term genuinely denotes the same process —
-per the skill's rule, a cross-ontology equivalent is a mapping, not a
-`definition_source`.
+`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 3 `skos:exactMatch` to GO
+and 1 `skos:broadMatch`. Three rows map proposed v11 classes; the fourth re-homes
+the `GO:0045493 xylan catabolic process` exactMatch onto the existing v5
+`METPO:1007712 xylan degradation` row after v11 withdraws duplicate `xylanolysis`.
+These rows are emitted where GO genuinely denotes the same process or a useful
+broader neighbor — per the skill's rule, a cross-ontology equivalent is a mapping,
+not a `definition_source`.
 
-The closeMatch is `dark oxidation of sulfur compounds` → `GO:0019417 sulfur
-oxidation`: GO admits phototrophic sulfur oxidation, which the FAPROTAX "dark"
-qualifier exists to exclude, and GO has no light-independent sibling to point at.
+The broadMatch is `hydrogenotrophic methanogenesis` → `GO:0019386 methanogenesis,
+from carbon dioxide`: GO names CO2 reduction to methane but does not constrain the
+electron donor to H2, so the FAPROTAX term is narrower.
 
-**Ten of the fifteen get no mapping**, and that is a finding rather than an omission.
-The anaerobic-respiration-by-acceptor family has no GO equivalents — searching
-"nitrate respiration" returns `GO:0008940 nitrate reductase activity`, an enzyme
-function, not the respiratory process. GO models the catalysis; FAPROTAX models the
-organism-level strategy. That gap is the substantive argument for these six classes
-existing in METPO at all.
+`dark oxidation of sulfur compounds` gets no GO mapping. `GO:0019417 sulfur
+oxidation` was rejected for the broader `sulfur oxidation` record because GO is
+restricted to oxygen addition to elemental sulfur, while METPO/FAPROTAX sulfur
+oxidation spans multiple reduced inorganic sulfur compounds.
+
+**Eleven of the fourteen new v11 classes get no mapping**, and that is a finding
+rather than an omission. The anaerobic-respiration-by-acceptor family has no GO
+equivalents — searching "nitrate respiration" returns `GO:0008940 nitrate
+reductase activity`, an enzyme function, not the respiratory process. GO models
+the catalysis; FAPROTAX models the organism-level strategy. That gap is the
+substantive argument for these six classes existing in METPO at all.
 
 `aromatic compound degradation` has no mapping for a different reason:
 `GO:0019439 aromatic compound catabolic process` is **obsolete**.
@@ -226,6 +260,27 @@ index size so an empty index cannot pass silently.
    the highest-value part of this cohort by occurrence count and need no new IDs.
 3. On mint, replace the `METPO:1008800+` placeholders with the assigned IDs.
 4. Re-seed `data/raw/metpo.owl` and create the corresponding TraitMech trait records.
+
+## Round-trip plan (Scope A)
+
+Once upstream mints real IDs for the 14 classes: refresh `data/raw/metpo.owl`, re-seed,
+and swap each record's `identifier:` from `traitmech:000121`–`traitmech:000134` to
+the corresponding new `METPO:` CURIE, preserving the old `traitmech:` ID as a synonym
+for traceability. Until then the `traitmech:` IDs remain authoritative locally.
+
+## Change log
+
+- v11, 2026-08: first Scope-A cohort after v5 — lifts 14 FAPROTAX metabolic
+  strategies into the `METPO:1008800`–`1008814` block, with `METPO:1008810`
+  withdrawn after `xylanolysis` was confirmed as a duplicate of existing
+  `METPO:1007712` xylan degradation.
+- v11 revision, 2026-09: reparented dark oxidation of sulfur compounds under
+  sulfur oxidation, downgraded hydrogenotrophic methanogenesis to a `skos:broadMatch`,
+  documented reparents for existing DNRA, denitrification, and dissimilatory sulfate
+  reduction rows from the v5 cohort, moved FAPROTAX group keys to related synonyms,
+  dropped the dark-sulfur `GO:0019417` closeMatch, recorded `xylanolysis` as a
+  synonym edit instead of a new class, and re-homed the `GO:0045493` exactMatch
+  onto the existing v5 `METPO:1007712` xylan degradation row.
 
 ## What is still unresolved after this cohort
 

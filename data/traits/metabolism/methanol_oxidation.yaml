@@ -1,0 +1,28 @@
+identifier: traitmech:000133
+label: methanol oxidation
+definition: A metabolism in which an organism oxidizes methanol, typically to formaldehyde,
+  as a carbon and energy source.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: methanol_oxidation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+xrefs:
+- GO:0015946
+evidence:
+- reference: DOI:10.3389/fbioe.2021.787791
+  snippet: methanol utilization in methylotrophy
+  notes: Le et al. review methanol dehydrogenases as primary enzymes that convert
+    methanol to formaldehyde during methylotrophy.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

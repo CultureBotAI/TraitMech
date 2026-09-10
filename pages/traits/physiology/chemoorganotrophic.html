@@ -30,22 +30,22 @@
     </p>
     <h1>chemoorganotrophic</h1>
     <p class="curie"><code>METPO:1000663</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A trophic type in which an organism obtains energy through chemical oxidation of organic compounds that also serve as the carbon source for biosynthesis.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Chemoorganotrophic organic chemical oxidation</h2>
       <p class="meta">DOI-backed graph for chemical oxidation of organic compounds, electron transfer to respiratory chains, proton motive force, ATP synthesis, and organic carbon assimilation.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph includes respiratory and fermentative alternatives. The E. coli K-12 AtpD example anchors only F-type ATP synthesis in the respiratory branch and is one beta component, not the complete rotary complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,45 +54,45 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>chemoorganotrophic</strong>
             <span class="edge-predicate">uses chemical energy source</span>
             <strong>organic compound</strong>
-            
+
             <p>Chemoorganotrophic metabolism derives energy from organic chemicals.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-012373944-5.00083-3</code>
                 <span class="evidence-snippet">reduced organic compound</span>
                 <span class="meta">Supports reduced organic compounds as the source for chemoorganotrophic growth.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>organic compound</strong>
             <span class="edge-predicate">oxidized during</span>
             <strong>organic substrate oxidation</strong>
-            
+
             <p>Organic substrates are oxidized to release reducing equivalents.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-012373944-5.00083-3</code>
                 <span class="evidence-snippet">oxidation of a reduced ... organic compound</span>
                 <span class="meta">Supports dissimilatory oxidation of reduced organic compounds.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>organic substrate oxidation</strong>
             <span class="edge-predicate">feeds electrons into</span>
@@ -100,16 +100,16 @@
             <code>METPO:2007402</code>
             <p>Organic substrate oxidation supplies electrons to respiration.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">electron transfer process</span>
                 <span class="meta">Supports electron flow through respiratory chains.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">transfers electrons to</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007403</code>
             <p>Respiration moves electrons to terminal electron acceptors.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mmbr.61.4.533-616.1997</code>
                 <span class="evidence-snippet">terminal electron acceptor</span>
                 <span class="meta">Supports terminal electron acceptors in respiratory metabolism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">generates</span>
@@ -134,16 +134,16 @@
             <code>biolink:produces</code>
             <p>Respiratory chains generate an electrochemical ion gradient.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">generation of an electrochemical ion gradient</span>
                 <span class="meta">Supports proton motive force generation from electron transport.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives production of</span>
@@ -151,16 +151,16 @@
             <code>biolink:produces</code>
             <p>Proton motive force drives ATP synthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">drives ATP synthesis</span>
                 <span class="meta">Supports ATP production from respiratory energy conservation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives</span>
@@ -168,50 +168,50 @@
             <code>RO:0002212</code>
             <p>Proton motive force drives the F-type ATP synthase rotary mechanism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.7554/eLife.21598</code>
                 <span class="evidence-snippet">proton motive force drives rotation and conformational changes in the F1 catalytic sites</span>
                 <span class="meta">The E. coli structural study directly supports coupling of proton motive force to the beta-containing ATP synthase complex.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>organic compound</strong>
             <span class="edge-predicate">assimilated into</span>
             <strong>biomass</strong>
-            
+
             <p>Organic compounds also supply carbon for biosynthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-012373944-5.00083-3</code>
                 <span class="evidence-snippet">carbon source</span>
                 <span class="meta">Supports organic compounds as carbon sources for biosynthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>organic substrate oxidation</strong>
             <span class="edge-predicate">produces reduced cofactor</span>
             <strong>reduced redox cofactor (NADH)</strong>
-            
+
             <p>Organic substrate oxidation reduces redox cofactors such as NAD to NADH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuae016</code>
-                
+
                 <span class="meta">Redox cofactors (NAD and ferredoxin) accept electrons and become reduced during organic oxidation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>reduced redox cofactor (NADH)</strong>
             <span class="edge-predicate">feeds electrons into</span>
@@ -219,16 +219,16 @@
             <code>METPO:2007402</code>
             <p>Reduced cofactors donate electrons to the membrane quinone pool via dehydrogenases.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13213-024-01761-y</code>
-                
+
                 <span class="meta">Some dehydrogenases inject electrons into the quinone pool of the respiratory chain.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>quinone pool</strong>
             <span class="edge-predicate">transfers electrons to</span>
@@ -236,16 +236,16 @@
             <code>METPO:2007403</code>
             <p>The quinone pool passes electrons to terminal oxidases reducing the terminal acceptor.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s13213-024-01761-y</code>
-                
+
                 <span class="meta">Quinol oxidases pass electrons from ubiquinols/menaquinones to oxygen.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>ambient molecular oxygen</strong>
             <span class="edge-predicate">enables</span>
@@ -253,16 +253,16 @@
             <code>RO:0002327</code>
             <p>Presence of oxygen enables aerobic respiratory chemoorganotrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.2166/9781789062304_0009</code>
-                
+
                 <span class="meta">Electron acceptors range from O2 in aerobic respiration.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>nitrate/nitrite</strong>
             <span class="edge-predicate">enables</span>
@@ -270,50 +270,50 @@
             <code>RO:0002327</code>
             <p>Inorganic acceptors such as nitrate/nitrite enable anaerobic respiratory chemoorganotrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.2166/9781789062304_0009</code>
-                
+
                 <span class="meta">Organisms catabolize an organic e-donor by respiration with an inorganic e-acceptor such as nitrite or nitrate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>absence of external electron acceptor</strong>
             <span class="edge-predicate">leads to</span>
             <strong>fermentation</strong>
-            
+
             <p>Absence of an external terminal electron acceptor leads to fermentation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.2166/9781789062304_0009</code>
-                
+
                 <span class="meta">In fermentation, no terminal e-acceptor is available; electrons are relocated onto an organic catabolic product.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>fermentation</strong>
             <span class="edge-predicate">generates ATP via</span>
             <strong>substrate-level phosphorylation</strong>
-            
+
             <p>Fermentation generates ATP primarily by substrate-level phosphorylation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuae016</code>
-                
+
                 <span class="meta">In fermentation, ATP is generated primarily by substrate-level phosphorylation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-16">
             <strong>substrate-level phosphorylation</strong>
             <span class="edge-predicate">has output</span>
@@ -321,16 +321,16 @@
             <code>RO:0002234</code>
             <p>Substrate-level phosphorylation directly produces ATP.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuae016</code>
-                
+
                 <span class="meta">Fermentative ATP is produced by substrate-level phosphorylation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-17">
             <strong>aerobic respiration</strong>
             <span class="edge-predicate">contributes to</span>
@@ -338,16 +338,16 @@
             <code>RO:0002326</code>
             <p>Oxygen-dependent respiration is a terminal-acceptor mode of the respiratory chain.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/00221287-98-1-231</code>
                 <span class="evidence-snippet">both oxygen and nitrate (or nitrite or chlorate) levels were continuously monitored during bacterial respiration</span>
                 <span class="meta">Verified against the public primary-study abstract.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-18">
             <strong>anaerobic respiration</strong>
             <span class="edge-predicate">contributes to</span>
@@ -355,19 +355,19 @@
             <code>RO:0002326</code>
             <p>Nitrate reduction provides an anaerobic terminal-acceptor mode of the respiratory chain.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/00221287-98-1-231</code>
                 <span class="evidence-snippet">commenced nitrate reduction when all the oxygen had been consumed</span>
                 <span class="meta">Verified against the public primary-study abstract.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -377,16 +377,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>ATP synthase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0ABB4/entry" rel="nofollow noreferrer"><code>UniProtKB:P0ABB4</code></a>
                   <br>ATP synthase subunit beta <span class="meta">(atpD)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
                   <br><code>NCBITaxon:83333</code>
                 </td>
@@ -397,31 +397,31 @@
                 <td>
                   <p>Beta component of the E. coli F1 catalytic head; this accession is not presented as the complete F1Fo complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.7554/eLife.21598" rel="nofollow noreferrer"><code>DOI:10.7554/eLife.21598</code></a>
-                      
+
                       <span class="evidence-snippet">proton motive force drives rotation and conformational changes in the F1 catalytic sites</span>
                       <span class="meta">The primary cryo-EM study resolves the E. coli F1Fo complex and its beta-containing catalytic head; UniProt verifies the reviewed K-12 AtpD entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -431,112 +431,112 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Jed Dongjin Kim-Ozaeta</dd>
         <dt>Definition source</dt><dd>DOI:10.1016/B978-012373944-5.00083-3</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/trophic_type.html" >trophic type <code>METPO:1000631</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>chemoorganotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000663</code> <span class="dim-preview">[-0.780, -1.684, -2.585, +1.757, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/organotrophic.html">organotrophic</a>
           <span class="sim">0.531</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoorganoheterotrophic.html">chemoorganoheterotrophic</a>
           <span class="sim">0.530</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemotrophic.html">chemotrophic</a>
           <span class="sim">0.506</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithoheterotrophic.html">lithoheterotrophic</a>
           <span class="sim">0.454</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/trophic_type.html">trophic type</a>
           <span class="sim">0.453</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/halophilic.html">halophilic</a>
           <span class="sim">0.446</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/halotolerant.html">halotolerant</a>
           <span class="sim">0.434</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemolithoautotrophic.html">chemolithoautotrophic</a>
           <span class="sim">0.433</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -607,209 +607,209 @@ Only identifiers that can be assigned confidently are given below; unresolved en
 - tricarboxylic-acid cycle — **GO:0006099**
 - cellular respiration — **GO:0045333**
 - aerobic respiration — **GO:0009060**</pre>
-      
+
       <p class="meta">Showing the first 60 of
         247 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/chemoorganotrophic-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.5772/intechopen.105508"
              rel="nofollow noreferrer"><code>DOI:10.5772/intechopen.105508</code></a>
-          
-          
+
+
           <span class="meta">organic compounds as energy and carbon</span>
         </li>
-        
+
         <li>
           <em>Pseudomonas putida</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=303"
              rel="nofollow noreferrer"><code>NCBITaxon:303</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/12534463/"
              rel="nofollow noreferrer"><code>PMID:12534463</code></a>
-          
-          
+
+
           <span class="meta">versatile chemoorganotroph</span>
         </li>
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.7554/eLife.21598"
              rel="nofollow noreferrer"><code>DOI:10.7554/eLife.21598</code></a>
-          
-          
+
+
           <span class="meta">Strain-level respiratory chemoorganotroph paired to the reviewed AtpD beta component of its F-type ATP synthase.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.883201+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for organic chemical oxidation, respiratory electron transport, ATP synthesis, and biomass formation.</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007402×1, METPO:2007403×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:38:01Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022904×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:41:04Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007504×1, METPO:1007500×1, METPO:1007501×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T07:34:58Z</time> ·
           <strong>RETYPE_CAUSAL_NODES</strong> · claude
           <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T08:14:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:50860×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T02:30:13Z</time> ·
           <strong>RETYPE_CAUSAL_NODES</strong> · claude
           <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-06-13T21:03:27Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:14Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2, METPO:2007402×1, METPO:2007403×1, METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009060×1, GO:0009061×1, GO:0006113×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:34Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01001495×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): fermentation is typed BIOLOGICAL_PROCESS. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A CLASS of routes rather than one route -- fermentation names a mode of energy conservation with many distinct implementations, so its steps cannot be enumerated without picking one. Was 3 BIOLOGICAL_PROCESS to 2 before this tranche. NOTE its groundings disagree with each other (GO:0006113 x3, METPO:1002005, and METPO:1000845 which is ACETOGENESIS, a different concept) -- filed as #391 and deliberately NOT touched here, because retyping a node while carrying a wrong CURIE along unchanged would make it look reviewed.</p>
         </li>
-        
+
         <li>
           <time>2026-08-17T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_SENSE</strong> · claude
           <p class="changes">One node_id per SENSE (issues 356, 384): ambient_oxygen is the chemical sense here. Already the ambient sense. Listed so a re-run still normalises the label and still retracts ENVO:01001495 if it has been re-applied — the grounder keys on (label, node_type), so an un-normalised label is what lets the retracted CURIE come back.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope chemoorganotrophic_organic_oxidation_energy=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T11:45:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -838,12 +838,12 @@ Only identifiers that can be assigned confidently are given below; unresolved en
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1194,8 +1194,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 11:45 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

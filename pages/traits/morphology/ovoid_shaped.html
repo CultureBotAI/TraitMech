@@ -30,22 +30,22 @@
     </p>
     <h1>ovoid shaped</h1>
     <p class="curie"><code>METPO:1000677</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A cell shape in which an organism has an oval morphology, rounded at both ends with one end often slightly broader than the other.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Ovoid-shape midcell peptidoglycan mechanism</h2>
       <p class="meta">Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth, and rounded ovoid geometry.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The graph represents pneumococcal midcell wall assembly. The R6 PBP2b example is explicitly one protein component of the RodA-PBP2b elongasome, not an accession for the full protein complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,28 +54,28 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>MapZ</strong>
             <span class="edge-predicate">positions</span>
             <strong>midcell peptidoglycan assembly</strong>
-            
+
             <p>MapZ participates in division-site placement for ovoid growth.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.mib.2016.07.014</code>
                 <span class="evidence-snippet">relies on the membrane protein MapZ</span>
                 <span class="meta">Supports MapZ as a division-positioning factor in S. pneumoniae.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>midcell peptidoglycan assembly</strong>
             <span class="edge-predicate">causes</span>
@@ -83,16 +83,16 @@
             <code>biolink:causes</code>
             <p>Midcell peptidoglycan assembly shapes ovoid cell geometry.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cub.2021.04.041</code>
                 <span class="evidence-snippet">peptidoglycan synthesis ... in the ovoid bacterium</span>
                 <span class="meta">Supports PG assembly dynamics in ovoid S. pneumoniae.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>DivIVA</strong>
             <span class="edge-predicate">controls</span>
@@ -100,16 +100,16 @@
             <code>RO:0002211</code>
             <p>DivIVA controls septum splitting and elongation dynamics.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mbio.01311-24</code>
                 <span class="evidence-snippet">DivIVA controls the dynamics of septum splitting and cell elongation</span>
                 <span class="meta">Supports DivIVA in ovococcal cell morphogenesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>septum splitting</strong>
             <span class="edge-predicate">contributes to</span>
@@ -117,16 +117,16 @@
             <code>RO:0002326</code>
             <p>Septum splitting and elongation dynamics contribute to ovoid morphology.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mbio.01311-24</code>
                 <span class="evidence-snippet">how ovoid bacteria proliferate</span>
                 <span class="meta">Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>ovoid geometry</strong>
             <span class="edge-predicate">manifests as</span>
@@ -134,138 +134,138 @@
             <code>METPO:2007400</code>
             <p>Ovoid cell-body geometry manifests the ovoid-shaped trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.cub.2021.04.041</code>
                 <span class="evidence-snippet">ovoid-shaped bacteria</span>
                 <span class="meta">Supports the trait endpoint.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>midcell peptidoglycan assembly</strong>
             <span class="edge-predicate">has component</span>
             <strong>septal peptidoglycan synthesis</strong>
-            
+
             <p>Ovococcal midcell growth includes a distinct septal PG synthesis mode.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">There are two spatially distinct modes of PG synthesis: septal and peripheral.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>midcell peptidoglycan assembly</strong>
             <span class="edge-predicate">has component</span>
             <strong>peripheral peptidoglycan synthesis</strong>
-            
+
             <p>Ovococcal midcell growth includes a distinct peripheral PG synthesis mode.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">There are two spatially distinct modes of PG synthesis: septal and peripheral.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>FtsZ treadmilling</strong>
             <span class="edge-predicate">drives</span>
             <strong>septal peptidoglycan synthesis</strong>
-            
+
             <p>FtsZ treadmilling drives septal PG synthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">FtsZ treadmilling drives septal PG synthesis together with the FtsW-PBP2x complex.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>FtsW-PBP2x complex</strong>
             <span class="edge-predicate">synthesizes</span>
             <strong>septal peptidoglycan synthesis</strong>
-            
+
             <p>The FtsW-PBP2x complex synthesizes the division septum.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">Septal PG synthesis is driven by the FtsW-PBP2x complex to synthesize the division septum.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>RodA-PBP2b elongasome</strong>
             <span class="edge-predicate">drives</span>
             <strong>peripheral peptidoglycan synthesis</strong>
-            
+
             <p>The RodA-PBP2b elongasome drives peripheral PG synthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">Peripheral (elongation) activity is carried out by the elongasome, driven by the RodA-PBP2b pair.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>MapZ</strong>
             <span class="edge-predicate">positions</span>
             <strong>FtsZ ring</strong>
-            
+
             <p>MapZ guides movement and positioning of the FtsZ ring.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">MapZ guides movement of FtsZ and associated proteins from the septal ring to the equatorial ring.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>midcell peptidoglycan assembly</strong>
             <span class="edge-predicate">assembles as</span>
             <strong>concentric midcell rings</strong>
-            
+
             <p>Septal and peripheral PG machineries assemble at midcell into concentric rings.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1042/BSR20221664</code>
-                
+
                 <span class="meta">Septal and peripheral PG-synthesis machineries assemble at mid-cell into concentric rings (inner septal, outer peripheral).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -275,16 +275,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>RodA-PBP2b elongasome</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0A3M6/entry" rel="nofollow noreferrer"><code>UniProtKB:P0A3M6</code></a>
                   <br>Penicillin-binding protein 2B <span class="meta">(penA)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=171101" rel="nofollow noreferrer">Streptococcus pneumoniae R6</a>
                   <br><code>NCBITaxon:171101</code>
                 </td>
@@ -295,31 +295,31 @@
                 <td>
                   <p>R6 PBP2b is the transpeptidase component of the RodA-PBP2b elongasome that performs peripheral peptidoglycan synthesis.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1128/JB.00184-13" rel="nofollow noreferrer"><code>DOI:10.1128/JB.00184-13</code></a>
-                      
+
                       <span class="evidence-snippet">PBP2b is essential for peripheral peptidoglycan synthesis</span>
                       <span class="meta">The R6-derived depletion study establishes the protein&#39;s peripheral-wall and morphology role; UniProt verifies the reviewed R6 accession.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -329,114 +329,114 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
         <dt>Definition source</dt><dd>DOI:10.1016/j.cub.2021.04.041</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/cell_shape.html" >cell shape <code>METPO:1000666</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>S_ovoid <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>ovoid-shaped <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000677</code> <span class="dim-preview">[+1.410, -5.519, -0.585, +0.196, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/facultatively_anaerobic.html">facultatively anaerobic</a>
           <span class="sim">0.559</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/flask_shaped.html">flask shaped</a>
           <span class="sim">0.497</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/coccobacillus_shaped.html">coccobacillus shaped</a>
           <span class="sim">0.438</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_optimum_mid1.html">pH optimum mid1</a>
           <span class="sim">0.334</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_aerobic.html">obligately aerobic</a>
           <span class="sim">0.327</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_very_low.html">temperature range very low</a>
           <span class="sim">0.305</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/rod_shaped.html">rod shaped</a>
           <span class="sim">0.305</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_optimum_mid1.html">NaCl optimum mid1</a>
           <span class="sim">0.304</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -507,117 +507,117 @@ FtsZ supplies the common spatial organizer in this MreB-lacking bacterium. PBP2x
 - elongasome complex
 - cytoplasmic membrane
 - peptidoglycan-containing cell wall</pre>
-      
+
       <p class="meta">Showing the first 60 of
         231 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/morphology/ovoid_shaped-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Streptococcus pneumoniae R6</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=171101"
              rel="nofollow noreferrer"><code>NCBITaxon:171101</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1128/JB.00184-13"
              rel="nofollow noreferrer"><code>DOI:10.1128/JB.00184-13</code></a>
-          
-          
+
+
           <span class="meta">Strain-level ovoid pneumococcal model paired to reviewed PBP2b, a component of the RodA-PBP2b peripheral peptidoglycan machinery.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.891106+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-11T20:05:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for MapZ, DivIVA, midcell peptidoglycan assembly, septum splitting, and ovoid cell geometry.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1, METPO:2007400×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:19Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: shapes → causes ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:22Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T05:05:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:Q1IYG2×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-08-22T04:26:15Z</time> ·
           <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
           <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic GO/InterPro terms and retracted 0 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope ovoid_shaped_midcell_pg_assembly=MECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ftsw_pbp2x, roda_pbp2b); added taxon-paired protein example(s) UniProtKB:P0A3M6 on roda_pbp2b (NCBITaxon:171101); regrounded 1 node(s) (mapZ: none-&gt;InterPro:IPR030858); added canonical example(s) NCBITaxon:171101.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -646,12 +646,12 @@ FtsZ supplies the common spatial organizer in this MreB-lacking bacterium. PBP2x
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1002,8 +1002,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

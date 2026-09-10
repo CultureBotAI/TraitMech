@@ -30,22 +30,22 @@
     </p>
     <h1>pH phenotype with numerical limits</h1>
     <p class="curie"><code>METPO:1000531</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A phenotype characterized by specific pH values or ranges that define growth or activity limits.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>pH numerical-limits and homeostasis context axis</h2>
       <p class="meta">DOI-backed nonmechanistic graph connecting the external-pH measurement axis and pH optimum, range, and delta subclasses with contextual PMF, F0F1-ATPase, antiporter, amino-acid decarboxylase, and cytoplasmic-buffering branches.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>external pH axis</strong>
             <span class="edge-predicate">defines</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007500</code>
             <p>External pH is the quantitative axis defining pH phenotypes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">external pH values that are outside</span>
                 <span class="meta">Verified against the open PMC manuscript of the Krulwich et al. review; microbial pH phenotypes are expressed relative to external growth pH values and internal pH-homeostatic limits.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>pH optimum</strong>
             <span class="edge-predicate">is a</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH optimum is a numerical-limit pH phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">cytoplasmic pH</span>
                 <span class="meta">Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>pH range</strong>
             <span class="edge-predicate">is a</span>
@@ -100,16 +100,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH range is a numerical-limit pH phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.tim.2007.02.005</code>
                 <span class="evidence-snippet">proton motive force</span>
                 <span class="meta">Supports pH range as the span of external pH over which the proton motive force remains compatible with growth.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>pH delta</strong>
             <span class="edge-predicate">is a</span>
@@ -117,16 +117,16 @@
             <code>rdfs:subClassOf</code>
             <p>pH delta is a numerical-limit pH phenotype.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro2549</code>
                 <span class="evidence-snippet">pH homeostasis</span>
                 <span class="meta">Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>external pH axis</strong>
             <span class="edge-predicate">regulates</span>
@@ -134,16 +134,16 @@
             <code>RO:0002211</code>
             <p>External pH influences the proton motive force across the cell envelope.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">cells maintain their cytoplasmic pH around neutral</span>
                 <span class="meta">Verified against the open Poolman review; maintaining near-neutral cytoplasmic pH makes external pH a major determinant of the transmembrane pH-gradient component of the PMF.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>F0F1-ATPase / ATP synthase</strong>
             <span class="edge-predicate">enables</span>
@@ -151,16 +151,16 @@
             <code>RO:0002327</code>
             <p>F0F1-ATPase couples the proton motive force to ATP synthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">stored in the form of a proton motive force, which subsequently can be used by F0F1-ATP synthase to make ATP</span>
                 <span class="meta">Verified against the open Poolman review; the PMF links proton translocation by the F0F1-ATPase to ATP synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>Na+/H+ antiporter activity</strong>
             <span class="edge-predicate">regulates</span>
@@ -168,16 +168,16 @@
             <code>RO:0002211</code>
             <p>Na+/H+ antiporter activity regulates internal pH and PMF.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high</span>
                 <span class="meta">Verified against the open Poolman review; Na+/H+ antiporters are listed as key bacterial pH-homeostasis regulators.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>K+/H+ antiporter activity</strong>
             <span class="edge-predicate">regulates</span>
@@ -185,16 +185,16 @@
             <code>RO:0002211</code>
             <p>K+/H+ antiporter activity regulates internal pH and PMF.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters</span>
                 <span class="meta">Verified against the open Poolman review; K+/H+ antiporters are listed as key bacterial pH-homeostasis regulators.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>amino-acid decarboxylase + antiporter systems</strong>
             <span class="edge-predicate">consumes</span>
@@ -202,16 +202,16 @@
             <code>biolink:consumes</code>
             <p>Amino-acid decarboxylase plus antiporter systems consume intracellular protons, raising internal pH.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">the chemistry of the decarboxylation reaction requires a proton</span>
                 <span class="meta">Verified against the open Poolman review; substrate decarboxylation consumes a cytoplasmic proton and raises internal pH.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>cytoplasmic phosphate buffering</strong>
             <span class="edge-predicate">contributes to</span>
@@ -219,16 +219,16 @@
             <code>RO:0002326</code>
             <p>Cytoplasmic phosphate pools contribute to internal-pH stability.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">sufficient buffering capacity (e.g. inorganic and organic phosphates)</span>
                 <span class="meta">Verified against the open Poolman review; cytoplasmic phosphate pools are named as sufficient buffering capacity needed for internal-pH stability.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>ATP synthesis from proton motive force</strong>
             <span class="edge-predicate">associated with</span>
@@ -236,16 +236,16 @@
             <code>biolink:associated_with</code>
             <p>F0F1-coupled ATP synthesis from the PMF is associated with the PMF branch of pH numerical-limit context.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">drive the synthesis of ATP and the transport of solutes</span>
                 <span class="meta">Verified against the open Poolman review; this connector keeps PMF-driven ATP synthesis as bioenergetic context rather than direct proof of a pH numerical limit.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>internal pH / proton motive force</strong>
             <span class="edge-predicate">associated with</span>
@@ -253,16 +253,16 @@
             <code>biolink:associated_with</code>
             <p>Regulated internal pH and PMF homeostasis is associated with the PMF branch of pH numerical-limit context.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">Cells use different transport mechanisms to interconvert the ΔΨ and ΔpH to simultaneously maintain a relatively constant PMF and internal pH</span>
                 <span class="meta">Verified against the open Poolman review; this connector keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis context rather than a universal mechanism for every pH bin.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>intracellular H+</strong>
             <span class="edge-predicate">associated with</span>
@@ -270,16 +270,16 @@
             <code>biolink:associated_with</code>
             <p>Intracellular proton consumption is associated with cytoplasmic pH homeostasis in the pH numerical-limit context.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">the internal pH is increased</span>
                 <span class="meta">Verified against the open Poolman review; this connector keeps amino-acid decarboxylation as cytoplasmic proton control context.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>internal pH</strong>
             <span class="edge-predicate">associated with</span>
@@ -287,26 +287,26 @@
             <code>biolink:associated_with</code>
             <p>Cytoplasmic pH homeostasis is associated with external-pH numerical-limit phenotypes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/femsre/fuad033</code>
                 <span class="evidence-snippet">the magnitude of the pH gradient is largely determined by the external pH</span>
                 <span class="meta">Verified against the open Poolman review; this connector keeps internal-pH homeostasis as measured external-pH phenotype context rather than direct proof of a measured external-pH limit.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -314,118 +314,118 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/nrmicro2549</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (3)</h2>
       <ul>
-        
+
         <li><a href="../../traits/environment/ph_delta.html">pH delta <code>METPO:1000232</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_optimum.html">pH optimum <code>METPO:1000331</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_range.html">pH range <code>METPO:1000332</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000531</code> <span class="dim-preview">[-2.393, -1.211, -4.380, +0.001, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_optimum.html">pH optimum</a>
           <span class="sim">0.942</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_delta.html">pH delta</a>
           <span class="sim">0.940</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range.html">pH range</a>
           <span class="sim">0.939</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits</a>
           <span class="sim">0.917</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/delta_phenotype_with_numerical_limits.html">delta phenotype with numerical limits</a>
           <span class="sim">0.907</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/optimum_phenotype_with_numerical_limits.html">optimum phenotype with numerical limits</a>
           <span class="sim">0.904</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_range.html">NaCl range</a>
           <span class="sim">0.898</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
           <span class="sim">0.886</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -496,165 +496,165 @@ The trait should preserve whether a value is an exact observation, an interval, 
 ## 2. Current mechanistic understanding
 
 External pH alters both components of the PMF: the chemical gradient, ΔpH, and electrical potential, Δψ. Acidophiles resist proton influx and often maintain a positive-inside potential; alkaliphiles must capture scarce external protons and use a large negative Δψ, cation/proton antiport, and proton-retaining surfaces. These processes stabilize cytoplasmic pH and preserve transport, ATP production, macromolecular stability, and enzyme function (krulwich2011molecularaspectsof pages 1-3, krulwich2011molecularaspectsof pages 3-5).</pre>
-      
+
       <p class="meta">Showing the first 60 of
         273 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/environment/ph_phenotype_with_numerical_limits-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1371/journal.pone.0018960"
              rel="nofollow noreferrer"><code>DOI:10.1371/journal.pone.0018960</code></a>
-          
-          
+
+
           <span class="meta">E. coli K-12 W3110 growth was measured across buffered external pH conditions; TolC affected maximal exponential growth at pH 4.5-6.0 but not 6.5-8.5, exemplifying a quantitative pH-growth phenotype.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.845918+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking the external pH axis to pH optimum, range, and delta measurement types.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T07:37:39Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:10Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×2, RO:0002327×1, biolink:consumes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-15T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Normalised causal-node type(s) so one node_id means one thing corpus-wide (issue 356): proton_motive_force: BIOLOGICAL_PROCESS -&gt; STATE. The schema&#39;s OWN example of STATE: &#39;a bioenergetic or molecular state of the cell (e.g. proton motive force ...) ... the state is the gradient / steady-value, not its establishment&#39;. All 35 occurrences describe the gradient -- every description across all four types reads &#39;electrochemical proton gradient&#39;, including the 13 typed BIOLOGICAL_PROCESS (&#39;Transmembrane electrochemical gradient generated by respiration&#39;), which name the gradient and its provenance rather than the generating process. Nothing here means the establishment, so this is a retype and not a rename; records that DO mean the process already use a separate id (proton_motive_force_generation in ph_delta.yaml). Also settles the one edge #356 was filed for: phototrophic.yaml&#39;s CAPACITY typing was blocking `powers` (METPO:2007900), which is gated to BIOLOGICAL_PROCESS|STATE.</p>
         </li>
-        
+
         <li>
           <time>2026-08-15T06:00:00Z</time> ·
           <strong>SPLIT_PROTEIN_FROM_ACTIVITY</strong> · claude
           <p class="changes">Separated the protein sense from the activity sense so one node_id means one thing (issue 356): renamed na_h_antiporter -&gt; na_h_antiport_activity (MOLECULAR_FUNCTION sense). Described as &#39;Cation/proton antiport ACTIVITY regulating internal pH and PMF&#39;, while the six GENE_OR_PROTEIN occurrences describe the transporter (&#39;Membrane antiporter that exports sodium from the cytoplasm in exchange for protons&#39;). na_h_antiport_activity already exists corpus-wide as MOLECULAR_FUNCTION.</p>
         </li>
-        
+
         <li>
           <time>2026-08-21T08:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · codex
           <p class="changes">Tranche 5 of issue 356 settles the process/quality families and merges ids that meant the same sense: phosphate_buffering is BIOLOGICAL_PROCESS. Both occurrences describe cytoplasmic phosphate pools buffering protons and stabilizing pH: the buffering action, not the size of a buffer reservoir. The distinct cytoplasmic_buffering_capacity id remains CAPACITY for that quantity sense.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope ph_phenotype_numerical_axis=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (f0f1_atpase).</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1371/journal.pone.0018960). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
         <li>
           <time>2026-09-04T02:20:00Z</time> ·
           <strong>REVIEW_CAUSAL_EVIDENCE</strong> · codex
           <p class="changes">Reviewed the ph_phenotype_numerical_axis graph for issue #183: added snippets to 1 record-level and 7 edge-level evidence items, and grounded 2 unmapped pH-axis predicates to RO:0002211 or RO:0002326. No paid research service was called.</p>
         </li>
-        
+
         <li>
           <time>2026-09-04T18:00:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (5 components to 1) by adding 4 source- and verbatim-snippet-backed association connectors among PMF, F0F1-ATPase/ATP-synthesis, antiporter, amino-acid-decarboxylase, and phosphate-buffering branches. No paid research service was called.</p>
         </li>
-        
+
         <li>
           <time>2026-09-06T17:10:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review: replaced the weak Poolman pH-homeostasis snippets with exact text supporting decarboxylation-linked proton consumption and internal pH context.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T02:20:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issue #682: replaced the short Poolman PMF snippet nested inside another connector snippet with exact near-neutral cytoplasmic-pH wording.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T04:24:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issue #685: replaced weak pH edge snippets with exact source spans that carry their edge claims, and left derived pH-axis bin membership in notes instead of fragment snippets.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T06:14:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issues #688, #689, and #690: restored record-level Krulwich pH-axis support, replaced cross-trait Poolman antiporter and phosphate-buffering fragments with primary-source spans, and made the PMF connector snippet distinct.</p>
         </li>
-        
+
         <li>
           <time>2026-09-07T20:05:00Z</time> ·
           <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
           <p class="changes">Addressed PR #664 adversarial review issues #696, #698, and #699: requoted weak Krulwich pH-homeostasis edge snippets and removed unsupported pH-breadth hub connectors that only joined generic review branches to quantitative bin nodes.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -683,12 +683,12 @@ External pH alters both components of the PMF: the chemical gradient, ΔpH, and 
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1039,8 +1039,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-09-07 20:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -30,22 +30,22 @@
     </p>
     <h1>pangenome openness</h1>
     <p class="curie"><code>traitmech:000102</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A genomics trait describing the structure of a species&#39; pangenome — the balance of core versus accessory genes and whether the pangenome is open (continually acquiring new genes across genomes) or closed.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Horizontal gene transfer drives open pangenomes</h2>
       <p class="meta">Evidence-backed causal sketch linking HGT and ecological breadth to open versus closed pangenome structure.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>horizontal gene transfer</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>HGT continually adds new accessory genes, keeping the pangenome open.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1073/pnas.0506758102</code>
-                
+
                 <span class="meta">Tettelin et al. introduce the pan-genome concept distinguishing open vs closed pangenomes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>pangenome openness</strong>
             <span class="edge-predicate">associated with</span>
@@ -83,16 +83,16 @@
             <code>biolink:associated_with</code>
             <p>Open pangenomes accumulate large accessory gene pools across strains.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nmicrobiol.2017.40</code>
-                
+
                 <span class="meta">McInerney et al. review the ecological and population drivers of pangenome openness.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>plasmid</strong>
             <span class="edge-predicate">enables</span>
@@ -100,16 +100,16 @@
             <code>RO:0002327</code>
             <p>Plasmids are mobile vehicles for accessory genes, increasing opportunity for gene acquisition.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/mgen.0.001021</code>
-                
+
                 <span class="meta">Gene gain and loss mediated by mobile genetic elements including plasmids.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>prophage</strong>
             <span class="edge-predicate">promotes</span>
@@ -117,111 +117,111 @@
             <code>RO:0002213</code>
             <p>Prophage-associated gene flux contributes to recent gain/loss and accessory genome expansion.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/microorganisms12050986</code>
-                
+
                 <span class="meta">Prophages, integrases, and transfer/mobile elements identified as main drivers of pangenome openness.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>gene gain and loss dynamics</strong>
             <span class="edge-predicate">shapes</span>
             <strong>pangenome openness</strong>
-            
+
             <p>Open/closed behavior reflects balance of ongoing gene gain versus loss across sampled lineages.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2022.04.23.489244</code>
-                
+
                 <span class="meta">HGT and resultant gene gain and loss dynamics are central drivers of pangenome composition.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>core gene fraction</strong>
             <span class="edge-predicate">negatively associated with</span>
             <strong>pangenome openness</strong>
-            
+
             <p>A larger conserved core leaves less flexible accessory fraction; empirically anticorrelated with openness.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/microorganisms12050986</code>
-                
+
                 <span class="meta">Strong inverse correlation between core gene percentage and openness coefficient (corr = -0.910).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>rare gene fraction</strong>
             <span class="edge-predicate">positively associated with</span>
             <strong>pangenome openness</strong>
-            
+
             <p>A higher proportion of rare genes indicates continued acquisition and non-saturation of the pangenome.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/microorganisms12050986</code>
-                
+
                 <span class="meta">Positive correlation between rare gene percentage and openness coefficient (corr = 0.742).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>sampling bias</strong>
             <span class="edge-predicate">biases estimate of</span>
             <strong>apparent pangenome openness</strong>
-            
+
             <p>Apparent openness can reflect which genomes were sampled rather than true HGT dynamics.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2022.04.23.489244</code>
-                
+
                 <span class="meta">Gene accumulation curves can be misleading because they may reflect sampling temporal/diversity bias.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>annotation error</strong>
             <span class="edge-predicate">biases estimate of</span>
             <strong>apparent pangenome openness</strong>
-            
+
             <p>Misannotation inflates or deflates presence/absence calls and can misclassify open/closed status.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2022.04.23.489244</code>
-                
+
                 <span class="meta">Higher rates of annotation error can lead to incorrect estimates of whether a pangenome is open or closed.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -229,114 +229,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1073/pnas.0506758102</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>open pangenome <span class="meta">NARROW_SYNONYM · DOI:10.1073/pnas.0506758102</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/gc_skew.html">GC skew</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -407,93 +407,93 @@ Selection also structures which accessory genes coexist. Across 40 *Pseudomonas*
 | gene deletion / gene loss | Label only | Proximal process reducing retained repertoire. |
 | natural competence | Label only | Cell state enabling transformation. |
 | CSP–ComD/ComE competence signaling | Taxon-specific, label only | Pneumococcal regulatory module. |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         213 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/genomics/pangenome_openness-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/20623278/"
              rel="nofollow noreferrer"><code>PMID:20623278</code></a>
-          
-          
+
+
           <span class="meta">Textbook open pan-genome: enormous accessory-genome diversity across strains relative to the core genome.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-05T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate GENOMICS trait (pangenome openness) from literature research.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (HGT-driven open pangenome) with biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009292×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, RO:0002213×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope pangenome_openness_hgt=NONMECHANISTIC with scope_notes; retyped 2 node(s) (plasmid-&gt;GENETIC_ELEMENT, prophage-&gt;GENETIC_ELEMENT).</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -522,12 +522,12 @@ Selection also structures which accessory genes coexist. Across 40 *Pseudomonas*
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -878,8 +878,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

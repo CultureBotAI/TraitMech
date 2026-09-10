@@ -14,26 +14,26 @@ METPO source class and (optionally) to literature evidence.
 
 **Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
 
-| Category | REVIEWED | DEPRECATED | causal_graphs | Total |
-|---|---:|---:|---:|---:|
-| MORPHOLOGY | 88 | 0 | 88 | 88 |
-| PHYSIOLOGY | 45 | 0 | 45 | 45 |
-| ENVIRONMENT | 121 | 0 | 121 | 121 |
-| ECOLOGY | 26 | 0 | 26 | 26 |
-| GENOMICS | 19 | 0 | 19 | 19 |
-| UPPER | 8 | 0 | 5 | 8 |
-| METABOLISM | 120 | 23 | 49 | 143 |
-| OBSERVATION | 0 | 20 | 0 | 20 |
-| QUANTITATIVE_PROPERTY | 0 | 7 | 0 | 7 |
-| **TOTAL** | **427** | **50** | **353** | **477** |
+| Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
+|---|---:|---:|---:|---:|---:|
+| MORPHOLOGY | 88 | 0 | 0 | 88 | 88 |
+| PHYSIOLOGY | 45 | 0 | 0 | 45 | 45 |
+| ENVIRONMENT | 121 | 0 | 0 | 121 | 121 |
+| ECOLOGY | 26 | 0 | 0 | 26 | 26 |
+| GENOMICS | 19 | 0 | 0 | 19 | 19 |
+| UPPER | 8 | 0 | 0 | 5 | 8 |
+| METABOLISM | 120 | 14 | 23 | 49 | 157 |
+| OBSERVATION | 0 | 0 | 20 | 0 | 20 |
+| QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
+| **TOTAL** | **427** | **14** | **50** | **353** | **491** |
 
-All 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
-`DEPRECATED`. Of the reviewed records, 353 currently carry causal graphs. The
-50 deprecated records (23 metabolism, 20 observation, 7 quantitative_property)
-are generic relation or measurement carriers from the upstream METPO seed that
-are not intended to carry mechanism graphs in TraitMech. They are retained for
-traceability while specific trait records capture the chemical, quality,
-measurement, or growth context.
+477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
+`DEPRECATED`; 14 newer metabolism records are `PROPOSED`. Of the reviewed
+records, 353 currently carry causal graphs. The 50 deprecated records (23
+metabolism, 20 observation, 7 quantitative_property) are generic relation or
+measurement carriers from the upstream METPO seed that are not intended to carry
+mechanism graphs in TraitMech. They are retained for traceability while specific
+trait records capture the chemical, quality, measurement, or growth context.
 
 (`material entity` subtree — chemicals / microbes / enzymes — is not
 seeded; those belong in MIM / CultureMech.)
@@ -71,7 +71,8 @@ just validate-all             # validate every TraitRecord YAML
   plus `DETECTION` and `OTHER`).
 - **TermKindEnum** — `CLASS` / `DATATYPE_PROPERTY` /
   `OBJECT_PROPERTY` / `ANNOTATION_PROPERTY`.
-- **MappingStatusEnum** — `SEEDED` / `REVIEWED` / `DEPRECATED`.
+- **MappingStatusEnum** — `SEEDED` / `PROPOSED` / `REVIEWED` /
+  `DEPRECATED`.
 - **PriorityEnum**, **SynonymTypeEnum**.
 
 ## Layout
@@ -81,7 +82,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 477 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 491 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts

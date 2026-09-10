@@ -30,22 +30,22 @@
     </p>
     <h1>stress response</h1>
     <p class="curie"><code>traitmech:000078</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A physiological program by which a cell senses and mounts a protective response to environmental or cellular stress, such as the RpoS-mediated general stress response of enteric bacteria.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Stress-induced protective response</h2>
       <p class="meta">Evidence-backed causal sketch linking environmental stress to an induced, protective general stress response.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents the enterobacterial stringent-response/RpoS/Hfq branch and is not universal across microbial taxa. The E. coli RpoS example anchors the sigma-S module; RSH is a heterogeneous enzyme superfamily and Hfq is a separate RNA-chaperone family.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>environmental stress</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>A stressor triggers the stress-response program.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-090110-102946</code>
-                
+
                 <span class="meta">Battesti et al. review stress/stationary-phase induction of RpoS.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>response to stress</strong>
             <span class="edge-predicate">confers</span>
@@ -83,50 +83,50 @@
             <code>METPO:2007700</code>
             <p>The induced program realizes the stress-response trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/nrmicro3032</code>
-                
+
                 <span class="meta">Imlay reviews inducible molecular stress defenses.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>RelA/SpoT homologue enzymes</strong>
             <span class="edge-predicate">synthesizes/hydrolyzes</span>
             <strong>(p)ppGpp</strong>
-            
+
             <p>RSH enzymes synthesize and hydrolyze the (p)ppGpp alarmone.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/mic.0.001483</code>
-                
+
                 <span class="meta">(p)ppGpp is synthesized and hydrolysed by RelA-SpoT homologue (RSH) enzymes; broadly conserved in bacteria.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>nutrient limitation</strong>
             <span class="edge-predicate">triggers</span>
             <strong>(p)ppGpp</strong>
-            
+
             <p>Nutrient-limiting conditions trigger a surge of (p)ppGpp.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/mic.0.001483</code>
-                
+
                 <span class="meta">Stringent response mediated by (p)ppGpp, whose intracellular surge is triggered by nutrient-limiting conditions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>(p)ppGpp</strong>
             <span class="edge-predicate">inhibits</span>
@@ -134,33 +134,33 @@
             <code>RO:0002212</code>
             <p>(p)ppGpp inhibits ribosome biosynthesis, slowing growth.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1099/mic.0.001483</code>
-                
+
                 <span class="meta">(p)ppGpp inhibits ribosome biosynthesis, inducing a slow-growth phenotype.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>(p)ppGpp</strong>
             <span class="edge-predicate">enhances</span>
             <strong>stress tolerance</strong>
-            
+
             <p>Moderate (p)ppGpp induction enhances stress tolerance.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.isci.2024.108818</code>
-                
+
                 <span class="meta">Moderate induction of (p)ppGpp reduces growth rate while enhancing stress tolerance.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>(p)ppGpp</strong>
             <span class="edge-predicate">positively regulates</span>
@@ -168,33 +168,33 @@
             <code>RO:0002213</code>
             <p>(p)ppGpp positively regulates RpoS abundance/activity.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.isci.2024.108818</code>
-                
+
                 <span class="meta">(p)ppGpp positively regulates RpoS by transcriptional activation and by inhibiting RpoS proteolysis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>RpoS (sigma S)</strong>
             <span class="edge-predicate">induces</span>
             <strong>general stress resistance</strong>
-            
+
             <p>RpoS-dependent gene expression induces general stress resistance.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-090110-102946</code>
-                
+
                 <span class="meta">RpoS-dependent gene expression leads to general stress resistance of cells.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Hfq</strong>
             <span class="edge-predicate">promotes</span>
@@ -202,16 +202,16 @@
             <code>RO:0002213</code>
             <p>Hfq is required for sRNA-dependent translation of RpoS, and so raises the amount of RpoS available.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mmbr.00151-22</code>
-                
+
                 <span class="meta">Hfq is needed for sRNA-dependent RpoS translation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>general stress resistance</strong>
             <span class="edge-predicate">confers</span>
@@ -219,19 +219,19 @@
             <code>METPO:2007700</code>
             <p>General stress resistance realizes the stress-response trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1146/annurev-micro-090110-102946</code>
-                
+
                 <span class="meta">RpoS-mediated general stress resistance is the protective program defining the trait.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -241,16 +241,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>RpoS (sigma S)</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P13445/entry" rel="nofollow noreferrer"><code>UniProtKB:P13445</code></a>
                   <br>RNA polymerase sigma factor RpoS <span class="meta">(rpoS)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
                   <br><code>NCBITaxon:83333</code>
                 </td>
@@ -261,31 +261,31 @@
                 <td>
                   <p>E. coli K-12 sigma-S factor directing stationary-phase and general-stress transcription; it anchors only this enterobacterial branch.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1073/pnas.90.8.3511" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.90.8.3511</code></a>
-                      
+
                       <span class="evidence-snippet">the rpoS gene product, sigma 38, is a second principal sigma factor in stationary-phase Escherichia coli</span>
                       <span class="meta">The primary study identifies and functionally characterizes E. coli RpoS; UniProtKB P13445 is the reviewed K-12 entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -293,123 +293,123 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1146/annurev-micro-090110-102946</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/oxidative_stress_response.html">oxidative stress response <code>traitmech:000079</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>general stress response <span class="meta">RELATED_SYNONYM · DOI:10.1146/annurev-micro-090110-102946</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -480,155 +480,155 @@ In *Caulobacter crescentus*, phosphorylated PhyR binds NepR through partner swit
 A 2023 primary study added a recovery mechanism: Lon directly degrades σT under optimal growth and during recovery from sucrose-induced osmotic stress. Deletion of `lon` delays σT downregulation, and LarA enhances Lon-mediated σT degradation both in vitro and in vivo. This supports a conserved design principle—regulated destruction of the master sigma factor resets the GSR—even though the proteins differ between taxa. (akar2023regulationofthe pages 1-2, akar2023regulationofthe pages 7-9)
 
 ## Candidate nodes grouped by type</pre>
-      
+
       <p class="meta">Showing the first 60 of
         252 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/stress_response-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/38411096/"
              rel="nofollow noreferrer"><code>PMID:38411096</code></a>
-          
-          
+
+
           <span class="meta">general stress response (RpoS)</span>
         </li>
-        
+
         <li>
           <em>Deinococcus radiodurans</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1299"
              rel="nofollow noreferrer"><code>NCBITaxon:1299</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/30339218/"
              rel="nofollow noreferrer"><code>PMID:30339218</code></a>
-          
-          
+
+
           <span class="meta">extreme stress resistance</span>
         </li>
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1073/pnas.90.8.3511"
              rel="nofollow noreferrer"><code>DOI:10.1073/pnas.90.8.3511</code></a>
-          
-          
+
+
           <span class="meta">Strain-level general-stress model paired to the reviewed RpoS sigma factor.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-04T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate PHYSIOLOGY axis class (stress response) to parent specific stress-response sub-variants.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (stress-induced protective response) with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 8 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:15Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2, RO:0002212×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A010TBV5×1, UniProtKB:A0A3B9B147×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-08-04T03:08:16Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 2 causal edge(s) off enables/RO:0002327 with a TRAIT object (2 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T18:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Edge hfq -&gt; rpos in graph stress_response_induction: re-grounded it from enables/RO:0002327 to promotes/RO:0002213. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. &#39;Hfq enables sRNA-dependent TRANSLATION of RpoS&#39; -- the object is the sigma factor, not the translation, so what the edge actually asserts about RpoS is that Hfq increases it. The graph already reads ppgpp -positively regulates-&gt; rpos alongside it.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T13:25:00-07:00</time> ·
           <strong>REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Marked the graph mechanistic and enterobacterial in scope, reviewed the heterogeneous RSH umbrella as label-only, grounded RpoS and Hfq to exact InterPro families, and added DOI-cited E. coli K-12 RpoS P13445.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -657,12 +657,12 @@ A 2023 primary study added a recovery mechanism: Lon directly degrades σT under
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1013,8 +1013,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-24 20:25 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -495,7 +495,7 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        out_path.write_text(page_html)
+        write_html(out_path, page_html)
         written += 1
 
         category_lists[doc.get("trait_category", "OTHER")].append({
@@ -521,7 +521,7 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        out_path.write_text(page_html)
+        write_html(out_path, page_html)
 
     # Render UMAP page if data exists.
     if UMAP_JSON.exists():
@@ -541,7 +541,7 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        (pages_dir / "umap.html").write_text(umap_html)
+        write_html(pages_dir / "umap.html", umap_html)
 
     # Render sfdp graph-layout page if data exists.
     if GRAPH_JSON.exists():
@@ -566,7 +566,7 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        (pages_dir / "graph.html").write_text(graph_html)
+        write_html(pages_dir / "graph.html", graph_html)
 
     # Render landing page.
     category_counts = {cat: len(items) for cat, items in sorted(category_lists.items(), key=lambda x: -len(x[1]))}
@@ -587,7 +587,7 @@ def render_pages(args: argparse.Namespace) -> int:
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
     )
-    (pages_dir / "index.html").write_text(landing)
+    write_html(pages_dir / "index.html", landing)
 
     # Render record-browser page (category tile grid).
     browse = env.get_template("browse.html").render(
@@ -600,7 +600,7 @@ def render_pages(args: argparse.Namespace) -> int:
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
     )
-    (pages_dir / "browse.html").write_text(browse)
+    write_html(pages_dir / "browse.html", browse)
 
     print(f"Wrote {written} trait pages")
     print(f"Wrote {len(category_lists)} category index pages")
@@ -608,6 +608,12 @@ def render_pages(args: argparse.Namespace) -> int:
     print("Wrote pages/browse.html")
     print(f"Coverage: {embedded_count}/{len(traits)} ({_coverage_pct(match_table, len(traits))}%)")
     return 0
+
+
+def write_html(path: Path, text: str) -> None:
+    """Write rendered HTML with whitespace-only rendered lines blanked."""
+    path.write_text("\n".join("" if not line.strip() else line
+                              for line in text.split("\n")))
 
 
 def _coverage_pct(match_table: dict[str, dict], n: int) -> str:

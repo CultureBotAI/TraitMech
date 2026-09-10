@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/add_faprotax_metabolic_traits.py
+session:
+  id: 2026-09-08T074434Z-codex-134ebd
+  timestamp: '2026-09-08T07:44:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - parent_traits
+  - synonyms
+  - proposal_status
+  summary: Add FAPROTAX metabolic capability traits
+  details: Added 14 PROPOSED metabolism records from proposals/metpo_traitmech_v11, narrowed
+    denitrification, DNRA, and dissimilatory sulfate reduction under the new intermediate
+    parents, and added xylanolysis as an exact synonym of traitmech:000113 after duplicate
+    review found GO:0045493 was already grounded. Every new record carries the FAPROTAX DOI
+    plus one additional DOI-backed literature citation; verified the candidate labels, slugs,
+    and IDs with rg --no-ignore --hidden, kept sequence-feature and chemical-column labels
+    out of scope, and kept the writer non-destructive for existing same-ID records.

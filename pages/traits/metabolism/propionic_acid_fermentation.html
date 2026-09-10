@@ -30,22 +30,22 @@
     </p>
     <h1>propionic acid fermentation</h1>
     <p class="curie"><code>traitmech:000029</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A fermentation that produces propionate (with acetate and CO2) from sugars or lactate, typically via the Wood-Werkman (methylmalonyl-CoA) pathway. Characteristic of propionibacteria (e.g. Propionibacterium freudenreichii).</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Propionic acid fermentation produces propionate via the Wood-Werkman pathway</h2>
       <p class="meta">Evidence-backed causal sketch linking methylmalonyl-CoA-pathway catabolism of sugars or lactate to propionate, acetate, and CO2.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents the Wood-Werkman reaction sequence and its biotin-dependent transcarboxylation step; the exemplar is explicitly one component of the three-subunit transcarboxylase, not the complete complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>propionic acid fermentation</strong>
             <span class="edge-predicate">participates in</span>
@@ -66,16 +66,16 @@
             <code>biolink:participates_in</code>
             <p>Propionic acid fermentation is a class of fermentation metabolism.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2021.703525</code>
                 <span class="evidence-snippet">fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products</span>
                 <span class="meta">Energy-conservation review supports propionate formation as a redox-balancing fermentation route.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>propionic acid fermentation</strong>
             <span class="edge-predicate">produces</span>
@@ -83,169 +83,169 @@
             <code>METPO:2007800</code>
             <p>Propionate is the characteristic end product of the pathway.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">substrates such as glucose, glycerol or lactic acid are converted into propionic acid</span>
                 <span class="meta">Classical-fermentation review describes propionic acid fermentation via the Wood-Werkman pathway in propionibacteria.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>propionic acid fermentation</strong>
             <span class="edge-predicate">has major pathway</span>
             <strong>Wood-Werkman cycle</strong>
-            
+
             <p>The Wood-Werkman methylmalonyl-CoA cycle is the predominant propionate-forming route.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">In Propionibacterium spp., the predominant route is the Wood-Werkman pathway</span>
                 <span class="meta">Wood-Werkman cycle described as the predominant propionate-forming route in Propionibacterium and Acidipropionibacterium.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>pyruvate</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>oxaloacetate</strong>
-            
+
             <p>Pyruvate is carboxylated to oxaloacetate in a biotin-dependent reaction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">pyruvate is converted to oxaloacetate in a biotin-dependent carboxyl transfer reaction</span>
                 <span class="meta">Pyruvate is carboxylated to oxaloacetate by methylmalonyl-CoA carboxytransferase in a biotin-dependent reaction.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>biotin</strong>
             <span class="edge-predicate">cofactor for</span>
             <strong>methylmalonyl-CoA carboxytransferase</strong>
-            
+
             <p>The transcarboxylation step is biotin-dependent.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">biotin-dependent carboxyl transfer reaction catalyzed by methylmalonyl-CoA carboxytransferase</span>
                 <span class="meta">The transcarboxylation converting pyruvate to oxaloacetate is explicitly described as biotin-dependent.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>oxaloacetate</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>malate</strong>
-            
+
             <p>Oxaloacetate is reduced to malate in the reductive branch.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">Oxaloacetate is then reduced to malate</span>
                 <span class="meta">Oxaloacetate is reduced to malate in the reductive branch leading toward succinate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>malate</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>fumarate</strong>
-            
+
             <p>Malate is dehydrated to fumarate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">reduced to malate, dehydrated to fumarate</span>
                 <span class="meta">Malate is dehydrated to fumarate in the Wood-Werkman route.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>fumarate</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>succinate</strong>
-            
+
             <p>Fumarate is reduced to succinate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">dehydrated to fumarate and reduced to succinate</span>
                 <span class="meta">Fumarate is reduced to succinate en route to propionate formation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>succinyl-CoA</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>methylmalonyl-CoA</strong>
-            
+
             <p>The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">Succinate is converted to succinyl-CoA by succinyl-CoA synthetase and rearranged via a vitamin B12-dependent methylmalonyl-CoA mutase to methylmalonyl-CoA</span>
                 <span class="meta">The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates during propionate formation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>propionyl-CoA</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>propionate</strong>
-            
+
             <p>Propionyl-CoA is converted to propionate by a CoA-transferase.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">propionyl-CoA is converted to propionic acid with the release of CoA by a CoA-transferase</span>
                 <span class="meta">Propionyl-CoA is finally converted to propionic acid or propionate by a CoA-transferase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>propionic acid fermentation</strong>
             <span class="edge-predicate">has byproduct</span>
             <strong>acetate</strong>
-            
+
             <p>The fermentation produces propionate with acetate as a co-product.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">accompanied by acetic acid and CO2 formation</span>
                 <span class="meta">The fermentation is defined as producing propionic acid with acetate as a co-product.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>pyruvate</strong>
             <span class="edge-predicate">contributes to</span>
@@ -253,53 +253,53 @@
             <code>RO:0002326</code>
             <p>Pyruvate carboxylation initiates the Wood-Werkman cycle.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">It starts from pyruvate, generated via glycolysis, which can follow two alternative routes: Carboxylation to oxaloacetate: this initiates the Wood–Werkman cycle and leads to propionic acid</span>
                 <span class="meta">Verified against the public PMC full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>succinate</strong>
             <span class="edge-predicate">causally upstream of</span>
             <strong>succinyl-CoA</strong>
-            
+
             <p>The propionate pathway converts succinate through succinyl-CoA.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1186/s12864-016-3367-x</code>
                 <span class="evidence-snippet">Succinate is then converted into succinyl-CoA, methyl malonyl CoA, propanoyl CoA and propionate by specific enzymes</span>
                 <span class="meta">Verified against the open article full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>methylmalonyl-CoA carboxytransferase</strong>
             <span class="edge-predicate">catalyzes conversion of</span>
             <strong>pyruvate</strong>
-            
+
             <p>Methylmalonyl-CoA carboxytransferase catalyzes the pyruvate-to-oxaloacetate entry reaction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/molecules31020333</code>
                 <span class="evidence-snippet">pyruvate is converted to oxaloacetate in a biotin-dependent carboxyl transfer reaction catalyzed by methylmalonyl-CoA carboxytransferase</span>
                 <span class="meta">Verified against the public PMC full text.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -309,16 +309,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>methylmalonyl-CoA carboxytransferase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/Q8GBW6/entry" rel="nofollow noreferrer"><code>UniProtKB:Q8GBW6</code></a>
                   <br>Methylmalonyl-CoA carboxyltransferase 12S subunit
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1752" rel="nofollow noreferrer">Propionibacterium freudenreichii subsp. shermanii</a>
                   <br><code>NCBITaxon:1752</code>
                 </td>
@@ -329,31 +329,31 @@
                 <td>
                   <p>Forms the substrate-binding 12S component of the three-subunit transcarboxylase that couples methylmalonyl-CoA decarboxylation to pyruvate carboxylation.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1093/emboj/cdg244" rel="nofollow noreferrer"><code>DOI:10.1093/emboj/cdg244</code></a>
-                      
+
                       <span class="evidence-snippet">TC 12S bound to its MMCoA substrate</span>
                       <span class="meta">The primary structural study used the P. shermanii 12S component and resolved methylmalonyl-CoA binding; UniProtKB Q8GBW6 verifies the reviewed component identity and source taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -361,114 +361,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.3390/molecules31020333</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/fermentation.html" >Fermentation <code>METPO:1002005</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>propionate fermentation <span class="meta">RELATED_SYNONYM · DOI:10.3390/molecules31020333</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1002005</code> <span class="dim-preview">[-0.758, -6.428, +3.551, +10.454, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lactic_acid_fermentation.html">lactic acid fermentation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentative_hydrogen_production.html">fermentative hydrogen production</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/ethanol_fermentation.html">ethanol fermentation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/mixed_acid_fermentation.html">mixed-acid fermentation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/respiration.html">respiration</a>
           <span class="sim">0.644</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
           <span class="sim">0.600</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
           <span class="sim">0.600</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -539,148 +539,148 @@ Ontology identifiers below are restricted to identifiers directly supported by t
 
 **Outputs:** propionate/propionic acid; acetate/acetic acid; carbon dioxide; water. Succinate and lactate may remain as strain- and process-dependent coproducts.
 </pre>
-      
+
       <p class="meta">Showing the first 60 of
         247 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/propionic_acid_fermentation-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Propionibacterium freudenreichii</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1744"
              rel="nofollow noreferrer"><code>NCBITaxon:1744</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/21620505/"
              rel="nofollow noreferrer"><code>PMID:21620505</code></a>
-          
-          
+
+
           <span class="meta">Canonical propionic-acid fermenter (Swiss-cheese eyes and flavour).</span>
         </li>
-        
+
         <li>
           <em>Propionibacterium freudenreichii subsp. shermanii</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1752"
              rel="nofollow noreferrer"><code>NCBITaxon:1752</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1093/emboj/cdg244"
              rel="nofollow noreferrer"><code>DOI:10.1093/emboj/cdg244</code></a>
-          
-          
+
+
           <span class="meta">Source organism for structural and substrate-bound characterization of the methylmalonyl-CoA transcarboxylase 12S component.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-08-23T09:02:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Reviewed the graph as mechanistic and added DOI-backed, taxon-paired UniProtKB Q8GBW6 as the transcarboxylase 12S component exemplar.</p>
         </li>
-        
+
         <li>
           <time>2026-05-30T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (propionic acid fermentation); product-specific sub-variant of the existing Fermentation class (METPO:1002005).</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (propionic acid fermentation) with GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17272×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 9 evidence-backed generic edges (12 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:29806×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:15361×1, CHEBI:16452×1, CHEBI:15539×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:19Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A3S9JES8×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:11Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:54Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0047154×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T09:00:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
           <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) using 3 public-source, verbatim-snippet-backed connector(s). No paid research service was called.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -709,12 +709,12 @@ Ontology identifiers below are restricted to identifiers directly supported by t
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1065,8 +1065,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 09:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

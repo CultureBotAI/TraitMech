@@ -30,22 +30,22 @@
     </p>
     <h1>urease activity</h1>
     <p class="curie"><code>traitmech:000077</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A physiological enzyme-activity phenotype in which a cell produces urease, which hydrolyzes urea to ammonia and carbon dioxide, typically raising local pH; it is the basis of the diagnostic urease test.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Urease-catalyzed urea hydrolysis</h2>
       <p class="meta">Evidence-backed causal sketch linking urease to hydrolysis of urea into ammonia, the basis of the urease test.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The core urease reaction is general, whereas the carbonic-anhydrase and calcium-carbonate branch is an application-specific extension. The S. pasteurii example is explicitly the UreA/UreB/UreC heterotrimer and no one accession denotes the complete enzyme.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>urease</strong>
             <span class="edge-predicate">enables</span>
@@ -66,16 +66,16 @@
             <code>RO:0002327</code>
             <p>Urease carries out urea hydrolysis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mr.59.3.451-480.1995</code>
-                
+
                 <span class="meta">Mobley, Island &amp; Hausinger review microbial ureases.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>urease activity</strong>
             <span class="edge-predicate">consumes</span>
@@ -83,16 +83,16 @@
             <code>biolink:consumes</code>
             <p>The urease reaction consumes urea.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mr.59.3.451-480.1995</code>
-                
+
                 <span class="meta">Supports urea as the hydrolysis substrate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>urease activity</strong>
             <span class="edge-predicate">has output</span>
@@ -100,16 +100,16 @@
             <code>RO:0002234</code>
             <p>Urea hydrolysis produces ammonia.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mr.53.1.85-108.1989</code>
-                
+
                 <span class="meta">Mobley &amp; Hausinger support ammonia release from urea hydrolysis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>urease activity</strong>
             <span class="edge-predicate">manifests as</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007400</code>
             <p>Urease enzymatic activity manifests as the observable urease-activity phenotype scored by the diagnostic urease test.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mr.59.3.451-480.1995</code>
-                
+
                 <span class="meta">Urease activity (urea-to-ammonia hydrolysis raising local pH) is the assayable phenotype used to score urease-positive organisms.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>urease activity</strong>
             <span class="edge-predicate">has output</span>
@@ -134,16 +134,16 @@
             <code>RO:0002234</code>
             <p>Urea hydrolysis produces hydroxide, mechanistically explaining alkalinization.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.24263/2304-974x-2024-13-2-10</code>
-                
+
                 <span class="meta">(NH2)2CO + 2H2O + urease -&gt; 2 NH4+ + 2 OH- + CO2 + urease.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>urease activity</strong>
             <span class="edge-predicate">has output</span>
@@ -151,16 +151,16 @@
             <code>RO:0002234</code>
             <p>Urea hydrolysis produces carbon dioxide.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.24263/2304-974x-2024-13-2-10</code>
-                
+
                 <span class="meta">(NH2)2CO + 2H2O + urease -&gt; 2 NH4+ + 2 OH- + CO2 + urease.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>urease activity</strong>
             <span class="edge-predicate">increases</span>
@@ -168,33 +168,33 @@
             <code>RO:0002213</code>
             <p>Urea hydrolysis (NH4+/OH- production) increases local pH, the basis of the urease test color change.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.est.3c06617</code>
-                
+
                 <span class="meta">Urea hydrolysis produces NH4+ and OH-, causing a pH increase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">is substrate of</span>
             <strong>carbonic anhydrase activity</strong>
-            
+
             <p>CO2 from urea hydrolysis is hydrated by carbonic anhydrase.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.est.3c06617</code>
-                
+
                 <span class="meta">Hydration of CO2 to HCO3- by carbonic anhydrase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>carbonic anhydrase activity</strong>
             <span class="edge-predicate">increases</span>
@@ -202,36 +202,36 @@
             <code>RO:0002213</code>
             <p>Carbonic anhydrase hydrates CO2, increasing bicarbonate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.est.3c06617</code>
-                
+
                 <span class="meta">Increase in [HCO3-] following the hydration of CO2 to HCO3- by CA.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>carbonic anhydrase activity</strong>
             <span class="edge-predicate">affects</span>
             <strong>calcium carbonate precipitation</strong>
-            
+
             <p>CA-driven buffering enhances solubility trapping and affects the CaCO3 phase formed.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/acs.est.3c06617</code>
-                
+
                 <span class="meta">CA physiologically promotes buffering, which enhances solubility trapping and affects the phase of the CaCO3 mineral formed.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -241,16 +241,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>urease</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P41020/entry" rel="nofollow noreferrer"><code>UniProtKB:P41020</code></a>
                   <br>Urease subunit alpha <span class="meta">(ureC)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1474" rel="nofollow noreferrer">Sporosarcina pasteurii</a>
                   <br><code>NCBITaxon:1474</code>
                 </td>
@@ -261,29 +261,29 @@
                 <td>
                   <p>Catalytic alpha component of the S. pasteurii UreA/UreB/UreC urease; it binds the binuclear nickel active site but does not alone denote the complete enzyme.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0969-2126(99)80026-4" rel="nofollow noreferrer"><code>DOI:10.1016/S0969-2126(99)80026-4</code></a>
-                      
+
                       <span class="evidence-snippet">crystal structures of the native and inhibited enzyme from Bacillus pasteurii</span>
                       <span class="meta">The structural study resolves the heteropolymeric S. pasteurii urease and its binuclear nickel catalytic center; P41020 is its reviewed UreC alpha component.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
               <tr>
                 <td>urease</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P41021/entry" rel="nofollow noreferrer"><code>UniProtKB:P41021</code></a>
                   <br>Urease subunit beta <span class="meta">(ureB)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1474" rel="nofollow noreferrer">Sporosarcina pasteurii</a>
                   <br><code>NCBITaxon:1474</code>
                 </td>
@@ -294,29 +294,29 @@
                 <td>
                   <p>Beta structural component of the S. pasteurii UreA/UreB/UreC urease; it is recorded explicitly so the accession is not mistaken for the complete enzyme.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0969-2126(99)80026-4" rel="nofollow noreferrer"><code>DOI:10.1016/S0969-2126(99)80026-4</code></a>
-                      
+
                       <span class="evidence-snippet">crystal structures of the native and inhibited enzyme from Bacillus pasteurii</span>
                       <span class="meta">The structure contains the beta component mapped to reviewed UniProtKB P41021 as part of the heteropolymeric urease assembly.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
               <tr>
                 <td>urease</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P41022/entry" rel="nofollow noreferrer"><code>UniProtKB:P41022</code></a>
                   <br>Urease subunit gamma <span class="meta">(ureA)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1474" rel="nofollow noreferrer">Sporosarcina pasteurii</a>
                   <br><code>NCBITaxon:1474</code>
                 </td>
@@ -327,31 +327,31 @@
                 <td>
                   <p>Gamma structural component of the S. pasteurii UreA/UreB/UreC urease; it is recorded explicitly so the accession is not mistaken for the complete enzyme.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0969-2126(99)80026-4" rel="nofollow noreferrer"><code>DOI:10.1016/S0969-2126(99)80026-4</code></a>
-                      
+
                       <span class="evidence-snippet">crystal structures of the native and inhibited enzyme from Bacillus pasteurii</span>
                       <span class="meta">The structure contains the gamma component mapped to reviewed UniProtKB P41022 as part of the heteropolymeric urease assembly.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -359,116 +359,116 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1128/mr.59.3.451-480.1995</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>urease-positive <span class="meta">RELATED_SYNONYM · DOI:10.1128/mr.59.3.451-480.1995</span></li>
-        
+
         <li>ureolysis <span class="meta">RELATED_SYNONYM · DOI:10.1126/science.aaf4507</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -539,141 +539,141 @@ High-confidence candidates include urea, water, ammonia/ammonium, carbamate, car
 
 Context-specific candidates include Ca²⁺, Mg²⁺, phosphate, calcium carbonate, struvite, and carbonate apatite. Candidate inhibitors include acetohydroxamic acid, 2-mercaptoacetamide, lactic acid, bismuth compounds, and noncognate metal ions. These should not all be represented as universal physiological regulators. (burne2000bacterialureasesin pages 4-6, nim2019thematurationpathway pages 8-10, szczerbiec2024antibacterialpropertiesand pages 5-7)
 </pre>
-      
+
       <p class="meta">Showing the first 60 of
         191 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/urease_activity-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Sporosarcina pasteurii</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1474"
              rel="nofollow noreferrer"><code>NCBITaxon:1474</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1186/s12934-020-1281-z"
              rel="nofollow noreferrer"><code>DOI:10.1186/s12934-020-1281-z</code></a>
-          
-          
+
+
           <span class="meta">Most-used organism for microbially induced calcite precipitation; copious constitutive urease (formerly Bacillus pasteurii).</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-04T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate PHYSIOLOGY trait (urease activity) from literature research to fill the enzyme-activity-phenotype gap.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (urease urea hydrolysis) with GO/CHEBI node groundings and RO/METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:38:16Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A090IGX8×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-16T00:00:00Z</time> ·
           <strong>FIX_ORPHAN_NODE</strong> · claude
           <p class="changes">Connected the previously-orphaned urease_activity_trait node via a &#39;manifests as&#39; (METPO:2007400) edge from urease_function, so the molecular function links to the observable trait.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:15Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×2, RO:0002213×2).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:20Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:16526×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:35Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:16234×1, GO:0004089×1, CHEBI:17544×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:56Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009039×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (3 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-08T05:00:00Z</time> ·
           <strong>UNGROUND_CAUSAL_NODE</strong> · claude
           <p class="changes">Dropped the grounding GO:0009039 from node urease. Issue 352. GO:0009039 is &#39;urease ACTIVITY&#39;. Same as catalase: kept on urease_function, dropped from the protein that enables it.</p>
         </li>
-        
+
         <li>
           <time>2026-08-19T00:00:00+00:00</time> ·
           <strong>ADDED_SYNONYM</strong> · add_faprotax_synonyms
           <p class="changes">Added &#39;ureolysis&#39; (600 occurrences in microbedecoder&#39;s unmapped labels) as a RELATED_SYNONYM (#453). FAPROTAX&#39;s ureolysis is urea hydrolysis, which this record already defines as its mechanism: &#39;produces urease, which hydrolyzes urea to ammonia and carbon dioxide&#39;. Written with the source&#39;s underscores because that is the string a consumer must resolve.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T11:20:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Reviewed the urease graph scope, converted the S. pasteurii citation to DOI, dispositioned the multisubunit urease node, and added explicit reviewed UreC, UreB, and UreA component examples with structural evidence.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -702,12 +702,12 @@ Context-specific candidates include Ca²⁺, Mg²⁺, phosphate, calcium carbona
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1058,8 +1058,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-24 11:20 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

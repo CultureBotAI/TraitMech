@@ -22,7 +22,7 @@ Up to four artifacts are produced under `proposals/<cohort-name>/`:
 
 | File | Format |
 |---|---|
-| `metpo_proposal_classes_robot.tsv` | 11-column ROBOT template (mirrors kg-microbe convention) |
+| `metpo_proposal_classes_robot.tsv` | 11/12-column ROBOT template (mirrors kg-microbe convention, with an optional `hasRelatedSynonym` column) |
 | `metpo_proposal_properties_robot.tsv` | 12-column ROBOT template |
 | `metpo_proposal_mappings.sssom.tsv` | SSSOM mapping set — cross-ontology equivalents with `skos:exactMatch`/`closeMatch`/`narrowMatch` and match confidence. **Optional**: emit only when ≥1 proposed term aligns to an existing OMP/MICRO/PATO/GO/CHEBI/… class. See "Cross-ontology equivalents are mappings, not definition_source" in [`reference/conventions.md`](reference/conventions.md). |
 | `proposal.md` | Reviewer narrative: scope, hierarchy decisions, predicate rationale, verification, upstream path |
@@ -207,9 +207,10 @@ curated ontology, not a schema dump.
 - **Label**: copy from the record's `label:` slot verbatim.
 - **Definition**: rewrite the record's `description:` in Aristotelian form
   (`<genus>: <differentia>`). The original prose usually needs tightening.
-- **Synonyms**: copy from `synonyms:` (only `EXACT_SYNONYM` entries — drop
-  `BROAD_SYNONYM` / `NARROW_SYNONYM` per OBO convention since ROBOT writes
-  only `hasExactSynonym` here).
+- **Synonyms**: copy true `EXACT_SYNONYM` entries into the
+  `hasExactSynonym` column. If a cohort needs related labels such as raw
+  source group keys, add the 12th `hasRelatedSynonym` column and put
+  `RELATED_SYNONYM` entries there.
 - **Definition source**: cite the curation event that minted the
   `traitmech:` ID — `TraitMech:data/traits/<category>/<slug>.yaml` plus the
   curator name from `curation_history`. If the record cites a PMID/DOI,
@@ -264,14 +265,15 @@ count):
 python3 -c "
 p = 'proposals/<cohort>/metpo_proposal_classes_robot.tsv'
 lines = open(p).readlines()
-lines[1] = lines[1].rstrip('\n') + '\t\t\t\n'  # 3 trailing tabs to reach 11 cols
+lines[1] = lines[1].rstrip('\n') + '\t\t\t\n'  # exact-synonym-only 11-col template
 open(p, 'w').writelines(lines)
 "
 ```
 
-(The classes template needs 3 trailing tabs; the properties template needs
-3 trailing tabs to reach 12 cols when the header lists only the first 9
-directives.)
+(The 11-column exact-synonym-only classes template needs 3 trailing tabs. A
+12-column classes template can put `A oboInOwl:hasRelatedSynonym SPLIT=|` in
+the final column instead. The properties template needs 3 trailing tabs to
+reach 12 columns when the header lists only the first 9 directives.)
 
 
 ### 5. Verify

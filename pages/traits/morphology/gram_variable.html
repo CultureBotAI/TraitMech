@@ -30,22 +30,22 @@
     </p>
     <h1>gram variable</h1>
     <p class="curie"><code>METPO:1000700</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A gram stain in which bacteria from the same culture show both gram-positive and gram-negative staining characteristics, often due to age of culture or cell wall degradation.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Gram-variable peptidoglycan thinning</h2>
       <p class="meta">DOI-backed graph linking culture-age-dependent peptidoglycan thinning and autolysis to inconsistent gram-staining within a single bacterial population.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · Gram variability is a culture-state staining outcome rather than a stable protein-mediated trait; no token protein example is appropriate.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>culture aging</strong>
             <span class="edge-predicate">regulates</span>
@@ -66,16 +66,16 @@
             <code>RO:0002211</code>
             <p>Aging cultures undergo cell-wall thinning via autolysis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/CMR.00043-07</code>
                 <span class="evidence-snippet">autolysis</span>
                 <span class="meta">Supports autolysis-driven peptidoglycan thinning in aging cultures.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>peptidoglycan thinning</strong>
             <span class="edge-predicate">causes</span>
@@ -83,16 +83,16 @@
             <code>biolink:causes</code>
             <p>Thinned peptidoglycan no longer retains the gram-stain dye.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/CMR.00043-07</code>
                 <span class="evidence-snippet">crystal violet</span>
                 <span class="meta">Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>crystal-violet retention loss</strong>
             <span class="edge-predicate">has output</span>
@@ -100,16 +100,16 @@
             <code>RO:0002234</code>
             <p>Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/CMR.00043-07</code>
                 <span class="evidence-snippet">decolorization</span>
                 <span class="meta">Supports differential decolorization producing mixed staining within a single culture.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>mixed-population gram staining</strong>
             <span class="edge-predicate">manifests as</span>
@@ -117,33 +117,33 @@
             <code>METPO:2007400</code>
             <p>Mixed staining manifests the gram-variable trait.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/CMR.00043-07</code>
                 <span class="evidence-snippet">Gram-variable</span>
                 <span class="meta">Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>thin peptidoglycan layer</strong>
             <span class="edge-predicate">results in</span>
             <strong>gram-negative staining</strong>
-            
+
             <p>A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/spectrum.00732-24</code>
-                
+
                 <span class="meta">certain bacteria can stain Gram-negative despite having a monoderm cell wall structure</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>thin peptidoglycan layer</strong>
             <span class="edge-predicate">decreases</span>
@@ -151,16 +151,16 @@
             <code>RO:0002212</code>
             <p>A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/spectrum.00732-24</code>
-                
+
                 <span class="meta">to retain the CV-iodide complex, resulting in the loss of the CV</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>CV-iodide complex retention</strong>
             <span class="edge-predicate">regulates</span>
@@ -168,16 +168,16 @@
             <code>RO:0002211</code>
             <p>Reduced CV-iodide complex retention drives loss of crystal-violet retention.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/spectrum.00732-24</code>
-                
+
                 <span class="meta">Reduced CV-iodide complex retention underlies the loss of crystal violet during decolorization.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>cell wall-deficient forms</strong>
             <span class="edge-predicate">produces</span>
@@ -185,26 +185,26 @@
             <code>METPO:2007800</code>
             <p>Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2023.11.16.566987</code>
-                
+
                 <span class="meta">mechanisms that can produce cell-wall alterations or loss that would lead to mixed Gram reactions in a single culture</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -214,112 +214,112 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
         <dt>Definition source</dt><dd>DOI:10.1128/CMR.00043-07</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/gram_stain.html" >gram stain <code>METPO:1000697</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>variable <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000700</code> <span class="dim-preview">[-3.645, -2.566, -2.886, -0.695, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gram_stain.html">gram stain</a>
           <span class="sim">0.977</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/pressure_delta.html">pressure delta</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/catalase_activity.html">catalase activity</a>
           <span class="sim">0.754</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">0.754</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -390,151 +390,151 @@ Culture age is a major modifier, but not the phenotype itself. In one mechanisti
 | Candidate node | Suggested grounding | Curation note |
 |---|---|---|
 | crystal violet | `CHEBI:41688` | Primary dye; verify ontology release during implementation. |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         227 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/morphology/gram_variable-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(2)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Arthrobacter globiformis</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1665"
              rel="nofollow noreferrer"><code>NCBITaxon:1665</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/1689718/"
              rel="nofollow noreferrer"><code>PMID:1689718</code></a>
-          
-          
+
+
           <span class="meta">Gram-variable rod-coccus cycle</span>
         </li>
-        
+
         <li>
           <em>Clostridium acetobutylicum</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1488"
              rel="nofollow noreferrer"><code>NCBITaxon:1488</code></a>
-          
-          
-          
-          
+
+
+
+
           <code>https://www.epa.gov/sites/default/files/2015-09/documents/fra003.pdf</code>
-          
+
           <span class="meta">stains Gram-variable in age</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.903723+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-11T23:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking culture-age-dependent peptidoglycan thinning and loss of crystal-violet retention to gram-variable staining.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T05:49:24Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:19Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 4 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:13Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000017×1, RO:0002211×1, METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has output), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 2 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces, 1 to reduces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T06:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Relabelled 1 causal edge from `reduces` to `decreases` and re-grounded it from METPO:2007802 to RO:0002212 (negatively regulates), issue 330. The corpus wrote two senses under the single label `reduces` - genuine electron donation, and a lessens/decreases sense - and METPO:2007802 is defined as donating electrons to the object and lowering its oxidation state, which this edge does not assert. The two senses could not be separated mechanically because the label was identical, so they migrated together in issue 329 and were split here by reading each edge. RO:0002212 declares no rdfs:domain or rdfs:range, so this introduces no entailment of the kind issue 301 removed.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope gram_variable_wall_thinning=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -563,12 +563,12 @@ Culture age is a major modifier, but not the phenotype itself. In one mechanisti
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -919,8 +919,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

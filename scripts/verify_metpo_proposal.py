@@ -3,7 +3,7 @@
 
 Runs every pre-submission check the `metpo-proposal` skill specifies:
 
-  1. Column-count sanity (classes=11 cols, properties=12 cols on every row).
+  1. Column-count sanity (classes=11 or 12 cols by file, properties=12 cols).
   2. ROBOT header row 2 has the required directives.
   3. Parent integrity — every `SC %` parent resolves either in-file or to
      `METPO:<n>`.
@@ -40,7 +40,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
 TRAITS_DIR = REPO_ROOT / "data/traits"
 
-CLASS_COLS = 11
+CLASS_COLS = {11, 12}
 PROP_COLS = 12
 
 # Built-in CURIE prefixes accepted as external parents/ranges without
@@ -63,13 +63,53 @@ def _emit(failures: list[str], msg: str) -> None:
     print(f"  FAIL: {msg}", file=sys.stderr)
 
 
-def check_columns(rows: list[list[str]], expected: int, label: str, failures: list[str]) -> None:
+def check_columns(
+    rows: list[list[str]], expected: int | set[int], label: str, failures: list[str]
+) -> int | None:
+    if not rows:
+        return None
+    expected_values = {expected} if isinstance(expected, int) else expected
+    if not isinstance(expected, int):
+        header_width = len(rows[0])
+        if header_width not in expected_values:
+            expected_desc = " or ".join(str(value) for value in sorted(expected_values))
+            _emit(
+                failures,
+                f"{label} row 1 has {header_width} cols, expected {expected_desc}",
+            )
+            return None
+        expected_values = {header_width}
+
+    (expected_width,) = expected_values
     for i, row in enumerate(rows, start=1):
-        if len(row) != expected:
-            _emit(failures, f"{label} row {i} has {len(row)} cols, expected {expected}")
+        if len(row) != expected_width:
+            _emit(
+                failures,
+                f"{label} row {i} has {len(row)} cols, expected {expected_width}",
+            )
+    return expected_width
 
 
-def check_robot_header(rows: list[list[str]], required: list[str], label: str, failures: list[str]) -> None:
+def class_robot_header_requirements(width: int | None) -> list[tuple[int, str]]:
+    required = [
+        (0, "ID"),
+        (1, "LABEL"),
+        (2, "A IAO:0000115"),
+        (3, ">A IAO:0000119"),
+        (4, "SC %"),
+        (7, "A oboInOwl:inSubset"),
+    ]
+    if width == 12:
+        required.append((11, "A oboInOwl:hasRelatedSynonym"))
+    return required
+
+
+def check_robot_header(
+    rows: list[list[str]],
+    required: list[tuple[int, str]],
+    label: str,
+    failures: list[str],
+) -> None:
     if len(rows) < 2:
         _emit(failures, f"{label}: missing header rows (need 2)")
         return
@@ -279,10 +319,10 @@ def main() -> int:
 
     if class_rows:
         print(f"  classes TSV: {len(class_rows)} rows", file=sys.stderr)
-        check_columns(class_rows, CLASS_COLS, "classes", failures)
+        class_width = check_columns(class_rows, CLASS_COLS, "classes", failures)
         check_robot_header(
             class_rows,
-            [(0, "ID"), (1, "LABEL"), (2, "A IAO:0000115"), (3, ">A IAO:0000119"), (4, "SC %"), (7, "A oboInOwl:inSubset")],
+            class_robot_header_requirements(class_width),
             "classes",
             failures,
         )

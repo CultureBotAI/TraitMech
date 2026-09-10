@@ -30,22 +30,22 @@
     </p>
     <h1>GC skew</h1>
     <p class="curie"><code>traitmech:000097</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A genome-sequence property describing strand asymmetry in guanine versus cytosine content between the leading and lagging replication strands, commonly used to locate the replication origin and terminus.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>GC skew arises from replication-strand mutational asymmetry</h2>
       <p class="meta">Evidence-backed causal sketch linking DNA replication to leading-versus-lagging strand compositional asymmetry that marks the replication origin and terminus.</p>
 
       <p class="graph-scope"><code>NONMECHANISTIC</code> · This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>DNA replication</strong>
             <span class="edge-predicate">causes</span>
@@ -66,16 +66,16 @@
             <code>biolink:causes</code>
             <p>Asymmetric mutation between leading and lagging strands during replication produces strand-specific G/C bias.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/oxfordjournals.molbev.a025626</code>
-                
+
                 <span class="meta">Lobry first described replication-linked asymmetric substitution patterns between the two DNA strands.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>GC skew</strong>
             <span class="edge-predicate">associated with</span>
@@ -83,16 +83,16 @@
             <code>biolink:associated_with</code>
             <p>GC skew inversions mark the replication origin and terminus.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/S0378-1119(99)00297-8</code>
-                
+
                 <span class="meta">Frank &amp; Lobry review strand-asymmetry signatures used to locate replication boundaries.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>lagging-strand single-stranded DNA exposure</strong>
             <span class="edge-predicate">increases</span>
@@ -100,16 +100,16 @@
             <code>RO:0002213</code>
             <p>Single-stranded exposure of the lagging strand increases cytosine deamination.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2023.11.15.567178</code>
-                
+
                 <span class="meta">Lagging strand exposed as ssDNA, increasing cytosine-to-thymine mutations and thus contributing to GC skew.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>cytosine deamination at replication forks</strong>
             <span class="edge-predicate">contributes to</span>
@@ -117,16 +117,16 @@
             <code>RO:0002326</code>
             <p>Cytosine deamination at the replication fork generates strand-specific G/C bias.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2026.1727296</code>
-                
+
                 <span class="meta">Cytosine deamination at the replication fork is explicitly implicated in generating GC skew.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>leading-strand gene density / gene strand bias</strong>
             <span class="edge-predicate">contributes to</span>
@@ -134,16 +134,16 @@
             <code>RO:0002326</code>
             <p>Biased gene density on leading versus lagging strands contributes to skew.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1101/2023.11.15.567178</code>
-                
+
                 <span class="meta">Biased gene density on leading vs lagging strands is highlighted as a major contributor to skew.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>translational selection and genetic code constraints</strong>
             <span class="edge-predicate">contributes to</span>
@@ -151,16 +151,16 @@
             <code>RO:0002326</code>
             <p>Translational selection and genetic-code constraints shape asymmetric G/C distributions.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2026.1727296</code>
-                
+
                 <span class="meta">Translational selection and the nature of the genetic code are universal determinants of asymmetric G/C distributions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>third-codon-position mutational bias</strong>
             <span class="edge-predicate">contributes to</span>
@@ -168,16 +168,16 @@
             <code>RO:0002326</code>
             <p>Mutational bias at the degenerate third codon position contributes to strand compositional asymmetry.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/pl00006428</code>
-                
+
                 <span class="meta">Third-position skews probably reflect mutational biases, separating mutational from protein-coding constraints.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>strand-specific DNA repair</strong>
             <span class="edge-predicate">contributes to</span>
@@ -185,26 +185,26 @@
             <code>RO:0002326</code>
             <p>Strand-specific MMR and transcription-coupled NER contribute to strand compositional asymmetry.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2026.1727296</code>
-                
+
                 <span class="meta">Strand-specific DNA repair pathways (MutSL-dependent MMR, transcription-coupled NER) contribute to asymmetry.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -212,114 +212,114 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1093/oxfordjournals.molbev.a025626</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>strand compositional asymmetry <span class="meta">RELATED_SYNONYM · DOI:10.1016/S0378-1119(99)00297-8</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -390,93 +390,93 @@ The strongest direct experimental support comes from accelerated evolution in *E
 
 ### Molecular events and chemicals
 </pre>
-      
+
       <p class="meta">Showing the first 60 of
         214 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/genomics/gc_skew-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/9278503/"
              rel="nofollow noreferrer"><code>PMID:9278503</code></a>
-          
-          
+
+
           <span class="meta">The complete circular E. coli K-12 chromosome is a source-backed model for leading/lagging-strand GC asymmetry and replication-origin inference.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-05T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate GENOMICS trait (GC skew) from literature research; distinct from the existing GC-content composition bins.</p>
         </li>
-        
+
         <li>
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (GC skew / replication strand asymmetry) with GO node grounding and biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×5, RO:0002213×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope gc_skew_replication_strand_asymmetry=NONMECHANISTIC with scope_notes.</p>
         </li>
-        
+
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
           <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -505,12 +505,12 @@ The strongest direct experimental support comes from accelerated evolution in *E
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -861,8 +861,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

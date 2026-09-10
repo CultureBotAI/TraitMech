@@ -30,22 +30,22 @@
     </p>
     <h1>motile</h1>
     <p class="curie"><code>METPO:1000702</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A motility in which an organism has the ability to move independently using metabolic energy.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Energy-dependent bacterial locomotion</h2>
       <p class="meta">Evidence-backed causal sketch linking motile phenotype to metabolic energy, ion motive force, flagella, pili, and directional regulation.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>metabolic energy</strong>
             <span class="edge-predicate">generates</span>
@@ -66,16 +66,16 @@
             <code>biolink:produces</code>
             <p>Metabolism supports ion gradients that can power motility.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2021.659464</code>
                 <span class="evidence-snippet">ion motive force powering the bacterial flagellar motor</span>
                 <span class="meta">Supports energy transduction from ion gradients into motor function.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>ion motive force</strong>
             <span class="edge-predicate">powers</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007900</code>
             <p>Ion motive force powers rotation of the flagellar motor.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3389/fmicb.2021.659464</code>
                 <span class="evidence-snippet">The Dynamic Ion Motive Force Powering</span>
                 <span class="meta">Review directly addresses ion motive force powering flagellar motors.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>flagellar motor</strong>
             <span class="edge-predicate">confers</span>
@@ -100,16 +100,16 @@
             <code>METPO:2007700</code>
             <p>Flagellar rotation enables independent bacterial movement.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom9070279</code>
                 <span class="evidence-snippet">responsible for motility</span>
                 <span class="meta">Supports flagella-driven motility.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>type IV pilus</strong>
             <span class="edge-predicate">confers</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007700</code>
             <p>Type IV pilus extension and retraction enable surface motility.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41579-019-0195-4</code>
                 <span class="evidence-snippet">enable T4P to perform</span>
                 <span class="meta">Supports pilus-mediated twitching and related motility functions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>chemotaxis signaling</strong>
             <span class="edge-predicate">directs</span>
@@ -134,33 +134,33 @@
             <code>RO:0002211</code>
             <p>Chemotaxis signaling regulates motility direction in response to environmental changes.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom9070279</code>
                 <span class="evidence-snippet">migrate towards more desirable environments</span>
                 <span class="meta">Supports chemotaxis regulation of motile behavior.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>MotA-MotB stator complex</strong>
             <span class="edge-predicate">acts as</span>
             <strong>transmembrane H+ channel activity</strong>
-            
+
             <p>The MotA-MotB stator acts as a transmembrane H+ channel.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">it can act as a transmembrane H+ channel</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>transmembrane H+ channel activity</strong>
             <span class="edge-predicate">generates</span>
@@ -168,33 +168,33 @@
             <code>biolink:produces</code>
             <p>H+ flux through the stator generates torque via electrostatic interaction with FliG.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">conducts H+ through the channel to generate torque by electrostatic interactions between MotA and FliG</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>flagellar motor torque</strong>
             <span class="edge-predicate">acts on</span>
             <strong>FliG rotor protein</strong>
-            
+
             <p>Torque is generated by electrostatic interaction between the stator and the FliG rotor.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">electrostatic interactions between MotA and FliG generate torque on the rotor</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>flagellar motor torque</strong>
             <span class="edge-predicate">powers</span>
@@ -202,50 +202,50 @@
             <code>METPO:2007900</code>
             <p>Torque generation drives rotation of the flagellar motor.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">a membrane-embedded rotary motor fueled by an ion motive force across the cytoplasmic membrane</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>CheA histidine kinase</strong>
             <span class="edge-predicate">phosphorylates</span>
             <strong>CheY response regulator</strong>
-            
+
             <p>Phosphorylated CheA transfers phosphate to the response regulator CheY.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">Phosphorylated CheA transfers its phosphate group to a response regulator called CheY</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>CheY response regulator</strong>
             <span class="edge-predicate">binds</span>
             <strong>flagellar C-ring switch complex</strong>
-            
+
             <p>Phosphorylated CheY binds the C-ring switch complex to control rotation direction.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">Phosphorylated CheY (CheY-P) binds to the C-ring</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>flagellar C-ring switch complex</strong>
             <span class="edge-predicate">regulates</span>
@@ -253,16 +253,16 @@
             <code>RO:0002211</code>
             <p>CheY-P binding to the C-ring switches motor rotation direction, implementing chemotactic responses.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/biom14121488</code>
-                
+
                 <span class="meta">allowing the motor to switch the direction of rotation from CCW to CW</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>PilB extension ATPase</strong>
             <span class="edge-predicate">promotes</span>
@@ -270,16 +270,16 @@
             <code>RO:0002213</code>
             <p>PilB ATPase powers type IV pilus extension/assembly.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msphere.00390-24</code>
-                
+
                 <span class="meta">PilB (extension ATPase)</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>PilT retraction ATPase</strong>
             <span class="edge-predicate">promotes</span>
@@ -287,16 +287,16 @@
             <code>RO:0002213</code>
             <p>PilT ATPase powers type IV pilus retraction/disassembly.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msphere.00390-24</code>
-                
+
                 <span class="meta">PilT (retraction ATPase)</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-15">
             <strong>type IV pilus extension</strong>
             <span class="edge-predicate">enables</span>
@@ -304,16 +304,16 @@
             <code>RO:0002327</code>
             <p>Cycles of T4P extension and retraction power twitching surface motility.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msphere.00390-24</code>
-                
+
                 <span class="meta">recurrent cycles of T4P assembly (extension) and disassembly (retraction) power surface movement</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-16">
             <strong>type IV pilus retraction</strong>
             <span class="edge-predicate">enables</span>
@@ -321,16 +321,16 @@
             <code>RO:0002327</code>
             <p>Cycles of T4P extension and retraction power twitching surface motility.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msphere.00390-24</code>
-                
+
                 <span class="meta">recurrent cycles of T4P assembly (extension) and disassembly (retraction) power surface movement</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-17">
             <strong>twitching motility</strong>
             <span class="edge-predicate">confers</span>
@@ -338,33 +338,33 @@
             <code>METPO:2007700</code>
             <p>Twitching motility is a form of independent surface movement.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/msphere.00390-24</code>
-                
+
                 <span class="meta">recurrent cycles of T4P assembly and disassembly power surface movement (twitching motility)</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-18">
             <strong>SprB adhesin surface movement</strong>
             <span class="edge-predicate">drives</span>
             <strong>gliding motility</strong>
-            
+
             <p>Movement of the SprB adhesin along the outer membrane drives gliding motility.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00068-24</code>
-                
+
                 <span class="meta">gliding... is driven by the surface movement of adhesins (notably SprB) along the outer membrane</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-19">
             <strong>gliding motility</strong>
             <span class="edge-predicate">confers</span>
@@ -372,19 +372,19 @@
             <code>METPO:2007700</code>
             <p>Gliding motility is a non-flagellar mechanism of independent movement.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/jb.00068-24</code>
-                
+
                 <span class="meta">gliding is a form of surface motility driven by adhesin movement</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -394,16 +394,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>CheY response regulator</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0AE67/entry" rel="nofollow noreferrer"><code>UniProtKB:P0AE67</code></a>
                   <br>Chemotaxis protein CheY <span class="meta">(cheY)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
                   <br><code>NCBITaxon:83333</code>
                 </td>
@@ -414,31 +414,31 @@
                 <td>
                   <p>Phosphorylated CheY binds the E. coli flagellar switch and changes motor rotation during swimming.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1073/pnas.1000935107" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1000935107</code></a>
-                      
+
                       <span class="evidence-snippet">CheY binds to the rotor protein FliN</span>
                       <span class="meta">The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -446,131 +446,131 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1038/s41579-021-00626-4</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/motility.html" >motility <code>METPO:1000701</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (5)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/axially_filamented.html">axially filamented <code>METPO:1000705</code></a></li>
-        
+
         <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a></li>
-        
+
         <li><a href="../../traits/morphology/gliding.html">gliding <code>METPO:1000706</code></a></li>
-        
+
         <li><a href="../../traits/morphology/swarming_motility.html">swarming motility <code>traitmech:000062</code></a></li>
-        
+
         <li><a href="../../traits/morphology/twitching_motility.html">twitching motility <code>traitmech:000061</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>yes <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000702</code> <span class="dim-preview">[+24.397, -70.567, +20.807, -80.811, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/swarming_motility.html">swarming motility</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped</a>
           <span class="sim">0.578</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/non_spore_forming.html">non-spore forming</a>
           <span class="sim">0.427</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gram_negative.html">gram negative</a>
           <span class="sim">0.419</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/facultatively_aerobic.html">facultatively aerobic</a>
           <span class="sim">0.419</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/aerobic.html">aerobic</a>
           <span class="sim">0.378</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/spore_forming.html">spore forming</a>
           <span class="sim">0.364</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -641,233 +641,233 @@ Ontology identifiers are intentionally conservative. The supplied identifier `ME
 
 - `METPO:1000702` — motile.
 - Active cellular locomotion — label-only umbrella process.</pre>
-      
+
       <p class="meta">Showing the first 60 of
         277 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/morphology/motile-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(3)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
              rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/32449734/"
              rel="nofollow noreferrer"><code>PMID:32449734</code></a>
-          
-          
+
+
           <span class="meta">flagellar swimming motility</span>
         </li>
-        
+
         <li>
           <em>Pseudomonas aeruginosa</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287"
              rel="nofollow noreferrer"><code>NCBITaxon:287</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/11029417/"
              rel="nofollow noreferrer"><code>PMID:11029417</code></a>
-          
-          
+
+
           <span class="meta">flagellar + pilus motility</span>
         </li>
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1073/pnas.1000935107"
              rel="nofollow noreferrer"><code>DOI:10.1073/pnas.1000935107</code></a>
-          
-          
+
+
           <span class="meta">Strain-level CheY swimming-motility exemplar.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.905197+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-06T14:40:41-07:00</time> ·
           <strong>CURATED_WITH_ORGANISM_EXAMPLE</strong> · codex
           <p class="changes">Added Pseudomonas aeruginosa organism example with PMID-backed evidence.</p>
         </li>
-        
+
         <li>
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed motility review and added causal graph for energy-dependent locomotion by flagella, type IV pili, ion motive force, and chemotaxis.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T05:05:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:R6TBR9×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:48Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: powers → enables ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-16T06:54:40Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006935×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-17T04:09:44Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 14 evidence-backed generic edges (14 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:13Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 9 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×5, RO:0002213×2, biolink:produces×1, RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0043107×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:19Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:G0HQV3×1, UniProtKB:A0A2X5A7X5×1).</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:21:12Z</time> ·
           <strong>RETRACT_DEAD_UNIPROT_GROUNDINGS</strong> · claude
           <p class="changes">Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt; nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)</p>
         </li>
-        
+
         <li>
           <time>2026-07-20T04:23:55Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0044096×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 4 causal edge(s) off enables/RO:0002327 with a TRAIT object (4 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T08:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Re-grounded causal edge(s) off enables/RO:0002327 onto contributes to (RO:0002326), issue 334. biolink declares enables range &#39;biological process or activity&#39;, which only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so an edge pointing at a GENE_OR_PROTEIN entailed a false type. The replacements are chosen per idiom rather than swept: a gene cluster ENCODES its product, a subunit is PART OF the complex it belongs to, and an energy source or acquired repertoire CONTRIBUTES TO the machine it powers or composes. All three declare no rdfs:domain or rdfs:range, so none can reintroduce the class of defect being removed.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T09:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Reverted the motive-force edge from contributes to back to enables/RO:0002327, issue 334 review. biolink defines contributes to as holding where one entity contributes to the occurrence or GENERATION of the other. A motive force does not generate the motor or machinery - it powers rotation, which is what the edge description says. That is the same energy-powers-a-machine idiom this work deferred for molecular_oxygen and cytoplasmic_na, so deferring it here too is the consistent call. The edge stays baselined under issue 334 until it is modelled as an input to the machine or pointed at the rotation process, either of which is range-correct.</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T18:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Edge ion_motive_force -&gt; flagellar_motor in graph motile_energy_dependent_locomotion: re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. &#39;Ion motive force POWERS rotation of the flagellar motor.&#39;</p>
         </li>
-        
+
         <li>
           <time>2026-08-07T18:00:00Z</time> ·
           <strong>REGROUND_CAUSAL_EDGE</strong> · claude
           <p class="changes">Edge motor_torque -&gt; flagellar_motor in graph motile_energy_dependent_locomotion: re-grounded it from enables/RO:0002327 to powers/METPO:2007900. Issue 334. biolink declares enables range &#39;biological process or activity&#39;, which of CausalNodeTypeEnum only BIOLOGICAL_PROCESS, PATHWAY and MOLECULAR_FUNCTION satisfy, so this edge entailed a false type on its object. &#39;Torque generation drives rotation of the flagellar motor.&#39;</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope motile_energy_dependent_locomotion=MECHANISTIC with scope_notes; marked 8 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flagellar_motor, motab_stator, flig_rotor, chea_kinase, chey_response_regulator, flagellar_c_ring, pilb_atpase, pilt_atpase); added taxon-paired protein example(s) UniProtKB:P0AE67 on chey_response_regulator (NCBITaxon:83333); added canonical example(s) NCBITaxon:83333.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -896,12 +896,12 @@ Ontology identifiers are intentionally conservative. The supplied identifier `ME
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1252,8 +1252,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

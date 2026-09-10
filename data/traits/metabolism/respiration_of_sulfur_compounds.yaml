@@ -1,0 +1,26 @@
+identifier: traitmech:000124
+label: respiration of sulfur compounds
+definition: An anaerobic respiration in which an organism conserves energy by transferring
+  electrons to an inorganic sulfur compound as the terminal electron acceptor.
+definition_source: DOI:10.1126/science.aaf4507
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: respiration_of_sulfur_compounds
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aaf4507
+evidence:
+- reference: DOI:10.3389/fmicb.2023.1108245
+  snippet: sulfate, sulfur, or thiosulfate respiration
+  notes: Zavarzina et al. experimentally compare iron respiration with sulfur/thiosulfate
+    respiration in Dethiobacter alkaliphilus.
+curation_history:
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
+    after repository-wide duplicate review.
+  llm_assisted: true

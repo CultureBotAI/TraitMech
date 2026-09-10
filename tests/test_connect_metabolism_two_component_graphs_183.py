@@ -16,6 +16,7 @@ from connect_metabolism_two_component_graphs_183 import (  # noqa: E402
     ACTION,
     ADDITIONS,
     EXPECTED_COMPONENTS,
+    TIMESTAMP,
     _components,
     _edge_key,
     transform,
@@ -53,7 +54,18 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edge(slug: str):
             item.get("reference") and item.get("snippet")
             for item in expected["evidence"]
         )
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert {
+        "timestamp": TIMESTAMP,
+        "curator": "codex",
+        "action": ACTION,
+    } in [
+        {
+            "timestamp": event.get("timestamp"),
+            "curator": event.get("curator"),
+            "action": event.get("action"),
+        }
+        for event in doc["curation_history"]
+    ]
 
 
 @pytest.mark.parametrize("slug", sorted(ADDITIONS))

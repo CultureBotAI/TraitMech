@@ -30,22 +30,22 @@
     </p>
     <h1>chemotrophic</h1>
     <p class="curie"><code>METPO:1000641</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A trophic type in which an organism obtains energy from chemical oxidation of either inorganic or organic compounds.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Chemotrophic chemical redox energy conservation</h2>
       <p class="meta">DOI-backed graph linking reduced chemical substrates, inorganic and organic donor examples, redox reactions, respiratory electron transfer, proton motive force, and ATP.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · This graph represents respiratory chemotrophic energy conservation, not every chemotrophic route; fermentation and substrate-level phosphorylation are outside its scope. The E. coli K-12 AtpD example supports the shared F-type ATP-synthase module and is one beta subunit, not the complete rotary complex.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>chemotrophic</strong>
             <span class="edge-predicate">has energy source</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007807</code>
             <p>Chemotrophy uses chemical substrates as energy sources.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-012373944-5.00083-3</code>
                 <span class="evidence-snippet">chemical energy</span>
                 <span class="meta">Supports chemical energy as the defining chemotrophic energy source.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>inorganic compound</strong>
             <span class="edge-predicate">example of</span>
@@ -83,16 +83,16 @@
             <code>rdfs:subClassOf</code>
             <p>Inorganic substrates are chemical energy sources in lithotrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-0-12-378630-2.00219-X</code>
                 <span class="evidence-snippet">oxidize inorganic atoms or molecules</span>
                 <span class="meta">Supports inorganic chemical substrates in chemolithotrophic metabolism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>organic compound</strong>
             <span class="edge-predicate">example of</span>
@@ -100,33 +100,33 @@
             <code>rdfs:subClassOf</code>
             <p>Organic substrates are chemical energy sources in organotrophy.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/B978-012373944-5.00083-3</code>
                 <span class="evidence-snippet">reduced organic compound</span>
                 <span class="meta">Supports reduced organic compounds as chemical energy substrates.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>reduced chemical substrate</strong>
             <span class="edge-predicate">oxidized by</span>
             <strong>redox reaction</strong>
-            
+
             <p>Chemical energy is released through oxidation-reduction chemistry.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">free energy of a redox reaction</span>
                 <span class="meta">Supports redox reactions as the energy source for chemiosmotic conservation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>redox reaction</strong>
             <span class="edge-predicate">feeds electrons into</span>
@@ -134,16 +134,16 @@
             <code>METPO:2007402</code>
             <p>Redox reactions can feed electrons into membrane respiratory chains.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">membrane-bound electron transport chain</span>
                 <span class="meta">Supports membrane electron transport in respiratory energy conservation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">transfers electrons to</span>
@@ -151,16 +151,16 @@
             <code>METPO:2007403</code>
             <p>Respiratory chains transfer electrons to terminal acceptors.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mmbr.61.4.533-616.1997</code>
                 <span class="evidence-snippet">terminal electron acceptor</span>
                 <span class="meta">Supports terminal electron acceptors in respiratory metabolism.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>respiratory chain</strong>
             <span class="edge-predicate">generates</span>
@@ -168,16 +168,16 @@
             <code>biolink:produces</code>
             <p>Respiratory electron transfer generates an ion gradient.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">generation of an electrochemical ion gradient</span>
                 <span class="meta">Supports ion-gradient formation by electron transport.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>proton motive force</strong>
             <span class="edge-predicate">drives production of</span>
@@ -185,33 +185,33 @@
             <code>biolink:produces</code>
             <p>Proton motive force drives ATP synthesis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
                 <span class="evidence-snippet">drives ATP synthesis</span>
                 <span class="meta">Supports ATP synthesis from chemotrophic respiratory energy conservation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>proton motive force</strong>
             <span class="edge-predicate">used by</span>
             <strong>ATP synthase</strong>
-            
+
             <p>F-type ATP synthase converts proton-motive-force energy into rotary catalysis.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.7554/eLife.21598</code>
                 <span class="evidence-snippet">the potential energy of the proton motive force into rotation of the central stalk</span>
                 <span class="meta">The E. coli F1Fo structural study directly supports proton-motive-force-driven rotation of the ATP synthase represented by this node.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>ATP synthase</strong>
             <span class="edge-predicate">produces</span>
@@ -219,87 +219,87 @@
             <code>biolink:produces</code>
             <p>ATP synthase couples ion flow to phosphorylation of ADP.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.7554/eLife.21598</code>
                 <span class="evidence-snippet">couples ion flow across membranes with the addition of inorganic phosphate to ADP thereby generating ATP</span>
                 <span class="meta">The E. coli F1Fo study supports ATP as the catalytic product of the multisubunit ATP synthase; P0ABB4 represents only its beta component.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>proton motive force</strong>
             <span class="edge-predicate">can be built by</span>
             <strong>quinone/quinol cycling</strong>
-            
+
             <p>Proton motive force can be generated by quinone/quinol cycling.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
-                
+
                 <span class="meta">The proton motive force (pmf) can be built up by different mechanisms like proton pumping, quinone/quinol cycling or by a redox loop.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>proton pumping</strong>
             <span class="edge-predicate">contributes to generation of</span>
             <strong>proton motive force</strong>
-            
+
             <p>Active proton pumping contributes to building the proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
-                
+
                 <span class="meta">The proton motive force (pmf) can be built up by different mechanisms like proton pumping, quinone/quinol cycling or by a redox loop.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>redox loop</strong>
             <span class="edge-predicate">contributes to generation of</span>
             <strong>proton motive force</strong>
-            
+
             <p>A redox loop contributes to building the proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
-                
+
                 <span class="meta">The proton motive force (pmf) can be built up by different mechanisms like proton pumping, quinone/quinol cycling or by a redox loop.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>redox loop</strong>
             <span class="edge-predicate">couples electron transport to</span>
             <strong>net proton transfer across membrane</strong>
-            
+
             <p>A redox loop couples electron transport to net proton transfer across the membrane without proton pumping.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/j.bbabio.2008.09.008</code>
-                
+
                 <span class="meta">The latter couples electron transport to a net proton transfer across the membrane without proton pumping.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -309,16 +309,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>ATP synthase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P0ABB4/entry" rel="nofollow noreferrer"><code>UniProtKB:P0ABB4</code></a>
                   <br>ATP synthase subunit beta <span class="meta">(atpD)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
                   <br><code>NCBITaxon:83333</code>
                 </td>
@@ -329,31 +329,31 @@
                 <td>
                   <p>Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase; this accession is not presented as the complete rotary complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.7554/eLife.21598" rel="nofollow noreferrer"><code>DOI:10.7554/eLife.21598</code></a>
-                      
+
                       <span class="evidence-snippet">the potential energy of the proton motive force into rotation of the central stalk that drives conformational changes in the F1 catalytic sites</span>
                       <span class="meta">The primary cryo-EM study resolves the E. coli F1Fo complex and its beta-containing catalytic head; UniProtKB P0ABB4 verifies the reviewed AtpD component and K-12 taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -361,116 +361,116 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1016/B978-012373944-5.00083-3</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/physiology/trophic_type.html" >trophic type <code>METPO:1000631</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>TT_chemotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>chemotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000641</code> <span class="dim-preview">[-1.746, -0.197, -4.063, +1.592, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/organotrophic.html">organotrophic</a>
           <span class="sim">0.838</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithotrophic.html">lithotrophic</a>
           <span class="sim">0.527</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoorganotrophic.html">chemoorganotrophic</a>
           <span class="sim">0.506</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_delta_low.html">NaCl delta low</a>
           <span class="sim">0.426</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/trophic_type.html">trophic type</a>
           <span class="sim">0.415</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/orange_pigmented.html">orange pigmented</a>
           <span class="sim">0.410</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
           <span class="sim">0.408</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_delta_mid2.html">temperature delta mid2</a>
           <span class="sim">0.407</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -541,135 +541,135 @@ Ontology identifiers below are limited to high-confidence mappings. Labels witho
 - Fe(II), Fe(III), molecular hydrogen, sulfide, elemental sulfur, thiosulfate, nitrate, sulfate, water, NADH, acetate, formate, propionate — use ChEBI after identifier validation
 - reduced inorganic sulfur compounds — collection/class node rather than a single molecule
 - polarized carbon electrode — experimental-factor/material node</pre>
-      
+
       <p class="meta">Showing the first 60 of
         253 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/physiology/chemotrophic-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Escherichia coli K-12</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
              rel="nofollow noreferrer"><code>NCBITaxon:83333</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.7554/eLife.21598"
              rel="nofollow noreferrer"><code>DOI:10.7554/eLife.21598</code></a>
-          
-          
+
+
           <span class="meta">Strain-level chemoorganotrophic respiratory model paired to the reviewed AtpD beta component of its F-type ATP synthase.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.872607+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-09T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for chemical substrate oxidation, respiratory electron transfer, proton motive force, and ATP synthesis.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:31Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000010×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×2, biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007402×1, METPO:2007403×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:38:01Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0016491×1, GO:0022904×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:41:04Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007504×1, METPO:1007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T08:14:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:50860×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T02:30:13Z</time> ·
           <strong>RETYPE_CAUSAL_NODES</strong> · claude
           <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-06-13T21:03:27Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 4 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T01:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES</strong> · claude
           <p class="changes">Re-grounded 1 causal edge(s) off microbe-domain METPO predicates (1 to has energy source), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain &#39;biological process or activity&#39;; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T12:30:00-07:00</time> ·
           <strong>REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Marked the respiratory chemotrophy graph mechanistic, documented its scope, added DOI-cited E. coli K-12 as the canonical strain, and paired the generic ATP synthase complex with reviewed AtpD component P0ABB4 without treating one subunit as the whole complex.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -698,12 +698,12 @@ Ontology identifiers below are limited to high-confidence mappings. Labels witho
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1054,8 +1054,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-24 19:30 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

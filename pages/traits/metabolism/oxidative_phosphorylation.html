@@ -30,22 +30,22 @@
     </p>
     <h1>Oxidative phosphorylation</h1>
     <p class="curie"><code>METPO:1000803</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A metabolism that generates ATP through the transfer of electrons from electron donors to electron acceptors via redox reactions, coupled to the pumping of protons across a membrane to create an electrochemical gradient.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Oxidative phosphorylation chemiosmotic coupling</h2>
       <p class="meta">Evidence-backed causal sketch linking respiratory electron transfer, proton motive force, ATP synthase, and ATP production.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents a concrete aerobic heme-copper-oxidase branch of bacterial oxidative phosphorylation. The redundant family-unspecified terminal-oxidase node was removed rather than assigned an overbroad grounding.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,28 +54,28 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>Oxidative phosphorylation</strong>
             <span class="edge-predicate">uses pathway</span>
             <strong>electron transport chain</strong>
-            
+
             <p>Oxidative phosphorylation couples phosphorylation to respiratory electron transfer.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/191144a0</code>
                 <span class="evidence-snippet">electron and hydrogen transfer</span>
                 <span class="meta">Mitchell paper supports coupling electron/hydrogen transfer to phosphorylation.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>electron transport chain</strong>
             <span class="edge-predicate">localized to</span>
@@ -83,16 +83,16 @@
             <code>biolink:located_in</code>
             <p>Electron transfer and proton translocation are membrane-coupled.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/191144a0</code>
                 <span class="evidence-snippet">Chemi-Osmotic Type of Mechanism</span>
                 <span class="meta">Chemiosmotic mechanism requires a membrane-separated ion gradient.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>electron transport chain</strong>
             <span class="edge-predicate">generates</span>
@@ -100,16 +100,16 @@
             <code>biolink:produces</code>
             <p>Respiratory electron transfer establishes a proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41598-019-38564-0</code>
                 <span class="evidence-snippet">proton motive force (pmf) established and maintained by respiratory chain enzymes</span>
                 <span class="meta">Supports respiratory chain generation of pmf.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>proton motive force</strong>
             <span class="edge-predicate">regulates</span>
@@ -117,16 +117,16 @@
             <code>RO:0002211</code>
             <p>Proton motive force energizes F1Fo ATP synthase.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1038/s41598-019-38564-0</code>
                 <span class="evidence-snippet">energized by the proton motive force</span>
                 <span class="meta">Supports pmf-driven ATP synthase.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>F1Fo ATP synthase</strong>
             <span class="edge-predicate">produces</span>
@@ -134,33 +134,33 @@
             <code>METPO:2007800</code>
             <p>ATP synthase synthesizes ATP from ADP and phosphate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/BF01923429</code>
                 <span class="evidence-snippet">synthesis of ATP is also driven by a proton motive force</span>
                 <span class="meta">ATP synthase review supports pmf-driven ATP synthesis.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>NADH</strong>
             <span class="edge-predicate">is oxidized by</span>
             <strong>Complex I / NADH:quinone oxidoreductase (NDH-1)</strong>
-            
+
             <p>Complex I oxidizes NADH at the respiratory chain entry point.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms252413421</code>
                 <span class="evidence-snippet">Proton-translocating NADH–ubiquinone oxidoreductase (complex I) catalyzes the oxidation of NADH by ubiquinone accompanied by the transmembrane transfer of four protons</span>
                 <span class="meta">complex I catalyzes the oxidation of NADH by ubiquinone (general prokaryotic claim).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-7">
             <strong>Complex I / NADH:quinone oxidoreductase (NDH-1)</strong>
             <span class="edge-predicate">reduces</span>
@@ -168,33 +168,33 @@
             <code>METPO:2007802</code>
             <p>Complex I transfers electrons from NADH to the quinone pool.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms252413421</code>
                 <span class="evidence-snippet">oxidation of NADH by ubiquinone</span>
                 <span class="meta">oxidation of NADH by ubiquinone; reduces the membrane quinone pool.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-8">
             <strong>Complex I / NADH:quinone oxidoreductase (NDH-1)</strong>
             <span class="edge-predicate">translocates</span>
             <strong>proton</strong>
-            
+
             <p>Complex I couples redox chemistry to transmembrane proton translocation.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms252413421</code>
                 <span class="evidence-snippet">accompanied by the transmembrane transfer of four protons</span>
                 <span class="meta">coupled with the vectorial transmembrane transfer of four H+ ions.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-9">
             <strong>Complex I / NADH:quinone oxidoreductase (NDH-1)</strong>
             <span class="edge-predicate">generates</span>
@@ -202,33 +202,33 @@
             <code>biolink:produces</code>
             <p>Complex I proton translocation contributes directly to formation of the proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms252413421</code>
                 <span class="evidence-snippet">contributing to the formation of a proton motive force (pmf)</span>
                 <span class="meta">The review directly links proton-translocating NADH-ubiquinone oxidoreductase to PMF formation across bacterial and mitochondrial coupling membranes.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-10">
             <strong>succinate</strong>
             <span class="edge-predicate">is oxidized by</span>
             <strong>succinate dehydrogenase / Complex II</strong>
-            
+
             <p>Succinate dehydrogenase oxidizes succinate, reducing quinone.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s10863-024-10041-y</code>
                 <span class="evidence-snippet">catalyzes the two-electron reduction of quinone by succinate</span>
                 <span class="meta">succinate dehydrogenase catalyzes the two-electron reduction of quinone by succinate.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-11">
             <strong>succinate dehydrogenase / Complex II</strong>
             <span class="edge-predicate">reduces</span>
@@ -236,16 +236,16 @@
             <code>METPO:2007802</code>
             <p>Complex II transfers electrons from succinate to the membrane quinone pool.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s10863-024-10041-y</code>
                 <span class="evidence-snippet">catalyzes the two-electron reduction of quinone by succinate</span>
                 <span class="meta">The B. licheniformis respiratory-chain study identifies succinate dehydrogenase as succinate:quinone oxidoreductase, directly joining Complex II to the quinone pool.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-12">
             <strong>proton translocation</strong>
             <span class="edge-predicate">generates</span>
@@ -253,16 +253,16 @@
             <code>biolink:produces</code>
             <p>Vectorial proton translocation establishes the proton motive force.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms252413421</code>
                 <span class="evidence-snippet">contributing to the formation of a proton motive force (pmf)</span>
                 <span class="meta">energy conservation in the form of an electrochemical gradient (proton motive force, pmf).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-13">
             <strong>heme-copper oxidase</strong>
             <span class="edge-predicate">reduces</span>
@@ -270,36 +270,36 @@
             <code>METPO:2007802</code>
             <p>Heme-copper terminal oxidases catalyze four-electron reduction of O2 to water in the concrete branch represented here.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms25021277</code>
                 <span class="evidence-snippet">catalyze the four-electron reduction of O2 to 2H2O</span>
                 <span class="meta">The review identifies heme-copper oxidases as a bacterial terminal-oxidase class carrying out the oxygen-reduction reaction.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-14">
             <strong>heme-copper oxidase</strong>
             <span class="edge-predicate">translocates</span>
             <strong>proton</strong>
-            
+
             <p>Heme-copper oxidases act as proton pumps contributing to PMF.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.3390/ijms25021277</code>
                 <span class="evidence-snippet">Heme-copper oxidases are true proton pumps</span>
                 <span class="meta">Heme-copper oxidases are true proton pumps (general claim).</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -309,16 +309,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>heme-copper oxidase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P08306/entry" rel="nofollow noreferrer"><code>UniProtKB:P08306</code></a>
                   <br>Cytochrome c oxidase subunit 2 <span class="meta">(ctaC)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266" rel="nofollow noreferrer">Paracoccus denitrificans</a>
                   <br><code>NCBITaxon:266</code>
                 </td>
@@ -329,31 +329,31 @@
                 <td>
                   <p>Subunit II component of purified P. denitrificans cytochrome c oxidase; this accession does not represent the complete heme-copper oxidase complex.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1016/S0005-2728(98)00092-9" rel="nofollow noreferrer"><code>DOI:10.1016/S0005-2728(98)00092-9</code></a>
-                      
+
                       <span class="evidence-snippet">enzyme containing polypeptides I-IV</span>
                       <span class="meta">The primary purification study establishes the four-subunit P. denitrificans oxidase and its subunit-II component; UniProtKB P08306 verifies the reviewed protein and taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -363,119 +363,119 @@
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
         <dt>Author</dt><dd>Anthea Guo</dd>
         <dt>Definition source</dt><dd>DOI:10.1038/191144a0</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>respiratory-chain phosphorylation <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0006119</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000803</code> <span class="dim-preview">[-1.060, -0.950, -1.248, -0.351, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
           <span class="sim">0.974</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
           <span class="sim">0.971</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
           <span class="sim">0.970</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
           <span class="sim">0.969</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
           <span class="sim">0.969</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.966</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
           <span class="sim">0.938</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/iron_oxidation.html">iron oxidation</a>
           <span class="sim">0.938</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -546,171 +546,171 @@ Identifiers below are conservative. Where exact cross-ontology grounding is unce
 | Cytochrome bc₁ complex | Label-only complex node | `petABC`/taxon-specific nomenclature | Quinol oxidation and Q-cycle proton translocation. |
 | Cytochrome bcc–aa₃ supercomplex | Label-only complex node | `qcrABC`, `cta` genes, taxon-specific | Important actinobacterial/mycobacterial branch. |
 | Heme-copper terminal oxidase | Label-only superclass | `cyoABCD`, `cox/cta` families | Reduces O₂; pumping stoichiometry varies by family. |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         285 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/oxidative_phosphorylation-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Paracoccus denitrificans</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266"
              rel="nofollow noreferrer"><code>NCBITaxon:266</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://pubmed.ncbi.nlm.nih.gov/30428155/"
              rel="nofollow noreferrer"><code>PMID:30428155</code></a>
-          
-          
+
+
           <span class="meta">Free-living model of the mitochondrial-type respiratory chain and oxidative phosphorylation (full set of bacterial respiratory complexes).</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-08-23T09:14:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
           <p class="changes">Reviewed the graph as mechanistic, grounded complexes I, II, and ATP synthase, replaced the ambiguous terminal-oxidase node with the cited heme-copper branch, connected the respiratory entry branches, and added DOI-backed P. denitrificans subunit-II P08306.</p>
         </li>
-        
+
         <li>
           <time>2026-05-05T01:35:46.912667+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
         <li>
           <time>2026-05-07T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for chemiosmotic coupling, proton motive force, ATP synthase, and ATP production.</p>
         </li>
-        
+
         <li>
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-23T08:21:49Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×1, biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:19Z</time> ·
           <strong>RENAME_PREDICATE_LABELS</strong> · claude
           <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-24T04:41:04Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
         </li>
-        
+
         <li>
           <time>2026-05-26T02:30:13Z</time> ·
           <strong>RETYPE_CAUSAL_NODES</strong> · claude
           <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 7 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000017×2, biolink:produces×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:24636×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-26T07:15:18Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A2U9ILE5×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 3 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to produces, 2 to reduces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-16T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_TYPE</strong> · claude
           <p class="changes">Under the PATHWAY-vs-BIOLOGICAL_PROCESS rule, one node_id means one thing corpus-wide (issue 356): electron_transport_chain is typed PATHWAY. PATHWAY is a named, conventionally enumerable multi-step route; BIOLOGICAL_PROCESS is everything else. A named route through enumerable complexes. Was 4 PATHWAY to 2 before this tranche.</p>
         </li>
-        
+
         <li>
           <time>2026-08-17T02:00:00Z</time> ·
           <strong>NORMALISE_NODE_SENSE</strong> · claude
           <p class="changes">One node_id per SENSE (issues 356, 384): molecular_oxygen is the chemical sense here. The molecule, not the condition — the dioxygen participating in the reaction the graph describes. Normalised onto molecular_oxygen, the id 20 other chemical occurrences already use, so one id means one sense corpus-wide (issues 356, 384).</p>
         </li>
-        
+
         <li>
           <time>2026-08-22T04:26:15Z</time> ·
           <strong>REVIEW_UNIPROT_INSTANCE_GROUNDINGS</strong> · codex
           <p class="changes">Reviewed 1 organism-specific UniProtKB grounding(s): replaced 0 with taxon-agnostic GO/InterPro terms and retracted 1 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T03:24:00Z</time> ·
           <strong>RESTORE_CANONICAL_CITATION</strong> · claude
           <p class="changes">Restored the canonical-example citation for NCBITaxon:266 from DOI:10.1016/S0005-2728(98)00092-9 back to PMID:30428155 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T06:15:39Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006119; declared exact synonym(s): &#39;respiratory-chain phosphorylation&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -739,12 +739,12 @@ Identifiers below are conservative. Where exact cross-ontology grounding is unce
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -1095,8 +1095,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

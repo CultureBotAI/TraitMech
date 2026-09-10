@@ -30,22 +30,22 @@
     </p>
     <h1>starch degradation</h1>
     <p class="curie"><code>traitmech:000115</code> · CLASS · REVIEWED</p>
-    
+
     <p class="definition">A biopolymer-degradation metabolism in which an organism hydrolyzes starch (amylose and amylopectin) to maltooligosaccharides and glucose using amylases and related glycoside hydrolases.</p>
-    
+
   </header>
 
-  
+
   <section class="causal-graphs">
-    
-    
+
+
     <div class="card causal-graph-card">
       <h2>Starch degradation hydrolyzes amylose/amylopectin to glucose</h2>
       <p class="meta">Evidence-backed causal sketch linking amylase systems to hydrolysis of starch into maltooligosaccharides and glucose.</p>
 
       <p class="graph-scope"><code>MECHANISTIC</code> · Represents extracellular alpha-amylase initiation followed by a generic exo-hydrolase step. The B. licheniformis protein example supports the alpha-amylase branch; alpha-glucosidase and glucoamylase remain unresolved as a combined downstream label.</p>
 
-      
+
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -54,11 +54,11 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-      
+
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-          
+
           <li id="pathograph-1-edge-1">
             <strong>alpha-amylase</strong>
             <span class="edge-predicate">confers</span>
@@ -66,16 +66,16 @@
             <code>METPO:2007700</code>
             <p>Alpha-amylase endo-hydrolyzes starch alpha-1,4 linkages and initiates production of shorter glucans.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1016/S0168-1656(01)00407-2</code>
                 <span class="evidence-snippet">the use of starch-converting enzymes in the production of maltodextrin, modified starches, or glucose and fructose syrups</span>
                 <span class="meta">The review supports alpha-amylase-family starch conversion; the edge no longer attributes alpha-1,6 hydrolysis to the refined alpha-amylase node.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-2">
             <strong>starch degradation</strong>
             <span class="edge-predicate">produces</span>
@@ -83,16 +83,16 @@
             <code>METPO:2007800</code>
             <p>Starch hydrolysis yields maltodextrins and glucose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1093/nar/gkt1178</code>
-                
+
                 <span class="meta">CAZy review classifies glycoside hydrolases (including amylases) used to degrade starch and other polysaccharides.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-3">
             <strong>starch (amylose/amylopectin)</strong>
             <span class="edge-predicate">is hydrolyzed to</span>
@@ -100,16 +100,16 @@
             <code>RO:0001001</code>
             <p>Endo-amylolytic cleavage of starch yields maltooligosaccharides as the core trait-level intermediate.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1007/s00018-023-04812-w</code>
-                
+
                 <span class="meta">Reports hydrolysis of starch into maltooligosaccharides; flagged as broad trait-level core edge across taxa.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-4">
             <strong>alpha-amylase</strong>
             <span class="edge-predicate">hydrolyzes</span>
@@ -117,16 +117,16 @@
             <code>METPO:2007808</code>
             <p>B. licheniformis alpha-amylase hydrolyzes starch; the adjacent starch-to-maltooligosaccharide edge records the product transition.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1021/bp060057a</code>
                 <span class="evidence-snippet">The enzymatic hydrolysis of soluble starch with an alpha-amylase from Bacillus licheniformis</span>
                 <span class="meta">Direct substrate-enzyme evidence from the canonical taxon; changing the object from the product node corrects the previous edge direction.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-5">
             <strong>alpha-glucosidase / glucoamylase</strong>
             <span class="edge-predicate">degrades</span>
@@ -134,16 +134,16 @@
             <code>METPO:2007809</code>
             <p>Alpha-glucosidase/glucoamylase exo-acts on maltooligosaccharides to release glucose.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mbio.01506-24</code>
-                
+
                 <span class="meta">Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose; generic terminal exo-hydrolysis step.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
           <li id="pathograph-1-edge-6">
             <strong>alpha-glucosidase / glucoamylase</strong>
             <span class="edge-predicate">produces</span>
@@ -151,19 +151,19 @@
             <code>METPO:2007800</code>
             <p>Exo-amylolytic release of glucose monomers from maltooligosaccharides.</p>
             <ul>
-              
+
               <li>
                 <code>DOI:10.1128/mbio.01506-24</code>
-                
+
                 <span class="meta">Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose, the terminal assimilable sugar.</span>
               </li>
-              
+
             </ul>
           </li>
-          
+
         </ul>
       </div>
-      
+
 
       <div class="protein-examples">
         <h3>Protein and taxon examples</h3>
@@ -173,16 +173,16 @@
               <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
             </thead>
             <tbody>
-              
+
               <tr>
                 <td>alpha-amylase</td>
                 <td>
-                  
+
                   <a href="https://www.uniprot.org/uniprotkb/P06278/entry" rel="nofollow noreferrer"><code>UniProtKB:P06278</code></a>
                   <br>Alpha-amylase <span class="meta">(amyS)</span>
                 </td>
                 <td>
-                  
+
                   <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1402" rel="nofollow noreferrer">Bacillus licheniformis</a>
                   <br><code>NCBITaxon:1402</code>
                 </td>
@@ -193,31 +193,31 @@
                 <td>
                   <p>Secreted alpha-amylase that hydrolyzes soluble starch in the canonical B. licheniformis example.</p>
                   <ul>
-                    
+
                     <li>
-                      
-                      
+
+
                       <a href="https://doi.org/10.1021/bp060057a" rel="nofollow noreferrer"><code>DOI:10.1021/bp060057a</code></a>
-                      
+
                       <span class="evidence-snippet">The enzymatic hydrolysis of soluble starch with an alpha-amylase from Bacillus licheniformis</span>
                       <span class="meta">The primary enzymology study directly tests B. licheniformis alpha-amylase on soluble starch; UniProtKB P06278 verifies the reviewed AmyS protein and taxon.</span>
                     </li>
-                    
+
                   </ul>
                 </td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
       </div>
 
     </div>
-    
-  </section>
-  
 
-  
+  </section>
+
+
+
 
 
   <section class="grid">
@@ -225,125 +225,125 @@
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
-        
+
         <dt>Definition source</dt><dd>DOI:10.1016/S0168-1656(01)00407-2</dd>
-        
-        
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/biopolymer_degradation.html" >biopolymer degradation <code>traitmech:000110</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (3)</h2>
       <ul class="synonyms">
-        
+
         <li>amylolytic <span class="meta">RELATED_SYNONYM · DOI:10.1016/S0168-1656(01)00407-2</span></li>
-        
+
         <li>starch breakdown <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
         <li>starch catabolism <span class="meta">EXACT_SYNONYM · http://purl.obolibrary.org/obo/go/releases/2026-07-26/go-basic.obo</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
         <li><code>GO:0005983</code></li>
       </ul>
     </div>
-    
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxygenic_photosynthesis.html">oxygenic photosynthesis</a>
           <span class="sim">1.000</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card research-card">
       <h2>Deep research</h2>
       <p class="meta">Generated by <code>just research-trait</code>;
@@ -414,129 +414,129 @@ The following table organizes all candidate nodes for the starch degradation cau
 | REGULATORY | carbon catabolite repression | GO:0009401 | Global carbon-source control mechanism repressing maltose/starch utilization genes in the presence of preferred carbohydrates such as glucose (davidson2010bindingproteindependentuptake pages 2-4) |
 | REGULATORY | maltose / maltotriose induction | label-only candidate | Induction signal for maltose regulons and some starch-responsive loci; maltotriose is a particularly effective inducer in enterobacteria (dippel2005themaltodextrinsystem pages 7-8, dippel2005themaltodextrinsystem pages 2-2) |
 | BINDING PROTEIN | SusD | label-only candidate | Essential outer membrane starch-binding protein that presents substrate to SusC/SusG and is required for growth on starch in Bacteroides (foley2016thesusoperon pages 8-10, foley2016thesusoperon pages 10-12) |</pre>
-      
+
       <p class="meta">Showing the first 60 of
         287 lines of findings; the linked file also carries the
         run's front matter and the prompt it was given —
         <a href="https://github.com/CultureBotAI/TraitMech/blob/main/research/traits/metabolism/starch_degradation-deep-research-falcon.md" target="_blank" rel="noopener">read the full report</a>.</p>
-      
-    </div>
-    
 
-    
-    
+    </div>
+
+
+
+
     <div class="card" id="canonical-examples">
       <h2>Canonical examples
         <span class="meta">(1)</span></h2>
       <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
         NCBITaxon and link out to the NCBI record.</p>
       <ul class="canonical-examples">
-        
+
         <li>
           <em>Bacillus licheniformis</em>
-          
-          
-          
+
+
+
           <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1402"
              rel="nofollow noreferrer"><code>NCBITaxon:1402</code></a>
-          
-          
-          
-          
-          
+
+
+
+
+
           <a href="https://doi.org/10.1186/gb-2004-5-10-r77"
              rel="nofollow noreferrer"><code>DOI:10.1186/gb-2004-5-10-r77</code></a>
-          
-          
+
+
           <span class="meta">Industrial amylase producer; model for extracellular starch hydrolysis.</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-06-08T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (starch degradation / amylolysis); leftover round, sub-variant of biopolymer degradation.</p>
         </li>
-        
+
         <li>
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (amylase hydrolysis of starch) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
         </li>
-        
+
         <li>
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17234×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-23T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added 4 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:21:12Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:33Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17593×1).</p>
         </li>
-        
+
         <li>
           <time>2026-06-24T17:23:38Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000013×1, METPO:2000007×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T00:00:00Z</time> ·
           <strong>MIGRATE_ENABLES_TRAIT_EDGES</strong> · claude
           <p class="changes">Migrated 1 causal edge(s) off enables/RO:0002327 with a TRAIT object (1 to confers), issue 302. RO:0002327 has range &#39;biological process or activity&#39;, which a trait (a disposition) cannot satisfy, so the previous form entailed trait is-a BiologicalProcessOrActivity. The replacements are proposed in proposals/metpo_traitmech_v8 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T02:00:00Z</time> ·
           <strong>MIGRATE_MICROBE_DOMAIN_EDGES_PART2</strong> · claude
           <p class="changes">Re-grounded 4 causal edge(s) off microbe-domain METPO predicates onto their causal-graph counterparts (1 to degrades, 1 to hydrolyzes, 2 to produces), issue 301 part 2. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Each replacement is a 1:1 mirror of its source predicate that changes only the domain, so the claim each edge makes is unchanged and directions are unchanged. The replacements are proposed in proposals/metpo_traitmech_v9 and are placeholder ids until METPO mints them.</p>
         </li>
-        
+
         <li>
           <time>2026-08-06T06:15:13Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0001001×1).</p>
         </li>
-        
+
         <li>
           <time>2026-08-24T00:00:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · codex
           <p class="changes">Refined the broad amylase node to alpha-amylase with GO and a DOI-backed B. licheniformis AmyS example, corrected the enzyme-substrate edge, retained the combined downstream exo-hydrolase label with an explicit rationale, and documented graph scope.</p>
         </li>
-        
+
         <li>
           <time>2026-08-26T06:15:39Z</time> ·
           <strong>ADD_EXACT_ONTOLOGY_MATCH</strong> · codex
           <p class="changes">Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0005983; declared exact synonym(s): &#39;starch breakdown&#39;, &#39;starch catabolism&#39;. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.</p>
         </li>
-        
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -565,12 +565,12 @@ The following table organizes all candidate nodes for the starch degradation cau
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (parent_proxy)</p>
   </div>
-  
+
 </aside>
 </div>
 
@@ -921,8 +921,8 @@ function renderPathograph(containerId, data) {
     <div>
       Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 477 TraitRecords
-      · embedding coverage 100.0%
+      · 491 TraitRecords
+      · embedding coverage 97.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
