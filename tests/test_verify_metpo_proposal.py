@@ -24,6 +24,53 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 import verify_metpo_proposal as vmp  # noqa: E402
 
 
+def test_class_width_is_fixed_by_header_row():
+    rows = [
+        [""] * 12,
+        [""] * 12,
+        [""] * 11,
+    ]
+    failures: list[str] = []
+
+    width = vmp.check_columns(rows, vmp.CLASS_COLS, "classes", failures)
+
+    assert width == 12
+    assert failures == ["classes row 3 has 11 cols, expected 12"]
+
+
+def test_twelve_column_class_header_checks_related_synonym_directive():
+    rows = [
+        [""] * 12,
+        [
+            "ID",
+            "LABEL",
+            "A IAO:0000115",
+            ">A IAO:0000119",
+            "SC %",
+            "A oboInOwl:hasExactSynonym SPLIT=|",
+            "A oboInOwl:hasDbXref SPLIT=|",
+            "A oboInOwl:inSubset",
+            "",
+            "",
+            "",
+            "",
+        ],
+    ]
+    failures: list[str] = []
+
+    vmp.check_robot_header(
+        rows,
+        vmp.class_robot_header_requirements(12),
+        "classes",
+        failures,
+    )
+
+    assert failures == [
+        "classes header row 2 col 11 = '', expected to contain "
+        "'A oboInOwl:hasRelatedSynonym'",
+    ]
+
+
 def _corpus(tmp_path: Path, *ids: str) -> Path:
     """A stand-in data/traits/ holding one YAML per synthetic id."""
     d = tmp_path / "traits"
