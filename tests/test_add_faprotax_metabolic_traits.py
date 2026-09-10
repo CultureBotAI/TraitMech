@@ -155,3 +155,23 @@ def test_metpo_v11_documents_scope_a_round_trip_plan():
     assert "## Round-trip plan (Scope A)" in proposal
     assert "## Change log" in proposal
     assert "METPO:1008810` withdrawn" in proposal
+
+
+def test_metpo_v11_group_keys_are_related_in_robot_template():
+    rows = [
+        row
+        for row in _v11_proposal_rows()
+        if row["proposed_id"].startswith("METPO:")
+    ]
+
+    for row in rows:
+        assert row["exact_synonyms"] == ""
+        assert row["related_synonyms"]
+
+
+def test_metpo_v11_drops_dark_sulfur_go_closematch():
+    mapping_tsv = REPO_ROOT / "proposals/metpo_traitmech_v11/metpo_proposal_mappings.sssom.tsv"
+    proposal = _v11_proposal_text()
+
+    assert "GO:0019417" not in mapping_tsv.read_text(encoding="utf-8")
+    assert "phototrophic sulfur oxidation" not in proposal

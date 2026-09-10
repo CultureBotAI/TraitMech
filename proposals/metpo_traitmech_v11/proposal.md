@@ -68,9 +68,9 @@ second label** — `aerobic_chemo_heterotrophy` differs from
 An exact-match check missed this, because `chemoheterotrophy` ≠ `chemoheterotrophic`
 under normalisation. Only reading METPO's trophic-type branch surfaced it.
 
-**Requested instead: two synonym additions to an existing class.**
+**Requested instead: two related-synonym additions to an existing class.**
 
-| target | add as `oboInOwl:hasExactSynonym` | occurrences |
+| target | add as `oboInOwl:hasRelatedSynonym` | occurrences |
 |---|---|---:|
 | `METPO:1000636` chemoheterotrophic | `chemoheterotrophy` | 10,493 |
 | `METPO:1000636` chemoheterotrophic | `aerobic_chemoheterotrophy` | 7,875 |
@@ -90,8 +90,8 @@ METPO:1000660 phototrophic      — aerobic_anoxygenic_phototrophy
 METPO:1000651 methylotrophic    — methylotrophy
 ```
 
-So the underscored FAPROTAX spelling is already an accepted synonym form here, which
-is why the 14 proposed classes below carry theirs the same way.
+So the underscored FAPROTAX spelling is already an accepted related-synonym form
+here, which is why the 14 proposed classes below carry theirs the same way.
 
 ## The 14 proposed classes
 
@@ -196,20 +196,21 @@ mapping instead.
 
 ## Cross-ontology mappings
 
-`metpo_proposal_mappings.sssom.tsv` carries 4 rows: 2 `skos:exactMatch` to GO,
-1 `skos:broadMatch`, and 1 `skos:closeMatch`. Emitted where GO genuinely denotes
-the same process or a useful broader neighbor — per the skill's rule, a
-cross-ontology equivalent is a mapping, not a `definition_source`.
+`metpo_proposal_mappings.sssom.tsv` carries 3 rows: 2 `skos:exactMatch` to GO and
+1 `skos:broadMatch`. Emitted where GO genuinely denotes the same process or a useful
+broader neighbor — per the skill's rule, a cross-ontology equivalent is a mapping,
+not a `definition_source`.
 
 The broadMatch is `hydrogenotrophic methanogenesis` → `GO:0019386 methanogenesis,
 from carbon dioxide`: GO names CO2 reduction to methane but does not constrain the
 electron donor to H2, so the FAPROTAX term is narrower.
 
-The closeMatch is `dark oxidation of sulfur compounds` → `GO:0019417 sulfur
-oxidation`: GO admits phototrophic sulfur oxidation, which the FAPROTAX "dark"
-qualifier exists to exclude, and GO has no light-independent sibling to point at.
+`dark oxidation of sulfur compounds` gets no GO mapping. `GO:0019417 sulfur
+oxidation` was rejected for the broader `sulfur oxidation` record because GO is
+restricted to oxygen addition to elemental sulfur, while METPO/FAPROTAX sulfur
+oxidation spans multiple reduced inorganic sulfur compounds.
 
-**Ten of the fourteen get no mapping**, and that is a finding rather than an omission.
+**Eleven of the fourteen get no mapping**, and that is a finding rather than an omission.
 The anaerobic-respiration-by-acceptor family has no GO equivalents — searching
 "nitrate respiration" returns `GO:0008940 nitrate reductase activity`, an enzyme
 function, not the respiratory process. GO models the catalysis; FAPROTAX models the
@@ -272,8 +273,9 @@ for traceability. Until then the `traitmech:` IDs remain authoritative locally.
 - v11 revision, 2026-09: reparented dark oxidation of sulfur compounds under
   sulfur oxidation, downgraded hydrogenotrophic methanogenesis to a `skos:broadMatch`,
   documented reparents for existing DNRA, denitrification, and dissimilatory sulfate
-  reduction rows from the v5 cohort, and recorded `xylanolysis` as a synonym edit
-  instead of a new class.
+  reduction rows from the v5 cohort, moved FAPROTAX group keys to related synonyms,
+  dropped the dark-sulfur `GO:0019417` closeMatch, and recorded `xylanolysis` as a
+  synonym edit instead of a new class.
 
 ## What is still unresolved after this cohort
 

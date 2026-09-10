@@ -12,7 +12,7 @@ proposals/
 ├── README.md                          # this file
 └── metpo_traitmech_v<N>/              # one cohort
     ├── proposal.md                    # reviewer narrative
-    ├── metpo_proposal_classes_robot.tsv      # 11-col ROBOT template
+    ├── metpo_proposal_classes_robot.tsv      # 11/12-col ROBOT template
     └── metpo_proposal_properties_robot.tsv   # 12-col ROBOT template
 ```
 

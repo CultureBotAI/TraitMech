@@ -40,7 +40,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
 TRAITS_DIR = REPO_ROOT / "data/traits"
 
-CLASS_COLS = 11
+CLASS_COLS = {11, 12}
 PROP_COLS = 12
 
 # Built-in CURIE prefixes accepted as external parents/ranges without
@@ -63,10 +63,15 @@ def _emit(failures: list[str], msg: str) -> None:
     print(f"  FAIL: {msg}", file=sys.stderr)
 
 
-def check_columns(rows: list[list[str]], expected: int, label: str, failures: list[str]) -> None:
+def check_columns(rows: list[list[str]], expected: int | set[int], label: str, failures: list[str]) -> None:
+    expected_values = {expected} if isinstance(expected, int) else expected
     for i, row in enumerate(rows, start=1):
-        if len(row) != expected:
-            _emit(failures, f"{label} row {i} has {len(row)} cols, expected {expected}")
+        if len(row) not in expected_values:
+            expected_desc = " or ".join(str(value) for value in sorted(expected_values))
+            _emit(
+                failures,
+                f"{label} row {i} has {len(row)} cols, expected {expected_desc}",
+            )
 
 
 def check_robot_header(rows: list[list[str]], required: list[str], label: str, failures: list[str]) -> None:
