@@ -10,11 +10,8 @@
 # Convenience wrapper (recommended)
 just verify-proposal <cohort>
 
-# Manual equivalents:
-
-# Column-count sanity (must print nothing)
-awk -F'\t' 'NF != 11 {print NR": "NF" cols"}' proposals/<cohort>/metpo_proposal_classes_robot.tsv
-awk -F'\t' 'NF != 12 {print NR": "NF" cols"}' proposals/<cohort>/metpo_proposal_properties_robot.tsv
+# Manual equivalent:
+uv run python scripts/verify_metpo_proposal.py proposals/<cohort>
 
 # Enum coverage (Scope C only) — every CausalNodeTypeEnum value should appear
 # as a leaf row whose definition_source matches the enum value.
@@ -119,4 +116,3 @@ robot reason --reasoner ELK --input /tmp/merged.owl \
 | A cohort cites a `traitmech:` ID that no record has | Typo, or a citation left behind after a record was renamed or removed | `just verify-proposal <cohort>` names it; fix the citation. |
 | An ontology IRI (`OMP:`, `PATO:`, `GO:`, …) sits in `definition_source` (col 4) | Cross-ontology equivalence mistaken for definition provenance (issue #83) | Move it: lightweight hint → `xrefs` (`hasDbXref`); semantic alignment → `metpo_proposal_mappings.sssom.tsv` with a `skos:*Match`. Keep col 4 for citations only. Catch with the `definition_source` hygiene check in step 5. |
 | `CausalNodeTypeEnum` value renamed but proposal still cites old name | Schema drift after proposal was drafted | Use Path C (new cohort version) if v1 is merged; Path A otherwise. |
-

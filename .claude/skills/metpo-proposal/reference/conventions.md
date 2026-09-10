@@ -21,7 +21,9 @@ the justfile.
    - The 12-point pre-submission checklist.
    - Paired predicate convention (`does not <stem>` + shared related-synonym).
 2. **`kg-microbe`: `mappings/metpo_proposal_classes_robot.tsv`** —
-   the canonical 11-column class template. Copy the two-row header verbatim.
+   the canonical class template. Copy the 11-column two-row header verbatim for
+   exact-synonym-only cohorts; add a 12th `hasRelatedSynonym` column only when
+   a class cohort needs related OBO synonyms.
 3. **`kg-microbe`: `mappings/metpo_proposal_properties_robot.tsv`** —
    the canonical 12-column property template.
 4. **`CommunityMech`: `proposals/metpo_communitymech_v1/`** —
@@ -38,11 +40,20 @@ the justfile.
 
 Tab-separated, **two header rows**, no other column structures parse cleanly.
 
-**Classes** (11 columns):
+**Classes** (11 columns, exact synonyms only):
 
 ```
 proposed_id<TAB>label<TAB>definition<TAB>definition_source<TAB>parent<TAB>synonyms<TAB>xrefs<TAB>subset<TAB>priority<TAB>observations<TAB>traits_addressed
 ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>SC %<TAB>A oboInOwl:hasExactSynonym SPLIT=|<TAB>A oboInOwl:hasDbXref SPLIT=|<TAB>A oboInOwl:inSubset<TAB><TAB><TAB>
+```
+
+Use 12 columns when a class cohort needs related synonyms. Keep the exact-synonym
+column, add `related_synonyms` as the final metadata column, and put
+`A oboInOwl:hasRelatedSynonym SPLIT=|` in the final ROBOT header column:
+
+```
+proposed_id<TAB>label<TAB>definition<TAB>definition_source<TAB>parent<TAB>exact_synonyms<TAB>xrefs<TAB>subset<TAB>priority<TAB>observations<TAB>traits_addressed<TAB>related_synonyms
+ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>SC %<TAB>A oboInOwl:hasExactSynonym SPLIT=|<TAB>A oboInOwl:hasDbXref SPLIT=|<TAB>A oboInOwl:inSubset<TAB><TAB><TAB><TAB>A oboInOwl:hasRelatedSynonym SPLIT=|
 ```
 
 **Properties** (12 columns):
@@ -53,16 +64,17 @@ ID<TAB>LABEL<TAB>A IAO:0000115<TAB>>A IAO:0000119<TAB>TYPE<TAB>DOMAIN<TAB>RANGE<
 ```
 
 The **second row (ROBOT header) must have trailing tabs to reach the full
-column count**, even when the trailing columns are blank. Validate with:
+column count** when the trailing columns are blank. Validate with:
 
 ```bash
 just verify-proposal <cohort>
 # or manually:
-awk -F'\t' 'NF != 11 {print NR": "NF" cols"}' proposals/<cohort>/metpo_proposal_classes_robot.tsv
-awk -F'\t' 'NF != 12 {print NR": "NF" cols"}' proposals/<cohort>/metpo_proposal_properties_robot.tsv
+uv run python scripts/verify_metpo_proposal.py proposals/<cohort>
 ```
 
-Both commands should print nothing.
+The verifier accepts either class-template width and checks the corresponding
+ROBOT header directives, parent integrity, subset consistency, and Scope-A/C
+coverage.
 
 ---
 
@@ -121,4 +133,3 @@ written to a separate SSSOM file — never into `definition_source`.
 > `mappings/predicate_grounding.tsv`) follow the same principle: the alignment
 > they record is a mapping. Each carries a `predicate_id` column with the
 > `skos:*Match` strength rather than burying it in free-text `notes`.
-
