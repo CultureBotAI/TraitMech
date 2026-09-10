@@ -366,8 +366,8 @@ NEW_RECORDS: tuple[tuple[str, dict], ...] = (
             "label": "dark oxidation of sulfur compounds",
             "definition": (
                 "A sulfur oxidation in which an organism oxidizes a reduced "
-                "inorganic sulfur compound to sulfate as an electron donor "
-                "for energy conservation independently of light."
+                "inorganic sulfur compound as an electron donor for energy "
+                "conservation independently of light."
             ),
             "definition_source": FAPROTAX,
             "trait_category": "METABOLISM",
