@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/beta_glucosidase_activity.yaml
+  slug: beta_glucosidase_activity
+session:
+  id: 2026-09-11T175851Z-codex-9e520c
+  timestamp: '2026-09-11T17:58:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add beta-glucosidase activity
+  details: Minted traitmech:000146 for beta-glucosidase activity with DOI-backed beta-glucosidase
+    definition and API ZYM observations; cited Flavobacterium panaciterrae as a directly supported
+    canonical example; left causal_graphs empty because the existing cellulolysis and biopolymer
+    records already capture beta-glucosidase as a molecular function in broader cellulose
+    mechanisms.
