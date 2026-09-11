@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/coagulase_positive.yaml
+  slug: coagulase_positive
+session:
+  id: 2026-09-11T093811Z-codex-29ce4d
+  timestamp: '2026-09-11T09:38:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add coagulase positive trait
+  details: Added the active METPO coagulase positive child class as an OTHER TraitRecord with
+    DOI-backed plasma-clotting evidence and a Staphylococcus aureus canonical example; no
+    causal graph was added because the positive assay outcome is a child of coagulase activity
+    and does not need a separate mechanism graph.

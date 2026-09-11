@@ -1,0 +1,51 @@
+identifier: METPO:1007090
+label: coagulase positive
+definition: Test-outcome phenotype where the coagulase test yields a positive result
+  (plasma clotting). The underlying enzyme-organism relation should additionally be
+  asserted via <organism> METPO:2000302 'shows activity of' <coagulase enzyme term>
+  once a sufficiently specific enzyme term is selected (no GO/EC term currently exists
+  at the bacteriological coagulase test granularity).
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007089
+synonyms:
+- synonym_text: coagulase +
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: coagulase test positive
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T09:35:28Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T09:37:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO coagulase positive test-outcome phenotype with
+    DOI-backed plasma-clotting evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1099/mic.0.000019
+evidence:
+- reference: DOI:10.1099/mic.0.000019
+  snippet: coagulase-positive S. aureus bacteria promoted clotting of plasma which
+    was not seen when a coagulase-deficient mutant strain was used
+  notes: Loof et al. show that coagulase-positive S. aureus clots plasma in a way
+    lost from a coagulase-deficient mutant, directly supporting the positive test-outcome
+    phenotype.
+- reference: DOI:10.1371/journal.ppat.1001036
+  snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete coagulase
+    (Coa), a polypeptide that binds to and activates prothrombin
+  notes: Cheng et al. connect S. aureus Coa secretion to prothrombin activation, the
+    clotting activity detected by the coagulase test.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Loof et al. use coagulase-positive S. aureus as a direct plasma-clotting example
+    and contrast it with a coagulase-deficient mutant.
+  reference: DOI:10.1099/mic.0.000019
