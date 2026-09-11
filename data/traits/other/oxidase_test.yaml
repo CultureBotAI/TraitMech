@@ -1,0 +1,42 @@
+identifier: METPO:1007081
+label: oxidase test
+definition: A biochemical test that detects cytochrome c oxidase activity using a
+  redox indicator. The test outcome (positive or negative) is captured by its child
+  classes; this class itself does not assert oxidase activity.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: cytochrome oxidase test
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: oxidase activity test
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T14:24:19Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T14:32:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO oxidase test with OMP definition provenance plus
+    stable-URL and DOI-backed assay evidence after a repository-wide duplicate review
+    covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0000220
+evidence:
+- reference: https://asm.org/protocols/oxidase-test-protocol
+  snippet: The oxidase test is a biochemical reaction that assays for the presence
+    of cytochrome oxidase
+  notes: The American Society for Microbiology oxidase-test protocol describes the
+    assay as a biochemical reaction that reads cytochrome oxidase.
+- reference: DOI:10.5812/chbs-160199
+  snippet: The ability of bacteria to produce the enzyme cytochrome oxidase can be
+    determined by performing an oxidase test
+  notes: Hafezi and Khamar review oxidase-test use for determining bacterial cytochrome
+    oxidase production.

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/oxidase_test.yaml
+  slug: oxidase_test
+session:
+  id: 2026-09-11T143323Z-codex-8dd6be
+  timestamp: '2026-09-11T14:33:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add oxidase test trait
+  details: Added the seeded METPO:1007081 oxidase test record with OMP definition provenance
+    and ASM plus DOI-backed oxidase assay evidence.
