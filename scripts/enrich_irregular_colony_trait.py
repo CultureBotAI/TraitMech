@@ -26,8 +26,13 @@ UPDATES = {
         {
             "reference": KANDI_2015,
             "snippet": (
-                "shape (circular, irregular, rhomboid, umbonate, umbonate, "
-                "filamentous, or rhizoid)"
+                "Colony morphology is one among the various characters of "
+                "bacteria, which is also unique to a particular genus of "
+                "bacteria that could be instrumental in preliminary "
+                "identification. Size (measured in millimetres - pinpoint "
+                "(≤ 1 mm), small (2-3 mm), medium (4-5 mm), and large "
+                "(> 5 mm) colonies), shape (circular, irregular, rhomboid, "
+                "umbonate, umbonate, filamentous, or rhizoid)"
             ),
             "notes": (
                 "Kandi lists irregular as a bacterial colony shape value distinct "
