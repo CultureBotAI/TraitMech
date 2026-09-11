@@ -86,26 +86,6 @@ OXIDASE_NEGATIVE_UPDATES = {
             ),
         },
     ],
-    "canonical_examples": [
-        {
-            "taxon_id": "NCBITaxon:1279",
-            "taxon_label": "Staphylococcus",
-            "note": (
-                "ASM lists Staphylococcus spp. as oxidase-negative in an "
-                "oxidase-test differentiation example."
-            ),
-            "reference": ASM_OXIDASE_PROTOCOL,
-        },
-        {
-            "taxon_id": "NCBITaxon:1301",
-            "taxon_label": "Streptococcus",
-            "note": (
-                "ASM lists Streptococcus spp. as oxidase-negative in an "
-                "oxidase-test differentiation example."
-            ),
-            "reference": ASM_OXIDASE_PROTOCOL,
-        },
-    ],
 }
 
 
@@ -135,6 +115,7 @@ def enrich_oxidase_negative(record: dict) -> dict:
         raise ValueError(f"expected seeded synonyms, got {record.get('synonyms')!r}")
 
     record.update(copy.deepcopy(OXIDASE_NEGATIVE_UPDATES))
+    record.pop("canonical_examples", None)
     record_curation_event(
         record,
         curator=CURATOR,

@@ -52,14 +52,3 @@ evidence:
   notes: The review constrains interpretation of the negative assay outcome to cytochrome
     c oxidase under the oxidase-test readout, rather than absence of every terminal
     oxidase.
-canonical_examples:
-- taxon_id: NCBITaxon:1279
-  taxon_label: Staphylococcus
-  note: ASM lists Staphylococcus spp. as oxidase-negative in an oxidase-test differentiation
-    example.
-  reference: https://asm.org/protocols/oxidase-test-protocol
-- taxon_id: NCBITaxon:1301
-  taxon_label: Streptococcus
-  note: ASM lists Streptococcus spp. as oxidase-negative in an oxidase-test differentiation
-    example.
-  reference: https://asm.org/protocols/oxidase-test-protocol

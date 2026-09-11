@@ -659,6 +659,29 @@
       ]
     },
     {
+      "identifier": "METPO:1007086",
+      "label": "oxidase negative",
+      "category": "other",
+      "slug": "oxidase_negative",
+      "score": 55.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no canonical_examples +30"
+      ]
+    },
+    {
       "identifier": "METPO:1007081",
       "label": "oxidase test",
       "category": "other",
@@ -962,28 +985,6 @@
       "components": 0,
       "orphans": 0,
       "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "METPO:1007086",
-      "label": "oxidase negative",
-      "category": "other",
-      "slug": "oxidase_negative",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 2,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
       "series": null,
