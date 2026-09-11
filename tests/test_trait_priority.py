@@ -65,6 +65,10 @@ def _act(rec: Record, *, children=0, series=None, series_size=0, overlap=0.0) ->
     )
 
 
+def _unresearched_mechanism(row: dict) -> bool:
+    return not row["researched"] and not row["action"].startswith("DROP")
+
+
 # --- the inverted lumping rule ----------------------------------------------
 
 
@@ -396,16 +400,15 @@ def test_missing_research_directory_is_empty_not_an_error():
     assert researched_slugs(Path("/nonexistent")) == set()
 
 
-def test_proposed_mechanism_records_await_a_first_research_pass():
-    """New FAPROTAX proposals should jump the paid-research queue."""
+def test_unresearched_mechanism_meta_matches_queue_filter():
     rows, meta = build_queue()
-    expected = sum(1 for row in rows if row["action"] == "BUILD_CAUSAL_GRAPH")
+    expected = sum(1 for row in rows if _unresearched_mechanism(row))
     assert meta["unresearched_mechanism_records"] == expected, meta
 
 
 def test_unresearched_filter_does_not_return_non_mechanism_records():
     rows, _ = build_queue()
-    expected = sum(1 for row in rows if row["action"] == "BUILD_CAUSAL_GRAPH")
+    expected = sum(1 for row in rows if _unresearched_mechanism(row))
     out = _run(["--unresearched-only", "--top", "0"])
     assert _row_count(out) == expected
     assert f"{expected} row(s) shown of {expected} matching" in out

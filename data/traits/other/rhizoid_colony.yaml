@@ -1,0 +1,31 @@
+identifier: METPO:1007068
+label: rhizoid colony
+definition: A colony shape that has a branching, root-like outline.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007063
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T12:47:37Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T12:48:01Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO rhizoid colony phenotype with stable OMP definition
+    provenance and DOI-backed evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0000168
+evidence:
+- reference: DOI:10.7759/cureus.374
+  snippet: Colony morphology is one among the various characters of bacteria, which
+    is also unique to a particular genus of bacteria that could be instrumental in
+    preliminary identification. Size (measured in millimetres - pinpoint (≤ 1 mm),
+    small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies), shape (circular,
+    irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
+  notes: Kandi lists rhizoid as a bacterial colony shape value distinct from circular,
+    irregular, and filamentous forms.
