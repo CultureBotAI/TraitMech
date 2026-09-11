@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/nitrification.yaml
+  slug: nitrification
+session:
+  id: 2026-09-11T061623Z-codex-170e0f
+  timestamp: '2026-09-11T06:16:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Seed nitrification TraitRecord
+  details: Added METPO:1005001 nitrification from data/raw/metpo.owl and enriched it with
+    DOI-backed evidence for the two-step ammonia- and nitrite-oxidation process. Left GO:0019329
+    and GO:0019332 out of xrefs because they are component processes rather than exact matches
+    for the complete nitrification trait.

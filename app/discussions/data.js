@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "nitrification-component-go-xref-gap",
+  "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "nitrification",
+  "source_id": "METPO:1005001",
+  "source_file": "nitrification.yaml",
+  "attaches_to": [],
+  "rationale": "METPO cites GO:0019329 ammonia oxidation and GO:0019332 nitrite oxidation as definition components, but each GO term covers only one half of the full two-step nitrification trait and is not exact enough for TraitRecord xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -291,9 +308,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 15,
+ "total_discussions": 16,
  "total_knowledge_gaps": 8,
- "total_source_entries": 15,
+ "total_source_entries": 16,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
