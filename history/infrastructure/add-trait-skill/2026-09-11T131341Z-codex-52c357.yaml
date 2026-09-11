@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T131341Z-codex-52c357
+  timestamp: '2026-09-11T13:13:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - identity
+  - evidence
+  - validation
+  - review
+  summary: Tighten add-trait guidance from colony curation loop
+  details: 'Updated .claude/skills/add-trait/SKILL.md to preserve add-trait loop lessons:
+    sequence-feature-like candidates need trait-level interpretation before acceptance, temporary
+    METPO seed trees are projections rather than missing queues, SEEDED records still need
+    DOI/PMID/stable-URL evidence when review artifacts showed corpus demand gaps, generated
+    priority dashboards can legitimately change parent rows such as CURATE_ROOT_WITH_SUBTYPES,
+    and quota-only Copilot or Claude failures must be logged as provider outages rather than
+    filed as curation defects.'

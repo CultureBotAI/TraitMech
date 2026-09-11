@@ -55,6 +55,15 @@ rejected near misses, record the reason in the response or an attached
 `discussions` item on the exact existing record so the same target is not
 repeatedly triaged as missing.
 
+Sequence-feature-like candidates need an explicit interpretation pass before
+they are accepted. Do not add a literal locus, gene, operon, protein domain,
+regulatory site, mobile-element sequence, or source-database feature row as a
+TraitRecord. Add a GENOMICS record only when the record denotes a reusable
+organism-, strain-, or genome-level property, such as possession of a mobile
+element class or a sequence-composition phenotype; keep unresolved source labels
+out of `EXACT_SYNONYM` and record borderline mapping questions as
+`CURATION_TODO` discussions.
+
 ## Prove it is new
 
 Before writing anything, search exact identifiers, labels, synonyms, likely
@@ -82,6 +91,12 @@ same-family sibling records before copying the skeleton. Skip the candidate if
 the existing local record already carries the exact phenotype, and explain that
 semantic duplicate explicitly.
 
+Do not treat a temporary seeder output directory as a missing-work queue. It is
+a reusable METPO projection that can contain records already live under
+`data/traits`, and it goes stale as soon as another add-trait PR lands. For each
+candidate, copy by exact identifier, then prove absence against the live tree
+and `history/` with the ignored-and-hidden search above.
+
 ## Identity
 
 TraitMech is METPO-first:
@@ -107,9 +122,10 @@ TraitMech is METPO-first:
    ```
 
    Never run bare `just seed-apply` for a one-record add; the seeder has no
-   target filter and can emit every missing METPO term. Preserve the
+   target filter and emits a broad METPO skeleton tree. Preserve the
    seeder-chosen category and generated file name, including any slug collision
-   suffix, and do not overwrite an existing real record.
+   suffix, and do not infer novelty from a target file merely existing under a
+   temporary seed root.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
 5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
@@ -153,6 +169,9 @@ Make the first record small but independently reviewable:
 - `discussions`: `CURATION_TODO`, `KNOWLEDGE_GAP`, or controversy notes for
   unresolved but reviewable gaps
 
+Every added record needs at least one DOI, PMID, or stable URL in
+`definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
@@ -165,6 +184,11 @@ An evidence snippet must carry the specific definition claim it is attached to.
 Do not use article titles, section headings, keyword fragments, or generic noun
 phrases that name the topic but do not support the asserted substrate, endpoint,
 energy-conservation role, taxon scope, or direction.
+
+A `SEEDED` METPO record still needs DOI, PMID, or stable-URL evidence when prior
+review artifacts marked the term as lacking corpus demand or primary support.
+Use METPO or its source axiom for `definition_source`, and add literature
+evidence that justifies the TraitMech record.
 
 Keeping first-pass local records at `PROPOSED` leaves them in the
 `just audit-proposals` two-citation gate until a human curator promotes them to
@@ -284,6 +308,12 @@ artifacts were not regenerated.
 When `just ground-predicates` or `just ground-nodes` proposes exact CURIEs you
 accept, rerun that recipe with `--apply` before repeating downstream audits.
 
+Regenerated priority artifacts can legitimately change existing parent rows
+when the new record changes child counts, series families, or overlap scores.
+Inspect those deltas before changing tests; do not preserve a stale assertion
+that `--unresearched-only` is equivalent to only `BUILD_CAUSAL_GRAPH`, because
+`CURATE_ROOT_WITH_SUBTYPES` is also a valid unresearched mechanism action.
+
 ## Review and merge
 
 After local validation passes, finish the record through the same reviewed PR
@@ -299,6 +329,9 @@ loop used for other hand-curated trait changes:
 4. Inspect every review, PR comment, and workflow outcome. For each actionable
    curation defect, file a GitHub issue, fix the defect on the same branch, and
    rerun the relevant local validation before pushing.
+   Quota and rate-limit failures are not reviews: fetch failed logs, confirm the
+   agent never read the diff, log the affected PR and workflow runs on the
+   standing quota issue, and file GitHub issues only for actual curation defects.
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
 6. Merge the PR only after CI and reviews are clean, delete the remote feature
