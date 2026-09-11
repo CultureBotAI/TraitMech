@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/epibiont_phenotype.yaml
+  slug: epibiont_phenotype
+session:
+  id: 2026-09-11T092043Z-codex-13273f
+  timestamp: '2026-09-11T09:20:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add epibiont phenotype TraitRecord
+  details: Seeded METPO:1007093 as the epibiont phenotype record, added DOI and BacDive stable
+    URL evidence for Epibacterium ulvae surface association, and deliberately left causal_graphs
+    absent because the broad surface-associated lifestyle is host- and taxon-specific.

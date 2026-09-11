@@ -1,0 +1,46 @@
+identifier: METPO:1007093
+label: epibiont phenotype
+definition: A phenotype characterized by a microbe that lives on the external surface
+  of a host organism or substrate, as distinct from endosymbionts (which live inside
+  the host); captures host-association mode, not specific host taxonomy.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: ectosymbiont
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: epibiont
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T09:17:09Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T09:20:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO epibiont phenotype with DOI- and stable-URL-backed
+    Epibacterium ulvae surface-association evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1099/ijs.0.042838-0
+evidence:
+- reference: DOI:10.1099/ijs.0.042838-0
+  snippet: were isolated from the marine alga Ulva australis
+  notes: Penesyan et al. describe Epibacterium ulvae strains U95 and U82 as bacteria
+    associated with the marine green alga Ulva australis.
+- reference: https://bacdive.dsmz.de/strain/24523
+  snippet: isolated from surface of the marine green alga Ulva australis
+  notes: BacDive records the E. ulvae type strain U95 as isolated from the external
+    surface of the marine green alga Ulva australis.
+canonical_examples:
+- taxon_id: NCBITaxon:1156985
+  taxon_label: Epibacterium ulvae
+  note: Species represented by type strain U95 (= DSM 24752 = LMG 26464), which was
+    isolated from the surface of the marine green alga Ulva australis.
+  reference: https://bacdive.dsmz.de/strain/24523
