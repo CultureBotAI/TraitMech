@@ -186,6 +186,12 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
+that supports a definition, canonical example, graph edge, or curation
+decision. If the source exposes no concise contiguous passage for that claim,
+leave `snippet` absent and make `notes` say exactly what the citation supports;
+never synthesize a quote to make the record look complete.
+
 Use source-system group keys, database column names, and other identifier-like
 strings as `RELATED_SYNONYM` provenance labels by default, especially when they
 contain underscores. Promote one to `EXACT_SYNONYM` only when it is a true
@@ -376,12 +382,17 @@ loop used for other hand-curated trait changes:
    history record is committed.
 2. Push a trait-scoped branch and open a pull request with the new identifier,
    label, sources, generated artifacts, and validation commands in the body.
-3. Request Copilot review and dispatch both manual adversarial workflows:
+3. Request Copilot review, dispatch both manual adversarial workflows, and
+   perform a local adversarial review of the PR diff:
    `.github/workflows/claude-code-review.yml` and
    `.github/workflows/pr-shepherd.yml`, using the PR number as input.
-4. Inspect every review, PR comment, and workflow outcome. For each actionable
-   curation defect, file a GitHub issue, fix the defect on the same branch, and
-   rerun the relevant local validation before pushing.
+   The local review must try to falsify the trait identity, duplicate search,
+   parent choice, xrefs, evidence snippets, canonical examples, any METPO
+   proposal, and regenerated artifacts before the PR merges.
+4. Inspect every local finding, external review, PR comment, and workflow
+   outcome. For each actionable curation defect, file a GitHub issue, fix the
+   defect on the same branch, and rerun the relevant local validation before
+   pushing.
    Quota and rate-limit failures are not reviews: fetch failed logs, confirm the
    agent never read the diff, log the affected PR and workflow runs on the
    standing quota issue, and file GitHub issues only for actual curation defects.
