@@ -324,6 +324,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-galactosidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-galactosidase activity",
+  "source_id": "traitmech:000148",
+  "source_file": "beta_galactosidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004565 carries the same beta-galactosidase activity label but denotes the enzyme molecular function rather than the organism-level beta-galactosidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/beta_galactosidase_activity.html#beta-galactosidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "beta-glucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-glucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -478,9 +495,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 26,
+ "total_discussions": 27,
  "total_knowledge_gaps": 8,
- "total_source_entries": 26,
+ "total_source_entries": 27,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
