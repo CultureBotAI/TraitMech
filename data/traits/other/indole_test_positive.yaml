@@ -1,0 +1,53 @@
+identifier: METPO:1005011
+label: indole test positive
+definition: A phenotype in which an organism tests positive in the indole test, indicating
+  it produces indole from tryptophan.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: indole test
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-11T06:46:27Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T07:00:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the active METPO indole-test-positive phenotype with DOI-backed
+    indole production evidence after a repository-wide duplicate review covering ignored
+    and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1128/AEM.02787-15
+evidence:
+- reference: DOI:10.1128/AEM.02787-15
+  snippet: Indole, a bacterial product of tryptophan degradation
+  notes: Darkoh et al. support microbial indole production as a tryptophan-degradation
+    phenotype and evaluate indole detection in bacterial cultures.
+- reference: DOI:10.1128/AEM.02787-15
+  snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22 mM indole
+    during a 24-h period in the presence of 5 mM tryptophan
+  notes: Darkoh et al. measured indole production by the enterotoxigenic E. coli H10407
+    strain under tryptophan-supplemented culture conditions.
+canonical_examples:
+- taxon_id: NCBITaxon:316401
+  taxon_label: Escherichia coli ETEC H10407
+  note: Enterotoxigenic E. coli H10407 produced millimolar indole after 24 h of growth
+    with tryptophan supplementation.
+  reference: DOI:10.1128/AEM.02787-15
+discussions:
+- discussion_id: indole-test-positive-assay-parent-gap
+  prompt: Resolve a non-assay parent for positive indole-test phenotypes before narrowing
+    parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: METPO:1005010 is the seeded superclass of METPO:1005011, but METPO:1005010
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-11'

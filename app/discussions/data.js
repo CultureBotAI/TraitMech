@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "indole-test-positive-assay-parent-gap",
+  "prompt": "Resolve a non-assay parent for positive indole-test phenotypes before narrowing parent_traits below phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "indole test positive",
+  "source_id": "METPO:1005011",
+  "source_file": "indole_test_positive.yaml",
+  "attaches_to": [],
+  "rationale": "METPO:1005010 is the seeded superclass of METPO:1005011, but METPO:1005010 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/other/indole_test_positive.html#indole-test-positive-assay-parent-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -308,9 +325,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 16,
+ "total_discussions": 17,
  "total_knowledge_gaps": 8,
- "total_source_entries": 16,
+ "total_source_entries": 17,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

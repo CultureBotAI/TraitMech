@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_positive.yaml
+  slug: indole_test_positive
+session:
+  id: 2026-09-11T064735Z-codex-8cf452
+  timestamp: '2026-09-11T06:47:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add indole test positive TraitRecord
+  details: Seeded METPO:1005011 from data/raw/metpo.owl, enriched it with DOI:10.1128/AEM.02787-15
+    evidence for tryptophan-derived bacterial indole production, added Escherichia coli ETEC
+    H10407 as a canonical example, and reparented the record from assay parent METPO:1005010
+    to METPO:1000059 with an open curation TODO for the missing non-assay parent.
