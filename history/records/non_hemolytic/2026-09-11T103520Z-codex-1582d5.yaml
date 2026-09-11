@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/non_hemolytic.yaml
+  slug: non_hemolytic
+session:
+  id: 2026-09-11T103520Z-codex-1582d5
+  timestamp: '2026-09-11T10:35:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add non-hemolytic TraitRecord
+  details: Added the seeded METPO:1005027 non-hemolytic absence phenotype under phenotype
+    with DOI-backed gamma-hemolysis evidence from Petjul et al. and a parentage CURATION_TODO
+    after an ignored/hidden duplicate search found no existing exact record.
