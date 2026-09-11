@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lecithinase_activity.yaml
+  slug: lecithinase_activity
+session:
+  id: 2026-09-11T051534Z-codex-cbf01c
+  timestamp: '2026-09-11T05:15:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add lecithinase activity TraitRecord
+  details: Minted traitmech:000140 for DOI-backed lecithinase activity, cited egg-yolk agar
+    lecithinase-reaction evidence and the classic Gram-negative-bacteria lecithinase-production
+    survey, recorded Bacillus cereus as a canonical lecithinase-positive example, and left
+    GO:0004629 as a scope-shifted xref gap.
