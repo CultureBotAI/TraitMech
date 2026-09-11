@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/hemolytic.yaml
+  slug: hemolytic
+session:
+  id: 2026-09-11T090200Z-codex-2f1783
+  timestamp: '2026-09-11T09:02:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add hemolytic TraitRecord
+  details: Added METPO:1005026 hemolytic from data/raw/metpo.owl as a SEEDED child of hemolysis
+    and enriched it with DOI-backed Staphylococcus aureus evidence after a repository-wide
+    duplicate review covering ignored and hidden files.
