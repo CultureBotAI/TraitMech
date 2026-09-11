@@ -13,6 +13,10 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
+    # Claw owns the bytes and action pins of these vendored workflows.
+    # Updates arrive through the shared canonical governance revision.
+    exclude-paths:
+      - ".github/workflows/pr-shepherd.yml"
     schedule:
       interval: weekly
     # One PR per action rather than a lockstep bump: an action upgrade can break
