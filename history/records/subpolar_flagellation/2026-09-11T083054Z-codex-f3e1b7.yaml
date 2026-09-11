@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/subpolar_flagellation.yaml
+  slug: subpolar_flagellation
+session:
+  id: 2026-09-11T083054Z-codex-f3e1b7
+  timestamp: '2026-09-11T08:30:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Added seeded METPO subpolar flagellation trait
+  details: Seeded METPO:1005037 from data/raw/metpo.owl, reparented it under the reviewed
+    flagellar arrangement class, and enriched it with DOI-backed evidence from Kanbe et al.
+    2007 and Camarena and Dreyfus 2020. Added Bradyrhizobium diazoefficiens USDA 110 as a
+    canonical example after confirming NCBITaxon:224911.
