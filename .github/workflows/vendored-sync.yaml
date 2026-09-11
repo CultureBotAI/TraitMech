@@ -25,7 +25,10 @@ name: vendored-sync
 # label-correspondence job keeps its filter.
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
   workflow_dispatch:
@@ -37,7 +40,7 @@ concurrency:
   # PR runs share a ref group and may supersede one another. Every non-PR run
   # gets a unique group so GitHub cannot replace a pending main-commit verdict
   # before it starts (#199).
-  group: vendored-sync-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:

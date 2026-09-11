@@ -127,6 +127,13 @@ exactly how #215 got in.
 
 ## `paths:` filters
 
+Deterministic validation workflows run for every PR and for
+`merge_group: checks_requested`. Required status checks need a result even when
+a PR changes only documentation; workflow-level PR path filters would leave
+those checks pending. Push filters remain where useful. The queue checkout is
+the combined candidate commit, and curation-history audits it against the
+merge-group event's immutable base SHA.
+
 **A `paths:` filter is a promise that the job does not need the files it
 excludes.** When a job grows a new input, the filter has to grow with it.
 
@@ -138,9 +145,12 @@ built for), and `conf/`, where both ratchet baselines lived outside the filter s
 
 **Enforced now.** `just audit-qc-paths` derives what the `qc` chain reads —
 justfile chain → recipes → scripts → path constants, parsed with `ast` — and
-fails on any top-level directory the filter omits (#252). It found the `conf/`
+fails on any top-level directory an existing filter omits (#252). It found the `conf/`
 instance on its first run. It also fails when it cannot inspect anything, since
 a gate that passes while blind is the failure mode the section below is about.
+An unfiltered PR trigger covers every inferred read; inference and its
+nonempty-read-set checks still run. A missing PR trigger does not count as
+unfiltered.
 
 **Project dependency inputs are part of every filtered environment-resolving
 job.** A filtered PR workflow that runs `uv sync`, project-aware `uv run`, or a
@@ -219,19 +229,16 @@ across #277-#281 ranged from **two** functional gates (#277, bumping
 `claude-code-action`, which appears in only two workflow files) to **seven**
 (#281, bumping `actions/checkout`, which appears in nearly all of them).
 
-The floor is `pr-sanity` and `vendored-sync` — the only two *functional gates*
-with no `paths:` filter. `claude-code-review.yml` used to be unfiltered too but
-never counted toward the floor (since #307: its only job is gated on an `if:`,
-so it can run nothing on a Dependabot PR), and as of 2026-08-13Z it no longer
-runs on `pull_request` at all — automatic review is off while
-`CLAUDE_CODE_OAUTH_TOKEN` has no quota, so it was turning every PR red without
-saying anything about the PR. `/review` and manual dispatch still work. That floor is the reassuring part:
-**`pr-sanity` is the gate that enforces SHA pinning** (see "Action pinning"
-above), so the check that actually validates *this* class of change is exactly
-the one immune to the filters.
-Everything above two gates is a bonus that depends on the bump's blast radius.
-State it that way wherever you copy this pattern; "seven gates cover it" would
-be false on a #277-shaped PR.
+All deterministic PR validation workflows are now unfiltered and also run on
+merge groups. `pr-sanity` enforces action SHA pinning; corpus QC, the Python
+matrix, strict validation, taxonomy, labels, history, and vendored integrity
+supply the remaining checks. The exact job contexts and trigger contract are
+covered by `tests/test_merge_queue_workflows.py`.
+
+`claude-code-review.yml` is separate: automatic review remains off while the
+account lacks quota. `/review` and manual dispatch still work, and model review
+is not a required queue check. The historical two-workflow floor described in
+earlier dependency PR reviews no longer describes current deterministic CI.
 
 This used to create a caveat: `NO_UNFILTERED_CI` decided "unfiltered" from a
 workflow's `on:` block alone, so a workflow gated this way still counted toward
@@ -244,10 +251,9 @@ hanging off a gated one is not guaranteed to run either. The check never
 evaluates the `if:` expression; "has an `if:`" is the conservative reading, and
 it can only shrink the counted set.
 
-Note the separate hazard that remains: if `pr-sanity` alone gained a `paths:`
-filter, `vendored-sync` would keep `NO_UNFILTERED_CI` green while the
-SHA-pinning gate stopped covering dependency PRs. That is a coverage loss, not
-an invariant failure, and no check catches it.
+The merge-queue workflow contract now rejects a PR filter on any required
+workflow, including `pr-sanity`, even if another unfiltered workflow would keep
+`NO_UNFILTERED_CI` satisfied.
 
 Skipping does not make these PRs unreviewable. Comment `/review`, or use
 `workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both

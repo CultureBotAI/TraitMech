@@ -28,8 +28,13 @@ name: label-correspondence
 # ~2min and needs uv + a cached OAK ontology download.
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths: &trigger_paths
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches: [main]
+    paths:
       - "mappings/**"
       - "scripts/validate_id_label_correspondence.py"
       - "conf/id_label_targets.yaml"
@@ -41,13 +46,14 @@ on:
       # to verify it (#566).
       - "pyproject.toml"
       - "uv.lock"
-  push:
-    branches: [main]
-    paths: *trigger_paths
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   label-correspondence:

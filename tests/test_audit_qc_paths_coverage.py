@@ -63,6 +63,24 @@ def test_an_uncovered_directory_is_flagged(tmp_path):
     assert "audit-thing" in findings[0]["readers"]
 
 
+def test_unfiltered_pr_trigger_covers_reads_without_skipping_inference(tmp_path):
+    root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["conf"])
+    workflow = root / ".github/workflows/qc.yaml"
+    workflow.write_text("on:\n  pull_request:\n  merge_group:\n    types: [checks_requested]\n")
+    assert filter_tops(workflow.read_text()) is None
+    assert audit(root) == []
+    assert AUDIT_READ_SET == {"conf"}
+    (root / "scripts/audit_thing.py").write_text("X = 1\n")
+    with pytest.raises(BlindGate, match="were not examined at all"):
+        audit(root)
+
+
+@pytest.mark.parametrize("trigger", ["push:\n", "pull_request:\n    paths-ignore: ['conf/**']\n"])
+def test_absent_or_uninspectable_pr_trigger_is_not_unconditional(trigger):
+    with pytest.raises(BlindGate):
+        filter_tops("on:\n  " + trigger)
+
+
 def test_a_path_the_script_names_but_the_repo_lacks_is_ignored(tmp_path):
     """Prose and illustrations are not reads — this script's own docstring
     contains `REPO_ROOT / "..."` and was flagged on the first run."""

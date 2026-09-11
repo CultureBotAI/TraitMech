@@ -23,7 +23,10 @@ name: pr-sanity
 # silently returning the repo to "some PRs run nothing".
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
   workflow_dispatch:
@@ -32,7 +35,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: pr-sanity-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   # PRs only: on main, cancelling would leave the earlier commit unverified.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
