@@ -109,10 +109,9 @@ TraitMech is METPO-first:
 
    ```bash
    set -euo pipefail
-   tmp="$(mktemp -d)"
-   trap 'rm -rf "$tmp"' EXIT
-   uv run python scripts/seed_from_metpo.py --out "$tmp" --apply
-   target="$(rg --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp" || :)"
+   tmp="$(mktemp -d /tmp/traitmech-seed.XXXXXX)"
+   .venv/bin/python scripts/seed_from_metpo.py --out "$tmp" --apply
+   target="$(rg --no-ignore --hidden --glob '*.yaml' -l '^identifier: <METPO CURIE>$' "$tmp" || :)"
    test -n "$target"
    relative="${target#"$tmp"/}"
    destination="data/traits/$relative"
@@ -121,7 +120,7 @@ TraitMech is METPO-first:
    cp "$target" "$destination"
    ```
 
-   Never run bare `just seed-apply` for a one-record add; the seeder has no
+   Never run the whole-tree `seed-apply` recipe for a one-record add; the seeder has no
    target filter and emits a broad METPO skeleton tree. Preserve the
    seeder-chosen category and generated file name, including any slug collision
    suffix, and do not infer novelty from a target file merely existing under a
@@ -191,7 +190,7 @@ Use METPO or its source axiom for `definition_source`, and add literature
 evidence that justifies the TraitMech record.
 
 Keeping first-pass local records at `PROPOSED` leaves them in the
-`just audit-proposals` two-citation gate until a human curator promotes them to
+`scripts/audit_proposals.py` two-citation gate until a human curator promotes them to
 `REVIEWED`.
 
 ## Causal graphs
@@ -249,7 +248,7 @@ test if formatting drifts.
 For every added record, create repository-level history:
 
 ```bash
-just new-history \
+.venv/bin/python scripts/new_history_record.py \
   --kind record \
   --slug <slug> \
   --target-root data/traits/<category> \
@@ -272,41 +271,70 @@ Validate the new record directly with the maintained LinkML wrapper before
 broader gates:
 
 ```bash
-just validate data/traits/<category>/<slug>.yaml
+.venv/bin/linkml-validate -s src/traitmech/schema/traitmech.yaml \
+  --target-class TraitRecord data/traits/<category>/<slug>.yaml
 ```
 
 Then run the checks whose scope LinkML does not cover:
 
 ```bash
-just validate-strict data/traits/<category>/<slug>.yaml
-just validate-history history/records/<slug>
-just audit-proposals
-just audit-graphs
-just ground-predicates
-just ground-nodes
-just audit-predicate-domains
-just audit-graph-protein-taxa
-just check-biolink-coverage
-just gen-pages
-just gen-priority-dashboard
+.venv/bin/python scripts/validate_strict.py data/traits/<category>/<slug>.yaml
+.venv/bin/python scripts/validate_history_links.py history/records/<slug>
+.venv/bin/linkml-validate --schema src/traitmech/schema/history.yaml \
+  --target-class HistoryRecord history/records/<slug>/<record>.yaml
+.venv/bin/python scripts/audit_schema.py
+.venv/bin/python scripts/audit_writers.py
+.venv/bin/python scripts/audit_proposals.py
+.venv/bin/python scripts/verify_metpo_proposal.py --coverage
+.venv/bin/python scripts/audit_causal_graphs.py
+.venv/bin/python scripts/ground_causal_predicates.py
+.venv/bin/python scripts/ground_causal_nodes.py
+.venv/bin/python scripts/audit_biolink_curies.py
+.venv/bin/python scripts/audit_predicate_domains.py --fail-on new
+.venv/bin/python scripts/audit_graph_protein_taxa.py --fail-on gaps
+.venv/bin/python scripts/check_biolink_coverage.py
+.venv/bin/python scripts/audit_evidence_snippets.py
+.venv/bin/python scripts/audit_exact_synonyms.py --collisions-only
+.venv/bin/python scripts/audit_unapplied_groundings.py
+.venv/bin/python scripts/audit_discussion_anchors.py
+.venv/bin/python scripts/audit_discussions_data.py
+.venv/bin/python scripts/pr_sanity.py
+.venv/bin/python scripts/audit_justfile_paths.py
+.venv/bin/python scripts/audit_qc_paths_coverage.py
+.venv/bin/python scripts/run_trait_graph_audit.py --verify
+.venv/bin/python scripts/check_sources.py
+.venv/bin/python scripts/render_trait_pages.py
+.venv/bin/python scripts/trait_priority.py --dashboard --top 80
 git diff --check
-just qc
-uv run pytest tests/test_readme_artifacts.py -v --tb=short
+.venv/bin/ruff check src scripts tests
+.venv/bin/python -m pytest tests/test_readme_artifacts.py tests/test_trait_priority.py -v --tb=short
+.venv/bin/python -m pytest -q
 ```
 
-Also run `just verify-snippets --record data/traits/<category>/<slug>.yaml`
+Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<category>/<slug>.yaml`
 after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
 for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
 directly and confirm the recorded text is still a contiguous, verbatim source
-span. Run `just validate-products` when adding or editing CHEBI formula-bearing
-chemicals, and run `just audit-uniprot` after adding or editing
-`protein_examples`. Run `just build-embeddings` before `just gen-pages` only
+span. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`
+when adding or editing CHEBI formula-bearing chemicals, and run
+`.venv/bin/python scripts/audit_uniprot_grounding.py` after adding or editing
+`protein_examples`. Run `.venv/bin/python scripts/build_embedding_index.py`
+before `scripts/render_trait_pages.py` only
 when the sibling DeepWalk artifacts named by
 `scripts/build_embedding_index.py` are present; otherwise report that embedding
 artifacts were not regenerated.
 
-When `just ground-predicates` or `just ground-nodes` proposes exact CURIEs you
-accept, rerun that recipe with `--apply` before repeating downstream audits.
+When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
+proposes exact CURIEs you accept, rerun that script with `--apply` before
+repeating downstream audits.
+
+If any `discussions:` block changes, regenerate the browser data with the
+shared claw module:
+
+```bash
+PYTHONPATH=<culturebotai-claw>/src .venv/bin/python -m kg_microbe_discussions \
+  --config conf/discussions_config.yaml --output app/discussions
+```
 
 Regenerated priority artifacts can legitimately change existing parent rows
 when the new record changes child counts, series families, or overlap scores.
