@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/beta_galactosidase_activity.yaml
+  slug: beta_galactosidase_activity
+session:
+  id: 2026-09-11T194752Z-codex-dbe91b
+  timestamp: '2026-09-11T19:47:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add beta-galactosidase activity TraitRecord
+  details: Minted traitmech:000148 for beta-galactosidase activity after an ignored-and-hidden
+    duplicate search found no existing TraitRecord or proposal. Added DOI-backed beta-galactosidase
+    definition support, direct DOI-backed Selenomonas sputigena API ZYM evidence, a direct
+    Selenomonas canonical example, and a v25 METPO proposal row reserving METPO:1010200 for
+    upstream minting.

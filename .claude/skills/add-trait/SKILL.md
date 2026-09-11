@@ -197,6 +197,12 @@ strings as `RELATED_SYNONYM` provenance labels by default, especially when they
 contain underscores. Promote one to `EXACT_SYNONYM` only when it is a true
 lexical name for the same trait.
 
+Apply that scope test to METPO proposal synonyms too. For enzyme-activity
+phenotypes, a bare enzyme name usually names the molecule rather than the
+organismal phenotype; keep it out of TraitRecord `EXACT_SYNONYM` and proposal
+`exact_synonyms` unless a source uses that bare string as a phenotype label, and
+store useful shifted labels as `RELATED_SYNONYM` or `related_synonyms` instead.
+
 An evidence snippet must carry the specific definition claim it is attached to.
 Do not use article titles, section headings, keyword fragments, or generic noun
 phrases that name the topic but do not support the asserted substrate, endpoint,

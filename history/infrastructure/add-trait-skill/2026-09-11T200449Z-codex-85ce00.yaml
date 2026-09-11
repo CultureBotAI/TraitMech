@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T200449Z-codex-85ce00
+  timestamp: '2026-09-11T20:04:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - workflow
+  summary: Tighten enzyme-activity synonym scope in add-trait
+  details: 'Updated .claude/skills/add-trait/SKILL.md after the beta-galactosidase activity
+    PR found a scope error in METPO proposal synonyms: a bare enzyme label names the molecule
+    rather than the organism-level enzyme-activity phenotype and belongs in RELATED_SYNONYM
+    or related_synonyms unless a source uses it as the true phenotype label.'
