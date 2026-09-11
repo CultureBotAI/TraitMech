@@ -256,6 +256,23 @@ window.searchData = [
   "page_url": "../../pages/traits/other/indole_test_positive.html#indole-test-positive-assay-parent-gap"
  },
  {
+  "discussion_id": "non-hemolytic-parent-gap",
+  "prompt": "Resolve a neutral parent axis for absence of hemolysis before narrowing parent_traits below phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "non-hemolytic",
+  "source_id": "METPO:1005027",
+  "source_file": "non_hemolytic.yaml",
+  "attaches_to": [],
+  "rationale": "METPO:1005025 is the seeded superclass of METPO:1005027, but METPO:1005025 defines the ability to lyse red blood cells; this absence phenotype is temporarily parented directly to METPO:1000059 phenotype until METPO has a neutral hemolysis axis or another broader parent for hemolysis-test outcomes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/other/non_hemolytic.html#non-hemolytic-parent-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -342,9 +359,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 18,
+ "total_discussions": 19,
  "total_knowledge_gaps": 8,
- "total_source_entries": 18,
+ "total_source_entries": 19,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
