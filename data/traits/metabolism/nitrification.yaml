@@ -1,0 +1,39 @@
+identifier: METPO:1005001
+label: nitrification
+definition: A biological process in which ammonia is oxidized to nitrite (ammonia
+  oxidation) and nitrite is oxidized to nitrate (nitrite oxidation), in two steps.
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000630
+curation_history:
+- timestamp: '2026-09-11T06:15:37Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T06:20:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the active METPO nitrification class with DOI-backed two-step
+    ammonia- and nitrite-oxidation evidence after a repository-wide duplicate review
+    covering ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.3389/fmicb.2020.01900
+evidence:
+- reference: DOI:10.3389/fmicb.2020.01900
+  snippet: nitrification proceeds as a two-step process, involving the oxidation of
+    ammonia to nitrite and the oxidation of nitrite to nitrate
+  notes: Sedlacek et al. review the historical evidence that established nitrification
+    as a microbially mediated, two-step ammonia- and nitrite-oxidation process.
+discussions:
+- discussion_id: nitrification-component-go-xref-gap
+  prompt: Resolve an exact external ontology class for the complete nitrification
+    process before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: METPO cites GO:0019329 ammonia oxidation and GO:0019332 nitrite oxidation
+    as definition components, but each GO term covers only one half of the full two-step
+    nitrification trait and is not exact enough for TraitRecord xrefs.
+  posed_by: codex
+  posed_date: '2026-09-11'
