@@ -1,0 +1,51 @@
+identifier: traitmech:000147
+label: cystine arylamidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  cystine arylamidase enzymes that hydrolyze cystine arylamide substrates.
+definition_source: DOI:10.14202/vetworld.2024.143-149
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.14202/vetworld.2024.143-149
+  snippet: Cystine arylamidase 7.5 L-cystyl-2-naphthylamide
+  notes: Ludfiani et al. list L-cystyl-2-naphthylamide as the API ZYM cystine arylamidase
+    substrate, grounding the organism-level phenotype as an arylamide-hydrolyzing
+    enzyme activity.
+- reference: DOI:10.3389/fmicb.2022.1034816
+  snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4), esterase
+    lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase, valine arylamidase
+  notes: Jiang et al. detected cystine arylamidase in the Geminicoccus harenae type
+    strain with the API ZYM enzyme activity panel.
+- reference: DOI:10.2323/jgam.60.59
+  snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase
+    (C4), leucine arylamidase, valine arylamidase, cystine arylamidase
+  notes: An et al. reported cystine arylamidase among positive API ZYM activities
+    for the Flavobacterium panaciterrae DCY69T type strain.
+canonical_examples:
+- taxon_id: NCBITaxon:2498453
+  taxon_label: Geminicoccus harenae
+  note: Jiang et al. reported Geminicoccus harenae as positive for cystine arylamidase
+    in the API ZYM enzyme activity panel.
+  reference: DOI:10.3389/fmicb.2022.1034816
+discussions:
+- discussion_id: cystine-arylamidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for cystine arylamidase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004177 covers aminopeptidase activity at molecular-function scope
+    and no live GO class provides an exact residue-specific cystine arylamidase production
+    phenotype at organism-level scope.
+  posed_by: codex
+  posed_date: '2026-09-11'
+curation_history:
+- timestamp: '2026-09-11T19:19:57Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted cystine arylamidase activity as a DOI-backed TraitRecord after a
+    repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact cystine arylamidase activity class yet.
+  llm_assisted: true

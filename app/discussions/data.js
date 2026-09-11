@@ -358,6 +358,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
  },
  {
+  "discussion_id": "cystine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for cystine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cystine arylamidase activity",
+  "source_id": "traitmech:000147",
+  "source_file": "cystine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 covers aminopeptidase activity at molecular-function scope and no live GO class provides an exact residue-specific cystine arylamidase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cystine_arylamidase_activity.html#cystine-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "dnase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -461,9 +478,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 25,
+ "total_discussions": 26,
  "total_knowledge_gaps": 8,
- "total_source_entries": 25,
+ "total_source_entries": 26,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

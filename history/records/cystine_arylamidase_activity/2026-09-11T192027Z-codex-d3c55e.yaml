@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cystine_arylamidase_activity.yaml
+  slug: cystine_arylamidase_activity
+session:
+  id: 2026-09-11T192027Z-codex-d3c55e
+  timestamp: '2026-09-11T19:20:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add cystine arylamidase activity TraitRecord
+  details: Minted traitmech:000147 for cystine arylamidase activity after an ignored-and-hidden
+    duplicate search found no existing TraitRecord or proposal. Added DOI-backed API ZYM substrate
+    support, two DOI-backed species-description evidence items, a direct Geminicoccus harenae
+    canonical example, and a v24 METPO proposal row reserving METPO:1010100 for upstream minting.
