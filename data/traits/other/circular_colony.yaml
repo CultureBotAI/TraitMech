@@ -1,0 +1,38 @@
+identifier: METPO:1007064
+label: circular colony
+definition: A colony shape that has a regular round outline.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007063
+synonyms:
+- synonym_text: round colony
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T11:51:15Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T11:52:08Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO circular colony phenotype with stable ASM protocol
+    evidence after a repository-wide duplicate review covering ignored and hidden
+    files.
+  llm_assisted: true
+definition_source: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+evidence:
+- reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+  snippet: Describe the form, elevation, and margin as indicated in Fig. 1. Also indicate
+    whether the colonies are smooth (shiny glistening surface), rough (dull, bumpy,
+    granular, or matte surface), or mucoid (slimy or gummy appearance).
+  notes: Breakwell et al. describe colony form as an observed macroscopic feature
+    separate from elevation and margin; circular colony specializes that form axis.
+- reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+  snippet: Colonies are smooth and are circular in form with an entire margin.
+  notes: The ASM example records circular form separately from entire margin and convex
+    elevation, supporting circular as a colony outline state rather than a margin
+    or elevation descriptor.
