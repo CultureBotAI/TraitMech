@@ -1,0 +1,32 @@
+identifier: METPO:1005026
+label: hemolytic
+definition: A phenotype in which an organism is capable of lysing red blood cells.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1005025
+curation_history:
+- timestamp: '2026-09-11T09:01:06Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T09:02:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the active METPO hemolytic child class with DOI-backed Staphylococcus
+    aureus hemolysis evidence after a repository-wide duplicate review covering ignored
+    and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.3390/toxins5061140
+evidence:
+- reference: DOI:10.3390/toxins5061140
+  snippet: hemolysis to toxigenic substances secreted by S. aureus
+  notes: Berube and Bubeck Wardenburg review historical evidence that S. aureus secretes
+    hemolytic toxins, supporting a hemolytic phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Canonical hemolytic bacterium whose culture supernatants have long been assayed
+    for rabbit red-blood-cell lysis.
+  reference: DOI:10.3390/toxins5061140
