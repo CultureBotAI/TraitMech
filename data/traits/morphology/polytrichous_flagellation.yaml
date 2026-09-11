@@ -1,0 +1,44 @@
+identifier: METPO:1007006
+label: polytrichous flagellation
+definition: A flagellar arrangement in which multiple flagella (typically a tuft)
+  are present per cell, often combined with polar attachment.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- traitmech:000056
+synonyms:
+- synonym_text: polytrichous
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T08:45:09Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T08:46:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO polytrichous flagellation phenotype with DOI-backed
+    polytrichous-flagella evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1128/AEM.64.10.3576-3583.1998
+evidence:
+- reference: DOI:10.1128/AEM.64.10.3576-3583.1998
+  snippet: In transmission electron micrographs, isolate OC 1/4 exhibited monopolar
+    polytrichous flagellation, with up to three flagella per cell (Fig. 4).
+  notes: Huber et al. directly observed multiple flagella at one pole of Thermocrinis
+    ruber OC 1/4.
+- reference: DOI:10.1128/AEM.68.12.6310-6320.2002
+  snippet: The cells have bipolar polytrichous flagella and exhibit a unique swimming
+    pattern, rotating and translating along their short axis.
+  notes: Thar and Kuhl describe a second bacterial polytrichous arrangement, with
+    flagella present at both cell poles.
+canonical_examples:
+- taxon_id: NCBITaxon:75906
+  taxon_label: Thermocrinis ruber
+  note: Huber et al. directly observed up to three monopolar flagella per cell in
+    the Thermocrinis ruber isolate OC 1/4.
+  reference: DOI:10.1128/AEM.64.10.3576-3583.1998

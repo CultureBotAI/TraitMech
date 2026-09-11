@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/polytrichous_flagellation.yaml
+  slug: polytrichous_flagellation
+session:
+  id: 2026-09-11T084620Z-codex-0c4da8
+  timestamp: '2026-09-11T08:46:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add polytrichous flagellation trait
+  details: Seeded METPO:1007006 as a morphology TraitRecord, replaced the duplicate upstream
+    METPO:1007005 parent with the reviewed local flagellar-arrangement parent traitmech:000056,
+    added DOI:10.1128/AEM.64.10.3576-3583.1998 and DOI:10.1128/AEM.68.12.6310-6320.2002 evidence,
+    and added Thermocrinis ruber NCBITaxon:75906 as a canonical example. No causal graph was
+    added because the reusable placement trait has direct morphology evidence but published
+    FlhF/FlhG placement programs are organism-specific.
