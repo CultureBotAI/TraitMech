@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/catalase_negative.yaml
+  slug: catalase_negative
+session:
+  id: 2026-09-11T140321Z-codex-ab44d4
+  timestamp: '2026-09-11T14:03:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve catalase negative assay parent
+  details: Reparented METPO:1007084 catalase negative below the newly curated METPO:1007080
+    catalase test assay parent and marked the temporary catalase-negative assay-parent CURATION_TODO
+    resolved.

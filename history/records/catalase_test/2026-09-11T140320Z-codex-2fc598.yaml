@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/catalase_test.yaml
+  slug: catalase_test
+session:
+  id: 2026-09-11T140320Z-codex-2fc598
+  timestamp: '2026-09-11T14:03:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add catalase test TraitRecord
+  details: Added the seeded METPO:1007080 catalase test assay parent with the OMP_0000218
+    definition source, stable ASM catalase-test protocol evidence, Iwase et al. DOI evidence
+    for the visible oxygen-bubble assay readout, and exact METPO synonyms after an ignored-and-hidden
+    duplicate search found no existing exact record.

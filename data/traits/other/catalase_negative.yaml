@@ -8,7 +8,7 @@ trait_category: OTHER
 term_kind: CLASS
 mapping_status: SEEDED
 parent_traits:
-- METPO:1000059
+- METPO:1007080
 synonyms:
 - synonym_text: catalase -
   synonym_type: EXACT_SYNONYM
@@ -28,6 +28,12 @@ curation_history:
   changes: Enriched the seeded METPO catalase negative test-outcome phenotype with
     DOI-backed assay and Enterococcus faecium evidence after a repository-wide duplicate
     review covering ignored and hidden files.
+  llm_assisted: true
+- timestamp: '2026-09-11T14:03:00Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented catalase negative below the newly curated METPO:1007080 catalase
+    test assay parent and marked the temporary assay-parent discussion resolved.
   llm_assisted: true
 definition_source: DOI:10.1038/srep03081
 evidence:
@@ -52,9 +58,9 @@ discussions:
   prompt: Resolve a non-assay parent for negative catalase-test phenotypes before
     narrowing parent_traits below phenotype.
   kind: CURATION_TODO
-  status: OPEN
-  rationale: METPO:1007080 is the seeded superclass of METPO:1007084, but METPO:1007080
-    defines an assay rather than a broader microbial trait class, so this record is
-    temporarily parented directly to METPO:1000059 phenotype.
+  status: RESOLVED
+  rationale: METPO:1007080 is now represented as the seeded catalase-test assay parent,
+    so this negative assay-outcome phenotype can use its source superclass rather
+    than a temporary direct phenotype parent.
   posed_by: codex
   posed_date: '2026-09-11'

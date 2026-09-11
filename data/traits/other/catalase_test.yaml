@@ -1,0 +1,42 @@
+identifier: METPO:1007080
+label: catalase test
+definition: A biochemical test that detects catalase enzyme activity by exposing cells
+  to hydrogen peroxide and observing for visible bubbling. The test outcome (positive
+  or negative) is captured by its child classes; this class itself does not assert
+  that the organism has catalase activity.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: catalase activity test
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: catalase assay
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T14:00:10Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T14:03:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO catalase test with OMP definition provenance
+    plus stable-URL and DOI-backed assay evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0000218
+evidence:
+- reference: https://asm.org/protocols/catalase-test-protocol
+  snippet: The catalase test facilitates the detection of this enzyme in bacteria
+  notes: The American Society for Microbiology catalase-test protocol describes the
+    bacterial assay context for detecting catalase.
+- reference: DOI:10.1038/srep03081
+  snippet: The enzyme-generated oxygen bubbles trapped by Triton X-100 were visualized
+    as foam
+  notes: Iwase et al. support the visible oxygen-bubble readout produced by catalase-mediated
+    hydrogen-peroxide decomposition.
