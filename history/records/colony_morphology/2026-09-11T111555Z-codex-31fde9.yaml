@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/colony_morphology.yaml
+  slug: colony_morphology
+session:
+  id: 2026-09-11T111555Z-codex-31fde9
+  timestamp: '2026-09-11T11:15:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded colony morphology trait
+  details: Added METPO:1007062 as data/traits/other/colony_morphology.yaml from the METPO
+    seed, preserving the OTHER category and phenotype parent. Enriched the record with stable
+    ASM Colony Morphology Protocol URL evidence for macroscopic colony descriptors after an
+    exact duplicate search including ignored and hidden files found no existing live data/traits
+    or history record.

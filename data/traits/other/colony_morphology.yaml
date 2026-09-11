@@ -1,0 +1,35 @@
+identifier: METPO:1007062
+label: colony morphology
+definition: A phenotype characterized by macroscopic colony characteristics such as
+  shape, margin, elevation, surface, colour, and size.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T11:12:54Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T11:15:17Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO colony morphology phenotype with stable ASM protocol
+    evidence after a repository-wide duplicate review covering ignored and hidden
+    files.
+  llm_assisted: true
+definition_source: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+evidence:
+- reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+  snippet: If well separated from other colonies, a colony will have a characteristic
+    shape (both in elevation and margin), size, color, and consistency.
+  notes: Breakwell et al. describe shape, elevation, margin, size, color, and consistency
+    as characteristic macroscopic features of a well-separated colony on solid medium.
+- reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+  snippet: Describe the form, elevation, and margin as indicated in Fig. 1. Also indicate
+    whether the colonies are smooth (shiny glistening surface), rough (dull, bumpy,
+    granular, or matte surface), or mucoid (slimy or gummy appearance).
+  notes: The peer-reviewed ASM protocol explicitly treats colony form, elevation,
+    margin, and surface texture as morphology descriptors.
