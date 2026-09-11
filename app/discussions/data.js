@@ -254,12 +254,29 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/gelatinase_activity.html#gelatinase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "lipase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for lipase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lipase activity",
+  "source_id": "traitmech:000139",
+  "source_file": "lipase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0016298 denotes the lipase molecular function rather than the organism-level lipase production phenotype, so it is too scope-shifted for an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-xref-gap"
  }
 ];
 window.searchMetrics = {
- "total_discussions": 13,
+ "total_discussions": 14,
  "total_knowledge_gaps": 8,
- "total_source_entries": 13,
+ "total_source_entries": 14,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,54 @@
+identifier: traitmech:000139
+label: lipase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  lipases that hydrolyze triglycerides at lipid-water interfaces.
+definition_source: DOI:10.22207/JPAM.16.4.27
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: lipase production
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.22207/JPAM.16.4.27
+- synonym_text: lipolytic activity
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.mex.2018.01.004
+evidence:
+- reference: DOI:10.22207/JPAM.16.4.27
+  snippet: Lipase-producing bacteria were isolated using tributyrin agar as a selective
+    medium
+  notes: Savalia and Dungrechiya used tributyrin agar to isolate lipase-producing
+    bacteria from waste samples.
+- reference: DOI:10.1016/j.mex.2018.01.004
+  snippet: to identify lipase producers. The addition of calcium and magnesium ions
+    can provide an easier screening procedure for selection of lipolytic bacterial
+    strains
+  notes: Carrazco-Palafox et al. optimized modified tributyrin agar as a microbial
+    lipolytic-activity screen.
+canonical_examples:
+- taxon_id: NCBITaxon:1408
+  taxon_label: Bacillus pumilus
+  note: Bacillus pumilus S113 was isolated as the strongest lipase producer in a tributyrin-agar
+    screen.
+  reference: DOI:10.22207/JPAM.16.4.27
+discussions:
+- discussion_id: lipase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for lipase activity before adding
+    a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0016298 denotes the lipase molecular function rather than the organism-level
+    lipase production phenotype, so it is too scope-shifted for an equivalent TraitRecord
+    xref.
+  posed_by: codex
+  posed_date: '2026-09-11'
+curation_history:
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted lipase activity as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has no exact lipase
+    activity class yet.
+  llm_assisted: true
