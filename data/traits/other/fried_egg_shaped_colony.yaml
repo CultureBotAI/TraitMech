@@ -1,0 +1,34 @@
+identifier: METPO:1007069
+label: fried-egg-shaped colony
+definition: A colony shape that has a raised opaque centre and a translucent peripheral
+  zone, resembling a fried egg.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007063
+synonyms:
+- synonym_text: fried-egg colony
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T13:40:39Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T13:41:36Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO fried-egg-shaped colony phenotype with stable
+    MICRO definition provenance and DOI-backed opaque-center, translucent-periphery
+    evidence after a repository-wide duplicate review covering ignored and hidden
+    files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/MICRO_0000349
+evidence:
+- reference: DOI:10.1371/journal.pone.0068373
+  snippet: TR colonies showed the typical “fried egg” appearance, with a small opaque
+    center surrounded by a large translucent peripheral area.
+  notes: Bertin et al. describe the opaque-center, translucent-periphery colony appearance
+    that underlies the MICRO-derived fried-egg colony definition.
