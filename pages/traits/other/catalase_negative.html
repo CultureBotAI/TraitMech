@@ -57,7 +57,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/other/catalase_test.html" >catalase test <code>METPO:1007080</code></a></li>
 
       </ul>
     </div>
@@ -138,7 +138,7 @@
         <p class="discussion-prompt">Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>catalase-negative-assay-parent-gap</code>
           · raised by codex
           · 2026-09-11
@@ -151,7 +151,7 @@
           mechanism it concerns.</p>
 
 
-        <p>METPO:1007080 is the seeded superclass of METPO:1007084, but METPO:1007080 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.</p>
+        <p>METPO:1007080 is now represented as the seeded catalase-test assay parent, so this negative assay-outcome phenotype can use its source superclass rather than a temporary direct phenotype parent.</p>
 
 
 
@@ -181,6 +181,12 @@
           <time>2026-09-11T10:12:30Z</time> ·
           <strong>ENRICHED_FROM_LITERATURE</strong> · codex
           <p class="changes">Enriched the seeded METPO catalase negative test-outcome phenotype with DOI-backed assay and Enterococcus faecium evidence after a repository-wide duplicate review covering ignored and hidden files.</p>
+        </li>
+
+        <li>
+          <time>2026-09-11T14:03:00Z</time> ·
+          <strong>RESOLVED_PARENT_GAP</strong> · codex
+          <p class="changes">Reparented catalase negative below the newly curated METPO:1007080 catalase test assay parent and marked the temporary assay-parent discussion resolved.</p>
         </li>
 
       </ol>
@@ -235,10 +241,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-11 10:12 UTC from
+      Record as of 2026-09-11 14:03 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 521 TraitRecords
-      · embedding coverage 91.6%
+      · 522 TraitRecords
+      · embedding coverage 91.4%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
