@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lipase_activity.yaml
+  slug: lipase_activity
+session:
+  id: 2026-09-11T045119Z-codex-f49777
+  timestamp: '2026-09-11T04:51:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add lipase activity TraitRecord
+  details: Minted traitmech:000139 for DOI-backed lipase activity, cited tributyrin-agar and
+    modified tributyrin-agar evidence, recorded Bacillus pumilus S113 as a canonical lipase-producing
+    example, and left GO:0016298 as a scope-shifted xref gap.
