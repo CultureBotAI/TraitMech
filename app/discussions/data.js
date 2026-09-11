@@ -307,6 +307,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alkaline_phosphatase_activity.html#alkaline-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-glucosidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for alpha-glucosidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-glucosidase activity",
+  "source_id": "traitmech:000145",
+  "source_file": "alpha_glucosidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0090599 carries the same alpha-glucosidase activity label but denotes the enzyme molecular function rather than the organism-level alpha-glucosidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -427,9 +444,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 23,
+ "total_discussions": 24,
  "total_knowledge_gaps": 8,
- "total_source_entries": 23,
+ "total_source_entries": 24,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

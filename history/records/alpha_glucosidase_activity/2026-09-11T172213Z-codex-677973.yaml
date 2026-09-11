@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_glucosidase_activity.yaml
+  slug: alpha_glucosidase_activity
+session:
+  id: 2026-09-11T172213Z-codex-677973
+  timestamp: '2026-09-11T17:22:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add alpha-glucosidase activity
+  details: Minted traitmech:000145 for alpha-glucosidase activity with DOI-backed API ZYM
+    observations and a directly supported Flexibacterium corallicola canonical example; left
+    causal_graphs empty because the reviewed enzyme-activity parent captures the shared assay
+    mechanism.
