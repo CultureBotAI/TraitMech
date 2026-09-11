@@ -364,6 +364,16 @@ loop used for other hand-curated trait changes:
 
 1. Commit only the new record, its history, supporting writer script if any,
    generated artifacts, and directly related documentation or tests.
+   After committing, run the committed-diff curation-history gate against the
+   PR base:
+
+   ```bash
+   git fetch origin main
+   .venv/bin/python scripts/audit_history_records.py --base origin/main
+   ```
+
+   This audit reads `base...HEAD`, not the working tree, so run it after the
+   history record is committed.
 2. Push a trait-scoped branch and open a pull request with the new identifier,
    label, sources, generated artifacts, and validation commands in the body.
 3. Request Copilot review and dispatch both manual adversarial workflows:

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T180045Z-codex-1179e1
+  timestamp: '2026-09-11T18:00:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - history
+  summary: Add committed-diff history audit to add-trait
+  details: Documented that the add-trait PR loop should run scripts/audit_history_records.py
+    against origin/main after committing, so future trait-record PRs exercise the same history-presence
+    gate locally that the curation-history workflow enforces in CI.

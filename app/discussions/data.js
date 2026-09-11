@@ -324,6 +324,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-glucosidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for beta-glucosidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-glucosidase activity",
+  "source_id": "traitmech:000146",
+  "source_file": "beta_glucosidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0008422 denotes the beta-D-glucosidase molecular function rather than the organism-level beta-glucosidase production phenotype, so it belongs as a causal-node grounding when a mechanistic graph needs the catalytic activity but not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -444,9 +461,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 24,
+ "total_discussions": 25,
  "total_knowledge_gaps": 8,
- "total_source_entries": 24,
+ "total_source_entries": 25,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
