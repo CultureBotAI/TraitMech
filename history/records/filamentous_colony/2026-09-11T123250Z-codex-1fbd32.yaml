@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/filamentous_colony.yaml
+  slug: filamentous_colony
+session:
+  id: 2026-09-11T123250Z-codex-1fbd32
+  timestamp: '2026-09-11T12:32:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded filamentous colony trait
+  details: Added METPO:1007066 as data/traits/other/filamentous_colony.yaml from the METPO
+    seed, preserving the OTHER category and colony shape parent. Enriched the record with
+    stable OMP definition provenance and DOI:10.7759/cureus.374 evidence for filamentous as
+    a bacterial colony shape after an exact duplicate search including ignored and hidden
+    files found no existing live data/traits or history record.
