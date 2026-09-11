@@ -1,0 +1,50 @@
+identifier: traitmech:000138
+label: DNase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  DNase enzymes that hydrolyze DNA.
+definition_source: DOI:10.3389/fmicb.2019.00969
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: DNase production
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.22207/JPAM.14.1.44
+evidence:
+- reference: DOI:10.3389/fmicb.2019.00969
+  snippet: unexpected and widespread presence of DNase secretion in bacteria in general
+    and in MGP more specifically
+  notes: Al-Wahaibi et al. assayed marine bacterial isolates for extracellular DNase
+    secretion.
+- reference: DOI:10.22207/JPAM.14.1.44
+  snippet: screened for their capacity to produce DNA hydrolyzing activity on DNase
+    test agar plate
+  notes: Asha and Krishnaveni screened halophilic marine-sediment Bacillus-group isolates
+    for DNA hydrolysis on DNase test agar.
+canonical_examples:
+- taxon_id: NCBITaxon:2026187
+  taxon_label: Bacillus pacificus
+  note: Bacillus pacificus KVCMST-8A-12 was reported as a DNase-producing marine-sediment
+    isolate.
+  reference: DOI:10.1128/MRA.01011-21
+discussions:
+- discussion_id: dnase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for DNase activity before adding
+    a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004536 denotes the DNA nuclease molecular function rather than the
+    organism-level DNase production phenotype, so it is too scope-shifted for an equivalent
+    TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-11'
+curation_history:
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DNase activity as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has no exact DNase activity
+    class yet.
+  llm_assisted: true
