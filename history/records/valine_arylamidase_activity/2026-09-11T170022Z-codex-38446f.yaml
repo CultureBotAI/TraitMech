@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/valine_arylamidase_activity.yaml
+  slug: valine_arylamidase_activity
+session:
+  id: 2026-09-11T170022Z-codex-38446f
+  timestamp: '2026-09-11T17:00:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add valine arylamidase activity
+  details: Minted traitmech:000144 for valine arylamidase activity with two DOI-backed API
+    ZYM observations and a directly supported Geminicoccus harenae canonical example; left
+    causal_graphs empty because the reviewed enzyme-activity parent captures the shared assay
+    mechanism.
