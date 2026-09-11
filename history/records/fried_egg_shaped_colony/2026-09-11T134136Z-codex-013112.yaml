@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/fried_egg_shaped_colony.yaml
+  slug: fried_egg_shaped_colony
+session:
+  id: 2026-09-11T134136Z-codex-013112
+  timestamp: '2026-09-11T13:41:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded fried-egg-shaped colony trait
+  details: Added METPO:1007069 as data/traits/other/fried_egg_shaped_colony.yaml from the
+    METPO seed, then enriched the record with stable MICRO definition provenance and DOI:10.1371/journal.pone.0068373
+    evidence for the opaque-center, translucent-periphery fried-egg colony appearance after
+    an exact duplicate search including ignored and hidden files.
