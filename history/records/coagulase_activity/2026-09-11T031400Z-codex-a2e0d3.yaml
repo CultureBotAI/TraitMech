@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/coagulase_activity.yaml
+  slug: coagulase_activity
+session:
+  id: 2026-09-11T031400Z-codex-a2e0d3
+  timestamp: '2026-09-11T03:14:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add coagulase activity as a METPO-seeded physiology trait
+  details: Created data/traits/physiology/coagulase_activity.yaml from active METPO:1007089
+    after gitignore-independent duplicate searches found no existing TraitRecord. Added DOI-backed
+    evidence for staphylococcal coagulases activating prothrombin and fibrinogen cleavage,
+    kept the METPO coagulase-test synonym, and left causal_graphs absent for the first pass.
