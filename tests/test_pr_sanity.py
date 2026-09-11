@@ -95,6 +95,27 @@ def test_workflow_without_the_conventions_pointer_is_flagged(tmp_path):
         ".github/workflows/b.yaml"]
 
 
+def test_governed_workflow_is_exempt_from_the_pointer_and_an_ungoverned_one_is_not(tmp_path):
+    """A workflow vendored byte-identical from culturebotai-claw opens with the
+    governed banner; its conventions live in claw and check_vendored_sync fails
+    on any local edit, so demanding the local pointer would demand a change
+    nobody here may make (culturebotai-claw#391).
+
+    Driven by the same workflow twice -- once with the banner, once with a
+    plain comment in its place -- so a test that exempted every non-pointer
+    first line, or none, goes red.
+    """
+    root = _repo(tmp_path)
+    body = UNFILTERED_WF.split("\n", 1)[1]
+    (root / ".github/workflows/governed.yaml").write_text(
+        "# Governed by culturebotai-claw: vendored byte-identical into every Mech\n" + body)
+    (root / ".github/workflows/plain.yaml").write_text("# just a comment\n" + body)
+    _commit(root)
+    flagged = [f["file"] for f in check_workflows(root)
+               if f["check"] == "MISSING_CONVENTIONS_POINTER"]
+    assert flagged == [".github/workflows/plain.yaml"]
+
+
 def test_conventions_pointer_must_be_the_first_line(tmp_path):
     """Buried on line 3 it is not what a reader opening the file sees."""
     root = _repo(tmp_path)

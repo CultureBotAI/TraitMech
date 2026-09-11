@@ -105,6 +105,11 @@ WORKFLOW_DIR = Path(".github/workflows")
 # unlinked from anywhere, which made it strictly less discoverable than the
 # per-file comment blocks it consolidated.
 CONVENTIONS_POINTER = "Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md"
+# A workflow vendored byte-identical from culturebotai-claw opens with this
+# banner instead. Its conventions live in claw, and check_vendored_sync.sh
+# fails on any local edit, so demanding the local pointer would demand a
+# change nobody here may make (culturebotai-claw#391).
+GOVERNED_BANNER = "# Governed by culturebotai-claw"
 
 # Triggers that resolve to the SAME pull request as a `pull_request` run, so
 # they can land in a group keyed on the PR — which is what made #215 possible:
@@ -511,7 +516,8 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
             continue
         rel = str(path.relative_to(root))
         text = path.read_text()
-        if text.split("\n", 1)[0].strip() != f"# {CONVENTIONS_POINTER}":
+        first = text.split("\n", 1)[0].strip()
+        if first != f"# {CONVENTIONS_POINTER}" and not first.startswith(GOVERNED_BANNER):
             findings.append({
                 "check": "MISSING_CONVENTIONS_POINTER", "file": rel,
                 "detail": (f"first line is not `# {CONVENTIONS_POINTER}` — an "
