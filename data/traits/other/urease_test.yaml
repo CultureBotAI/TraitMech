@@ -1,0 +1,43 @@
+identifier: METPO:1007082
+label: urease test
+definition: A biochemical test that detects urease enzyme activity by observing urea
+  hydrolysis (typically via a pH-indicator color change). The test outcome (positive
+  or negative) is captured by its child classes; this class itself does not assert
+  urease activity.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: urea hydrolysis test
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: urease activity test
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T14:52:53Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T14:53:47Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO urease test with OMP definition provenance plus
+    DOI-backed urea-hydrolysis and pH-indicator evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0000222
+evidence:
+- reference: DOI:10.5812/chbs-160199
+  snippet: Urea is classified as a diamide, and certain bacteria possessing the enzyme
+    urease are capable of utilizing urea to generate ammonia, carbon dioxide, and
+    water
+  notes: Hafezi and Khamar describe the urease-test chemistry linking bacterial urease
+    to urea conversion into alkaline products.
+- reference: DOI:10.5812/chbs-160199
+  snippet: Both types contain a phenol red reagent that changes color with pH variations
+  notes: The review describes phenol red as the pH indicator for both liquid and solid
+    urease-test media.
