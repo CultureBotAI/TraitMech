@@ -393,9 +393,11 @@ loop used for other hand-curated trait changes:
    outcome. For each actionable curation defect, file a GitHub issue, fix the
    defect on the same branch, and rerun the relevant local validation before
    pushing.
-   Quota and rate-limit failures are not reviews: fetch failed logs, confirm the
-   agent never read the diff, log the affected PR and workflow runs on the
-   standing quota issue, and file GitHub issues only for actual curation defects.
+   Quota and rate-limit failures are not reviews: fetch the failed workflow logs
+   or PR review/comment that reported quota exhaustion, confirm no agent read
+   the diff, log the affected PR plus each failed workflow run or failed review
+   request on the standing quota issue, and file GitHub issues only for actual
+   curation defects.
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
 6. Merge the PR only after CI and reviews are clean, delete the remote feature
