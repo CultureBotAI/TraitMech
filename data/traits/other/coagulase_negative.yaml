@@ -1,0 +1,49 @@
+identifier: METPO:1007091
+label: coagulase negative
+definition: Test-outcome phenotype where the coagulase test yields a negative result.
+  The underlying enzyme-organism relation should additionally be asserted via <organism>
+  METPO:2000303 'does not show activity of' <coagulase enzyme term> once a sufficiently
+  specific enzyme term is selected.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007089
+synonyms:
+- synonym_text: coagulase -
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: coagulase test negative
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T09:54:43Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T09:59:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO coagulase negative test-outcome phenotype with
+    DOI- and NCBI-backed evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.3390/microorganisms9040830
+evidence:
+- reference: DOI:10.3390/microorganisms9040830
+  snippet: Coagulase-negative staphylococci (CoNS) form a large group of Gram-positive
+    cocci united by their mutual lack of the virulence factor coagulase
+  notes: Michels et al. define coagulase-negative staphylococci by absence of the
+    coagulase virulence factor, supporting the negative assay-outcome phenotype.
+- reference: https://www.ncbi.nlm.nih.gov/books/NBK563240/
+  snippet: Staphylococcus epidermidis is a coagulase-negative, gram-positive cocci
+    bacteria that form clusters
+  notes: Lee and Anjum identify S. epidermidis as coagulase-negative, providing a
+    stable species-level example of a negative coagulase test outcome.
+canonical_examples:
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  note: Lee and Anjum describe S. epidermidis as a coagulase-negative Staphylococcus
+    species.
+  reference: https://www.ncbi.nlm.nih.gov/books/NBK563240/

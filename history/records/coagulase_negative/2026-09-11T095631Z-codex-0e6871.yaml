@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/coagulase_negative.yaml
+  slug: coagulase_negative
+session:
+  id: 2026-09-11T095631Z-codex-0e6871
+  timestamp: '2026-09-11T09:56:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add coagulase negative TraitRecord
+  details: Added the seeded METPO:1007091 coagulase negative assay-outcome phenotype under
+    coagulase activity with DOI-backed definition evidence from Michels et al. and a stable
+    NCBI Bookshelf Staphylococcus epidermidis canonical example. The repository-wide duplicate
+    search covered ignored and hidden files and found no existing exact coagulase negative
+    record.
