@@ -1,0 +1,47 @@
+identifier: traitmech:000141
+label: alkaline phosphatase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  alkaline phosphatase enzymes that dephosphorylate phosphate-containing compounds.
+definition_source: DOI:10.1128/JB.185.16.4983-4991.2003
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1128/JB.185.16.4983-4991.2003
+  snippet: leads to constitutive expression of a protein with alkaline phosphatase
+    activity
+  notes: Kriakov et al. identified a Mycobacterium smegmatis phoA gene whose expression
+    yields a protein with alkaline phosphatase activity.
+- reference: DOI:10.1155/2021/8888641
+  snippet: According to the API ZYM assays, all three isolates were positive for alkaline
+    phosphatase, leucine aryl amidase, acid phosphatase, and naphthol_AS_BI_phosphohydrolase.
+  notes: Mekonnen et al. treated alkaline phosphatase as an assayed bacterial exoenzyme
+    phenotype in rapid urease-producing soil isolates.
+canonical_examples:
+- taxon_id: NCBITaxon:1772
+  taxon_label: Mycobacterium smegmatis
+  note: Mycobacterium smegmatis carries phoA and can express alkaline phosphatase
+    activity when the phosphate-uptake system is perturbed.
+  reference: DOI:10.1128/JB.185.16.4983-4991.2003
+discussions:
+- discussion_id: alkaline-phosphatase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for alkaline phosphatase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004035 carries the same alkaline phosphatase activity label but denotes
+    the enzyme molecular function rather than the organism-level phenotype, so it
+    is appropriate as a causal-node grounding rather than an equivalent TraitRecord
+    xref.
+  posed_by: codex
+  posed_date: '2026-09-11'
+curation_history:
+- timestamp: '2026-09-11T16:01:38Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted alkaline phosphatase activity as a DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact alkaline phosphatase activity class yet.
+  llm_assisted: true
