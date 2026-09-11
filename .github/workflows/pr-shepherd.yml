@@ -1,8 +1,10 @@
-# Conventions for this directory: docs/WORKFLOW_CONVENTIONS.md
+# Governed by culturebotai-claw: vendored byte-identical into every Mech through
+# kg-microbe-governance, pinned in scripts/.vendored_canon_ref. Edit the canonical
+# copy in claw, not this file -- check_vendored_sync.sh fails on any local drift.
 name: PR shepherd
 
-# The fleet's FIRST agent workflow. TraitMech is the pilot because it is the
-# smallest surface, per culturebotai-claw docs/AUTONOMOUS_LOOPS.md.
+# The fleet's FIRST agent workflow, piloted in TraitMech and now vendored to
+# every Mech, per culturebotai-claw docs/AUTONOMOUS_LOOPS.md section 5.4.
 #
 # pr-shepherd goes first among agents because it can only advance PRs that
 # already exist — it cannot invent work, so the worst case is a wrong comment
@@ -22,7 +24,7 @@ name: PR shepherd
 #
 # So this agent may ONLY read and post one comment. It must not merge, push,
 # edit files, approve, or change labels. Those capabilities arrive with the
-# Apps — see docs/AGENT_IDENTITY.md.
+# Apps — see culturebotai-claw docs/AUTONOMOUS_LOOPS.md section 5.7.
 # ─────────────────────────────────────────────────────────────────────────────
 #
 # NO `schedule:` TRIGGER, deliberately. culturebotai-claw/.github/cron-profiles.yaml
@@ -225,5 +227,5 @@ jobs:
             echo "> [!NOTE]"
             echo "> This agent is comment-only by design. It cannot merge, push,"
             echo "> edit files, approve, or relabel. Those need the writer/reviewer"
-            echo "> App split — see \`docs/AGENT_IDENTITY.md\`."
+            echo "> App split — see culturebotai-claw docs/AUTONOMOUS_LOOPS.md section 5.7."
           } >> "$GITHUB_STEP_SUMMARY"
