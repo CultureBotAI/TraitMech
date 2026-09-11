@@ -407,12 +407,29 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "valine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for valine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "valine arylamidase activity",
+  "source_id": "traitmech:000144",
+  "source_file": "valine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 covers aminopeptidase activity at molecular-function scope and no live GO class provides an exact residue-specific valine arylamidase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-xref-gap"
  }
 ];
 window.searchMetrics = {
- "total_discussions": 22,
+ "total_discussions": 23,
  "total_knowledge_gaps": 8,
- "total_source_entries": 22,
+ "total_source_entries": 23,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
