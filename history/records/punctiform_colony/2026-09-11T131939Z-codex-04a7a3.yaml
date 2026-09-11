@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/punctiform_colony.yaml
+  slug: punctiform_colony
+session:
+  id: 2026-09-11T131939Z-codex-04a7a3
+  timestamp: '2026-09-11T13:19:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded punctiform colony trait
+  details: Added METPO:1007067 as data/traits/other/punctiform_colony.yaml from the METPO
+    seed, then enriched the record with stable OMP definition provenance and DOI:10.7759/cureus.374
+    evidence for pinpoint colony size after an exact duplicate search including ignored and
+    hidden files.

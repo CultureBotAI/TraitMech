@@ -1,0 +1,31 @@
+identifier: METPO:1007067
+label: punctiform colony
+definition: A colony shape that is very small (pinpoint), typically <1 mm in diameter.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007063
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T13:19:00Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T13:19:39Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO punctiform colony phenotype with stable OMP definition
+    provenance and DOI-backed pinpoint-size evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0000240
+evidence:
+- reference: DOI:10.7759/cureus.374
+  snippet: Colony morphology is one among the various characters of bacteria, which
+    is also unique to a particular genus of bacteria that could be instrumental in
+    preliminary identification. Size (measured in millimetres - pinpoint (≤ 1 mm),
+    small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies), shape (circular,
+    irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
+  notes: Kandi lists pinpoint as the smallest bacterial colony-size descriptor, matching
+    the size component of the OMP-derived punctiform colony definition.
