@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alkaline_phosphatase_activity.yaml
+  slug: alkaline_phosphatase_activity
+session:
+  id: 2026-09-11T160225Z-codex-d30771
+  timestamp: '2026-09-11T16:02:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add alkaline phosphatase activity TraitRecord
+  details: Minted traitmech:000141 for DOI-backed alkaline phosphatase activity, cited Mycobacterium
+    smegmatis PhoA and API ZYM bacterial exoenzyme evidence, recorded Mycobacterium smegmatis
+    as a canonical alkaline-phosphatase example, and left GO:0004035 as a molecular-function
+    xref gap.
