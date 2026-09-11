@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/rhizoid_colony.yaml
+  slug: rhizoid_colony
+session:
+  id: 2026-09-11T124801Z-codex-6fa972
+  timestamp: '2026-09-11T12:48:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded rhizoid colony trait
+  details: Added METPO:1007068 as data/traits/other/rhizoid_colony.yaml from the METPO seed,
+    preserving the OTHER category and colony shape parent. Enriched the record with stable
+    OMP definition provenance and DOI:10.7759/cureus.374 evidence for rhizoid as a bacterial
+    colony shape after an exact duplicate search including ignored and hidden files found
+    no existing live data/traits or history record.
