@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T174404Z-codex-78c155
+  timestamp: '2026-09-11T17:44:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - identity
+  - evidence
+  summary: Tighten add-trait enzyme panel triage
+  details: Documented that diagnostic or commercial enzyme-panel labels need interpretation
+    before acceptance, that substrate or kit-specific panel strings should be evidence leads
+    rather than exact trait names, and that same-label GO catalytic-activity terms usually
+    ground molecular-function causal nodes rather than organism-level enzyme-activity TraitRecord
+    xrefs.

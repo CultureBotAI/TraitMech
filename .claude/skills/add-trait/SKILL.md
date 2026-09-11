@@ -55,6 +55,12 @@ rejected near misses, record the reason in the response or an attached
 `discussions` item on the exact existing record so the same target is not
 repeatedly triaged as missing.
 
+Diagnostic and commercial enzyme-panel labels also need interpretation before
+acceptance. Treat kit well names, chromogenic-substrate names, and ambiguous
+panel rows as evidence leads, not trait labels; reject a row when its only
+stable biology collapses to an existing activity record, and keep the kit string
+out of `EXACT_SYNONYM` unless papers use it as a true trait name.
+
 Sequence-feature-like candidates need an explicit interpretation pass before
 they are accepted. Do not add a literal locus, gene, operon, protein domain,
 regulatory site, mobile-element sequence, or source-database feature row as a
@@ -140,6 +146,12 @@ a `CURATION_TODO` discussion describing what must be checked.
 `skos:*Match` strength. Leave close, narrow, broad, medium-confidence, or
 otherwise scope-qualified mappings out of the TraitRecord xrefs; put them in
 METPO proposal SSSOM or an explicit discussion instead.
+
+For cell-level enzyme-activity TraitRecords, same-label GO catalytic-activity
+classes usually denote the molecular function rather than an equivalent
+organismal phenotype. If a GO term is exact for a causal node but shifted for
+the record's `xrefs`, leave it out of `xrefs` and record the decision in a
+`CURATION_TODO` discussion or proposal notes.
 
 When a local parent is the genus in the new definition, do not borrow endpoints,
 substrates, products, or pathway branches from that parent unless the new
