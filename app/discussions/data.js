@@ -203,12 +203,29 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "claude",
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
+ },
+ {
+  "discussion_id": "gelatinase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for gelatinase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gelatinase activity",
+  "source_id": "traitmech:000136",
+  "source_file": "gelatinase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0008233 is the generic peptidase-activity class and MICRO:0000649 denotes a gelatinase assay, so both are too broad or assay-level for equivalent TraitRecord xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gelatinase_activity.html#gelatinase-activity-xref-gap"
  }
 ];
 window.searchMetrics = {
- "total_discussions": 10,
+ "total_discussions": 11,
  "total_knowledge_gaps": 8,
- "total_source_entries": 10,
+ "total_source_entries": 11,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

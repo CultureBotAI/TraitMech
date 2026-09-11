@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gelatinase_activity.yaml
+  slug: gelatinase_activity
+session:
+  id: 2026-09-11T033551Z-codex-b89668
+  timestamp: '2026-09-11T03:35:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add gelatinase activity TraitRecord
+  details: Minted traitmech:000136 for gelatinase activity after a repository-wide duplicate
+    review that included ignored and hidden files. Added two DOI-backed evidence entries from
+    Del Papa et al. 2007 and Zeng et al. 2005, related synonyms for gelatinase-positive and
+    gelatinase production, an Enterococcus faecalis canonical example, a discussion documenting
+    why no exact GO or MICRO xref was added, and a v13 METPO class proposal for upstream minting.

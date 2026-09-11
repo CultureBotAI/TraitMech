@@ -17,7 +17,7 @@ METPO source class and (optionally) to literature evidence.
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
 | MORPHOLOGY | 88 | 0 | 0 | 88 | 88 |
-| PHYSIOLOGY | 45 | 0 | 0 | 45 | 46 |
+| PHYSIOLOGY | 45 | 1 | 0 | 45 | 47 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 121 |
 | ECOLOGY | 26 | 0 | 0 | 26 | 26 |
 | GENOMICS | 19 | 0 | 0 | 19 | 19 |
@@ -25,12 +25,12 @@ METPO source class and (optionally) to literature evidence.
 | METABOLISM | 120 | 15 | 23 | 49 | 158 |
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
-| **TOTAL** | **427** | **15** | **50** | **353** | **493** |
+| **TOTAL** | **427** | **16** | **50** | **353** | **494** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
-`DEPRECATED`; 15 newer metabolism records are `PROPOSED`, and one physiology
-record is still `SEEDED`. Of the reviewed records, 353 currently carry causal
-graphs. The 50 deprecated records (23
+`DEPRECATED`; 15 newer metabolism records and one physiology record are
+`PROPOSED`, and one physiology record is still `SEEDED`. Of the reviewed
+records, 353 currently carry causal graphs. The 50 deprecated records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
 measurement carriers from the upstream METPO seed that are not intended to carry
 mechanism graphs in TraitMech. They are retained for traceability while specific
@@ -83,7 +83,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 492 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 494 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
