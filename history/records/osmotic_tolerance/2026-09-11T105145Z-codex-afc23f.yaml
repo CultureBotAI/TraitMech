@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/osmotic_tolerance.yaml
+  slug: osmotic_tolerance
+session:
+  id: 2026-09-11T105145Z-codex-afc23f
+  timestamp: '2026-09-11T10:51:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded osmotic tolerance trait
+  details: Added METPO:1007073 as data/traits/other/osmotic_tolerance.yaml from the METPO
+    seed, preserving the OTHER category, phenotype parent, and osmophile exact synonym. Enriched
+    the record with DOI:10.1128/mBio.00390-21 evidence for growth under a 400 mM sorbitol
+    nonionic hyperosmotic challenge after exact duplicate searches including ignored and hidden
+    files found no existing data/traits record.
