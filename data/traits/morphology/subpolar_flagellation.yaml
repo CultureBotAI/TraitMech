@@ -1,0 +1,39 @@
+identifier: METPO:1005037
+label: subpolar flagellation
+definition: A motility phenotype in which flagella are located near but not at the
+  cell pole.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- traitmech:000056
+curation_history:
+- timestamp: '2026-09-11T08:29:17Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T08:30:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO subpolar flagellation phenotype with DOI-backed
+    subpolar-flagella evidence after a repository-wide duplicate review covering ignored
+    and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1128/JB.01405-06
+evidence:
+- reference: DOI:10.1128/JB.01405-06
+  snippet: The cell has two sets of flagellar systems, one thick flagellum and a few
+    thin flagella, uniquely growing at subpolar positions.
+  notes: Kanbe et al. describe two morphologically distinct Bradyrhizobium flagellar
+    systems that both emerge from subpolar positions.
+- reference: DOI:10.3390/biom10050774
+  snippet: Under the growth conditions commonly used in the laboratory, a single subpolar
+    flagellum that traverses the cell membrane, is assembled on the surface.
+  notes: Camarena and Dreyfus review the Rhodobacter sphaeroides Fla1 system as a
+    second bacterial example of subpolar flagellation.
+canonical_examples:
+- taxon_id: NCBITaxon:224911
+  taxon_label: Bradyrhizobium diazoefficiens USDA 110
+  note: Kanbe et al. directly observed subpolar thick and thin flagella in Bradyrhizobium
+    japonicum 110spc4, a derivative of USDA 110 now assigned by NCBI to B. diazoefficiens.
+  reference: DOI:10.1128/JB.01405-06
