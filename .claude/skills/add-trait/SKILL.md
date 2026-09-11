@@ -169,6 +169,9 @@ Make the first record small but independently reviewable:
 - `discussions`: `CURATION_TODO`, `KNOWLEDGE_GAP`, or controversy notes for
   unresolved but reviewable gaps
 
+Every added record needs at least one DOI, PMID, or stable URL in
+`definition_source` or `evidence`; a bare uncited seed skeleton is not enough.
+
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
