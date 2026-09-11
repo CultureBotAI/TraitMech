@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/caseinase_activity.yaml
+  slug: caseinase_activity
+session:
+  id: 2026-09-11T040210Z-codex-a52d16
+  timestamp: '2026-09-11T04:02:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add caseinase activity TraitRecord
+  details: Minted traitmech:000137 for caseinase activity after a repository-wide duplicate
+    review that included ignored and hidden files. Added two DOI-backed evidence entries from
+    Ouertani et al. 2018 and Alves et al. 2014, a related synonym for caseinase production,
+    a Bacillus cereus canonical example, a discussion documenting why generic GO peptidase
+    activity was not added as an exact xref, and a v14 METPO class proposal for upstream minting.
