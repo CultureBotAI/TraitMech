@@ -343,8 +343,9 @@ def _row_count(out: str) -> int:
 
 def test_top_zero_means_all_rows():
     """The documented zero sentinel must print the complete live queue."""
+    _, meta = build_queue()
     out = _run(["--top", "0"])
-    assert _row_count(out) == 491
+    assert _row_count(out) == meta["records"]
 
 
 def test_the_footer_count_equals_the_rows_actually_printed():
@@ -397,14 +398,17 @@ def test_missing_research_directory_is_empty_not_an_error():
 
 def test_proposed_mechanism_records_await_a_first_research_pass():
     """New FAPROTAX proposals should jump the paid-research queue."""
-    _, meta = build_queue()
-    assert meta["unresearched_mechanism_records"] == 14, meta
+    rows, meta = build_queue()
+    expected = sum(1 for row in rows if row["action"] == "BUILD_CAUSAL_GRAPH")
+    assert meta["unresearched_mechanism_records"] == expected, meta
 
 
 def test_unresearched_filter_does_not_return_non_mechanism_records():
+    rows, _ = build_queue()
+    expected = sum(1 for row in rows if row["action"] == "BUILD_CAUSAL_GRAPH")
     out = _run(["--unresearched-only", "--top", "0"])
-    assert _row_count(out) == 14
-    assert "14 row(s) shown of 14 matching" in out
+    assert _row_count(out) == expected
+    assert f"{expected} row(s) shown of {expected} matching" in out
 
 
 def test_reviewed_empty_canonical_examples_are_read_from_curation_history(tmp_path):
