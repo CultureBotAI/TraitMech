@@ -1,0 +1,2 @@
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	mapping_source	comment
+METPO:1008900	pectin degradation	skos:exactMatch	GO:0045490	pectin catabolic process	semapv:ManualMappingCuration	high	metpo_traitmech_v12	Direct equivalent. GO uses 'catabolic process' where TraitMech uses 'degradation'.

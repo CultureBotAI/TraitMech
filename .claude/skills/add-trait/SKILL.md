@@ -112,6 +112,16 @@ RO, MICRO, PATO, NCBITaxon, InterPro, Pfam, NCBIfam, ComplexPortal, or UniProtKB
 accession has not been resolved at its issuing authority, leave it out and add
 a `CURATION_TODO` discussion describing what must be checked.
 
+`xrefs` are emitted as `oboInOwl:hasDbXref`, so they cannot carry
+`skos:*Match` strength. Leave close, narrow, broad, medium-confidence, or
+otherwise scope-qualified mappings out of the TraitRecord xrefs; put them in
+METPO proposal SSSOM or an explicit discussion instead.
+
+When a local parent is the genus in the new definition, do not borrow endpoints,
+substrates, products, or pathway branches from that parent unless the new
+trait's own scope and evidence support them. A child term can be narrower than
+its parent on one axis and deliberately silent on another.
+
 ## Evidence bundle
 
 Make the first record small but independently reviewable:
@@ -136,6 +146,16 @@ Make the first record small but independently reviewable:
 
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
+
+Use source-system group keys, database column names, and other identifier-like
+strings as `RELATED_SYNONYM` provenance labels by default, especially when they
+contain underscores. Promote one to `EXACT_SYNONYM` only when it is a true
+lexical name for the same trait.
+
+An evidence snippet must carry the specific definition claim it is attached to.
+Do not use article titles, section headings, keyword fragments, or generic noun
+phrases that name the topic but do not support the asserted substrate, endpoint,
+energy-conservation role, taxon scope, or direction.
 
 Keeping first-pass local records at `PROPOSED` leaves them in the
 `just audit-proposals` two-citation gate until a human curator promotes them to
@@ -233,10 +253,13 @@ just qc
 ```
 
 Also run `just verify-snippets --record data/traits/<category>/<slug>.yaml`
-after adding a `snippet`. Run `just validate-products` when adding or editing
-CHEBI formula-bearing chemicals, and run `just audit-uniprot` after adding or
-editing `protein_examples`. Run `just build-embeddings` before `just gen-pages`
-only when the sibling DeepWalk artifacts named by
+after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
+for `NOT_IN_ABSTRACT` or `UNRESOLVED`, open the DOI/PMID source directly and
+confirm the recorded text is still a contiguous, verbatim source span. Run
+`just validate-products` when adding or editing CHEBI formula-bearing
+chemicals, and run `just audit-uniprot` after adding or editing
+`protein_examples`. Run `just build-embeddings` before `just gen-pages` only
+when the sibling DeepWalk artifacts named by
 `scripts/build_embedding_index.py` are present; otherwise report that embedding
 artifacts were not regenerated.
 
