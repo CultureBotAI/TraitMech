@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T175158Z-codex-b3bc26
+  timestamp: '2026-09-11T17:51:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - documentation
+  summary: Tighten add-trait README count guidance
+  details: Documented that each new TraitRecord must update every root README record-count
+    mention, not only the top corpus statistics table, after a review found the layout comment
+    can drift when a new record increments category totals, and corrected that stale layout
+    comment from 530 to 531 curated TraitRecords.
