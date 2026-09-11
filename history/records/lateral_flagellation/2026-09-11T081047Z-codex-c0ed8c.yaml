@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/lateral_flagellation.yaml
+  slug: lateral_flagellation
+session:
+  id: 2026-09-11T081047Z-codex-c0ed8c
+  timestamp: '2026-09-11T08:10:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Added seeded METPO lateral flagellation trait
+  details: Seeded METPO:1005036 from data/raw/metpo.owl, reparented it under the reviewed
+    flagellar arrangement class, and enriched it with DOI-backed evidence from Merino et al.
+    2006, Belas et al. 1986, Stewart and McCarter 2003, and Canals et al. 2006.
+    Added Vibrio parahaemolyticus as a canonical example after confirming NCBITaxon:670.

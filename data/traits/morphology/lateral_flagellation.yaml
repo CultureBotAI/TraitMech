@@ -1,0 +1,51 @@
+identifier: METPO:1005036
+label: lateral flagellation
+definition: A motility phenotype in which flagella emerge from the lateral side of
+  the cell.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- traitmech:000056
+curation_history:
+- timestamp: '2026-09-11T08:08:23Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T08:09:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO lateral flagellation phenotype with DOI-backed
+    lateral-flagella evidence after a repository-wide duplicate review covering ignored
+    and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1111/j.1574-6968.2006.00403.x
+evidence:
+- reference: DOI:10.1111/j.1574-6968.2006.00403.x
+  snippet: These bacteria are able to express both a constitutive polar flagellum
+    required for swimming motility and a separate lateral flagella system that is
+    induced in viscous media or on surfaces and is essential for swarming motility.
+  notes: Merino et al. review lateral flagella as a distinct, inducible flagellar
+    system in bacteria with dual polar and lateral systems.
+- reference: DOI:10.1128/jb.167.1.210-218.1986
+  snippet: The polar flagellum is responsible for motility in a liquid environment
+    (swimming), and the lateral flagella enable the bacteria to move over surfaces
+    (swarming).
+  notes: Belas et al. directly connect V. parahaemolyticus lateral flagella with surface
+    swarming.
+- reference: DOI:10.1128/jb.185.15.4508-4518.2003
+  snippet: Multiple proton-driven lateral flagella enable translocation over surfaces
+    (i.e., swarming).
+  notes: Stewart and McCarter describe the lateral flagella of V. parahaemolyticus
+    as surface-translocation organelles.
+- reference: DOI:10.1128/jb.188.3.852-862.2006
+  snippet: Mesophilic Aeromonas strains express a polar flagellum in all culture conditions,
+    and certain strains produce lateral flagella on semisolid media or on surfaces.
+  notes: Canals et al. show that lateral flagella are an Aeromonas trait as well as
+    a Vibrio parahaemolyticus trait.
+canonical_examples:
+- taxon_id: NCBITaxon:670
+  taxon_label: Vibrio parahaemolyticus
+  note: Belas et al. describe V. parahaemolyticus as producing a polar swimming flagellum
+    and lateral flagella that enable swarming on surfaces.
+  reference: DOI:10.1128/jb.167.1.210-218.1986
