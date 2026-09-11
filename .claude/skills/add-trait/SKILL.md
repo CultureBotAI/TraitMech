@@ -48,9 +48,12 @@ ecophysiological trait or METPO relation:
 Reject organism-level observations, one-off database columns, source-specific
 field names, predicted profile rows, precomposed chemical-use pairs, genes,
 proteins, pathways without a trait, broad placeholders, and traits already
-represented by an existing exact record. For rejected near misses, record the
-reason in the response or an attached `discussions` item on the exact existing
-record so the same target is not repeatedly triaged as missing.
+represented by an existing exact record. Treat lexical variants or METPO family
+variants as duplicates when they only add a context suffix, assay polarity, or
+capability wrapper to a trait already represented at the exact same scope. For
+rejected near misses, record the reason in the response or an attached
+`discussions` item on the exact existing record so the same target is not
+repeatedly triaged as missing.
 
 ## Prove it is new
 
@@ -72,6 +75,12 @@ METPO proposal, read it before continuing. Never search broad prefixes such as
 
 When you report "no existing record" or "no prior proposal", explicitly say the
 search included ignored and hidden files.
+
+If a seeded METPO label looks absent only because it adds a suffix such as
+`activity`, `capability`, `positive`, or `flagellation`, inspect the parent and
+same-family sibling records before copying the skeleton. Skip the candidate if
+the existing local record already carries the exact phenotype, and explain that
+semantic duplicate explicitly.
 
 ## Identity
 
@@ -190,6 +199,11 @@ A first graph should be readable and source-bounded:
 Generic states, capacities, and intermediates may stay ungrounded. Do not add a
 node or edge just to make the graph look complete.
 
+Positive or negative assay-result children of a reviewed activity parent often
+need only their definition, evidence, and a direct canonical example. Do not add
+a child graph when the reviewed parent already captures the molecular mechanism
+and the child merely records assay polarity.
+
 ## Write the record
 
 For a METPO-owned record, generate a temporary seed tree and copy only the
@@ -270,6 +284,27 @@ artifacts were not regenerated.
 When `just ground-predicates` or `just ground-nodes` proposes exact CURIEs you
 accept, rerun that recipe with `--apply` before repeating downstream audits.
 
+## Review and merge
+
+After local validation passes, finish the record through the same reviewed PR
+loop used for other hand-curated trait changes:
+
+1. Commit only the new record, its history, supporting writer script if any,
+   generated artifacts, and directly related documentation or tests.
+2. Push a trait-scoped branch and open a pull request with the new identifier,
+   label, sources, generated artifacts, and validation commands in the body.
+3. Request Copilot review and dispatch both manual adversarial workflows:
+   `.github/workflows/claude-code-review.yml` and
+   `.github/workflows/pr-shepherd.yml`, using the PR number as input.
+4. Inspect every review, PR comment, and workflow outcome. For each actionable
+   curation defect, file a GitHub issue, fix the defect on the same branch, and
+   rerun the relevant local validation before pushing.
+5. Watch PR checks until every required check is green. Treat a failing gate as
+   a blocker, not as advisory output.
+6. Merge the PR only after CI and reviews are clean, delete the remote feature
+   branch, fetch with pruning, and verify no local or remote branch for that
+   trait remains.
+
 ## Report
 
 End with:
@@ -280,5 +315,7 @@ End with:
 - curation-history event and repository history record
 - generated pages or derived reports that changed
 - validation commands that passed
+- PR review outcome, issue numbers filed for review findings, merge result, and
+  branch cleanup
 - any `CURATION_TODO` or upstream METPO issue left open
 - whether duplicate and absence searches included ignored and hidden files
