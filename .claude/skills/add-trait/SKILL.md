@@ -274,8 +274,11 @@ For every added record, create repository-level history:
   --agent-tool <agent-tool>
 ```
 
-Update `README.md` corpus statistics whenever the new `data/traits` record
-changes a category or total count.
+Update every record-count mention in the root `README.md` whenever the new
+`data/traits` record changes a category or total count. This includes the corpus
+statistics table and any prose or layout comments that quote the total number of
+curated records; derive the numbers live instead of incrementing one visible
+counter by hand.
 
 ## Validate
 
