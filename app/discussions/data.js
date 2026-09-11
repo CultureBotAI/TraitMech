@@ -375,6 +375,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lecithinase_activity.html#lecithinase-activity-xref-gap"
  },
  {
+  "discussion_id": "leucine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for leucine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "leucine arylamidase activity",
+  "source_id": "traitmech:000143",
+  "source_file": "leucine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 covers aminopeptidase activity at molecular-function scope and the obsolete GO leucyl aminopeptidase term no longer provides a live exact class for leucine arylamidase production as an organism-level phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/leucine_arylamidase_activity.html#leucine-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "lipase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lipase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -393,9 +410,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 21,
+ "total_discussions": 22,
  "total_knowledge_gaps": 8,
- "total_source_entries": 21,
+ "total_source_entries": 22,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
