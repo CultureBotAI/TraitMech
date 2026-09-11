@@ -1,0 +1,48 @@
+identifier: METPO:1005032
+label: polar flagellation
+definition: A motility phenotype in which one or more flagella are located at one
+  or both poles of the cell.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- traitmech:000056
+synonyms:
+- synonym_text: flagellum arrangement
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-11T07:49:46Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T08:00:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO polar flagellation phenotype with DOI-backed
+    flagellar-arrangement evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1093/femsre/fuv034
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  snippet: Bacteria differ in number and location of their flagella that appear in
+    regular patterns at the cell surface (flagellation pattern).
+  notes: Schuhmacher et al. support treating the number and cellular position of flagella
+    as a flagellation-pattern morphology class.
+- reference: DOI:10.3390/biom10040533
+  snippet: Some bacterial species, such as the marine bacterium Vibrio alginolyticus,
+    have a single polar flagellum that allows it to swim in liquid environments.
+  notes: Kojima et al. give Vibrio alginolyticus as a direct bacterial example whose
+    flagellum is positioned at a cell pole.
+- reference: DOI:10.3390/biom10040533
+  snippet: Two regulators, FlhF and FlhG, function antagonistically to generate only
+    one flagellum at the cell pole.
+  notes: Kojima et al. connect FlhF/FlhG regulation to generation of a polar flagellum,
+    supporting polar placement as a microbial flagellation phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:663
+  taxon_label: Vibrio alginolyticus
+  note: Kojima et al. describe V. alginolyticus as a marine bacterium with a single
+    polar flagellum.
+  reference: DOI:10.3390/biom10040533

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/polar_flagellation.yaml
+  slug: polar_flagellation
+session:
+  id: 2026-09-11T080500Z-codex-b0640e
+  timestamp: '2026-09-11T08:05:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Added seeded METPO polar flagellation trait
+  details: Seeded METPO:1005032 from data/raw/metpo.owl, parented it under the reviewed flagellar
+    arrangement trait, and enriched it with DOI-backed snippets from Schuhmacher et al. 2015
+    and Kojima et al. 2020 plus a Vibrio alginolyticus NCBITaxon:663 canonical example.
