@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/urease_negative.yaml
+  slug: urease_negative
+session:
+  id: 2026-09-11T154141Z-codex-250ecc
+  timestamp: '2026-09-11T15:41:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add urease negative trait
+  details: Added the seeded METPO:1007088 urease negative record with OMP definition provenance
+    and DOI-backed urease-test interpretation evidence from Hafezi and Khamar.

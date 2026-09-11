@@ -1,0 +1,42 @@
+identifier: METPO:1007088
+label: urease negative
+definition: Test-outcome phenotype where the urease test yields a negative result.
+  The underlying enzyme-organism relation should additionally be asserted via <organism>
+  METPO:2000303 'does not show activity of' GO:0009039 'urease activity'.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007082
+synonyms:
+- synonym_text: urease -
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: urease test negative
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T15:40:34Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T15:41:02Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO urease-negative test outcome with OMP definition
+    provenance plus DOI-backed assay evidence after a repository-wide duplicate review
+    covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0006090
+evidence:
+- reference: DOI:10.5812/chbs-160199
+  snippet: A positive reaction is indicated by the entire liquid medium and the surface
+    of the solid medium turning pink, whereas a negative reaction is characterized
+    by the medium remaining yellow
+  notes: Hafezi and Khamar review the urease-test polarity and interpret an unchanged
+    yellow medium as a negative assay result.
+- reference: DOI:10.5812/chbs-160199
+  snippet: Both types contain a phenol red reagent that changes color with pH variations
+  notes: The review describes the pH-indicator readout shared by liquid and solid
+    urease-test media.
