@@ -1,0 +1,60 @@
+identifier: METPO:1007084
+label: catalase negative
+definition: Test-outcome phenotype where the catalase test yields a negative result
+  (no bubbling on H2O2). The underlying enzyme-organism relation should additionally
+  be asserted via <organism> METPO:2000303 'does not show activity of' GO:0004096
+  'catalase activity'.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: catalase -
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: catalase test negative
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T10:12:15Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T10:12:30Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO catalase negative test-outcome phenotype with
+    DOI-backed assay and Enterococcus faecium evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1038/srep03081
+evidence:
+- reference: DOI:10.1038/srep03081
+  snippet: The enzyme-generated oxygen bubbles trapped by Triton X-100 were visualized
+    as foam
+  notes: Iwase et al. tie the catalase assay signal to oxygen bubbles from hydrogen-peroxide
+    decomposition, supporting no visible bubbling as a negative test outcome.
+- reference: DOI:10.1128/iai.72.8.4512-4520.2004
+  snippet: E. faecium is catalase negative, and the major mechanism to scavenge hydrogen
+    peroxide is NADH peroxidase
+  notes: Moy et al. identify E. faecium as catalase-negative and contrast its NADH-peroxidase
+    scavenging with catalase-bearing E. faecalis under heme-supplemented conditions.
+canonical_examples:
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  note: Moy et al. describe E. faecium as catalase-negative in the context of hydrogen-peroxide
+    accumulation and scavenging.
+  reference: DOI:10.1128/iai.72.8.4512-4520.2004
+discussions:
+- discussion_id: catalase-negative-assay-parent-gap
+  prompt: Resolve a non-assay parent for negative catalase-test phenotypes before
+    narrowing parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: METPO:1007080 is the seeded superclass of METPO:1007084, but METPO:1007080
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-11'

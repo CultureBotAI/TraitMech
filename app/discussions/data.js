@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "catalase-negative-assay-parent-gap",
+  "prompt": "Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "catalase negative",
+  "source_id": "METPO:1007084",
+  "source_file": "catalase_negative.yaml",
+  "attaches_to": [],
+  "rationale": "METPO:1007080 is the seeded superclass of METPO:1007084, but METPO:1007080 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/other/catalase_negative.html#catalase-negative-assay-parent-gap"
+ },
+ {
   "discussion_id": "indole-test-positive-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for positive indole-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -325,9 +342,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 17,
+ "total_discussions": 18,
  "total_knowledge_gaps": 8,
- "total_source_entries": 17,
+ "total_source_entries": 18,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

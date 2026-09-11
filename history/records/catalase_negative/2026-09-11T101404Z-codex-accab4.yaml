@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/catalase_negative.yaml
+  slug: catalase_negative
+session:
+  id: 2026-09-11T101404Z-codex-accab4
+  timestamp: '2026-09-11T10:14:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add catalase negative TraitRecord
+  details: Added the seeded METPO:1007084 catalase negative assay-outcome phenotype under
+    phenotype with DOI-backed assay evidence from Iwase et al., DOI-backed Enterococcus faecium
+    example evidence from Moy et al., exact METPO synonyms, and an assay-parent CURATION_TODO
+    after an ignored/hidden duplicate search found no existing exact record.
