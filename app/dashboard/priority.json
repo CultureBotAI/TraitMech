@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 514,
+    "records": 515,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 37,
+    "unresearched_mechanism_records": 38,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 0,
       "ADD_CANONICAL_EXAMPLES": 0,
-      "BUILD_CAUSAL_GRAPH": 37,
+      "BUILD_CAUSAL_GRAPH": 38,
       "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 143
@@ -58,6 +58,30 @@
       "label": "colony morphology",
       "category": "other",
       "slug": "colony_morphology",
+      "score": 58.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 1,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no canonical_examples +30",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1007063",
+      "label": "colony shape",
+      "category": "other",
+      "slug": "colony_shape",
       "score": 58.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
