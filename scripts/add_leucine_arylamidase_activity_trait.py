@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Add leucine arylamidase activity with DOI-backed evidence."""
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+
+TARGET = REPO_ROOT / "data" / "traits" / "physiology" / (
+    "leucine_arylamidase_activity.yaml"
+)
+CURATOR = "codex"
+TIMESTAMP = "2026-09-11T16:42:06Z"
+
+RECORD = {
+    "identifier": "traitmech:000143",
+    "label": "leucine arylamidase activity",
+    "definition": (
+        "A physiological enzyme-activity phenotype in which a cell produces "
+        "active leucine arylamidase enzymes that hydrolyze leucine arylamide "
+        "substrates."
+    ),
+    "definition_source": "DOI:10.1099/ijsem.0.002327",
+    "trait_category": "PHYSIOLOGY",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["METPO:1000059"],
+    "evidence": [
+        {
+            "reference": "DOI:10.1099/ijsem.0.002327",
+            "snippet": (
+                "enzyme detection with an API zym kit was positive for "
+                "alkaline phosphatase, esterase, leucine arylamidase, valine "
+                "arylamidase, acid phosphatase"
+            ),
+            "notes": (
+                "Jung et al. detected leucine arylamidase in Lactobacillus "
+                "allii strain WiKim39 with the API ZYM enzyme activity panel."
+            ),
+        },
+        {
+            "reference": "DOI:10.1155/2021/8888641",
+            "snippet": (
+                "According to the API ZYM assays, all three isolates were "
+                "positive for alkaline phosphatase, leucine aryl amidase, acid "
+                "phosphatase, and naphthol_AS_BI_phosphohydrolase."
+            ),
+            "notes": (
+                "Mekonnen et al. treated leucine arylamidase as an assayed "
+                "bacterial exoenzyme phenotype in rapid urease-producing soil "
+                "isolates."
+            ),
+        },
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:1847728",
+            "taxon_label": "Companilactobacillus allii",
+            "note": (
+                "The Lactobacillus allii WiKim39 type strain described by "
+                "Jung et al. is now classified as Companilactobacillus allii "
+                "and was positive for leucine arylamidase in the API ZYM "
+                "panel."
+            ),
+            "reference": "DOI:10.1099/ijsem.0.002327",
+        }
+    ],
+    "discussions": [
+        {
+            "discussion_id": "leucine-arylamidase-activity-xref-gap",
+            "prompt": (
+                "Resolve an exact external ontology class for leucine "
+                "arylamidase activity before adding a TraitRecord xref."
+            ),
+            "kind": "CURATION_TODO",
+            "status": "OPEN",
+            "rationale": (
+                "GO:0004177 covers aminopeptidase activity at molecular-"
+                "function scope and the obsolete GO leucyl aminopeptidase term "
+                "no longer provides a live exact class for leucine arylamidase "
+                "production as an organism-level phenotype."
+            ),
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-11",
+        }
+    ],
+}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true", help="write the YAML file")
+    args = parser.parse_args()
+
+    if TARGET.exists():
+        raise SystemExit(f"{TARGET.relative_to(REPO_ROOT)} already exists")
+
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Minted leucine arylamidase activity as a DOI-backed TraitRecord "
+            "after a repository-wide duplicate review covering ignored and "
+            "hidden files; METPO has no exact leucine arylamidase activity "
+            "class yet."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+
+    rel = TARGET.relative_to(REPO_ROOT)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        print(f"wrote {rel}")
+    else:
+        print(f"would write {rel}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/leucine_arylamidase_activity.yaml
+  slug: leucine_arylamidase_activity
+session:
+  id: 2026-09-11T164206Z-codex-0be601
+  timestamp: '2026-09-11T16:42:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - data
+  - proposals
+  summary: Added leucine arylamidase activity TraitRecord
+  details: Minted traitmech:000143 for DOI-backed leucine arylamidase activity after an ignored-and-hidden
+    duplicate review found only molecular-function grounding rows and no live TraitRecord
+    or prior METPO proposal; added the v20 METPO proposal for METPO:1009700.
