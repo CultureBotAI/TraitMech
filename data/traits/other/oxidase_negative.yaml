@@ -1,0 +1,54 @@
+identifier: METPO:1007086
+label: oxidase negative
+definition: Test-outcome phenotype where the oxidase test yields a negative result.
+  The underlying enzyme-organism relation should additionally be asserted via <organism>
+  METPO:2000303 'does not show activity of' GO:0004129 'cytochrome-c oxidase activity'.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1007081
+synonyms:
+- synonym_text: oxidase -
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: oxidase test negative
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Marcin Joachimiak
+curation_history:
+- timestamp: '2026-09-11T15:15:36Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T15:16:21Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO oxidase-negative test outcome with OMP definition
+    provenance plus stable-URL and DOI-backed assay evidence after a repository-wide
+    duplicate review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: http://purl.obolibrary.org/obo/OMP_0006084
+evidence:
+- reference: https://asm.org/protocols/oxidase-test-protocol
+  snippet: The test can be used to distinguish Neisseria gonorrhoeae (oxidase positive)
+    from Staphylococcus spp. and Streptococcus spp. (oxidase negative)
+  notes: The American Society for Microbiology protocol gives oxidase-negative Staphylococcus
+    and Streptococcus spp. as contrasts to an oxidase-positive Neisseria gonorrhoeae
+    result.
+- reference: DOI:10.5812/chbs-160199
+  snippet: A positive result from the dry filter paper method is indicated by the
+    appearance of a dark purple color within 5 to 10 seconds. A 'delayed positive'
+    result is recognized when a color change occurs between 10 and 60 seconds, whereas
+    a negative result is indicated by the paper remaining colorless or changing color
+    after more than 60 seconds
+  notes: Hafezi and Khamar review the oxidase-test polarity and interpret a colorless
+    dry filter paper, or a color change only after the cutoff, as a negative result.
+- reference: DOI:10.5812/chbs-160199
+  snippet: Bacteria that are classified as oxidase-negative can be anaerobic, aerobic,
+    or facultative. A negative oxidase result indicates merely the absence of cytochrome
+    c oxidase, which is responsible for oxidizing the reactant, while these organisms
+    may utilize alternative oxidases for electron transfer during respiration
+  notes: The review constrains interpretation of the negative assay outcome to cytochrome
+    c oxidase under the oxidase-test readout, rather than absence of every terminal
+    oxidase.

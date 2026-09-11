@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/oxidase_negative.yaml
+  slug: oxidase_negative
+session:
+  id: 2026-09-11T151706Z-codex-1e66ac
+  timestamp: '2026-09-11T15:17:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add oxidase negative trait
+  details: Added the seeded METPO:1007086 oxidase negative record with OMP definition provenance,
+    ASM stable-URL evidence, and DOI-backed oxidase-test interpretation evidence from Hafezi
+    and Khamar.
