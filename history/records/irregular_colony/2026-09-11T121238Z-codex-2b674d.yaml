@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/irregular_colony.yaml
+  slug: irregular_colony
+session:
+  id: 2026-09-11T121238Z-codex-2b674d
+  timestamp: '2026-09-11T12:12:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded irregular colony trait
+  details: Added METPO:1007065 as data/traits/other/irregular_colony.yaml from the METPO seed,
+    preserving the OTHER category and colony shape parent. Enriched the record with DOI:10.7759/cureus.374
+    evidence for irregular as a bacterial colony shape after an exact duplicate search including
+    ignored and hidden files found no existing live data/traits or history record.
