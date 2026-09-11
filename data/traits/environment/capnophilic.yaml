@@ -1,0 +1,39 @@
+identifier: METPO:1005021
+label: capnophilic
+definition: A phenotype describing an organism that requires elevated concentrations
+  of carbon dioxide for growth.
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000601
+curation_history:
+- timestamp: '2026-09-11T07:15:32Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T07:30:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO capnophilic phenotype with DOI-backed elevated-carbon-dioxide
+    evidence after a repository-wide duplicate review covering ignored and hidden
+    files.
+  llm_assisted: true
+definition_source: DOI:10.1111/1462-2920.13092
+evidence:
+- reference: DOI:10.1111/1462-2920.13092
+  snippet: Campylobacter jejuni, the leading cause of human bacterial gastroenteritis,
+    requires low environmental oxygen and high carbon dioxide for optimum growth
+  notes: Al-Haideri et al. support elevated carbon dioxide as a growth condition required
+    by capnophilic Campylobacter jejuni.
+- reference: DOI:10.1111/1462-2920.13092
+  snippet: Taken together, our data suggest CanB is a major contributor to the capnophilic
+    growth phenotype of C. jejuni.
+  notes: Al-Haideri et al. describe the elevated-CO2 requirement as a capnophilic
+    growth phenotype and identify CanB as a major contributor in C. jejuni NCTC 11168.
+canonical_examples:
+- taxon_id: NCBITaxon:192222
+  taxon_label: Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+  note: C. jejuni NCTC 11168 was the strain background for the CanB study of the C.
+    jejuni capnophilic growth phenotype.
+  reference: DOI:10.1111/1462-2920.13092
