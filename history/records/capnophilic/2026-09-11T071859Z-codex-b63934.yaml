@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/capnophilic.yaml
+  slug: capnophilic
+session:
+  id: 2026-09-11T071859Z-codex-b63934
+  timestamp: '2026-09-11T07:18:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add capnophilic METPO trait
+  details: Added the seeded METPO:1005021 capnophilic TraitRecord and enriched it with DOI-backed
+    elevated-carbon-dioxide evidence from Al-Haideri et al., plus a direct Campylobacter jejuni
+    NCTC 11168 canonical example.
