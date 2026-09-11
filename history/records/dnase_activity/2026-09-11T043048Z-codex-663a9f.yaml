@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/dnase_activity.yaml
+  slug: dnase_activity
+session:
+  id: 2026-09-11T043048Z-codex-663a9f
+  timestamp: '2026-09-11T04:30:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add DNase activity TraitRecord
+  details: Minted traitmech:000138 for DOI-backed DNase activity, cited marine bacterial DNase
+    secretion and DNase test agar evidence, recorded Bacillus pacificus KVCMST-8A-12 as a
+    canonical DNase-producing example, and left GO:0004536 as a scope-shifted xref gap.

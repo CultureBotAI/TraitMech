@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
  },
  {
+  "discussion_id": "dnase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for DNase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "DNase activity",
+  "source_id": "traitmech:000138",
+  "source_file": "dnase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004536 denotes the DNA nuclease molecular function rather than the organism-level DNase production phenotype, so it is too scope-shifted for an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
+ },
+ {
   "discussion_id": "gelatinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for gelatinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -240,9 +257,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 12,
+ "total_discussions": 13,
  "total_knowledge_gaps": 8,
- "total_source_entries": 12,
+ "total_source_entries": 13,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
