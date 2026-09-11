@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/hemolysis.yaml
+  slug: hemolysis
+session:
+  id: 2026-09-11T060500Z-codex-9b81ce
+  timestamp: '2026-09-11T06:05:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Seed hemolysis TraitRecord
+  details: Added METPO:1005025 hemolysis from data/raw/metpo.owl and enriched it with DOI-backed
+    Staphylococcus aureus hemolysis evidence.

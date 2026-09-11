@@ -1,0 +1,36 @@
+identifier: METPO:1005025
+label: hemolysis
+definition: A phenotype describing the ability of an organism to lyse red blood cells.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: presence of hemolysis
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-11T05:43:36Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-11T06:00:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the active METPO hemolysis class with DOI-backed Staphylococcus
+    aureus hemolysis evidence after a repository-wide duplicate review covering ignored
+    and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.3390/toxins5061140
+evidence:
+- reference: DOI:10.3390/toxins5061140
+  snippet: hemolysis to toxigenic substances secreted by S. aureus
+  notes: Berube and Bubeck Wardenburg review historical evidence that S. aureus secretes
+    hemolytic toxins.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: Historical S. aureus culture supernatants caused hemolysis in rabbit assays
+    of staphylococcal toxins.
+  reference: DOI:10.3390/toxins5061140
