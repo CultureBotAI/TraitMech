@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/circular_colony.yaml
+  slug: circular_colony
+session:
+  id: 2026-09-11T115241Z-codex-af631d
+  timestamp: '2026-09-11T11:52:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add seeded circular colony trait
+  details: Added METPO:1007064 as data/traits/other/circular_colony.yaml from the METPO seed,
+    preserving the OTHER category, round colony exact synonym, and colony shape parent. Enriched
+    the record with stable ASM Colony Morphology Protocol URL evidence for circular form as
+    a macroscopic colony outline after an exact duplicate search including ignored and hidden
+    files found no existing live data/traits or history record.
