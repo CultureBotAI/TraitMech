@@ -42,7 +42,7 @@ ecophysiological trait or METPO relation:
 - `term_kind: CLASS`, `OBJECT_PROPERTY`, or `DATATYPE_PROPERTY` matching the
   exact METPO term semantics
 - at least one citable definition source for a curator-minted term
-- at least two distinct DOI/PMID-backed citations for a new
+- at least two distinct DOI/PMID/stable-URL citations for a new
   `mapping_status: PROPOSED` local term
 
 Reject organism-level observations, one-off database columns, source-specific
@@ -60,7 +60,7 @@ and hidden files:
 
 ```bash
 rg --no-ignore --hidden -n \
-  "<METPO CURIE>|<traitmech CURIE>|<slug>|<label>|<synonym>|<DOI>|<PMID>" \
+  "<METPO CURIE>|<traitmech CURIE>|<slug>|<label>|<synonym>|<DOI>|<PMID>|<stable URL>" \
   .
 ```
 
@@ -68,7 +68,7 @@ Search `data/raw/metpo.owl`, `data/traits`, `parent_traits`, `xrefs`,
 `synonyms`, `causal_graphs`, `discussions`, `research/`, `proposals/`,
 generated pages, and `history/`. If a prior mention is only a rejection or a
 METPO proposal, read it before continuing. Never search broad prefixes such as
-`DOI:10`, `PMID:`, or `METPO:` to prove absence.
+`DOI:10`, `PMID:`, `https://`, or `METPO:` to prove absence.
 
 When you report "no existing record" or "no prior proposal", explicitly say the
 search included ignored and hidden files.
@@ -128,8 +128,8 @@ Make the first record small but independently reviewable:
 
 - `definition`: one sentence that states the trait, not the source column that
   suggested it
-- `definition_source`: a METPO source for seeded records or a DOI/PMID for
-  curator-minted records
+- `definition_source`: a METPO source for seeded records or a DOI, PMID, or
+  stable URL for curator-minted records
 - `trait_category`: the enum matching the filesystem category
 - `term_kind`: `CLASS`, `OBJECT_PROPERTY`, or `DATATYPE_PROPERTY`
 - `mapping_status`: leave generated METPO skeletons as `SEEDED`; use
@@ -137,8 +137,8 @@ Make the first record small but independently reviewable:
   only after human curator signoff
 - `synonyms`: exact, broad, narrow, or related labels only when the declared
   scope is defensible
-- `evidence`: DOI/PMID-backed literature that supports the definition or major
-  curation claims
+- `evidence`: DOI/PMID/stable-URL-backed literature that supports the
+  definition or major curation claims
 - `canonical_examples`: organisms with direct source support for the trait,
   not taxa inferred from a pathway or protein paper
 - `discussions`: `CURATION_TODO`, `KNOWLEDGE_GAP`, or controversy notes for
@@ -181,7 +181,7 @@ A first graph should be readable and source-bounded:
 - `protein_examples` only for reviewed UniProt primary accessions paired with
   taxon metadata and direct evidence
 - directed `edges` with `subject`, `predicate`, `object`, `description`, and
-  DOI/PMID-backed `evidence`
+  DOI/PMID/stable-URL-backed `evidence`
 - `predicate_id` only when an exact relation CURIE has been curated
 - no orphan nodes: every declared node must be referenced by at least one edge
 - no disconnected mechanistic branches: every node in a `MECHANISTIC` graph
@@ -225,6 +225,9 @@ just new-history \
   --agent-tool <agent-tool>
 ```
 
+Update `README.md` corpus statistics whenever the new `data/traits` record
+changes a category or total count.
+
 ## Validate
 
 Validate the new record directly with the maintained LinkML wrapper before
@@ -250,13 +253,14 @@ just gen-pages
 just gen-priority-dashboard
 git diff --check
 just qc
+uv run pytest tests/test_readme_artifacts.py -v --tb=short
 ```
 
 Also run `just verify-snippets --record data/traits/<category>/<slug>.yaml`
 after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
-for `NOT_IN_ABSTRACT` or `UNRESOLVED`, open the DOI/PMID source directly and
-confirm the recorded text is still a contiguous, verbatim source span. Run
-`just validate-products` when adding or editing CHEBI formula-bearing
+for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
+directly and confirm the recorded text is still a contiguous, verbatim source
+span. Run `just validate-products` when adding or editing CHEBI formula-bearing
 chemicals, and run `just audit-uniprot` after adding or editing
 `protein_examples`. Run `just build-embeddings` before `just gen-pages` only
 when the sibling DeepWalk artifacts named by
@@ -272,7 +276,7 @@ End with:
 
 - new identifier, label, category, and file path
 - strongest identity source and strongest mechanism source
-- every DOI, PMID, CURIE, source accession, and taxon id added
+- every DOI, PMID, URL, CURIE, source accession, and taxon id added
 - curation-history event and repository history record
 - generated pages or derived reports that changed
 - validation commands that passed
