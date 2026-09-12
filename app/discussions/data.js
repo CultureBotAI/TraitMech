@@ -392,6 +392,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-glucuronidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for beta-glucuronidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-glucuronidase activity",
+  "source_id": "traitmech:000151",
+  "source_file": "beta_glucuronidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004566 carries the same beta-glucuronidase activity label but denotes the enzyme molecular function rather than the organism-level beta-glucuronidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -529,9 +546,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 29,
+ "total_discussions": 30,
  "total_knowledge_gaps": 8,
- "total_source_entries": 29,
+ "total_source_entries": 30,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
