@@ -48,8 +48,10 @@ RECORD = {
         {
             "reference": LIN,
             "snippet": (
-                "magnetotaxis and enables these microorganisms to detect "
-                "Earth's magnetic field for orientation and navigation"
+                "The origin and evolution of magnetoreception, which in diverse "
+                "prokaryotes and protozoa is known as magnetotaxis and enables "
+                "these microorganisms to detect Earth's magnetic field for "
+                "orientation and navigation"
             ),
             "notes": (
                 "Lin et al. define magnetotaxis as the magnetoreceptive "

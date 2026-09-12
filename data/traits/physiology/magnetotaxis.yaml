@@ -19,8 +19,9 @@ evidence:
   notes: Muller et al. review bacterial magnetotaxis as directed motility aligned
     to Earth's magnetic field.
 - reference: DOI:10.1038/s41396-018-0098-9
-  snippet: magnetotaxis and enables these microorganisms to detect Earth's magnetic
-    field for orientation and navigation
+  snippet: The origin and evolution of magnetoreception, which in diverse prokaryotes
+    and protozoa is known as magnetotaxis and enables these microorganisms to detect
+    Earth's magnetic field for orientation and navigation
   notes: Lin et al. define magnetotaxis as the magnetoreceptive orientation and navigation
     behavior of magnetotactic microorganisms.
 - reference: DOI:10.1128/mbio.01649-23
@@ -49,4 +50,11 @@ curation_history:
   action: ADD_SYNONYM
   changes: Moved the adjectival magnetotactic related synonym from the magnetosome
     organelle record onto the new magnetotaxis physiology trait; resolves issue 851.
+  llm_assisted: true
+- timestamp: '2026-09-12T17:05:00Z'
+  curator: codex
+  action: EDIT_EVIDENCE
+  changes: Extended the Lin et al. magnetotaxis evidence snippet to the beginning
+    of its source sentence after PR review requested stricter snippet verification;
+    resolves issue 852.
   llm_assisted: true
