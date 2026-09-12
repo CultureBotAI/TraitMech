@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_chymotrypsin_activity.yaml
+  slug: alpha_chymotrypsin_activity
+session:
+  id: 2026-09-12T052940Z-codex-d3099a
+  timestamp: '2026-09-12T05:29:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add alpha-chymotrypsin activity TraitRecord
+  details: Minted traitmech:000159 for URL/DOI-backed alpha-chymotrypsin activity after an
+    ignored-and-hidden duplicate search found no exact live TraitRecord or METPO proposal;
+    added NC-IUBMB EC 3.4.21.1 definition evidence, DOI-backed Amygdalobacter indicium API
+    ZYM evidence, a directly supported canonical example, a GO molecular-function xref TODO,
+    and a one-row METPO v36 proposal reserving METPO:1011300.
