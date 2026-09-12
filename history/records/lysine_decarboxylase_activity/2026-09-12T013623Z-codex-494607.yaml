@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/lysine_decarboxylase_activity.yaml
+  slug: lysine_decarboxylase_activity
+session:
+  id: 2026-09-12T013623Z-codex-494607
+  timestamp: '2026-09-12T01:36:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - grounding
+  summary: Add lysine decarboxylase activity
+  details: Minted traitmech:000153 for URL/DOI-backed lysine decarboxylase activity after
+    an ignored-and-hidden duplicate search, citing the NC-IUBMB EC 4.1.1.18 entry for L-lysine
+    decarboxylation scope, Moreau 2007 for a direct Escherichia coli canonical example, and
+    a v30 METPO proposal row reserving METPO:1010700 for upstream minting.
