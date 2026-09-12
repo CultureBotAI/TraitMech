@@ -766,6 +766,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-xref-gap"
  },
  {
+  "discussion_id": "naphthol-as-bi-phosphohydrolase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for naphthol-AS-BI-phosphohydrolase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "naphthol-AS-BI-phosphohydrolase activity",
+  "source_id": "traitmech:000174",
+  "source_file": "naphthol_as_bi_phosphohydrolase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0016791 covers broad phosphatase activity at molecular-function scope, and no live GO class provides an exact naphthol-AS-BI-phosphate-specific phosphohydrolase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.html#naphthol-as-bi-phosphohydrolase-activity-xref-gap"
+ },
+ {
   "discussion_id": "ornithine-decarboxylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for ornithine decarboxylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -920,9 +937,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 52,
+ "total_discussions": 53,
  "total_knowledge_gaps": 8,
- "total_source_entries": 52,
+ "total_source_entries": 53,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

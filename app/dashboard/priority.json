@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 559,
+    "records": 560,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 82,
+    "unresearched_mechanism_records": 83,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 1,
       "ADD_CANONICAL_EXAMPLES": 0,
-      "BUILD_CAUSAL_GRAPH": 81,
+      "BUILD_CAUSAL_GRAPH": 82,
       "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 143
@@ -1742,6 +1742,28 @@
       "label": "NAD-dependent alcohol dehydrogenase activity",
       "category": "physiology",
       "slug": "nad_dependent_alcohol_dehydrogenase_activity",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "traitmech:000174",
+      "label": "naphthol-AS-BI-phosphohydrolase activity",
+      "category": "physiology",
+      "slug": "naphthol_as_bi_phosphohydrolase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -12166,7 +12188,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 98,
+      "children": 99,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.yaml
+  slug: naphthol_as_bi_phosphohydrolase_activity
+session:
+  id: 2026-09-12T150952Z-codex-886c4b
+  timestamp: '2026-09-12T15:09:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add naphthol-AS-BI-phosphohydrolase activity
+  details: Minted traitmech:000174 for DOI-backed naphthol-AS-BI-phosphohydrolase activity,
+    added API ZYM substrate and Corynebacterium resistens evidence snippets, recorded Corynebacterium
+    resistens as a canonical example, left the broad GO phosphatase mapping as a curation
+    TODO, and reserved METPO:1012800 in proposals/metpo_traitmech_v51.
