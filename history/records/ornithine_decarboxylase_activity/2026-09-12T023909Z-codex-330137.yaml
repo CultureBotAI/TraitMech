@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/ornithine_decarboxylase_activity.yaml
+  slug: ornithine_decarboxylase_activity
+session:
+  id: 2026-09-12T023909Z-codex-330137
+  timestamp: '2026-09-12T02:39:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Mint ornithine decarboxylase activity
+  details: Minted traitmech:000154 for URL/DOI-backed ornithine decarboxylase activity after
+    an ignored-and-hidden duplicate search; added IUBMB EC 4.1.1.17 and Cunningham-Rundles
+    and Maas 1975 evidence, an E. coli K-12 canonical example, a GO xref-gap discussion, and
+    a v31 METPO proposal row reserving METPO:1010800 for upstream minting.

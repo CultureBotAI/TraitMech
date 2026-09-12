@@ -562,6 +562,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "ornithine-decarboxylase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for ornithine decarboxylase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ornithine decarboxylase activity",
+  "source_id": "traitmech:000154",
+  "source_file": "ornithine_decarboxylase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004586 carries the same ornithine decarboxylase activity label but denotes the enzyme molecular function rather than the organism-level ornithine decarboxylase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
+ },
+ {
   "discussion_id": "valine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for valine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -580,9 +597,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 32,
+ "total_discussions": 33,
  "total_knowledge_gaps": 8,
- "total_source_entries": 32,
+ "total_source_entries": 33,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
