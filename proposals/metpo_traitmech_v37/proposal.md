@@ -61,10 +61,11 @@ glutathione-S-conjugates, or related N-terminal L-gamma-glutamyl substrates.
 
 No exact external mapping is proposed. `GO:0003840` is the obsolete GO
 gamma-glutamyltransferase activity class, and its replacement `GO:0036374`
-denotes the molecular function glutathione gamma-glutamate hydrolase rather than
-the organism-level gamma-glutamyltransferase/glutathione-hydrolase phenotype.
-`GO:0036374` is appropriate as a causal-node grounding when a graph needs that
-hydrolysis half-reaction, not as an equivalent TraitRecord xref.
+glutathione hydrolase activity denotes a glutathione-hydrolysis molecular
+function rather than the organism-level
+gamma-glutamyltransferase/glutathione-hydrolase phenotype. `GO:0036374` is
+appropriate as a causal-node grounding when a graph needs that hydrolysis
+half-reaction, not as an equivalent TraitRecord xref.
 
 The API Campy label `gamma-glutamyl transferase` and the enzyme names
 `gamma-glutamyl transpeptidase` and `glutathione gamma-glutamate hydrolase` name

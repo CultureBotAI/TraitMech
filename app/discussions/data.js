@@ -537,7 +537,7 @@ window.searchData = [
   "source_id": "traitmech:000160",
   "source_file": "gamma_glutamyltransferase_activity.yaml",
   "attaches_to": [],
-  "rationale": "GO:0003840 gamma-glutamyltransferase activity is obsolete, and its replacement GO:0036374 denotes the molecular function glutathione gamma-glutamate hydrolase rather than the organism-level gamma-glutamyltransferase/glutathione-hydrolase phenotype. GO:0036374 is appropriate as a causal-node grounding when a graph needs that hydrolysis half-reaction, not as an equivalent TraitRecord xref.",
+  "rationale": "GO:0003840 gamma-glutamyltransferase activity is obsolete, and its replacement GO:0036374 glutathione hydrolase activity denotes a glutathione-hydrolysis molecular function rather than the organism-level gamma-glutamyltransferase/glutathione-hydrolase phenotype. GO:0036374 is appropriate as a causal-node grounding when a graph needs that hydrolysis half-reaction, not as an equivalent TraitRecord xref.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
