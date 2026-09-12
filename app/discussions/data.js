@@ -426,6 +426,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-xref-gap"
  },
  {
+  "discussion_id": "carboxylesterase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for carboxylesterase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "carboxylesterase activity",
+  "source_id": "traitmech:000156",
+  "source_file": "carboxylesterase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0106435 denotes carboxylesterase molecular function rather than the organism-level carboxylesterase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/carboxylesterase_activity.html#carboxylesterase-activity-xref-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -614,9 +631,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 34,
+ "total_discussions": 35,
  "total_knowledge_gaps": 8,
- "total_source_entries": 34,
+ "total_source_entries": 35,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
