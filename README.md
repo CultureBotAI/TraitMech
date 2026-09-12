@@ -12,7 +12,7 @@ Each trait — Gram type, motility, pH optimum, "uses as carbon source",
 "halophilic", etc. — lives in its own YAML file with provenance back to its
 METPO source class and (optionally) to literature evidence.
 
-**Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
+**Initial seed (from `data/raw/metpo.owl`, METPO 2026-06-12) and current curation status:**
 
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
@@ -25,14 +25,14 @@ METPO source class and (optionally) to literature evidence.
 | METABOLISM | 120 | 15 | 23 | 49 | 159 |
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
-| OTHER | 0 | 0 | 0 | 0 | 26 |
-| **TOTAL** | **427** | **56** | **50** | **353** | **566** |
+| OTHER | 0 | 0 | 0 | 0 | 27 |
+| **TOTAL** | **427** | **56** | **50** | **353** | **567** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; one morphology record, 15 newer metabolism records, and
-forty physiology records are `PROPOSED`, and thirty-three records are
+forty physiology records are `PROPOSED`, and thirty-four records are
 still `SEEDED` (one environment, one metabolism, four morphology, one
-physiology, and twenty-six other).
+physiology, and twenty-seven other).
 Of the reviewed records, 353 currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
@@ -89,9 +89,9 @@ just validate-all             # validate every TraitRecord YAML
 ```
 TraitMech/
 ├── data/
-│   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
+│   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 566 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 567 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts

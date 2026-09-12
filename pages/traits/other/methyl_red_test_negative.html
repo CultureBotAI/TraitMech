@@ -57,7 +57,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
+        <li><a href="../../traits/other/methyl_red_test.html" >methyl red test <code>METPO:1005013</code></a></li>
 
       </ul>
     </div>
@@ -127,7 +127,7 @@
         <p class="discussion-prompt">Resolve a non-assay parent for negative methyl-red-test phenotypes before narrowing parent_traits below phenotype.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>methyl-red-test-negative-assay-parent-gap</code>
           · raised by codex
           · 2026-09-12
@@ -146,6 +146,8 @@
 
 
 
+
+        <p class="meta"><em>Resolution:</em> METPO:1005013 is now represented as the seeded methyl-red-test assay parent, so this assay-outcome phenotype can use its exact source superclass instead of a temporary direct phenotype parent; this resolves the exact METPO assay-parent gap, not the broader non-assay parent question for assay-outcome phenotypes.</p>
 
 
 
@@ -176,6 +178,18 @@
           <time>2026-09-12T18:57:06Z</time> ·
           <strong>CURATION_REVIEW_REVISION</strong> · codex
           <p class="changes">Added the Hansen Klebsiella pneumoniae canonical example after local review issue #861 showed Table 2 directly supports a mostly methyl-red-negative Klebsiella pneumoniae result.</p>
+        </li>
+
+        <li>
+          <time>2026-09-12T20:15:55Z</time> ·
+          <strong>RESOLVED_PARENT_GAP</strong> · codex
+          <p class="changes">Reparented methyl red test negative below the newly curated METPO:1005013 methyl red test assay parent and marked the temporary assay-parent discussion resolved.</p>
+        </li>
+
+        <li>
+          <time>2026-09-12T20:44:24Z</time> ·
+          <strong>CURATION_REVIEW_REVISION</strong> · codex
+          <p class="changes">Moved the methyl-red parent-gap closure into resolution_note and resolved_date so the original non-assay parent rationale remains visible.</p>
         </li>
 
       </ol>
@@ -230,10 +244,10 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-12 18:57 UTC from
+      Record as of 2026-09-12 20:44 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
-      · 566 TraitRecords
-      · embedding coverage 84.3%
+      · 567 TraitRecords
+      · embedding coverage 84.1%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
