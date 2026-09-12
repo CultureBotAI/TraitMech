@@ -1,7 +1,7 @@
 identifier: traitmech:000175
 label: type IV pilus
-definition: A morphology trait in which a cell produces dynamic extracellular type-IV-pilin
-  filaments that extend from the cell surface.
+definition: A morphology trait in which a cell produces extracellular type-IV-pilin
+  filaments that dynamically extend from and retract toward the cell surface.
 definition_source: DOI:10.1093/femsre/fuab053
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -43,4 +43,10 @@ curation_history:
   changes: Minted type IV pilus as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact live type
     IV pilus class yet and the placeholder is reserved in proposals/metpo_traitmech_v52.
+  llm_assisted: true
+- timestamp: '2026-09-12T15:56:02Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Aligned the type IV pilus definition with dynamic extension and retraction
+    evidence after Claude Code Review on PR #847.'
   llm_assisted: true

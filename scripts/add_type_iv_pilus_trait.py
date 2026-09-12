@@ -19,13 +19,15 @@ PIEPENBRINK = "DOI:10.1042/BST20160221"
 ROBERGE = "DOI:10.1128/jb.00359-24"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-12T15:35:50Z"
+REVIEW_TIMESTAMP = "2026-09-12T15:56:02Z"
 
 RECORD = {
     "identifier": "traitmech:000175",
     "label": "type IV pilus",
     "definition": (
-        "A morphology trait in which a cell produces dynamic extracellular "
-        "type-IV-pilin filaments that extend from the cell surface."
+        "A morphology trait in which a cell produces extracellular "
+        "type-IV-pilin filaments that dynamically extend from and retract "
+        "toward the cell surface."
     ),
     "definition_source": ELLISON,
     "trait_category": "MORPHOLOGY",
@@ -107,6 +109,17 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADVERSARIAL_REVIEW_REPAIR",
+        changes=(
+            "Aligned the type IV pilus definition with dynamic extension and "
+            "retraction evidence after Claude Code Review on PR #847."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
