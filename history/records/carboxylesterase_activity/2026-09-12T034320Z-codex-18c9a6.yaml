@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/carboxylesterase_activity.yaml
+  slug: carboxylesterase_activity
+session:
+  id: 2026-09-12T034320Z-codex-18c9a6
+  timestamp: '2026-09-12T03:43:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add carboxylesterase activity
+  details: Minted traitmech:000156 for URL/DOI-backed carboxylesterase activity after an ignored-and-hidden
+    duplicate search found only prior molecular-function grounding rows; added IUBMB EC 3.1.1.1
+    definition evidence, a direct Corynebacterium resistens canonical example, and a v33 METPO
+    proposal row reserving METPO:1011000 for upstream minting.
