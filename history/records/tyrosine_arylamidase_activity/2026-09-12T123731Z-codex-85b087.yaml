@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/tyrosine_arylamidase_activity.yaml
+  slug: tyrosine_arylamidase_activity
+session:
+  id: 2026-09-12T123731Z-codex-85b087
+  timestamp: '2026-09-12T12:37:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - metpo_proposal
+  summary: Add tyrosine arylamidase activity trait
+  details: Added traitmech:000169 for tyrosine arylamidase activity, backed by DOI species
+    descriptions that report tyrosine arylamidase activity in Amygdalobacter indicium and
+    Actinomyces cardiffensis. Left GO:0004177 out of xrefs because it is a broad molecular-function
+    grounding rather than an exact organism-level phenotype equivalent.

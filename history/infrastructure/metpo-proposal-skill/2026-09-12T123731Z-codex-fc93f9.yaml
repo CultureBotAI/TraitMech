@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T123731Z-codex-fc93f9
+  timestamp: '2026-09-12T12:37:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve v46 METPO proposal block
+  details: Updated the metpo-proposal skill reservation note after adding metpo_traitmech_v46
+    so future Scope-A cohorts start at METPO:1012400 instead of reusing the METPO:1012300
+    block reserved for tyrosine arylamidase activity.
