@@ -38,7 +38,9 @@ data/traits/physiology/lecithinase_activity.yaml	traitmech:000140	2	DOI:10.2147/
 data/traits/physiology/leucine_arylamidase_activity.yaml	traitmech:000143	2	DOI:10.1099/ijsem.0.002327; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/lipase_activity.yaml	traitmech:000139	2	DOI:10.22207/JPAM.16.4.27; DOI:10.1016/j.mex.2018.01.004		yes
 data/traits/physiology/lysine_decarboxylase_activity.yaml	traitmech:000153	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/18.html; DOI:10.1128/jb.01306-06		yes
+data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml	traitmech:000165	3	https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html; DOI:10.1111/j.1432-1033.1986.tb09366.x; DOI:10.1128/jb.169.6.2591-2597.1987		yes
 data/traits/physiology/ornithine_decarboxylase_activity.yaml	traitmech:000154	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html; DOI:10.1128/jb.124.2.791-799.1975		yes
+data/traits/physiology/prolyl_aminopeptidase_activity.yaml	traitmech:000166	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html; DOI:10.1111/j.1365-2958.1993.tb01249.x; DOI:10.1099/ijsem.0.006017		yes
 data/traits/physiology/pyrazinamidase_activity.yaml	traitmech:000163	3	DOI:10.1111/j.1742-4658.2007.06241.x; https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html; DOI:10.1371/journal.pone.0015785		yes
 data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml	traitmech:000155	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html; DOI:10.1128/JCM.37.11.3443-3447.1999		yes
 data/traits/physiology/trypsin_activity.yaml	traitmech:000158	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html; DOI:10.1371/journal.pone.0322500		yes

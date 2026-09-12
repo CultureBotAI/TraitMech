@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/prolyl_aminopeptidase_activity.yaml
+  slug: prolyl_aminopeptidase_activity
+session:
+  id: 2026-09-12T110740Z-codex-c2a886
+  timestamp: '2026-09-12T11:07:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add prolyl aminopeptidase activity trait
+  details: Added traitmech:000166 for prolyl aminopeptidase activity, backed by the NC-IUBMB
+    EC 3.4.11.5 reaction, a Neisseria gonorrhoeae Pip cloning and characterization DOI, and
+    an Amygdalobacter indicium species-description DOI that reports proline arylamidase activity
+    in an enzyme panel. Left GO:0004177 and EC 3.4.11.5 out of xrefs because they are molecular-function
+    groundings rather than exact organism-level phenotype equivalents.
