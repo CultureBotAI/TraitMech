@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/voges_proskauer_test_negative.yaml
+  slug: voges_proskauer_test_negative
+session:
+  id: 2026-09-12T220930Z-codex-e2fbce
+  timestamp: '2026-09-12T22:09:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add Voges-Proskauer test negative trait
+  details: Added METPO:1005018 as the seeded Voges-Proskauer-test-negative phenotype with
+    stable ASM protocol evidence for VP-negative interpretation and Escherichia coli as a
+    canonical negative-control example after a repository-wide duplicate review covering ignored
+    and hidden files.

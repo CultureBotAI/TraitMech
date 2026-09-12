@@ -1,0 +1,34 @@
+identifier: METPO:1005018
+label: Voges-Proskauer test negative
+definition: A phenotype in which an organism tests negative in the Voges-Proskauer
+  test.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1005016
+curation_history:
+- timestamp: '2026-09-12T22:08:40Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T22:09:04Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO Voges-Proskauer-test-negative phenotype with
+    stable-URL VP-negative interpretation evidence after a repository-wide duplicate
+    review covering ignored and hidden files.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: VP-positive E. areogenes (A) shows red coloration on top of the culture,
+    whereas VP-negative E. coli (B) has a yellowish color.
+  notes: The ASM protocol figure caption identifies the yellow E. coli reaction after
+    adding Barritt's reagents as the VP-negative comparison.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: ASM Figure 2 presents E. coli grown in MR-VP broth for 48 hours as the VP-negative
+    control culture that remains yellowish after Barritt's reagents are added.
+  reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
