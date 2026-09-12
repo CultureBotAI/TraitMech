@@ -24,6 +24,7 @@ HANSEN = "DOI:10.1128/JCM.42.8.3665-3669.2004"
 CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T19:14:16Z"
 TIMESTAMP = "2026-09-12T19:16:03Z"
+REVIEW_TIMESTAMP = "2026-09-12T19:34:17Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005014",
@@ -82,21 +83,8 @@ UPDATES = {
             ),
             "notes": (
                 "Hansen et al. evaluated methyl red as a conventional "
-                "Klebsiella biochemical test; their Table 3 reports "
-                "K. ornithinolytica methyl-red result percentages across "
-                "CPHL, NRL, and SSI."
-            ),
-        },
-        {
-            "reference": HANSEN,
-            "snippet": (
-                "Methyl red 93.5 100.0 100.0 100.0 100.0 100.0 0.0 "
-                "0.0 10.0 36.7m 46.7 90.0"
-            ),
-            "notes": (
-                "Hansen et al. Table 3 reports the Methyl red row as 100.0% "
-                "positive for K. ornithinolytica in all three reference "
-                "laboratories, directly supporting the canonical example."
+                "Klebsiella biochemical test listed in the ASM Manual of "
+                "Clinical Microbiology."
             ),
         },
     ],
@@ -149,6 +137,19 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved PR #862 review issues #863 and #864 by removing a "
+            "flattened Hansen Table 3 row from evidence snippets and "
+            "narrowing the Hansen ASM Manual evidence note to match its "
+            "quote."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 
