@@ -248,6 +248,11 @@ mapping rather than a causal graph.
 - `xrefs` carries equivalents in PATO / GO / NCIT / ENVO / CHEBI / UO
   for cross-ontology lookup.
 
+## Merge queue
+
+See [the native merge-queue guide](docs/MERGE_QUEUE.md) for the reviewed merge workflow
+when queue enforcement is enabled on `main`.
+
 ## License
 
 CC0-1.0 — Public Domain Dedication.
