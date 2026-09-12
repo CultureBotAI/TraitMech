@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pyrazinamidase_activity.yaml
+  slug: pyrazinamidase_activity
+session:
+  id: 2026-09-12T090847Z-codex-086d47
+  timestamp: '2026-09-12T09:08:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added pyrazinamidase activity TraitRecord
+  details: Minted traitmech:000163 for pyrazinamidase activity with IUBMB EC 3.5.1.19, Zhang
+    et al., and Petrella et al. evidence, a Mycobacterium tuberculosis canonical example,
+    and the v40 METPO proposal reserving METPO:1011700.
