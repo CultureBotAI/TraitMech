@@ -409,6 +409,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "amylase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for amylase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "amylase activity",
+  "source_id": "traitmech:000162",
+  "source_file": "amylase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0016160 carries the same amylase activity label but denotes the enzyme molecular function rather than the organism-level amylolytic enzyme production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-xref-gap"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -716,9 +733,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 40,
+ "total_discussions": 41,
  "total_knowledge_gaps": 8,
- "total_source_entries": 40,
+ "total_source_entries": 41,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
