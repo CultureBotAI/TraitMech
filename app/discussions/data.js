@@ -307,6 +307,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alkaline_phosphatase_activity.html#alkaline-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-galactosidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for alpha-galactosidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-galactosidase activity",
+  "source_id": "traitmech:000149",
+  "source_file": "alpha_galactosidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004557 denotes the alpha-galactosidase/melibiase molecular function rather than the organism-level alpha-galactosidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/alpha_galactosidase_activity.html#alpha-galactosidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "alpha-glucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alpha-glucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -495,9 +512,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 27,
+ "total_discussions": 28,
  "total_knowledge_gaps": 8,
- "total_source_entries": 27,
+ "total_source_entries": 28,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_galactosidase_activity.yaml
+  slug: alpha_galactosidase_activity
+session:
+  id: 2026-09-11T234705Z-codex-c2ff71
+  timestamp: '2026-09-11T23:47:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add alpha-galactosidase activity TraitRecord
+  details: Minted traitmech:000149 for alpha-galactosidase activity after an ignored-and-hidden
+    duplicate search found no existing TraitRecord or proposal. Added DOI-backed alpha-galactosidase
+    definition support, direct DOI-backed Selenomonas sputigena API ZYM and API An-Ident evidence,
+    a direct Selenomonas canonical example, and a v26 METPO proposal row reserving METPO:1010300
+    for upstream minting.
