@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T174050Z-codex-482d2a
+  timestamp: '2026-09-12T17:40:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add indole test negative
+  details: Added the seeded METPO:1005012 indole-test-negative phenotype with DOI-backed indole-production
+    and Klebsiella indole-negative evidence, recorded Klebsiella pneumoniae as the canonical
+    example, and left the assay-parent gap as a CURATION_TODO.
