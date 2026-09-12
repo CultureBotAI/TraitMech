@@ -8,6 +8,10 @@ term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
 - METPO:1000059
+synonyms:
+- synonym_text: magnetotactic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro842
 evidence:
 - reference: DOI:10.1128/JB.00398-20
   snippet: Magnetotactic bacteria are aquatic or sediment-dwelling microorganisms
@@ -39,4 +43,10 @@ curation_history:
     duplicate review covering ignored and hidden files; METPO has only an obsolete
     magnetotaxis class in the local snapshot and the replacement placeholder is reserved
     in proposals/metpo_traitmech_v53.
+  llm_assisted: true
+- timestamp: '2026-09-12T16:36:30Z'
+  curator: codex
+  action: ADD_SYNONYM
+  changes: Moved the adjectival magnetotactic related synonym from the magnetosome
+    organelle record onto the new magnetotaxis physiology trait; resolves issue 851.
   llm_assisted: true

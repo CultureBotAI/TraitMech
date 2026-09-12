@@ -9,10 +9,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
-synonyms:
-- synonym_text: magnetotactic
-  synonym_type: RELATED_SYNONYM
-  source: DOI:10.1038/nrmicro842
 xrefs:
 - GO:0110143
 evidence:
@@ -51,6 +47,7 @@ causal_graphs:
   - node_id: magnetotaxis
     label: magnetotaxis
     node_type: BIOLOGICAL_PROCESS
+    grounding: traitmech:000176
     description: Movement biased along geomagnetic field lines.
   - node_id: mamk_protein
     grounding_status: REVIEWED_LABEL_ONLY
@@ -331,4 +328,11 @@ curation_history:
     and verbatim-snippet-backed connector(s). Clarified the magnetite and greigite
     nodes as mineral crystals contained within magnetosomes. No paid research service
     was called.'
+  llm_assisted: true
+- timestamp: '2026-09-12T16:36:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded the magnetotaxis causal-graph process node to newly minted traitmech:000176
+    and moved the adjectival magnetotactic related synonym to the magnetotaxis trait;
+    resolves issue 851.
   llm_assisted: true

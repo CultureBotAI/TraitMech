@@ -30,6 +30,11 @@ def _current(slug: str) -> dict:
 
 def _before(slug: str) -> dict:
     doc = _current(slug)
+    doc["curation_history"] = [
+        event
+        for event in doc.get("curation_history", [])
+        if event.get("action") != ACTION
+    ]
     graph = doc["causal_graphs"][0]
     new_keys = {_edge_key(edge) for edge in ADDITIONS[slug]}
     graph["edges"] = [edge for edge in graph["edges"] if _edge_key(edge) not in new_keys]
