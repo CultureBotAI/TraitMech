@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/amylase_activity.yaml
+  slug: amylase_activity
+session:
+  id: 2026-09-12T081149Z-codex-47e557
+  timestamp: '2026-09-12T08:11:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add amylase activity
+  details: Added traitmech:000162 amylase activity with DOI-backed amylolytic-enzyme definition
+    evidence, DOI-backed Bacteroides ovatus extracellular alpha-amylase evidence, a canonical
+    example, and the same-PR metpo_traitmech_v39 proposal reserving METPO:1011600.

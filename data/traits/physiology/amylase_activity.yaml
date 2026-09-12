@@ -1,0 +1,52 @@
+identifier: traitmech:000162
+label: amylase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  amylolytic enzymes that hydrolyze starch.
+definition_source: DOI:10.3389/fbioe.2020.00871
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: amylolytic enzymes
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fbioe.2020.00871
+evidence:
+- reference: DOI:10.3389/fbioe.2020.00871
+  snippet: All enzymes capable of degrading starch are collectively indicated as amylolytic
+    enzymes.
+  notes: Sidar et al. frame amylolytic enzymes as starch-degrading enzymes, grounding
+    the organism-level phenotype as active amylase production rather than starch catabolism
+    itself.
+- reference: DOI:10.1007/s00018-023-04812-w
+  snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13A_{Sus}
+  notes: Brown et al. characterized BoGH13A_Sus as a Bacteroides ovatus extracellular
+    alpha-amylase in a starch utilization system, supporting B. ovatus as a source-backed
+    amylase activity example.
+canonical_examples:
+- taxon_id: NCBITaxon:28116
+  taxon_label: Bacteroides ovatus
+  note: Brown et al. characterized the extracellular alpha-amylase BoGH13A_Sus from
+    the Bacteroides ovatus starch utilization system.
+  reference: DOI:10.1007/s00018-023-04812-w
+discussions:
+- discussion_id: amylase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for amylase activity before adding
+    a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0016160 carries the same amylase activity label but denotes the enzyme
+    molecular function rather than the organism-level amylolytic enzyme production
+    phenotype, so it is appropriate as a causal-node grounding rather than an equivalent
+    TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T08:08:43Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted amylase activity as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has no exact amylase
+    activity class yet.
+  llm_assisted: true
