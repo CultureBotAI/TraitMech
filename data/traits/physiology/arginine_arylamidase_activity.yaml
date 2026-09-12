@@ -1,0 +1,74 @@
+identifier: traitmech:000167
+label: arginine arylamidase activity
+definition: A physiological enzyme-activity phenotype in which a cell exhibits arginine
+  arylamidase/arginyl aminopeptidase activity, releasing N-terminal arginine or lysine
+  residues from peptides or hydrolyzing arginine and lysine arylamides.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: L-arginine arylamidase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fgene.2023.1240581
+- synonym_text: aminopeptidase B
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+- synonym_text: arginine aminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+- synonym_text: arginyl aminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+- synonym_text: L-arginine aminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+  snippet: <b>Reaction:</b> Release of N-terminal Arg and Lys from oligopeptides when
+    P1' is not Pro. Also acts on arylamides of Arg and Lys
+  notes: The NC-IUBMB EC 3.4.11.6 entry accepts aminopeptidase B, records arginine
+    aminopeptidase, arginyl aminopeptidase, and L-arginine aminopeptidase as other
+    names, and includes arginine and lysine arylamides in the reaction scope.
+- reference: DOI:10.3389/fgene.2023.1240581
+  snippet: Both of these strains exhibit positive results for oxidase, gamma-glutamyl
+    transferase, alkaline phosphatase, pyrrolidonyl arylamidase, L-arginine arylamidase,
+    and L-aspartate arylamidase
+  notes: Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive
+    for L-arginine arylamidase in the formal species description.
+- reference: DOI:10.1099/ijsem.0.006017
+  snippet: arginine arylamidase, proline arylamidase, leucyl glycine arylamidase,
+    phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine
+    arylamidase, glycine arylamidase, histidine arylamidase
+  notes: Srinivasan et al. listed arginine arylamidase among enzymatic activities
+    present in the Amygdalobacter indicium species description, supporting the API
+    arylamidase row as a directly assayed bacterial enzyme-activity phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:2974574
+  taxon_label: Helicobacter zhangjianzhongii
+  note: Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive
+    for L-arginine arylamidase in the formal species description.
+  reference: DOI:10.3389/fgene.2023.1240581
+discussions:
+- discussion_id: arginine-arylamidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for arginine arylamidase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004177 denotes broad aminopeptidase molecular function, and EC 3.4.11.6
+    denotes the aminopeptidase B/arginyl aminopeptidase molecular function rather
+    than the organism-level arginine arylamidase assay phenotype. Both remain causal-node
+    grounding leads rather than equivalent TraitRecord xrefs.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T11:40:11Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted arginine arylamidase activity as a URL/DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact arginine arylamidase activity class yet and the placeholder is reserved
+    in proposals/metpo_traitmech_v44.
+  llm_assisted: true

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/arginine_arylamidase_activity.yaml
+  slug: arginine_arylamidase_activity
+session:
+  id: 2026-09-12T114011Z-codex-a1d4d7
+  timestamp: '2026-09-12T11:40:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+  urls:
+  - https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - metpo_proposal
+  summary: Add arginine arylamidase activity trait
+  details: Added traitmech:000167 for arginine arylamidase activity, backed by the
+    NC-IUBMB EC 3.4.11.6 reaction and Helicobacter zhangjianzhongii and
+    Amygdalobacter indicium species-description DOIs that report L-arginine or
+    arginine arylamidase activity in enzyme panels. Left GO:0004177 and EC 3.4.11.6
+    out of xrefs because they are molecular-function groundings rather than exact
+    organism-level phenotype equivalents.
