@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	exact_synonyms	xrefs	subset	priority	observations	traits_addressed	related_synonyms
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset				A oboInOwl:hasRelatedSynonym SPLIT=|
+METPO:1013000	magnetotaxis	A behavioral physiology in which magnetosome-bearing motile cells align with geomagnetic field lines and navigate along that axis.	TraitMech:data/traits/physiology/magnetotaxis.yaml	METPO:1000059			metpo_traitmech_2026_09	HIGH	Follow-up from the magnetosome behavioral-trait gap; absent from live METPO and TraitMech after a magnetotaxis duplicate review covering ignored and hidden files.	traitmech:000176	magnetoaerotaxis
