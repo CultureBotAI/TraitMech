@@ -839,7 +839,7 @@ git push -u origin <branch>
 gh pr create --title "..." --body "..."
 gh api repos/CultureBotAI/TraitMech/pulls/<N>/requested_reviewers \
   -X POST --input - <<<'{"reviewers":["Copilot"]}'
-# wait for Copilot review, address, resolve threads, merge --delete-branch
+# wait for review, address, resolve threads, then enqueue via docs/MERGE_QUEUE.md
 ```
 
 **Branch hygiene**: always `git checkout main && git pull` before
