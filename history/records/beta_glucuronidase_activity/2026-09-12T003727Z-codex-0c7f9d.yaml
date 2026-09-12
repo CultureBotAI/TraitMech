@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/beta_glucuronidase_activity.yaml
+  slug: beta_glucuronidase_activity
+session:
+  id: 2026-09-12T003727Z-codex-0c7f9d
+  timestamp: '2026-09-12T00:37:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add beta-glucuronidase activity
+  details: Minted traitmech:000151 for URL/DOI-backed beta-glucuronidase activity
+    after an ignored-and-hidden duplicate search, citing the NC-IUBMB EC 3.2.1.31
+    entry for beta-glucuronidase reaction scope, Moberg 1985 for a direct Escherichia
+    coli canonical example, and a v28 METPO proposal row reserving METPO:1010500
+    for upstream minting.
