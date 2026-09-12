@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T181906Z-codex-718a83
+  timestamp: '2026-09-12T18:19:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/858
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/854
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Replace truncated Alves snippet
+  details: 'Addressed external review issue #858 by replacing a truncated Alves et al. quote
+    with a self-contained negative-indole reaction sentence from the same PMC full-text paragraph.'

@@ -24,6 +24,7 @@ TIMESTAMP = "2026-09-12T17:40:50Z"
 REVIEW_TIMESTAMP = "2026-09-12T17:52:10Z"
 EXTERNAL_REVIEW_TIMESTAMP = "2026-09-12T18:01:45Z"
 DARKOH_REVIEW_TIMESTAMP = "2026-09-12T18:09:40Z"
+ALVES_SNIPPET_REVIEW_TIMESTAMP = "2026-09-12T18:19:06Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005012",
@@ -61,8 +62,8 @@ UPDATES = {
         {
             "reference": ALVES,
             "snippet": (
-                "most clinical isolates classified as Klebsiella spp. belong "
-                "to the K. pneumoniae (indole-negative isolates)"
+                "However, K. variicola, R. planticola, and R. terrigena, in "
+                "addition to K. pneumoniae, can show a negative-indole reaction"
             ),
             "notes": (
                 "Alves et al. describe Klebsiella pneumoniae as an "
@@ -165,6 +166,17 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=DARKOH_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Replaced a truncated Alves Klebsiella quote after external "
+            "review issue #858."
+        ),
+        llm_assisted=True,
+        timestamp=ALVES_SNIPPET_REVIEW_TIMESTAMP,
     )
     return record
 
