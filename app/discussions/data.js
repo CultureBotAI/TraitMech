@@ -681,6 +681,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "pyrazinamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for pyrazinamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pyrazinamidase activity",
+  "source_id": "traitmech:000163",
+  "source_file": "pyrazinamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0008936 nicotinamidase activity denotes the catalytic molecular function rather than the organism-level pyrazinamidase/nicotinamidase phenotype, so it is appropriate as a causal-node grounding for the source label and not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/pyrazinamidase_activity.html#pyrazinamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "pyrrolidonyl-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for pyrrolidonyl arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -733,9 +750,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 41,
+ "total_discussions": 42,
  "total_knowledge_gaps": 8,
- "total_source_entries": 41,
+ "total_source_entries": 42,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
