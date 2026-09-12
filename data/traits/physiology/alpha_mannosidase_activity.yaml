@@ -1,0 +1,49 @@
+identifier: traitmech:000150
+label: alpha-mannosidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  alpha-mannosidase enzymes that hydrolyze terminal, non-reducing alpha-D-mannose
+  residues in alpha-D-mannosides.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html
+  snippet: 'Reaction: Hydrolysis of terminal, non-reducing α-D-mannose residues in
+    α-D-mannosides'
+  notes: The NC-IUBMB EC 3.2.1.24 entry defines alpha-mannosidase by its accepted
+    name and hydrolytic reaction, grounding the enzyme activity named by the organism-level
+    phenotype.
+- reference: DOI:10.1128/jcm.32.3.854-855.1994
+  snippet: Practically all A. haemolyticum strains (138 of 139) and the Listeria monocytogenes
+    type strain were alpha-mannosidase positive
+  notes: Carlson and Kontiainen detected alpha-mannosidase in nearly all tested Arcanobacterium
+    haemolyticum strains with a 4-h alpha-mannosidase assay.
+canonical_examples:
+- taxon_id: NCBITaxon:28264
+  taxon_label: Arcanobacterium haemolyticum
+  note: Carlson and Kontiainen reported 138 of 139 Arcanobacterium haemolyticum strains
+    as alpha-mannosidase positive in a 4-h test.
+  reference: DOI:10.1128/jcm.32.3.854-855.1994
+discussions:
+- discussion_id: alpha-mannosidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for alpha-mannosidase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004559 carries the same alpha-mannosidase activity label but denotes
+    the enzyme molecular function rather than the organism-level alpha-mannosidase
+    production phenotype, so it is appropriate as a causal-node grounding rather than
+    an equivalent TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T00:19:23Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted alpha-mannosidase activity as a URL/DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact alpha-mannosidase activity class yet.
+  llm_assisted: true
