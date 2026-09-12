@@ -426,6 +426,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-n-acetylhexosaminidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for beta-N-acetylhexosaminidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-N-acetylhexosaminidase activity",
+  "source_id": "traitmech:000157",
+  "source_file": "beta_n_acetylhexosaminidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004563 denotes beta-N-acetylhexosaminidase molecular function rather than the organism-level beta-N-acetylhexosaminidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "carboxylesterase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for carboxylesterase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -631,9 +648,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 35,
+ "total_discussions": 36,
  "total_knowledge_gaps": 8,
- "total_source_entries": 35,
+ "total_source_entries": 36,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
