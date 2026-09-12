@@ -19,6 +19,13 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-09-12T17:52:10Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Tightened Alves Klebsiella wording after local review issue #855 to avoid
+    implying Klebsiella pneumoniae is the only indole-negative Klebsiella or Raoultella
+    species.'
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
@@ -28,8 +35,8 @@ evidence:
 - reference: DOI:10.1128/JCM.00940-06
   snippet: most clinical isolates classified as Klebsiella spp. belong to the K. pneumoniae
     (indole-negative isolates)
-  notes: Alves et al. describe Klebsiella pneumoniae as the indole-negative Klebsiella
-    species in a clinical-isolate biochemical typing context.
+  notes: Alves et al. describe Klebsiella pneumoniae within an indole-negative Klebsiella
+    pneumoniae/Klebsiella variicola clinical-isolate group.
 - reference: DOI:10.1128/JCM.00940-06
   snippet: A total of 102 (84%) of the 122 isolates were negative for indole production
   notes: Alves et al. reported negative indole-production phenotypes among Klebsiella
@@ -37,8 +44,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:573
   taxon_label: Klebsiella pneumoniae
-  note: Alves et al. describe K. pneumoniae as an indole-negative Klebsiella species
-    in an indole-positive/negative clinical isolate identification study.
+  note: Alves et al. describe K. pneumoniae within an indole-negative Klebsiella pneumoniae/Klebsiella
+    variicola clinical-isolate group.
   reference: DOI:10.1128/JCM.00940-06
 discussions:
 - discussion_id: indole-test-negative-assay-parent-gap

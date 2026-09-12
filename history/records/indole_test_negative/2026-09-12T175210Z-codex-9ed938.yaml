@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T175210Z-codex-9ed938
+  timestamp: '2026-09-12T17:52:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - canonical_examples
+  summary: Tighten indole test negative evidence wording
+  details: 'Addressed local review issue #855 by narrowing the Alves et al. interpretation
+    notes so Klebsiella pneumoniae is not described as the only indole-negative Klebsiella
+    or Raoultella species.'

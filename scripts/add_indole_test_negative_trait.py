@@ -21,6 +21,7 @@ ALVES = "DOI:10.1128/JCM.00940-06"
 CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T17:38:53Z"
 TIMESTAMP = "2026-09-12T17:40:50Z"
+REVIEW_TIMESTAMP = "2026-09-12T17:52:10Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005012",
@@ -62,9 +63,9 @@ UPDATES = {
                 "to the K. pneumoniae (indole-negative isolates)"
             ),
             "notes": (
-                "Alves et al. describe Klebsiella pneumoniae as the "
-                "indole-negative Klebsiella species in a clinical-isolate "
-                "biochemical typing context."
+                "Alves et al. describe Klebsiella pneumoniae within an "
+                "indole-negative Klebsiella pneumoniae/Klebsiella variicola "
+                "clinical-isolate group."
             ),
         },
         {
@@ -84,9 +85,9 @@ UPDATES = {
             "taxon_id": "NCBITaxon:573",
             "taxon_label": "Klebsiella pneumoniae",
             "note": (
-                "Alves et al. describe K. pneumoniae as an indole-negative "
-                "Klebsiella species in an indole-positive/negative clinical "
-                "isolate identification study."
+                "Alves et al. describe K. pneumoniae within an "
+                "indole-negative Klebsiella pneumoniae/Klebsiella variicola "
+                "clinical-isolate group."
             ),
             "reference": ALVES,
         }
@@ -127,6 +128,18 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Tightened Alves Klebsiella wording after local review issue #855 "
+            "to avoid implying Klebsiella pneumoniae is the only "
+            "indole-negative Klebsiella or Raoultella species."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 
