@@ -69,7 +69,7 @@ column count** when the trailing columns are blank. Validate with:
 ```bash
 just verify-proposal <cohort>
 # or manually:
-uv run python scripts/verify_metpo_proposal.py proposals/<cohort>
+.venv/bin/python scripts/verify_metpo_proposal.py proposals/<cohort>
 ```
 
 The verifier accepts either class-template width and checks the corresponding
