@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/arginine_dihydrolase_activity.yaml
+  slug: arginine_dihydrolase_activity
+session:
+  id: 2026-09-12T094620Z-codex-240814
+  timestamp: '2026-09-12T09:46:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Added arginine dihydrolase activity TraitRecord
+  details: Minted traitmech:000164 for arginine dihydrolase activity with NC-IUBMB EC 3.5.3.6,
+    Rimaux et al. DOI evidence, a Latilactobacillus sakei canonical example, and the v41 METPO
+    proposal reserving METPO:1011800.
