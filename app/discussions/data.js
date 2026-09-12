@@ -545,6 +545,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-xref-gap"
  },
  {
+  "discussion_id": "lysine-decarboxylase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for lysine decarboxylase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lysine decarboxylase activity",
+  "source_id": "traitmech:000153",
+  "source_file": "lysine_decarboxylase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0008923 carries the same lysine decarboxylase activity label but denotes the enzyme molecular function rather than the organism-level lysine decarboxylase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
+ },
+ {
   "discussion_id": "valine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for valine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -563,9 +580,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 31,
+ "total_discussions": 32,
  "total_knowledge_gaps": 8,
- "total_source_entries": 31,
+ "total_source_entries": 32,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
