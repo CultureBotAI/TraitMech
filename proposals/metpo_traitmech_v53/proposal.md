@@ -53,12 +53,12 @@ duplicates.
 
 ## External Mappings
 
-No exact external ontology mapping is asserted. `magnetoaerotaxis` is included
-as a related synonym because it names oxygen/redox-zone navigation assisted by
-magnetic alignment rather than the exact generic alignment behavior.
-`GO:0110143` names the magnetosome cellular component and already belongs on
-the `magnetosome` record; the local METPO snapshot's `METPO:1000180`
-`magnetotaxis` class is obsolete.
+No exact external ontology mapping is asserted. `magnetoaerotaxis` names
+oxygen/redox-zone navigation assisted by magnetic alignment, and `magnetotactic`
+is adjectival; both are included as related synonyms rather than exact labels
+for the generic alignment behavior. `GO:0110143` names the magnetosome cellular
+component and already belongs on the `magnetosome` record; the local METPO
+snapshot's `METPO:1000180` `magnetotaxis` class is obsolete.
 
 ## Artifacts
 
