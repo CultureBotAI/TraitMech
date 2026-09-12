@@ -22,6 +22,7 @@ CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T17:38:53Z"
 TIMESTAMP = "2026-09-12T17:40:50Z"
 REVIEW_TIMESTAMP = "2026-09-12T17:52:10Z"
+EXTERNAL_REVIEW_TIMESTAMP = "2026-09-12T18:01:45Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005012",
@@ -63,9 +64,9 @@ UPDATES = {
                 "to the K. pneumoniae (indole-negative isolates)"
             ),
             "notes": (
-                "Alves et al. describe Klebsiella pneumoniae within an "
-                "indole-negative Klebsiella pneumoniae/Klebsiella variicola "
-                "clinical-isolate group."
+                "Alves et al. describe Klebsiella pneumoniae as an "
+                "indole-negative Klebsiella species in a clinical-isolate "
+                "biochemical typing context."
             ),
         },
         {
@@ -85,9 +86,9 @@ UPDATES = {
             "taxon_id": "NCBITaxon:573",
             "taxon_label": "Klebsiella pneumoniae",
             "note": (
-                "Alves et al. describe K. pneumoniae within an "
-                "indole-negative Klebsiella pneumoniae/Klebsiella variicola "
-                "clinical-isolate group."
+                "Alves et al. describe K. pneumoniae as an indole-negative "
+                "Klebsiella species in a clinical-isolate biochemical typing "
+                "context."
             ),
             "reference": ALVES,
         }
@@ -140,6 +141,18 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Removed unquoted Klebsiella variicola wording after external "
+            "review issue #856 while preserving the indole-negative "
+            "Klebsiella pneumoniae interpretation."
+        ),
+        llm_assisted=True,
+        timestamp=EXTERNAL_REVIEW_TIMESTAMP,
     )
     return record
 
