@@ -219,6 +219,11 @@ organismal phenotype; keep it out of TraitRecord `EXACT_SYNONYM` and proposal
 `exact_synonyms` unless a source uses that bare string as a phenotype label, and
 store useful shifted labels as `RELATED_SYNONYM` or `related_synonyms` instead.
 
+Match the TraitRecord and METPO proposal label to the qualifiers carried by the
+evidence. If the authoritative source is cofactor-, substrate-, endpoint-, or
+pathway-specific, keep the qualifier in both labels and definitions unless
+separate evidence supports the broader unqualified phenotype.
+
 An evidence snippet must carry the specific definition claim it is attached to.
 Do not use article titles, section headings, keyword fragments, or generic noun
 phrases that name the topic but do not support the asserted substrate, endpoint,

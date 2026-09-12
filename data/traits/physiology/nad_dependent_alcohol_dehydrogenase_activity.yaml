@@ -1,7 +1,8 @@
 identifier: traitmech:000165
-label: alcohol dehydrogenase activity
+label: NAD-dependent alcohol dehydrogenase activity
 definition: A physiological enzyme-activity phenotype in which a cell produces active
-  NAD-dependent alcohol dehydrogenases that interconvert primary alcohols and aldehydes.
+  NAD-dependent alcohol dehydrogenases that interconvert primary or secondary alcohols
+  with aldehydes or ketones.
 definition_source: https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -20,10 +21,14 @@ synonyms:
   source: https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html
 evidence:
 - reference: https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html
-  snippet: <b>Reaction:</b> (1) a primary alcohol + NAD<small><sup>+</sup></small>
-    = an aldehyde + NADH + H<small><sup>+</sup></small>
+  snippet: '<b>Reaction:</b> (1) a primary alcohol + NAD<small><sup>+</sup></small>
+    = an aldehyde + NADH + H<small><sup>+</sup></small><br>
+
+
+    (2) a secondary alcohol + NAD<small><sup>+</sup></small> = a ketone + NADH + H<small><sup>+</sup></small>'
   notes: The NC-IUBMB EC 1.1.1.1 entry names alcohol dehydrogenase as alcohol:NAD+
-    oxidoreductase and defines the NAD-dependent primary-alcohol-to-aldehyde reaction.
+    oxidoreductase and defines the NAD-dependent primary-alcohol-to-aldehyde and secondary-alcohol-to-ketone
+    reactions.
 - reference: DOI:10.1111/j.1432-1033.1986.tb09366.x
   snippet: The two alcohol dehydrogenases found in Zymomonas mobilis have each been
     purified using dye-ligand chromatography and affinity elution with nucleotides.
@@ -42,15 +47,15 @@ canonical_examples:
     isoenzymes from Zymomonas mobilis.
   reference: DOI:10.1111/j.1432-1033.1986.tb09366.x
 discussions:
-- discussion_id: alcohol-dehydrogenase-activity-xref-gap
-  prompt: Resolve an exact external ontology class for alcohol dehydrogenase activity
-    before adding a TraitRecord xref.
+- discussion_id: nad-dependent-alcohol-dehydrogenase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for NAD-dependent alcohol dehydrogenase
+    activity before adding a TraitRecord xref.
   kind: CURATION_TODO
   status: OPEN
   rationale: GO:0004022 and EC 1.1.1.1 denote the NAD-dependent molecular function
-    rather than the organism-level alcohol dehydrogenase production phenotype; the
-    GO term remains an appropriate causal-node grounding lead but not an equivalent
-    TraitRecord xref.
+    rather than the organism-level NAD-dependent alcohol dehydrogenase production
+    phenotype; the GO term remains an appropriate causal-node grounding lead but not
+    an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
 curation_history:
@@ -60,4 +65,11 @@ curation_history:
   changes: Minted alcohol dehydrogenase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alcohol dehydrogenase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-09-12T10:38:00Z'
+  curator: codex
+  action: REVIEW_FIX
+  changes: 'Narrowed the label and definition to the NAD-dependent EC 1.1.1.1 phenotype
+    after PR #833 review found the cofactor-agnostic alcohol dehydrogenase activity
+    label overbroad for the evidence.'
   llm_assisted: true

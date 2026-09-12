@@ -1386,28 +1386,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000165",
-      "label": "alcohol dehydrogenase activity",
-      "category": "physiology",
-      "slug": "alcohol_dehydrogenase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000159",
       "label": "alpha-chymotrypsin activity",
       "category": "physiology",
@@ -1654,6 +1632,28 @@
       "label": "lipase activity",
       "category": "physiology",
       "slug": "lipase_activity",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "traitmech:000165",
+      "label": "NAD-dependent alcohol dehydrogenase activity",
+      "category": "physiology",
+      "slug": "nad_dependent_alcohol_dehydrogenase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
