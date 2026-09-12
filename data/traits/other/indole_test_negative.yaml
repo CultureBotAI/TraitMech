@@ -6,7 +6,7 @@ trait_category: OTHER
 term_kind: CLASS
 mapping_status: SEEDED
 parent_traits:
-- METPO:1000059
+- METPO:1005010
 curation_history:
 - timestamp: '2026-09-12T17:38:53Z'
   curator: seed_from_metpo
@@ -44,6 +44,12 @@ curation_history:
   changes: 'Replaced a truncated Alves Klebsiella quote after external review issue
     #858.'
   llm_assisted: true
+- timestamp: '2026-09-12T21:38:12Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented indole test negative below the newly curated METPO:1005010 indole
+    test assay parent and marked the temporary assay-parent discussion resolved.
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
@@ -69,9 +75,14 @@ discussions:
   prompt: Resolve a non-assay parent for negative indole-test phenotypes before narrowing
     parent_traits below phenotype.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   rationale: METPO:1005010 is the seeded superclass of METPO:1005012, but METPO:1005010
     defines an assay rather than a broader microbial trait class, so this record is
     temporarily parented directly to METPO:1000059 phenotype.
   posed_by: codex
   posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: METPO:1005010 is now represented as the seeded indole-test assay
+    parent, so this assay-outcome phenotype can use its exact source superclass instead
+    of a temporary direct phenotype parent; this resolves the exact METPO assay-parent
+    gap, not the broader non-assay parent question for assay-outcome phenotypes.
