@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T103051Z-codex-21d85e
+  timestamp: '2026-09-12T10:30:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Clarify add-trait Copilot request account
+  details: Corrected the add-trait review snippet to request the requestable Copilot account
+    and documented that submitted quota comments may come from copilot-pull-request-reviewer.

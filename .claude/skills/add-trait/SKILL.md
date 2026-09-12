@@ -423,14 +423,15 @@ loop used for other hand-curated trait changes:
 
    ```bash
    gh api repos/CultureBotAI/TraitMech/pulls/<PR>/requested_reviewers \
-     -X POST -F 'reviewers[]=copilot-pull-request-reviewer'
+     -X POST -F 'reviewers[]=Copilot'
    gh workflow run claude-code-review.yml --repo CultureBotAI/TraitMech \
      -f pr_number=<PR>
    gh workflow run pr-shepherd.yml --repo CultureBotAI/TraitMech \
      -f pr_number=<PR> -f dry_run=false -f max_prs=1
    ```
 
-   The Copilot request uses GitHub's literal reviewer slug, not the UI label.
+   Request review from `Copilot`; the submitted review may appear from
+   `copilot-pull-request-reviewer`.
 
    The local review must try to falsify the trait identity, duplicate search,
    parent choice, xrefs, evidence snippets, canonical examples, any METPO
