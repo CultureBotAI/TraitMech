@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/histidine_arylamidase_activity.yaml
+  slug: histidine_arylamidase_activity
+session:
+  id: 2026-09-12T133831Z-codex-464b86
+  timestamp: '2026-09-12T13:38:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - metpo_proposal
+  summary: Add histidine arylamidase activity
+  details: Minted traitmech:000171 for DOI-backed histidine arylamidase activity, added two
+    full-text evidence snippets, recorded Amygdalobacter indicium as a canonical example,
+    left the broad GO aminopeptidase mapping as a curation TODO, and reserved METPO:1012500
+    in proposals/metpo_traitmech_v48.

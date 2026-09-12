@@ -141,8 +141,8 @@ CommunityMech v1 cohort, which occupies `1007100`–`1007220` and
 `CausalNodeTypeEnum` lift rows. Later Scope-A cohorts use a fresh 100-wide block
 per cohort so single-trait fallback proposals are append-only and easy to scan.
 Inspect the latest `proposals/metpo_traitmech_v<N>/proposal.md`, then reserve
-the next free hundred block; as of `metpo_traitmech_v47`, `METPO:1012400` is
-reserved, so the next one-row Scope-A cohort starts at `METPO:1012500`.
+the next free hundred block; as of `metpo_traitmech_v48`, `METPO:1012500` is
+reserved, so the next one-row Scope-A cohort starts at `METPO:1012600`.
 **Never reuse a block from a merged cohort, even if rows in the old block were
 rejected upstream.**
 
