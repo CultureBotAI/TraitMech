@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml
+  slug: pyrrolidonyl_arylamidase_activity
+session:
+  id: 2026-09-12T031532Z-codex-31771f
+  timestamp: '2026-09-12T03:15:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add pyrrolidonyl arylamidase activity
+  details: Minted traitmech:000155 for URL/DOI-backed pyrrolidonyl arylamidase activity after
+    an ignored-and-hidden duplicate search found only prior molecular-function grounding rows;
+    added IUBMB EC 3.4.19.3 definition evidence, a direct Corynebacterium auriscanis canonical
+    example, and a v32 METPO proposal row reserving METPO:1010900 for upstream minting.
