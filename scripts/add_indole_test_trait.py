@@ -24,6 +24,7 @@ ASM_INDOLE = "https://asm.org/protocols/indole-test-protocol"
 CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T21:35:36Z"
 TIMESTAMP = "2026-09-12T21:38:12Z"
+REVIEW_TIMESTAMP = "2026-09-12T21:50:37Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005010",
@@ -65,7 +66,7 @@ UPDATES = {
             "snippet": (
                 "The chief requirement for culturing an organism prior to "
                 "performing the indole test is that the medium contains a "
-                "sufficient quantity of tryptophan"
+                "sufficient quantity of tryptophan (5)."
             ),
             "notes": (
                 "The protocol explains that the indole-test medium needs "
@@ -116,6 +117,18 @@ def build_indole_test() -> dict:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Preserved the ASM source-local tryptophan citation marker after "
+            "Claude Code Review issue #874 so the second evidence snippet is "
+            "visibly a complete sentence."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 
