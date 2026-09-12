@@ -32,12 +32,17 @@ curation_history:
   changes: 'Removed unquoted Klebsiella variicola wording after external review issue
     #856 while preserving the indole-negative Klebsiella pneumoniae interpretation.'
   llm_assisted: true
+- timestamp: '2026-09-12T18:09:40Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Trimmed unsupported Darkoh indole-assay wording after external review
+    issue #857.'
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
   snippet: Indole, a bacterial product of tryptophan degradation
-  notes: Darkoh et al. support indole as a microbial tryptophan-degradation product
-    detected in indole assays.
+  notes: Darkoh et al. support indole as a microbial tryptophan-degradation product.
 - reference: DOI:10.1128/JCM.00940-06
   snippet: most clinical isolates classified as Klebsiella spp. belong to the K. pneumoniae
     (indole-negative isolates)

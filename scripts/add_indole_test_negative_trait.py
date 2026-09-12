@@ -23,6 +23,7 @@ SEED_TIMESTAMP = "2026-09-12T17:38:53Z"
 TIMESTAMP = "2026-09-12T17:40:50Z"
 REVIEW_TIMESTAMP = "2026-09-12T17:52:10Z"
 EXTERNAL_REVIEW_TIMESTAMP = "2026-09-12T18:01:45Z"
+DARKOH_REVIEW_TIMESTAMP = "2026-09-12T18:09:40Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005012",
@@ -54,7 +55,7 @@ UPDATES = {
             "snippet": "Indole, a bacterial product of tryptophan degradation",
             "notes": (
                 "Darkoh et al. support indole as a microbial "
-                "tryptophan-degradation product detected in indole assays."
+                "tryptophan-degradation product."
             ),
         },
         {
@@ -153,6 +154,17 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=EXTERNAL_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Trimmed unsupported Darkoh indole-assay wording after external "
+            "review issue #857."
+        ),
+        llm_assisted=True,
+        timestamp=DARKOH_REVIEW_TIMESTAMP,
     )
     return record
 
