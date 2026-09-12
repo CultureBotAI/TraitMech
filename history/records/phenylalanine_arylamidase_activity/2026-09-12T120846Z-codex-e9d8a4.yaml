@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/phenylalanine_arylamidase_activity.yaml
+  slug: phenylalanine_arylamidase_activity
+session:
+  id: 2026-09-12T120846Z-codex-e9d8a4
+  timestamp: '2026-09-12T12:08:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - metpo_proposal
+  summary: Add phenylalanine arylamidase activity trait
+  details: Added traitmech:000168 for phenylalanine arylamidase activity, backed
+    by DOI species descriptions that report phenylalanine arylamidase activity
+    in Amygdalobacter indicium and Actinomyces cardiffensis. Left GO:0004177
+    out of xrefs because it is a broad molecular-function grounding rather than
+    an exact organism-level phenotype equivalent.
