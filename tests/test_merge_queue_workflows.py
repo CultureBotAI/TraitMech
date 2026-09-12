@@ -15,12 +15,7 @@ REQUIRED_WORKFLOWS = {
     "curation-history.yaml": ["history"],
     "label-correspondence.yaml": ["label-correspondence / label-correspondence"],
     "pr-sanity.yaml": ["pr-sanity"],
-    "pytest.yaml": [
-        "pytest (Python 3.10)",
-        "pytest (Python 3.11)",
-        "pytest (Python 3.12)",
-        "pytest (Python 3.13)",
-    ],
+    "pytest.yaml": ["pytest"],
     "qc.yaml": ["qc"],
     "validate-strict.yaml": ["validate-strict"],
     "vendored-sync.yaml": ["vendored-sync"],

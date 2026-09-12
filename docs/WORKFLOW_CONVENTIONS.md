@@ -230,8 +230,8 @@ across #277-#281 ranged from **two** functional gates (#277, bumping
 (#281, bumping `actions/checkout`, which appears in nearly all of them).
 
 All deterministic PR validation workflows are now unfiltered and also run on
-merge groups. `pr-sanity` enforces action SHA pinning; corpus QC, the Python
-matrix, strict validation, taxonomy, labels, history, and vendored integrity
+merge groups. `pr-sanity` enforces action SHA pinning; corpus QC, Python 3.13
+tests, strict validation, taxonomy, labels, history, and vendored integrity
 supply the remaining checks. The exact job contexts and trigger contract are
 covered by `tests/test_merge_queue_workflows.py`.
 

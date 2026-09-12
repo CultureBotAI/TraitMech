@@ -45,6 +45,10 @@ seeded; those belong in MIM / CultureMech.)
 
 ## Quick start
 
+Use Python 3.13, pinned in `.python-version`, for development and GitHub CI.
+CI runs each check on this single minor to avoid duplicate jobs; package
+compatibility metadata remains in `pyproject.toml`.
+
 ```bash
 just install                  # uv sync --extra dev
 just gen-schema               # generate dataclasses from LinkML

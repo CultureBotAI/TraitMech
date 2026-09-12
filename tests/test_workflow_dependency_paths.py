@@ -34,7 +34,7 @@ import yaml
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 
-DEPENDENCY_INPUTS = ("pyproject.toml", "uv.lock")
+DEPENDENCY_INPUTS = ("pyproject.toml", "uv.lock", ".python-version")
 # Required PR checks are now unfiltered so they can gate the native queue.
 EXPECTED_FILTERED_DEPENDENCY_WORKFLOWS = frozenset()
 EXPECTED_FILTERED_PUSH_WORKFLOWS = frozenset(
