@@ -358,6 +358,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/render_trait_pages.py
 .venv/bin/python scripts/trait_priority.py --dashboard --top 80
 git diff --check
+git diff --cached --check
 .venv/bin/ruff check src scripts tests
 .venv/bin/python -m pytest tests/test_readme_artifacts.py tests/test_trait_priority.py -v --tb=short
 .venv/bin/python -m pytest -q
@@ -422,12 +423,14 @@ loop used for other hand-curated trait changes:
 
    ```bash
    gh api repos/CultureBotAI/TraitMech/pulls/<PR>/requested_reviewers \
-     -X POST -F 'reviewers[]=Copilot'
+     -X POST -F 'reviewers[]=copilot-pull-request-reviewer'
    gh workflow run claude-code-review.yml --repo CultureBotAI/TraitMech \
      -f pr_number=<PR>
    gh workflow run pr-shepherd.yml --repo CultureBotAI/TraitMech \
      -f pr_number=<PR> -f dry_run=false -f max_prs=1
    ```
+
+   The Copilot request uses GitHub's literal reviewer slug, not the UI label.
 
    The local review must try to falsify the trait identity, duplicate search,
    parent choice, xrefs, evidence snippets, canonical examples, any METPO

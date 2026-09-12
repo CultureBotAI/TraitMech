@@ -322,7 +322,7 @@ git commit -m "Add METPO ROBOT-template proposal: <cohort>"
 git push -u origin claude/metpo-<cohort>-proposal
 gh pr create --title "METPO ROBOT-template proposal: <cohort>"
 gh api repos/CultureBotAI/TraitMech/pulls/<n>/requested_reviewers \
-  -X POST --input - <<<'{"reviewers":["Copilot"]}'
+  -X POST -F 'reviewers[]=copilot-pull-request-reviewer'
 ```
 
 ---

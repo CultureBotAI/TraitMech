@@ -838,7 +838,7 @@ git add -p && git commit
 git push -u origin <branch>
 gh pr create --title "..." --body "..."
 gh api repos/CultureBotAI/TraitMech/pulls/<N>/requested_reviewers \
-  -X POST --input - <<<'{"reviewers":["Copilot"]}'
+  -X POST -F 'reviewers[]=copilot-pull-request-reviewer'
 # wait for review, address, resolve threads, then enqueue via docs/MERGE_QUEUE.md
 ```
 

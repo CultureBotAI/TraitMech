@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T102842Z-codex-d80424
+  timestamp: '2026-09-12T10:28:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Tighten add-trait PR review commands
+  details: Updated the add-trait review loop to request GitHub Copilot review with the literal
+    copilot-pull-request-reviewer slug and to run git diff --cached --check so staged whitespace
+    errors are checked before committing.
