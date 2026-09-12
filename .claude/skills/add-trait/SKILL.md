@@ -172,6 +172,13 @@ organismal phenotype. If a GO term is exact for a causal node but shifted for
 the record's `xrefs`, leave it out of `xrefs` and record the decision in a
 `CURATION_TODO` discussion or proposal notes.
 
+Before keeping a seeded parent on a positive or negative assay-result child,
+inspect the parent definition. If the parent denotes a laboratory assay rather
+than a broader biological trait and the branch is not also curating that assay
+class as a stable local record, reparent the child to `METPO:1000059` and attach
+a `CURATION_TODO` for the missing non-assay parent. Do not silently keep an
+absent assay class as though it were a stable phenotype parent.
+
 When a local parent is the genus in the new definition, do not borrow endpoints,
 substrates, products, or pathway branches from that parent unless the new
 trait's own scope and evidence support them. A child term can be narrower than
@@ -401,10 +408,12 @@ PR workflow. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -
 when adding or editing CHEBI formula-bearing chemicals, and run
 `.venv/bin/python scripts/audit_uniprot_grounding.py` after adding or editing
 `protein_examples`. Run `.venv/bin/python scripts/build_embedding_index.py`
-before `scripts/render_trait_pages.py` only
-when the sibling DeepWalk artifacts named by
-`scripts/build_embedding_index.py` are present; otherwise report that embedding
-artifacts were not regenerated.
+before `scripts/render_trait_pages.py` only when
+`scripts/build_embedding_index.py`'s exact `DEFAULT_KGM_DEEPWALK` or
+`FALLBACK_KGM_DEEPWALK` source path is present; otherwise report that embedding
+artifacts were not regenerated. Check those configured sibling paths directly
+rather than crawling the whole KG-Microbe checkout looking for the embedding
+file names.
 
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before

@@ -324,6 +324,23 @@ window.searchData = [
   "page_url": "../../pages/traits/other/non_hemolytic.html#non-hemolytic-parent-gap"
  },
  {
+  "discussion_id": "voges-proskauer-test-positive-assay-parent-gap",
+  "prompt": "Resolve a non-assay parent for positive Voges-Proskauer-test phenotypes before narrowing parent_traits below phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "Voges-Proskauer test positive",
+  "source_id": "METPO:1005017",
+  "source_file": "voges_proskauer_test_positive.yaml",
+  "attaches_to": [],
+  "rationale": "METPO:1005016 is the seeded superclass of METPO:1005017, but METPO:1005016 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/other/voges_proskauer_test_positive.html#voges-proskauer-test-positive-assay-parent-gap"
+ },
+ {
   "discussion_id": "acid-phosphatase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for acid phosphatase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -988,9 +1005,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 56,
+ "total_discussions": 57,
  "total_knowledge_gaps": 8,
- "total_source_entries": 56,
+ "total_source_entries": 57,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
