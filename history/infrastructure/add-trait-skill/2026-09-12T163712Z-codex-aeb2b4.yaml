@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T163712Z-codex-aeb2b4
+  timestamp: '2026-09-12T16:37:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/851
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/850
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - causal_graphs
+  summary: Require cross-record cleanup in add-trait
+  details: 'Updated the add-trait workflow after the magnetotaxis PR review showed that a
+    newly minted trait can resolve same-scope mentions in older records. The skill now requires
+    grounding exact pre-existing causal-graph nodes, moving better-scoped synonyms, and recording
+    history for any older records touched in the same branch unless DO_NOT_WORK.md protects
+    the file; resolves issue #851.'

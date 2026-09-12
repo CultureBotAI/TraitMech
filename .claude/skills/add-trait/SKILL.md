@@ -103,6 +103,15 @@ same-family sibling records before copying the skeleton. Skip the candidate if
 the existing local record already carries the exact phenotype, and explain that
 semantic duplicate explicitly.
 
+If the accepted target already appears inside an existing record as an
+ungrounded exact causal-graph node, an adjectival synonym on a neighboring
+record, or a discussion TODO, resolve that same-scope mention as part of the
+same branch unless `DO_NOT_WORK.md` protects the file. A newly minted
+`traitmech:` identifier is usable as a local causal-node grounding when the node
+denotes the same trait. Move synonyms whose lexical scope fits the new trait
+better than their old host; do not leave the old graph or synonym unresolved for
+post-merge cleanup.
+
 Do not treat a temporary seeder output directory as a missing-work queue. It is
 a reusable METPO projection that can contain records already live under
 `data/traits`, and it goes stale as soon as another add-trait PR lands. For each
@@ -285,6 +294,12 @@ under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
 `metpo-proposal` skill, reserve the proposed `METPO:` identifier, keep shifted
 or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
 and omit SSSOM mappings when there is no exact external equivalence to assert.
+
+When the new trait resolves exact mentions in older records, update those
+records through the same validated writer path and give each touched record a
+focused curation-history event and repository history record. Regenerate the
+causal-node grounding residuals and pages so the new grounding is visible in
+derived reports rather than only in YAML.
 
 Every manual edit to a new or seeded record must:
 

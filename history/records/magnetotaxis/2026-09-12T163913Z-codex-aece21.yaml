@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/magnetotaxis.yaml
+  slug: magnetotaxis
+session:
+  id: 2026-09-12T163913Z-codex-aece21
+  timestamp: '2026-09-12T16:39:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/851
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/850
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Move magnetotactic synonym
+  details: 'Moved the adjectival magnetotactic related synonym from the magnetosome organelle
+    record onto the new magnetotaxis physiology TraitRecord while addressing PR #850 review
+    issue #851.'

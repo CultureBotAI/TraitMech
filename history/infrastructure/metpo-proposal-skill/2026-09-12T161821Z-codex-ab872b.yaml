@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T161821Z-codex-ab872b
+  timestamp: '2026-09-12T16:18:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal high-water mark
+  details: Updated the local metpo-proposal skill after reserving METPO:1013000 in proposals/metpo_traitmech_v53
+    so future Scope-A cohorts start at METPO:1013100.

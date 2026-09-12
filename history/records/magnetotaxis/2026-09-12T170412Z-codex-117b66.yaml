@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/magnetotaxis.yaml
+  slug: magnetotaxis
+session:
+  id: 2026-09-12T170412Z-codex-117b66
+  timestamp: '2026-09-12T17:04:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/852
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/850
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Tighten magnetotaxis snippets
+  details: 'Addressed PR #850 review issue #852 by extending the Lin et al. magnetotaxis snippet
+    to the beginning of its Europe PMC abstract sentence and re-verifying all three DOI snippets
+    with scripts/verify_snippets.py --fail-on paraphrase.'
