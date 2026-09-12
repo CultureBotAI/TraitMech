@@ -70,7 +70,9 @@ xrefs.
 The source phrases `proline aminopeptidase`, `Pro-X aminopeptidase`, `proline
 iminopeptidase`, and `proline arylamidase` name enzymes or diagnostic panel
 rows rather than organismal phenotypes, so they are retained as related synonyms
-only.
+only. The `proline arylamidase` diagnostic-panel row is deliberately covered by
+this prolyl aminopeptidase activity proposal rather than lifted as a standalone
+arylamidase-series class.
 
 ## Artifacts
 
