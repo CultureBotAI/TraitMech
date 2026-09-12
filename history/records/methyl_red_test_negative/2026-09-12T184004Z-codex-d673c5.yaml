@@ -24,5 +24,4 @@ events:
     red as a conventional Klebsiella biochemical test after a repository-wide duplicate search
     that included ignored and hidden files. Reparented the assay child directly to phenotype
     with an open Curation TODO because METPO:1005013 defines an assay rather than a broader
-    microbial trait class, and left canonical_examples empty because Hansen et al. reported
-    method-dependent MR results rather than a clean negative exemplar.
+    microbial trait class.

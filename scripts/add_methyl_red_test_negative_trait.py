@@ -24,6 +24,7 @@ HANSEN = "DOI:10.1128/JCM.42.8.3665-3669.2004"
 CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T18:34:21Z"
 TIMESTAMP = "2026-09-12T18:38:59Z"
+REVIEW_TIMESTAMP = "2026-09-12T18:57:06Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005015",
@@ -70,9 +71,9 @@ UPDATES = {
             ),
             "notes": (
                 "Hansen et al. evaluated methyl red as a conventional "
-                "Klebsiella biochemical test; their MR results varied enough "
-                "by method that this first pass does not assert a canonical "
-                "negative example."
+                "Klebsiella biochemical test; their Table 2 reports "
+                "K. pneumoniae methyl-red result percentages across CPHL, "
+                "NRL, and SSI."
             ),
         },
         {
@@ -91,10 +92,23 @@ UPDATES = {
             "notes": (
                 "The same interlaboratory evaluation found that MR could be "
                 "method dependent for some Klebsiella species/test "
-                "combinations, so this first pass leaves canonical_examples "
-                "empty rather than promoting a method-sensitive result."
+                "combinations, so the K. pneumoniae canonical example is "
+                "recorded from Table 2 results rather than treated as a "
+                "species-wide invariant."
             ),
         },
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:573",
+            "taxon_label": "Klebsiella pneumoniae",
+            "note": (
+                "Hansen et al. Table 2 reported mostly methyl-red-negative "
+                "results for K. pneumoniae across three reference "
+                "laboratories: 10.7%, 3.6%, and 10.7% MR-positive strains."
+            ),
+            "reference": HANSEN,
+        }
     ],
     "discussions": [
         {
@@ -133,6 +147,18 @@ def build_record() -> dict:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Added the Hansen Klebsiella pneumoniae canonical example after "
+            "local review issue #861 showed Table 2 directly supports a "
+            "mostly methyl-red-negative Klebsiella pneumoniae result."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 

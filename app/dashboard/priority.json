@@ -150,30 +150,6 @@
       ]
     },
     {
-      "identifier": "METPO:1005015",
-      "label": "methyl red test negative",
-      "category": "other",
-      "slug": "methyl_red_test_negative",
-      "score": 58.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no canonical_examples +30",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "METPO:1005027",
       "label": "non-hemolytic",
       "category": "other",
@@ -871,6 +847,29 @@
       "label": "indole test negative",
       "category": "other",
       "slug": "indole_test_negative",
+      "score": 28.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "METPO:1005015",
+      "label": "methyl red test negative",
+      "category": "other",
+      "slug": "methyl_red_test_negative",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,

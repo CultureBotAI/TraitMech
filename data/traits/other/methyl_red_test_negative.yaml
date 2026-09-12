@@ -18,6 +18,13 @@ curation_history:
     DOI-backed methyl-red-test evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-09-12T18:57:06Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Added the Hansen Klebsiella pneumoniae canonical example after local review
+    issue #861 showed Table 2 directly supports a mostly methyl-red-negative Klebsiella
+    pneumoniae result.'
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -32,8 +39,8 @@ evidence:
     tests used in the present investigation are listed for Klebsiella species: indole,
     MR, VP, LDC, ODC, and malonate'
   notes: Hansen et al. evaluated methyl red as a conventional Klebsiella biochemical
-    test; their MR results varied enough by method that this first pass does not assert
-    a canonical negative example.
+    test; their Table 2 reports K. pneumoniae methyl-red result percentages across
+    CPHL, NRL, and SSI.
 - reference: DOI:10.1128/JCM.42.8.3665-3669.2004
   snippet: 'Variable results were of two types: (i) those in which all three laboratories
     found a mixture of positive and negative results among the representatives of
@@ -42,8 +49,16 @@ evidence:
     to be negative while another found most positive (e.g., K. rhinoscleromatis and
     MR) or vice versa, suggesting that the results were method dependent.'
   notes: The same interlaboratory evaluation found that MR could be method dependent
-    for some Klebsiella species/test combinations, so this first pass leaves canonical_examples
-    empty rather than promoting a method-sensitive result.
+    for some Klebsiella species/test combinations, so the K. pneumoniae canonical
+    example is recorded from Table 2 results rather than treated as a species-wide
+    invariant.
+canonical_examples:
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  note: 'Hansen et al. Table 2 reported mostly methyl-red-negative results for K.
+    pneumoniae across three reference laboratories: 10.7%, 3.6%, and 10.7% MR-positive
+    strains.'
+  reference: DOI:10.1128/JCM.42.8.3665-3669.2004
 discussions:
 - discussion_id: methyl-red-test-negative-assay-parent-gap
   prompt: Resolve a non-assay parent for negative methyl-red-test phenotypes before
