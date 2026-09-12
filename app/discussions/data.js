@@ -715,6 +715,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "prolyl-aminopeptidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for prolyl aminopeptidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "prolyl aminopeptidase activity",
+  "source_id": "traitmech:000166",
+  "source_file": "prolyl_aminopeptidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 denotes broad aminopeptidase molecular function and EC 3.4.11.5 denotes a prolyl aminopeptidase molecular function; both are scope-shifted relative to the organism-level prolyl aminopeptidase production phenotype, so they remain causal-node grounding leads rather than equivalent TraitRecord xrefs.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "pyrazinamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for pyrazinamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -784,9 +801,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 44,
+ "total_discussions": 45,
  "total_knowledge_gaps": 8,
- "total_source_entries": 44,
+ "total_source_entries": 45,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
