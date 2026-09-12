@@ -26,8 +26,9 @@ pass).
 **What v1 deliberately omits:**
 
 - **Scope A** is empty — the corpus has zero `traitmech:NNNNNN` IDs at the
-  time of drafting. As curators begin minting fallback IDs, add them via
-  **Path B (extend in place)** with a contiguous block at `1007430+`.
+  time of drafting. Later fallback traits are lifted in their own
+  `metpo_traitmech_v<N>` cohorts with fresh 100-wide blocks starting after
+  `1007500`; do not extend v1 for new Scope-A work.
 - **Scope B** is empty — but **not because the corpus is well-grounded**.
   An audit at v1 time found `0/1019` causal edges have a `predicate_id`;
   the `predicate` field carries 218 distinct free-text labels. Most top
@@ -39,8 +40,8 @@ pass).
   (populate `predicate_id` from RO/METPO where matches exist). Only the
   residual that has no upstream home (`manifests as`, `selects for`,
   `feeds electrons into`, `uses electron donor`, …) becomes a Scope-B
-  candidate. Add those via Path B (extend v1) at `2007400+` after grounding
-  completes.
+  candidate. Add those in a later predicate cohort at the next free
+  `2007400+` block after grounding completes.
 
 The structural template — Aristotelian definitions, OBO xrefs without
 equivalence claims, contiguous ID blocks per logical group, single subset

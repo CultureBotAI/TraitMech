@@ -62,6 +62,10 @@ acceptance. Treat kit well names, chromogenic-substrate names, and ambiguous
 panel rows as evidence leads, not trait labels; reject a row when its only
 stable biology collapses to an existing activity record, and keep the kit string
 out of `EXACT_SYNONYM` unless papers use it as a true trait name.
+When a panel label names a vertebrate enzyme, define an organism-level
+`<enzyme>-like activity` phenotype around the conserved reaction or assay
+readout. Do not claim that a microbe produces the exact vertebrate enzyme unless
+the source evidence demonstrates that exact molecular activity.
 
 Sequence-feature-like candidates need an explicit interpretation pass before
 they are accepted. Do not add a literal locus, gene, operon, protein domain,
@@ -191,6 +195,12 @@ Every added record needs at least one DOI, PMID, or stable URL in
 
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
+
+Publisher HTML may encode meaningful symbols as image tags. If a source renders
+part of a passage as an image, quote a source-rendered text alternative when one
+exists; otherwise quote the exact raw HTML and explain in `notes` what the image
+renders as. Never delete an inline image tag while presenting the adjacent text
+as a verbatim snippet.
 
 For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
 that supports a definition, canonical example, graph edge, or curation
