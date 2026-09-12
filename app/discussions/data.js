@@ -307,6 +307,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alkaline_phosphatase_activity.html#alkaline-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-chymotrypsin-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for alpha-chymotrypsin activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-chymotrypsin activity",
+  "source_id": "traitmech:000159",
+  "source_file": "alpha_chymotrypsin_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004263 chymotrypsin activity is obsolete, and its replacement GO:0004252 denotes broader serine-type endopeptidase molecular function rather than the organism-level chymotrypsin-like serine endopeptidase phenotype. GO:0004252 is appropriate as a causal-node grounding for generic serine-type endopeptidase activity, not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/alpha_chymotrypsin_activity.html#alpha-chymotrypsin-activity-xref-gap"
+ },
+ {
   "discussion_id": "alpha-fucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alpha-fucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -639,7 +656,7 @@ window.searchData = [
   "source_id": "traitmech:000158",
   "source_file": "trypsin_activity.yaml",
   "attaches_to": [],
-  "rationale": "GO:0004295 trypsin activity is obsolete, and its replacement GO:0004252 denotes broader serine-type endopeptidase molecular function rather than the organism-level trypsin production phenotype. GO:0004252 is appropriate as a causal-node grounding for generic serine endopeptidase activity, not as an equivalent TraitRecord xref.",
+  "rationale": "GO:0004295 trypsin activity is obsolete, and its replacement GO:0004252 denotes broader serine-type endopeptidase molecular function rather than the organism-level trypsin-like serine endopeptidase phenotype. GO:0004252 is appropriate as a causal-node grounding for generic serine endopeptidase activity, not as an equivalent TraitRecord xref.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -665,9 +682,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 37,
+ "total_discussions": 38,
  "total_knowledge_gaps": 8,
- "total_source_entries": 37,
+ "total_source_entries": 38,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

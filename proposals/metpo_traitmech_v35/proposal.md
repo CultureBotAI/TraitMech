@@ -50,18 +50,18 @@ activity, alpha-galactosidase activity, alpha-mannosidase activity,
 beta-glucuronidase activity, alpha-fucosidase activity, lysine decarboxylase
 activity, ornithine decarboxylase activity, and
 beta-N-acetylhexosaminidase activity. The proposed term captures the
-organismal enzyme-activity phenotype where a cell produces active trypsin
-enzymes that preferentially cleave peptide bonds on the carboxyl side of
-arginine or lysine residues.
+organismal enzyme-activity phenotype where a cell exhibits trypsin-like serine
+endopeptidase activity, preferentially cleaving peptide bonds on the carboxyl
+side of arginine or lysine residues.
 
 ## External Mappings
 
 No exact external mapping is proposed. `GO:0004295` is the obsolete GO trypsin
 activity class, and its replacement `GO:0004252` denotes broader serine-type
-endopeptidase molecular function rather than the organism-level trypsin
-production phenotype. `GO:0004252` is appropriate as a causal-node grounding
-when a graph needs generic serine-type endopeptidase activity, not as an
-equivalent TraitRecord xref.
+endopeptidase molecular function rather than the organism-level trypsin-like
+serine endopeptidase phenotype. `GO:0004252` is appropriate as a causal-node
+grounding when a graph needs generic serine-type endopeptidase activity, not as
+an equivalent TraitRecord xref.
 
 The API strip label `trypsin` names the enzyme rather than the full organismal
 phenotype, so it is retained as a related synonym only.
