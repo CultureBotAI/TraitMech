@@ -25,10 +25,10 @@ RECORD = {
     "identifier": "traitmech:000159",
     "label": "alpha-chymotrypsin activity",
     "definition": (
-        "A physiological enzyme-activity phenotype in which a cell produces "
-        "active alpha-chymotrypsin enzymes that preferentially cleave peptide "
-        "bonds on the carboxyl side of tyrosine, tryptophan, phenylalanine, "
-        "or leucine residues."
+        "A physiological enzyme-activity phenotype in which a cell exhibits "
+        "chymotrypsin-like serine endopeptidase activity, preferentially "
+        "cleaving peptide bonds on the carboxyl side of tyrosine, "
+        "tryptophan, phenylalanine, or leucine residues."
     ),
     "definition_source": IUBMB,
     "trait_category": "PHYSIOLOGY",
@@ -104,8 +104,8 @@ RECORD = {
                 "GO:0004263 chymotrypsin activity is obsolete, and its "
                 "replacement GO:0004252 denotes broader serine-type "
                 "endopeptidase molecular function rather than the organism-level "
-                "alpha-chymotrypsin production phenotype. GO:0004252 is "
-                "appropriate as a causal-node grounding for generic "
+                "chymotrypsin-like serine endopeptidase phenotype. GO:0004252 "
+                "is appropriate as a causal-node grounding for generic "
                 "serine-type endopeptidase activity, not as an equivalent "
                 "TraitRecord xref."
             ),

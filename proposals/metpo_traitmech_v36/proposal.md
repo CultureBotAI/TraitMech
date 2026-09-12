@@ -50,17 +50,18 @@ beta-galactosidase activity, alpha-galactosidase activity, alpha-mannosidase
 activity, beta-glucuronidase activity, alpha-fucosidase activity, lysine
 decarboxylase activity, ornithine decarboxylase activity,
 beta-N-acetylhexosaminidase activity, and trypsin activity. The proposed term
-captures the organismal enzyme-activity phenotype where a cell produces active
-alpha-chymotrypsin enzymes that preferentially cleave peptide bonds on the
-carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine residues.
+captures the organismal enzyme-activity phenotype where a cell exhibits
+chymotrypsin-like serine endopeptidase activity, preferentially cleaving peptide
+bonds on the carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine
+residues.
 
 ## External Mappings
 
 No exact external mapping is proposed. `GO:0004263` is the obsolete GO
 chymotrypsin activity class, and its replacement `GO:0004252` denotes broader
 serine-type endopeptidase molecular function rather than the organism-level
-alpha-chymotrypsin production phenotype. `GO:0004252` is appropriate as a
-causal-node grounding when a graph needs generic serine-type endopeptidase
+chymotrypsin-like serine endopeptidase phenotype. `GO:0004252` is appropriate
+as a causal-node grounding when a graph needs generic serine-type endopeptidase
 activity, not as an equivalent TraitRecord xref.
 
 The API strip label `alpha-chymotrypsin` names the enzyme rather than the full

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_chymotrypsin_activity.yaml
+  slug: alpha_chymotrypsin_activity
+session:
+  id: 2026-09-12T060152Z-codex-76062f
+  timestamp: '2026-09-12T06:01:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/820
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - grounding
+  summary: Tighten alpha-chymotrypsin activity wording
+  details: 'Addressed #820 by tightening the alpha-chymotrypsin activity definition and xref-gap
+    rationale from production of an active named enzyme to a chymotrypsin-like organismal
+    serine endopeptidase phenotype; kept the API alpha-chymotrypsin label as related provenance.'

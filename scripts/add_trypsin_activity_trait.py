@@ -22,9 +22,9 @@ RECORD = {
     "identifier": "traitmech:000158",
     "label": "trypsin activity",
     "definition": (
-        "A physiological enzyme-activity phenotype in which a cell produces "
-        "active trypsin enzymes that preferentially cleave peptide bonds on "
-        "the carboxyl side of arginine or lysine residues."
+        "A physiological enzyme-activity phenotype in which a cell exhibits "
+        "trypsin-like serine endopeptidase activity, preferentially cleaving "
+        "peptide bonds on the carboxyl side of arginine or lysine residues."
     ),
     "definition_source": IUBMB,
     "trait_category": "PHYSIOLOGY",
@@ -103,10 +103,11 @@ RECORD = {
             "rationale": (
                 "GO:0004295 trypsin activity is obsolete, and its replacement "
                 "GO:0004252 denotes broader serine-type endopeptidase "
-                "molecular function rather than the organism-level trypsin "
-                "production phenotype. GO:0004252 is appropriate as a "
-                "causal-node grounding for generic serine endopeptidase "
-                "activity, not as an equivalent TraitRecord xref."
+                "molecular function rather than the organism-level "
+                "trypsin-like serine endopeptidase phenotype. GO:0004252 is "
+                "appropriate as a causal-node grounding for generic serine "
+                "endopeptidase activity, not as an equivalent TraitRecord "
+                "xref."
             ),
             "posed_by": CURATOR,
             "posed_date": "2026-09-12",
