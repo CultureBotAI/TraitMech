@@ -1,0 +1,35 @@
+identifier: METPO:1005013
+label: methyl red test
+definition: An assay that tests the ability of an organism to produce and maintain
+  stable acid end products from glucose fermentation.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+curation_history:
+- timestamp: '2026-09-12T20:14:22Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T20:15:55Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO methyl-red-test assay parent with stable-URL methyl-red
+    readout evidence after a repository-wide duplicate review covering ignored and
+    hidden files.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: When the culture medium turns red after addition of methyl red, because
+    of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive
+    result for the MR test (Fig.1A).
+  notes: The ASM protocol PDF defines the methyl-red-test positive readout as acidification
+    to pH 4.4 or below after glucose fermentation.
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: A negative MR test is indicated by a yellow color in the culture medium
+    (Fig. 1B), which occurs when less acid is produced (pH is higher) from the fermentation
+    of glucose.
+  notes: The same protocol defines the negative readout as a yellow culture reflecting
+    less glucose-derived acid production.

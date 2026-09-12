@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test.yaml
+  slug: methyl_red_test
+session:
+  id: 2026-09-12T201610Z-codex-c05695
+  timestamp: '2026-09-12T20:16:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add methyl red test assay parent
+  details: Added METPO:1005013 as the seeded methyl red test assay parent with ASM stable-URL
+    evidence for the red positive and yellow negative readouts of glucose-fermentation acidification.

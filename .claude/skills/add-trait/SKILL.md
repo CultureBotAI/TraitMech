@@ -1,12 +1,14 @@
 ---
 name: add-trait
-description: Add a named microbial ecophysiological trait as a TraitRecord YAML with METPO-first identity, source-backed definition, optional canonical examples and causal graphs, curation history, repository history, generated pages, and validation. Use when the target trait is already named.
+description: Add or discover one evidence-backed microbial ecophysiological trait as a TraitRecord YAML with METPO-first identity, source-backed definition, optional canonical examples and causal graphs, curation history, repository history, generated pages, and validation.
 ---
 
 # Add a TraitRecord
 
 This skill turns one named, in-scope microbial trait into a validated
-TraitMech record.
+TraitMech record. It can also select the next target from the reviewed
+METPO/missing-trait frontier, but still adds one record or one tightly coupled
+parent/child repair per branch.
 
 Use `trait-priority` when choosing among existing curation targets. Use
 `deep-research-trait` or `research-causal-graphs` when an existing record needs
@@ -76,6 +78,27 @@ element class or a sequence-composition phenotype; keep unresolved source labels
 out of `EXACT_SYNONYM` and record borderline mapping questions as
 `CURATION_TODO` discussions.
 
+## Pick a target
+
+If the user names a trait, curate that trait only. For an open-ended request to
+find the next new trait:
+
+- generate a temporary seed tree and compare its exact `identifier` values to
+  live `data/traits/**/*.yaml`; exact-ID absence is a lead, not proof of
+  novelty
+- read `reports/metpo_2026_06_12_release_delta.tsv`,
+  `reports/metpo_2026_06_12_active_review.tsv`, and
+  `docs/METPO_2026_06_12_ACTIVE_REVIEW.md` before accepting a METPO addition
+  that prior release review did not seed
+- skip `DUPLICATE_NO_NEW_PRIMARY` rows unless a fresh ignored-and-hidden search
+  and same-family review show that the existing record is not exact
+- reconsider `NO_CORPUS_DEMAND_NO_PRIMARY` rows only when a concrete
+  DOI/PMID/stable-URL evidence bundle now supports TraitMech inclusion, or when
+  the parent class resolves same-scope open TODOs on accepted children
+- prefer candidates that close existing `CURATION_TODO` parent gaps, unresolved
+  causal-node groundings, or tightly related sibling groups over disconnected
+  seed rows with no live corpus demand
+
 ## Prove it is new
 
 Before writing anything, search exact identifiers, labels, synonyms, likely
@@ -111,6 +134,10 @@ same branch unless `DO_NOT_WORK.md` protects the file. A newly minted
 denotes the same trait. Move synonyms whose lexical scope fits the new trait
 better than their old host; do not leave the old graph or synonym unresolved for
 post-merge cleanup.
+
+When adding a missing parent for already accepted positive or negative
+assay-result children, reparent those children below the new exact parent and
+mark their temporary parent-gap discussions `RESOLVED` in the same branch.
 
 Do not treat a temporary seeder output directory as a missing-work queue. It is
 a reusable METPO projection that can contain records already live under
@@ -320,6 +347,11 @@ Every manual edit to a new or seeded record must:
 - append a `record_curation_event(..., llm_assisted=True)`
 - write with `write_validated_trait`
 - leave unrelated generated fields and source-owned seeded fields alone
+
+If a writer updates existing records, make it fail closed on the expected
+preimage: assert the identifier, label, mapping status, old parents, and any
+discussion status before replacing them so a stale branch does not rewrite
+unrelated drift.
 
 Do not hand-serialize YAML or loosen the `write_validated_trait` round-trip
 test if formatting drifts.
