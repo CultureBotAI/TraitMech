@@ -1,0 +1,46 @@
+identifier: traitmech:000175
+label: type IV pilus
+definition: A morphology trait in which a cell produces dynamic extracellular type-IV-pilin
+  filaments that extend from the cell surface.
+definition_source: DOI:10.1093/femsre/fuab053
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: type IV pili
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/femsre/fuab053
+- synonym_text: T4P
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/femsre/fuab053
+xrefs:
+- GO:0044096
+evidence:
+- reference: DOI:10.1093/femsre/fuab053
+  snippet: Bacteria and archaea rely on appendages called type IV pili (T4P)
+  notes: Ellison et al. review type IV pili as prokaryotic appendages that participate
+    in diverse surface-associated behaviors.
+- reference: DOI:10.1093/femsre/fuab053
+  snippet: T4P are broadly distributed fibers that dynamically extend and retract
+  notes: The review supports the record definition's dynamic extension and retraction
+    qualifier.
+- reference: DOI:10.1042/BST20160221
+  snippet: Type IV pili are hair-like bacterial surface appendages
+  notes: Piepenbrink and Sundberg support type IV pili as bacterial cell-surface appendages
+    built from pilin proteins.
+canonical_examples:
+- taxon_id: NCBITaxon:208964
+  taxon_label: Pseudomonas aeruginosa PAO1
+  note: The PAO1 type IV pilus is a canonical model for PilB/PilT-driven pilus extension
+    and retraction.
+  reference: DOI:10.1128/jb.00359-24
+curation_history:
+- timestamp: '2026-09-12T15:35:50Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted type IV pilus as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has no exact live type
+    IV pilus class yet and the placeholder is reserved in proposals/metpo_traitmech_v52.
+  llm_assisted: true
