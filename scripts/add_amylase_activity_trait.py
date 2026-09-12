@@ -55,7 +55,7 @@ RECORD = {
             "reference": BROWN,
             "snippet": (
                 "the Bacteroides ovatus (Bo) extracellular α-amylase, "
-                "BoGH13A_{Sus}"
+                "BoGH13ASus"
             ),
             "notes": (
                 "Brown et al. characterized BoGH13A_Sus as a Bacteroides "
