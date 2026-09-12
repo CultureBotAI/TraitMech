@@ -29,10 +29,11 @@ visually separated and leave room for upstream minting.
 
 Collision search included `data/raw/metpo.owl`, `proposals/`, `data/traits/`,
 `reports/`, `research/`, `history/`, `mappings/`, `.claude/`, generated pages,
-scripts, tests, and ignored/hidden files. No `METPO:1011700`,
-`metpo_traitmech_v40`, `traitmech:000163`, or existing
-pyrazinamidase/nicotinamidase activity TraitRecord/proposal row existed before
-this addition.
+scripts, tests, and ignored/hidden files. `METPO:1011700` only appeared in
+`.claude/skills/metpo-proposal/SKILL.md` as the next free block pointer after
+v39; no prior proposal reserved the ID, and no `metpo_traitmech_v40`,
+`traitmech:000163`, or pyrazinamidase/nicotinamidase activity
+TraitRecord/proposal row existed before this addition.
 
 Subset tag: `metpo_traitmech_2026_09`.
 
