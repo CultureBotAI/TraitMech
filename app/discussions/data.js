@@ -290,6 +290,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/acid_phosphatase_activity.html#acid-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "alanine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for alanine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alanine arylamidase activity",
+  "source_id": "traitmech:000161",
+  "source_file": "alanine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0016285 alanyl aminopeptidase activity denotes the catalytic molecular function rather than the organism-level alanine arylamidase/alanyl aminopeptidase phenotype, so it is appropriate as a causal-node grounding for that enzyme activity and not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/alanine_arylamidase_activity.html#alanine-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "alkaline-phosphatase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alkaline phosphatase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -699,9 +716,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 39,
+ "total_discussions": 40,
  "total_knowledge_gaps": 8,
- "total_source_entries": 39,
+ "total_source_entries": 40,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

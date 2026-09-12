@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alanine_arylamidase_activity.yaml
+  slug: alanine_arylamidase_activity
+session:
+  id: 2026-09-12T073606Z-codex-cb99f0
+  timestamp: '2026-09-12T07:36:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add alanine arylamidase activity
+  details: Added traitmech:000161 alanine arylamidase activity with NC-IUBMB EC 3.4.11.2 reaction
+    evidence, DOI-backed Amygdalobacter indicium species-description evidence, a canonical
+    example, and the same-PR metpo_traitmech_v38 proposal reserving METPO:1011500.

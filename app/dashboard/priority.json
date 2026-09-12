@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 546,
+    "records": 547,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 69,
+    "unresearched_mechanism_records": 70,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 1,
       "ADD_CANONICAL_EXAMPLES": 0,
-      "BUILD_CAUSAL_GRAPH": 68,
+      "BUILD_CAUSAL_GRAPH": 69,
       "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 143
@@ -1346,6 +1346,28 @@
       "label": "indole test positive",
       "category": "other",
       "slug": "indole_test_positive",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "traitmech:000161",
+      "label": "alanine arylamidase activity",
+      "category": "physiology",
+      "slug": "alanine_arylamidase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -11880,7 +11902,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 85,
+      "children": 86,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
