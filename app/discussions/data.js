@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-mannosidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for alpha-mannosidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-mannosidase activity",
+  "source_id": "traitmech:000150",
+  "source_file": "alpha_mannosidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004559 carries the same alpha-mannosidase activity label but denotes the enzyme molecular function rather than the organism-level alpha-mannosidase production phenotype, so it is appropriate as a causal-node grounding rather than an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -512,9 +529,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 28,
+ "total_discussions": 29,
  "total_knowledge_gaps": 8,
- "total_source_entries": 28,
+ "total_source_entries": 29,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
