@@ -327,7 +327,7 @@ window.searchData = [
   "discussion_id": "voges-proskauer-test-positive-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for positive Voges-Proskauer-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Other discussion",
   "source_name": "Voges-Proskauer test positive",
   "source_id": "METPO:1005017",

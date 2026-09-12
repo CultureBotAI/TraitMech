@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/voges_proskauer_test.yaml
+  slug: voges_proskauer_test
+session:
+  id: 2026-09-12T211600Z-codex-0feb8a
+  timestamp: '2026-09-12T21:16:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add Voges-Proskauer test assay parent
+  details: Added METPO:1005016 as the seeded Voges-Proskauer test assay parent with ASM stable-URL
+    evidence for acetoin production through butanediol fermentation and Barritt chemistry
+    detection.
