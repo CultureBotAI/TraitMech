@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 555,
+    "records": 556,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 78,
+    "unresearched_mechanism_records": 79,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -22,7 +22,7 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 1,
       "ADD_CANONICAL_EXAMPLES": 0,
-      "BUILD_CAUSAL_GRAPH": 77,
+      "BUILD_CAUSAL_GRAPH": 78,
       "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 143
@@ -1610,6 +1610,28 @@
       "label": "gelatinase activity",
       "category": "physiology",
       "slug": "gelatinase_activity",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "traitmech:000170",
+      "label": "glycine arylamidase activity",
+      "category": "physiology",
+      "slug": "glycine_arylamidase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -12078,7 +12100,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 94,
+      "children": 95,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

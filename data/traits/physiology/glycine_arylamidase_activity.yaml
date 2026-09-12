@@ -1,0 +1,58 @@
+identifier: traitmech:000170
+label: glycine arylamidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  glycine arylamidase enzymes that hydrolyze glycine arylamide substrates.
+definition_source: DOI:10.1099/ijsem.0.006017
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: glycine arylamidase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1099/ijsem.0.006017
+evidence:
+- reference: DOI:10.1099/ijsem.0.006017
+  snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+    arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+    arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine
+    arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine
+    arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase,
+    alpha-chymotrypsin'
+  notes: Srinivasan et al. listed glycine arylamidase among enzymatic activities present
+    in the Amygdalobacter indicium species description, supporting the API arylamidase
+    row as a directly assayed bacterial enzyme-activity phenotype.
+- reference: DOI:10.1128/JCM.40.9.3427-3431.2002
+  snippet: When the API rapid ID32A system was used, all eight strains displayed activity
+    for alanine arylamidase, arginine arylamidase, α-glucosidase, glycine arylamidase,
+    histidine arylamidase, leucine arylamidase, leucylglycine arylamidase, proline
+    arylamidase, phenylalanine arylamidase, serine arylamidase, and tyrosine arylamidase
+  notes: Hall et al. reported glycine arylamidase activity in all eight Actinomyces
+    cardiffensis clinical isolates tested with the API rapid ID32A system.
+canonical_examples:
+- taxon_id: NCBITaxon:3029272
+  taxon_label: Amygdalobacter indicium
+  note: Srinivasan et al. reported Amygdalobacter indicium as positive for glycine
+    arylamidase activity in an enzyme activity panel.
+  reference: DOI:10.1099/ijsem.0.006017
+discussions:
+- discussion_id: glycine-arylamidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for glycine arylamidase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004177 covers broad aminopeptidase activity at molecular-function
+    scope, and no live GO class provides an exact residue-specific glycine arylamidase
+    production phenotype at organism-level scope.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T13:05:26Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted glycine arylamidase activity as a DOI-backed TraitRecord after a
+    repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact glycine arylamidase activity class yet and the placeholder is reserved
+    in proposals/metpo_traitmech_v47.
+  llm_assisted: true
