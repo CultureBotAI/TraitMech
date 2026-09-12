@@ -140,12 +140,14 @@
           mechanism it concerns.</p>
 
 
-        <p>METPO:1005013 is now represented as the seeded methyl-red-test assay parent, so this assay-outcome phenotype can use its source superclass rather than a temporary direct phenotype parent.</p>
+        <p>METPO:1005013 is the seeded superclass of METPO:1005015, but METPO:1005013 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.</p>
 
 
 
 
 
+
+        <p class="meta"><em>Resolution:</em> METPO:1005013 is now represented as the seeded methyl-red-test assay parent, so this assay-outcome phenotype can use its exact source superclass instead of a temporary direct phenotype parent; this resolves the exact METPO assay-parent gap, not the broader non-assay parent question for assay-outcome phenotypes.</p>
 
 
 
@@ -182,6 +184,12 @@
           <time>2026-09-12T20:15:55Z</time> ·
           <strong>RESOLVED_PARENT_GAP</strong> · codex
           <p class="changes">Reparented methyl red test negative below the newly curated METPO:1005013 methyl red test assay parent and marked the temporary assay-parent discussion resolved.</p>
+        </li>
+
+        <li>
+          <time>2026-09-12T20:44:24Z</time> ·
+          <strong>CURATION_REVIEW_REVISION</strong> · codex
+          <p class="changes">Moved the methyl-red parent-gap closure into resolution_note and resolved_date so the original non-assay parent rationale remains visible.</p>
         </li>
 
       </ol>
@@ -236,7 +244,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-12 20:15 UTC from
+      Record as of 2026-09-12 20:44 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 567 TraitRecords
       · embedding coverage 84.1%

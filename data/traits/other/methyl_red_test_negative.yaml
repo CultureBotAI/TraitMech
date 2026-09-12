@@ -32,6 +32,12 @@ curation_history:
     methyl red test assay parent and marked the temporary assay-parent discussion
     resolved.
   llm_assisted: true
+- timestamp: '2026-09-12T20:44:24Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: Moved the methyl-red parent-gap closure into resolution_note and resolved_date
+    so the original non-assay parent rationale remains visible.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -72,8 +78,14 @@ discussions:
     narrowing parent_traits below phenotype.
   kind: CURATION_TODO
   status: RESOLVED
-  rationale: METPO:1005013 is now represented as the seeded methyl-red-test assay
-    parent, so this assay-outcome phenotype can use its source superclass rather than
-    a temporary direct phenotype parent.
+  rationale: METPO:1005013 is the seeded superclass of METPO:1005015, but METPO:1005013
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
   posed_by: codex
   posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: METPO:1005013 is now represented as the seeded methyl-red-test
+    assay parent, so this assay-outcome phenotype can use its exact source superclass
+    instead of a temporary direct phenotype parent; this resolves the exact METPO
+    assay-parent gap, not the broader non-assay parent question for assay-outcome
+    phenotypes.

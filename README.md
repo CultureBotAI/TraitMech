@@ -12,7 +12,7 @@ Each trait — Gram type, motility, pH optimum, "uses as carbon source",
 "halophilic", etc. — lives in its own YAML file with provenance back to its
 METPO source class and (optionally) to literature evidence.
 
-**Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
+**Initial seed (from `data/raw/metpo.owl`, METPO 2026-06-12) and current curation status:**
 
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
@@ -89,7 +89,7 @@ just validate-all             # validate every TraitRecord YAML
 ```
 TraitMech/
 ├── data/
-│   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
+│   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
 │   └── traits/<category>/<slug>.yaml    # 567 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings

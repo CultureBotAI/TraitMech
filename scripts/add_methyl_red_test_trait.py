@@ -32,6 +32,7 @@ CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T20:14:22Z"
 TIMESTAMP = "2026-09-12T20:15:55Z"
 REVIEW_TIMESTAMP = "2026-09-12T20:35:11Z"
+DISCUSSION_REVIEW_TIMESTAMP = "2026-09-12T20:44:24Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005013",
@@ -192,13 +193,18 @@ def resolve_child_parent_gap(
     discussion = matches[0]
     if discussion.get("status") != "OPEN":
         raise ValueError(f"expected OPEN discussion, got {discussion.get('status')!r}")
+    if "resolved_date" in discussion or "resolution_note" in discussion:
+        raise ValueError("expected unresolved discussion without resolution fields")
 
     record["parent_traits"] = ["METPO:1005013"]
     discussion["status"] = "RESOLVED"
-    discussion["rationale"] = (
+    discussion["resolved_date"] = "2026-09-12"
+    discussion["resolution_note"] = (
         "METPO:1005013 is now represented as the seeded methyl-red-test "
-        "assay parent, so this assay-outcome phenotype can use its source "
-        "superclass rather than a temporary direct phenotype parent."
+        "assay parent, so this assay-outcome phenotype can use its exact "
+        "source superclass instead of a temporary direct phenotype parent; "
+        "this resolves the exact METPO assay-parent gap, not the broader "
+        "non-assay parent question for assay-outcome phenotypes."
     )
     record_curation_event(
         record,
@@ -211,6 +217,19 @@ def resolve_child_parent_gap(
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+        upsert=True,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Moved the methyl-red parent-gap closure into resolution_note and "
+            "resolved_date so the original non-assay parent rationale remains "
+            "visible."
+        ),
+        llm_assisted=True,
+        timestamp=DISCUSSION_REVIEW_TIMESTAMP,
         upsert=True,
     )
     return record
