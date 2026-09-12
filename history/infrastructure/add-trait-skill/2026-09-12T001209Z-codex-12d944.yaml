@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T001209Z-codex-12d944
+  timestamp: '2026-09-12T00:12:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - validation
+  summary: Add canonical-example audit to add-trait
+  details: Documented the offline canonical_examples shape audit in the add-trait validation
+    checklist and the NCBI API-backed taxonomy audit to run when a new TraitRecord adds or
+    edits canonical_examples, matching the dedicated canonical-example-taxonomy PR workflow.

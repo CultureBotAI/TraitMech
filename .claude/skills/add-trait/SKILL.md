@@ -319,6 +319,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/audit_biolink_curies.py
 .venv/bin/python scripts/audit_predicate_domains.py --fail-on new
 .venv/bin/python scripts/audit_graph_protein_taxa.py --fail-on gaps
+.venv/bin/python scripts/audit_canonical_examples.py --no-resolve
 .venv/bin/python scripts/check_biolink_coverage.py
 .venv/bin/python scripts/audit_evidence_snippets.py
 .venv/bin/python scripts/audit_exact_synonyms.py --collisions-only
@@ -342,7 +343,10 @@ Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<cate
 after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
 for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
 directly and confirm the recorded text is still a contiguous, verbatim source
-span. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`
+span. When adding or editing `canonical_examples`, run
+`.venv/bin/python scripts/audit_canonical_examples.py --ncbi-api` so local
+validation resolves `NCBITaxon:` identifiers like the `canonical-example-taxonomy`
+PR workflow. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`
 when adding or editing CHEBI formula-bearing chemicals, and run
 `.venv/bin/python scripts/audit_uniprot_grounding.py` after adding or editing
 `protein_examples`. Run `.venv/bin/python scripts/build_embedding_index.py`
