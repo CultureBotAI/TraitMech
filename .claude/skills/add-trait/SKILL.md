@@ -205,6 +205,12 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+Shortened snippets must be self-contained and source-faithful. Do not stop
+before the head noun of a phrase, after a dangling article, preposition, or
+conjunction, or before a coordinated complement that would change the statement's
+scope. Quote enough of the source sentence for the stored span to read as the
+same claim without relying on omitted words.
+
 Publisher HTML may encode meaningful symbols as image tags. If a source renders
 part of a passage as an image, quote a source-rendered text alternative when one
 exists; otherwise quote the exact raw HTML and explain in `notes` what the image

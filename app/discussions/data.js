@@ -273,6 +273,23 @@ window.searchData = [
   "page_url": "../../pages/traits/other/indole_test_positive.html#indole-test-positive-assay-parent-gap"
  },
  {
+  "discussion_id": "methyl-red-test-negative-assay-parent-gap",
+  "prompt": "Resolve a non-assay parent for negative methyl-red-test phenotypes before narrowing parent_traits below phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "methyl red test negative",
+  "source_id": "METPO:1005015",
+  "source_file": "methyl_red_test_negative.yaml",
+  "attaches_to": [],
+  "rationale": "METPO:1005013 is the seeded superclass of METPO:1005015, but METPO:1005013 defines an assay rather than a broader microbial trait class, so this record is temporarily parented directly to METPO:1000059 phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/other/methyl_red_test_negative.html#methyl-red-test-negative-assay-parent-gap"
+ },
+ {
   "discussion_id": "non-hemolytic-parent-gap",
   "prompt": "Resolve a neutral parent axis for absence of hemolysis before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -954,9 +971,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 54,
+ "total_discussions": 55,
  "total_knowledge_gaps": 8,
- "total_source_entries": 54,
+ "total_source_entries": 55,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

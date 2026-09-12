@@ -1,0 +1,57 @@
+identifier: METPO:1005015
+label: methyl red test negative
+definition: A phenotype in which an organism tests negative in the methyl red test.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+curation_history:
+- timestamp: '2026-09-12T18:34:21Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T18:38:59Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO methyl-red-test-negative phenotype with stable-URL and
+    DOI-backed methyl-red-test evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: A negative MR test is indicated by a yellow color in the culture medium
+    (Fig. 1B), which occurs when less acid is produced (pH is higher) from the fermentation
+    of glucose.
+  notes: The ASM protocol PDF defines the negative methyl-red-test readout as a yellow
+    culture after methyl red is added, reflecting less acidification during glucose
+    fermentation.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: 'In the ASM Manual of Clinical Microbiology, only 6 of the 18 biochemical
+    tests used in the present investigation are listed for Klebsiella species: indole,
+    MR, VP, LDC, ODC, and malonate'
+  notes: Hansen et al. evaluated methyl red as a conventional Klebsiella biochemical
+    test; their MR results varied enough by method that this first pass does not assert
+    a canonical negative example.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: 'Variable results were of two types: (i) those in which all three laboratories
+    found a mixture of positive and negative results among the representatives of
+    a species for a specific test (e.g., K. pneumoniae and l-sorbose), suggesting
+    a truly variable reaction, and (ii) those in which one center found most strains
+    to be negative while another found most positive (e.g., K. rhinoscleromatis and
+    MR) or vice versa, suggesting that the results were method dependent.'
+  notes: The same interlaboratory evaluation found that MR could be method dependent
+    for some Klebsiella species/test combinations, so this first pass leaves canonical_examples
+    empty rather than promoting a method-sensitive result.
+discussions:
+- discussion_id: methyl-red-test-negative-assay-parent-gap
+  prompt: Resolve a non-assay parent for negative methyl-red-test phenotypes before
+    narrowing parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: METPO:1005013 is the seeded superclass of METPO:1005015, but METPO:1005013
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-12'
