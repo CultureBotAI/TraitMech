@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/gamma_glutamyltransferase_activity.yaml
+  slug: gamma_glutamyltransferase_activity
+session:
+  id: 2026-09-12T065049Z-codex-09097e
+  timestamp: '2026-09-12T06:50:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add gamma-glutamyltransferase activity
+  details: Added traitmech:000160 gamma-glutamyltransferase activity with NC-IUBMB reaction
+    evidence, Frontiers Helicobacter zhangjianzhongii API Campy evidence, a canonical example,
+    and the same-PR metpo_traitmech_v37 proposal reserving METPO:1011400.

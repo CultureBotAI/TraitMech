@@ -528,6 +528,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
  },
  {
+  "discussion_id": "gamma-glutamyltransferase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for gamma-glutamyltransferase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gamma-glutamyltransferase activity",
+  "source_id": "traitmech:000160",
+  "source_file": "gamma_glutamyltransferase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0003840 gamma-glutamyltransferase activity is obsolete, and its replacement GO:0036374 denotes the molecular function glutathione gamma-glutamate hydrolase rather than the organism-level gamma-glutamyltransferase/glutathione-hydrolase phenotype. GO:0036374 is appropriate as a causal-node grounding when a graph needs that hydrolysis half-reaction, not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/gamma_glutamyltransferase_activity.html#gamma-glutamyltransferase-activity-xref-gap"
+ },
+ {
   "discussion_id": "gelatinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for gelatinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -682,9 +699,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 38,
+ "total_discussions": 39,
  "total_knowledge_gaps": 8,
- "total_source_entries": 38,
+ "total_source_entries": 39,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

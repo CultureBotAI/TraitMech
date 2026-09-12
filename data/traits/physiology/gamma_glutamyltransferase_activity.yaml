@@ -1,0 +1,72 @@
+identifier: traitmech:000160
+label: gamma-glutamyltransferase activity
+definition: A physiological enzyme-activity phenotype in which a cell exhibits gamma-glutamyltransferase/glutathione-hydrolase
+  activity, processing glutathione, glutathione-S-conjugates, or other N-terminal
+  L-gamma-glutamyl substrates through a gamma-glutamyl-enzyme intermediate.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: gamma-glutamyl transferase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fgene.2023.1240581
+- synonym_text: gamma-glutamyl transpeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
+- synonym_text: glutathione gamma-glutamate hydrolase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
+  snippet: The enzyme then reacts with either a water molecule or a different acceptor
+    substrate (usually an <small>L</small>-amino acid or a dipeptide) to form <small>L</small>-glutamate
+    or a product containing a new &gamma;-glutamyl isopeptide bond, respectively.
+    The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates, and, at a lower
+    level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl
+    residue.
+  notes: The NC-IUBMB EC 3.4.19.13 entry scopes the bifunctional glutathione gamma-glutamate
+    hydrolase/gamma-glutamyltransferase enzyme across water- and acceptor-mediated
+    reactions.
+- reference: DOI:10.3389/fgene.2023.1240581
+  snippet: Like Helicobacter canis, these two putative isolates are positive for oxidase,
+    gamma-glutamyl transferase, and alkaline phosphatase and negative for catalase
+    and urease activities.
+  notes: Wang et al. detected gamma-glutamyltransferase activity in two Helicobacter
+    zhangjianzhongii isolates with the API Campy biochemical panel.
+- reference: DOI:10.3389/fgene.2023.1240581
+  snippet: Both of these strains exhibit positive results for oxidase, gamma-glutamyl
+    transferase, alkaline phosphatase, pyrrolidonyl arylamidase, L-arginine arylamidase,
+    and L-aspartate arylamidase
+  notes: The formal species description reports the same gamma-glutamyltransferase-positive
+    phenotype in both H. zhangjianzhongii strains.
+canonical_examples:
+- taxon_id: NCBITaxon:2974574
+  taxon_label: Helicobacter zhangjianzhongii
+  note: Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive
+    for gamma-glutamyltransferase activity in the API Campy biochemical panel.
+  reference: DOI:10.3389/fgene.2023.1240581
+discussions:
+- discussion_id: gamma-glutamyltransferase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for gamma-glutamyltransferase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0003840 gamma-glutamyltransferase activity is obsolete, and its replacement
+    GO:0036374 denotes the molecular function glutathione gamma-glutamate hydrolase
+    rather than the organism-level gamma-glutamyltransferase/glutathione-hydrolase
+    phenotype. GO:0036374 is appropriate as a causal-node grounding when a graph needs
+    that hydrolysis half-reaction, not as an equivalent TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T06:47:37Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted gamma-glutamyltransferase activity as a URL/DOI-backed TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; METPO
+    has no exact gamma-glutamyltransferase activity class yet and the placeholder
+    is reserved in proposals/metpo_traitmech_v37.
+  llm_assisted: true
