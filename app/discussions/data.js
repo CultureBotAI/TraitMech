@@ -639,7 +639,7 @@ window.searchData = [
   "source_id": "traitmech:000173",
   "source_file": "glutamyl_glutamic_acid_arylamidase_activity.yaml",
   "attaches_to": [],
-  "rationale": "GO:0004177 covers broad aminopeptidase activity at molecular-function scope, and no live GO class provides an exact glutamyl-glutamic-acid-specific arylamidase production phenotype at organism-level scope.",
+  "rationale": "GO:0016805 covers broad dipeptidase activity at molecular-function scope, and no live GO class provides an exact glutamyl-glutamic-acid-specific arylamidase production phenotype at organism-level scope.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

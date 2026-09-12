@@ -47,9 +47,10 @@ Glutamyl glutamic acid arylamidase activity is parallel to the existing
 diagnostic-enzyme physiology records for catalase, oxidase, urease, coagulase,
 gelatinase, caseinase, DNase, lipase, lecithinase, carboxylesterase, the
 phosphatase activity records, leucine, valine, cystine, alanine, arginine,
-phenylalanine, tyrosine, glycine, histidine, serine, prolyl, and pyrrolidonyl
-arylamidase activity, alpha-glucosidase activity, beta-glucosidase activity,
-beta-galactosidase activity, alpha-galactosidase activity,
+phenylalanine, tyrosine, glycine, histidine, serine, and pyrrolidonyl
+arylamidase activity, prolyl aminopeptidase activity, alpha-glucosidase
+activity, beta-glucosidase activity, beta-galactosidase activity,
+alpha-galactosidase activity,
 alpha-mannosidase activity, beta-glucuronidase activity,
 alpha-fucosidase activity, lysine decarboxylase activity, ornithine
 decarboxylase activity, beta-N-acetylhexosaminidase activity, trypsin activity,
@@ -62,8 +63,8 @@ arylamide substrates.
 
 ## External Mappings
 
-No exact external mapping is proposed. `GO:0004177` names the broader
-aminopeptidase molecular function rather than the organism-level glutamyl
+No exact external mapping is proposed. `GO:0016805` names the broader
+dipeptidase molecular function rather than the organism-level glutamyl
 glutamic acid arylamidase production phenotype, so it remains a close
 causal-node grounding lead and not an equivalent TraitRecord xref.
 
