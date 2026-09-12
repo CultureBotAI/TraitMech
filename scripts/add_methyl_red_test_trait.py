@@ -31,6 +31,7 @@ ASM_MRVP = (
 CURATOR = "codex"
 SEED_TIMESTAMP = "2026-09-12T20:14:22Z"
 TIMESTAMP = "2026-09-12T20:15:55Z"
+REVIEW_TIMESTAMP = "2026-09-12T20:35:11Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005013",
@@ -56,6 +57,23 @@ SEED_RECORD = {
 UPDATES = {
     "definition_source": ASM_MRVP,
     "evidence": [
+        {
+            "reference": ASM_MRVP,
+            "snippet": (
+                "Escherichia coli and other members of the low-ratio "
+                "organisms described by Clark and Lubs ferment sugars by the "
+                "mixed acid pathway resulting in a low ratio of CO2 to H2 gas "
+                "produced by fermentation. The mixed acid pathway gives 4 mol "
+                "of acidic products (mainly lactic and acetic acid), 1 mol of "
+                "neutral fermentation product (ethanol), 1 mol of CO2, and 1 "
+                "mol of H2 per mol of glucose fermented (9)."
+            ),
+            "notes": (
+                "The ASM protocol contrasts methyl-red-positive mixed-acid "
+                "fermentation with the lower-acid butanediol fermentation "
+                "route detected by the Voges-Proskauer test."
+            ),
+        },
         {
             "reference": ASM_MRVP,
             "snippet": (
@@ -125,6 +143,18 @@ def build_methyl_red_test() -> dict:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Added parent-level ASM evidence for high-acid mixed fermentation "
+            "after PR 866 review issue 867 noted that the parent reused "
+            "child assay-readout quotes."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 

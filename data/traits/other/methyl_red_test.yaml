@@ -19,8 +19,24 @@ curation_history:
     readout evidence after a repository-wide duplicate review covering ignored and
     hidden files.
   llm_assisted: true
+- timestamp: '2026-09-12T20:35:11Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: Added parent-level ASM evidence for high-acid mixed fermentation after
+    PR 866 review issue 867 noted that the parent reused child assay-readout quotes.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: Escherichia coli and other members of the low-ratio organisms described
+    by Clark and Lubs ferment sugars by the mixed acid pathway resulting in a low
+    ratio of CO2 to H2 gas produced by fermentation. The mixed acid pathway gives
+    4 mol of acidic products (mainly lactic and acetic acid), 1 mol of neutral fermentation
+    product (ethanol), 1 mol of CO2, and 1 mol of H2 per mol of glucose fermented
+    (9).
+  notes: The ASM protocol contrasts methyl-red-positive mixed-acid fermentation
+    with the lower-acid butanediol fermentation route detected by the Voges-Proskauer
+    test.
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
   snippet: When the culture medium turns red after addition of methyl red, because
     of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive

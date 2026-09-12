@@ -89,7 +89,10 @@ find the next new trait:
 - read `reports/metpo_2026_06_12_release_delta.tsv`,
   `reports/metpo_2026_06_12_active_review.tsv`, and
   `docs/METPO_2026_06_12_ACTIVE_REVIEW.md` before accepting a METPO addition
-  that prior release review did not seed
+  that prior release review did not seed; treat their `corpus_record` and
+  disposition columns as a frozen review snapshot, and recheck candidate rows
+  against live `data/traits/**` plus `history/` before deciding they are still
+  absent or unselected
 - skip `DUPLICATE_NO_NEW_PRIMARY` rows unless a fresh ignored-and-hidden search
   and same-family review show that the existing record is not exact
 - reconsider `NO_CORPUS_DEMAND_NO_PRIMARY` rows only when a concrete
