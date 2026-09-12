@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T153550Z-codex-3255c8
+  timestamp: '2026-09-12T15:35:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve v52 METPO proposal block
+  details: Updated the metpo-proposal skill reservation note after adding metpo_traitmech_v52
+    so future Scope-A cohorts start at METPO:1013000 instead of reusing the METPO:1012900
+    block reserved for type IV pilus.
