@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/trypsin_activity.yaml
+  slug: trypsin_activity
+session:
+  id: 2026-09-12T043726Z-codex-ec5852
+  timestamp: '2026-09-12T04:37:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add trypsin activity TraitRecord
+  details: Minted traitmech:000158 for URL/DOI-backed trypsin activity after an ignored-and-hidden
+    duplicate search found no exact live TraitRecord or METPO proposal; added NC-IUBMB EC
+    3.4.21.4 definition evidence, DOI-backed Flexibacterium corallicola API ZYM evidence,
+    a directly supported canonical example, a GO molecular-function xref TODO, and a one-row
+    METPO v35 proposal reserving METPO:1011200.

@@ -22,7 +22,9 @@ paid literature research before its causal graph can be curated. Use
   nodes or `protein_examples`.
 - `history/README.md` for repository-level curation history.
 - `.claude/skills/manage-identifiers/SKILL.md` for METPO-first identifiers and
-  the fallback `traitmech:NNNNNN` workflow.
+  the fallback `traitmech:NNNNNN` allocation workflow.
+- `.claude/skills/metpo-proposal/SKILL.md` before minting a `traitmech:`
+  fallback, so the temporary local ID gets a same-PR upstream proposal.
 - `src/traitmech/schema/traitmech.yaml` for allowed `TraitRecord` fields.
 - `DO_NOT_WORK.md` to avoid touching a protected existing record while checking
   parent or sibling context.
@@ -133,7 +135,11 @@ TraitMech is METPO-first:
    temporary seed root.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
-5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
+5. Add or extend a METPO ROBOT-template proposal for every minted
+   `traitmech:` ID. The same PR that adds the local record must reserve the
+   upstream `METPO:` placeholder, document the round-trip path, and verify the
+   proposal. If a separate upstream METPO issue already exists, reference it,
+   but do not substitute an issue link for a proposal artifact.
 
 Use `parent_traits` only for true broader trait classes. Put true equivalent
 external terms in `xrefs`; do not use `xrefs` for broader, narrower, merely
@@ -259,6 +265,12 @@ disposable. For a curator-minted record, create
 `data/traits/<category>/<slug>.yaml` from a small Python dictionary and write it
 through `write_validated_trait`.
 
+For every curator-minted `traitmech:` record, add the companion METPO proposal
+under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
+`metpo-proposal` skill, reserve the proposed `METPO:` identifier, keep shifted
+or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
+and omit SSSOM mappings when there is no exact external equivalence to assert.
+
 Every manual edit to a new or seeded record must:
 
 - load the existing YAML with `yaml.safe_load`
@@ -312,6 +324,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/audit_schema.py
 .venv/bin/python scripts/audit_writers.py
 .venv/bin/python scripts/audit_proposals.py
+.venv/bin/python scripts/verify_metpo_proposal.py proposals/<cohort>
 .venv/bin/python scripts/verify_metpo_proposal.py --coverage
 .venv/bin/python scripts/audit_causal_graphs.py
 .venv/bin/python scripts/ground_causal_predicates.py
@@ -426,5 +439,5 @@ End with:
 - validation commands that passed
 - PR review outcome, issue numbers filed for review findings, merge result, and
   branch cleanup
-- any `CURATION_TODO` or upstream METPO issue left open
+- any `CURATION_TODO`, METPO proposal, or upstream METPO issue left open
 - whether duplicate and absence searches included ignored and hidden files
