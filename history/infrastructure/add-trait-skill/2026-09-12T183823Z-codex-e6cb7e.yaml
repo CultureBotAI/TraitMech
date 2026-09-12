@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T183823Z-codex-e6cb7e
+  timestamp: '2026-09-12T18:38:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/858
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/854
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Require self-contained evidence snippets
+  details: 'Tightened .claude/skills/add-trait/SKILL.md after PR #854 review issue #858 found
+    a contiguous Alves et al. quote truncated before the clause''s head noun. The add-trait
+    workflow now requires shortened evidence snippets to remain grammatically self-contained
+    and source-faithful, including coordinated complements when an early stop would change
+    the claim''s scope.'

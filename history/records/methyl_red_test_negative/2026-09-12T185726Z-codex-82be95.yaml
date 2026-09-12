@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test_negative.yaml
+  slug: methyl_red_test_negative
+session:
+  id: 2026-09-12T185726Z-codex-82be95
+  timestamp: '2026-09-12T18:57:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - canonical_examples
+  - curation_notes
+  summary: Add Hansen methyl red negative example
+  details: 'Resolved local adversarial review issue #861 by adding Klebsiella pneumoniae as
+    a Hansen-backed canonical example for methyl red test negative using Table 2 positive-fraction
+    evidence, and narrowed the Hansen method-dependence note so it cautions against treating
+    the example as a species-wide invariant rather than blocking canonical_examples entirely.'
