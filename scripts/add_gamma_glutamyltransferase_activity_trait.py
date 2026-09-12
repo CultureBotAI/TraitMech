@@ -60,11 +60,14 @@ RECORD = {
         {
             "reference": IUBMB,
             "snippet": (
-                "The enzyme then reacts with either a water molecule or a "
-                "different acceptor substrate (usually an <small>L</small>-amino "
-                "acid or a dipeptide) to form <small>L</small>-glutamate or a "
-                "product containing a new &gamma;-glutamyl isopeptide bond, "
-                "respectively. The enzyme acts on glutathione, "
+                "The enzyme binds its substrate by forming an initial "
+                "&gamma;-glutamyl-enzyme intermediate, releasing the "
+                "<small>L</small>-cysteinylglycine part of the molecule. The "
+                "enzyme then reacts with either a water molecule or a different "
+                "acceptor substrate (usually an <small>L</small>-amino acid or "
+                "a dipeptide) to form <small>L</small>-glutamate or a product "
+                "containing a new &gamma;-glutamyl isopeptide bond, respectively. "
+                "The enzyme acts on glutathione, "
                 "glutathione-<i>S</i>-conjugates, and, at a lower level, on "
                 "other substrates with an N-terminal <small>L</small>-&gamma;"
                 "-glutamyl residue."
