@@ -630,6 +630,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "trypsin-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trypsin activity",
+  "source_id": "traitmech:000158",
+  "source_file": "trypsin_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004295 trypsin activity is obsolete, and its replacement GO:0004252 denotes broader serine-type endopeptidase molecular function rather than the organism-level trypsin production phenotype. GO:0004252 is appropriate as a causal-node grounding for generic serine endopeptidase activity, not as an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/trypsin_activity.html#trypsin-activity-xref-gap"
+ },
+ {
   "discussion_id": "valine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for valine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -648,9 +665,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 36,
+ "total_discussions": 37,
  "total_knowledge_gaps": 8,
- "total_source_entries": 36,
+ "total_source_entries": 37,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
