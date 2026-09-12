@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/voges_proskauer_test_positive.yaml
+  slug: voges_proskauer_test_positive
+session:
+  id: 2026-09-12T211601Z-codex-e7dee3
+  timestamp: '2026-09-12T21:16:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve Voges-Proskauer test positive assay parent
+  details: Reparented METPO:1005017 Voges-Proskauer test positive below the newly curated
+    METPO:1005016 Voges-Proskauer test assay parent and marked the temporary positive assay-parent
+    CURATION_TODO resolved.
