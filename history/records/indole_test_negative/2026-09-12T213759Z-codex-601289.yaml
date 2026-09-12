@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T213759Z-codex-601289
+  timestamp: '2026-09-12T21:37:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - curation_notes
+  summary: Reparent indole test negative
+  details: Reparented METPO:1005012 below the newly represented METPO:1005010 indole test
+    assay parent and resolved the temporary assay-parent discussion.

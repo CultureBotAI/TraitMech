@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test.yaml
+  slug: indole_test
+session:
+  id: 2026-09-12T213759Z-codex-ab5873
+  timestamp: '2026-09-12T21:37:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add indole test assay parent
+  details: Added METPO:1005010 as the seeded indole test assay parent with ASM stable-URL
+    evidence for the tryptophan-to-indole assay definition.

@@ -1,0 +1,33 @@
+identifier: METPO:1005010
+label: indole test
+definition: An assay that tests the ability of an organism to produce indole from
+  tryptophan.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+curation_history:
+- timestamp: '2026-09-12T21:35:36Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T21:38:12Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO indole-test assay parent with stable-URL tryptophan-to-indole
+    assay evidence after a repository-wide duplicate review covering ignored and hidden
+    files.
+  llm_assisted: true
+definition_source: https://asm.org/protocols/indole-test-protocol
+evidence:
+- reference: https://asm.org/protocols/indole-test-protocol
+  snippet: The indole test screens for the ability of an organism to degrade the amino
+    acid tryptophan and produce indole.
+  notes: The ASM protocol defines the indole test as an assay for organism-level tryptophan
+    degradation to indole.
+- reference: https://asm.org/protocols/indole-test-protocol
+  snippet: The chief requirement for culturing an organism prior to performing the
+    indole test is that the medium contains a sufficient quantity of tryptophan
+  notes: The protocol explains that the indole-test medium needs tryptophan so production
+    of indole can report tryptophan degradation.
