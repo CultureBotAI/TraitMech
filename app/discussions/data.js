@@ -834,6 +834,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "serine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for serine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "serine arylamidase activity",
+  "source_id": "traitmech:000172",
+  "source_file": "serine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 covers broad aminopeptidase activity at molecular-function scope, and no live GO class provides an exact residue-specific serine arylamidase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/serine_arylamidase_activity.html#serine-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -886,9 +903,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 50,
+ "total_discussions": 51,
  "total_knowledge_gaps": 8,
- "total_source_entries": 50,
+ "total_source_entries": 51,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
