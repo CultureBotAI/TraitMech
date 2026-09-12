@@ -10,8 +10,8 @@
 Physiology follow-up left diagnostic enzyme activities as reusable microbial
 physiology candidates not yet represented as standalone TraitMech records. METPO
 already carries catalase, oxidase, urease, and coagulase activity;
-carboxylesterase activity remains absent from the local METPO snapshot and from
-the live TraitMech physiology tree.
+carboxylesterase activity remains absent from the local METPO snapshot and was
+still absent from TraitMech before this cohort minted a local fallback class.
 
 This cohort lifts one local class:
 
