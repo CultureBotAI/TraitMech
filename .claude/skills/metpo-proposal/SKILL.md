@@ -141,8 +141,8 @@ CommunityMech v1 cohort, which occupies `1007100`–`1007220` and
 `CausalNodeTypeEnum` lift rows. Later Scope-A cohorts use a fresh 100-wide block
 per cohort so single-trait fallback proposals are append-only and easy to scan.
 Inspect the latest `proposals/metpo_traitmech_v<N>/proposal.md`, then reserve
-the next free hundred block; as of `metpo_traitmech_v36`, `METPO:1011300` is
-reserved, so the next one-row Scope-A cohort starts at `METPO:1011400`.
+the next free hundred block; as of `metpo_traitmech_v38`, `METPO:1011500` is
+reserved, so the next one-row Scope-A cohort starts at `METPO:1011600`.
 **Never reuse a block from a merged cohort, even if rows in the old block were
 rejected upstream.**
 
@@ -206,12 +206,12 @@ curated ontology, not a schema dump.
 
 #### Scope A (synthetic traits)
 
-- **Parent**: read the original `traitmech:` record's `parent_classes:` slot;
+- **Parent**: read the original `traitmech:` record's `parent_traits:` slot;
   use the closest existing METPO class as the proposal's `SC %` parent.
   Never `SC METPO:1000000` directly for a Scope-A row unless the trait is
   genuinely top-level.
 - **Label**: copy from the record's `label:` slot verbatim.
-- **Definition**: rewrite the record's `description:` in Aristotelian form
+- **Definition**: rewrite the record's `definition:` in Aristotelian form
   (`<genus>: <differentia>`). The original prose usually needs tightening.
 - **Synonyms**: copy true `EXACT_SYNONYM` entries into the
   `hasExactSynonym` column. If a cohort needs related labels such as raw

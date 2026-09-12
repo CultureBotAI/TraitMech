@@ -335,6 +335,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/audit_writers.py
 .venv/bin/python scripts/audit_proposals.py
 .venv/bin/python scripts/verify_metpo_proposal.py proposals/<cohort>
+.venv/bin/python scripts/robot_validate_proposal.py proposals/<cohort>
 .venv/bin/python scripts/verify_metpo_proposal.py --coverage
 .venv/bin/python scripts/audit_causal_graphs.py
 .venv/bin/python scripts/ground_causal_predicates.py
