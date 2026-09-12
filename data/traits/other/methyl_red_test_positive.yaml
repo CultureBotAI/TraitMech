@@ -1,0 +1,63 @@
+identifier: METPO:1005014
+label: methyl red test positive
+definition: A phenotype in which an organism tests positive in the methyl red test,
+  indicating mixed acid fermentation.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: methyl red test
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-12T19:14:16Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T19:16:03Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO methyl-red-test-positive phenotype with stable-URL and
+    DOI-backed methyl-red-test evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: When the culture medium turns red after addition of methyl red, because
+    of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive
+    result for the MR test (Fig.1A).
+  notes: The ASM protocol PDF defines a positive methyl-red-test readout as red culture
+    medium after methyl red is added, reflecting glucose fermentation that acidifies
+    the medium to pH 4.4 or lower.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: 'In the ASM Manual of Clinical Microbiology, only 6 of the 18 biochemical
+    tests used in the present investigation are listed for Klebsiella species: indole,
+    MR, VP, LDC, ODC, and malonate'
+  notes: Hansen et al. evaluated methyl red as a conventional Klebsiella biochemical
+    test; their Table 3 reports K. ornithinolytica methyl-red result percentages across
+    CPHL, NRL, and SSI.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: Methyl red 93.5 100.0 100.0 100.0 100.0 100.0 0.0 0.0 10.0 36.7m 46.7 90.0
+  notes: Hansen et al. Table 3 reports the Methyl red row as 100.0% positive for K.
+    ornithinolytica in all three reference laboratories, directly supporting the canonical
+    example.
+canonical_examples:
+- taxon_id: NCBITaxon:54291
+  taxon_label: Klebsiella ornithinolytica
+  note: Hansen et al. Table 3 reported 100.0% methyl-red-positive results for K. ornithinolytica
+    across the CPHL, NRL, and SSI reference laboratories.
+  reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+discussions:
+- discussion_id: methyl-red-test-positive-assay-parent-gap
+  prompt: Resolve a non-assay parent for positive methyl-red-test phenotypes before
+    narrowing parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: METPO:1005013 is the seeded superclass of METPO:1005014, but METPO:1005013
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-12'
