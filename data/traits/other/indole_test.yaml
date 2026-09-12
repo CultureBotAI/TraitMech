@@ -23,8 +23,7 @@ curation_history:
   curator: codex
   action: CURATION_REVIEW_REVISION
   changes: 'Preserved the ASM source-local tryptophan citation marker after Claude
-    Code Review issue #874 so the second evidence snippet is visibly a complete
-    sentence.'
+    Code Review issue #874 so the second evidence snippet is visibly a complete sentence.'
   llm_assisted: true
 definition_source: https://asm.org/protocols/indole-test-protocol
 evidence:
@@ -35,7 +34,6 @@ evidence:
     degradation to indole.
 - reference: https://asm.org/protocols/indole-test-protocol
   snippet: The chief requirement for culturing an organism prior to performing the
-    indole test is that the medium contains a sufficient quantity of tryptophan
-    (5).
+    indole test is that the medium contains a sufficient quantity of tryptophan (5).
   notes: The protocol explains that the indole-test medium needs tryptophan so production
     of indole can report tryptophan degradation.
