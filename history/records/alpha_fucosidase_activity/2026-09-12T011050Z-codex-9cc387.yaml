@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_fucosidase_activity.yaml
+  slug: alpha_fucosidase_activity
+session:
+  id: 2026-09-12T011050Z-codex-9cc387
+  timestamp: '2026-09-12T01:10:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - grounding
+  summary: Add alpha-fucosidase activity
+  details: Minted traitmech:000152 for URL/DOI-backed alpha-fucosidase activity after an ignored-and-hidden
+    duplicate search, citing the NC-IUBMB EC 3.2.1.51 entry for alpha-L-fucosidase reaction
+    scope, Tanner 1985 for a direct Tannerella forsythia canonical example through the Bacteroides
+    forsythus basonym, and a v29 METPO proposal row reserving METPO:1010600 for upstream minting.
