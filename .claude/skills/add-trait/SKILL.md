@@ -423,9 +423,11 @@ loop used for other hand-curated trait changes:
    curation defects.
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
-6. Merge the PR only after CI and reviews are clean, delete the remote feature
-   branch, fetch with pruning, and verify no local or remote branch for that
-   trait remains.
+6. Merge the PR only after CI and reviews are clean. Use the native merge-queue
+   path in `docs/MERGE_QUEUE.md`: enqueue without `--delete-branch`, wait until
+   `gh pr view <n> --json state,mergedAt,mergeCommit` reports `MERGED`, then
+   delete the remote feature branch, fetch with pruning, and verify no local or
+   remote branch for that trait remains.
 
 ## Report
 

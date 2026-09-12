@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T050931Z-codex-0ed3e3
+  timestamp: '2026-09-12T05:09:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Clarify add-trait merge-queue cleanup
+  details: Updated the add-trait review loop, the curation playbook workflow sketch, and
+    the next-tasks handoff sequence to route merges through the native merge queue without
+    gh's delete-branch flag, wait for the pull request to reach MERGED, and delete plus
+    prune feature branches only after the queued merge lands.
