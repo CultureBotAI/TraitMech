@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T103051Z-codex-74e3df
+  timestamp: '2026-09-12T10:30:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Correct METPO proposal Copilot request account
+  details: Corrected the METPO proposal PR workflow snippet to request the requestable Copilot
+    account instead of the submitted-review author slug.

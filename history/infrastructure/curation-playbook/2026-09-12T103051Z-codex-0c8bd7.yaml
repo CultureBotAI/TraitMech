@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: docs/CURATION_PLAYBOOK.md
+  slug: curation-playbook
+session:
+  id: 2026-09-12T103051Z-codex-0c8bd7
+  timestamp: '2026-09-12T10:30:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Correct curation playbook Copilot request account
+  details: Corrected the shared curation PR workflow snippet to request the requestable Copilot
+    account instead of the submitted-review author slug.

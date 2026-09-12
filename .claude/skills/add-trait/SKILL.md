@@ -219,6 +219,11 @@ organismal phenotype; keep it out of TraitRecord `EXACT_SYNONYM` and proposal
 `exact_synonyms` unless a source uses that bare string as a phenotype label, and
 store useful shifted labels as `RELATED_SYNONYM` or `related_synonyms` instead.
 
+Match the TraitRecord and METPO proposal label to the qualifiers carried by the
+evidence. If the authoritative source is cofactor-, substrate-, endpoint-, or
+pathway-specific, keep the qualifier in both labels and definitions unless
+separate evidence supports the broader unqualified phenotype.
+
 An evidence snippet must carry the specific definition claim it is attached to.
 Do not use article titles, section headings, keyword fragments, or generic noun
 phrases that name the topic but do not support the asserted substrate, endpoint,
@@ -358,6 +363,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/render_trait_pages.py
 .venv/bin/python scripts/trait_priority.py --dashboard --top 80
 git diff --check
+git diff --cached --check
 .venv/bin/ruff check src scripts tests
 .venv/bin/python -m pytest tests/test_readme_artifacts.py tests/test_trait_priority.py -v --tb=short
 .venv/bin/python -m pytest -q
@@ -428,6 +434,9 @@ loop used for other hand-curated trait changes:
    gh workflow run pr-shepherd.yml --repo CultureBotAI/TraitMech \
      -f pr_number=<PR> -f dry_run=false -f max_prs=1
    ```
+
+   Request review from `Copilot`; the submitted review may appear from
+   `copilot-pull-request-reviewer`.
 
    The local review must try to falsify the trait identity, duplicate search,
    parent choice, xrefs, evidence snippets, canonical examples, any METPO

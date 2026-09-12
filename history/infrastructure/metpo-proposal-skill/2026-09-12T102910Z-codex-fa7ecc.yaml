@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T102910Z-codex-fa7ecc
+  timestamp: '2026-09-12T10:29:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  summary: Fix METPO proposal Copilot request snippet
+  details: Updated the METPO proposal PR workflow snippet to request GitHub Copilot review
+    with the literal copilot-pull-request-reviewer slug instead of the Copilot UI label.

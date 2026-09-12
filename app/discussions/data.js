@@ -681,6 +681,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
  },
  {
+  "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for NAD-dependent alcohol dehydrogenase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "NAD-dependent alcohol dehydrogenase activity",
+  "source_id": "traitmech:000165",
+  "source_file": "nad_dependent_alcohol_dehydrogenase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004022 and EC 1.1.1.1 denote the NAD-dependent molecular function rather than the organism-level NAD-dependent alcohol dehydrogenase production phenotype; the GO term remains an appropriate causal-node grounding lead but not an equivalent TraitRecord xref.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-xref-gap"
+ },
+ {
   "discussion_id": "ornithine-decarboxylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for ornithine decarboxylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -767,9 +784,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 43,
+ "total_discussions": 44,
  "total_knowledge_gaps": 8,
- "total_source_entries": 43,
+ "total_source_entries": 44,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T104401Z-codex-f4b833
+  timestamp: '2026-09-12T10:44:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/834
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/833
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - ontology_mapping
+  summary: Require qualifier-preserving trait labels
+  details: Tightened the add-trait evidence guidance after PR 833 review found
+    that a cofactor-agnostic alcohol dehydrogenase activity label was broader
+    than the NAD-dependent EC 1.1.1.1 evidence. The skill now requires both the
+    TraitRecord and same-PR METPO proposal labels to preserve cofactor,
+    substrate, endpoint, and pathway qualifiers unless separate evidence
+    supports the broader unqualified phenotype.
