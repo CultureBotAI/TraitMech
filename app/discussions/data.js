@@ -630,6 +630,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/gelatinase_activity.html#gelatinase-activity-xref-gap"
  },
  {
+  "discussion_id": "glutamyl-glutamic-acid-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for glutamyl glutamic acid arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "glutamyl glutamic acid arylamidase activity",
+  "source_id": "traitmech:000173",
+  "source_file": "glutamyl_glutamic_acid_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0004177 covers broad aminopeptidase activity at molecular-function scope, and no live GO class provides an exact glutamyl-glutamic-acid-specific arylamidase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.html#glutamyl-glutamic-acid-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "glycine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for glycine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -903,9 +920,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 51,
+ "total_discussions": 52,
  "total_knowledge_gaps": 8,
- "total_source_entries": 51,
+ "total_source_entries": 52,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
