@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T114011Z-codex-b1e5d9
+  timestamp: '2026-09-12T11:40:11Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve v44 METPO proposal block
+  details: Updated the metpo-proposal skill reservation note after adding metpo_traitmech_v44
+    so future Scope-A cohorts start at METPO:1012200 instead of reusing the METPO:1012100
+    block reserved for arginine arylamidase activity.
