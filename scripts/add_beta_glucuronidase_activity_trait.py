@@ -36,7 +36,7 @@ RECORD = {
         {
             "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html",
             "snippet": (
-                "Reaction: a β-D-glucuronoside + H_{2}O = D-glucuronate + "
+                "Reaction: a β-D-glucuronoside + H2O = D-glucuronate + "
                 "an alcohol"
             ),
             "notes": (

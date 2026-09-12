@@ -11,7 +11,7 @@ parent_traits:
 - METPO:1000059
 evidence:
 - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html
-  snippet: 'Reaction: a β-D-glucuronoside + H_{2}O = D-glucuronate + an alcohol'
+  snippet: 'Reaction: a β-D-glucuronoside + H2O = D-glucuronate + an alcohol'
   notes: The NC-IUBMB EC 3.2.1.31 entry defines beta-glucuronidase by its accepted
     name and hydrolytic reaction, grounding the enzyme activity named by the organism-level
     phenotype.
@@ -45,4 +45,11 @@ curation_history:
   changes: Minted beta-glucuronidase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact beta-glucuronidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-09-12T00:55:15Z'
+  curator: codex
+  action: FIX_EVIDENCE_SNIPPET
+  changes: Corrected the IUBMB EC 3.2.1.31 water token from HTML-derived H_{2}O to
+    source-visible H2O after Claude Code Review flagged the snippet as non-verbatim
+    in https://github.com/CultureBotAI/TraitMech/issues/807.
   llm_assisted: true
