@@ -46,6 +46,7 @@ on:
       # to verify it (#566).
       - "pyproject.toml"
       - "uv.lock"
+      - ".python-version"
   workflow_dispatch:
 
 permissions:
@@ -61,6 +62,6 @@ jobs:
     # gate with no commit in this repository to show for it.
     uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@5de472d13e20f02ac494878939ba1cae26468a07
     with:
-      python-version: "3.12"
+      python-version: "3.13"
       # No prepare-recipe: the mappings this gate reads are committed, so
       # nothing has to be built first.

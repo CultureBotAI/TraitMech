@@ -7,8 +7,9 @@ authors = [
 ]
 readme = "README.md"
 license = {text = "CC0-1.0"}
-# Support is the set exercised by the CI matrix and advertised by classifiers.
-# Raise this bound together with both; untested future versions are not implied (#570).
+# Package compatibility remains bounded to the advertised versions (#570).
+# Development and CI use the fleet Python minor in .python-version; compatibility
+# with older minors does not add duplicate CI jobs.
 requires-python = ">=3.10,<3.14"
 keywords = [
     "microbiology",

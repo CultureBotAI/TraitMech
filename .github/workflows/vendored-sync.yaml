@@ -54,6 +54,9 @@ jobs:
       # pin, repository-identity, and manifest precondition failures use exit 2
       # and must fail immediately. The launcher and checker are themselves
       # governed by claw, so this workflow carries no independent file list.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
       - name: Verify vendored files match canonical claw
         run: |
           set -uo pipefail
