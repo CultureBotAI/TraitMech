@@ -41,11 +41,15 @@ RECORD = {
     "evidence": [
         {
             "reference": IUBMB,
-            "snippet": "Reaction: Preferential cleavage: Arg, Lys",
+            "snippet": (
+                '<b>Reaction:</b> Preferential cleavage: Arg<img '
+                'src="../../../EZgif/FISS.GIF" align=top>, Lys<img '
+                'src="../../../EZgif/FISS.GIF" align=top>'
+            ),
             "notes": (
-                "The NC-IUBMB EC 3.4.21.4 entry accepts the name trypsin "
-                "and marks the cleavage sites after arginine and lysine "
-                "residues in its reaction line."
+                "The NC-IUBMB EC 3.4.21.4 entry accepts the name trypsin and "
+                "its reaction line places the scissile-bond FISS.GIF image "
+                "immediately after Arg and Lys."
             ),
         },
         {

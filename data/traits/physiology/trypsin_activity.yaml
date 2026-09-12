@@ -15,9 +15,10 @@ synonyms:
   source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html
 evidence:
 - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html
-  snippet: 'Reaction: Preferential cleavage: Arg, Lys'
-  notes: The NC-IUBMB EC 3.4.21.4 entry accepts the name trypsin and marks the cleavage
-    sites after arginine and lysine residues in its reaction line.
+  snippet: '<b>Reaction:</b> Preferential cleavage: Arg<img src="../../../EZgif/FISS.GIF"
+    align=top>, Lys<img src="../../../EZgif/FISS.GIF" align=top>'
+  notes: The NC-IUBMB EC 3.4.21.4 entry accepts the name trypsin and its reaction
+    line places the scissile-bond FISS.GIF image immediately after Arg and Lys.
 - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html
   snippet: Isolated as multiple cationic and anionic trypsins [5] from the pancreas
     of many vertebrates and from lower species including crayfish, insects (cocoonase)
@@ -55,4 +56,10 @@ curation_history:
   changes: Minted trypsin activity as a URL/DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact trypsin
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-09-12T05:47:58Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SNIPPET
+  changes: Corrected the IUBMB reaction-line snippet for trypsin activity so it preserves
+    the scissile-bond image tags from the source HTML (#819).
   llm_assisted: true

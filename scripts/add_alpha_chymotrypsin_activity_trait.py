@@ -45,11 +45,17 @@ RECORD = {
     "evidence": [
         {
             "reference": IUBMB,
-            "snippet": "Reaction: Preferential cleavage: Tyr, Trp, Phe, Leu",
+            "snippet": (
+                '<b>Reaction:</b> Preferential cleavage: Tyr<img '
+                'src="../../../EZgif/FISS.GIF" align=top>, Trp<img '
+                'src="../../../EZgif/FISS.GIF" align=top>, Phe<img '
+                'src="../../../EZgif/FISS.GIF" align=top>, Leu<img '
+                'src="../../../EZgif/FISS.GIF" align=top>'
+            ),
             "notes": (
                 "The NC-IUBMB EC 3.4.21.1 entry accepts the name "
-                "chymotrypsin and marks tyrosine, tryptophan, phenylalanine, "
-                "and leucine as preferred cleavage sites in its reaction line."
+                "chymotrypsin and its reaction line places the scissile-bond "
+                "FISS.GIF image immediately after Tyr, Trp, Phe, and Leu."
             ),
         },
         {

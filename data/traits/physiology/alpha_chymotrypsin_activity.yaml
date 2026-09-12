@@ -15,10 +15,12 @@ synonyms:
   source: DOI:10.1099/ijsem.0.006017
 evidence:
 - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html
-  snippet: 'Reaction: Preferential cleavage: Tyr, Trp, Phe, Leu'
-  notes: The NC-IUBMB EC 3.4.21.1 entry accepts the name chymotrypsin and marks tyrosine,
-    tryptophan, phenylalanine, and leucine as preferred cleavage sites in its reaction
-    line.
+  snippet: '<b>Reaction:</b> Preferential cleavage: Tyr<img src="../../../EZgif/FISS.GIF"
+    align=top>, Trp<img src="../../../EZgif/FISS.GIF" align=top>, Phe<img src="../../../EZgif/FISS.GIF"
+    align=top>, Leu<img src="../../../EZgif/FISS.GIF" align=top>'
+  notes: The NC-IUBMB EC 3.4.21.1 entry accepts the name chymotrypsin and its reaction
+    line places the scissile-bond FISS.GIF image immediately after Tyr, Trp, Phe,
+    and Leu.
 - reference: DOI:10.1099/ijsem.0.006017
   snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
     arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
@@ -55,4 +57,10 @@ curation_history:
   changes: Minted alpha-chymotrypsin activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alpha-chymotrypsin activity class yet.
+  llm_assisted: true
+- timestamp: '2026-09-12T05:47:58Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SNIPPET
+  changes: Corrected the IUBMB reaction-line snippet for alpha-chymotrypsin activity
+    so it preserves the scissile-bond image tags from the source HTML (#819).
   llm_assisted: true
