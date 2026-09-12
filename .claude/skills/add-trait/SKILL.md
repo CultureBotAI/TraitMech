@@ -416,13 +416,24 @@ loop used for other hand-curated trait changes:
    history record is committed.
 2. Push a trait-scoped branch and open a pull request with the new identifier,
    label, sources, generated artifacts, and validation commands in the body.
-3. Request Copilot review, dispatch both manual adversarial workflows, and
-   perform a local adversarial review of the PR diff:
-   `.github/workflows/claude-code-review.yml` and
-   `.github/workflows/pr-shepherd.yml`, using the PR number as input.
+3. Request Copilot review, dispatch the manual Claude Code Review and a
+   targeted PR Shepherd assessment, then perform a local adversarial review of
+   the PR diff:
+
+   ```bash
+   gh api repos/CultureBotAI/TraitMech/pulls/<PR>/requested_reviewers \
+     -X POST -F 'reviewers[]=Copilot'
+   gh workflow run claude-code-review.yml --repo CultureBotAI/TraitMech \
+     -f pr_number=<PR>
+   gh workflow run pr-shepherd.yml --repo CultureBotAI/TraitMech \
+     -f pr_number=<PR> -f dry_run=false -f max_prs=1
+   ```
+
    The local review must try to falsify the trait identity, duplicate search,
    parent choice, xrefs, evidence snippets, canonical examples, any METPO
-   proposal, and regenerated artifacts before the PR merges.
+   proposal, and regenerated artifacts before the PR merges. A successful PR
+   Shepherd run can legitimately leave no comment on a fresh, unstuck PR; record
+   that successful outcome instead of treating silence as a failed review.
 4. Inspect every local finding, external review, PR comment, and workflow
    outcome. For each actionable curation defect, file a GitHub issue, fix the
    defect on the same branch, and rerun the relevant local validation before
@@ -430,7 +441,7 @@ loop used for other hand-curated trait changes:
    Quota and rate-limit failures are not reviews: fetch the failed workflow logs
    or PR review/comment that reported quota exhaustion, confirm no agent read
    the diff, log the affected PR plus each failed workflow run or failed review
-   request on the standing quota issue, and file GitHub issues only for actual
+   request on standing issue #742, and file GitHub issues only for actual
    curation defects.
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
