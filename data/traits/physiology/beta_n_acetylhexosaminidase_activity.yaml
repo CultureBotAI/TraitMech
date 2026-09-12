@@ -1,0 +1,62 @@
+identifier: traitmech:000157
+label: beta-N-acetylhexosaminidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  beta-N-acetylhexosaminidase enzymes that hydrolyze terminal, non-reducing N-acetyl-D-hexosamine
+  residues in N-acetyl-beta-D-hexosaminides.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: beta-N-acetyl-D-hexosaminide N-acetylhexosaminohydrolase activity
+  synonym_type: EXACT_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+- synonym_text: N-acetylhexosaminidase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1021/jf020965x
+- synonym_text: beta-N-acetylglucosaminidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+- synonym_text: N-acetyl-beta-glucosaminidase
+  synonym_type: RELATED_SYNONYM
+  source: TraitMech#453
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+  snippet: 'Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues
+    in N-acetyl-β-D-hexosaminides'
+  notes: The NC-IUBMB EC 3.2.1.52 entry defines beta-N-acetylhexosaminidase by its
+    accepted reaction, grounding the glycosidase activity named by the organism-level
+    phenotype.
+- reference: DOI:10.1021/jf020965x
+  snippet: Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly
+    N-acetylhexosaminidase
+  notes: Kurakake et al. reported production of N-acetylhexosaminidase by Serratia
+    marcescens YS-1, supporting this as a bacterial beta-N-acetylhexosaminidase activity
+    phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  note: Kurakake et al. reported Serratia marcescens YS-1 as mainly producing N-acetylhexosaminidase.
+  reference: DOI:10.1021/jf020965x
+discussions:
+- discussion_id: beta-n-acetylhexosaminidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for beta-N-acetylhexosaminidase
+    activity before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004563 denotes beta-N-acetylhexosaminidase molecular function rather
+    than the organism-level beta-N-acetylhexosaminidase production phenotype, so it
+    is appropriate as a causal-node grounding rather than an equivalent TraitRecord
+    xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T04:12:07Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted beta-N-acetylhexosaminidase activity as a URL/DOI-backed TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; METPO
+    has no exact beta-N-acetylhexosaminidase activity class yet.
+  llm_assisted: true
