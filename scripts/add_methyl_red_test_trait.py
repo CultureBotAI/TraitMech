@@ -33,6 +33,7 @@ SEED_TIMESTAMP = "2026-09-12T20:14:22Z"
 TIMESTAMP = "2026-09-12T20:15:55Z"
 REVIEW_TIMESTAMP = "2026-09-12T20:35:11Z"
 DISCUSSION_REVIEW_TIMESTAMP = "2026-09-12T20:44:24Z"
+FINAL_REVIEW_TIMESTAMP = "2026-09-12T21:00:37Z"
 
 SEED_RECORD = {
     "identifier": "METPO:1005013",
@@ -67,12 +68,21 @@ UPDATES = {
                 "produced by fermentation. The mixed acid pathway gives 4 mol "
                 "of acidic products (mainly lactic and acetic acid), 1 mol of "
                 "neutral fermentation product (ethanol), 1 mol of CO2, and 1 "
-                "mol of H2 per mol of glucose fermented (9)."
+                "mol of H2 per mol of glucose fermented (9). The large "
+                "quantity of acids produced causes a significant decrease in "
+                "the pH of the culture medium. In contrast, Enterobacter "
+                "aerogenes and other members of the high-ratio organisms "
+                "(those that produce a high ratio of CO2 to H2 from the "
+                "fermentation of glucose) ferment sugars via the butanediol "
+                "fermentation pathway, producing only 1 mol of acid per mol "
+                "of glucose. This pathway results in a lower degree of "
+                "acidification of the culture medium."
             ),
             "notes": (
-                "The ASM protocol contrasts methyl-red-positive mixed-acid "
-                "fermentation with the lower-acid butanediol fermentation "
-                "route detected by the Voges-Proskauer test."
+                "The ASM protocol contrasts mixed-acid fermentation's 4 mol "
+                "acidic products per mol glucose with the butanediol "
+                "pathway's 1 mol acid per mol glucose and lower medium "
+                "acidification."
             ),
         },
         {
@@ -156,6 +166,18 @@ def build_methyl_red_test() -> dict:
         ),
         llm_assisted=True,
         timestamp=REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Expanded the ASM mixed-acid evidence quote through its "
+            "butanediol contrast and narrowed its note after PR 866 review "
+            "issue 871."
+        ),
+        llm_assisted=True,
+        timestamp=FINAL_REVIEW_TIMESTAMP,
     )
     return record
 

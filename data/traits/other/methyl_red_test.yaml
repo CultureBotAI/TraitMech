@@ -25,6 +25,12 @@ curation_history:
   changes: Added parent-level ASM evidence for high-acid mixed fermentation after
     PR 866 review issue 867 noted that the parent reused child assay-readout quotes.
   llm_assisted: true
+- timestamp: '2026-09-12T21:00:37Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: Expanded the ASM mixed-acid evidence quote through its butanediol contrast
+    and narrowed its note after PR 866 review issue 871.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -33,9 +39,15 @@ evidence:
     ratio of CO2 to H2 gas produced by fermentation. The mixed acid pathway gives
     4 mol of acidic products (mainly lactic and acetic acid), 1 mol of neutral fermentation
     product (ethanol), 1 mol of CO2, and 1 mol of H2 per mol of glucose fermented
-    (9).
-  notes: The ASM protocol contrasts methyl-red-positive mixed-acid fermentation with
-    the lower-acid butanediol fermentation route detected by the Voges-Proskauer test.
+    (9). The large quantity of acids produced causes a significant decrease in the
+    pH of the culture medium. In contrast, Enterobacter aerogenes and other members
+    of the high-ratio organisms (those that produce a high ratio of CO2 to H2 from
+    the fermentation of glucose) ferment sugars via the butanediol fermentation pathway,
+    producing only 1 mol of acid per mol of glucose. This pathway results in a lower
+    degree of acidification of the culture medium.
+  notes: The ASM protocol contrasts mixed-acid fermentation's 4 mol acidic products
+    per mol glucose with the butanediol pathway's 1 mol acid per mol glucose and lower
+    medium acidification.
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
   snippet: When the culture medium turns red after addition of methyl red, because
     of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive
