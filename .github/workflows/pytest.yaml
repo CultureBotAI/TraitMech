@@ -2,26 +2,10 @@
 name: pytest
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths:
-      - "scripts/**"
-      - "src/traitmech/**"
-      - "tests/**"
-      - "pyproject.toml"
-      - "uv.lock"
-      # Workflow-shape tests inspect every sibling workflow. A workflow-only
-      # migration must therefore run pytest before its expected-set change can
-      # acknowledge the new shape (#586).
-      - ".github/workflows/**"
-      # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
-      # research/traits/ directly, so an artifact-only PR has to run it (#250).
-      - "research/**"
-      # test_write_validated_round_trip.py::test_the_whole_corpus_round_trips
-      # reads data/traits/ directly, so a curation-only PR has to run it too.
-      # Omitting this let 13 records drift off the round-trip invariant across
-      # #544-#552 without a single red check (#554) — the same
-      # filter-narrower-than-the-job defect as #184/#200/#250/#252.
-      - "data/traits/**"
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
     paths:
@@ -38,6 +22,13 @@ on:
       # As above: the corpus round-trip test reads data/traits/ (#554).
       - "data/traits/**"
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   pytest:
