@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	exact_synonyms	xrefs	subset	priority	observations	traits_addressed	related_synonyms
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset				A oboInOwl:hasRelatedSynonym SPLIT=|
+METPO:1013100	specialist	A phenotype describing an organism with a narrow ecological niche, restricted to a limited range of environments or resources.	TraitMech:data/traits/other/specialist.yaml	METPO:1000059			metpo_traitmech_2026_09	HIGH	Complement to the accepted METPO:1005040 generalist niche-breadth phenotype; absent from live METPO and TraitMech after a specialist duplicate review covering ignored and hidden files.	traitmech:000177	niche specialist

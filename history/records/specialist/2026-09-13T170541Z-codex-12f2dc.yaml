@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/specialist.yaml
+  slug: specialist
+session:
+  id: 2026-09-13T170541Z-codex-12f2dc
+  timestamp: '2026-09-13T17:05:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - metpo_proposal
+  summary: Add specialist niche-breadth phenotype
+  details: Minted traitmech:000177 for the specialist narrow-niche phenotype because the pinned
+    METPO snapshot has no exact live class. Added DOI-backed evidence from Bell and Bell 2021
+    plus von Meijenfeldt et al. 2023, reserved METPO:1013100 in proposals/metpo_traitmech_v54,
+    and kept the first record definition-only while the causal graph remains future work.
