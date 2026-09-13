@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-12T130526Z-codex-ab1373
+  timestamp: '2026-09-12T13:05:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve v47 METPO proposal block
+  details: Updated the metpo-proposal skill reservation note after adding metpo_traitmech_v47
+    so future Scope-A cohorts start at METPO:1012500 instead of reusing the METPO:1012400
+    block reserved for glycine arylamidase activity.

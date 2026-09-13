@@ -1,0 +1,59 @@
+identifier: traitmech:000173
+label: glutamyl glutamic acid arylamidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  glutamyl glutamic acid arylamidase enzymes that hydrolyze glutamyl-glutamic-acid
+  arylamide substrates.
+definition_source: DOI:10.1099/ijsem.0.006017
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: glutamyl glutamic acid arylamidase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1099/ijsem.0.006017
+evidence:
+- reference: DOI:10.1099/ijsem.0.006017
+  snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+    arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+    arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine
+    arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine
+    arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase,
+    alpha-chymotrypsin'
+  notes: Srinivasan et al. listed glutamyl glutamic acid arylamidase among enzymatic
+    activities present in the Amygdalobacter indicium species description, supporting
+    the API arylamidase row as a directly assayed bacterial enzyme-activity phenotype.
+- reference: DOI:10.1099/ijs.0.63642-0
+  snippet: arginine arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase,
+    leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase,
+    histidine arylamidase, glutamyl glutamic acid arylamidase and serine arylamidase
+    are positive
+  notes: Nichols et al. listed glutamyl glutamic acid arylamidase as positive in Olleya
+    marilimosa strain CAM030T.
+canonical_examples:
+- taxon_id: NCBITaxon:3029272
+  taxon_label: Amygdalobacter indicium
+  note: Srinivasan et al. reported Amygdalobacter indicium as positive for glutamyl
+    glutamic acid arylamidase activity in an enzyme activity panel.
+  reference: DOI:10.1099/ijsem.0.006017
+discussions:
+- discussion_id: glutamyl-glutamic-acid-arylamidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for glutamyl glutamic acid arylamidase
+    activity before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0016805 covers broad dipeptidase activity at molecular-function scope,
+    and no live GO class provides an exact glutamyl-glutamic-acid-specific arylamidase
+    production phenotype at organism-level scope.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T14:23:58Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted glutamyl glutamic acid arylamidase activity as a DOI-backed TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; METPO
+    has no exact glutamyl glutamic acid arylamidase activity class yet and the placeholder
+    is reserved in proposals/metpo_traitmech_v50.
+  llm_assisted: true

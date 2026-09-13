@@ -1,0 +1,71 @@
+identifier: traitmech:000166
+label: prolyl aminopeptidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces active
+  prolyl aminopeptidases that release N-terminal proline residues from peptides.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: proline aminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+- synonym_text: Pro-X aminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+- synonym_text: proline iminopeptidase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+- synonym_text: proline arylamidase
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1099/ijsem.0.006017
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+  snippet: <b>Reaction:</b> Release of N-terminal proline from a peptide
+  notes: The NC-IUBMB EC 3.4.11.5 entry accepts prolyl aminopeptidase, gives the N-terminal-proline
+    release reaction, and records proline aminopeptidase, Pro-X aminopeptidase, and
+    proline iminopeptidase as other names.
+- reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+  snippet: Proline iminopeptidase (Pip) is a hydrolase elaborated by virtually all
+    strains of Neisseria gonorrhoeae that selectively removes N-terminal proline residues
+    from peptides.
+  notes: Albertson and Koomey cloned the gonococcal pip gene and confirmed that the
+    encoded enzyme can release biologically active proline from peptides.
+- reference: DOI:10.1099/ijsem.0.006017
+  snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+    arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+    arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine
+    arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine
+    arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase,
+    alpha-chymotrypsin'
+  notes: Srinivasan et al. listed proline arylamidase among enzymatic activities present
+    in the Amygdalobacter indicium species description, supporting the API proline
+    arylamidase row as a directly assayed bacterial enzyme-activity phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  note: Albertson and Koomey cloned the Neisseria gonorrhoeae proline iminopeptidase
+    gene and confirmed that the encoded Pip enzyme releases proline from peptides.
+  reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+discussions:
+- discussion_id: prolyl-aminopeptidase-activity-xref-gap
+  prompt: Resolve an exact external ontology class for prolyl aminopeptidase activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004177 denotes broad aminopeptidase molecular function and EC 3.4.11.5
+    denotes a prolyl aminopeptidase molecular function; both are scope-shifted relative
+    to the organism-level prolyl aminopeptidase production phenotype, so they remain
+    causal-node grounding leads rather than equivalent TraitRecord xrefs.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T11:07:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted prolyl aminopeptidase activity as a URL/DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact prolyl aminopeptidase activity class yet.
+  llm_assisted: true

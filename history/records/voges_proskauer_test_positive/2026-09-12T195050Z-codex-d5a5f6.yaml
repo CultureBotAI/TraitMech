@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/voges_proskauer_test_positive.yaml
+  slug: voges_proskauer_test_positive
+session:
+  id: 2026-09-12T195050Z-codex-d5a5f6
+  timestamp: '2026-09-12T19:50:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add Voges-Proskauer test positive trait
+  details: Added METPO:1005017 as the seeded Voges-Proskauer test positive phenotype, reparented
+    it from the assay class to phenotype with an open curation TODO, and cited the ASM MR-VP
+    protocol for the acetoin-based positive readout plus Hansen et al. for conventional Klebsiella
+    VP testing and a Klebsiella oxytoca canonical example.

@@ -34,17 +34,17 @@ import yaml
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 
-DEPENDENCY_INPUTS = ("pyproject.toml", "uv.lock")
-EXPECTED_FILTERED_DEPENDENCY_WORKFLOWS = frozenset(
+DEPENDENCY_INPUTS = ("pyproject.toml", "uv.lock", ".python-version")
+# Required PR checks are now unfiltered so they can gate the native queue.
+EXPECTED_FILTERED_DEPENDENCY_WORKFLOWS = frozenset()
+EXPECTED_FILTERED_PUSH_WORKFLOWS = frozenset(
     {
         "canonical-example-taxonomy.yaml",
         "curation-history.yaml",
         "pytest.yaml",
-        "qc.yaml",
         "validate-strict.yaml",
     }
 )
-EXPECTED_FILTERED_PUSH_WORKFLOWS = EXPECTED_FILTERED_DEPENDENCY_WORKFLOWS - {"qc.yaml"}
 PROJECT_INSTALL_COMMANDS = (
     re.compile(r"(?:^|[\s;&|])uv\s+sync(?:$|[\s;&|])"),
     re.compile(r"(?:^|[\s;&|])uv\s+run(?:$|[\s;&|])"),
@@ -153,20 +153,27 @@ def test_push_and_pull_request_filters_agree_on_dependency_inputs():
     """
     mismatched: list[str] = []
     checked: set[str] = set()
-    for name, (document, pr_paths) in _filtered_dependency_workflows().items():
+    for path in sorted(WORKFLOWS.glob("*.y*ml")):
+        name = path.name
+        document = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if not _workflow_installs_project_dependencies(document):
+            continue
         on = document.get(True) or document.get("on") or {}
+        if "pull_request" not in on:
+            continue
+        pr_paths = _pull_request_paths(document)
         push = on.get("push")
         if not isinstance(push, dict) or not push.get("paths"):
             continue
         checked.add(name)
         for dep in DEPENDENCY_INPUTS:
-            in_pr = _path_is_included(dep, pr_paths)
+            in_pr = pr_paths is None or _path_is_included(dep, pr_paths)
             in_push = _path_is_included(dep, push["paths"])
             if in_pr != in_push:
                 mismatched.append(f"{name}: {dep} in pull_request={in_pr}, push={in_push}")
 
     assert checked == EXPECTED_FILTERED_PUSH_WORKFLOWS, (
-        "the set of dependency-installing workflows with filtered push and PR "
+        "the set of dependency-installing PR workflows with filtered push "
         "triggers changed; acknowledge it so this comparison cannot pass "
         f"vacuously (#580): expected {sorted(EXPECTED_FILTERED_PUSH_WORKFLOWS)}, "
         f"found {sorted(checked)}"

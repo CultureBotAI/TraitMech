@@ -1,0 +1,33 @@
+identifier: METPO:1005040
+label: generalist
+definition: A phenotype describing an organism with a broad ecological niche, capable
+  of thriving across diverse environments or utilizing varied resources.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+curation_history:
+- timestamp: '2026-09-12T22:29:50Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T22:35:00Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Enriched the seeded METPO generalist phenotype with DOI-backed bacterial
+    and prokaryotic niche-breadth evidence after a repository-wide duplicate review
+    covering ignored and hidden files.
+  llm_assisted: true
+definition_source: DOI:10.1093/femsec/fiaa240
+evidence:
+- reference: DOI:10.1093/femsec/fiaa240
+  snippet: Organisms are often categorized as generalists or specialists, corresponding
+    to broad or narrow niche requirements
+  notes: Bell and Bell frame bacterial generalism by broad niche requirements across
+    environmental axes such as temperature tolerance and resource use.
+- reference: DOI:10.1038/s41559-023-02027-7
+  snippet: Generalists can survive in many environments, whereas specialists are restricted
+    to a single environment.
+  notes: The social-niche-breadth study defines generalists and specialists while
+    introducing a niche-breadth score for prokaryotic genomes across environments.

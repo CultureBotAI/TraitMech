@@ -85,8 +85,9 @@ pull request; additional path-filtered workflows depend on the changed files.
 ### Step 4 — Pick it up (only if the user says to)
 
 Hand off to the right skill, then drive it the usual way: branch → implement →
-`just qc` → PR → watch CI → squash-merge `--delete-branch` → sync main. Re-run
-Step 3 to record the new state.
+`just qc` → PR → watch CI → enqueue via `docs/MERGE_QUEUE.md` → wait for
+`MERGED` → delete/prune branches → sync main. Re-run Step 3 to record the new
+state.
 
 ## CI gates (what "green" actually means here)
 

@@ -2,78 +2,20 @@
 name: qc
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths:
-      - "data/traits/**"
-      - "src/traitmech/schema/**"
-      - "src/traitmech/**.py"
-      - "scripts/**.py"
-      # `lint` joined the qc chain in #312 and runs ruff over tests/ as well,
-      # so a tests-only PR now changes what qc verifies. audit-qc-paths caught
-      # this the moment lint was added — a filter narrower than what the job
-      # checks is exactly #184/#200.
-      - "tests/**.py"
-      # audit-proposal-coverage joined the qc chain in #319 and reads
-      # proposals/*/metpo_proposal_classes_robot.tsv, so a proposals-only PR now
-      # changes what qc verifies. audit-qc-paths caught this the moment the
-      # recipe was added — a filter narrower than what the job reads is exactly
-      # #184/#200/#250/#252.
-      - "proposals/**"
-      # audit-graph-protein-taxa reads DO_NOT_WORK.md to report protected
-      # records instead of gaps (#522), so editing that list changes what qc
-      # verifies.
-      - "DO_NOT_WORK.md"
-      # sources-check reads download.yaml, so editing the source catalogue
-      # changes what qc verifies (#574).
-      - "download.yaml"
-      - "justfile"
-      - "pyproject.toml"
-      - "uv.lock"
-      - ".github/workflows/qc.yaml"
-      # `audit-derived-reports` (#214) compares the tracked reports against a
-      # fresh generation, so every input to that generation has to trigger it.
-      # A filter narrower than what the job verifies is how #184 and #200
-      # happened.
-      #   reports/**  — the artefact itself, edited directly
-      #   mappings/** — the OTHER input. The residual is a function of the
-      #                 corpus AND the grounding tables, so adding a row to
-      #                 mappings/predicate_grounding.tsv shrinks the residual.
-      #                 That is the single most common way these reports go
-      #                 stale, because it is exactly the section 9 workflow.
-      - "reports/**"
-      - "mappings/**"
-      # pages/ joined the gate in #230. Both its inputs have to trigger too:
-      # the pages themselves, and the templates — a one-line template edit
-      # changes all 489 rendered files, so leaving it out would be the widest
-      # possible version of the filter-narrower-than-the-job bug (#184, #200).
-      - "pages/**"
-      - "src/traitmech/templates/**"
-      # The discussions-data audit compares app/discussions/data.js with the
-      # source YAML. A direct artifact edit must therefore run the same gate;
-      # otherwise the path filter would make its only consumer silent (#409).
-      - "app/**"
-      # The renderer's other two tracked inputs. Both change what it emits, so
-      # both must trigger the job that compares its output: the embedding
-      # tables feed the match/UMAP/graph sections, and metpo.owl supplies the
-      # version string in every page footer.
-      - "data/embeddings/**"
-      - "data/raw/metpo.owl"
-      # research/ joined the gate in #242, via audit-research-artifacts: it
-      # checks every manifest `ok` row's artifact is present and that no
-      # artifact carries a malformed CURIE. Without this line the job cannot
-      # fire on a PR that adds only research artifacts — which is the shape of
-      # every sweep batch, and the shape the gate exists for. Same
-      # filter-narrower-than-the-job bug as #184 and #200 (#250).
-      - "research/**"
-      # conf/ holds both ratchet baselines — causal_graph_audit_baseline.tsv and
-      # evidence_snippet_baseline.tsv — plus id_label_targets.yaml. Without this
-      # line, WEAKENING a baseline does not re-run qc, which is the one edit
-      # that most needs it. Found by audit-qc-paths on its first run: the fourth
-      # instance of this bug after #184, #200 and #250 (#252).
-      - "conf/**"
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   qc:
@@ -85,10 +27,8 @@ jobs:
 
       - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
+          python-version: "3.13"
           enable-cache: true
-
-      - name: Set up Python
-        run: uv python install 3.12
 
       - name: Install dependencies
         run: uv sync --extra dev

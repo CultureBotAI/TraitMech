@@ -1,0 +1,73 @@
+identifier: traitmech:000159
+label: alpha-chymotrypsin activity
+definition: A physiological enzyme-activity phenotype in which a cell exhibits chymotrypsin-like
+  serine endopeptidase activity, preferentially cleaving peptide bonds on the carboxyl
+  side of tyrosine, tryptophan, phenylalanine, or leucine residues.
+definition_source: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: alpha-chymotrypsin
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1099/ijsem.0.006017
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html
+  snippet: '<b>Reaction:</b> Preferential cleavage: Tyr<img src="../../../EZgif/FISS.GIF"
+    align=top>, Trp<img src="../../../EZgif/FISS.GIF" align=top>, Phe<img src="../../../EZgif/FISS.GIF"
+    align=top>, Leu<img src="../../../EZgif/FISS.GIF" align=top>'
+  notes: The NC-IUBMB EC 3.4.21.1 entry accepts the name chymotrypsin and its reaction
+    line places the scissile-bond FISS.GIF image immediately after Tyr, Trp, Phe,
+    and Leu.
+- reference: DOI:10.1099/ijsem.0.006017
+  snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+    arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+    arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine
+    arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine
+    arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase,
+    alpha-chymotrypsin'
+  notes: Srinivasan et al. listed alpha-chymotrypsin among enzymatic activities present
+    in the Amygdalobacter indicium species description, consistent with the positive
+    API ZYM table row for both assayed A. indicium strains.
+canonical_examples:
+- taxon_id: NCBITaxon:3029272
+  taxon_label: Amygdalobacter indicium
+  note: Srinivasan et al. reported Amygdalobacter indicium as positive for alpha-chymotrypsin
+    activity in the API ZYM enzyme activity panel.
+  reference: DOI:10.1099/ijsem.0.006017
+discussions:
+- discussion_id: alpha-chymotrypsin-activity-xref-gap
+  prompt: Resolve an exact external ontology class for alpha-chymotrypsin activity
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0004263 chymotrypsin activity is obsolete, and its replacement GO:0004252
+    denotes broader serine-type endopeptidase molecular function rather than the organism-level
+    chymotrypsin-like serine endopeptidase phenotype. GO:0004252 is appropriate as
+    a causal-node grounding for generic serine-type endopeptidase activity, not as
+    an equivalent TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T05:29:03Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted alpha-chymotrypsin activity as a URL/DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact alpha-chymotrypsin activity class yet.
+  llm_assisted: true
+- timestamp: '2026-09-12T05:47:58Z'
+  curator: codex
+  action: CORRECTED_EVIDENCE_SNIPPET
+  changes: Corrected the IUBMB reaction-line snippet for alpha-chymotrypsin activity
+    so it preserves the scissile-bond image tags from the source HTML (#819).
+  llm_assisted: true
+- timestamp: '2026-09-12T06:00:57Z'
+  curator: codex
+  action: TIGHTENED_DEFINITION_WORDING
+  changes: Tightened the alpha-chymotrypsin activity definition to describe a chymotrypsin-like
+    organismal phenotype instead of over-specifying production of the named vertebrate
+    enzyme (#820).
+  llm_assisted: true

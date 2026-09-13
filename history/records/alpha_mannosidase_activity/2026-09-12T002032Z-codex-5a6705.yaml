@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_mannosidase_activity.yaml
+  slug: alpha_mannosidase_activity
+session:
+  id: 2026-09-12T002032Z-codex-5a6705
+  timestamp: '2026-09-12T00:20:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add alpha-mannosidase activity
+  details: Minted traitmech:000150 for URL/DOI-backed alpha-mannosidase activity after an
+    ignored-and-hidden duplicate search, citing the NC-IUBMB EC 3.2.1.24 entry for alpha-mannosidase
+    reaction scope, Carlson and Kontiainen 1994 for a direct Arcanobacterium haemolyticum
+    canonical example, and a v27 METPO proposal row reserving METPO:1010400 for upstream minting.

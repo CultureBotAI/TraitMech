@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test_positive.yaml
+  slug: methyl_red_test_positive
+session:
+  id: 2026-09-12T193442Z-codex-f57529
+  timestamp: '2026-09-12T19:34:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - canonical_examples
+  - curation_notes
+  summary: Resolve methyl red test positive evidence review findings
+  details: 'Resolved PR #862 review issues #863 and #864 by removing the flattened Hansen
+    Table 3 row from record-level evidence snippets while leaving the source-backed Table
+    3 percentages in the canonical example note, and by narrowing the remaining Hansen evidence
+    note to match its ASM Manual quote.'

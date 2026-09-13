@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test_negative.yaml
+  slug: methyl_red_test_negative
+session:
+  id: 2026-09-12T201612Z-codex-ef584a
+  timestamp: '2026-09-12T20:16:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - discussions
+  summary: Resolve methyl red test negative assay parent
+  details: Reparented METPO:1005015 methyl red test negative below the newly curated METPO:1005013
+    methyl red test assay parent and marked the temporary methyl-red-test-negative assay-parent
+    CURATION_TODO resolved.

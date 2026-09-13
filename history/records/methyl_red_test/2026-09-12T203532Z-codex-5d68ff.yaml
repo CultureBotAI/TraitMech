@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test.yaml
+  slug: methyl_red_test
+session:
+  id: 2026-09-12T203532Z-codex-5d68ff
+  timestamp: '2026-09-12T20:35:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Strengthen methyl red test parent evidence
+  details: 'Added parent-level ASM evidence for high-acid mixed fermentation after PR #866
+    review issue #867.'

@@ -1,0 +1,3 @@
+proposed_id	label	definition	definition_source	parent	exact_synonyms	xrefs	subset	priority	observations	traits_addressed	related_synonyms
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset				A oboInOwl:hasRelatedSynonym SPLIT=|
+METPO:1010100	cystine arylamidase activity	A phenotype in which a microorganism produces active cystine arylamidase enzymes that hydrolyze cystine arylamide substrates.	DOI:10.14202/vetworld.2024.143-149	METPO:1000059			metpo_traitmech_2026_09	HIGH	Follow-up from the physiology diagnostic-enzyme gap sweep; absent from METPO and TraitMech after a cystine arylamidase duplicate review covering ignored and hidden files.	TraitMech#453; traitmech:000147	cystine aryl amidase

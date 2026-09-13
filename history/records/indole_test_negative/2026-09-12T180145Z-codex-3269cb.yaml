@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T180145Z-codex-3269cb
+  timestamp: '2026-09-12T18:01:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - canonical_examples
+  summary: Remove unquoted K. variicola wording
+  details: 'Addressed external review issue #856 by removing K. variicola grouping wording
+    from the Alves et al. notes while preserving Klebsiella pneumoniae as an indole-negative
+    Klebsiella canonical example.'

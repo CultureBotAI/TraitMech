@@ -12,12 +12,12 @@ Each trait — Gram type, motility, pH optimum, "uses as carbon source",
 "halophilic", etc. — lives in its own YAML file with provenance back to its
 METPO source class and (optionally) to literature evidence.
 
-**Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
+**Initial seed (from `data/raw/metpo.owl`, METPO 2026-06-12) and current curation status:**
 
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
-| MORPHOLOGY | 88 | 0 | 0 | 88 | 92 |
-| PHYSIOLOGY | 45 | 10 | 0 | 45 | 56 |
+| MORPHOLOGY | 88 | 1 | 0 | 88 | 93 |
+| PHYSIOLOGY | 45 | 40 | 0 | 45 | 86 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 122 |
 | ECOLOGY | 26 | 0 | 0 | 26 | 26 |
 | GENOMICS | 19 | 0 | 0 | 19 | 19 |
@@ -25,13 +25,14 @@ METPO source class and (optionally) to literature evidence.
 | METABOLISM | 120 | 15 | 23 | 49 | 159 |
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
-| OTHER | 0 | 0 | 0 | 0 | 22 |
-| **TOTAL** | **427** | **25** | **50** | **353** | **531** |
+| OTHER | 0 | 0 | 0 | 0 | 31 |
+| **TOTAL** | **427** | **56** | **50** | **353** | **571** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
-`DEPRECATED`; 15 newer metabolism records and ten physiology records are
-`PROPOSED`, and twenty-eight records are still `SEEDED` (one environment, one
-metabolism, four morphology, one physiology, and twenty-one other).
+`DEPRECATED`; one morphology record, 15 newer metabolism records, and
+forty physiology records are `PROPOSED`, and thirty-eight records are
+still `SEEDED` (one environment, one metabolism, four morphology, one
+physiology, and thirty-one other).
 Of the reviewed records, 353 currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
@@ -43,6 +44,10 @@ trait records capture the chemical, quality, measurement, or growth context.
 seeded; those belong in MIM / CultureMech.)
 
 ## Quick start
+
+Use Python 3.13, pinned in `.python-version`, for development and GitHub CI.
+CI runs each check on this single minor to avoid duplicate jobs; package
+compatibility metadata remains in `pyproject.toml`.
 
 ```bash
 just install                  # uv sync --extra dev
@@ -84,9 +89,9 @@ just validate-all             # validate every TraitRecord YAML
 ```
 TraitMech/
 ├── data/
-│   ├── raw/metpo.owl                    # vendored METPO release (2025-11-25)
+│   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 531 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 571 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
@@ -247,6 +252,11 @@ mapping rather than a causal graph.
   already appear) resolve directly to a TraitMech YAML.
 - `xrefs` carries equivalents in PATO / GO / NCIT / ENVO / CHEBI / UO
   for cross-ontology lookup.
+
+## Merge queue
+
+See [the native merge-queue guide](docs/MERGE_QUEUE.md) for the reviewed merge workflow
+when queue enforcement is enabled on `main`.
 
 ## License
 

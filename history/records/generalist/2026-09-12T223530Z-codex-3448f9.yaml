@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/generalist.yaml
+  slug: generalist
+session:
+  id: 2026-09-12T223530Z-codex-3448f9
+  timestamp: '2026-09-12T22:35:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  summary: Add generalist trait
+  details: Added METPO:1005040 as the seeded generalist phenotype with DOI-backed bacterial
+    and prokaryotic niche-breadth evidence after a repository-wide duplicate review covering
+    ignored and hidden files.

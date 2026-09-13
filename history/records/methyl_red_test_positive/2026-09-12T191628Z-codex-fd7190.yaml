@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test_positive.yaml
+  slug: methyl_red_test_positive
+session:
+  id: 2026-09-12T191628Z-codex-fd7190
+  timestamp: '2026-09-12T19:16:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - curation_notes
+  summary: Add methyl red test positive trait
+  details: Added the seeded METPO:1005014 methyl-red-test-positive phenotype with ASM stable-URL
+    evidence for the positive methyl-red readout, Hansen et al. DOI evidence for methyl red
+    as a conventional Klebsiella biochemical test, and a Hansen Table 3 Klebsiella ornithinolytica
+    canonical example after a repository-wide duplicate search that included ignored and hidden
+    files. Reparented the assay child directly to phenotype with an open Curation TODO because
+    METPO:1005013 defines an assay rather than a broader microbial trait class.

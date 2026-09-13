@@ -6,8 +6,13 @@ name: canonical-example-taxonomy
 # cheap, and small enough for a normal hosted runner. Network failure is an
 # explicit failure, never a clean-looking skipped resolution.
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths: &trigger_paths
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches: [main]
+    paths:
       - "data/traits/**"
       - "scripts/audit_canonical_examples.py"
       - "tests/test_audit_canonical_examples.py"
@@ -17,15 +22,13 @@ on:
       # to its verdict just as much as the script it runs (#566/#567).
       - "pyproject.toml"
       - "uv.lock"
-  push:
-    branches: [main]
-    paths: *trigger_paths
+      - ".python-version"
   schedule:
     - cron: "23 10 * * 1"
   workflow_dispatch:
 
 concurrency:
-  group: canonical-example-taxonomy-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
@@ -40,10 +43,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
-          python-version: "3.12"
+          python-version: "3.13"
       - name: Install uv
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
+          python-version: "3.13"
           enable-cache: true
       - name: Install dependencies
         run: uv sync

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-11T191344Z-codex-70191d
+  timestamp: '2026-09-11T19:13:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - workflow
+  summary: Tighten add-trait snippets and local review
+  details: Updated the add-trait workflow to prefer exact evidence snippets on new DOI, PMID,
+    and stable-URL evidence items, and to require a local adversarial PR-diff review in addition
+    to Copilot and manual Claude reviewer workflows so quota failures cannot satisfy the review
+    step.

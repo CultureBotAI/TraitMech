@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/magnetotaxis.yaml
+  slug: magnetotaxis
+session:
+  id: 2026-09-12T161820Z-codex-06c3a2
+  timestamp: '2026-09-12T16:18:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add magnetotaxis
+  details: Minted traitmech:000176 for a DOI-backed magnetotaxis physiology trait, recorded
+    Magnetospirillum gryphiswaldense MSR-1 as a canonical example, and reserved METPO:1013000
+    in proposals/metpo_traitmech_v53.

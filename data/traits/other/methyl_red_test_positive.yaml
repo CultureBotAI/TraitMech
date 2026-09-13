@@ -1,0 +1,83 @@
+identifier: METPO:1005014
+label: methyl red test positive
+definition: A phenotype in which an organism tests positive in the methyl red test,
+  indicating mixed acid fermentation.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1005013
+synonyms:
+- synonym_text: methyl red test
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-12T19:14:16Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T19:16:03Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO methyl-red-test-positive phenotype with stable-URL and
+    DOI-backed methyl-red-test evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+- timestamp: '2026-09-12T19:34:17Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved PR #862 review issues #863 and #864 by removing a flattened Hansen
+    Table 3 row from evidence snippets and narrowing the Hansen ASM Manual evidence
+    note to match its quote.'
+  llm_assisted: true
+- timestamp: '2026-09-12T20:15:55Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented methyl red test positive below the newly curated METPO:1005013
+    methyl red test assay parent and marked the temporary assay-parent discussion
+    resolved.
+  llm_assisted: true
+- timestamp: '2026-09-12T20:44:24Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: Moved the methyl-red parent-gap closure into resolution_note and resolved_date
+    so the original non-assay parent rationale remains visible.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: When the culture medium turns red after addition of methyl red, because
+    of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive
+    result for the MR test (Fig.1A).
+  notes: The ASM protocol PDF defines a positive methyl-red-test readout as red culture
+    medium after methyl red is added, reflecting glucose fermentation that acidifies
+    the medium to pH 4.4 or lower.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: 'In the ASM Manual of Clinical Microbiology, only 6 of the 18 biochemical
+    tests used in the present investigation are listed for Klebsiella species: indole,
+    MR, VP, LDC, ODC, and malonate'
+  notes: Hansen et al. evaluated methyl red as a conventional Klebsiella biochemical
+    test listed in the ASM Manual of Clinical Microbiology.
+canonical_examples:
+- taxon_id: NCBITaxon:54291
+  taxon_label: Klebsiella ornithinolytica
+  note: Hansen et al. Table 3 reported 100.0% methyl-red-positive results for K. ornithinolytica
+    across the CPHL, NRL, and SSI reference laboratories.
+  reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+discussions:
+- discussion_id: methyl-red-test-positive-assay-parent-gap
+  prompt: Resolve a non-assay parent for positive methyl-red-test phenotypes before
+    narrowing parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: METPO:1005013 is the seeded superclass of METPO:1005014, but METPO:1005013
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: METPO:1005013 is now represented as the seeded methyl-red-test
+    assay parent, so this assay-outcome phenotype can use its exact source superclass
+    instead of a temporary direct phenotype parent; this resolves the exact METPO
+    assay-parent gap, not the broader non-assay parent question for assay-outcome
+    phenotypes.

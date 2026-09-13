@@ -1,12 +1,14 @@
 ---
 name: add-trait
-description: Add a named microbial ecophysiological trait as a TraitRecord YAML with METPO-first identity, source-backed definition, optional canonical examples and causal graphs, curation history, repository history, generated pages, and validation. Use when the target trait is already named.
+description: Add or discover one evidence-backed microbial ecophysiological trait as a TraitRecord YAML with METPO-first identity, source-backed definition, optional canonical examples and causal graphs, curation history, repository history, generated pages, and validation.
 ---
 
 # Add a TraitRecord
 
 This skill turns one named, in-scope microbial trait into a validated
-TraitMech record.
+TraitMech record. It can also select the next target from the reviewed
+METPO/missing-trait frontier, but still adds one record or one tightly coupled
+parent/child repair per branch.
 
 Use `trait-priority` when choosing among existing curation targets. Use
 `deep-research-trait` or `research-causal-graphs` when an existing record needs
@@ -22,7 +24,9 @@ paid literature research before its causal graph can be curated. Use
   nodes or `protein_examples`.
 - `history/README.md` for repository-level curation history.
 - `.claude/skills/manage-identifiers/SKILL.md` for METPO-first identifiers and
-  the fallback `traitmech:NNNNNN` workflow.
+  the fallback `traitmech:NNNNNN` allocation workflow.
+- `.claude/skills/metpo-proposal/SKILL.md` before minting a `traitmech:`
+  fallback, so the temporary local ID gets a same-PR upstream proposal.
 - `src/traitmech/schema/traitmech.yaml` for allowed `TraitRecord` fields.
 - `DO_NOT_WORK.md` to avoid touching a protected existing record while checking
   parent or sibling context.
@@ -60,6 +64,10 @@ acceptance. Treat kit well names, chromogenic-substrate names, and ambiguous
 panel rows as evidence leads, not trait labels; reject a row when its only
 stable biology collapses to an existing activity record, and keep the kit string
 out of `EXACT_SYNONYM` unless papers use it as a true trait name.
+When a panel label names a vertebrate enzyme, define an organism-level
+`<enzyme>-like activity` phenotype around the conserved reaction or assay
+readout. Do not claim that a microbe produces the exact vertebrate enzyme unless
+the source evidence demonstrates that exact molecular activity.
 
 Sequence-feature-like candidates need an explicit interpretation pass before
 they are accepted. Do not add a literal locus, gene, operon, protein domain,
@@ -69,6 +77,30 @@ organism-, strain-, or genome-level property, such as possession of a mobile
 element class or a sequence-composition phenotype; keep unresolved source labels
 out of `EXACT_SYNONYM` and record borderline mapping questions as
 `CURATION_TODO` discussions.
+
+## Pick a target
+
+If the user names a trait, curate that trait only. For an open-ended request to
+find the next new trait:
+
+- generate a temporary seed tree and compare its exact `identifier` values to
+  live `data/traits/**/*.yaml`; exact-ID absence is a lead, not proof of
+  novelty
+- read `reports/metpo_2026_06_12_release_delta.tsv`,
+  `reports/metpo_2026_06_12_active_review.tsv`, and
+  `docs/METPO_2026_06_12_ACTIVE_REVIEW.md` before accepting a METPO addition
+  that prior release review did not seed; treat their `corpus_record` and
+  disposition columns as a frozen review snapshot, and recheck candidate rows
+  against live `data/traits/**` plus `history/` before deciding they are still
+  absent or unselected
+- skip `DUPLICATE_NO_NEW_PRIMARY` rows unless a fresh ignored-and-hidden search
+  and same-family review show that the existing record is not exact
+- reconsider `NO_CORPUS_DEMAND_NO_PRIMARY` rows only when a concrete
+  DOI/PMID/stable-URL evidence bundle now supports TraitMech inclusion, or when
+  the parent class resolves same-scope open TODOs on accepted children
+- prefer candidates that close existing `CURATION_TODO` parent gaps, unresolved
+  causal-node groundings, or tightly related sibling groups over disconnected
+  seed rows with no live corpus demand
 
 ## Prove it is new
 
@@ -96,6 +128,19 @@ If a seeded METPO label looks absent only because it adds a suffix such as
 same-family sibling records before copying the skeleton. Skip the candidate if
 the existing local record already carries the exact phenotype, and explain that
 semantic duplicate explicitly.
+
+If the accepted target already appears inside an existing record as an
+ungrounded exact causal-graph node, an adjectival synonym on a neighboring
+record, or a discussion TODO, resolve that same-scope mention as part of the
+same branch unless `DO_NOT_WORK.md` protects the file. A newly minted
+`traitmech:` identifier is usable as a local causal-node grounding when the node
+denotes the same trait. Move synonyms whose lexical scope fits the new trait
+better than their old host; do not leave the old graph or synonym unresolved for
+post-merge cleanup.
+
+When adding a missing parent for already accepted positive or negative
+assay-result children, reparent those children below the new exact parent and
+mark their temporary parent-gap discussions `RESOLVED` in the same branch.
 
 Do not treat a temporary seeder output directory as a missing-work queue. It is
 a reusable METPO projection that can contain records already live under
@@ -133,7 +178,11 @@ TraitMech is METPO-first:
    temporary seed root.
 4. If METPO has no exact term and the trait is in scope, mint the next
    zero-padded `traitmech:NNNNNN` through `manage-identifiers`.
-5. File or reference a METPO upstream issue for every minted `traitmech:` ID.
+5. Add or extend a METPO ROBOT-template proposal for every minted
+   `traitmech:` ID. The same PR that adds the local record must reserve the
+   upstream `METPO:` placeholder, document the round-trip path, and verify the
+   proposal. If a separate upstream METPO issue already exists, reference it,
+   but do not substitute an issue link for a proposal artifact.
 
 Use `parent_traits` only for true broader trait classes. Put true equivalent
 external terms in `xrefs`; do not use `xrefs` for broader, narrower, merely
@@ -152,6 +201,13 @@ classes usually denote the molecular function rather than an equivalent
 organismal phenotype. If a GO term is exact for a causal node but shifted for
 the record's `xrefs`, leave it out of `xrefs` and record the decision in a
 `CURATION_TODO` discussion or proposal notes.
+
+Before keeping a seeded parent on a positive or negative assay-result child,
+inspect the parent definition. If the parent denotes a laboratory assay rather
+than a broader biological trait and the branch is not also curating that assay
+class as a stable local record, reparent the child to `METPO:1000059` and attach
+a `CURATION_TODO` for the missing non-assay parent. Do not silently keep an
+absent assay class as though it were a stable phenotype parent.
 
 When a local parent is the genus in the new definition, do not borrow endpoints,
 substrates, products, or pathway branches from that parent unless the new
@@ -186,10 +242,39 @@ Every added record needs at least one DOI, PMID, or stable URL in
 Do not put paraphrases in `snippet`. `snippet` is a verbatim, contiguous span
 from the cited source; put interpretation in `notes`.
 
+Shortened snippets must be self-contained and source-faithful. Do not stop
+before the head noun of a phrase, after a dangling article, preposition, or
+conjunction, or before a coordinated complement that would change the statement's
+scope. Quote enough of the source sentence for the stored span to read as the
+same claim without relying on omitted words.
+
+Publisher HTML may encode meaningful symbols as image tags. If a source renders
+part of a passage as an image, quote a source-rendered text alternative when one
+exists; otherwise quote the exact raw HTML and explain in `notes` what the image
+renders as. Never delete an inline image tag while presenting the adjacent text
+as a verbatim snippet.
+
+For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
+that supports a definition, canonical example, graph edge, or curation
+decision. If the source exposes no concise contiguous passage for that claim,
+leave `snippet` absent and make `notes` say exactly what the citation supports;
+never synthesize a quote to make the record look complete.
+
 Use source-system group keys, database column names, and other identifier-like
 strings as `RELATED_SYNONYM` provenance labels by default, especially when they
 contain underscores. Promote one to `EXACT_SYNONYM` only when it is a true
 lexical name for the same trait.
+
+Apply that scope test to METPO proposal synonyms too. For enzyme-activity
+phenotypes, a bare enzyme name usually names the molecule rather than the
+organismal phenotype; keep it out of TraitRecord `EXACT_SYNONYM` and proposal
+`exact_synonyms` unless a source uses that bare string as a phenotype label, and
+store useful shifted labels as `RELATED_SYNONYM` or `related_synonyms` instead.
+
+Match the TraitRecord and METPO proposal label to the qualifiers carried by the
+evidence. If the authoritative source is cofactor-, substrate-, endpoint-, or
+pathway-specific, keep the qualifier in both labels and definitions unless
+separate evidence supports the broader unqualified phenotype.
 
 An evidence snippet must carry the specific definition claim it is attached to.
 Do not use article titles, section headings, keyword fragments, or generic noun
@@ -247,12 +332,29 @@ disposable. For a curator-minted record, create
 `data/traits/<category>/<slug>.yaml` from a small Python dictionary and write it
 through `write_validated_trait`.
 
+For every curator-minted `traitmech:` record, add the companion METPO proposal
+under `proposals/metpo_traitmech_v<N>/` in the same branch. Use the
+`metpo-proposal` skill, reserve the proposed `METPO:` identifier, keep shifted
+or enzyme-name-only labels in `related_synonyms` instead of `exact_synonyms`,
+and omit SSSOM mappings when there is no exact external equivalence to assert.
+
+When the new trait resolves exact mentions in older records, update those
+records through the same validated writer path and give each touched record a
+focused curation-history event and repository history record. Regenerate the
+causal-node grounding residuals and pages so the new grounding is visible in
+derived reports rather than only in YAML.
+
 Every manual edit to a new or seeded record must:
 
 - load the existing YAML with `yaml.safe_load`
 - append a `record_curation_event(..., llm_assisted=True)`
 - write with `write_validated_trait`
 - leave unrelated generated fields and source-owned seeded fields alone
+
+If a writer updates existing records, make it fail closed on the expected
+preimage: assert the identifier, label, mapping status, old parents, and any
+discussion status before replacing them so a stale branch does not rewrite
+unrelated drift.
 
 Do not hand-serialize YAML or loosen the `write_validated_trait` round-trip
 test if formatting drifts.
@@ -300,6 +402,8 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/audit_schema.py
 .venv/bin/python scripts/audit_writers.py
 .venv/bin/python scripts/audit_proposals.py
+.venv/bin/python scripts/verify_metpo_proposal.py proposals/<cohort>
+.venv/bin/python scripts/robot_validate_proposal.py proposals/<cohort>
 .venv/bin/python scripts/verify_metpo_proposal.py --coverage
 .venv/bin/python scripts/audit_causal_graphs.py
 .venv/bin/python scripts/ground_causal_predicates.py
@@ -307,6 +411,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/audit_biolink_curies.py
 .venv/bin/python scripts/audit_predicate_domains.py --fail-on new
 .venv/bin/python scripts/audit_graph_protein_taxa.py --fail-on gaps
+.venv/bin/python scripts/audit_canonical_examples.py --no-resolve
 .venv/bin/python scripts/check_biolink_coverage.py
 .venv/bin/python scripts/audit_evidence_snippets.py
 .venv/bin/python scripts/audit_exact_synonyms.py --collisions-only
@@ -321,6 +426,7 @@ Then run the checks whose scope LinkML does not cover:
 .venv/bin/python scripts/render_trait_pages.py
 .venv/bin/python scripts/trait_priority.py --dashboard --top 80
 git diff --check
+git diff --cached --check
 .venv/bin/ruff check src scripts tests
 .venv/bin/python -m pytest tests/test_readme_artifacts.py tests/test_trait_priority.py -v --tb=short
 .venv/bin/python -m pytest -q
@@ -330,14 +436,19 @@ Also run `.venv/bin/python scripts/verify_snippets.py --record data/traits/<cate
 after adding a `snippet`. A `VERIFIED` row is decisive for an abstract quote;
 for `NOT_IN_ABSTRACT`, `UNRESOLVED`, or URL-backed evidence, open the source
 directly and confirm the recorded text is still a contiguous, verbatim source
-span. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`
+span. When adding or editing `canonical_examples`, run
+`.venv/bin/python scripts/audit_canonical_examples.py --ncbi-api` so local
+validation resolves `NCBITaxon:` identifiers like the `canonical-example-taxonomy`
+PR workflow. Run `.venv/bin/python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml`
 when adding or editing CHEBI formula-bearing chemicals, and run
 `.venv/bin/python scripts/audit_uniprot_grounding.py` after adding or editing
 `protein_examples`. Run `.venv/bin/python scripts/build_embedding_index.py`
-before `scripts/render_trait_pages.py` only
-when the sibling DeepWalk artifacts named by
-`scripts/build_embedding_index.py` are present; otherwise report that embedding
-artifacts were not regenerated.
+before `scripts/render_trait_pages.py` only when
+`scripts/build_embedding_index.py`'s exact `DEFAULT_KGM_DEEPWALK` or
+`FALLBACK_KGM_DEEPWALK` source path is present; otherwise report that embedding
+artifacts were not regenerated. Check those configured sibling paths directly
+rather than crawling the whole KG-Microbe checkout looking for the embedding
+file names.
 
 When `scripts/ground_causal_predicates.py` or `scripts/ground_causal_nodes.py`
 proposes exact CURIEs you accept, rerun that script with `--apply` before
@@ -364,22 +475,55 @@ loop used for other hand-curated trait changes:
 
 1. Commit only the new record, its history, supporting writer script if any,
    generated artifacts, and directly related documentation or tests.
+   After committing, run the committed-diff curation-history gate against the
+   PR base:
+
+   ```bash
+   git fetch origin main
+   .venv/bin/python scripts/audit_history_records.py --base origin/main
+   ```
+
+   This audit reads `base...HEAD`, not the working tree, so run it after the
+   history record is committed.
 2. Push a trait-scoped branch and open a pull request with the new identifier,
    label, sources, generated artifacts, and validation commands in the body.
-3. Request Copilot review and dispatch both manual adversarial workflows:
-   `.github/workflows/claude-code-review.yml` and
-   `.github/workflows/pr-shepherd.yml`, using the PR number as input.
-4. Inspect every review, PR comment, and workflow outcome. For each actionable
-   curation defect, file a GitHub issue, fix the defect on the same branch, and
-   rerun the relevant local validation before pushing.
-   Quota and rate-limit failures are not reviews: fetch failed logs, confirm the
-   agent never read the diff, log the affected PR and workflow runs on the
-   standing quota issue, and file GitHub issues only for actual curation defects.
+3. Request Copilot review, dispatch the manual Claude Code Review and a
+   targeted PR Shepherd assessment, then perform a local adversarial review of
+   the PR diff:
+
+   ```bash
+   gh api repos/CultureBotAI/TraitMech/pulls/<PR>/requested_reviewers \
+     -X POST -F 'reviewers[]=Copilot'
+   gh workflow run claude-code-review.yml --repo CultureBotAI/TraitMech \
+     -f pr_number=<PR>
+   gh workflow run pr-shepherd.yml --repo CultureBotAI/TraitMech \
+     -f pr_number=<PR> -f dry_run=false -f max_prs=1
+   ```
+
+   Request review from `Copilot`; the submitted review may appear from
+   `copilot-pull-request-reviewer`.
+
+   The local review must try to falsify the trait identity, duplicate search,
+   parent choice, xrefs, evidence snippets, canonical examples, any METPO
+   proposal, and regenerated artifacts before the PR merges. A successful PR
+   Shepherd run can legitimately leave no comment on a fresh, unstuck PR; record
+   that successful outcome instead of treating silence as a failed review.
+4. Inspect every local finding, external review, PR comment, and workflow
+   outcome. For each actionable curation defect, file a GitHub issue, fix the
+   defect on the same branch, and rerun the relevant local validation before
+   pushing.
+   Quota and rate-limit failures are not reviews: fetch the failed workflow logs
+   or PR review/comment that reported quota exhaustion, confirm no agent read
+   the diff, log the affected PR plus each failed workflow run or failed review
+   request on standing issue #742, and file GitHub issues only for actual
+   curation defects.
 5. Watch PR checks until every required check is green. Treat a failing gate as
    a blocker, not as advisory output.
-6. Merge the PR only after CI and reviews are clean, delete the remote feature
-   branch, fetch with pruning, and verify no local or remote branch for that
-   trait remains.
+6. Merge the PR only after CI and reviews are clean. Use the native merge-queue
+   path in `docs/MERGE_QUEUE.md`: enqueue without `--delete-branch`, wait until
+   `gh pr view <n> --json state,mergedAt,mergeCommit` reports `MERGED`, then
+   delete the remote feature branch, fetch with pruning, and verify no local or
+   remote branch for that trait remains.
 
 ## Report
 
@@ -393,5 +537,5 @@ End with:
 - validation commands that passed
 - PR review outcome, issue numbers filed for review findings, merge result, and
   branch cleanup
-- any `CURATION_TODO` or upstream METPO issue left open
+- any `CURATION_TODO`, METPO proposal, or upstream METPO issue left open
 - whether duplicate and absence searches included ignored and hidden files

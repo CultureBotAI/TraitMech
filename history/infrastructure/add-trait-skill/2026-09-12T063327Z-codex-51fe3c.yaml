@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T063327Z-codex-51fe3c
+  timestamp: '2026-09-12T06:33:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - identifiers
+  - metpo_proposal
+  - evidence
+  summary: Refresh add-trait skill guidance
+  details: Updated the add-trait and companion identifier/METPO proposal skills to capture
+    recent diagnostic-enzyme snippet lessons, require same-PR METPO proposal artifacts for
+    traitmech fallback IDs, and align proposal commands plus ID allocation guidance with the
+    current v36 cohort pattern.

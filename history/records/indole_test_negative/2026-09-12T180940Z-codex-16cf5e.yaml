@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test_negative.yaml
+  slug: indole_test_negative
+session:
+  id: 2026-09-12T180940Z-codex-16cf5e
+  timestamp: '2026-09-12T18:09:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/857
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/854
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Trim Darkoh evidence note
+  details: 'Addressed external review issue #857 by trimming the Darkoh et al. evidence note
+    to the tryptophan-degradation claim directly supported by the recorded DOI snippet.'

@@ -1,0 +1,36 @@
+identifier: METPO:1005016
+label: Voges-Proskauer test
+definition: An assay that tests the ability of an organism to produce acetoin from
+  glucose via the butanediol fermentation pathway.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+curation_history:
+- timestamp: '2026-09-12T21:15:14Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T21:15:44Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO Voges-Proskauer-test assay parent with stable-URL butanediol-pathway
+    and acetoin-readout evidence after a repository-wide duplicate review covering
+    ignored and hidden files.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: Bacteria fermenting sugars via the butanediol pathway produce acetoin (i.e.,
+    acetyl methyl carbinol or 3-hydroxybutanone) as an intermediate which can be further
+    reduced to 2,3-butanediol.
+  notes: The ASM protocol links acetoin production directly to sugar fermentation
+    through the butanediol pathway.
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: In the presence of KOH the intermediate acetoin is oxidized to diacetyl,
+    a reaction which is catalyzed by a-naphthol (2). Diacetyl reacts with the guanidine
+    group associated with molecules contributed by peptone in the medium, to form
+    a pinkish-red-colored product (Fig. 2A).
+  notes: The same protocol explains that the Voges-Proskauer reaction detects acetoin
+    via Barritt chemistry that forms a pinkish-red product.

@@ -2,15 +2,10 @@
 name: validate-strict
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths:
-      - "src/traitmech/schema/**"
-      - "data/traits/**"
-      - "scripts/seed_from_metpo.py"
-      - "scripts/validate_strict.py"
-      - ".github/workflows/validate-strict.yaml"
-      - "pyproject.toml"
-      - "uv.lock"
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
     paths:
@@ -21,7 +16,15 @@ on:
       - ".github/workflows/validate-strict.yaml"
       - "pyproject.toml"
       - "uv.lock"
+      - ".python-version"
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   validate-strict:
@@ -31,10 +34,8 @@ jobs:
 
       - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
+          python-version: "3.13"
           enable-cache: true
-
-      - name: Set up Python
-        run: uv python install 3.12
 
       - name: Install dependencies
         run: uv sync

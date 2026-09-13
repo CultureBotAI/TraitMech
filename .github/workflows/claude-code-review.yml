@@ -250,6 +250,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
+          python-version: "3.13"
           enable-cache: true
 
       - name: Install just and sync the project
@@ -392,7 +393,7 @@ jobs:
             echo "::error title=Claude review failed::No execution log found; the review agent did not run."
             exit 1
           fi
-          python3 - "$file" <<'PY'
+          uv run --no-project python - "$file" <<'PY'
           import json, os, sys
 
           def summary(md):

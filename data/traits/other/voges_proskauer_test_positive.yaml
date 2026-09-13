@@ -1,0 +1,70 @@
+identifier: METPO:1005017
+label: Voges-Proskauer test positive
+definition: A phenotype in which an organism tests positive in the Voges-Proskauer
+  test, indicating acetoin production.
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1005016
+synonyms:
+- synonym_text: voges-proskauer test
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-09-12T19:49:19Z'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+- timestamp: '2026-09-12T19:50:21Z'
+  curator: codex
+  action: ENRICHED_FROM_LITERATURE
+  changes: Added the METPO Voges-Proskauer-test-positive phenotype with stable-URL
+    and DOI-backed acetoin-production evidence after a repository-wide duplicate review
+    covering ignored and hidden files.
+  llm_assisted: true
+- timestamp: '2026-09-12T21:15:44Z'
+  curator: codex
+  action: RESOLVED_PARENT_GAP
+  changes: Reparented Voges-Proskauer test positive below the newly curated METPO:1005016
+    Voges-Proskauer test assay parent and marked the temporary assay-parent discussion
+    resolved.
+  llm_assisted: true
+definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+evidence:
+- reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+  snippet: In the presence of KOH the intermediate acetoin is oxidized to diacetyl,
+    a reaction which is catalyzed by a-naphthol (2). Diacetyl reacts with the guanidine
+    group associated with molecules contributed by peptone in the medium, to form
+    a pinkish-red-colored product (Fig. 2A).
+  notes: The ASM protocol PDF explains that the Voges-Proskauer reaction detects acetoin
+    through Barritt chemistry that forms a pinkish-red product.
+- reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+  snippet: 'In the ASM Manual of Clinical Microbiology, only 6 of the 18 biochemical
+    tests used in the present investigation are listed for Klebsiella species: indole,
+    MR, VP, LDC, ODC, and malonate'
+  notes: Hansen et al. evaluated Voges-Proskauer as a conventional Klebsiella biochemical
+    test listed in the ASM Manual of Clinical Microbiology.
+canonical_examples:
+- taxon_id: NCBITaxon:571
+  taxon_label: Klebsiella oxytoca
+  note: Hansen et al. Table 2 reported 100.0% Voges-Proskauer-positive results for
+    K. oxytoca across the CPHL, NRL, and SSI reference laboratories.
+  reference: DOI:10.1128/JCM.42.8.3665-3669.2004
+discussions:
+- discussion_id: voges-proskauer-test-positive-assay-parent-gap
+  prompt: Resolve a non-assay parent for positive Voges-Proskauer-test phenotypes
+    before narrowing parent_traits below phenotype.
+  kind: CURATION_TODO
+  status: RESOLVED
+  rationale: METPO:1005016 is the seeded superclass of METPO:1005017, but METPO:1005016
+    defines an assay rather than a broader microbial trait class, so this record is
+    temporarily parented directly to METPO:1000059 phenotype.
+  posed_by: codex
+  posed_date: '2026-09-12'
+  resolved_date: '2026-09-12'
+  resolution_note: METPO:1005016 is now represented as the seeded Voges-Proskauer-test
+    assay parent, so this positive assay-outcome phenotype can use its exact source
+    superclass instead of a temporary direct phenotype parent; this resolves the exact
+    METPO assay-parent gap, not the broader non-assay parent question for assay-outcome
+    phenotypes.

@@ -14,13 +14,44 @@ data/traits/metabolism/pectin_degradation.yaml	traitmech:000135	2	DOI:10.1128/MM
 data/traits/metabolism/respiration_of_sulfur_compounds.yaml	traitmech:000124	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2023.1108245		yes
 data/traits/metabolism/sulfur_respiration.yaml	traitmech:000125	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2023.1108245		yes
 data/traits/metabolism/thiosulfate_respiration.yaml	traitmech:000126	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2023.1108245		yes
+data/traits/morphology/type_iv_pilus.yaml	traitmech:000175	2	DOI:10.1093/femsre/fuab053; DOI:10.1042/BST20160221		yes
 data/traits/physiology/acid_phosphatase_activity.yaml	traitmech:000142	2	DOI:10.1128/JB.182.23.6850-6853.2000; DOI:10.1155/2021/8888641		yes
+data/traits/physiology/alanine_arylamidase_activity.yaml	traitmech:000161	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html; DOI:10.1099/ijsem.0.006017		yes
 data/traits/physiology/alkaline_phosphatase_activity.yaml	traitmech:000141	2	DOI:10.1128/JB.185.16.4983-4991.2003; DOI:10.1155/2021/8888641		yes
+data/traits/physiology/alpha_chymotrypsin_activity.yaml	traitmech:000159	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html; DOI:10.1099/ijsem.0.006017		yes
+data/traits/physiology/alpha_fucosidase_activity.yaml	traitmech:000152	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/51.html; DOI:10.1128/jcm.22.3.333-335.1985		yes
+data/traits/physiology/alpha_galactosidase_activity.yaml	traitmech:000149	2	DOI:10.3109/07388551.2013.794124; DOI:10.1128/jcm.22.3.333-335.1985		yes
 data/traits/physiology/alpha_glucosidase_activity.yaml	traitmech:000145	2	DOI:10.1371/journal.pone.0322500; DOI:10.3390/microorganisms13092005		yes
+data/traits/physiology/alpha_mannosidase_activity.yaml	traitmech:000150	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html; DOI:10.1128/jcm.32.3.854-855.1994		yes
+data/traits/physiology/amylase_activity.yaml	traitmech:000162	2	DOI:10.3389/fbioe.2020.00871; DOI:10.1007/s00018-023-04812-w		yes
+data/traits/physiology/arginine_arylamidase_activity.yaml	traitmech:000167	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html; DOI:10.3389/fgene.2023.1240581; DOI:10.1099/ijsem.0.006017		yes
+data/traits/physiology/arginine_dihydrolase_activity.yaml	traitmech:000164	4	DOI:10.1128/aem.07724-11; https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html; DOI:10.1016/j.fm.2010.11.016; DOI:10.1016/j.resmic.2012.11.004		yes
+data/traits/physiology/beta_galactosidase_activity.yaml	traitmech:000148	2	DOI:10.3389/fmicb.2021.742300; DOI:10.1128/jcm.22.3.333-335.1985		yes
+data/traits/physiology/beta_glucosidase_activity.yaml	traitmech:000146	3	DOI:10.1007/s13205-015-0328-z; DOI:10.2323/jgam.60.59; DOI:10.3390/microorganisms12040776		yes
+data/traits/physiology/beta_glucuronidase_activity.yaml	traitmech:000151	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html; DOI:10.1128/aem.50.6.1383-1387.1985		yes
+data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml	traitmech:000157	2	https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html; DOI:10.1021/jf020965x		yes
+data/traits/physiology/carboxylesterase_activity.yaml	traitmech:000156	2	https://iubmb.qmul.ac.uk/enzyme/EC3/1/1/1.html; DOI:10.1128/JCM.43.8.3713-3717.2005		yes
 data/traits/physiology/caseinase_activity.yaml	traitmech:000137	2	DOI:10.3389/fmicb.2018.01148; DOI:10.2174/1874285801408010025		yes
+data/traits/physiology/cystine_arylamidase_activity.yaml	traitmech:000147	3	DOI:10.14202/vetworld.2024.143-149; DOI:10.3389/fmicb.2022.1034816; DOI:10.2323/jgam.60.59		yes
 data/traits/physiology/dnase_activity.yaml	traitmech:000138	2	DOI:10.3389/fmicb.2019.00969; DOI:10.22207/JPAM.14.1.44		yes
+data/traits/physiology/gamma_glutamyltransferase_activity.yaml	traitmech:000160	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html; DOI:10.3389/fgene.2023.1240581		yes
 data/traits/physiology/gelatinase_activity.yaml	traitmech:000136	2	DOI:10.1128/JB.01311-07; DOI:10.1128/IAI.73.3.1606-1612.2005		yes
+data/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.yaml	traitmech:000173	2	DOI:10.1099/ijsem.0.006017; DOI:10.1099/ijs.0.63642-0		yes
+data/traits/physiology/glycine_arylamidase_activity.yaml	traitmech:000170	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
+data/traits/physiology/histidine_arylamidase_activity.yaml	traitmech:000171	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/lecithinase_activity.yaml	traitmech:000140	2	DOI:10.2147/IDR.S365254; DOI:10.1128/jb.81.6.939-945.1961		yes
 data/traits/physiology/leucine_arylamidase_activity.yaml	traitmech:000143	2	DOI:10.1099/ijsem.0.002327; DOI:10.1155/2021/8888641		yes
 data/traits/physiology/lipase_activity.yaml	traitmech:000139	2	DOI:10.22207/JPAM.16.4.27; DOI:10.1016/j.mex.2018.01.004		yes
+data/traits/physiology/lysine_decarboxylase_activity.yaml	traitmech:000153	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/18.html; DOI:10.1128/jb.01306-06		yes
+data/traits/physiology/magnetotaxis.yaml	traitmech:000176	3	DOI:10.1128/JB.00398-20; DOI:10.1038/s41396-018-0098-9; DOI:10.1128/mbio.01649-23		yes
+data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml	traitmech:000165	3	https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html; DOI:10.1111/j.1432-1033.1986.tb09366.x; DOI:10.1128/jb.169.6.2591-2597.1987		yes
+data/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.yaml	traitmech:000174	2	DOI:10.14202/vetworld.2024.143-149; DOI:10.1128/JCM.43.8.3713-3717.2005		yes
+data/traits/physiology/ornithine_decarboxylase_activity.yaml	traitmech:000154	2	https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html; DOI:10.1128/jb.124.2.791-799.1975		yes
+data/traits/physiology/phenylalanine_arylamidase_activity.yaml	traitmech:000168	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
+data/traits/physiology/prolyl_aminopeptidase_activity.yaml	traitmech:000166	3	https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html; DOI:10.1111/j.1365-2958.1993.tb01249.x; DOI:10.1099/ijsem.0.006017		yes
+data/traits/physiology/pyrazinamidase_activity.yaml	traitmech:000163	3	DOI:10.1111/j.1742-4658.2007.06241.x; https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html; DOI:10.1371/journal.pone.0015785		yes
+data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml	traitmech:000155	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html; DOI:10.1128/JCM.37.11.3443-3447.1999		yes
+data/traits/physiology/serine_arylamidase_activity.yaml	traitmech:000172	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
+data/traits/physiology/trypsin_activity.yaml	traitmech:000158	2	https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html; DOI:10.1371/journal.pone.0322500		yes
+data/traits/physiology/tyrosine_arylamidase_activity.yaml	traitmech:000169	2	DOI:10.1099/ijsem.0.006017; DOI:10.1128/JCM.40.9.3427-3431.2002		yes
 data/traits/physiology/valine_arylamidase_activity.yaml	traitmech:000144	2	DOI:10.3389/fmicb.2022.1034816; DOI:10.1099/ijsem.0.002327		yes

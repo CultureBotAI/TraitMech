@@ -44,7 +44,7 @@ This is the inverse of CultureMech / MediaIngredientMech / CommunityMech, all of
 |---|---|
 | Re-seeding from a new METPO release | Use the METPO CURIE directly. No minting. |
 | Adding an organism-level trait that exists in METPO | Look up the METPO CURIE; use that as `identifier:`. |
-| Adding a trait that **does not yet exist** in METPO | Two options. Prefer (1): file a METPO ticket so the trait gets an upstream ID. Fall back to (2): mint `traitmech:NNNNNN` and document the gap. |
+| Adding a trait that **does not yet exist** in METPO | Mint `traitmech:NNNNNN`, add a same-PR METPO ROBOT-template proposal, and document the round-trip path. Reference any pre-existing upstream METPO issue, but do not use an issue link instead of the proposal artifact. |
 | Validating that no two trait YAMLs share an identifier | Use the duplicate-check snippet below. |
 | Curating a renamed METPO term | Keep the old METPO CURIE in `identifier:`; add the new label to `synonyms:`. Identifiers don't change. |
 
@@ -64,13 +64,16 @@ For the `definition`, `synonyms`, and other slots, the seeder (`scripts/seed_fro
 
 ## Minting `traitmech:NNNNNN` (fallback path)
 
-Only when METPO truly has no matching term and the curator wants to record the trait now rather than wait on the upstream PR.
+Only when METPO truly has no matching term and the curator wants to record the
+trait now rather than wait on an upstream METPO release. Every new fallback ID
+must be paired with a `proposals/metpo_traitmech_v<N>/` cohort in the same PR
+that reserves the proposed `METPO:` placeholder.
 
 ### 1. Find the next available number
 
 ```bash
 # Highest existing traitmech: number across all trait YAMLs
-grep -rh "^identifier: traitmech:" data/traits/ \
+rg --no-ignore --hidden -o "^identifier: traitmech:[0-9]{6}" data/traits/ \
   | awk -F: '{print $NF}' \
   | sort -n | tail -1
 # (no output = 000000 is free; mint 000001)
@@ -90,7 +93,7 @@ for yaml_file in Path("data/traits").rglob("*.yaml"):
 print(f"Next traitmech ID: traitmech:{max_id + 1:06d}")
 ```
 
-### 2. Hand-author the YAML
+### 2. Write the YAML
 
 Place the new file under the appropriate `data/traits/<category>/` directory. Categories:
 
@@ -100,22 +103,25 @@ morphology, observation, physiology,
 quantitative_property, upper
 ```
 
-Minimum-viable shape:
+Build the record in Python and write it through `write_validated_trait`; do not
+hand-serialize YAML. Minimum-viable shape:
 
 ```yaml
 identifier: traitmech:000001          # Six-digit zero-padded
 label: <your trait label>
 definition: >-
   <one-or-two-sentence definition>
-definition_source: DOI:10.xxxx/yyy    # Citation or "curator-supplied"
+definition_source: DOI:10.xxxx/yyy    # DOI, PMID, or stable URL citation
 trait_category: PHYSIOLOGY            # Must match a TraitCategoryEnum value
+term_kind: CLASS
+mapping_status: PROPOSED
 synonyms: []
-evidence: []                          # PMID:/DOI: refs supporting the trait
+evidence: []                          # DOI/PMID/stable-URL refs supporting the trait
 curation_history:
   - timestamp: '2026-05-19T00:00:00+00:00'
     curator: <your name or handle>    # match an existing convention: seed_from_metpo, codex, or your name
     action: MINTED_TRAITMECH_ID
-    changes: 'METPO has no matching term yet; tracked in METPO issue #N'
+    changes: 'METPO has no matching term yet; reserved in proposals/metpo_traitmech_v<N>'
     llm_assisted: false
 ```
 
@@ -128,9 +134,15 @@ just validate path/to/new_trait.yaml      # single file, open mode
 just validate-strict path/to/new_trait.yaml  # closed mode (rejects unknown fields)
 ```
 
-### 4. Open a METPO upstream ticket
+### 4. Add a METPO proposal
 
-The minted `traitmech:` ID is meant to be **temporary**. File a METPO issue so the term gets a real ontology home; once upstream lands, re-seed and migrate the YAML's `identifier:` to the METPO CURIE (keep the old `traitmech:` in `synonyms:` so external references don't break).
+The minted `traitmech:` ID is meant to be **temporary**. Add or extend a
+`proposals/metpo_traitmech_v<N>/` cohort in the same PR so the term has a real
+upstream ontology home reserved. If a separate METPO issue already exists,
+reference it from the proposal narrative; otherwise the ROBOT template plus
+round-trip plan is the review artifact. Once upstream lands, re-seed and migrate
+the YAML's `identifier:` to the METPO CURIE while preserving the old
+`traitmech:` CURIE for traceability.
 
 ## Validation snippets
 

@@ -28,19 +28,10 @@ name: Curation history
 # dependency on a culturebotai-claw checkout.
 
 on:
+  # Required checks report on every PR and on the combined queue commit.
   pull_request:
-    paths:
-      - "data/traits/**"
-      - "history/**"
-      - "src/traitmech/schema/history.yaml"
-      - "scripts/new_history_record.py"
-      - "scripts/validate_history_links.py"
-      - "justfile"
-      - ".github/workflows/curation-history.yaml"
-      # Runs under `uv sync`; the resolved environment is an input to the
-      # verdict, so a dependency-only change must still run this (#566/#567).
-      - "pyproject.toml"
-      - "uv.lock"
+  merge_group:
+    types: [checks_requested]
   push:
     branches: [main]
     paths:
@@ -55,13 +46,14 @@ on:
       # verdict, so a dependency-only change must still run this (#566/#567).
       - "pyproject.toml"
       - "uv.lock"
+      - ".python-version"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: curation-history-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
@@ -79,6 +71,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
+          python-version: "3.13"
           # The last of eight call sites without it (#224). Nothing about this
           # job made caching wrong — it was simply the one never updated.
           enable-cache: true
@@ -90,10 +83,16 @@ jobs:
         run: just validate-history
 
       - name: Check for missing history records (blocking)
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' || github.event_name == 'merge_group'
+        env:
+          HISTORY_BASE: ${{ github.event_name == 'merge_group' && github.event.merge_group.base_sha || github.event.pull_request.base.sha }}
         run: |
           set -euo pipefail
-          git fetch --no-tags origin "${{ github.base_ref }}"
+          # The checkout is the combined candidate. Use the event's immutable
+          # base, so an earlier queued PR is included even if the last PR only
+          # changes documentation. Missing event data must fail closed.
+          test -n "$HISTORY_BASE"
+          git cat-file -e "${HISTORY_BASE}^{commit}"
 
           # The RULE lives in scripts/audit_history_records.py, not here. Shell
           # embedded in workflow YAML cannot be unit-tested and cannot be run
@@ -106,7 +105,7 @@ jobs:
           # would never be written -- losing the remediation text on exactly the
           # runs that need it.
           status=0
-          just audit-history-records --base "origin/${{ github.base_ref }}" \
+          just audit-history-records --base "$HISTORY_BASE" \
             > out.txt 2>&1 || status=$?
           cat out.txt
 

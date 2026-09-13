@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.yaml
+  slug: glutamyl_glutamic_acid_arylamidase_activity
+session:
+  id: 2026-09-12T142358Z-codex-3c7c84
+  timestamp: '2026-09-12T14:23:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - metpo_proposal
+  summary: Add glutamyl glutamic acid arylamidase activity
+  details: Minted traitmech:000173 for DOI-backed glutamyl glutamic acid arylamidase activity,
+    added two full-text evidence snippets, recorded Amygdalobacter indicium as a canonical
+    example, left the broad GO dipeptidase mapping as a curation TODO, and reserved METPO:1012700
+    in proposals/metpo_traitmech_v50.

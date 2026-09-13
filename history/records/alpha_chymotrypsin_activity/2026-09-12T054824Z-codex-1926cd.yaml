@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/alpha_chymotrypsin_activity.yaml
+  slug: alpha_chymotrypsin_activity
+session:
+  id: 2026-09-12T054824Z-codex-1926cd
+  timestamp: '2026-09-12T05:48:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/819
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  summary: Correct alpha-chymotrypsin IUBMB scissile-bond snippet
+  details: Fixed the NC-IUBMB EC 3.4.21.1 reaction-line evidence snippet for alpha-chymotrypsin
+    activity so the verbatim quote preserves the FISS.GIF scissile-bond image tags found in
+    the source HTML; recorded the correction in the TraitRecord curation history.

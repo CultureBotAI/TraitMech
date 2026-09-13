@@ -202,12 +202,18 @@ def paths_read(script: Path, root: Path) -> set[str]:
     return tops
 
 
-def filter_tops(workflow_text: str) -> set[str]:
-    """Top-level entries named by qc.yaml's pull_request paths filter."""
+def filter_tops(workflow_text: str) -> set[str] | None:
+    """Covered entries, or None for an unconditional PR path trigger."""
     doc = yaml.safe_load(workflow_text)
     # PyYAML resolves the bare key `on` to boolean True under YAML 1.1.
     triggers = doc.get("on", doc.get(True)) or {}
+    if "pull_request" not in triggers:
+        raise BlindGate("qc.yaml has no pull_request trigger")
     pull_request = triggers.get("pull_request") or {}
+    if "paths-ignore" in pull_request:
+        raise BlindGate("qc.yaml uses paths-ignore, which this audit cannot inspect")
+    if "paths" not in pull_request:
+        return None
     patterns = pull_request.get("paths") or []
     return {str(p).split("/")[0].replace("**", "").strip() or "/" for p in patterns}
 
@@ -249,7 +255,7 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
             if direct:
                 for top in direct:
                     read_set.add(top)
-                    if top in IGNORED_TOPS or top in covered:
+                    if covered is None or top in IGNORED_TOPS or top in covered:
                         continue
                     seen.setdefault(top, set()).add(f"{recipe} → (named directly)")
                 continue
@@ -286,7 +292,7 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
                 silent.add(rel)
             for top in script_reads:
                 read_set.add(top)
-                if top in IGNORED_TOPS or top in covered:
+                if covered is None or top in IGNORED_TOPS or top in covered:
                     continue
                 seen.setdefault(top, set()).add(f"{recipe} → {rel}")
 
@@ -333,7 +339,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  ! {row['path']}  (read by {row['readers']})", file=sys.stderr)
         print(f"      {row['detail']}", file=sys.stderr)
     if not findings:
-        print("  every directory the qc chain reads is in the filter")
+        print("  the PR trigger covers every directory the qc chain reads")
     return 1 if findings else 0
 
 

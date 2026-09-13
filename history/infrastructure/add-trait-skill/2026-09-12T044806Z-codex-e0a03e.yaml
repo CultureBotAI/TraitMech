@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-12T044806Z-codex-e0a03e
+  timestamp: '2026-09-12T04:48:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - metpo_proposal
+  summary: Require same-PR METPO proposals for new traitmech records
+  details: Updated the add-trait skill so every curator-minted traitmech fallback record explicitly
+    gets a same-branch METPO ROBOT-template proposal, per-cohort proposal verification, and
+    report wording that names proposal artifacts instead of treating standalone upstream issues
+    as sufficient.

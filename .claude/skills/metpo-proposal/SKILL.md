@@ -12,11 +12,12 @@ tags: [metpo, ontology, robot, linkml, proposal, schema-lift, kg-microbe, traitm
 
 ## Overview
 
-TraitMech is a **consumer** of METPO: all 357 current trait records carry
-`METPO:` identifiers seeded from `data/raw/metpo.owl`. This skill produces the
-**reverse-direction** artifact — a ROBOT-template proposal that asks METPO to
-adopt classes/predicates that originated locally in TraitMech, so that future
-seeds round-trip without `traitmech:` fallback IDs.
+TraitMech is a **consumer** of METPO. Seeded records carry `METPO:`
+identifiers from `data/raw/metpo.owl`, and every curator-minted `traitmech:`
+fallback needs a METPO proposal so that future seeds can round-trip without the
+temporary local ID. This skill produces the **reverse-direction** artifact — a
+ROBOT-template proposal that asks METPO to adopt classes/predicates that
+originated locally in TraitMech.
 
 Up to four artifacts are produced under `proposals/<cohort-name>/`:
 
@@ -64,14 +65,18 @@ To find candidates:
 
 ```bash
 # Edges that have a description but no predicate_id grounding
-uv run python -c "
+.venv/bin/python -c "
 import yaml, pathlib
+labels = set()
 for p in pathlib.Path('data/traits').rglob('*.yaml'):
     doc = yaml.safe_load(p.read_text())
     for g in (doc.get('causal_graphs') or []):
         for e in (g.get('edges') or []):
             if not e.get('predicate_id') and e.get('predicate'):
-                print(f'{p}:{e[\"predicate\"]}')" | sort -u | head -50
+                labels.add(f'{p}:{e[\"predicate\"]}')
+for label in sorted(labels)[:50]:
+    print(label)
+"
 ```
 
 ### Scope C — Schema enum lift (one-off; do not lift workflow-internal enums)
@@ -119,29 +124,29 @@ ROBOT column structure and the citation-vs-mapping rule (issue #83) — all in
 
 ## ID-space conventions
 
-TraitMech proposes into the **`METPO:1007400+` and `METPO:2007400+` placeholder
-ranges**, chosen to leave clear daylight above the CommunityMech v1 cohort
-(which occupies `1007100`–`1007220` and `2007100`–`2007113`).
+TraitMech proposes into **`METPO:1007400+` class** and **`METPO:2007400+`
+predicate** placeholder ranges, chosen to leave clear daylight above the
+CommunityMech v1 cohort, which occupies `1007100`–`1007220` and
+`2007100`–`2007113`.
 
 | Range | Use |
 |---|---|
 | `METPO:1000000` | METPO root (only as `SC %` parent when no closer parent exists) |
 | `METPO:1000525` | "microbe" — DOMAIN for predicates whose subject is a microbial taxon |
-| `METPO:1007400`–`METPO:1007499` | **Placeholder** range for TraitMech class proposals (cohort v1 starts here) |
-| `METPO:2007400`–`METPO:2007499` | **Placeholder** range for TraitMech predicate proposals |
+| `METPO:1007400`–`METPO:1007499` | Initial TraitMech class block used by `metpo_traitmech_v1` |
+| `METPO:1007500`+ | Later class proposal blocks |
+| `METPO:2007400`+ | TraitMech predicate proposal blocks |
 
-Within `1007400`–`1007499`, allocate contiguous numeric blocks per scope so
-the file scans easily. Suggested v1 layout:
+`metpo_traitmech_v1` uses `1007400`–`1007420` for causal-graph and
+`CausalNodeTypeEnum` lift rows. Later Scope-A cohorts use a fresh 100-wide block
+per cohort so single-trait fallback proposals are append-only and easy to scan.
+Inspect the latest `proposals/metpo_traitmech_v<N>/proposal.md`, then reserve
+the next free hundred block; as of `metpo_traitmech_v53`, `METPO:1013000` is
+reserved, so the next one-row Scope-A cohort starts at `METPO:1013100`.
+**Never reuse a block from a merged cohort, even if rows in the old block were
+rejected upstream.**
 
-- `1007400`–`1007404` — top-level domain classes (`trait causal graph`, `trait causal node`, `trait causal edge`, optional)
-- `1007410`–`1007429` — `CausalNodeTypeEnum` lift (Scope C): enum-parent + 10 leaves
-- `1007430`–`1007499` — Scope-A synthetic trait classes (one per `traitmech:NNNNNN` row found in the corpus at audit time)
-
-Future cohorts should pick a fresh block starting at `1007500+` and document
-the new block in their `proposal.md`. **Never reuse a block from a merged
-cohort, even if rows in the old block were rejected upstream.**
-
-For Scope-B predicates, use `2007400+` and follow the
+For Scope-B predicates, use the next free block at `2007400+` and follow the
 [kg-microbe SKILL.md paired predicate convention](../../../../kg-microbe/.claude/skills/metpo-proposal/SKILL.md#paired-predicates-positive--negative-via-shared-synonym)
 only when the predicate is truly paired (microbe ↔ chemical capability). Most
 causal-graph predicates are unidirectional and should NOT be paired.
@@ -149,12 +154,13 @@ causal-graph predicates are unidirectional and should NOT be paired.
 ### Collision check before minting
 
 ```bash
-# Ensure your proposed block doesn't overlap any other Mech's cohort
-grep -E "METPO:100(7[0-9]{3}|6[0-9]{3})" data/raw/metpo.owl | head
+# Ensure your proposed block doesn't overlap an existing proposal or METPO term
+rg --no-ignore --hidden -n "METPO:10114[0-9]{2}" proposals data/raw/metpo.owl
 ```
 
-If the upstream METPO release has already minted IDs in `1007400+`, bump to
-the next free block.
+Replace `10114[0-9]{2}` with a regex for the exact placeholder IDs or whole
+block you intend to reserve. Empty output means the block is free in this
+checkout.
 
 ---
 
@@ -200,12 +206,12 @@ curated ontology, not a schema dump.
 
 #### Scope A (synthetic traits)
 
-- **Parent**: read the original `traitmech:` record's `parent_classes:` slot;
+- **Parent**: read the original `traitmech:` record's `parent_traits:` slot;
   use the closest existing METPO class as the proposal's `SC %` parent.
   Never `SC METPO:1000000` directly for a Scope-A row unless the trait is
   genuinely top-level.
 - **Label**: copy from the record's `label:` slot verbatim.
-- **Definition**: rewrite the record's `description:` in Aristotelian form
+- **Definition**: rewrite the record's `definition:` in Aristotelian form
   (`<genus>: <differentia>`). The original prose usually needs tightening.
 - **Synonyms**: copy true `EXACT_SYNONYM` entries into the
   `hasExactSynonym` column. If a cohort needs related labels such as raw
@@ -256,8 +262,8 @@ Skip slots that just hold metadata (e.g., timestamps, curator IDs).
 ### 4. Write the TSVs
 
 Write `metpo_proposal_classes_robot.tsv` and
-`metpo_proposal_properties_robot.tsv` directly with the `Write` tool. Build
-each row as a literal tab-separated string. After writing, fix the ROBOT
+`metpo_proposal_properties_robot.tsv` as literal tab-separated strings. After
+writing, fix the ROBOT
 header row's trailing tabs (header row 2 needs to reach the full column
 count):
 
@@ -310,12 +316,13 @@ also lists the common pitfalls and their fixes.
 Standard TraitMech workflow:
 
 ```bash
-git checkout -b claude/metpo-<cohort>-proposal
+git switch -c claude/metpo-<cohort>-proposal
 git add proposals/<cohort>/ justfile           # justfile only if you added a target
 git commit -m "Add METPO ROBOT-template proposal: <cohort>"
 git push -u origin claude/metpo-<cohort>-proposal
 gh pr create --title "METPO ROBOT-template proposal: <cohort>"
-gh api repos/CultureBotAI/TraitMech/pulls/<n>/requested_reviewers -X POST -f "reviewers[]=Copilot"
+gh api repos/CultureBotAI/TraitMech/pulls/<n>/requested_reviewers \
+  -X POST -F 'reviewers[]=Copilot'
 ```
 
 ---

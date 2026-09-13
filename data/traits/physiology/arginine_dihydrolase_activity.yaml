@@ -1,0 +1,75 @@
+identifier: traitmech:000164
+label: arginine dihydrolase activity
+definition: A physiological pathway-activity phenotype in which a cell converts L-arginine
+  through the arginine deiminase pathway to generate ATP.
+definition_source: DOI:10.1128/aem.07724-11
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: arginine deiminase pathway activity
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.resmic.2012.11.004
+- synonym_text: ADI pathway activity
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.resmic.2012.11.004
+- synonym_text: arginine dihydrolase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html
+- synonym_text: arginine deiminase
+  synonym_type: RELATED_SYNONYM
+  source: https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html
+evidence:
+- reference: https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html
+  snippet: <b>Reaction:</b> <small>L</small>-arginine + H<small><sub>2</sub></small>O
+    = <small>L</small>-citrulline + NH<small><sub>3</sub></small>
+  notes: The NC-IUBMB EC 3.5.3.6 entry grounds the first arginine-deiminase step of
+    the arginine deiminase pathway and records arginine dihydrolase as another name
+    for that molecular function.
+- reference: DOI:10.1016/j.fm.2010.11.016
+  snippet: Arginine conversion through the ADI pathway, which was activated from the
+    stationary growth phase on, resulted in the production of both citrulline and
+    ornithine for all pH conditions tested.
+  notes: Rimaux et al. directly assayed pH-dependent L-arginine conversion through
+    the ADI pathway in Lactobacillus sakei CTC 494.
+- reference: DOI:10.1128/aem.07724-11
+  snippet: For instance, the ability to utilize arginine through the arginine deiminase
+    (ADI) pathway, resulting in additional ATP, represents a competitive benefit.
+  notes: Rimaux et al. frame arginine utilization through the ADI pathway as an ATP-yielding
+    metabolic capability and show that arc gene expression is strain- and pH-dependent
+    in Lactobacillus sakei.
+- reference: DOI:10.1016/j.resmic.2012.11.004
+  snippet: Arginine conversion through the arginine deiminase (ADI) pathway is a common
+    metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and
+    which inquisitively involves citrulline excretion and re-uptake.
+  notes: Rimaux et al. use the pathway-activity phrasing while studying the transporter
+    coupled to citrulline and ornithine exchange during L. sakei ADI pathway activity.
+canonical_examples:
+- taxon_id: NCBITaxon:1599
+  taxon_label: Latilactobacillus sakei
+  note: Rimaux et al. assayed arginine conversion through the ADI pathway in Lactobacillus
+    sakei CTC 494 and observed citrulline and ornithine production across the tested
+    pH series.
+  reference: DOI:10.1016/j.fm.2010.11.016
+discussions:
+- discussion_id: arginine-dihydrolase-activity-xref-gap
+  prompt: Resolve exact external ontology mappings for arginine dihydrolase activity
+    before adding TraitRecord xrefs.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0016990 arginine deiminase activity and EC 3.5.3.6 denote the first-step
+    molecular function in the arginine deiminase pathway rather than the full organism-level
+    pathway-activity phenotype, so GO:0016990 is a close mechanism grounding for the
+    source node and not an equivalent TraitRecord xref.
+  posed_by: codex
+  posed_date: '2026-09-12'
+curation_history:
+- timestamp: '2026-09-12T09:44:56Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted arginine dihydrolase activity as a URL/DOI-backed TraitRecord after
+    a repository-wide duplicate review covering ignored and hidden files; METPO has
+    no exact arginine deiminase pathway activity class yet.
+  llm_assisted: true

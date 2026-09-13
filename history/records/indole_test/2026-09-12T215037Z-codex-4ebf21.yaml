@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/indole_test.yaml
+  slug: indole_test
+session:
+  id: 2026-09-12T215037Z-codex-4ebf21
+  timestamp: '2026-09-12T21:50:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/874
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/873
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_notes
+  summary: Complete ASM indole-test medium quote
+  details: 'Extended the second ASM indole-test evidence snippet to keep the source-local
+    (5). citation marker after Claude Code Review issue #874 noted that the previous snippet
+    ended before the terminal punctuation of the source sentence.'

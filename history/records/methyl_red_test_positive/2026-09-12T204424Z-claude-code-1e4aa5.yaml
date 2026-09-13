@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/other/methyl_red_test_positive.yaml
+  slug: methyl_red_test_positive
+session:
+  id: 2026-09-12T204424Z-claude-code-1e4aa5
+  timestamp: '2026-09-12T20:44:24Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/870
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/866
+events:
+- type: EDIT
+  outcome: changed
+  summary: Preserve methyl red positive parent-gap rationale
+  details: Moved the resolved discussion closure into resolution_note and resolved_date while
+    restoring the original rationale that records why the methyl red positive assay-parent
+    gap was raised.

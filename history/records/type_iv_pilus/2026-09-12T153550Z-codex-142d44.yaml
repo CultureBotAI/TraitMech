@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/type_iv_pilus.yaml
+  slug: type_iv_pilus
+session:
+  id: 2026-09-12T153550Z-codex-142d44
+  timestamp: '2026-09-12T15:35:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add type IV pilus
+  details: Minted traitmech:000175 for a DOI-backed type IV pilus morphology trait, added
+    type IV pili and T4P exact synonyms, added the GO:0044096 structural xref, recorded Pseudomonas
+    aeruginosa PAO1 as a canonical example, and reserved METPO:1012900 in proposals/metpo_traitmech_v52.
