@@ -1,0 +1,29 @@
+identifier: traitmech:000177
+label: specialist
+definition: A phenotype describing an organism with a narrow ecological niche, restricted
+  to a limited range of environments or resources.
+definition_source: DOI:10.1093/femsec/fiaa240
+trait_category: OTHER
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1093/femsec/fiaa240
+  snippet: Organisms are often categorized as generalists or specialists, corresponding
+    to broad or narrow niche requirements
+  notes: Bell and Bell frame specialists as organisms with narrow niche requirements,
+    contrasting them with bacterial generalists.
+- reference: DOI:10.1038/s41559-023-02027-7
+  snippet: Generalists can survive in many environments, whereas specialists are restricted
+    to a single environment.
+  notes: The social-niche-breadth study defines specialists as environmentally restricted
+    prokaryotes while contrasting them with generalists.
+curation_history:
+- timestamp: '2026-09-13T17:05:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted specialist as a DOI-backed TraitRecord after a repository-wide duplicate
+    review covering ignored and hidden files; the local METPO snapshot has no exact
+    specialist class and the replacement placeholder is reserved in proposals/metpo_traitmech_v54.
+  llm_assisted: true
