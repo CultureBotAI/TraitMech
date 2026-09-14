@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/akinete.yaml
+  slug: akinete
+session:
+  id: 2026-09-14T154954Z-codex-106b3c
+  timestamp: '2026-09-14T15:49:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add akinete trait
+  details: Minted traitmech:000185 for the cyanobacterial akinete morphology trait with DOI-backed
+    Nostocales evidence from 10.1159/000517443 and 10.3389/fmicb.2025.1677844, a Trichormus
+    variabilis ATCC 29413 canonical example, and a v62 METPO proposal for the upstream placeholder.
