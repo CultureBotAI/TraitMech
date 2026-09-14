@@ -12,9 +12,6 @@ synonyms:
 - synonym_text: TT_phototroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: aerobic_anoxygenic_phototrophy
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 - synonym_text: phototroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
@@ -413,4 +410,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-14T23:14:00Z'
+  curator: codex
+  action: NARROWED_RELATED_SYNONYM
+  changes: Moved the aerobic_anoxygenic_phototrophy metpo.owl source key from broad
+    phototrophic to the newly minted same-scope aerobic anoxygenic phototrophy TraitRecord.
   llm_assisted: true

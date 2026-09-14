@@ -17,7 +17,7 @@ METPO source class and (optionally) to literature evidence.
 | Category | REVIEWED | PROPOSED | DEPRECATED | causal_graphs | Total |
 |---|---:|---:|---:|---:|---:|
 | MORPHOLOGY | 88 | 3 | 0 | 88 | 95 |
-| PHYSIOLOGY | 45 | 43 | 0 | 45 | 89 |
+| PHYSIOLOGY | 45 | 44 | 0 | 46 | 90 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 122 |
 | ECOLOGY | 26 | 0 | 0 | 26 | 26 |
 | GENOMICS | 19 | 0 | 0 | 19 | 19 |
@@ -26,14 +26,14 @@ METPO source class and (optionally) to literature evidence.
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
 | OTHER | 0 | 1 | 0 | 0 | 32 |
-| **TOTAL** | **427** | **73** | **50** | **354** | **588** |
+| **TOTAL** | **427** | **74** | **50** | **355** | **589** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; three morphology records, 26 newer metabolism records,
-forty-three physiology records, and one other record are `PROPOSED`, and
+forty-four physiology records, and one other record are `PROPOSED`, and
 thirty-eight records are still `SEEDED` (one environment, one metabolism,
 four morphology, one physiology, and thirty-one other).
-Of the reviewed records, 354 currently carry causal graphs. The 50 deprecated
+Across the corpus, 355 records currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
 measurement carriers from the upstream METPO seed that are not intended to carry

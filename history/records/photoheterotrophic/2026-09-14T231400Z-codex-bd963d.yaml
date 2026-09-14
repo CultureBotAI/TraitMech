@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photoheterotrophic.yaml
+  slug: photoheterotrophic
+session:
+  id: 2026-09-14T231400Z-codex-bd963d
+  timestamp: '2026-09-14T23:14:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Grounded the aerobic anoxygenic phototrophs graph node
+  details: Grounded the existing same-scope aerobic_anoxygenic_phototrophs TRAIT node on the
+    Photoheterotrophic causal graph to the newly minted traitmech:000194 record.

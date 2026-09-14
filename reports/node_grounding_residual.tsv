@@ -193,6 +193,7 @@ peptidoglycan hydrolases	GENE_OR_PROTEIN	2	data/traits/morphology/sarcina_arrang
 daughter-cell separation	BIOLOGICAL_PROCESS	2	data/traits/morphology/sarcina_arrangement.yaml|data/traits/morphology/streptococcus_arrangement.yaml
 peptidoglycan remodeling	BIOLOGICAL_PROCESS	2	data/traits/morphology/spiral_shaped.yaml|data/traits/morphology/streptococcus_arrangement.yaml
 periplasmic flagella	ORGANELLE	2	data/traits/morphology/spiral_shaped.yaml|data/traits/morphology/spirochete_shaped.yaml
+photophosphorylation	BIOLOGICAL_PROCESS	2	data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
 dissolved inorganic carbon	CHEMICAL	2	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml
 respiratory energy conservation	BIOLOGICAL_PROCESS	2	data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
 dissolved inorganic carbon transporter	GENE_OR_PROTEIN	2	data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml
@@ -2173,8 +2174,6 @@ carboxysomal carbonic anhydrase	GENE_OR_PROTEIN	1	data/traits/physiology/photoau
 proteorhodopsin proton pumping	BIOLOGICAL_PROCESS	1	data/traits/physiology/photoheterotrophic.yaml
 membrane potential	STATE	1	data/traits/physiology/photoheterotrophic.yaml
 nad(p)h for anabolic metabolism	CHEMICAL	1	data/traits/physiology/photoheterotrophic.yaml
-photophosphorylation	BIOLOGICAL_PROCESS	1	data/traits/physiology/photoheterotrophic.yaml
-aerobic anoxygenic phototrophs	TRAIT	1	data/traits/physiology/photoheterotrophic.yaml
 anoxygenic photosynthesis	PATHWAY	1	data/traits/physiology/photolithotrophic.yaml
 hydrogen sulfide oxidation	BIOLOGICAL_PROCESS	1	data/traits/physiology/photolithotrophic.yaml
 photosynthetic co2 fixation	BIOLOGICAL_PROCESS	1	data/traits/physiology/photolithotrophic.yaml

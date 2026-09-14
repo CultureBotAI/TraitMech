@@ -303,6 +303,7 @@ data/traits/morphology/twitching_motility.yaml	traitmech:000061	twitching motili
 data/traits/morphology/vibrio_shaped.yaml	METPO:1000686	vibrio shaped	vibrio_shaped_crvA_curvature	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/white_pigmented.yaml	METPO:1003029	white pigmented	white_pigmented_low_chromophore	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/yellow_pigmented.yaml	METPO:1003030	yellow pigmented	yellow_pigmented_carotenoid_color	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml	traitmech:000194	aerobic anoxygenic phototrophy	aerobic_anoxygenic_phototrophy_light_organic_carbon	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	antibiotic resistance	antibiotic_resistance_mechanisms	MECHANISTIC	4	1	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/autotrophic.yaml	METPO:1000632	autotrophic	autotrophic_inorganic_carbon_fixation	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	bioluminescence_luciferase	MECHANISTIC	5	2	3	1	1	1	1	PASS	0	0	-
