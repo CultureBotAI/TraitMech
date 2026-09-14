@@ -164,7 +164,12 @@ def test_ncbi_api_posts_all_ids_once(monkeypatch):
             return None
 
         def read(self):
-            return b"<TaxaSet><Taxon><TaxId>2261</TaxId><ScientificName>P. furiosus</ScientificName></Taxon></TaxaSet>"
+            return (
+                b"<TaxaSet>"
+                b"<Taxon><TaxId>2261</TaxId><ScientificName>P. furiosus</ScientificName></Taxon>"
+                b"<Taxon><TaxId>2285</TaxId><ScientificName>Sulfolobus acidocaldarius</ScientificName></Taxon>"
+                b"</TaxaSet>"
+            )
 
     seen = {}
 
@@ -180,7 +185,7 @@ def test_ncbi_api_posts_all_ids_once(monkeypatch):
     assert "id=2261%2C2285" in seen["body"]
     assert seen["timeout"] == 7
     assert adapter.label("NCBITaxon:2261") == "P. furiosus"
-    assert adapter.label("NCBITaxon:2285") is None
+    assert adapter.label("NCBITaxon:2285") == "Sulfolobus acidocaldarius"
 
 
 def test_ncbi_api_retries_ids_missing_from_partial_responses(monkeypatch):
@@ -222,6 +227,30 @@ def test_ncbi_api_retries_ids_missing_from_partial_responses(monkeypatch):
     assert "id=2285" in seen_bodies[1]
     assert adapter.label("NCBITaxon:2261") == "P. furiosus"
     assert adapter.label("NCBITaxon:2285") == "Sulfolobus acidocaldarius"
+
+
+def test_ncbi_api_exhausted_partial_responses_fail_as_resolution_failures(monkeypatch):
+    class Response:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return None
+
+        def read(self):
+            return (
+                b"<TaxaSet>"
+                b"<Taxon><TaxId>2261</TaxId><ScientificName>P. furiosus</ScientificName></Taxon>"
+                b"</TaxaSet>"
+            )
+
+    def fake_urlopen(request, timeout):
+        return Response()
+
+    monkeypatch.setattr(ace.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(ace.time, "sleep", lambda _seconds: None)
+    with pytest.raises(RuntimeError, match="omitted 1 requested taxonomy"):
+        ace._ncbi_api_adapter(["NCBITaxon:2261", "NCBITaxon:2285"], attempts=2)
 
 
 def test_ncbi_api_failure_is_not_reported_as_a_skipped_clean_run(

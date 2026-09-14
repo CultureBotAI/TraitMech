@@ -145,8 +145,6 @@ def _ncbi_api_adapter(
             )
         if attempt + 1 < attempts:
             time.sleep(2**attempt)
-    if labels:
-        return _LabelAdapter(labels)
     raise RuntimeError(
         f"NCBI taxonomy EFetch failed after {attempts} attempt(s): {last_error}"
     ) from last_error
