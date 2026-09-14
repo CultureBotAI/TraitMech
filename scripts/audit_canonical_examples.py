@@ -94,19 +94,7 @@ def _parse_ncbi_taxonomy(payload: bytes) -> dict[str, str]:
     return labels
 
 
-def _ncbi_api_adapter(
-    curies: Sequence[str], *, attempts: int = 3, timeout: float = 60.0
-) -> _LabelAdapter:
-    """Resolve a small CURIE set with one authoritative NCBI EFetch request.
-
-    More than 200 ids should be sent by POST according to the E-utilities
-    guidance. Retrying transient HTTP/network failures makes the scheduled gate
-    useful without ever converting an unavailable service into a false clean
-    result.
-    """
-    ids = [curie.removeprefix("NCBITaxon:") for curie in curies]
-    if not ids:
-        return _LabelAdapter({})
+def _fetch_ncbi_taxonomy(ids: Sequence[str], *, timeout: float) -> dict[str, str]:
     body = urllib.parse.urlencode({
         "db": "taxonomy",
         "id": ",".join(ids),
@@ -119,15 +107,46 @@ def _ncbi_api_adapter(
         headers={"User-Agent": "TraitMech canonical-example audit"},
         method="POST",
     )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return _parse_ncbi_taxonomy(response.read())
+
+
+def _missing_ncbi_ids(ids: Sequence[str], labels: dict[str, str]) -> list[str]:
+    return [tax_id for tax_id in ids if f"NCBITaxon:{tax_id}" not in labels]
+
+
+def _ncbi_api_adapter(
+    curies: Sequence[str], *, attempts: int = 3, timeout: float = 60.0
+) -> _LabelAdapter:
+    """Resolve a small CURIE set with authoritative NCBI EFetch requests.
+
+    More than 200 ids should be sent by POST according to the E-utilities
+    guidance. Retrying transient HTTP/network failures and partial success
+    payloads makes the scheduled gate useful without ever converting an
+    unavailable service into a false clean result.
+    """
+    pending = [curie.removeprefix("NCBITaxon:") for curie in curies]
+    if not pending:
+        return _LabelAdapter({})
+
+    labels: dict[str, str] = {}
     last_error: Exception | None = None
     for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
-                return _LabelAdapter(_parse_ncbi_taxonomy(response.read()))
+            labels.update(_fetch_ncbi_taxonomy(pending, timeout=timeout))
         except (OSError, ET.ParseError, ValueError, urllib.error.HTTPError) as exc:
             last_error = exc
-            if attempt + 1 < attempts:
-                time.sleep(2**attempt)
+        else:
+            pending = _missing_ncbi_ids(pending, labels)
+            if not pending:
+                return _LabelAdapter(labels)
+            last_error = ValueError(
+                f"NCBI EFetch omitted {len(pending)} requested taxonomy record(s)"
+            )
+        if attempt + 1 < attempts:
+            time.sleep(2**attempt)
+    if labels:
+        return _LabelAdapter(labels)
     raise RuntimeError(
         f"NCBI taxonomy EFetch failed after {attempts} attempt(s): {last_error}"
     ) from last_error
