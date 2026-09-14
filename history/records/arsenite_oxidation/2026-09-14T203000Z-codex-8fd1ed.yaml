@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/arsenite_oxidation.yaml
+  slug: arsenite_oxidation
+session:
+  id: 2026-09-14T203000Z-codex-8fd1ed
+  timestamp: '2026-09-14T20:30:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add arsenite oxidation trait
+  details: Minted traitmech:000189 for the arsenite oxidation metabolism trait with DOI-backed
+    As(III)-to-As(V) evidence from 10.3389/fmicb.2020.569282, 10.1128/AEM.66.1.92-97.2000,
+    and 10.1186/s12866-024-03676-9, recorded an exact As(III) oxidation synonym and exact-xref
+    gap, and reserved METPO:1014300 in proposals/metpo_traitmech_v66.

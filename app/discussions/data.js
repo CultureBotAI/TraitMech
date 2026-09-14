@@ -239,6 +239,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-xref-gap"
  },
  {
+  "discussion_id": "arsenite-oxidation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level arsenite oxidation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "arsenite oxidation",
+  "source_id": "traitmech:000189",
+  "source_file": "arsenite_oxidation.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only METPO:1000840 obsolete Arsenite oxidation. Potential external molecular function terms for arsenite oxidase activity are narrower than the organism-level As(III)-to-As(V) metabolism, and a future mechanism graph should distinguish aerobic AioBA oxidation from anaerobic ArxAB-mediated arsenite oxidation.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/arsenite_oxidation.html#arsenite-oxidation-xref-gap"
+ },
+ {
   "discussion_id": "butanediol-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for 2,3-butanediol fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1175,9 +1192,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 67,
+ "total_discussions": 68,
  "total_knowledge_gaps": 8,
- "total_source_entries": 67,
+ "total_source_entries": 68,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
