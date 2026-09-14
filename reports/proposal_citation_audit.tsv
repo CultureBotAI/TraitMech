@@ -1,6 +1,7 @@
 path	identifier	n_citations	citations	malformed	passes
 data/traits/metabolism/aromatic_compound_degradation.yaml	traitmech:000130	2	DOI:10.1126/science.aaf4507; DOI:10.3390/ijerph6010278		yes
 data/traits/metabolism/aromatic_hydrocarbon_degradation.yaml	traitmech:000129	2	DOI:10.1126/science.aaf4507; DOI:10.1007/BF00058836		yes
+data/traits/metabolism/butyric_acid_fermentation.yaml	traitmech:000179	3	DOI:10.1111/j.1574-6968.2009.01514.x; DOI:10.3389/fmicb.2021.703525; DOI:10.1111/1751-7915.12304		yes
 data/traits/metabolism/dark_hydrogen_oxidation.yaml	traitmech:000131	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2018.02873		yes
 data/traits/metabolism/dark_oxidation_of_sulfur_compounds.yaml	traitmech:000132	2	DOI:10.1126/science.aaf4507; DOI:10.1111/1462-2920.14543		yes
 data/traits/metabolism/hydrocarbon_degradation.yaml	traitmech:000128	2	DOI:10.1126/science.aaf4507; DOI:10.1128/MR.54.3.305-315.1990		yes

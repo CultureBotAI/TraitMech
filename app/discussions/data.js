@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "butyric-acid-fermentation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for butyric acid fermentation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "butyric acid fermentation",
+  "source_id": "traitmech:000179",
+  "source_file": "butyric_acid_fermentation.yaml",
+  "attaches_to": [],
+  "rationale": "No exact GO or external metabolism class was resolved for the organism-level butyrate-producing fermentation phenotype; butyrate-synthesis enzyme molecular functions and chemical production relations are shifted relative to this product-specific fermentation class.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-xref-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1022,9 +1039,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 58,
+ "total_discussions": 59,
  "total_knowledge_gaps": 8,
- "total_source_entries": 58,
+ "total_source_entries": 59,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

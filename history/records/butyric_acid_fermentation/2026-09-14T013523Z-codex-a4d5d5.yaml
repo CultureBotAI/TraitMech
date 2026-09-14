@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/butyric_acid_fermentation.yaml
+  slug: butyric_acid_fermentation
+session:
+  id: 2026-09-14T013523Z-codex-a4d5d5
+  timestamp: '2026-09-14T01:35:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add butyric acid fermentation
+  details: Minted traitmech:000179 for butyric acid fermentation after an ignored-and-hidden
+    duplicate search found no live exact TraitRecord or prior v56 proposal. Added DOI evidence
+    from Buckel 2021, Louis and Flint 2009, and Baroi et al. 2015; set Clostridium tyrobutyricum
+    as the canonical example; left the exact external ontology xref unresolved as a CURATION_TODO;
+    and reserved METPO:1013300 in proposals/metpo_traitmech_v56.
