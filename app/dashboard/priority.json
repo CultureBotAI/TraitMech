@@ -894,29 +894,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000181",
-      "label": "2,3-butanediol fermentation",
-      "category": "metabolism",
-      "slug": "butanediol_fermentation",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "METPO:1005036",
       "label": "lateral flagellation",
       "category": "morphology",
@@ -1404,6 +1381,28 @@
       "label": "acetone-butanol-ethanol fermentation",
       "category": "metabolism",
       "slug": "acetone_butanol_ethanol_fermentation",
+      "score": 25.0,
+      "action": "BUILD_CAUSAL_GRAPH",
+      "edges": 0,
+      "nodes": 0,
+      "components": 0,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "traitmech:000181",
+      "label": "2,3-butanediol fermentation",
+      "category": "metabolism",
+      "slug": "butanediol_fermentation",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,

@@ -16,6 +16,7 @@ events:
   outcome: changed
   sections:
   - identity
+  - synonyms
   - evidence
   - canonical_examples
   - discussions
@@ -23,6 +24,7 @@ events:
   details: Minted traitmech:000181 for 2,3-butanediol fermentation after an ignored-and-hidden
     duplicate search found no live exact TraitRecord or prior v58 proposal. Added
     DOI and ASM stable-URL evidence from Li et al. 2023, Chen et al. 2014, and
-    the ASM methyl-red/Voges-Proskauer protocol; set Klebsiella pneumoniae as the
-    canonical example; left the exact external ontology xref unresolved as a
+    the ASM methyl-red/Voges-Proskauer protocol; recorded butanediol fermentation
+    as a related synonym; set Klebsiella pneumoniae as the canonical example;
+    left the exact external ontology xref unresolved as a
     CURATION_TODO; and reserved METPO:1013500 in proposals/metpo_traitmech_v58.

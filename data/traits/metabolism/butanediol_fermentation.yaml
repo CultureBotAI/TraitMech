@@ -8,6 +8,10 @@ term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
 - METPO:1002005
+synonyms:
+- synonym_text: butanediol fermentation
+  synonym_type: RELATED_SYNONYM
+  source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: DOI:10.1186/s12934-023-02163-6
   snippet: 3-Hydroxybutanone (Acetoin, AC) and 2,3-butanediol (BD) are two essential

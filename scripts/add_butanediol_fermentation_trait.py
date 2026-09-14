@@ -37,6 +37,13 @@ RECORD = {
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
     "parent_traits": ["METPO:1002005"],
+    "synonyms": [
+        {
+            "synonym_text": "butanediol fermentation",
+            "synonym_type": "RELATED_SYNONYM",
+            "source": ASM_MR_VP,
+        },
+    ],
     "evidence": [
         {
             "reference": LI,
