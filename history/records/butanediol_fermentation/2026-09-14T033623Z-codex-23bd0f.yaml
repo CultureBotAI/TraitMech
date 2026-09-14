@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/butanediol_fermentation.yaml
+  slug: butanediol_fermentation
+session:
+  id: 2026-09-14T033623Z-codex-23bd0f
+  timestamp: '2026-09-14T03:36:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add 2,3-butanediol fermentation
+  details: Minted traitmech:000181 for 2,3-butanediol fermentation after an ignored-and-hidden
+    duplicate search found no live exact TraitRecord or prior v58 proposal. Added
+    DOI and ASM stable-URL evidence from Li et al. 2023, Chen et al. 2014, and
+    the ASM methyl-red/Voges-Proskauer protocol; recorded butanediol fermentation
+    as a related synonym; set Klebsiella pneumoniae as the canonical example;
+    left the exact external ontology xref unresolved as a
+    CURATION_TODO; and reserved METPO:1013500 in proposals/metpo_traitmech_v58.
