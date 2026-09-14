@@ -1,0 +1,56 @@
+identifier: traitmech:000184
+label: holdfast
+definition: A morphology trait in which a bacterial cell produces a localized polar
+  adhesive matrix called a holdfast that mediates permanent attachment to surfaces.
+definition_source: DOI:10.1128/jb.00276-19
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: holdfast adhesin
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/jb.00276-19
+evidence:
+- reference: DOI:10.1128/jb.00276-19
+  snippet: Caulobacter crescentus synthesizes a polysaccharide-based adhesin known
+    as the holdfast at one of its cell poles, which enables tight attachment to exogenous
+    surfaces.
+  notes: Hershey et al. support holdfast as a Caulobacter polar polysaccharide-based
+    adhesin mediating tight surface attachment.
+- reference: DOI:10.1128/jb.00276-19
+  snippet: Glucose, 3-O-methylglucose, mannose, N-acetylglucosamine, and xylose were
+    detected in our extracts.
+  notes: The compositional analysis supports the holdfast matrix as a bacterial polysaccharide-rich
+    adhesive.
+- reference: DOI:10.1128/jb.00273-22
+  snippet: Species of the Caulobacterales produce a specialized polar adhesin, holdfast,
+    which is required for permanent attachment to surfaces.
+  notes: Chepkwony et al. support holdfast as a specialized polar Caulobacterales
+    adhesin required for permanent attachment.
+canonical_examples:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: Model freshwater Caulobacter species, long called Caulobacter crescentus,
+    that produces a polar holdfast.
+  reference: DOI:10.1128/jb.00276-19
+discussions:
+- discussion_id: holdfast-exact-xref-gap
+  prompt: Resolve exact external ontology xrefs for the bacterial holdfast morphology
+    trait.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only the deprecated METPO:1000158
+    obsolete holdfast class; no active METPO, GO, or OBO class was accepted as an
+    exact equivalent for this bacterial adhesive-matrix trait.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T06:26:17Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted holdfast as a DOI-backed TraitRecord after a repository-wide duplicate
+    review covering ignored and hidden files; live METPO has no active exact holdfast
+    class and the placeholder is reserved in proposals/metpo_traitmech_v61.
+  llm_assisted: true

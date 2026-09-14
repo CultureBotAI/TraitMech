@@ -290,6 +290,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "holdfast-exact-xref-gap",
+  "prompt": "Resolve exact external ontology xrefs for the bacterial holdfast morphology trait.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "holdfast",
+  "source_id": "traitmech:000184",
+  "source_file": "holdfast.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only the deprecated METPO:1000158 obsolete holdfast class; no active METPO, GO, or OBO class was accepted as an exact equivalent for this bacterial adhesive-matrix trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-exact-xref-gap"
+ },
+ {
   "discussion_id": "catalase-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative catalase-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -1090,9 +1107,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 62,
+ "total_discussions": 63,
  "total_knowledge_gaps": 8,
- "total_source_entries": 62,
+ "total_source_entries": 63,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

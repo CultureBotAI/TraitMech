@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-14T062617Z-codex-0c1bbb
+  timestamp: '2026-09-14T06:26:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - instructions
+  summary: Reserve the next METPO Scope-A block after v61
+  details: Updated the local metpo-proposal skill after reserving METPO:1013800 in proposals/metpo_traitmech_v61
+    so future Scope-A cohorts start at METPO:1013900.
