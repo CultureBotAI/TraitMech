@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/methanogenesis.yaml
+  slug: methanogenesis
+session:
+  id: 2026-09-14T212854Z-codex-5b73a0
+  timestamp: '2026-09-14T21:28:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Ground methyl-based methanogenesis branch
+  details: Grounded the existing methyl_based_methanogenesis causal node to traitmech:000192
+    after minting the same-scope methyl-substrate methanogenesis TraitRecord.

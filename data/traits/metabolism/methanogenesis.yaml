@@ -133,8 +133,9 @@ causal_graphs:
     description: C2 substrate for acetoclastic methanogenesis.
   - node_id: methyl_based_methanogenesis
     label: methyl-based methanogenesis
-    node_type: PATHWAY
-    description: Methanogenic pathway using methylated compounds as substrate.
+    node_type: TRAIT
+    grounding: traitmech:000192
+    description: Methyl-substrate methanogenesis branch.
   - node_id: methylated_compounds
     label: methylated compounds
     node_type: CHEMICAL
@@ -271,7 +272,7 @@ causal_graphs:
   - subject: methyl_based_methanogenesis
     predicate: part of
     object: methanogenesis_trait
-    description: Methylotrophic methanogenesis is a methyl-substrate branch.
+    description: Methyl-based methanogenesis is a methyl-substrate branch.
     evidence:
     - reference: DOI:10.3389/fmicb.2017.01198
       snippet: acetoclastic methanogenesis using acetate, and methylotrophic methanogenesis
@@ -445,4 +446,10 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the acetoclastic methanogenesis causal node to traitmech:000191
     after minting the same-scope acetate-using methanogenesis TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-09-14T21:27:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE
+  changes: Grounded the methyl-based methanogenesis causal node to traitmech:000192
+    after minting the same-scope methyl-substrate methanogenesis TraitRecord.
   llm_assisted: true
