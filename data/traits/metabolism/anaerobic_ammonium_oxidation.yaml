@@ -1,0 +1,52 @@
+identifier: traitmech:000188
+label: anaerobic ammonium oxidation
+definition: An anaerobic nitrogen metabolism in which ammonium is oxidized with nitrite
+  as the electron acceptor to form dinitrogen.
+definition_source: DOI:10.1038/22749
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000121
+synonyms:
+- synonym_text: anammox
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/22749
+- synonym_text: anaerobic ammonia oxidation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/22749
+evidence:
+- reference: DOI:10.1038/22749
+  snippet: This new process combines ammonia and nitrite directly into dinitrogen
+    gas
+  notes: Strous et al. identified the anaerobic ammonia oxidation process and linked
+    ammonia plus nitrite conversion to dinitrogen formation.
+- reference: DOI:10.1128/AEM.65.7.3248-3250.1999
+  snippet: The affinity constants for the substrates ammonium and nitrite were each
+    less than 0.1 mg of nitrogen per liter.
+  notes: Strous et al. measured ammonium and nitrite as high-affinity anammox substrates.
+- reference: DOI:10.1038/nature10453
+  snippet: anammox converts ammonia and nitrite into dinitrogen (N2) gas
+  notes: Kartal et al. review the pathway scope and support anammox as the established
+    exact synonym.
+discussions:
+- discussion_id: anaerobic-ammonium-oxidation-xref-gap
+  prompt: Resolve an exact external ontology class for anaerobic ammonium oxidation
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only METPO:1000812 obsolete Anaerobic
+    ammonium oxidation. Candidate GO classes should be checked against the primary
+    Gene Ontology release before adding an exact xref because component ammonium-
+    or nitrite-oxidation processes are narrower than the whole anammox metabolism.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T20:06:42Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted anaerobic ammonium oxidation as a DOI-backed nitrogen respiration
+    TraitRecord after a repository-wide duplicate review covering ignored and hidden
+    files; the local METPO snapshot has only obsolete anammox classes and the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v65.
+  llm_assisted: true
