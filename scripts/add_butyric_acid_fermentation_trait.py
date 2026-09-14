@@ -27,11 +27,10 @@ RECORD = {
     "label": "butyric acid fermentation",
     "definition": (
         "A fermentation in which anaerobic bacteria convert organic substrates "
-        "to butyrate as a major reduced end product, conserving energy through "
-        "substrate-level phosphorylation and reduced-ferredoxin-dependent "
-        "ion-gradient generation."
+        "to butyrate as a major reduced end product while conserving energy "
+        "by substrate-level phosphorylation or ion-gradient generation."
     ),
-    "definition_source": BUCKEL,
+    "definition_source": LOUIS_FLINT,
     "trait_category": "METABOLISM",
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
@@ -40,7 +39,7 @@ RECORD = {
         {
             "synonym_text": "butyrate fermentation",
             "synonym_type": "RELATED_SYNONYM",
-            "source": BUCKEL,
+            "source": LOUIS_FLINT,
         },
     ],
     "evidence": [
@@ -57,24 +56,28 @@ RECORD = {
                 "with ferredoxin changed this view."
             ),
             "notes": (
-                "Buckel reviews Firmicutes fermentations that form acetate, "
-                "butyrate, and H2 while demonstrating redox and "
-                "ion-gradient-linked energy conservation in butyrate-forming "
-                "anaerobic bacteria."
+                "Buckel supplies anaerobic-fermentation energy-conservation "
+                "context, including substrate-level phosphorylation and "
+                "ferredoxin-linked ion-gradient generation."
             ),
         },
         {
             "reference": LOUIS_FLINT,
             "snippet": (
-                "butyryl-CoA : acetate CoA-transferase, rather than "
-                "butyrate kinase, appears to perform the final step in "
-                "butyrate synthesis"
+                "Five different arrangements have been identified for the "
+                "genes of the central pathway involved in butyrate synthesis, "
+                "while in most cases butyryl-CoA : acetate CoA-transferase, "
+                "rather than butyrate kinase, appears to perform the final "
+                "step in butyrate synthesis. Mechanisms have been proposed "
+                "recently in non-gut Clostridium spp. whereby butyrate "
+                "synthesis can result in energy generation via both "
+                "substrate-level phosphorylation and proton gradients."
             ),
             "notes": (
-                "Louis and Flint identify the butyryl-CoA : acetate "
-                "CoA-transferase route as the common terminal "
-                "butyrate-synthesis route in butyrate-producing gut "
-                "bacteria."
+                "Louis and Flint connect butyrate synthesis to energy "
+                "generation through substrate-level phosphorylation and "
+                "proton gradients while reviewing the butyryl-CoA : acetate "
+                "CoA-transferase terminal route."
             ),
         },
         {

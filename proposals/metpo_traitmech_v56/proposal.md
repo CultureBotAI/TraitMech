@@ -46,8 +46,8 @@ Butyric acid fermentation is a product-specific fermentation class parallel to
 the existing lactic acid, mixed-acid, ethanol, propionic acid, and fermentative
 hydrogen production records. The proposed term captures the bacterial
 fermentative phenotype that converts organic substrates to butyrate as a major
-reduced end product while conserving energy through substrate-level
-phosphorylation and reduced-ferredoxin-dependent ion-gradient generation.
+reduced end product while conserving energy by substrate-level phosphorylation
+or ion-gradient generation.
 
 ## External Mappings
 
