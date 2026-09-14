@@ -1,3 +1,3 @@
-proposed_id	label	definition	definition_source	parent	exact_synonyms	xrefs	subset	priority	traits_addressed	comment
-ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset			A rdfs:comment
-METPO:1013600	citrate utilization	A metabolism in which a microorganism uses citrate as a sole carbon and energy source.	TraitMech:data/traits/metabolism/citrate_utilization.yaml	METPO:1000060			metpo_traitmech_2026_09	HIGH	traitmech:000182	Precomposed citrate-use metabolism absent from METPO and TraitMech after a citrate utilization duplicate review covering ignored and hidden files.
+proposed_id	label	definition	definition_source	parent	exact_synonyms	xrefs	subset	priority	observations	traits_addressed	related_synonyms
+ID	LABEL	A IAO:0000115	>A IAO:0000119	SC %	A oboInOwl:hasExactSynonym SPLIT=|	A oboInOwl:hasDbXref SPLIT=|	A oboInOwl:inSubset				A oboInOwl:hasRelatedSynonym SPLIT=|
+METPO:1013600	citrate fermentation	A fermentation in which citrate is the primary fermentable substrate.	TraitMech:data/traits/metabolism/citrate_fermentation.yaml	METPO:1002005			metpo_traitmech_2026_09	HIGH	Pathway-scoped anaerobic citrate fermentation, not an assay substrate-use readout.	traitmech:000182	anaerobic citrate fermentation

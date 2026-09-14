@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>citrate utilization — METABOLISM — TraitMech</title>
+<title>citrate fermentation — METABOLISM — TraitMech</title>
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -28,10 +28,10 @@
       <span>›</span>
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
-    <h1>citrate utilization</h1>
+    <h1>citrate fermentation</h1>
     <p class="curie"><code>traitmech:000182</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">A metabolism in which a microorganism uses citrate as a sole carbon and energy source.</p>
+    <p class="definition">A fermentation in which citrate is the primary fermentable substrate.</p>
 
   </header>
 
@@ -57,7 +57,7 @@
       <h2>Parent traits (1)</h2>
       <ul>
 
-        <li><a href="../../traits/metabolism/metabolism.html" >metabolism <code>METPO:1000060</code></a></li>
+        <li><a href="../../traits/metabolism/fermentation.html" >Fermentation <code>METPO:1002005</code></a></li>
 
       </ul>
     </div>
@@ -108,7 +108,7 @@
              rel="nofollow noreferrer"><code>DOI:10.1186/1471-2180-9-168</code></a>
 
 
-          <span class="meta">Chen et al. and Meyer et al. both studied citrate-positive K. pneumoniae strains.</span>
+          <span class="meta">Chen et al. and Meyer et al. both studied anaerobic citrate fermentation in K. pneumoniae strains.</span>
         </li>
 
       </ul>
@@ -123,12 +123,12 @@
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
 
 
-      <div class="discussion" id="citrate-utilization-xref-gap">
-        <p class="discussion-prompt">Resolve an exact external ontology class for citrate utilization before adding a TraitRecord xref.</p>
+      <div class="discussion" id="citrate-fermentation-xref-gap">
+        <p class="discussion-prompt">Resolve an exact external ontology class for citrate fermentation before adding a TraitRecord xref.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
           <span class="badge">OPEN</span>
-          <code>citrate-utilization-xref-gap</code>
+          <code>citrate-fermentation-xref-gap</code>
           · raised by codex
           · 2026-09-14
         </p>
@@ -140,7 +140,7 @@
           mechanism it concerns.</p>
 
 
-        <p>No exact GO or external metabolism class was resolved for the organism-level citrate-utilization phenotype; citrate metabolic process terms, citrate lyase or transporter molecular functions, carbon-source or energy-source predicates, and citrate assay terms are shifted relative to this precomposed microbial citrate-use class.</p>
+        <p>No exact GO or external metabolism class was resolved for anaerobic citrate fermentation; generic citrate metabolic process terms, citrate lyase or transporter molecular functions, and citrate-test assay terms are shifted relative to this pathway-scoped fermentation class.</p>
 
 
 
@@ -163,7 +163,13 @@
         <li>
           <time>2026-09-14T04:09:24Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
-          <p class="changes">Minted citrate utilization as a DOI- and stable-URL-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact citrate utilization class yet and the placeholder is reserved in proposals/metpo_traitmech_v59.</p>
+          <p class="changes">Minted citrate fermentation as a DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact anaerobic citrate fermentation class yet and the placeholder is reserved in proposals/metpo_traitmech_v59.</p>
+        </li>
+
+        <li>
+          <time>2026-09-14T04:38:10Z</time> ·
+          <strong>CURATION_REVIEW_REVISION</strong> · codex
+          <p class="changes">Resolved PR #894 review issue #897 by narrowing the minted record from citrate utilization to pathway-scoped citrate fermentation.</p>
         </li>
 
       </ol>
@@ -175,11 +181,11 @@
 <aside class="rail">
   <div class="card source-card">
     <h2>Source</h2>
-    <p class="rail-path"><code>data/traits/metabolism/citrate_utilization.yaml</code></p>
+    <p class="rail-path"><code>data/traits/metabolism/citrate_fermentation.yaml</code></p>
     <ul class="rail-links">
-      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/citrate_utilization.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
-      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/metabolism/citrate_utilization.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
-      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/metabolism/citrate_utilization.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/citrate_fermentation.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/metabolism/citrate_fermentation.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/metabolism/citrate_fermentation.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
     </ul>
   </div>
 
@@ -218,7 +224,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-14 04:09 UTC from
+      Record as of 2026-09-14 04:38 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 577 TraitRecords
       · embedding coverage 82.7%
