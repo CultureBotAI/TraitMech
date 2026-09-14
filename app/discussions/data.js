@@ -290,6 +290,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "akinete-exact-xref-gap",
+  "prompt": "Resolve exact external ontology xrefs for the cyanobacterial akinete morphology trait.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "akinete",
+  "source_id": "traitmech:000185",
+  "source_file": "akinete.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only deprecated akinete classes, including METPO:1000012 obsolete akinete; no active METPO, GO, or OBO class was accepted as an exact equivalent for this cyanobacterial dormant-cell trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/morphology/akinete.html#akinete-exact-xref-gap"
+ },
+ {
   "discussion_id": "holdfast-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial holdfast morphology trait.",
   "kind": "CURATION_TODO",
@@ -1107,9 +1124,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 63,
+ "total_discussions": 64,
  "total_knowledge_gaps": 8,
- "total_source_entries": 63,
+ "total_source_entries": 64,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
