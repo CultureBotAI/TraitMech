@@ -1,0 +1,56 @@
+identifier: traitmech:000186
+label: siderophore production
+definition: A physiological trait in which bacteria biosynthesize and release siderophores
+  that scavenge extracellular iron for uptake.
+definition_source: DOI:10.1111/1462-2920.14937
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1111/1462-2920.14937
+  snippet: Siderophores are iron-chelating molecules produced by bacteria to access
+    iron, a key nutrient.
+  notes: Schalk et al. define bacterial siderophores as produced iron-chelating molecules
+    that enable iron access.
+- reference: DOI:10.1111/1462-2920.14937
+  snippet: They are released by bacteria into their environment to scavenge iron and
+    bring it back into the cells.
+  notes: The same review supports the release, extracellular scavenging, and uptake
+    clauses in the local definition.
+- reference: DOI:10.15698/mic2018.10.649
+  snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play important
+    roles for growth under iron-limiting conditions.
+  notes: Ringel and Bruser support pyoverdine production as a fluorescent-pseudomonad
+    siderophore-production subtype.
+- reference: DOI:10.1073/pnas.0908760106
+  snippet: The siderophore pyoverdine (PVD) is a primary virulence factor of the human
+    pathogenic bacterium Pseudomonas aeruginosa
+  notes: Imperi et al. support Pseudomonas aeruginosa as a pyoverdine-producing bacterium.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: Pseudomonas aeruginosa is used as a canonical pyoverdine-producing bacterium.
+  reference: DOI:10.1073/pnas.0908760106
+discussions:
+- discussion_id: siderophore-production-xref-gap
+  prompt: Resolve exact external ontology xrefs for the bacterial siderophore production
+    phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only METPO:1000277 obsolete siderophore.
+    GO:0019290 is limited to the siderophore biosynthetic process, GO:0015891 is a
+    siderophore transport process, and CHEBI:26672 denotes the siderophore molecule
+    rather than the organism-level biosynthesis-and-release trait.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T18:32:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted siderophore production as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has only an obsolete
+    siderophore class in the local snapshot and the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v63.
+  llm_assisted: true

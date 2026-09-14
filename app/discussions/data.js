@@ -1072,6 +1072,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/serine_arylamidase_activity.html#serine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "siderophore-production-xref-gap",
+  "prompt": "Resolve exact external ontology xrefs for the bacterial siderophore production phenotype.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "siderophore production",
+  "source_id": "traitmech:000186",
+  "source_file": "siderophore_production.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only METPO:1000277 obsolete siderophore. GO:0019290 is limited to the siderophore biosynthetic process, GO:0015891 is a siderophore transport process, and CHEBI:26672 denotes the siderophore molecule rather than the organism-level biosynthesis-and-release trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-xref-gap"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1124,9 +1141,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 64,
+ "total_discussions": 65,
  "total_knowledge_gaps": 8,
- "total_source_entries": 64,
+ "total_source_entries": 65,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

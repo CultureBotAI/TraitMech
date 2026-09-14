@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/siderophore_production.yaml
+  slug: siderophore_production
+session:
+  id: 2026-09-14T183333Z-codex-0d9b0c
+  timestamp: '2026-09-14T18:33:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add siderophore production trait
+  details: Minted traitmech:000186 for the bacterial siderophore production physiology trait
+    with DOI-backed siderophore synthesis and release evidence from 10.1111/1462-2920.14937,
+    10.15698/mic2018.10.649, and 10.1073/pnas.0908760106; added Pseudomonas aeruginosa as
+    a canonical pyoverdine-producing example; and reserved METPO:1014000 in proposals/metpo_traitmech_v63.
