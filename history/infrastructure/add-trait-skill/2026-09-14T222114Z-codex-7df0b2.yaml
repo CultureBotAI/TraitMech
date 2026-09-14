@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-14T22:21:14Z-codex-7df0b2
+  timestamp: '2026-09-14T22:21:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Align add-trait protein examples with audits
+  details: Updated the add-trait guidance so protein_examples prefer reviewed
+    UniProt primary accessions but may use an unreviewed primary accession only
+    when its proteome_id is live and audit-verifiable.

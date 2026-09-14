@@ -199,6 +199,7 @@ data/traits/metabolism/mixed_acid_fermentation.yaml	traitmech:000027	mixed-acid 
 data/traits/metabolism/nitrogen_fixation.yaml	traitmech:000103	nitrogen fixation	nitrogen_fixation_nitrogenase	MECHANISTIC	3	2	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/oxidative_phosphorylation.yaml	METPO:1000803	Oxidative phosphorylation	oxidative_phosphorylation_chemiosmotic_coupling	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/oxygenic_photosynthesis.yaml	traitmech:000034	oxygenic photosynthesis	oxygenic_photosynthesis_water_splitting	MECHANISTIC	5	4	1	2	2	1	1	PASS	0	0	-
+data/traits/metabolism/photoferrotrophy.yaml	traitmech:000193	photoferrotrophy	photoferrotrophy_light_feii_oxidation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/photosynthesis.yaml	traitmech:000038	photosynthesis	photosynthesis_chlorophyll_reaction_center	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/metabolism/phototrophy.yaml	traitmech:000037	phototrophy	phototrophy_light_energy_capture	MECHANISTIC	2	1	1	3	3	1	1	PASS	0	0	-
 data/traits/metabolism/propionic_acid_fermentation.yaml	traitmech:000029	propionic acid fermentation	propionic_acid_fermentation_propionate	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-

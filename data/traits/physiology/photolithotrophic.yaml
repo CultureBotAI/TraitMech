@@ -130,6 +130,7 @@ causal_graphs:
     label: photoferrotrophy
     node_type: TRAIT
     description: Photolithotrophic subtype oxidizing Fe(II) via anoxygenic photosynthesis.
+    grounding: traitmech:000193
   edges:
   - subject: photolithotrophic_trait
     predicate: has energy source
@@ -396,4 +397,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-14T22:07:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE
+  changes: Grounded the photoferrotrophy causal node to traitmech:000193 after minting
+    the same-scope phototrophic Fe(II) oxidation TraitRecord.
   llm_assisted: true

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/photoferrotrophy.yaml
+  slug: photoferrotrophy
+session:
+  id: 2026-09-14T220851Z-codex-fde243
+  timestamp: '2026-09-14T22:08:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Added the photoferrotrophy TraitRecord
+  details: Minted traitmech:000193 as a DOI-backed anoxygenic phototrophic Fe(II)-oxidation
+    TraitRecord, parented it to anoxygenic photosynthesis and iron oxidation, added
+    Rhodopseudomonas palustris TIE-1 as a canonical example, added a compact
+    process-level light/Fe(II)/carbon-fixation causal graph, and left exact external
+    xref and audit-clean protein-example resolution as explicit curation TODOs.

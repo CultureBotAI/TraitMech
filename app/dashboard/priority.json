@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 587,
+    "records": 588,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 110,
+    "unresearched_mechanism_records": 111,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -25,7 +25,7 @@
       "BUILD_CAUSAL_GRAPH": 109,
       "DEEPEN_CAUSAL_GRAPH": 146,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 143
+      "CURATE_ROOT": 144
     }
   },
   "rows": [
@@ -6952,7 +6952,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 0,
+      "children": 1,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -7152,7 +7152,7 @@
       "orphans": 0,
       "examples": 2,
       "canonical_examples_reviewed_empty": false,
-      "children": 0,
+      "children": 1,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -7237,6 +7237,26 @@
       "series_size": 0,
       "series_overlap": null,
       "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "traitmech:000193",
+      "label": "photoferrotrophy",
+      "category": "metabolism",
+      "slug": "photoferrotrophy",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 8,
+      "nodes": 8,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
       "reasons": []
     },
     {
