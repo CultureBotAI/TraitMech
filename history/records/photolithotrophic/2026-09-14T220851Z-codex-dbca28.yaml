@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/photolithotrophic.yaml
+  slug: photolithotrophic
+session:
+  id: 2026-09-14T220851Z-codex-dbca28
+  timestamp: '2026-09-14T22:08:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - identity
+  summary: Grounded the photoferrotrophy graph node
+  details: Grounded the existing same-scope photoferrotrophy TRAIT node on the Photolithotrophic
+    causal graph to the newly minted traitmech:000193 record.

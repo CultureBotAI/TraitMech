@@ -392,6 +392,40 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "photoferrotrophy-xref-gap",
+  "prompt": "Resolve an exact external ontology class for photoferrotrophy before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "photoferrotrophy",
+  "source_id": "traitmech:000193",
+  "source_file": "photoferrotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has no active photoferrotrophy or anoxygenic phototrophic Fe(II) oxidation class. Candidate GO classes for photosynthesis, photosynthetic electron transport, and carbon fixation are broader than this Fe(II)-donor organismal metabolism, so no exact external class has yet been resolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-xref-gap"
+ },
+ {
+  "discussion_id": "photoferrotrophy-protein-example-gap",
+  "prompt": "Resolve a live, audit-clean UniProt protein example for a taxon-specific photoferrotrophy branch.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "photoferrotrophy",
+  "source_id": "traitmech:000193",
+  "source_file": "photoferrotrophy.yaml",
+  "attaches_to": [],
+  "rationale": "R. palustris TIE-1 PioA and R. ferrooxidans SW2 FoxE have DOI-backed primary evidence, but their current exact UniProtKB accessions are unreviewed entries without live Proteomes cross-references. The first graph therefore stays process-level until a reviewed or audit-verifiable exact entry is available.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-protein-example-gap"
+ },
+ {
   "discussion_id": "akinete-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the cyanobacterial akinete morphology trait.",
   "kind": "CURATION_TODO",
@@ -1243,9 +1277,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 71,
+ "total_discussions": 73,
  "total_knowledge_gaps": 8,
- "total_source_entries": 71,
+ "total_source_entries": 72,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

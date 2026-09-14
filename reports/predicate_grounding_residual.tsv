@@ -146,6 +146,7 @@ supports growth in	2	unmapped		data/traits/metabolism/iron_oxidation.yaml
 serves as substrate for	2	unmapped		data/traits/metabolism/methanogenesis.yaml
 has output	2	blocked_by_node_type	RO:0002234	data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
 is oxidized by	2	unmapped		data/traits/metabolism/oxidative_phosphorylation.yaml
+fixed during	2	unmapped		data/traits/metabolism/photoferrotrophy.yaml|data/traits/physiology/photolithotrophic.yaml
 electron donor for	2	unmapped		data/traits/metabolism/reductive_tca_cycle.yaml
 generates ATP via	2	unmapped		data/traits/metabolism/substrate_level_phosphorylation.yaml|data/traits/physiology/chemoorganotrophic.yaml
 rotates	2	unmapped		data/traits/morphology/axially_filamented.yaml|data/traits/morphology/flagellated.yaml
@@ -527,7 +528,6 @@ cannot generate	1	unmapped		data/traits/physiology/photoheterotrophic.yaml
 perform	1	unmapped		data/traits/physiology/photoheterotrophic.yaml
 relies primarily on	1	unmapped		data/traits/physiology/photoheterotrophic.yaml
 interconverts	1	unmapped		data/traits/physiology/photolithoautotrophic.yaml
-fixed during	1	unmapped		data/traits/physiology/photolithotrophic.yaml
 provides energy to	1	unmapped		data/traits/physiology/photolithotrophic.yaml
 acts as electron donor for	1	unmapped		data/traits/physiology/photolithotrophic.yaml
 transfers excitation energy to	1	unmapped		data/traits/physiology/phototrophic.yaml

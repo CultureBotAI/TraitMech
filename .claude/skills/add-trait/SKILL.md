@@ -307,8 +307,9 @@ A first graph should be readable and source-bounded:
   corpus
 - stable local `graph_id` values
 - taxon-agnostic node groundings when exact ontology or database CURIEs exist
-- `protein_examples` only for reviewed UniProt primary accessions paired with
-  taxon metadata and direct evidence
+- `protein_examples` using UniProt primary accessions paired with taxon metadata
+  and direct evidence; prefer reviewed entries, and include a live,
+  audit-verifiable `proteome_id` for any unreviewed entry
 - directed `edges` with `subject`, `predicate`, `object`, `description`, and
   DOI/PMID/stable-URL-backed `evidence`
 - `predicate_id` only when an exact relation CURIE has been curated
