@@ -1,0 +1,58 @@
+identifier: traitmech:000180
+label: acetone-butanol-ethanol fermentation
+definition: A fermentation in which solventogenic bacteria convert organic carbon
+  sources to organic acids and then reassimilate those acids to produce acetone, butanol,
+  and ethanol solvents.
+definition_source: DOI:10.1073/pnas.1423143112
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1002005
+synonyms:
+- synonym_text: ABE fermentation
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.1423143112
+- synonym_text: acetone-butanol fermentation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.50.4.484-524.1986
+evidence:
+- reference: DOI:10.1073/pnas.1423143112
+  snippet: One canonical example of such processes is acetone-butanol-ethanol (ABE)
+    fermentation by Clostridium acetobutylicum, during which cells convert carbon
+    sources to organic acids that are later reassimilated to produce solvents as a
+    strategy for cellular survival.
+  notes: Liao et al. use the exact acetone-butanol-ethanol (ABE) fermentation name
+    and describe the acidogenic-to-solventogenic conversion of carbon sources into
+    solvent end products.
+- reference: DOI:10.1002/bit.22003
+  snippet: Biological production of butanol (with acetone and ethanol) was one of
+    the largest industrial fermentation processes early in the 20th century.
+  notes: Lee et al. independently review fermentative butanol production with acetone
+    and ethanol by Clostridia.
+canonical_examples:
+- taxon_id: NCBITaxon:272562
+  taxon_label: Clostridium acetobutylicum ATCC 824
+  note: Wild-type ATCC 824 strain whose ABE fermentations were experimentally reproduced
+    by Liao et al.'s integrated model.
+  reference: DOI:10.1073/pnas.1423143112
+discussions:
+- discussion_id: acetone-butanol-ethanol-fermentation-xref-gap
+  prompt: Resolve an exact external ontology class for acetone-butanol-ethanol fermentation
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: No exact GO or external metabolism class was resolved for the organism-level
+    ABE fermentation phenotype; broader fermentation classes and individual solvent-production
+    reactions are shifted relative to this product-specific fermentation class.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T02:40:39Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted acetone-butanol-ethanol fermentation as a DOI-backed solventogenic
+    fermentation TraitRecord after a repository-wide duplicate review covering ignored
+    and hidden files; METPO has no exact acetone-butanol-ethanol fermentation class
+    yet and the placeholder is reserved in proposals/metpo_traitmech_v57.
+  llm_assisted: true

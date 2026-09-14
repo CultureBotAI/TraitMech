@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml
+  slug: acetone_butanol_ethanol_fermentation
+session:
+  id: 2026-09-14T024039Z-codex-e4908d
+  timestamp: '2026-09-14T02:40:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add acetone-butanol-ethanol fermentation
+  details: Minted traitmech:000180 for acetone-butanol-ethanol fermentation after an ignored-and-hidden
+    duplicate search found no live exact TraitRecord or prior v57 proposal. Added DOI evidence
+    from Liao et al. 2015 and Lee et al. 2008; set Clostridium acetobutylicum ATCC 824 as
+    the canonical example; left the exact external ontology xref unresolved as a CURATION_TODO;
+    and reserved METPO:1013400 in proposals/metpo_traitmech_v57.
