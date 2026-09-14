@@ -145,7 +145,7 @@ causal_graphs:
       metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2014.00713
-      snippet: Fe(II) as an electron source for carbon fixation and biomass formation
+      snippet: Fe(II) as an electron source for carbon fixation
       notes: Supports electron flow from Fe(II) into photoferrotrophic carbon fixation.
     predicate_id: RO:0002327
   - subject: carbon_dioxide
@@ -162,7 +162,8 @@ causal_graphs:
     description: Carbon fixed during photoferrotrophy supports biomass formation.
     evidence:
     - reference: DOI:10.3389/fmicb.2014.00713
-      snippet: Fe(II) as an electron source for carbon fixation and biomass formation
+      snippet: photoferrotrophic bacteria use light as energy and Fe(II) as an electron
+        source for carbon fixation and biomass formation
       notes: Supports biomass formation coupled to Fe(II)-fed photoferrotrophic metabolism.
     predicate_id: RO:0002234
 discussions:

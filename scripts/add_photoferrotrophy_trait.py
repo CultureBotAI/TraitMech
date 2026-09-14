@@ -292,7 +292,7 @@ RECORD = {
                             "reference": WALTER,
                             "snippet": (
                                 "Fe(II) as an electron source for carbon "
-                                "fixation and biomass formation"
+                                "fixation"
                             ),
                             "notes": (
                                 "Supports electron flow from Fe(II) into "
@@ -333,8 +333,9 @@ RECORD = {
                         {
                             "reference": WALTER,
                             "snippet": (
-                                "Fe(II) as an electron source for carbon "
-                                "fixation and biomass formation"
+                                "photoferrotrophic bacteria use light as "
+                                "energy and Fe(II) as an electron source for "
+                                "carbon fixation and biomass formation"
                             ),
                             "notes": (
                                 "Supports biomass formation coupled to "
