@@ -1,0 +1,52 @@
+identifier: traitmech:000183
+label: bacteriocin production
+definition: A physiological trait in which bacteria produce bacteriocins, ribosomally
+  synthesized antimicrobial peptides or proteins that kill or inhibit other bacteria.
+definition_source: DOI:10.3389/fmicb.2016.00461
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.3389/fmicb.2016.00461
+  snippet: Bacteriocins are ribosomally synthesized antimicrobial peptides produced
+    by bacteria, which have the ability to kill or inhibit other bacteria.
+  notes: Rea et al. review bacteriocins as bacterially produced ribosomal antimicrobial
+    peptides.
+- reference: DOI:10.1146/annurev.micro.56.012302.161024
+  snippet: 'the most abundant and diverse family of microbial defense systems: the
+    bacteriocins.'
+  notes: Riley and Wertz support bacteriocins as a widespread, diverse microbial defense-system
+    family.
+- reference: DOI:10.1038/srep27973
+  snippet: Traditionally, nisin was produced industrially by using Lactococcus lactis
+    in the neutral fermentation process.
+  notes: Zhang et al. support Lactococcus lactis as an industrial nisin-producing
+    bacterium.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Lactococcus lactis is used as a canonical nisin-producing bacterium in neutral
+    fermentation.
+  reference: DOI:10.1038/srep27973
+discussions:
+- discussion_id: bacteriocin-production-xref-gap
+  prompt: Resolve exact external ontology xrefs for the organismal bacteriocin production
+    phenotype.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: GO:0030152 bacteriocin biosynthetic process denotes a biological process
+    rather than a standalone organismal production phenotype; individual nisin-biosynthesis
+    and bacteriocin gene-family terms would be narrower or sequence-feature shifted
+    for this broad bacteriocin production trait.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T05:04:06Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted bacteriocin production as a DOI-backed TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has no exact bacteriocin
+    production class yet and the placeholder is reserved in proposals/metpo_traitmech_v60.
+  llm_assisted: true
