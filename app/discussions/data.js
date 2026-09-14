@@ -256,6 +256,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-xref-gap"
  },
  {
+  "discussion_id": "citrate-fermentation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for citrate fermentation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "citrate fermentation",
+  "source_id": "traitmech:000182",
+  "source_file": "citrate_fermentation.yaml",
+  "attaches_to": [],
+  "rationale": "No exact GO or external metabolism class was resolved for anaerobic citrate fermentation; generic citrate metabolic process terms, citrate lyase or transporter molecular functions, and citrate-test assay terms are shifted relative to this pathway-scoped fermentation class.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-xref-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1073,9 +1090,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 61,
+ "total_discussions": 62,
  "total_knowledge_gaps": 8,
- "total_source_entries": 61,
+ "total_source_entries": 62,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
