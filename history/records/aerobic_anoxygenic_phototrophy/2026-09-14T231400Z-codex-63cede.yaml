@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml
+  slug: aerobic_anoxygenic_phototrophy
+session:
+  id: 2026-09-14T231400Z-codex-63cede
+  timestamp: '2026-09-14T23:14:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Added the aerobic anoxygenic phototrophy TraitRecord
+  details: Minted traitmech:000194 as a DOI-backed aerobic bacteriochlorophyll reaction-center
+    photoheterotrophy, parented it to photoheterotrophic, anoxygenic photosynthesis, and aerobic,
+    added Erythrobacter sp. NAP1 as a canonical example, added a compact light/organic-carbon
+    causal graph, moved the metpo.owl source key from broad phototrophic, and reserved METPO:1014800
+    in proposals/metpo_traitmech_v71.

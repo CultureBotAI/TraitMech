@@ -34,6 +34,7 @@ upregulates	5	unmapped		data/traits/environment/nacl_optimum_mid2.yaml|data/trai
 results in	5	unmapped		data/traits/environment/nacl_range_high.yaml|data/traits/environment/zinc_tolerant.yaml|data/traits/morphology/ellipsoidal.yaml
 increases abundance of	5	unmapped		data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/piezotolerant.yaml|data/traits/environment/temperature_delta_mid2.yaml
 enhances	5	unmapped		data/traits/environment/ph_optimum_high.yaml|data/traits/morphology/carboxysome.yaml|data/traits/physiology/heterotrophic.yaml
+assimilated into	5	unmapped		data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml
 coupled to reduction of	5	unmapped		data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/hydrogenotrophic.yaml
 detoxifies	4	unmapped		data/traits/environment/aerobic.yaml|data/traits/environment/anaerobic.yaml|data/traits/environment/microaerophilic.yaml
 damages	4	unmapped		data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
@@ -53,7 +54,6 @@ positions	4	unmapped		data/traits/morphology/cell_shape.yaml|data/traits/morphol
 establishes	4	unmapped		data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/spiral_shaped.yaml|data/traits/morphology/spore_shaped.yaml
 favors	4	unmapped		data/traits/morphology/magnetosome.yaml|data/traits/physiology/oligotrophic.yaml
 can proceed through	4	unmapped		data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
-assimilated into	4	unmapped		data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
 requires containment level	3	unmapped		data/traits/ecology/biosafety_level_4.yaml
 confers	3	blocked_by_node_type	METPO:2007700	data/traits/ecology/commensalism.yaml|data/traits/morphology/spirochete_shaped.yaml|data/traits/morphology/sporulation.yaml
 leads to	3	unmapped		data/traits/ecology/endosymbiosis.yaml|data/traits/morphology/spore_shaped.yaml|data/traits/physiology/chemoorganotrophic.yaml
@@ -160,6 +160,7 @@ incomplete separation yields	2	unmapped		data/traits/morphology/diplococcus_shap
 carries out	2	unmapped		data/traits/morphology/ellipsoidal.yaml
 combines with	2	unmapped		data/traits/morphology/flask_shaped.yaml|data/traits/morphology/oval_shaped.yaml
 predicts	2	unmapped		data/traits/morphology/gliding.yaml|data/traits/morphology/non_spore_forming.yaml
+captures	2	unmapped		data/traits/morphology/lophotrichous.yaml|data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml
 dephosphorylates	2	unmapped		data/traits/morphology/non_spore_forming.yaml|data/traits/physiology/chemotaxis.yaml
 has component	2	unmapped		data/traits/morphology/ovoid_shaped.yaml
 provides precursor for	2	unmapped		data/traits/morphology/pigmentation.yaml
@@ -441,7 +442,6 @@ provides mechanical support to	1	unmapped		data/traits/morphology/heterocyst.yam
 increases accumulation of	1	unmapped		data/traits/morphology/intracellular_inclusion.yaml
 assembles	1	unmapped		data/traits/morphology/intracellular_inclusion.yaml
 localizes to and promotes assembly at	1	unmapped		data/traits/morphology/lophotrichous.yaml
-captures	1	unmapped		data/traits/morphology/lophotrichous.yaml
 sufficient for	1	unmapped		data/traits/morphology/magnetosome.yaml
 promotes localization of	1	unmapped		data/traits/morphology/monotrichous.yaml
 regulates number of	1	unmapped		data/traits/morphology/monotrichous.yaml

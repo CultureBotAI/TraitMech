@@ -596,6 +596,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/acid_phosphatase_activity.html#acid-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "aerobic-anoxygenic-phototrophy-xref-gap",
+  "prompt": "Resolve an exact external ontology class for aerobic anoxygenic phototrophy before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "aerobic anoxygenic phototrophy",
+  "source_id": "traitmech:000194",
+  "source_file": "aerobic_anoxygenic_phototrophy.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot carries aerobic_anoxygenic_phototrophy only as a related synonym on broad phototrophic, and GO photosynthetic electron transport classes denote the intracellular pathway rather than this organism-level aerobic photoheterotrophic trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/aerobic_anoxygenic_phototrophy.html#aerobic-anoxygenic-phototrophy-xref-gap"
+ },
+ {
   "discussion_id": "alanine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alanine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1277,9 +1294,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 73,
+ "total_discussions": 74,
  "total_knowledge_gaps": 8,
- "total_source_entries": 72,
+ "total_source_entries": 73,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

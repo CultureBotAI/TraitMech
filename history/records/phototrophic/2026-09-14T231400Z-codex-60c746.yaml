@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/phototrophic.yaml
+  slug: phototrophic
+session:
+  id: 2026-09-14T231400Z-codex-60c746
+  timestamp: '2026-09-14T23:14:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Moved a narrowed AAP source key
+  details: Removed the aerobic_anoxygenic_phototrophy metpo.owl source key from the broad
+    Phototrophic record after minting the same-scope aerobic anoxygenic phototrophy TraitRecord
+    with that key as a related synonym.
