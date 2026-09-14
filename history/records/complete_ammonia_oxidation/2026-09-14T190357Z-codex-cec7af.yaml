@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/complete_ammonia_oxidation.yaml
+  slug: complete_ammonia_oxidation
+session:
+  id: 2026-09-14T190357Z-codex-cec7af
+  timestamp: '2026-09-14T19:03:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add complete ammonia oxidation trait
+  details: Minted traitmech:000187 for the complete ammonia oxidation metabolism trait with
+    DOI-backed one-organism ammonia-to-nitrate oxidation evidence from 10.1038/nature16459,
+    10.1038/nature16461, and 10.1128/aem.01698-23; added Candidatus Nitrospira inopinata as
+    a canonical comammox Nitrospira example; and reserved METPO:1014100 in proposals/metpo_traitmech_v64.

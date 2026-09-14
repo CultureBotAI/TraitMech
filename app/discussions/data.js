@@ -273,6 +273,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-xref-gap"
  },
  {
+  "discussion_id": "complete-ammonia-oxidation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for one-organism complete ammonia oxidation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "complete ammonia oxidation",
+  "source_id": "traitmech:000187",
+  "source_file": "complete_ammonia_oxidation.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only METPO:1000862 obsolete Complete ammonia oxidation. METPO:1005001 denotes nitrification without requiring both oxidation steps to occur in one organism, while GO:0019329 ammonia oxidation and GO:0019332 nitrite oxidation each cover only one component of the comammox phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1141,9 +1158,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 65,
+ "total_discussions": 66,
  "total_knowledge_gaps": 8,
- "total_source_entries": 65,
+ "total_source_entries": 66,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
