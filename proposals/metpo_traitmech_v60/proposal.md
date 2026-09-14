@@ -49,17 +49,17 @@ branch.
 
 ## External Mappings
 
-No exact external mapping is proposed. `GO:0030152` bacteriocin biosynthetic
-process is a candidate process-level grounding, but the initial TraitRecord
-leaves `xrefs` empty because that GO term denotes the underlying biosynthetic
-process rather than the standalone organismal phenotype represented here.
-Nisin-specific biosynthesis terms and individual bacteriocin gene-family terms
-are too narrow for the broad bacteriocin production class.
+`GO:0030152` bacteriocin biosynthetic process is proposed as an exact external
+mapping because this TraitMech class captures the bacterial capability to
+produce bacteriocin products rather than the presence of one narrow
+nisin-specific biosynthesis branch or an individual bacteriocin gene family.
+The mapping grounds the broad production physiology while staying outside
+sequence-feature interpretation.
 
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with
-  one related synonym and no exact external xrefs.
+  one related synonym and one exact external xref.
 
 ## Upstream Path
 

@@ -596,23 +596,6 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/arginine_dihydrolase_activity.html#arginine-dihydrolase-activity-xref-gap"
  },
  {
-  "discussion_id": "bacteriocin-production-xref-gap",
-  "prompt": "Resolve exact external ontology xrefs for the organismal bacteriocin production phenotype.",
-  "kind": "CURATION_TODO",
-  "status": "OPEN",
-  "is_gap": "Other discussion",
-  "source_name": "bacteriocin production",
-  "source_id": "traitmech:000183",
-  "source_file": "bacteriocin_production.yaml",
-  "attaches_to": [],
-  "rationale": "GO:0030152 bacteriocin biosynthetic process denotes a biological process rather than a standalone organismal production phenotype; individual nisin-biosynthesis and bacteriocin gene-family terms would be narrower or sequence-feature shifted for this broad bacteriocin production trait.",
-  "num_experiments": 0,
-  "num_evidence": 0,
-  "evidence_refs": [],
-  "posed_by": "codex",
-  "page_url": "../../pages/traits/physiology/bacteriocin_production.html#bacteriocin-production-xref-gap"
- },
- {
   "discussion_id": "beta-galactosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-galactosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1107,9 +1090,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 63,
+ "total_discussions": 62,
  "total_knowledge_gaps": 8,
- "total_source_entries": 63,
+ "total_source_entries": 62,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -68,6 +68,13 @@
 
 
 
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        <li><code>GO:0030152</code></li>
+      </ul>
+    </div>
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
@@ -116,44 +123,6 @@
 
 
 
-    <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
-      <p class="meta">Open questions attached to this trait. Seeded by
-        <code>just knowledge-gap-scan</code> and curated; see
-        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
-
-
-      <div class="discussion" id="bacteriocin-production-xref-gap">
-        <p class="discussion-prompt">Resolve exact external ontology xrefs for the organismal bacteriocin production phenotype.</p>
-        <p class="meta">
-          <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
-          <code>bacteriocin-production-xref-gap</code>
-          · raised by codex
-          · 2026-09-14
-        </p>
-
-
-        <p class="meta discussion-unanchored">Not yet attached to a section of this
-          record — a curator sets <code>attaches_to</code> (e.g.
-          <code>causal_graphs#some_edge</code>) so the gap shows beside the
-          mechanism it concerns.</p>
-
-
-        <p>GO:0030152 bacteriocin biosynthetic process denotes a biological process rather than a standalone organismal production phenotype; individual nisin-biosynthesis and bacteriocin gene-family terms would be narrower or sequence-feature shifted for this broad bacteriocin production trait.</p>
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-
 
 
     <div class="card">
@@ -164,6 +133,12 @@
           <time>2026-09-14T05:04:06Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted bacteriocin production as a DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact bacteriocin production class yet and the placeholder is reserved in proposals/metpo_traitmech_v60.</p>
+        </li>
+
+        <li>
+          <time>2026-09-14T05:16:59Z</time> ·
+          <strong>ADVERSARIAL_REVIEW_REPAIR</strong> · codex
+          <p class="changes">Resolved PR #899 review issue #900 by grounding bacteriocin production to GO:0030152 and removing the obsolete xref-gap TODO.</p>
         </li>
 
       </ol>
@@ -218,7 +193,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-14 05:04 UTC from
+      Record as of 2026-09-14 05:16 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 578 TraitRecords
       · embedding coverage 82.5%

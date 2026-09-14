@@ -8,6 +8,8 @@ term_kind: CLASS
 mapping_status: PROPOSED
 parent_traits:
 - METPO:1000059
+xrefs:
+- GO:0030152
 evidence:
 - reference: DOI:10.3389/fmicb.2016.00461
   snippet: Bacteriocins are ribosomally synthesized antimicrobial peptides produced
@@ -30,18 +32,6 @@ canonical_examples:
   note: Lactococcus lactis is used as a canonical nisin-producing bacterium in neutral
     fermentation.
   reference: DOI:10.1038/srep27973
-discussions:
-- discussion_id: bacteriocin-production-xref-gap
-  prompt: Resolve exact external ontology xrefs for the organismal bacteriocin production
-    phenotype.
-  kind: CURATION_TODO
-  status: OPEN
-  rationale: GO:0030152 bacteriocin biosynthetic process denotes a biological process
-    rather than a standalone organismal production phenotype; individual nisin-biosynthesis
-    and bacteriocin gene-family terms would be narrower or sequence-feature shifted
-    for this broad bacteriocin production trait.
-  posed_by: codex
-  posed_date: '2026-09-14'
 curation_history:
 - timestamp: '2026-09-14T05:04:06Z'
   curator: codex
@@ -49,4 +39,10 @@ curation_history:
   changes: Minted bacteriocin production as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact bacteriocin
     production class yet and the placeholder is reserved in proposals/metpo_traitmech_v60.
+  llm_assisted: true
+- timestamp: '2026-09-14T05:16:59Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Resolved PR #899 review issue #900 by grounding bacteriocin production
+    to GO:0030152 and removing the obsolete xref-gap TODO.'
   llm_assisted: true

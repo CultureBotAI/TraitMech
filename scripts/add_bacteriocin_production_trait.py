@@ -19,6 +19,7 @@ RILEY = "DOI:10.1146/annurev.micro.56.012302.161024"
 ZHANG = "DOI:10.1038/srep27973"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-14T05:04:06Z"
+REVIEW_TIMESTAMP = "2026-09-14T05:16:59Z"
 
 RECORD = {
     "identifier": "traitmech:000183",
@@ -33,6 +34,7 @@ RECORD = {
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
     "parent_traits": ["METPO:1000059"],
+    "xrefs": ["GO:0030152"],
     "evidence": [
         {
             "reference": REA,
@@ -80,27 +82,6 @@ RECORD = {
             "reference": ZHANG,
         },
     ],
-    "discussions": [
-        {
-            "discussion_id": "bacteriocin-production-xref-gap",
-            "prompt": (
-                "Resolve exact external ontology xrefs for the organismal "
-                "bacteriocin production phenotype."
-            ),
-            "kind": "CURATION_TODO",
-            "status": "OPEN",
-            "rationale": (
-                "GO:0030152 bacteriocin biosynthetic process denotes a "
-                "biological process rather than a standalone organismal "
-                "production phenotype; individual nisin-biosynthesis and "
-                "bacteriocin gene-family terms would be narrower or "
-                "sequence-feature shifted for this broad bacteriocin "
-                "production trait."
-            ),
-            "posed_by": CURATOR,
-            "posed_date": "2026-09-14",
-        },
-    ],
 }
 
 
@@ -126,6 +107,17 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADVERSARIAL_REVIEW_REPAIR",
+        changes=(
+            "Resolved PR #899 review issue #900 by grounding bacteriocin "
+            "production to GO:0030152 and removing the obsolete xref-gap TODO."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
