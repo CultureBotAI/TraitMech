@@ -112,7 +112,7 @@ ADDITIONS: dict[str, list[dict[str, Any]]] = {
             "subject": "methyl_based_methanogenesis",
             "predicate": "part of",
             "object": "methanogenesis_trait",
-            "description": "Methylotrophic methanogenesis is a methyl-substrate branch.",
+            "description": "Methyl-based methanogenesis is a methyl-substrate branch.",
             "evidence": [{
                 "reference": "DOI:10.3389/fmicb.2017.01198",
                 "snippet": (

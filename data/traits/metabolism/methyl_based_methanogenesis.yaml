@@ -1,0 +1,51 @@
+identifier: traitmech:000192
+label: methyl-based methanogenesis
+definition: A methanogenesis in which methylated compounds donate methyl groups that
+  are transferred to coenzyme M and reduced to methane.
+definition_source: DOI:10.1128/mmbr.00024-22
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000844
+synonyms:
+- synonym_text: methylotrophic methanogenesis
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2017.01198
+- synonym_text: methanogenesis using methylated compounds
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2017.01198
+evidence:
+- reference: DOI:10.1128/mmbr.00024-22
+  snippet: Methyl-based methanogenesis is one of three broad categories of archaeal
+    anaerobic methanogenesis, including both the methyl dismutation (methylotrophic)
+    pathway and the methyl-reducing (also known as hydrogen-dependent methylotrophic)
+    pathway
+  notes: Bueno de Mesquita et al. define methyl-based methanogenesis as the methanogenesis
+    branch covering methyl dismutation and hydrogen-dependent methyl-reducing pathways.
+- reference: DOI:10.3389/fmicb.2017.01198
+  snippet: acetoclastic methanogenesis using acetate, and methylotrophic methanogenesis
+    using methylated compounds, such as methanol, methylamines
+  notes: Evans et al. describe methylotrophic methanogenesis as the methylated-compound-using
+    branch among major methanogenic carbon-source pathways.
+discussions:
+- discussion_id: methyl-based-methanogenesis-xref-gap
+  prompt: Resolve an exact external ontology xref for methyl-substrate methanogenesis
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only obsolete METPO:1000866 Methylotrophic
+    methanogenesis. The existing methylotrophic record is the broader reduced-one-carbon
+    trophic type, and GO:0015948 methane biosynthetic process is exact only for the
+    broader methanogenesis parent, so no exact active external class has yet been
+    resolved for this methyl-substrate branch.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T21:27:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted methyl-based methanogenesis as a DOI-backed child of methanogenesis
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    pinned METPO snapshot has only an obsolete Methylotrophic methanogenesis class.
+  llm_assisted: true

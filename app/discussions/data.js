@@ -358,6 +358,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/lipolysis.html#lipolysis-xref-gap"
  },
  {
+  "discussion_id": "methyl-based-methanogenesis-xref-gap",
+  "prompt": "Resolve an exact external ontology xref for methyl-substrate methanogenesis before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "methyl-based methanogenesis",
+  "source_id": "traitmech:000192",
+  "source_file": "methyl_based_methanogenesis.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete METPO:1000866 Methylotrophic methanogenesis. The existing methylotrophic record is the broader reduced-one-carbon trophic type, and GO:0015948 methane biosynthetic process is exact only for the broader methanogenesis parent, so no exact active external class has yet been resolved for this methyl-substrate branch.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/methyl_based_methanogenesis.html#methyl-based-methanogenesis-xref-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1226,9 +1243,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 70,
+ "total_discussions": 71,
  "total_knowledge_gaps": 8,
- "total_source_entries": 70,
+ "total_source_entries": 71,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

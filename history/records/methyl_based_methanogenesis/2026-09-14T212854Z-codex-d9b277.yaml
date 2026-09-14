@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/methyl_based_methanogenesis.yaml
+  slug: methyl_based_methanogenesis
+session:
+  id: 2026-09-14T212854Z-codex-d9b277
+  timestamp: '2026-09-14T21:28:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add methyl-based methanogenesis trait
+  details: Minted traitmech:000192 for the methyl-based methanogenesis metabolism trait with
+    DOI-backed methyl-substrate evidence from 10.1128/mmbr.00024-22 and 10.3389/fmicb.2017.01198,
+    recorded the open exact-xref boundary, and reserved METPO:1014600 in proposals/metpo_traitmech_v69.
