@@ -1,0 +1,42 @@
+identifier: traitmech:000191
+label: acetoclastic methanogenesis
+definition: A methanogenesis in which acetate is split into methane and carbon dioxide.
+definition_source: DOI:10.1007/s00253-023-12700-3
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000844
+synonyms:
+- synonym_text: methanogenesis using acetate
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2017.01198
+evidence:
+- reference: DOI:10.1007/s00253-023-12700-3
+  snippet: the acetoclastic methanogens split acetate to CH4 and CO2
+  notes: Szuhaj et al. distinguish acetoclastic methanogens by their acetate-to-methane-and-carbon-dioxide
+    branch of methanogenesis.
+- reference: DOI:10.3389/fmicb.2017.01198
+  snippet: acetoclastic methanogenesis using acetate
+  notes: Evans et al. describe acetoclastic methanogenesis as the acetate-using branch
+    among major methanogenic carbon-source pathways.
+discussions:
+- discussion_id: acetoclastic-methanogenesis-xref-gap
+  prompt: Resolve an exact external ontology xref for acetate-splitting methanogenesis
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only obsolete METPO:1000865 Acetoclastic
+    methanogenesis. GO:0015948 methane biosynthetic process is exact only for the
+    broader methanogenesis parent, and no exact active external class has yet been
+    resolved for the acetate-splitting branch.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T21:20:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted acetoclastic methanogenesis as a DOI-backed child of methanogenesis
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    pinned METPO snapshot has only an obsolete Acetoclastic methanogenesis class.
+  llm_assisted: true

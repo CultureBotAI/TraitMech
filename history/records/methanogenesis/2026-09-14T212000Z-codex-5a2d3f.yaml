@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/methanogenesis.yaml
+  slug: methanogenesis
+session:
+  id: 2026-09-14T212000Z-codex-5a2d3f
+  timestamp: '2026-09-14T21:20:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Ground acetoclastic methanogenesis branch
+  details: Grounded the methanogenesis graph's acetoclastic_methanogenesis node to the newly
+    minted traitmech:000191 record after confirming the node has the same acetate-using methanogenesis
+    scope.
