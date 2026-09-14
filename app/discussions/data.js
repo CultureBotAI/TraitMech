@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-xref-gap"
  },
  {
+  "discussion_id": "butanediol-fermentation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for 2,3-butanediol fermentation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "2,3-butanediol fermentation",
+  "source_id": "traitmech:000181",
+  "source_file": "butanediol_fermentation.yaml",
+  "attaches_to": [],
+  "rationale": "No exact GO or external metabolism class was resolved for the organism-level 2,3-butanediol fermentation phenotype; Voges-Proskauer assay terms, acetoin or butanediol chemical production reactions, and individual dehydrogenase molecular functions are shifted relative to this product-specific fermentation class.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/butanediol_fermentation.html#butanediol-fermentation-xref-gap"
+ },
+ {
   "discussion_id": "butyric-acid-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for butyric acid fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1056,9 +1073,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 60,
+ "total_discussions": 61,
  "total_knowledge_gaps": 8,
- "total_source_entries": 60,
+ "total_source_entries": 61,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
