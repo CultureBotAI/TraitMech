@@ -1,0 +1,40 @@
+identifier: traitmech:000190
+label: lipolysis
+definition: A metabolism in which a microorganism hydrolyzes triacylglycerols into
+  fatty acids and glycerol through lipase-catalyzed ester cleavage.
+definition_source: DOI:10.1186/s12934-020-01428-8
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+evidence:
+- reference: DOI:10.1186/s12934-020-01428-8
+  snippet: Microbial lipases (EC 3.1.1.3) catalyze the hydrolysis of long chain triglycerides
+  notes: Chandra et al. review microbial lipases and their use in long-chain triglyceride
+    hydrolysis.
+- reference: DOI:10.1007/s00253-004-1568-8
+  snippet: Lipases, triacylglycerol hydrolases, are an important group of biotechnologically
+    relevant enzymes
+  notes: Gupta et al. review bacterial lipases as microbial enzymes for triacylglycerol
+    hydrolysis.
+discussions:
+- discussion_id: lipolysis-xref-gap
+  prompt: Resolve an exact external ontology xref for organism-level microbial lipolysis
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only obsolete METPO:1000175 lipolysis,
+    and GO:0016298 denotes the lipase molecular function rather than the organism-level
+    lipid-hydrolysis trait. GO lipid catabolic process classes also include downstream
+    fatty-acid catabolism and are broader than lipase-driven triacylglycerol hydrolysis.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T21:00:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted lipolysis as a DOI-backed metabolism TraitRecord after a repository-wide
+    duplicate review covering ignored and hidden files; METPO has only an obsolete
+    lipolysis class.
+  llm_assisted: true

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/lipolysis.yaml
+  slug: lipolysis
+session:
+  id: 2026-09-14T210000Z-codex-153e08
+  timestamp: '2026-09-14T21:00:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add lipolysis trait
+  details: Minted traitmech:000190 for the lipolysis metabolism trait with DOI-backed microbial
+    lipase evidence from 10.1186/s12934-020-01428-8 and 10.1007/s00253-004-1568-8, recorded
+    organismal lipolysis exact-xref boundaries, and reserved METPO:1014400 in proposals/metpo_traitmech_v67.
