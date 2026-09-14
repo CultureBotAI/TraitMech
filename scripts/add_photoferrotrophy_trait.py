@@ -151,6 +151,15 @@ RECORD = {
                     ),
                 },
                 {
+                    "node_id": "carbon_fixation",
+                    "label": "carbon fixation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "grounding": "GO:0015977",
+                    "description": (
+                        "Inorganic carbon assimilation into organic compounds."
+                    ),
+                },
+                {
                     "node_id": "carbon_dioxide",
                     "label": "carbon dioxide",
                     "node_type": "CHEMICAL",
@@ -271,12 +280,35 @@ RECORD = {
                     "predicate_id": "METPO:2007405",
                 },
                 {
+                    "subject": "photosynthetic_electron_transport",
+                    "predicate": "enables",
+                    "object": "carbon_fixation",
+                    "description": (
+                        "Light-driven electron transport supports carbon "
+                        "fixation in photoferrotrophic metabolism."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": WALTER,
+                            "snippet": (
+                                "Fe(II) as an electron source for carbon "
+                                "fixation and biomass formation"
+                            ),
+                            "notes": (
+                                "Supports electron flow from Fe(II) into "
+                                "photoferrotrophic carbon fixation."
+                            ),
+                        },
+                    ],
+                    "predicate_id": "RO:0002327",
+                },
+                {
                     "subject": "carbon_dioxide",
                     "predicate": "fixed during",
-                    "object": "photosynthetic_electron_transport",
+                    "object": "carbon_fixation",
                     "description": (
-                        "Photoferrotrophs fix inorganic carbon during "
-                        "light-driven Fe(II) oxidation."
+                        "Photoferrotrophs assimilate inorganic carbon by "
+                        "carbon fixation."
                     ),
                     "evidence": [
                         {
@@ -290,11 +322,11 @@ RECORD = {
                     ],
                 },
                 {
-                    "subject": "photosynthetic_electron_transport",
+                    "subject": "carbon_fixation",
                     "predicate": "has output",
                     "object": "biomass",
                     "description": (
-                        "Fixed carbon supports photoferrotrophic biomass "
+                        "Carbon fixed during photoferrotrophy supports biomass "
                         "formation."
                     ),
                     "evidence": [

@@ -72,6 +72,11 @@ causal_graphs:
     grounding: GO:0009767
     description: Light-driven electron-transport chain powered by photochemical reaction
       centers.
+  - node_id: carbon_fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Inorganic carbon assimilation into organic compounds.
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -133,19 +138,28 @@ causal_graphs:
       notes: Supports Fe(II) oxidation by the model R. palustris TIE-1 photoferrotrophy
         system.
     predicate_id: METPO:2007405
+  - subject: photosynthetic_electron_transport
+    predicate: enables
+    object: carbon_fixation
+    description: Light-driven electron transport supports carbon fixation in photoferrotrophic
+      metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2014.00713
+      snippet: Fe(II) as an electron source for carbon fixation and biomass formation
+      notes: Supports electron flow from Fe(II) into photoferrotrophic carbon fixation.
+    predicate_id: RO:0002327
   - subject: carbon_dioxide
     predicate: fixed during
-    object: photosynthetic_electron_transport
-    description: Photoferrotrophs fix inorganic carbon during light-driven Fe(II)
-      oxidation.
+    object: carbon_fixation
+    description: Photoferrotrophs assimilate inorganic carbon by carbon fixation.
     evidence:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: inorganic carbon is fixed into organic matter
       notes: Supports carbon fixation during photoferrotrophic anoxygenic photosynthesis.
-  - subject: photosynthetic_electron_transport
+  - subject: carbon_fixation
     predicate: has output
     object: biomass
-    description: Fixed carbon supports photoferrotrophic biomass formation.
+    description: Carbon fixed during photoferrotrophy supports biomass formation.
     evidence:
     - reference: DOI:10.3389/fmicb.2014.00713
       snippet: Fe(II) as an electron source for carbon fixation and biomass formation
