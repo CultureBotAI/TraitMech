@@ -59,7 +59,7 @@ NAD-dependent alcohol dehydrogenase activity, glutamyl glutamic acid
 arylamidase activity, and naphthol-AS-BI-phosphohydrolase activity. The
 proposed term captures the organismal enzyme-activity phenotype where a cell
 produces active leucyl-glycine arylamidase enzymes that hydrolyze
-leucyl-glycine dipeptide substrates.
+leucyl-glycine arylamide substrates.
 
 ## External Mappings
 

@@ -27,7 +27,7 @@ RECORD = {
     "definition": (
         "A physiological enzyme-activity phenotype in which a cell produces "
         "active leucyl-glycine arylamidase enzymes that hydrolyze "
-        "leucyl-glycine dipeptide substrates."
+        "leucyl-glycine arylamide substrates."
     ),
     "definition_source": AMYGDALOBACTER,
     "trait_category": "PHYSIOLOGY",

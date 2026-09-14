@@ -1,7 +1,7 @@
 identifier: traitmech:000178
 label: leucyl glycine arylamidase activity
 definition: A physiological enzyme-activity phenotype in which a cell produces active
-  leucyl-glycine arylamidase enzymes that hydrolyze leucyl-glycine dipeptide substrates.
+  leucyl-glycine arylamidase enzymes that hydrolyze leucyl-glycine arylamide substrates.
 definition_source: DOI:10.1099/ijsem.0.006017
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -58,4 +58,11 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact leucyl glycine arylamidase activity class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v55.
+  llm_assisted: true
+- timestamp: '2026-09-14T01:12:00Z'
+  curator: codex
+  action: UPDATED_DEFINITION
+  changes: Corrected the PR 882 review wording issue tracked in issue 883 by defining
+    the trait around leucyl-glycine arylamide substrates rather than free leucyl-glycine
+    dipeptide substrates.
   llm_assisted: true
