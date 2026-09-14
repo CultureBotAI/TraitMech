@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "acetoclastic-methanogenesis-xref-gap",
+  "prompt": "Resolve an exact external ontology xref for acetate-splitting methanogenesis before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "acetoclastic methanogenesis",
+  "source_id": "traitmech:000191",
+  "source_file": "acetoclastic_methanogenesis.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete METPO:1000865 Acetoclastic methanogenesis. GO:0015948 methane biosynthetic process is exact only for the broader methanogenesis parent, and no exact active external class has yet been resolved for the acetate-splitting branch.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/acetoclastic_methanogenesis.html#acetoclastic-methanogenesis-xref-gap"
+ },
+ {
   "discussion_id": "acetone-butanol-ethanol-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for acetone-butanol-ethanol fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1209,9 +1226,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 69,
+ "total_discussions": 70,
  "total_knowledge_gaps": 8,
- "total_source_entries": 69,
+ "total_source_entries": 70,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
