@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/citrate_utilization.yaml
+  slug: citrate_utilization
+session:
+  id: 2026-09-14T040924Z-codex-4e8d2a
+  timestamp: '2026-09-14T04:09:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add citrate utilization
+  details: Minted traitmech:000182 for citrate utilization after an ignored-and-hidden
+    duplicate search found no live exact TraitRecord or prior v59 proposal. Added
+    DOI and ASM stable-URL evidence from Chen et al. 2009, Meyer et al. 2001,
+    and the ASM citrate-test protocol; set Klebsiella pneumoniae as the
+    canonical example; left the exact external ontology xref unresolved as a
+    CURATION_TODO; and reserved METPO:1013600 in proposals/metpo_traitmech_v59.
