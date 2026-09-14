@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/anaerobic_ammonium_oxidation.yaml
+  slug: anaerobic_ammonium_oxidation
+session:
+  id: 2026-09-14T200642Z-codex-bd13af
+  timestamp: '2026-09-14T20:06:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Add anaerobic ammonium oxidation trait
+  details: Minted traitmech:000188 for the anaerobic ammonium oxidation metabolism trait with
+    DOI-backed ammonia-plus-nitrite-to-dinitrogen evidence from 10.1038/22749, 10.1128/AEM.65.7.3248-3250.1999,
+    and 10.1038/nature10453; recorded the anammox exact synonym and an exact-xref gap; and
+    reserved METPO:1014200 in proposals/metpo_traitmech_v65.

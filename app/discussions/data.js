@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-xref-gap"
  },
  {
+  "discussion_id": "anaerobic-ammonium-oxidation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for anaerobic ammonium oxidation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "anaerobic ammonium oxidation",
+  "source_id": "traitmech:000188",
+  "source_file": "anaerobic_ammonium_oxidation.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only METPO:1000812 obsolete Anaerobic ammonium oxidation. Candidate GO classes should be checked against the primary Gene Ontology release before adding an exact xref because component ammonium- or nitrite-oxidation processes are narrower than the whole anammox metabolism.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-xref-gap"
+ },
+ {
   "discussion_id": "butanediol-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for 2,3-butanediol fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1158,9 +1175,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 66,
+ "total_discussions": 67,
  "total_knowledge_gaps": 8,
- "total_source_entries": 66,
+ "total_source_entries": 67,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,5 +1,6 @@
 path	identifier	n_citations	citations	malformed	passes
 data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml	traitmech:000180	2	DOI:10.1073/pnas.1423143112; DOI:10.1002/bit.22003		yes
+data/traits/metabolism/anaerobic_ammonium_oxidation.yaml	traitmech:000188	3	DOI:10.1038/22749; DOI:10.1128/AEM.65.7.3248-3250.1999; DOI:10.1038/nature10453		yes
 data/traits/metabolism/aromatic_compound_degradation.yaml	traitmech:000130	2	DOI:10.1126/science.aaf4507; DOI:10.3390/ijerph6010278		yes
 data/traits/metabolism/aromatic_hydrocarbon_degradation.yaml	traitmech:000129	2	DOI:10.1126/science.aaf4507; DOI:10.1007/BF00058836		yes
 data/traits/metabolism/butanediol_fermentation.yaml	traitmech:000181	3	DOI:10.1186/s12934-023-02163-6; https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf; DOI:10.1007/s00253-014-5526-9		yes
