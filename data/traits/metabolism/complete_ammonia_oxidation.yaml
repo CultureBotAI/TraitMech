@@ -1,0 +1,58 @@
+identifier: traitmech:000187
+label: complete ammonia oxidation
+definition: A nitrification metabolism in which a single organism oxidizes ammonia
+  via nitrite to nitrate.
+definition_source: DOI:10.1038/nature16459
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1005001
+synonyms:
+- synonym_text: comammox
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nature16459
+evidence:
+- reference: DOI:10.1038/nature16459
+  snippet: Complete oxidation of ammonia to nitrate in one organism (complete ammonia
+    oxidation; comammox) is energetically feasible
+  notes: van Kessel et al. define complete ammonia oxidation, or comammox, as oxidation
+    of ammonia to nitrate in a single organism.
+- reference: DOI:10.1038/nature16461
+  snippet: Here we report on the discovery and cultivation of a completely nitrifying
+    bacterium from the genus Nitrospira, a globally distributed group of nitrite oxidizers.
+  notes: Daims et al. independently demonstrated complete nitrification in a single
+    Nitrospira organism.
+- reference: DOI:10.1128/aem.01698-23
+  snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability of
+    comammox to generate more energy through the complete oxidation of ammonia to
+    nitrate
+  notes: Ghimire-Kafle et al. support the same ammonia-to-nitrate scope in a freshwater
+    complete-ammonia-oxidizing Nitrospira enrichment.
+canonical_examples:
+- taxon_id: NCBITaxon:1715989
+  taxon_label: Candidatus Nitrospira inopinata
+  note: Daims et al. cultivated and physiologically characterized Candidatus Nitrospira
+    inopinata as a complete nitrifier.
+  reference: DOI:10.1038/nature16461
+discussions:
+- discussion_id: complete-ammonia-oxidation-xref-gap
+  prompt: Resolve an exact external ontology class for one-organism complete ammonia
+    oxidation before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only METPO:1000862 obsolete Complete
+    ammonia oxidation. METPO:1005001 denotes nitrification without requiring both
+    oxidation steps to occur in one organism, while GO:0019329 ammonia oxidation and
+    GO:0019332 nitrite oxidation each cover only one component of the comammox phenotype.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T20:27:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted complete ammonia oxidation as a DOI-backed nitrification TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; METPO
+    has only an obsolete Complete ammonia oxidation class in the local snapshot and
+    the replacement placeholder is reserved in proposals/metpo_traitmech_v64.
+  llm_assisted: true

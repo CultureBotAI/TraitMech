@@ -5,6 +5,7 @@ data/traits/metabolism/aromatic_hydrocarbon_degradation.yaml	traitmech:000129	2	
 data/traits/metabolism/butanediol_fermentation.yaml	traitmech:000181	3	DOI:10.1186/s12934-023-02163-6; https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf; DOI:10.1007/s00253-014-5526-9		yes
 data/traits/metabolism/butyric_acid_fermentation.yaml	traitmech:000179	3	DOI:10.1111/j.1574-6968.2009.01514.x; DOI:10.3389/fmicb.2021.703525; DOI:10.1111/1751-7915.12304		yes
 data/traits/metabolism/citrate_fermentation.yaml	traitmech:000182	2	DOI:10.1128/JB.183.18.5248-5256.2001; DOI:10.1186/1471-2180-9-168		yes
+data/traits/metabolism/complete_ammonia_oxidation.yaml	traitmech:000187	3	DOI:10.1038/nature16459; DOI:10.1038/nature16461; DOI:10.1128/aem.01698-23		yes
 data/traits/metabolism/dark_hydrogen_oxidation.yaml	traitmech:000131	2	DOI:10.1126/science.aaf4507; DOI:10.3389/fmicb.2018.02873		yes
 data/traits/metabolism/dark_oxidation_of_sulfur_compounds.yaml	traitmech:000132	2	DOI:10.1126/science.aaf4507; DOI:10.1111/1462-2920.14543		yes
 data/traits/metabolism/hydrocarbon_degradation.yaml	traitmech:000128	2	DOI:10.1126/science.aaf4507; DOI:10.1128/MR.54.3.305-315.1990		yes
