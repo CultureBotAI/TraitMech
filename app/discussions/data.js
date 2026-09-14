@@ -324,6 +324,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
  },
  {
+  "discussion_id": "lipolysis-xref-gap",
+  "prompt": "Resolve an exact external ontology xref for organism-level microbial lipolysis before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lipolysis",
+  "source_id": "traitmech:000190",
+  "source_file": "lipolysis.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete METPO:1000175 lipolysis, and GO:0016298 denotes the lipase molecular function rather than the organism-level lipid-hydrolysis trait. GO lipid catabolic process classes also include downstream fatty-acid catabolism and are broader than lipase-driven triacylglycerol hydrolysis.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/lipolysis.html#lipolysis-xref-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1192,9 +1209,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 68,
+ "total_discussions": 69,
  "total_knowledge_gaps": 8,
- "total_source_entries": 68,
+ "total_source_entries": 69,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
