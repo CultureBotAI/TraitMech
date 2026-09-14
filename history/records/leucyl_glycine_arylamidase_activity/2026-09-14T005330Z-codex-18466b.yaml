@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/leucyl_glycine_arylamidase_activity.yaml
+  slug: leucyl_glycine_arylamidase_activity
+session:
+  id: 2026-09-14T005330Z-codex-18466b
+  timestamp: '2026-09-14T00:53:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/453
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Add leucyl glycine arylamidase activity
+  details: Minted traitmech:000178 for leucyl glycine arylamidase activity after an ignored-and-hidden
+    duplicate search found no live exact TraitRecord or prior v55 proposal. Added two DOI
+    evidence snippets from Amygdalobacter indicium and Actinomyces cardiffensis enzyme-panel
+    species descriptions, kept leucyl glycine enzyme strings as related synonyms, set Amygdalobacter
+    indicium as the canonical example, and documented GO:0016805 as a broader molecular-function
+    xref lead while reserving METPO:1013200 in proposals/metpo_traitmech_v55.

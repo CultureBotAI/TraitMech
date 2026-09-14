@@ -783,6 +783,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/leucine_arylamidase_activity.html#leucine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "leucyl-glycine-arylamidase-activity-xref-gap",
+  "prompt": "Resolve an exact external ontology class for leucyl glycine arylamidase activity before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "leucyl glycine arylamidase activity",
+  "source_id": "traitmech:000178",
+  "source_file": "leucyl_glycine_arylamidase_activity.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0016805 covers broad dipeptidase activity at molecular-function scope, and no live GO class provides an exact leucyl-glycine-specific arylamidase production phenotype at organism-level scope.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/leucyl_glycine_arylamidase_activity.html#leucyl-glycine-arylamidase-activity-xref-gap"
+ },
+ {
   "discussion_id": "lipase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lipase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1005,9 +1022,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 57,
+ "total_discussions": 58,
  "total_knowledge_gaps": 8,
- "total_source_entries": 57,
+ "total_source_entries": 58,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
