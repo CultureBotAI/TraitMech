@@ -146,6 +146,7 @@ data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	thermot
 data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation tolerant	uv_tolerance_excision_repair	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	xerophilic_low_water_activity_growth	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_tolerance_czc_efflux	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
+data/traits/genomics/brex_system.yaml	traitmech:000210	BREX system	brex_methylation_antiphage_defense	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
