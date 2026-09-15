@@ -152,6 +152,7 @@ data/traits/genomics/cbass_system.yaml	traitmech:000212	CBASS system	cbass_cycli
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dna_sensing_antiphage_defense	MECHANISTIC	1	0	1	1	1	2	2	PASS	0	0	-
+data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	gc_low_mid_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
