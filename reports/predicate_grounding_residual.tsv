@@ -297,6 +297,7 @@ exposes	1	unmapped		data/traits/environment/temperature_range_mid1.yaml
 opens	1	unmapped		data/traits/environment/temperature_range_mid2.yaml
 refolds	1	unmapped		data/traits/environment/thermophilic.yaml
 quenches	1	unmapped		data/traits/environment/uv_radiation_tolerant.yaml
+encodes	1	blocked_by_node_type	METPO:2007813	data/traits/genomics/brex_system.yaml
 strengthens selection for	1	unmapped		data/traits/genomics/codon_usage_bias.yaml
 integrates spacers via	1	unmapped		data/traits/genomics/crispr_cas_system.yaml
 carries	1	unmapped		data/traits/genomics/gc_content.yaml

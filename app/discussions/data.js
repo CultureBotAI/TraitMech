@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "brex-molecular-coupling-gap",
+  "prompt": "Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "BREX system",
+  "source_id": "traitmech:000210",
+  "source_file": "brex_system.yaml",
+  "attaches_to": [],
+  "rationale": "Goldfarb et al. showed that methylation is essential and that BREX blocks phage DNA replication after adsorption, but the exact biochemical coupling between the methylation mark and blocked phage replication remains insufficient for a more specific causal edge.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1549,9 +1566,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 89,
- "total_knowledge_gaps": 8,
- "total_source_entries": 88,
+ "total_discussions": 90,
+ "total_knowledge_gaps": 9,
+ "total_source_entries": 89,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

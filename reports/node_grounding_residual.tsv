@@ -1108,6 +1108,10 @@ zntr merr-family regulator	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolera
 znta transcription	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
 czccba rnd efflux complex	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolerant.yaml
 zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
+phage dna replication	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
+brex locus	GENETIC_ELEMENT	1	data/traits/genomics/brex_system.yaml
+brex host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
+brex self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
 gene expression level	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 trna abundance	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 5' mrna secondary structure	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml

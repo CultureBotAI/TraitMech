@@ -8,6 +8,7 @@ data/traits/environment/copper_tolerant.yaml	copper_tolerance_cop_efflux	7	1	7	7
 data/traits/environment/mercury_tolerant.yaml	mercury_tolerance_mer_reduction	9	1	9	9
 data/traits/environment/radiotolerant.yaml	radiotolerance_repair_antioxidant	11	1	11	11
 data/traits/environment/zinc_tolerant.yaml	zinc_tolerance_czc_efflux	11	1	11	11
+data/traits/genomics/brex_system.yaml	brex_methylation_antiphage_defense	7	1	7	7
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity	10	1	10	10
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense	9	1	9	9
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl	15	1	15	15
