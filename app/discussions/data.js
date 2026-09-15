@@ -307,6 +307,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
  },
  {
+  "discussion_id": "kiwa-activation-and-counterdefense-gap",
+  "prompt": "Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details before minting narrower Kiwa mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Kiwa system",
+  "source_id": "traitmech:000231",
+  "source_file": "kiwa_system.yaml",
+  "attaches_to": [],
+  "rationale": "Zhang et al. support a KwaA/KwaB membrane-associated antiviral supercomplex and also describe the phage Gam DNA-mimic counter-defense and RecBCD-dependent restoration of Kiwa protection, but the first TraitRecord stays at the system level until separate review resolves the activation conformational change, exact DNA-binding state, phage counter-defense breadth, and RecBCD connection.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/kiwa_system.html#kiwa-activation-and-counterdefense-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1736,9 +1753,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 100,
- "total_knowledge_gaps": 19,
- "total_source_entries": 99,
+ "total_discussions": 101,
+ "total_knowledge_gaps": 20,
+ "total_source_entries": 100,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

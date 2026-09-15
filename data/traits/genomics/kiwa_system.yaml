@@ -1,0 +1,175 @@
+identifier: traitmech:000231
+label: Kiwa system
+definition: A phage defense system in which an organism possesses a two-component
+  Kiwa locus encoding the transmembrane sensor KwaA and DNA-binding effector KwaB
+  that assemble into a membrane-associated supercomplex and coordinate phage-attachment
+  sensing with inhibition of phage DNA replication and late transcription.
+definition_source: DOI:10.1016/j.cell.2025.07.002
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Kiwa
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2025.07.002
+evidence:
+- reference: DOI:10.1126/science.aar4120
+  snippet: Kiwa KwaAB pfam16162 No annotated domain 934 924 (1.8%) Membrane associated
+  notes: Doron et al. reported Kiwa/KwaAB as a membrane-associated defense system
+    in their pangenome-scale antiphage-system discovery screen.
+- reference: DOI:10.1016/j.cell.2025.07.002
+  snippet: Kiwa, a widespread two-component system composed of the transmembrane sensor
+    KwaA and the DNA-binding effector KwaB
+  notes: Zhang et al. support defining Kiwa as a recurring two-component KwaA/KwaB
+    antiviral system.
+- reference: DOI:10.1016/j.cell.2025.07.002
+  snippet: KwaA and KwaB assemble into a large, membrane-associated supercomplex
+  notes: Zhang et al. connect the KwaA and KwaB components to membrane-associated
+    supercomplex assembly.
+- reference: DOI:10.1016/j.cell.2025.07.002
+  snippet: Upon phage binding, KwaA senses infection at the membrane, leading to KwaB
+    binding of ejected phage DNA and inhibition of replication and late transcription,
+    without inducing host cell death
+  notes: Zhang et al. connect phage binding to KwaA-dependent membrane sensing, KwaB
+    binding of phage DNA, and inhibition of phage replication and late transcription.
+- reference: DOI:10.1016/j.cell.2025.07.002
+  snippet: its antiviral activity requires association with KwaA, suggesting spatial
+    or conformational regulation
+  notes: Zhang et al. support KwaA-KwaB association as required for Kiwa antiviral
+    activity.
+- reference: DOI:10.1016/j.cell.2025.07.002
+  snippet: Kiwa coordinates membrane-associated detection of phage infection with
+    downstream DNA binding by its effector, forming a spatially coordinated antiviral
+    mechanism
+  notes: Zhang et al. summarize the Kiwa system-level mechanism as membrane-associated
+    phage-infection detection coordinated with effector DNA binding.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Zhang et al. characterized the Escherichia coli O55:H7 Kiwa system and showed
+    that its KwaA/KwaB pair assembles into a membrane-associated supercomplex that
+    inhibits phage DNA replication and late transcription.
+  reference: DOI:10.1016/j.cell.2025.07.002
+causal_graphs:
+- graph_id: kiwa_membrane_sensing_dna_binding
+  title: Kiwa coordinates membrane sensing with phage DNA binding
+  description: Evidence-backed process sketch linking a Kiwa kwaAB locus to KwaA-KwaB
+    supercomplex assembly, membrane-associated phage-infection sensing, binding of
+    ejected phage DNA, and inhibition of phage DNA replication and late transcription.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the characterized two-component Kiwa mechanism without
+    asserting one exact phage receptor, the precise KwaA conformational change, the
+    structural basis of KwaB DNA binding, Gam-mediated counter-defense, or RecBCD
+    rescue as universal across all Kiwa loci.
+  nodes:
+  - node_id: kiwa_locus
+    label: Kiwa locus
+    node_type: GENETIC_ELEMENT
+    description: A two-component phage-defense locus encoding the transmembrane sensor
+      KwaA and DNA-binding effector KwaB.
+  - node_id: kwaab_supercomplex_assembly
+    label: KwaA-KwaB supercomplex assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of KwaA and KwaB into a large membrane-associated Kiwa supercomplex.
+  - node_id: membrane_phage_sensing_and_dna_binding
+    label: membrane phage sensing and DNA binding
+    node_type: BIOLOGICAL_PROCESS
+    description: KwaA-mediated membrane sensing of phage binding coordinated with
+      KwaB binding to ejected phage DNA.
+  - node_id: phage_replication_and_late_transcription
+    label: phage replication and late transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Phage DNA replication and late phage transcription inside an infected
+      bacterial host.
+  - node_id: kiwa_system_trait
+    label: Kiwa system
+    node_type: TRAIT
+    grounding: traitmech:000231
+    description: Possession of a genome-encoded Kiwa phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: kiwa_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: kwaab_supercomplex_assembly
+    description: The Kiwa kwaAB locus encodes KwaA and KwaB components that assemble
+      into a membrane-associated supercomplex.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: KwaA and KwaB assemble into a large, membrane-associated supercomplex
+      notes: Zhang et al. support KwaA/KwaB supercomplex assembly.
+  - subject: kwaab_supercomplex_assembly
+    predicate: enables
+    predicate_id: RO:0002327
+    object: membrane_phage_sensing_and_dna_binding
+    description: Association with KwaA is required for Kiwa antiviral activity despite
+      independent KwaB DNA binding.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: its antiviral activity requires association with KwaA, suggesting spatial
+        or conformational regulation
+      notes: Zhang et al. support KwaA association as required for KwaB antiviral
+        activity.
+  - subject: membrane_phage_sensing_and_dna_binding
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_replication_and_late_transcription
+    description: KwaA sensing of phage binding coordinates with KwaB binding of ejected
+      phage DNA to inhibit phage replication and late transcription.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: Upon phage binding, KwaA senses infection at the membrane, leading
+        to KwaB binding of ejected phage DNA and inhibition of replication and late
+        transcription
+      notes: Zhang et al. connect Kiwa membrane sensing and KwaB DNA binding to inhibition
+        of phage replication and late transcription.
+  - subject: membrane_phage_sensing_and_dna_binding
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: kiwa_system_trait
+    description: Spatially coordinated membrane-associated phage sensing and effector
+      DNA binding realizes the Kiwa antiphage-defense phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: Kiwa coordinates membrane-associated detection of phage infection with
+        downstream DNA binding by its effector
+      notes: Zhang et al. summarize the system-level Kiwa antiviral mechanism.
+  - subject: kiwa_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Kiwa system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: Our findings support a model in which Kiwa coordinates membrane-associated
+        detection of phage infection
+      notes: Zhang et al. support Kiwa as an antiviral phage-defense system.
+discussions:
+- discussion_id: kiwa-activation-and-counterdefense-gap
+  prompt: Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details
+    before minting narrower Kiwa mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Zhang et al. support a KwaA/KwaB membrane-associated antiviral supercomplex
+    and also describe the phage Gam DNA-mimic counter-defense and RecBCD-dependent
+    restoration of Kiwa protection, but the first TraitRecord stays at the system
+    level until separate review resolves the activation conformational change, exact
+    DNA-binding state, phage counter-defense breadth, and RecBCD connection.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T22:47:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Kiwa system as a DOI-backed GENOMICS TraitRecord under the phage
+    defense system parent after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v108.
+  llm_assisted: true
