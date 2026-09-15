@@ -214,7 +214,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, and AbiE are split out as traitmech:000226, traitmech:000225, and traitmech:000227, respectively. Lopatina et al., Fineran et al., and Dy et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin branches and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, and AbiZ are split out as traitmech:000226, traitmech:000225, traitmech:000227, and traitmech:000228, respectively. Lopatina et al., Fineran et al., Dy et al., and Durmaz and Klaenhammer still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

@@ -170,12 +170,13 @@ discussions:
     under the broad abortive infection system parent.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: ToxIN, AbiQ, and AbiE are split out as traitmech:000226, traitmech:000225,
-    and traitmech:000227, respectively. Lopatina et al., Fineran et al., and Dy et
-    al. still support Abi as a genomically encoded phage defense strategy that spans
-    mechanistically diverse toxin-antitoxin branches and other Abi families. Additional
-    narrower TraitRecords need separate review to ground each subfamily's trigger,
-    effector, growth-arrest or cell-death mechanism, and phage escape routes.
+  rationale: ToxIN, AbiQ, AbiE, and AbiZ are split out as traitmech:000226, traitmech:000225,
+    traitmech:000227, and traitmech:000228, respectively. Lopatina et al., Fineran
+    et al., Dy et al., and Durmaz and Klaenhammer still support Abi as a genomically
+    encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin,
+    premature-lysis, and other Abi families. Additional narrower TraitRecords need
+    separate review to ground each subfamily's trigger, effector, growth-arrest or
+    cell-death mechanism, and phage escape routes.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -207,4 +208,11 @@ curation_history:
   changes: Removed AbiE from the open abortive-infection subfamily split-gap discussion
     after minting traitmech:000227 for the AbiE system; other abortive-infection families
     remain open.
+  llm_assisted: true
+- timestamp: '2026-09-15T20:35:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Documented AbiZ as split out in the open abortive-infection subfamily split-gap
+    discussion after minting traitmech:000228 for the AbiZ system; other abortive-infection
+    families remain open.
   llm_assisted: true

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-15T203737Z-codex-529026
+  timestamp: '2026-09-15T20:37:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Narrow abortive infection split gap after AbiZ split
+  details: Documented AbiZ as split out in the abortive infection system open subfamily split-gap
+    discussion after minting traitmech:000228 for the AbiZ system in the same PR. The discussion
+    remains open for other abortive-infection families that still require separate DOI-backed
+    curation.

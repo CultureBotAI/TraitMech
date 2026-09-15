@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T203738Z-codex-d91ec0
+  timestamp: '2026-09-15T20:37:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - documentation
+  summary: Advance METPO proposal block after AbiZ
+  details: Documented that metpo_traitmech_v105 reserves METPO:1018200 for the AbiZ system,
+    advancing the next one-row Scope-A cohort to METPO:1018300 after adding proposals/metpo_traitmech_v105.
