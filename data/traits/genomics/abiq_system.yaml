@@ -110,17 +110,18 @@ causal_graphs:
       snippet: AbiQ modified the early-expressed phage mRNA profiles
       notes: Samson et al. directly assayed phage transcription in AbiQ-containing
         Lactococcus cells.
-  - subject: early_phage_mrna_profile_modification
+  - subject: abiq_type_iii_toxin_antitoxin_activity
     predicate: contributes to
     predicate_id: RO:0002326
     object: restricted_phage_propagation
-    description: Altered early phage mRNA profiles are part of the AbiQ restriction
-      phenotype that reduces phage propagation.
+    description: AbiQ type III toxin-antitoxin activity contributes to restricted
+      phage propagation in infected host cells.
     evidence:
     - reference: DOI:10.1128/JB.00296-13
-      snippet: In the presence of AbiQ, additional small transcripts were observed
-      notes: Samson et al. observed small phage transcripts in AbiQ-containing cells
-        and attributed them to the AbiQ phenotype.
+      snippet: active against various phage families infecting Gram-positive and Gram-negative
+        bacteria
+      notes: Samson et al. support AbiQ as an antiphage type III toxin-antitoxin
+        system.
   - subject: restricted_phage_propagation
     predicate: confers
     predicate_id: METPO:2007700

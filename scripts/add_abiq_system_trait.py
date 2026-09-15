@@ -288,26 +288,26 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "early_phage_mrna_profile_modification",
+                    "subject": "abiq_type_iii_toxin_antitoxin_activity",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "restricted_phage_propagation",
                     "description": (
-                        "Altered early phage mRNA profiles are part of the "
-                        "AbiQ restriction phenotype that reduces phage "
-                        "propagation."
+                        "AbiQ type III toxin-antitoxin activity contributes "
+                        "to restricted phage propagation in infected host "
+                        "cells."
                     ),
                     "evidence": [
                         {
                             "reference": SAMSON,
                             "snippet": (
-                                "In the presence of AbiQ, additional small "
-                                "transcripts were observed"
+                                "active against various phage families "
+                                "infecting Gram-positive and Gram-negative "
+                                "bacteria"
                             ),
                             "notes": (
-                                "Samson et al. observed small phage "
-                                "transcripts in AbiQ-containing cells and "
-                                "attributed them to the AbiQ phenotype."
+                                "Samson et al. support AbiQ as an antiphage "
+                                "type III toxin-antitoxin system."
                             ),
                         }
                     ],
