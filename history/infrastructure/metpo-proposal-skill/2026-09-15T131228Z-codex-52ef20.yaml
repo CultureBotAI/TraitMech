@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T131228Z-codex-52ef20
+  timestamp: '2026-09-15T13:12:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal reserve block to v94
+  details: Documented that metpo_traitmech_v93 reserves METPO:1017000 for Thoeris system,
+    advancing the next one-row Scope-A cohort to METPO:1017100 for v94.
