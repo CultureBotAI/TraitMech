@@ -52,6 +52,7 @@ membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_opt
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 phage infection	BIOLOGICAL_PROCESS	3	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/thoeris_system.yaml
+phage dna replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brex_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
@@ -134,7 +135,6 @@ psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment
 cryoprotection	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_low.yaml
 dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.yaml|data/traits/environment/thermophilic.yaml
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
-phage dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/brex_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 foreign dna nicking	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
@@ -1253,6 +1253,11 @@ shedu locus	GENETIC_ELEMENT	1	data/traits/genomics/shedu_system.yaml
 shedu nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 shedu dna end nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 phage dna propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
+sspabcd-sspe locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspe_system.yaml
+ssp single-stranded dna phosphorothioation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
+sspe pt-site recruitment	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
+sspe gtpase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
+sspe dna nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
 thoeris tir cadpr-isomer production	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
 thsa nad depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml

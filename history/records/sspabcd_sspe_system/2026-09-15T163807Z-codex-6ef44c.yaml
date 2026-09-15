@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sspabcd_sspe_system.yaml
+  slug: sspabcd_sspe_system
+session:
+  id: 2026-09-15T163807Z-codex-6ef44c
+  timestamp: '2026-09-15T16:38:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add SspABCD-SspE system trait
+  details: Minted traitmech:000222 for the DOI-backed SspABCD-SspE phosphorothioate
+    restriction system with Xiong, Gao, and Jiang evidence, a Vibrio cyclitrophicus
+    canonical example, a nonmechanistic SspE PT-site-dependent DNA-nicking graph,
+    and an upstream METPO v99 placeholder reservation.

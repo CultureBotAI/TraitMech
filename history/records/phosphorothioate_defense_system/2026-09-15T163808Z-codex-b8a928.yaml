@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/phosphorothioate_defense_system.yaml
+  slug: phosphorothioate_defense_system
+session:
+  id: 2026-09-15T163808Z-codex-b8a928
+  timestamp: '2026-09-15T16:38:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Split SspABCD-SspE from phosphorothioate gap
+  details: Updated the phosphorothioate-subfamily knowledge gap after SspABCD-SspE
+    curation so it no longer lists SspBCD-E among unresolved child systems while
+    leaving SspABCD-sspFGH and archaeal phosphorothioate-based antiviral systems
+    open for primary-source review.
