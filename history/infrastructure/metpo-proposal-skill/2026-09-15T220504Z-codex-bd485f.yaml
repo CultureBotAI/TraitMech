@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T220504Z-codex-bd485f
+  timestamp: '2026-09-15T22:05:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal block after AbiT
+  details: Documented that metpo_traitmech_v107 reserves METPO:1018400 for the AbiT system,
+    advancing the next one-row Scope-A cohort to METPO:1018500 after adding proposals/metpo_traitmech_v107.

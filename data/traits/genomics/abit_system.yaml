@@ -1,0 +1,174 @@
+identifier: traitmech:000230
+label: AbiT system
+definition: An abortive infection system in which an organism possesses the two-gene
+  pED1 abiT locus whose constitutively cotranscribed abiTi and abiTii genes encode
+  an AbiTi-AbiTii phage-resistance module that acts late in the 936/P335 lactococcal
+  phage lytic cycle.
+definition_source: DOI:10.1128/JB.184.22.6325-6332.2002
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+evidence:
+- reference: DOI:10.1128/JB.184.22.6325-6332.2002
+  snippet: Here, we describe the isolation and characterization of a novel Abi mechanism
+    encoded by plasmid pED1 from L. lactis
+  notes: Bouchard et al. identified the plasmid pED1-encoded AbiT abortive-infection
+    mechanism in Lactococcus lactis.
+- reference: DOI:10.1128/JB.184.22.6325-6332.2002
+  snippet: The system is composed of two constitutively cotranscribed genes encoding
+    putative proteins of 127 and 213 amino acids, named AbiTi and AbiTii, respectively
+  notes: Bouchard et al. support defining AbiT around the paired abiTi and abiTii
+    host genes rather than around a single gene.
+- reference: DOI:10.1128/JB.184.22.6325-6332.2002
+  snippet: The fact that resistant cells do not survive phage infection proves that
+    the antiphage system carried by pED1 is an Abi mechanism. It was therefore named
+    AbiT.
+  notes: Bouchard et al. placed the pED1 phage-resistance determinant in the abortive-infection
+    class and named it AbiT.
+- reference: DOI:10.1128/JB.184.22.6325-6332.2002
+  snippet: Two genes are responsible for the antiphage activity of AbiT
+  notes: Bouchard et al. support a two-gene genetic basis for AbiT phage resistance.
+- reference: DOI:10.1128/JB.184.22.6325-6332.2002
+  snippet: It appears that AbiT affects DNA replication and also prevents effective
+    encapsidation
+  notes: Bouchard et al. connect AbiT to both impaired phage DNA replication and ineffective
+    phage encapsidation.
+- reference: DOI:10.1128/AEM.01755-12
+  snippet: AbiT-resistant phage mutants derived from the wild-type AbiT-sensitive
+    lactococcal phages p2, bIL170, and P008 were isolated and characterized
+  notes: Labrie et al. generated AbiT-resistant mutants from three sensitive 936-group
+    Lactococcus phages.
+- reference: DOI:10.1128/AEM.01755-12
+  snippet: three distinct phage genes involved in AbiT activity were identified
+  notes: Labrie et al. found that AbiT sensitivity maps to multiple nonhomologous
+    phage genes rather than one universal phage escape determinant.
+- reference: DOI:10.1128/AEM.01755-12
+  snippet: AbiT blocks capsid protein synthesis of the wild-type phage, while it does
+    not affect the resistant phage p2.t3, mutated in the capsid gene
+  notes: Labrie et al. connect a p2 major-capsid-protein escape mutation to restoration
+    of capsid protein synthesis in the presence of AbiT.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Bouchard et al. isolated pED1 from Lactococcus lactis W51, localized the AbiT
+    phage-resistance phenotype to abiTi and abiTii, and showed that the determinant
+    restricts 936 and P335 Lactococcus phages after transfer into phage-sensitive
+    Lactococcus lactis strains.
+  reference: DOI:10.1128/JB.184.22.6325-6332.2002
+causal_graphs:
+- graph_id: abit_late_phage_development_block
+  title: AbiT activity blocks late phage development
+  description: Evidence-backed process sketch linking the two-gene abiT locus to AbiTi-AbiTii
+    antiphage activity, impaired phage DNA replication or capsid production, restricted
+    phage propagation, and abortive-infection system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiT at the system level without asserting a molecular
+    function for AbiTi or AbiTii, the exact host target, the direct phage activator,
+    or that every AbiT-insensitive phage mutates the same phage gene.
+  nodes:
+  - node_id: abit_locus
+    label: abiT locus
+    node_type: GENETIC_ELEMENT
+    description: A two-gene abortive-infection locus encoding AbiTi and AbiTii.
+  - node_id: abiti_abitii_antiphage_activity
+    label: AbiTi-AbiTii antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection antiphage activity mediated by the AbiTi and AbiTii
+      host proteins.
+  - node_id: interrupted_late_phage_development
+    label: interrupted late phage development
+    node_type: BIOLOGICAL_PROCESS
+    description: AbiT-associated impairment of phage DNA replication, phage DNA encapsidation,
+      or capsid protein synthesis after early phage gene expression.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of 936 or P335 phage propagation in an AbiT-containing
+      infected host cell.
+  - node_id: abit_system_trait
+    label: AbiT system
+    node_type: TRAIT
+    grounding: traitmech:000230
+    description: Possession of a genome-encoded AbiT two-component abortive-infection
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage defense system.
+  edges:
+  - subject: abit_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiti_abitii_antiphage_activity
+    description: The abiT locus carries abiTi, abiTii, and the promoter required for
+      the complete phage-resistance phenotype.
+    evidence:
+    - reference: DOI:10.1128/JB.184.22.6325-6332.2002
+      snippet: Two genes are responsible for the antiphage activity of AbiT
+      notes: Bouchard et al. showed that both abiT genes are required for full AbiT
+        activity.
+  - subject: abiti_abitii_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: interrupted_late_phage_development
+    description: AbiT activity interferes with late phage development after early
+      phage gene expression.
+    evidence:
+    - reference: DOI:10.1128/JB.184.22.6325-6332.2002
+      snippet: It appears that AbiT affects DNA replication and also prevents effective
+        encapsidation
+      notes: Bouchard et al. found reduced DNA replication and failed encapsidation
+        in AbiT-containing infected cells.
+    - reference: DOI:10.1128/AEM.01755-12
+      snippet: AbiT blocks capsid protein synthesis of the wild-type phage, while
+        it does not affect the resistant phage p2.t3, mutated in the capsid gene
+      notes: Labrie et al. refine the AbiT phenotype by linking wild-type p2 capsid
+        protein synthesis blockage to an AbiT-sensitive capsid gene.
+  - subject: interrupted_late_phage_development
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Failed phage DNA maturation or capsid production limits completion
+      of the phage lytic cycle.
+    evidence:
+    - reference: DOI:10.1128/JB.184.22.6325-6332.2002
+      snippet: The monitoring of the intracellular phage infection process by DNA
+        replication, gene expression, and electron microscopy as well as the study
+        of phage mutants by genome mapping indicated that AbiT is likely to act at
+        a later stage of the phage lytic cycle
+      notes: Bouchard et al. support a late-stage block in the phage lytic cycle.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abit_system_trait
+    description: Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection
+      defense trait.
+    evidence:
+    - reference: DOI:10.1128/JB.184.22.6325-6332.2002
+      snippet: The fact that resistant cells do not survive phage infection proves
+        that the antiphage system carried by pED1 is an Abi mechanism. It was therefore
+        named AbiT.
+      notes: Bouchard et al. define AbiT as a pED1 abortive-infection phage resistance
+        system.
+  - subject: abit_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiT system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1128/JB.184.22.6325-6332.2002
+      snippet: Here, we describe the isolation and characterization of a novel Abi
+        mechanism encoded by plasmid pED1 from L. lactis
+      notes: Bouchard et al. place AbiT in the abortive infection class of phage defense.
+curation_history:
+- timestamp: '2026-09-15T22:05:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiT system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v107.
+  llm_assisted: true

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-15T220503Z-codex-bd7d1e
+  timestamp: '2026-09-15T22:05:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track AbiT split on abortive infection parent
+  details: Updated the open abortive-infection subfamily split-gap discussion after minting
+    traitmech:000230 for AbiT so the parent rationale names ToxIN, AbiQ, AbiE, AbiZ, AbiK,
+    and AbiT as resolved narrower records while keeping the gap open for remaining Abi families.
