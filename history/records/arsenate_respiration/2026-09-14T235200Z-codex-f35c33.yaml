@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/arsenate_respiration.yaml
+  slug: arsenate_respiration
+session:
+  id: 2026-09-14T235200Z-codex-f35c33
+  timestamp: '2026-09-14T23:52:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Added the arsenate respiration TraitRecord
+  details: Minted traitmech:000195 as a DOI-backed anaerobic respiration trait, parented it
+    to METPO:1000802 anaerobic respiration, added Shewanella sp. ANA-3 as a canonical example,
+    distinguished ArrAB-dependent respiration from ArsC cytosolic detoxification, and reserved
+    METPO:1014900 in proposals/metpo_traitmech_v72.
