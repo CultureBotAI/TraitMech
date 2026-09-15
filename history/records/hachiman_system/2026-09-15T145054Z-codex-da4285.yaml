@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hachiman_system.yaml
+  slug: hachiman_system
+session:
+  id: 2026-09-15T145054Z-codex-da4285
+  timestamp: '2026-09-15T14:50:54Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Hachiman system trait
+  details: Minted traitmech:000219 for the DOI-backed Hachiman antiphage system with Tuck
+    and Cui evidence, an Escherichia coli canonical example, a nonmechanistic HamAB DNA-cleavage
+    graph, an open subtype-and-trigger knowledge gap, and an upstream METPO v96 placeholder
+    reservation.

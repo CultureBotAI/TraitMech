@@ -162,6 +162,7 @@ data/traits/genomics/gc_skew.yaml	traitmech:000097	GC skew	gc_skew_replication_s
 data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	genome_size_population_lifestyle	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genome_streamlining.yaml	traitmech:000099	genome streamlining	streamlining_oligotrophic_selection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genomic_island.yaml	traitmech:000093	genomic island	gi_hgt_accessory_function	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/hachiman_system.yaml	traitmech:000219	Hachiman system	hachiman_hamab_dna_cleavage	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/mobile_genetic_element.yaml	traitmech:000089	mobile genetic element	mge_horizontal_gene_transfer	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness	pangenome_openness_hgt	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense system	phage_defense_system_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
