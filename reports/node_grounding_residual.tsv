@@ -1209,7 +1209,6 @@ bacterial chromosome	CELLULAR_LOCALIZATION	1	data/traits/genomics/prophage.yaml
 ci master repressor	GENE_OR_PROTEIN	1	data/traits/genomics/prophage.yaml
 lytic gene expression	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
 dna damage / replication stress	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/prophage.yaml
-reca-lexa sos response	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
 reca* nucleoprotein filament	GENE_OR_PROTEIN	1	data/traits/genomics/prophage.yaml
 phage-plasmid	GENETIC_ELEMENT	1	data/traits/genomics/prophage.yaml
 extrachromosomal prophage maintenance	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
@@ -1617,7 +1616,6 @@ combined septal and peripheral pg synthesis	BIOLOGICAL_PROCESS	1	data/traits/mor
 apical polarisome	CELLULAR_LOCALIZATION	1	data/traits/morphology/filament_shaped.yaml
 apical peptidoglycan synthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
 hyphal tip extension	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
-reca/lexa sos response	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
 ftsz polymerization	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
 polar hyphal growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
 hyphal branch emergence	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
@@ -2195,6 +2193,12 @@ blue-green light	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/phototrophic.yaml
 ion transport across membrane	BIOLOGICAL_PROCESS	1	data/traits/physiology/phototrophic.yaml
 threshold autoinducer concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/quorum_sensing.yaml
 quorum-sensing inhibitor	CHEMICAL	1	data/traits/physiology/quorum_sensing.yaml
+genotoxic stress	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/sos_response.yaml
+single-stranded dna accumulation	BIOLOGICAL_PROCESS	1	data/traits/physiology/sos_response.yaml
+reca nucleoprotein filament	GENE_OR_PROTEIN	1	data/traits/physiology/sos_response.yaml
+lexa autoproteolysis	BIOLOGICAL_PROCESS	1	data/traits/physiology/sos_response.yaml
+sos regulon expression	BIOLOGICAL_PROCESS	1	data/traits/physiology/sos_response.yaml
+dna repair and damage tolerance	BIOLOGICAL_PROCESS	1	data/traits/physiology/sos_response.yaml
 germinant	CHEMICAL	1	data/traits/physiology/spore_germination.yaml
 cadpa release from spore core	BIOLOGICAL_PROCESS	1	data/traits/physiology/spore_germination.yaml
 cortex peptidoglycan hydrolysis	BIOLOGICAL_PROCESS	1	data/traits/physiology/spore_germination.yaml

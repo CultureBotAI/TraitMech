@@ -80,6 +80,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Bacterial DNA-damage-inducible SOS response mediated by RecA and
       LexA.
+    grounding: GO:0009432
   - node_id: reca_filament
     label: RecA* nucleoprotein filament
     node_type: GENE_OR_PROTEIN
@@ -251,4 +252,10 @@ curation_history:
     the tranche: set graph scope prophage_lysogeny=NONMECHANISTIC with scope_notes;
     marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ci_repressor,
     reca_filament); retyped 1 node(s) (phage_plasmid->GENETIC_ELEMENT).'
+  llm_assisted: true
+- timestamp: '2026-09-15T06:22:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE
+  changes: Grounded the RecA-LexA SOS-response biological-process node to GO:0009432
+    while adding the organism-level traitmech:000207 SOS response record.
   llm_assisted: true

@@ -533,6 +533,7 @@ acts as electron donor for	1	unmapped		data/traits/physiology/photolithotrophic.
 transfers excitation energy to	1	unmapped		data/traits/physiology/phototrophic.yaml
 extends light absorption into	1	unmapped		data/traits/physiology/phototrophic.yaml
 pumps	1	unmapped		data/traits/physiology/phototrophic.yaml
+derepresses	1	unmapped		data/traits/physiology/sos_response.yaml
 synthesizes/hydrolyzes	1	unmapped		data/traits/physiology/stress_response.yaml
 is substrate of	1	unmapped		data/traits/physiology/urease_activity.yaml
 causally upstream of or within	1	unmapped		data/traits/upper/biological_process.yaml

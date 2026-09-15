@@ -1446,6 +1446,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-xref-gap"
  },
  {
+  "discussion_id": "sos-response-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level microbial SOS response before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "SOS response",
+  "source_id": "traitmech:000207",
+  "source_file": "sos_response.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0009432 SOS response exactly grounds biological-process nodes in causal graphs but is shifted from this organism-level response trait. RecA, LexA, SulA, translesion-polymerase, prophage-induction, DNA-repair, and DNA-damage terms describe narrower machinery, downstream processes, or related triggers rather than the whole microbial SOS-response phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/sos_response.html#sos-response-xref-gap"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1498,9 +1515,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 86,
+ "total_discussions": 87,
  "total_knowledge_gaps": 8,
- "total_source_entries": 85,
+ "total_source_entries": 86,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
