@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/thoeris_system.html#thoeris-family-signal-and-trigger-gap"
  },
  {
+  "discussion_id": "wadjet-subfamily-and-substrate-gap",
+  "prompt": "Resolve Wadjet subfamily architecture, plasmid substrate specificity, and activation cues before minting narrower Wadjet mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Wadjet system",
+  "source_id": "traitmech:000218",
+  "source_file": "wadjet_system.yaml",
+  "attaches_to": [],
+  "rationale": "Deep et al. and Liu et al. support JetABCD-mediated topology- or shape-biased circular plasmid cleavage, and Weiss et al. support MksG-mediated plasmid degradation in the MksBEFG subfamily, but Wadjet variants need separate review before TraitMech asserts one exact target size threshold, linear-plasmid escape rule, loop-extrusion endpoint, polar localization pattern, or nuclease activation model.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/wadjet_system.html#wadjet-subfamily-and-substrate-gap"
+ },
+ {
   "discussion_id": "zorya-subtype-effector-and-trigger-gap",
   "prompt": "Resolve Zorya subtype effectors, ion usage, and phage triggers before minting narrower Zorya mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1685,9 +1702,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 97,
- "total_knowledge_gaps": 16,
- "total_source_entries": 96,
+ "total_discussions": 98,
+ "total_knowledge_gaps": 17,
+ "total_source_entries": 97,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
