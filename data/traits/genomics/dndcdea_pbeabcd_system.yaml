@@ -1,0 +1,181 @@
+identifier: traitmech:000224
+label: DndCDEA-PbeABCD system
+definition: A phosphorothioate defense system in which an organism possesses a DndCDEA-PbeABCD
+  locus that pairs DndCDEA-mediated host-DNA phosphorothioation with PbeABCD-dependent
+  targeting of non-phosphorothioated viral DNA to inhibit viral DNA replication.
+definition_source: DOI:10.1038/s41467-019-09390-9
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000213
+synonyms:
+- synonym_text: PbeABCD-mediated PT defence system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-019-09390-9
+evidence:
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate
+    (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition
+    of DNA replication
+  notes: Xiong et al. name the DndCDEA-PbeABCD architecture as an archaeal PT-based
+    antiviral system.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: can defend against viral attack together with pbeABCD, a conserved 4-gene
+    cassette sharing no sequence homology with DndFGH
+  notes: Xiong et al. support separating PbeABCD systems from canonical Dnd systems
+    whose restriction module is DndFGH.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: DndCDEA-PbeABCD confers protection against the haloarchaeal virus SNJ1
+  notes: Xiong et al. experimentally support the antiviral output of the Haloterrigena
+    jeotgali A29 DndCDEA-PbeABCD locus after heterologous expression in CJ7-F cells.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: PbeABCD exerted antiviral activity depending on the presence of PT modifications
+  notes: Xiong et al. connect PbeABCD antiviral restriction to phosphorothioation-dependent
+    self/non-self discrimination.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: the subsequent viral genome replication process is significantly inhibited
+    by the DndCDEA-PbeABCD system
+  notes: Xiong et al. directly connect DndCDEA-PbeABCD to inhibition of SNJ1 viral
+    DNA replication after viral DNA injection.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: does not involve viral DNA degradation or cleavage, ruling out the involvement
+    of currently known defence mechanisms
+  notes: Xiong et al. bound the PbeABCD mechanism away from the DNA-cleavage mechanisms
+    of canonical restriction systems.
+- reference: DOI:10.1134/S0006297921030081
+  snippet: instead of the dndFGH, the restriction function is performed by the pbeABCD
+    gene cluster
+  notes: Isaev et al. summarize pbeABCD as the restriction branch paired with archaeal
+    DndCDEA phosphorothioation.
+- reference: DOI:10.1134/S0006297921030081
+  snippet: The dndCDEA-pbeABCD from Haloterrigena jeotgali was shown to provide antiviral
+    defense
+  notes: Isaev et al. independently summarize the Haloterrigena jeotgali DndCDEA-PbeABCD
+    locus as an antiviral defense system.
+canonical_examples:
+- taxon_id: NCBITaxon:1455609
+  taxon_label: Natrinema thermotolerans A29
+  note: Xiong et al. identified the dndCDEA-pbeABCD locus in Haloterrigena jeotgali
+    A29 and showed that the cloned locus confers DndCDEA- and PbeABCD-dependent resistance
+    to the haloarchaeal virus SNJ1.
+  reference: DOI:10.1038/s41467-019-09390-9
+causal_graphs:
+- graph_id: dndcdea_pbeabcd_pt_viral_replication_inhibition
+  title: DndCDEA-PbeABCD systems halt archaeal viral DNA replication
+  description: Evidence-backed process sketch linking a DndCDEA-PbeABCD locus to host
+    DNA phosphorothioation, PT-dependent PbeABCD antiviral activity, and inhibited
+    replication of non-phosphorothioated viral DNA.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures DndCDEA-PbeABCD restriction at the system level
+    without asserting one universal host taxon, PT motif outside characterized haloarchaeal
+    systems, PbeABCD subunit cycle, direct viral DNA cleavage, or relationship to
+    bacterial DndFGH and Ssp-family systems.
+  nodes:
+  - node_id: dndcdea_pbeabcd_locus
+    label: DndCDEA-PbeABCD locus
+    node_type: GENETIC_ELEMENT
+    description: An archaeal phosphorothioation-dependent antiviral locus pairing
+      DndCDEA host-DNA phosphorothioation with PbeABCD restriction activity.
+  - node_id: dndcdea_dna_phosphorothioation
+    label: DndCDEA DNA phosphorothioation
+    node_type: BIOLOGICAL_PROCESS
+    description: DndCDEA-mediated installation of sequence-specific phosphorothioate
+      marks on host DNA.
+  - node_id: pbeabcd_pt_dependent_virus_targeting
+    label: PbeABCD PT-dependent virus targeting
+    node_type: BIOLOGICAL_PROCESS
+    description: Phosphorothioate-dependent PbeABCD antiviral activity against invading
+      DNA that lacks host PT marks.
+  - node_id: viral_dna_replication
+    label: viral DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Replication of invading archaeal viral DNA after host cell entry.
+  - node_id: dndcdea_pbeabcd_system_trait
+    label: DndCDEA-PbeABCD system
+    node_type: TRAIT
+    grounding: traitmech:000224
+    description: Possession of a genome-encoded DndCDEA-PbeABCD phosphorothioation-dependent
+      antiviral defense system.
+  - node_id: phosphorothioate_defense_system_trait
+    label: phosphorothioate defense system
+    node_type: TRAIT
+    grounding: traitmech:000213
+    description: Possession of a genome-encoded phosphorothioate-based antiviral defense
+      system.
+  edges:
+  - subject: dndcdea_pbeabcd_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dndcdea_dna_phosphorothioation
+    description: The DndCDEA modification module installs phosphorothioate marks on
+      archaeal host DNA.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: involves DndCDEA-specific DNA phosphorothioate (PT) modification
+      notes: Xiong et al. support DndCDEA-dependent host DNA phosphorothioation in
+        the PbeABCD-coupled system.
+  - subject: dndcdea_pbeabcd_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pbeabcd_pt_dependent_virus_targeting
+    description: DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD
+      antiviral activity.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: can defend against viral attack together with pbeABCD
+      notes: Xiong et al. support the paired DndCDEA modification and PbeABCD effector
+        architecture.
+  - subject: dndcdea_dna_phosphorothioation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pbeabcd_pt_dependent_virus_targeting
+    description: PbeABCD antiviral activity depends on the presence of PT marks rather
+      than direct PbeABCD-DndCDEA protein interactions.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: depending on the presence of PT modifications
+      notes: Xiong et al. distinguish PT-dependent PbeABCD restriction from direct
+        modification-effector protein coupling.
+  - subject: pbeabcd_pt_dependent_virus_targeting
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: viral_dna_replication
+    description: PbeABCD-dependent targeting inhibits replication of non-phosphorothioated
+      viral DNA.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: the subsequent viral genome replication process is significantly inhibited
+      notes: Xiong et al. observed impaired SNJ1 genome replication in cells expressing
+        DndCDEA-PbeABCD.
+  - subject: pbeabcd_pt_dependent_virus_targeting
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: dndcdea_pbeabcd_system_trait
+    description: PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD
+      defense trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: DndCDEA-PbeABCD confers resistance against invading viruses
+      notes: Xiong et al. support PbeABCD-mediated restriction as the system's antiviral
+        output.
+  - subject: dndcdea_pbeabcd_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phosphorothioate_defense_system_trait
+    description: DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.
+    evidence:
+    - reference: DOI:10.1134/S0006297921030081
+      snippet: instead of the dndFGH, the restriction function is performed by the
+        pbeABCD gene cluster
+      notes: Isaev et al. place PbeABCD in the family of PT defense systems while
+        distinguishing it from DndFGH.
+curation_history:
+- timestamp: '2026-09-15T17:36:16Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted DndCDEA-PbeABCD system as a DOI-backed GENOMICS TraitRecord under
+    the phosphorothioate defense system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v101.
+  llm_assisted: true

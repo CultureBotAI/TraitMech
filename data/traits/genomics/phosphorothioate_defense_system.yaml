@@ -1,9 +1,8 @@
 identifier: traitmech:000213
 label: phosphorothioate defense system
 definition: A genomics trait describing possession of a DNA phosphorothioation-dependent
-  antiphage restriction locus in which host DNA phosphorothioate modification is paired
-  with Dnd- or Ssp-family restriction activity to nick unmodified invading DNA and
-  inhibit bacteriophage replication.
+  antiviral locus in which host DNA phosphorothioate modification is paired with a
+  Dnd-, Ssp-, or Pbe-family effector module to restrict invading viral DNA.
 definition_source: DOI:10.1038/s41564-020-0700-6
 trait_category: GENOMICS
 term_kind: CLASS
@@ -38,6 +37,11 @@ evidence:
     systems against infection by various lytic phages as well as temperate phages
   notes: Jiang et al. experimentally demonstrated broad antiphage protection by Dnd-related
     phosphorothioate R-M systems.
+- reference: DOI:10.1038/s41467-019-09390-9
+  snippet: DndCDEA-specific DNA phosphorothioate (PT) modification and the PbeABCD-mediated
+    halt of virus propagation
+  notes: Xiong et al. support DndCDEA-PbeABCD as an archaeal phosphorothioation-dependent
+    antiviral branch distinct from bacterial DndFGH and Ssp systems.
 canonical_examples:
 - taxon_id: NCBITaxon:340184
   taxon_label: Escherichia coli B7A
@@ -45,19 +49,21 @@ canonical_examples:
     DH10B and measured strong DndB7A R-M protection against multiple lytic phages.
   reference: DOI:10.1128/mbio.00933-23
 causal_graphs:
-- graph_id: phosphorothioate_dna_nicking_antiphage_defense
-  title: Phosphorothioate restriction modules nick invading phage DNA
+- graph_id: phosphorothioate_dna_restriction_antiviral_defense
+  title: Phosphorothioate restriction modules target invading viral DNA
   description: Evidence-backed process sketch linking host DNA phosphorothioate modification
-    to PT-dependent restriction, foreign-DNA nicking, and impaired phage DNA replication.
+    to PT-dependent self/non-self discrimination, restriction of invading viral DNA,
+    and impaired viral DNA replication.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures system-level logic shared by phosphorothioate-based
-    Dnd and Ssp restriction-modification systems without claiming that the DndFGH
-    and SspE restriction modules sense or cleave DNA by one exact protein mechanism.
+    Dnd, Ssp, and Pbe antiviral systems without claiming that DndFGH, SspE, SspFGH,
+    and PbeABCD sense PT marks, damage foreign DNA, or inhibit viral replication by
+    one exact protein mechanism.
   nodes:
   - node_id: phosphorothioate_modification_module
     label: phosphorothioate modification module
     node_type: GENETIC_ELEMENT
-    description: A Dnd- or Ssp-family gene module that installs sequence-specific
+    description: A Dnd-, Ssp-, or Pbe-paired gene module that installs sequence-specific
       phosphorothioate modifications on host DNA.
   - node_id: dna_phosphorothioation
     label: DNA phosphorothioation
@@ -69,27 +75,27 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Phosphorothioate-dependent self/non-self discrimination that targets
       invading DNA for restriction.
-  - node_id: foreign_dna_nicking
-    label: foreign DNA nicking
+  - node_id: viral_dna_restriction
+    label: viral DNA restriction
     node_type: BIOLOGICAL_PROCESS
-    description: Introduction of nicks into unmodified invading DNA by a PT-associated
-      restriction module.
-  - node_id: phage_dna_replication
-    label: phage DNA replication
+    description: Restriction of invading viral DNA by a PT-associated Dnd, Ssp, or
+      Pbe effector module.
+  - node_id: viral_dna_replication
+    label: viral DNA replication
     node_type: BIOLOGICAL_PROCESS
-    description: Replication of invading bacteriophage DNA after host cell entry.
+    description: Replication of invading viral DNA after host cell entry.
   - node_id: phosphorothioate_defense_system_trait
     label: phosphorothioate defense system
     node_type: TRAIT
     grounding: traitmech:000213
-    description: Possession of a genome-encoded phosphorothioate-based phage defense
+    description: Possession of a genome-encoded phosphorothioate-based antiviral defense
       system.
   - node_id: phage_defense_system
     label: phage defense system
     node_type: TRAIT
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
-      bacteriophage infection.
+      viral infection.
   edges:
   - subject: phosphorothioate_modification_module
     predicate: contributes to
@@ -110,8 +116,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pt_dependent_foreign_dna_targeting
-    description: Sequence-specific PT marks couple host DNA modification to self/non-self
-      restriction by Dnd- and Ssp-family restriction modules.
+    description: Sequence-specific PT marks couple host DNA modification to PT-dependent
+      self/non-self restriction by Dnd-, Ssp-, and Pbe-family effector modules.
     evidence:
     - reference: DOI:10.1038/s41564-020-0700-6
       snippet: SspE senses sequence-specific PTs by virtue of its PT-stimulated NTPase
@@ -121,8 +127,9 @@ causal_graphs:
   - subject: pt_dependent_foreign_dna_targeting
     predicate: activates
     predicate_id: RO:0002213
-    object: foreign_dna_nicking
-    description: DndFGH and SspE systems converge on nicking unmodified invading DNA.
+    object: viral_dna_restriction
+    description: Dnd, Ssp, and Pbe phosphorothioation-dependent systems converge on
+      restriction of viral DNA lacking host PT marks.
     evidence:
     - reference: DOI:10.1038/s41564-020-0700-6
       snippet: SspE inhibits phage propagation by introducing nicking damage to impair
@@ -135,50 +142,63 @@ causal_graphs:
         DNA
       notes: Jiang et al. summarize DndFGH-mediated DNA binding, translocation, and
         nicking of foreign DNA that lacks PT modification.
-  - subject: foreign_dna_nicking
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: PbeABCD exerted antiviral activity depending on the presence of PT
+        modifications
+      notes: Xiong et al. support PT-dependent PbeABCD antiviral activity.
+  - subject: viral_dna_restriction
     predicate: mitigates
     predicate_id: METPO:2007407
-    object: phage_dna_replication
-    description: PT-dependent nicking of invading DNA impairs bacteriophage DNA replication.
+    object: viral_dna_replication
+    description: PT-dependent effector activity inhibits replication of invading viral
+      DNA.
     evidence:
     - reference: DOI:10.1038/s41564-020-0700-6
       snippet: SspE inhibits phage propagation by introducing nicking damage to impair
         phage DNA replication
       notes: Xiong et al. directly connect SspE DNA nicking to impaired phage replication.
-  - subject: foreign_dna_nicking
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: PbeABCD-mediated halt of virus propagation via inhibition of DNA replication
+      notes: Xiong et al. connect PbeABCD-dependent PT restriction to inhibited archaeal
+        viral DNA replication.
+  - subject: viral_dna_restriction
     predicate: confers
     predicate_id: METPO:2007700
     object: phosphorothioate_defense_system_trait
-    description: Foreign-DNA nicking realizes phosphorothioate-based restriction of
-      infecting bacteriophages.
+    description: Restriction of invading viral DNA realizes phosphorothioate-based
+      antiviral defense.
     evidence:
     - reference: DOI:10.1128/mbio.00933-23
       snippet: the host could benefit from Dnd-related R-M systems for a broad range
         of antiphage activities
       notes: Jiang et al. support Dnd-mediated phosphorothioate restriction as an
         antiphage defense output.
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: a new type of PT-based virus resistance system
+      notes: Xiong et al. place DndCDEA-PbeABCD in the PT antiviral defense family.
   - subject: phosphorothioate_defense_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
     object: phage_defense_system
-    description: Phosphorothioate restriction-system possession is a phage-defense-system
+    description: Phosphorothioate restriction-system possession is an antiviral defense-system
       trait.
     evidence:
     - reference: DOI:10.1038/s41564-020-0700-6
       snippet: provides protection against phages
       notes: Xiong et al. place PT-dependent SspABCD-SspE in the antiphage defense
         family.
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: a new type of PT-based virus resistance system
+      notes: Xiong et al. place DndCDEA-PbeABCD in the PT antiviral defense family.
 discussions:
 - discussion_id: phosphorothioate-subfamily-split-gap
   prompt: Resolve archaeal phosphorothioate-based antiviral systems before minting
     additional narrower children under the phosphorothioate defense parent.
   kind: KNOWLEDGE_GAP
-  status: OPEN
-  rationale: The Dnd system is split out as traitmech:000221, the SspABCD-SspE single-restriction-enzyme
-    system is split out as traitmech:000222, and the SspABCD-SspFGH system is split
-    out as traitmech:000223. Archaeal phosphorothioate-based antiviral systems still
-    need separate primary-source review before they can be split into a narrower TraitRecord
-    with exact component groundings.
+  status: RESOLVED
+  rationale: Dnd, SspABCD-SspE, SspABCD-SspFGH, and archaeal DndCDEA-PbeABCD PT antiviral
+    architectures have all been split out as narrower phosphorothioate defense system
+    children.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -210,4 +230,12 @@ curation_history:
   changes: Removed SspFGH from the open phosphorothioate subfamily split-gap discussion
     after minting traitmech:000223 for the SspABCD-SspFGH system; archaeal phosphorothioate-based
     antiviral systems remain open.
+  llm_assisted: true
+- timestamp: '2026-09-15T17:36:17Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Minted traitmech:000224 for the archaeal DndCDEA-PbeABCD system, broadened
+    the phosphorothioate defense system parent from bacteriophage-only Dnd/Ssp wording
+    to Dnd/Ssp/Pbe viral-DNA restriction wording, and marked the phosphorothioate
+    subfamily split-gap discussion resolved.
   llm_assisted: true
