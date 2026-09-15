@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T231442Z-codex-916a40
+  timestamp: '2026-09-15T23:14:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal block after Lamassu
+  details: Documented that metpo_traitmech_v109 reserves METPO:1018600 for the Lamassu system,
+    advancing the next one-row Scope-A cohort to METPO:1018700 after adding proposals/metpo_traitmech_v109.
