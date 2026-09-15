@@ -409,6 +409,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-xref-gap"
  },
  {
+  "discussion_id": "iodate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level iodate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "iodate respiration",
+  "source_id": "traitmech:000203",
+  "source_file": "iodate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "Candidate Idr, DmsAB, EC, Rhea, and protein-family terms describe narrower iodate reductase activities, reactions, or enzymes rather than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-xref-gap"
+ },
+ {
   "discussion_id": "lipolysis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for organism-level microbial lipolysis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1430,9 +1447,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 82,
+ "total_discussions": 83,
  "total_knowledge_gaps": 8,
- "total_source_entries": 81,
+ "total_source_entries": 82,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

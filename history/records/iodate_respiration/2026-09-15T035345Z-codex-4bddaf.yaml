@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/iodate_respiration.yaml
+  slug: iodate_respiration
+session:
+  id: 2026-09-15T035345Z-codex-4bddaf
+  timestamp: '2026-09-15T03:53:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add iodate respiration
+  details: Minted traitmech:000203 for DOI-backed iodate respiration, added Amachi 2007, Reyes-Umana
+    2021, and Reyes-Umana 2022 evidence, added a Pseudomonas sp. SCT canonical example, and
+    reserved the upstream placeholder in proposals/metpo_traitmech_v80.

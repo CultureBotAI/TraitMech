@@ -1,0 +1,59 @@
+identifier: traitmech:000203
+label: iodate respiration
+definition: An anaerobic respiration in which an organism uses iodate as the terminal
+  electron acceptor for energy conservation.
+definition_source: DOI:10.1128/AEM.00241-07
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: dissimilatory iodate reduction
+  synonym_type: EXACT_SYNONYM
+evidence:
+- reference: DOI:10.1128/AEM.00241-07
+  snippet: SCT was capable of anaerobic growth with 3 mM iodate as the sole electron
+    acceptor
+  notes: Amachi et al. isolated Pseudomonas sp. strain SCT from marine sediment slurry
+    and showed anaerobic growth with iodate as sole electron acceptor.
+- reference: DOI:10.1128/AEM.00241-07
+  snippet: SCT is a dissimilatory iodate-reducing bacterium
+  notes: Amachi et al. support the dissimilatory iodate reduction synonym and organism-level
+    phenotype scope.
+- reference: DOI:10.1038/s41396-021-01034-5
+  snippet: dissimilatory IO3− reduction to iodide (I−) by a novel estuarine bacterium,
+    Denitromonas sp. IR-12
+  notes: Reyes-Umana et al. show that iodate respiration recurs in an estuarine Denitromonas
+    isolate.
+- reference: DOI:10.3389/fmicb.2021.804181
+  snippet: A. toluclasticum sp. TC-10 couples acetate oxidation to iodate reduction
+    with a concomitant increase in the OD600.
+  notes: Reyes-Umana et al. extend the dissimilatory iodate-reducing phenotype to
+    the freshwater isolate Aromatoleum toluclasticum sp. TC-10.
+canonical_examples:
+- taxon_id: NCBITaxon:412955
+  taxon_label: Pseudomonas sp. SCT
+  note: Amachi et al. isolated Pseudomonas sp. strain SCT from marine sediment slurry
+    and showed anaerobic growth with iodate as the sole electron acceptor.
+  reference: DOI:10.1128/AEM.00241-07
+discussions:
+- discussion_id: iodate-respiration-xref-gap
+  prompt: Resolve an exact external ontology class for organism-level iodate respiration
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Candidate Idr, DmsAB, EC, Rhea, and protein-family terms describe narrower
+    iodate reductase activities, reactions, or enzymes rather than the whole-organism
+    anaerobic respiration phenotype.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T03:53:45Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted iodate respiration as a DOI-backed anaerobic respiration TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    local METPO snapshot has no exact iodate respiration class and the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v80.
+  llm_assisted: true
