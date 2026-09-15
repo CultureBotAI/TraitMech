@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>homeoviscous adaptation — PHYSIOLOGY — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/physiology.html">PHYSIOLOGY</a>
+    </p>
+    <h1>homeoviscous adaptation</h1>
+    <p class="curie"><code>traitmech:000208</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A stress response in which an organism remodels membrane lipid composition to maintain a functional membrane viscosity and fluidity when temperature changes perturb lipid packing.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Membrane-fluidity homeostasis by lipid remodeling</h2>
+      <p class="meta">Evidence-backed causal sketch linking temperature-driven membrane rigidification to homeoviscous lipid remodeling and restored membrane fluidity.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved membrane-fluidity output of homeoviscous adaptation without making the Bacillus DesK/DesR two-component branch, E. coli FabI/FabB metabolic valve, or any single lipid species universal across microbes.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Membrane-fluidity homeostasis by lipid remodeling</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for homeoviscous adaptation.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>temperature downshift</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>membrane rigidification</strong>
+            <code>biolink:causes</code>
+            <p>A temperature decrease causes the bacterial membrane to rigidify and thicken.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                <span class="evidence-snippet">Upon temperature decrease, the membrane rigidifies and increases in thickness</span>
+                <span class="meta">Sidarta et al. describe rigidification and thickening as the immediate membrane response to temperature decrease.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>membrane rigidification</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>homeoviscous adaptation</strong>
+            <code>RO:0002213</code>
+            <p>Membrane rigidification is sensed as the physical input that activates homeoviscous lipid remodeling.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                <span class="evidence-snippet">Upon temperature decrease, the membrane rigidifies and increases in thickness, resulting in activation of the kinase-dominant state of DesK</span>
+                <span class="meta">Sidarta et al. support the physical membrane-state trigger through the B. subtilis DesK sensor model.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>homeoviscous adaptation</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>membrane lipid remodeling</strong>
+            <code>RO:0002213</code>
+            <p>Homeoviscous adaptation increases lipid remodeling routes, including fatty-acyl desaturation, that counteract bilayer ordering.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                <span class="evidence-snippet">desaturates the fatty acyl chains, resulting in membrane fluidization and concomitant decrease of bilayer thickness</span>
+                <span class="meta">Sidarta et al. support Des-mediated fatty-acyl desaturation as a concrete B. subtilis homeoviscous remodeling branch.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>FabI/FabB branchpoint enzymes</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>membrane lipid remodeling</strong>
+            <code>RO:0002211</code>
+            <p>The E. coli FabI/FabB branchpoint valve allocates fatty-acid synthesis flux between saturated and unsaturated membrane-lipid routes.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-024-53677-5</code>
+                <span class="evidence-snippet">A first element of this regulatory system is a temperature-sensitive metabolic valve that allocates flux between the saturated and unsaturated fatty acid synthesis pathways via the branchpoint enzymes FabI and FabB</span>
+                <span class="meta">Hoogerland et al. support the E. coli FabI/FabB branchpoint valve as a regulator of flux between saturated and unsaturated fatty-acid synthesis.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>membrane lipid remodeling</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>membrane fluidity</strong>
+            <code>RO:0002211</code>
+            <p>Temperature-dependent membrane lipid remodeling maintains membrane fluidity near a functional setpoint.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-024-53677-5</code>
+                <span class="evidence-snippet">hard-wired parameters calibrate the system to generate membrane compositions that maintain constant fluidity</span>
+                <span class="meta">Hoogerland et al. show that the E. coli fatty-acid synthesis system generates temperature-specific membrane compositions that maintain fluidity.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>membrane fluidity</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>homeoviscous adaptation</strong>
+            <code>RO:0002326</code>
+            <p>Restoration of optimal membrane fluidity is the physiological output of homeoviscous adaptation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-024-53677-5</code>
+                <span class="evidence-snippet">restores optimal membrane fluidity within a single generation</span>
+                <span class="meta">Hoogerland et al. directly connect the homeoviscous fatty-acid control system to rapid fluidity restoration.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>FabI/FabB branchpoint enzymes</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0AEK4/entry" rel="nofollow noreferrer"><code>UniProtKB:P0AEK4</code></a>
+                  <br>Enoyl-[acyl-carrier-protein] reductase [NADH] FabI <span class="meta">(fabI)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v161 · sequence v2</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 FabI catalyzes enoyl-ACP reduction in fatty-acid elongation and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.</p>
+                  <ul>
+
+                    <li>
+
+                      <code>https://rest.uniprot.org/uniprotkb/P0AEK4.json</code>
+                      <span class="evidence-snippet">Involved in the elongation cycle of fatty acid which are used in the lipid metabolism</span>
+                      <span class="meta">Verified FabI identity and fatty-acid elongation role against the live UniProt REST entry for P0AEK4 retrieved on 2026-09-15.</span>
+                    </li>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1038/s41467-024-53677-5" rel="nofollow noreferrer"><code>DOI:10.1038/s41467-024-53677-5</code></a>
+
+                      <span class="evidence-snippet">via the branchpoint enzymes FabI and FabB</span>
+                      <span class="meta">Hoogerland et al. place FabI in the temperature-sensitive E. coli fatty-acid branchpoint valve.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td>FabI/FabB branchpoint enzymes</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0A953/entry" rel="nofollow noreferrer"><code>UniProtKB:P0A953</code></a>
+                  <br>3-oxoacyl-[acyl-carrier-protein] synthase 1 <span class="meta">(fabB)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v155 · sequence v1</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 FabB elongates acyl-ACP substrates in fatty-acid biosynthesis and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.</p>
+                  <ul>
+
+                    <li>
+
+                      <code>https://rest.uniprot.org/uniprotkb/P0A953.json</code>
+                      <span class="evidence-snippet">Catalyzes a key reaction in unsaturated fatty acid (UFA) synthesis</span>
+                      <span class="meta">Verified FabB identity and unsaturated fatty-acid synthesis role against the live UniProt REST entry for P0A953 retrieved on 2026-09-15.</span>
+                    </li>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1038/s41467-024-53677-5" rel="nofollow noreferrer"><code>DOI:10.1038/s41467-024-53677-5</code></a>
+
+                      <span class="evidence-snippet">via the branchpoint enzymes FabI and FabB</span>
+                      <span class="meta">Hoogerland et al. place FabB in the temperature-sensitive E. coli fatty-acid branchpoint valve.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1039/d4cc03114h</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/physiology/stress_response.html" >stress response <code>traitmech:000078</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (2)</h2>
+      <ul class="synonyms">
+
+        <li>homoviscous adaptation <span class="meta">EXACT_SYNONYM · DOI:10.1146/annurev-micro-091313-103612</span></li>
+
+        <li>HVA <span class="meta">RELATED_SYNONYM · DOI:10.1039/d4cc03114h</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1038/s41467-024-53677-5"
+             rel="nofollow noreferrer"><code>DOI:10.1038/s41467-024-53677-5</code></a>
+
+
+          <span class="meta">E. coli rapidly restores membrane fluidity after temperature shock through a FabI/FabB branchpoint valve coupled to transcriptional feedback.</span>
+        </li>
+
+        <li>
+          <em>Bacillus subtilis</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423"
+             rel="nofollow noreferrer"><code>NCBITaxon:1423</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1128/spectrum.03925-23"
+             rel="nofollow noreferrer"><code>DOI:10.1128/spectrum.03925-23</code></a>
+
+
+          <span class="meta">B. subtilis is the model organism for DesK/DesR membrane thickness sensing and Des-mediated fatty-acyl-chain desaturation during cold-induced homeoviscous adaptation.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="homeoviscous-adaptation-xref-gap">
+        <p class="discussion-prompt">Resolve an exact external ontology class for organism-level homeoviscous adaptation before adding a TraitRecord xref.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>homeoviscous-adaptation-xref-gap</code>
+          · raised by codex
+          · 2026-09-15
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>No exact GO, PATO, or METPO class is present in the pinned local snapshot for homeoviscous adaptation. Related lipid metabolism, fatty-acid desaturation, membrane-fluidity, and cold-response terms are narrower, broader, or shifted from the whole-organism membrane-acclimation trait.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-15T07:02:39Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted homeoviscous adaptation as a DOI-backed stress-response TraitRecord after a repository-wide duplicate review covering ignored and hidden files; the local METPO snapshot has no exact homeoviscous-adaptation class and the replacement placeholder is reserved in proposals/metpo_traitmech_v85.</p>
+        </li>
+
+        <li>
+          <time>2026-09-15T07:13:33Z</time> ·
+          <strong>ADD_PROTEIN_EXAMPLES</strong> · codex
+          <p class="changes">Added E. coli K-12 FabI and FabB UniProt protein examples to the homeoviscous adaptation causal graph and removed a top-level evidence item whose Maiti review citation had no verbatim snippet.</p>
+        </li>
+
+        <li>
+          <time>2026-09-15T07:26:31Z</time> ·
+          <strong>NORMALIZED_CAUSAL_NODE_ID</strong> · codex
+          <p class="changes">Renamed the homeoviscous graph node membrane_rigidification to the canonical membrane_rigidity QUALITY node id after PR review found that the retired process-shaped alias had been reintroduced.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/physiology/homeoviscous_adaptation.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/homeoviscous_adaptation.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/physiology/homeoviscous_adaptation.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/physiology/homeoviscous_adaptation.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000208" target="_blank" rel="noopener"><code>traitmech:000208</code></a></dd>
+      <dt>Category</dt>
+      <dd>PHYSIOLOGY</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking temperature-driven membrane rigidification to homeoviscous lipid remodeling and restored membrane fluidity.", "edges": [{"description": "A temperature decrease causes the bacterial membrane to rigidify and thicken.", "evidence": [{"notes": "Sidarta et al. describe rigidification and thickening as the immediate membrane response to temperature decrease.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "Upon temperature decrease, the membrane rigidifies and increases in thickness"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "temperature_downshift", "target": "membrane_rigidity"}, {"description": "Membrane rigidification is sensed as the physical input that activates homeoviscous lipid remodeling.", "evidence": [{"notes": "Sidarta et al. support the physical membrane-state trigger through the B. subtilis DesK sensor model.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "Upon temperature decrease, the membrane rigidifies and increases in thickness, resulting in activation of the kinase-dominant state of DesK"}], "id": "edge-2", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "membrane_rigidity", "target": "homeoviscous_adaptation_process"}, {"description": "Homeoviscous adaptation increases lipid remodeling routes, including fatty-acyl desaturation, that counteract bilayer ordering.", "evidence": [{"notes": "Sidarta et al. support Des-mediated fatty-acyl desaturation as a concrete B. subtilis homeoviscous remodeling branch.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "desaturates the fatty acyl chains, resulting in membrane fluidization and concomitant decrease of bilayer thickness"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "homeoviscous_adaptation_process", "target": "membrane_lipid_remodeling"}, {"description": "The E. coli FabI/FabB branchpoint valve allocates fatty-acid synthesis flux between saturated and unsaturated membrane-lipid routes.", "evidence": [{"notes": "Hoogerland et al. support the E. coli FabI/FabB branchpoint valve as a regulator of flux between saturated and unsaturated fatty-acid synthesis.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "A first element of this regulatory system is a temperature-sensitive metabolic valve that allocates flux between the saturated and unsaturated fatty acid synthesis pathways via the branchpoint enzymes FabI and FabB"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "fab_fatty_acid_branchpoint_enzymes", "target": "membrane_lipid_remodeling"}, {"description": "Temperature-dependent membrane lipid remodeling maintains membrane fluidity near a functional setpoint.", "evidence": [{"notes": "Hoogerland et al. show that the E. coli fatty-acid synthesis system generates temperature-specific membrane compositions that maintain fluidity.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "hard-wired parameters calibrate the system to generate membrane compositions that maintain constant fluidity"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane_lipid_remodeling", "target": "membrane_fluidity"}, {"description": "Restoration of optimal membrane fluidity is the physiological output of homeoviscous adaptation.", "evidence": [{"notes": "Hoogerland et al. directly connect the homeoviscous fatty-acid control system to rapid fluidity restoration.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "restores optimal membrane fluidity within a single generation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane_fluidity", "target": "homeoviscous_adaptation_trait"}], "evidence_rows": [{"description": "A temperature decrease causes the bacterial membrane to rigidify and thicken.", "edge_id": "edge-1", "evidence": [{"notes": "Sidarta et al. describe rigidification and thickening as the immediate membrane response to temperature decrease.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "Upon temperature decrease, the membrane rigidifies and increases in thickness"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "temperature downshift", "target": "membrane rigidification"}, {"description": "Membrane rigidification is sensed as the physical input that activates homeoviscous lipid remodeling.", "edge_id": "edge-2", "evidence": [{"notes": "Sidarta et al. support the physical membrane-state trigger through the B. subtilis DesK sensor model.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "Upon temperature decrease, the membrane rigidifies and increases in thickness, resulting in activation of the kinase-dominant state of DesK"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "membrane rigidification", "target": "homeoviscous adaptation"}, {"description": "Homeoviscous adaptation increases lipid remodeling routes, including fatty-acyl desaturation, that counteract bilayer ordering.", "edge_id": "edge-3", "evidence": [{"notes": "Sidarta et al. support Des-mediated fatty-acyl desaturation as a concrete B. subtilis homeoviscous remodeling branch.", "reference": "DOI:10.1128/spectrum.03925-23", "snippet": "desaturates the fatty acyl chains, resulting in membrane fluidization and concomitant decrease of bilayer thickness"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "homeoviscous adaptation", "target": "membrane lipid remodeling"}, {"description": "The E. coli FabI/FabB branchpoint valve allocates fatty-acid synthesis flux between saturated and unsaturated membrane-lipid routes.", "edge_id": "edge-4", "evidence": [{"notes": "Hoogerland et al. support the E. coli FabI/FabB branchpoint valve as a regulator of flux between saturated and unsaturated fatty-acid synthesis.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "A first element of this regulatory system is a temperature-sensitive metabolic valve that allocates flux between the saturated and unsaturated fatty acid synthesis pathways via the branchpoint enzymes FabI and FabB"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "FabI/FabB branchpoint enzymes", "target": "membrane lipid remodeling"}, {"description": "Temperature-dependent membrane lipid remodeling maintains membrane fluidity near a functional setpoint.", "edge_id": "edge-5", "evidence": [{"notes": "Hoogerland et al. show that the E. coli fatty-acid synthesis system generates temperature-specific membrane compositions that maintain fluidity.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "hard-wired parameters calibrate the system to generate membrane compositions that maintain constant fluidity"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane lipid remodeling", "target": "membrane fluidity"}, {"description": "Restoration of optimal membrane fluidity is the physiological output of homeoviscous adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Hoogerland et al. directly connect the homeoviscous fatty-acid control system to rapid fluidity restoration.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "restores optimal membrane fluidity within a single generation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "membrane fluidity", "target": "homeoviscous adaptation"}], "graph_id": "homeoviscous_adaptation_membrane_fluidity", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "E. coli fatty-acid synthesis enzymes at the saturated/unsaturated branchpoint that route acyl-ACP flux during temperature adaptation.", "grounding": null, "id": "fab_fatty_acid_branchpoint_enzymes", "is_orphan": false, "label": "FabI/FabB branchpoint enzymes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 161, "evidence": [{"notes": "Verified FabI identity and fatty-acid elongation role against the live UniProt REST entry for P0AEK4 retrieved on 2026-09-15.", "reference": "https://rest.uniprot.org/uniprotkb/P0AEK4.json", "snippet": "Involved in the elongation cycle of fatty acid which are used in the lipid metabolism"}, {"notes": "Hoogerland et al. place FabI in the temperature-sensitive E. coli fatty-acid branchpoint valve.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "via the branchpoint enzymes FabI and FabB"}], "gene_symbol": "fabI", "protein_label": "Enoyl-[acyl-carrier-protein] reductase [NADH] FabI", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FabI catalyzes enoyl-ACP reduction in fatty-acid elongation and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AEK4"}, {"entry_status": "REVIEWED", "entry_version": 155, "evidence": [{"notes": "Verified FabB identity and unsaturated fatty-acid synthesis role against the live UniProt REST entry for P0A953 retrieved on 2026-09-15.", "reference": "https://rest.uniprot.org/uniprotkb/P0A953.json", "snippet": "Catalyzes a key reaction in unsaturated fatty acid (UFA) synthesis"}, {"notes": "Hoogerland et al. place FabB in the temperature-sensitive E. coli fatty-acid branchpoint valve.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "via the branchpoint enzymes FabI and FabB"}], "gene_symbol": "fabB", "protein_label": "3-oxoacyl-[acyl-carrier-protein] synthase 1", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FabB elongates acyl-ACP substrates in fatty-acid biosynthesis and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A953"}], "xrefs": []}, {"color": "#ecfccb", "description": "Temperature-responsive lipid remodeling that restores the membrane to a fluidity setpoint.", "grounding": "METPO:1016200", "id": "homeoviscous_adaptation_process", "is_orphan": false, "label": "homeoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to remodel membrane lipid composition to preserve functional membrane viscosity and fluidity.", "grounding": "traitmech:000208", "id": "homeoviscous_adaptation_trait", "is_orphan": false, "label": "homeoviscous adaptation", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Dynamic lipid-bilayer state maintained near a functional setpoint by homeoviscous remodeling.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Changes in membrane lipid unsaturation, branching, or chain length that alter lipid packing.", "grounding": null, "id": "membrane_lipid_remodeling", "is_orphan": false, "label": "membrane lipid remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced membrane fluidity and increased bilayer thickness after cooling.", "grounding": null, "id": "membrane_rigidity", "is_orphan": false, "label": "membrane rigidification", "node_type": "QUALITY", "protein_examples": [], "xrefs": []}, {"color": "#dcfce7", "description": "A decrease in ambient temperature that orders the lipid bilayer.", "grounding": null, "id": "temperature_downshift", "is_orphan": false, "label": "temperature downshift", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 161, "evidence": [{"notes": "Verified FabI identity and fatty-acid elongation role against the live UniProt REST entry for P0AEK4 retrieved on 2026-09-15.", "reference": "https://rest.uniprot.org/uniprotkb/P0AEK4.json", "snippet": "Involved in the elongation cycle of fatty acid which are used in the lipid metabolism"}, {"notes": "Hoogerland et al. place FabI in the temperature-sensitive E. coli fatty-acid branchpoint valve.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "via the branchpoint enzymes FabI and FabB"}], "gene_symbol": "fabI", "node_id": "fab_fatty_acid_branchpoint_enzymes", "node_label": "FabI/FabB branchpoint enzymes", "protein_label": "Enoyl-[acyl-carrier-protein] reductase [NADH] FabI", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FabI catalyzes enoyl-ACP reduction in fatty-acid elongation and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AEK4"}, {"entry_status": "REVIEWED", "entry_version": 155, "evidence": [{"notes": "Verified FabB identity and unsaturated fatty-acid synthesis role against the live UniProt REST entry for P0A953 retrieved on 2026-09-15.", "reference": "https://rest.uniprot.org/uniprotkb/P0A953.json", "snippet": "Catalyzes a key reaction in unsaturated fatty acid (UFA) synthesis"}, {"notes": "Hoogerland et al. place FabB in the temperature-sensitive E. coli fatty-acid branchpoint valve.", "reference": "DOI:10.1038/s41467-024-53677-5", "snippet": "via the branchpoint enzymes FabI and FabB"}], "gene_symbol": "fabB", "node_id": "fab_fatty_acid_branchpoint_enzymes", "node_label": "FabI/FabB branchpoint enzymes", "protein_label": "3-oxoacyl-[acyl-carrier-protein] synthase 1", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FabB elongates acyl-ACP substrates in fatty-acid biosynthesis and participates in the FabI/FabB metabolic valve that allocates flux between saturated and unsaturated fatty-acid synthesis during homeoviscous adaptation.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A953"}], "scope_notes": "This graph captures the conserved membrane-fluidity output of homeoviscous adaptation without making the Bacillus DesK/DesR two-component branch, E. coli FabI/FabB metabolic valve, or any single lipid species universal across microbes.", "scope_status": "MECHANISTIC", "title": "Membrane-fluidity homeostasis by lipid remodeling"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-15 07:26 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 603 TraitRecords
+      · embedding coverage 79.1%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

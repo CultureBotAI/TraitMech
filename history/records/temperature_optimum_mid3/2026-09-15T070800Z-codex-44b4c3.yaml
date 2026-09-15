@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_optimum_mid3.yaml
+  slug: temperature_optimum_mid3
+session:
+  id: 2026-09-15T070800Z-codex-44b4c3
+  timestamp: '2026-09-15T07:08:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground homeoviscous adaptation node
+  details: Grounded the temperature optimum mid3 graph's homeoviscous adaptation biological-process
+    node to the v85 METPO placeholder METPO:1016200.

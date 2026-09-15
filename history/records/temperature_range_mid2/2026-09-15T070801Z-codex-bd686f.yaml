@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_range_mid2.yaml
+  slug: temperature_range_mid2
+session:
+  id: 2026-09-15T070801Z-codex-bd686f
+  timestamp: '2026-09-15T07:08:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground homeoviscous adaptation node
+  details: Grounded the temperature range mid2 graph's homeoviscous adaptation biological-process
+    node to the v85 METPO placeholder METPO:1016200.

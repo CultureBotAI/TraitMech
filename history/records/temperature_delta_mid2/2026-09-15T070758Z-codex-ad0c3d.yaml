@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_mid2.yaml
+  slug: temperature_delta_mid2
+session:
+  id: 2026-09-15T070758Z-codex-ad0c3d
+  timestamp: '2026-09-15T07:07:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Normalize membrane fluidity node
+  details: Normalized the mixed membrane fluidity / homeoviscous adaptation quality label
+    to the exact membrane fluidity quality and grounded it to the existing METPO:1007505 placeholder.

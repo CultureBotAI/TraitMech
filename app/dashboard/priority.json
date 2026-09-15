@@ -1,20 +1,20 @@
 {
   "meta": {
-    "records": 602,
+    "records": 603,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
-    "mean_series_overlap": 0.066,
+    "mean_series_overlap": 0.068,
     "sibling_pairs": 112,
-    "mean_sibling_overlap": 0.068,
+    "mean_sibling_overlap": 0.069,
     "max_sibling_overlap": 0.188,
     "child_parent_pairs": 51,
-    "mean_child_parent_overlap": 0.083,
-    "max_child_parent_overlap": 0.2,
+    "mean_child_parent_overlap": 0.085,
+    "max_child_parent_overlap": 0.214,
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 125,
+    "unresearched_mechanism_records": 126,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 1,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 148,
+      "DEEPEN_CAUSAL_GRAPH": 149,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 146
     }
@@ -3797,6 +3797,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000208",
+      "label": "homeoviscous adaptation",
+      "category": "physiology",
+      "slug": "homeoviscous_adaptation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 6,
+      "nodes": 7,
+      "components": 1,
+      "orphans": 0,
+      "examples": 2,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (6 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000083",
       "label": "spore germination",
       "category": "physiology",
@@ -5788,7 +5810,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.07,
+      "series_overlap": 0.085,
       "researched": true,
       "reasons": [
         "2 components +3"
@@ -5810,7 +5832,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.07,
+      "series_overlap": 0.085,
       "researched": true,
       "reasons": [
         "2 components +3"
@@ -6840,7 +6862,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.07,
+      "series_overlap": 0.085,
       "researched": true,
       "reasons": []
     },
@@ -6860,7 +6882,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.07,
+      "series_overlap": 0.085,
       "researched": true,
       "reasons": [
         "canonical_examples reviewed empty +0"
@@ -8759,7 +8781,7 @@
       "orphans": 0,
       "examples": 3,
       "canonical_examples_reviewed_empty": false,
-      "children": 4,
+      "children": 5,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -9440,7 +9462,7 @@
       "children": 0,
       "series": "temperature delta",
       "series_size": 5,
-      "series_overlap": 0.07,
+      "series_overlap": 0.085,
       "researched": true,
       "reasons": [
         "canonical_examples reviewed empty +0",

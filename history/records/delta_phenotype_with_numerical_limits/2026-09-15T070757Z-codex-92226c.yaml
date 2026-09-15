@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+  slug: delta_phenotype_with_numerical_limits
+session:
+  id: 2026-09-15T070757Z-codex-92226c
+  timestamp: '2026-09-15T07:07:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground homeoviscous adaptation node
+  details: Grounded the delta phenotype breadth graph's homeoviscous adaptation biological-process
+    node to the v85 METPO placeholder METPO:1016200.

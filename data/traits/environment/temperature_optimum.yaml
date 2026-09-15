@@ -71,6 +71,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Generic lipid-remodeling strategy that maintains a target membrane
       physical state (fluidity) across growth temperatures.
+    grounding: METPO:1016200
   - node_id: arrhenius_plot_deviation
     label: Arrhenius plot deviation from linearity
     node_type: EXPERIMENTAL_FACTOR
@@ -261,4 +262,10 @@ curation_history:
     canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:58Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true

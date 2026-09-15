@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/homeoviscous_adaptation.yaml
+  slug: homeoviscous_adaptation
+session:
+  id: 2026-09-15T072704Z-codex-6cb554
+  timestamp: '2026-09-15T07:27:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Normalize homeoviscous membrane rigidity node
+  details: 'Renamed the new homeoviscous adaptation graph node from the retired membrane_rigidification
+    alias to the canonical membrane_rigidity QUALITY id after PR review issue #936 exposed
+    the process/quality consistency regression.'
