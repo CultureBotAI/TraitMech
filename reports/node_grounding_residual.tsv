@@ -1114,6 +1114,10 @@ zntr merr-family regulator	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolera
 znta transcription	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
 czccba rnd efflux complex	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolerant.yaml
 zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
+abiq locus	GENETIC_ELEMENT	1	data/traits/genomics/abiq_system.yaml
+abiq type iii toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
+early phage mrna profile modification	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
 abortive infection system activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 host growth arrest or cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 bacterial population protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-15T182920Z-codex-2128be
+  timestamp: '2026-09-15T18:29:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Narrow abortive infection split gap after AbiQ split
+  details: Removed AbiQ from the abortive infection system causal-graph scope note and open
+    subfamily split-gap discussion after minting traitmech:000225 for the AbiQ system in the
+    same PR. The discussion remains open for ToxIN, AbiE, and other abortive-infection families
+    that still require separate DOI-backed curation.

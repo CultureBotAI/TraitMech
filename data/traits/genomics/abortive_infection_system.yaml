@@ -50,8 +50,8 @@ causal_graphs:
     of nearby bacterial cells.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the shared Abi strategy without claiming that ToxIN,
-    AbiQ, AbiE, and other abortive-infection families use one exact sensor, effector,
-    toxin-antitoxin architecture, or cell-death mechanism.
+    AbiE, and other abortive-infection families use one exact sensor, effector, toxin-antitoxin
+    architecture, or cell-death mechanism.
   nodes:
   - node_id: phage_infection
     label: phage infection
@@ -166,15 +166,15 @@ causal_graphs:
         systems.
 discussions:
 - discussion_id: abortive-infection-subfamily-split-gap
-  prompt: Resolve ToxIN/AbiQ, AbiE, and other abortive-infection families before minting
+  prompt: Resolve ToxIN, AbiE, and other abortive-infection families before minting
     narrower children under the broad abortive infection system parent.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Lopatina et al., Fineran et al., and Dy et al. support Abi as a genomically
-    encoded phage defense strategy that spans mechanistically diverse families, including
-    the ToxIN/AbiQ and AbiE toxin-antitoxin branches. Narrower TraitRecords will need
-    separate review to ground each subfamily's trigger, effector, growth-arrest or
-    cell-death mechanism, and phage escape routes.
+  rationale: AbiQ is split out as traitmech:000225. Lopatina et al., Fineran et al.,
+    and Dy et al. still support Abi as a genomically encoded phage defense strategy
+    that spans mechanistically diverse ToxIN, AbiE, and other toxin-antitoxin branches.
+    Additional narrower TraitRecords need separate review to ground each subfamily's
+    trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -185,4 +185,11 @@ curation_history:
     the phage defense system parent after an ignored-and-hidden duplicate review found
     no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v91.
+  llm_assisted: true
+- timestamp: '2026-09-15T18:45:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Removed AbiQ from the open abortive-infection subfamily split-gap discussion
+    after minting traitmech:000225 for the AbiQ system; ToxIN, AbiE, and other abortive-infection
+    families remain open.
   llm_assisted: true
