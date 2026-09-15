@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T035345Z-codex-b608e7
+  timestamp: '2026-09-15T03:53:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Reserve METPO v80 placeholder
+  details: Updated the METPO proposal skill next Scope-A placeholder block after reserving
+    METPO:1015700 for the iodate respiration v80 proposal, so the next one-row Scope-A cohort
+    starts at METPO:1015800.
