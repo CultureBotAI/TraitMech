@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/thoeris_system.html#thoeris-family-signal-and-trigger-gap"
  },
  {
+  "discussion_id": "zorya-subtype-effector-and-trigger-gap",
+  "prompt": "Resolve Zorya subtype effectors, ion usage, and phage triggers before minting narrower Zorya mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Zorya system",
+  "source_id": "traitmech:000217",
+  "source_file": "zorya_system.yaml",
+  "attaches_to": [],
+  "rationale": "Hu et al. support Type I ZorAB activation and ZorC/ZorD-mediated phage-DNA degradation, and Mariano et al. support Type I/II ZorAB architecture plus a recruited Type II ZorE nickase, but Zorya variants need separate review before TraitMech asserts one universal ion substrate, effector composition, nuclease target, cell-death pathway, Type III mechanism, or anti-defense breadth.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/zorya_system.html#zorya-subtype-effector-and-trigger-gap"
+ },
+ {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for acetate-splitting methanogenesis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1668,9 +1685,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 96,
- "total_knowledge_gaps": 15,
- "total_source_entries": 95,
+ "total_discussions": 97,
+ "total_knowledge_gaps": 16,
+ "total_source_entries": 96,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
