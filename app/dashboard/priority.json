@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 621,
+    "records": 622,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 144,
+    "unresearched_mechanism_records": 145,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 3,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 161,
+      "DEEPEN_CAUSAL_GRAPH": 162,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 150
     }
@@ -2842,6 +2842,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000227",
+      "label": "AbiE system",
+      "category": "genomics",
+      "slug": "abie_system",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 5,
+      "nodes": 6,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (5 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "traitmech:000225",
       "label": "AbiQ system",
       "category": "genomics",
@@ -3370,7 +3393,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 2,
+      "children": 3,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

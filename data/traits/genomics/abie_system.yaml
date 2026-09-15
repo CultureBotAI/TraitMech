@@ -1,0 +1,156 @@
+identifier: traitmech:000227
+label: AbiE system
+definition: An abortive infection system in which an organism possesses an abiE bicistronic
+  locus whose AbiEii DUF1814-family bacteriostatic toxin and AbiEi COG5340-family
+  antitoxin constitute a non-interacting type IV toxin-antitoxin module that supports
+  phage resistance.
+definition_source: DOI:10.1093/nar/gkt1419
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+evidence:
+- reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+  snippet: Subcloning and deletion analysis of the recombinant plasmid pPG01 defined
+    a 2.5-kb ScaIHpaI fragment as conferring phage insensitivity
+  notes: Garvey et al. localized the pNP40 AbiE determinant to the pPG01 subclone.
+- reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+  snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614
+    conformed to the criteria defining abortive infection and were designated AbiE
+    and AbiF, respectively
+  notes: Garvey et al. designated the pPG01-encoded pNP40 phage-insensitivity determinant
+    as AbiE.
+- reference: DOI:10.1093/nar/gkt1419
+  snippet: AbiE systems are encoded by bicistronic operons and function via a non-interacting
+    (Type IV) bacteriostatic TA mechanism
+  notes: Dy et al. support defining AbiE as a type IV toxin-antitoxin Abi family.
+- reference: DOI:10.1093/nar/gkt1419
+  snippet: We demonstrate that the AbiE phage resistance systems function as novel
+    Type IV TAs and are widespread in bacteria and archaea
+  notes: Dy et al. support a reusable AbiE-system trait beyond the original Lactococcus
+    pNP40 determinant.
+- reference: DOI:10.1093/nar/gkt1419
+  snippet: AbiEii was toxic by acting as a GTP-binding NTase and was neutralized by
+    expression of AbiEi
+  notes: Dy et al. connect the AbiEii nucleotidyltransferase toxin and AbiEi antitoxin
+    to the AbiE type IV toxin-antitoxin module.
+- reference: DOI:10.1093/nar/gkt1419
+  snippet: AbiEii was shown to specifically bind GTP, the first step in a NTase activity
+  notes: Dy et al. support the GTP-binding nucleotidyltransferase activity of AbiEii
+    while leaving the exact toxic target unresolved.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Garvey et al. cloned the pNP40 AbiE determinant and showed that the pPG01-encoded
+    region conferred abortive-infection phage insensitivity in Lactococcus lactis
+    subsp. lactis MG1614.
+  reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+causal_graphs:
+- graph_id: abie_type_iv_ta_antiphage_activity
+  title: AbiE type IV toxin-antitoxin activity supports phage resistance
+  description: Evidence-backed process sketch linking an abiE locus to type IV toxin-antitoxin
+    activity, AbiEii GTP-dependent toxicity, restricted phage propagation, and abortive-infection
+    system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiE at the system level without asserting a universal
+    phage activator, the exact cellular target of AbiEii, or that every COG5340-DUF1814
+    pair functions in abortive infection.
+  nodes:
+  - node_id: abie_locus
+    label: abiE locus
+    node_type: GENETIC_ELEMENT
+    description: A bicistronic type IV toxin-antitoxin abortive-infection locus encoding
+      AbiEi and AbiEii.
+  - node_id: abie_type_iv_toxin_antitoxin_activity
+    label: AbiE type IV toxin-antitoxin activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Non-interacting type IV toxin-antitoxin activity mediated by the
+      AbiEi antitoxin and AbiEii toxin.
+  - node_id: abieii_ntase_toxicity
+    label: AbiEii GTP-binding nucleotidyltransferase toxicity
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth-inhibitory toxicity that depends on conserved AbiEii nucleotidyltransferase
+      motifs and GTP binding.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of phage propagation in an AbiE-containing infected
+      host cell.
+  - node_id: abie_system_trait
+    label: AbiE system
+    node_type: TRAIT
+    grounding: traitmech:000227
+    description: Possession of a genome-encoded abiE type IV toxin-antitoxin abortive-infection
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage defense system.
+  edges:
+  - subject: abie_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abie_type_iv_toxin_antitoxin_activity
+    description: The abiE locus encodes the defining type IV toxin-antitoxin module.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt1419
+      snippet: AbiE systems are encoded by bicistronic operons and function via a
+        non-interacting (Type IV) bacteriostatic TA mechanism
+      notes: Dy et al. show that AbiE is a bicistronic type IV toxin-antitoxin system.
+  - subject: abie_type_iv_toxin_antitoxin_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abieii_ntase_toxicity
+    description: The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase
+      toxicity to AbiEi antitoxicity.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt1419
+      snippet: AbiEii was toxic by acting as a GTP-binding NTase and was neutralized
+        by expression of AbiEi
+      notes: Dy et al. identify AbiEii as the toxin and AbiEi as its cognate antitoxin.
+  - subject: abie_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The AbiE determinant contributes to abortive phage-resistance phenotypes.
+    evidence:
+    - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+      snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis
+        MG1614 conformed to the criteria defining abortive infection and were designated
+        AbiE and AbiF, respectively
+      notes: Garvey et al. show that the pPG01 AbiE determinant produces an abortive-infection
+        phage-insensitivity mechanism.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abie_system_trait
+    description: Restriction of phage propagation realizes the AbiE abortive-infection
+      defense trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt1419
+      snippet: We demonstrate that the AbiE phage resistance systems function as novel
+        Type IV TAs and are widespread in bacteria and archaea
+      notes: Dy et al. describe AbiE systems as type IV toxin-antitoxin phage-resistance
+        systems.
+  - subject: abie_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiE system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+      snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis
+        MG1614 conformed to the criteria defining abortive infection and were designated
+        AbiE and AbiF, respectively
+      notes: Garvey et al. place AbiE in the abortive infection class of phage defense.
+curation_history:
+- timestamp: '2026-09-15T19:46:30Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiE system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v104.
+  llm_assisted: true
