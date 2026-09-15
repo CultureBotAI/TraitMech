@@ -32,6 +32,11 @@ def _before_additions(slug: str) -> dict:
     keys = {_edge_key(edge) for edge in ADDITIONS[slug]}
     graph = doc["causal_graphs"][0]
     graph["edges"] = [edge for edge in graph["edges"] if _edge_key(edge) not in keys]
+    doc["curation_history"] = [
+        event
+        for event in doc.get("curation_history", [])
+        if event.get("action") != ACTION
+    ]
     return doc
 
 

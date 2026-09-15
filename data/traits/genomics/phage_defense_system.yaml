@@ -1,0 +1,137 @@
+identifier: traitmech:000209
+label: phage defense system
+definition: A genomics trait describing possession of one or more bacterial or archaeal
+  immune systems that inhibit bacteriophage infection.
+definition_source: DOI:10.1038/s41579-019-0278-2
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: antiphage defense system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aar4120
+- synonym_text: anti-phage system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41586-019-1894-8
+- synonym_text: pan-immune system
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41579-019-0278-2
+evidence:
+- reference: DOI:10.1038/s41579-019-0278-2
+  snippet: Viruses and their hosts are engaged in a constant arms race leading to
+    the evolution of antiviral defence mechanisms
+  notes: Bernheim and Sorek define the bacterial bacteriophage-defense context and
+    review the pan-genomic diversity and cost of antiviral defense systems.
+- reference: DOI:10.1038/s41579-019-0278-2
+  snippet: individual microorganisms often encode multiple distinct defence systems
+  notes: The pan-immune-system model supports treating possession of one or more defense
+    systems as a strain-level genomics trait rather than a single protein, locus,
+    or pathway.
+- reference: DOI:10.1038/s41586-019-1894-8
+  snippet: Bacteria have evolved numerous immune mechanisms, both innate and adaptive
+  notes: Hampton et al. review innate and adaptive anti-phage systems and the phage
+    counter-defense mechanisms that evade them.
+- reference: DOI:10.1038/s41586-019-1894-8
+  snippet: Here we review the spectrum of anti-phage systems and highlight their evasion
+    by bacteriophages
+  notes: This supports the umbrella scope spanning diverse CRISPR-Cas, restriction-modification,
+    BREX, DISARM, abortive-infection, and related anti-phage defenses.
+- reference: DOI:10.1126/science.aar4120
+  snippet: Candidate immune systems were then experimentally validated for their activities
+  notes: The Science article summary for Doron et al. supports genomic discovery
+    and experimental validation of antiphage defense systems from microbial pangenomes.
+canonical_examples:
+- taxon_id: NCBITaxon:1308
+  taxon_label: Streptococcus thermophilus
+  note: S. thermophilus is the organism in which CRISPR-Cas adaptive immunity was
+    experimentally shown to provide phage resistance.
+  reference: DOI:10.1126/science.1138140
+causal_graphs:
+- graph_id: phage_defense_system_hierarchy
+  title: Antiphage defense systems resist viral challenge
+  description: Evidence-backed ontology sketch linking phage pressure to the umbrella
+    phage-defense-system trait and its reviewed CRISPR-Cas and restriction-modification
+    children.
+  scope_status: NONMECHANISTIC
+  scope_notes: This parent trait groups independently reviewed genome-level anti-phage
+    defense systems without claiming that CRISPR-Cas, restriction-modification, BREX,
+    DISARM, abortive infection, or other defense families share one universal molecular
+    mechanism.
+  nodes:
+  - node_id: bacteriophage_pressure
+    label: bacteriophage pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Selective pressure imposed by bacteriophage infection.
+  - node_id: phage_defense_system_trait
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  - node_id: crispr_cas_system
+    label: CRISPR-Cas system
+    node_type: TRAIT
+    grounding: traitmech:000094
+    description: Adaptive immune system using CRISPR arrays and Cas proteins to recognize
+      invading nucleic acids.
+  - node_id: restriction_modification_system
+    label: restriction-modification system
+    node_type: TRAIT
+    grounding: traitmech:000095
+    description: Paired methyltransferase and restriction-endonuclease system for
+      self/non-self DNA discrimination.
+  edges:
+  - subject: bacteriophage_pressure
+    predicate: selects for
+    predicate_id: METPO:2007401
+    object: phage_defense_system_trait
+    description: Virus-host arms races select for microbial antiviral defense mechanisms.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0278-2
+      snippet: constant arms race leading to the evolution of antiviral defence mechanisms
+      notes: Bernheim and Sorek frame bacteriophages and bacterial hosts as engaged
+        in an evolutionary arms race.
+  - subject: crispr_cas_system
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system_trait
+    description: CRISPR-Cas possession is an adaptive phage-defense system.
+    evidence:
+    - reference: DOI:10.1126/science.aar4120
+      snippet: well-known defense arsenals such as restriction-modification and CRISPR
+        systems
+      notes: The Science article summary for Doron et al. places CRISPR systems
+        among the recognized microbial defense arsenals.
+  - subject: restriction_modification_system
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system_trait
+    description: Restriction-modification possession is an innate phage-defense system.
+    evidence:
+    - reference: DOI:10.1126/science.aar4120
+      snippet: well-known defense arsenals such as restriction-modification and CRISPR
+        systems
+      notes: The Science article summary for Doron et al. places restriction-modification
+        systems among the recognized microbial defense arsenals.
+discussions:
+- discussion_id: phage-defense-system-xref-gap
+  prompt: Resolve exact ontology xrefs for organism-level phage defense system possession
+    before adding TraitRecord xrefs.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot retains only obsolete phage defense, and GO:0051607
+    defense response to virus is a biological process rather than this GENOMICS possession
+    trait. CRISPR-Cas, restriction-modification, BREX, DISARM, abortive-infection,
+    and other mechanism terms are narrower than the umbrella parent curated here.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T07:55:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted phage defense system as a DOI-backed GENOMICS TraitRecord after
+    an ignored-and-hidden duplicate review found only obsolete METPO phage defense
+    and future-gap mentions; the replacement placeholder is reserved in proposals/metpo_traitmech_v86.
+  llm_assisted: true
