@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abiz_system.yaml
+  slug: abiz_system
+session:
+  id: 2026-09-15T210427Z-codex-a7c9e2
+  timestamp: '2026-09-15T21:04:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Correct AbiZ premature-lysis graph predicate
+  details: Corrected the AbiZ edge from premature infected-cell lysis to restricted
+    phage propagation to use contributes to / RO:0002326 instead of mitigates /
+    METPO:2007407 after local adversarial review issue 962 found that the old predicate
+    inverted the intended restriction of phage propagation.

@@ -26,6 +26,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/abie_system.yaml|data/traits/genomics/abiq_system.yaml|data/traits/genomics/abiz_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -51,7 +52,6 @@ proton-pumping respiratory complexes	GENE_OR_PROTEIN	3	data/traits/environment/p
 membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_optimum.yaml|data/traits/environment/temperature_delta_low.yaml|data/traits/environment/temperature_delta_mid1.yaml
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
-restricted phage propagation	BIOLOGICAL_PROCESS	3	data/traits/genomics/abie_system.yaml|data/traits/genomics/abiq_system.yaml|data/traits/genomics/toxin_system.yaml
 phage infection	BIOLOGICAL_PROCESS	3	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/thoeris_system.yaml
 phage dna replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brex_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml|data/traits/genomics/sspabcd_sspfgh_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
@@ -1121,6 +1121,9 @@ abieii gtp-binding nucleotidyltransferase toxicity	BIOLOGICAL_PROCESS	1	data/tra
 abiq locus	GENETIC_ELEMENT	1	data/traits/genomics/abiq_system.yaml
 abiq type iii toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
 early phage mrna profile modification	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
+abiz locus	GENETIC_ELEMENT	1	data/traits/genomics/abiz_system.yaml
+abiz-enhanced holin/lysin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiz_system.yaml
+premature infected-cell lysis	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiz_system.yaml
 abortive infection system activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 host growth arrest or cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 bacterial population protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
