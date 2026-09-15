@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 614,
+    "records": 615,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 137,
+    "unresearched_mechanism_records": 138,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 2,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 158,
+      "DEEPEN_CAUSAL_GRAPH": 159,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 147
     }
@@ -3478,7 +3478,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 11,
+      "children": 12,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -3529,6 +3529,28 @@
       "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000220",
+      "label": "Shedu system",
+      "category": "genomics",
+      "slug": "shedu_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 5,
+      "nodes": 6,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (5 edges) +12"
       ]
     },
     {

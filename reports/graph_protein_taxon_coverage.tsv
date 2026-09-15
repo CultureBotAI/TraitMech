@@ -172,6 +172,7 @@ data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	restriction-modification system	rm_self_nonself_defense	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/shedu_system.yaml	traitmech:000220	Shedu system	shedu_dna_end_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/thoeris_system.yaml	traitmech:000216	Thoeris system	thoeris_tir_signal_nad_depletion_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/transposable_element.yaml	traitmech:000092	transposable element	te_transposition_rearrangement	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/wadjet_system.yaml	traitmech:000218	Wadjet system	wadjet_smc_plasmid_restriction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

@@ -1247,6 +1247,10 @@ restriction endonuclease cleavage	MOLECULAR_FUNCTION	1	data/traits/genomics/rest
 phage-encoded dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
+shedu locus	GENETIC_ELEMENT	1	data/traits/genomics/shedu_system.yaml
+shedu nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
+shedu dna end nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
+phage dna propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
 thoeris tir cadpr-isomer production	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
 thsa nad depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
