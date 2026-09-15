@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heat shock response — PHYSIOLOGY — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/physiology.html">PHYSIOLOGY</a>
+    </p>
+    <h1>heat shock response</h1>
+    <p class="curie"><code>traitmech:000205</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A stress response in which acute heat stress induces heat-shock proteins that refold or degrade denatured proteins to restore protein homeostasis.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Heat-shock proteostasis restoration</h2>
+      <p class="meta">Evidence-backed causal sketch linking acute heat shock to protein unfolding, heat-shock protein induction, and restored protein homeostasis.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved proteostasis output of the heat-shock response without making the E. coli sigma-32 branch, B. subtilis HrcA/CtsR branches, or other lineage-specific heat-shock regulators universal.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Heat-shock proteostasis restoration</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for heat shock response.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>acute heat shock</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>heat-induced protein unfolding</strong>
+            <code>biolink:causes</code>
+            <p>Acute heat shock causes protein unfolding and aggregate formation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">A sudden heat shock results in protein unfolding leading to the formation of protein aggregates</span>
+                <span class="meta">Verified against the open PMC full text; heat shock immediately destabilizes cellular proteins.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>heat-induced protein unfolding</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>heat-shock response</strong>
+            <code>biolink:causes</code>
+            <p>Protein unfolding and aggregation trigger rapid, transient heat-shock protein production.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">It responds to protein unfolding, aggregation and damage by the rapid and transient production of HSPs</span>
+                <span class="meta">Verified against the open PMC full text; the edge links damaged unfolded proteins to the protective heat-shock response.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>heat-shock response</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>heat-shock chaperones</strong>
+            <code>RO:0002213</code>
+            <p>The heat-shock response induces chaperones that refold denatured proteins.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">chaperones binding to denatured proteins and allowing refolding to their native state</span>
+                <span class="meta">Verified against the open PMC full text; chaperones are a major heat-shock protein class.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>heat-shock response</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>ATP-dependent proteases</strong>
+            <code>RO:0002213</code>
+            <p>The heat-shock response induces ATP-dependent proteases that remove denatured proteins.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">ATP-dependent proteases degrading denatured proteins</span>
+                <span class="meta">Verified against the open PMC full text; ATP-dependent proteases are a major heat-shock protein class.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>heat-shock chaperones</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>protein homeostasis</strong>
+            <code>RO:0002326</code>
+            <p>Heat-shock chaperones help restore proteostasis by refolding denatured proteins.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">chaperones binding to denatured proteins and allowing refolding to their native state</span>
+                <span class="meta">Verified against the open PMC full text; induced chaperones support refolding of denatured proteins.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>ATP-dependent proteases</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>protein homeostasis</strong>
+            <code>RO:0002326</code>
+            <p>ATP-dependent proteases help restore proteostasis by degrading denatured proteins.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1007/s12192-016-0727-z</code>
+                <span class="evidence-snippet">ATP-dependent proteases degrading denatured proteins</span>
+                <span class="meta">Verified against the open PMC full text; induced proteases clear denatured proteins.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-7">
+            <strong>protein homeostasis</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>heat shock response</strong>
+            <code>METPO:2007700</code>
+            <p>Restoration of protein-folding homeostasis realizes the heat-shock-response trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/MMBR.00007-08</code>
+                <span class="evidence-snippet">restores an appropriate protein-folding environment in the cell</span>
+                <span class="meta">Verified against the open PMC full text; Guisbert et al. describe proteostasis restoration as the sigma-32-mediated heat-shock response output.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>heat-shock chaperones</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0A6Y8/entry" rel="nofollow noreferrer"><code>UniProtKB:P0A6Y8</code></a>
+                  <br>Chaperone protein DnaK <span class="meta">(dnaK)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v183 · sequence v2</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 DnaK is an Hsp70 heat-shock chaperone that binds sigma-32 in the chaperone-mediated heat-shock control branch.</p>
+                  <ul>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1073/pnas.89.8.3516" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.89.8.3516</code></a>
+
+                      <span class="evidence-snippet">purified sigma 32 bound to DnaK and that this complex was disrupted in the presence of ATP</span>
+                      <span class="meta">Liberek et al. directly support DnaK as an E. coli heat-shock chaperone that binds the sigma-32 transcription factor.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td>ATP-dependent proteases</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0AAI3/entry" rel="nofollow noreferrer"><code>UniProtKB:P0AAI3</code></a>
+                  <br>ATP-dependent zinc metalloprotease FtsH <span class="meta">(ftsH)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v155 · sequence v1</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 FtsH is an ATP-dependent membrane metalloprotease that degrades the sigma-32 heat-shock transcription factor.</p>
+                  <ul>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1002/j.1460-2075.1995.tb07253.x" rel="nofollow noreferrer"><code>DOI:10.1002/j.1460-2075.1995.tb07253.x</code></a>
+
+                      <span class="evidence-snippet">FtsH catalyzed ATP-dependent degradation of biologically active histidine-tagged sigma 32</span>
+                      <span class="meta">Tomoyasu et al. directly support FtsH as the E. coli ATP-dependent protease that degrades sigma-32.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1007/s12192-016-0727-z</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/physiology/stress_response.html" >stress response <code>traitmech:000078</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (2)</h2>
+      <ul class="synonyms">
+
+        <li>heat-shock response <span class="meta">EXACT_SYNONYM · DOI:10.1007/s12192-016-0727-z</span></li>
+
+        <li>HSR <span class="meta">RELATED_SYNONYM · DOI:10.1128/MMBR.00007-08</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(2)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1128/MMBR.00007-08"
+             rel="nofollow noreferrer"><code>DOI:10.1128/MMBR.00007-08</code></a>
+
+
+          <span class="meta">E. coli is a model for the sigma-32-mediated heat-shock response, including heat-shock chaperone and protease upregulation.</span>
+        </li>
+
+        <li>
+          <em>Bacillus subtilis</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423"
+             rel="nofollow noreferrer"><code>NCBITaxon:1423</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1007/s12192-016-0727-z"
+             rel="nofollow noreferrer"><code>DOI:10.1007/s12192-016-0727-z</code></a>
+
+
+          <span class="meta">B. subtilis is a Gram-positive model for heat-shock stimulon regulation by repressor and alternative-sigma branches.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="heat-shock-response-xref-gap">
+        <p class="discussion-prompt">Resolve exact ontology xrefs for organism-level microbial heat shock response before adding TraitRecord xrefs.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>heat-shock-response-xref-gap</code>
+          · raised by codex
+          · 2026-09-15
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>GO:0009408 response to heat can ground biological-process nodes but is broader than this organism-level stress response trait. Candidate heat-shock-protein, chaperone, and ATP-dependent-protease terms describe narrower molecular machinery rather than the whole response phenotype.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-15T04:58:15Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted heat shock response as a DOI-backed stress-response TraitRecord after a repository-wide duplicate review covering ignored and hidden files; the local METPO snapshot has only an obsolete heat shock response class and the replacement placeholder is reserved in proposals/metpo_traitmech_v82.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/physiology/heat_shock_response.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/heat_shock_response.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/physiology/heat_shock_response.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/physiology/heat_shock_response.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000205" target="_blank" rel="noopener"><code>traitmech:000205</code></a></dd>
+      <dt>Category</dt>
+      <dd>PHYSIOLOGY</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking acute heat shock to protein unfolding, heat-shock protein induction, and restored protein homeostasis.", "edges": [{"description": "Acute heat shock causes protein unfolding and aggregate formation.", "evidence": [{"notes": "Verified against the open PMC full text; heat shock immediately destabilizes cellular proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "A sudden heat shock results in protein unfolding leading to the formation of protein aggregates"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "acute_heat_shock", "target": "protein_unfolding"}, {"description": "Protein unfolding and aggregation trigger rapid, transient heat-shock protein production.", "evidence": [{"notes": "Verified against the open PMC full text; the edge links damaged unfolded proteins to the protective heat-shock response.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "It responds to protein unfolding, aggregation and damage by the rapid and transient production of HSPs"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "protein_unfolding", "target": "heat_shock_response_process"}, {"description": "The heat-shock response induces chaperones that refold denatured proteins.", "evidence": [{"notes": "Verified against the open PMC full text; chaperones are a major heat-shock protein class.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "chaperones binding to denatured proteins and allowing refolding to their native state"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat_shock_response_process", "target": "heat_shock_chaperones"}, {"description": "The heat-shock response induces ATP-dependent proteases that remove denatured proteins.", "evidence": [{"notes": "Verified against the open PMC full text; ATP-dependent proteases are a major heat-shock protein class.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "ATP-dependent proteases degrading denatured proteins"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat_shock_response_process", "target": "atp_dependent_proteases"}, {"description": "Heat-shock chaperones help restore proteostasis by refolding denatured proteins.", "evidence": [{"notes": "Verified against the open PMC full text; induced chaperones support refolding of denatured proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "chaperones binding to denatured proteins and allowing refolding to their native state"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "heat_shock_chaperones", "target": "protein_homeostasis"}, {"description": "ATP-dependent proteases help restore proteostasis by degrading denatured proteins.", "evidence": [{"notes": "Verified against the open PMC full text; induced proteases clear denatured proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "ATP-dependent proteases degrading denatured proteins"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "atp_dependent_proteases", "target": "protein_homeostasis"}, {"description": "Restoration of protein-folding homeostasis realizes the heat-shock-response trait.", "evidence": [{"notes": "Verified against the open PMC full text; Guisbert et al. describe proteostasis restoration as the sigma-32-mediated heat-shock response output.", "reference": "DOI:10.1128/MMBR.00007-08", "snippet": "restores an appropriate protein-folding environment in the cell"}], "id": "edge-7", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "protein_homeostasis", "target": "heat_shock_response_trait"}], "evidence_rows": [{"description": "Acute heat shock causes protein unfolding and aggregate formation.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open PMC full text; heat shock immediately destabilizes cellular proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "A sudden heat shock results in protein unfolding leading to the formation of protein aggregates"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "acute heat shock", "target": "heat-induced protein unfolding"}, {"description": "Protein unfolding and aggregation trigger rapid, transient heat-shock protein production.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the open PMC full text; the edge links damaged unfolded proteins to the protective heat-shock response.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "It responds to protein unfolding, aggregation and damage by the rapid and transient production of HSPs"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "heat-induced protein unfolding", "target": "heat-shock response"}, {"description": "The heat-shock response induces chaperones that refold denatured proteins.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open PMC full text; chaperones are a major heat-shock protein class.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "chaperones binding to denatured proteins and allowing refolding to their native state"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat-shock response", "target": "heat-shock chaperones"}, {"description": "The heat-shock response induces ATP-dependent proteases that remove denatured proteins.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open PMC full text; ATP-dependent proteases are a major heat-shock protein class.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "ATP-dependent proteases degrading denatured proteins"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "heat-shock response", "target": "ATP-dependent proteases"}, {"description": "Heat-shock chaperones help restore proteostasis by refolding denatured proteins.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open PMC full text; induced chaperones support refolding of denatured proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "chaperones binding to denatured proteins and allowing refolding to their native state"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "heat-shock chaperones", "target": "protein homeostasis"}, {"description": "ATP-dependent proteases help restore proteostasis by degrading denatured proteins.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open PMC full text; induced proteases clear denatured proteins.", "reference": "DOI:10.1007/s12192-016-0727-z", "snippet": "ATP-dependent proteases degrading denatured proteins"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ATP-dependent proteases", "target": "protein homeostasis"}, {"description": "Restoration of protein-folding homeostasis realizes the heat-shock-response trait.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open PMC full text; Guisbert et al. describe proteostasis restoration as the sigma-32-mediated heat-shock response output.", "reference": "DOI:10.1128/MMBR.00007-08", "snippet": "restores an appropriate protein-folding environment in the cell"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "protein homeostasis", "target": "heat shock response"}], "graph_id": "heat_shock_response_proteostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "A sudden upward temperature shift.", "grounding": null, "id": "acute_heat_shock", "is_orphan": false, "label": "acute heat shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proteases that clear denatured proteins or degrade heat-shock regulators during the heat-shock response.", "grounding": null, "id": "atp_dependent_proteases", "is_orphan": false, "label": "ATP-dependent proteases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 155, "evidence": [{"notes": "Tomoyasu et al. directly support FtsH as the E. coli ATP-dependent protease that degrades sigma-32.", "reference": "DOI:10.1002/j.1460-2075.1995.tb07253.x", "snippet": "FtsH catalyzed ATP-dependent degradation of biologically active histidine-tagged sigma 32"}], "gene_symbol": "ftsH", "protein_label": "ATP-dependent zinc metalloprotease FtsH", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FtsH is an ATP-dependent membrane metalloprotease that degrades the sigma-32 heat-shock transcription factor.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AAI3"}], "xrefs": []}, {"color": "#f3e8ff", "description": "Induced chaperone systems that bind denatured proteins and promote refolding.", "grounding": null, "id": "heat_shock_chaperones", "is_orphan": false, "label": "heat-shock chaperones", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "Liberek et al. directly support DnaK as an E. coli heat-shock chaperone that binds the sigma-32 transcription factor.", "reference": "DOI:10.1073/pnas.89.8.3516", "snippet": "purified sigma 32 bound to DnaK and that this complex was disrupted in the presence of ATP"}], "gene_symbol": "dnaK", "protein_label": "Chaperone protein DnaK", "retrieved_on": "2026-09-15", "role": "E. coli K-12 DnaK is an Hsp70 heat-shock chaperone that binds sigma-32 in the chaperone-mediated heat-shock control branch.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A6Y8"}], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid, transient production of heat-shock proteins after protein unfolding or aggregation.", "grounding": null, "id": "heat_shock_response_process", "is_orphan": false, "label": "heat-shock response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to induce heat-shock proteins after acute heat stress.", "grounding": "traitmech:000205", "id": "heat_shock_response_trait", "is_orphan": false, "label": "heat shock response", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular protein-folding state restored by chaperone refolding and protease degradation of denatured proteins.", "grounding": null, "id": "protein_homeostasis", "is_orphan": false, "label": "protein homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protein unfolding and aggregation triggered by heat shock.", "grounding": null, "id": "protein_unfolding", "is_orphan": false, "label": "heat-induced protein unfolding", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "Liberek et al. directly support DnaK as an E. coli heat-shock chaperone that binds the sigma-32 transcription factor.", "reference": "DOI:10.1073/pnas.89.8.3516", "snippet": "purified sigma 32 bound to DnaK and that this complex was disrupted in the presence of ATP"}], "gene_symbol": "dnaK", "node_id": "heat_shock_chaperones", "node_label": "heat-shock chaperones", "protein_label": "Chaperone protein DnaK", "retrieved_on": "2026-09-15", "role": "E. coli K-12 DnaK is an Hsp70 heat-shock chaperone that binds sigma-32 in the chaperone-mediated heat-shock control branch.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A6Y8"}, {"entry_status": "REVIEWED", "entry_version": 155, "evidence": [{"notes": "Tomoyasu et al. directly support FtsH as the E. coli ATP-dependent protease that degrades sigma-32.", "reference": "DOI:10.1002/j.1460-2075.1995.tb07253.x", "snippet": "FtsH catalyzed ATP-dependent degradation of biologically active histidine-tagged sigma 32"}], "gene_symbol": "ftsH", "node_id": "atp_dependent_proteases", "node_label": "ATP-dependent proteases", "protein_label": "ATP-dependent zinc metalloprotease FtsH", "retrieved_on": "2026-09-15", "role": "E. coli K-12 FtsH is an ATP-dependent membrane metalloprotease that degrades the sigma-32 heat-shock transcription factor.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AAI3"}], "scope_notes": "This graph captures the conserved proteostasis output of the heat-shock response without making the E. coli sigma-32 branch, B. subtilis HrcA/CtsR branches, or other lineage-specific heat-shock regulators universal.", "scope_status": "MECHANISTIC", "title": "Heat-shock proteostasis restoration"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-15 04:58 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 600 TraitRecords
+      · embedding coverage 79.5%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

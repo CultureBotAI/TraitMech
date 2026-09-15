@@ -1093,7 +1093,6 @@ group ii chaperonin (thermosome)	GENE_OR_PROTEIN	1	data/traits/environment/therm
 denatured proteins	GENE_OR_PROTEIN	1	data/traits/environment/thermophilic.yaml
 tetraether lipid cyclopentane ring number	QUALITY	1	data/traits/environment/thermophilic.yaml
 membrane rigidity	QUALITY	1	data/traits/environment/thermophilic.yaml
-heat-shock response	BIOLOGICAL_PROCESS	1	data/traits/environment/thermotolerant.yaml
 chaperone proteins	GENE_OR_PROTEIN	1	data/traits/environment/thermotolerant.yaml
 limited thermostability	BIOLOGICAL_PROCESS	1	data/traits/environment/thermotolerant.yaml
 heat-shock chaperone gene expression	BIOLOGICAL_PROCESS	1	data/traits/environment/thermotolerant.yaml
@@ -2103,6 +2102,12 @@ nutrient limitation or heat stress	ENVIRONMENTAL_FACTOR	1	data/traits/physiology
 toxin-antitoxin modules	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
 ribosome hibernation factors (rmf/hpf/raia)	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
 resuscitation-promoting factors (rpf)	GENE_OR_PROTEIN	1	data/traits/physiology/dormancy.yaml
+acute heat shock	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/heat_shock_response.yaml
+heat-induced protein unfolding	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml
+heat-shock response	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml
+heat-shock chaperones	GENE_OR_PROTEIN	1	data/traits/physiology/heat_shock_response.yaml
+atp-dependent proteases	GENE_OR_PROTEIN	1	data/traits/physiology/heat_shock_response.yaml
+protein homeostasis	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml
 nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 glycolysis and pentose phosphate pathway	PATHWAY	1	data/traits/physiology/heterotrophic.yaml
 protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml

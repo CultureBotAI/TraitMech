@@ -1157,6 +1157,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "heat-shock-response-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level microbial heat shock response before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heat shock response",
+  "source_id": "traitmech:000205",
+  "source_file": "heat_shock_response.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0009408 response to heat can ground biological-process nodes but is broader than this organism-level stress response trait. Candidate heat-shock-protein, chaperone, and ATP-dependent-protease terms describe narrower molecular machinery rather than the whole response phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heat_shock_response.html#heat-shock-response-xref-gap"
+ },
+ {
   "discussion_id": "histidine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for histidine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1464,9 +1481,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 84,
+ "total_discussions": 85,
  "total_knowledge_gaps": 8,
- "total_source_entries": 83,
+ "total_source_entries": 84,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
