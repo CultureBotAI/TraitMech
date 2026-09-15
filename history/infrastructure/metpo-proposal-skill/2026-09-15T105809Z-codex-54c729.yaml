@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T105809Z-codex-54c729
+  timestamp: '2026-09-15T10:58:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identifiers
+  summary: Advance METPO proposal reserve block to v91
+  details: Documented that metpo_traitmech_v90 reserves METPO:1016700 for phosphorothioate
+    defense system, advancing the next one-row Scope-A cohort to METPO:1016800 for v91.
