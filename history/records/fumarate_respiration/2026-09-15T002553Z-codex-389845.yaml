@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/fumarate_respiration.yaml
+  slug: fumarate_respiration
+session:
+  id: 2026-09-15T002553Z-codex-389845
+  timestamp: '2026-09-15T00:25:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Added the fumarate respiration TraitRecord
+  details: Minted traitmech:000196 as a DOI-backed anaerobic respiration trait, parented it
+    to METPO:1000802 anaerobic respiration, added Bacteroides fragilis as a canonical example,
+    kept organism-level fumarate respiration separate from narrower fumarate reductase classes,
+    and reserved METPO:1015000 in proposals/metpo_traitmech_v73.
