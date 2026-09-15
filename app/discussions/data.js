@@ -1208,6 +1208,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/histidine_arylamidase_activity.html#histidine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "homeoviscous-adaptation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level homeoviscous adaptation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "homeoviscous adaptation",
+  "source_id": "traitmech:000208",
+  "source_file": "homeoviscous_adaptation.yaml",
+  "attaches_to": [],
+  "rationale": "No exact GO, PATO, or METPO class is present in the pinned local snapshot for homeoviscous adaptation. Related lipid metabolism, fatty-acid desaturation, membrane-fluidity, and cold-response terms are narrower, broader, or shifted from the whole-organism membrane-acclimation trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/homeoviscous_adaptation.html#homeoviscous-adaptation-xref-gap"
+ },
+ {
   "discussion_id": "lecithinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lecithinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1515,9 +1532,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 87,
+ "total_discussions": 88,
  "total_knowledge_gaps": 8,
- "total_source_entries": 86,
+ "total_source_entries": 87,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

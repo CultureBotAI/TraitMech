@@ -1,7 +1,6 @@
 node_label	node_type	node_count	example_files
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
-homeoviscous adaptation	BIOLOGICAL_PROCESS	7	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_optimum.yaml|data/traits/environment/temperature_optimum_mid1.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 atp	CHEMICAL	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/oxygenic_photosynthesis.yaml
@@ -49,6 +48,7 @@ metabolite decarboxylation pathways	PATHWAY	3	data/traits/environment/ph_delta_h
 external ph stress	ENVIRONMENTAL_FACTOR	3	data/traits/environment/ph_delta_low.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 proton-pumping respiratory complexes	GENE_OR_PROTEIN	3	data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_mid3.yaml|data/traits/environment/ph_optimum_low.yaml
 membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_optimum.yaml|data/traits/environment/temperature_delta_low.yaml|data/traits/environment/temperature_delta_mid1.yaml
+temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
@@ -73,6 +73,7 @@ antibiotic tolerance	BIOLOGICAL_PROCESS	2	data/traits/ecology/pathogenic_to_host
 host immune evasion	BIOLOGICAL_PROCESS	2	data/traits/ecology/pathogenic_to_host.yaml|data/traits/morphology/capsule.yaml
 low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 low passive proton permeability	QUALITY	2	data/traits/environment/acidophilic.yaml|data/traits/environment/ph_range_very_low.yaml
+membrane lipid remodeling	BIOLOGICAL_PROCESS	2	data/traits/environment/acidotolerant.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 inward proton leakage	BIOLOGICAL_PROCESS	2	data/traits/environment/acidotolerant.yaml|data/traits/environment/ph_delta_high.yaml
 anaerobic growth	BIOLOGICAL_PROCESS	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 arsc arsenate reductase	GENE_OR_PROTEIN	2	data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/metal_tolerant.yaml
@@ -122,10 +123,10 @@ protein and membrane stabilization	BIOLOGICAL_PROCESS	2	data/traits/environment/
 ice-binding/antifreeze proteins	GENE_OR_PROTEIN	2	data/traits/environment/temperature_optimum_low.yaml|data/traits/environment/temperature_range_very_low.yaml
 branched-chain amino acids	CHEMICAL	2	data/traits/environment/temperature_optimum_mid1.yaml|data/traits/environment/temperature_range_mid1.yaml
 baseline mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid2.yaml|data/traits/environment/temperature_range_mid2.yaml
+membrane rigidification	QUALITY	2	data/traits/environment/temperature_optimum_mid2.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 upper-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid3.yaml|data/traits/environment/temperature_range_mid3.yaml
 liquid-crystalline membrane state	STATE	2	data/traits/environment/temperature_optimum_mid3.yaml|data/traits/environment/temperature_range_mid3.yaml
 warm-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_range_mid4.yaml
-temperature downshift	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml
 rpoh (sigma-32) heat-shock sigma factor	GENE_OR_PROTEIN	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/thermotolerant.yaml
 psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_very_low.yaml
 cryoprotection	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_low.yaml
@@ -431,7 +432,6 @@ bipolar tetraether lipids (gdnt/gdgt)	CHEMICAL	1	data/traits/environment/acidoph
 acidic exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/acidotolerant.yaml
 proton efflux transport	MOLECULAR_FUNCTION	1	data/traits/environment/acidotolerant.yaml
 amino-acid decarboxylase system	BIOLOGICAL_PROCESS	1	data/traits/environment/acidotolerant.yaml
-membrane lipid remodeling	BIOLOGICAL_PROCESS	1	data/traits/environment/acidotolerant.yaml
 cation/h+ antiport	MOLECULAR_FUNCTION	1	data/traits/environment/acidotolerant.yaml
 substrate dehydrogenases	GENE_OR_PROTEIN	1	data/traits/environment/aerobic.yaml
 terminal oxidases	GENE_OR_PROTEIN	1	data/traits/environment/aerobic.yaml
@@ -946,14 +946,12 @@ anteiso-branched-chain fatty acids	CHEMICAL	1	data/traits/environment/temperatur
 membrane function and growth at low temperature	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta.yaml
 maximal thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
 decreased growth temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_delta_high.yaml
-homoviscous adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
 decreased membrane fluidity	STATE	1	data/traits/environment/temperature_delta_high.yaml
 membrane viscosity at higher temperature	QUALITY	1	data/traits/environment/temperature_delta_high.yaml
 increased short-/branched-/unsaturated fatty acids	CHEMICAL	1	data/traits/environment/temperature_delta_high.yaml
 hyperthermophilic enzyme thermostability	QUALITY	1	data/traits/environment/temperature_delta_high.yaml
 irreversible inactivation at high temperatures	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
 limited thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_low.yaml
-homeoviscous adaptation / restored fluidity	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_low.yaml
 iso-to-anteiso branched-chain fatty acid shift	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_low.yaml
 moderate thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid1.yaml
 decrease in ambient temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_delta_mid1.yaml
@@ -963,7 +961,6 @@ thermal niche / temperature breadth	QUALITY	1	data/traits/environment/temperatur
 tmin and tmax growth boundaries	QUALITY	1	data/traits/environment/temperature_delta_mid1.yaml
 broad thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
 acyl-lipid desaturase (des)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_delta_mid2.yaml
-membrane fluidity / homeoviscous adaptation	QUALITY	1	data/traits/environment/temperature_delta_mid2.yaml
 rpos sigma factor (sigma-s)	GENE_OR_PROTEIN	1	data/traits/environment/temperature_delta_mid2.yaml
 otsab trehalose biosynthesis operon	PATHWAY	1	data/traits/environment/temperature_delta_mid2.yaml
 cold / cold-shock tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
@@ -997,7 +994,6 @@ lower-mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temp
 mesophile membrane and enzyme adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_mid1.yaml
 low-melting membrane lipids	CHEMICAL	1	data/traits/environment/temperature_optimum_mid1.yaml
 mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid2.yaml
-membrane rigidification	QUALITY	1	data/traits/environment/temperature_optimum_mid2.yaml
 mesophile category	STATE	1	data/traits/environment/temperature_optimum_mid2.yaml
 upper-mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid3.yaml
 membrane bilayer	CELLULAR_LOCALIZATION	1	data/traits/environment/temperature_optimum_mid3.yaml
@@ -2111,6 +2107,7 @@ atp-dependent proteases	GENE_OR_PROTEIN	1	data/traits/physiology/heat_shock_resp
 protein homeostasis	BIOLOGICAL_PROCESS	1	data/traits/physiology/heat_shock_response.yaml
 nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 glycolysis and pentose phosphate pathway	PATHWAY	1	data/traits/physiology/heterotrophic.yaml
+fabi/fabb branchpoint enzymes	GENE_OR_PROTEIN	1	data/traits/physiology/homeoviscous_adaptation.yaml
 protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml
 membrane-bound (de)hydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/lithoautotrophic.yaml
 reverse electron flow	BIOLOGICAL_PROCESS	1	data/traits/physiology/lithoautotrophic.yaml

@@ -58,10 +58,11 @@ causal_graphs:
     description: Unsaturated fatty acids incorporated into membrane lipids that lower
       the bilayer melting point.
   - node_id: homeoviscous_adaptation
-    label: homeoviscous adaptation / restored fluidity
+    label: homeoviscous adaptation
     node_type: BIOLOGICAL_PROCESS
     description: Lipid remodeling that maintains membrane fluidity across temperature,
       restoring bilayer fluidity.
+    grounding: METPO:1016200
   - node_id: anteiso_bcfa_shift
     label: iso-to-anteiso branched-chain fatty acid shift
     node_type: BIOLOGICAL_PROCESS
@@ -214,4 +215,16 @@ curation_history:
     tracked artifact explicitly found no natural organism with both sustained-growth
     endpoints establishing a non-boundary 5-10 degree C breadth. Stress survival and
     one-endpoint studies do not qualify under #591. No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:02:39Z'
+  curator: codex
+  action: NORMALIZED_CAUSAL_NODE_LABELS
+  changes: Normalized the homeoviscous-adaptation causal-node label before grounding
+    it through proposals/metpo_traitmech_v85.
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:57Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true

@@ -66,6 +66,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Compensatory adjustment of membrane lipid composition to maintain
       optimal fluidity across temperatures.
+    grounding: METPO:1016200
   - node_id: fab_c10_competition
     label: FabA/FabI/FabB competition for C10:1 pool
     node_type: BIOLOGICAL_PROCESS
@@ -384,4 +385,10 @@ curation_history:
     provenance after evidence-weak connectors were pruned; this NONMECHANISTIC graph
     intentionally ships with 6 disconnected components until independent trait-specific
     connectors are curated.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:59Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true

@@ -65,10 +65,11 @@ causal_graphs:
       membrane.
     grounding: CHEBI:27208
   - node_id: membrane_fluidity
-    label: membrane fluidity / homeoviscous adaptation
+    label: membrane fluidity
     node_type: QUALITY
     description: Physical state of the lipid bilayer that must be maintained across
       temperatures for transport and growth.
+    grounding: METPO:1007505
   - node_id: rpos_sigma_factor
     label: RpoS sigma factor (sigma-S)
     node_type: GENE_OR_PROTEIN
@@ -244,4 +245,10 @@ curation_history:
     canonical example(s): Pseudomonas mangiferae (NCBITaxon:2593654; DOI:10.1099/ijsem.0.003657).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:02:39Z'
+  curator: codex
+  action: NORMALIZED_CAUSAL_NODE_LABELS
+  changes: Normalized the homeoviscous-adaptation causal-node label before grounding
+    it through proposals/metpo_traitmech_v85.
   llm_assisted: true
