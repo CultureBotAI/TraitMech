@@ -1112,6 +1112,11 @@ phage dna replication	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
 brex locus	GENETIC_ELEMENT	1	data/traits/genomics/brex_system.yaml
 brex host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
 brex self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
+cbass oligonucleotide cyclase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
+cbass cyclic oligonucleotide synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
+cbass effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
+abortive cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
+phage replication	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
 gene expression level	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 trna abundance	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 5' mrna secondary structure	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
