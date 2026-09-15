@@ -83,13 +83,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the Legacy graph artifact; source provenance not recorded deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000844</code> <span class="dim-preview">[+2.183, -3.599, -0.641, +0.610, …]</span></li>
+
+      </ul>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetoclastic_methanogenesis.html">acetoclastic methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/methanogenesis.html">Methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/methyl_based_methanogenesis.html">methyl-based methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
+          <span class="sim">0.488</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
+          <span class="sim">0.482</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
+          <span class="sim">0.477</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
+          <span class="sim">0.475</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
+          <span class="sim">0.472</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -142,6 +204,11 @@
   </div>
 
 
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
+
 </aside>
 </div>
 
@@ -165,7 +232,7 @@
       Record as of 2026-09-08 00:00 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 593 TraitRecords
-      · embedding coverage 80.4%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

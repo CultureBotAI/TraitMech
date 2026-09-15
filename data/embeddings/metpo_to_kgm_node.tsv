@@ -192,6 +192,7 @@ METPO:2000103	capable of	metabolism	direct_metpo	1	METPO:2000103
 traitmech:000019	carbon fixation	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000111	cellulolysis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000112	chitinolysis	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000198	chlorate respiration	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000182	citrate fermentation	metabolism	parent_proxy	1	METPO:1002005
 METPO:2000212	compartmentalizes	metabolism	direct_metpo	1	METPO:2000212
 traitmech:000187	complete ammonia oxidation	metabolism	parent_proxy	1	METPO:1005001
@@ -247,6 +248,7 @@ METPO:2000209	exports	metabolism	direct_metpo	1	METPO:2000209
 METPO:1002005	Fermentation	metabolism	direct_metpo	1	METPO:1002005
 traitmech:000109	fermentative hydrogen production	metabolism	parent_proxy	1	METPO:1002005
 METPO:2000011	ferments	metabolism	direct_metpo	1	METPO:2000011
+traitmech:000196	fumarate respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000508	has growth NaCl observation	metabolism	direct_metpo	1	METPO:2000508
 METPO:2000514	has growth oxygen observation	metabolism	direct_metpo	1	METPO:2000514
 METPO:2000502	has growth pH observation	metabolism	direct_metpo	1	METPO:2000502
@@ -297,6 +299,7 @@ METPO:1000803	Oxidative phosphorylation	metabolism	direct_metpo	1	METPO:1000803
 METPO:2000016	oxidizes	metabolism	direct_metpo	1	METPO:2000016
 traitmech:000034	oxygenic photosynthesis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000135	pectin degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000197	perchlorate respiration	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000193	photoferrotrophy	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000038	photosynthesis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000037	phototrophy	metabolism	parent_proxy	1	METPO:1000060

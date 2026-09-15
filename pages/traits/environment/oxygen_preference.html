@@ -338,7 +338,7 @@
         <li><code>METPO:1000601</code> <span class="dim-preview">[-1.145, -2.522, -2.827, -0.321, …]</span></li>
 
       </ul>
-      <p class="meta">Stored kg-microbe graph vector (source: Legacy graph artifact; source provenance not recorded; dimensions: unrecorded).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -346,8 +346,14 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the stored graph vectors (source: Legacy graph artifact; source provenance not recorded; dimensions: unrecorded).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/capnophilic.html">capnophilic</a>
+          <span class="sim">0.989</span>
+        </li>
 
         <li>
           <span class="nn-cat">environment</span>
@@ -362,38 +368,32 @@
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/pressure_optimum.html">pressure optimum</a>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/filamentous_colony.html">filamentous colony</a>
+          <span class="sim">0.531</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/biofilm_formation.html">biofilm formation</a>
+          <span class="sim">0.531</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/colony_morphology.html">colony morphology</a>
           <span class="sim">0.531</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <a href="../../traits/environment/radiotolerant.html">radiotolerant</a>
           <span class="sim">0.531</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">0.531</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/heterocyst.html">heterocyst</a>
-          <span class="sim">0.531</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/intracellular_inclusion.html">intracellular inclusion</a>
-          <span class="sim">0.531</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/magnetosome.html">magnetosome</a>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/epibiont_phenotype.html">epibiont phenotype</a>
           <span class="sim">0.531</span>
         </li>
 
@@ -1016,7 +1016,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-31 04:43 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 593 TraitRecords
-      · embedding coverage 80.4%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

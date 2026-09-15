@@ -325,7 +325,7 @@
         <li><code>METPO:1000602</code> <span class="dim-preview">[-37.032, +29.784, -5.356, +74.090, …]</span></li>
 
       </ul>
-      <p class="meta">Stored kg-microbe graph vector (source: Legacy graph artifact; source provenance not recorded; dimensions: unrecorded).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -333,12 +333,18 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the stored graph vectors (source: Legacy graph artifact; source provenance not recorded; dimensions: unrecorded).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
 
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/motile.html">motile</a>
+          <span class="sim">0.378</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
           <span class="sim">0.378</span>
         </li>
 
@@ -350,8 +356,8 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
-          <span class="sim">0.378</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.353</span>
         </li>
 
         <li>
@@ -362,26 +368,20 @@
 
         <li>
           <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polar_flagellation.html">polar flagellation</a>
+          <span class="sim">0.316</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.311</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/rod_shaped.html">rod shaped</a>
           <span class="sim">0.287</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/spore_forming.html">spore forming</a>
-          <span class="sim">0.282</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_aerobic.html">obligately aerobic</a>
-          <span class="sim">0.281</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped</a>
-          <span class="sim">0.280</span>
         </li>
 
       </ul>
@@ -1022,7 +1022,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-26 06:15 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 593 TraitRecords
-      · embedding coverage 80.4%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
