@@ -19,6 +19,7 @@ SALTIKOV_AEM = "DOI:10.1128/AEM.69.5.2800-2809.2003"
 MALASARN = "DOI:10.1128/JB.01110-07"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-14T23:52:00Z"
+REVIEW_TIMESTAMP = "2026-09-15T00:08:31Z"
 
 RECORD = {
     "identifier": "traitmech:000195",
@@ -87,7 +88,7 @@ RECORD = {
             "taxon_id": "NCBITaxon:94122",
             "taxon_label": "Shewanella sp. ANA-3",
             "note": (
-                "Genetically tractable facultative anaerobe isolated for "
+                "Facultatively anaerobic Shewanella isolate characterized for "
                 "arsenate-respiration studies."
             ),
             "reference": SALTIKOV_AEM,
@@ -142,6 +143,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="TIGHTENED_CANONICAL_EXAMPLE",
+        changes=(
+            "Tightened the ANA-3 canonical example note to the DOI-backed "
+            "isolation and facultative arsenate-respiration evidence without "
+            "making a broader genetic-tractability claim."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

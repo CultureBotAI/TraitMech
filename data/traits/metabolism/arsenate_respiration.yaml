@@ -34,7 +34,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:94122
   taxon_label: Shewanella sp. ANA-3
-  note: Genetically tractable facultative anaerobe isolated for arsenate-respiration
+  note: Facultatively anaerobic Shewanella isolate characterized for arsenate-respiration
     studies.
   reference: DOI:10.1128/AEM.69.5.2800-2809.2003
 discussions:
@@ -58,4 +58,11 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     local METPO snapshot has only obsolete arsenate-reduction classes and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v72.
+  llm_assisted: true
+- timestamp: '2026-09-15T00:08:31Z'
+  curator: codex
+  action: TIGHTENED_CANONICAL_EXAMPLE
+  changes: Tightened the ANA-3 canonical example note to the DOI-backed isolation
+    and facultative arsenate-respiration evidence without making a broader genetic-tractability
+    claim.
   llm_assisted: true
