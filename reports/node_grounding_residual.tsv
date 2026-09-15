@@ -26,6 +26,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
+phage dna replication	BIOLOGICAL_PROCESS	4	data/traits/genomics/brex_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -52,7 +53,6 @@ membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_opt
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 phage infection	BIOLOGICAL_PROCESS	3	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/dnd_system.yaml|data/traits/genomics/thoeris_system.yaml
-phage dna replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brex_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
@@ -142,6 +142,7 @@ antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
+ssp single-stranded dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/sspabcd_sspe_system.yaml|data/traits/genomics/sspabcd_sspfgh_system.yaml
 light energy	ENVIRONMENTAL_FACTOR	2	data/traits/metabolism/anoxygenic_photosynthesis.yaml|data/traits/metabolism/photosynthesis.yaml
 calvin-benson-bassham cycle	PATHWAY	2	data/traits/metabolism/carbon_fixation.yaml|data/traits/physiology/mixotrophic.yaml
 3-hydroxypropionate/4-hydroxybutyrate cycle	PATHWAY	2	data/traits/metabolism/carbon_fixation.yaml|data/traits/physiology/chemoautotrophic.yaml
@@ -1254,10 +1255,12 @@ shedu nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system
 shedu dna end nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 phage dna propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 sspabcd-sspe locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspe_system.yaml
-ssp single-stranded dna phosphorothioation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe pt-site recruitment	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe gtpase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe dna nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
+sspabcd-sspfgh locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
+ssp pt self/nonself discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
+sspfgh-dependent non-pt dna damage	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
 thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
 thoeris tir cadpr-isomer production	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
 thsa nad depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml

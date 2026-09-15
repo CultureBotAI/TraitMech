@@ -1,0 +1,187 @@
+identifier: traitmech:000223
+label: SspABCD-SspFGH system
+definition: A phosphorothioate defense system in which an organism possesses an SspABCD-SspFGH
+  locus that pairs an SspABCD-family single-stranded DNA phosphorothioation module
+  with an SspFGH restriction module to damage non-phosphorothioated phage DNA and
+  suppress phage DNA replication.
+definition_source: DOI:10.1128/mbio.00613-21
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000213
+synonyms:
+- synonym_text: SspABCD-SspFGH defense system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/mbio.00613-21
+evidence:
+- reference: DOI:10.1128/mbio.00613-21
+  snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system capable of providing
+    protection against phages
+  notes: Wang et al. name SspABCD-SspFGH as a single-stranded DNA phosphorothioation-based
+    bacterial phage-defense system.
+- reference: DOI:10.1128/mbio.00613-21
+  snippet: PT-modifying genes sspBCD and iscS in Vibrio anguillarum strain FF-93 can
+    provide protection against a range of phages in combination with sspFGH
+  notes: Wang et al. support a native Vibrio anguillarum FF-93 Ssp system whose IscS-SspBCD
+    phosphorothioation module works with the sspFGH cassette.
+- reference: DOI:10.1128/mbio.00613-21
+  snippet: SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based
+    defense barrier to fend off phage invasion
+  notes: Wang et al. support the modification-plus-restriction architecture and antiphage
+    output.
+- reference: DOI:10.1128/mbio.00613-21
+  snippet: SspFGH damages non-PT-modified DNA and exerts antiphage activity by suppressing
+    phage DNA replication
+  notes: Wang et al. connect SspFGH-dependent DNA damage to the observed block in
+    phage DNA replication.
+- reference: DOI:10.1038/s41564-020-0700-6
+  snippet: SspABCD confers single-stranded and high-frequency PTs with SspB acting
+    as a nickase
+  notes: Xiong et al. independently support SspABCD-family single-stranded host-DNA
+    phosphorothioation.
+- reference: DOI:10.3390/ijms252413316
+  snippet: could also be coupled to SspFGH for anti-phage activity
+  notes: Xu and Gu summarize SspFGH as an SspABCD-coupled phosphorothioate antiphage
+    restriction module.
+canonical_examples:
+- taxon_id: NCBITaxon:55601
+  taxon_label: Vibrio anguillarum
+  note: Wang et al. identified an sspFGH cassette adjacent to the sspBCD cluster in
+    Vibrio anguillarum FF-93 and showed that its SspFGH module couples to IscS-SspBCD
+    phosphorothioation for phage defense.
+  reference: DOI:10.1128/mbio.00613-21
+causal_graphs:
+- graph_id: sspabcd_sspfgh_non_pt_dna_damage
+  title: SspABCD-SspFGH systems couple Ssp PT marks to foreign-DNA damage
+  description: Evidence-backed process sketch linking an SspABCD-SspFGH locus to single-stranded
+    host DNA phosphorothioation, SspFGH-dependent damage of non-phosphorothioated
+    phage DNA, and reduced phage DNA replication.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures SspABCD-SspFGH restriction at the system level without
+    asserting one universal host taxon, PT frequency, a DNA-damage chemistry, a complete
+    SspFGH subunit cycle, or relationship to SspE and archaeal PT antiviral systems.
+  nodes:
+  - node_id: sspabcd_sspfgh_locus
+    label: SspABCD-SspFGH locus
+    node_type: GENETIC_ELEMENT
+    description: An Ssp phosphorothioation-dependent restriction locus pairing an
+      SspABCD-family DNA modification module with SspFGH restriction activity.
+  - node_id: ssp_single_stranded_dna_phosphorothioation
+    label: Ssp single-stranded DNA phosphorothioation
+    node_type: BIOLOGICAL_PROCESS
+    description: SspABCD-family installation of single-stranded phosphorothioate marks
+      on host DNA.
+  - node_id: ssp_pt_self_nonself_discrimination
+    label: Ssp PT self/nonself discrimination
+    node_type: BIOLOGICAL_PROCESS
+    description: Use of Ssp phosphorothioate marks to distinguish phosphorothioated
+      host DNA from invading DNA that lacks host phosphorothioate marks.
+  - node_id: sspfgh_non_pt_dna_damage
+    label: SspFGH-dependent non-PT DNA damage
+    node_type: BIOLOGICAL_PROCESS
+    description: SspFGH-dependent damage of DNA molecules that lack host single-stranded
+      phosphorothioate marks.
+  - node_id: phage_dna_replication
+    label: phage DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Replication of invading bacteriophage DNA after host cell entry.
+  - node_id: sspabcd_sspfgh_system_trait
+    label: SspABCD-SspFGH system
+    node_type: TRAIT
+    grounding: traitmech:000223
+    description: Possession of a genome-encoded SspABCD-SspFGH restriction-modification
+      defense system.
+  - node_id: phosphorothioate_defense_system_trait
+    label: phosphorothioate defense system
+    node_type: TRAIT
+    grounding: traitmech:000213
+    description: Possession of a genome-encoded phosphorothioate-based phage defense
+      system.
+  edges:
+  - subject: sspabcd_sspfgh_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ssp_single_stranded_dna_phosphorothioation
+    description: The SspABCD-family modification module installs single-stranded PT
+      marks on host DNA.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: IscS and SspBCD in FF-93 also confer DNA PT modification at 5'-CPSCA-3'
+        consensus sequences
+      notes: Wang et al. support single-stranded host-DNA phosphorothioation by the
+        FF-93 IscS-SspBCD module.
+  - subject: sspabcd_sspfgh_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sspfgh_non_pt_dna_damage
+    description: SspABCD-SspFGH loci pair the Ssp modification module with SspFGH-dependent
+      restriction activity against DNA lacking PT marks.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: SspFGH coupled with IscS-SspBCD behaves as a new type of ssDNA PT modification-based
+        defense barrier
+      notes: Wang et al. support the paired Ssp phosphorothioation and SspFGH restriction
+        architecture.
+  - subject: ssp_single_stranded_dna_phosphorothioation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ssp_pt_self_nonself_discrimination
+    description: SspFGH uses Ssp phosphorothioate marks as a recognition tag to discriminate
+      self DNA from invading non-PT DNA.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: SspFGH employs ssDNA PT modification as a recognition tag to introduce
+        damage to non-PT-modified phage genomes
+      notes: Wang et al. support PT-dependent self/nonself discrimination by the SspFGH
+        barrier.
+  - subject: ssp_pt_self_nonself_discrimination
+    predicate: activates
+    predicate_id: RO:0002213
+    object: sspfgh_non_pt_dna_damage
+    description: Ssp PT self/nonself discrimination leads to SspFGH-dependent damage
+      of non-PT phage DNA.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: SspFGH introduces damage to non-PT DNA and consequently impairs phage
+        DNA replication
+      notes: Wang et al. connect SspFGH non-PT DNA damage to the restriction output.
+  - subject: sspfgh_non_pt_dna_damage
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_dna_replication
+    description: SspFGH-dependent damage of phage DNA suppresses phage DNA replication.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: its DNA replication was markedly suppressed in the presence of IscS-SspBCD-SspFGH
+      notes: Wang et al. directly connect the SspFGH barrier to impaired phage DNA
+        replication.
+  - subject: sspfgh_non_pt_dna_damage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: sspabcd_sspfgh_system_trait
+    description: SspFGH-dependent non-PT DNA damage realizes the SspABCD-SspFGH antiphage
+      defense trait.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: SspFGH provided moderate levels of protection against phages
+      notes: Wang et al. support phage restriction as the SspFGH system output.
+  - subject: sspabcd_sspfgh_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phosphorothioate_defense_system_trait
+    description: SspABCD-SspFGH possession is a phosphorothioate-defense-system trait.
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system
+      notes: Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based
+        defense systems.
+curation_history:
+- timestamp: '2026-09-15T17:06:06Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted SspABCD-SspFGH system as a DOI-backed GENOMICS TraitRecord under
+    the phosphorothioate defense system parent after an ignored-and-hidden duplicate
+    review found no exact live TraitMech, METPO, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v100.
+  llm_assisted: true

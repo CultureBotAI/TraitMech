@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T170609Z-codex-9ad7c4
+  timestamp: '2026-09-15T17:06:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal reserve block to v101
+  details: Documented that metpo_traitmech_v100 reserves METPO:1017700 for the
+    SspABCD-SspFGH system, advancing the next one-row Scope-A cohort to
+    METPO:1017800 for v101.
