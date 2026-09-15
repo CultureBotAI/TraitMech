@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T032239Z-codex-999dfa
+  timestamp: '2026-09-15T03:22:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Reserve METPO v79 placeholder
+  details: Updated the METPO proposal skill next Scope-A placeholder block after reserving
+    METPO:1015600 for the selenate respiration v79 proposal, so the next one-row Scope-A cohort
+    starts at METPO:1015700.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/selenate_respiration.yaml
+  slug: selenate_respiration
+session:
+  id: 2026-09-15T032239Z-codex-c7c6a9
+  timestamp: '2026-09-15T03:22:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add selenate respiration
+  details: Minted traitmech:000202 for DOI-backed selenate respiration, added Oremland 1994,
+    Narasingarao 2006, and Narasingarao 2007 evidence, added a Sedimenticola selenatireducens
+    AK4OH1 canonical example, and reserved the upstream placeholder in proposals/metpo_traitmech_v79.
