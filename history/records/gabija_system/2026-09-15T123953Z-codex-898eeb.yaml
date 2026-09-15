@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gabija_system.yaml
+  slug: gabija_system
+session:
+  id: 2026-09-15T123953Z-codex-898eeb
+  timestamp: '2026-09-15T12:39:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Gabija system TraitRecord
+  details: Minted traitmech:000215 for the DOI-backed Gabija system under phage defense system
+    with Oh, Cheng, and Antine evidence, a Bacillus cereus canonical example, a nonmechanistic
+    GajAB nucleotide-depletion and DNA-cleavage graph, and a knowledge-gap discussion for
+    unresolved activation and anti-defense scope.

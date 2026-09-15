@@ -152,6 +152,7 @@ data/traits/genomics/cbass_system.yaml	traitmech:000212	CBASS system	cbass_cycli
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dna_sensing_antiphage_defense	MECHANISTIC	1	0	1	1	1	2	2	PASS	0	0	-
+data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	gc_low_mid_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -170,6 +171,7 @@ data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	restriction-modification system	rm_self_nonself_defense	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/thoeris_system.yaml	traitmech:000216	Thoeris system	thoeris_tir_signal_nad_depletion_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/transposable_element.yaml	traitmech:000092	transposable element	te_transposition_rearrangement	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/acetogenesis.yaml	METPO:1000845	Acetogenesis	acetogenesis_wood_ljungdahl	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/aerobic_respiration.yaml	METPO:1000801	Aerobic respiration	aerobic_respiration_terminal_oxidase	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-

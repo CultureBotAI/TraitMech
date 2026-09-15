@@ -273,6 +273,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/disarm_system.html#disarm-downstream-effector-gap"
  },
  {
+  "discussion_id": "gabija-activation-and-antidefense-gap",
+  "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gabija system",
+  "source_id": "traitmech:000215",
+  "source_file": "gabija_system.yaml",
+  "attaches_to": [],
+  "rationale": "Cheng et al. support nucleotide depletion and DNA cleavage as Gabija outputs, and Antine et al. support GajAB complex assembly plus Gad1-mediated inhibition, but Gabija family members need separate review before TraitMech asserts one universal trigger, exact GajA:GajB stoichiometry, host death program, DNA substrate, or anti-Gabija phage inhibitor.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gabija_system.html#gabija-activation-and-antidefense-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -305,6 +322,23 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
+ },
+ {
+  "discussion_id": "thoeris-family-signal-and-trigger-gap",
+  "prompt": "Resolve Thoeris family architecture, signal chemistry, and phage triggering before minting narrower Thoeris mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Thoeris system",
+  "source_id": "traitmech:000216",
+  "source_file": "thoeris_system.yaml",
+  "attaches_to": [],
+  "rationale": "Ka et al. support the B. cereus ThsA/ThsB two-gene system and Ofir et al. support the TIR-produced cADPR-like signal that activates ThsA NAD depletion, but Thoeris variants need separate review before TraitMech asserts one exact number of TIR-domain proteins, cADPR-isomer chemistry, TIR target, ThsA activation state, cell-death pathway, or phage-triggering mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/thoeris_system.html#thoeris-family-signal-and-trigger-gap"
  },
  {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
@@ -1634,9 +1668,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 94,
- "total_knowledge_gaps": 13,
- "total_source_entries": 93,
+ "total_discussions": 96,
+ "total_knowledge_gaps": 15,
+ "total_source_entries": 95,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

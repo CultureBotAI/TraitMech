@@ -25,6 +25,7 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
+phage replication	BIOLOGICAL_PROCESS	4	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml|data/traits/genomics/gabija_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -132,7 +133,7 @@ psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment
 cryoprotection	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_low.yaml
 dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.yaml|data/traits/environment/thermophilic.yaml
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
-phage replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml
+phage infection	BIOLOGICAL_PROCESS	2	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/thoeris_system.yaml
 phage dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/brex_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
@@ -1110,7 +1111,6 @@ zntr merr-family regulator	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolera
 znta transcription	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
 czccba rnd efflux complex	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolerant.yaml
 zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
-phage infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 abortive infection system activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 host growth arrest or cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 bacterial population protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
@@ -1136,6 +1136,10 @@ disarm 5-prime-overhang dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/di
 drmab core complex	GENE_OR_PROTEIN	1	data/traits/genomics/disarm_system.yaml
 disarm drmab activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 phage dna circularization	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
+gabija gaja-gajb operon	GENETIC_ELEMENT	1	data/traits/genomics/gabija_system.yaml
+gajab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
+gabija nucleotide depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
+gabija dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
 genomic dna	CELLULAR_LOCALIZATION	1	data/traits/genomics/gc_content.yaml
 gc/at mutation bias	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
 gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
@@ -1239,6 +1243,9 @@ restriction endonuclease cleavage	MOLECULAR_FUNCTION	1	data/traits/genomics/rest
 phage-encoded dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
+thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
+thoeris tir cadpr-isomer production	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
+thsa nad depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/thoeris_system.yaml
 genome rearrangement	QUALITY	1	data/traits/genomics/transposable_element.yaml
 transposable element insertion	BIOLOGICAL_PROCESS	1	data/traits/genomics/transposable_element.yaml
 target site duplication	QUALITY	1	data/traits/genomics/transposable_element.yaml
