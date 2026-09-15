@@ -273,6 +273,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phage_defense_system.html#phage-defense-system-xref-gap"
  },
  {
+  "discussion_id": "phosphorothioate-subfamily-split-gap",
+  "prompt": "Resolve Dnd, SspBCD-E, SspABCD-sspFGH, and archaeal phosphorothioate-based antiviral systems before minting narrower children under the phosphorothioate defense parent.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "phosphorothioate defense system",
+  "source_id": "traitmech:000213",
+  "source_file": "phosphorothioate_defense_system.yaml",
+  "attaches_to": [],
+  "rationale": "Xiong et al. and Jiang et al. support at least two bacterial PT-related R-M architectures with distinct restriction modules. The DndFGH macromolecular machine, SspE single restriction enzyme, SspFGH systems, and archaeal phosphorothioate-based antiviral systems need separate primary-source review before they can be split into narrower TraitRecords with exact component groundings.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
+ },
+ {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for acetate-splitting methanogenesis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1600,9 +1617,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 92,
- "total_knowledge_gaps": 11,
- "total_source_entries": 91,
+ "total_discussions": 93,
+ "total_knowledge_gaps": 12,
+ "total_source_entries": 92,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/phosphorothioate_defense_system.yaml
+  slug: phosphorothioate_defense_system
+session:
+  id: 2026-09-15T105809Z-codex-cda406
+  timestamp: '2026-09-15T10:58:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add phosphorothioate defense system trait
+  details: Added traitmech:000213 for phosphorothioate defense system with DOI-backed Xiong
+    and Jiang evidence, an Escherichia coli B7A canonical example, a PT-dependent antiphage
+    defense causal graph without premature DndFGH or SspE component-family grounding, and
+    an upstream placeholder reserved in proposals/metpo_traitmech_v90.
