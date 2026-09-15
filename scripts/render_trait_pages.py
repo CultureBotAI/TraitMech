@@ -24,6 +24,8 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
+import json
 import re
 import shutil
 import sys
@@ -33,7 +35,6 @@ from pathlib import Path
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-
 from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
 
@@ -49,7 +50,38 @@ GRAPH_JSON = EMBED_DIR / "trait_graph.json"
 NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
-EMBEDDING_RELEASE = "2026-04-25"
+def load_projection_receipt(path: Path) -> dict:
+    """Display only metadata bound to the current map and neighbor bytes.
+
+    Old arrays have no generation receipt. Their current defaults are not
+    evidence about the algorithm, source release or dimension used before.
+    """
+    legacy = {"label": "Unverified projection", "method": "unknown",
+              "source": "Legacy graph artifact; source provenance not recorded",
+              "dimensions": "unrecorded", "verified": False}
+    try:
+        receipt = json.loads(path.with_suffix(".metadata.json").read_text())
+        source = receipt["source"]
+        dimensions = receipt["input_dimensions"]
+        method = receipt["projection"]["method"]
+        if (receipt["schema_version"] != 1 or method not in {"pacmap", "umap", "sfdp"}
+                or type(dimensions) is not int or dimensions < 1
+                or not isinstance(source["filename"], str) or not source["filename"]
+                or not re.fullmatch(r"[0-9a-f]{64}", source["sha256"])):
+            return legacy
+        # Include neighbor integrity so a newer neighbor run cannot silently
+        # borrow an older map's source claim on every trait page.
+        for output in (path, path.parent / "trait_nearest_neighbors.json"):
+            with output.open("rb") as stream:
+                digest = hashlib.file_digest(stream, "sha256").hexdigest()
+            if receipt["outputs"].get(output.name) != digest:
+                return legacy
+        return {"label": {"pacmap": "PaCMAP", "umap": "UMAP", "sfdp": "sfdp layout"}[method],
+                "method": method, "source": source["filename"],
+                "source_sha256": source["sha256"], "dimensions": dimensions, "verified": True}
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
+        return legacy
+
 
 # Provider precedence for the deep-research lookup.
 #
@@ -122,8 +154,8 @@ def load_traits() -> list[tuple[Path, dict]]:
     for path in sorted(TRAITS_DIR.rglob("*.yaml")):
         try:
             doc = yaml.safe_load(path.read_text())
-        except Exception:
-            continue
+        except (OSError, yaml.YAMLError) as error:
+            raise ValueError(f"Unable to read trait record: {path}") from error
         if isinstance(doc, dict):
             out.append((path, doc))
     return out
@@ -256,10 +288,10 @@ def load_node_dim_preview(needed_nodes: set[str]) -> dict[str, str]:
             sid = parts[0]
             if sid in needed_nodes:
                 dims = parts[1:1 + DIM_PREVIEW]
-                if dims and dims[0] in ("0", "0.0", ""):
-                    # Header / index column? skip.
-                    if all(d.isdigit() for d in dims if d):
-                        continue
+                # Header / index column? skip.
+                if (dims and dims[0] in ("0", "0.0", "")
+                        and all(d.isdigit() for d in dims if d)):
+                    continue
                 preview = ", ".join(f"{float(d):+.3f}" for d in dims if d)
                 out[sid] = f"[{preview}, …]"
     return out
@@ -370,6 +402,7 @@ def render_pages(args: argparse.Namespace) -> int:
     metpo_version = load_metpo_version(RAW_OWL)
     traits = load_traits()
     match_table = load_match_table()
+    embedding_receipt = load_projection_receipt(UMAP_JSON)
     # One value for every page in the run, derived from the data (#228).
     corpus_stamp = corpus_timestamp(traits)
 
@@ -484,7 +517,8 @@ def render_pages(args: argparse.Namespace) -> int:
             research_blob_url=(
                 f"{GH_BLOB_BASE}/{research_rel}" if research_rel else ""
             ),
-            embedding_release=EMBEDDING_RELEASE,
+            embedding_release=embedding_receipt["source"],
+            embedding_dimensions=embedding_receipt["dimensions"],
             metpo_version=metpo_version,
             yaml_path=yaml_rel,
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
@@ -534,6 +568,7 @@ def render_pages(args: argparse.Namespace) -> int:
             title="Trait embedding space",
             root="",
             data_url="data/trait_umap.json",
+            projection=embedding_receipt,
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in umap_points}),
             n_points=len(umap_points),
             metpo_version=metpo_version,
@@ -554,9 +589,10 @@ def render_pages(args: argparse.Namespace) -> int:
             nn_by_curie, {point["id"] for point in graph_points}
         )
         graph_html = env.get_template("graph.html").render(
-            title="Trait graph layout (sfdp)",
+            title="Trait graph layout",
             root="",
             data_url="data/trait_graph.json",
+            projection=load_projection_receipt(GRAPH_JSON),
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in graph_points}),
             graph_edges=_json.dumps(graph_edges),
             n_points=len(graph_points),
@@ -578,6 +614,7 @@ def render_pages(args: argparse.Namespace) -> int:
     embedded_count = sum(1 for v in match_table.values() if v["n_kgm_nodes"] > 0)
     landing = env.get_template("index.html").render(
         title="Microbial trait knowledge base",
+        projection_label=embedding_receipt["label"],
         root="",
         total_traits=len(traits),
         embedded_count=embedded_count,

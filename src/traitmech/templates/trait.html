@@ -210,7 +210,7 @@
         <li><code>{{ node }}</code>{% if node in node_dim_preview %} <span class="dim-preview">{{ node_dim_preview[node] }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe ({{ embedding_release }}).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: {{ embedding_release }}; dimensions: {{ embedding_dimensions }}).</p>
       {% else %}
       <p class="no-match">No kg-microbe node embedding for this METPO class
         in the {{ embedding_release }} deepwalk. Most unmatched terms are
@@ -223,7 +223,7 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-{{ nearest_neighbors|length }} cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: {{ embedding_release }}; dimensions: {{ embedding_dimensions }}).</p>
       <ul class="nn-list">
         {% for nn in nearest_neighbors %}
         <li>

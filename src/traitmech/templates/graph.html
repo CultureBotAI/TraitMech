@@ -2,10 +2,10 @@
 {% block content %}
 <header>
   <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Graph layout</p>
-  <h1>Trait graph layout (sfdp)</h1>
-  <p class="tagline">Graphviz <strong>sfdp</strong> force-directed layout over
-    <strong>{{ n_points }}</strong> METPO trait embeddings from kg-microbe's
-    2026-04-25 deepwalk (512-D, layout k=15). The {{ n_edges }} visible links are
+  <h1>Trait graph layout</h1>
+  <p class="tagline">{{ projection.label }} over
+    <strong>{{ n_points }}</strong> METPO trait embeddings. Projection: {{ projection.label }}.
+    Source: {{ projection.source }}; dimensions: {{ projection.dimensions }}. The {{ n_edges }} visible links are
     reciprocal relationships in the committed top-neighbor index. Hover for a
     label; click to open the trait page.</p>
 </header>

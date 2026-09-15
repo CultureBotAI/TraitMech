@@ -2,17 +2,12 @@
 """Vendor a slim trait subset of kg-microbe's deepwalk embeddings + build a
 METPO CURIE ↔ kg-microbe-node match table.
 
-Source priority
----------------
-1. ``../CommunityMech/CommunityMech/data/embeddings/DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v2_2026-04-25_*.tsv.gz``
-   (5.7 GB, 512-D, latest; carries 380 METPO CURIEs DIRECTLY plus the legacy
-   pre-METPO trait nodes for backward compatibility).
-2. Fallback to the 2024-09-25 200-D file if the 2026-04-25 one isn't present.
-
-The 2026-04-25 file is the first kg-microbe-derived embedding that ingests
-METPO. Direct CURIE lookup (METPO:1000602 → that row's 512 floats) is the
-primary match path; the alias-table + label-match fallback covers METPO
-classes whose CURIEs the embedding doesn't have but whose label does.
+Source selection
+----------------
+Explicit ``--src`` or ``KG_MICROBE_EMBEDDINGS`` takes precedence, then a local
+v3 2026-06-26 artifact, then the configured/sibling CommunityMech artifact.
+A missing selected source fails; legacy releases require an explicit path.
+No source/reducer provenance is inferred for old point arrays.
 
 Bridge
 ------
@@ -40,6 +35,9 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
+import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -48,16 +46,21 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Newest available kg-microbe-derived deepwalk: 512-D, 2026-06-26 (v3),
 # includes METPO CURIEs directly. Source-of-truth for direct-METPO matching.
-DEFAULT_KGM_DEEPWALK = (
-    REPO_ROOT.parent / "CommunityMech" / "CommunityMech" / "data" / "embeddings"
-    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz"
-)
-# Fallback: 2024-09-25 200-D file (pre-METPO; only useful for legacy-prefix
-# trait nodes like `cell_shape:bacillus`).
-FALLBACK_KGM_DEEPWALK = (
-    REPO_ROOT.parent / "kg-microbe-projects" / "taxa_media"
-    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_200_1_wouniprot__2024-09-25_03_07_47.tsv.gz"
-)
+EMBEDDINGS_FILENAME = "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz"
+
+
+def default_deepwalk() -> Path:
+    override = os.environ.get("KG_MICROBE_EMBEDDINGS")
+    if override:
+        return Path(override).expanduser()
+    local = REPO_ROOT / "data" / "embeddings" / EMBEDDINGS_FILENAME
+    if local.is_file():
+        return local
+    community = Path(os.environ.get("COMMUNITYMECH_ROOT") or REPO_ROOT.parent / "CommunityMech")
+    return community / "data" / "embeddings" / EMBEDDINGS_FILENAME
+
+
+DEFAULT_KGM_DEEPWALK = default_deepwalk()
 DEFAULT_KGM_ALIASES = (
     REPO_ROOT.parent / "kg-microbe" / "mappings" / "canonical" / "metpo_alias_mappings.tsv"
 )
@@ -143,8 +146,8 @@ def load_metpo_records(traits_dir: Path) -> list[tuple[str, str, list[str], str,
     for path in sorted(traits_dir.rglob("*.yaml")):
         try:
             doc = yaml.safe_load(path.read_text())
-        except Exception:
-            continue
+        except (OSError, yaml.YAMLError) as error:
+            raise ValueError(f"Unable to read trait record: {path}") from error
         if not isinstance(doc, dict):
             continue
         curie = (doc.get("identifier") or "").strip()
@@ -319,8 +322,8 @@ def compute_umap_and_neighbors(
             return [], {}
     elif method == "pacmap":
         try:
-            import pacmap  # noqa: F401
-            from sklearn.preprocessing import normalize  # noqa: F401
+            import pacmap
+            from sklearn.preprocessing import normalize
         except ImportError as e:
             print(f"  PaCMAP / scikit-learn not available: {e}; skipping projection",
                   file=sys.stderr)
@@ -328,7 +331,7 @@ def compute_umap_and_neighbors(
     elif method == "sfdp":
         try:
             sys.path.insert(0, str(Path(__file__).resolve().parent))
-            from sfdp_layout import sfdp_layout  # noqa: F401
+            from sfdp_layout import sfdp_layout
         except ImportError as e:
             print(f"  sfdp_layout / scikit-learn not available: {e}; skipping projection",
                   file=sys.stderr)
@@ -393,6 +396,7 @@ def compute_umap_and_neighbors(
             "label": lbl,
             "category": cat,
             "match_method": match_by_curie[curie]["match_method"],
+            "kgm_nodes": match_by_curie[curie]["kgm_nodes"].split(";"),
             "umap_x": float(coords[i, 0]),
             "umap_y": float(coords[i, 1]),
         })
@@ -402,6 +406,8 @@ def compute_umap_and_neighbors(
                 "label": record_by_curie[curies[j]][0],
                 "category": record_by_curie[curies[j]][2],
                 "similarity": float(sim[i, j]),
+                "match_method": match_by_curie[curies[j]]["match_method"],
+                "kgm_nodes": match_by_curie[curies[j]]["kgm_nodes"].split(";"),
             }
             for j in top_idx[i]
         ]
@@ -414,9 +420,34 @@ def compute_umap_and_neighbors(
 
 
 def write_json(path: Path, payload) -> None:
-    import json
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2))
+
+
+
+def file_sha256(path: Path) -> str:
+    with path.open("rb") as stream:
+        return hashlib.file_digest(stream, "sha256").hexdigest()
+
+
+def write_projection_metadata(path: Path, source: Path, vectors, method: str,
+                              match_table: Path, neighbors: Path) -> None:
+    """Bind newly generated outputs to the source actually selected by this run."""
+    dims = {len(vector) for vector in vectors.values()}
+    if len(dims) != 1:
+        raise ValueError("Graph vectors must have one nonempty dimension")
+    write_json(path.with_suffix(".metadata.json"), {
+        "schema_version": 1,
+        "embedding_family": "kg_microbe_deepwalk",
+        "source": {"filename": source.name, "sha256": file_sha256(source)},
+        "input_dimensions": next(iter(dims)),
+        "projection": {"method": method, "random_state": 42,
+                       "normalization": "l2" if method in {"pacmap", "sfdp"} else "none"},
+        "match_table_sha256": file_sha256(match_table),
+        "outputs": {path.name: file_sha256(path), neighbors.name: file_sha256(neighbors)},
+        "coverage": {"projected": len(json.loads(path.read_text())),
+                     "neighbor_records": len(json.loads(neighbors.read_text()))},
+    })
 
 
 def main() -> int:
@@ -436,13 +467,9 @@ def main() -> int:
     args = ap.parse_args()
 
     src = args.src
-    if not src.exists():
-        if FALLBACK_KGM_DEEPWALK.exists():
-            print(f"  Primary embedding missing ({src}); using fallback {FALLBACK_KGM_DEEPWALK.name}")
-            src = FALLBACK_KGM_DEEPWALK
-        else:
-            print(f"deepwalk source missing: {src}", file=sys.stderr)
-            return 2
+    if not src.is_file():
+        print(f"Selected deepwalk source missing: {src}; pass --src for another release", file=sys.stderr)
+        return 2
 
     print(f"[1/4] Vendoring slim deepwalk subset → {args.out_deepwalk}")
     print(f"      source: {src.name}")
@@ -474,8 +501,12 @@ def main() -> int:
     umap_points, nn_map = compute_umap_and_neighbors(
         metpo_records, rows, vectors, method=args.method
     )
+    if not umap_points:
+        print("Projection produced no points; outputs were not published", file=sys.stderr)
+        return 2
     write_json(args.umap_out, umap_points)
     write_json(OUT_NN_JSON, nn_map)
+    write_projection_metadata(args.umap_out, src, vectors, args.method, args.out_match, OUT_NN_JSON)
     print(f"      {len(umap_points)} UMAP points → {args.umap_out.name}")
     nn_with_data = sum(1 for v in nn_map.values() if v)
     print(f"      {nn_with_data} traits with ≥1 nearest neighbor → {OUT_NN_JSON.name}")
