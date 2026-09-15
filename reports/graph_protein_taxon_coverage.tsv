@@ -153,6 +153,7 @@ data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	cod
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dna_sensing_antiphage_defense	MECHANISTIC	1	0	1	1	1	2	2	PASS	0	0	-
 data/traits/genomics/dnd_system.yaml	traitmech:000221	Dnd system	dnd_dna_phosphorothioation_foreign_dna_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/dndcdea_pbeabcd_system.yaml	traitmech:000224	DndCDEA-PbeABCD system	dndcdea_pbeabcd_pt_viral_replication_inhibition	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -167,7 +168,7 @@ data/traits/genomics/hachiman_system.yaml	traitmech:000219	Hachiman system	hachi
 data/traits/genomics/mobile_genetic_element.yaml	traitmech:000089	mobile genetic element	mge_horizontal_gene_transfer	NONMECHANISTIC	5	1	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pangenome_openness.yaml	traitmech:000102	pangenome openness	pangenome_openness_hgt	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense system	phage_defense_system_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/phosphorothioate_defense_system.yaml	traitmech:000213	phosphorothioate defense system	phosphorothioate_dna_nicking_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/phosphorothioate_defense_system.yaml	traitmech:000213	phosphorothioate defense system	phosphorothioate_dna_restriction_antiviral_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	plasmid carriage	plasmid_conjugation_hgt	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
