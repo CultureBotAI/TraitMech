@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/restriction_modification_system.yaml
+  slug: restriction_modification_system
+session:
+  id: 2026-09-15T074928Z-codex-0a1cbc
+  timestamp: '2026-09-15T07:49:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Reparent R-M under phage defense
+  details: Reparented the reviewed restriction-modification system record from the broad genomics
+    root to the newly minted phage defense system parent so it sits under an exact antiviral
+    genome-defense superclass.

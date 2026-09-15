@@ -1187,6 +1187,7 @@ rare gene fraction	QUALITY	1	data/traits/genomics/pangenome_openness.yaml
 sampling bias	EXPERIMENTAL_FACTOR	1	data/traits/genomics/pangenome_openness.yaml
 annotation error	EXPERIMENTAL_FACTOR	1	data/traits/genomics/pangenome_openness.yaml
 apparent pangenome openness	QUALITY	1	data/traits/genomics/pangenome_openness.yaml
+bacteriophage pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/phage_defense_system.yaml
 toxin-antitoxin system	GENE_OR_PROTEIN	1	data/traits/genomics/plasmid_carriage.yaml
 plasmid vertical inheritance	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml
 restriction of incoming plasmid dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml

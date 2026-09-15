@@ -8,7 +8,7 @@ trait_category: GENOMICS
 term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
-- METPO:1000188
+- traitmech:000209
 synonyms:
 - synonym_text: R-M system
   synonym_type: RELATED_SYNONYM
@@ -242,4 +242,10 @@ curation_history:
     Type IV subtype island; the tracked report identifies modification-dependent restriction
     as distinct from the canonical Types I-III self/non-self mechanism. No research
     service was called.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:55:00Z'
+  curator: codex
+  action: REFINED_PARENT_TRAITS
+  changes: Reparented restriction-modification system from the broad genomics parent
+    to the newly minted phage defense system parent.
   llm_assisted: true

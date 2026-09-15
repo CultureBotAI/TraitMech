@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "phage-defense-system-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phage defense system",
+  "source_id": "traitmech:000209",
+  "source_file": "phage_defense_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot retains only obsolete phage defense, and GO:0051607 defense response to virus is a biological process rather than this GENOMICS possession trait. CRISPR-Cas, restriction-modification, BREX, DISARM, abortive-infection, and other mechanism terms are narrower than the umbrella parent curated here.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/phage_defense_system.html#phage-defense-system-xref-gap"
+ },
+ {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for acetate-splitting methanogenesis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1532,9 +1549,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 88,
+ "total_discussions": 89,
  "total_knowledge_gaps": 8,
- "total_source_entries": 87,
+ "total_source_entries": 88,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
