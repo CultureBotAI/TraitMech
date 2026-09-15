@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/dimethyl_sulfoxide_respiration.yaml
+  slug: dimethyl_sulfoxide_respiration
+session:
+  id: 2026-09-15T025331Z-codex-7f5282
+  timestamp: '2026-09-15T02:53:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add dimethyl sulfoxide respiration
+  details: Minted traitmech:000201 for DOI-backed dimethyl sulfoxide respiration, added Gralnick
+    2006 and Rosenbaum 2022 evidence snippets, added a Shewanella oneidensis MR-1 canonical
+    example, and reserved the upstream placeholder in proposals/metpo_traitmech_v78.
