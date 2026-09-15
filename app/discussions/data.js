@@ -511,6 +511,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-protein-example-gap"
  },
  {
+  "discussion_id": "selenate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level selenate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "selenate respiration",
+  "source_id": "traitmech:000202",
+  "source_file": "selenate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "Candidate EC, Rhea, and protein-family terms for selenate reductase describe narrower molecular functions, reactions, or enzymes rather than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-xref-gap"
+ },
+ {
   "discussion_id": "tetrathionate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level tetrathionate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1413,9 +1430,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 81,
+ "total_discussions": 82,
  "total_knowledge_gaps": 8,
- "total_source_entries": 80,
+ "total_source_entries": 81,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
