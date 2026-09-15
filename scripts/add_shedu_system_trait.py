@@ -1,0 +1,428 @@
+#!/usr/bin/env python3
+"""Add the Shedu system genomics trait."""
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+
+TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "shedu_system.yaml"
+
+LOEFF = "DOI:10.1016/j.cell.2024.11.030"
+GU = "DOI:10.1016/j.molcel.2024.12.004"
+
+CURATOR = "codex"
+TIMESTAMP = "2026-09-15T15:25:04Z"
+
+RECORD: dict[str, Any] = {
+    "identifier": "traitmech:000220",
+    "label": "Shedu system",
+    "definition": (
+        "A genomics trait describing possession of a Shedu antiphage "
+        "defense system encoding a single-protein immune nuclease with a "
+        "conserved nuclease core and regulated sensor domain architecture."
+    ),
+    "definition_source": LOEFF,
+    "trait_category": "GENOMICS",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["traitmech:000209"],
+    "synonyms": [
+        {
+            "synonym_text": "Shedu anti-phage defense system",
+            "synonym_type": "EXACT_SYNONYM",
+            "source": LOEFF,
+        }
+    ],
+    "evidence": [
+        {
+            "reference": LOEFF,
+            "snippet": (
+                "Shedu is a single-component defense system comprising a "
+                "putative nuclease SduA"
+            ),
+            "notes": (
+                "Loeff et al. support Shedu as a named, single-component "
+                "antiphage defense system centered on SduA."
+            ),
+        },
+        {
+            "reference": LOEFF,
+            "snippet": (
+                "End binding positions the DNA over the PD-(D/E)XK "
+                "nuclease domain, resulting in dsDNA nicking at a fixed "
+                "distance from the 5' end"
+            ),
+            "notes": (
+                "Loeff et al. connect Shedu DNA-end recognition to "
+                "positioned double-stranded DNA nicking."
+            ),
+        },
+        {
+            "reference": LOEFF,
+            "snippet": (
+                "The end-directed DNA nicking activity of Shedu prevents "
+                "propagation of linear DNA"
+            ),
+            "notes": (
+                "Loeff et al. support DNA-end-directed nicking as an "
+                "antiviral Shedu output that blocks linear DNA propagation."
+            ),
+        },
+        {
+            "reference": GU,
+            "snippet": (
+                "Prokaryotes possess diverse anti-bacteriophage immune "
+                "systems, including the single-protein Shedu nuclease"
+            ),
+            "notes": (
+                "Gu et al. also place Shedu among prokaryotic antiphage "
+                "immune systems and support its single-protein nuclease "
+                "architecture."
+            ),
+        },
+        {
+            "reference": GU,
+            "snippet": (
+                "we reveal the structural basis for activation of Bacillus "
+                "cereus Shedu"
+            ),
+            "notes": (
+                "Gu et al. support Bacillus cereus Shedu as a "
+                "structurally characterized representative."
+            ),
+        },
+        {
+            "reference": GU,
+            "snippet": (
+                "these data reveal Shedu as a broad family of immune "
+                "nucleases with a common nuclease core regulated by "
+                "diverse NTDs"
+            ),
+            "notes": (
+                "Gu et al. support defining Shedu at the immune-nuclease "
+                "family level while leaving N-terminal domain diversity "
+                "for narrower subtype review."
+            ),
+        },
+    ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:1396",
+            "taxon_label": "Bacillus cereus",
+            "note": (
+                "Gu et al. structurally characterized Bacillus cereus "
+                "Shedu and reported that this nuclease cleaves near DNA "
+                "ends with a 3' single-stranded overhang."
+            ),
+            "reference": GU,
+        },
+    ],
+    "causal_graphs": [
+        {
+            "graph_id": "shedu_dna_end_nicking",
+            "title": "Shedu immune nucleases nick DNA ends during antiphage defense",
+            "description": (
+                "Evidence-backed process sketch linking a Shedu locus to "
+                "SduA-like sensor-dependent nuclease activation, DNA-end "
+                "nicking, and inhibition of bacteriophage DNA propagation."
+            ),
+            "scope_status": "NONMECHANISTIC",
+            "scope_notes": (
+                "The graph captures SduA/Shedu immune-nuclease outputs "
+                "without asserting one universal N-terminal sensor class, "
+                "DNA-end substrate, overhang preference, phage target, "
+                "activation signal, escape strategy, or Bacillus-specific "
+                "mechanism across all Shedu homologs."
+            ),
+            "nodes": [
+                {
+                    "node_id": "shedu_locus",
+                    "label": "Shedu locus",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A Shedu antiphage defense locus encoding a "
+                        "single-protein SduA-like immune nuclease."
+                    ),
+                },
+                {
+                    "node_id": "shedu_nuclease_activation",
+                    "label": "Shedu nuclease activation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Sensor-dependent activation of the Shedu nuclease "
+                        "core."
+                    ),
+                },
+                {
+                    "node_id": "shedu_dna_end_nicking",
+                    "label": "Shedu DNA end nicking",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Shedu-mediated recognition and nicking of DNA near "
+                        "free or structured ends."
+                    ),
+                },
+                {
+                    "node_id": "phage_dna_propagation",
+                    "label": "phage DNA propagation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Propagation of bacteriophage DNA inside an "
+                        "infected bacterial host."
+                    ),
+                },
+                {
+                    "node_id": "shedu_system_trait",
+                    "label": "Shedu system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000220",
+                    "description": (
+                        "Possession of a genome-encoded Shedu antiphage "
+                        "defense system."
+                    ),
+                },
+                {
+                    "node_id": "phage_defense_system",
+                    "label": "phage defense system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000209",
+                    "description": (
+                        "Possession of one or more genome-encoded immune "
+                        "systems that inhibit bacteriophage infection."
+                    ),
+                },
+            ],
+            "edges": [
+                {
+                    "subject": "shedu_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "shedu_nuclease_activation",
+                    "description": (
+                        "Shedu loci encode SduA-like single-protein immune "
+                        "nucleases whose sensor domains regulate a common "
+                        "nuclease core."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": LOEFF,
+                            "snippet": (
+                                "Shedu is a single-component defense system "
+                                "comprising a putative nuclease SduA"
+                            ),
+                            "notes": (
+                                "Loeff et al. support the "
+                                "single-component SduA-centered Shedu "
+                                "architecture."
+                            ),
+                        },
+                        {
+                            "reference": GU,
+                            "snippet": (
+                                "these data reveal Shedu as a broad family "
+                                "of immune nucleases with a common nuclease "
+                                "core regulated by diverse NTDs"
+                            ),
+                            "notes": (
+                                "Gu et al. support Shedu as a broader family "
+                                "of sensor-regulated immune nucleases."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "shedu_nuclease_activation",
+                    "predicate": "enables",
+                    "predicate_id": "RO:0002327",
+                    "object": "shedu_dna_end_nicking",
+                    "description": (
+                        "Shedu sensor-domain activation enables PD-(D/E)XK "
+                        "nuclease-domain nicking of DNA near DNA ends."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": LOEFF,
+                            "snippet": (
+                                "the N-terminal domains of SduA form a "
+                                "clamp that recognizes free DNA ends"
+                            ),
+                            "notes": (
+                                "Loeff et al. support free DNA-end "
+                                "recognition by the N-terminal SduA clamp."
+                            ),
+                        },
+                        {
+                            "reference": LOEFF,
+                            "snippet": (
+                                "End binding positions the DNA over the "
+                                "PD-(D/E)XK nuclease domain, resulting in "
+                                "dsDNA nicking at a fixed distance from "
+                                "the 5' end"
+                            ),
+                            "notes": (
+                                "Loeff et al. connect DNA-end binding to "
+                                "SduA nuclease-domain positioning and "
+                                "double-stranded DNA nicking."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "shedu_dna_end_nicking",
+                    "predicate": "mitigates",
+                    "predicate_id": "METPO:2007407",
+                    "object": "phage_dna_propagation",
+                    "description": (
+                        "Shedu-mediated nicking or degradation of phage DNA "
+                        "ends inhibits bacteriophage DNA propagation."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": LOEFF,
+                            "snippet": (
+                                "The end-directed DNA nicking activity of "
+                                "Shedu prevents propagation of linear DNA"
+                            ),
+                            "notes": (
+                                "Loeff et al. support Shedu DNA nicking as "
+                                "a barrier to linear DNA propagation."
+                            ),
+                        },
+                        {
+                            "reference": GU,
+                            "snippet": (
+                                "Shedu cleaves near DNA ends with a 3' "
+                                "single-stranded overhang, likely enabling "
+                                "it to specifically degrade the DNA "
+                                "injected by certain bacteriophages"
+                            ),
+                            "notes": (
+                                "Gu et al. connect B. cereus Shedu DNA-end "
+                                "cleavage to likely degradation of injected "
+                                "phage DNA."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "shedu_dna_end_nicking",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": "shedu_system_trait",
+                    "description": (
+                        "DNA-end nicking is a characterized antiviral "
+                        "output that realizes the Shedu system trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": LOEFF,
+                            "snippet": (
+                                "Taken together, these results define the "
+                                "antiviral mechanism of Shedu systems"
+                            ),
+                            "notes": (
+                                "Loeff et al. connect DNA-end sensing and "
+                                "cleavage to the Shedu antiviral mechanism."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "subject": "shedu_system_trait",
+                    "predicate": "is a",
+                    "predicate_id": "rdfs:subClassOf",
+                    "object": "phage_defense_system",
+                    "description": (
+                        "Shedu system possession is a phage-defense-system "
+                        "trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": GU,
+                            "snippet": (
+                                "Prokaryotes possess diverse "
+                                "anti-bacteriophage immune systems, "
+                                "including the single-protein Shedu "
+                                "nuclease"
+                            ),
+                            "notes": (
+                                "Gu et al. place Shedu in the family of "
+                                "prokaryotic antiphage immune systems."
+                            ),
+                        }
+                    ],
+                },
+            ],
+        },
+    ],
+    "discussions": [
+        {
+            "discussion_id": "shedu-sensor-and-substrate-gap",
+            "prompt": (
+                "Resolve Shedu sensor classes and DNA substrate "
+                "preferences before minting narrower Shedu subtype or "
+                "mechanism children."
+            ),
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "Loeff et al. support free-DNA-end recognition and "
+                "end-directed DNA nicking by SduA, and Gu et al. support a "
+                "common Shedu nuclease core regulated by diverse "
+                "N-terminal domains, but Shedu homologs need separate "
+                "review before TraitMech asserts one universal "
+                "N-terminal sensor class, activating DNA substrate, "
+                "overhang preference, phage target, or escape strategy."
+            ),
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-15",
+        },
+    ],
+}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help="write the new TraitRecord YAML",
+    )
+    args = parser.parse_args()
+
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Minted Shedu system as a DOI-backed GENOMICS TraitRecord "
+            "under the phage defense system parent after an "
+            "ignored-and-hidden duplicate review found no exact live "
+            "TraitMech, METPO, or prior proposal record; the replacement "
+            "placeholder is reserved in proposals/metpo_traitmech_v97."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+
+    rel = TARGET.relative_to(REPO_ROOT)
+    if args.apply:
+        write_validated_trait(record, TARGET)
+        print(f"wrote {rel}")
+    else:
+        print(f"would write {rel}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

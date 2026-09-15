@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "shedu-sensor-and-substrate-gap",
+  "prompt": "Resolve Shedu sensor classes and DNA substrate preferences before minting narrower Shedu subtype or mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Shedu system",
+  "source_id": "traitmech:000220",
+  "source_file": "shedu_system.yaml",
+  "attaches_to": [],
+  "rationale": "Loeff et al. support free-DNA-end recognition and end-directed DNA nicking by SduA, and Gu et al. support a common Shedu nuclease core regulated by diverse N-terminal domains, but Shedu homologs need separate review before TraitMech asserts one universal N-terminal sensor class, activating DNA substrate, overhang preference, phage target, or escape strategy.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/shedu_system.html#shedu-sensor-and-substrate-gap"
+ },
+ {
   "discussion_id": "thoeris-family-signal-and-trigger-gap",
   "prompt": "Resolve Thoeris family architecture, signal chemistry, and phage triggering before minting narrower Thoeris mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1719,9 +1736,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 99,
- "total_knowledge_gaps": 18,
- "total_source_entries": 98,
+ "total_discussions": 100,
+ "total_knowledge_gaps": 19,
+ "total_source_entries": 99,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

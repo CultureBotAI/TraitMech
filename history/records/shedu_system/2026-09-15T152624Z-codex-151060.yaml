@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/shedu_system.yaml
+  slug: shedu_system
+session:
+  id: 2026-09-15T152624Z-codex-151060
+  timestamp: '2026-09-15T15:26:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Shedu system trait
+  details: Minted traitmech:000220 for the DOI-backed Shedu antiphage system with Loeff and
+    Gu evidence, a Bacillus cereus canonical example, a nonmechanistic DNA-end-nicking graph,
+    an open sensor-and-substrate knowledge gap, and an upstream METPO v97 placeholder reservation.
