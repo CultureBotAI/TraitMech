@@ -427,12 +427,14 @@ migrate-metpo-2026-06-12 *args:
 finalize-metpo-2026-06-12-review *args:
     uv run python scripts/finalize_metpo_2026_06_12_review.py {{args}}
 
-# Build slim deepwalk subset + METPO ↔ kg-microbe-node match table from the
-# local kg-microbe deepwalk artifact. Reads
-# ../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz
-# (latest available) and ../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv.
-build-embeddings:
-    uv run python scripts/build_embedding_index.py
+# Refresh both retained graph layouts from one explicitly selected source and
+# alias file. Each producer streams the source once; no legacy vector cache is used.
+# See docs/GRAPH_PROVENANCE.md for source selection and common-map prerequisites.
+build-embeddings source aliases:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    uv run --locked python scripts/build_embedding_index.py --src "$1" --kgm-aliases "$2" --method pacmap --umap-out data/embeddings/trait_umap.json
+    uv run --locked python scripts/build_embedding_index.py --src "$1" --kgm-aliases "$2" --method sfdp --umap-out data/embeddings/trait_graph.json
 
 # Render per-trait HTML pages + category indexes + landing into pages/.
 gen-pages *args:
@@ -614,8 +616,10 @@ deep-research-provider provider focus="causal_mechanism" *args="":
 audit-embedding-publication:
     uv run python scripts/check_graph_receipts.py
 
-# Composite: refresh METPO → seed → build embeddings → render pages.
-gen-site: seed-apply build-embeddings gen-pages
+# Prepare curation/seeding and refresh the common text map first (see the guide).
+# This local composite refreshes both specialty layouts, then validates/renders.
+# It never seeds YAML or invokes the semantic encoder implicitly.
+gen-site source aliases: (build-embeddings source aliases) gen-pages
 
 # NOTE: the shared LinkML module (mech_shared.yaml) is vendored byte-identical
 # across the Mech repos (package-namespaced path per repo). Its self-generated

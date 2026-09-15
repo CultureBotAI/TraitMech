@@ -27,7 +27,7 @@ Outputs
 
 Usage
 -----
-    just build-embeddings       # uses defaults
+    just build-embeddings /path/to/source.tsv.gz /path/to/metpo_alias_mappings.tsv
     python3 scripts/build_embedding_index.py --src <path>
 """
 

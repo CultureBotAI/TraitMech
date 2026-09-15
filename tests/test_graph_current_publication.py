@@ -32,8 +32,7 @@ def builder(monkeypatch):
     return module
 
 
-@pytest.fixture
-def generation(tmp_path, builder):
+def build_fixture_generation(tmp_path, builder, parent_order=("METPO:1", "METPO:2")):
     corpus = tmp_path / "data/traits/ecology"
     corpus.mkdir(parents=True)
     for name, doc in {
@@ -41,7 +40,7 @@ def generation(tmp_path, builder):
             "identifier": "traitmech:000001",
             "label": "Fixture phenotype",
             "trait_category": "ECOLOGY",
-            "parent_traits": ["METPO:1", "METPO:2"],
+            "parent_traits": list(parent_order),
         },
         "parent1": {"identifier": "METPO:1", "label": "First parent", "trait_category": "ECOLOGY"},
         "parent2": {"identifier": "METPO:2", "label": "Second parent", "trait_category": "ECOLOGY"},
@@ -144,6 +143,38 @@ def generation(tmp_path, builder):
             files, directory / name.replace(".json", ".metadata.json"), receipt
         )
     return tmp_path
+
+
+@pytest.fixture
+def generation(tmp_path, builder):
+    return build_fixture_generation(tmp_path, builder)
+
+
+def test_refreshing_only_pacmap_is_insufficient_but_both_layouts_pass(
+    generation, builder, tmp_path
+):
+    """Tiny handwritten generations only: no real encoder or graph reducer."""
+    import shutil
+
+    current = build_fixture_generation(tmp_path / "current", builder, ("METPO:2", "METPO:1"))
+    old_child = generation / "data/traits/ecology/child.yaml"
+    shutil.copyfile(current / "data/traits/ecology/child.yaml", old_child)
+    with pytest.raises(ValueError, match="corpus changed"):
+        check_graph_receipts(generation)
+    output = generation / "data/embeddings"
+    for name in (
+        "trait_umap.json",
+        "trait_umap.metadata.json",
+        "trait_nearest_neighbors.json",
+        "deepwalk_traits.tsv.gz",
+        "metpo_to_kgm_node.tsv",
+    ):
+        shutil.copyfile(current / "data/embeddings" / name, output / name)
+    with pytest.raises(ValueError):
+        check_graph_receipts(generation)
+    for name in ("trait_graph.json", "trait_graph.metadata.json"):
+        shutil.copyfile(current / "data/embeddings" / name, output / name)
+    assert len(check_graph_receipts(generation)) == 2
 
 
 def rebind_output(root, filename):
