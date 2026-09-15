@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/prophage.yaml
+  slug: prophage
+session:
+  id: 2026-09-15T062302Z-codex-d938b5
+  timestamp: '2026-09-15T06:23:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground the prophage SOS causal node
+  details: Grounded the ungrounded RecA-LexA SOS-response biological-process node in the prophage
+    lysogeny causal graph to GO:0009432 while adding traitmech:000207 SOS response as the
+    organism-level physiology trait.
