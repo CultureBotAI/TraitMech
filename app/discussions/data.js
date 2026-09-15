@@ -324,6 +324,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/kiwa_system.html#kiwa-activation-and-counterdefense-gap"
  },
  {
+  "discussion_id": "lamassu-subtype-and-effector-gap",
+  "prompt": "Resolve Lamassu subtype architecture, effector diversity, and viral-DNA trigger specificity before minting narrower Lamassu mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lamassu system",
+  "source_id": "traitmech:000232",
+  "source_file": "lamassu_system.yaml",
+  "attaches_to": [],
+  "rationale": "Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, but the first TraitRecord stays at the system level until separate review resolves long-versus-short LmuB clades, LmuC-independent subfamilies, effector-domain diversity, viral DNA triggers, and cell-death outputs across Lamassu loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1753,9 +1770,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 101,
- "total_knowledge_gaps": 20,
- "total_source_entries": 100,
+ "total_discussions": 102,
+ "total_knowledge_gaps": 21,
+ "total_source_entries": 101,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
