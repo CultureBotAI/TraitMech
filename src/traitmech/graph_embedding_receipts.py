@@ -30,8 +30,11 @@ def canonical(value: object) -> bytes:
 
 
 def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
     with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _frame(digest, value: str) -> None:
@@ -73,7 +76,7 @@ class GraphSource:
             raise ValueError("a graph node filter requires an explicit policy name")
         self.node_filter = node_filter
         self.filter_name = filter_name
-        self.receipt = None
+        self.receipt: dict | None = None
         self._started = False
 
     def __iter__(self):
@@ -138,9 +141,11 @@ class GraphSource:
             "prefixes": list(self.prefixes),
             "selection": "prefixes" if self.node_ids is None else "explicit-node-ids",
             "filter_policy": self.filter_name,
-            "requested_node_ids_sha256": None
-            if self.node_ids is None
-            else hashlib.sha256(canonical(sorted(self.node_ids))).hexdigest(),
+            "requested_node_ids_sha256": (
+                None
+                if self.node_ids is None
+                else hashlib.sha256(canonical(sorted(self.node_ids))).hexdigest()
+            ),
             "selected_nodes": len(seen),
             "dimensions": dimension,
             "selected_node_ids_sha256": hashlib.sha256(canonical(sorted(seen))).hexdigest(),
@@ -416,6 +421,8 @@ def load_receipt(path: Path) -> dict:
     if path.is_symlink():
         raise ValueError("symlinked graph receipt refused")
     receipt = json.loads(path.read_text())
+    if not isinstance(receipt, dict):
+        raise ValueError("graph receipt must be a JSON object")
     names = receipt.get("outputs", {})
     if (
         not isinstance(names, dict)
@@ -485,11 +492,11 @@ def publish_artifacts(staged: dict[Path, Path], receipt_path: Path, receipt: dic
                 temporary.unlink(missing_ok=True)
         success = True
     except BaseException:
-        for target, backup in reversed(changes):
-            if backup is None:
+        for target, previous_path in reversed(changes):
+            if previous_path is None:
                 target.unlink(missing_ok=True)
             else:
-                os.replace(backup, target)
+                os.replace(previous_path, target)
         raise
     finally:
         if success or not any(recovery.glob("previous-*")):
