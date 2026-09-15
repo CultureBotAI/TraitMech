@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/chlorate_respiration.yaml
+  slug: chlorate_respiration
+session:
+  id: 2026-09-15T012753Z-codex-4fb8ce
+  timestamp: '2026-09-15T01:27:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - synonyms
+  - evidence
+  - canonical_examples
+  - discussions
+  summary: Added the chlorate respiration TraitRecord
+  details: Minted traitmech:000198 as a DOI-backed anaerobic respiration trait, parented it
+    to METPO:1000802 anaerobic respiration, added dissimilatory chlorate reduction as a
+    related synonym, added Ideonella dechloratans as a canonical example, kept organism-level
+    chlorate respiration separate from narrower chlorate reductase and chlorite dismutase
+    classes, and reserved METPO:1015200 in proposals/metpo_traitmech_v75.
