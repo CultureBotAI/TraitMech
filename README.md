@@ -22,14 +22,14 @@ METPO source class and (optionally) to literature evidence.
 | ECOLOGY | 26 | 0 | 0 | 26 | 26 |
 | GENOMICS | 19 | 0 | 0 | 19 | 19 |
 | UPPER | 8 | 0 | 0 | 5 | 8 |
-| METABOLISM | 120 | 32 | 23 | 50 | 176 |
+| METABOLISM | 120 | 33 | 23 | 50 | 177 |
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
 | OTHER | 0 | 1 | 0 | 0 | 32 |
-| **TOTAL** | **427** | **80** | **50** | **355** | **595** |
+| **TOTAL** | **427** | **81** | **50** | **355** | **596** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
-`DEPRECATED`; three morphology records, 32 newer metabolism records,
+`DEPRECATED`; three morphology records, 33 newer metabolism records,
 forty-four physiology records, and one other record are `PROPOSED`, and
 thirty-eight records are still `SEEDED` (one environment, one metabolism,
 four morphology, one physiology, and thirty-one other).

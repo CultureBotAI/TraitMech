@@ -375,6 +375,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
  },
  {
+  "discussion_id": "dimethyl-sulfoxide-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level dimethyl sulfoxide respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "dimethyl sulfoxide respiration",
+  "source_id": "traitmech:000201",
+  "source_file": "dimethyl_sulfoxide_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has only an obsolete dimethyl sulfoxide respiration class. Candidate EC, Rhea, KEGG, and protein-family terms for DMSO reductase or DmsABC are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/dimethyl_sulfoxide_respiration.html#dimethyl-sulfoxide-respiration-xref-gap"
+ },
+ {
   "discussion_id": "fumarate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level fumarate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1396,9 +1413,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 80,
+ "total_discussions": 81,
  "total_knowledge_gaps": 8,
- "total_source_entries": 79,
+ "total_source_entries": 80,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
