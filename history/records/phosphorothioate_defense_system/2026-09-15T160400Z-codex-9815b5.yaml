@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/phosphorothioate_defense_system.yaml
+  slug: phosphorothioate_defense_system
+session:
+  id: 2026-09-15T160400Z-codex-9815b5
+  timestamp: '2026-09-15T16:04:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Split Dnd from phosphorothioate gap
+  details: Updated the phosphorothioate-subfamily knowledge gap after Dnd system curation
+    so it no longer lists Dnd among unresolved child systems while leaving SspBCD-E, SspABCD-sspFGH,
+    and archaeal phosphorothioate-based antiviral systems open for primary-source review.

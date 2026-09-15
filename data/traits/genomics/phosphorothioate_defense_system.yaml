@@ -170,16 +170,17 @@ causal_graphs:
         family.
 discussions:
 - discussion_id: phosphorothioate-subfamily-split-gap
-  prompt: Resolve Dnd, SspBCD-E, SspABCD-sspFGH, and archaeal phosphorothioate-based
-    antiviral systems before minting narrower children under the phosphorothioate
+  prompt: Resolve SspBCD-E, SspABCD-sspFGH, and archaeal phosphorothioate-based antiviral
+    systems before minting additional narrower children under the phosphorothioate
     defense parent.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Xiong et al. and Jiang et al. support at least two bacterial PT-related
-    R-M architectures with distinct restriction modules. The DndFGH macromolecular
-    machine, SspE single restriction enzyme, SspFGH systems, and archaeal phosphorothioate-based
-    antiviral systems need separate primary-source review before they can be split
-    into narrower TraitRecords with exact component groundings.
+  rationale: The Dnd system is now split out as traitmech:000221. Xiong et al. and
+    Jiang et al. still support additional bacterial PT-related R-M architectures with
+    distinct restriction modules, and the SspE single restriction enzyme, SspFGH systems,
+    and archaeal phosphorothioate-based antiviral systems need separate primary-source
+    review before they can be split into narrower TraitRecords with exact component
+    groundings.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -190,4 +191,11 @@ curation_history:
     under the phage defense system parent after an ignored-and-hidden duplicate review
     found no exact live TraitMech, METPO, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v90.
+  llm_assisted: true
+- timestamp: '2026-09-15T16:03:59Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Removed Dnd from the open phosphorothioate subfamily split-gap discussion
+    after minting traitmech:000221 for the Dnd system; SspE, SspFGH, and archaeal
+    phosphorothioate-based antiviral systems remain open.
   llm_assisted: true
