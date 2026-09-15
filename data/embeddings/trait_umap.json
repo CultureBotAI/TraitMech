@@ -4,3815 +4,6489 @@
     "label": "animal pathogen",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 2.0534262657165527,
-    "umap_y": -9.053628921508789
+    "kgm_nodes": [
+      "METPO:1004002"
+    ],
+    "umap_x": 1.556034803390503,
+    "umap_y": 10.924118041992188
   },
   {
     "id": "traitmech:000053",
     "label": "biofilm formation",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -12.069304466247559,
-    "umap_y": 8.592235565185547
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.682520866394043,
+    "umap_y": -2.8471028804779053
   },
   {
     "id": "METPO:1001101",
     "label": "biosafety level",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": -8.391400337219238,
-    "umap_y": 11.697464942932129
+    "kgm_nodes": [
+      "METPO:1001101"
+    ],
+    "umap_x": -5.655506610870361,
+    "umap_y": -7.335946559906006
   },
   {
     "id": "METPO:1001102",
     "label": "biosafety level 1",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 2.129417896270752,
-    "umap_y": -8.872756004333496
+    "kgm_nodes": [
+      "METPO:1001102"
+    ],
+    "umap_x": 1.8409442901611328,
+    "umap_y": 10.963885307312012
   },
   {
     "id": "METPO:1001103",
     "label": "biosafety level 2",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 2.0852348804473877,
-    "umap_y": -9.129212379455566
+    "kgm_nodes": [
+      "METPO:1001103"
+    ],
+    "umap_x": 1.9031950235366821,
+    "umap_y": 11.020560264587402
   },
   {
     "id": "METPO:1001104",
     "label": "biosafety level 3",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 2.347459077835083,
-    "umap_y": -8.906250953674316
+    "kgm_nodes": [
+      "METPO:1001104"
+    ],
+    "umap_x": 2.6318483352661133,
+    "umap_y": 11.130928993225098
   },
   {
     "id": "METPO:1001105",
     "label": "biosafety level 4",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": -8.392801284790039,
-    "umap_y": 11.829561233520508
+    "kgm_nodes": [
+      "METPO:1001105"
+    ],
+    "umap_x": -5.704005718231201,
+    "umap_y": -7.487061500549316
   },
   {
     "id": "METPO:1001106",
     "label": "biosafety level 5",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": -8.54138469696045,
-    "umap_y": 11.773144721984863
+    "kgm_nodes": [
+      "METPO:1001106"
+    ],
+    "umap_x": -5.800848007202148,
+    "umap_y": -7.539896488189697
   },
   {
     "id": "traitmech:000042",
     "label": "commensalism",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.674339294433594,
-    "umap_y": 8.794027328491211
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.049266815185547,
+    "umap_y": -3.5502538681030273
   },
   {
     "id": "traitmech:000045",
     "label": "endosymbiosis",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.365464210510254,
-    "umap_y": 8.399942398071289
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.816139221191406,
+    "umap_y": -2.177340030670166
   },
   {
     "id": "traitmech:000048",
     "label": "free-living",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.928714752197266,
-    "umap_y": 8.610008239746094
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.455577850341797,
+    "umap_y": -2.3818020820617676
   },
   {
     "id": "traitmech:000052",
     "label": "gut-associated",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.93063735961914,
-    "umap_y": 9.447173118591309
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.505888938903809,
+    "umap_y": -2.3420536518096924
   },
   {
     "id": "traitmech:000047",
     "label": "habitat association",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -12.382932662963867,
-    "umap_y": 9.35684585571289
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.958444595336914,
+    "umap_y": -3.8192436695098877
   },
   {
     "id": "traitmech:000049",
     "label": "host-associated",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.19266128540039,
-    "umap_y": 8.765027046203613
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.608370780944824,
+    "umap_y": -2.3745017051696777
   },
   {
     "id": "METPO:1004004",
     "label": "human pathogen",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 1.952021598815918,
-    "umap_y": -9.011397361755371
+    "kgm_nodes": [
+      "METPO:1004004"
+    ],
+    "umap_x": 1.7856563329696655,
+    "umap_y": 10.891570091247559
   },
   {
     "id": "traitmech:000041",
     "label": "mutualism",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.746490478515625,
-    "umap_y": 8.513118743896484
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.356217384338379,
+    "umap_y": -3.224541425704956
   },
   {
     "id": "traitmech:000044",
     "label": "nitrogen-fixing symbiosis",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -12.521015167236328,
-    "umap_y": 9.960966110229492
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.961504936218262,
+    "umap_y": -1.6251057386398315
   },
   {
     "id": "traitmech:000046",
     "label": "opportunistic pathogen",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -10.627737998962402,
-    "umap_y": 9.003219604492188
+    "kgm_nodes": [
+      "METPO:1004000"
+    ],
+    "umap_x": -12.331581115722656,
+    "umap_y": -3.6494007110595703
   },
   {
     "id": "traitmech:000043",
     "label": "parasitism",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -12.456466674804688,
-    "umap_y": 8.441581726074219
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.124588012695312,
+    "umap_y": -3.6336188316345215
   },
   {
     "id": "METPO:1004000",
     "label": "pathogenic to host",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": -10.806285858154297,
-    "umap_y": 9.025718688964844
+    "kgm_nodes": [
+      "METPO:1004000"
+    ],
+    "umap_x": -12.024101257324219,
+    "umap_y": -3.917145252227783
   },
   {
     "id": "METPO:1004003",
     "label": "plant pathogen",
     "category": "ecology",
     "match_method": "direct_metpo",
-    "umap_x": 1.8428460359573364,
-    "umap_y": -9.21232795715332
+    "kgm_nodes": [
+      "METPO:1004003"
+    ],
+    "umap_x": 1.4506689310073853,
+    "umap_y": 10.877250671386719
   },
   {
     "id": "traitmech:000054",
     "label": "predatory bacterium",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -12.214284896850586,
-    "umap_y": 8.798027038574219
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.114933967590332,
+    "umap_y": -3.7220618724823
   },
   {
     "id": "traitmech:000051",
     "label": "rhizosphere association",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.323186874389648,
-    "umap_y": 9.066346168518066
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.195268630981445,
+    "umap_y": -2.5956530570983887
   },
   {
     "id": "traitmech:000055",
     "label": "saprotrophy",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.833250045776367,
-    "umap_y": 8.307490348815918
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.914006233215332,
+    "umap_y": -2.2445240020751953
   },
   {
     "id": "traitmech:000050",
     "label": "soil-dwelling",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.770246505737305,
-    "umap_y": 8.974783897399902
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.986804008483887,
+    "umap_y": -2.798978805541992
   },
   {
     "id": "traitmech:000040",
     "label": "symbiosis",
     "category": "ecology",
     "match_method": "parent_proxy",
-    "umap_x": -11.514337539672852,
-    "umap_y": 8.209333419799805
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.665128707885742,
+    "umap_y": -3.6633763313293457
   },
   {
     "id": "METPO:1003003",
     "label": "acidophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.232117652893066,
-    "umap_y": 10.195423126220703
+    "kgm_nodes": [
+      "METPO:1003003"
+    ],
+    "umap_x": -4.5562310218811035,
+    "umap_y": -9.002273559570312
   },
   {
     "id": "METPO:1003008",
     "label": "acidotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.130916595458984,
-    "umap_y": 10.228591918945312
+    "kgm_nodes": [
+      "METPO:1003008"
+    ],
+    "umap_x": -4.457442760467529,
+    "umap_y": -9.027677536010742
   },
   {
     "id": "METPO:1000602",
     "label": "aerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.2700276374816895,
-    "umap_y": -8.422645568847656
+    "kgm_nodes": [
+      "METPO:1000602"
+    ],
+    "umap_x": 1.644883394241333,
+    "umap_y": 10.805112838745117
   },
   {
     "id": "METPO:1000609",
     "label": "aerotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 0.7192761898040771,
-    "umap_y": -7.031426906585693
+    "kgm_nodes": [
+      "METPO:1000609"
+    ],
+    "umap_x": 0.29055047035217285,
+    "umap_y": 8.944931983947754
   },
   {
     "id": "METPO:1003009",
     "label": "alkalotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.235400199890137,
-    "umap_y": 10.129903793334961
+    "kgm_nodes": [
+      "METPO:1003009"
+    ],
+    "umap_x": -4.521658420562744,
+    "umap_y": -9.098258018493652
   },
   {
     "id": "METPO:1003002",
-    "label": "alkaphilic",
+    "label": "alkaliphilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.189486503601074,
-    "umap_y": 10.187764167785645
+    "kgm_nodes": [
+      "METPO:1003002"
+    ],
+    "umap_x": -4.5554890632629395,
+    "umap_y": -9.045577049255371
   },
   {
     "id": "METPO:1000603",
     "label": "anaerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 3.3954060077667236,
-    "umap_y": -7.467351913452148
+    "kgm_nodes": [
+      "METPO:1000603"
+    ],
+    "umap_x": 2.819580316543579,
+    "umap_y": 10.123738288879395
   },
   {
     "id": "traitmech:000017",
     "label": "arsenic tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.373528480529785,
-    "umap_y": 9.43763256072998
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.008012771606445,
+    "umap_y": -2.942829132080078
   },
   {
     "id": "traitmech:000013",
     "label": "cadmium tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.224371910095215,
-    "umap_y": 8.154192924499512
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.374226570129395,
+    "umap_y": -3.7566139698028564
+  },
+  {
+    "id": "METPO:1005021",
+    "label": "capnophilic",
+    "category": "environment",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005021"
+    ],
+    "umap_x": -11.514030456542969,
+    "umap_y": -2.9871959686279297
   },
   {
     "id": "traitmech:000015",
     "label": "cobalt tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.491982460021973,
-    "umap_y": 8.318078994750977
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.553637504577637,
+    "umap_y": -3.3473217487335205
   },
   {
     "id": "traitmech:000018",
     "label": "copper tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -11.686033248901367,
-    "umap_y": 8.411673545837402
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.586615562438965,
+    "umap_y": -3.3266520500183105
   },
   {
     "id": "METPO:1000534",
     "label": "delta phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.958510398864746,
-    "umap_y": 13.309647560119629
+    "kgm_nodes": [
+      "METPO:1000534"
+    ],
+    "umap_x": -5.687495231628418,
+    "umap_y": -10.905360221862793
   },
   {
     "id": "traitmech:000010",
     "label": "desiccation tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.003994941711426,
-    "umap_y": 9.354185104370117
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.71042251586914,
+    "umap_y": -2.5487022399902344
   },
   {
     "id": "METPO:1000627",
     "label": "euryhaline",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.1342748403549194,
-    "umap_y": -6.1041789054870605
+    "kgm_nodes": [
+      "METPO:1000627"
+    ],
+    "umap_x": 1.801000952720642,
+    "umap_y": 7.995028495788574
   },
   {
     "id": "METPO:1000721",
     "label": "extreme hyperthermophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -9.701571464538574,
-    "umap_y": 10.819121360778809
+    "kgm_nodes": [
+      "METPO:1000721"
+    ],
+    "umap_x": -5.646162509918213,
+    "umap_y": -8.080826759338379
   },
   {
     "id": "METPO:1000628",
     "label": "extremely halophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.5403129458427429,
-    "umap_y": -6.308233261108398
+    "kgm_nodes": [
+      "METPO:1000628"
+    ],
+    "umap_x": 1.8455519676208496,
+    "umap_y": 8.387980461120605
   },
   {
     "id": "METPO:1000612",
     "label": "facultative oxygen preference",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.0837336778640747,
-    "umap_y": -9.39795970916748
+    "kgm_nodes": [
+      "METPO:1000612"
+    ],
+    "umap_x": -1.1206817626953125,
+    "umap_y": 12.6661958694458
   },
   {
     "id": "METPO:1000720",
     "label": "facultative psychrophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -9.685354232788086,
-    "umap_y": 10.639945983886719
+    "kgm_nodes": [
+      "METPO:1000720"
+    ],
+    "umap_x": -5.750667572021484,
+    "umap_y": -7.8775153160095215
   },
   {
     "id": "METPO:1003007",
     "label": "facultatively acidophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.224142074584961,
-    "umap_y": 10.18856143951416
+    "kgm_nodes": [
+      "METPO:1003007"
+    ],
+    "umap_x": -4.5161638259887695,
+    "umap_y": -9.043034553527832
   },
   {
     "id": "METPO:1000608",
     "label": "facultatively aerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 3.65856671333313,
-    "umap_y": -7.72327995300293
+    "kgm_nodes": [
+      "METPO:1000608"
+    ],
+    "umap_x": 2.8658201694488525,
+    "umap_y": 10.137042045593262
   },
   {
     "id": "METPO:1003005",
-    "label": "facultatively alkaphilic",
+    "label": "facultatively alkaliphilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.201082229614258,
-    "umap_y": 10.229509353637695
+    "kgm_nodes": [
+      "METPO:1003005"
+    ],
+    "umap_x": -4.527272701263428,
+    "umap_y": -9.022953033447266
   },
   {
     "id": "METPO:1000605",
     "label": "facultatively anaerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 0.199300155043602,
-    "umap_y": -8.690652847290039
+    "kgm_nodes": [
+      "METPO:1000605"
+    ],
+    "umap_x": 0.14327821135520935,
+    "umap_y": 11.388412475585938
   },
   {
     "id": "METPO:1000535",
     "label": "growth range phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.083722114562988,
-    "umap_y": 13.099308013916016
+    "kgm_nodes": [
+      "METPO:1000535"
+    ],
+    "umap_x": -5.649654865264893,
+    "umap_y": -10.726151466369629
   },
   {
     "id": "METPO:1000621",
     "label": "haloalkaliphilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.9853905439376831,
-    "umap_y": -6.050639629364014
+    "kgm_nodes": [
+      "METPO:1000621"
+    ],
+    "umap_x": 1.7897001504898071,
+    "umap_y": 8.145112991333008
   },
   {
     "id": "METPO:1000620",
     "label": "halophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.737703263759613,
-    "umap_y": -6.324021816253662
+    "kgm_nodes": [
+      "METPO:1000620"
+    ],
+    "umap_x": 1.486322045326233,
+    "umap_y": 8.403228759765625
   },
   {
     "id": "METPO:1000629",
     "label": "halophily preference",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.9780582189559937,
-    "umap_y": -6.077995777130127
+    "kgm_nodes": [
+      "METPO:1000629"
+    ],
+    "umap_x": 1.8749719858169556,
+    "umap_y": 8.07116985321045
   },
   {
     "id": "METPO:1000622",
     "label": "halotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.7108283042907715,
-    "umap_y": -6.122411727905273
+    "kgm_nodes": [
+      "METPO:1000622"
+    ],
+    "umap_x": 1.5349947214126587,
+    "umap_y": 8.259964942932129
   },
   {
     "id": "METPO:1000617",
     "label": "hyperthermophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 1.1528412103652954,
-    "umap_y": -6.9157843589782715
+    "kgm_nodes": [
+      "METPO:1000617"
+    ],
+    "umap_x": 1.2804137468338013,
+    "umap_y": 9.492712020874023
   },
   {
     "id": "traitmech:000008",
     "label": "ionizing radiation tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.066203117370605,
-    "umap_y": 9.461997032165527
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.486661911010742,
+    "umap_y": -2.922574758529663
   },
   {
     "id": "traitmech:000016",
     "label": "mercury tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.165177345275879,
-    "umap_y": 8.38830852508545
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.061461448669434,
+    "umap_y": -3.4295661449432373
   },
   {
     "id": "METPO:1000615",
     "label": "mesophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.597216844558716,
-    "umap_y": -9.059897422790527
+    "kgm_nodes": [
+      "METPO:1000615"
+    ],
+    "umap_x": 2.1891822814941406,
+    "umap_y": 11.107950210571289
   },
   {
     "id": "traitmech:000012",
     "label": "metal tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.317890167236328,
-    "umap_y": 9.759778022766113
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.83127212524414,
+    "umap_y": -3.596235513687134
   },
   {
     "id": "METPO:1000604",
     "label": "microaerophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.0576086044311523,
-    "umap_y": -8.894759178161621
+    "kgm_nodes": [
+      "METPO:1000604"
+    ],
+    "umap_x": 1.6102993488311768,
+    "umap_y": 11.211142539978027
   },
   {
     "id": "METPO:1000610",
     "label": "microaerotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -10.547723770141602,
-    "umap_y": 8.591349601745605
+    "kgm_nodes": [
+      "METPO:1000610"
+    ],
+    "umap_x": -11.853004455566406,
+    "umap_y": -2.8362679481506348
   },
   {
     "id": "METPO:1000623",
     "label": "moderately halophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.1782517433166504,
-    "umap_y": -8.320127487182617
+    "kgm_nodes": [
+      "METPO:1000623"
+    ],
+    "umap_x": 2.0110538005828857,
+    "umap_y": 10.615200996398926
   },
   {
     "id": "METPO:1000335",
     "label": "NaCl delta",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.999184608459473,
-    "umap_y": 13.267927169799805
+    "kgm_nodes": [
+      "METPO:1000335"
+    ],
+    "umap_x": -5.676349639892578,
+    "umap_y": -10.883271217346191
   },
   {
     "id": "METPO:1000482",
     "label": "NaCl delta high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.998265027999878,
-    "umap_y": -9.093317031860352
+    "kgm_nodes": [
+      "METPO:1000482"
+    ],
+    "umap_x": -2.3954505920410156,
+    "umap_y": 11.538147926330566
   },
   {
     "id": "METPO:1000479",
     "label": "NaCl delta low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.7535715103149414,
-    "umap_y": -9.48286247253418
+    "kgm_nodes": [
+      "METPO:1000479"
+    ],
+    "umap_x": -1.3870494365692139,
+    "umap_y": 11.511425971984863
   },
   {
     "id": "METPO:1000480",
     "label": "NaCl delta mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.2307307720184326,
-    "umap_y": -10.19038200378418
+    "kgm_nodes": [
+      "METPO:1000480"
+    ],
+    "umap_x": -2.5002777576446533,
+    "umap_y": 11.259557723999023
   },
   {
     "id": "METPO:1000481",
     "label": "NaCl delta mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.654048442840576,
-    "umap_y": -10.241288185119629
+    "kgm_nodes": [
+      "METPO:1000481"
+    ],
+    "umap_x": -2.8424477577209473,
+    "umap_y": 11.203907012939453
   },
   {
     "id": "METPO:1000333",
     "label": "NaCl optimum",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.990445137023926,
-    "umap_y": 13.284916877746582
+    "kgm_nodes": [
+      "METPO:1000333"
+    ],
+    "umap_x": -5.675894737243652,
+    "umap_y": -10.910713195800781
   },
   {
     "id": "METPO:1000468",
     "label": "NaCl optimum high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.598156690597534,
-    "umap_y": -8.731751441955566
+    "kgm_nodes": [
+      "METPO:1000468"
+    ],
+    "umap_x": -2.098832607269287,
+    "umap_y": 11.64898681640625
   },
   {
     "id": "METPO:1000465",
     "label": "NaCl optimum low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.296177387237549,
-    "umap_y": -10.19495677947998
+    "kgm_nodes": [
+      "METPO:1000465"
+    ],
+    "umap_x": -2.05945086479187,
+    "umap_y": 11.93879508972168
   },
   {
     "id": "METPO:1000466",
     "label": "NaCl optimum mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.5982868671417236,
-    "umap_y": -10.510955810546875
+    "kgm_nodes": [
+      "METPO:1000466"
+    ],
+    "umap_x": -2.8101272583007812,
+    "umap_y": 11.607921600341797
   },
   {
     "id": "METPO:1000467",
     "label": "NaCl optimum mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.1710238456726074,
-    "umap_y": -9.159286499023438
+    "kgm_nodes": [
+      "METPO:1000467"
+    ],
+    "umap_x": -2.277346611022949,
+    "umap_y": 11.581954956054688
   },
   {
     "id": "METPO:1000334",
     "label": "NaCl range",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.073163032531738,
-    "umap_y": 13.134215354919434
+    "kgm_nodes": [
+      "METPO:1000334"
+    ],
+    "umap_x": -5.685362339019775,
+    "umap_y": -10.791325569152832
   },
   {
     "id": "METPO:1000472",
     "label": "NaCl range high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.9450838565826416,
-    "umap_y": -9.093822479248047
+    "kgm_nodes": [
+      "METPO:1000472"
+    ],
+    "umap_x": -2.401785373687744,
+    "umap_y": 11.56057357788086
   },
   {
     "id": "METPO:1000469",
     "label": "NaCl range low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.7640738487243652,
-    "umap_y": -10.564393997192383
+    "kgm_nodes": [
+      "METPO:1000469"
+    ],
+    "umap_x": -2.9318015575408936,
+    "umap_y": 11.497900009155273
   },
   {
     "id": "METPO:1000470",
     "label": "NaCl range mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.882258176803589,
-    "umap_y": -10.584646224975586
+    "kgm_nodes": [
+      "METPO:1000470"
+    ],
+    "umap_x": -2.921260356903076,
+    "umap_y": 11.362507820129395
   },
   {
     "id": "METPO:1000471",
     "label": "NaCl range mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.7809083461761475,
-    "umap_y": -9.96096420288086
+    "kgm_nodes": [
+      "METPO:1000471"
+    ],
+    "umap_x": -2.767319440841675,
+    "umap_y": 11.2092924118042
   },
   {
     "id": "METPO:1003001",
     "label": "neutrophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.28787899017334,
-    "umap_y": 10.216596603393555
+    "kgm_nodes": [
+      "METPO:1003001"
+    ],
+    "umap_x": -4.453435897827148,
+    "umap_y": -8.98918342590332
   },
   {
     "id": "METPO:1000624",
     "label": "non halophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.14388370513916,
-    "umap_y": -8.000482559204102
+    "kgm_nodes": [
+      "METPO:1000624"
+    ],
+    "umap_x": 1.919777512550354,
+    "umap_y": 10.248291969299316
   },
   {
     "id": "METPO:1003006",
     "label": "obligately acidophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.230524063110352,
-    "umap_y": 10.250199317932129
+    "kgm_nodes": [
+      "METPO:1003006"
+    ],
+    "umap_x": -4.555837631225586,
+    "umap_y": -9.032502174377441
   },
   {
     "id": "METPO:1000606",
     "label": "obligately aerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 0.012982863001525402,
-    "umap_y": -8.839852333068848
+    "kgm_nodes": [
+      "METPO:1000606"
+    ],
+    "umap_x": 0.32410722970962524,
+    "umap_y": 11.103874206542969
   },
   {
     "id": "METPO:1003004",
-    "label": "obligately alkaphilic",
+    "label": "obligately alkaliphilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.178089141845703,
-    "umap_y": 10.134963035583496
+    "kgm_nodes": [
+      "METPO:1003004"
+    ],
+    "umap_x": -4.524432182312012,
+    "umap_y": -9.05642032623291
   },
   {
     "id": "METPO:1000607",
     "label": "obligately anaerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 1.2681127786636353,
-    "umap_y": -7.310666561126709
+    "kgm_nodes": [
+      "METPO:1000607"
+    ],
+    "umap_x": 1.3638381958007812,
+    "umap_y": 9.769440650939941
   },
   {
     "id": "traitmech:000002",
     "label": "obligately piezophilic",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.144035339355469,
-    "umap_y": 8.803210258483887
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.939530372619629,
+    "umap_y": -2.1488869190216064
   },
   {
     "id": "METPO:1000536",
     "label": "optimum phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.0202054977417,
-    "umap_y": 13.248350143432617
+    "kgm_nodes": [
+      "METPO:1000536"
+    ],
+    "umap_x": -5.680553436279297,
+    "umap_y": -10.853105545043945
   },
   {
     "id": "METPO:1000601",
     "label": "oxygen preference",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -10.987464904785156,
-    "umap_y": 8.617622375488281
+    "kgm_nodes": [
+      "METPO:1000601"
+    ],
+    "umap_x": -11.768499374389648,
+    "umap_y": -3.00705885887146
   },
   {
     "id": "METPO:1000232",
     "label": "pH delta",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.995103359222412,
-    "umap_y": 13.285279273986816
+    "kgm_nodes": [
+      "METPO:1000232"
+    ],
+    "umap_x": -5.639829635620117,
+    "umap_y": -10.878085136413574
   },
   {
     "id": "METPO:1000478",
     "label": "pH delta high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.5268795490264893,
-    "umap_y": -8.980661392211914
+    "kgm_nodes": [
+      "METPO:1000478"
+    ],
+    "umap_x": -2.1159186363220215,
+    "umap_y": 11.60501480102539
   },
   {
     "id": "METPO:1000474",
     "label": "pH delta low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.039557933807373,
-    "umap_y": -10.249937057495117
+    "kgm_nodes": [
+      "METPO:1000474"
+    ],
+    "umap_x": -2.0819308757781982,
+    "umap_y": 12.252105712890625
   },
   {
     "id": "METPO:1000475",
     "label": "pH delta mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.1767234802246094,
-    "umap_y": -10.888221740722656
+    "kgm_nodes": [
+      "METPO:1000475"
+    ],
+    "umap_x": -2.8692657947540283,
+    "umap_y": 12.51304817199707
   },
   {
     "id": "METPO:1000476",
     "label": "pH delta mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.394941806793213,
-    "umap_y": -11.130990028381348
+    "kgm_nodes": [
+      "METPO:1000476"
+    ],
+    "umap_x": -3.0762763023376465,
+    "umap_y": 12.493196487426758
   },
   {
     "id": "METPO:1000477",
     "label": "pH delta mid3",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.835059881210327,
-    "umap_y": -9.194039344787598
+    "kgm_nodes": [
+      "METPO:1000477"
+    ],
+    "umap_x": -2.056640386581421,
+    "umap_y": 11.662960052490234
   },
   {
     "id": "METPO:1000473",
     "label": "pH delta very low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.937479853630066,
-    "umap_y": -9.42963981628418
+    "kgm_nodes": [
+      "METPO:1000473"
+    ],
+    "umap_x": -1.5883150100708008,
+    "umap_y": 11.603043556213379
   },
   {
     "id": "METPO:1003000",
     "label": "pH growth preference",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.424833297729492,
-    "umap_y": 10.331302642822266
+    "kgm_nodes": [
+      "METPO:1003000"
+    ],
+    "umap_x": -4.770965099334717,
+    "umap_y": -8.66130256652832
   },
   {
     "id": "METPO:1000331",
     "label": "pH optimum",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.009117126464844,
-    "umap_y": 13.263565063476562
+    "kgm_nodes": [
+      "METPO:1000331"
+    ],
+    "umap_x": -5.659337997436523,
+    "umap_y": -10.869597434997559
   },
   {
     "id": "METPO:1000458",
     "label": "pH optimum high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.779818296432495,
-    "umap_y": -8.974931716918945
+    "kgm_nodes": [
+      "METPO:1000458"
+    ],
+    "umap_x": -1.9287124872207642,
+    "umap_y": 11.847024917602539
   },
   {
     "id": "METPO:1000455",
     "label": "pH optimum low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.265585422515869,
-    "umap_y": -9.335685729980469
+    "kgm_nodes": [
+      "METPO:1000455"
+    ],
+    "umap_x": -1.5595096349716187,
+    "umap_y": 11.724265098571777
   },
   {
     "id": "METPO:1000456",
     "label": "pH optimum mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.881192445755005,
-    "umap_y": -10.972664833068848
+    "kgm_nodes": [
+      "METPO:1000456"
+    ],
+    "umap_x": -2.6798648834228516,
+    "umap_y": 12.489606857299805
   },
   {
     "id": "METPO:1000457",
     "label": "pH optimum mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.3190860748291016,
-    "umap_y": -11.027366638183594
+    "kgm_nodes": [
+      "METPO:1000457"
+    ],
+    "umap_x": -2.989436388015747,
+    "umap_y": 12.386326789855957
   },
   {
     "id": "METPO:1000531",
     "label": "pH phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.053579330444336,
-    "umap_y": 13.20495319366455
+    "kgm_nodes": [
+      "METPO:1000531"
+    ],
+    "umap_x": -5.673404693603516,
+    "umap_y": -10.811849594116211
   },
   {
     "id": "METPO:1000332",
     "label": "pH range",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.999044418334961,
-    "umap_y": 13.285964012145996
+    "kgm_nodes": [
+      "METPO:1000332"
+    ],
+    "umap_x": -5.679418087005615,
+    "umap_y": -10.812786102294922
   },
   {
     "id": "METPO:1000464",
     "label": "pH range high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.8024349212646484,
-    "umap_y": -8.969295501708984
+    "kgm_nodes": [
+      "METPO:1000464"
+    ],
+    "umap_x": -2.1248319149017334,
+    "umap_y": 11.700913429260254
   },
   {
     "id": "METPO:1000460",
     "label": "pH range low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.3795723915100098,
-    "umap_y": -11.211310386657715
+    "kgm_nodes": [
+      "METPO:1000460"
+    ],
+    "umap_x": -3.1120524406433105,
+    "umap_y": 12.52119255065918
   },
   {
     "id": "METPO:1000461",
     "label": "pH range mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.297684669494629,
-    "umap_y": -11.147130966186523
+    "kgm_nodes": [
+      "METPO:1000461"
+    ],
+    "umap_x": -3.1570539474487305,
+    "umap_y": 12.58040714263916
   },
   {
     "id": "METPO:1000462",
     "label": "pH range mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.3441150188446045,
-    "umap_y": -11.167606353759766
+    "kgm_nodes": [
+      "METPO:1000462"
+    ],
+    "umap_x": -3.2487385272979736,
+    "umap_y": 12.560408592224121
   },
   {
     "id": "METPO:1000463",
     "label": "pH range mid3",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.3591134548187256,
-    "umap_y": -10.962404251098633
+    "kgm_nodes": [
+      "METPO:1000463"
+    ],
+    "umap_x": -3.2505054473876953,
+    "umap_y": 12.449010848999023
   },
   {
     "id": "METPO:1000459",
     "label": "pH range very low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.3321330547332764,
-    "umap_y": -9.142457962036133
+    "kgm_nodes": [
+      "METPO:1000459"
+    ],
+    "umap_x": -1.7018169164657593,
+    "umap_y": 11.507282257080078
   },
   {
     "id": "traitmech:000001",
     "label": "piezophilic",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -11.744693756103516,
-    "umap_y": 8.111326217651367
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.84689998626709,
+    "umap_y": -1.9107487201690674
   },
   {
     "id": "traitmech:000003",
     "label": "piezotolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.382485389709473,
-    "umap_y": 9.394017219543457
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.243861198425293,
+    "umap_y": -2.338675022125244
   },
   {
     "id": "traitmech:000006",
     "label": "pressure delta",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.265857696533203,
-    "umap_y": 9.827585220336914
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.085800170898438,
+    "umap_y": -2.157776355743408
   },
   {
     "id": "traitmech:000004",
     "label": "pressure optimum",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.44268798828125,
-    "umap_y": 8.003287315368652
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.589712142944336,
+    "umap_y": -2.528045892715454
   },
   {
     "id": "traitmech:000005",
     "label": "pressure range",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.004920959472656,
-    "umap_y": 8.868583679199219
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.382013320922852,
+    "umap_y": -1.899827241897583
   },
   {
     "id": "METPO:1000614",
     "label": "psychrophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 2.4036803245544434,
-    "umap_y": -8.952303886413574
+    "kgm_nodes": [
+      "METPO:1000614"
+    ],
+    "umap_x": 1.836147665977478,
+    "umap_y": 10.818537712097168
   },
   {
     "id": "METPO:1000618",
     "label": "psychrotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -9.860055923461914,
-    "umap_y": 10.853219985961914
+    "kgm_nodes": [
+      "METPO:1000618"
+    ],
+    "umap_x": -5.772031784057617,
+    "umap_y": -8.192620277404785
   },
   {
     "id": "traitmech:000007",
     "label": "radiotolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -12.19880199432373,
-    "umap_y": 9.028735160827637
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.48287582397461,
+    "umap_y": -3.221264362335205
   },
   {
     "id": "METPO:1000532",
     "label": "salinity phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.029982566833496,
-    "umap_y": 13.237607955932617
+    "kgm_nodes": [
+      "METPO:1000532"
+    ],
+    "umap_x": -5.647515296936035,
+    "umap_y": -10.823220252990723
   },
   {
     "id": "METPO:1000625",
     "label": "slightly halophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.9127627611160278,
-    "umap_y": -6.139052391052246
+    "kgm_nodes": [
+      "METPO:1000625"
+    ],
+    "umap_x": 1.6343960762023926,
+    "umap_y": 8.070582389831543
   },
   {
     "id": "METPO:1000626",
     "label": "stenohaline",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.0494256019592285,
-    "umap_y": -6.061234474182129
+    "kgm_nodes": [
+      "METPO:1000626"
+    ],
+    "umap_x": 1.841689109802246,
+    "umap_y": 8.136466026306152
   },
   {
     "id": "METPO:1000611",
     "label": "strictly anaerobic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 1.7011507749557495,
-    "umap_y": -7.080238342285156
+    "kgm_nodes": [
+      "METPO:1000611"
+    ],
+    "umap_x": 1.7436516284942627,
+    "umap_y": 10.30118465423584
   },
   {
     "id": "METPO:1000303",
     "label": "temperature delta",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.00217056274414,
-    "umap_y": 13.297597885131836
+    "kgm_nodes": [
+      "METPO:1000303"
+    ],
+    "umap_x": -5.665153503417969,
+    "umap_y": -10.830059051513672
   },
   {
     "id": "METPO:1000487",
     "label": "temperature delta high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.882617950439453,
-    "umap_y": -10.573098182678223
+    "kgm_nodes": [
+      "METPO:1000487"
+    ],
+    "umap_x": -2.826367139816284,
+    "umap_y": 12.337008476257324
   },
   {
     "id": "METPO:1000484",
     "label": "temperature delta low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.6597990989685059,
-    "umap_y": -10.372684478759766
+    "kgm_nodes": [
+      "METPO:1000484"
+    ],
+    "umap_x": -1.710724115371704,
+    "umap_y": 12.243562698364258
   },
   {
     "id": "METPO:1000485",
     "label": "temperature delta mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.169212579727173,
-    "umap_y": -10.328856468200684
+    "kgm_nodes": [
+      "METPO:1000485"
+    ],
+    "umap_x": -1.8992060422897339,
+    "umap_y": 12.153525352478027
   },
   {
     "id": "METPO:1000486",
     "label": "temperature delta mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.4253201484680176,
-    "umap_y": -11.096434593200684
+    "kgm_nodes": [
+      "METPO:1000486"
+    ],
+    "umap_x": -3.0559613704681396,
+    "umap_y": 12.561017990112305
   },
   {
     "id": "METPO:1000483",
     "label": "temperature delta very low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -0.7861762642860413,
-    "umap_y": -9.132633209228516
+    "kgm_nodes": [
+      "METPO:1000483"
+    ],
+    "umap_x": -0.740950882434845,
+    "umap_y": 11.818426132202148
   },
   {
     "id": "METPO:1000304",
     "label": "temperature optimum",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.990445137023926,
-    "umap_y": 13.340520858764648
+    "kgm_nodes": [
+      "METPO:1000304"
+    ],
+    "umap_x": -5.665797710418701,
+    "umap_y": -10.778926849365234
   },
   {
     "id": "METPO:1000447",
     "label": "temperature optimum high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.4948461055755615,
-    "umap_y": -9.118453025817871
+    "kgm_nodes": [
+      "METPO:1000447"
+    ],
+    "umap_x": -1.2868964672088623,
+    "umap_y": 11.599575996398926
   },
   {
     "id": "METPO:1000442",
     "label": "temperature optimum low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.4905755519866943,
-    "umap_y": -9.526464462280273
+    "kgm_nodes": [
+      "METPO:1000442"
+    ],
+    "umap_x": -1.5126384496688843,
+    "umap_y": 11.267983436584473
   },
   {
     "id": "METPO:1000443",
     "label": "temperature optimum mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.531956911087036,
-    "umap_y": -9.49778938293457
+    "kgm_nodes": [
+      "METPO:1000443"
+    ],
+    "umap_x": -1.789272427558899,
+    "umap_y": 11.682642936706543
   },
   {
     "id": "METPO:1000444",
     "label": "temperature optimum mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.4420359134674072,
-    "umap_y": -10.183878898620605
+    "kgm_nodes": [
+      "METPO:1000444"
+    ],
+    "umap_x": -2.7422409057617188,
+    "umap_y": 10.94958209991455
   },
   {
     "id": "METPO:1000445",
     "label": "temperature optimum mid3",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.445544481277466,
-    "umap_y": -9.419275283813477
+    "kgm_nodes": [
+      "METPO:1000445"
+    ],
+    "umap_x": -2.188263416290283,
+    "umap_y": 11.750847816467285
   },
   {
     "id": "METPO:1000446",
     "label": "temperature optimum mid4",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -1.9102712869644165,
-    "umap_y": -10.168100357055664
+    "kgm_nodes": [
+      "METPO:1000446"
+    ],
+    "umap_x": -1.5406674146652222,
+    "umap_y": 12.173992156982422
   },
   {
     "id": "METPO:1000441",
     "label": "temperature optimum very low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.232574462890625,
-    "umap_y": 13.019735336303711
+    "kgm_nodes": [
+      "METPO:1000441"
+    ],
+    "umap_x": -5.632836818695068,
+    "umap_y": -10.467267036437988
   },
   {
     "id": "METPO:1000533",
     "label": "temperature phenotype with numerical limits",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -8.010470390319824,
-    "umap_y": 13.257262229919434
+    "kgm_nodes": [
+      "METPO:1000533"
+    ],
+    "umap_x": -5.675431251525879,
+    "umap_y": -10.850915908813477
   },
   {
     "id": "METPO:1000613",
     "label": "temperature preference",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -10.007912635803223,
-    "umap_y": 10.50723648071289
+    "kgm_nodes": [
+      "METPO:1000613"
+    ],
+    "umap_x": -5.6581339836120605,
+    "umap_y": -8.15023136138916
   },
   {
     "id": "METPO:1000306",
     "label": "temperature range",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -7.999520301818848,
-    "umap_y": 13.259230613708496
+    "kgm_nodes": [
+      "METPO:1000306"
+    ],
+    "umap_x": -5.668915271759033,
+    "umap_y": -10.832829475402832
   },
   {
     "id": "METPO:1000454",
     "label": "temperature range high",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.1701571941375732,
-    "umap_y": -10.438738822937012
+    "kgm_nodes": [
+      "METPO:1000454"
+    ],
+    "umap_x": -2.4580702781677246,
+    "umap_y": 12.450996398925781
   },
   {
     "id": "METPO:1000449",
     "label": "temperature range low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.0978097915649414,
-    "umap_y": -11.071695327758789
+    "kgm_nodes": [
+      "METPO:1000449"
+    ],
+    "umap_x": -3.0167312622070312,
+    "umap_y": 12.612266540527344
   },
   {
     "id": "METPO:1000450",
     "label": "temperature range mid1",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.0094594955444336,
-    "umap_y": -11.112465858459473
+    "kgm_nodes": [
+      "METPO:1000450"
+    ],
+    "umap_x": -2.9837806224823,
+    "umap_y": 12.58839225769043
   },
   {
     "id": "METPO:1000451",
     "label": "temperature range mid2",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.316711664199829,
-    "umap_y": -10.753143310546875
+    "kgm_nodes": [
+      "METPO:1000451"
+    ],
+    "umap_x": -2.698646306991577,
+    "umap_y": 12.793089866638184
   },
   {
     "id": "METPO:1000452",
     "label": "temperature range mid3",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.3740956783294678,
-    "umap_y": -10.843539237976074
+    "kgm_nodes": [
+      "METPO:1000452"
+    ],
+    "umap_x": -2.69539213180542,
+    "umap_y": 12.551496505737305
   },
   {
     "id": "METPO:1000453",
     "label": "temperature range mid4",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -2.3116910457611084,
-    "umap_y": -10.677688598632812
+    "kgm_nodes": [
+      "METPO:1000453"
+    ],
+    "umap_x": -2.5635650157928467,
+    "umap_y": 12.631433486938477
   },
   {
     "id": "METPO:1000448",
     "label": "temperature range very low",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -3.288461446762085,
-    "umap_y": -11.054814338684082
+    "kgm_nodes": [
+      "METPO:1000448"
+    ],
+    "umap_x": -3.2290899753570557,
+    "umap_y": 12.602009773254395
   },
   {
     "id": "METPO:1000616",
     "label": "thermophilic",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": 1.2981467247009277,
-    "umap_y": -7.888437747955322
+    "kgm_nodes": [
+      "METPO:1000616"
+    ],
+    "umap_x": 1.6206647157669067,
+    "umap_y": 10.3333158493042
   },
   {
     "id": "METPO:1000619",
     "label": "thermotolerant",
     "category": "environment",
     "match_method": "direct_metpo",
-    "umap_x": -9.79633617401123,
-    "umap_y": 10.55386734008789
+    "kgm_nodes": [
+      "METPO:1000619"
+    ],
+    "umap_x": -5.68218469619751,
+    "umap_y": -8.143983840942383
   },
   {
     "id": "traitmech:000009",
     "label": "UV radiation tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -11.455412864685059,
-    "umap_y": 8.738186836242676
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.029655456542969,
+    "umap_y": -3.0166287422180176
   },
   {
     "id": "traitmech:000011",
     "label": "xerophilic",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -11.378799438476562,
-    "umap_y": 9.189448356628418
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.64886474609375,
+    "umap_y": -2.472710609436035
   },
   {
     "id": "traitmech:000014",
     "label": "zinc tolerant",
     "category": "environment",
     "match_method": "parent_proxy",
-    "umap_x": -11.878586769104004,
-    "umap_y": 8.901273727416992
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.661717414855957,
+    "umap_y": -3.716782808303833
   },
   {
     "id": "traitmech:000096",
     "label": "codon usage bias",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1558995246887207,
-    "umap_y": 16.84011459350586
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.802083730697632,
+    "umap_y": -17.425268173217773
   },
   {
     "id": "traitmech:000094",
     "label": "CRISPR-Cas system",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1607260704040527,
-    "umap_y": 16.84049415588379
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8018722534179688,
+    "umap_y": -17.424097061157227
   },
   {
     "id": "METPO:1000127",
     "label": "GC content",
     "category": "genomics",
     "match_method": "direct_metpo",
-    "umap_x": -8.41132926940918,
-    "umap_y": 12.129500389099121
+    "kgm_nodes": [
+      "METPO:1000127"
+    ],
+    "umap_x": -5.72200345993042,
+    "umap_y": -7.804738521575928
   },
   {
     "id": "METPO:1000432",
     "label": "GC high",
     "category": "genomics",
     "match_method": "direct_metpo",
-    "umap_x": -0.500783383846283,
-    "umap_y": -8.906492233276367
+    "kgm_nodes": [
+      "METPO:1000432"
+    ],
+    "umap_x": -0.6860119700431824,
+    "umap_y": 11.72651195526123
   },
   {
     "id": "METPO:1000429",
     "label": "GC low",
     "category": "genomics",
     "match_method": "direct_metpo",
-    "umap_x": -1.0458242893218994,
-    "umap_y": -9.191088676452637
+    "kgm_nodes": [
+      "METPO:1000429"
+    ],
+    "umap_x": -0.9598345756530762,
+    "umap_y": 11.919328689575195
   },
   {
     "id": "METPO:1000430",
     "label": "GC mid1",
     "category": "genomics",
     "match_method": "direct_metpo",
-    "umap_x": -1.9285420179367065,
-    "umap_y": -9.55915355682373
+    "kgm_nodes": [
+      "METPO:1000430"
+    ],
+    "umap_x": -1.4904831647872925,
+    "umap_y": 11.191715240478516
   },
   {
     "id": "METPO:1000431",
     "label": "GC mid2",
     "category": "genomics",
     "match_method": "direct_metpo",
-    "umap_x": -1.2498260736465454,
-    "umap_y": -9.44648551940918
+    "kgm_nodes": [
+      "METPO:1000431"
+    ],
+    "umap_x": -0.9370861649513245,
+    "umap_y": 11.644401550292969
   },
   {
     "id": "traitmech:000097",
     "label": "GC skew",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.161874771118164,
-    "umap_y": 16.840839385986328
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8031656742095947,
+    "umap_y": -17.421241760253906
   },
   {
     "id": "traitmech:000098",
     "label": "genome size",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1614508628845215,
-    "umap_y": 16.84113883972168
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8030476570129395,
+    "umap_y": -17.423019409179688
   },
   {
     "id": "traitmech:000099",
     "label": "genome streamlining",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1670145988464355,
-    "umap_y": 16.846004486083984
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.804147958755493,
+    "umap_y": -17.420677185058594
   },
   {
     "id": "traitmech:000093",
     "label": "genomic island",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1646335124969482,
-    "umap_y": 16.840600967407227
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8025474548339844,
+    "umap_y": -17.4218692779541
   },
   {
     "id": "traitmech:000089",
     "label": "mobile genetic element",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.162146806716919,
-    "umap_y": 16.843820571899414
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8021087646484375,
+    "umap_y": -17.42288589477539
   },
   {
     "id": "traitmech:000102",
     "label": "pangenome openness",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.159576892852783,
-    "umap_y": 16.841724395751953
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8023738861083984,
+    "umap_y": -17.42169952392578
   },
   {
     "id": "traitmech:000090",
     "label": "plasmid carriage",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1635825634002686,
-    "umap_y": 16.841712951660156
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8042166233062744,
+    "umap_y": -17.422060012817383
   },
   {
     "id": "traitmech:000100",
     "label": "ploidy",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.161329507827759,
-    "umap_y": 16.84077262878418
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8049817085266113,
+    "umap_y": -17.41933250427246
   },
   {
     "id": "traitmech:000091",
     "label": "prophage",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1619632244110107,
-    "umap_y": 16.84117889404297
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8047358989715576,
+    "umap_y": -17.42056655883789
   },
   {
     "id": "traitmech:000095",
     "label": "restriction-modification system",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.161728858947754,
-    "umap_y": 16.839942932128906
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.801431179046631,
+    "umap_y": -17.425336837768555
   },
   {
     "id": "traitmech:000101",
     "label": "rRNA operon copy number",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1620562076568604,
-    "umap_y": 16.84075927734375
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.802666425704956,
+    "umap_y": -17.42257308959961
   },
   {
     "id": "traitmech:000092",
     "label": "transposable element",
     "category": "genomics",
     "match_method": "parent_proxy",
-    "umap_x": 2.1621408462524414,
-    "umap_y": 16.841062545776367
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.80364990234375,
+    "umap_y": -17.424121856689453
   },
   {
     "id": "METPO:2000210",
     "label": "accumulates",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.22286319732666,
-    "umap_y": 7.588161468505859
+    "kgm_nodes": [
+      "METPO:2000210"
+    ],
+    "umap_x": 12.08281135559082,
+    "umap_y": -10.038575172424316
+  },
+  {
+    "id": "traitmech:000191",
+    "label": "acetoclastic methanogenesis",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000844"
+    ],
+    "umap_x": 1.1175265312194824,
+    "umap_y": 8.864818572998047
   },
   {
     "id": "METPO:1000845",
     "label": "Acetogenesis",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 2.300957679748535,
-    "umap_y": -6.007298946380615
+    "kgm_nodes": [
+      "METPO:1000845"
+    ],
+    "umap_x": 10.429058074951172,
+    "umap_y": -13.020853042602539
+  },
+  {
+    "id": "traitmech:000180",
+    "label": "acetone-butanol-ethanol fermentation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.227630615234375,
+    "umap_y": 1.5163648128509521
   },
   {
     "id": "METPO:1000801",
     "label": "Aerobic respiration",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 2.5201303958892822,
-    "umap_y": -4.860479831695557
+    "kgm_nodes": [
+      "METPO:1000801"
+    ],
+    "umap_x": 10.363113403320312,
+    "umap_y": -13.145718574523926
+  },
+  {
+    "id": "traitmech:000188",
+    "label": "anaerobic ammonium oxidation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.745405197143555,
+    "umap_y": -5.170150279998779
   },
   {
     "id": "traitmech:000033",
     "label": "anaerobic oxidation of methane",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.6379947662353516,
-    "umap_y": -4.355251789093018
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.74553680419922,
+    "umap_y": -5.170853137969971
   },
   {
     "id": "METPO:1000802",
     "label": "Anaerobic respiration",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 2.602163076400757,
-    "umap_y": -4.2064666748046875
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.7471923828125,
+    "umap_y": -5.168582916259766
   },
   {
     "id": "traitmech:000035",
     "label": "anoxygenic photosynthesis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.534133911132812,
-    "umap_y": -5.291219234466553
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.28418731689453,
+    "umap_y": 7.3259968757629395
+  },
+  {
+    "id": "traitmech:000130",
+    "label": "aromatic compound degradation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.22806167602539,
+    "umap_y": 6.612206935882568
+  },
+  {
+    "id": "traitmech:000129",
+    "label": "aromatic hydrocarbon degradation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.163095474243164,
+    "umap_y": 6.988253593444824
+  },
+  {
+    "id": "traitmech:000195",
+    "label": "arsenate respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.748624801635742,
+    "umap_y": -5.168470859527588
+  },
+  {
+    "id": "traitmech:000189",
+    "label": "arsenite oxidation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.022363662719727,
+    "umap_y": 6.688889980316162
   },
   {
     "id": "METPO:2000002",
     "label": "assimilates",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.642905235290527,
-    "umap_y": 9.412347793579102
+    "kgm_nodes": [
+      "METPO:2000002"
+    ],
+    "umap_x": 13.033361434936523,
+    "umap_y": -8.686698913574219
   },
   {
     "id": "traitmech:000110",
     "label": "biopolymer degradation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.596689224243164,
-    "umap_y": -5.320638179779053
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.236814498901367,
+    "umap_y": 6.471414566040039
   },
   {
     "id": "METPO:2000003",
     "label": "builds acid from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.84803295135498,
-    "umap_y": 10.074813842773438
+    "kgm_nodes": [
+      "METPO:2000003"
+    ],
+    "umap_x": 13.38549518585205,
+    "umap_y": -7.67902135848999
   },
   {
     "id": "METPO:2000004",
     "label": "builds base from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.575568199157715,
-    "umap_y": 9.702919960021973
+    "kgm_nodes": [
+      "METPO:2000004"
+    ],
+    "umap_x": 13.112533569335938,
+    "umap_y": -8.085112571716309
   },
   {
     "id": "METPO:2000005",
     "label": "builds gas from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.758957862854004,
-    "umap_y": 9.044500350952148
+    "kgm_nodes": [
+      "METPO:2000005"
+    ],
+    "umap_x": 13.027417182922363,
+    "umap_y": -8.362784385681152
+  },
+  {
+    "id": "traitmech:000181",
+    "label": "2,3-butanediol fermentation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.228752136230469,
+    "umap_y": 1.5135836601257324
+  },
+  {
+    "id": "traitmech:000179",
+    "label": "butyric acid fermentation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.228828430175781,
+    "umap_y": 1.5135332345962524
   },
   {
     "id": "METPO:1002003",
     "label": "Cable bacteria metabolism",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.1040563583374023,
-    "umap_y": -5.230825901031494
+    "kgm_nodes": [
+      "METPO:1002003"
+    ],
+    "umap_x": 10.394165992736816,
+    "umap_y": -13.087067604064941
   },
   {
     "id": "traitmech:000020",
     "label": "Calvin-Benson-Bassham cycle",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.82300567626953,
-    "umap_y": -5.431552886962891
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 19.79111099243164,
+    "umap_y": 7.0685248374938965
   },
   {
     "id": "METPO:2000103",
     "label": "capable of",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.097160577774048,
-    "umap_y": -10.519476890563965
+    "kgm_nodes": [
+      "METPO:2000103"
+    ],
+    "umap_x": 3.7534568309783936,
+    "umap_y": 11.404919624328613
   },
   {
     "id": "traitmech:000019",
     "label": "carbon fixation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.297822952270508,
-    "umap_y": -5.174773216247559
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.23990249633789,
+    "umap_y": 6.751059055328369
   },
   {
     "id": "traitmech:000111",
     "label": "cellulolysis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.66746711730957,
-    "umap_y": -5.352938652038574
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.240436553955078,
+    "umap_y": 6.751132011413574
   },
   {
     "id": "traitmech:000112",
     "label": "chitinolysis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.50762939453125,
-    "umap_y": -5.278726100921631
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.323328018188477,
+    "umap_y": 6.775285243988037
+  },
+  {
+    "id": "traitmech:000182",
+    "label": "citrate fermentation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.228681564331055,
+    "umap_y": 1.514206051826477
   },
   {
     "id": "METPO:2000212",
     "label": "compartmentalizes",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.253255844116211,
-    "umap_y": 7.804716110229492
+    "kgm_nodes": [
+      "METPO:2000212"
+    ],
+    "umap_x": 12.185481071472168,
+    "umap_y": -9.86617660522461
+  },
+  {
+    "id": "traitmech:000187",
+    "label": "complete ammonia oxidation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1005001"
+    ],
+    "umap_x": 10.414680480957031,
+    "umap_y": -13.049010276794434
+  },
+  {
+    "id": "traitmech:000131",
+    "label": "dark hydrogen oxidation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.57018280029297,
+    "umap_y": 6.512762546539307
+  },
+  {
+    "id": "traitmech:000132",
+    "label": "dark oxidation of sulfur compounds",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.242685317993164,
+    "umap_y": 6.751429080963135
   },
   {
     "id": "METPO:2000007",
     "label": "degrades",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.476353645324707,
-    "umap_y": 9.812959671020508
+    "kgm_nodes": [
+      "METPO:2000007"
+    ],
+    "umap_x": 13.34839916229248,
+    "umap_y": -7.84420919418335
   },
   {
     "id": "traitmech:000104",
     "label": "denitrification",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.611701250076294,
-    "umap_y": -4.2058210372924805
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.744659423828125,
+    "umap_y": -5.168716907501221
   },
   {
     "id": "traitmech:000025",
     "label": "dicarboxylate/4-hydroxybutyrate cycle",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.535444259643555,
-    "umap_y": -5.292672634124756
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.23834800720215,
+    "umap_y": 6.770814895629883
   },
   {
     "id": "METPO:2000200",
     "label": "disproportionates",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.995243072509766,
-    "umap_y": 9.68950366973877
+    "kgm_nodes": [
+      "METPO:2000200"
+    ],
+    "umap_x": 13.599806785583496,
+    "umap_y": -7.366217136383057
   },
   {
     "id": "METPO:1000806",
     "label": "Disproportionation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.0244996547698975,
-    "umap_y": -5.3028950691223145
+    "kgm_nodes": [
+      "METPO:1000806"
+    ],
+    "umap_x": 10.388826370239258,
+    "umap_y": -13.097803115844727
   },
   {
     "id": "traitmech:000031",
     "label": "dissimilatory iron reduction",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.609962224960327,
-    "umap_y": -4.3671064376831055
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.743825912475586,
+    "umap_y": -5.169169902801514
   },
   {
     "id": "traitmech:000108",
     "label": "dissimilatory manganese reduction",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.6400880813598633,
-    "umap_y": -4.3399786949157715
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.74455451965332,
+    "umap_y": -5.169322490692139
   },
   {
     "id": "traitmech:000039",
     "label": "dissimilatory metal reduction",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.5656235218048096,
-    "umap_y": -4.243160724639893
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.74551010131836,
+    "umap_y": -5.169938564300537
   },
   {
     "id": "traitmech:000030",
     "label": "dissimilatory nitrate reduction to ammonium",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.6801955699920654,
-    "umap_y": -4.328825950622559
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.744468688964844,
+    "umap_y": -5.169061660766602
   },
   {
     "id": "traitmech:000105",
     "label": "dissimilatory sulfate reduction",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 2.653477430343628,
-    "umap_y": -4.329998970031738
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.743684768676758,
+    "umap_y": -5.170504570007324
   },
   {
     "id": "METPO:2000230",
     "label": "does not accumulate",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.244882583618164,
-    "umap_y": 7.681950569152832
+    "kgm_nodes": [
+      "METPO:2000230"
+    ],
+    "umap_x": 12.075576782226562,
+    "umap_y": -10.074006080627441
   },
   {
     "id": "METPO:2000027",
     "label": "does not assimilate",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.765007972717285,
-    "umap_y": 9.79513931274414
+    "kgm_nodes": [
+      "METPO:2000027"
+    ],
+    "umap_x": 13.25529956817627,
+    "umap_y": -8.112968444824219
   },
   {
     "id": "METPO:2000028",
     "label": "does not build acid from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.549864768981934,
-    "umap_y": 9.81662654876709
+    "kgm_nodes": [
+      "METPO:2000028"
+    ],
+    "umap_x": 13.310432434082031,
+    "umap_y": -8.050752639770508
   },
   {
     "id": "METPO:2000029",
     "label": "does not build base from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.906517028808594,
-    "umap_y": 9.856239318847656
+    "kgm_nodes": [
+      "METPO:2000029"
+    ],
+    "umap_x": 13.625085830688477,
+    "umap_y": -7.503436088562012
   },
   {
     "id": "METPO:2000030",
     "label": "does not build gas from",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.601851463317871,
-    "umap_y": 9.647210121154785
+    "kgm_nodes": [
+      "METPO:2000030"
+    ],
+    "umap_x": 13.202075958251953,
+    "umap_y": -8.09420394897461
   },
   {
     "id": "METPO:2000232",
     "label": "does not compartmentalize",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.25239372253418,
-    "umap_y": 7.6793670654296875
+    "kgm_nodes": [
+      "METPO:2000232"
+    ],
+    "umap_x": 12.092753410339355,
+    "umap_y": -10.053214073181152
   },
   {
     "id": "METPO:2000033",
     "label": "does not degrade",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.854740142822266,
-    "umap_y": 10.035892486572266
+    "kgm_nodes": [
+      "METPO:2000033"
+    ],
+    "umap_x": 13.267029762268066,
+    "umap_y": -7.804311275482178
   },
   {
     "id": "METPO:2000220",
     "label": "does not disproportionate",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.500822067260742,
-    "umap_y": 10.00128173828125
+    "kgm_nodes": [
+      "METPO:2000220"
+    ],
+    "umap_x": 13.357240676879883,
+    "umap_y": -7.797920227050781
   },
   {
     "id": "METPO:2000229",
     "label": "does not export",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.24443531036377,
-    "umap_y": 7.584367752075195
+    "kgm_nodes": [
+      "METPO:2000229"
+    ],
+    "umap_x": 12.241069793701172,
+    "umap_y": -9.76765251159668
   },
   {
     "id": "METPO:2000037",
     "label": "does not ferment",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.582673072814941,
-    "umap_y": 9.107706069946289
+    "kgm_nodes": [
+      "METPO:2000037"
+    ],
+    "umap_x": 12.877656936645508,
+    "umap_y": -8.813913345336914
   },
   {
     "id": "METPO:2000039",
     "label": "does not hydrolyze",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.086246490478516,
-    "umap_y": 9.465781211853027
+    "kgm_nodes": [
+      "METPO:2000039"
+    ],
+    "umap_x": 13.241510391235352,
+    "umap_y": -8.182226181030273
   },
   {
     "id": "METPO:2000228",
     "label": "does not import",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.256376266479492,
-    "umap_y": 7.628473281860352
+    "kgm_nodes": [
+      "METPO:2000228"
+    ],
+    "umap_x": 12.130974769592285,
+    "umap_y": -9.959942817687988
   },
   {
     "id": "METPO:2000042",
     "label": "does not oxidize",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.54895305633545,
-    "umap_y": 9.177528381347656
+    "kgm_nodes": [
+      "METPO:2000042"
+    ],
+    "umap_x": 13.196785926818848,
+    "umap_y": -8.415192604064941
   },
   {
     "id": "METPO:2000222",
     "label": "does not produce",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.435585021972656,
-    "umap_y": 9.311984062194824
+    "kgm_nodes": [
+      "METPO:2000222"
+    ],
+    "umap_x": 13.117307662963867,
+    "umap_y": -8.488077163696289
   },
   {
     "id": "METPO:2000044",
     "label": "does not reduce",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.676895141601562,
-    "umap_y": 9.313117980957031
+    "kgm_nodes": [
+      "METPO:2000044"
+    ],
+    "umap_x": 13.263408660888672,
+    "umap_y": -8.362386703491211
   },
   {
     "id": "METPO:2000231",
     "label": "does not sequester",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.278352737426758,
-    "umap_y": 7.824808597564697
+    "kgm_nodes": [
+      "METPO:2000231"
+    ],
+    "umap_x": 12.046042442321777,
+    "umap_y": -10.136544227600098
   },
   {
     "id": "METPO:2000303",
     "label": "does not show activity of",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.108650207519531,
-    "umap_y": 7.283204078674316
+    "kgm_nodes": [
+      "METPO:2000303"
+    ],
+    "umap_x": 11.872930526733398,
+    "umap_y": -10.427901268005371
   },
   {
     "id": "METPO:2000227",
     "label": "does not transport",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.220605850219727,
-    "umap_y": 7.541187286376953
+    "kgm_nodes": [
+      "METPO:2000227"
+    ],
+    "umap_x": 12.002567291259766,
+    "umap_y": -10.176365852355957
   },
   {
     "id": "METPO:2000031",
     "label": "does not use as carbon source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.411924362182617,
-    "umap_y": 8.30759334564209
+    "kgm_nodes": [
+      "METPO:2000031"
+    ],
+    "umap_x": 12.572915077209473,
+    "umap_y": -9.275846481323242
   },
   {
     "id": "METPO:2000034",
     "label": "does not use as electron acceptor",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.610052108764648,
-    "umap_y": 9.442662239074707
+    "kgm_nodes": [
+      "METPO:2000034"
+    ],
+    "umap_x": 13.206304550170898,
+    "umap_y": -8.287627220153809
   },
   {
     "id": "METPO:2000035",
     "label": "does not use as electron donor",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.053044319152832,
-    "umap_y": 9.6972017288208
+    "kgm_nodes": [
+      "METPO:2000035"
+    ],
+    "umap_x": 13.257465362548828,
+    "umap_y": -8.210451126098633
   },
   {
     "id": "METPO:2000036",
     "label": "does not use as energy source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.941607475280762,
-    "umap_y": 9.845340728759766
+    "kgm_nodes": [
+      "METPO:2000036"
+    ],
+    "umap_x": 13.427642822265625,
+    "umap_y": -7.785128593444824
   },
   {
     "id": "METPO:2000040",
     "label": "does not use as nitrogen source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.245278358459473,
-    "umap_y": 9.831665992736816
+    "kgm_nodes": [
+      "METPO:2000040"
+    ],
+    "umap_x": 13.352737426757812,
+    "umap_y": -7.942568302154541
   },
   {
     "id": "METPO:2000047",
     "label": "does not use as sulfur source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.859770774841309,
-    "umap_y": 10.268241882324219
+    "kgm_nodes": [
+      "METPO:2000047"
+    ],
+    "umap_x": 13.603578567504883,
+    "umap_y": -7.531804084777832
   },
   {
     "id": "METPO:2000021",
     "label": "does not use for aerobic catabolization",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.891804695129395,
-    "umap_y": 9.798636436462402
+    "kgm_nodes": [
+      "METPO:2000021"
+    ],
+    "umap_x": 13.296753883361816,
+    "umap_y": -8.050678253173828
   },
   {
     "id": "METPO:2000022",
     "label": "does not use for aerobic growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.034013748168945,
-    "umap_y": 9.340259552001953
+    "kgm_nodes": [
+      "METPO:2000022"
+    ],
+    "umap_x": 13.194012641906738,
+    "umap_y": -8.522085189819336
   },
   {
     "id": "METPO:2000023",
     "label": "does not use for anaerobic catabolization",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.502392768859863,
-    "umap_y": 9.682283401489258
+    "kgm_nodes": [
+      "METPO:2000023"
+    ],
+    "umap_x": 13.215130805969238,
+    "umap_y": -7.673066139221191
   },
   {
     "id": "METPO:2000024",
     "label": "does not use for anaerobic growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.182909965515137,
-    "umap_y": 9.573348999023438
+    "kgm_nodes": [
+      "METPO:2000024"
+    ],
+    "umap_x": 13.326007843017578,
+    "umap_y": -7.796971797943115
   },
   {
     "id": "METPO:2000025",
     "label": "does not use for anaerobic growth in the dark",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.830260276794434,
-    "umap_y": 9.724356651306152
+    "kgm_nodes": [
+      "METPO:2000025"
+    ],
+    "umap_x": 13.276896476745605,
+    "umap_y": -7.679973602294922
   },
   {
     "id": "METPO:2000026",
     "label": "does not use for anaerobic growth with light",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.629794120788574,
-    "umap_y": 9.91627311706543
+    "kgm_nodes": [
+      "METPO:2000026"
+    ],
+    "umap_x": 13.280538558959961,
+    "umap_y": -8.054238319396973
   },
   {
     "id": "METPO:2000038",
     "label": "does not use for growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.602851867675781,
-    "umap_y": 9.634329795837402
+    "kgm_nodes": [
+      "METPO:2000038"
+    ],
+    "umap_x": 13.284005165100098,
+    "umap_y": -8.028595924377441
   },
   {
     "id": "METPO:2000046",
     "label": "does not use for respiration",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.594137191772461,
-    "umap_y": 9.597461700439453
+    "kgm_nodes": [
+      "METPO:2000046"
+    ],
+    "umap_x": 13.195539474487305,
+    "umap_y": -8.229990005493164
   },
   {
     "id": "METPO:2000041",
     "label": "does not use in other way",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.42434310913086,
-    "umap_y": 9.72472858428955
+    "kgm_nodes": [
+      "METPO:2000041"
+    ],
+    "umap_x": 13.281601905822754,
+    "umap_y": -7.905063152313232
   },
   {
     "id": "METPO:1000805",
     "label": "Electron transfer",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.0741264820098877,
-    "umap_y": -5.336633682250977
+    "kgm_nodes": [
+      "METPO:1000805"
+    ],
+    "umap_x": 10.382741928100586,
+    "umap_y": -13.1088285446167
   },
   {
     "id": "METPO:2000301",
     "label": "enzyme activity analyzed",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.096729278564453,
-    "umap_y": 7.22605562210083
+    "kgm_nodes": [
+      "METPO:2000301"
+    ],
+    "umap_x": 11.862879753112793,
+    "umap_y": -10.448976516723633
   },
   {
     "id": "traitmech:000028",
     "label": "ethanol fermentation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": -0.017042072489857674,
-    "umap_y": -7.999938011169434
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.227951049804688,
+    "umap_y": 1.5140999555587769
   },
   {
     "id": "METPO:2000209",
     "label": "exports",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.258259773254395,
-    "umap_y": 7.764089107513428
+    "kgm_nodes": [
+      "METPO:2000209"
+    ],
+    "umap_x": 12.172173500061035,
+    "umap_y": -9.876108169555664
   },
   {
     "id": "METPO:1002005",
     "label": "Fermentation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 0.0678025409579277,
-    "umap_y": -8.067663192749023
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.2284574508667,
+    "umap_y": 1.5134708881378174
   },
   {
     "id": "traitmech:000109",
     "label": "fermentative hydrogen production",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 0.1255481094121933,
-    "umap_y": -7.824222564697266
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.230298042297363,
+    "umap_y": 1.5152097940444946
   },
   {
     "id": "METPO:2000011",
     "label": "ferments",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.85935115814209,
-    "umap_y": 10.001116752624512
+    "kgm_nodes": [
+      "METPO:2000011"
+    ],
+    "umap_x": 13.304803848266602,
+    "umap_y": -7.8239240646362305
   },
   {
     "id": "METPO:2000508",
     "label": "has growth NaCl observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.035116672515869,
-    "umap_y": -10.092573165893555
+    "kgm_nodes": [
+      "METPO:2000508"
+    ],
+    "umap_x": 4.334157943725586,
+    "umap_y": 12.307425498962402
   },
   {
     "id": "METPO:2000514",
     "label": "has growth oxygen observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.503586769104004,
-    "umap_y": -10.56727409362793
+    "kgm_nodes": [
+      "METPO:2000514"
+    ],
+    "umap_x": 4.811952114105225,
+    "umap_y": 12.357359886169434
   },
   {
     "id": "METPO:2000502",
     "label": "has growth pH observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.8314273357391357,
-    "umap_y": -10.590926170349121
+    "kgm_nodes": [
+      "METPO:2000502"
+    ],
+    "umap_x": 4.4593963623046875,
+    "umap_y": 12.39369010925293
   },
   {
     "id": "METPO:2000054",
     "label": "has growth temperature observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.23442268371582,
-    "umap_y": -10.214885711669922
+    "kgm_nodes": [
+      "METPO:2000054"
+    ],
+    "umap_x": 4.132855415344238,
+    "umap_y": 12.278746604919434
   },
   {
     "id": "METPO:2000510",
     "label": "has NaCl delta observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.914295196533203,
-    "umap_y": -9.845133781433105
+    "kgm_nodes": [
+      "METPO:2000510"
+    ],
+    "umap_x": 4.864286422729492,
+    "umap_y": 12.320734024047852
   },
   {
     "id": "METPO:2000506",
     "label": "has NaCl observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.196579933166504,
-    "umap_y": -10.178915023803711
+    "kgm_nodes": [
+      "METPO:2000506"
+    ],
+    "umap_x": 3.780613899230957,
+    "umap_y": 11.88759994506836
   },
   {
     "id": "METPO:2000511",
     "label": "has observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.0371222496032715,
-    "umap_y": -10.327893257141113
+    "kgm_nodes": [
+      "METPO:2000511"
+    ],
+    "umap_x": 3.617306709289551,
+    "umap_y": 12.668184280395508
   },
   {
     "id": "METPO:2000507",
     "label": "has optimum NaCl observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.223182201385498,
-    "umap_y": -9.818815231323242
+    "kgm_nodes": [
+      "METPO:2000507"
+    ],
+    "umap_x": 4.1405134201049805,
+    "umap_y": 11.825420379638672
   },
   {
     "id": "METPO:2000513",
     "label": "has optimum oxygen observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.064809322357178,
-    "umap_y": -10.419391632080078
+    "kgm_nodes": [
+      "METPO:2000513"
+    ],
+    "umap_x": 4.792381763458252,
+    "umap_y": 12.400381088256836
   },
   {
     "id": "METPO:2000501",
     "label": "has optimum pH observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.6887428760528564,
-    "umap_y": -10.186957359313965
+    "kgm_nodes": [
+      "METPO:2000501"
+    ],
+    "umap_x": 4.636322975158691,
+    "umap_y": 12.464154243469238
   },
   {
     "id": "METPO:2000053",
     "label": "has optimum temperature observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.1905903816223145,
-    "umap_y": -10.49993896484375
+    "kgm_nodes": [
+      "METPO:2000053"
+    ],
+    "umap_x": 4.3221964836120605,
+    "umap_y": 12.2890625
   },
   {
     "id": "METPO:2000516",
     "label": "has oxygen delta observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.069739818572998,
-    "umap_y": -10.24280834197998
+    "kgm_nodes": [
+      "METPO:2000516"
+    ],
+    "umap_x": 3.5688323974609375,
+    "umap_y": 12.290635108947754
   },
   {
     "id": "METPO:2000512",
     "label": "has oxygen observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.7554409503936768,
-    "umap_y": -10.969099998474121
+    "kgm_nodes": [
+      "METPO:2000512"
+    ],
+    "umap_x": 4.0694661140441895,
+    "umap_y": 12.347558975219727
   },
   {
     "id": "METPO:2000504",
     "label": "has pH delta observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.315460681915283,
-    "umap_y": -10.286815643310547
+    "kgm_nodes": [
+      "METPO:2000504"
+    ],
+    "umap_x": 3.6957168579101562,
+    "umap_y": 12.140621185302734
   },
   {
     "id": "METPO:2000239",
     "label": "has pH observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.8181560039520264,
-    "umap_y": -9.747405052185059
+    "kgm_nodes": [
+      "METPO:2000239"
+    ],
+    "umap_x": 4.034556865692139,
+    "umap_y": 11.941154479980469
   },
   {
     "id": "METPO:2000102",
     "label": "has phenotype",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.011509895324707,
-    "umap_y": 6.973724842071533
+    "kgm_nodes": [
+      "METPO:2000102"
+    ],
+    "umap_x": 11.742949485778809,
+    "umap_y": -10.65696907043457
   },
   {
     "id": "METPO:2000101",
     "label": "has quality",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.087634086608887,
-    "umap_y": 7.181907653808594
+    "kgm_nodes": [
+      "METPO:2000101"
+    ],
+    "umap_x": 11.67844009399414,
+    "umap_y": -10.775029182434082
   },
   {
     "id": "METPO:2000509",
     "label": "has range NaCl observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.619318962097168,
-    "umap_y": -10.844988822937012
+    "kgm_nodes": [
+      "METPO:2000509"
+    ],
+    "umap_x": 4.637490749359131,
+    "umap_y": 12.693472862243652
   },
   {
     "id": "METPO:2000515",
     "label": "has range oxygen observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.633224964141846,
-    "umap_y": -11.095745086669922
+    "kgm_nodes": [
+      "METPO:2000515"
+    ],
+    "umap_x": 4.626958847045898,
+    "umap_y": 12.636258125305176
   },
   {
     "id": "METPO:2000503",
     "label": "has range pH observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.003613471984863,
-    "umap_y": -9.8811674118042
+    "kgm_nodes": [
+      "METPO:2000503"
+    ],
+    "umap_x": 4.318934440612793,
+    "umap_y": 11.823981285095215
   },
   {
     "id": "METPO:2000055",
     "label": "has range temperature observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.570314407348633,
-    "umap_y": -10.644566535949707
+    "kgm_nodes": [
+      "METPO:2000055"
+    ],
+    "umap_x": 4.133430004119873,
+    "umap_y": 12.632302284240723
   },
   {
     "id": "METPO:2000056",
     "label": "has temperature delta observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 4.279913425445557,
-    "umap_y": -10.791069984436035
+    "kgm_nodes": [
+      "METPO:2000056"
+    ],
+    "umap_x": 4.42271614074707,
+    "umap_y": 12.738554954528809
   },
   {
     "id": "METPO:2000052",
     "label": "has temperature observation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.8863351345062256,
-    "umap_y": -10.621783256530762
+    "kgm_nodes": [
+      "METPO:2000052"
+    ],
+    "umap_x": 3.887510061264038,
+    "umap_y": 12.406872749328613
   },
   {
     "id": "METPO:1000846",
     "label": "Homoacetogenesis",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.144998073577881,
-    "umap_y": -5.284414291381836
+    "kgm_nodes": [
+      "METPO:1000846"
+    ],
+    "umap_x": 10.371195793151855,
+    "umap_y": -13.130613327026367
+  },
+  {
+    "id": "traitmech:000128",
+    "label": "hydrocarbon degradation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.271848678588867,
+    "umap_y": 6.492616176605225
+  },
+  {
+    "id": "traitmech:000127",
+    "label": "hydrogenotrophic methanogenesis",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000844"
+    ],
+    "umap_x": 0.8978678584098816,
+    "umap_y": 9.222959518432617
   },
   {
     "id": "METPO:2000013",
     "label": "hydrolyzes",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.711926460266113,
-    "umap_y": 9.815321922302246
+    "kgm_nodes": [
+      "METPO:2000013"
+    ],
+    "umap_x": 13.148075103759766,
+    "umap_y": -8.42003345489502
   },
   {
     "id": "METPO:2000208",
     "label": "imports",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.354538917541504,
-    "umap_y": 7.920621395111084
+    "kgm_nodes": [
+      "METPO:2000208"
+    ],
+    "umap_x": 12.186802864074707,
+    "umap_y": -9.832921028137207
   },
   {
     "id": "traitmech:000107",
     "label": "iron oxidation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.532711029052734,
-    "umap_y": -5.289991855621338
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.192514419555664,
+    "umap_y": 6.9842939376831055
   },
   {
     "id": "METPO:2000045",
     "label": "is not required for growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.722335815429688,
-    "umap_y": 9.429429054260254
+    "kgm_nodes": [
+      "METPO:2000045"
+    ],
+    "umap_x": 13.341287612915039,
+    "umap_y": -8.289271354675293
   },
   {
     "id": "traitmech:000026",
     "label": "lactic acid fermentation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 0.14394040405750275,
-    "umap_y": -7.98868465423584
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.226212501525879,
+    "umap_y": 1.5181747674942017
   },
   {
     "id": "traitmech:000114",
     "label": "lignin degradation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.593080520629883,
-    "umap_y": -5.319965839385986
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.337169647216797,
+    "umap_y": 6.4452104568481445
+  },
+  {
+    "id": "traitmech:000190",
+    "label": "lipolysis",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.2459659576416,
+    "umap_y": 6.7512006759643555
   },
   {
     "id": "traitmech:000032",
     "label": "manganese oxidation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.87952423095703,
-    "umap_y": -5.457956790924072
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.239439010620117,
+    "umap_y": 6.753510475158691
   },
   {
     "id": "METPO:1000060",
     "label": "metabolism",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 20.532203674316406,
-    "umap_y": -5.288095474243164
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.201860427856445,
+    "umap_y": 7.31998872756958
   },
   {
     "id": "METPO:1000844",
     "label": "Methanogenesis",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 2.4001238346099854,
-    "umap_y": -5.471677303314209
+    "kgm_nodes": [
+      "METPO:1000844"
+    ],
+    "umap_x": 0.9464056491851807,
+    "umap_y": 9.138738632202148
+  },
+  {
+    "id": "traitmech:000133",
+    "label": "methanol oxidation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.10909652709961,
+    "umap_y": 6.7128472328186035
+  },
+  {
+    "id": "traitmech:000192",
+    "label": "methyl-based methanogenesis",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000844"
+    ],
+    "umap_x": 1.0303287506103516,
+    "umap_y": 9.314183235168457
   },
   {
     "id": "traitmech:000027",
     "label": "mixed-acid fermentation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": -0.10467289388179779,
-    "umap_y": -7.992193698883057
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.227130889892578,
+    "umap_y": 1.5148829221725464
+  },
+  {
+    "id": "traitmech:000134",
+    "label": "nitrate reduction",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.239410400390625,
+    "umap_y": 6.754591464996338
+  },
+  {
+    "id": "traitmech:000122",
+    "label": "nitrate respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.745370864868164,
+    "umap_y": -5.169090747833252
+  },
+  {
+    "id": "METPO:1005001",
+    "label": "nitrification",
+    "category": "metabolism",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005001"
+    ],
+    "umap_x": 10.439173698425293,
+    "umap_y": -13.005622863769531
+  },
+  {
+    "id": "traitmech:000123",
+    "label": "nitrite respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.744197845458984,
+    "umap_y": -5.1690216064453125
   },
   {
     "id": "traitmech:000103",
     "label": "nitrogen fixation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.323444366455078,
-    "umap_y": -5.192497730255127
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.24221420288086,
+    "umap_y": 6.726357460021973
+  },
+  {
+    "id": "traitmech:000121",
+    "label": "nitrogen respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.741987228393555,
+    "umap_y": -5.169229507446289
   },
   {
     "id": "METPO:2000001",
     "label": "organism interacts with chemical",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.251233100891113,
-    "umap_y": 7.723205089569092
+    "kgm_nodes": [
+      "METPO:2000001"
+    ],
+    "umap_x": 12.212701797485352,
+    "umap_y": -9.818617820739746
   },
   {
     "id": "METPO:1000803",
     "label": "Oxidative phosphorylation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.094827890396118,
-    "umap_y": -5.294549942016602
+    "kgm_nodes": [
+      "METPO:1000803"
+    ],
+    "umap_x": 10.386106491088867,
+    "umap_y": -13.100391387939453
   },
   {
     "id": "METPO:2000016",
     "label": "oxidizes",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.880240440368652,
-    "umap_y": 9.577149391174316
+    "kgm_nodes": [
+      "METPO:2000016"
+    ],
+    "umap_x": 13.24056625366211,
+    "umap_y": -7.997869968414307
   },
   {
     "id": "traitmech:000034",
     "label": "oxygenic photosynthesis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.484071731567383,
-    "umap_y": -5.264657974243164
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.239948272705078,
+    "umap_y": 6.756174087524414
+  },
+  {
+    "id": "traitmech:000135",
+    "label": "pectin degradation",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.241735458374023,
+    "umap_y": 6.726296901702881
+  },
+  {
+    "id": "traitmech:000193",
+    "label": "photoferrotrophy",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.24006462097168,
+    "umap_y": 6.755880355834961
   },
   {
     "id": "traitmech:000038",
     "label": "photosynthesis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.542125701904297,
-    "umap_y": -5.296108722686768
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.23390007019043,
+    "umap_y": 6.776701927185059
   },
   {
     "id": "traitmech:000037",
     "label": "phototrophy",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.541351318359375,
-    "umap_y": -5.295095443725586
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.236921310424805,
+    "umap_y": 6.756449222564697
   },
   {
     "id": "METPO:2000202",
     "label": "produces",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.88843059539795,
-    "umap_y": 9.913079261779785
+    "kgm_nodes": [
+      "METPO:2000202"
+    ],
+    "umap_x": 13.299153327941895,
+    "umap_y": -7.6669721603393555
   },
   {
     "id": "traitmech:000029",
     "label": "propionic acid fermentation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 0.09934937208890915,
-    "umap_y": -8.216523170471191
+    "kgm_nodes": [
+      "METPO:1002005"
+    ],
+    "umap_x": 9.231118202209473,
+    "umap_y": 1.5123411417007446
   },
   {
     "id": "traitmech:000116",
     "label": "proteolysis",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.47637176513672,
-    "umap_y": -5.265620708465576
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.233657836914062,
+    "umap_y": 6.776179790496826
   },
   {
     "id": "traitmech:000036",
     "label": "proteorhodopsin phototrophy",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.548189163208008,
-    "umap_y": -5.298264980316162
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.237504959106445,
+    "umap_y": 6.722821235656738
   },
   {
     "id": "METPO:2000017",
     "label": "reduces",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.594775199890137,
-    "umap_y": 8.88300895690918
+    "kgm_nodes": [
+      "METPO:2000017"
+    ],
+    "umap_x": 13.145111083984375,
+    "umap_y": -8.0441255569458
   },
   {
     "id": "traitmech:000021",
     "label": "reductive tricarboxylic acid cycle",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.54936981201172,
-    "umap_y": -5.298036575317383
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.23952865600586,
+    "umap_y": 6.755969047546387
   },
   {
     "id": "METPO:2000018",
     "label": "requires for growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 14.185532569885254,
-    "umap_y": 10.47215747833252
+    "kgm_nodes": [
+      "METPO:2000018"
+    ],
+    "umap_x": 13.398433685302734,
+    "umap_y": -7.698149681091309
   },
   {
     "id": "METPO:1000800",
     "label": "respiration",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 2.479757070541382,
-    "umap_y": -4.879628658294678
+    "kgm_nodes": [
+      "METPO:1000800"
+    ],
+    "umap_x": 10.349237442016602,
+    "umap_y": -13.179407119750977
+  },
+  {
+    "id": "traitmech:000124",
+    "label": "respiration of sulfur compounds",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.741113662719727,
+    "umap_y": -5.169520378112793
   },
   {
     "id": "METPO:2000211",
     "label": "sequesters",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.245240211486816,
-    "umap_y": 7.673590183258057
+    "kgm_nodes": [
+      "METPO:2000211"
+    ],
+    "umap_x": 12.240626335144043,
+    "umap_y": -9.764777183532715
   },
   {
     "id": "METPO:2000302",
     "label": "shows activity of",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.10800838470459,
-    "umap_y": 7.232748031616211
+    "kgm_nodes": [
+      "METPO:2000302"
+    ],
+    "umap_x": 11.869758605957031,
+    "umap_y": -10.432851791381836
   },
   {
     "id": "traitmech:000115",
     "label": "starch degradation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.530044555664062,
-    "umap_y": -5.289933681488037
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.138526916503906,
+    "umap_y": 6.824686050415039
   },
   {
     "id": "METPO:1000804",
     "label": "Substrate-level phosphorylation",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.1297545433044434,
-    "umap_y": -5.313718318939209
+    "kgm_nodes": [
+      "METPO:1000804"
+    ],
+    "umap_x": 10.373878479003906,
+    "umap_y": -13.121410369873047
   },
   {
     "id": "traitmech:000106",
     "label": "sulfur oxidation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.542625427246094,
-    "umap_y": -5.294891357421875
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.241933822631836,
+    "umap_y": 6.751472473144531
+  },
+  {
+    "id": "traitmech:000125",
+    "label": "sulfur respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.743288040161133,
+    "umap_y": -5.169219970703125
   },
   {
     "id": "METPO:1002006",
     "label": "Syntrophy",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 3.1448450088500977,
-    "umap_y": -5.180541038513184
+    "kgm_nodes": [
+      "METPO:1002006"
+    ],
+    "umap_x": 10.3890962600708,
+    "umap_y": -13.09640121459961
+  },
+  {
+    "id": "traitmech:000126",
+    "label": "thiosulfate respiration",
+    "category": "metabolism",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000802"
+    ],
+    "umap_x": 24.740358352661133,
+    "umap_y": -5.17080545425415
   },
   {
     "id": "traitmech:000023",
     "label": "3-hydroxypropionate bicycle",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.51436424255371,
-    "umap_y": -5.281556129455566
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.768585205078125,
+    "umap_y": 6.908174991607666
   },
   {
     "id": "traitmech:000024",
     "label": "3-hydroxypropionate/4-hydroxybutyrate cycle",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.51816749572754,
-    "umap_y": -5.2837066650390625
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.2409725189209,
+    "umap_y": 6.752021312713623
   },
   {
     "id": "METPO:2000207",
     "label": "transports",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.256351470947266,
-    "umap_y": 7.719425678253174
+    "kgm_nodes": [
+      "METPO:2000207"
+    ],
+    "umap_x": 12.183140754699707,
+    "umap_y": -9.853894233703613
   },
   {
     "id": "METPO:2000006",
     "label": "uses as carbon source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.894387245178223,
-    "umap_y": 9.56330394744873
+    "kgm_nodes": [
+      "METPO:2000006"
+    ],
+    "umap_x": 13.090166091918945,
+    "umap_y": -8.139281272888184
   },
   {
     "id": "METPO:2000008",
     "label": "uses as electron acceptor",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.96055793762207,
-    "umap_y": 9.772745132446289
+    "kgm_nodes": [
+      "METPO:2000008"
+    ],
+    "umap_x": 13.300113677978516,
+    "umap_y": -7.7780585289001465
   },
   {
     "id": "METPO:2000009",
     "label": "uses as electron donor",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.408709526062012,
-    "umap_y": 9.274065017700195
+    "kgm_nodes": [
+      "METPO:2000009"
+    ],
+    "umap_x": 13.515036582946777,
+    "umap_y": -8.057844161987305
   },
   {
     "id": "METPO:2000010",
     "label": "uses as energy source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.599058151245117,
-    "umap_y": 8.430179595947266
+    "kgm_nodes": [
+      "METPO:2000010"
+    ],
+    "umap_x": 12.508688926696777,
+    "umap_y": -9.272662162780762
   },
   {
     "id": "METPO:2000014",
     "label": "uses as nitrogen source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.272361755371094,
-    "umap_y": 9.610637664794922
+    "kgm_nodes": [
+      "METPO:2000014"
+    ],
+    "umap_x": 13.14776611328125,
+    "umap_y": -8.079541206359863
   },
   {
     "id": "METPO:2000020",
     "label": "uses as sulfur source",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.003188133239746,
-    "umap_y": 9.858201026916504
+    "kgm_nodes": [
+      "METPO:2000020"
+    ],
+    "umap_x": 13.354586601257324,
+    "umap_y": -7.972194671630859
   },
   {
     "id": "METPO:2000032",
     "label": "uses for aerobic catabolization",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 14.03049373626709,
-    "umap_y": 9.873135566711426
+    "kgm_nodes": [
+      "METPO:2000032"
+    ],
+    "umap_x": 13.61936092376709,
+    "umap_y": -7.358365535736084
   },
   {
     "id": "METPO:2000043",
     "label": "uses for aerobic growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.29645824432373,
-    "umap_y": 10.141656875610352
+    "kgm_nodes": [
+      "METPO:2000043"
+    ],
+    "umap_x": 13.129395484924316,
+    "umap_y": -8.402000427246094
   },
   {
     "id": "METPO:2000048",
     "label": "uses for anaerobic catabolization",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.721024513244629,
-    "umap_y": 9.930625915527344
+    "kgm_nodes": [
+      "METPO:2000048"
+    ],
+    "umap_x": 13.353846549987793,
+    "umap_y": -7.649946689605713
   },
   {
     "id": "METPO:2000049",
     "label": "uses for anaerobic growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.104777336120605,
-    "umap_y": 9.93698787689209
+    "kgm_nodes": [
+      "METPO:2000049"
+    ],
+    "umap_x": 13.838383674621582,
+    "umap_y": -7.823309421539307
   },
   {
     "id": "METPO:2000050",
     "label": "uses for anaerobic growth in the dark",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.111917495727539,
-    "umap_y": 9.684959411621094
+    "kgm_nodes": [
+      "METPO:2000050"
+    ],
+    "umap_x": 13.423330307006836,
+    "umap_y": -7.9791579246521
   },
   {
     "id": "METPO:2000051",
     "label": "uses for anaerobic growth with light",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.432579040527344,
-    "umap_y": 8.451920509338379
+    "kgm_nodes": [
+      "METPO:2000051"
+    ],
+    "umap_x": 12.45295524597168,
+    "umap_y": -9.46423053741455
   },
   {
     "id": "METPO:2000012",
     "label": "uses for growth",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.522719383239746,
-    "umap_y": 8.877086639404297
+    "kgm_nodes": [
+      "METPO:2000012"
+    ],
+    "umap_x": 13.133672714233398,
+    "umap_y": -8.316887855529785
   },
   {
     "id": "METPO:2000019",
     "label": "uses for respiration",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 13.637855529785156,
-    "umap_y": 9.698195457458496
+    "kgm_nodes": [
+      "METPO:2000019"
+    ],
+    "umap_x": 13.235218048095703,
+    "umap_y": -8.122075080871582
   },
   {
     "id": "METPO:2000015",
     "label": "uses in other way",
     "category": "metabolism",
     "match_method": "direct_metpo",
-    "umap_x": 12.991461753845215,
-    "umap_y": 8.367588996887207
+    "kgm_nodes": [
+      "METPO:2000015"
+    ],
+    "umap_x": 12.786575317382812,
+    "umap_y": -8.849770545959473
   },
   {
     "id": "traitmech:000022",
     "label": "Wood-Ljungdahl pathway",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.510549545288086,
-    "umap_y": -5.279988765716553
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.191930770874023,
+    "umap_y": 6.394940376281738
   },
   {
     "id": "traitmech:000113",
     "label": "xylan degradation",
     "category": "metabolism",
     "match_method": "parent_proxy",
-    "umap_x": 20.542098999023438,
-    "umap_y": -5.295354843139648
+    "kgm_nodes": [
+      "METPO:1000060"
+    ],
+    "umap_x": 20.30205535888672,
+    "umap_y": 6.523972988128662
+  },
+  {
+    "id": "traitmech:000185",
+    "label": "akinete",
+    "category": "morphology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.788370132446289,
+    "umap_y": -2.105315685272217
   },
   {
     "id": "traitmech:000059",
     "label": "amphitrichous",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -1.065366268157959,
-    "umap_y": -9.552546501159668
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -0.9510732889175415,
+    "umap_y": 14.081321716308594
   },
   {
     "id": "METPO:1000705",
     "label": "axially filamented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 2.351166248321533,
-    "umap_y": -8.28371810913086
+    "kgm_nodes": [
+      "METPO:1000705"
+    ],
+    "umap_x": 2.421934127807617,
+    "umap_y": 11.363870620727539
   },
   {
     "id": "METPO:1000667",
     "label": "bacillus shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.466336250305176,
-    "umap_y": -7.750208377838135
+    "kgm_nodes": [
+      "METPO:1000667"
+    ],
+    "umap_x": 2.7127907276153564,
+    "umap_y": 10.280269622802734
   },
   {
     "id": "METPO:1003022",
     "label": "black pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.374746322631836,
-    "umap_y": -7.359900951385498
+    "kgm_nodes": [
+      "METPO:1003022"
+    ],
+    "umap_x": -4.687558174133301,
+    "umap_y": -21.489816665649414
   },
   {
     "id": "METPO:1000687",
     "label": "branched shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.236026763916016,
-    "umap_y": -3.3604938983917236
+    "kgm_nodes": [
+      "METPO:1000687"
+    ],
+    "umap_x": -1.018876314163208,
+    "umap_y": 6.76360559463501
   },
   {
     "id": "METPO:1003023",
     "label": "brown pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.375198364257812,
-    "umap_y": -7.3604536056518555
+    "kgm_nodes": [
+      "METPO:1003023"
+    ],
+    "umap_x": -4.68844747543335,
+    "umap_y": -21.490032196044922
   },
   {
     "id": "traitmech:000063",
     "label": "capsule",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.8528470993042,
-    "umap_y": 8.897921562194824
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.95685863494873,
+    "umap_y": -3.319397449493408
   },
   {
     "id": "traitmech:000072",
     "label": "carboxysome",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.872905731201172,
-    "umap_y": 8.895742416381836
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.256235122680664,
+    "umap_y": -3.8378186225891113
   },
   {
     "id": "METPO:1003031",
     "label": "carotenoid pigmentation",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.372982025146484,
-    "umap_y": -7.360182285308838
+    "kgm_nodes": [
+      "METPO:1003031"
+    ],
+    "umap_x": -4.687498569488525,
+    "umap_y": -21.489530563354492
   },
   {
     "id": "METPO:1000881",
     "label": "cell length",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -9.335419654846191,
-    "umap_y": 11.527626037597656
+    "kgm_nodes": [
+      "METPO:1000881"
+    ],
+    "umap_x": -5.568268299102783,
+    "umap_y": -9.103235244750977
   },
   {
     "id": "METPO:1000886",
     "label": "cell length large",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -1.9068516492843628,
-    "umap_y": -9.888282775878906
+    "kgm_nodes": [
+      "METPO:1000886"
+    ],
+    "umap_x": -1.042472243309021,
+    "umap_y": 12.073773384094238
   },
   {
     "id": "METPO:1000885",
     "label": "cell length medium",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -1.6370090246200562,
-    "umap_y": -9.839791297912598
+    "kgm_nodes": [
+      "METPO:1000885"
+    ],
+    "umap_x": -1.5102115869522095,
+    "umap_y": 12.38011646270752
   },
   {
     "id": "METPO:1000884",
     "label": "cell length small",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -2.134643793106079,
-    "umap_y": -10.393400192260742
+    "kgm_nodes": [
+      "METPO:1000884"
+    ],
+    "umap_x": -1.5861235857009888,
+    "umap_y": 12.29516887664795
   },
   {
     "id": "METPO:1000883",
     "label": "cell length very small",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -2.2948334217071533,
-    "umap_y": -9.856586456298828
+    "kgm_nodes": [
+      "METPO:1000883"
+    ],
+    "umap_x": -1.6463963985443115,
+    "umap_y": 11.923813819885254
   },
   {
     "id": "METPO:1000666",
     "label": "cell shape",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.317778587341309,
-    "umap_y": -3.331678628921509
+    "kgm_nodes": [
+      "METPO:1000666"
+    ],
+    "umap_x": -1.8515938520431519,
+    "umap_y": 5.7639546394348145
   },
   {
     "id": "METPO:1000882",
     "label": "cell width",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -8.84557819366455,
-    "umap_y": 11.867456436157227
+    "kgm_nodes": [
+      "METPO:1000882"
+    ],
+    "umap_x": -5.11661958694458,
+    "umap_y": -9.63522720336914
   },
   {
     "id": "METPO:1000890",
     "label": "cell width large",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -1.8194031715393066,
-    "umap_y": -9.84355354309082
+    "kgm_nodes": [
+      "METPO:1000890"
+    ],
+    "umap_x": -1.3086670637130737,
+    "umap_y": 12.331787109375
   },
   {
     "id": "METPO:1000889",
     "label": "cell width medium",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -1.839606761932373,
-    "umap_y": -10.046911239624023
+    "kgm_nodes": [
+      "METPO:1000889"
+    ],
+    "umap_x": -1.6592655181884766,
+    "umap_y": 12.46993637084961
   },
   {
     "id": "METPO:1000888",
     "label": "cell width small",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -2.1436057090759277,
-    "umap_y": -9.891912460327148
+    "kgm_nodes": [
+      "METPO:1000888"
+    ],
+    "umap_x": -1.48138427734375,
+    "umap_y": 12.098365783691406
   },
   {
     "id": "METPO:1000887",
     "label": "cell width very small",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -2.9863951206207275,
-    "umap_y": -10.95507526397705
+    "kgm_nodes": [
+      "METPO:1000887"
+    ],
+    "umap_x": -1.8018344640731812,
+    "umap_y": 12.233957290649414
   },
   {
     "id": "METPO:1000688",
     "label": "coccobacillus shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 1.7357842922210693,
-    "umap_y": -8.51106071472168
+    "kgm_nodes": [
+      "METPO:1000688"
+    ],
+    "umap_x": 2.3470845222473145,
+    "umap_y": 10.657881736755371
   },
   {
     "id": "METPO:1000668",
     "label": "coccus shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.713226318359375,
-    "umap_y": -7.85326623916626
+    "kgm_nodes": [
+      "METPO:1000668"
+    ],
+    "umap_x": 3.124561309814453,
+    "umap_y": 10.264793395996094
   },
   {
     "id": "METPO:1003024",
     "label": "cream pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.37343406677246,
-    "umap_y": -7.360378265380859
+    "kgm_nodes": [
+      "METPO:1003024"
+    ],
+    "umap_x": -4.688717365264893,
+    "umap_y": -21.487634658813477
   },
   {
     "id": "METPO:1000669",
     "label": "crescent shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.31849193572998,
-    "umap_y": -3.327688455581665
+    "kgm_nodes": [
+      "METPO:1000669"
+    ],
+    "umap_x": -1.7947919368743896,
+    "umap_y": 5.83256196975708
   },
   {
     "id": "METPO:1000670",
     "label": "curved shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.118767738342285,
-    "umap_y": -3.40720534324646
+    "kgm_nodes": [
+      "METPO:1000670"
+    ],
+    "umap_x": -0.6024416089057922,
+    "umap_y": 7.282374382019043
   },
   {
     "id": "METPO:1000671",
     "label": "diplococcus shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.277849197387695,
-    "umap_y": -3.3440988063812256
+    "kgm_nodes": [
+      "METPO:1000671"
+    ],
+    "umap_x": -1.5862901210784912,
+    "umap_y": 6.113840103149414
   },
   {
     "id": "METPO:1000689",
     "label": "disc shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.043312072753906,
-    "umap_y": -3.436307191848755
+    "kgm_nodes": [
+      "METPO:1000689"
+    ],
+    "umap_x": 0.8076744079589844,
+    "umap_y": 8.590193748474121
   },
   {
     "id": "METPO:1000672",
     "label": "dumbbell shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.275492668151855,
-    "umap_y": -3.3452370166778564
+    "kgm_nodes": [
+      "METPO:1000672"
+    ],
+    "umap_x": -1.5089472532272339,
+    "umap_y": 6.1639275550842285
   },
   {
     "id": "METPO:1000673",
     "label": "ellipsoidal",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.221940040588379,
-    "umap_y": -3.36828875541687
+    "kgm_nodes": [
+      "METPO:1000673"
+    ],
+    "umap_x": -1.1347417831420898,
+    "umap_y": 6.60644006729126
   },
   {
     "id": "METPO:1000674",
     "label": "filament shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 1.9558550119400024,
-    "umap_y": -7.933650016784668
+    "kgm_nodes": [
+      "METPO:1000674"
+    ],
+    "umap_x": 1.6777769327163696,
+    "umap_y": 10.081007957458496
   },
   {
     "id": "traitmech:000056",
     "label": "flagellar arrangement",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -0.9446679353713989,
-    "umap_y": -9.582298278808594
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.0386486053466797,
+    "umap_y": 13.84602165222168
   },
   {
     "id": "METPO:1000704",
     "label": "flagellated",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -0.6905953884124756,
-    "umap_y": -9.470014572143555
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.0732581615447998,
+    "umap_y": 13.73455810546875
   },
   {
     "id": "METPO:1000675",
     "label": "flask shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 0.6645519733428955,
-    "umap_y": -8.834439277648926
+    "kgm_nodes": [
+      "METPO:1000675"
+    ],
+    "umap_x": 0.6144067049026489,
+    "umap_y": 10.864067077636719
   },
   {
     "id": "METPO:1000690",
     "label": "fusiform shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.129146575927734,
-    "umap_y": -3.406665563583374
+    "kgm_nodes": [
+      "METPO:1000690"
+    ],
+    "umap_x": -0.3138808608055115,
+    "umap_y": 7.739902496337891
   },
   {
     "id": "traitmech:000070",
     "label": "gas vesicle",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.82701301574707,
-    "umap_y": 8.92431354522705
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.946396827697754,
+    "umap_y": -3.387239456176758
   },
   {
     "id": "METPO:1000706",
     "label": "gliding",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 1.7994734048843384,
-    "umap_y": -9.032712936401367
+    "kgm_nodes": [
+      "METPO:1000706"
+    ],
+    "umap_x": 2.060671806335449,
+    "umap_y": 11.163941383361816
   },
   {
     "id": "METPO:1000699",
     "label": "gram negative",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.447216749191284,
-    "umap_y": -8.1576509475708
+    "kgm_nodes": [
+      "METPO:1000699"
+    ],
+    "umap_x": 2.5182433128356934,
+    "umap_y": 10.581535339355469
   },
   {
     "id": "METPO:1000698",
     "label": "gram positive",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.6795778274536133,
-    "umap_y": -7.773889541625977
+    "kgm_nodes": [
+      "METPO:1000698"
+    ],
+    "umap_x": 3.064210891723633,
+    "umap_y": 10.317472457885742
   },
   {
     "id": "METPO:1000697",
     "label": "gram stain",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -9.677416801452637,
-    "umap_y": 9.876457214355469
+    "kgm_nodes": [
+      "METPO:1000697"
+    ],
+    "umap_x": -6.212597370147705,
+    "umap_y": -6.977735996246338
   },
   {
     "id": "METPO:1000700",
     "label": "gram variable",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -8.898022651672363,
-    "umap_y": 10.003364562988281
+    "kgm_nodes": [
+      "METPO:1000700"
+    ],
+    "umap_x": -5.777302265167236,
+    "umap_y": -7.315314769744873
   },
   {
     "id": "METPO:1003025",
     "label": "green pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.373743057250977,
-    "umap_y": -7.359711170196533
+    "kgm_nodes": [
+      "METPO:1003025"
+    ],
+    "umap_x": -4.687801837921143,
+    "umap_y": -21.488183975219727
   },
   {
     "id": "METPO:1000676",
     "label": "helical shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -9.994409561157227,
-    "umap_y": -3.459585189819336
+    "kgm_nodes": [
+      "METPO:1000676"
+    ],
+    "umap_x": -0.3664996922016144,
+    "umap_y": 7.7889509201049805
   },
   {
     "id": "traitmech:000073",
     "label": "heterocyst",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.809341430664062,
-    "umap_y": 8.906960487365723
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.48879623413086,
+    "umap_y": -2.94999623298645
+  },
+  {
+    "id": "traitmech:000184",
+    "label": "holdfast",
+    "category": "morphology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.536246299743652,
+    "umap_y": -2.4385526180267334
   },
   {
     "id": "traitmech:000066",
     "label": "intracellular inclusion",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.77675724029541,
-    "umap_y": 8.916396141052246
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.404217720031738,
+    "umap_y": -3.4301583766937256
   },
   {
     "id": "METPO:1000691",
     "label": "irregular shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.185454368591309,
-    "umap_y": -3.3814260959625244
+    "kgm_nodes": [
+      "METPO:1000691"
+    ],
+    "umap_x": -0.8424930572509766,
+    "umap_y": 7.028039455413818
+  },
+  {
+    "id": "METPO:1005036",
+    "label": "lateral flagellation",
+    "category": "morphology",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005036"
+    ],
+    "umap_x": -1.1855964660644531,
+    "umap_y": 13.020063400268555
   },
   {
     "id": "traitmech:000058",
     "label": "lophotrichous",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -0.810711681842804,
-    "umap_y": -9.42204761505127
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.0235662460327148,
+    "umap_y": 13.864601135253906
   },
   {
     "id": "traitmech:000071",
     "label": "magnetosome",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.718876838684082,
-    "umap_y": 8.96279525756836
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.673614501953125,
+    "umap_y": -2.205801010131836
   },
   {
     "id": "traitmech:000057",
     "label": "monotrichous",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -0.816230833530426,
-    "umap_y": -9.545364379882812
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.0948128700256348,
+    "umap_y": 13.6897611618042
   },
   {
     "id": "METPO:1000702",
     "label": "motile",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 2.9913930892944336,
-    "umap_y": -8.059465408325195
+    "kgm_nodes": [
+      "METPO:1000702"
+    ],
+    "umap_x": 2.0197205543518066,
+    "umap_y": 10.70354175567627
   },
   {
     "id": "METPO:1000701",
     "label": "motility",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.773087501525879,
-    "umap_y": 9.388937950134277
+    "kgm_nodes": [
+      "METPO:1000701"
+    ],
+    "umap_x": -12.201119422912598,
+    "umap_y": -3.7247307300567627
   },
   {
     "id": "traitmech:000074",
     "label": "mycelial growth",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.729479789733887,
-    "umap_y": 8.91867446899414
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.725549697875977,
+    "umap_y": -2.4652159214019775
   },
   {
     "id": "METPO:1000703",
     "label": "non motile",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.582289457321167,
-    "umap_y": -7.8160223960876465
+    "kgm_nodes": [
+      "METPO:1000703"
+    ],
+    "umap_x": 2.968122720718384,
+    "umap_y": 10.083147048950195
   },
   {
     "id": "METPO:1000872",
     "label": "non-spore forming",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 3.607971429824829,
-    "umap_y": -7.795811653137207
+    "kgm_nodes": [
+      "METPO:1000872"
+    ],
+    "umap_x": 2.880857229232788,
+    "umap_y": 10.240041732788086
   },
   {
     "id": "METPO:1003026",
     "label": "orange pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.3738956451416,
-    "umap_y": -7.359916687011719
+    "kgm_nodes": [
+      "METPO:1003026"
+    ],
+    "umap_x": -4.69000768661499,
+    "umap_y": -21.49250602722168
   },
   {
     "id": "METPO:1000678",
     "label": "oval shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 1.845610499382019,
-    "umap_y": -9.116344451904297
+    "kgm_nodes": [
+      "METPO:1000678"
+    ],
+    "umap_x": 1.6002992391586304,
+    "umap_y": 11.330883026123047
   },
   {
     "id": "METPO:1000677",
     "label": "ovoid shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 0.5383802652359009,
-    "umap_y": -8.738099098205566
+    "kgm_nodes": [
+      "METPO:1000677"
+    ],
+    "umap_x": 0.2369966059923172,
+    "umap_y": 11.192112922668457
   },
   {
     "id": "traitmech:000060",
     "label": "peritrichous",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -0.7866246104240417,
-    "umap_y": -9.471702575683594
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.108001947402954,
+    "umap_y": 13.640544891357422
   },
   {
     "id": "METPO:1003021",
     "label": "pigmentation",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.373117446899414,
-    "umap_y": -7.360650062561035
+    "kgm_nodes": [
+      "METPO:1003021"
+    ],
+    "umap_x": -4.688562870025635,
+    "umap_y": -21.49037742614746
   },
   {
     "id": "METPO:1003027",
     "label": "pink pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.374149322509766,
-    "umap_y": -7.360334873199463
+    "kgm_nodes": [
+      "METPO:1003027"
+    ],
+    "umap_x": -4.687315464019775,
+    "umap_y": -21.491464614868164
   },
   {
     "id": "METPO:1000679",
     "label": "pleomorphic shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 0.34681084752082825,
-    "umap_y": -7.374820232391357
+    "kgm_nodes": [
+      "METPO:1000679"
+    ],
+    "umap_x": 0.7456954121589661,
+    "umap_y": 9.343158721923828
+  },
+  {
+    "id": "METPO:1005032",
+    "label": "polar flagellation",
+    "category": "morphology",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005032"
+    ],
+    "umap_x": -1.1958454847335815,
+    "umap_y": 12.975531578063965
   },
   {
     "id": "traitmech:000067",
     "label": "polyhydroxyalkanoate granule",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.725191116333008,
-    "umap_y": 8.925870895385742
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.791015625,
+    "umap_y": -3.6008896827697754
   },
   {
     "id": "traitmech:000068",
     "label": "polyphosphate granule",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.685830116271973,
-    "umap_y": 8.896337509155273
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.95387077331543,
+    "umap_y": -2.3907294273376465
+  },
+  {
+    "id": "METPO:1007006",
+    "label": "polytrichous flagellation",
+    "category": "morphology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000704"
+    ],
+    "umap_x": -1.0475690364837646,
+    "umap_y": 13.864774703979492
   },
   {
     "id": "traitmech:000065",
     "label": "prosthecate",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.195764541625977,
-    "umap_y": 9.08548355102539
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.97756290435791,
+    "umap_y": -3.4100019931793213
   },
   {
     "id": "METPO:1003028",
     "label": "red pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.375411987304688,
-    "umap_y": -7.360405445098877
+    "kgm_nodes": [
+      "METPO:1003028"
+    ],
+    "umap_x": -4.687654972076416,
+    "umap_y": -21.489830017089844
   },
   {
     "id": "METPO:1000680",
     "label": "ring shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.229048728942871,
-    "umap_y": -3.3640999794006348
+    "kgm_nodes": [
+      "METPO:1000680"
+    ],
+    "umap_x": -1.2340072393417358,
+    "umap_y": 6.512731552124023
   },
   {
     "id": "METPO:1000681",
     "label": "rod shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -0.45855891704559326,
-    "umap_y": -8.978302955627441
+    "kgm_nodes": [
+      "METPO:1000681"
+    ],
+    "umap_x": -0.24721896648406982,
+    "umap_y": 11.600528717041016
   },
   {
     "id": "traitmech:000064",
     "label": "S-layer",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.19874382019043,
-    "umap_y": 9.067265510559082
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.563576698303223,
+    "umap_y": -3.539083242416382
   },
   {
     "id": "traitmech:000120",
     "label": "sarcina arrangement",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -10.326618194580078,
-    "umap_y": -3.324948787689209
+    "kgm_nodes": [
+      "METPO:1000666"
+    ],
+    "umap_x": -1.8055078983306885,
+    "umap_y": 5.824468612670898
   },
   {
     "id": "METPO:1000683",
     "label": "sphere shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -1.8819732666015625,
-    "umap_y": -9.731951713562012
+    "kgm_nodes": [
+      "METPO:1000683"
+    ],
+    "umap_x": -1.1896497011184692,
+    "umap_y": 11.667608261108398
   },
   {
     "id": "METPO:1000692",
     "label": "spindle shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.270303726196289,
-    "umap_y": -3.3447494506835938
+    "kgm_nodes": [
+      "METPO:1000692"
+    ],
+    "umap_x": -1.4866749048233032,
+    "umap_y": 6.196617126464844
   },
   {
     "id": "METPO:1000684",
     "label": "spiral shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 2.3713459968566895,
-    "umap_y": -8.269755363464355
+    "kgm_nodes": [
+      "METPO:1000684"
+    ],
+    "umap_x": 2.164238929748535,
+    "umap_y": 10.930322647094727
   },
   {
     "id": "METPO:1000693",
     "label": "spirochete shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.275588989257812,
-    "umap_y": -3.344355583190918
+    "kgm_nodes": [
+      "METPO:1000693"
+    ],
+    "umap_x": -1.453992486000061,
+    "umap_y": 6.241041660308838
   },
   {
     "id": "METPO:1000871",
     "label": "spore forming",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 2.130902051925659,
-    "umap_y": -7.778013229370117
+    "kgm_nodes": [
+      "METPO:1000871"
+    ],
+    "umap_x": 1.8478169441223145,
+    "umap_y": 10.548428535461426
   },
   {
     "id": "METPO:1000682",
     "label": "spore shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.215737342834473,
-    "umap_y": -3.3695552349090576
+    "kgm_nodes": [
+      "METPO:1000682"
+    ],
+    "umap_x": -1.2170867919921875,
+    "umap_y": 6.575295925140381
   },
   {
     "id": "METPO:1000870",
     "label": "sporulation",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.455592155456543,
-    "umap_y": 9.487910270690918
+    "kgm_nodes": [
+      "METPO:1000870"
+    ],
+    "umap_x": -12.32555103302002,
+    "umap_y": -3.8308451175689697
   },
   {
     "id": "METPO:1000694",
     "label": "square shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.139385223388672,
-    "umap_y": -3.40104079246521
+    "kgm_nodes": [
+      "METPO:1000694"
+    ],
+    "umap_x": -0.6178380250930786,
+    "umap_y": 7.309480667114258
   },
   {
     "id": "traitmech:000118",
     "label": "staphylococcus arrangement",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -10.327621459960938,
-    "umap_y": -3.324319839477539
+    "kgm_nodes": [
+      "METPO:1000666"
+    ],
+    "umap_x": -1.7990258932113647,
+    "umap_y": 5.825628280639648
   },
   {
     "id": "METPO:1000685",
     "label": "star shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 0.050382986664772034,
-    "umap_y": -7.368495941162109
+    "kgm_nodes": [
+      "METPO:1000685"
+    ],
+    "umap_x": 0.07213442772626877,
+    "umap_y": 8.888154983520508
   },
   {
     "id": "traitmech:000117",
     "label": "streptococcus arrangement",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -10.43568229675293,
-    "umap_y": -3.278703451156616
+    "kgm_nodes": [
+      "METPO:1000666"
+    ],
+    "umap_x": -1.852444052696228,
+    "umap_y": 5.747500419616699
+  },
+  {
+    "id": "METPO:1005037",
+    "label": "subpolar flagellation",
+    "category": "morphology",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005037"
+    ],
+    "umap_x": -1.1270778179168701,
+    "umap_y": 13.194971084594727
   },
   {
     "id": "traitmech:000069",
     "label": "sulfur globule",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -11.237025260925293,
-    "umap_y": 9.314346313476562
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.935373306274414,
+    "umap_y": -3.0562994480133057
   },
   {
     "id": "traitmech:000062",
     "label": "swarming motility",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": 2.880768299102783,
-    "umap_y": -8.006478309631348
+    "kgm_nodes": [
+      "METPO:1000702"
+    ],
+    "umap_x": 2.1362709999084473,
+    "umap_y": 10.549960136413574
   },
   {
     "id": "METPO:1000695",
     "label": "tailed shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.206202507019043,
-    "umap_y": -3.374091148376465
+    "kgm_nodes": [
+      "METPO:1000695"
+    ],
+    "umap_x": -1.1537387371063232,
+    "umap_y": 6.6181464195251465
   },
   {
     "id": "traitmech:000119",
     "label": "tetrad arrangement",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": -10.327832221984863,
-    "umap_y": -3.3220388889312744
+    "kgm_nodes": [
+      "METPO:1000666"
+    ],
+    "umap_x": -1.799790859222412,
+    "umap_y": 5.833609104156494
   },
   {
     "id": "METPO:1000696",
     "label": "triangular shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -10.27688217163086,
-    "umap_y": -3.3443424701690674
+    "kgm_nodes": [
+      "METPO:1000696"
+    ],
+    "umap_x": -1.4800845384597778,
+    "umap_y": 6.224571704864502
   },
   {
     "id": "traitmech:000061",
     "label": "twitching motility",
     "category": "morphology",
     "match_method": "parent_proxy",
-    "umap_x": 2.848611831665039,
-    "umap_y": -8.033514022827148
+    "kgm_nodes": [
+      "METPO:1000702"
+    ],
+    "umap_x": 2.276918411254883,
+    "umap_y": 10.649178504943848
+  },
+  {
+    "id": "traitmech:000175",
+    "label": "type IV pilus",
+    "category": "morphology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.644207954406738,
+    "umap_y": -2.195650339126587
   },
   {
     "id": "METPO:1000686",
     "label": "vibrio shaped",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": 2.641852855682373,
-    "umap_y": -8.17929458618164
+    "kgm_nodes": [
+      "METPO:1000686"
+    ],
+    "umap_x": 1.943105936050415,
+    "umap_y": 10.678744316101074
   },
   {
     "id": "METPO:1003029",
     "label": "white pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.37312889099121,
-    "umap_y": -7.360263824462891
+    "kgm_nodes": [
+      "METPO:1003029"
+    ],
+    "umap_x": -4.688730239868164,
+    "umap_y": -21.490427017211914
   },
   {
     "id": "METPO:1003030",
     "label": "yellow pigmented",
     "category": "morphology",
     "match_method": "direct_metpo",
-    "umap_x": -20.374452590942383,
-    "umap_y": -7.359841346740723
+    "kgm_nodes": [
+      "METPO:1003030"
+    ],
+    "umap_x": -4.687982082366943,
+    "umap_y": -21.488672256469727
   },
   {
     "id": "METPO:1001007",
     "label": "growth NaCl observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.00457763671875,
-    "umap_y": -9.99116039276123
+    "kgm_nodes": [
+      "METPO:1001007"
+    ],
+    "umap_x": 3.363197088241577,
+    "umap_y": 11.834547996520996
   },
   {
     "id": "METPO:1001017",
     "label": "growth oxygen observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.7048842906951904,
-    "umap_y": -10.432306289672852
+    "kgm_nodes": [
+      "METPO:1001017"
+    ],
+    "umap_x": 4.54787540435791,
+    "umap_y": 12.421700477600098
   },
   {
     "id": "METPO:1001012",
     "label": "growth pH observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.3927388191223145,
-    "umap_y": -10.672327995300293
+    "kgm_nodes": [
+      "METPO:1001012"
+    ],
+    "umap_x": 4.638797283172607,
+    "umap_y": 12.694747924804688
   },
   {
     "id": "METPO:1001002",
     "label": "growth temperature observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.951690435409546,
-    "umap_y": -10.59583854675293
+    "kgm_nodes": [
+      "METPO:1001002"
+    ],
+    "umap_x": 3.770770311355591,
+    "umap_y": 12.397109031677246
   },
   {
     "id": "METPO:1001008",
     "label": "NaCl delta observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.774542808532715,
-    "umap_y": -10.619104385375977
+    "kgm_nodes": [
+      "METPO:1001008"
+    ],
+    "umap_x": 4.433643341064453,
+    "umap_y": 12.342199325561523
   },
   {
     "id": "METPO:1001022",
     "label": "NaCl observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.264459133148193,
-    "umap_y": -9.969720840454102
+    "kgm_nodes": [
+      "METPO:1001022"
+    ],
+    "umap_x": 4.324418544769287,
+    "umap_y": 11.97996711730957
   },
   {
     "id": "METPO:1001009",
     "label": "NaCl range observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.4944450855255127,
-    "umap_y": -9.948716163635254
+    "kgm_nodes": [
+      "METPO:1001009"
+    ],
+    "umap_x": 4.346153736114502,
+    "umap_y": 12.317642211914062
   },
   {
     "id": "METPO:1001010",
     "label": "optimum NaCl observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.6707489490509033,
-    "umap_y": -11.245071411132812
+    "kgm_nodes": [
+      "METPO:1001010"
+    ],
+    "umap_x": 3.8946034908294678,
+    "umap_y": 12.55824089050293
   },
   {
     "id": "METPO:1001016",
     "label": "optimum oxygen observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.8707334995269775,
-    "umap_y": -10.49244499206543
+    "kgm_nodes": [
+      "METPO:1001016"
+    ],
+    "umap_x": 3.6680727005004883,
+    "umap_y": 12.308649063110352
   },
   {
     "id": "METPO:1001013",
     "label": "optimum pH observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.217070579528809,
-    "umap_y": -10.718546867370605
+    "kgm_nodes": [
+      "METPO:1001013"
+    ],
+    "umap_x": 4.519925117492676,
+    "umap_y": 12.630775451660156
   },
   {
     "id": "METPO:1001001",
     "label": "optimum temperature observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.653001070022583,
-    "umap_y": -9.402934074401855
+    "kgm_nodes": [
+      "METPO:1001001"
+    ],
+    "umap_x": 3.289520025253296,
+    "umap_y": 11.453300476074219
   },
   {
     "id": "METPO:1001019",
     "label": "oxygen delta observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.592597007751465,
-    "umap_y": -10.61677074432373
+    "kgm_nodes": [
+      "METPO:1001019"
+    ],
+    "umap_x": 4.5562262535095215,
+    "umap_y": 12.544659614562988
   },
   {
     "id": "METPO:1001020",
     "label": "oxygen observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.8668389320373535,
-    "umap_y": -10.462728500366211
+    "kgm_nodes": [
+      "METPO:1001020"
+    ],
+    "umap_x": 4.032059669494629,
+    "umap_y": 12.180586814880371
   },
   {
     "id": "METPO:1001018",
     "label": "oxygen range observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.559406757354736,
-    "umap_y": -10.78094482421875
+    "kgm_nodes": [
+      "METPO:1001018"
+    ],
+    "umap_x": 4.499408721923828,
+    "umap_y": 12.395977973937988
   },
   {
     "id": "METPO:1001014",
     "label": "pH delta observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.087923526763916,
-    "umap_y": -10.803732872009277
+    "kgm_nodes": [
+      "METPO:1001014"
+    ],
+    "umap_x": 4.69310188293457,
+    "umap_y": 12.564973831176758
   },
   {
     "id": "METPO:1001023",
     "label": "pH observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.1720685958862305,
-    "umap_y": -10.422645568847656
+    "kgm_nodes": [
+      "METPO:1001023"
+    ],
+    "umap_x": 4.643918514251709,
+    "umap_y": 12.309242248535156
   },
   {
     "id": "METPO:1001015",
     "label": "pH range observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.081575870513916,
-    "umap_y": -10.531685829162598
+    "kgm_nodes": [
+      "METPO:1001015"
+    ],
+    "umap_x": 4.290957927703857,
+    "umap_y": 12.518617630004883
   },
   {
     "id": "METPO:1001004",
     "label": "temperature delta observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.512538909912109,
-    "umap_y": -11.046923637390137
+    "kgm_nodes": [
+      "METPO:1001004"
+    ],
+    "umap_x": 4.089339733123779,
+    "umap_y": 12.700784683227539
   },
   {
     "id": "METPO:1001021",
     "label": "temperature observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 3.2856616973876953,
-    "umap_y": -9.386942863464355
+    "kgm_nodes": [
+      "METPO:1001021"
+    ],
+    "umap_x": 3.5803754329681396,
+    "umap_y": 12.163362503051758
   },
   {
     "id": "METPO:1001003",
     "label": "temperature range observation",
     "category": "observation",
     "match_method": "direct_metpo",
-    "umap_x": 4.471940994262695,
-    "umap_y": -10.479372024536133
+    "kgm_nodes": [
+      "METPO:1001003"
+    ],
+    "umap_x": 4.653073787689209,
+    "umap_y": 12.352828979492188
+  },
+  {
+    "id": "METPO:1007084",
+    "label": "catalase negative",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.146415710449219,
+    "umap_y": -4.238212585449219
+  },
+  {
+    "id": "METPO:1007080",
+    "label": "catalase test",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.041576385498047,
+    "umap_y": -2.608639717102051
+  },
+  {
+    "id": "METPO:1007064",
+    "label": "circular colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.311271667480469,
+    "umap_y": -3.270139217376709
+  },
+  {
+    "id": "METPO:1007091",
+    "label": "coagulase negative",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.248188972473145,
+    "umap_y": -2.2208476066589355
+  },
+  {
+    "id": "METPO:1007090",
+    "label": "coagulase positive",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.35425853729248,
+    "umap_y": -2.0639381408691406
+  },
+  {
+    "id": "METPO:1007062",
+    "label": "colony morphology",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.592117309570312,
+    "umap_y": -3.6816322803497314
+  },
+  {
+    "id": "METPO:1007063",
+    "label": "colony shape",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.071880340576172,
+    "umap_y": -3.2414286136627197
+  },
+  {
+    "id": "METPO:1007093",
+    "label": "epibiont phenotype",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.014927864074707,
+    "umap_y": -4.137819766998291
+  },
+  {
+    "id": "METPO:1007066",
+    "label": "filamentous colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.103693962097168,
+    "umap_y": -3.970397710800171
+  },
+  {
+    "id": "METPO:1007069",
+    "label": "fried-egg-shaped colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.74958610534668,
+    "umap_y": -4.344633102416992
+  },
+  {
+    "id": "METPO:1005040",
+    "label": "generalist",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005040"
+    ],
+    "umap_x": -13.108665466308594,
+    "umap_y": -3.4602231979370117
+  },
+  {
+    "id": "METPO:1005025",
+    "label": "hemolysis",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005025"
+    ],
+    "umap_x": -5.657413482666016,
+    "umap_y": -7.182661056518555
+  },
+  {
+    "id": "METPO:1005026",
+    "label": "hemolytic",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005026"
+    ],
+    "umap_x": -5.563392639160156,
+    "umap_y": -7.063290119171143
+  },
+  {
+    "id": "METPO:1005010",
+    "label": "indole test",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005010"
+    ],
+    "umap_x": -5.585951805114746,
+    "umap_y": -6.966826915740967
+  },
+  {
+    "id": "METPO:1005012",
+    "label": "indole test negative",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005012"
+    ],
+    "umap_x": -5.53521203994751,
+    "umap_y": -6.9466776847839355
+  },
+  {
+    "id": "METPO:1005011",
+    "label": "indole test positive",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005011"
+    ],
+    "umap_x": -5.55950403213501,
+    "umap_y": -6.961135387420654
+  },
+  {
+    "id": "METPO:1007065",
+    "label": "irregular colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.86502742767334,
+    "umap_y": -3.0723233222961426
+  },
+  {
+    "id": "METPO:1005013",
+    "label": "methyl red test",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005013"
+    ],
+    "umap_x": -5.564265251159668,
+    "umap_y": -6.936273574829102
+  },
+  {
+    "id": "METPO:1005015",
+    "label": "methyl red test negative",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005015"
+    ],
+    "umap_x": -5.518251419067383,
+    "umap_y": -6.9263834953308105
+  },
+  {
+    "id": "METPO:1005014",
+    "label": "methyl red test positive",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005014"
+    ],
+    "umap_x": -5.473878383636475,
+    "umap_y": -6.947144508361816
+  },
+  {
+    "id": "METPO:1005027",
+    "label": "non-hemolytic",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005027"
+    ],
+    "umap_x": -5.5297346115112305,
+    "umap_y": -6.895096302032471
+  },
+  {
+    "id": "METPO:1007073",
+    "label": "osmotic tolerance",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.83696174621582,
+    "umap_y": -3.191880464553833
+  },
+  {
+    "id": "METPO:1007086",
+    "label": "oxidase negative",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.392569541931152,
+    "umap_y": -2.4625184535980225
+  },
+  {
+    "id": "METPO:1007081",
+    "label": "oxidase test",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.380558967590332,
+    "umap_y": -3.013906717300415
+  },
+  {
+    "id": "METPO:1007067",
+    "label": "punctiform colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.894262313842773,
+    "umap_y": -3.58402681350708
+  },
+  {
+    "id": "METPO:1007068",
+    "label": "rhizoid colony",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.218945503234863,
+    "umap_y": -3.5810294151306152
+  },
+  {
+    "id": "traitmech:000177",
+    "label": "specialist",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.725975036621094,
+    "umap_y": -2.364741563796997
+  },
+  {
+    "id": "METPO:1007088",
+    "label": "urease negative",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.505751609802246,
+    "umap_y": -3.2367990016937256
+  },
+  {
+    "id": "METPO:1007082",
+    "label": "urease test",
+    "category": "other",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.10515308380127,
+    "umap_y": -3.409457206726074
+  },
+  {
+    "id": "METPO:1005016",
+    "label": "Voges-Proskauer test",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005016"
+    ],
+    "umap_x": -5.576196193695068,
+    "umap_y": -7.030692100524902
+  },
+  {
+    "id": "METPO:1005018",
+    "label": "Voges-Proskauer test negative",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005018"
+    ],
+    "umap_x": -5.4423370361328125,
+    "umap_y": -6.775561809539795
+  },
+  {
+    "id": "METPO:1005017",
+    "label": "Voges-Proskauer test positive",
+    "category": "other",
+    "match_method": "direct_metpo",
+    "kgm_nodes": [
+      "METPO:1005017"
+    ],
+    "umap_x": -5.381168842315674,
+    "umap_y": -6.970268249511719
+  },
+  {
+    "id": "traitmech:000142",
+    "label": "acid phosphatase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.652350425720215,
+    "umap_y": -3.8838982582092285
+  },
+  {
+    "id": "traitmech:000194",
+    "label": "aerobic anoxygenic phototrophy",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000657"
+    ],
+    "umap_x": 0.6317343711853027,
+    "umap_y": 9.981358528137207
+  },
+  {
+    "id": "traitmech:000161",
+    "label": "alanine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.230733871459961,
+    "umap_y": -2.1447012424468994
+  },
+  {
+    "id": "traitmech:000141",
+    "label": "alkaline phosphatase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.60512924194336,
+    "umap_y": -2.790975332260132
+  },
+  {
+    "id": "traitmech:000159",
+    "label": "alpha-chymotrypsin activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.463467597961426,
+    "umap_y": -2.4467568397521973
+  },
+  {
+    "id": "traitmech:000152",
+    "label": "alpha-fucosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.18563175201416,
+    "umap_y": -2.9739136695861816
+  },
+  {
+    "id": "traitmech:000149",
+    "label": "alpha-galactosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.70533275604248,
+    "umap_y": -2.9969654083251953
+  },
+  {
+    "id": "traitmech:000145",
+    "label": "alpha-glucosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.05638313293457,
+    "umap_y": -2.677044153213501
+  },
+  {
+    "id": "traitmech:000150",
+    "label": "alpha-mannosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.178903579711914,
+    "umap_y": -3.5785274505615234
+  },
+  {
+    "id": "traitmech:000162",
+    "label": "amylase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.139864921569824,
+    "umap_y": -3.318988800048828
   },
   {
     "id": "traitmech:000088",
     "label": "antibiotic resistance",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.876640319824219,
-    "umap_y": 9.429314613342285
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.72713565826416,
+    "umap_y": -3.010209321975708
+  },
+  {
+    "id": "traitmech:000167",
+    "label": "arginine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.737589836120605,
+    "umap_y": -2.9913763999938965
+  },
+  {
+    "id": "traitmech:000164",
+    "label": "arginine dihydrolase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.71444034576416,
+    "umap_y": -3.02451753616333
   },
   {
     "id": "METPO:1000632",
     "label": "autotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.6015158891677856,
-    "umap_y": -6.923929214477539
+    "kgm_nodes": [
+      "METPO:1000632"
+    ],
+    "umap_x": 0.8444663286209106,
+    "umap_y": 9.407135963439941
+  },
+  {
+    "id": "traitmech:000183",
+    "label": "bacteriocin production",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.248496055603027,
+    "umap_y": -3.4088687896728516
+  },
+  {
+    "id": "traitmech:000148",
+    "label": "beta-galactosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.121779441833496,
+    "umap_y": -3.8342578411102295
+  },
+  {
+    "id": "traitmech:000146",
+    "label": "beta-glucosidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.644210815429688,
+    "umap_y": -3.5318374633789062
+  },
+  {
+    "id": "traitmech:000151",
+    "label": "beta-glucuronidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.725872039794922,
+    "umap_y": -3.0159244537353516
+  },
+  {
+    "id": "traitmech:000157",
+    "label": "beta-N-acetylhexosaminidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.872659683227539,
+    "umap_y": -3.675417184829712
   },
   {
     "id": "traitmech:000085",
     "label": "bioluminescence",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.566079139709473,
-    "umap_y": 8.779314994812012
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.701199531555176,
+    "umap_y": -2.977938175201416
   },
   {
     "id": "METPO:1000633",
     "label": "carboxydotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0142669677734375,
-    "umap_y": -3.1537272930145264
+    "kgm_nodes": [
+      "METPO:1000633"
+    ],
+    "umap_x": 2.2631266117095947,
+    "umap_y": 5.798471927642822
+  },
+  {
+    "id": "traitmech:000156",
+    "label": "carboxylesterase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.724186897277832,
+    "umap_y": -3.0195932388305664
+  },
+  {
+    "id": "traitmech:000137",
+    "label": "caseinase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.707199096679688,
+    "umap_y": -2.9879519939422607
   },
   {
     "id": "traitmech:000075",
     "label": "catalase activity",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -12.387469291687012,
-    "umap_y": 8.562175750732422
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.014716148376465,
+    "umap_y": -3.866074562072754
   },
   {
     "id": "METPO:1000634",
     "label": "chemoautolithotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.12343491613864899,
-    "umap_y": -5.597480297088623
+    "kgm_nodes": [
+      "METPO:1000634"
+    ],
+    "umap_x": 1.0563099384307861,
+    "umap_y": 8.111979484558105
   },
   {
     "id": "METPO:1000635",
     "label": "chemoautotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0192683935165405,
-    "umap_y": -3.114058256149292
+    "kgm_nodes": [
+      "METPO:1000635"
+    ],
+    "umap_x": 2.271512269973755,
+    "umap_y": 5.775884628295898
   },
   {
     "id": "METPO:1000636",
     "label": "chemoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.30264270305633545,
-    "umap_y": -8.224555015563965
+    "kgm_nodes": [
+      "METPO:1000636"
+    ],
+    "umap_x": 0.3799997866153717,
+    "umap_y": 10.643977165222168
   },
   {
     "id": "METPO:1000637",
     "label": "chemolithoautotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.6273698806762695,
-    "umap_y": -6.19455099105835
+    "kgm_nodes": [
+      "METPO:1000637"
+    ],
+    "umap_x": 1.3125886917114258,
+    "umap_y": 8.552667617797852
   },
   {
     "id": "METPO:1000638",
     "label": "chemolithoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.8140012621879578,
-    "umap_y": -3.6363019943237305
+    "kgm_nodes": [
+      "METPO:1000638"
+    ],
+    "umap_x": 1.9992542266845703,
+    "umap_y": 6.3728227615356445
   },
   {
     "id": "METPO:1000639",
     "label": "chemolithotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.036648228764534,
-    "umap_y": -5.566801071166992
+    "kgm_nodes": [
+      "METPO:1000639"
+    ],
+    "umap_x": 1.3793816566467285,
+    "umap_y": 7.965928554534912
   },
   {
     "id": "METPO:1000640",
     "label": "chemoorganoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.12676100432872772,
-    "umap_y": -6.554976463317871
+    "kgm_nodes": [
+      "METPO:1000640"
+    ],
+    "umap_x": 0.39301708340644836,
+    "umap_y": 8.891433715820312
   },
   {
     "id": "METPO:1000663",
     "label": "chemoorganotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.1904122233390808,
-    "umap_y": -6.777280330657959
+    "kgm_nodes": [
+      "METPO:1000663"
+    ],
+    "umap_x": 0.6760099530220032,
+    "umap_y": 8.850643157958984
   },
   {
     "id": "traitmech:000086",
     "label": "chemotaxis",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.734800338745117,
-    "umap_y": 9.106236457824707
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.40135669708252,
+    "umap_y": -2.093498706817627
   },
   {
     "id": "METPO:1000641",
     "label": "chemotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.25133216381073,
-    "umap_y": -7.4322829246521
+    "kgm_nodes": [
+      "METPO:1000641"
+    ],
+    "umap_x": -0.06668678671121597,
+    "umap_y": 9.910309791564941
+  },
+  {
+    "id": "METPO:1007089",
+    "label": "coagulase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.078086853027344,
+    "umap_y": -2.918700933456421
   },
   {
     "id": "METPO:1000642",
     "label": "copiotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.7790036201477051,
-    "umap_y": -3.5836360454559326
+    "kgm_nodes": [
+      "METPO:1000642"
+    ],
+    "umap_x": 2.0013558864593506,
+    "umap_y": 6.222346782684326
+  },
+  {
+    "id": "traitmech:000147",
+    "label": "cystine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.934450149536133,
+    "umap_y": -2.5916264057159424
+  },
+  {
+    "id": "traitmech:000138",
+    "label": "DNase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.691170692443848,
+    "umap_y": -3.000858783721924
   },
   {
     "id": "traitmech:000080",
     "label": "dormancy",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.662935256958008,
-    "umap_y": 9.074628829956055
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.724974632263184,
+    "umap_y": -2.9994280338287354
+  },
+  {
+    "id": "traitmech:000160",
+    "label": "gamma-glutamyltransferase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.05398941040039,
+    "umap_y": -2.2178146839141846
+  },
+  {
+    "id": "traitmech:000136",
+    "label": "gelatinase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.365777015686035,
+    "umap_y": -3.6163504123687744
+  },
+  {
+    "id": "traitmech:000173",
+    "label": "glutamyl glutamic acid arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.037949562072754,
+    "umap_y": -2.9340360164642334
+  },
+  {
+    "id": "traitmech:000170",
+    "label": "glycine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.891846656799316,
+    "umap_y": -2.731339931488037
   },
   {
     "id": "METPO:1000644",
     "label": "heterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.7560097575187683,
-    "umap_y": -7.376785755157471
+    "kgm_nodes": [
+      "METPO:1000644"
+    ],
+    "umap_x": 1.0043679475784302,
+    "umap_y": 10.190279006958008
+  },
+  {
+    "id": "traitmech:000171",
+    "label": "histidine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.148860931396484,
+    "umap_y": -2.3781285285949707
   },
   {
     "id": "METPO:1000646",
     "label": "hydrogenotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0019060373306274,
-    "umap_y": -3.1180903911590576
+    "kgm_nodes": [
+      "METPO:1000646"
+    ],
+    "umap_x": 2.2728800773620605,
+    "umap_y": 5.752374172210693
+  },
+  {
+    "id": "traitmech:000140",
+    "label": "lecithinase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.373896598815918,
+    "umap_y": -2.0453288555145264
+  },
+  {
+    "id": "traitmech:000143",
+    "label": "leucine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.07008171081543,
+    "umap_y": -2.547468423843384
+  },
+  {
+    "id": "traitmech:000178",
+    "label": "leucyl glycine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.762232780456543,
+    "umap_y": -2.210191011428833
+  },
+  {
+    "id": "traitmech:000139",
+    "label": "lipase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.321290969848633,
+    "umap_y": -3.257587194442749
   },
   {
     "id": "METPO:1000647",
     "label": "lithoautotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0150973796844482,
-    "umap_y": -3.0801310539245605
+    "kgm_nodes": [
+      "METPO:1000647"
+    ],
+    "umap_x": 2.3013830184936523,
+    "umap_y": 5.748063087463379
   },
   {
     "id": "METPO:1000648",
     "label": "lithoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.9934107065200806,
-    "umap_y": -3.2116119861602783
+    "kgm_nodes": [
+      "METPO:1000648"
+    ],
+    "umap_x": 2.2224020957946777,
+    "umap_y": 5.865161895751953
   },
   {
     "id": "METPO:1000649",
     "label": "lithotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.3344449996948242,
-    "umap_y": -6.42011833190918
+    "kgm_nodes": [
+      "METPO:1000649"
+    ],
+    "umap_x": 0.48683539032936096,
+    "umap_y": 8.722552299499512
+  },
+  {
+    "id": "traitmech:000153",
+    "label": "lysine decarboxylase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.166692733764648,
+    "umap_y": -3.244385004043579
+  },
+  {
+    "id": "traitmech:000176",
+    "label": "magnetotaxis",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.577563285827637,
+    "umap_y": -3.4370343685150146
   },
   {
     "id": "METPO:1000650",
     "label": "methanotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.9407310485839844,
-    "umap_y": -3.3103506565093994
+    "kgm_nodes": [
+      "METPO:1000650"
+    ],
+    "umap_x": 2.1571707725524902,
+    "umap_y": 5.987393856048584
   },
   {
     "id": "METPO:1000651",
     "label": "methylotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 1.1966291666030884,
-    "umap_y": -7.616278648376465
+    "kgm_nodes": [
+      "METPO:1000651"
+    ],
+    "umap_x": 1.0960525274276733,
+    "umap_y": 10.047953605651855
   },
   {
     "id": "METPO:1000652",
     "label": "mixotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.004729151725769,
-    "umap_y": -3.1474759578704834
+    "kgm_nodes": [
+      "METPO:1000652"
+    ],
+    "umap_x": 2.225222587585449,
+    "umap_y": 5.8389573097229
+  },
+  {
+    "id": "traitmech:000165",
+    "label": "NAD-dependent alcohol dehydrogenase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.547496795654297,
+    "umap_y": -2.738070249557495
+  },
+  {
+    "id": "traitmech:000174",
+    "label": "naphthol-AS-BI-phosphohydrolase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.90005111694336,
+    "umap_y": -3.669499635696411
   },
   {
     "id": "traitmech:000087",
     "label": "natural competence",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.898004531860352,
-    "umap_y": 8.406173706054688
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.442217826843262,
+    "umap_y": -1.962774634361267
   },
   {
     "id": "METPO:1000731",
     "label": "nutrient adaptation",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.8363069891929626,
-    "umap_y": -3.456637144088745
+    "kgm_nodes": [
+      "METPO:1000731"
+    ],
+    "umap_x": 2.051142454147339,
+    "umap_y": 6.224294185638428
   },
   {
     "id": "METPO:1000654",
     "label": "oligotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.6011277437210083,
-    "umap_y": -3.731419563293457
+    "kgm_nodes": [
+      "METPO:1000654"
+    ],
+    "umap_x": 1.7315267324447632,
+    "umap_y": 6.803522109985352
   },
   {
     "id": "METPO:1000664",
     "label": "organoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.4033314883708954,
-    "umap_y": -6.182077407836914
+    "kgm_nodes": [
+      "METPO:1000664"
+    ],
+    "umap_x": 0.9820704460144043,
+    "umap_y": 8.313614845275879
   },
   {
     "id": "METPO:1000655",
     "label": "organotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.27861928939819336,
-    "umap_y": -7.032036304473877
+    "kgm_nodes": [
+      "METPO:1000655"
+    ],
+    "umap_x": 0.019786503165960312,
+    "umap_y": 9.464827537536621
+  },
+  {
+    "id": "traitmech:000154",
+    "label": "ornithine decarboxylase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.21878433227539,
+    "umap_y": -3.2552621364593506
   },
   {
     "id": "traitmech:000076",
     "label": "oxidase activity",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.511272430419922,
-    "umap_y": 9.141858100891113
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.29212760925293,
+    "umap_y": -3.480435609817505
   },
   {
     "id": "traitmech:000079",
     "label": "oxidative stress response",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.817008972167969,
-    "umap_y": 8.231795310974121
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -12.992223739624023,
+    "umap_y": -2.918958902359009
   },
   {
     "id": "traitmech:000082",
     "label": "persister cell formation",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.837039947509766,
-    "umap_y": 8.693286895751953
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.85268497467041,
+    "umap_y": -2.050273895263672
+  },
+  {
+    "id": "traitmech:000168",
+    "label": "phenylalanine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.684800148010254,
+    "umap_y": -3.3298802375793457
   },
   {
     "id": "METPO:1000656",
     "label": "photoautotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.4563038945198059,
-    "umap_y": -7.9698991775512695
+    "kgm_nodes": [
+      "METPO:1000656"
+    ],
+    "umap_x": 0.8050867915153503,
+    "umap_y": 10.357155799865723
   },
   {
     "id": "METPO:1000657",
     "label": "photoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.5342035293579102,
-    "umap_y": -7.64755916595459
+    "kgm_nodes": [
+      "METPO:1000657"
+    ],
+    "umap_x": 0.6215865612030029,
+    "umap_y": 10.101386070251465
   },
   {
     "id": "METPO:1000665",
     "label": "photolithoautotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.9874864816665649,
-    "umap_y": -3.1616833209991455
+    "kgm_nodes": [
+      "METPO:1000665"
+    ],
+    "umap_x": 2.237764835357666,
+    "umap_y": 5.838546276092529
   },
   {
     "id": "METPO:1000658",
     "label": "photolithotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -0.9736810326576233,
-    "umap_y": -3.162078857421875
+    "kgm_nodes": [
+      "METPO:1000658"
+    ],
+    "umap_x": 2.2210686206817627,
+    "umap_y": 5.893666744232178
   },
   {
     "id": "METPO:1000659",
     "label": "photoorganoheterotrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0034759044647217,
-    "umap_y": -3.1791982650756836
+    "kgm_nodes": [
+      "METPO:1000659"
+    ],
+    "umap_x": 2.197838068008423,
+    "umap_y": 5.911737442016602
   },
   {
     "id": "METPO:1000660",
     "label": "phototrophic",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": 0.4260680079460144,
-    "umap_y": -7.385044574737549
+    "kgm_nodes": [
+      "METPO:1000660"
+    ],
+    "umap_x": 0.6128273606300354,
+    "umap_y": 9.964690208435059
+  },
+  {
+    "id": "traitmech:000166",
+    "label": "prolyl aminopeptidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.274442672729492,
+    "umap_y": -2.2998719215393066
+  },
+  {
+    "id": "traitmech:000163",
+    "label": "pyrazinamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.26896858215332,
+    "umap_y": -3.360945463180542
+  },
+  {
+    "id": "traitmech:000155",
+    "label": "pyrrolidonyl arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.1448335647583,
+    "umap_y": -2.3865549564361572
   },
   {
     "id": "traitmech:000084",
     "label": "quorum sensing",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -12.294599533081055,
-    "umap_y": 9.755056381225586
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.443968772888184,
+    "umap_y": -3.835014581680298
+  },
+  {
+    "id": "traitmech:000172",
+    "label": "serine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.038787841796875,
+    "umap_y": -2.146775960922241
+  },
+  {
+    "id": "traitmech:000186",
+    "label": "siderophore production",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.47359848022461,
+    "umap_y": -3.604823112487793
   },
   {
     "id": "traitmech:000083",
     "label": "spore germination",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -12.456801414489746,
-    "umap_y": 9.254701614379883
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.795437812805176,
+    "umap_y": -3.487370252609253
   },
   {
     "id": "traitmech:000078",
     "label": "stress response",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.61844253540039,
-    "umap_y": 9.100610733032227
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.5368070602417,
+    "umap_y": -2.8319547176361084
   },
   {
     "id": "METPO:1000631",
     "label": "trophic type",
     "category": "physiology",
     "match_method": "direct_metpo",
-    "umap_x": -1.0152021646499634,
-    "umap_y": -3.0954606533050537
+    "kgm_nodes": [
+      "METPO:1000631"
+    ],
+    "umap_x": 2.248940944671631,
+    "umap_y": 5.805939197540283
+  },
+  {
+    "id": "traitmech:000158",
+    "label": "trypsin activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.362826347351074,
+    "umap_y": -2.9215281009674072
+  },
+  {
+    "id": "traitmech:000169",
+    "label": "tyrosine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.223052024841309,
+    "umap_y": -2.3523900508880615
   },
   {
     "id": "traitmech:000077",
     "label": "urease activity",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -11.73964786529541,
-    "umap_y": 9.317739486694336
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.24616813659668,
+    "umap_y": -4.020174026489258
+  },
+  {
+    "id": "traitmech:000144",
+    "label": "valine arylamidase activity",
+    "category": "physiology",
+    "match_method": "parent_proxy",
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -14.100244522094727,
+    "umap_y": -2.079436779022217
   },
   {
     "id": "traitmech:000081",
     "label": "viable but nonculturable state",
     "category": "physiology",
     "match_method": "parent_proxy",
-    "umap_x": -12.3727445602417,
-    "umap_y": 8.237988471984863
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.46670913696289,
+    "umap_y": -3.8654696941375732
   },
   {
     "id": "METPO:2000060",
     "label": "has maximum observed value",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 4.1483893394470215,
-    "umap_y": -10.734766006469727
+    "kgm_nodes": [
+      "METPO:2000060"
+    ],
+    "umap_x": 4.393431186676025,
+    "umap_y": 12.739184379577637
   },
   {
     "id": "METPO:2000059",
     "label": "has minimum observed value",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 4.531481742858887,
-    "umap_y": -10.741503715515137
+    "kgm_nodes": [
+      "METPO:2000059"
+    ],
+    "umap_x": 4.495249271392822,
+    "umap_y": 12.518044471740723
   },
   {
     "id": "METPO:2000058",
     "label": "has observed spot value",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 4.371485233306885,
-    "umap_y": -10.430462837219238
+    "kgm_nodes": [
+      "METPO:2000058"
+    ],
+    "umap_x": 4.781182289123535,
+    "umap_y": 12.404805183410645
   },
   {
     "id": "METPO:2000071",
     "label": "has value",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 3.088019371032715,
-    "umap_y": -9.9991455078125
+    "kgm_nodes": [
+      "METPO:2000071"
+    ],
+    "umap_x": 4.882511615753174,
+    "umap_y": 12.343988418579102
   },
   {
     "id": "METPO:2000061",
     "label": "has value comments",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 4.462672710418701,
-    "umap_y": -10.294041633605957
+    "kgm_nodes": [
+      "METPO:2000061"
+    ],
+    "umap_x": 4.10228967666626,
+    "umap_y": 12.05811882019043
   },
   {
     "id": "METPO:2000062",
     "label": "is negative data",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 3.4612882137298584,
-    "umap_y": -9.21694278717041
+    "kgm_nodes": [
+      "METPO:2000062"
+    ],
+    "umap_x": 3.41007137298584,
+    "umap_y": 11.324402809143066
   },
   {
     "id": "METPO:2000063",
     "label": "observation data property",
     "category": "quantitative_property",
     "match_method": "direct_metpo",
-    "umap_x": 3.7282919883728027,
-    "umap_y": -10.818577766418457
+    "kgm_nodes": [
+      "METPO:2000063"
+    ],
+    "umap_x": 4.37531042098999,
+    "umap_y": 12.345351219177246
   },
   {
     "id": "METPO:1000630",
     "label": "biological process",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 3.1345672607421875,
-    "umap_y": -5.243836402893066
+    "kgm_nodes": [
+      "METPO:1000630"
+    ],
+    "umap_x": 10.41890811920166,
+    "umap_y": -13.041434288024902
   },
   {
     "id": "METPO:1000526",
     "label": "chemical entity",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 2.0458459854125977,
-    "umap_y": -5.803737163543701
+    "kgm_nodes": [
+      "METPO:1000526"
+    ],
+    "umap_x": 11.147372245788574,
+    "umap_y": -11.714649200439453
   },
   {
     "id": "METPO:1000527",
     "label": "enzyme",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 2.5571300983428955,
-    "umap_y": -5.660181045532227
+    "kgm_nodes": [
+      "METPO:1000527"
+    ],
+    "umap_x": 11.070107460021973,
+    "umap_y": -11.852239608764648
   },
   {
     "id": "METPO:1000186",
     "label": "material entity",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 1.9135123491287231,
-    "umap_y": -6.034756183624268
+    "kgm_nodes": [
+      "METPO:1000186"
+    ],
+    "umap_x": 11.050738334655762,
+    "umap_y": -11.881340026855469
   },
   {
     "id": "METPO:1000525",
     "label": "microbe",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 1.9135913848876953,
-    "umap_y": -5.962398529052734
+    "kgm_nodes": [
+      "METPO:1000525"
+    ],
+    "umap_x": 11.074250221252441,
+    "umap_y": -11.845126152038574
   },
   {
     "id": "METPO:1001000",
     "label": "observation",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 4.1050848960876465,
-    "umap_y": -10.29240894317627
+    "kgm_nodes": [
+      "METPO:1001000"
+    ],
+    "umap_x": 4.392520904541016,
+    "umap_y": 12.18582534790039
   },
   {
     "id": "METPO:1000059",
     "label": "phenotype",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": -11.408530235290527,
-    "umap_y": 8.750503540039062
+    "kgm_nodes": [
+      "METPO:1000059"
+    ],
+    "umap_x": -13.80703353881836,
+    "umap_y": -3.589390277862549
   },
   {
     "id": "METPO:1000188",
     "label": "quality",
     "category": "upper",
     "match_method": "direct_metpo",
-    "umap_x": 2.1563737392425537,
-    "umap_y": 16.839614868164062
+    "kgm_nodes": [
+      "METPO:1000188"
+    ],
+    "umap_x": 2.8029403686523438,
+    "umap_y": -17.42676544189453
   }
 ]
