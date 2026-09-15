@@ -477,6 +477,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "organohalide-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level organohalide respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "organohalide respiration",
+  "source_id": "traitmech:000204",
+  "source_file": "organohalide_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete Halogenated compound respiration and Organohalide respiration classes. Candidate reductive dehalogenase protein-family and enzyme terms are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-xref-gap"
+ },
+ {
   "discussion_id": "perchlorate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level perchlorate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1447,9 +1464,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 83,
+ "total_discussions": 84,
  "total_knowledge_gaps": 8,
- "total_source_entries": 82,
+ "total_source_entries": 83,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
