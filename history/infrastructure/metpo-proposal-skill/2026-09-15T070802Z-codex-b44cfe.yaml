@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T070802Z-codex-b44cfe
+  timestamp: '2026-09-15T07:08:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve METPO v85 homeoviscous adaptation placeholder
+  details: Documented that metpo_traitmech_v85 reserves METPO:1016200 for the homeoviscous
+    adaptation proposal, so the next one-row Scope-A cohort starts at METPO:1016300.

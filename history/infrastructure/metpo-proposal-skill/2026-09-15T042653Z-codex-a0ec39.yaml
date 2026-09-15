@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal-skill.yaml
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T042653Z-codex-a0ec39
+  timestamp: '2026-09-15T04:26:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve METPO v81 organohalide placeholder
+  details: Documented that metpo_traitmech_v81 reserves METPO:1015800 for the organohalide
+    respiration proposal, so the next one-row Scope-A cohort starts at METPO:1015900.

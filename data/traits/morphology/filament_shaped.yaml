@@ -72,6 +72,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: DNA-damage-triggered RecA/LexA SOS regulon inducing division-inhibitor
       expression.
+    grounding: GO:0009432
   - node_id: sula
     label: SulA
     node_type: GENE_OR_PROTEIN
@@ -320,4 +321,10 @@ curation_history:
     the tranche: set graph scope filament_shaped_streptomyces_polar_growth=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cgla).'
+  llm_assisted: true
+- timestamp: '2026-09-15T06:22:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE
+  changes: Grounded the RecA/LexA SOS-response biological-process node to GO:0009432
+    while adding the organism-level traitmech:000207 SOS response record.
   llm_assisted: true

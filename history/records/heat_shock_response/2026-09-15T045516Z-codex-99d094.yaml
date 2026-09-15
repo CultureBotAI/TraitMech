@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/heat_shock_response.yaml
+  slug: heat_shock_response
+session:
+  id: 2026-09-15T045516Z-codex-99d094
+  timestamp: '2026-09-15T04:55:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - ontology_mapping
+  summary: Add heat shock response trait
+  details: Minted traitmech:000205 heat shock response as a DOI-backed physiology TraitRecord
+    under stress response, with evidence from Schumann 2016 and Guisbert et al. 2008, Escherichia
+    coli and Bacillus subtilis canonical examples, a conserved proteostasis causal graph,
+    an xref-gap discussion, and the companion metpo_traitmech_v82 ROBOT proposal reserving
+    METPO:1015900.

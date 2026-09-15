@@ -70,6 +70,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Temperature-driven remodeling of membrane lipid composition to maintain
       bilayer order.
+    grounding: METPO:1016200
   - node_id: membrane_fluidity_homeostasis
     label: membrane fluidity homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -384,4 +385,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #700: removed the unsupported
     cis-trans-isomerase high-temperature membrane-viscosity edge and its abandoned
     isomerase node.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:57Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true

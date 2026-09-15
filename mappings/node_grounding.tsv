@@ -129,6 +129,8 @@ hydrostatic pressure	ENVIRONMENTAL_FACTOR	PATO:0001025	pressure	skos:closeMatch	
 chemotaxis signaling	BIOLOGICAL_PROCESS	GO:0006935	chemotaxis	skos:closeMatch	GO	medium	grounding-tail: GO chemotaxis (signal-transduction sense)
 salt-in strategy	BIOLOGICAL_PROCESS	METPO:1007720	salt-in strategy	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v7
 reductive genome evolution	BIOLOGICAL_PROCESS	METPO:1007721	reductive genome evolution	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v7
+homeoviscous adaptation	BIOLOGICAL_PROCESS	METPO:1016200	homeoviscous adaptation	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v85; membrane-fluidity stress-response process reused across temperature graphs
+homoviscous adaptation	BIOLOGICAL_PROCESS	METPO:1016200	homeoviscous adaptation	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v85; exact spelling variant used in membrane-sensing literature and one temperature graph
 bicarbonate	CHEMICAL	CHEBI:17544	hydrogencarbonate	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 pyruvate	CHEMICAL	CHEBI:15361	pyruvate	skos:exactMatch	CHEBI	high	exact name match via kg-microbe index (enriched-corpus pass)
 biofilm formation	BIOLOGICAL_PROCESS	GO:0042710	biofilm formation	skos:exactMatch	GO	high	exact name match via kg-microbe index (enriched-corpus pass)

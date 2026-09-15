@@ -73,6 +73,7 @@ causal_graphs:
     label: homeoviscous adaptation
     node_type: BIOLOGICAL_PROCESS
     description: Lipid remodeling that maintains membrane fluidity across temperatures.
+    grounding: METPO:1016200
   - node_id: liquid_crystalline_membrane_state
     label: liquid-crystalline membrane state
     node_type: STATE
@@ -243,4 +244,10 @@ curation_history:
     canonical example(s): Mucor circinelloides (NCBITaxon:36080; DOI:10.1016/j.heliyon.2024.e30812).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:58Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true

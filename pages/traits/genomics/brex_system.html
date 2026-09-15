@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BREX system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>BREX system</h1>
+    <p class="curie"><code>traitmech:000210</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A genomics trait describing possession of a bacteriophage exclusion defense system that uses host DNA methylation to discriminate self from non-self and inhibit phage DNA replication.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>BREX methylation guides antiphage discrimination</h2>
+      <p class="meta">Evidence-backed causal sketch linking a BREX locus to host-DNA methylation, self/non-self discrimination, and blocked phage-DNA replication.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · The graph captures Goldfarb et al.&#39;s experimentally supported host-methylation and post-adsorption phage-replication block without asserting that the molecular coupling between marked host DNA and blocked phage DNA is fully resolved.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>BREX methylation guides antiphage discrimination</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for BREX system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>BREX locus</strong>
+            <span class="edge-predicate">encodes</span>
+            <strong>PglX adenine methyltransferase</strong>
+
+            <p>Type I BREX loci encode PglX adenine methyltransferases.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.01001-19</code>
+                <span class="evidence-snippet">identified a complete cassette of a classic type I BREX system</span>
+                <span class="meta">The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>PglX adenine methyltransferase</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>BREX host DNA methylation</strong>
+            <code>RO:0002326</code>
+            <p>PglX methyltransferase activity methylates BREX recognition motifs in host DNA.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.01001-19</code>
+                <span class="evidence-snippet">this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase</span>
+                <span class="meta">Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>BREX host DNA methylation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>BREX self/non-self discrimination</strong>
+            <code>RO:0002326</code>
+            <p>Host DNA methylation guides BREX self/non-self discrimination.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.15252/embj.201489455</code>
+                <span class="evidence-snippet">methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination</span>
+                <span class="meta">Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>BREX self/non-self discrimination</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>BREX system</strong>
+            <code>METPO:2007700</code>
+            <p>Methylation-guided self/non-self discrimination realizes the BREX defense trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.15252/embj.201489455</code>
+                <span class="evidence-snippet">is essential for the defensive function of the BREX system</span>
+                <span class="meta">Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>BREX self/non-self discrimination</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>phage DNA replication</strong>
+            <code>METPO:2007407</code>
+            <p>BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.15252/embj.201489455</code>
+                <span class="evidence-snippet">allows phage adsorption but blocks phage DNA replication</span>
+                <span class="meta">The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>BREX system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>BREX possession is a methylation-based phage-defense system.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.15252/embj.201489455</code>
+                <span class="evidence-snippet">We denote this novel defense system BREX (Bacteriophage Exclusion)</span>
+                <span class="meta">Goldfarb et al. place BREX in the phage defense system family.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>PglX adenine methyltransferase</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0DQP1/entry" rel="nofollow noreferrer"><code>UniProtKB:P0DQP1</code></a>
+                  <br>Adenine-specific methyltransferase PglX <span class="meta">(pglX)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=498216" rel="nofollow noreferrer">Lacticaseibacillus casei str. Zhang</a>
+                  <br><code>NCBITaxon:498216</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v19 · sequence v1</span>
+                </td>
+                <td>
+                  <p>L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.</p>
+                  <ul>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1128/AEM.01001-19" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01001-19</code></a>
+
+                      <span class="evidence-snippet">this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system</span>
+                      <span class="meta">Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.15252/embj.201489455</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (2)</h2>
+      <ul class="synonyms">
+
+        <li>bacteriophage exclusion <span class="meta">EXACT_SYNONYM · DOI:10.15252/embj.201489455</span></li>
+
+        <li>bacteriophage exclusion system <span class="meta">EXACT_SYNONYM · DOI:10.1128/AEM.01001-19</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
+
+    </div>
+
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/plasmid_carriage.html">plasmid carriage</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/transposable_element.html">transposable element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ploidy.html">ploidy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Lacticaseibacillus casei str. Zhang</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=498216"
+             rel="nofollow noreferrer"><code>NCBITaxon:498216</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1128/AEM.01001-19"
+             rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01001-19</code></a>
+
+
+          <span class="meta">The strain historically named Lactobacillus casei Zhang carries a complete type I BREX cassette whose pglX component is required for BREX-linked methylation and plasmid restriction phenotypes.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="brex-molecular-coupling-gap">
+        <p class="discussion-prompt">Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>brex-molecular-coupling-gap</code>
+          · raised by codex
+          · 2026-09-15
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Goldfarb et al. showed that methylation is essential and that BREX blocks phage DNA replication after adsorption, but the exact biochemical coupling between the methylation mark and blocked phage replication remains insufficient for a more specific causal edge.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-15T08:40:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted BREX system as a DOI-backed GENOMICS TraitRecord under the phage defense system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v87.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/brex_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/brex_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/brex_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/brex_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000210" target="_blank" rel="noopener"><code>traitmech:000210</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking a BREX locus to host-DNA methylation, self/non-self discrimination, and blocked phage-DNA replication.", "edges": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "brex_locus", "target": "pglx_methyltransferase"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pglx_methyltransferase", "target": "host_dna_methylation"}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "host_dna_methylation", "target": "self_nonself_discrimination"}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "self_nonself_discrimination", "target": "brex_system_trait"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "self_nonself_discrimination", "target": "phage_dna_replication"}, {"description": "BREX possession is a methylation-based phage-defense system.", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brex_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "edge_id": "edge-1", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "predicate": "encodes", "predicate_id": null, "source": "BREX locus", "target": "PglX adenine methyltransferase"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "PglX adenine methyltransferase", "target": "BREX host DNA methylation"}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "edge_id": "edge-3", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BREX host DNA methylation", "target": "BREX self/non-self discrimination"}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "BREX self/non-self discrimination", "target": "BREX system"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "edge_id": "edge-5", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "BREX self/non-self discrimination", "target": "phage DNA replication"}, {"description": "BREX possession is a methylation-based phage-defense system.", "edge_id": "edge-6", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BREX system", "target": "phage defense system"}], "graph_id": "brex_methylation_antiphage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Multi-gene bacteriophage-exclusion cassette encoding the BREX defense system.", "grounding": null, "id": "brex_locus", "is_orphan": false, "label": "BREX locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded bacteriophage exclusion defense system.", "grounding": "traitmech:000210", "id": "brex_system_trait", "is_orphan": false, "label": "BREX system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of host DNA at BREX recognition motifs.", "grounding": null, "id": "host_dna_methylation", "is_orphan": false, "label": "BREX host DNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adenine-specific DNA methyltransferase component of type I BREX systems.", "grounding": "InterPro:IPR047939", "id": "pglx_methyltransferase", "is_orphan": false, "label": "PglX adenine methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host cell entry.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation-guided discrimination of host DNA from unmodified invading phage DNA.", "grounding": null, "id": "self_nonself_discrimination", "is_orphan": false, "label": "BREX self/non-self discrimination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "node_id": "pglx_methyltransferase", "node_label": "PglX adenine methyltransferase", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "scope_notes": "The graph captures Goldfarb et al.\u0027s experimentally supported host-methylation and post-adsorption phage-replication block without asserting that the molecular coupling between marked host DNA and blocked phage DNA is fully resolved.", "scope_status": "MECHANISTIC", "title": "BREX methylation guides antiphage discrimination"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-15 08:40 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 605 TraitRecords
+      · embedding coverage 100.0%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

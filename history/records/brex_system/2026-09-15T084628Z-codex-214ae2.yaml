@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brex_system.yaml
+  slug: brex_system
+session:
+  id: 2026-09-15T084628Z-codex-214ae2
+  timestamp: '2026-09-15T08:46:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add BREX system trait
+  details: Added traitmech:000210 for BREX system with DOI-backed Goldfarb and Hui evidence,
+    a Lacticaseibacillus casei Zhang canonical example, a PglX-paired methylation causal graph,
+    and an upstream placeholder reserved in proposals/metpo_traitmech_v87.

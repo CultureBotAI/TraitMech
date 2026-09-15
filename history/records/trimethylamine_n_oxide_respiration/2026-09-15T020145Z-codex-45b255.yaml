@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/trimethylamine_n_oxide_respiration.yaml
+  slug: trimethylamine_n_oxide_respiration
+session:
+  id: 2026-09-15T020145Z-codex-45b255
+  timestamp: '2026-09-15T02:01:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add trimethylamine N-oxide respiration
+  details: Minted traitmech:000199 for DOI-backed trimethylamine N-oxide respiration, added
+    Denby 2014/2015 and Qiu 2024 evidence snippets, added an Escherichia coli K-12 canonical
+    example, and reserved the upstream placeholder in proposals/metpo_traitmech_v76.

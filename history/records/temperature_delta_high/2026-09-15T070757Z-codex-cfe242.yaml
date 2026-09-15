@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/environment/temperature_delta_high.yaml
+  slug: temperature_delta_high
+session:
+  id: 2026-09-15T070757Z-codex-cfe242
+  timestamp: '2026-09-15T07:07:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Ground homoviscous adaptation node
+  details: Grounded the temperature delta high graph's homoviscous adaptation biological-process
+    node to the v85 METPO placeholder METPO:1016200.

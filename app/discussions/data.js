@@ -205,6 +205,40 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "brex-molecular-coupling-gap",
+  "prompt": "Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "BREX system",
+  "source_id": "traitmech:000210",
+  "source_file": "brex_system.yaml",
+  "attaches_to": [],
+  "rationale": "Goldfarb et al. showed that methylation is essential and that BREX blocks phage DNA replication after adsorption, but the exact biochemical coupling between the methylation mark and blocked phage replication remains insufficient for a more specific causal edge.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
+ },
+ {
+  "discussion_id": "phage-defense-system-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "phage defense system",
+  "source_id": "traitmech:000209",
+  "source_file": "phage_defense_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot retains only obsolete phage defense, and GO:0051607 defense response to virus is a biological process rather than this GENOMICS possession trait. CRISPR-Cas, restriction-modification, BREX, DISARM, abortive-infection, and other mechanism terms are narrower than the umbrella parent curated here.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/phage_defense_system.html#phage-defense-system-xref-gap"
+ },
+ {
   "discussion_id": "acetoclastic-methanogenesis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for acetate-splitting methanogenesis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -375,6 +409,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
  },
  {
+  "discussion_id": "dimethyl-sulfoxide-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level dimethyl sulfoxide respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "dimethyl sulfoxide respiration",
+  "source_id": "traitmech:000201",
+  "source_file": "dimethyl_sulfoxide_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has only an obsolete dimethyl sulfoxide respiration class. Candidate EC, Rhea, KEGG, and protein-family terms for DMSO reductase or DmsABC are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/dimethyl_sulfoxide_respiration.html#dimethyl-sulfoxide-respiration-xref-gap"
+ },
+ {
   "discussion_id": "fumarate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level fumarate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -390,6 +441,23 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "iodate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level iodate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "iodate respiration",
+  "source_id": "traitmech:000203",
+  "source_file": "iodate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "Candidate Idr, DmsAB, EC, Rhea, and protein-family terms describe narrower iodate reductase activities, reactions, or enzymes rather than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-xref-gap"
  },
  {
   "discussion_id": "lipolysis-xref-gap",
@@ -443,6 +511,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "organohalide-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level organohalide respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "organohalide respiration",
+  "source_id": "traitmech:000204",
+  "source_file": "organohalide_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete Halogenated compound respiration and Organohalide respiration classes. Candidate reductive dehalogenase protein-family and enzyme terms are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-xref-gap"
+ },
+ {
   "discussion_id": "perchlorate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level perchlorate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -492,6 +577,57 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-protein-example-gap"
+ },
+ {
+  "discussion_id": "selenate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level selenate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "selenate respiration",
+  "source_id": "traitmech:000202",
+  "source_file": "selenate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "Candidate EC, Rhea, and protein-family terms for selenate reductase describe narrower molecular functions, reactions, or enzymes rather than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "tetrathionate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level tetrathionate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tetrathionate respiration",
+  "source_id": "traitmech:000200",
+  "source_file": "tetrathionate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has no active organism-level class for tetrathionate respiration. Candidate EC, Rhea, and protein-family terms for tetrathionate reductase or the TtrA/TtrB/TtrC complex are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/tetrathionate_respiration.html#tetrathionate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "trimethylamine-n-oxide-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level trimethylamine N-oxide respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trimethylamine N-oxide respiration",
+  "source_id": "traitmech:000199",
+  "source_file": "trimethylamine_n_oxide_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has no active organism-level class for trimethylamine N-oxide respiration. Candidate EC, Rhea, and protein-family terms for TorA or broader trimethylamine N-oxide reductases are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/trimethylamine_n_oxide_respiration.html#trimethylamine-n-oxide-respiration-xref-gap"
  },
  {
   "discussion_id": "akinete-exact-xref-gap",
@@ -953,6 +1089,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
  },
  {
+  "discussion_id": "cold-shock-response-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "cold shock response",
+  "source_id": "traitmech:000206",
+  "source_file": "cold_shock_response.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0009409 response to cold can ground broad biological-process response nodes but is broader than the rapid temperature-downshift cold-shock response curated here. Cold-shock-domain signatures and CspA-family terms describe narrower molecular machinery rather than the whole organism-level stress-response trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/cold_shock_response.html#cold-shock-response-xref-gap"
+ },
+ {
   "discussion_id": "cystine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for cystine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1055,6 +1208,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "heat-shock-response-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level microbial heat shock response before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "heat shock response",
+  "source_id": "traitmech:000205",
+  "source_file": "heat_shock_response.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0009408 response to heat can ground biological-process nodes but is broader than this organism-level stress response trait. Candidate heat-shock-protein, chaperone, and ATP-dependent-protease terms describe narrower molecular machinery rather than the whole response phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/heat_shock_response.html#heat-shock-response-xref-gap"
+ },
+ {
   "discussion_id": "histidine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for histidine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1070,6 +1240,23 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/histidine_arylamidase_activity.html#histidine-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "homeoviscous-adaptation-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level homeoviscous adaptation before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "homeoviscous adaptation",
+  "source_id": "traitmech:000208",
+  "source_file": "homeoviscous_adaptation.yaml",
+  "attaches_to": [],
+  "rationale": "No exact GO, PATO, or METPO class is present in the pinned local snapshot for homeoviscous adaptation. Related lipid metabolism, fatty-acid desaturation, membrane-fluidity, and cold-response terms are narrower, broader, or shifted from the whole-organism membrane-acclimation trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/homeoviscous_adaptation.html#homeoviscous-adaptation-xref-gap"
  },
  {
   "discussion_id": "lecithinase-activity-xref-gap",
@@ -1310,6 +1497,23 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-xref-gap"
  },
  {
+  "discussion_id": "sos-response-xref-gap",
+  "prompt": "Resolve exact ontology xrefs for organism-level microbial SOS response before adding TraitRecord xrefs.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "SOS response",
+  "source_id": "traitmech:000207",
+  "source_file": "sos_response.yaml",
+  "attaches_to": [],
+  "rationale": "GO:0009432 SOS response exactly grounds biological-process nodes in causal graphs but is shifted from this organism-level response trait. RecA, LexA, SulA, translesion-polymerase, prophage-induction, DNA-repair, and DNA-damage terms describe narrower machinery, downstream processes, or related triggers rather than the whole microbial SOS-response phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/physiology/sos_response.html#sos-response-xref-gap"
+ },
+ {
   "discussion_id": "trypsin-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for trypsin activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1362,9 +1566,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 78,
- "total_knowledge_gaps": 8,
- "total_source_entries": 77,
+ "total_discussions": 90,
+ "total_knowledge_gaps": 9,
+ "total_source_entries": 89,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

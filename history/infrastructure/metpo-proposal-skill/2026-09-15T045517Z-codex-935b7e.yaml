@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T045517Z-codex-935b7e
+  timestamp: '2026-09-15T04:55:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - metpo_proposal
+  summary: Reserve METPO v82 heat shock response placeholder
+  details: Documented that metpo_traitmech_v82 reserves METPO:1015900 for the heat shock response
+    proposal, so the next one-row Scope-A cohort starts at METPO:1016000.

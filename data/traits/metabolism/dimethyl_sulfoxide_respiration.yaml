@@ -1,0 +1,56 @@
+identifier: traitmech:000201
+label: dimethyl sulfoxide respiration
+definition: An anaerobic respiration in which an organism uses dimethyl sulfoxide
+  as the terminal electron acceptor for energy conservation.
+definition_source: DOI:10.1073/pnas.0505959103
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: DMSO respiration
+  synonym_type: EXACT_SYNONYM
+evidence:
+- reference: DOI:10.1073/pnas.0505959103
+  snippet: one (SO1427-SO1432) is required for anaerobic respiration of DMSO
+  notes: Gralnick et al. identify the SO1427-SO1432 gene cluster required for Shewanella
+    oneidensis MR-1 anaerobic respiration of dimethyl sulfoxide.
+- reference: DOI:10.1073/pnas.0505959103
+  snippet: DMSO respiration is an extracellular respiratory process
+  notes: Gralnick et al. support DMSO respiration as a bona fide respiratory process
+    rather than an isolated reductase assay.
+- reference: DOI:10.1111/1462-2920.15971
+  snippet: M. thermoacetica can also use dimethyl sulfoxide as terminal electron acceptor
+  notes: Rosenbaum et al. support organism-level use of dimethyl sulfoxide as an anaerobic
+    terminal electron acceptor.
+- reference: DOI:10.1111/1462-2920.15971
+  snippet: Membranes showed a DMSO reductase activity
+  notes: Rosenbaum et al. biochemically support an induced DMSO reductase activity
+    in Moorella thermoacetica membranes.
+canonical_examples:
+- taxon_id: NCBITaxon:211586
+  taxon_label: Shewanella oneidensis MR-1
+  note: Gralnick et al. showed that the SO1427-SO1432 gene cluster is required for
+    anaerobic DMSO respiration in Shewanella oneidensis MR-1.
+  reference: DOI:10.1073/pnas.0505959103
+discussions:
+- discussion_id: dimethyl-sulfoxide-respiration-xref-gap
+  prompt: Resolve an exact external ontology class for organism-level dimethyl sulfoxide
+    respiration before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot has only an obsolete dimethyl sulfoxide respiration
+    class. Candidate EC, Rhea, KEGG, and protein-family terms for DMSO reductase or
+    DmsABC are narrower than the whole-organism anaerobic respiration phenotype.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T02:53:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted dimethyl sulfoxide respiration as a DOI-backed anaerobic respiration
+    TraitRecord after a repository-wide duplicate review covering ignored and hidden
+    files; the local METPO snapshot has only obsolete sulfoxide respiration classes
+    and the replacement placeholder is reserved in proposals/metpo_traitmech_v78.
+  llm_assisted: true

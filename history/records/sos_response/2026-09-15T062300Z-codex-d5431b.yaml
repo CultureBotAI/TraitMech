@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/sos_response.yaml
+  slug: sos_response
+session:
+  id: 2026-09-15T062300Z-codex-d5431b
+  timestamp: '2026-09-15T06:23:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add the SOS response physiology trait
+  details: Added traitmech:000207 SOS response with DOI-backed Maslowska et al. SOS-system
+    review evidence, Yu et al. RecA/LexA and SulA mechanism evidence, E. coli K-12 RecA/LexA
+    protein examples, and a v84 METPO proposal reserving METPO:1016100.

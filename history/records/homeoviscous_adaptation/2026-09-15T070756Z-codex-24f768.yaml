@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/homeoviscous_adaptation.yaml
+  slug: homeoviscous_adaptation
+session:
+  id: 2026-09-15T070756Z-codex-24f768
+  timestamp: '2026-09-15T07:07:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add homeoviscous adaptation trait
+  details: Added traitmech:000208 for homeoviscous adaptation with DOI-backed Maiti, de Mendoza,
+    Sidarta, and Hoogerland evidence, E. coli and B. subtilis canonical examples, a membrane-fluidity
+    causal graph, an xref-gap discussion, and a v85 METPO proposal reserving METPO:1016200.

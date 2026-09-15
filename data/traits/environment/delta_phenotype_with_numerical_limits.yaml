@@ -71,6 +71,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Regulation of membrane lipid composition to keep fluidity within
       a functional window under stress.
+    grounding: METPO:1016200
   - node_id: compatible_solutes
     label: compatible solutes / osmolytes
     node_type: CHEMICAL
@@ -235,4 +236,10 @@ curation_history:
     canonical example(s): Psychrobacter arcticus (NCBITaxon:334543; DOI:10.1128/JB.01377-08).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-15T07:05:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1016200×1).
   llm_assisted: true
