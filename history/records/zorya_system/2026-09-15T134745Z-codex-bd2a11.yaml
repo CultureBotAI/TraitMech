@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/zorya_system.yaml
+  slug: zorya_system
+session:
+  id: 2026-09-15T134745Z-codex-bd2a11
+  timestamp: '2026-09-15T13:47:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Zorya system trait
+  details: Minted traitmech:000217 for the DOI-backed Zorya system under phage defense system
+    with Hu and Mariano evidence, an Escherichia coli canonical example, a nonmechanistic
+    ZorAB/effector antiphage graph, an open subtype-effector knowledge gap, and an upstream
+    METPO v94 placeholder reservation.
