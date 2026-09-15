@@ -29,6 +29,7 @@ import json
 import re
 import shutil
 import sys
+import tempfile
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,6 +38,7 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
+from traitmech.text_map_site import prepare_text_map
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
@@ -64,18 +66,30 @@ def load_projection_receipt(path: Path) -> dict:
         source = receipt["source"]
         dimensions = receipt["input_dimensions"]
         method = receipt["projection"]["method"]
-        if (receipt["schema_version"] != 1 or method not in {"pacmap", "umap", "sfdp"}
+        if (receipt["schema_version"] not in {1, 2} or method not in {"pacmap", "umap", "sfdp"}
                 or type(dimensions) is not int or dimensions < 1
                 or not isinstance(source["filename"], str) or not source["filename"]
                 or not re.fullmatch(r"[0-9a-f]{64}", source["sha256"])):
             return legacy
-        # Include neighbor integrity so a newer neighbor run cannot silently
-        # borrow an older map's source claim on every trait page.
-        for output in (path, path.parent / "trait_nearest_neighbors.json"):
-            with output.open("rb") as stream:
-                digest = hashlib.file_digest(stream, "sha256").hexdigest()
-            if receipt["outputs"].get(output.name) != digest:
+        if receipt["schema_version"] == 2:
+            from traitmech.graph_embedding_receipts import validate_receipt
+
+            outputs = receipt["outputs"]
+            required = {path.name, "trait_nearest_neighbors.json", "deepwalk_traits.tsv.gz",
+                        "metpo_to_kgm_node.tsv"}
+            if (not isinstance(outputs, dict) or not required.issubset(outputs)
+                    or any(not isinstance(name, str) or Path(name).name != name
+                           or name in {".", ".."} for name in outputs)):
                 return legacy
+            validate_receipt(receipt, {name: path.parent / name for name in outputs})
+        else:
+            # The older receipt binds the projection and nearest neighbors.
+            # Its metadata must not be borrowed by a later neighbor run.
+            for output in (path, path.parent / "trait_nearest_neighbors.json"):
+                with output.open("rb") as stream:
+                    digest = hashlib.file_digest(stream, "sha256").hexdigest()
+                if receipt["outputs"].get(output.name) != digest:
+                    return legacy
         return {"label": {"pacmap": "PaCMAP", "umap": "UMAP", "sfdp": "sfdp layout"}[method],
                 "method": method, "source": source["filename"],
                 "source_sha256": source["sha256"], "dimensions": dimensions, "verified": True}
@@ -386,6 +400,18 @@ def research_answer(text: str) -> list[str]:
 
 
 def render_pages(args: argparse.Namespace) -> int:
+    # Finish full-input/policy validation and artifact staging before --clean
+    # can remove any existing pages. The temporary copy survives pointer swaps.
+    with prepare_text_map(REPO_ROOT) as ready:
+        if ready is None or args.dry_run:
+            return _render_pages(args)
+        with tempfile.TemporaryDirectory(prefix="traitmech-site-map-") as directory:
+            staging = Path(directory)
+            ready.stage(staging)
+            return _render_pages(args, staged_text_map=staging / "text-map")
+
+
+def _render_pages(args: argparse.Namespace, *, staged_text_map: Path | None = None) -> int:
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
     # tree — that is half of what #214 was about — and this function wipes and
@@ -415,6 +441,8 @@ def render_pages(args: argparse.Namespace) -> int:
         shutil.rmtree(pages_dir)
 
     pages_dir.mkdir(parents=True, exist_ok=True)
+    if staged_text_map is not None:
+        shutil.copytree(staged_text_map, pages_dir / "text-map", dirs_exist_ok=True)
     (pages_dir / "category").mkdir(exist_ok=True)
     (pages_dir / "assets").mkdir(exist_ok=True)
     shutil.copyfile(TEMPLATES_DIR / "style.css", pages_dir / "assets" / "style.css")
@@ -614,6 +642,7 @@ def render_pages(args: argparse.Namespace) -> int:
     embedded_count = sum(1 for v in match_table.values() if v["n_kgm_nodes"] > 0)
     landing = env.get_template("index.html").render(
         title="Microbial trait knowledge base",
+        text_map_enabled=staged_text_map is not None,
         projection_label=embedding_receipt["label"],
         root="",
         total_traits=len(traits),

@@ -117,6 +117,13 @@
   </header>
   <main class="wrap">
     <div class="cards">
+      {% if text_map_enabled %}
+      <section class="card">
+        <h2>Semantic text map</h2>
+        <div class="actions"><a class="btn" href="text-map/">Explore shared BGE map &rarr;</a></div>
+        <p>Traits grouped by their biological descriptions, using the fleet's pinned BGE text model and PaCMAP.</p>
+      </section>
+      {% endif %}
       <div class="card">
         <div class="ic">&#128270;</div>
         <div class="actions"><a class="btn" href="browse.html">Browse records &rarr;</a></div>

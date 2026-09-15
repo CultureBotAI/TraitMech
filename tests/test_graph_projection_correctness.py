@@ -1,4 +1,5 @@
 """Selected graph sources and published receipts must be literal, not guessed."""
+
 import importlib.util
 import json
 import sys
@@ -17,8 +18,11 @@ def builder():
 
 
 def test_explicit_missing_source_fails_without_fallback(builder, tmp_path, monkeypatch):
-    monkeypatch.setattr(sys, "argv", ["builder", "--src", str(tmp_path / "typo.gz"),
-                                    "--out-deepwalk", str(tmp_path / "out.gz")])
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["builder", "--src", str(tmp_path / "typo.gz"), "--out-deepwalk", str(tmp_path / "out.gz")],
+    )
     assert builder.main() == 2
     assert not (tmp_path / "out.gz").exists()
 
@@ -41,26 +45,21 @@ def test_current_local_and_configured_sibling_layout(builder, tmp_path, monkeypa
     assert builder.default_deepwalk() == local
 
 
-def test_receipt_uses_actual_source_dimensions_and_output_digests(builder, tmp_path):
-    source = tmp_path / "explicit_legacy_graph.tsv.gz"
-    source.write_bytes(b"a caller-selected legacy artifact")
-    output = tmp_path / "map.json"
-    output.write_text('[{"id":"METPO:1"}]')
-    neighbors = tmp_path / "neighbors.json"
-    neighbors.write_text('{"METPO:1":[]}')
-    matches = tmp_path / "matches.tsv"
-    matches.write_text("match_method\nparent_proxy\n")
-    builder.write_projection_metadata(output, source, {"METPO:1": [1.] * 200}, "umap", matches, neighbors)
-    metadata = json.loads(output.with_suffix(".metadata.json").read_text())
-    assert metadata["source"] == {"filename": source.name, "sha256": builder.file_sha256(source)}
-    assert metadata["input_dimensions"] == 200
-    assert metadata["projection"]["method"] == "umap"
-    assert metadata["outputs"][output.name] == builder.file_sha256(output)
-    assert metadata["outputs"][neighbors.name] == builder.file_sha256(neighbors)
+def test_output_only_metadata_cannot_bless_old_coordinates(builder, tmp_path):
+    with pytest.raises(ValueError, match="Output-only provenance"):
+        builder.write_projection_metadata(
+            tmp_path / "old-map.json",
+            tmp_path / "new-source.gz",
+            {"METPO:1": [1.0] * 200},
+            "pacmap",
+            tmp_path / "matches.tsv",
+            tmp_path / "neighbors.json",
+        )
 
 
 def test_renderer_checks_receipt_and_labels_legacy_without_guessing(builder, tmp_path, monkeypatch):
     import hashlib
+
     path = Path(__file__).resolve().parents[1] / "scripts/render_trait_pages.py"
     monkeypatch.syspath_prepend(str(path.parent))
     spec = importlib.util.spec_from_file_location("graph_renderer_under_test", path)
@@ -71,10 +70,15 @@ def test_renderer_checks_receipt_and_labels_legacy_without_guessing(builder, tmp
     neighbors = tmp_path / "trait_nearest_neighbors.json"
     neighbors.write_text("{}")
     assert renderer.load_projection_receipt(projection)["verified"] is False
-    receipt = {"schema_version": 1, "input_dimensions": 200,
+    receipt = {
+        "schema_version": 1,
+        "input_dimensions": 200,
         "source": {"filename": "actual_legacy_source.gz", "sha256": "a" * 64},
         "projection": {"method": "umap"},
-        "outputs": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in (projection, neighbors)}}
+        "outputs": {
+            p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in (projection, neighbors)
+        },
+    }
     projection.with_suffix(".metadata.json").write_text(json.dumps(receipt))
     result = renderer.load_projection_receipt(projection)
     assert result["label"] == "UMAP"

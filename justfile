@@ -1194,4 +1194,4 @@ gen-discussions-data: (_require-claw "kg_microbe_discussions")
 
 # Full canonical semantic text by default; --record/--limit are explicit canaries.
 text-map-inputs *args:
-    uv run python scripts/text_map_inputs.py {{args}}
+    uv run python scripts/text_map_inputs.py "$@"
