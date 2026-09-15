@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/perchlorate_respiration.yaml
+  slug: perchlorate_respiration
+session:
+  id: 2026-09-15T005627Z-codex-8916eb
+  timestamp: '2026-09-15T00:56:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Added the perchlorate respiration TraitRecord
+  details: Minted traitmech:000197 as a DOI-backed anaerobic respiration trait, parented it
+    to METPO:1000802 anaerobic respiration, kept organism-level perchlorate respiration separate
+    from narrower perchlorate reductase and chlorite dismutase classes, and reserved METPO:1015100
+    in proposals/metpo_traitmech_v74.
