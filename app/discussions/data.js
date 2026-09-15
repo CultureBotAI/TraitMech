@@ -256,6 +256,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-xref-gap"
  },
  {
+  "discussion_id": "arsenate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level arsenate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "arsenate respiration",
+  "source_id": "traitmech:000195",
+  "source_file": "arsenate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains obsolete arsenate reduction and arsenate-reducing classes but no active organism-level arsenate respiration class. Potential GO, Rhea, EC, and protein-family terms for respiratory arsenate reductase are narrower than the whole-organism anaerobic respiration phenotype, and future groundings must keep ArrAB respiratory reduction separate from ArsC cytosolic detoxification.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/arsenate_respiration.html#arsenate-respiration-xref-gap"
+ },
+ {
   "discussion_id": "arsenite-oxidation-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level arsenite oxidation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1294,9 +1311,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 74,
+ "total_discussions": 75,
  "total_knowledge_gaps": 8,
- "total_source_entries": 73,
+ "total_source_entries": 74,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

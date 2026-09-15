@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/arsenate_respiration.yaml
+  slug: arsenate_respiration
+session:
+  id: 2026-09-15T000831Z-codex-issue916
+  timestamp: '2026-09-15T00:08:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  summary: Tightened the ANA-3 canonical example note
+  details: Reworded the Shewanella sp. ANA-3 note to rely only on the cited facultative
+    arsenate-respiration isolation paper and close adversarial review issue #916.

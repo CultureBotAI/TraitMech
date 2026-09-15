@@ -1,0 +1,68 @@
+identifier: traitmech:000195
+label: arsenate respiration
+definition: An anaerobic respiration in which an organism uses arsenate as the terminal
+  electron acceptor and reduces it to arsenite for energy conservation.
+definition_source: DOI:10.1073/pnas.1834303100
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: As(V) respiration
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1073/pnas.1834303100
+- synonym_text: respiratory As(V) reduction
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1073/pnas.1834303100
+evidence:
+- reference: DOI:10.1073/pnas.1834303100
+  snippet: can be used by microorganisms as a terminal electron acceptor in anaerobic
+    respiration
+  notes: Saltikov and Newman define the organism-level scope as microbial anaerobic
+    respiration using arsenate, As(V), as a terminal electron acceptor.
+- reference: DOI:10.1128/AEM.69.5.2800-2809.2003
+  snippet: This gram-negative strain stoichiometrically couples the oxidation of lactate
+    to acetate with the reduction of As(V) to arsenite
+  notes: Saltikov et al. isolated and characterized ANA-3 as a facultatively anaerobic
+    As(V)-respiring Shewanella strain.
+- reference: DOI:10.1128/JB.01110-07
+  snippet: the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR), the
+    key enzyme involved in this metabolism
+  notes: Malasarn et al. biochemically characterize ARR as the arsenate respiratory
+    reductase for ANA-3 arsenate respiration.
+canonical_examples:
+- taxon_id: NCBITaxon:94122
+  taxon_label: Shewanella sp. ANA-3
+  note: Facultatively anaerobic Shewanella isolate characterized for arsenate-respiration
+    studies.
+  reference: DOI:10.1128/AEM.69.5.2800-2809.2003
+discussions:
+- discussion_id: arsenate-respiration-xref-gap
+  prompt: Resolve an exact external ontology class for organism-level arsenate respiration
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains obsolete arsenate reduction and arsenate-reducing
+    classes but no active organism-level arsenate respiration class. Potential GO,
+    Rhea, EC, and protein-family terms for respiratory arsenate reductase are narrower
+    than the whole-organism anaerobic respiration phenotype, and future groundings
+    must keep ArrAB respiratory reduction separate from ArsC cytosolic detoxification.
+  posed_by: codex
+  posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-09-14T23:52:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted arsenate respiration as a DOI-backed anaerobic respiration TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    local METPO snapshot has only obsolete arsenate-reduction classes and the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v72.
+  llm_assisted: true
+- timestamp: '2026-09-15T00:08:31Z'
+  curator: codex
+  action: TIGHTENED_CANONICAL_EXAMPLE
+  changes: Tightened the ANA-3 canonical example note to the DOI-backed isolation
+    and facultative arsenate-respiration evidence without making a broader genetic-tractability
+    claim.
+  llm_assisted: true
