@@ -494,6 +494,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-protein-example-gap"
  },
  {
+  "discussion_id": "tetrathionate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level tetrathionate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tetrathionate respiration",
+  "source_id": "traitmech:000200",
+  "source_file": "tetrathionate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot has no active organism-level class for tetrathionate respiration. Candidate EC, Rhea, and protein-family terms for tetrathionate reductase or the TtrA/TtrB/TtrC complex are narrower than the whole-organism anaerobic respiration phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/tetrathionate_respiration.html#tetrathionate-respiration-xref-gap"
+ },
+ {
   "discussion_id": "trimethylamine-n-oxide-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level trimethylamine N-oxide respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1379,9 +1396,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 79,
+ "total_discussions": 80,
  "total_knowledge_gaps": 8,
- "total_source_entries": 78,
+ "total_source_entries": 79,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

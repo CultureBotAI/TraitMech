@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/tetrathionate_respiration.yaml
+  slug: tetrathionate_respiration
+session:
+  id: 2026-09-15T022834Z-codex-0b53fe
+  timestamp: '2026-09-15T02:28:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add tetrathionate respiration
+  details: Minted traitmech:000200 for DOI-backed tetrathionate respiration, added Hensel
+    1999 and Price-Carter 2001 evidence snippets, added a Salmonella enterica subsp. enterica
+    serovar Typhimurium str. LT2 canonical example, and reserved the upstream placeholder
+    in proposals/metpo_traitmech_v77.
