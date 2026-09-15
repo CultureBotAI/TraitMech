@@ -1,0 +1,198 @@
+identifier: traitmech:000222
+label: SspABCD-SspE system
+definition: A phosphorothioate defense system in which an organism possesses an SspABCD-SspE
+  locus that pairs an SspABCD single-stranded DNA phosphorothioation module with the
+  SspE restriction enzyme to sense host phosphorothioate marks and nick invading DNA.
+definition_source: DOI:10.1038/s41564-020-0700-6
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000213
+synonyms:
+- synonym_text: SspABCD-SspE PT system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41564-020-0700-6
+evidence:
+- reference: DOI:10.1038/s41564-020-0700-6
+  snippet: Here, we describe an unusual SspABCD-SspE PT system in Vibrio cyclitrophicus,
+    Escherichia coli and Streptomyces yokosukanensis
+  notes: Xiong et al. name SspABCD-SspE as a bacterial phosphorothioation system distinct
+    from Dnd.
+- reference: DOI:10.1038/s41564-020-0700-6
+  snippet: SspABCD confers single-stranded and high-frequency PTs with SspB acting
+    as a nickase
+  notes: Xiong et al. support the SspABCD modification module and its single-stranded
+    high-frequency PT output.
+- reference: DOI:10.1038/s41564-020-0700-6
+  snippet: SspABCD coupled with SspE provides protection against phages
+  notes: Xiong et al. support the modification-plus-restriction architecture and the
+    antiphage output of SspABCD-SspE.
+- reference: DOI:10.1038/s41467-022-34505-0
+  snippet: In the PT-based defense system Ssp, SspABCD confers a single-stranded PT
+    modification of host DNA
+  notes: Gao et al. support Ssp as a PT-based defense system with host-DNA phosphorothioation
+    by SspABCD.
+- reference: DOI:10.1038/s41467-022-34505-0
+  snippet: SspE relies on PT modification in host DNA to exert antiphage activity
+  notes: Gao et al. connect host PT modification to SspE-mediated antiphage activity.
+- reference: DOI:10.1128/mbio.00933-23
+  snippet: a novel PT-related R-M system, composed of the modification module SspABCD
+    paired with a single restriction enzyme, SspE
+  notes: Jiang et al. support defining this child by the SspABCD modification module
+    paired with single-enzyme SspE restriction, separate from DndFGH and SspFGH systems.
+canonical_examples:
+- taxon_id: NCBITaxon:47951
+  taxon_label: Vibrio cyclitrophicus
+  note: Xiong et al. describe an SspABCD-SspE PT system in Vibrio cyclitrophicus and
+    analyze its SspABCD-dependent single-stranded PTs plus SspE-dependent antiphage
+    activity.
+  reference: DOI:10.1038/s41564-020-0700-6
+causal_graphs:
+- graph_id: sspabcd_sspe_pt_site_dependent_dna_nicking
+  title: SspABCD-SspE systems couple Ssp PT marks to DNA nicking
+  description: Evidence-backed process sketch linking an SspABCD-SspE locus to single-stranded
+    host DNA phosphorothioation, SspE PT-site recognition, SspE GTPase-linked nuclease
+    activation, and reduced phage DNA replication.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures SspABCD-SspE restriction at the system level without
+    asserting one universal host taxon, PT frequency, DNA motif outside 5'-CPSCA-3'-characterized
+    systems, full SspE conformational cycle, or relationship to SspFGH and archaeal
+    PT antiviral systems.
+  nodes:
+  - node_id: sspabcd_sspe_locus
+    label: SspABCD-SspE locus
+    node_type: GENETIC_ELEMENT
+    description: An Ssp phosphorothioation-dependent restriction locus pairing the
+      SspABCD DNA modification module with SspE restriction activity.
+  - node_id: ssp_single_stranded_dna_phosphorothioation
+    label: Ssp single-stranded DNA phosphorothioation
+    node_type: BIOLOGICAL_PROCESS
+    description: SspABCD-mediated installation of single-stranded phosphorothioate
+      marks on host DNA.
+  - node_id: sspe_pt_site_recruitment
+    label: SspE PT-site recruitment
+    node_type: BIOLOGICAL_PROCESS
+    description: Preferential recruitment of SspE to phosphorothioate-marked DNA sites.
+  - node_id: sspe_gtpase_activation
+    label: SspE GTPase activation
+    node_type: BIOLOGICAL_PROCESS
+    description: PT-dependent enlargement of the SspE GTP-binding pocket and stimulation
+      of GTP hydrolysis.
+  - node_id: sspe_dna_nicking
+    label: SspE DNA nicking
+    node_type: BIOLOGICAL_PROCESS
+    description: SspE nuclease activation and DNA nicking during phosphorothioate-dependent
+      self/nonself discrimination.
+  - node_id: phage_dna_replication
+    label: phage DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Replication of invading bacteriophage DNA after host cell entry.
+  - node_id: sspabcd_sspe_system_trait
+    label: SspABCD-SspE system
+    node_type: TRAIT
+    grounding: traitmech:000222
+    description: Possession of a genome-encoded SspABCD-SspE restriction-modification
+      defense system.
+  - node_id: phosphorothioate_defense_system_trait
+    label: phosphorothioate defense system
+    node_type: TRAIT
+    grounding: traitmech:000213
+    description: Possession of a genome-encoded phosphorothioate-based phage defense
+      system.
+  edges:
+  - subject: sspabcd_sspe_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ssp_single_stranded_dna_phosphorothioation
+    description: The SspABCD modification module installs single-stranded, high-frequency
+      PT marks on host DNA.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: SspABCD confers single-stranded and high-frequency PTs with SspB acting
+        as a nickase
+      notes: Xiong et al. support SspABCD-dependent host DNA phosphorothioation.
+  - subject: sspabcd_sspe_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sspe_pt_site_recruitment
+    description: SspABCD-SspE loci pair SspABCD host-DNA phosphorothioation with single-enzyme
+      SspE restriction activity.
+    evidence:
+    - reference: DOI:10.1128/mbio.00933-23
+      snippet: the modification module SspABCD paired with a single restriction enzyme,
+        SspE
+      notes: Jiang et al. support the paired SspABCD modification and SspE restriction
+        architecture.
+  - subject: ssp_single_stranded_dna_phosphorothioation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sspe_pt_site_recruitment
+    description: SspE relies on host DNA PT marks and is preferentially recruited
+      to PT sites.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-34505-0
+      snippet: SspE relies on PT modification in host DNA to exert antiphage activity
+      notes: Gao et al. support PT-dependent SspE activity.
+  - subject: sspe_pt_site_recruitment
+    predicate: activates
+    predicate_id: RO:0002213
+    object: sspe_gtpase_activation
+    description: PT-site recognition stimulates the SspE GTPase cycle.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-34505-0
+      snippet: PT recognition enlarges the GTP-binding pocket, thereby increasing
+        GTP hydrolysis activity
+      notes: Gao et al. support PT-induced SspE GTPase activation.
+  - subject: sspe_gtpase_activation
+    predicate: activates
+    predicate_id: RO:0002213
+    object: sspe_dna_nicking
+    description: GTPase-linked conformational switching activates SspE nuclease nicking
+      activity.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-34505-0
+      snippet: turns on the DNA nicking nuclease activity of CTD
+      notes: Gao et al. support activation of SspE DNA-nicking nuclease activity.
+  - subject: sspe_dna_nicking
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_dna_replication
+    description: SspE-linked DNA nicking inhibits phage propagation by impairing phage
+      DNA replication.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: SspE inhibits phage propagation by introducing nicking damage to impair
+        phage DNA replication
+      notes: Xiong et al. directly connect SspE DNA-nicking damage to impaired phage
+        DNA replication.
+  - subject: sspe_dna_nicking
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: sspabcd_sspe_system_trait
+    description: SspE DNA nicking realizes the SspABCD-SspE antiphage defense trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-022-34505-0
+      snippet: enabling SspE to accomplish self-nonself discrimination and limit phage
+        predation
+      notes: Gao et al. support SspE self/nonself discrimination as the Ssp antiphage
+        output.
+  - subject: sspabcd_sspe_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phosphorothioate_defense_system_trait
+    description: SspABCD-SspE possession is a phosphorothioate-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: SspABCD coupled with SspE provides protection against phages
+      notes: Xiong et al. place SspABCD-SspE within phosphorothioation-dependent antiphage
+        defense systems.
+curation_history:
+- timestamp: '2026-09-15T16:38:06Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted SspABCD-SspE system as a DOI-backed GENOMICS TraitRecord under the
+    phosphorothioate defense system parent after an ignored-and-hidden duplicate review
+    found no exact live TraitMech, METPO, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v99.
+  llm_assisted: true
