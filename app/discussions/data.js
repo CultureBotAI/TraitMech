@@ -325,7 +325,7 @@ window.searchData = [
  },
  {
   "discussion_id": "phosphorothioate-subfamily-split-gap",
-  "prompt": "Resolve Dnd, SspBCD-E, SspABCD-sspFGH, and archaeal phosphorothioate-based antiviral systems before minting narrower children under the phosphorothioate defense parent.",
+  "prompt": "Resolve SspBCD-E, SspABCD-sspFGH, and archaeal phosphorothioate-based antiviral systems before minting additional narrower children under the phosphorothioate defense parent.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -333,7 +333,7 @@ window.searchData = [
   "source_id": "traitmech:000213",
   "source_file": "phosphorothioate_defense_system.yaml",
   "attaches_to": [],
-  "rationale": "Xiong et al. and Jiang et al. support at least two bacterial PT-related R-M architectures with distinct restriction modules. The DndFGH macromolecular machine, SspE single restriction enzyme, SspFGH systems, and archaeal phosphorothioate-based antiviral systems need separate primary-source review before they can be split into narrower TraitRecords with exact component groundings.",
+  "rationale": "The Dnd system is now split out as traitmech:000221. Xiong et al. and Jiang et al. still support additional bacterial PT-related R-M architectures with distinct restriction modules, and the SspE single restriction enzyme, SspFGH systems, and archaeal phosphorothioate-based antiviral systems need separate primary-source review before they can be split into narrower TraitRecords with exact component groundings.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

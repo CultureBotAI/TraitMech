@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T160401Z-codex-700213
+  timestamp: '2026-09-15T16:04:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal reserve block to v99
+  details: Documented that metpo_traitmech_v98 reserves METPO:1017500 for Dnd system, advancing
+    the next one-row Scope-A cohort to METPO:1017600 for v99.
