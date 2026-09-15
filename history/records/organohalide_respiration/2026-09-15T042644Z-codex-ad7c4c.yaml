@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/metabolism/organohalide_respiration.yaml
+  slug: organohalide_respiration
+session:
+  id: 2026-09-15T042644Z-codex-ad7c4c
+  timestamp: '2026-09-15T04:26:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5-Codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  summary: Add organohalide respiration trait
+  details: Minted traitmech:000204 for DOI-backed organohalide respiration, added Hug 2013
+    and Maymo-Gatell 1997 evidence plus a Dehalococcoides mccartyi strain 195 canonical example,
+    and reserved the upstream placeholder in proposals/metpo_traitmech_v81.

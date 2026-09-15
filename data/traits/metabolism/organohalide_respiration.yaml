@@ -1,0 +1,54 @@
+identifier: traitmech:000204
+label: organohalide respiration
+definition: An anaerobic respiration in which an organism uses an organohalide as
+  the terminal electron acceptor for energy conservation.
+definition_source: DOI:10.1098/rstb.2012.0322
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+evidence:
+- reference: DOI:10.1098/rstb.2012.0322
+  snippet: Organohalide respiration is an anaerobic bacterial respiratory process
+    that uses halogenated hydrocarbons as terminal electron acceptors during electron
+    transport-based energy conservation.
+  notes: Hug et al. define organohalide respiration as anaerobic electron-transport-based
+    energy conservation with halogenated hydrocarbons as terminal electron acceptors.
+- reference: DOI:10.1098/rstb.2012.0322
+  snippet: Organohalide-respiring bacteria have been identified from multiple bacterial
+    phyla
+  notes: Hug et al. support the record as a reusable bacterial respiration phenotype
+    rather than a single-strain label.
+- reference: DOI:10.1126/science.276.5318.1568
+  snippet: Growth of strain 195 with H2 and tetrachloroethene as the electron donor
+    and acceptor pair required extracts from mixed microbial cultures.
+  notes: Maymo-Gatell et al. support tetrachloroethene as a growth-coupled organohalide
+    electron acceptor in Dehalococcoides mccartyi strain 195.
+canonical_examples:
+- taxon_id: NCBITaxon:243164
+  taxon_label: Dehalococcoides mccartyi 195
+  note: Strain 195 grows by coupling H2 oxidation to tetrachloroethene reduction,
+    establishing growth-coupled organohalide respiration.
+  reference: DOI:10.1126/science.276.5318.1568
+discussions:
+- discussion_id: organohalide-respiration-xref-gap
+  prompt: Resolve an exact external ontology class for organism-level organohalide
+    respiration before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only obsolete Halogenated compound
+    respiration and Organohalide respiration classes. Candidate reductive dehalogenase
+    protein-family and enzyme terms are narrower than the whole-organism anaerobic
+    respiration phenotype.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T04:25:36Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted organohalide respiration as a DOI-backed anaerobic respiration TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    local METPO snapshot has only obsolete organohalide/halogenated-compound respiration
+    classes and the replacement placeholder is reserved in proposals/metpo_traitmech_v81.
+  llm_assisted: true
