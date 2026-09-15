@@ -61,6 +61,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cold-shock-protein induction supporting transient low-temperature
       acclimation.
+    grounding: traitmech:000206
   - node_id: membrane_rigidity
     label: membrane rigidification and thickening
     node_type: QUALITY
@@ -298,4 +299,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope psychrotolerant_facultative_cold_adaptation=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-09-15T05:32:00Z'
+  curator: codex
+  action: GROUND_CAUSAL_NODE
+  changes: Grounded the exact cold-shock-response biological-process node to the newly
+    minted local traitmech:000206 cold shock response record.
   llm_assisted: true

@@ -2,12 +2,19 @@
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from audit_uniprot_grounding import audit_uses, iter_nodes, iter_uses  # noqa: E402
+from audit_uniprot_grounding import (  # noqa: E402
+    FIELDS,
+    audit_uses,
+    iter_nodes,
+    iter_uses,
+    write_report,
+)
 
 
 def _node(example=None, grounding=None):
@@ -132,3 +139,17 @@ def test_resolver_called_once_for_reused_accession():
     rows = audit_uses(iter_uses(nodes), delay=0, resolver=resolver)
     assert calls == [("P0A6Y8", 0)]
     assert [row["reused_in_n_files"] for row in rows] == [2, 2]
+
+
+def test_write_report_quotes_empty_final_finding_without_changing_value(tmp_path):
+    report = tmp_path / "report.tsv"
+    row = {field: "value" for field in FIELDS}
+    row["finding"] = ""
+
+    write_report([row], report)
+
+    text = report.read_text(encoding="utf-8")
+    assert text.splitlines()[1].endswith('\t""')
+    with report.open(encoding="utf-8", newline="") as handle:
+        round_tripped = list(csv.DictReader(handle, delimiter="\t"))
+    assert round_tripped[0]["finding"] == ""

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/physiology/cold_shock_response.yaml
+  slug: cold_shock_response
+session:
+  id: 2026-09-15T053301Z-codex-3c5c55
+  timestamp: '2026-09-15T05:33:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add the cold shock response physiology trait
+  details: Added traitmech:000206 cold shock response with DOI-backed Weber and Marahiel cold-shock
+    review evidence, CspA-family RNA-chaperone mechanism evidence from Phadtare and Inouye,
+    a primary E. coli CspA canonical example from Goldstein et al., and a v83 METPO proposal
+    reserving METPO:1016000.

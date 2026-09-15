@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import sys
 import time
@@ -292,12 +293,13 @@ def audit_uses(
 
 def write_report(rows: list[dict[str, Any]], out: Path = REPORT) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
-    with out.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(
-            handle, fieldnames=FIELDS, delimiter="\t", lineterminator="\n"
-        )
-        writer.writeheader()
-        writer.writerows(rows)
+    buffer = io.StringIO()
+    writer = csv.DictWriter(
+        buffer, fieldnames=FIELDS, delimiter="\t", lineterminator="\n"
+    )
+    writer.writeheader()
+    writer.writerows(rows)
+    out.write_text(buffer.getvalue().replace('\t\n', '\t""\n'), encoding="utf-8")
 
 
 def main() -> int:
