@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-15T115034Z-codex-cb188b
+  timestamp: '2026-09-15T11:50:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add abortive infection system trait
+  details: Added traitmech:000214 for abortive infection system with DOI-backed Lopatina,
+    Fineran, and Dy evidence, a direct Pectobacterium atrosepticum ToxIN canonical
+    example, a broad Abi population-level defense causal graph without premature ToxIN,
+    AbiQ, or AbiE component-family grounding, and an upstream placeholder reserved in
+    proposals/metpo_traitmech_v91.

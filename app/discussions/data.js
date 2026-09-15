@@ -205,6 +205,23 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "abortive-infection-subfamily-split-gap",
+  "prompt": "Resolve ToxIN/AbiQ, AbiE, and other abortive-infection families before minting narrower children under the broad abortive infection system parent.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "abortive infection system",
+  "source_id": "traitmech:000214",
+  "source_file": "abortive_infection_system.yaml",
+  "attaches_to": [],
+  "rationale": "Lopatina et al., Fineran et al., and Dy et al. support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse families, including the ToxIN/AbiQ and AbiE toxin-antitoxin branches. Narrower TraitRecords will need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abortive_infection_system.html#abortive-infection-subfamily-split-gap"
+ },
+ {
   "discussion_id": "brex-molecular-coupling-gap",
   "prompt": "Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.",
   "kind": "KNOWLEDGE_GAP",
@@ -1617,9 +1634,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 93,
- "total_knowledge_gaps": 12,
- "total_source_entries": 92,
+ "total_discussions": 94,
+ "total_knowledge_gaps": 13,
+ "total_source_entries": 93,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
