@@ -1,0 +1,154 @@
+identifier: traitmech:000225
+label: AbiQ system
+definition: An abortive infection system in which an organism possesses an AbiQ type
+  III toxin-antitoxin locus whose protein endoribonuclease and cognate RNA antitoxin
+  module alter early phage mRNA profiles and restrict phage propagation after adsorption.
+definition_source: DOI:10.1128/JB.00296-13
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+evidence:
+- reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+  snippet: the system encoded by pSRQ900 was classified as an abortive infection mechanism
+    and was named AbiQ
+  notes: Emond et al. named AbiQ as a Lactococcus plasmid-encoded abortive infection
+    system rather than an adsorption-blocking or restriction-modification defense.
+- reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+  snippet: The frameshift mutation completely abolished host resistance to phages
+    p2 and c21
+  notes: Emond et al. localized the phage-resistance phenotype to the abiQ open reading
+    frame on the pSRQ900 fragment.
+- reference: DOI:10.1128/JB.00296-13
+  snippet: Lactococcus lactis AbiQ system, a type III toxin-antitoxin with antiviral
+    activities
+  notes: Samson et al. support the type III protein-RNA toxin-antitoxin architecture
+    of AbiQ.
+- reference: DOI:10.1128/JB.00296-13
+  snippet: AbiQ modified the early-expressed phage mRNA profiles
+  notes: Samson et al. connect AbiQ to altered early phage mRNA profiles during infection.
+- reference: DOI:10.1128/JB.00296-13
+  snippet: active against various phage families infecting Gram-positive and Gram-negative
+    bacteria
+  notes: Samson et al. support AbiQ as an antiphage system whose activity is not restricted
+    to its native lactococcal host.
+- reference: DOI:10.1128/JB.00296-13
+  snippet: In the presence of AbiQ, additional small transcripts were observed
+  notes: Samson et al. observed altered P008 transcript profiles in phage-infected
+    AbiQ-containing cells.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Emond et al. isolated the pSRQ900 plasmid from Lactococcus lactis W-37, named
+    its encoded abortive-infection mechanism AbiQ, and showed AbiQ-dependent resistance
+    to c2- and 936-like lactococcal phages.
+  reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+causal_graphs:
+- graph_id: abiq_type_iii_ta_antiphage_activity
+  title: AbiQ type III toxin-antitoxin activity disrupts phage mRNA profiles
+  description: Evidence-backed process sketch linking an AbiQ locus to type III toxin-antitoxin
+    activity, altered early phage mRNA profiles, restricted phage propagation, and
+    abortive-infection system possession.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiQ at the system level without asserting a universal
+    phage activator, exact AbiQ RNA target, or phage-escape path; Samson et al. show
+    that multiple unrelated phage genes can be involved in the AbiQ phenotype.
+  nodes:
+  - node_id: abiq_locus
+    label: AbiQ locus
+    node_type: GENETIC_ELEMENT
+    description: A type III toxin-antitoxin abortive-infection locus encoding the
+      AbiQ toxin with its cognate RNA antitoxin.
+  - node_id: abiq_type_iii_toxin_antitoxin_activity
+    label: AbiQ type III toxin-antitoxin activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Protein-RNA toxin-antitoxin activity of AbiQ, in which the AbiQ protein
+      acts as an endoribonuclease neutralized by a cognate RNA antitoxin.
+  - node_id: early_phage_mrna_profile_modification
+    label: early phage mRNA profile modification
+    node_type: BIOLOGICAL_PROCESS
+    description: AbiQ-associated alteration of early phage mRNA profiles in infected
+      host cells.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced production of infectious phage from an AbiQ-containing infected
+      host cell.
+  - node_id: abiq_system_trait
+    label: AbiQ system
+    node_type: TRAIT
+    grounding: traitmech:000225
+    description: Possession of a genome-encoded AbiQ type III toxin-antitoxin abortive-infection
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage defense system.
+  edges:
+  - subject: abiq_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiq_type_iii_toxin_antitoxin_activity
+    description: The AbiQ locus encodes a type III protein-RNA toxin-antitoxin antiphage
+      system.
+    evidence:
+    - reference: DOI:10.1128/JB.00296-13
+      snippet: Lactococcus lactis AbiQ system, a type III toxin-antitoxin with antiviral
+        activities
+      notes: Samson et al. define AbiQ as a type III toxin-antitoxin system with antiviral
+        activity.
+  - subject: abiq_type_iii_toxin_antitoxin_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: early_phage_mrna_profile_modification
+    description: AbiQ activity alters the abundance pattern of early-expressed phage
+      transcripts during infection.
+    evidence:
+    - reference: DOI:10.1128/JB.00296-13
+      snippet: AbiQ modified the early-expressed phage mRNA profiles
+      notes: Samson et al. directly assayed phage transcription in AbiQ-containing
+        Lactococcus cells.
+  - subject: early_phage_mrna_profile_modification
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Altered early phage mRNA profiles are part of the AbiQ restriction
+      phenotype that reduces phage propagation.
+    evidence:
+    - reference: DOI:10.1128/JB.00296-13
+      snippet: In the presence of AbiQ, additional small transcripts were observed
+      notes: Samson et al. observed small phage transcripts in AbiQ-containing cells
+        and attributed them to the AbiQ phenotype.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abiq_system_trait
+    description: Restriction of phage propagation realizes the AbiQ antiphage defense
+      trait.
+    evidence:
+    - reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+      snippet: The frameshift mutation completely abolished host resistance to phages
+        p2 and c21
+      notes: Emond et al. measured reduced phage plaquing on cells carrying the native
+        AbiQ plasmid.
+  - subject: abiq_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiQ system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+      snippet: the system encoded by pSRQ900 was classified as an abortive infection
+        mechanism and was named AbiQ
+      notes: Emond et al. place AbiQ in the abortive infection class of phage defense.
+curation_history:
+- timestamp: '2026-09-15T18:45:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiQ system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v102.
+  llm_assisted: true

@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T182920Z-codex-34ba3b
+  timestamp: '2026-09-15T18:29:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal reserve block to v103
+  details: Documented that metpo_traitmech_v102 reserves METPO:1017900 for the AbiQ system,
+    advancing the next one-row Scope-A cohort to METPO:1018000 for v103.
