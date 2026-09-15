@@ -17,3 +17,20 @@ The `page` field is relative to the directory containing the published map
 folder: from `text-map/index.html`, the shared renderer uses `../` plus `page`.
 This repository publishes the bundle at `pages/text-map/`, so record links omit
 the deployment wrapper `pages/` and resolve to its sibling record directories.
+
+## Generate and publish the common map
+
+The governed runtime is installed at `scripts/embedding_pipeline.py`.
+`conf/text_map.yaml` enables the immutable bundle selected by
+`data/text_map/current.json`. `just gen-pages` validates the pinned BGE profile,
+512-token window, actual PaCMAP and fresh complete adapter input before staging
+`pages/text-map/` and its navigation link. A stale or invalid enabled bundle
+fails before the existing site is replaced.
+
+Follow the [locked runtime instructions](../conf/embedding-runtime/README.md)
+for local generation and refresh. After semantic curation, export complete
+inputs and reuse the matching verified vector cache to encode changed text,
+then project the new bundle and run `just gen-pages`. Keep the same recorded
+model/runtime profile to reuse its cache. Normal CI and page rendering do not
+run inference. Graph maps retain their own source/corpus receipts and must be
+regenerated through their maintained builders when those inputs change.
