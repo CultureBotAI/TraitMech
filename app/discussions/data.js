@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "cbass-subtype-mechanism-gap",
+  "prompt": "Resolve CBASS subtype-specific sensing and effector mechanisms before splitting cGAMP-phospholipase, cAAA-nuclease, ancillary-gene, or individual CD-NTase protein-family edges into reviewed graph groundings.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CBASS system",
+  "source_id": "traitmech:000212",
+  "source_file": "cbass_system.yaml",
+  "attaches_to": [],
+  "rationale": "Cohen et al. resolved a phage-triggered cGAMP-phospholipase CBASS system and Millman et al. classified CBASS loci into four major types with multiple signaling molecules, effectors, and ancillary genes; exact phage sensors and subtype-specific effector families remain shifted from this first organism-level trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/cbass_system.html#cbass-subtype-mechanism-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -1583,9 +1600,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 91,
- "total_knowledge_gaps": 10,
- "total_source_entries": 90,
+ "total_discussions": 92,
+ "total_knowledge_gaps": 11,
+ "total_source_entries": 91,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
