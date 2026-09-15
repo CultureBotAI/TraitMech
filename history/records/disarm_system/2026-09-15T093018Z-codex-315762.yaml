@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/disarm_system.yaml
+  slug: disarm_system
+session:
+  id: 2026-09-15T093018Z-codex-315762
+  timestamp: '2026-09-15T09:30:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DISARM system trait
+  details: Added traitmech:000211 for DISARM system with DOI-backed Ofir and Bravo evidence,
+    a Bacillus paralicheniformis ATCC 9945a canonical example, a DrmAB activation causal graph
+    with reviewed DrmA and DrmB protein examples from the same strain, and an upstream
+    placeholder reserved in proposals/metpo_traitmech_v88.

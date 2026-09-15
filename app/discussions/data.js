@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "disarm-downstream-effector-gap",
+  "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DISARM system",
+  "source_id": "traitmech:000211",
+  "source_file": "disarm_system.yaml",
+  "attaches_to": [],
+  "rationale": "Ofir et al. inferred phage DNA degradation and showed that DrmC is partially redundant across phages; Bravo et al. resolved DrmAB recognition and activation but left the downstream nuclease or physical replication block as a model.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/disarm_system.html#disarm-downstream-effector-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1566,9 +1583,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 90,
- "total_knowledge_gaps": 9,
- "total_source_entries": 89,
+ "total_discussions": 91,
+ "total_knowledge_gaps": 10,
+ "total_source_entries": 90,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
