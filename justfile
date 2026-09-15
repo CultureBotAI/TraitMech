@@ -609,6 +609,11 @@ deep-research-provider provider focus="causal_mechanism" *args="":
       --config conf/deep_research_provider.yaml --provider {{provider}} \
       --focus {{focus}} {{args}}
 
+# Validate both specialty graph generations against all current YAML, without inference.
+# The maintained renderer (and qc audit-derived-reports) also runs this preflight.
+audit-embedding-publication:
+    uv run python scripts/check_graph_receipts.py
+
 # Composite: refresh METPO → seed → build embeddings → render pages.
 gen-site: seed-apply build-embeddings gen-pages
 

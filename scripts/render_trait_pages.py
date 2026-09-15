@@ -39,6 +39,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
 from traitmech.text_map_site import prepare_text_map
+from traitmech.graph_publication import check_graph_receipts
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
@@ -412,6 +413,9 @@ def render_pages(args: argparse.Namespace) -> int:
 
 
 def _render_pages(args: argparse.Namespace, *, staged_text_map: Path | None = None) -> int:
+    # Graph-relevant YAML can change without changing common semantic text (#927).
+    # Require both complete current graph generations before --clean or any site write.
+    check_graph_receipts(REPO_ROOT)
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
     # tree — that is half of what #214 was about — and this function wipes and

@@ -22,6 +22,8 @@ on:
       - "research/**"
       # As above: the corpus round-trip test reads data/traits/ (#554).
       - "data/traits/**"
+      # Current graph publication reads the complete retained generation (#927).
+      - "data/embeddings/**"
   workflow_dispatch:
 
 permissions:

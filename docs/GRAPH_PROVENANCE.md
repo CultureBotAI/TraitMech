@@ -22,3 +22,18 @@ receipt = load_receipt(Path("path/to/projection.metadata.json"))
 ```
 
 This verifies all sibling artifacts declared by the receipt. It is not a tool for attaching newly guessed provenance to legacy arrays. Full published artifacts must be regenerated from reviewed current inputs before the graph correction is considered complete.
+
+Before publication, run `just audit-embedding-publication`. The maintained page renderer
+and the `just qc` derived-pages audit run the same preflight before changing site
+output. Both specialty maps must bind the exact complete current YAML path/hash
+ledger, including ignored YAML, and their map, match table, slim vectors and
+neighbor outputs must form consistent generations. Parent ordering and other
+graph-relevant fields are covered even when common semantic text is unchanged.
+
+This check reads current YAML and committed artifacts only; it never opens the
+original large embedding source or runs a model/reducer. Missing, legacy-only,
+stale or inconsistent receipts block current publication and preserve prior
+pages. After YAML curation, refresh both specialty generations from the selected
+source before rendering; do not attach current hashes to old coordinates. The
+standalone historical receipt reader may still label old arrays as unverified,
+but the maintained current-site writer does not bypass this gate.
