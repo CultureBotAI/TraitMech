@@ -2,13 +2,15 @@
 {% block content %}
 <header>
   <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Graph layout</p>
-  <h1>Trait graph layout (sfdp)</h1>
-  <p class="tagline">Graphviz <strong>sfdp</strong> force-directed layout over
-    <strong>{{ n_points }}</strong> METPO trait embeddings from kg-microbe's
-    2026-04-25 deepwalk (512-D, layout k=15). The {{ n_edges }} visible links are
+  <h1>Trait graph layout</h1>
+  <p class="tagline">{{ projection.label }} over
+    <strong>{{ n_points }}</strong> traits positioned using matched graph vectors. Projection: {{ projection.label }}.
+    Source: {{ projection.source }}; dimensions: {{ projection.dimensions }}. The {{ n_edges }} visible links are
     reciprocal relationships in the committed top-neighbor index. Hover for a
     label; click to open the trait page.</p>
 </header>
+
+{% include "_graph_matching.html" %}
 
 <section class="umap-controls">
   <label>Search
@@ -27,7 +29,7 @@
   <div class="data-table-actions"><a id="csv-download" href="#" download="trait_graph.csv">Download CSV</a></div>
   <div class="data-table-scroll">
     <table class="data-table" id="data-table">
-      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Layout x</th><th>Layout y</th></tr></thead>
+      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Matching method</th><th>Source graph nodes</th><th>Layout x</th><th>Layout y</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -41,6 +43,7 @@ const GRAPH_EDGES = {{ graph_edges | safe }};
 fetch("{{ data_url }}")
   .then(r => r.json())
   .then(points => {
+    showMatchingSummary(points);
     const W = Math.min(1100, window.innerWidth - 40);
     const H = 640;
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
@@ -80,8 +83,8 @@ fetch("{{ data_url }}")
       .attr("opacity", 0.78)
       .style("cursor", "pointer")
       .on("mouseover", (e, d) => {
-        tooltip.style("display", "block")
-          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category}</span>`);
+        tooltip.style("display", "block");
+        showMatchingTooltip(tooltip.node(), d);
       })
       .on("mousemove", (e) => {
         tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
@@ -183,11 +186,12 @@ fetch("{{ data_url }}")
         const label = href
           ? `<a href="${esc(href)}">${esc(d.label)}</a>` : esc(d.label);
         return `<tr><td>${label}</td><td>${esc(d.id)}</td><td>${esc(d.category)}</td>` +
+          `<td>${esc(matchingLabel(d))}</td><td>${esc(matchingNodes(d))}</td>` +
           `<td class="num">${(+d.umap_x).toFixed(3)}</td><td class="num">${(+d.umap_y).toFixed(3)}</td></tr>`;
       }).join("");
       // Download CSV of the same data.
-      const csvRows = [["label", "id", "category", "x", "y"]].concat(
-        rows.map(d => [d.label, d.id, d.category, d.umap_x, d.umap_y]));
+      const csvRows = [["label", "id", "category", "match_method", "source_nodes", "x", "y"]].concat(
+        rows.map(d => [d.label, d.id, d.category, matchingLabel(d), matchingNodes(d), d.umap_x, d.umap_y]));
       const csv = csvRows.map(r => r.map(v => {
         const s = String(v == null ? "" : v);
         return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;

@@ -30,10 +30,11 @@ METPO:1003008	acidotolerant	environment	direct_metpo	1	METPO:1003008
 METPO:1000602	aerobic	environment	direct_metpo	1	METPO:1000602
 METPO:1000609	aerotolerant	environment	direct_metpo	1	METPO:1000609
 METPO:1003009	alkalotolerant	environment	direct_metpo	1	METPO:1003009
-METPO:1003002	alkaphilic	environment	direct_metpo	1	METPO:1003002
+METPO:1003002	alkaliphilic	environment	direct_metpo	1	METPO:1003002
 METPO:1000603	anaerobic	environment	direct_metpo	1	METPO:1000603
 traitmech:000017	arsenic tolerant	environment	parent_proxy	1	METPO:1000059
 traitmech:000013	cadmium tolerant	environment	parent_proxy	1	METPO:1000059
+METPO:1005021	capnophilic	environment	direct_metpo	1	METPO:1005021
 traitmech:000015	cobalt tolerant	environment	parent_proxy	1	METPO:1000059
 traitmech:000018	copper tolerant	environment	parent_proxy	1	METPO:1000059
 METPO:1000534	delta phenotype with numerical limits	environment	direct_metpo	1	METPO:1000534
@@ -45,7 +46,7 @@ METPO:1000612	facultative oxygen preference	environment	direct_metpo	1	METPO:100
 METPO:1000720	facultative psychrophilic	environment	direct_metpo	1	METPO:1000720
 METPO:1003007	facultatively acidophilic	environment	direct_metpo	1	METPO:1003007
 METPO:1000608	facultatively aerobic	environment	direct_metpo	1	METPO:1000608
-METPO:1003005	facultatively alkaphilic	environment	direct_metpo	1	METPO:1003005
+METPO:1003005	facultatively alkaliphilic	environment	direct_metpo	1	METPO:1003005
 METPO:1000605	facultatively anaerobic	environment	direct_metpo	1	METPO:1000605
 METPO:1000535	growth range phenotype with numerical limits	environment	direct_metpo	1	METPO:1000535
 METPO:1000621	haloalkaliphilic	environment	direct_metpo	1	METPO:1000621
@@ -79,7 +80,7 @@ METPO:1003001	neutrophilic	environment	direct_metpo	1	METPO:1003001
 METPO:1000624	non halophilic	environment	direct_metpo	1	METPO:1000624
 METPO:1003006	obligately acidophilic	environment	direct_metpo	1	METPO:1003006
 METPO:1000606	obligately aerobic	environment	direct_metpo	1	METPO:1000606
-METPO:1003004	obligately alkaphilic	environment	direct_metpo	1	METPO:1003004
+METPO:1003004	obligately alkaliphilic	environment	direct_metpo	1	METPO:1003004
 METPO:1000607	obligately anaerobic	environment	direct_metpo	1	METPO:1000607
 traitmech:000002	obligately piezophilic	environment	parent_proxy	1	METPO:1000059
 METPO:1000536	optimum phenotype with numerical limits	environment	direct_metpo	1	METPO:1000536
@@ -146,8 +147,13 @@ METPO:1000619	thermotolerant	environment	direct_metpo	1	METPO:1000619
 traitmech:000009	UV radiation tolerant	environment	parent_proxy	1	METPO:1000059
 traitmech:000011	xerophilic	environment	parent_proxy	1	METPO:1000059
 traitmech:000014	zinc tolerant	environment	parent_proxy	1	METPO:1000059
+traitmech:000214	abortive infection system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000210	BREX system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000212	CBASS system	genomics	parent_proxy	1	METPO:1000188
 traitmech:000096	codon usage bias	genomics	parent_proxy	1	METPO:1000188
 traitmech:000094	CRISPR-Cas system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000211	DISARM system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000215	Gabija system	genomics	parent_proxy	1	METPO:1000188
 METPO:1000127	GC content	genomics	direct_metpo	1	METPO:1000127
 METPO:1000432	GC high	genomics	direct_metpo	1	METPO:1000432
 METPO:1000429	GC low	genomics	direct_metpo	1	METPO:1000429
@@ -159,33 +165,51 @@ traitmech:000099	genome streamlining	genomics	parent_proxy	1	METPO:1000188
 traitmech:000093	genomic island	genomics	parent_proxy	1	METPO:1000188
 traitmech:000089	mobile genetic element	genomics	parent_proxy	1	METPO:1000188
 traitmech:000102	pangenome openness	genomics	parent_proxy	1	METPO:1000188
+traitmech:000209	phage defense system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000213	phosphorothioate defense system	genomics	parent_proxy	1	METPO:1000188
 traitmech:000090	plasmid carriage	genomics	parent_proxy	1	METPO:1000188
 traitmech:000100	ploidy	genomics	parent_proxy	1	METPO:1000188
 traitmech:000091	prophage	genomics	parent_proxy	1	METPO:1000188
 traitmech:000095	restriction-modification system	genomics	parent_proxy	1	METPO:1000188
 traitmech:000101	rRNA operon copy number	genomics	parent_proxy	1	METPO:1000188
+traitmech:000216	Thoeris system	genomics	parent_proxy	1	METPO:1000188
 traitmech:000092	transposable element	genomics	parent_proxy	1	METPO:1000188
 METPO:2000210	accumulates	metabolism	direct_metpo	1	METPO:2000210
+traitmech:000191	acetoclastic methanogenesis	metabolism	parent_proxy	1	METPO:1000844
 METPO:1000845	Acetogenesis	metabolism	direct_metpo	1	METPO:1000845
+traitmech:000180	acetone-butanol-ethanol fermentation	metabolism	parent_proxy	1	METPO:1002005
 METPO:1000801	Aerobic respiration	metabolism	direct_metpo	1	METPO:1000801
+traitmech:000188	anaerobic ammonium oxidation	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000033	anaerobic oxidation of methane	metabolism	parent_proxy	1	METPO:1000802
 METPO:1000802	Anaerobic respiration	metabolism	direct_metpo	1	METPO:1000802
 traitmech:000035	anoxygenic photosynthesis	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000130	aromatic compound degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000129	aromatic hydrocarbon degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000195	arsenate respiration	metabolism	parent_proxy	1	METPO:1000802
+traitmech:000189	arsenite oxidation	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000002	assimilates	metabolism	direct_metpo	1	METPO:2000002
 traitmech:000110	biopolymer degradation	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000003	builds acid from	metabolism	direct_metpo	1	METPO:2000003
 METPO:2000004	builds base from	metabolism	direct_metpo	1	METPO:2000004
 METPO:2000005	builds gas from	metabolism	direct_metpo	1	METPO:2000005
+traitmech:000181	2,3-butanediol fermentation	metabolism	parent_proxy	1	METPO:1002005
+traitmech:000179	butyric acid fermentation	metabolism	parent_proxy	1	METPO:1002005
 METPO:1002003	Cable bacteria metabolism	metabolism	direct_metpo	1	METPO:1002003
 traitmech:000020	Calvin-Benson-Bassham cycle	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000103	capable of	metabolism	direct_metpo	1	METPO:2000103
 traitmech:000019	carbon fixation	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000111	cellulolysis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000112	chitinolysis	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000198	chlorate respiration	metabolism	parent_proxy	1	METPO:1000802
+traitmech:000182	citrate fermentation	metabolism	parent_proxy	1	METPO:1002005
 METPO:2000212	compartmentalizes	metabolism	direct_metpo	1	METPO:2000212
+traitmech:000187	complete ammonia oxidation	metabolism	parent_proxy	1	METPO:1005001
+traitmech:000131	dark hydrogen oxidation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000132	dark oxidation of sulfur compounds	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000007	degrades	metabolism	direct_metpo	1	METPO:2000007
 traitmech:000104	denitrification	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000025	dicarboxylate/4-hydroxybutyrate cycle	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000201	dimethyl sulfoxide respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000200	disproportionates	metabolism	direct_metpo	1	METPO:2000200
 METPO:1000806	Disproportionation	metabolism	direct_metpo	1	METPO:1000806
 traitmech:000031	dissimilatory iron reduction	metabolism	parent_proxy	1	METPO:1000802
@@ -233,6 +257,7 @@ METPO:2000209	exports	metabolism	direct_metpo	1	METPO:2000209
 METPO:1002005	Fermentation	metabolism	direct_metpo	1	METPO:1002005
 traitmech:000109	fermentative hydrogen production	metabolism	parent_proxy	1	METPO:1002005
 METPO:2000011	ferments	metabolism	direct_metpo	1	METPO:2000011
+traitmech:000196	fumarate respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000508	has growth NaCl observation	metabolism	direct_metpo	1	METPO:2000508
 METPO:2000514	has growth oxygen observation	metabolism	direct_metpo	1	METPO:2000514
 METPO:2000502	has growth pH observation	metabolism	direct_metpo	1	METPO:2000502
@@ -257,21 +282,36 @@ METPO:2000055	has range temperature observation	metabolism	direct_metpo	1	METPO:
 METPO:2000056	has temperature delta observation	metabolism	direct_metpo	1	METPO:2000056
 METPO:2000052	has temperature observation	metabolism	direct_metpo	1	METPO:2000052
 METPO:1000846	Homoacetogenesis	metabolism	direct_metpo	1	METPO:1000846
+traitmech:000128	hydrocarbon degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000127	hydrogenotrophic methanogenesis	metabolism	parent_proxy	1	METPO:1000844
 METPO:2000013	hydrolyzes	metabolism	direct_metpo	1	METPO:2000013
 METPO:2000208	imports	metabolism	direct_metpo	1	METPO:2000208
+traitmech:000203	iodate respiration	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000107	iron oxidation	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000045	is not required for growth	metabolism	direct_metpo	1	METPO:2000045
 traitmech:000026	lactic acid fermentation	metabolism	parent_proxy	1	METPO:1002005
 traitmech:000114	lignin degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000190	lipolysis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000032	manganese oxidation	metabolism	parent_proxy	1	METPO:1000060
 METPO:1000060	metabolism	metabolism	direct_metpo	1	METPO:1000060
 METPO:1000844	Methanogenesis	metabolism	direct_metpo	1	METPO:1000844
+traitmech:000133	methanol oxidation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000192	methyl-based methanogenesis	metabolism	parent_proxy	1	METPO:1000844
 traitmech:000027	mixed-acid fermentation	metabolism	parent_proxy	1	METPO:1002005
+traitmech:000134	nitrate reduction	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000122	nitrate respiration	metabolism	parent_proxy	1	METPO:1000802
+METPO:1005001	nitrification	metabolism	direct_metpo	1	METPO:1005001
+traitmech:000123	nitrite respiration	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000103	nitrogen fixation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000121	nitrogen respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000001	organism interacts with chemical	metabolism	direct_metpo	1	METPO:2000001
+traitmech:000204	organohalide respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:1000803	Oxidative phosphorylation	metabolism	direct_metpo	1	METPO:1000803
 METPO:2000016	oxidizes	metabolism	direct_metpo	1	METPO:2000016
 traitmech:000034	oxygenic photosynthesis	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000135	pectin degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000197	perchlorate respiration	metabolism	parent_proxy	1	METPO:1000802
+traitmech:000193	photoferrotrophy	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000038	photosynthesis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000037	phototrophy	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000202	produces	metabolism	direct_metpo	1	METPO:2000202
@@ -282,15 +322,21 @@ METPO:2000017	reduces	metabolism	direct_metpo	1	METPO:2000017
 traitmech:000021	reductive tricarboxylic acid cycle	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000018	requires for growth	metabolism	direct_metpo	1	METPO:2000018
 METPO:1000800	respiration	metabolism	direct_metpo	1	METPO:1000800
+traitmech:000124	respiration of sulfur compounds	metabolism	parent_proxy	1	METPO:1000802
+traitmech:000202	selenate respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000211	sequesters	metabolism	direct_metpo	1	METPO:2000211
 METPO:2000302	shows activity of	metabolism	direct_metpo	1	METPO:2000302
 traitmech:000115	starch degradation	metabolism	parent_proxy	1	METPO:1000060
 METPO:1000804	Substrate-level phosphorylation	metabolism	direct_metpo	1	METPO:1000804
 traitmech:000106	sulfur oxidation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000125	sulfur respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:1002006	Syntrophy	metabolism	direct_metpo	1	METPO:1002006
+traitmech:000200	tetrathionate respiration	metabolism	parent_proxy	1	METPO:1000802
+traitmech:000126	thiosulfate respiration	metabolism	parent_proxy	1	METPO:1000802
 traitmech:000023	3-hydroxypropionate bicycle	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000024	3-hydroxypropionate/4-hydroxybutyrate cycle	metabolism	parent_proxy	1	METPO:1000060
 METPO:2000207	transports	metabolism	direct_metpo	1	METPO:2000207
+traitmech:000199	trimethylamine N-oxide respiration	metabolism	parent_proxy	1	METPO:1000802
 METPO:2000006	uses as carbon source	metabolism	direct_metpo	1	METPO:2000006
 METPO:2000008	uses as electron acceptor	metabolism	direct_metpo	1	METPO:2000008
 METPO:2000009	uses as electron donor	metabolism	direct_metpo	1	METPO:2000009
@@ -308,6 +354,7 @@ METPO:2000019	uses for respiration	metabolism	direct_metpo	1	METPO:2000019
 METPO:2000015	uses in other way	metabolism	direct_metpo	1	METPO:2000015
 traitmech:000022	Wood-Ljungdahl pathway	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000113	xylan degradation	metabolism	parent_proxy	1	METPO:1000060
+traitmech:000185	akinete	morphology	parent_proxy	1	METPO:1000059
 traitmech:000059	amphitrichous	morphology	parent_proxy	1	METPO:1000704
 METPO:1000705	axially filamented	morphology	direct_metpo	1	METPO:1000705
 METPO:1000667	bacillus shaped	morphology	direct_metpo	1	METPO:1000667
@@ -351,8 +398,10 @@ METPO:1000700	gram variable	morphology	direct_metpo	1	METPO:1000700
 METPO:1003025	green pigmented	morphology	direct_metpo	1	METPO:1003025
 METPO:1000676	helical shaped	morphology	direct_metpo	1	METPO:1000676
 traitmech:000073	heterocyst	morphology	parent_proxy	1	METPO:1000059
+traitmech:000184	holdfast	morphology	parent_proxy	1	METPO:1000059
 traitmech:000066	intracellular inclusion	morphology	parent_proxy	1	METPO:1000059
 METPO:1000691	irregular shaped	morphology	direct_metpo	1	METPO:1000691
+METPO:1005036	lateral flagellation	morphology	direct_metpo	1	METPO:1005036
 traitmech:000058	lophotrichous	morphology	parent_proxy	1	METPO:1000704
 traitmech:000071	magnetosome	morphology	parent_proxy	1	METPO:1000059
 traitmech:000057	monotrichous	morphology	parent_proxy	1	METPO:1000704
@@ -368,8 +417,10 @@ traitmech:000060	peritrichous	morphology	parent_proxy	1	METPO:1000704
 METPO:1003021	pigmentation	morphology	direct_metpo	1	METPO:1003021
 METPO:1003027	pink pigmented	morphology	direct_metpo	1	METPO:1003027
 METPO:1000679	pleomorphic shaped	morphology	direct_metpo	1	METPO:1000679
+METPO:1005032	polar flagellation	morphology	direct_metpo	1	METPO:1005032
 traitmech:000067	polyhydroxyalkanoate granule	morphology	parent_proxy	1	METPO:1000059
 traitmech:000068	polyphosphate granule	morphology	parent_proxy	1	METPO:1000059
+METPO:1007006	polytrichous flagellation	morphology	parent_proxy	1	METPO:1000704
 traitmech:000065	prosthecate	morphology	parent_proxy	1	METPO:1000059
 METPO:1003028	red pigmented	morphology	direct_metpo	1	METPO:1003028
 METPO:1000680	ring shaped	morphology	direct_metpo	1	METPO:1000680
@@ -387,12 +438,14 @@ METPO:1000694	square shaped	morphology	direct_metpo	1	METPO:1000694
 traitmech:000118	staphylococcus arrangement	morphology	parent_proxy	1	METPO:1000666
 METPO:1000685	star shaped	morphology	direct_metpo	1	METPO:1000685
 traitmech:000117	streptococcus arrangement	morphology	parent_proxy	1	METPO:1000666
+METPO:1005037	subpolar flagellation	morphology	direct_metpo	1	METPO:1005037
 traitmech:000069	sulfur globule	morphology	parent_proxy	1	METPO:1000059
 traitmech:000062	swarming motility	morphology	parent_proxy	1	METPO:1000702
 METPO:1000695	tailed shaped	morphology	direct_metpo	1	METPO:1000695
 traitmech:000119	tetrad arrangement	morphology	parent_proxy	1	METPO:1000666
 METPO:1000696	triangular shaped	morphology	direct_metpo	1	METPO:1000696
 traitmech:000061	twitching motility	morphology	parent_proxy	1	METPO:1000702
+traitmech:000175	type IV pilus	morphology	parent_proxy	1	METPO:1000059
 METPO:1000686	vibrio shaped	morphology	direct_metpo	1	METPO:1000686
 METPO:1003029	white pigmented	morphology	direct_metpo	1	METPO:1003029
 METPO:1003030	yellow pigmented	morphology	direct_metpo	1	METPO:1003030
@@ -416,10 +469,61 @@ METPO:1001015	pH range observation	observation	direct_metpo	1	METPO:1001015
 METPO:1001004	temperature delta observation	observation	direct_metpo	1	METPO:1001004
 METPO:1001021	temperature observation	observation	direct_metpo	1	METPO:1001021
 METPO:1001003	temperature range observation	observation	direct_metpo	1	METPO:1001003
+METPO:1007084	catalase negative	other	parent_proxy	1	METPO:1000059
+METPO:1007080	catalase test	other	parent_proxy	1	METPO:1000059
+METPO:1007064	circular colony	other	parent_proxy	1	METPO:1000059
+METPO:1007091	coagulase negative	other	parent_proxy	1	METPO:1000059
+METPO:1007090	coagulase positive	other	parent_proxy	1	METPO:1000059
+METPO:1007062	colony morphology	other	parent_proxy	1	METPO:1000059
+METPO:1007063	colony shape	other	parent_proxy	1	METPO:1000059
+METPO:1007093	epibiont phenotype	other	parent_proxy	1	METPO:1000059
+METPO:1007066	filamentous colony	other	parent_proxy	1	METPO:1000059
+METPO:1007069	fried-egg-shaped colony	other	parent_proxy	1	METPO:1000059
+METPO:1005040	generalist	other	direct_metpo	1	METPO:1005040
+METPO:1005025	hemolysis	other	direct_metpo	1	METPO:1005025
+METPO:1005026	hemolytic	other	direct_metpo	1	METPO:1005026
+METPO:1005010	indole test	other	direct_metpo	1	METPO:1005010
+METPO:1005012	indole test negative	other	direct_metpo	1	METPO:1005012
+METPO:1005011	indole test positive	other	direct_metpo	1	METPO:1005011
+METPO:1007065	irregular colony	other	parent_proxy	1	METPO:1000059
+METPO:1005013	methyl red test	other	direct_metpo	1	METPO:1005013
+METPO:1005015	methyl red test negative	other	direct_metpo	1	METPO:1005015
+METPO:1005014	methyl red test positive	other	direct_metpo	1	METPO:1005014
+METPO:1005027	non-hemolytic	other	direct_metpo	1	METPO:1005027
+METPO:1007073	osmotic tolerance	other	parent_proxy	1	METPO:1000059
+METPO:1007086	oxidase negative	other	parent_proxy	1	METPO:1000059
+METPO:1007081	oxidase test	other	parent_proxy	1	METPO:1000059
+METPO:1007067	punctiform colony	other	parent_proxy	1	METPO:1000059
+METPO:1007068	rhizoid colony	other	parent_proxy	1	METPO:1000059
+traitmech:000177	specialist	other	parent_proxy	1	METPO:1000059
+METPO:1007088	urease negative	other	parent_proxy	1	METPO:1000059
+METPO:1007082	urease test	other	parent_proxy	1	METPO:1000059
+METPO:1005016	Voges-Proskauer test	other	direct_metpo	1	METPO:1005016
+METPO:1005018	Voges-Proskauer test negative	other	direct_metpo	1	METPO:1005018
+METPO:1005017	Voges-Proskauer test positive	other	direct_metpo	1	METPO:1005017
+traitmech:000142	acid phosphatase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000194	aerobic anoxygenic phototrophy	physiology	parent_proxy	1	METPO:1000657
+traitmech:000161	alanine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000141	alkaline phosphatase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000159	alpha-chymotrypsin activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000152	alpha-fucosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000149	alpha-galactosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000145	alpha-glucosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000150	alpha-mannosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000162	amylase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000088	antibiotic resistance	physiology	parent_proxy	1	METPO:1000059
+traitmech:000167	arginine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000164	arginine dihydrolase activity	physiology	parent_proxy	1	METPO:1000059
 METPO:1000632	autotrophic	physiology	direct_metpo	1	METPO:1000632
+traitmech:000183	bacteriocin production	physiology	parent_proxy	1	METPO:1000059
+traitmech:000148	beta-galactosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000146	beta-glucosidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000151	beta-glucuronidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000157	beta-N-acetylhexosaminidase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000085	bioluminescence	physiology	parent_proxy	1	METPO:1000059
 METPO:1000633	carboxydotrophic	physiology	direct_metpo	1	METPO:1000633
+traitmech:000156	carboxylesterase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000137	caseinase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000075	catalase activity	physiology	parent_proxy	1	METPO:1000059
 METPO:1000634	chemoautolithotrophic	physiology	direct_metpo	1	METPO:1000634
 METPO:1000635	chemoautotrophic	physiology	direct_metpo	1	METPO:1000635
@@ -431,35 +535,65 @@ METPO:1000640	chemoorganoheterotrophic	physiology	direct_metpo	1	METPO:1000640
 METPO:1000663	chemoorganotrophic	physiology	direct_metpo	1	METPO:1000663
 traitmech:000086	chemotaxis	physiology	parent_proxy	1	METPO:1000059
 METPO:1000641	chemotrophic	physiology	direct_metpo	1	METPO:1000641
+METPO:1007089	coagulase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000206	cold shock response	physiology	parent_proxy	1	METPO:1000059
 METPO:1000642	copiotrophic	physiology	direct_metpo	1	METPO:1000642
+traitmech:000147	cystine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000138	DNase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000080	dormancy	physiology	parent_proxy	1	METPO:1000059
+traitmech:000160	gamma-glutamyltransferase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000136	gelatinase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000173	glutamyl glutamic acid arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000170	glycine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000205	heat shock response	physiology	parent_proxy	1	METPO:1000059
 METPO:1000644	heterotrophic	physiology	direct_metpo	1	METPO:1000644
+traitmech:000171	histidine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000208	homeoviscous adaptation	physiology	parent_proxy	1	METPO:1000059
 METPO:1000646	hydrogenotrophic	physiology	direct_metpo	1	METPO:1000646
+traitmech:000140	lecithinase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000143	leucine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000178	leucyl glycine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000139	lipase activity	physiology	parent_proxy	1	METPO:1000059
 METPO:1000647	lithoautotrophic	physiology	direct_metpo	1	METPO:1000647
 METPO:1000648	lithoheterotrophic	physiology	direct_metpo	1	METPO:1000648
 METPO:1000649	lithotrophic	physiology	direct_metpo	1	METPO:1000649
+traitmech:000153	lysine decarboxylase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000176	magnetotaxis	physiology	parent_proxy	1	METPO:1000059
 METPO:1000650	methanotrophic	physiology	direct_metpo	1	METPO:1000650
 METPO:1000651	methylotrophic	physiology	direct_metpo	1	METPO:1000651
 METPO:1000652	mixotrophic	physiology	direct_metpo	1	METPO:1000652
+traitmech:000165	NAD-dependent alcohol dehydrogenase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000174	naphthol-AS-BI-phosphohydrolase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000087	natural competence	physiology	parent_proxy	1	METPO:1000059
 METPO:1000731	nutrient adaptation	physiology	direct_metpo	1	METPO:1000731
 METPO:1000654	oligotrophic	physiology	direct_metpo	1	METPO:1000654
 METPO:1000664	organoheterotrophic	physiology	direct_metpo	1	METPO:1000664
 METPO:1000655	organotrophic	physiology	direct_metpo	1	METPO:1000655
+traitmech:000154	ornithine decarboxylase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000076	oxidase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000079	oxidative stress response	physiology	parent_proxy	1	METPO:1000059
 traitmech:000082	persister cell formation	physiology	parent_proxy	1	METPO:1000059
+traitmech:000168	phenylalanine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
 METPO:1000656	photoautotrophic	physiology	direct_metpo	1	METPO:1000656
 METPO:1000657	photoheterotrophic	physiology	direct_metpo	1	METPO:1000657
 METPO:1000665	photolithoautotrophic	physiology	direct_metpo	1	METPO:1000665
 METPO:1000658	photolithotrophic	physiology	direct_metpo	1	METPO:1000658
 METPO:1000659	photoorganoheterotrophic	physiology	direct_metpo	1	METPO:1000659
 METPO:1000660	phototrophic	physiology	direct_metpo	1	METPO:1000660
+traitmech:000166	prolyl aminopeptidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000163	pyrazinamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000155	pyrrolidonyl arylamidase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000084	quorum sensing	physiology	parent_proxy	1	METPO:1000059
+traitmech:000172	serine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000186	siderophore production	physiology	parent_proxy	1	METPO:1000059
+traitmech:000207	SOS response	physiology	parent_proxy	1	METPO:1000059
 traitmech:000083	spore germination	physiology	parent_proxy	1	METPO:1000059
 traitmech:000078	stress response	physiology	parent_proxy	1	METPO:1000059
 METPO:1000631	trophic type	physiology	direct_metpo	1	METPO:1000631
+traitmech:000158	trypsin activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000169	tyrosine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000077	urease activity	physiology	parent_proxy	1	METPO:1000059
+traitmech:000144	valine arylamidase activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000081	viable but nonculturable state	physiology	parent_proxy	1	METPO:1000059
 METPO:2000060	has maximum observed value	quantitative_property	direct_metpo	1	METPO:2000060
 METPO:2000059	has minimum observed value	quantitative_property	direct_metpo	1	METPO:2000059

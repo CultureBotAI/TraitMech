@@ -24,18 +24,22 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
+import json
 import re
 import shutil
 import sys
+import tempfile
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-
 from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
+from traitmech.text_map_site import prepare_text_map
+from traitmech.graph_publication import check_graph_receipts
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
@@ -49,7 +53,50 @@ GRAPH_JSON = EMBED_DIR / "trait_graph.json"
 NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
-EMBEDDING_RELEASE = "2026-04-25"
+def load_projection_receipt(path: Path) -> dict:
+    """Display only metadata bound to the current map and neighbor bytes.
+
+    Old arrays have no generation receipt. Their current defaults are not
+    evidence about the algorithm, source release or dimension used before.
+    """
+    legacy = {"label": "Unverified projection", "method": "unknown",
+              "source": "Legacy graph artifact; source provenance not recorded",
+              "dimensions": "unrecorded", "verified": False}
+    try:
+        receipt = json.loads(path.with_suffix(".metadata.json").read_text())
+        source = receipt["source"]
+        dimensions = receipt["input_dimensions"]
+        method = receipt["projection"]["method"]
+        if (receipt["schema_version"] not in {1, 2} or method not in {"pacmap", "umap", "sfdp"}
+                or type(dimensions) is not int or dimensions < 1
+                or not isinstance(source["filename"], str) or not source["filename"]
+                or not re.fullmatch(r"[0-9a-f]{64}", source["sha256"])):
+            return legacy
+        if receipt["schema_version"] == 2:
+            from traitmech.graph_embedding_receipts import validate_receipt
+
+            outputs = receipt["outputs"]
+            required = {path.name, "trait_nearest_neighbors.json", "deepwalk_traits.tsv.gz",
+                        "metpo_to_kgm_node.tsv"}
+            if (not isinstance(outputs, dict) or not required.issubset(outputs)
+                    or any(not isinstance(name, str) or Path(name).name != name
+                           or name in {".", ".."} for name in outputs)):
+                return legacy
+            validate_receipt(receipt, {name: path.parent / name for name in outputs})
+        else:
+            # The older receipt binds the projection and nearest neighbors.
+            # Its metadata must not be borrowed by a later neighbor run.
+            for output in (path, path.parent / "trait_nearest_neighbors.json"):
+                with output.open("rb") as stream:
+                    digest = hashlib.file_digest(stream, "sha256").hexdigest()
+                if receipt["outputs"].get(output.name) != digest:
+                    return legacy
+        return {"label": {"pacmap": "PaCMAP", "umap": "UMAP", "sfdp": "sfdp layout"}[method],
+                "method": method, "source": source["filename"],
+                "source_sha256": source["sha256"], "dimensions": dimensions, "verified": True}
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
+        return legacy
+
 
 # Provider precedence for the deep-research lookup.
 #
@@ -122,8 +169,8 @@ def load_traits() -> list[tuple[Path, dict]]:
     for path in sorted(TRAITS_DIR.rglob("*.yaml")):
         try:
             doc = yaml.safe_load(path.read_text())
-        except Exception:
-            continue
+        except (OSError, yaml.YAMLError) as error:
+            raise ValueError(f"Unable to read trait record: {path}") from error
         if isinstance(doc, dict):
             out.append((path, doc))
     return out
@@ -256,10 +303,10 @@ def load_node_dim_preview(needed_nodes: set[str]) -> dict[str, str]:
             sid = parts[0]
             if sid in needed_nodes:
                 dims = parts[1:1 + DIM_PREVIEW]
-                if dims and dims[0] in ("0", "0.0", ""):
-                    # Header / index column? skip.
-                    if all(d.isdigit() for d in dims if d):
-                        continue
+                # Header / index column? skip.
+                if (dims and dims[0] in ("0", "0.0", "")
+                        and all(d.isdigit() for d in dims if d)):
+                    continue
                 preview = ", ".join(f"{float(d):+.3f}" for d in dims if d)
                 out[sid] = f"[{preview}, …]"
     return out
@@ -354,6 +401,21 @@ def research_answer(text: str) -> list[str]:
 
 
 def render_pages(args: argparse.Namespace) -> int:
+    # Finish full-input/policy validation and artifact staging before --clean
+    # can remove any existing pages. The temporary copy survives pointer swaps.
+    with prepare_text_map(REPO_ROOT) as ready:
+        if ready is None or args.dry_run:
+            return _render_pages(args)
+        with tempfile.TemporaryDirectory(prefix="traitmech-site-map-") as directory:
+            staging = Path(directory)
+            ready.stage(staging)
+            return _render_pages(args, staged_text_map=staging / "text-map")
+
+
+def _render_pages(args: argparse.Namespace, *, staged_text_map: Path | None = None) -> int:
+    # Graph-relevant YAML can change without changing common semantic text (#927).
+    # Require both complete current graph generations before --clean or any site write.
+    check_graph_receipts(REPO_ROOT)
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
     # tree — that is half of what #214 was about — and this function wipes and
@@ -370,6 +432,7 @@ def render_pages(args: argparse.Namespace) -> int:
     metpo_version = load_metpo_version(RAW_OWL)
     traits = load_traits()
     match_table = load_match_table()
+    embedding_receipt = load_projection_receipt(UMAP_JSON)
     # One value for every page in the run, derived from the data (#228).
     corpus_stamp = corpus_timestamp(traits)
 
@@ -382,6 +445,8 @@ def render_pages(args: argparse.Namespace) -> int:
         shutil.rmtree(pages_dir)
 
     pages_dir.mkdir(parents=True, exist_ok=True)
+    if staged_text_map is not None:
+        shutil.copytree(staged_text_map, pages_dir / "text-map", dirs_exist_ok=True)
     (pages_dir / "category").mkdir(exist_ok=True)
     (pages_dir / "assets").mkdir(exist_ok=True)
     shutil.copyfile(TEMPLATES_DIR / "style.css", pages_dir / "assets" / "style.css")
@@ -484,7 +549,8 @@ def render_pages(args: argparse.Namespace) -> int:
             research_blob_url=(
                 f"{GH_BLOB_BASE}/{research_rel}" if research_rel else ""
             ),
-            embedding_release=EMBEDDING_RELEASE,
+            embedding_release=embedding_receipt["source"],
+            embedding_dimensions=embedding_receipt["dimensions"],
             metpo_version=metpo_version,
             yaml_path=yaml_rel,
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
@@ -534,6 +600,7 @@ def render_pages(args: argparse.Namespace) -> int:
             title="Trait embedding space",
             root="",
             data_url="data/trait_umap.json",
+            projection=embedding_receipt,
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in umap_points}),
             n_points=len(umap_points),
             metpo_version=metpo_version,
@@ -554,9 +621,10 @@ def render_pages(args: argparse.Namespace) -> int:
             nn_by_curie, {point["id"] for point in graph_points}
         )
         graph_html = env.get_template("graph.html").render(
-            title="Trait graph layout (sfdp)",
+            title="Trait graph layout",
             root="",
             data_url="data/trait_graph.json",
+            projection=load_projection_receipt(GRAPH_JSON),
             href_by_id=_json.dumps({p["id"]: page_path.get(p["id"], "") for p in graph_points}),
             graph_edges=_json.dumps(graph_edges),
             n_points=len(graph_points),
@@ -578,6 +646,8 @@ def render_pages(args: argparse.Namespace) -> int:
     embedded_count = sum(1 for v in match_table.values() if v["n_kgm_nodes"] > 0)
     landing = env.get_template("index.html").render(
         title="Microbial trait knowledge base",
+        text_map_enabled=staged_text_map is not None,
+        projection_label=embedding_receipt["label"],
         root="",
         total_traits=len(traits),
         embedded_count=embedded_count,

@@ -318,7 +318,7 @@
         <li><code>METPO:1000701</code> <span class="dim-preview">[-1.722, -3.036, -3.705, +0.093, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -326,8 +326,14 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/generalist.html">generalist</a>
+          <span class="sim">0.856</span>
+        </li>
 
         <li>
           <span class="nn-cat">morphology</span>
@@ -336,20 +342,8 @@
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/phenotype.html">phenotype</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/magnetosome.html">magnetosome</a>
           <span class="sim">0.839</span>
         </li>
 
@@ -360,20 +354,26 @@
         </li>
 
         <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/xerophilic.html">xerophilic</a>
+          <span class="sim">0.839</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/zinc_tolerant.html">zinc tolerant</a>
+          <span class="sim">0.839</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/uv_radiation_tolerant.html">UV radiation tolerant</a>
+          <span class="sim">0.839</span>
+        </li>
+
+        <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/persister_cell_formation.html">persister cell formation</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ionizing_radiation_tolerant.html">ionizing radiation tolerant</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/mercury_tolerant.html">mercury tolerant</a>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">0.839</span>
         </li>
 
@@ -1021,7 +1021,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-26 19:05 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -277,7 +277,7 @@
         <li><code>METPO:1000679</code> <span class="dim-preview">[-2.951, -6.268, -2.114, +1.959, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -285,7 +285,7 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
 
         <li>
@@ -296,13 +296,31 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/ethanol_fermentation.html">ethanol fermentation</a>
+          <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
           <span class="sim">0.350</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
+          <a href="../../traits/metabolism/citrate_fermentation.html">citrate fermentation</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/butyric_acid_fermentation.html">butyric acid fermentation</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/propionic_acid_fermentation.html">propionic acid fermentation</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/butanediol_fermentation.html">2,3-butanediol fermentation</a>
           <span class="sim">0.350</span>
         </li>
 
@@ -316,24 +334,6 @@
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lactic_acid_fermentation.html">lactic acid fermentation</a>
           <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/mixed_acid_fermentation.html">mixed-acid fermentation</a>
-          <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/propionic_acid_fermentation.html">propionic acid fermentation</a>
-          <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemoorganoheterotrophic.html">chemoorganoheterotrophic</a>
-          <span class="sim">0.334</span>
         </li>
 
       </ul>
@@ -889,7 +889,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-26 03:23 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

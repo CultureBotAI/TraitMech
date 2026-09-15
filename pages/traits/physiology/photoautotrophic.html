@@ -432,7 +432,7 @@
         <li><code>METPO:1000656</code> <span class="dim-preview">[-1.879, -5.853, -1.491, +0.710, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -440,12 +440,18 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
 
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic</a>
+          <span class="sim">0.637</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/aerobic_anoxygenic_phototrophy.html">aerobic anoxygenic phototrophy</a>
           <span class="sim">0.637</span>
         </li>
 
@@ -483,12 +489,6 @@
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/lithoautotrophic.html">lithoautotrophic</a>
           <span class="sim">0.445</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/photolithoautotrophic.html">photolithoautotrophic</a>
-          <span class="sim">0.439</span>
         </li>
 
       </ul>
@@ -1141,7 +1141,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-30 20:17 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

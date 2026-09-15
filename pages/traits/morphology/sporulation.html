@@ -486,7 +486,7 @@
         <li><code>METPO:1000870</code> <span class="dim-preview">[-1.554, -2.668, -2.202, -0.616, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -494,8 +494,14 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/generalist.html">generalist</a>
+          <span class="sim">0.844</span>
+        </li>
 
         <li>
           <span class="nn-cat">morphology</span>
@@ -505,43 +511,37 @@
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/oxidase_activity.html">oxidase activity</a>
+          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
           <span class="sim">0.829</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/carboxylesterase_activity.html">carboxylesterase activity</a>
+          <span class="sim">0.829</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/beta_n_acetylhexosaminidase_activity.html">beta-N-acetylhexosaminidase activity</a>
+          <span class="sim">0.829</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/beta_galactosidase_activity.html">beta-galactosidase activity</a>
+          <span class="sim">0.829</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/caseinase_activity.html">caseinase activity</a>
           <span class="sim">0.829</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
-          <span class="sim">0.829</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/metal_tolerant.html">metal tolerant</a>
-          <span class="sim">0.829</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/dormancy.html">dormancy</a>
-          <span class="sim">0.829</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/mercury_tolerant.html">mercury tolerant</a>
-          <span class="sim">0.829</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ionizing_radiation_tolerant.html">ionizing radiation tolerant</a>
           <span class="sim">0.829</span>
         </li>
 
@@ -1196,7 +1196,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-31 06:48 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

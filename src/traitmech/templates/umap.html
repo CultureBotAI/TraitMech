@@ -3,10 +3,11 @@
 <header>
   <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Embedding space</p>
   <h1>Trait embedding space</h1>
-  <p class="tagline">PaCMAP projection of <strong>{{ n_points }}</strong> METPO trait
-    embeddings from kg-microbe's 2026-04-25 deepwalk (512-D, n_neighbors=15).
+  <p class="tagline">{{ projection.label }} of <strong>{{ n_points }}</strong> traits positioned using matched graph vectors. Source: {{ projection.source }}; dimensions: {{ projection.dimensions }}.
     Hover for label, click to open the trait page.</p>
 </header>
+
+{% include "_graph_matching.html" %}
 
 <section class="umap-controls">
   <label>Search
@@ -25,7 +26,7 @@
   <div class="data-table-actions"><a id="csv-download" href="#" download="trait_umap.csv">Download CSV</a></div>
   <div class="data-table-scroll">
     <table class="data-table" id="data-table">
-      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
+      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Matching method</th><th>Source graph nodes</th><th>Projection x</th><th>Projection y</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -38,6 +39,7 @@ const HREF_BY_ID = {{ href_by_id | safe }};  // id -> authoritative page href (b
 fetch("{{ data_url }}")
   .then(r => r.json())
   .then(points => {
+    showMatchingSummary(points);
     const W = Math.min(1100, window.innerWidth - 40);
     const H = 640;
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
@@ -65,8 +67,8 @@ fetch("{{ data_url }}")
       .attr("opacity", 0.78)
       .style("cursor", "pointer")
       .on("mouseover", (e, d) => {
-        tooltip.style("display", "block")
-          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category}</span>`);
+        tooltip.style("display", "block");
+        showMatchingTooltip(tooltip.node(), d);
       })
       .on("mousemove", (e) => {
         tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
@@ -159,11 +161,12 @@ fetch("{{ data_url }}")
         const label = href
           ? `<a href="${esc(href)}">${esc(d.label)}</a>` : esc(d.label);
         return `<tr><td>${label}</td><td>${esc(d.id)}</td><td>${esc(d.category)}</td>` +
+          `<td>${esc(matchingLabel(d))}</td><td>${esc(matchingNodes(d))}</td>` +
           `<td class="num">${(+d.umap_x).toFixed(3)}</td><td class="num">${(+d.umap_y).toFixed(3)}</td></tr>`;
       }).join("");
       // Download CSV of the same data.
-      const csvRows = [["label", "id", "category", "x", "y"]].concat(
-        rows.map(d => [d.label, d.id, d.category, d.umap_x, d.umap_y]));
+      const csvRows = [["label", "id", "category", "match_method", "source_nodes", "x", "y"]].concat(
+        rows.map(d => [d.label, d.id, d.category, matchingLabel(d), matchingNodes(d), d.umap_x, d.umap_y]));
       const csv = csvRows.map(r => r.map(v => {
         const s = String(v == null ? "" : v);
         return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;

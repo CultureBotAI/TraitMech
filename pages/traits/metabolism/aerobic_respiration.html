@@ -295,7 +295,7 @@
         <li><code>METPO:1000801</code> <span class="dim-preview">[-0.171, -2.146, -1.478, +1.150, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -303,18 +303,24 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
+          <a href="../../traits/metabolism/arsenate_respiration.html">arsenate respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction</a>
+          <a href="../../traits/metabolism/anaerobic_ammonium_oxidation.html">anaerobic ammonium oxidation</a>
+          <span class="sim">0.959</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
           <span class="sim">0.959</span>
         </li>
 
@@ -326,31 +332,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <a href="../../traits/metabolism/nitrite_respiration.html">nitrite respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
+          <a href="../../traits/metabolism/nitrate_respiration.html">nitrate respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_manganese_reduction.html">dissimilatory manganese reduction</a>
+          <a href="../../traits/metabolism/organohalide_respiration.html">organohalide respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
-          <span class="sim">0.959</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/denitrification.html">denitrification</a>
+          <a href="../../traits/metabolism/iodate_respiration.html">iodate respiration</a>
           <span class="sim">0.959</span>
         </li>
 
@@ -986,7 +986,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-08-26 10:25 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

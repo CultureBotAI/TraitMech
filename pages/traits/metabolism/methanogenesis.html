@@ -425,7 +425,7 @@
         <li><code>METPO:1000844</code> <span class="dim-preview">[+2.183, -3.599, -0.641, +0.610, …]</span></li>
 
       </ul>
-      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      <p class="meta">Stored kg-microbe graph vector (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
 
     </div>
 
@@ -433,8 +433,26 @@
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
-        from the 2026-04-25 deepwalk (512-D).</p>
+        from the stored graph vectors (source: DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz; dimensions: 512).</p>
       <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/methyl_based_methanogenesis.html">methyl-based methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetoclastic_methanogenesis.html">acetoclastic methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/hydrogenotrophic_methanogenesis.html">hydrogenotrophic methanogenesis</a>
+          <span class="sim">1.000</span>
+        </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
@@ -464,24 +482,6 @@
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
           <span class="sim">0.472</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
-          <span class="sim">0.467</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/oxidative_phosphorylation.html">Oxidative phosphorylation</a>
-          <span class="sim">0.466</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.html">3-hydroxypropionate/4-hydroxybutyrate cycle</a>
-          <span class="sim">0.460</span>
         </li>
 
       </ul>
@@ -1143,7 +1143,7 @@ function renderPathograph(containerId, data) {
       Record as of 2026-09-14 21:27 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 611 TraitRecords
-      · embedding coverage 78.1%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

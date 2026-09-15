@@ -117,6 +117,13 @@
   </header>
   <main class="wrap">
     <div class="cards">
+      {% if text_map_enabled %}
+      <section class="card">
+        <h2>Semantic text map</h2>
+        <div class="actions"><a class="btn" href="text-map/">Explore shared BGE map &rarr;</a></div>
+        <p>Traits grouped by their biological descriptions, using the fleet's pinned BGE text model and PaCMAP.</p>
+      </section>
+      {% endif %}
       <div class="card">
         <div class="ic">&#128270;</div>
         <div class="actions"><a class="btn" href="browse.html">Browse records &rarr;</a></div>
@@ -125,9 +132,9 @@
       </div>
       <div class="card">
         <div class="ic">&#128506;&#65039;</div>
-        <div class="actions"><a class="btn" href="umap.html">Explore embedding (PaCMAP) &rarr;</a><a class="btn" href="{{ root }}graph.html">Graph layout &rarr;</a></div>
+        <div class="actions"><a class="btn" href="umap.html">Explore embedding ({{ projection_label }}) &rarr;</a><a class="btn" href="{{ root }}graph.html">Graph layout &rarr;</a></div>
         <h2>Embedding browser</h2>
-        <p>Interactive PaCMAP of the trait embedding space with click-through to records.</p>
+        <p>Interactive {{ projection_label }} of the trait embedding space with click-through to records.</p>
       </div>
       <div class="card">
         <div class="ic">&#128187;</div>
