@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/toxin_system.yaml
+  slug: toxin_system
+session:
+  id: 2026-09-15T191719Z-codex-5f84a5
+  timestamp: '2026-09-15T19:17:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add ToxIN system trait
+  details: Minted traitmech:000226 for the ToxIN type III protein-RNA toxin-antitoxin abortive-infection
+    system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO,
+    or prior proposal record for ToxIN, the expected slug, the source DOIs, or the reserved
+    IDs. Curated DOI-backed Fineran and Blower evidence, a Pectobacterium atrosepticum canonical
+    example, a nonmechanistic causal graph for type III toxin-antitoxin activity and restricted
+    phage propagation, and a same-PR METPO v103 proposal.

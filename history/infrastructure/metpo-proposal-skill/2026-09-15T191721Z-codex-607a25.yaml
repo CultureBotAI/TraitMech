@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-15T191721Z-codex-607a25
+  timestamp: '2026-09-15T19:17:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - documentation
+  summary: Advance METPO proposal block after ToxIN
+  details: Documented that metpo_traitmech_v103 reserves METPO:1018000 for the ToxIN system,
+    advancing the next one-row Scope-A cohort to METPO:1018100 after adding proposals/metpo_traitmech_v103.
