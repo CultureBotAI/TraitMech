@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cold shock response — PHYSIOLOGY — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/physiology.html">PHYSIOLOGY</a>
+    </p>
+    <h1>cold shock response</h1>
+    <p class="curie"><code>traitmech:000206</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A stress response in which a rapid temperature downshift induces nucleic-acid-binding cold-shock proteins and RNA-remodeling functions that preserve gene expression at low temperature.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Cold-shock RNA adaptation</h2>
+      <p class="meta">Evidence-backed causal sketch linking abrupt temperature downshift to bacterial cold-shock protein induction and RNA chaperone support for low-temperature translation.</p>
+
+      <p class="graph-scope"><code>MECHANISTIC</code> · This graph captures the conserved CspA-family RNA-support branch of the bacterial cold-shock response without making one cold-sensing regulator, one RNA helicase, or one post-transcriptional circuit universal across bacteria.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Cold-shock RNA adaptation</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for cold shock response.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>acute cold shock</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>cold-shock response</strong>
+            <code>biolink:causes</code>
+            <p>Abrupt temperature downshift causes the bacterial cold-shock protein-expression response.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3184/003685003783238707</code>
+                <span class="evidence-snippet">bacteria express a well-defined set of proteins after a rapid decrease in temperature, which is termed cold shock</span>
+                <span class="meta">Verified against the public Crossref abstract; the cold-shock response follows rapid temperature decrease.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>cold-shock response</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>CspA-family cold-shock proteins</strong>
+            <code>RO:0002213</code>
+            <p>The cold-shock response induces CspA-family nucleic-acid-binding cold-shock proteins.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3184/003685003783238707</code>
+                <span class="evidence-snippet">nucleic acid-binding cold shock proteins which play a fundamental role not only during cold shock adaptation</span>
+                <span class="meta">Verified against the public Crossref abstract; nucleic-acid-binding cold-shock proteins are central cold-shock-adaptation components.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>CspA-family cold-shock proteins</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RNA secondary-structure control at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>CspA-family cold-shock proteins contribute to low-temperature RNA secondary-structure control.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1046/j.1365-2958.1999.01541.x</code>
+                <span class="evidence-snippet">RNA chaperone to prevent the formation of secondary structures in RNA molecules</span>
+                <span class="meta">Verified against the public Crossref abstract; CspA-family RNA chaperone activity limits RNA secondary-structure formation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>RNA secondary-structure control at low temperature</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>translation at low temperature</strong>
+            <code>RO:0002326</code>
+            <p>Control of RNA secondary structures supports translation at low temperature.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1046/j.1365-2958.1999.01541.x</code>
+                <span class="evidence-snippet">prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature</span>
+                <span class="meta">Verified against the public Crossref abstract; CspA-family RNA chaperoning facilitates low-temperature translation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>translation at low temperature</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>cold shock response</strong>
+            <code>METPO:2007700</code>
+            <p>Preservation of translation realizes the RNA-adaptation branch of the cold-shock-response trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1046/j.1365-2958.1999.01541.x</code>
+                <span class="evidence-snippet">proposed function as an RNA chaperone to prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature</span>
+                <span class="meta">Verified against the public Crossref abstract; RNA chaperoning connects CspA-family proteins to preserved translation during cold stress.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>CspA-family cold-shock proteins</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0A9X9/entry" rel="nofollow noreferrer"><code>UniProtKB:P0A9X9</code></a>
+                  <br>Cold shock protein CspA <span class="meta">(cspA)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-09-15 · entry v146 · sequence v2</span>
+                </td>
+                <td>
+                  <p>E. coli K-12 CspA is the major CspA-family cold-shock protein and model RNA chaperone induced by temperature downshift.</p>
+                  <ul>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1073/pnas.87.1.283" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.87.1.283</code></a>
+
+                      <span class="evidence-snippet">the production of a 7.4-kDa cytoplasmic protein (CS7.4) was prominently induced</span>
+                      <span class="meta">Goldstein et al. directly support strong induction of the E. coli major cold-shock protein later named CspA.</span>
+                    </li>
+
+                    <li>
+
+
+                      <a href="https://doi.org/10.1046/j.1365-2958.1999.01541.x" rel="nofollow noreferrer"><code>DOI:10.1046/j.1365-2958.1999.01541.x</code></a>
+
+                      <span class="evidence-snippet">CspA, the major cold shock protein, binds RNA with low sequence specificity</span>
+                      <span class="meta">Phadtare and Inouye directly support CspA as an RNA-binding cold-shock protein.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.3184/003685003783238707</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/physiology/stress_response.html" >stress response <code>traitmech:000078</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>cold-shock response <span class="meta">EXACT_SYNONYM · DOI:10.3184/003685003783238707</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1073/pnas.87.1.283"
+             rel="nofollow noreferrer"><code>DOI:10.1073/pnas.87.1.283</code></a>
+
+
+          <span class="meta">E. coli is a model for the bacterial cold-shock response, including induction of the major cold-shock protein CspA.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="cold-shock-response-xref-gap">
+        <p class="discussion-prompt">Resolve exact ontology xrefs for organism-level microbial cold shock response before adding TraitRecord xrefs.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>cold-shock-response-xref-gap</code>
+          · raised by codex
+          · 2026-09-15
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>GO:0009409 response to cold can ground broad biological-process response nodes but is broader than the rapid temperature-downshift cold-shock response curated here. Cold-shock-domain signatures and CspA-family terms describe narrower molecular machinery rather than the whole organism-level stress-response trait.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-15T05:32:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted cold shock response as a DOI-backed stress-response TraitRecord after a repository-wide duplicate review covering ignored and hidden files; the local METPO snapshot has only an obsolete cold shock response class and the replacement placeholder is reserved in proposals/metpo_traitmech_v83.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/physiology/cold_shock_response.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/cold_shock_response.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/physiology/cold_shock_response.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/physiology/cold_shock_response.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000206" target="_blank" rel="noopener"><code>traitmech:000206</code></a></dd>
+      <dt>Category</dt>
+      <dd>PHYSIOLOGY</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking abrupt temperature downshift to bacterial cold-shock protein induction and RNA chaperone support for low-temperature translation.", "edges": [{"description": "Abrupt temperature downshift causes the bacterial cold-shock protein-expression response.", "evidence": [{"notes": "Verified against the public Crossref abstract; the cold-shock response follows rapid temperature decrease.", "reference": "DOI:10.3184/003685003783238707", "snippet": "bacteria express a well-defined set of proteins after a rapid decrease in temperature, which is termed cold shock"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "acute_cold_shock", "target": "cold_shock_response_process"}, {"description": "The cold-shock response induces CspA-family nucleic-acid-binding cold-shock proteins.", "evidence": [{"notes": "Verified against the public Crossref abstract; nucleic-acid-binding cold-shock proteins are central cold-shock-adaptation components.", "reference": "DOI:10.3184/003685003783238707", "snippet": "nucleic acid-binding cold shock proteins which play a fundamental role not only during cold shock adaptation"}], "id": "edge-2", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold_shock_response_process", "target": "cspa_family_cold_shock_proteins"}, {"description": "CspA-family cold-shock proteins contribute to low-temperature RNA secondary-structure control.", "evidence": [{"notes": "Verified against the public Crossref abstract; CspA-family RNA chaperone activity limits RNA secondary-structure formation.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "RNA chaperone to prevent the formation of secondary structures in RNA molecules"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cspa_family_cold_shock_proteins", "target": "rna_secondary_structure_control"}, {"description": "Control of RNA secondary structures supports translation at low temperature.", "evidence": [{"notes": "Verified against the public Crossref abstract; CspA-family RNA chaperoning facilitates low-temperature translation.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rna_secondary_structure_control", "target": "low_temperature_translation"}, {"description": "Preservation of translation realizes the RNA-adaptation branch of the cold-shock-response trait.", "evidence": [{"notes": "Verified against the public Crossref abstract; RNA chaperoning connects CspA-family proteins to preserved translation during cold stress.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "proposed function as an RNA chaperone to prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low_temperature_translation", "target": "cold_shock_response_trait"}], "evidence_rows": [{"description": "Abrupt temperature downshift causes the bacterial cold-shock protein-expression response.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the public Crossref abstract; the cold-shock response follows rapid temperature decrease.", "reference": "DOI:10.3184/003685003783238707", "snippet": "bacteria express a well-defined set of proteins after a rapid decrease in temperature, which is termed cold shock"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "acute cold shock", "target": "cold-shock response"}, {"description": "The cold-shock response induces CspA-family nucleic-acid-binding cold-shock proteins.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the public Crossref abstract; nucleic-acid-binding cold-shock proteins are central cold-shock-adaptation components.", "reference": "DOI:10.3184/003685003783238707", "snippet": "nucleic acid-binding cold shock proteins which play a fundamental role not only during cold shock adaptation"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "cold-shock response", "target": "CspA-family cold-shock proteins"}, {"description": "CspA-family cold-shock proteins contribute to low-temperature RNA secondary-structure control.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the public Crossref abstract; CspA-family RNA chaperone activity limits RNA secondary-structure formation.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "RNA chaperone to prevent the formation of secondary structures in RNA molecules"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CspA-family cold-shock proteins", "target": "RNA secondary-structure control at low temperature"}, {"description": "Control of RNA secondary structures supports translation at low temperature.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the public Crossref abstract; CspA-family RNA chaperoning facilitates low-temperature translation.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RNA secondary-structure control at low temperature", "target": "translation at low temperature"}, {"description": "Preservation of translation realizes the RNA-adaptation branch of the cold-shock-response trait.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the public Crossref abstract; RNA chaperoning connects CspA-family proteins to preserved translation during cold stress.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "proposed function as an RNA chaperone to prevent the formation of secondary structures in RNA molecules, thus facilitating translation at low temperature"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "translation at low temperature", "target": "cold shock response"}], "graph_id": "cold_shock_response_rna_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "A sudden downward temperature shift.", "grounding": null, "id": "acute_cold_shock", "is_orphan": false, "label": "acute cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rapid expression of cold-shock proteins and RNA-remodeling functions after a temperature downshift.", "grounding": null, "id": "cold_shock_response_process", "is_orphan": false, "label": "cold-shock response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to induce cold-shock proteins after a rapid temperature downshift.", "grounding": "traitmech:000206", "id": "cold_shock_response_trait", "is_orphan": false, "label": "cold shock response", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Nucleic-acid-binding cold-shock proteins that act as RNA chaperones after cold shock.", "grounding": null, "id": "cspa_family_cold_shock_proteins", "is_orphan": false, "label": "CspA-family cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "Goldstein et al. directly support strong induction of the E. coli major cold-shock protein later named CspA.", "reference": "DOI:10.1073/pnas.87.1.283", "snippet": "the production of a 7.4-kDa cytoplasmic protein (CS7.4) was prominently induced"}, {"notes": "Phadtare and Inouye directly support CspA as an RNA-binding cold-shock protein.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "CspA, the major cold shock protein, binds RNA with low sequence specificity"}], "gene_symbol": "cspA", "protein_label": "Cold shock protein CspA", "retrieved_on": "2026-09-15", "role": "E. coli K-12 CspA is the major CspA-family cold-shock protein and model RNA chaperone induced by temperature downshift.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A9X9"}], "xrefs": []}, {"color": "#ecfccb", "description": "Protein synthesis preserved during low-temperature stress.", "grounding": "GO:0006412", "id": "low_temperature_translation", "is_orphan": false, "label": "translation at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "RNA chaperoning that limits inhibitory secondary structure formation in cold-stressed cells.", "grounding": null, "id": "rna_secondary_structure_control", "is_orphan": false, "label": "RNA secondary-structure control at low temperature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 146, "evidence": [{"notes": "Goldstein et al. directly support strong induction of the E. coli major cold-shock protein later named CspA.", "reference": "DOI:10.1073/pnas.87.1.283", "snippet": "the production of a 7.4-kDa cytoplasmic protein (CS7.4) was prominently induced"}, {"notes": "Phadtare and Inouye directly support CspA as an RNA-binding cold-shock protein.", "reference": "DOI:10.1046/j.1365-2958.1999.01541.x", "snippet": "CspA, the major cold shock protein, binds RNA with low sequence specificity"}], "gene_symbol": "cspA", "node_id": "cspa_family_cold_shock_proteins", "node_label": "CspA-family cold-shock proteins", "protein_label": "Cold shock protein CspA", "retrieved_on": "2026-09-15", "role": "E. coli K-12 CspA is the major CspA-family cold-shock protein and model RNA chaperone induced by temperature downshift.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0A9X9"}], "scope_notes": "This graph captures the conserved CspA-family RNA-support branch of the bacterial cold-shock response without making one cold-sensing regulator, one RNA helicase, or one post-transcriptional circuit universal across bacteria.", "scope_status": "MECHANISTIC", "title": "Cold-shock RNA adaptation"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-15 05:32 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 601 TraitRecords
+      · embedding coverage 79.4%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

@@ -319,6 +319,7 @@ data/traits/physiology/chemoorganoheterotrophic.yaml	METPO:1000640	chemoorganohe
 data/traits/physiology/chemoorganotrophic.yaml	METPO:1000663	chemoorganotrophic	chemoorganotrophic_organic_oxidation_energy	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/physiology/chemotaxis.yaml	traitmech:000086	chemotaxis	chemotaxis_gradient_response	MECHANISTIC	7	6	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/chemotrophic.yaml	METPO:1000641	chemotrophic	chemotrophic_chemical_redox_energy	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
+data/traits/physiology/cold_shock_response.yaml	traitmech:000206	cold shock response	cold_shock_response_rna_adaptation	MECHANISTIC	1	0	1	1	1	1	0	PASS	0	0	-
 data/traits/physiology/copiotrophic.yaml	METPO:1000642	copiotrophic	copiotrophic_high_nutrient_fast_growth	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/dormancy.yaml	traitmech:000080	dormancy	dormancy_seed_bank	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
 data/traits/physiology/heat_shock_response.yaml	traitmech:000205	heat shock response	heat_shock_response_proteostasis	MECHANISTIC	2	0	2	2	2	2	0	PASS	0	0	-

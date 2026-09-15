@@ -903,7 +903,6 @@ transcription and translation	BIOLOGICAL_PROCESS	1	data/traits/environment/psych
 protein and membrane stability	QUALITY	1	data/traits/environment/psychrophilic.yaml
 ice crystals	CHEMICAL	1	data/traits/environment/psychrophilic.yaml
 facultative lipid remodeling	BIOLOGICAL_PROCESS	1	data/traits/environment/psychrotolerant.yaml
-cold-shock response	BIOLOGICAL_PROCESS	1	data/traits/environment/psychrotolerant.yaml
 membrane rigidification and thickening	QUALITY	1	data/traits/environment/psychrotolerant.yaml
 unsaturated hopanoids	CHEMICAL	1	data/traits/environment/psychrotolerant.yaml
 protein and membrane stability under cold stress	QUALITY	1	data/traits/environment/psychrotolerant.yaml
@@ -2085,6 +2084,10 @@ quinone/quinol cycling	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemotrophic.
 redox loop	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemotrophic.yaml
 proton pumping	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemotrophic.yaml
 net proton transfer across membrane	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemotrophic.yaml
+acute cold shock	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/cold_shock_response.yaml
+cold-shock response	BIOLOGICAL_PROCESS	1	data/traits/physiology/cold_shock_response.yaml
+cspa-family cold-shock proteins	GENE_OR_PROTEIN	1	data/traits/physiology/cold_shock_response.yaml
+rna secondary-structure control at low temperature	BIOLOGICAL_PROCESS	1	data/traits/physiology/cold_shock_response.yaml
 high nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/copiotrophic.yaml
 diverse carbon sources	CHEMICAL	1	data/traits/physiology/copiotrophic.yaml
 membrane transporters	GENE_OR_PROTEIN	1	data/traits/physiology/copiotrophic.yaml
