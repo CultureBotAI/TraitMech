@@ -358,6 +358,23 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
  },
  {
+  "discussion_id": "fumarate-respiration-xref-gap",
+  "prompt": "Resolve an exact external ontology class for organism-level fumarate respiration before adding a TraitRecord xref.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fumarate respiration",
+  "source_id": "traitmech:000196",
+  "source_file": "fumarate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned METPO snapshot contains only obsolete Fumarate respiration and no active organism-level class for anaerobic respiration using fumarate as the terminal electron acceptor. Potential GO, Rhea, EC, and protein-family terms for fumarate reductase or the fumarate-to-succinate reaction are narrower than the whole-organism anaerobic respiration phenotype and should be checked separately before grounding FrdABCD-level causal nodes.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-xref-gap"
+ },
+ {
   "discussion_id": "lipolysis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for organism-level microbial lipolysis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -1311,9 +1328,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 75,
+ "total_discussions": 76,
  "total_knowledge_gaps": 8,
- "total_source_entries": 74,
+ "total_source_entries": 75,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

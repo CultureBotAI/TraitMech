@@ -1,0 +1,61 @@
+identifier: traitmech:000196
+label: fumarate respiration
+definition: An anaerobic respiration in which an organism uses fumarate as the terminal
+  electron acceptor and reduces it to succinate for energy conservation.
+definition_source: DOI:10.1128/mBio.03238-19
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: anaerobic respiration on fumarate
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/JB.00389-22
+evidence:
+- reference: DOI:10.1128/mBio.03238-19
+  snippet: under anaerobic conditions, fumarate can serve as a terminal electron acceptor,
+    with fumarate reductase (FRD) transferring electrons from the reduced quinone,
+    producing succinate
+  notes: Ito et al. summarize Bacteroides anaerobic respiration as quinone-linked
+    transfer to fumarate through fumarate reductase, producing succinate.
+- reference: DOI:10.1128/JB.00389-22
+  snippet: The respiratory chain responsible for anaerobic respiration (NADH to fumarate)
+    involves two NADH dehydrogenases
+  notes: Butler et al. describe the B. fragilis anaerobic respiratory chain as an
+    NADH-to-fumarate route.
+- reference: DOI:10.1128/JB.00389-22
+  snippet: Analysis of fumarate reductase showed that it is synthesized and active
+    under anaerobic and nanaerobic conditions
+  notes: The 2023 biochemical assay shows fumarate reductase remains synthesized and
+    active in B. fragilis membranes under strictly anaerobic growth and under low-oxygen
+    growth.
+canonical_examples:
+- taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  note: Gut anaerobe with fumarate-linked anaerobic respiration characterized in membrane
+    and mutant assays.
+  reference: DOI:10.1128/mBio.03238-19
+discussions:
+- discussion_id: fumarate-respiration-xref-gap
+  prompt: Resolve an exact external ontology class for organism-level fumarate respiration
+    before adding a TraitRecord xref.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned METPO snapshot contains only obsolete Fumarate respiration
+    and no active organism-level class for anaerobic respiration using fumarate as
+    the terminal electron acceptor. Potential GO, Rhea, EC, and protein-family terms
+    for fumarate reductase or the fumarate-to-succinate reaction are narrower than
+    the whole-organism anaerobic respiration phenotype and should be checked separately
+    before grounding FrdABCD-level causal nodes.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T00:25:53Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted fumarate respiration as a DOI-backed anaerobic respiration TraitRecord
+    after a repository-wide duplicate review covering ignored and hidden files; the
+    local METPO snapshot has only obsolete Fumarate respiration and the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v73.
+  llm_assisted: true
