@@ -16,6 +16,7 @@ temperature decrease	ENVIRONMENTAL_FACTOR	5	data/traits/environment/mesophilic.y
 na+/h+ antiporters	GENE_OR_PROTEIN	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_delta_high.yaml
 maximal growth rate	QUALITY	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/pressure_optimum.yaml
 f0f1-atpase	GENE_OR_PROTEIN	5	data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_delta_mid1.yaml|data/traits/environment/ph_delta_mid3.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	5	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 phage replication	BIOLOGICAL_PROCESS	5	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml|data/traits/genomics/gabija_system.yaml
 formate	CHEMICAL	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 oxygen	CHEMICAL	5	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/morphology/carboxysome.yaml
@@ -26,7 +27,6 @@ acidic proteome	QUALITY	4	data/traits/environment/nacl_delta_high.yaml|data/trai
 cytoplasmic buffering capacity	CAPACITY	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_optimum.yaml
 amino-acid decarboxylation	BIOLOGICAL_PROCESS	4	data/traits/environment/neutrophilic.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_growth_preference.yaml
 ambient molecular oxygen	ENVIRONMENTAL_FACTOR	4	data/traits/environment/oxygen_preference.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml|data/traits/morphology/pink_pigmented.yaml
-restricted phage propagation	BIOLOGICAL_PROCESS	4	data/traits/genomics/abie_system.yaml|data/traits/genomics/abiq_system.yaml|data/traits/genomics/abiz_system.yaml
 sulfite	CHEMICAL	4	data/traits/metabolism/disproportionation.yaml|data/traits/metabolism/dissimilatory_sulfate_reduction.yaml|data/traits/morphology/sulfur_globule.yaml
 flhf	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
 flig	GENE_OR_PROTEIN	4	data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml|data/traits/morphology/lophotrichous.yaml
@@ -1118,6 +1118,9 @@ zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.ya
 abie locus	GENETIC_ELEMENT	1	data/traits/genomics/abie_system.yaml
 abie type iv toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abie_system.yaml
 abieii gtp-binding nucleotidyltransferase toxicity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abie_system.yaml
+abik locus	GENETIC_ELEMENT	1	data/traits/genomics/abik_system.yaml
+abik rt-related polymerase activity	MOLECULAR_FUNCTION	1	data/traits/genomics/abik_system.yaml
+interrupted phage dna replication or maturation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abik_system.yaml
 abiq locus	GENETIC_ELEMENT	1	data/traits/genomics/abiq_system.yaml
 abiq type iii toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
 early phage mrna profile modification	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiq_system.yaml
