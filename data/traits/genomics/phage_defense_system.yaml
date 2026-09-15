@@ -40,8 +40,8 @@ evidence:
     BREX, DISARM, abortive-infection, and related anti-phage defenses.
 - reference: DOI:10.1126/science.aar4120
   snippet: Candidate immune systems were then experimentally validated for their activities
-  notes: The Science article summary for Doron et al. supports genomic discovery
-    and experimental validation of antiphage defense systems from microbial pangenomes.
+  notes: The Science article summary for Doron et al. supports genomic discovery and
+    experimental validation of antiphage defense systems from microbial pangenomes.
 canonical_examples:
 - taxon_id: NCBITaxon:1308
   taxon_label: Streptococcus thermophilus
@@ -102,8 +102,8 @@ causal_graphs:
     - reference: DOI:10.1126/science.aar4120
       snippet: well-known defense arsenals such as restriction-modification and CRISPR
         systems
-      notes: The Science article summary for Doron et al. places CRISPR systems
-        among the recognized microbial defense arsenals.
+      notes: The Science article summary for Doron et al. places CRISPR systems among
+        the recognized microbial defense arsenals.
   - subject: restriction_modification_system
     predicate: is a
     predicate_id: rdfs:subClassOf
