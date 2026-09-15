@@ -1122,6 +1122,11 @@ crrna	RNA	1	data/traits/genomics/crispr_cas_system.yaml
 crrna-cas effector complex	RNA	1	data/traits/genomics/crispr_cas_system.yaml
 invading nucleic acid target	CHEMICAL	1	data/traits/genomics/crispr_cas_system.yaml
 phage and plasmid pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/crispr_cas_system.yaml
+disarm host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
+disarm 5-prime-overhang dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
+drmab core complex	GENE_OR_PROTEIN	1	data/traits/genomics/disarm_system.yaml
+disarm drmab activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
+phage dna circularization	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 genomic dna	CELLULAR_LOCALIZATION	1	data/traits/genomics/gc_content.yaml
 gc/at mutation bias	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
 gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
