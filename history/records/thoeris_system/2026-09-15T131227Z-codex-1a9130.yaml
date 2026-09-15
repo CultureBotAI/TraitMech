@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/thoeris_system.yaml
+  slug: thoeris_system
+session:
+  id: 2026-09-15T131227Z-codex-1a9130
+  timestamp: '2026-09-15T13:12:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Thoeris system trait
+  details: Minted traitmech:000216 for the DOI-backed Thoeris system under phage defense system
+    with Ka and Ofir evidence, a Bacillus cereus canonical example, a nonmechanistic ThsA/TIR
+    signalling graph, an open family-breadth knowledge gap, and an upstream METPO v93 placeholder
+    reservation.
