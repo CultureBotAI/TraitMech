@@ -49,9 +49,9 @@ causal_graphs:
     to infected-host growth arrest or death, restricted phage replication, and protection
     of nearby bacterial cells.
   scope_status: NONMECHANISTIC
-  scope_notes: The graph captures the shared Abi strategy without claiming that AbiE
-    and other abortive-infection families use one exact sensor, effector, toxin-antitoxin
-    architecture, or cell-death mechanism.
+  scope_notes: The graph captures the shared Abi strategy without claiming that other
+    abortive-infection families use one exact sensor, effector, toxin-antitoxin architecture,
+    or cell-death mechanism.
   nodes:
   - node_id: phage_infection
     label: phage infection
@@ -166,16 +166,16 @@ causal_graphs:
         systems.
 discussions:
 - discussion_id: abortive-infection-subfamily-split-gap
-  prompt: Resolve AbiE and other abortive-infection families before minting narrower
-    children under the broad abortive infection system parent.
+  prompt: Resolve other abortive-infection families before minting narrower children
+    under the broad abortive infection system parent.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: ToxIN and AbiQ are split out as traitmech:000226 and traitmech:000225,
-    respectively. Lopatina et al., Fineran et al., and Dy et al. still support Abi
-    as a genomically encoded phage defense strategy that spans mechanistically diverse
-    AbiE and other toxin-antitoxin branches. Additional narrower TraitRecords need
-    separate review to ground each subfamily's trigger, effector, growth-arrest or
-    cell-death mechanism, and phage escape routes.
+  rationale: ToxIN, AbiQ, and AbiE are split out as traitmech:000226, traitmech:000225,
+    and traitmech:000227, respectively. Lopatina et al., Fineran et al., and Dy et
+    al. still support Abi as a genomically encoded phage defense strategy that spans
+    mechanistically diverse toxin-antitoxin branches and other Abi families. Additional
+    narrower TraitRecords need separate review to ground each subfamily's trigger,
+    effector, growth-arrest or cell-death mechanism, and phage escape routes.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -200,4 +200,11 @@ curation_history:
   changes: Removed ToxIN from the open abortive-infection subfamily split-gap discussion
     after minting traitmech:000226 for the ToxIN system; AbiE and other abortive-infection
     families remain open.
+  llm_assisted: true
+- timestamp: '2026-09-15T19:46:31Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Removed AbiE from the open abortive-infection subfamily split-gap discussion
+    after minting traitmech:000227 for the AbiE system; other abortive-infection families
+    remain open.
   llm_assisted: true

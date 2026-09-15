@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-15T194633Z-codex-a67442
+  timestamp: '2026-09-15T19:46:33Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Narrow abortive infection split gap after AbiE split
+  details: Removed AbiE from the abortive infection system causal-graph scope note and open
+    subfamily split-gap discussion after minting traitmech:000227 for the AbiE system in the
+    same PR. The discussion remains open for other abortive-infection families that still
+    require separate DOI-backed curation.

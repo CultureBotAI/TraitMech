@@ -206,7 +206,7 @@ window.searchData = [
  },
  {
   "discussion_id": "abortive-infection-subfamily-split-gap",
-  "prompt": "Resolve AbiE and other abortive-infection families before minting narrower children under the broad abortive infection system parent.",
+  "prompt": "Resolve other abortive-infection families before minting narrower children under the broad abortive infection system parent.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -214,7 +214,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN and AbiQ are split out as traitmech:000226 and traitmech:000225, respectively. Lopatina et al., Fineran et al., and Dy et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse AbiE and other toxin-antitoxin branches. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, and AbiE are split out as traitmech:000226, traitmech:000225, and traitmech:000227, respectively. Lopatina et al., Fineran et al., and Dy et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin branches and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
