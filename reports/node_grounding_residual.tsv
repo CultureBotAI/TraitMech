@@ -1189,6 +1189,10 @@ dependence on exogenous b-vitamin precursors	BIOLOGICAL_PROCESS	1	data/traits/ge
 integrase/recombinase/transposase mobility module	GENE_OR_PROTEIN	1	data/traits/genomics/genomic_island.yaml
 integrative conjugative element (ice)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
 integrative mobilizable element (ime)	GENETIC_ELEMENT	1	data/traits/genomics/genomic_island.yaml
+hachiman locus	GENETIC_ELEMENT	1	data/traits/genomics/hachiman_system.yaml
+hamab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
+hachiman dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
+phage particle production	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
 genome plasticity	QUALITY	1	data/traits/genomics/mobile_genetic_element.yaml
 relaxase	GENE_OR_PROTEIN	1	data/traits/genomics/mobile_genetic_element.yaml
 origin of transfer (orit)	CELLULAR_LOCALIZATION	1	data/traits/genomics/mobile_genetic_element.yaml

@@ -290,6 +290,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gabija_system.html#gabija-activation-and-antidefense-gap"
  },
  {
+  "discussion_id": "hachiman-subtype-and-trigger-gap",
+  "prompt": "Resolve Hachiman subtype effectors, DNA substrates, and activation triggers before minting narrower Hachiman mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hachiman system",
+  "source_id": "traitmech:000219",
+  "source_file": "hachiman_system.yaml",
+  "attaches_to": [],
+  "rationale": "Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1702,9 +1719,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 98,
- "total_knowledge_gaps": 17,
- "total_source_entries": 97,
+ "total_discussions": 99,
+ "total_knowledge_gaps": 18,
+ "total_source_entries": 98,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
