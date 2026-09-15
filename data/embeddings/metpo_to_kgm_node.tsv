@@ -148,8 +148,10 @@ traitmech:000009	UV radiation tolerant	environment	parent_proxy	1	METPO:1000059
 traitmech:000011	xerophilic	environment	parent_proxy	1	METPO:1000059
 traitmech:000014	zinc tolerant	environment	parent_proxy	1	METPO:1000059
 traitmech:000210	BREX system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000212	CBASS system	genomics	parent_proxy	1	METPO:1000188
 traitmech:000096	codon usage bias	genomics	parent_proxy	1	METPO:1000188
 traitmech:000094	CRISPR-Cas system	genomics	parent_proxy	1	METPO:1000188
+traitmech:000211	DISARM system	genomics	parent_proxy	1	METPO:1000188
 METPO:1000127	GC content	genomics	direct_metpo	1	METPO:1000127
 METPO:1000432	GC high	genomics	direct_metpo	1	METPO:1000432
 METPO:1000429	GC low	genomics	direct_metpo	1	METPO:1000429

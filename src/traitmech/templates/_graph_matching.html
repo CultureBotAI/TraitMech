@@ -1,0 +1,51 @@
+<section aria-label="Graph matching provenance">
+  <h2>How traits use graph vectors</h2>
+  <p id="matching-summary" aria-live="polite">Loading matching coverage…</p>
+  <p>A direct METPO match uses the trait's own graph node. A parent proxy borrows a
+    parent trait's vector; it is not an independently learned vector for this trait.
+    Alias and label matches use the listed matched graph nodes. Missing matching
+    metadata is reported as unknown. Hover over a point or use the table to see its
+    matching method and source nodes. Colors indicate trait category.</p>
+</section>
+<script id="graph-matching-provenance">
+const MATCHING_LABELS = {
+  direct_metpo: "Direct METPO match",
+  parent_proxy: "Parent proxy (borrowed parent vector)",
+  alias_table: "Alias match",
+  label_match: "Label match",
+  unknown: "Unknown matching provenance"
+};
+function matchingKey(point) {
+  return Object.prototype.hasOwnProperty.call(MATCHING_LABELS, point.match_method)
+    ? point.match_method : "unknown";
+}
+function matchingLabel(point) { return MATCHING_LABELS[matchingKey(point)]; }
+function matchingNodes(point) {
+  return Array.isArray(point.kgm_nodes) && point.kgm_nodes.length
+    ? point.kgm_nodes.map(String).join(", ") : "Not recorded";
+}
+function showMatchingSummary(points) {
+  const counts = {};
+  points.forEach(point => {
+    const key = matchingKey(point);
+    counts[key] = (counts[key] || 0) + 1;
+  });
+  document.getElementById("matching-summary").textContent = Object.keys(MATCHING_LABELS)
+    .filter(key => counts[key])
+    .map(key => `${counts[key]} ${MATCHING_LABELS[key]}`).join("; ") + ".";
+}
+function showMatchingTooltip(container, point) {
+  container.replaceChildren();
+  const rows = [
+    ["strong", point.label],
+    ["div", `${point.id} · ${point.category}`],
+    ["div", matchingLabel(point)],
+    ["div", `Source graph nodes: ${matchingNodes(point)}`]
+  ];
+  rows.forEach(([tag, value]) => {
+    const element = document.createElement(tag);
+    element.textContent = value == null ? "" : String(value);
+    container.appendChild(element);
+  });
+}
+</script>

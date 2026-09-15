@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/cbass_system.yaml
+  slug: cbass_system
+session:
+  id: 2026-09-15T100602Z-codex-820552
+  timestamp: '2026-09-15T10:06:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add CBASS system trait
+  details: Added traitmech:000212 for CBASS system with DOI-backed Cohen and Millman evidence,
+    an Escherichia coli TW11681 canonical example, a cyclic-oligonucleotide antiphage-defense
+    causal graph without premature subtype-specific protein grounding, and an upstream placeholder
+    reserved in proposals/metpo_traitmech_v89.
