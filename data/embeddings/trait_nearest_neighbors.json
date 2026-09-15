@@ -185,16 +185,6 @@
       ]
     },
     {
-      "id": "traitmech:000211",
-      "label": "DISARM system",
-      "category": "genomics",
-      "similarity": 0.9053954356865948,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
       "id": "traitmech:000089",
       "label": "mobile genetic element",
       "category": "genomics",
@@ -205,11 +195,41 @@
       ]
     },
     {
-      "id": "traitmech:000096",
-      "label": "codon usage bias",
+      "id": "traitmech:000093",
+      "label": "genomic island",
       "category": "genomics",
       "similarity": 0.9053954356865948,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000099",
+      "label": "genome streamlining",
+      "category": "genomics",
+      "similarity": 0.9053954356865948,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000210",
+      "label": "BREX system",
+      "category": "genomics",
+      "similarity": 0.9053954356865948,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "METPO:1000188",
+      "label": "quality",
+      "category": "upper",
+      "similarity": 0.9053954356865948,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000188"
       ]
@@ -217,26 +237,6 @@
     {
       "id": "traitmech:000094",
       "label": "CRISPR-Cas system",
-      "category": "genomics",
-      "similarity": 0.9053954356865948,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000102",
-      "label": "pangenome openness",
-      "category": "genomics",
-      "similarity": 0.9053954356865948,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000093",
-      "label": "genomic island",
       "category": "genomics",
       "similarity": 0.9053954356865948,
       "match_method": "parent_proxy",
@@ -307,21 +307,21 @@
       ]
     },
     {
-      "id": "traitmech:000046",
-      "label": "opportunistic pathogen",
-      "category": "ecology",
-      "similarity": 0.18533372828434547,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1004000"
-      ]
-    },
-    {
       "id": "METPO:1004000",
       "label": "pathogenic to host",
       "category": "ecology",
       "similarity": 0.18533372828434547,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1004000"
+      ]
+    },
+    {
+      "id": "traitmech:000046",
+      "label": "opportunistic pathogen",
+      "category": "ecology",
+      "similarity": 0.18533372828434547,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1004000"
       ]
@@ -389,8 +389,8 @@
       ]
     },
     {
-      "id": "traitmech:000098",
-      "label": "genome size",
+      "id": "traitmech:000099",
+      "label": "genome streamlining",
       "category": "genomics",
       "similarity": 0.20944363946219458,
       "match_method": "parent_proxy",
@@ -399,8 +399,8 @@
       ]
     },
     {
-      "id": "traitmech:000211",
-      "label": "DISARM system",
+      "id": "traitmech:000098",
+      "label": "genome size",
       "category": "genomics",
       "similarity": 0.20944363946219458,
       "match_method": "parent_proxy",
@@ -441,8 +441,8 @@
       ]
     },
     {
-      "id": "traitmech:000092",
-      "label": "transposable element",
+      "id": "traitmech:000093",
+      "label": "genomic island",
       "category": "genomics",
       "similarity": 0.2523722354303619,
       "match_method": "parent_proxy",
@@ -461,8 +461,18 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000099",
+      "label": "genome streamlining",
+      "category": "genomics",
+      "similarity": 0.2523722354303619,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 0.2523722354303619,
       "match_method": "parent_proxy",
@@ -473,16 +483,6 @@
     {
       "id": "traitmech:000097",
       "label": "GC skew",
-      "category": "genomics",
-      "similarity": 0.2523722354303619,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 0.2523722354303619,
       "match_method": "parent_proxy",
@@ -513,8 +513,48 @@
       ]
     },
     {
-      "id": "traitmech:000094",
-      "label": "CRISPR-Cas system",
+      "id": "traitmech:000089",
+      "label": "mobile genetic element",
+      "category": "genomics",
+      "similarity": 0.8660799516431923,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000093",
+      "label": "genomic island",
+      "category": "genomics",
+      "similarity": 0.8660799516431923,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000099",
+      "label": "genome streamlining",
+      "category": "genomics",
+      "similarity": 0.8660799516431923,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000098",
+      "label": "genome size",
+      "category": "genomics",
+      "similarity": 0.8660799516431923,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000209",
+      "label": "phage defense system",
       "category": "genomics",
       "similarity": 0.8660799516431923,
       "match_method": "parent_proxy",
@@ -525,46 +565,6 @@
     {
       "id": "traitmech:000097",
       "label": "GC skew",
-      "category": "genomics",
-      "similarity": 0.8660799516431923,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000211",
-      "label": "DISARM system",
-      "category": "genomics",
-      "similarity": 0.8660799516431923,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
-      "category": "genomics",
-      "similarity": 0.8660799516431923,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000096",
-      "label": "codon usage bias",
-      "category": "genomics",
-      "similarity": 0.8660799516431923,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 0.8660799516431923,
       "match_method": "parent_proxy",
@@ -595,48 +595,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
-      "category": "genomics",
-      "similarity": 0.8696283694590947,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000099",
-      "label": "genome streamlining",
-      "category": "genomics",
-      "similarity": 0.8696283694590947,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000093",
-      "label": "genomic island",
-      "category": "genomics",
-      "similarity": 0.8696283694590947,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000089",
-      "label": "mobile genetic element",
-      "category": "genomics",
-      "similarity": 0.8696283694590947,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000102",
-      "label": "pangenome openness",
+      "id": "traitmech:000100",
+      "label": "ploidy",
       "category": "genomics",
       "similarity": 0.8696283694590947,
       "match_method": "parent_proxy",
@@ -647,6 +607,46 @@
     {
       "id": "traitmech:000097",
       "label": "GC skew",
+      "category": "genomics",
+      "similarity": 0.8696283694590947,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000098",
+      "label": "genome size",
+      "category": "genomics",
+      "similarity": 0.8696283694590947,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
+      "category": "genomics",
+      "similarity": 0.8696283694590947,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000211",
+      "label": "DISARM system",
+      "category": "genomics",
+      "similarity": 0.8696283694590947,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 0.8696283694590947,
       "match_method": "parent_proxy",
@@ -3341,8 +3341,8 @@
       ]
     },
     {
-      "id": "traitmech:000178",
-      "label": "leucyl glycine arylamidase activity",
+      "id": "traitmech:000174",
+      "label": "naphthol-AS-BI-phosphohydrolase activity",
       "category": "physiology",
       "similarity": 0.47402017589078205,
       "match_method": "parent_proxy",
@@ -3351,9 +3351,9 @@
       ]
     },
     {
-      "id": "traitmech:000005",
-      "label": "pressure range",
-      "category": "environment",
+      "id": "traitmech:000154",
+      "label": "ornithine decarboxylase activity",
+      "category": "physiology",
       "similarity": 0.47402017589078205,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -3495,8 +3495,18 @@
       ]
     },
     {
-      "id": "traitmech:000006",
-      "label": "pressure delta",
+      "id": "METPO:1007086",
+      "label": "oxidase negative",
+      "category": "other",
+      "similarity": 0.31886234968590443,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000059"
+      ]
+    },
+    {
+      "id": "traitmech:000001",
+      "label": "piezophilic",
       "category": "environment",
       "similarity": 0.31886234968590443,
       "match_method": "parent_proxy",
@@ -3505,18 +3515,8 @@
       ]
     },
     {
-      "id": "traitmech:000004",
-      "label": "pressure optimum",
-      "category": "environment",
-      "similarity": 0.31886234968590443,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000059"
-      ]
-    },
-    {
-      "id": "traitmech:000005",
-      "label": "pressure range",
+      "id": "traitmech:000003",
+      "label": "piezotolerant",
       "category": "environment",
       "similarity": 0.31886234968590443,
       "match_method": "parent_proxy",
@@ -3843,8 +3843,8 @@
       ]
     },
     {
-      "id": "traitmech:000062",
-      "label": "swarming motility",
+      "id": "traitmech:000061",
+      "label": "twitching motility",
       "category": "morphology",
       "similarity": 0.4187558870351804,
       "match_method": "parent_proxy",
@@ -4161,9 +4161,9 @@
       ]
     },
     {
-      "id": "METPO:1007089",
-      "label": "coagulase activity",
-      "category": "physiology",
+      "id": "METPO:1007088",
+      "label": "urease negative",
+      "category": "other",
       "similarity": 0.4631329686783966,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -4171,8 +4171,8 @@
       ]
     },
     {
-      "id": "traitmech:000086",
-      "label": "chemotaxis",
+      "id": "traitmech:000087",
+      "label": "natural competence",
       "category": "physiology",
       "similarity": 0.4631329686783966,
       "match_method": "parent_proxy",
@@ -4325,9 +4325,9 @@
       ]
     },
     {
-      "id": "traitmech:000011",
-      "label": "xerophilic",
-      "category": "environment",
+      "id": "METPO:1007064",
+      "label": "circular colony",
+      "category": "other",
       "similarity": 0.4867438750459525,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -4335,9 +4335,9 @@
       ]
     },
     {
-      "id": "traitmech:000014",
-      "label": "zinc tolerant",
-      "category": "environment",
+      "id": "traitmech:000139",
+      "label": "lipase activity",
+      "category": "physiology",
       "similarity": 0.4867438750459525,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -4705,6 +4705,16 @@
       ]
     },
     {
+      "id": "METPO:1000702",
+      "label": "motile",
+      "category": "morphology",
+      "similarity": 0.2487460682196908,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000702"
+      ]
+    },
+    {
       "id": "traitmech:000062",
       "label": "swarming motility",
       "category": "morphology",
@@ -4720,16 +4730,6 @@
       "category": "morphology",
       "similarity": 0.2487460682196908,
       "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000702"
-      ]
-    },
-    {
-      "id": "METPO:1000702",
-      "label": "motile",
-      "category": "morphology",
-      "similarity": 0.2487460682196908,
-      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000702"
       ]
@@ -5053,21 +5053,21 @@
       ]
     },
     {
-      "id": "METPO:1000702",
-      "label": "motile",
-      "category": "morphology",
-      "similarity": 0.25145978673962777,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000702"
-      ]
-    },
-    {
       "id": "traitmech:000061",
       "label": "twitching motility",
       "category": "morphology",
       "similarity": 0.25145978673962777,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000702"
+      ]
+    },
+    {
+      "id": "METPO:1000702",
+      "label": "motile",
+      "category": "morphology",
+      "similarity": 0.25145978673962777,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000702"
       ]
@@ -6765,8 +6765,8 @@
       ]
     },
     {
-      "id": "traitmech:000127",
-      "label": "hydrogenotrophic methanogenesis",
+      "id": "traitmech:000192",
+      "label": "methyl-based methanogenesis",
       "category": "metabolism",
       "similarity": 0.33180306826182226,
       "match_method": "parent_proxy",
@@ -6785,8 +6785,8 @@
       ]
     },
     {
-      "id": "traitmech:000192",
-      "label": "methyl-based methanogenesis",
+      "id": "traitmech:000127",
+      "label": "hydrogenotrophic methanogenesis",
       "category": "metabolism",
       "similarity": 0.33180306826182226,
       "match_method": "parent_proxy",
@@ -9583,9 +9583,9 @@
       ]
     },
     {
-      "id": "traitmech:000080",
-      "label": "dormancy",
-      "category": "physiology",
+      "id": "METPO:1007080",
+      "label": "catalase test",
+      "category": "other",
       "similarity": 0.4264484851498028,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -9655,9 +9655,9 @@
       ]
     },
     {
-      "id": "traitmech:000075",
-      "label": "catalase activity",
-      "category": "physiology",
+      "id": "traitmech:000053",
+      "label": "biofilm formation",
+      "category": "ecology",
       "similarity": 0.4522149559512345,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -9665,8 +9665,8 @@
       ]
     },
     {
-      "id": "traitmech:000014",
-      "label": "zinc tolerant",
+      "id": "traitmech:000011",
+      "label": "xerophilic",
       "category": "environment",
       "similarity": 0.4522149559512345,
       "match_method": "parent_proxy",
@@ -12147,8 +12147,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12197,8 +12197,8 @@
       ]
     },
     {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
+      "id": "traitmech:000092",
+      "label": "transposable element",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12207,8 +12207,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12229,8 +12229,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12279,8 +12279,8 @@
       ]
     },
     {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
+      "id": "traitmech:000092",
+      "label": "transposable element",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12289,8 +12289,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12311,8 +12311,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12361,8 +12361,8 @@
       ]
     },
     {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
+      "id": "traitmech:000092",
+      "label": "transposable element",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12371,8 +12371,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12393,8 +12393,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12443,8 +12443,8 @@
       ]
     },
     {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
+      "id": "traitmech:000092",
+      "label": "transposable element",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12453,8 +12453,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12475,8 +12475,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12515,6 +12515,16 @@
       ]
     },
     {
+      "id": "traitmech:000092",
+      "label": "transposable element",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
       "id": "traitmech:000090",
       "label": "plasmid carriage",
       "category": "genomics",
@@ -12525,18 +12535,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000096",
-      "label": "codon usage bias",
+      "id": "traitmech:000213",
+      "label": "phosphorothioate defense system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -12546,6 +12546,16 @@
     }
   ],
   "METPO:1000127": [
+    {
+      "id": "traitmech:000213",
+      "label": "phosphorothioate defense system",
+      "category": "genomics",
+      "similarity": 0.9537717027104433,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
     {
       "id": "traitmech:000100",
       "label": "ploidy",
@@ -12597,8 +12607,8 @@
       ]
     },
     {
-      "id": "traitmech:000090",
-      "label": "plasmid carriage",
+      "id": "traitmech:000101",
+      "label": "rRNA operon copy number",
       "category": "genomics",
       "similarity": 0.9537717027104433,
       "match_method": "parent_proxy",
@@ -12609,16 +12619,6 @@
     {
       "id": "traitmech:000095",
       "label": "restriction-modification system",
-      "category": "genomics",
-      "similarity": 0.9537717027104433,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000091",
-      "label": "prophage",
       "category": "genomics",
       "similarity": 0.9537717027104433,
       "match_method": "parent_proxy",
@@ -12967,8 +12967,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13007,6 +13007,16 @@
       ]
     },
     {
+      "id": "traitmech:000092",
+      "label": "transposable element",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
       "id": "traitmech:000090",
       "label": "plasmid carriage",
       "category": "genomics",
@@ -13017,18 +13027,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000096",
-      "label": "codon usage bias",
+      "id": "traitmech:000213",
+      "label": "phosphorothioate defense system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13049,8 +13049,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13089,6 +13089,16 @@
       ]
     },
     {
+      "id": "traitmech:000092",
+      "label": "transposable element",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
       "id": "traitmech:000090",
       "label": "plasmid carriage",
       "category": "genomics",
@@ -13099,18 +13109,8 @@
       ]
     },
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000096",
-      "label": "codon usage bias",
+      "id": "traitmech:000213",
+      "label": "phosphorothioate defense system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13151,8 +13151,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13191,8 +13191,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13233,8 +13233,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13263,8 +13263,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13273,8 +13273,8 @@
       ]
     },
     {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13315,8 +13315,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13345,8 +13345,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13355,8 +13355,8 @@
       ]
     },
     {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13387,8 +13387,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13427,8 +13427,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13437,8 +13437,8 @@
       ]
     },
     {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13469,8 +13469,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13509,6 +13509,58 @@
       ]
     },
     {
+      "id": "traitmech:000091",
+      "label": "prophage",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    }
+  ],
+  "traitmech:000213": [
+    {
+      "id": "traitmech:000102",
+      "label": "pangenome openness",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000209",
+      "label": "phage defense system",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000098",
+      "label": "genome size",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
       "id": "traitmech:000095",
       "label": "restriction-modification system",
       "category": "genomics",
@@ -13519,8 +13571,38 @@
       ]
     },
     {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000093",
+      "label": "genomic island",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000089",
+      "label": "mobile genetic element",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000211",
+      "label": "DISARM system",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13561,8 +13643,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13601,8 +13683,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13643,8 +13725,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13683,8 +13765,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13725,8 +13807,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13765,8 +13847,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13807,16 +13889,6 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
       "id": "traitmech:000093",
       "label": "genomic island",
       "category": "genomics",
@@ -13847,8 +13919,18 @@
       ]
     },
     {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000091",
+      "label": "prophage",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000090",
+      "label": "plasmid carriage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13889,6 +13971,16 @@
       ]
     },
     {
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
       "id": "traitmech:000093",
       "label": "genomic island",
       "category": "genomics",
@@ -13919,18 +14011,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
-      "id": "traitmech:000100",
-      "label": "ploidy",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -13971,8 +14053,8 @@
       ]
     },
     {
-      "id": "traitmech:000101",
-      "label": "rRNA operon copy number",
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14011,8 +14093,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000091",
+      "label": "prophage",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14105,6 +14187,16 @@
   ],
   "traitmech:000191": [
     {
+      "id": "traitmech:000192",
+      "label": "methyl-based methanogenesis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999992,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000844"
+      ]
+    },
+    {
       "id": "METPO:1000844",
       "label": "Methanogenesis",
       "category": "metabolism",
@@ -14117,16 +14209,6 @@
     {
       "id": "traitmech:000127",
       "label": "hydrogenotrophic methanogenesis",
-      "category": "metabolism",
-      "similarity": 0.9999999999999992,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000844"
-      ]
-    },
-    {
-      "id": "traitmech:000192",
-      "label": "methyl-based methanogenesis",
       "category": "metabolism",
       "similarity": 0.9999999999999992,
       "match_method": "parent_proxy",
@@ -14361,11 +14443,31 @@
       ]
     },
     {
-      "id": "traitmech:000030",
-      "label": "dissimilatory nitrate reduction to ammonium",
+      "id": "traitmech:000039",
+      "label": "dissimilatory metal reduction",
       "category": "metabolism",
       "similarity": 0.9586357838681627,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "traitmech:000105",
+      "label": "dissimilatory sulfate reduction",
+      "category": "metabolism",
+      "similarity": 0.9586357838681627,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "METPO:1000802",
+      "label": "Anaerobic respiration",
+      "category": "metabolism",
+      "similarity": 0.9586357838681627,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000802"
       ]
@@ -14401,28 +14503,8 @@
       ]
     },
     {
-      "id": "traitmech:000039",
-      "label": "dissimilatory metal reduction",
-      "category": "metabolism",
-      "similarity": 0.9586357838681627,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000104",
-      "label": "denitrification",
-      "category": "metabolism",
-      "similarity": 0.9586357838681627,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000105",
-      "label": "dissimilatory sulfate reduction",
+      "id": "traitmech:000195",
+      "label": "arsenate respiration",
       "category": "metabolism",
       "similarity": 0.9586357838681627,
       "match_method": "parent_proxy",
@@ -14453,6 +14535,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -14465,16 +14557,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14535,6 +14617,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -14547,16 +14639,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14617,6 +14699,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -14629,16 +14721,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14689,8 +14771,8 @@
       ]
     },
     {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
+      "id": "traitmech:000129",
+      "label": "aromatic hydrocarbon degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14699,8 +14781,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000130",
+      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14739,8 +14821,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -14771,8 +14853,8 @@
       ]
     },
     {
-      "id": "traitmech:000035",
-      "label": "anoxygenic photosynthesis",
+      "id": "traitmech:000129",
+      "label": "aromatic hydrocarbon degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14781,8 +14863,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -14821,8 +14903,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -14903,8 +14985,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -14945,6 +15027,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -14957,16 +15049,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15017,6 +15099,16 @@
       ]
     },
     {
+      "id": "traitmech:000129",
+      "label": "aromatic hydrocarbon degradation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000035",
       "label": "anoxygenic photosynthesis",
       "category": "metabolism",
@@ -15029,16 +15121,6 @@
     {
       "id": "traitmech:000130",
       "label": "aromatic compound degradation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15067,8 +15149,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -15181,6 +15263,16 @@
       ]
     },
     {
+      "id": "traitmech:000129",
+      "label": "aromatic hydrocarbon degradation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000035",
       "label": "anoxygenic photosynthesis",
       "category": "metabolism",
@@ -15193,16 +15285,6 @@
     {
       "id": "traitmech:000130",
       "label": "aromatic compound degradation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15231,8 +15313,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -15559,8 +15641,8 @@
       ]
     },
     {
-      "id": "traitmech:000180",
-      "label": "acetone-butanol-ethanol fermentation",
+      "id": "traitmech:000029",
+      "label": "propionic acid fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15569,8 +15651,8 @@
       ]
     },
     {
-      "id": "traitmech:000029",
-      "label": "propionic acid fermentation",
+      "id": "traitmech:000026",
+      "label": "lactic acid fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15641,8 +15723,8 @@
       ]
     },
     {
-      "id": "traitmech:000180",
-      "label": "acetone-butanol-ethanol fermentation",
+      "id": "traitmech:000029",
+      "label": "propionic acid fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15651,8 +15733,8 @@
       ]
     },
     {
-      "id": "traitmech:000029",
-      "label": "propionic acid fermentation",
+      "id": "traitmech:000026",
+      "label": "lactic acid fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15745,6 +15827,16 @@
   ],
   "traitmech:000020": [
     {
+      "id": "traitmech:000129",
+      "label": "aromatic hydrocarbon degradation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000035",
       "label": "anoxygenic photosynthesis",
       "category": "metabolism",
@@ -15757,16 +15849,6 @@
     {
       "id": "traitmech:000130",
       "label": "aromatic compound degradation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -15805,8 +15887,8 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -15837,31 +15919,11 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
-      "category": "morphology",
-      "similarity": 0.13027587918797812,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "METPO:1000666",
       "label": "cell shape",
       "category": "morphology",
       "similarity": 0.13027587918797812,
       "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
-      "category": "morphology",
-      "similarity": 0.13027587918797812,
-      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -15879,6 +15941,26 @@
     {
       "id": "traitmech:000117",
       "label": "streptococcus arrangement",
+      "category": "morphology",
+      "similarity": 0.13027587918797812,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 0.13027587918797812,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.13027587918797812,
       "match_method": "parent_proxy",
@@ -15979,11 +16061,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16061,11 +16143,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16143,11 +16225,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16175,6 +16257,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -16187,16 +16279,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -16307,8 +16389,8 @@
       ]
     },
     {
-      "id": "traitmech:000029",
-      "label": "propionic acid fermentation",
+      "id": "traitmech:000180",
+      "label": "acetone-butanol-ethanol fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -16553,11 +16635,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16635,11 +16717,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16749,6 +16831,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -16761,16 +16853,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -16881,11 +16963,11 @@
       ]
     },
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000032",
+      "label": "manganese oxidation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -16913,6 +16995,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -16925,16 +17017,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -17117,8 +17199,8 @@
       ]
     },
     {
-      "id": "traitmech:000020",
-      "label": "Calvin-Benson-Bassham cycle",
+      "id": "traitmech:000190",
+      "label": "lipolysis",
       "category": "metabolism",
       "similarity": 0.9322385510830994,
       "match_method": "parent_proxy",
@@ -17127,8 +17209,8 @@
       ]
     },
     {
-      "id": "traitmech:000022",
-      "label": "Wood-Ljungdahl pathway",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 0.9322385510830994,
       "match_method": "parent_proxy",
@@ -17159,6 +17241,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -17171,16 +17263,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -17241,6 +17323,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -17253,16 +17345,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -17323,6 +17405,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -17335,16 +17427,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -17405,6 +17487,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -17417,16 +17509,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -17487,6 +17569,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -17499,16 +17591,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -20315,8 +20397,8 @@
       ]
     },
     {
-      "id": "traitmech:000193",
-      "label": "photoferrotrophy",
+      "id": "traitmech:000021",
+      "label": "reductive tricarboxylic acid cycle",
       "category": "metabolism",
       "similarity": 0.9354170978610813,
       "match_method": "parent_proxy",
@@ -20325,8 +20407,8 @@
       ]
     },
     {
-      "id": "traitmech:000135",
-      "label": "pectin degradation",
+      "id": "traitmech:000112",
+      "label": "chitinolysis",
       "category": "metabolism",
       "similarity": 0.9354170978610813,
       "match_method": "parent_proxy",
@@ -20849,6 +20931,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -20861,16 +20953,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -21167,26 +21249,6 @@
       ]
     },
     {
-      "id": "traitmech:000179",
-      "label": "butyric acid fermentation",
-      "category": "metabolism",
-      "similarity": 0.09222163738559153,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1002005"
-      ]
-    },
-    {
-      "id": "METPO:1002005",
-      "label": "Fermentation",
-      "category": "metabolism",
-      "similarity": 0.09222163738559153,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1002005"
-      ]
-    },
-    {
       "id": "traitmech:000026",
       "label": "lactic acid fermentation",
       "category": "metabolism",
@@ -21197,8 +21259,8 @@
       ]
     },
     {
-      "id": "traitmech:000027",
-      "label": "mixed-acid fermentation",
+      "id": "traitmech:000179",
+      "label": "butyric acid fermentation",
       "category": "metabolism",
       "similarity": 0.09222163738559153,
       "match_method": "parent_proxy",
@@ -21207,8 +21269,8 @@
       ]
     },
     {
-      "id": "traitmech:000182",
-      "label": "citrate fermentation",
+      "id": "traitmech:000029",
+      "label": "propionic acid fermentation",
       "category": "metabolism",
       "similarity": 0.09222163738559153,
       "match_method": "parent_proxy",
@@ -21227,8 +21289,28 @@
       ]
     },
     {
-      "id": "traitmech:000109",
-      "label": "fermentative hydrogen production",
+      "id": "traitmech:000181",
+      "label": "2,3-butanediol fermentation",
+      "category": "metabolism",
+      "similarity": 0.09222163738559153,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1002005"
+      ]
+    },
+    {
+      "id": "METPO:1002005",
+      "label": "Fermentation",
+      "category": "metabolism",
+      "similarity": 0.09222163738559153,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1002005"
+      ]
+    },
+    {
+      "id": "traitmech:000182",
+      "label": "citrate fermentation",
       "category": "metabolism",
       "similarity": 0.09222163738559153,
       "match_method": "parent_proxy",
@@ -22027,8 +22109,8 @@
       ]
     },
     {
-      "id": "METPO:1007006",
-      "label": "polytrichous flagellation",
+      "id": "traitmech:000060",
+      "label": "peritrichous",
       "category": "morphology",
       "similarity": 0.09339839609513823,
       "match_method": "parent_proxy",
@@ -22047,11 +22129,11 @@
       ]
     },
     {
-      "id": "METPO:1000704",
-      "label": "flagellated",
+      "id": "METPO:1007006",
+      "label": "polytrichous flagellation",
       "category": "morphology",
       "similarity": 0.09339839609513823,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -22879,6 +22961,16 @@
   ],
   "traitmech:000128": [
     {
+      "id": "traitmech:000114",
+      "label": "lignin degradation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000107",
       "label": "iron oxidation",
       "category": "metabolism",
@@ -22899,38 +22991,8 @@
       ]
     },
     {
-      "id": "traitmech:000114",
-      "label": "lignin degradation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -22949,8 +23011,28 @@
       ]
     },
     {
-      "id": "traitmech:000035",
-      "label": "anoxygenic photosynthesis",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "METPO:1000060",
+      "label": "metabolism",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23227,6 +23309,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -23239,16 +23331,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -23289,16 +23371,6 @@
   ],
   "traitmech:000107": [
     {
-      "id": "traitmech:000190",
-      "label": "lipolysis",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
       "id": "traitmech:000114",
       "label": "lignin degradation",
       "category": "metabolism",
@@ -23319,28 +23391,18 @@
       ]
     },
     {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
+      "id": "traitmech:000190",
+      "label": "lipolysis",
       "category": "metabolism",
-      "similarity": 0.9999999999999998,
+      "similarity": 1.0,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23359,8 +23421,28 @@
       ]
     },
     {
-      "id": "traitmech:000035",
-      "label": "anoxygenic photosynthesis",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "METPO:1000060",
+      "label": "metabolism",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23545,16 +23627,6 @@
       ]
     },
     {
-      "id": "traitmech:000190",
-      "label": "lipolysis",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
       "id": "traitmech:000128",
       "label": "hydrocarbon degradation",
       "category": "metabolism",
@@ -23565,28 +23637,18 @@
       ]
     },
     {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
+      "id": "traitmech:000190",
+      "label": "lipolysis",
       "category": "metabolism",
-      "similarity": 0.9999999999999998,
+      "similarity": 1.0,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23605,8 +23667,28 @@
       ]
     },
     {
-      "id": "traitmech:000035",
-      "label": "anoxygenic photosynthesis",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "METPO:1000060",
+      "label": "metabolism",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23616,16 +23698,6 @@
     }
   ],
   "traitmech:000190": [
-    {
-      "id": "traitmech:000107",
-      "label": "iron oxidation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
     {
       "id": "traitmech:000114",
       "label": "lignin degradation",
@@ -23637,6 +23709,16 @@
       ]
     },
     {
+      "id": "traitmech:000107",
+      "label": "iron oxidation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000128",
       "label": "hydrocarbon degradation",
       "category": "metabolism",
@@ -23647,28 +23729,8 @@
       ]
     },
     {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
+      "id": "traitmech:000035",
+      "label": "anoxygenic photosynthesis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23687,8 +23749,28 @@
       ]
     },
     {
-      "id": "traitmech:000035",
-      "label": "anoxygenic photosynthesis",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "METPO:1000060",
+      "label": "metabolism",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23698,6 +23780,16 @@
     }
   ],
   "traitmech:000032": [
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
     {
       "id": "METPO:1000060",
       "label": "metabolism",
@@ -23709,26 +23801,6 @@
       ]
     },
     {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000103",
-      "label": "nitrogen fixation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
       "id": "traitmech:000134",
       "label": "nitrate reduction",
       "category": "metabolism",
@@ -23739,10 +23811,10 @@
       ]
     },
     {
-      "id": "traitmech:000189",
-      "label": "arsenite oxidation",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
       "category": "metabolism",
-      "similarity": 0.9999999999999998,
+      "similarity": 1.0,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
@@ -23777,9 +23849,29 @@
       "kgm_nodes": [
         "METPO:1000060"
       ]
+    },
+    {
+      "id": "traitmech:000111",
+      "label": "cellulolysis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
     }
   ],
   "METPO:1000060": [
+    {
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
     {
       "id": "traitmech:000032",
       "label": "manganese oxidation",
@@ -23791,26 +23883,6 @@
       ]
     },
     {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000103",
-      "label": "nitrogen fixation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
       "id": "traitmech:000134",
       "label": "nitrate reduction",
       "category": "metabolism",
@@ -23821,10 +23893,10 @@
       ]
     },
     {
-      "id": "traitmech:000189",
-      "label": "arsenite oxidation",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
       "category": "metabolism",
-      "similarity": 0.9999999999999998,
+      "similarity": 1.0,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
@@ -23853,6 +23925,16 @@
     {
       "id": "traitmech:000035",
       "label": "anoxygenic photosynthesis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000111",
+      "label": "cellulolysis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -23873,8 +23955,8 @@
       ]
     },
     {
-      "id": "traitmech:000191",
-      "label": "acetoclastic methanogenesis",
+      "id": "traitmech:000127",
+      "label": "hydrogenotrophic methanogenesis",
       "category": "metabolism",
       "similarity": 0.9999999999999992,
       "match_method": "parent_proxy",
@@ -23883,8 +23965,8 @@
       ]
     },
     {
-      "id": "traitmech:000127",
-      "label": "hydrogenotrophic methanogenesis",
+      "id": "traitmech:000191",
+      "label": "acetoclastic methanogenesis",
       "category": "metabolism",
       "similarity": 0.9999999999999992,
       "match_method": "parent_proxy",
@@ -23945,11 +24027,11 @@
   ],
   "traitmech:000133": [
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -23965,11 +24047,11 @@
       ]
     },
     {
-      "id": "traitmech:000103",
-      "label": "nitrogen fixation",
+      "id": "METPO:1000060",
+      "label": "metabolism",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -23979,16 +24061,6 @@
       "label": "nitrate reduction",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000189",
-      "label": "arsenite oxidation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
@@ -24023,6 +24095,16 @@
       "kgm_nodes": [
         "METPO:1000060"
       ]
+    },
+    {
+      "id": "traitmech:000111",
+      "label": "cellulolysis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
     }
   ],
   "traitmech:000192": [
@@ -24037,8 +24119,8 @@
       ]
     },
     {
-      "id": "traitmech:000191",
-      "label": "acetoclastic methanogenesis",
+      "id": "traitmech:000127",
+      "label": "hydrogenotrophic methanogenesis",
       "category": "metabolism",
       "similarity": 0.9999999999999992,
       "match_method": "parent_proxy",
@@ -24047,8 +24129,8 @@
       ]
     },
     {
-      "id": "traitmech:000127",
-      "label": "hydrogenotrophic methanogenesis",
+      "id": "traitmech:000191",
+      "label": "acetoclastic methanogenesis",
       "category": "metabolism",
       "similarity": 0.9999999999999992,
       "match_method": "parent_proxy",
@@ -24109,18 +24191,18 @@
   ],
   "traitmech:000027": [
     {
-      "id": "METPO:1002005",
-      "label": "Fermentation",
+      "id": "traitmech:000028",
+      "label": "ethanol fermentation",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1002005"
       ]
     },
     {
-      "id": "traitmech:000028",
-      "label": "ethanol fermentation",
+      "id": "traitmech:000026",
+      "label": "lactic acid fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24159,6 +24241,16 @@
       ]
     },
     {
+      "id": "METPO:1002005",
+      "label": "Fermentation",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1002005"
+      ]
+    },
+    {
       "id": "traitmech:000109",
       "label": "fermentative hydrogen production",
       "category": "metabolism",
@@ -24169,18 +24261,8 @@
       ]
     },
     {
-      "id": "traitmech:000026",
-      "label": "lactic acid fermentation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1002005"
-      ]
-    },
-    {
-      "id": "traitmech:000029",
-      "label": "propionic acid fermentation",
+      "id": "traitmech:000180",
+      "label": "acetone-butanol-ethanol fermentation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24191,11 +24273,11 @@
   ],
   "traitmech:000134": [
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
+      "id": "traitmech:000103",
+      "label": "nitrogen fixation",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -24211,30 +24293,20 @@
       ]
     },
     {
+      "id": "METPO:1000060",
+      "label": "metabolism",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000133",
       "label": "methanol oxidation",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000103",
-      "label": "nitrogen fixation",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000189",
-      "label": "arsenite oxidation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
@@ -24263,6 +24335,16 @@
     {
       "id": "traitmech:000035",
       "label": "anoxygenic photosynthesis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000111",
+      "label": "cellulolysis",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -24313,16 +24395,6 @@
       ]
     },
     {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
       "id": "traitmech:000203",
       "label": "iodate respiration",
       "category": "metabolism",
@@ -24345,6 +24417,16 @@
     {
       "id": "traitmech:000125",
       "label": "sulfur respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "traitmech:000188",
+      "label": "anaerobic ammonium oxidation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24457,8 +24539,8 @@
       ]
     },
     {
-      "id": "traitmech:000121",
-      "label": "nitrogen respiration",
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24467,8 +24549,8 @@
       ]
     },
     {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
+      "id": "traitmech:000121",
+      "label": "nitrogen respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24519,16 +24601,6 @@
   ],
   "traitmech:000103": [
     {
-      "id": "METPO:1000060",
-      "label": "metabolism",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
       "id": "traitmech:000032",
       "label": "manganese oxidation",
       "category": "metabolism",
@@ -24539,11 +24611,11 @@
       ]
     },
     {
-      "id": "traitmech:000133",
-      "label": "methanol oxidation",
+      "id": "METPO:1000060",
+      "label": "metabolism",
       "category": "metabolism",
       "similarity": 1.0,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -24559,10 +24631,10 @@
       ]
     },
     {
-      "id": "traitmech:000189",
-      "label": "arsenite oxidation",
+      "id": "traitmech:000133",
+      "label": "methanol oxidation",
       "category": "metabolism",
-      "similarity": 0.9999999999999998,
+      "similarity": 1.0,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000060"
@@ -24597,6 +24669,16 @@
       "kgm_nodes": [
         "METPO:1000060"
       ]
+    },
+    {
+      "id": "traitmech:000111",
+      "label": "cellulolysis",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
     }
   ],
   "traitmech:000121": [
@@ -24621,8 +24703,8 @@
       ]
     },
     {
-      "id": "traitmech:000123",
-      "label": "nitrite respiration",
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24631,8 +24713,8 @@
       ]
     },
     {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
+      "id": "traitmech:000123",
+      "label": "nitrite respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -24785,6 +24867,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -24827,16 +24919,6 @@
     {
       "id": "traitmech:000125",
       "label": "sulfur respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000188",
-      "label": "anaerobic ammonium oxidation",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -25185,6 +25267,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -25197,16 +25289,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -26087,16 +26169,6 @@
       ]
     },
     {
-      "id": "traitmech:000202",
-      "label": "selenate respiration",
-      "category": "metabolism",
-      "similarity": 0.9675511890724976,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
       "id": "traitmech:000124",
       "label": "respiration of sulfur compounds",
       "category": "metabolism",
@@ -26107,38 +26179,18 @@
       ]
     },
     {
-      "id": "METPO:1000802",
-      "label": "Anaerobic respiration",
+      "id": "traitmech:000202",
+      "label": "selenate respiration",
       "category": "metabolism",
-      "similarity": 0.9675511890724974,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000198",
-      "label": "chlorate respiration",
-      "category": "metabolism",
-      "similarity": 0.9675511890724974,
+      "similarity": 0.9675511890724976,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000802"
       ]
     },
     {
-      "id": "traitmech:000122",
-      "label": "nitrate respiration",
-      "category": "metabolism",
-      "similarity": 0.9675511890724974,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000195",
-      "label": "arsenate respiration",
+      "id": "traitmech:000196",
+      "label": "fumarate respiration",
       "category": "metabolism",
       "similarity": 0.9675511890724974,
       "match_method": "parent_proxy",
@@ -26149,6 +26201,36 @@
     {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
+      "category": "metabolism",
+      "similarity": 0.9675511890724974,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "traitmech:000126",
+      "label": "thiosulfate respiration",
+      "category": "metabolism",
+      "similarity": 0.9675511890724974,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "traitmech:000104",
+      "label": "denitrification",
+      "category": "metabolism",
+      "similarity": 0.9675511890724974,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
+      "id": "traitmech:000199",
+      "label": "trimethylamine N-oxide respiration",
       "category": "metabolism",
       "similarity": 0.9675511890724974,
       "match_method": "parent_proxy",
@@ -26169,6 +26251,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -26181,16 +26273,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -26261,6 +26343,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -26273,16 +26365,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -26537,8 +26619,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000130",
+      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -26629,8 +26711,8 @@
       ]
     },
     {
-      "id": "traitmech:000128",
-      "label": "hydrocarbon degradation",
+      "id": "traitmech:000022",
+      "label": "Wood-Ljungdahl pathway",
       "category": "metabolism",
       "similarity": 0.9379257831872997,
       "match_method": "parent_proxy",
@@ -26639,8 +26721,8 @@
       ]
     },
     {
-      "id": "traitmech:000022",
-      "label": "Wood-Ljungdahl pathway",
+      "id": "traitmech:000113",
+      "label": "xylan degradation",
       "category": "metabolism",
       "similarity": 0.9379257831872997,
       "match_method": "parent_proxy",
@@ -26701,8 +26783,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000130",
+      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -26753,6 +26835,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -26765,16 +26857,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -26875,8 +26957,8 @@
       ]
     },
     {
-      "id": "traitmech:000103",
-      "label": "nitrogen fixation",
+      "id": "traitmech:000107",
+      "label": "iron oxidation",
       "category": "metabolism",
       "similarity": 0.9380665898957248,
       "match_method": "parent_proxy",
@@ -26885,8 +26967,8 @@
       ]
     },
     {
-      "id": "traitmech:000128",
-      "label": "hydrocarbon degradation",
+      "id": "traitmech:000113",
+      "label": "xylan degradation",
       "category": "metabolism",
       "similarity": 0.9380665898957248,
       "match_method": "parent_proxy",
@@ -26917,6 +26999,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -26929,16 +27021,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -26999,6 +27081,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -27011,16 +27103,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -27111,8 +27193,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000130",
+      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -27193,8 +27275,8 @@
       ]
     },
     {
-      "id": "traitmech:000129",
-      "label": "aromatic hydrocarbon degradation",
+      "id": "traitmech:000130",
+      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -27327,6 +27409,16 @@
       ]
     },
     {
+      "id": "traitmech:000122",
+      "label": "nitrate respiration",
+      "category": "metabolism",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000802"
+      ]
+    },
+    {
       "id": "traitmech:000123",
       "label": "nitrite respiration",
       "category": "metabolism",
@@ -27339,16 +27431,6 @@
     {
       "id": "traitmech:000121",
       "label": "nitrogen respiration",
-      "category": "metabolism",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000802"
-      ]
-    },
-    {
-      "id": "traitmech:000204",
-      "label": "organohalide respiration",
       "category": "metabolism",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -28629,6 +28711,26 @@
       ]
     },
     {
+      "id": "traitmech:000110",
+      "label": "biopolymer degradation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000020",
+      "label": "Calvin-Benson-Bassham cycle",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000133",
       "label": "methanol oxidation",
       "category": "metabolism",
@@ -28639,11 +28741,11 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "METPO:1000060",
+      "label": "metabolism",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -28671,26 +28773,6 @@
     {
       "id": "traitmech:000103",
       "label": "nitrogen fixation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000020",
-      "label": "Calvin-Benson-Bassham cycle",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -28711,6 +28793,26 @@
       ]
     },
     {
+      "id": "traitmech:000110",
+      "label": "biopolymer degradation",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
+      "id": "traitmech:000020",
+      "label": "Calvin-Benson-Bassham cycle",
+      "category": "metabolism",
+      "similarity": 0.9999999999999998,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000060"
+      ]
+    },
+    {
       "id": "traitmech:000133",
       "label": "methanol oxidation",
       "category": "metabolism",
@@ -28721,11 +28823,11 @@
       ]
     },
     {
-      "id": "traitmech:000134",
-      "label": "nitrate reduction",
+      "id": "METPO:1000060",
+      "label": "metabolism",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000060"
       ]
@@ -28753,26 +28855,6 @@
     {
       "id": "traitmech:000103",
       "label": "nitrogen fixation",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000020",
-      "label": "Calvin-Benson-Bassham cycle",
-      "category": "metabolism",
-      "similarity": 0.9999999999999998,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000060"
-      ]
-    },
-    {
-      "id": "traitmech:000130",
-      "label": "aromatic compound degradation",
       "category": "metabolism",
       "similarity": 0.9999999999999998,
       "match_method": "parent_proxy",
@@ -28875,16 +28957,6 @@
       ]
     },
     {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000057",
       "label": "monotrichous",
       "category": "morphology",
@@ -28920,6 +28992,16 @@
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -29059,16 +29141,6 @@
       ]
     },
     {
-      "id": "METPO:1000702",
-      "label": "motile",
-      "category": "morphology",
-      "similarity": 0.578237034953301,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000702"
-      ]
-    },
-    {
       "id": "traitmech:000061",
       "label": "twitching motility",
       "category": "morphology",
@@ -29084,6 +29156,16 @@
       "category": "morphology",
       "similarity": 0.578237034953301,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000702"
+      ]
+    },
+    {
+      "id": "METPO:1000702",
+      "label": "motile",
+      "category": "morphology",
+      "similarity": 0.578237034953301,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000702"
       ]
@@ -29213,16 +29295,6 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
-      "category": "morphology",
-      "similarity": 0.79434010868231,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000118",
       "label": "staphylococcus arrangement",
       "category": "morphology",
@@ -29233,8 +29305,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.79434010868231,
       "match_method": "parent_proxy",
@@ -29243,8 +29315,18 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
+      "category": "morphology",
+      "similarity": 0.79434010868231,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.79434010868231,
       "match_method": "parent_proxy",
@@ -29623,8 +29705,18 @@
       ]
     },
     {
-      "id": "traitmech:000208",
-      "label": "homeoviscous adaptation",
+      "id": "traitmech:000007",
+      "label": "radiotolerant",
+      "category": "environment",
+      "similarity": 0.8240970970482752,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000059"
+      ]
+    },
+    {
+      "id": "traitmech:000145",
+      "label": "alpha-glucosidase activity",
       "category": "physiology",
       "similarity": 0.8240970970482752,
       "match_method": "parent_proxy",
@@ -29633,8 +29725,8 @@
       ]
     },
     {
-      "id": "traitmech:000143",
-      "label": "leucine arylamidase activity",
+      "id": "traitmech:000149",
+      "label": "alpha-galactosidase activity",
       "category": "physiology",
       "similarity": 0.8240970970482752,
       "match_method": "parent_proxy",
@@ -29643,9 +29735,9 @@
       ]
     },
     {
-      "id": "traitmech:000140",
-      "label": "lecithinase activity",
-      "category": "physiology",
+      "id": "traitmech:000004",
+      "label": "pressure optimum",
+      "category": "environment",
       "similarity": 0.8240970970482752,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -29653,9 +29745,9 @@
       ]
     },
     {
-      "id": "METPO:1007082",
-      "label": "urease test",
-      "category": "other",
+      "id": "traitmech:000005",
+      "label": "pressure range",
+      "category": "environment",
       "similarity": 0.8240970970482752,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -29663,18 +29755,8 @@
       ]
     },
     {
-      "id": "traitmech:000141",
-      "label": "alkaline phosphatase activity",
-      "category": "physiology",
-      "similarity": 0.8240970970482752,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000059"
-      ]
-    },
-    {
-      "id": "traitmech:000142",
-      "label": "acid phosphatase activity",
+      "id": "traitmech:000152",
+      "label": "alpha-fucosidase activity",
       "category": "physiology",
       "similarity": 0.8240970970482752,
       "match_method": "parent_proxy",
@@ -30751,16 +30833,6 @@
   ],
   "METPO:1000669": [
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
-      "category": "morphology",
-      "similarity": 0.9548752523143037,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000117",
       "label": "streptococcus arrangement",
       "category": "morphology",
@@ -30781,6 +30853,16 @@
       ]
     },
     {
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
+      "category": "morphology",
+      "similarity": 0.9548752523143037,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
       "id": "traitmech:000118",
       "label": "staphylococcus arrangement",
       "category": "morphology",
@@ -30791,11 +30873,11 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "METPO:1000666",
+      "label": "cell shape",
       "category": "morphology",
       "similarity": 0.9548752523143037,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -30843,8 +30925,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 0.689252241592567,
       "match_method": "parent_proxy",
@@ -30853,18 +30935,8 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
-      "category": "morphology",
-      "similarity": 0.689252241592567,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.689252241592567,
       "match_method": "parent_proxy",
@@ -30883,11 +30955,21 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.689252241592567,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "METPO:1000666",
+      "label": "cell shape",
+      "category": "morphology",
+      "similarity": 0.689252241592567,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -30935,16 +31017,6 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
-      "category": "morphology",
-      "similarity": 0.904954413320914,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000117",
       "label": "streptococcus arrangement",
       "category": "morphology",
@@ -30955,8 +31027,8 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.904954413320914,
       "match_method": "parent_proxy",
@@ -30965,8 +31037,18 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "METPO:1000666",
+      "label": "cell shape",
+      "category": "morphology",
+      "similarity": 0.904954413320914,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.904954413320914,
       "match_method": "parent_proxy",
@@ -31017,16 +31099,6 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
-      "category": "morphology",
-      "similarity": 0.5049628572561917,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000120",
       "label": "sarcina arrangement",
       "category": "morphology",
@@ -31037,11 +31109,11 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.5049628572561917,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -31062,6 +31134,16 @@
       "category": "morphology",
       "similarity": 0.5049628572561917,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "METPO:1000666",
+      "label": "cell shape",
+      "category": "morphology",
+      "similarity": 0.5049628572561917,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -31089,6 +31171,16 @@
       ]
     },
     {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 0.8876756327876554,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
       "id": "traitmech:000119",
       "label": "tetrad arrangement",
       "category": "morphology",
@@ -31099,8 +31191,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 0.8876756327876554,
       "match_method": "parent_proxy",
@@ -31114,16 +31206,6 @@
       "category": "morphology",
       "similarity": 0.8876756327876554,
       "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
-      "category": "morphology",
-      "similarity": 0.8876756327876554,
-      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -31181,8 +31263,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 0.8026004377659347,
       "match_method": "parent_proxy",
@@ -31191,8 +31273,8 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.8026004377659347,
       "match_method": "parent_proxy",
@@ -31325,26 +31407,6 @@
   ],
   "traitmech:000056": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000057",
       "label": "monotrichous",
       "category": "morphology",
@@ -31385,6 +31447,26 @@
       ]
     },
     {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
       "id": "METPO:1005036",
       "label": "lateral flagellation",
       "category": "morphology",
@@ -31407,28 +31489,8 @@
   ],
   "METPO:1000704": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -31459,6 +31521,26 @@
     {
       "id": "METPO:1007006",
       "label": "polytrichous flagellation",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -31631,8 +31713,8 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.5343650759635882,
       "match_method": "parent_proxy",
@@ -31641,8 +31723,8 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 0.5343650759635882,
       "match_method": "parent_proxy",
@@ -31847,8 +31929,8 @@
       ]
     },
     {
-      "id": "traitmech:000061",
-      "label": "twitching motility",
+      "id": "traitmech:000062",
+      "label": "swarming motility",
       "category": "morphology",
       "similarity": 0.41941761944160283,
       "match_method": "parent_proxy",
@@ -31857,8 +31939,8 @@
       ]
     },
     {
-      "id": "traitmech:000062",
-      "label": "swarming motility",
+      "id": "traitmech:000061",
+      "label": "twitching motility",
       "category": "morphology",
       "similarity": 0.41941761944160283,
       "match_method": "parent_proxy",
@@ -31969,11 +32051,11 @@
       ]
     },
     {
-      "id": "METPO:1000702",
-      "label": "motile",
+      "id": "traitmech:000062",
+      "label": "swarming motility",
       "category": "morphology",
       "similarity": 0.20025334728737332,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000702"
       ]
@@ -32585,18 +32667,18 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "METPO:1000666",
+      "label": "cell shape",
       "category": "morphology",
       "similarity": 0.6808256674369917,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000666"
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.6808256674369917,
       "match_method": "parent_proxy",
@@ -32615,18 +32697,18 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.6808256674369917,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.6808256674369917,
       "match_method": "parent_proxy",
@@ -32667,8 +32749,8 @@
       ]
     },
     {
-      "id": "METPO:1007006",
-      "label": "polytrichous flagellation",
+      "id": "traitmech:000057",
+      "label": "monotrichous",
       "category": "morphology",
       "similarity": 0.7637072012838342,
       "match_method": "parent_proxy",
@@ -32687,28 +32769,28 @@
       ]
     },
     {
-      "id": "traitmech:000056",
-      "label": "flagellar arrangement",
-      "category": "morphology",
-      "similarity": 0.7637072012838342,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
-      "category": "morphology",
-      "similarity": 0.7637072012838342,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000059",
       "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 0.7637072012838342,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "METPO:1007006",
+      "label": "polytrichous flagellation",
+      "category": "morphology",
+      "similarity": 0.7637072012838342,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000056",
+      "label": "flagellar arrangement",
       "category": "morphology",
       "similarity": 0.7637072012838342,
       "match_method": "parent_proxy",
@@ -32719,28 +32801,8 @@
   ],
   "traitmech:000058": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -32774,6 +32836,26 @@
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -32883,28 +32965,8 @@
   ],
   "traitmech:000057": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -32938,6 +33000,26 @@
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -33621,16 +33703,6 @@
   ],
   "traitmech:000060": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
       "category": "morphology",
@@ -33676,6 +33748,16 @@
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -33877,16 +33959,6 @@
       ]
     },
     {
-      "id": "METPO:1002005",
-      "label": "Fermentation",
-      "category": "metabolism",
-      "similarity": 0.3497134050762194,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1002005"
-      ]
-    },
-    {
       "id": "traitmech:000182",
       "label": "citrate fermentation",
       "category": "metabolism",
@@ -33897,18 +33969,8 @@
       ]
     },
     {
-      "id": "traitmech:000179",
-      "label": "butyric acid fermentation",
-      "category": "metabolism",
-      "similarity": 0.3497134050762194,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1002005"
-      ]
-    },
-    {
-      "id": "traitmech:000029",
-      "label": "propionic acid fermentation",
+      "id": "traitmech:000028",
+      "label": "ethanol fermentation",
       "category": "metabolism",
       "similarity": 0.3497134050762194,
       "match_method": "parent_proxy",
@@ -33927,8 +33989,8 @@
       ]
     },
     {
-      "id": "traitmech:000109",
-      "label": "fermentative hydrogen production",
+      "id": "traitmech:000029",
+      "label": "propionic acid fermentation",
       "category": "metabolism",
       "similarity": 0.3497134050762194,
       "match_method": "parent_proxy",
@@ -33937,11 +33999,31 @@
       ]
     },
     {
-      "id": "traitmech:000026",
-      "label": "lactic acid fermentation",
+      "id": "traitmech:000179",
+      "label": "butyric acid fermentation",
       "category": "metabolism",
       "similarity": 0.3497134050762194,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1002005"
+      ]
+    },
+    {
+      "id": "traitmech:000027",
+      "label": "mixed-acid fermentation",
+      "category": "metabolism",
+      "similarity": 0.3497134050762194,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1002005"
+      ]
+    },
+    {
+      "id": "METPO:1002005",
+      "label": "Fermentation",
+      "category": "metabolism",
+      "similarity": 0.3497134050762194,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1002005"
       ]
@@ -33989,16 +34071,6 @@
       ]
     },
     {
-      "id": "METPO:1000704",
-      "label": "flagellated",
-      "category": "morphology",
-      "similarity": 0.7128911130972797,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
       "category": "morphology",
@@ -34019,11 +34091,21 @@
       ]
     },
     {
-      "id": "traitmech:000058",
-      "label": "lophotrichous",
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
       "category": "morphology",
       "similarity": 0.7128911130972797,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "METPO:1000704",
+      "label": "flagellated",
+      "category": "morphology",
+      "similarity": 0.7128911130972797,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -34195,28 +34277,8 @@
   ],
   "METPO:1007006": [
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -34250,6 +34312,26 @@
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000060",
+      "label": "peritrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -34451,16 +34533,6 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
-      "category": "morphology",
-      "similarity": 0.8206846100884748,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000117",
       "label": "streptococcus arrangement",
       "category": "morphology",
@@ -34481,6 +34553,16 @@
       ]
     },
     {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 0.8206846100884748,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
       "id": "traitmech:000118",
       "label": "staphylococcus arrangement",
       "category": "morphology",
@@ -34491,8 +34573,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.8206846100884748,
       "match_method": "parent_proxy",
@@ -34697,8 +34779,8 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -34707,8 +34789,8 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -34891,8 +34973,8 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.8766747600613038,
       "match_method": "parent_proxy",
@@ -34901,8 +34983,8 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
       "similarity": 0.8766747600613038,
       "match_method": "parent_proxy",
@@ -35025,11 +35107,11 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
+      "id": "traitmech:000119",
+      "label": "tetrad arrangement",
       "category": "morphology",
       "similarity": 0.8695140168949673,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -35045,11 +35127,11 @@
       ]
     },
     {
-      "id": "traitmech:000119",
-      "label": "tetrad arrangement",
+      "id": "METPO:1000666",
+      "label": "cell shape",
       "category": "morphology",
       "similarity": 0.8695140168949673,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -35117,8 +35199,8 @@
       ]
     },
     {
-      "id": "traitmech:000061",
-      "label": "twitching motility",
+      "id": "traitmech:000062",
+      "label": "swarming motility",
       "category": "morphology",
       "similarity": 0.36440258530668923,
       "match_method": "parent_proxy",
@@ -35127,8 +35209,8 @@
       ]
     },
     {
-      "id": "traitmech:000062",
-      "label": "swarming motility",
+      "id": "traitmech:000061",
+      "label": "twitching motility",
       "category": "morphology",
       "similarity": 0.36440258530668923,
       "match_method": "parent_proxy",
@@ -35199,16 +35281,6 @@
       ]
     },
     {
-      "id": "traitmech:000117",
-      "label": "streptococcus arrangement",
-      "category": "morphology",
-      "similarity": 0.8014611440590181,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000119",
       "label": "tetrad arrangement",
       "category": "morphology",
@@ -35219,10 +35291,10 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "traitmech:000117",
+      "label": "streptococcus arrangement",
       "category": "morphology",
-      "similarity": 0.8014611440590176,
+      "similarity": 0.8014611440590181,
       "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
@@ -35231,6 +35303,16 @@
     {
       "id": "traitmech:000120",
       "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 0.8014611440590176,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.8014611440590176,
       "match_method": "parent_proxy",
@@ -35301,8 +35383,8 @@
       ]
     },
     {
-      "id": "traitmech:000151",
-      "label": "beta-glucuronidase activity",
+      "id": "traitmech:000157",
+      "label": "beta-N-acetylhexosaminidase activity",
       "category": "physiology",
       "similarity": 0.8291479911211944,
       "match_method": "parent_proxy",
@@ -35363,16 +35445,6 @@
       ]
     },
     {
-      "id": "METPO:1000666",
-      "label": "cell shape",
-      "category": "morphology",
-      "similarity": 0.6591523688395522,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "traitmech:000119",
       "label": "tetrad arrangement",
       "category": "morphology",
@@ -35383,8 +35455,18 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
+      "id": "METPO:1000666",
+      "label": "cell shape",
+      "category": "morphology",
+      "similarity": 0.6591523688395522,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
       "category": "morphology",
       "similarity": 0.659152368839552,
       "match_method": "parent_proxy",
@@ -35393,8 +35475,8 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.659152368839552,
       "match_method": "parent_proxy",
@@ -35527,6 +35609,16 @@
       ]
     },
     {
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
+      "category": "morphology",
+      "similarity": 0.4815061735550493,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
       "id": "METPO:1000666",
       "label": "cell shape",
       "category": "morphology",
@@ -35539,16 +35631,6 @@
     {
       "id": "traitmech:000120",
       "label": "sarcina arrangement",
-      "category": "morphology",
-      "similarity": 0.4815061735550493,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
       "category": "morphology",
       "similarity": 0.4815061735550493,
       "match_method": "parent_proxy",
@@ -35599,21 +35681,21 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "METPO:1000666",
       "label": "cell shape",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -35691,6 +35773,26 @@
       ]
     },
     {
+      "id": "traitmech:000057",
+      "label": "monotrichous",
+      "category": "morphology",
+      "similarity": 0.7429848698007082,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000058",
+      "label": "lophotrichous",
+      "category": "morphology",
+      "similarity": 0.7429848698007082,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
       "id": "traitmech:000056",
       "label": "flagellar arrangement",
       "category": "morphology",
@@ -35701,11 +35803,11 @@
       ]
     },
     {
-      "id": "METPO:1000704",
-      "label": "flagellated",
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
       "category": "morphology",
       "similarity": 0.7429848698007082,
-      "match_method": "direct_metpo",
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000704"
       ]
@@ -35723,26 +35825,6 @@
     {
       "id": "METPO:1007006",
       "label": "polytrichous flagellation",
-      "category": "morphology",
-      "similarity": 0.7429848698007082,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000057",
-      "label": "monotrichous",
-      "category": "morphology",
-      "similarity": 0.7429848698007082,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
       "category": "morphology",
       "similarity": 0.7429848698007082,
       "match_method": "parent_proxy",
@@ -35947,21 +36029,21 @@
       ]
     },
     {
-      "id": "traitmech:000118",
-      "label": "staphylococcus arrangement",
-      "category": "morphology",
-      "similarity": 0.8346132734656149,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "METPO:1000666",
       "label": "cell shape",
       "category": "morphology",
       "similarity": 0.8346132734656149,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000118",
+      "label": "staphylococcus arrangement",
+      "category": "morphology",
+      "similarity": 0.8346132734656149,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -36009,21 +36091,21 @@
       ]
     },
     {
-      "id": "traitmech:000120",
-      "label": "sarcina arrangement",
-      "category": "morphology",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000666"
-      ]
-    },
-    {
       "id": "METPO:1000666",
       "label": "cell shape",
       "category": "morphology",
       "similarity": 1.0,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000666"
+      ]
+    },
+    {
+      "id": "traitmech:000120",
+      "label": "sarcina arrangement",
+      "category": "morphology",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000666"
       ]
@@ -37053,8 +37135,8 @@
       ]
     },
     {
-      "id": "traitmech:000122",
-      "label": "nitrate respiration",
+      "id": "traitmech:000199",
+      "label": "trimethylamine N-oxide respiration",
       "category": "metabolism",
       "similarity": 0.06506218081187809,
       "match_method": "parent_proxy",
@@ -37135,11 +37217,11 @@
       ]
     },
     {
-      "id": "traitmech:000062",
-      "label": "swarming motility",
+      "id": "METPO:1000702",
+      "label": "motile",
       "category": "morphology",
       "similarity": 0.09985947073143076,
-      "match_method": "parent_proxy",
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000702"
       ]
@@ -37413,6 +37495,16 @@
       ]
     },
     {
+      "id": "traitmech:000062",
+      "label": "swarming motility",
+      "category": "morphology",
+      "similarity": 0.11577405665550977,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000702"
+      ]
+    },
+    {
       "id": "METPO:1000702",
       "label": "motile",
       "category": "morphology",
@@ -37433,16 +37525,6 @@
       ]
     },
     {
-      "id": "traitmech:000062",
-      "label": "swarming motility",
-      "category": "morphology",
-      "similarity": 0.11577405665550977,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000702"
-      ]
-    },
-    {
       "id": "METPO:1000676",
       "label": "helical shaped",
       "category": "morphology",
@@ -37453,8 +37535,8 @@
       ]
     },
     {
-      "id": "traitmech:000121",
-      "label": "nitrogen respiration",
+      "id": "traitmech:000195",
+      "label": "arsenate respiration",
       "category": "metabolism",
       "similarity": 0.11204892370645902,
       "match_method": "parent_proxy",
@@ -37463,8 +37545,8 @@
       ]
     },
     {
-      "id": "traitmech:000031",
-      "label": "dissimilatory iron reduction",
+      "id": "traitmech:000188",
+      "label": "anaerobic ammonium oxidation",
       "category": "metabolism",
       "similarity": 0.11204892370645902,
       "match_method": "parent_proxy",
@@ -37905,16 +37987,6 @@
       ]
     },
     {
-      "id": "traitmech:000127",
-      "label": "hydrogenotrophic methanogenesis",
-      "category": "metabolism",
-      "similarity": 0.08328795180349047,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000844"
-      ]
-    },
-    {
       "id": "METPO:1000844",
       "label": "Methanogenesis",
       "category": "metabolism",
@@ -37927,6 +37999,16 @@
     {
       "id": "traitmech:000192",
       "label": "methyl-based methanogenesis",
+      "category": "metabolism",
+      "similarity": 0.08328795180349047,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000844"
+      ]
+    },
+    {
+      "id": "traitmech:000127",
+      "label": "hydrogenotrophic methanogenesis",
       "category": "metabolism",
       "similarity": 0.08328795180349047,
       "match_method": "parent_proxy",
@@ -39033,28 +39115,8 @@
   ],
   "METPO:1005040": [
     {
-      "id": "METPO:1007081",
-      "label": "oxidase test",
-      "category": "other",
-      "similarity": 0.9388541636958844,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000059"
-      ]
-    },
-    {
-      "id": "METPO:1007065",
-      "label": "irregular colony",
-      "category": "other",
-      "similarity": 0.9388541636958844,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000059"
-      ]
-    },
-    {
-      "id": "traitmech:000087",
-      "label": "natural competence",
+      "id": "traitmech:000161",
+      "label": "alanine arylamidase activity",
       "category": "physiology",
       "similarity": 0.9388541636958844,
       "match_method": "parent_proxy",
@@ -39063,8 +39125,28 @@
       ]
     },
     {
-      "id": "traitmech:000174",
-      "label": "naphthol-AS-BI-phosphohydrolase activity",
+      "id": "traitmech:000004",
+      "label": "pressure optimum",
+      "category": "environment",
+      "similarity": 0.9388541636958844,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000059"
+      ]
+    },
+    {
+      "id": "traitmech:000005",
+      "label": "pressure range",
+      "category": "environment",
+      "similarity": 0.9388541636958844,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000059"
+      ]
+    },
+    {
+      "id": "traitmech:000076",
+      "label": "oxidase activity",
       "category": "physiology",
       "similarity": 0.9388541636958844,
       "match_method": "parent_proxy",
@@ -39073,8 +39155,18 @@
       ]
     },
     {
-      "id": "traitmech:000165",
-      "label": "NAD-dependent alcohol dehydrogenase activity",
+      "id": "traitmech:000007",
+      "label": "radiotolerant",
+      "category": "environment",
+      "similarity": 0.9388541636958844,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000059"
+      ]
+    },
+    {
+      "id": "traitmech:000142",
+      "label": "acid phosphatase activity",
       "category": "physiology",
       "similarity": 0.9388541636958844,
       "match_method": "parent_proxy",
@@ -39083,9 +39175,9 @@
       ]
     },
     {
-      "id": "METPO:1007073",
-      "label": "osmotic tolerance",
-      "category": "other",
+      "id": "traitmech:000154",
+      "label": "ornithine decarboxylase activity",
+      "category": "physiology",
       "similarity": 0.9388541636958844,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -39093,19 +39185,9 @@
       ]
     },
     {
-      "id": "METPO:1007086",
-      "label": "oxidase negative",
-      "category": "other",
-      "similarity": 0.9388541636958844,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000059"
-      ]
-    },
-    {
-      "id": "METPO:1007068",
-      "label": "rhizoid colony",
-      "category": "other",
+      "id": "traitmech:000006",
+      "label": "pressure delta",
+      "category": "environment",
       "similarity": 0.9388541636958844,
       "match_method": "parent_proxy",
       "kgm_nodes": [
@@ -42999,21 +43081,21 @@
       ]
     },
     {
-      "id": "traitmech:000194",
-      "label": "aerobic anoxygenic phototrophy",
-      "category": "physiology",
-      "similarity": 0.28354013182152826,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000657"
-      ]
-    },
-    {
       "id": "METPO:1000657",
       "label": "photoheterotrophic",
       "category": "physiology",
       "similarity": 0.28354013182152826,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000657"
+      ]
+    },
+    {
+      "id": "traitmech:000194",
+      "label": "aerobic anoxygenic phototrophy",
+      "category": "physiology",
+      "similarity": 0.28354013182152826,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000657"
       ]
@@ -46823,21 +46905,21 @@
   ],
   "METPO:1000656": [
     {
-      "id": "traitmech:000194",
-      "label": "aerobic anoxygenic phototrophy",
-      "category": "physiology",
-      "similarity": 0.6368590998181808,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000657"
-      ]
-    },
-    {
       "id": "METPO:1000657",
       "label": "photoheterotrophic",
       "category": "physiology",
       "similarity": 0.6368590998181808,
       "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000657"
+      ]
+    },
+    {
+      "id": "traitmech:000194",
+      "label": "aerobic anoxygenic phototrophy",
+      "category": "physiology",
+      "similarity": 0.6368590998181808,
+      "match_method": "parent_proxy",
       "kgm_nodes": [
         "METPO:1000657"
       ]
@@ -48841,21 +48923,21 @@
       ]
     },
     {
-      "id": "METPO:1000657",
-      "label": "photoheterotrophic",
-      "category": "physiology",
-      "similarity": 0.08924756107647658,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000657"
-      ]
-    },
-    {
       "id": "traitmech:000194",
       "label": "aerobic anoxygenic phototrophy",
       "category": "physiology",
       "similarity": 0.08924756107647658,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000657"
+      ]
+    },
+    {
+      "id": "METPO:1000657",
+      "label": "photoheterotrophic",
+      "category": "physiology",
+      "similarity": 0.08924756107647658,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1000657"
       ]
@@ -48985,8 +49067,8 @@
       ]
     },
     {
-      "id": "traitmech:000059",
-      "label": "amphitrichous",
+      "id": "traitmech:000056",
+      "label": "flagellar arrangement",
       "category": "morphology",
       "similarity": 0.09827259142833267,
       "match_method": "parent_proxy",
@@ -48995,18 +49077,8 @@
       ]
     },
     {
-      "id": "METPO:1000704",
-      "label": "flagellated",
-      "category": "morphology",
-      "similarity": 0.09827259142833267,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1000704"
-      ]
-    },
-    {
-      "id": "METPO:1007006",
-      "label": "polytrichous flagellation",
+      "id": "traitmech:000058",
+      "label": "lophotrichous",
       "category": "morphology",
       "similarity": 0.09827259142833267,
       "match_method": "parent_proxy",
@@ -49025,8 +49097,18 @@
       ]
     },
     {
-      "id": "traitmech:000060",
-      "label": "peritrichous",
+      "id": "METPO:1000704",
+      "label": "flagellated",
+      "category": "morphology",
+      "similarity": 0.09827259142833267,
+      "match_method": "direct_metpo",
+      "kgm_nodes": [
+        "METPO:1000704"
+      ]
+    },
+    {
+      "id": "traitmech:000059",
+      "label": "amphitrichous",
       "category": "morphology",
       "similarity": 0.09827259142833267,
       "match_method": "parent_proxy",
@@ -49119,21 +49201,21 @@
   ],
   "METPO:1000630": [
     {
-      "id": "METPO:1005001",
-      "label": "nitrification",
-      "category": "metabolism",
-      "similarity": 0.9785977324448876,
-      "match_method": "direct_metpo",
-      "kgm_nodes": [
-        "METPO:1005001"
-      ]
-    },
-    {
       "id": "traitmech:000187",
       "label": "complete ammonia oxidation",
       "category": "metabolism",
       "similarity": 0.9785977324448876,
       "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1005001"
+      ]
+    },
+    {
+      "id": "METPO:1005001",
+      "label": "nitrification",
+      "category": "metabolism",
+      "similarity": 0.9785977324448876,
+      "match_method": "direct_metpo",
       "kgm_nodes": [
         "METPO:1005001"
       ]
@@ -49693,8 +49775,8 @@
   ],
   "METPO:1000188": [
     {
-      "id": "traitmech:000209",
-      "label": "phage defense system",
+      "id": "traitmech:000101",
+      "label": "rRNA operon copy number",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -49733,16 +49815,6 @@
       ]
     },
     {
-      "id": "traitmech:000092",
-      "label": "transposable element",
-      "category": "genomics",
-      "similarity": 1.0,
-      "match_method": "parent_proxy",
-      "kgm_nodes": [
-        "METPO:1000188"
-      ]
-    },
-    {
       "id": "traitmech:000102",
       "label": "pangenome openness",
       "category": "genomics",
@@ -49753,8 +49825,8 @@
       ]
     },
     {
-      "id": "traitmech:000095",
-      "label": "restriction-modification system",
+      "id": "traitmech:000098",
+      "label": "genome size",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
@@ -49763,8 +49835,18 @@
       ]
     },
     {
-      "id": "traitmech:000091",
-      "label": "prophage",
+      "id": "traitmech:000213",
+      "label": "phosphorothioate defense system",
+      "category": "genomics",
+      "similarity": 1.0,
+      "match_method": "parent_proxy",
+      "kgm_nodes": [
+        "METPO:1000188"
+      ]
+    },
+    {
+      "id": "traitmech:000095",
+      "label": "restriction-modification system",
       "category": "genomics",
       "similarity": 1.0,
       "match_method": "parent_proxy",
