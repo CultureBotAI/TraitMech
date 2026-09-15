@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/wadjet_system.yaml
+  slug: wadjet_system
+session:
+  id: 2026-09-15T141921Z-codex-532ffe
+  timestamp: '2026-09-15T14:19:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Wadjet system trait
+  details: Minted traitmech:000218 for the DOI-backed Wadjet anti-plasmid system with Deep,
+    Liu, and Weiss evidence, a Corynebacterium glutamicum canonical example, a nonmechanistic
+    Wadjet SMC plasmid-restriction graph, an open subfamily-and-substrate knowledge gap, and
+    an upstream METPO v95 placeholder reservation.

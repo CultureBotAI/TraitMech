@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 611,
+    "records": 613,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 134,
+    "unresearched_mechanism_records": 136,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 2,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 155,
+      "DEEPEN_CAUSAL_GRAPH": 157,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 147
     }
@@ -3456,7 +3456,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 9,
+      "children": 10,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -3514,6 +3514,50 @@
       "label": "Thoeris system",
       "category": "genomics",
       "slug": "thoeris_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 6,
+      "nodes": 7,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000218",
+      "label": "Wadjet system",
+      "category": "genomics",
+      "slug": "wadjet_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 4,
+      "nodes": 5,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (4 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000217",
+      "label": "Zorya system",
+      "category": "genomics",
+      "slug": "zorya_system",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
       "edges": 6,
@@ -13352,7 +13396,7 @@
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
-      "children": 12,
+      "children": 13,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
