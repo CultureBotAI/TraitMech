@@ -26,6 +26,7 @@ PHILIPPE = "DOI:10.1371/journal.pone.0298680"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-15T20:35:00Z"
+FIX_TIMESTAMP = "2026-09-15T21:04:27Z"
 PARENT_TIMESTAMP = "2026-09-15T20:35:01Z"
 
 OLD_DISCUSSION_RATIONALE = (
@@ -295,8 +296,8 @@ RECORD: dict[str, Any] = {
                 },
                 {
                     "subject": "premature_infected_cell_lysis",
-                    "predicate": "mitigates",
-                    "predicate_id": "METPO:2007407",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
                     "object": "restricted_phage_propagation",
                     "description": (
                         "Premature AbiZ-associated lysis limits the yield of "
@@ -430,6 +431,19 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATED_CAUSAL_GRAPH",
+        changes=(
+            "Corrected the AbiZ premature-lysis edge from mitigates restricted "
+            "phage propagation to contributes to restricted phage propagation "
+            "after local adversarial review issue 962 identified that the old "
+            "predicate inverted the intended antiphage effect."
+        ),
+        llm_assisted=True,
+        timestamp=FIX_TIMESTAMP,
     )
     return record
 
