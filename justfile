@@ -1191,3 +1191,7 @@ report-label-drift:
 gen-discussions-data: (_require-claw "kg_microbe_discussions")
     PYTHONPATH={{claw_src}} uv run python \
       -m kg_microbe_discussions --config conf/discussions_config.yaml --output app/discussions
+
+# Full canonical semantic text by default; --record/--limit are explicit canaries.
+text-map-inputs *args:
+    uv run python scripts/text_map_inputs.py {{args}}
