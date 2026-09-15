@@ -68,7 +68,7 @@ causal_graphs:
     label: temperature downshift
     node_type: ENVIRONMENTAL_FACTOR
     description: A decrease in ambient temperature that orders the lipid bilayer.
-  - node_id: membrane_rigidification
+  - node_id: membrane_rigidity
     label: membrane rigidification
     node_type: QUALITY
     description: Reduced membrane fluidity and increased bilayer thickness after cooling.
@@ -146,7 +146,7 @@ causal_graphs:
   edges:
   - subject: temperature_downshift
     predicate: causes
-    object: membrane_rigidification
+    object: membrane_rigidity
     description: A temperature decrease causes the bacterial membrane to rigidify
       and thicken.
     evidence:
@@ -156,7 +156,7 @@ causal_graphs:
       notes: Sidarta et al. describe rigidification and thickening as the immediate
         membrane response to temperature decrease.
     predicate_id: biolink:causes
-  - subject: membrane_rigidification
+  - subject: membrane_rigidity
     predicate: positively regulates
     object: homeoviscous_adaptation_process
     description: Membrane rigidification is sensed as the physical input that activates
@@ -243,4 +243,11 @@ curation_history:
   changes: Added E. coli K-12 FabI and FabB UniProt protein examples to the homeoviscous
     adaptation causal graph and removed a top-level evidence item whose Maiti review
     citation had no verbatim snippet.
+  llm_assisted: true
+- timestamp: '2026-09-15T07:26:31Z'
+  curator: codex
+  action: NORMALIZED_CAUSAL_NODE_ID
+  changes: Renamed the homeoviscous graph node membrane_rigidification to the canonical
+    membrane_rigidity QUALITY node id after PR review found that the retired process-shaped
+    alias had been reintroduced.
   llm_assisted: true

@@ -151,7 +151,7 @@ RECORD = {
                     ),
                 },
                 {
-                    "node_id": "membrane_rigidification",
+                    "node_id": "membrane_rigidity",
                     "label": "membrane rigidification",
                     "node_type": "QUALITY",
                     "description": (
@@ -309,7 +309,7 @@ RECORD = {
                 {
                     "subject": "temperature_downshift",
                     "predicate": "causes",
-                    "object": "membrane_rigidification",
+                    "object": "membrane_rigidity",
                     "description": (
                         "A temperature decrease causes the bacterial membrane to "
                         "rigidify and thicken."
@@ -331,7 +331,7 @@ RECORD = {
                     "predicate_id": "biolink:causes",
                 },
                 {
-                    "subject": "membrane_rigidification",
+                    "subject": "membrane_rigidity",
                     "predicate": "positively regulates",
                     "object": "homeoviscous_adaptation_process",
                     "description": (
