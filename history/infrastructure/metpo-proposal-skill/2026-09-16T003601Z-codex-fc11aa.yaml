@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/metpo-proposal/SKILL.md
+  slug: metpo-proposal-skill
+session:
+  id: 2026-09-16T003601Z-codex-fc11aa
+  timestamp: '2026-09-16T00:36:01Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Advance METPO proposal block after Druantia
+  details: Documented that metpo_traitmech_v111 reserves METPO:1018800 for the Druantia system,
+    advancing the next one-row Scope-A cohort to METPO:1018900 after adding proposals/metpo_traitmech_v111.
