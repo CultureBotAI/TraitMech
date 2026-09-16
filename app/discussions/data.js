@@ -273,6 +273,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/disarm_system.html#disarm-downstream-effector-gap"
  },
  {
+  "discussion_id": "druantia-subtype-mechanism-gap",
+  "prompt": "Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Druantia system",
+  "source_id": "traitmech:000234",
+  "source_file": "druantia_system.yaml",
+  "attaches_to": [],
+  "rationale": "Doron et al. separated Type I DruABCDE, Type II DruMFGE, and Type III DruHE architectures and validated one Type I locus, while Wu et al. define a Type III mechanism in which DruH likely senses infection and DruE engages ssDNA-containing intermediates. The first TraitRecord therefore stays at the DruE-core family level until separate review resolves Type I/II partner functions, Type III-specific DruH activation, exact phage triggers, and Zorya-coupled versus standalone outputs across Druantia loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1787,9 +1804,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 103,
- "total_knowledge_gaps": 22,
- "total_source_entries": 102,
+ "total_discussions": 104,
+ "total_knowledge_gaps": 23,
+ "total_source_entries": 103,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
