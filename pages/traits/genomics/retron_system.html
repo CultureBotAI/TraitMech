@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retron system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Retron system</h1>
+    <p class="curie"><code>traitmech:000235</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses a retron locus encoding a reverse transcriptase, an msr/msd non-coding RNA that yields multicopy single-stranded DNA, and an associated effector whose activation can inhibit bacteriophage propagation through abortive infection.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Retrons couple msDNA complexes to effector activation</h2>
+      <p class="meta">Evidence-backed process sketch linking a complete retron locus to RT/ncRNA-dependent msDNA biosynthesis, control of associated effectors, abortive-infection outputs, and inhibition of phage growth.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph stays at the retron family level and uses the Ec48 RecBCD-guarding and Retron-Sen2 RcaT mechanisms as characterized examples without asserting one universal effector fold, phage trigger, direct msDNA-modification event, guarded host target, or Retron-Septu release architecture across all retron antiphage loci.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Retrons couple msDNA complexes to effector activation</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for Retron system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>retron locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>retron msDNA biosynthesis</strong>
+            <code>RO:0002326</code>
+            <p>Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2020.09.065</code>
+                <span class="evidence-snippet">Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)</span>
+                <span class="meta">Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>retron locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RT-msDNA effector control</strong>
+            <code>RO:0002326</code>
+            <p>Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2020.09.065</code>
+                <span class="evidence-snippet">The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein</span>
+                <span class="meta">Millman et al. support the effector as a required part of a complete retron defensive unit.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>retron msDNA biosynthesis</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>RT-msDNA effector control</strong>
+            <code>RO:0002326</code>
+            <p>The reverse-transcriptase-msDNA complex can control associated retron effector activity.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05091-4</code>
+                <span class="evidence-snippet">RcaT is neutralized by the reverse transcriptase–msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis</span>
+                <span class="meta">Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>RT-msDNA effector control</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>effector-dependent abortive infection</strong>
+            <code>RO:0002326</code>
+            <p>Phage-triggered perturbation of retron effector control can activate an associated effector.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05091-4</code>
+                <span class="evidence-snippet">phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth</span>
+                <span class="meta">Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>effector-dependent abortive infection</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>phage growth</strong>
+            <code>METPO:2007407</code>
+            <p>Retron effector activation can block phage amplification through abortive infection.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2020.09.065</code>
+                <span class="evidence-snippet">We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection</span>
+                <span class="meta">Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>effector-dependent abortive infection</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>Retron system</strong>
+            <code>METPO:2007700</code>
+            <p>Associated effector activity realizes the Retron system defense phenotype.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2020.09.065</code>
+                <span class="evidence-snippet">retrons, functioning together with their associated effector genes, form anti-phage defense systems</span>
+                <span class="meta">Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-7">
+            <strong>Retron system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>Retron system possession is a phage-defense-system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2020.09.065</code>
+                <span class="evidence-snippet">We report that retrons function as anti-phage defense systems</span>
+                <span class="meta">Millman et al. support Retron system as a child of phage defense system.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1016/j.cell.2020.09.065</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Escherichia coli</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562"
+             rel="nofollow noreferrer"><code>NCBITaxon:562</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1016/j.cell.2020.09.065"
+             rel="nofollow noreferrer"><code>DOI:10.1016/j.cell.2020.09.065</code></a>
+
+
+          <span class="meta">Millman et al. cloned E. coli Ec48 and Ec73 retrons with their predicted effector genes into E. coli MG1655 and showed that both engineered E. coli systems had broad antiphage activity that depended on reverse-transcriptase catalytic-site residues.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="retron-effector-trigger-gap">
+        <p class="discussion-prompt">Resolve retron effector, phage-trigger, and hybrid-system diversity before minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>retron-effector-trigger-gap</code>
+          · raised by codex
+          · 2026-09-15
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Millman et al. support multiple RT/ncRNA/effector retron systems as abortive-infection antiphage systems, and Bobonis et al. resolve the Retron-Sen2 RcaT example in which a reverse-transcriptase-msDNA antitoxin complex responds to phage-triggered msDNA modification. The first TraitRecord therefore stays at the broad retron-system level until separate subtype review resolves which effectors, guarded host targets, phage triggers, direct-msDNA modification steps, and Septu-coupled architectures apply across each retron family.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-16T01:28:00Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted Retron system as a DOI-backed GENOMICS TraitRecord under the phage defense system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v112.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/retron_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/retron_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/retron_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/retron_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000235" target="_blank" rel="noopener"><code>traitmech:000235</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed process sketch linking a complete retron locus to RT/ncRNA-dependent msDNA biosynthesis, control of associated effectors, abortive-infection outputs, and inhibition of phage growth.", "edges": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "retron_msdna_biosynthesis"}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "rt_msdna_effector_control"}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_msdna_biosynthesis", "target": "rt_msdna_effector_control"}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rt_msdna_effector_control", "target": "effector_dependent_abortive_infection"}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector_dependent_abortive_infection", "target": "phage_growth"}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector_dependent_abortive_infection", "target": "retron_system_trait"}, {"description": "Retron system possession is a phage-defense-system trait.", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "retron_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "edge_id": "edge-1", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "target": "retron msDNA biosynthesis"}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "edge_id": "edge-2", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "target": "RT-msDNA effector control"}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "edge_id": "edge-3", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron msDNA biosynthesis", "target": "RT-msDNA effector control"}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "edge_id": "edge-4", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RT-msDNA effector control", "target": "effector-dependent abortive infection"}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "edge_id": "edge-5", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector-dependent abortive infection", "target": "phage growth"}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "edge_id": "edge-6", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector-dependent abortive infection", "target": "Retron system"}, {"description": "Retron system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Retron system", "target": "phage defense system"}], "graph_id": "retron_msdna_effector_abortive_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Activation of a retron-associated effector output that arrests or kills infected host cells and limits phage amplification.", "grounding": null, "id": "effector_dependent_abortive_infection", "is_orphan": false, "label": "effector-dependent abortive infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage growth and amplification inside a bacterial host population.", "grounding": null, "id": "phage_growth", "is_orphan": false, "label": "phage growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A complete retron antiphage locus encoding a reverse transcriptase, msr/msd non-coding RNA, and an associated effector.", "grounding": null, "id": "retron_locus", "is_orphan": false, "label": "retron locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reverse-transcriptase-dependent production of multicopy single-stranded DNA from a retron non-coding RNA template.", "grounding": null, "id": "retron_msdna_biosynthesis", "is_orphan": false, "label": "retron msDNA biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Retron phage-defense system.", "grounding": "traitmech:000235", "id": "retron_system_trait", "is_orphan": false, "label": "Retron system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Regulation of retron effector activity by reverse-transcriptase-msDNA complexes.", "grounding": null, "id": "rt_msdna_effector_control", "is_orphan": false, "label": "RT-msDNA effector control", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph stays at the retron family level and uses the Ec48 RecBCD-guarding and Retron-Sen2 RcaT mechanisms as characterized examples without asserting one universal effector fold, phage trigger, direct msDNA-modification event, guarded host target, or Retron-Septu release architecture across all retron antiphage loci.", "scope_status": "NONMECHANISTIC", "title": "Retrons couple msDNA complexes to effector activation"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-16 01:28 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 630 TraitRecords
+      · embedding coverage 75.7%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
