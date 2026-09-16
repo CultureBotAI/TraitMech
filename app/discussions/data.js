@@ -392,6 +392,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "retron-effector-trigger-gap",
+  "prompt": "Resolve retron effector, phage-trigger, and hybrid-system diversity before minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Retron system",
+  "source_id": "traitmech:000235",
+  "source_file": "retron_system.yaml",
+  "attaches_to": [],
+  "rationale": "Millman et al. support multiple RT/ncRNA/effector retron systems as abortive-infection antiphage systems, and Bobonis et al. resolve the Retron-Sen2 RcaT example in which a reverse-transcriptase-msDNA antitoxin complex responds to phage-triggered msDNA modification. The first TraitRecord therefore stays at the broad retron-system level until separate subtype review resolves which effectors, guarded host targets, phage triggers, direct-msDNA modification steps, and Septu-coupled architectures apply across each retron family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/retron_system.html#retron-effector-trigger-gap"
+ },
+ {
   "discussion_id": "septu-standalone-retron-regulation-gap",
   "prompt": "Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate specificity before minting narrower Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1804,9 +1821,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 104,
- "total_knowledge_gaps": 23,
- "total_source_entries": 103,
+ "total_discussions": 105,
+ "total_knowledge_gaps": 24,
+ "total_source_entries": 104,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

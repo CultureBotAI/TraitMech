@@ -1,0 +1,212 @@
+identifier: traitmech:000235
+label: Retron system
+definition: A phage defense system in which an organism possesses a retron locus encoding
+  a reverse transcriptase, an msr/msd non-coding RNA that yields multicopy single-stranded
+  DNA, and an associated effector whose activation can inhibit bacteriophage propagation
+  through abortive infection.
+definition_source: DOI:10.1016/j.cell.2020.09.065
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+evidence:
+- reference: DOI:10.1016/j.cell.2020.09.065
+  snippet: We report that retrons function as anti-phage defense systems
+  notes: Millman et al. support retrons as experimentally observed antiphage defense
+    systems rather than only retroelement sequence features.
+- reference: DOI:10.1016/j.cell.2020.09.065
+  snippet: 'The defensive unit is composed of three components: the RT, the ncRNA,
+    and an effector protein'
+  notes: Millman et al. support defining the broad record around a reverse transcriptase,
+    non-coding RNA, and associated effector rather than a bare reverse-transcriptase
+    gene.
+- reference: DOI:10.1016/j.cell.2020.09.065
+  snippet: We examined multiple retron systems and show that they confer defense against
+    a broad range of phages via abortive infection
+  notes: Millman et al. support treating Retron system as a family of organism-level
+    antiphage traits, with abortive infection as a shared defense output.
+- reference: DOI:10.1016/j.cell.2020.09.065
+  snippet: retrons, functioning together with their associated effector genes, form
+    anti-phage defense systems
+  notes: Millman et al. connect associated effector genes to Retron antiphage function.
+- reference: DOI:10.1038/s41586-022-05091-4
+  snippet: RcaT is neutralized by the reverse transcriptase–msDNA antitoxin complex,
+    and becomes active upon perturbation of msDNA biosynthesis
+  notes: Bobonis et al. support an RcaT-containing Retron-Sen2 example in which the
+    reverse-transcriptase-msDNA complex controls effector activity.
+- reference: DOI:10.1038/s41586-022-05091-4
+  snippet: we identified multiple trigger and blocker proteins of phage origin
+  notes: Bobonis et al. support phage-encoded trigger and blocker logic for the characterized
+    Retron-Sen2 RcaT system.
+- reference: DOI:10.1038/s41586-022-05091-4
+  snippet: phage-related triggers directly modify the msDNA, thereby activating RcaT
+    and inhibiting bacterial growth
+  notes: Bobonis et al. connect phage-triggered msDNA modification to RcaT activation
+    in Retron-Sen2 without making that trigger universal across all retrons.
+- reference: DOI:10.1038/s41586-022-05091-4
+  snippet: retron toxin–antitoxin systems act as abortive infection anti-phage defence
+    systems
+  notes: Bobonis et al. support retron toxin-antitoxin systems as abortive-infection
+    antiphage systems.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Millman et al. cloned E. coli Ec48 and Ec73 retrons with their predicted effector
+    genes into E. coli MG1655 and showed that both engineered E. coli systems had
+    broad antiphage activity that depended on reverse-transcriptase catalytic-site
+    residues.
+  reference: DOI:10.1016/j.cell.2020.09.065
+causal_graphs:
+- graph_id: retron_msdna_effector_abortive_defense
+  title: Retrons couple msDNA complexes to effector activation
+  description: Evidence-backed process sketch linking a complete retron locus to RT/ncRNA-dependent
+    msDNA biosynthesis, control of associated effectors, abortive-infection outputs,
+    and inhibition of phage growth.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph stays at the retron family level and uses the Ec48 RecBCD-guarding
+    and Retron-Sen2 RcaT mechanisms as characterized examples without asserting one
+    universal effector fold, phage trigger, direct msDNA-modification event, guarded
+    host target, or Retron-Septu release architecture across all retron antiphage
+    loci.
+  nodes:
+  - node_id: retron_locus
+    label: retron locus
+    node_type: GENETIC_ELEMENT
+    description: A complete retron antiphage locus encoding a reverse transcriptase,
+      msr/msd non-coding RNA, and an associated effector.
+  - node_id: retron_msdna_biosynthesis
+    label: retron msDNA biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Reverse-transcriptase-dependent production of multicopy single-stranded
+      DNA from a retron non-coding RNA template.
+  - node_id: rt_msdna_effector_control
+    label: RT-msDNA effector control
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation of retron effector activity by reverse-transcriptase-msDNA
+      complexes.
+  - node_id: effector_dependent_abortive_infection
+    label: effector-dependent abortive infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of a retron-associated effector output that arrests or
+      kills infected host cells and limits phage amplification.
+  - node_id: phage_growth
+    label: phage growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage growth and amplification inside a bacterial host population.
+  - node_id: retron_system_trait
+    label: Retron system
+    node_type: TRAIT
+    grounding: traitmech:000235
+    description: Possession of a genome-encoded Retron phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: retron_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: retron_msdna_biosynthesis
+    description: Retron loci encode the reverse transcriptase and non-coding RNA components
+      that biosynthesize msDNA.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.09.065
+      snippet: Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase
+        (RT)
+      notes: Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis
+        module.
+  - subject: retron_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rt_msdna_effector_control
+    description: Complete retron defensive units include an associated effector coupled
+      to the RT/ncRNA core.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.09.065
+      snippet: 'The defensive unit is composed of three components: the RT, the ncRNA,
+        and an effector protein'
+      notes: Millman et al. support the effector as a required part of a complete
+        retron defensive unit.
+  - subject: retron_msdna_biosynthesis
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rt_msdna_effector_control
+    description: The reverse-transcriptase-msDNA complex can control associated retron
+      effector activity.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-05091-4
+      snippet: RcaT is neutralized by the reverse transcriptase–msDNA antitoxin complex,
+        and becomes active upon perturbation of msDNA biosynthesis
+      notes: Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to
+        RcaT toxin control in Retron-Sen2.
+  - subject: rt_msdna_effector_control
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: effector_dependent_abortive_infection
+    description: Phage-triggered perturbation of retron effector control can activate
+      an associated effector.
+    evidence:
+    - reference: DOI:10.1038/s41586-022-05091-4
+      snippet: phage-related triggers directly modify the msDNA, thereby activating
+        RcaT and inhibiting bacterial growth
+      notes: Bobonis et al. support phage-triggered activation of the RcaT effector
+        in Retron-Sen2.
+  - subject: effector_dependent_abortive_infection
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_growth
+    description: Retron effector activation can block phage amplification through
+      abortive infection.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.09.065
+      snippet: We examined multiple retron systems and show that they confer defense
+        against a broad range of phages via abortive infection
+      notes: Millman et al. link multiple retron systems to broad antiphage defense
+        by abortive infection.
+  - subject: effector_dependent_abortive_infection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: retron_system_trait
+    description: Associated effector activity realizes the Retron system defense phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.09.065
+      snippet: retrons, functioning together with their associated effector genes,
+        form anti-phage defense systems
+      notes: Millman et al. support complete retron systems in which the retron and
+        associated effector genes together confer defense.
+  - subject: retron_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Retron system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2020.09.065
+      snippet: We report that retrons function as anti-phage defense systems
+      notes: Millman et al. support Retron system as a child of phage defense system.
+discussions:
+- discussion_id: retron-effector-trigger-gap
+  prompt: Resolve retron effector, phage-trigger, and hybrid-system diversity before
+    minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Millman et al. support multiple RT/ncRNA/effector retron systems as abortive-infection
+    antiphage systems, and Bobonis et al. resolve the Retron-Sen2 RcaT example in
+    which a reverse-transcriptase-msDNA antitoxin complex responds to phage-triggered
+    msDNA modification. The first TraitRecord therefore stays at the broad retron-system
+    level until separate subtype review resolves which effectors, guarded host targets,
+    phage triggers, direct-msDNA modification steps, and Septu-coupled architectures
+    apply across each retron family.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-16T01:28:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Retron system as a DOI-backed GENOMICS TraitRecord under the phage
+    defense system parent after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v112.
+  llm_assisted: true

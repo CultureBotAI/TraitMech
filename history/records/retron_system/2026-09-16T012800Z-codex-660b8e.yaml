@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/retron_system.yaml
+  slug: retron_system
+session:
+  id: 2026-09-16T012800Z-codex-660b8e
+  timestamp: '2026-09-16T01:28:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Retron system trait
+  details: Minted traitmech:000235 for the Retron phage-defense system after an ignored-and-hidden
+    duplicate search found no exact live TraitMech, METPO, or prior proposal record for Retron,
+    the expected slug, the source DOI identifiers, or the reserved IDs. Curated DOI-backed
+    Millman and Bobonis evidence, an Escherichia coli canonical example, a nonmechanistic
+    causal graph for RT-msDNA effector control, and a same-PR METPO v112 proposal.

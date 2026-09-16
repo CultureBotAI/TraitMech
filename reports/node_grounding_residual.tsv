@@ -54,6 +54,7 @@ membrane unsaturated fatty acids	CHEMICAL	3	data/traits/environment/pressure_opt
 temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_preference.yaml|data/traits/physiology/homeoviscous_adaptation.yaml
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 phage dna replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brex_system.yaml|data/traits/genomics/sspabcd_sspe_system.yaml|data/traits/genomics/sspabcd_sspfgh_system.yaml
+phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
@@ -138,7 +139,6 @@ dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
-phage growth	BIOLOGICAL_PROCESS	2	data/traits/genomics/druantia_system.yaml|data/traits/genomics/septu_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
@@ -1282,6 +1282,10 @@ host recognition site methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/rest
 restriction endonuclease	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 restriction endonuclease cleavage	MOLECULAR_FUNCTION	1	data/traits/genomics/restriction_modification_system.yaml
 phage-encoded dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
+retron locus	GENETIC_ELEMENT	1	data/traits/genomics/retron_system.yaml
+retron msdna biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
+rt-msdna effector control	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
+effector-dependent abortive infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
 septu locus	GENETIC_ELEMENT	1	data/traits/genomics/septu_system.yaml
