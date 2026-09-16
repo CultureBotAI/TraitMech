@@ -1,0 +1,187 @@
+identifier: traitmech:000233
+label: Septu system
+definition: A phage defense system in which an organism possesses a Septu locus encoding
+  PtuA and the HNH endonuclease PtuB, whose PtuAB oligomer confers antiphage immunity
+  through nuclease-mediated phage genome cleavage in standalone systems and can be
+  regulated by retron RT-msDNA complexes in Retron-Septu loci.
+definition_source: DOI:10.1038/s41594-023-01172-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Septu
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.aar4120
+evidence:
+- reference: DOI:10.1126/science.aar4120
+  snippet: Septu PtuAB pfam13304, COG3950, pfam13395, pfam01844 ATPase, HNH nuclease
+    2,506 2,117 (4.1%)
+  notes: Doron et al. reported Septu/PtuAB as an ATPase- and HNH-nuclease-linked system
+    in their pangenome-scale antiphage-system discovery screen.
+- reference: DOI:10.1038/s41594-023-01172-8
+  snippet: 'E. coli Septu system, an anti-phage defense system, comprises two components:
+    PtuA and PtuB'
+  notes: Yang et al. support defining Septu as a two-component PtuA/PtuB antiphage
+    system.
+- reference: DOI:10.1038/s41594-023-01172-8
+  snippet: PtuA contains an ATPase domain while PtuB is a nuclease that belongs to
+    the His-Asn-His (HNH) family
+  notes: Yang et al. support the ATPase and HNH endonuclease component classes that
+    distinguish the PtuAB system.
+- reference: DOI:10.1038/s41594-023-01172-8
+  snippet: PtuAB restricts phage growth by cleaving phage genomic DNA
+  notes: Yang et al. connect the PtuAB complex to nuclease-mediated restriction of
+    phage growth in cells.
+- reference: DOI:10.1126/science.adv3344
+  snippet: The Retron-Septu system uniquely integrates retron and Septu antiphage
+    defenses
+  notes: Wang et al. support recognizing Retron-Septu as a Septu architecture with
+    coupled retron regulation, not as a separate exact replacement for the broader
+    Septu class.
+- reference: DOI:10.1126/science.adv3344
+  snippet: Activation occurs upon disassembly, releasing PtuAB, which degrades single-stranded
+    DNA to restrict phage replication
+  notes: Wang et al. connect Retron-Septu activation to release of PtuAB and DNA degradation
+    that restricts phage replication.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Yang et al. structurally and functionally characterized an Escherichia coli
+    Septu system in which PtuA and PtuB assemble into a 6:2 oligomer that restricts
+    phage growth by cleaving phage genomic DNA.
+  reference: DOI:10.1038/s41594-023-01172-8
+causal_graphs:
+- graph_id: septu_ptuab_oligomer_nuclease_defense
+  title: Septu PtuAB oligomers cleave phage genomic DNA
+  description: Evidence-backed process sketch linking a Septu locus to PtuAB oligomer
+    assembly, PtuB-dependent nuclease activity, cleavage of phage genomic DNA, and
+    inhibition of phage replication.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures the shared PtuA/PtuB nuclease logic without asserting
+    one exact activation trigger, ATP regulatory state, phage cue, target DNA modification,
+    standalone-versus-retron architecture, or ssDNA-versus-genomic-DNA substrate across
+    all Septu and Retron-Septu loci.
+  nodes:
+  - node_id: septu_locus
+    label: Septu locus
+    node_type: GENETIC_ELEMENT
+    description: A Septu antiphage locus encoding a PtuA ATPase and cognate PtuB HNH
+      nuclease.
+  - node_id: ptuab_oligomer_assembly
+    label: PtuAB oligomer assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of PtuA and PtuB into a higher-order antiphage complex.
+  - node_id: ptuab_antiphage_activity
+    label: PtuAB antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: PtuAB complex activity, dependent on PtuB nuclease activity, that
+      restricts phage growth.
+  - node_id: phage_genomic_dna_cleavage
+    label: phage genomic DNA cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Cleavage or degradation of phage genomic DNA by an activated PtuAB
+      complex.
+  - node_id: phage_growth
+    label: phage growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage growth and amplification inside a bacterial host population.
+  - node_id: septu_system_trait
+    label: Septu system
+    node_type: TRAIT
+    grounding: traitmech:000233
+    description: Possession of a genome-encoded Septu phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: septu_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ptuab_oligomer_assembly
+    description: The Septu locus encodes PtuA and PtuB components that assemble into
+      a higher-order PtuAB complex.
+    evidence:
+    - reference: DOI:10.1038/s41594-023-01172-8
+      snippet: PtuA and PtuB form a stable complex with a 6:2 stoichiometry
+      notes: Yang et al. support assembly of the PtuA and PtuB Septu components.
+  - subject: ptuab_oligomer_assembly
+    predicate: enables
+    predicate_id: RO:0002327
+    object: ptuab_antiphage_activity
+    description: PtuAB assembly is critical for antiphage activity.
+    evidence:
+    - reference: DOI:10.1038/s41594-023-01172-8
+      snippet: the assembly of PtuAB is critical for its anti-phage activity
+      notes: Yang et al. support a functional connection between PtuAB assembly and
+        antiphage activity.
+  - subject: ptuab_antiphage_activity
+    predicate: enables
+    predicate_id: RO:0002327
+    object: phage_genomic_dna_cleavage
+    description: The PtuAB complex restricts phage growth by cleaving phage genomic
+      DNA.
+    evidence:
+    - reference: DOI:10.1038/s41594-023-01172-8
+      snippet: E. coli anti-phage defense mediated by PtuAB via degrading the phage
+        genomic DNA
+      notes: Yang et al. connect PtuAB activity to cleavage of phage genomic DNA.
+  - subject: phage_genomic_dna_cleavage
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_growth
+    description: PtuAB-mediated cleavage of phage genomic DNA restricts phage growth.
+    evidence:
+    - reference: DOI:10.1038/s41594-023-01172-8
+      snippet: PtuAB restricts phage growth by cleaving phage genomic DNA
+      notes: Yang et al. connect PtuAB nuclease activity to reduced phage growth.
+  - subject: phage_genomic_dna_cleavage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: septu_system_trait
+    description: PtuAB-mediated phage genomic DNA cleavage realizes the Septu system
+      trait.
+    evidence:
+    - reference: DOI:10.1038/s41594-023-01172-8
+      snippet: PtuAB can confer bacteria immune defense against phage infection by
+        digesting phage genomic DNA in a species-dependent way
+      notes: Yang et al. support the DNA-digestion logic of PtuAB antiphage defense.
+  - subject: septu_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Septu system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1126/science.aar4120
+      snippet: Septu PtuAB pfam13304, COG3950, pfam13395, pfam01844 ATPase, HNH nuclease
+        2,506 2,117 (4.1%)
+      notes: Doron et al. reported Septu in a table of candidate antiphage defense
+        systems.
+discussions:
+- discussion_id: septu-standalone-retron-regulation-gap
+  prompt: Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate
+    specificity before minting narrower Septu mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Yang et al. support a standalone Escherichia coli PtuAB system in which
+    ATP modulates PtuA/PtuB nuclease activity through an incompletely resolved phage
+    trigger, and Wang et al. support Retron-Septu Ec83/Ec78 complexes in which retron
+    RT-msDNA association keeps PtuAB inactive until disassembly. The first TraitRecord
+    therefore stays at the PtuA/PtuB system level until separate review resolves standalone
+    activation, retron-dependent release, target DNA classes, and phage-specific activity
+    across Septu loci.
+  posed_by: codex
+  posed_date: '2026-09-15'
+curation_history:
+- timestamp: '2026-09-15T23:58:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Septu system as a DOI-backed GENOMICS TraitRecord under the phage
+    defense system parent after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v110.
+  llm_assisted: true

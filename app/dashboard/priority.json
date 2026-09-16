@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 627,
+    "records": 628,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 150,
+    "unresearched_mechanism_records": 151,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 166,
+      "DEEPEN_CAUSAL_GRAPH": 167,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 150
     }
@@ -3682,7 +3682,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 14,
+      "children": 15,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -3731,6 +3731,28 @@
       "series_size": 0,
       "series_overlap": null,
       "researched": true,
+      "reasons": [
+        "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000233",
+      "label": "Septu system",
+      "category": "genomics",
+      "slug": "septu_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 6,
+      "nodes": 7,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
       "reasons": [
         "thin graph (6 edges) +12"
       ]

@@ -375,6 +375,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "septu-standalone-retron-regulation-gap",
+  "prompt": "Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate specificity before minting narrower Septu mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Septu system",
+  "source_id": "traitmech:000233",
+  "source_file": "septu_system.yaml",
+  "attaches_to": [],
+  "rationale": "Yang et al. support a standalone Escherichia coli PtuAB system in which ATP modulates PtuA/PtuB nuclease activity through an incompletely resolved phage trigger, and Wang et al. support Retron-Septu Ec83/Ec78 complexes in which retron RT-msDNA association keeps PtuAB inactive until disassembly. The first TraitRecord therefore stays at the PtuA/PtuB system level until separate review resolves standalone activation, retron-dependent release, target DNA classes, and phage-specific activity across Septu loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/septu_system.html#septu-standalone-retron-regulation-gap"
+ },
+ {
   "discussion_id": "shedu-sensor-and-substrate-gap",
   "prompt": "Resolve Shedu sensor classes and DNA substrate preferences before minting narrower Shedu subtype or mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1770,9 +1787,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 102,
- "total_knowledge_gaps": 21,
- "total_source_entries": 101,
+ "total_discussions": 103,
+ "total_knowledge_gaps": 22,
+ "total_source_entries": 102,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
