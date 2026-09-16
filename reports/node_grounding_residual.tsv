@@ -1279,6 +1279,11 @@ restriction endonuclease cleavage	MOLECULAR_FUNCTION	1	data/traits/genomics/rest
 phage-encoded dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml
 chemotactic motility	BIOLOGICAL_PROCESS	1	data/traits/genomics/rrna_operon_copy_number.yaml
+septu locus	GENETIC_ELEMENT	1	data/traits/genomics/septu_system.yaml
+ptuab oligomer assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/septu_system.yaml
+ptuab antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/septu_system.yaml
+phage genomic dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/septu_system.yaml
+phage growth	BIOLOGICAL_PROCESS	1	data/traits/genomics/septu_system.yaml
 shedu locus	GENETIC_ELEMENT	1	data/traits/genomics/shedu_system.yaml
 shedu nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 shedu dna end nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
