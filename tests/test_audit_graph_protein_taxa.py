@@ -366,7 +366,7 @@ def test_load_protected_reads_backticked_trait_paths(tmp_path):
 
 def test_real_corpus_has_one_row_per_graph():
     rows = coverage_rows()
-    assert len(rows) == 405
+    assert len(rows) == 406
     assert not any("GENERIC_UNIPROT_GROUNDING" in row["unmet_requirements"] for row in rows)
 
 
