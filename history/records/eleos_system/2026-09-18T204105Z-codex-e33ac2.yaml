@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/eleos_system.yaml
+  slug: eleos_system
+session:
+  id: 2026-09-18T204105Z-codex-e33ac2
+  timestamp: '2026-09-18T20:41:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Eleos system trait
+  details: Minted traitmech:000250 for the DOI-backed Eleos phage-defense system under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; added Millman et al. and commit-pinned DefenseFinder
+    evidence for the Eleos registry row and LeoA/LeoB/LeoBC/LeoC profiles, a nonmechanistic
+    Eleos locus-to-phage-restriction graph, an open mechanism knowledge gap attached to that
+    graph, and a same-PR METPO v127 proposal reserving METPO:1020400.
