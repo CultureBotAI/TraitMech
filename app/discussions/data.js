@@ -358,6 +358,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "paris-trigger-and-counterdefense-gap",
+  "prompt": "Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA suppression, and non-Ocr phage triggers before minting narrower PARIS subtype children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PARIS system",
+  "source_id": "traitmech:000237",
+  "source_file": "paris_system.yaml",
+  "attaches_to": [],
+  "rationale": "Rousset et al. discovered PARIS as an abortive infection system triggered by T7 Ocr; Deep et al. resolved Ocr-dependent AriA release of AriB for the E. coli B185 system; and Burman et al. showed that T5 Ptr1 and Ptr2 can activate PARIS while a phage T5 lysine tRNA variant can evade AriB cleavage. The first TraitRecord therefore stays at the broad PARIS-system level until separate subtype review resolves which foreign-protein triggers, AriB activities, and anti-defense suppressors apply across each PARIS family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/paris_system.html#paris-trigger-and-counterdefense-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -1838,9 +1855,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 106,
- "total_knowledge_gaps": 25,
- "total_source_entries": 105,
+ "total_discussions": 107,
+ "total_knowledge_gaps": 26,
+ "total_source_entries": 106,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -34,14 +34,12 @@ from typing import Any
 
 import yaml
 
-from traitmech.curate.curation_event import record_curation_event
-from traitmech.validation.write_validated import (
-    ValidationFailedError,
-    validate_trait,
-    write_validated_trait,
-)
-
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation import write_validated as trait_writer  # noqa: E402
+
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
 TRAITS_DIR = REPO_ROOT / "data/traits"
 DEFAULT_MAPPING = REPO_ROOT / "mappings/predicate_grounding.tsv"
@@ -244,11 +242,15 @@ def main() -> int:
         invalid_msg: str | None = None
         if args.apply:
             try:
-                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
-            except ValidationFailedError as exc:
+                trait_writer.write_validated_trait(
+                    doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH
+                )
+            except trait_writer.ValidationFailedError as exc:
                 invalid_msg = exc.errors[0].message[:200] if exc.errors else str(exc)[:200]
         else:
-            errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            errors = trait_writer.validate_trait(
+                doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH
+            )
             if errors:
                 invalid_msg = errors[0].message[:200]
 

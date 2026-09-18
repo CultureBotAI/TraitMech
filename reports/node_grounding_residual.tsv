@@ -141,6 +141,7 @@ dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
+phage propagation	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
@@ -1251,6 +1252,12 @@ rare gene fraction	QUALITY	1	data/traits/genomics/pangenome_openness.yaml
 sampling bias	EXPERIMENTAL_FACTOR	1	data/traits/genomics/pangenome_openness.yaml
 annotation error	EXPERIMENTAL_FACTOR	1	data/traits/genomics/pangenome_openness.yaml
 apparent pangenome openness	QUALITY	1	data/traits/genomics/pangenome_openness.yaml
+paris locus	GENETIC_ELEMENT	1	data/traits/genomics/paris_system.yaml
+aria/arib immune complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+foreign protein sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+arib nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+lysine trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+translation inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 bacteriophage pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/phage_defense_system.yaml
 phosphorothioate modification module	GENETIC_ELEMENT	1	data/traits/genomics/phosphorothioate_defense_system.yaml
 pt-dependent foreign dna targeting	BIOLOGICAL_PROCESS	1	data/traits/genomics/phosphorothioate_defense_system.yaml
@@ -1281,7 +1288,6 @@ phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/py
 cyclic pyrimidine second messenger synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 cyclic pyrimidine receptor activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 pycsar antiviral output	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
-phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/restriction_modification_system.yaml
 cognate dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 host recognition site methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/restriction_modification_system.yaml
