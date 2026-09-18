@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/paris_system.yaml
+  slug: paris_system
+session:
+  id: 2026-09-18T091605Z-codex-7aeddc
+  timestamp: '2026-09-18T09:16:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/977
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/976
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - curation_history
+  summary: Scope PARIS canonical example note
+  details: 'Resolved PR #976 review issue #977 by removing Deep/Burman follow-up claims from
+    the Escherichia coli canonical example note so the note is supported by its single Rousset
+    et al. reference.'

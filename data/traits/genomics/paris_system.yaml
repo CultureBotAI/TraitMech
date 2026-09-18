@@ -67,9 +67,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: Rousset et al. cloned the native-promoter PARIS locus from E. coli B185 and
-    showed that it provided robust defense; follow-up work by Deep et al. and Burman
-    et al. used the E. coli B185 AriA/AriB proteins for structural and mechanistic
-    studies.
+    showed that it provided robust defense.
   reference: DOI:10.1016/j.chom.2022.02.018
 causal_graphs:
 - graph_id: paris_ariab_trna_cleavage_abortive_defense
@@ -243,4 +241,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v114.
+  llm_assisted: true
+- timestamp: '2026-09-18T09:16:05Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Resolved PR #976 review issue #977 by scoping the PARIS canonical example
+    note to the Rousset et al. E. coli B185 evidence cited by that example.'
   llm_assisted: true

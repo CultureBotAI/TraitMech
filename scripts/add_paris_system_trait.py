@@ -23,6 +23,7 @@ BURMAN = "DOI:10.1038/s41586-024-07874-3"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-18T08:27:56Z"
+REVIEW_TIMESTAMP = "2026-09-18T09:16:05Z"
 
 RECORD: dict[str, Any] = {
     "identifier": "traitmech:000237",
@@ -165,9 +166,7 @@ RECORD: dict[str, Any] = {
             "note": (
                 "Rousset et al. cloned the native-promoter PARIS locus "
                 "from E. coli B185 and showed that it provided robust "
-                "defense; follow-up work by Deep et al. and Burman et "
-                "al. used the E. coli B185 AriA/AriB proteins for "
-                "structural and mechanistic studies."
+                "defense."
             ),
             "reference": ROUSSET,
         }
@@ -542,6 +541,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADVERSARIAL_REVIEW_REPAIR",
+        changes=(
+            "Resolved PR #976 review issue #977 by scoping the PARIS "
+            "canonical example note to the Rousset et al. E. coli B185 "
+            "evidence cited by that example."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
