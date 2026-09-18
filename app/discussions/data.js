@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
  },
  {
+  "discussion_id": "hailong-mechanism-and-family-breadth-gap",
+  "prompt": "Resolve Hailong ODA transfer, phage-trigger breadth, HalA ion specificity, and family architecture before minting narrower Hailong mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hailong system",
+  "source_id": "traitmech:000242",
+  "source_file": "hailong_system.yaml",
+  "attaches_to": [],
+  "rationale": "Tan et al. support HalB oligodeoxyadenylate synthesis, HalA repression by inhibitory DNA signals, and viral DNA-exonuclease-triggered release of HalA effector function, but Hailong homologs need separate review before TraitMech asserts one complete ODA-transfer pathway, phage nuclease trigger, HalA ion selectivity, host-processing factor, or ancillary-gene architecture across the full Hailong family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hailong_system.html#hailong-mechanism-and-family-breadth-gap"
+ },
+ {
   "discussion_id": "hna-trigger-and-family-breadth-gap",
   "prompt": "Resolve Hna trigger breadth, phage escape routes, and family architecture before minting narrower Hna mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1923,9 +1940,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 111,
- "total_knowledge_gaps": 30,
- "total_source_entries": 110,
+ "total_discussions": 112,
+ "total_knowledge_gaps": 31,
+ "total_source_entries": 111,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

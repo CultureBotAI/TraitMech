@@ -172,6 +172,7 @@ data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	genome_size_p
 data/traits/genomics/genome_streamlining.yaml	traitmech:000099	genome streamlining	streamlining_oligotrophic_selection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genomic_island.yaml	traitmech:000093	genomic island	gi_hgt_accessory_function	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/hachiman_system.yaml	traitmech:000219	Hachiman system	hachiman_hamab_dna_cleavage	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/hailong_system.yaml	traitmech:000242	Hailong system	hailong_dna_gated_growth_arrest	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/hna_system.yaml	traitmech:000241	Hna system	hna_ssb_triggered_abortive_infection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/kiwa_system.yaml	traitmech:000231	Kiwa system	kiwa_membrane_sensing_dna_binding	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/lamassu_system.yaml	traitmech:000232	Lamassu system	lamassu_smc_dna_sensing_nuclease_activation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
