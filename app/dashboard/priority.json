@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 636,
+    "records": 637,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 159,
+    "unresearched_mechanism_records": 160,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -25,7 +25,7 @@
       "BUILD_CAUSAL_GRAPH": 119,
       "DEEPEN_CAUSAL_GRAPH": 171,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 153
+      "CURATE_ROOT": 154
     }
   },
   "rows": [
@@ -3793,7 +3793,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 21,
+      "children": 22,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -7787,6 +7787,26 @@
       "series_size": 0,
       "series_overlap": null,
       "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "traitmech:000242",
+      "label": "Hailong system",
+      "category": "genomics",
+      "slug": "hailong_system",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 7,
+      "nodes": 8,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
       "reasons": []
     },
     {

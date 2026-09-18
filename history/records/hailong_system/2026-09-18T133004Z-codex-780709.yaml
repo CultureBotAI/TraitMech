@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hailong_system.yaml
+  slug: hailong_system
+session:
+  id: 2026-09-18T133004Z-codex-780709
+  timestamp: '2026-09-18T13:30:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add Hailong system trait
+  details: Minted traitmech:000242 for the Hailong NTase DNA-signal phage-defense system after
+    an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior
+    proposal record for Hailong. Added DOI-backed Tan and Kuehn/Pinilla-Redondo evidence,
+    a nonmechanistic causal graph linking a Hailong locus to HalB oligodeoxyadenylate
+    synthesis, HalA repression, phage-exonuclease-triggered HalA activation, and host
+    cell growth arrest, one Escherichia coli canonical example, a v119 METPO proposal,
+    plus a knowledge-gap discussion for Hailong ODA transfer and family breadth before
+    adding narrower Hailong mechanism children.
