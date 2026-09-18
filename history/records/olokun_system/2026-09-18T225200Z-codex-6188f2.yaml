@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/olokun_system.yaml
+  slug: olokun_system
+session:
+  id: 2026-09-18T225200Z-codex-6188f2
+  timestamp: '2026-09-18T22:52:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Added Olokun phage defense system
+  details: Minted traitmech:000254 for the Olokun bacterial phage defense system under phage
+    defense system after an ignored-and-hidden duplicate search found no live TraitMech, METPO,
+    or prior proposal record; added Millman et al. DOI evidence plus commit-pinned DefenseFinder
+    article, rule, and HMM evidence, a conservative nonmechanistic causal graph, and a v131
+    METPO placeholder proposal for METPO:1020800.

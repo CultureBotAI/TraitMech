@@ -595,6 +595,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/mokosh_system.html#mokosh-mechanism-gap"
  },
  {
+  "discussion_id": "olokun-mechanism-gap",
+  "prompt": "Resolve Olokun phage triggers and effector outputs before minting narrower Olokun mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Olokun system",
+  "source_id": "traitmech:000254",
+  "source_file": "olokun_system.yaml",
+  "attaches_to": [
+   "causal_graphs#olokun_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Olokun as a named anti-phage system with OloA and OloB profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/olokun_system.html#olokun-mechanism-gap"
+ },
+ {
   "discussion_id": "paris-trigger-and-counterdefense-gap",
   "prompt": "Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA suppression, and non-Ocr phage triggers before minting narrower PARIS subtype children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2126,9 +2145,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 122,
- "total_knowledge_gaps": 41,
- "total_source_entries": 121,
+ "total_discussions": 123,
+ "total_knowledge_gaps": 42,
+ "total_source_entries": 122,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
