@@ -1,0 +1,142 @@
+identifier: traitmech:000254
+label: Olokun system
+definition: A phage defense system in which an organism possesses a two-component
+  Olokun locus represented by OloA and OloB profiles that can protect bacteria from
+  bacteriophage infection.
+definition_source: DOI:10.1016/j.chom.2022.09.017
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Olokun
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1016/j.chom.2022.09.017
+  snippet: discovery of 21 defense systems that protect bacteria from phages, based
+    on computational genomic analyses and phage-infection experiments
+  notes: Millman et al. report the computational and experimental cohort that DefenseFinder
+    cites for Olokun as a bacterial anti-phage system.
+- reference: DOI:10.1101/2022.05.11.491447
+  snippet: discovery of 21 new defense systems that protect bacteria from phages,
+    based on computational genomic analyses and phage infection experiments
+  notes: The bioRxiv version of Millman et al. independently carries the 21-system
+    discovery claim linked from DefenseFinder's Olokun article registry.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Olokun | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+    systems that protect bacteria from phages
+  notes: The DefenseFinder model registry maps the named Olokun system to the Millman
+    et al. antiphage-system discovery preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Olokun\tOlokun\t2\t2\tOlokun__OloA, Olokun__OloB"
+  notes: The DefenseFinder rules table models Olokun with OloA and OloB profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Olokun__OloA                                      | Olokun__OloA                                      |
+    Olokun
+  notes: The DefenseFinder HMM inventory records OloA as an Olokun profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Olokun__OloB                                      | Olokun__OloB                                      |
+    Olokun
+  notes: The DefenseFinder HMM inventory records OloB as an Olokun profile.
+causal_graphs:
+- graph_id: olokun_locus_restricts_phage
+  title: Olokun loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an Olokun locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Olokun as a named anti-phage system with DefenseFinder
+    OloA and OloB profile choices while leaving its phage trigger, molecular substrate,
+    antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: olokun_locus
+    label: Olokun locus
+    node_type: GENETIC_ELEMENT
+    description: An Olokun anti-phage defense locus satisfying a DefenseFinder rule
+      over OloA and OloB profiles.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Olokun
+      system.
+  - node_id: olokun_system_trait
+    label: Olokun system
+    node_type: TRAIT
+    grounding: traitmech:000254
+    description: Possession of a genome-encoded Olokun phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: olokun_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Olokun to a bacterial anti-phage-system discovery
+      preprint and represents Olokun loci through OloA and OloB component profiles.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: discovery of 21 defense systems that protect bacteria from phages
+      notes: Millman et al. describe the anti-phage discovery cohort that the DefenseFinder
+        Olokun registry row maps to the Olokun system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Olokun | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: The DefenseFinder registry maps Olokun itself to the Millman et al. bacterial
+        antiphage-system discovery preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Olokun\tOlokun\t2\t2\tOlokun__OloA, Olokun__OloB"
+      notes: The DefenseFinder rules table supports OloA and OloB as Olokun system
+        profile choices.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: olokun_system_trait
+    description: Olokun-mediated phage restriction realizes the Olokun system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: discovery of 21 defense systems that protect bacteria from phages
+      notes: Millman et al. place the Olokun discovery cohort in the set of bacterial
+        systems that protect against phages.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Olokun | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: DefenseFinder records Olokun as a named system from the Millman et al.
+        antiphage discovery preprint.
+  - subject: olokun_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Olokun system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: An expanding arsenal of immune systems that protect bacteria from phages
+      notes: DefenseFinder associates Olokun with the Millman et al. bacterial antiphage-system
+        discovery paper.
+discussions:
+- discussion_id: olokun-mechanism-gap
+  prompt: Resolve Olokun phage triggers and effector outputs before minting narrower
+    Olokun mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Millman et al. and DefenseFinder support Olokun as a named anti-phage
+    system with OloA and OloB profile choices, but the trigger, molecular substrate,
+    antiviral effector output, and subtype-specific mechanism are not resolved enough
+    here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#olokun_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-18'
+curation_history:
+- timestamp: '2026-09-18T22:52:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Olokun system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v131.
+  llm_assisted: true
