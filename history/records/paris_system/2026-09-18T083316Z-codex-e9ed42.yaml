@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/paris_system.yaml
+  slug: paris_system
+session:
+  id: 2026-09-18T083316Z-codex-e9ed42
+  timestamp: '2026-09-18T08:33:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add PARIS system trait
+  details: Minted traitmech:000237 for the AriA/AriB PARIS abortive-infection system after
+    an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior
+    proposal record for PARIS, the expected slug, the source DOIs, or the reserved IDs. Rousset
+    et al., Deep et al., and Burman et al. support the phage anti-restriction-induced system
+    identity, AriA/AriB activation by foreign proteins, lysine-tRNA cleavage, an Escherichia
+    coli canonical example, and a nonmechanistic causal graph for PARIS-mediated abortive
+    infection.
