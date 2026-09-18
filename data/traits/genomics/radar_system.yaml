@@ -54,9 +54,9 @@ canonical_examples:
 causal_graphs:
 - graph_id: radar_rdrab_deamination_antiphage_defense
   title: RADAR RdrA/RdrB complexes couple deamination to phage defense
-  description: Evidence-backed process sketch linking a complete RADAR locus to RdrA/RdrB
-    supramolecular complex assembly, infection-associated adenosine-substrate deamination,
-    inosine nucleotide accumulation, and inhibition of phage replication.
+  description: Evidence-backed process sketch covering RADAR locus assembly, infection-associated
+    adenosine-substrate deamination, inosine nucleotide accumulation, and inhibition
+    of phage replication without asserting the unresolved exact coupling step.
   scope_status: NONMECHANISTIC
   scope_notes: The graph stays at the RADAR-family level and uses the mononucleotide-deamination
     mechanism from Duncan-Lowey et al. without asserting that the exact RdrA activation
@@ -110,16 +110,6 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2023.01.012
       snippet: RdrA and RdrB join to form a giant assembly up to 10 MDa
       notes: Duncan-Lowey et al. support RdrA/RdrB RADAR complex assembly.
-  - subject: radar_locus
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: adenosine_substrate_deamination
-    description: RADAR loci encode RdrB, which catalyzes ATP-to-ITP deamination.
-    evidence:
-    - reference: DOI:10.1016/j.cell.2023.01.012
-      snippet: RdrB catalyzes ATP-to-ITP conversion in vitro
-      notes: Duncan-Lowey et al. support RdrB as the ATP-to-ITP deaminase encoded
-        by RADAR loci.
   - subject: adenosine_substrate_deamination
     predicate: contributes to
     predicate_id: RO:0002326
@@ -188,4 +178,13 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v115.
+  llm_assisted: true
+- timestamp: '2026-09-18T10:07:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Resolved PR #978 review follow-ups #979, #980, and #981 plus PR #982 review
+    follow-ups #983, #984, and #985 by removing the unsupported RADAR-locus-to-deamination
+    edge, rewiring the RADAR confers edge to adenosine-nucleotide deamination, and
+    normalizing the initial per-record curation timestamp while leaving the append-only
+    session history record intact.'
   llm_assisted: true

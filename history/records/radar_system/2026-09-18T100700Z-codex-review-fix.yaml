@@ -19,8 +19,9 @@ events:
   - curation_history
   summary: Address RADAR review findings
   details: >-
-    Rewired the RADAR graph edges flagged on PR #978 so the RdrB ATP-to-ITP
-    evidence annotates a RADAR-locus to deamination edge and the
-    rapid-deamination evidence confers the RADAR trait directly from the
-    deamination node. Normalized the initial curation timestamps so they do
-    not postdate the merged curation.
+    Rewired the RADAR graph edges flagged on PR #978 so the rapid-deamination
+    evidence confers the RADAR trait directly from the deamination node and the
+    unsupported direct RADAR-locus to deamination edge is removed. Normalized
+    the initial per-record curation timestamp so it does not postdate the
+    merged curation and preserved the original append-only session history
+    record.
