@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CapRel system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>CapRel system</h1>
+    <p class="curie"><code>traitmech:000244</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses a fused CapRel toxin-antitoxin locus whose C-terminal antitoxin sensor can directly bind phage trigger proteins, relieve autoinhibition of the toxSAS toxin domain, promote tRNA pyrophosphorylation, and restrict phage propagation by blocking translation.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>CapRel sensors couple phage trigger binding to translation blockade</h2>
+      <p class="meta">Evidence-backed process sketch linking a fused CapRel toxin-antitoxin locus to direct phage-protein sensing, toxSAS activation, tRNA pyrophosphorylation, translation inhibition, and restricted phage propagation.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures CapRelSJ46 major-capsid-protein and Gp54 trigger evidence without claiming one universal CapRel phage trigger, allosteric route, escape route, or phage specificity across all fused CapRel homologs.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>CapRel sensors couple phage trigger binding to translation blockade</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for CapRel system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>CapRel locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>CapRel toxSAS activation</strong>
+            <code>RO:0002326</code>
+            <p>Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor</span>
+                <span class="meta">Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>phage trigger binding</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>CapRel toxSAS activation</strong>
+            <code>RO:0002213</code>
+            <p>Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">major capsid protein binds directly to the C-terminal domain</span>
+                <span class="meta">Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1038/s41586-024-08039-y</code>
+                <span class="evidence-snippet">directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain</span>
+                <span class="meta">Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>CapRel toxSAS activation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>tRNA pyrophosphorylation</strong>
+            <code>RO:0002326</code>
+            <p>CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">enabling the toxin domain to pyrophosphorylate tRNAs</span>
+                <span class="meta">Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>tRNA pyrophosphorylation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>translation blockade</strong>
+            <code>RO:0002326</code>
+            <p>tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">pyrophosphorylate tRNAs, which blocks translation</span>
+                <span class="meta">Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>translation blockade</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>restricted phage propagation</strong>
+            <code>RO:0002326</code>
+            <p>Translation blockade contributes to restriction of the infecting phage.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">blocks translation to restrict viral infection</span>
+                <span class="meta">Zhang et al. connect translation blockade to restriction of viral infection.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>restricted phage propagation</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>CapRel system</strong>
+            <code>METPO:2007700</code>
+            <p>CapRel-dependent restriction of phage propagation realizes the CapRel system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">fused CapRels can provide anti-phage defence</span>
+                <span class="meta">Zhang et al. support fused CapRels as anti-phage defense systems.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-7">
+            <strong>CapRel system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>CapRel system possession is a phage-defense-system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41586-022-05444-z</code>
+                <span class="evidence-snippet">a fused anti-phage toxin-antitoxin system</span>
+                <span class="meta">Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1038/s41586-022-05444-z</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (2)</h2>
+      <ul class="synonyms">
+
+        <li>CapRel toxin-antitoxin system <span class="meta">EXACT_SYNONYM · DOI:10.1038/s41586-022-05444-z</span></li>
+
+        <li>fused CapRel system <span class="meta">EXACT_SYNONYM · DOI:10.1038/s41586-022-05444-z</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="caprel-trigger-and-family-breadth-gap">
+        <p class="discussion-prompt">Resolve CapRel trigger breadth, phage escape routes, and family-specific activation before minting narrower CapRel mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>caprel-trigger-and-family-breadth-gap</code>
+          · raised by codex
+          · 2026-09-18
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Zhang et al. support CapRelSJ46 sensing of a major capsid protein and an unrelated Gp54 trigger, but fused CapRel homologs need separate review before TraitMech asserts one universal phage trigger, CapRel escape route, tRNA target spectrum, or phage specificity across the family.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-18T15:19:24Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted CapRel system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v121.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/caprel_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/caprel_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/caprel_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/caprel_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000244" target="_blank" rel="noopener"><code>traitmech:000244</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed process sketch linking a fused CapRel toxin-antitoxin locus to direct phage-protein sensing, toxSAS activation, tRNA pyrophosphorylation, translation inhibition, and restricted phage propagation.", "edges": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_locus", "target": "caprel_toxin_activation"}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_trigger_binding", "target": "caprel_toxin_activation"}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "enabling the toxin domain to pyrophosphorylate tRNAs"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_toxin_activation", "target": "trna_pyrophosphorylation"}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trna_pyrophosphorylation", "target": "translation_blockade"}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation_blockade", "target": "restricted_phage_propagation"}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "caprel_system_trait"}, {"description": "CapRel system possession is a phage-defense-system trait.", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "caprel_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "edge_id": "edge-1", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel locus", "target": "CapRel toxSAS activation"}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "edge_id": "edge-2", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage trigger binding", "target": "CapRel toxSAS activation"}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "edge_id": "edge-3", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "enabling the toxin domain to pyrophosphorylate tRNAs"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel toxSAS activation", "target": "tRNA pyrophosphorylation"}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "edge_id": "edge-4", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tRNA pyrophosphorylation", "target": "translation blockade"}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "edge_id": "edge-5", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation blockade", "target": "restricted phage propagation"}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "CapRel system"}, {"description": "CapRel system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CapRel system", "target": "phage defense system"}], "graph_id": "caprel_phage_triggered_translation_blockade", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A fused CapRel toxin-antitoxin locus encoding an N-terminal toxSAS toxin domain and a C-terminal antitoxin sensor domain.", "grounding": null, "id": "caprel_locus", "is_orphan": false, "label": "CapRel locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded fused CapRel toxin-antitoxin phage-defense system.", "grounding": "traitmech:000244", "id": "caprel_system_trait", "is_orphan": false, "label": "CapRel system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Relief of autoinhibition that activates the N-terminal CapRel toxSAS toxin domain.", "grounding": null, "id": "caprel_toxin_activation", "is_orphan": false, "label": "CapRel toxSAS activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct binding of a phage-encoded trigger protein to the CapRel antitoxin sensor domain.", "grounding": null, "id": "phage_trigger_binding", "is_orphan": false, "label": "phage trigger binding", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells whose CapRel system has blocked translation.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of cellular translation downstream of CapRel-mediated tRNA pyrophosphorylation.", "grounding": null, "id": "translation_blockade", "is_orphan": false, "label": "translation blockade", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pyrophosphorylation of transfer RNAs by activated CapRel toxSAS toxin activity.", "grounding": null, "id": "trna_pyrophosphorylation", "is_orphan": false, "label": "tRNA pyrophosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures CapRelSJ46 major-capsid-protein and Gp54 trigger evidence without claiming one universal CapRel phage trigger, allosteric route, escape route, or phage specificity across all fused CapRel homologs.", "scope_status": "NONMECHANISTIC", "title": "CapRel sensors couple phage trigger binding to translation blockade"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-18 15:19 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 639 TraitRecords
+      · embedding coverage 74.6%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

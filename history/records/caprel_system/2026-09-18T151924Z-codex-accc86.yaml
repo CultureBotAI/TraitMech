@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/caprel_system.yaml
+  slug: caprel_system
+session:
+  id: 2026-09-18T151924Z-codex-accc86
+  timestamp: '2026-09-18T15:19:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add CapRel system trait
+  details: Minted traitmech:000244 as a DOI-backed GENOMICS TraitRecord for fused CapRel toxin-antitoxin
+    phage-defense loci, added evidence snippets from the 2022 and 2024 Nature CapRel studies,
+    captured a family-level phage-triggered tRNA-pyrophosphorylation graph, and reserved METPO:1019800
+    in proposals/metpo_traitmech_v121.
