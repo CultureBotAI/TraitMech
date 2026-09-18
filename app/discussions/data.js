@@ -400,6 +400,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/disarm_system.html#disarm-downstream-effector-gap"
  },
  {
+  "discussion_id": "dodola-mechanism-gap",
+  "prompt": "Resolve Dodola phage triggers and effector outputs before minting narrower Dodola mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dodola system",
+  "source_id": "traitmech:000252",
+  "source_file": "dodola_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dodola_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Dodola as a named anti-phage system with DolA and DolB profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dodola_system.html#dodola-mechanism-gap"
+ },
+ {
   "discussion_id": "druantia-subtype-mechanism-gap",
   "prompt": "Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2088,9 +2107,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 120,
- "total_knowledge_gaps": 39,
- "total_source_entries": 119,
+ "total_discussions": 121,
+ "total_knowledge_gaps": 40,
+ "total_source_entries": 120,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

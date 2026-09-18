@@ -832,6 +832,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/bunzi_system",
     "genomics/caprel_system",
     "genomics/dazbog_system",
+    "genomics/dodola_system",
     "genomics/eleos_system",
     "genomics/mokosh_system",
     "genomics/sparta_system",
