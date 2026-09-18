@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/caprel_system.yaml
+  slug: caprel_system
+session:
+  id: 2026-09-18T154345Z-codex-issue1001
+  timestamp: '2026-09-18T15:43:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1001
+events:
+- type: EDIT
+  outcome: changed
+  summary: Tighten CapRel scope wording
+  details: Narrowed the CapRel system definition to fused locus possession, kept the
+    CapRelSJ46 trigger-to-translation-blockade mechanism in evidence and graph scope,
+    and expanded a dangling activation snippet into a self-contained Zhang et al.
+    quote fragment.

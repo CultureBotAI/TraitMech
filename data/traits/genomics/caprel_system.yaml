@@ -1,9 +1,8 @@
 identifier: traitmech:000244
 label: CapRel system
 definition: A phage defense system in which an organism possesses a fused CapRel toxin-antitoxin
-  locus whose C-terminal antitoxin sensor can directly bind phage trigger proteins,
-  relieve autoinhibition of the toxSAS toxin domain, promote tRNA pyrophosphorylation,
-  and restrict phage propagation by blocking translation.
+  locus encoding an N-terminal toxSAS toxin domain and a C-terminal antitoxin sensor
+  domain that together can restrict bacteriophage propagation.
 definition_source: DOI:10.1038/s41586-022-05444-z
 trait_category: GENOMICS
 term_kind: CLASS
@@ -28,8 +27,8 @@ evidence:
   notes: Zhang et al. support direct sensing of a phage major capsid protein by the
     CapRelSJ46 C-terminal antitoxin domain.
 - reference: DOI:10.1038/s41586-022-05444-z
-  snippet: enabling the toxin domain to pyrophosphorylate tRNAs, which blocks translation
-    to restrict viral infection
+  snippet: This open state enables CapRelSJ46 to pyrophosphorylate tRNAs and inhibit
+    translation
   notes: Zhang et al. connect phage-triggered CapRel activation to tRNA pyrophosphorylation,
     translation blockade, and restriction of viral infection.
 - reference: DOI:10.1038/s41586-022-05444-z
@@ -136,7 +135,7 @@ causal_graphs:
       tRNAs.
     evidence:
     - reference: DOI:10.1038/s41586-022-05444-z
-      snippet: enabling the toxin domain to pyrophosphorylate tRNAs
+      snippet: This open state enables CapRelSJ46 to pyrophosphorylate tRNAs
       notes: Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated
         tRNA pyrophosphorylation.
   - subject: trna_pyrophosphorylation
@@ -199,4 +198,11 @@ curation_history:
   changes: Minted CapRel system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v121.
+  llm_assisted: true
+- timestamp: '2026-09-18T15:43:45Z'
+  curator: codex
+  action: UPDATED_DEFINITION
+  changes: Tightened the CapRel system definition around fused CapRel locus possession
+    and expanded a dangling CapRel activation snippet after late Copilot feedback
+    in issue 1001.
   llm_assisted: true
