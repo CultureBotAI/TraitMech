@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/aditi_system.yaml
+  slug: aditi_system
+session:
+  id: 2026-09-18T184725Z-codex-771ad2
+  timestamp: '2026-09-18T18:47:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Aditi system trait
+  details: Minted traitmech:000247 for the DOI-backed Aditi phage-defense system under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; added Millman et al. and commit-pinned DefenseFinder
+    evidence for the Aditi registry row and DitA/DitB mandatory profiles, a nonmechanistic
+    Aditi locus-to-phage-restriction graph, an open mechanism knowledge gap attached to that
+    graph, and a same-PR METPO v124 proposal reserving METPO:1020100.
