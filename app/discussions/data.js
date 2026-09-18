@@ -290,6 +290,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cbass_system.html#cbass-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "dazbog-mechanism-gap",
+  "prompt": "Resolve Dazbog phage triggers and effector outputs before minting narrower Dazbog mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dazbog system",
+  "source_id": "traitmech:000245",
+  "source_file": "dazbog_system.yaml",
+  "attaches_to": [],
+  "rationale": "Millman et al. and DefenseFinder support Dazbog as a named DzbA/DzbB anti-phage locus, but the trigger, molecular substrate, antiviral effector output, and death-or-survival phenotype are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dazbog_system.html#dazbog-mechanism-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -1957,9 +1974,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 113,
- "total_knowledge_gaps": 32,
- "total_source_entries": 112,
+ "total_discussions": 114,
+ "total_knowledge_gaps": 33,
+ "total_source_entries": 113,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

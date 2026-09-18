@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dazbog_system.yaml
+  slug: dazbog_system
+session:
+  id: 2026-09-18T161442Z-claude-code-d2ecff
+  timestamp: '2026-09-18T16:14:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Dazbog system trait
+  details: Minted traitmech:000245 for the Dazbog system GENOMICS trait using Millman et al.
+    DOI evidence plus commit-pinned DefenseFinder model registries for the Dazbog and DzbA/DzbB
+    system scope; reserved METPO:1019900 in proposals/metpo_traitmech_v122 for upstream replacement.
