@@ -87,6 +87,10 @@ causal_graphs:
       preprint and represents Mokosh loci through type I MkoA/MkoB and type II MkoC
       component profiles.
     evidence:
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: discovery of 21 defense systems that protect bacteria from phages
+      notes: Millman et al. describe the anti-phage discovery cohort that the DefenseFinder
+        Mokosh registry row maps to the Mokosh system.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Mokosh | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
         systems that protect bacteria from phages
@@ -134,6 +138,8 @@ discussions:
     system with type I and type II profiles, but the trigger, molecular substrate,
     antiviral effector output, and subtype-specific mechanism are not resolved enough
     here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#mokosh_locus_restricts_phage
   posed_by: codex
   posed_date: '2026-09-18'
 curation_history:

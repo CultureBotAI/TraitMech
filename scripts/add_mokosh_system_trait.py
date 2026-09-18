@@ -209,6 +209,19 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
+                            "reference": MILLMAN,
+                            "snippet": (
+                                "discovery of 21 defense systems that "
+                                "protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "Millman et al. describe the anti-phage "
+                                "discovery cohort that the DefenseFinder "
+                                "Mokosh registry row maps to the Mokosh "
+                                "system."
+                            ),
+                        },
+                        {
                             "reference": DEFENSEFINDER_ARTICLES,
                             "snippet": (
                                 "Mokosh | 10\\.1101/2022\\.05\\.11\\.491447 "
@@ -322,6 +335,7 @@ RECORD: dict[str, Any] = {
                 "output, and subtype-specific mechanism are not resolved "
                 "enough here to assert a narrower mechanistic child trait."
             ),
+            "attaches_to": ["causal_graphs#mokosh_locus_restricts_phage"],
             "posed_by": CURATOR,
             "posed_date": "2026-09-18",
         }
