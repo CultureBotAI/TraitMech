@@ -212,7 +212,8 @@ RECORD: dict[str, Any] = {
                             "reference": DEFENSEFINDER_ARTICLES,
                             "snippet": (
                                 "Mokosh | 10\\.1101/2022\\.05\\.11\\.491447 "
-                                "| An expanding arsenal of immune systems"
+                                "| An expanding arsenal of immune systems "
+                                "that protect bacteria from phages"
                             ),
                             "notes": (
                                 "The DefenseFinder registry maps Mokosh "
@@ -266,8 +267,9 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": DEFENSEFINDER_ARTICLES,
                             "snippet": (
-                                "10\\.1101/2022\\.05\\.11\\.491447 | An "
-                                "expanding arsenal of immune systems"
+                                "Mokosh | 10\\.1101/2022\\.05\\.11\\.491447 "
+                                "| An expanding arsenal of immune systems "
+                                "that protect bacteria from phages"
                             ),
                             "notes": (
                                 "DefenseFinder records Mokosh as a named "

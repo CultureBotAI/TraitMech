@@ -89,7 +89,7 @@ causal_graphs:
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Mokosh | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
-        systems
+        systems that protect bacteria from phages
       notes: The DefenseFinder registry maps Mokosh itself to the Millman et al. bacterial
         antiphage-system discovery preprint.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
@@ -110,7 +110,8 @@ causal_graphs:
       notes: Millman et al. place the Mokosh discovery cohort in the set of bacterial
         systems that protect against phages.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune systems
+      snippet: Mokosh | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
       notes: DefenseFinder records Mokosh as a named system from the Millman et al.
         antiphage discovery preprint.
   - subject: mokosh_system_trait
