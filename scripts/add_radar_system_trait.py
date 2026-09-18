@@ -20,7 +20,8 @@ TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "radar_system.yaml"
 DUNCAN_LOWEY = "DOI:10.1016/j.cell.2023.01.012"
 GAO = "DOI:10.1016/j.cell.2023.01.026"
 CURATOR = "codex"
-TIMESTAMP = "2026-09-18T10:18:00Z"
+TIMESTAMP = "2026-09-18T09:55:00Z"
+REVIEW_TIMESTAMP = "2026-09-18T10:07:00Z"
 
 RECORD: dict[str, Any] = {
     "identifier": "traitmech:000238",
@@ -144,11 +145,11 @@ RECORD: dict[str, Any] = {
                 "defense"
             ),
             "description": (
-                "Evidence-backed process sketch linking a complete "
-                "RADAR locus to RdrA/RdrB supramolecular complex "
+                "Evidence-backed process sketch covering RADAR locus "
                 "assembly, infection-associated adenosine-substrate "
                 "deamination, inosine nucleotide accumulation, and "
-                "inhibition of phage replication."
+                "inhibition of phage replication without asserting "
+                "the unresolved exact coupling step."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
@@ -254,31 +255,6 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "rdra_rdrb_complex_assembly",
-                    "predicate": "enables",
-                    "predicate_id": "RO:0002327",
-                    "object": "adenosine_substrate_deamination",
-                    "description": (
-                        "The RdrA/RdrB RADAR complex enables RdrB "
-                        "deamination of adenosine-containing substrates."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": DUNCAN_LOWEY,
-                            "snippet": (
-                                "Our results define ATP mononucleotide "
-                                "deamination as a determinant of RADAR "
-                                "immunity"
-                            ),
-                            "notes": (
-                                "Duncan-Lowey et al. support ATP "
-                                "mononucleotide deamination as a RADAR "
-                                "immune output."
-                            ),
-                        }
-                    ],
-                },
-                {
                     "subject": "adenosine_substrate_deamination",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
@@ -334,13 +310,14 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "inosine_nucleotide_accumulation",
+                    "subject": "adenosine_substrate_deamination",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": "radar_system_trait",
                     "description": (
-                        "RADAR-mediated inosine nucleotide accumulation "
-                        "realizes the RADAR antiphage phenotype."
+                        "RADAR-mediated adenosine-nucleotide "
+                        "deamination realizes the RADAR antiphage "
+                        "phenotype."
                     ),
                     "evidence": [
                         {
@@ -352,8 +329,10 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "Duncan-Lowey et al. connect rapid "
-                                "adenosine-nucleotide deamination to "
-                                "RADAR antiphage defense."
+                                "adenosine-nucleotide deamination, "
+                                "rather than downstream inosine "
+                                "accumulation alone, to RADAR antiphage "
+                                "defense."
                             ),
                         }
                     ],
@@ -437,6 +416,22 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADVERSARIAL_REVIEW_REPAIR",
+        changes=(
+            "Resolved PR #978 review follow-ups #979, #980, and #981 "
+            "plus PR #982 review follow-ups #983, #984, and #985 by "
+            "removing the unsupported RADAR-locus-to-deamination edge, "
+            "rewiring the RADAR confers edge to adenosine-nucleotide "
+            "deamination, and normalizing the initial per-record "
+            "curation timestamp while leaving the append-only session "
+            "history record intact."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

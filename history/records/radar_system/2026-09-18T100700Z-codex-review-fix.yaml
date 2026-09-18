@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/radar_system.yaml
+  slug: radar_system
+session:
+  id: 2026-09-18T100700Z-codex-review-fix
+  timestamp: '2026-09-18T10:07:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Address RADAR review findings
+  details: >-
+    Rewired the RADAR graph edges flagged on PR #978 so the rapid-deamination
+    evidence confers the RADAR trait directly from the deamination node and the
+    unsupported direct RADAR-locus to deamination edge is removed. Normalized
+    the initial per-record curation timestamp so it does not postdate the
+    merged curation and preserved the original append-only session history
+    record.
