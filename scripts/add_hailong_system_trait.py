@@ -18,7 +18,7 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "hailong_system.yaml"
 
 TAN = "DOI:10.1038/s41586-025-09058-z"
-CHAN = "DOI:10.1016/j.molcel.2025.06.011"
+KUEHN = "DOI:10.1016/j.molcel.2025.06.011"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-18T13:27:00Z"
@@ -42,7 +42,7 @@ RECORD: dict[str, Any] = {
         {
             "synonym_text": "Hailong anti-phage system",
             "synonym_type": "EXACT_SYNONYM",
-            "source": CHAN,
+            "source": KUEHN,
         }
     ],
     "evidence": [
@@ -121,7 +121,7 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": CHAN,
+            "reference": KUEHN,
             "snippet": (
                 "the bacterial Hailong anti-phage system, in which "
                 "constitutively synthesized DNA oligonucleotides inhibit a "
@@ -364,6 +364,7 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": TAN,
                             "snippet": (
+                                "viral DNA replication enzymes that "
                                 "degrade ODA and trigger release of HalA "
                                 "ion channel effector function"
                             ),
@@ -376,7 +377,10 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": TAN,
                             "snippet": (
-                                "induce protective host cell growth arrest"
+                                "viral DNA exonucleases required for phage "
+                                "replication trigger release of the primed "
+                                "HalA complex and induce protective host "
+                                "cell growth arrest"
                             ),
                             "notes": (
                                 "Tan et al. support host cell growth arrest "

@@ -167,11 +167,13 @@ causal_graphs:
       sensing to protective host cell growth arrest.
     evidence:
     - reference: DOI:10.1038/s41586-025-09058-z
-      snippet: degrade ODA and trigger release of HalA ion channel effector function
+      snippet: viral DNA replication enzymes that degrade ODA and trigger release
+        of HalA ion channel effector function
       notes: Tan et al. connect ODA degradation to release of HalA ion-channel effector
         function.
     - reference: DOI:10.1038/s41586-025-09058-z
-      snippet: induce protective host cell growth arrest
+      snippet: viral DNA exonucleases required for phage replication trigger release
+        of the primed HalA complex and induce protective host cell growth arrest
       notes: Tan et al. support host cell growth arrest as a protective Hailong output
         after phage-exonuclease challenge.
   - subject: host_cell_growth_arrest
