@@ -182,6 +182,7 @@ data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	plasmid carriage	pla
 data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pycsar_system.yaml	traitmech:000236	Pycsar system	pycsar_cyclic_pyrimidine_phage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/radar_system.yaml	traitmech:000238	RADAR system	radar_rdrab_deamination_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	restriction-modification system	rm_self_nonself_defense	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/genomics/retron_system.yaml	traitmech:000235	Retron system	retron_msdna_effector_abortive_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-

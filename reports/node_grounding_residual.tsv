@@ -4,6 +4,7 @@ na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 restricted phage propagation	BIOLOGICAL_PROCESS	6	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
+phage replication	BIOLOGICAL_PROCESS	6	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml|data/traits/genomics/gabija_system.yaml
 atp	CHEMICAL	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/oxygenic_photosynthesis.yaml
 acetyl-coa	CHEMICAL	6	data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 mreb	GENE_OR_PROTEIN	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccobacillus_shaped.yaml
@@ -17,7 +18,6 @@ temperature decrease	ENVIRONMENTAL_FACTOR	5	data/traits/environment/mesophilic.y
 na+/h+ antiporters	GENE_OR_PROTEIN	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml|data/traits/environment/ph_delta_high.yaml
 maximal growth rate	QUALITY	5	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/pressure_optimum.yaml
 f0f1-atpase	GENE_OR_PROTEIN	5	data/traits/environment/ph_delta_high.yaml|data/traits/environment/ph_delta_mid1.yaml|data/traits/environment/ph_delta_mid3.yaml
-phage replication	BIOLOGICAL_PROCESS	5	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml|data/traits/genomics/gabija_system.yaml
 formate	CHEMICAL	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 oxygen	CHEMICAL	5	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/oxidative_phosphorylation.yaml|data/traits/morphology/carboxysome.yaml
 mrec	GENE_OR_PROTEIN	5	data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/cell_width_small.yaml|data/traits/morphology/fusiform_shaped.yaml
@@ -1288,6 +1288,10 @@ phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/py
 cyclic pyrimidine second messenger synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 cyclic pyrimidine receptor activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 pycsar antiviral output	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
+radar locus	GENETIC_ELEMENT	1	data/traits/genomics/radar_system.yaml
+rdra/rdrb supramolecular complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
+radar adenosine-substrate deamination	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
+inosine nucleotide accumulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/radar_system.yaml
 foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/restriction_modification_system.yaml
 cognate dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 host recognition site methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/restriction_modification_system.yaml
