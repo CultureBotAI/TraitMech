@@ -258,6 +258,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avast_system.html#avast-subtype-effector-gap"
  },
  {
+  "discussion_id": "borvo-mechanism-gap",
+  "prompt": "Resolve Borvo phage triggers and effector outputs before minting narrower Borvo mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Borvo system",
+  "source_id": "traitmech:000249",
+  "source_file": "borvo_system.yaml",
+  "attaches_to": [
+   "causal_graphs#borvo_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Borvo as a named anti-phage system with BovA profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/borvo_system.html#borvo-mechanism-gap"
+ },
+ {
   "discussion_id": "brex-molecular-coupling-gap",
   "prompt": "Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.",
   "kind": "KNOWLEDGE_GAP",
@@ -2031,9 +2050,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 117,
- "total_knowledge_gaps": 36,
- "total_source_entries": 116,
+ "total_discussions": 118,
+ "total_knowledge_gaps": 37,
+ "total_source_entries": 117,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
