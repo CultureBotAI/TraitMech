@@ -222,6 +222,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/abortive_infection_system.html#abortive-infection-subfamily-split-gap"
  },
  {
+  "discussion_id": "avast-subtype-effector-gap",
+  "prompt": "Resolve AVAST subtype sensors, phage triggers, and effector outputs before minting narrower Avs1-Avs5 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AVAST system",
+  "source_id": "traitmech:000239",
+  "source_file": "avast_system.yaml",
+  "attaches_to": [],
+  "rationale": "Gao et al. support phage-protein pattern recognition by Avs1 through Avs4, while Muralidharan et al. support Avs5 immunity against nucleus-forming jumbo phages through phage-triggered Sir2-like effector activation. The first TraitRecord therefore stays at the AVAST-system level until separate review resolves which phage cues, effector domains, and antiviral substrates generalize across AVAST loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/avast_system.html#avast-subtype-effector-gap"
+ },
+ {
   "discussion_id": "brex-molecular-coupling-gap",
   "prompt": "Resolve the molecular coupling between BREX-guided host methylation and phage-DNA replication arrest before adding more specific BREX mechanism edges.",
   "kind": "KNOWLEDGE_GAP",
@@ -1872,9 +1889,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 108,
- "total_knowledge_gaps": 27,
- "total_source_entries": 107,
+ "total_discussions": 109,
+ "total_knowledge_gaps": 28,
+ "total_source_entries": 108,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
