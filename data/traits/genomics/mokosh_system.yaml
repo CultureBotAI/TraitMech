@@ -17,8 +17,8 @@ evidence:
 - reference: DOI:10.1016/j.chom.2022.09.017
   snippet: discovery of 21 defense systems that protect bacteria from phages, based
     on computational genomic analyses and phage-infection experiments
-  notes: Millman et al. report the computational and experimental cohort in which
-    Mokosh was discovered as a bacterial anti-phage system.
+  notes: Millman et al. report the computational and experimental cohort that DefenseFinder
+    cites for Mokosh as a bacterial anti-phage system.
 - reference: DOI:10.1101/2022.05.11.491447
   snippet: discovery of 21 new defense systems that protect bacteria from phages,
     based on computational genomic analyses and phage infection experiments
@@ -83,9 +83,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: restricted_phage_propagation
-    description: DefenseFinder represents Mokosh loci through type I MkoA/MkoB and
-      type II MkoC component profiles.
+    description: DefenseFinder maps Mokosh to a bacterial anti-phage-system discovery
+      preprint and represents Mokosh loci through type I MkoA/MkoB and type II MkoC
+      component profiles.
     evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Mokosh | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems
+      notes: The DefenseFinder registry maps Mokosh itself to the Millman et al.
+        bacterial antiphage-system discovery preprint.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Mokosh_type_I__MkoA_A, Mokosh_type_I__MkoB_A
       notes: The DefenseFinder rules table supports MkoA and MkoB as Mokosh type I

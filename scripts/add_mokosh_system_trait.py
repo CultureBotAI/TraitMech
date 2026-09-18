@@ -67,7 +67,7 @@ RECORD: dict[str, Any] = {
             ),
             "notes": (
                 "Millman et al. report the computational and experimental "
-                "cohort in which Mokosh was discovered as a bacterial "
+                "cohort that DefenseFinder cites for Mokosh as a bacterial "
                 "anti-phage system."
             ),
         },
@@ -202,10 +202,24 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "RO:0002326",
                     "object": "restricted_phage_propagation",
                     "description": (
-                        "DefenseFinder represents Mokosh loci through type I "
-                        "MkoA/MkoB and type II MkoC component profiles."
+                        "DefenseFinder maps Mokosh to a bacterial "
+                        "anti-phage-system discovery preprint and represents "
+                        "Mokosh loci through type I MkoA/MkoB and type II "
+                        "MkoC component profiles."
                     ),
                     "evidence": [
+                        {
+                            "reference": DEFENSEFINDER_ARTICLES,
+                            "snippet": (
+                                "Mokosh | 10\\.1101/2022\\.05\\.11\\.491447 "
+                                "| An expanding arsenal of immune systems"
+                            ),
+                            "notes": (
+                                "The DefenseFinder registry maps Mokosh "
+                                "itself to the Millman et al. bacterial "
+                                "antiphage-system discovery preprint."
+                            ),
+                        },
                         {
                             "reference": DEFENSEFINDER_RULES,
                             "snippet": (
@@ -340,6 +354,8 @@ def main() -> int:
 
     rel = TARGET.relative_to(REPO_ROOT)
     if args.apply:
+        if TARGET.exists():
+            raise SystemExit(f"{rel} already exists")
         write_validated_trait(record, TARGET)
         print(f"wrote {rel}")
     else:
