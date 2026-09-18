@@ -451,7 +451,9 @@ window.searchData = [
   "source_name": "Mokosh system",
   "source_id": "traitmech:000246",
   "source_file": "mokosh_system.yaml",
-  "attaches_to": [],
+  "attaches_to": [
+   "causal_graphs#mokosh_locus_restricts_phage"
+  ],
   "rationale": "Millman et al. and DefenseFinder support Mokosh as a named anti-phage system with type I and type II profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
   "num_experiments": 0,
   "num_evidence": 0,
