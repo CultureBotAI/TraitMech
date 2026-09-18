@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hna_system.yaml
+  slug: hna_system
+session:
+  id: 2026-09-18T124612Z-codex-a9003b
+  timestamp: '2026-09-18T12:46:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Hna system trait
+  details: Minted traitmech:000241 for the Hna SF2 helicase/nuclease phage-defense system
+    after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or
+    prior proposal record for Hna. Added DOI-backed Sather and Hooper evidence, a nonmechanistic
+    causal graph linking an Hna locus to phage SSB-triggered nuclease activation and abortive
+    infection, one Sinorhizobium meliloti canonical example, plus a knowledge-gap discussion
+    for Hna trigger breadth before adding narrower Hna mechanism children.

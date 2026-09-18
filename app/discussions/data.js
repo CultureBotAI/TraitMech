@@ -341,6 +341,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hachiman_system.html#hachiman-subtype-and-trigger-gap"
  },
  {
+  "discussion_id": "hna-trigger-and-family-breadth-gap",
+  "prompt": "Resolve Hna trigger breadth, phage escape routes, and family architecture before minting narrower Hna mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hna system",
+  "source_id": "traitmech:000241",
+  "source_file": "hna_system.yaml",
+  "attaches_to": [],
+  "rationale": "Sather et al. support Sinorhizobium Hna abortive infection after phage infection or phage SSB expression, and Hooper et al. support 5A SSB stimulation of nuclease activation, but Hna homologs need separate review before TraitMech asserts one universal phage trigger, ATP-dependent activation gate, DNA substrate, escape route, or host death timing across the full Hna family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hna_system.html#hna-trigger-and-family-breadth-gap"
+ },
+ {
   "discussion_id": "kiwa-activation-and-counterdefense-gap",
   "prompt": "Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details before minting narrower Kiwa mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1906,9 +1923,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 110,
- "total_knowledge_gaps": 29,
- "total_source_entries": 109,
+ "total_discussions": 111,
+ "total_knowledge_gaps": 30,
+ "total_source_entries": 110,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hna system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Hna system</h1>
+    <p class="curie"><code>traitmech:000241</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses an Hna locus encoding a single SF2 helicase/nuclease effector that protects cells from bacteriophage infection by responding to phage single-stranded DNA-binding protein challenge, shifting toward dysregulated nuclease activation, and triggering abortive infection.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Hna nuclease activation couples phage SSB challenge to abortive infection</h2>
+      <p class="meta">Evidence-backed process sketch linking an Hna locus to phage single-stranded DNA-binding protein challenge, dysregulated helicase/nuclease activity, abortive infection, and inhibition of phage spread.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Sather et al. and Hooper et al. Hna phage-SSB-triggered abortive infection evidence without asserting one universal phage trigger, escape route, DNA substrate, ATP-concentration gate, or host-cell-death timing across all Hna homologs.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Hna nuclease activation couples phage SSB challenge to abortive infection</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for Hna system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>Hna locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Hna nuclease activation</strong>
+            <code>RO:0002326</code>
+            <p>Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2023.01.010</code>
+                <span class="evidence-snippet">mutagenesis of these motifs inactivating viral defense</span>
+                <span class="meta">Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>phage SSB stimulation</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>Hna nuclease activation</strong>
+            <code>RO:0002213</code>
+            <p>A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2023.01.010</code>
+                <span class="evidence-snippet">A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)</span>
+                <span class="meta">Sather et al. support Hna response to a phage SSB independently of whole-phage infection.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1038/s41467-026-73157-2</code>
+                <span class="evidence-snippet">shifts catalytic partitioning toward dysregulated nuclease activation</span>
+                <span class="meta">Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>Hna nuclease activation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>abortive infection response</strong>
+            <code>RO:0002326</code>
+            <p>Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-026-73157-2</code>
+                <span class="evidence-snippet">Disruption of this balance enhances DNA cleavage and causes cellular toxicity</span>
+                <span class="meta">Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2023.01.010</code>
+                <span class="evidence-snippet">infected cells carrying the system die but do not release phage progeny</span>
+                <span class="meta">Sather et al. support the abortive infection host-cell fate of Hna-containing cells.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>abortive infection response</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>Hna system</strong>
+            <code>METPO:2007700</code>
+            <p>Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2023.01.010</code>
+                <span class="evidence-snippet">Hna limits phage spread by initiating abortive infection in response to a phage protein</span>
+                <span class="meta">Sather et al. support abortive infection as the Hna antiviral output.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>Hna system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>Hna system possession is a phage-defense-system trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-026-73157-2</code>
+                <span class="evidence-snippet">Hna is a broadly distributed anti-phage immune system</span>
+                <span class="meta">Hooper et al. place Hna in the anti-phage immune-system family.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1016/j.chom.2023.01.010</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>Hna anti-phage defense system <span class="meta">EXACT_SYNONYM · DOI:10.1038/s41467-026-73157-2</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Sinorhizobium meliloti</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=382"
+             rel="nofollow noreferrer"><code>NCBITaxon:382</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1016/j.chom.2023.01.010"
+             rel="nofollow noreferrer"><code>DOI:10.1016/j.chom.2023.01.010</code></a>
+
+
+          <span class="meta">Sather et al. showed that Sinorhizobium meliloti Hna provides protection against diverse bacteriophages and triggers abortive infection in phage-infected cells.</span>
+        </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="hna-trigger-and-family-breadth-gap">
+        <p class="discussion-prompt">Resolve Hna trigger breadth, phage escape routes, and family architecture before minting narrower Hna mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>hna-trigger-and-family-breadth-gap</code>
+          · raised by codex
+          · 2026-09-18
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Sather et al. support Sinorhizobium Hna abortive infection after phage infection or phage SSB expression, and Hooper et al. support 5A SSB stimulation of nuclease activation, but Hna homologs need separate review before TraitMech asserts one universal phage trigger, ATP-dependent activation gate, DNA substrate, escape route, or host death timing across the full Hna family.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-18T12:46:11Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted Hna system as a DOI-backed GENOMICS TraitRecord under the phage defense system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v118.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/hna_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/hna_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/hna_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/hna_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000241" target="_blank" rel="noopener"><code>traitmech:000241</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed process sketch linking an Hna locus to phage single-stranded DNA-binding protein challenge, dysregulated helicase/nuclease activity, abortive infection, and inhibition of phage spread.", "edges": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_locus", "target": "hna_nuclease_activation"}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_ssb_stimulation", "target": "hna_nuclease_activation"}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "hna_nuclease_activation", "target": "abortive_infection_response"}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive_infection_response", "target": "hna_system_trait"}, {"description": "Hna system possession is a phage-defense-system trait.", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "hna_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Hna loci encode SF2 helicase/nuclease proteins whose conserved helicase and nuclease motifs are required for viral defense.", "edge_id": "edge-1", "evidence": [{"notes": "Sather et al. connect Hna helicase and nuclease motifs to antiphage activity.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "mutagenesis of these motifs inactivating viral defense"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna locus", "target": "Hna nuclease activation"}, {"description": "A phage-encoded single-stranded DNA-binding protein stimulates Hna and shifts it toward dysregulated nuclease activation.", "edge_id": "edge-2", "evidence": [{"notes": "Sather et al. support Hna response to a phage SSB independently of whole-phage infection.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "A similar host cell response is triggered in cells containing Hna upon expression of a phage-encoded single-stranded DNA binding protein (SSB)"}, {"notes": "Hooper et al. directly connect phage SSB stimulation to Hna nuclease activation.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "shifts catalytic partitioning toward dysregulated nuclease activation"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage SSB stimulation", "target": "Hna nuclease activation"}, {"description": "Dysregulated Hna nuclease activation damages DNA, causes cellular toxicity, and contributes to the abortive infection response.", "edge_id": "edge-3", "evidence": [{"notes": "Hooper et al. support Hna nuclease dysregulation as a toxic DNA-cleavage output.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Disruption of this balance enhances DNA cleavage and causes cellular toxicity"}, {"notes": "Sather et al. support the abortive infection host-cell fate of Hna-containing cells.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "infected cells carrying the system die but do not release phage progeny"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Hna nuclease activation", "target": "abortive infection response"}, {"description": "Hna-mediated abortive infection is the phage-defense output that realizes the Hna system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Sather et al. support abortive infection as the Hna antiviral output.", "reference": "DOI:10.1016/j.chom.2023.01.010", "snippet": "Hna limits phage spread by initiating abortive infection in response to a phage protein"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive infection response", "target": "Hna system"}, {"description": "Hna system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Hooper et al. place Hna in the anti-phage immune-system family.", "reference": "DOI:10.1038/s41467-026-73157-2", "snippet": "Hna is a broadly distributed anti-phage immune system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Hna system", "target": "phage defense system"}], "graph_id": "hna_ssb_triggered_abortive_infection", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Host cell death after infection that prevents release of bacteriophage progeny.", "grounding": null, "id": "abortive_infection_response", "is_orphan": false, "label": "abortive infection response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-effector Hna phage-defense locus encoding an SF2 helicase/nuclease immune protein.", "grounding": null, "id": "hna_locus", "is_orphan": false, "label": "Hna locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "Dysregulated activation of Hna nuclease activity after phage single-stranded DNA-binding protein challenge.", "grounding": null, "id": "hna_nuclease_activation", "is_orphan": false, "label": "Hna nuclease activation", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Hna phage-defense system.", "grounding": "traitmech:000241", "id": "hna_system_trait", "is_orphan": false, "label": "Hna system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stimulation of Hna by a phage-encoded single-stranded DNA-binding protein.", "grounding": null, "id": "phage_ssb_stimulation", "is_orphan": false, "label": "phage SSB stimulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures Sather et al. and Hooper et al. Hna phage-SSB-triggered abortive infection evidence without asserting one universal phage trigger, escape route, DNA substrate, ATP-concentration gate, or host-cell-death timing across all Hna homologs.", "scope_status": "NONMECHANISTIC", "title": "Hna nuclease activation couples phage SSB challenge to abortive infection"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-18 12:46 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 636 TraitRecords
+      · embedding coverage 75.0%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
