@@ -12,14 +12,14 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from traitmech.curate.curation_event import record_curation_event
-from traitmech.validation.write_validated import write_validated_trait
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "avast_system.yaml"
 
 GAO_2020 = "DOI:10.1126/science.aba0372"
 GAO_2022 = "DOI:10.1126/science.abm4096"
-MURALIDHARAN = "DOI:10.1016/j.cell.2025.12.004"
+MURALIDHARAN = "DOI:10.1016/j.molcel.2026.01.004"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-18T10:44:12Z"
 
@@ -96,7 +96,7 @@ RECORD: dict[str, Any] = {
             "reference": MURALIDHARAN,
             "snippet": (
                 "Recognition of phage infection triggers the Sir2-like "
-                "effector domain of Avs5 across all three Avs5 clades"
+                "effector domain of Avs5 across three Avs5 clades"
             ),
             "notes": (
                 "Muralidharan et al. support a subtype-specific Avs5 "
@@ -258,7 +258,7 @@ RECORD: dict[str, Any] = {
                             "snippet": (
                                 "Recognition of phage infection "
                                 "triggers the Sir2-like effector domain "
-                                "of Avs5 across all three Avs5 clades"
+                                "of Avs5 across three Avs5 clades"
                             ),
                             "notes": (
                                 "Muralidharan et al. connect phage "

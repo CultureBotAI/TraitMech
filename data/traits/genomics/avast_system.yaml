@@ -28,15 +28,15 @@ evidence:
   notes: Gao et al. characterized Avs1 through Avs4 as prokaryotic STAND-family innate
     immune receptors that detect conserved phage proteins and trigger subtype-specific
     antiviral effector outputs.
-- reference: DOI:10.1016/j.cell.2025.12.004
+- reference: DOI:10.1016/j.molcel.2026.01.004
   snippet: AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of
     numerous domains (STAND) superfamily, confer conserved immunity against jumbo
     phages
   notes: Muralidharan et al. extend the named AVAST family with Avs5 systems that
     defend against nucleus-forming jumbo phages.
-- reference: DOI:10.1016/j.cell.2025.12.004
+- reference: DOI:10.1016/j.molcel.2026.01.004
   snippet: Recognition of phage infection triggers the Sir2-like effector domain of
-    Avs5 across all three Avs5 clades
+    Avs5 across three Avs5 clades
   notes: Muralidharan et al. support a subtype-specific Avs5 effector activation mechanism
     downstream of phage infection sensing.
 canonical_examples:
@@ -45,7 +45,7 @@ canonical_examples:
   note: Muralidharan et al. characterized the Pseudomonas aeruginosa Avs5-1 system
     and showed that its Sir2-like effector domain is activated during jumbo-phage
     infection.
-  reference: DOI:10.1016/j.cell.2025.12.004
+  reference: DOI:10.1016/j.molcel.2026.01.004
 causal_graphs:
 - graph_id: avast_stand_pattern_recognition_defense
   title: AVAST STAND receptors detect phage proteins during antiphage defense
@@ -101,7 +101,7 @@ causal_graphs:
       snippet: Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes
         the portal
       notes: Gao et al. support Avs1 through Avs4 as phage-protein-sensing AVAST receptors.
-    - reference: DOI:10.1016/j.cell.2025.12.004
+    - reference: DOI:10.1016/j.molcel.2026.01.004
       snippet: Avs5 localizes to early infection vesicles, where it senses an essential,
         early-expressed phage protein named JADA
       notes: Muralidharan et al. support phage-infection recognition by Avs5 receptors.
@@ -112,9 +112,9 @@ causal_graphs:
     description: Detection of a phage cue activates the effector domain coupled to
       the cognate Avs STAND receptor.
     evidence:
-    - reference: DOI:10.1016/j.cell.2025.12.004
+    - reference: DOI:10.1016/j.molcel.2026.01.004
       snippet: Recognition of phage infection triggers the Sir2-like effector domain
-        of Avs5 across all three Avs5 clades
+        of Avs5 across three Avs5 clades
       notes: Muralidharan et al. connect phage recognition to subtype-specific Avs5
         Sir2-like effector activation.
   - subject: avast_effector_output
@@ -129,7 +129,7 @@ causal_graphs:
         and antiviral activity
       notes: Gao et al. support Avs effector outputs as downstream antiviral activities
         in Avs1 through Avs4 systems.
-    - reference: DOI:10.1016/j.cell.2025.12.004
+    - reference: DOI:10.1016/j.molcel.2026.01.004
       snippet: resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation,
         and arrest of infection
       notes: Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting
@@ -141,7 +141,7 @@ causal_graphs:
     description: Activated AVAST effector outputs realize the AVAST phage-defense-system
       trait.
     evidence:
-    - reference: DOI:10.1016/j.cell.2025.12.004
+    - reference: DOI:10.1016/j.molcel.2026.01.004
       snippet: AVAST type 5 (Avs5) systems, part of the signal transduction ATPases
         of numerous domains (STAND) superfamily, confer conserved immunity against
         jumbo phages
