@@ -828,6 +828,7 @@ DEFERRED = {
 POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/caprel_system",
     "genomics/dazbog_system",
+    "genomics/mokosh_system",
     "genomics/sparta_system",
 }
 

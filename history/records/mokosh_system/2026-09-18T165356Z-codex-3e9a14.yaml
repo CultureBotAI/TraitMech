@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mokosh_system.yaml
+  slug: mokosh_system
+session:
+  id: 2026-09-18T165356Z-codex-3e9a14
+  timestamp: '2026-09-18T16:53:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Added Mokosh phage defense system
+  details: Minted traitmech:000246 for the Mokosh bacterial phage defense system under phage
+    defense system, supported it with Millman et al. DOI evidence plus DefenseFinder registry,
+    rule, and HMM stable URLs, reserved the METPO:1020000 replacement placeholder in metpo_traitmech_v123,
+    and added a nonmechanistic locus-to-phage-restriction graph with an open mechanism knowledge
+    gap.
