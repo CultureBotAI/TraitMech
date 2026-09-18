@@ -557,6 +557,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "menshen-mechanism-gap",
+  "prompt": "Resolve Menshen phage triggers and effector outputs before minting narrower Menshen mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Menshen system",
+  "source_id": "traitmech:000253",
+  "source_file": "menshen_system.yaml",
+  "attaches_to": [
+   "causal_graphs#menshen_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Menshen as a named anti-phage system with NsnA, NsnB, and NsnC profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/menshen_system.html#menshen-mechanism-gap"
+ },
+ {
   "discussion_id": "mokosh-mechanism-gap",
   "prompt": "Resolve Mokosh phage triggers and effector outputs before minting narrower Mokosh mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2107,9 +2126,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 121,
- "total_knowledge_gaps": 40,
- "total_source_entries": 120,
+ "total_discussions": 122,
+ "total_knowledge_gaps": 41,
+ "total_source_entries": 121,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

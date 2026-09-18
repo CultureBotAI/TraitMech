@@ -1,0 +1,364 @@
+#!/usr/bin/env python3
+"""Add the Menshen system genomics trait."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+
+TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "menshen_system.yaml"
+
+MILLMAN = "DOI:10.1016/j.chom.2022.09.017"
+MILLMAN_PREPRINT = "DOI:10.1101/2022.05.11.491447"
+
+DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
+DEFENSEFINDER_ARTICLES = (
+    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
+    f"{DEFENSEFINDER_COMMIT}/List_system_article.md"
+)
+DEFENSEFINDER_RULES = (
+    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
+    f"{DEFENSEFINDER_COMMIT}/DefenseFinder_rules.tsv"
+)
+DEFENSEFINDER_HMMS = (
+    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
+    f"{DEFENSEFINDER_COMMIT}/Liste_hmm_system.md"
+)
+
+CURATOR = "codex"
+TIMESTAMP = "2026-09-18T22:20:11Z"
+
+PROFILES = ("NsnA", "NsnB", "NsnC_2507451963")
+
+
+def hmm_inventory_evidence(profile: str) -> dict[str, str]:
+    hmm = f"Menshen__{profile}"
+    return {
+        "reference": DEFENSEFINDER_HMMS,
+        "snippet": f"{hmm:<49} | {hmm:<49} | Menshen",
+        "notes": (
+            "The DefenseFinder HMM inventory records "
+            f"{profile.split('_', maxsplit=1)[0]} as a Menshen profile."
+        ),
+    }
+
+
+RECORD: dict[str, Any] = {
+    "identifier": "traitmech:000253",
+    "label": "Menshen system",
+    "definition": (
+        "A phage defense system in which an organism possesses a Menshen "
+        "locus represented by NsnA, NsnB, and NsnC profile choices that can "
+        "protect bacteria from bacteriophage infection."
+    ),
+    "definition_source": MILLMAN,
+    "trait_category": "GENOMICS",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["traitmech:000209"],
+    "synonyms": [
+        {
+            "synonym_text": "Menshen",
+            "synonym_type": "EXACT_SYNONYM",
+            "source": DEFENSEFINDER_ARTICLES,
+        }
+    ],
+    "evidence": [
+        {
+            "reference": MILLMAN,
+            "snippet": (
+                "discovery of 21 defense systems that protect bacteria from "
+                "phages, based on computational genomic analyses and "
+                "phage-infection experiments"
+            ),
+            "notes": (
+                "Millman et al. report the computational and experimental "
+                "cohort that DefenseFinder cites for Menshen as a bacterial "
+                "anti-phage system."
+            ),
+        },
+        {
+            "reference": MILLMAN_PREPRINT,
+            "snippet": (
+                "discovery of 21 new defense systems that protect bacteria "
+                "from phages, based on computational genomic analyses and "
+                "phage infection experiments"
+            ),
+            "notes": (
+                "The bioRxiv version of Millman et al. independently carries "
+                "the 21-system discovery claim linked from DefenseFinder's "
+                "Menshen article registry."
+            ),
+        },
+        {
+            "reference": DEFENSEFINDER_ARTICLES,
+            "snippet": (
+                "Menshen | 10\\.1101/2022\\.05\\.11\\.491447 | An "
+                "expanding arsenal of immune systems that protect bacteria "
+                "from phages"
+            ),
+            "notes": (
+                "The DefenseFinder model registry maps the named Menshen "
+                "system to the Millman et al. antiphage-system discovery "
+                "preprint."
+            ),
+        },
+        {
+            "reference": DEFENSEFINDER_RULES,
+            "snippet": (
+                "Menshen\tMenshen\t2\t2\tMenshen__NsnA, Menshen__NsnB, "
+                "Menshen__NsnC_2507451963"
+            ),
+            "notes": (
+                "The DefenseFinder rules table models Menshen with NsnA, "
+                "NsnB, and NsnC profile choices."
+            ),
+        },
+        *(hmm_inventory_evidence(profile) for profile in PROFILES),
+    ],
+    "causal_graphs": [
+        {
+            "graph_id": "menshen_locus_restricts_phage",
+            "title": "Menshen loci confer bacterial phage defense",
+            "description": (
+                "Conservative system-level sketch linking possession of a "
+                "Menshen locus to restricted bacteriophage propagation "
+                "without asserting the unresolved phage trigger or molecular "
+                "output."
+            ),
+            "scope_status": "NONMECHANISTIC",
+            "scope_notes": (
+                "The graph captures Menshen as a named anti-phage system "
+                "with DefenseFinder NsnA, NsnB, and NsnC profile choices "
+                "while leaving its phage trigger, molecular substrate, "
+                "antiviral effector output, and subtype breadth unresolved."
+            ),
+            "nodes": [
+                {
+                    "node_id": "menshen_locus",
+                    "label": "Menshen locus",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A Menshen anti-phage defense locus satisfying a "
+                        "DefenseFinder rule over NsnA, NsnB, and NsnC "
+                        "profiles."
+                    ),
+                },
+                {
+                    "node_id": "restricted_phage_propagation",
+                    "label": "restricted phage propagation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Reduced propagation of bacteriophage in cells "
+                        "carrying the Menshen system."
+                    ),
+                },
+                {
+                    "node_id": "menshen_system_trait",
+                    "label": "Menshen system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000253",
+                    "description": (
+                        "Possession of a genome-encoded Menshen phage-defense "
+                        "system."
+                    ),
+                },
+                {
+                    "node_id": "phage_defense_system",
+                    "label": "phage defense system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000209",
+                    "description": (
+                        "Possession of one or more genome-encoded immune "
+                        "systems that inhibit bacteriophage infection."
+                    ),
+                },
+            ],
+            "edges": [
+                {
+                    "subject": "menshen_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "restricted_phage_propagation",
+                    "description": (
+                        "DefenseFinder maps Menshen to a bacterial "
+                        "anti-phage-system discovery preprint and represents "
+                        "Menshen loci through NsnA, NsnB, and NsnC component "
+                        "profiles."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": MILLMAN,
+                            "snippet": (
+                                "discovery of 21 defense systems that "
+                                "protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "Millman et al. describe the anti-phage "
+                                "discovery cohort that the DefenseFinder "
+                                "Menshen registry row maps to the Menshen "
+                                "system."
+                            ),
+                        },
+                        {
+                            "reference": DEFENSEFINDER_ARTICLES,
+                            "snippet": (
+                                "Menshen | 10\\.1101/2022\\.05\\.11\\.491447 "
+                                "| An expanding arsenal of immune systems "
+                                "that protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "The DefenseFinder registry maps Menshen "
+                                "itself to the Millman et al. bacterial "
+                                "antiphage-system discovery preprint."
+                            ),
+                        },
+                        {
+                            "reference": DEFENSEFINDER_RULES,
+                            "snippet": (
+                                "Menshen\tMenshen\t2\t2\tMenshen__NsnA, "
+                                "Menshen__NsnB, Menshen__NsnC_2507451963"
+                            ),
+                            "notes": (
+                                "The DefenseFinder rules table supports "
+                                "NsnA, NsnB, and NsnC as Menshen system "
+                                "profile choices."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "restricted_phage_propagation",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": "menshen_system_trait",
+                    "description": (
+                        "Menshen-mediated phage restriction realizes the "
+                        "Menshen system trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": MILLMAN,
+                            "snippet": (
+                                "discovery of 21 defense systems that "
+                                "protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "Millman et al. place the Menshen discovery "
+                                "cohort in the set of bacterial systems that "
+                                "protect against phages."
+                            ),
+                        },
+                        {
+                            "reference": DEFENSEFINDER_ARTICLES,
+                            "snippet": (
+                                "Menshen | 10\\.1101/2022\\.05\\.11\\.491447 "
+                                "| An expanding arsenal of immune systems "
+                                "that protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "DefenseFinder records Menshen as a named "
+                                "system from the Millman et al. antiphage "
+                                "discovery preprint."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "menshen_system_trait",
+                    "predicate": "is a",
+                    "predicate_id": "rdfs:subClassOf",
+                    "object": "phage_defense_system",
+                    "description": (
+                        "Menshen system possession is a "
+                        "phage-defense-system trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": DEFENSEFINDER_ARTICLES,
+                            "snippet": (
+                                "An expanding arsenal of immune systems that "
+                                "protect bacteria from phages"
+                            ),
+                            "notes": (
+                                "DefenseFinder associates Menshen with the "
+                                "Millman et al. bacterial antiphage-system "
+                                "discovery paper."
+                            ),
+                        }
+                    ],
+                },
+            ],
+        }
+    ],
+    "discussions": [
+        {
+            "discussion_id": "menshen-mechanism-gap",
+            "prompt": (
+                "Resolve Menshen phage triggers and effector outputs before "
+                "minting narrower Menshen mechanism children."
+            ),
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "Millman et al. and DefenseFinder support Menshen as a named "
+                "anti-phage system with NsnA, NsnB, and NsnC profile choices, "
+                "but the trigger, molecular substrate, antiviral effector "
+                "output, and subtype-specific mechanism are not resolved "
+                "enough here to assert a narrower mechanistic child trait."
+            ),
+            "attaches_to": ["causal_graphs#menshen_locus_restricts_phage"],
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-18",
+        }
+    ],
+}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help=f"write {TARGET.relative_to(REPO_ROOT)}",
+    )
+    args = parser.parse_args()
+
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Minted Menshen system as a DOI-backed GENOMICS TraitRecord "
+            "under phage defense system after an ignored-and-hidden "
+            "duplicate review found no exact live TraitMech, METPO, or prior "
+            "proposal record; the replacement placeholder is reserved in "
+            "proposals/metpo_traitmech_v130."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+
+    rel = TARGET.relative_to(REPO_ROOT)
+    if args.apply:
+        if TARGET.exists():
+            raise SystemExit(f"{rel} already exists")
+        write_validated_trait(record, TARGET)
+        print(f"wrote {rel}")
+    else:
+        print(f"would write {rel}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
