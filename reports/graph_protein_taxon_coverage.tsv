@@ -167,6 +167,7 @@ data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dn
 data/traits/genomics/dnd_system.yaml	traitmech:000221	Dnd system	dnd_dna_phosphorothioation_foreign_dna_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dndcdea_pbeabcd_system.yaml	traitmech:000224	DndCDEA-PbeABCD system	dndcdea_pbeabcd_pt_viral_replication_inhibition	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/druantia_system.yaml	traitmech:000234	Druantia system	druantia_drue_dna_processing_phage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/eleos_system.yaml	traitmech:000250	Eleos system	eleos_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

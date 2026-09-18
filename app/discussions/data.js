@@ -398,6 +398,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "eleos-mechanism-gap",
+  "prompt": "Resolve Eleos phage triggers and effector outputs before minting narrower Eleos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Eleos system",
+  "source_id": "traitmech:000250",
+  "source_file": "eleos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#eleos_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Eleos as a named anti-phage system with LeoA, LeoB, LeoBC, and LeoC profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/eleos_system.html#eleos-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2050,9 +2069,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 118,
- "total_knowledge_gaps": 37,
- "total_source_entries": 117,
+ "total_discussions": 119,
+ "total_knowledge_gaps": 38,
+ "total_source_entries": 118,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
