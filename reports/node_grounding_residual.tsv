@@ -1315,6 +1315,13 @@ shedu locus	GENETIC_ELEMENT	1	data/traits/genomics/shedu_system.yaml
 shedu nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 shedu dna end nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
 phage dna propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/shedu_system.yaml
+sparta locus	GENETIC_ELEMENT	1	data/traits/genomics/sparta_system.yaml
+sparta heterodimer assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
+guide rna-mediated target dna binding	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
+sparta oligomerization	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
+sparta tir-domain nad(p)ase activity	MOLECULAR_FUNCTION	1	data/traits/genomics/sparta_system.yaml
+nad(p)+ depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
+plasmid-invaded cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
 sspabcd-sspe locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe pt-site recruitment	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe gtpase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml

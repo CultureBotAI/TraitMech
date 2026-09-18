@@ -511,6 +511,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/shedu_system.html#shedu-sensor-and-substrate-gap"
  },
  {
+  "discussion_id": "sparta-native-host-and-substrate-gap",
+  "prompt": "Resolve SPARTA natural-host substrates before adding canonical examples or narrower short-pAgo defense children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SPARTA system",
+  "source_id": "traitmech:000240",
+  "source_file": "sparta_system.yaml",
+  "attaches_to": [],
+  "rationale": "Koopal et al. support strong high-copy plasmid activation and only limited, NADase-independent phage effects; Kottur et al. support C. thermophila SPARTA structural activation. This first record therefore stays broad until natural-host activity, phage scope, and whether SIR2-APAZ or nuclease-APAZ relatives should be separate children are resolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sparta_system.html#sparta-native-host-and-substrate-gap"
+ },
+ {
   "discussion_id": "thoeris-family-signal-and-trigger-gap",
   "prompt": "Resolve Thoeris family architecture, signal chemistry, and phage triggering before minting narrower Thoeris mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1889,9 +1906,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 109,
- "total_knowledge_gaps": 28,
- "total_source_entries": 108,
+ "total_discussions": 110,
+ "total_knowledge_gaps": 29,
+ "total_source_entries": 109,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
