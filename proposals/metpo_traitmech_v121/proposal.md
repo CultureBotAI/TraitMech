@@ -10,9 +10,9 @@
 The pinned METPO snapshot has no active exact class for the CapRel system, the
 genome-level possession trait for fused toxSAS toxin-antitoxin phage-defense
 loci. Zhang et al. showed that CapRelSJ46 protects *Escherichia coli* against
-diverse phages by using its C-terminal antitoxin sensor domain to directly
-sense phage trigger proteins, relieve autoinhibition of the N-terminal toxSAS
-toxin domain, pyrophosphorylate tRNAs, and block translation.
+diverse phages, and directly connected characterized CapRelSJ46 triggers to
+relief of N-terminal toxSAS-domain autoinhibition, tRNA
+pyrophosphorylation, and translation blockade.
 
 This cohort lifts one local class:
 
@@ -41,9 +41,9 @@ Subset tag: `metpo_traitmech_2026_09`.
 | `METPO:1019800` | CapRel system | `METPO:1016300` phage defense system |
 
 CapRel system captures genome-level possession of a fused CapRel
-toxin-antitoxin locus whose C-terminal antitoxin sensor can directly bind
-phage trigger proteins, relieve toxSAS-domain autoinhibition, promote tRNA
-pyrophosphorylation, and restrict phage propagation by blocking translation. It
+toxin-antitoxin locus encoding an N-terminal toxSAS toxin domain and a
+C-terminal antitoxin sensor domain that together can restrict bacteriophage
+propagation. It
 excludes individual `capRel` genes; standalone CapRel proteins, toxSAS domains,
 and C-terminal antitoxin domains; phage trigger proteins such as major capsid
 protein or Gp54; tRNA pyrophosphorylation, translation blockade, or phage

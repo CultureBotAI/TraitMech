@@ -28,10 +28,9 @@ RECORD: dict[str, Any] = {
     "label": "CapRel system",
     "definition": (
         "A phage defense system in which an organism possesses a fused "
-        "CapRel toxin-antitoxin locus whose C-terminal antitoxin sensor can "
-        "directly bind phage trigger proteins, relieve autoinhibition of the "
-        "toxSAS toxin domain, promote tRNA pyrophosphorylation, and restrict "
-        "phage propagation by blocking translation."
+        "CapRel toxin-antitoxin locus encoding an N-terminal toxSAS toxin "
+        "domain and a C-terminal antitoxin sensor domain that together can "
+        "restrict bacteriophage propagation."
     ),
     "definition_source": ZHANG_2022,
     "trait_category": "GENOMICS",
@@ -77,8 +76,8 @@ RECORD: dict[str, Any] = {
         {
             "reference": ZHANG_2022,
             "snippet": (
-                "enabling the toxin domain to pyrophosphorylate tRNAs, "
-                "which blocks translation to restrict viral infection"
+                "This open state enables CapRelSJ46 to "
+                "pyrophosphorylate tRNAs and inhibit translation"
             ),
             "notes": (
                 "Zhang et al. connect phage-triggered CapRel activation to "
@@ -295,7 +294,7 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": ZHANG_2022,
                             "snippet": (
-                                "enabling the toxin domain to "
+                                "This open state enables CapRelSJ46 to "
                                 "pyrophosphorylate tRNAs"
                             ),
                             "notes": (
