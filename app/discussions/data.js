@@ -392,6 +392,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "pycsar-signal-and-effector-gap",
+  "prompt": "Resolve Pycsar cyclase clades, cyclic pyrimidine specificity, receptor-effector folds, activating phage triggers, and effector outputs before minting narrower Pycsar subtype children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Pycsar system",
+  "source_id": "traitmech:000236",
+  "source_file": "pycsar_system.yaml",
+  "attaches_to": [],
+  "rationale": "Tal et al. support Pycsar systems as widespread PycC-containing antiphage systems whose phage-induced cyclic CMP or cyclic UMP second messengers activate immune effectors, and Hou et al. resolve a uridylate-cyclase/PycTIR branch with zinc-finger and cUMP-recognition determinants. The first TraitRecord therefore stays at the broad Pycsar-system level until separate subtype review resolves which cyclase clades, second messengers, receptor folds, phage triggers, and outputs apply across each family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pycsar_system.html#pycsar-signal-and-effector-gap"
+ },
+ {
   "discussion_id": "retron-effector-trigger-gap",
   "prompt": "Resolve retron effector, phage-trigger, and hybrid-system diversity before minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1821,9 +1838,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 105,
- "total_knowledge_gaps": 24,
- "total_source_entries": 104,
+ "total_discussions": 106,
+ "total_knowledge_gaps": 25,
+ "total_source_entries": 105,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

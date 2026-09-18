@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 630,
+    "records": 631,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 153,
+    "unresearched_mechanism_records": 154,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -25,7 +25,7 @@
       "BUILD_CAUSAL_GRAPH": 119,
       "DEEPEN_CAUSAL_GRAPH": 168,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 151
+      "CURATE_ROOT": 152
     }
   },
   "rows": [
@@ -3704,7 +3704,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 17,
+      "children": 18,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -7698,6 +7698,26 @@
       "series_size": 0,
       "series_overlap": null,
       "researched": true,
+      "reasons": []
+    },
+    {
+      "identifier": "traitmech:000236",
+      "label": "Pycsar system",
+      "category": "genomics",
+      "slug": "pycsar_system",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 8,
+      "nodes": 8,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
       "reasons": []
     },
     {
