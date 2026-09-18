@@ -1,7 +1,7 @@
 node_label	node_type	node_count	example_files
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
-restricted phage propagation	BIOLOGICAL_PROCESS	7	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	8	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
@@ -1141,6 +1141,11 @@ avast antiviral effector output	BIOLOGICAL_PROCESS	1	data/traits/genomics/avast_
 brex locus	GENETIC_ELEMENT	1	data/traits/genomics/brex_system.yaml
 brex host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
 brex self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
+caprel locus	GENETIC_ELEMENT	1	data/traits/genomics/caprel_system.yaml
+phage trigger binding	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
+caprel toxsas activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
+trna pyrophosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
+translation blockade	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 cbass oligonucleotide cyclase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
 cbass cyclic oligonucleotide synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
 cbass effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml

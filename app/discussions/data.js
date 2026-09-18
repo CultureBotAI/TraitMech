@@ -256,6 +256,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "caprel-trigger-and-family-breadth-gap",
+  "prompt": "Resolve CapRel trigger breadth, phage escape routes, and family-specific activation before minting narrower CapRel mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CapRel system",
+  "source_id": "traitmech:000244",
+  "source_file": "caprel_system.yaml",
+  "attaches_to": [],
+  "rationale": "Zhang et al. support CapRelSJ46 sensing of a major capsid protein and an unrelated Gp54 trigger, but fused CapRel homologs need separate review before TraitMech asserts one universal phage trigger, CapRel escape route, tRNA target spectrum, or phage specificity across the family.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/caprel_system.html#caprel-trigger-and-family-breadth-gap"
+ },
+ {
   "discussion_id": "cbass-subtype-mechanism-gap",
   "prompt": "Resolve CBASS subtype-specific sensing and effector mechanisms before splitting cGAMP-phospholipase, cAAA-nuclease, ancillary-gene, or individual CD-NTase protein-family edges into reviewed graph groundings.",
   "kind": "KNOWLEDGE_GAP",
@@ -1940,9 +1957,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 112,
- "total_knowledge_gaps": 31,
- "total_source_entries": 111,
+ "total_discussions": 113,
+ "total_knowledge_gaps": 32,
+ "total_source_entries": 112,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
