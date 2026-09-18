@@ -189,6 +189,7 @@ data/traits/genomics/retron_system.yaml	traitmech:000235	Retron system	retron_ms
 data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	rRNA operon copy number	rrn_copy_growth_rate	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/septu_system.yaml	traitmech:000233	Septu system	septu_ptuab_oligomer_nuclease_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/shedu_system.yaml	traitmech:000220	Shedu system	shedu_dna_end_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/sparta_system.yaml	traitmech:000240	SPARTA system	sparta_pago_tir_apaz_nadase_cell_death	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/sspabcd_sspe_system.yaml	traitmech:000222	SspABCD-SspE system	sspabcd_sspe_pt_site_dependent_dna_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/sspabcd_sspfgh_system.yaml	traitmech:000223	SspABCD-SspFGH system	sspabcd_sspfgh_non_pt_dna_damage	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/thoeris_system.yaml	traitmech:000216	Thoeris system	thoeris_tir_signal_nad_depletion_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

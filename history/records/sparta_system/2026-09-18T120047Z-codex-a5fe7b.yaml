@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sparta_system.yaml
+  slug: sparta_system
+session:
+  id: 2026-09-18T120047Z-codex-a5fe7b
+  timestamp: '2026-09-18T12:00:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add SPARTA system trait
+  details: Minted traitmech:000240 for the short-pAgo/TIR-APAZ SPARTA mobile-DNA defense system
+    after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or
+    prior proposal record for SPARTA. Added DOI-backed Koopal and Kottur evidence, a nonmechanistic
+    causal graph linking a SPARTA locus to guide-RNA/target-DNA-triggered oligomerization,
+    TIR-domain NAD(P)ase activation, NAD(P)+ depletion, and cell death of plasmid-invaded
+    cells, plus a knowledge-gap discussion for natural-host substrate scope before adding
+    canonical examples or narrower SPARTA children.

@@ -822,6 +822,13 @@ DEFERRED = {
     ),
 }
 
+# This migration is intentionally limited to the 89-record #444 queue that was
+# reviewed under #591. Later curations can add records whose canonical examples
+# are deliberately postponed.
+POST_444_CANONICAL_EXAMPLE_QUEUE = {
+    "genomics/sparta_system",
+}
+
 
 def validate_ledger() -> None:
     """Fail closed when the hand-reviewed ledger drifts or contradicts itself."""
@@ -851,7 +858,7 @@ def expected_queue() -> set[str]:
         f"{row['category']}/{row['slug']}"
         for row in rows
         if row["action"] == ADD_ACTION
-    }
+    } - POST_444_CANONICAL_EXAMPLE_QUEUE
 
 
 def _insert_examples(doc: dict[str, Any], examples: list[dict[str, str]]) -> None:

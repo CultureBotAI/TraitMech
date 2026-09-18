@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPARTA system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>SPARTA system</h1>
+    <p class="curie"><code>traitmech:000240</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A genomics trait describing possession of a short prokaryotic Argonaute TIR-APAZ (SPARTA) locus whose short pAgo and TIR-APAZ proteins form heterodimeric complexes that oligomerize after guide RNA-mediated target DNA binding and unleash TIR domain-mediated NAD(P)ase activity that depletes NAD(P)+ to remove plasmid-invaded cells.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>SPARTA complexes couple guide RNA target binding to NAD(P)ase-triggered cell death</h2>
+      <p class="meta">Evidence-backed process sketch linking a SPARTA locus to short-pAgo/TIR-APAZ heterodimer assembly, guide RNA-target DNA activation, oligomerization, TIR-domain NAD(P)ase activity, NAD(P)+ depletion, and removal of plasmid-invaded cells.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph stays at the SPARTA-family level and models the high-copy plasmid activation route from Koopal et al. without asserting that phage defense, SIR2-APAZ systems, nuclease-APAZ systems, or every other short-pAgo family uses the same enzymatic output.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>SPARTA complexes couple guide RNA target binding to NAD(P)ase-triggered cell death</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for SPARTA system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>SPARTA locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>SPARTA heterodimer assembly</strong>
+            <code>RO:0002326</code>
+            <p>SPARTA loci encode short pAgo and TIR-APAZ proteins that assemble into heterodimeric complexes.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2022.03.012</code>
+                <span class="evidence-snippet">SPARTA proteins form heterodimeric complexes</span>
+                <span class="meta">Koopal et al. support the paired-protein complex architecture of SPARTA.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>guide RNA-mediated target DNA binding</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>SPARTA oligomerization</strong>
+            <code>RO:0002213</code>
+            <p>Guide RNA-mediated target DNA binding triggers SPARTA tetramer-of-heterodimers oligomerization.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2022.03.012</code>
+                <span class="evidence-snippet">Upon guide RNA-mediated target DNA binding, four SPARTA heterodimers form oligomers</span>
+                <span class="meta">Koopal et al. connect target recognition to SPARTA oligomer formation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>SPARTA oligomerization</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>SPARTA TIR-domain NAD(P)ase activity</strong>
+            <code>RO:0002213</code>
+            <p>SPARTA oligomerization aligns TIR domains and activates NAD(P)+ hydrolysis.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2022.03.012</code>
+                <span class="evidence-snippet">oligomers in which TIR domain-mediated NAD(P)ase activity is unleashed</span>
+                <span class="meta">Koopal et al. link oligomer formation to activation of TIR-domain NAD(P)ase activity.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1038/s41467-024-49271-4</code>
+                <span class="evidence-snippet">The TIR domains amass in a parallel-strands arrangement for catalysis</span>
+                <span class="meta">Kottur et al. structurally support TIR-domain arrangement in the active SPARTA assembly.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>SPARTA TIR-domain NAD(P)ase activity</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>NAD(P)+ depletion</strong>
+            <code>RO:0002326</code>
+            <p>Activated SPARTA TIR domains hydrolyze NAD(P)+, depleting the cellular NAD(P)+ pool.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41467-024-49271-4</code>
+                <span class="evidence-snippet">activated by invading DNA to unleash its TIR domain for NAD(P)+ hydrolysis</span>
+                <span class="meta">Kottur et al. describe DNA-triggered release of SPARTA TIR-domain NAD(P)+ hydrolysis.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>NAD(P)+ depletion</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>plasmid-invaded cell death</strong>
+            <code>RO:0002326</code>
+            <p>SPARTA-associated NAD(P)+ depletion contributes to death of plasmid-invaded host cells.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2022.03.012</code>
+                <span class="evidence-snippet">causes cell death through NAD(P)+ depletion</span>
+                <span class="meta">Koopal et al. connect SPARTA-driven NAD(P)+ depletion to cell death.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>plasmid-invaded cell death</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>SPARTA system</strong>
+            <code>METPO:2007700</code>
+            <p>Removal of plasmid-invaded cells is the cellular outcome of the SPARTA possession trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cell.2022.03.012</code>
+                <span class="evidence-snippet">This results in the removal of plasmid-invaded cells from bacterial cultures</span>
+                <span class="meta">Koopal et al. support SPARTA-mediated removal of plasmid-invaded cells.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1016/j.cell.2022.03.012</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (1)</h2>
+      <ul class="synonyms">
+
+        <li>short prokaryotic Argonaute TIR-APAZ system <span class="meta">EXACT_SYNONYM · DOI:10.1016/j.cell.2022.03.012</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="sparta-native-host-and-substrate-gap">
+        <p class="discussion-prompt">Resolve SPARTA natural-host substrates before adding canonical examples or narrower short-pAgo defense children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>sparta-native-host-and-substrate-gap</code>
+          · raised by codex
+          · 2026-09-18
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>Koopal et al. support strong high-copy plasmid activation and only limited, NADase-independent phage effects; Kottur et al. support C. thermophila SPARTA structural activation. This first record therefore stays broad until natural-host activity, phage scope, and whether SIR2-APAZ or nuclease-APAZ relatives should be separate children are resolved.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-18T11:59:02Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted SPARTA system as a DOI-backed GENOMICS TraitRecord under the quality root after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v117.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/sparta_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/sparta_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/sparta_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/sparta_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000240" target="_blank" rel="noopener"><code>traitmech:000240</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed process sketch linking a SPARTA locus to short-pAgo/TIR-APAZ heterodimer assembly, guide RNA-target DNA activation, oligomerization, TIR-domain NAD(P)ase activity, NAD(P)+ depletion, and removal of plasmid-invaded cells.", "edges": [{"description": "SPARTA loci encode short pAgo and TIR-APAZ proteins that assemble into heterodimeric complexes.", "evidence": [{"notes": "Koopal et al. support the paired-protein complex architecture of SPARTA.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "SPARTA proteins form heterodimeric complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sparta_locus", "target": "sparta_heterodimer_assembly"}, {"description": "Guide RNA-mediated target DNA binding triggers SPARTA tetramer-of-heterodimers oligomerization.", "evidence": [{"notes": "Koopal et al. connect target recognition to SPARTA oligomer formation.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "Upon guide RNA-mediated target DNA binding, four SPARTA heterodimers form oligomers"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "guide_target_binding", "target": "sparta_oligomerization"}, {"description": "SPARTA oligomerization aligns TIR domains and activates NAD(P)+ hydrolysis.", "evidence": [{"notes": "Koopal et al. link oligomer formation to activation of TIR-domain NAD(P)ase activity.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "oligomers in which TIR domain-mediated NAD(P)ase activity is unleashed"}, {"notes": "Kottur et al. structurally support TIR-domain arrangement in the active SPARTA assembly.", "reference": "DOI:10.1038/s41467-024-49271-4", "snippet": "The TIR domains amass in a parallel-strands arrangement for catalysis"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "sparta_oligomerization", "target": "tir_nadpase_activity"}, {"description": "Activated SPARTA TIR domains hydrolyze NAD(P)+, depleting the cellular NAD(P)+ pool.", "evidence": [{"notes": "Kottur et al. describe DNA-triggered release of SPARTA TIR-domain NAD(P)+ hydrolysis.", "reference": "DOI:10.1038/s41467-024-49271-4", "snippet": "activated by invading DNA to unleash its TIR domain for NAD(P)+ hydrolysis"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tir_nadpase_activity", "target": "nadp_depletion"}, {"description": "SPARTA-associated NAD(P)+ depletion contributes to death of plasmid-invaded host cells.", "evidence": [{"notes": "Koopal et al. connect SPARTA-driven NAD(P)+ depletion to cell death.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "causes cell death through NAD(P)+ depletion"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nadp_depletion", "target": "invaded_cell_death"}, {"description": "Removal of plasmid-invaded cells is the cellular outcome of the SPARTA possession trait.", "evidence": [{"notes": "Koopal et al. support SPARTA-mediated removal of plasmid-invaded cells.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "This results in the removal of plasmid-invaded cells from bacterial cultures"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "invaded_cell_death", "target": "sparta_system_trait"}], "evidence_rows": [{"description": "SPARTA loci encode short pAgo and TIR-APAZ proteins that assemble into heterodimeric complexes.", "edge_id": "edge-1", "evidence": [{"notes": "Koopal et al. support the paired-protein complex architecture of SPARTA.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "SPARTA proteins form heterodimeric complexes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SPARTA locus", "target": "SPARTA heterodimer assembly"}, {"description": "Guide RNA-mediated target DNA binding triggers SPARTA tetramer-of-heterodimers oligomerization.", "edge_id": "edge-2", "evidence": [{"notes": "Koopal et al. connect target recognition to SPARTA oligomer formation.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "Upon guide RNA-mediated target DNA binding, four SPARTA heterodimers form oligomers"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "guide RNA-mediated target DNA binding", "target": "SPARTA oligomerization"}, {"description": "SPARTA oligomerization aligns TIR domains and activates NAD(P)+ hydrolysis.", "edge_id": "edge-3", "evidence": [{"notes": "Koopal et al. link oligomer formation to activation of TIR-domain NAD(P)ase activity.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "oligomers in which TIR domain-mediated NAD(P)ase activity is unleashed"}, {"notes": "Kottur et al. structurally support TIR-domain arrangement in the active SPARTA assembly.", "reference": "DOI:10.1038/s41467-024-49271-4", "snippet": "The TIR domains amass in a parallel-strands arrangement for catalysis"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "SPARTA oligomerization", "target": "SPARTA TIR-domain NAD(P)ase activity"}, {"description": "Activated SPARTA TIR domains hydrolyze NAD(P)+, depleting the cellular NAD(P)+ pool.", "edge_id": "edge-4", "evidence": [{"notes": "Kottur et al. describe DNA-triggered release of SPARTA TIR-domain NAD(P)+ hydrolysis.", "reference": "DOI:10.1038/s41467-024-49271-4", "snippet": "activated by invading DNA to unleash its TIR domain for NAD(P)+ hydrolysis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SPARTA TIR-domain NAD(P)ase activity", "target": "NAD(P)+ depletion"}, {"description": "SPARTA-associated NAD(P)+ depletion contributes to death of plasmid-invaded host cells.", "edge_id": "edge-5", "evidence": [{"notes": "Koopal et al. connect SPARTA-driven NAD(P)+ depletion to cell death.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "causes cell death through NAD(P)+ depletion"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NAD(P)+ depletion", "target": "plasmid-invaded cell death"}, {"description": "Removal of plasmid-invaded cells is the cellular outcome of the SPARTA possession trait.", "edge_id": "edge-6", "evidence": [{"notes": "Koopal et al. support SPARTA-mediated removal of plasmid-invaded cells.", "reference": "DOI:10.1016/j.cell.2022.03.012", "snippet": "This results in the removal of plasmid-invaded cells from bacterial cultures"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "plasmid-invaded cell death", "target": "SPARTA system"}], "graph_id": "sparta_pago_tir_apaz_nadase_cell_death", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Recognition of target DNA by a SPARTA complex through a bound guide RNA.", "grounding": null, "id": "guide_target_binding", "is_orphan": false, "label": "guide RNA-mediated target DNA binding", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell death triggered in host cells carrying highly transcribed multicopy plasmid DNA detected by SPARTA.", "grounding": null, "id": "invaded_cell_death", "is_orphan": false, "label": "plasmid-invaded cell death", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of cellular NAD(P)+ downstream of activated SPARTA TIR-domain NAD(P)ase activity.", "grounding": null, "id": "nadp_depletion", "is_orphan": false, "label": "NAD(P)+ depletion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of short pAgo and TIR-APAZ proteins into SPARTA heterodimeric complexes.", "grounding": null, "id": "sparta_heterodimer_assembly", "is_orphan": false, "label": "SPARTA heterodimer assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A short prokaryotic Argonaute TIR-APAZ locus encoding short pAgo and TIR-APAZ proteins.", "grounding": null, "id": "sparta_locus", "is_orphan": false, "label": "SPARTA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Formation of a target-DNA-bound SPARTA oligomer from four guide-loaded heterodimers.", "grounding": null, "id": "sparta_oligomerization", "is_orphan": false, "label": "SPARTA oligomerization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded short prokaryotic Argonaute TIR-APAZ defense system.", "grounding": "traitmech:000240", "id": "sparta_system_trait", "is_orphan": false, "label": "SPARTA system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#cffafe", "description": "NAD(P)+ hydrolysis by TIR domains assembled in an active SPARTA oligomer.", "grounding": null, "id": "tir_nadpase_activity", "is_orphan": false, "label": "SPARTA TIR-domain NAD(P)ase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph stays at the SPARTA-family level and models the high-copy plasmid activation route from Koopal et al. without asserting that phage defense, SIR2-APAZ systems, nuclease-APAZ systems, or every other short-pAgo family uses the same enzymatic output.", "scope_status": "NONMECHANISTIC", "title": "SPARTA complexes couple guide RNA target binding to NAD(P)ase-triggered cell death"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-18 11:59 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 635 TraitRecords
+      · embedding coverage 75.1%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>
