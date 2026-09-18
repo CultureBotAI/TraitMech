@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pycsar_system.yaml
+  slug: pycsar_system
+session:
+  id: 2026-09-18T073628Z-codex-04b73a
+  timestamp: '2026-09-18T07:36:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add Pycsar system trait
+  details: Minted traitmech:000236 for the Pycsar cyclic-pyrimidine phage-defense system after
+    an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, or prior
+    proposal record for Pycsar, the expected slug, the source DOIs, or the reserved IDs. Tal
+    et al. and Hou et al. support the PycC-centered system identity, cCMP/cUMP signaling,
+    cyclic-pyrimidine receptor effectors, an Escherichia coli canonical example, and a nonmechanistic
+    causal graph for Pycsar-mediated phage defense.

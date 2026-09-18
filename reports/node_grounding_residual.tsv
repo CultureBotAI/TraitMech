@@ -1276,6 +1276,12 @@ dna damage / replication stress	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/prop
 reca* nucleoprotein filament	GENE_OR_PROTEIN	1	data/traits/genomics/prophage.yaml
 phage-plasmid	GENETIC_ELEMENT	1	data/traits/genomics/prophage.yaml
 extrachromosomal prophage maintenance	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
+pycsar locus	GENETIC_ELEMENT	1	data/traits/genomics/pycsar_system.yaml
+phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
+cyclic pyrimidine second messenger synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
+cyclic pyrimidine receptor activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
+pycsar antiviral output	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
+phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 foreign dna	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/restriction_modification_system.yaml
 cognate dna methyltransferase	GENE_OR_PROTEIN	1	data/traits/genomics/restriction_modification_system.yaml
 host recognition site methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/restriction_modification_system.yaml

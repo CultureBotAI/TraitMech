@@ -1,0 +1,228 @@
+identifier: traitmech:000236
+label: Pycsar system
+definition: A phage defense system in which an organism possesses a Pycsar locus encoding
+  a PycC pyrimidine cyclase and a cognate cyclic-pyrimidine receptor effector whose
+  phage-induced cyclic CMP or cyclic UMP signaling activates antiviral effector outputs
+  that inhibit bacteriophage propagation.
+definition_source: DOI:10.1016/j.cell.2021.09.031
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Pyrimidine Cyclase System for Antiphage Resistance
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.cell.2021.09.031
+- synonym_text: pyrimidine cyclase system for anti-phage resistance
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/s41467-024-49861-2
+evidence:
+- reference: DOI:10.1016/j.cell.2021.09.031
+  snippet: We discovered a family of bacterial pyrimidine cyclase enzymes that specifically
+    synthesize cCMP and cUMP following phage infection
+  notes: Tal et al. support Pycsar-associated pyrimidine cyclases as phage-induced
+    producers of cyclic CMP and cyclic UMP.
+- reference: DOI:10.1016/j.cell.2021.09.031
+  snippet: The cCMP and cUMP molecules then activate effector proteins
+  notes: Tal et al. connect cyclic pyrimidine second messengers to activation of Pycsar
+    effector proteins.
+- reference: DOI:10.1016/j.cell.2021.09.031
+  snippet: both operons provided substantial defense against multiple phages
+  notes: Tal et al. support a canonical Escherichia coli example by showing that two
+    E. coli Pycsar loci conferred antiphage defense after cloning into E. coli MG1655.
+- reference: DOI:10.1016/j.cell.2021.09.031
+  snippet: Mutation in the predicted active site of the cyclase domain abolished defense
+  notes: Tal et al. support the functional importance of the PycC cyclase domain for
+    the antiphage phenotype.
+- reference: DOI:10.1038/s41467-024-49861-2
+  snippet: This system consists of a pyrimidine cyclase and a cyclic pyrimidine receptor
+    protein
+  notes: Hou et al. support defining Pycsar systems around a pyrimidine cyclase plus
+    a cognate cyclic-pyrimidine receptor rather than a bare pycC gene.
+- reference: DOI:10.1038/s41467-024-49861-2
+  snippet: a distinct zinc-finger motif of the uridylate cyclase is identified to
+    confer substantial resistance against phage infections
+  notes: Hou et al. support the uridylate-cyclase branch while the broad TraitRecord
+    leaves cCMP-producing and cUMP-producing Pycsar clades unresolved as children.
+- reference: DOI:10.1038/s41467-024-49861-2
+  snippet: specific cUMP recognition
+  notes: Hou et al. support cyclic UMP recognition by the PycTIR cyclic-pyrimidine
+    receptor as one resolved Pycsar effector-activation mechanism.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: Tal et al. cloned native Pycsar two-gene operons from E. coli 303145 and E.
+    coli E831 into E. coli MG1655 and showed that both operons provided substantial
+    defense against multiple phages.
+  reference: DOI:10.1016/j.cell.2021.09.031
+causal_graphs:
+- graph_id: pycsar_cyclic_pyrimidine_phage_defense
+  title: Pycsar loci couple cyclic-pyrimidine signaling to phage defense
+  description: Evidence-backed process sketch linking a complete Pycsar locus to phage-induced
+    PycC pyrimidine cyclase activity, cyclic CMP or cyclic UMP signaling, cyclic-pyrimidine
+    receptor activation, antiviral effector output, and inhibition of phage propagation.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph stays at the Pycsar-family level and uses characterized cytidylate-cyclase
+    and uridylate-cyclase examples without asserting one universal cyclase clade,
+    cCMP-versus-cUMP product, PycTIR-versus-PycTM effector fold, AGS-C role, zinc-finger
+    role, activating phage trigger, membrane impairment, or NAD-depletion output across
+    all Pycsar antiphage loci.
+  nodes:
+  - node_id: pycsar_locus
+    label: Pycsar locus
+    node_type: GENETIC_ELEMENT
+    description: A complete Pycsar antiphage locus encoding a PycC pyrimidine cyclase
+      and a cognate cyclic-pyrimidine receptor effector.
+  - node_id: phage_induced_pycC_cyclase_activity
+    label: phage-induced PycC cyclase activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of a PycC pyrimidine cyclase during phage infection.
+  - node_id: cyclic_pyrimidine_synthesis
+    label: cyclic pyrimidine second messenger synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: PycC-catalyzed production of cyclic CMP or cyclic UMP second messengers.
+  - node_id: cyclic_pyrimidine_receptor_activation
+    label: cyclic pyrimidine receptor activation
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of a Pycsar cyclic-pyrimidine receptor effector by cyclic
+      CMP or cyclic UMP.
+  - node_id: pycsar_antiviral_output
+    label: Pycsar antiviral output
+    node_type: BIOLOGICAL_PROCESS
+    description: Execution of a Pycsar effector output that arrests infected host
+      cells or otherwise limits bacteriophage amplification.
+  - node_id: phage_propagation
+    label: phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Completion of bacteriophage replication and spread in a susceptible
+      bacterial population.
+  - node_id: pycsar_system_trait
+    label: Pycsar system
+    node_type: TRAIT
+    grounding: traitmech:000236
+    description: Possession of a genome-encoded Pycsar cyclic-pyrimidine phage-defense
+      system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pycsar_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phage_induced_pycC_cyclase_activity
+    description: Pycsar loci encode a PycC pyrimidine cyclase whose catalytic activity
+      is required for the antiphage phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: Mutation in the predicted active site of the cyclase domain abolished
+        defense
+      notes: Tal et al. show that the PycC active site is required for defense in
+        an E. coli Pycsar locus.
+  - subject: pycsar_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cyclic_pyrimidine_receptor_activation
+    description: Complete Pycsar systems pair the PycC cyclase with a cyclic-pyrimidine
+      receptor effector.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49861-2
+      snippet: This system consists of a pyrimidine cyclase and a cyclic pyrimidine
+        receptor protein
+      notes: Hou et al. support a two-part system definition rather than a cyclase-only
+        sequence feature.
+  - subject: phage_induced_pycC_cyclase_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cyclic_pyrimidine_synthesis
+    description: PycC pyrimidine cyclases synthesize cyclic CMP or cyclic UMP after
+      phage infection.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: We discovered a family of bacterial pyrimidine cyclase enzymes that
+        specifically synthesize cCMP and cUMP following phage infection
+      notes: Tal et al. link PycC cyclase activity to phage-induced cyclic CMP and
+        cyclic UMP production.
+  - subject: cyclic_pyrimidine_synthesis
+    predicate: activates
+    predicate_id: RO:0002213
+    object: cyclic_pyrimidine_receptor_activation
+    description: Cyclic CMP and cyclic UMP second messengers can activate Pycsar effector
+      proteins.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: The cCMP and cUMP molecules then activate effector proteins
+      notes: Tal et al. support cyclic-pyrimidine second messengers as direct activators
+        of Pycsar effector proteins.
+  - subject: cyclic_pyrimidine_receptor_activation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pycsar_antiviral_output
+    description: Pycsar receptor activation stimulates an immune-effector state that
+      antagonizes phage infection.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: these molecules activate immune effectors that execute an antiviral
+        response
+      notes: Tal et al. connect cCMP and cUMP to immune-effector activation and antiviral
+        output.
+  - subject: pycsar_antiviral_output
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_propagation
+    description: Native E. coli Pycsar systems substantially defend against multiple
+      bacteriophages.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: both operons provided substantial defense against multiple phages
+      notes: Tal et al. demonstrated substantial antiphage defense by two native E.
+        coli Pycsar operons cloned into E. coli MG1655.
+  - subject: pycsar_antiviral_output
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pycsar_system_trait
+    description: Cyclic-pyrimidine signaling through a Pycsar receptor realizes the
+      Pycsar antiphage trait.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49861-2
+      snippet: named pyrimidine cyclase system for anti-phage resistance (Pycsar)
+      notes: Hou et al. connect the Pycsar name to the cyclic-pyrimidine signaling
+        system's antiphage-resistance phenotype.
+  - subject: pycsar_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Pycsar system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2021.09.031
+      snippet: cCMP/cUMP cyclases function as part of a family of bacterial anti-phage
+        defense systems
+      notes: Tal et al. support Pycsar system as a child of phage defense system.
+discussions:
+- discussion_id: pycsar-signal-and-effector-gap
+  prompt: Resolve Pycsar cyclase clades, cyclic pyrimidine specificity, receptor-effector
+    folds, activating phage triggers, and effector outputs before minting narrower
+    Pycsar subtype children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Tal et al. support Pycsar systems as widespread PycC-containing antiphage
+    systems whose phage-induced cyclic CMP or cyclic UMP second messengers activate
+    immune effectors, and Hou et al. resolve a uridylate-cyclase/PycTIR branch with
+    zinc-finger and cUMP-recognition determinants. The first TraitRecord therefore
+    stays at the broad Pycsar-system level until separate subtype review resolves
+    which cyclase clades, second messengers, receptor folds, phage triggers, and outputs
+    apply across each family.
+  posed_by: codex
+  posed_date: '2026-09-18'
+curation_history:
+- timestamp: '2026-09-18T07:33:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Pycsar system as a DOI-backed GENOMICS TraitRecord under the phage
+    defense system parent after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v113.
+  llm_assisted: true
