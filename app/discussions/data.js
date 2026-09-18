@@ -258,6 +258,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/avast_system.html#avast-subtype-effector-gap"
  },
  {
+  "discussion_id": "azaca-mechanism-gap",
+  "prompt": "Resolve Azaca phage triggers and effector outputs before minting narrower Azaca mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Azaca system",
+  "source_id": "traitmech:000251",
+  "source_file": "azaca_system.yaml",
+  "attaches_to": [
+   "causal_graphs#azaca_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Azaca as a named anti-phage system with ZacA, ZacB, and ZacC profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/azaca_system.html#azaca-mechanism-gap"
+ },
+ {
   "discussion_id": "borvo-mechanism-gap",
   "prompt": "Resolve Borvo phage triggers and effector outputs before minting narrower Borvo mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2069,9 +2088,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 119,
- "total_knowledge_gaps": 38,
- "total_source_entries": 118,
+ "total_discussions": 120,
+ "total_knowledge_gaps": 39,
+ "total_source_entries": 119,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
