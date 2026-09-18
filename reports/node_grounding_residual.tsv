@@ -1,7 +1,7 @@
 node_label	node_type	node_count	example_files
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	9	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
-restricted phage propagation	BIOLOGICAL_PROCESS	8	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
@@ -1164,6 +1164,7 @@ sensitive phage infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system
 dart toxin release	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 viral dna adp-ribosylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 inhibited phage genome replication	STATE	1	data/traits/genomics/dartg_system.yaml
+dazbog locus	GENETIC_ELEMENT	1	data/traits/genomics/dazbog_system.yaml
 disarm host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 disarm 5-prime-overhang dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 drmab core complex	GENE_OR_PROTEIN	1	data/traits/genomics/disarm_system.yaml
