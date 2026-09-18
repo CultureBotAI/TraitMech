@@ -154,6 +154,7 @@ data/traits/genomics/abiz_system.yaml	traitmech:000228	AbiZ system	abiz_prematur
 data/traits/genomics/abortive_infection_system.yaml	traitmech:000214	abortive infection system	abortive_infection_population_level_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/aditi_system.yaml	traitmech:000247	Aditi system	aditi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/avast_system.yaml	traitmech:000239	AVAST system	avast_stand_pattern_recognition_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/borvo_system.yaml	traitmech:000249	Borvo system	borvo_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/brex_system.yaml	traitmech:000210	BREX system	brex_methylation_antiphage_defense	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/genomics/bunzi_system.yaml	traitmech:000248	Bunzi system	bunzi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/caprel_system.yaml	traitmech:000244	CapRel system	caprel_phage_triggered_translation_blockade	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

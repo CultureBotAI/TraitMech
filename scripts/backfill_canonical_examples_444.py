@@ -827,6 +827,7 @@ DEFERRED = {
 # are deliberately postponed.
 POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/aditi_system",
+    "genomics/borvo_system",
     "genomics/bunzi_system",
     "genomics/caprel_system",
     "genomics/dazbog_system",

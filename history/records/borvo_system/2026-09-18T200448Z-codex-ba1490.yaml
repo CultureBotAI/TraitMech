@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/borvo_system.yaml
+  slug: borvo_system
+session:
+  id: 2026-09-18T200448Z-codex-ba1490
+  timestamp: '2026-09-18T20:04:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Create Borvo system trait
+  details: Added traitmech:000249 as a DOI-backed Borvo system GENOMICS TraitRecord under
+    phage defense system, using Millman et al. and commit-pinned DefenseFinder article, rule,
+    and HMM evidence to support system identity while leaving unresolved trigger and effector
+    details as an open knowledge gap.
