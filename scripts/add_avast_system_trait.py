@@ -27,11 +27,12 @@ RECORD: dict[str, Any] = {
     "identifier": "traitmech:000239",
     "label": "AVAST system",
     "definition": (
-        "A phage defense system in which an organism possesses an "
-        "antiviral ATPase/NTPase of the STAND superfamily locus encoding "
-        "a modular Avs receptor-effector that recognizes conserved "
-        "bacteriophage proteins and activates subtype-specific "
-        "antiphage outputs to inhibit bacteriophage replication."
+        "A phage defense system in which an organism possesses a locus "
+        "encoding a STAND-superfamily antiviral ATPase/NTPase that "
+        "functions as a modular Avs receptor-effector, recognizes "
+        "conserved bacteriophage proteins, and activates "
+        "subtype-specific antiphage outputs to inhibit bacteriophage "
+        "replication."
     ),
     "definition_source": GAO_2020,
     "trait_category": "GENOMICS",
@@ -145,9 +146,9 @@ RECORD: dict[str, Any] = {
                     "label": "AVAST locus",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        "An antiviral ATPase/NTPase of the STAND "
-                        "superfamily locus encoding a modular Avs "
-                        "phage-defense receptor-effector."
+                        "A phage-defense locus encoding a "
+                        "STAND-superfamily antiviral ATPase/NTPase that "
+                        "functions as a modular Avs receptor-effector."
                     ),
                 },
                 {
@@ -296,9 +297,13 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": MURALIDHARAN,
                             "snippet": (
-                                "resulting in rapid NAD + hydrolysis, "
-                                "disruption of phage nucleus formation, "
-                                "and arrest of infection"
+                                "Upon sensing Jumbo J phage, Avs5-1 "
+                                "underwent oligomerization, which "
+                                "activated the enzymatic activity of "
+                                "its Sir2 effector, resulting in rapid "
+                                "NAD + hydrolysis, disruption of phage "
+                                "nucleus formation, and arrest of "
+                                "infection"
                             ),
                             "notes": (
                                 "Muralidharan et al. support Avs5 "

@@ -1,9 +1,9 @@
 identifier: traitmech:000239
 label: AVAST system
-definition: A phage defense system in which an organism possesses an antiviral ATPase/NTPase
-  of the STAND superfamily locus encoding a modular Avs receptor-effector that recognizes
-  conserved bacteriophage proteins and activates subtype-specific antiphage outputs
-  to inhibit bacteriophage replication.
+definition: A phage defense system in which an organism possesses a locus encoding
+  a STAND-superfamily antiviral ATPase/NTPase that functions as a modular Avs receptor-effector,
+  recognizes conserved bacteriophage proteins, and activates subtype-specific antiphage
+  outputs to inhibit bacteriophage replication.
 definition_source: DOI:10.1126/science.aba0372
 trait_category: GENOMICS
 term_kind: CLASS
@@ -61,8 +61,8 @@ causal_graphs:
   - node_id: avast_locus
     label: AVAST locus
     node_type: GENETIC_ELEMENT
-    description: An antiviral ATPase/NTPase of the STAND superfamily locus encoding
-      a modular Avs phage-defense receptor-effector.
+    description: A phage-defense locus encoding a STAND-superfamily antiviral ATPase/NTPase
+      that functions as a modular Avs receptor-effector.
   - node_id: avs_stand_receptor_activation
     label: Avs STAND receptor activation
     node_type: BIOLOGICAL_PROCESS
@@ -130,8 +130,9 @@ causal_graphs:
       notes: Gao et al. support Avs effector outputs as downstream antiviral activities
         in Avs1 through Avs4 systems.
     - reference: DOI:10.1016/j.molcel.2026.01.004
-      snippet: resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation,
-        and arrest of infection
+      snippet: Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which
+        activated the enzymatic activity of its Sir2 effector, resulting in rapid
+        NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection
       notes: Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting
         AVAST output.
   - subject: avast_effector_output
