@@ -1,10 +1,10 @@
 node_label	node_type	node_count	example_files
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
+phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
 restricted phage propagation	BIOLOGICAL_PROCESS	6	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
-phage replication	BIOLOGICAL_PROCESS	6	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/cbass_system.yaml|data/traits/genomics/gabija_system.yaml
 atp	CHEMICAL	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/oxygenic_photosynthesis.yaml
 acetyl-coa	CHEMICAL	6	data/traits/metabolism/carbon_fixation.yaml|data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml|data/traits/metabolism/mixed_acid_fermentation.yaml
 mreb	GENE_OR_PROTEIN	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccobacillus_shaped.yaml
@@ -1135,6 +1135,9 @@ premature infected-cell lysis	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiz_sys
 abortive infection system activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 host growth arrest or cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
 bacterial population protection	BIOLOGICAL_PROCESS	1	data/traits/genomics/abortive_infection_system.yaml
+avast locus	GENETIC_ELEMENT	1	data/traits/genomics/avast_system.yaml
+avs stand receptor activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/avast_system.yaml
+avast antiviral effector output	BIOLOGICAL_PROCESS	1	data/traits/genomics/avast_system.yaml
 brex locus	GENETIC_ELEMENT	1	data/traits/genomics/brex_system.yaml
 brex host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml
 brex self/non-self discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/brex_system.yaml

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/avast_system.yaml
+  slug: avast_system
+session:
+  id: 2026-09-18T104841Z-codex-66285b
+  timestamp: '2026-09-18T10:48:41Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add AVAST system trait
+  details: Minted traitmech:000239 as a DOI-backed AVAST system GENOMICS TraitRecord under
+    the phage defense system parent, added evidence from Gao et al. and Muralidharan et al.,
+    recorded Pseudomonas aeruginosa as a canonical example, sketched a nonmechanistic STAND
+    receptor-effector graph, and reserved METPO:1019300 in proposals/metpo_traitmech_v116.
