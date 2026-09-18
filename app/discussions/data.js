@@ -275,6 +275,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "bunzi-mechanism-gap",
+  "prompt": "Resolve Bunzi phage triggers and effector outputs before minting narrower Bunzi mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Bunzi system",
+  "source_id": "traitmech:000248",
+  "source_file": "bunzi_system.yaml",
+  "attaches_to": [
+   "causal_graphs#bunzi_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Bunzi as a named anti-phage system with BnzA and BnzB profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/bunzi_system.html#bunzi-mechanism-gap"
+ },
+ {
   "discussion_id": "caprel-trigger-and-family-breadth-gap",
   "prompt": "Resolve CapRel trigger breadth, phage escape routes, and family-specific activation before minting narrower CapRel mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2012,9 +2031,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 116,
- "total_knowledge_gaps": 35,
- "total_source_entries": 115,
+ "total_discussions": 117,
+ "total_knowledge_gaps": 36,
+ "total_source_entries": 116,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
