@@ -826,6 +826,7 @@ DEFERRED = {
 # reviewed under #591. Later curations can add records whose canonical examples
 # are deliberately postponed.
 POST_444_CANONICAL_EXAMPLE_QUEUE = {
+    "genomics/aditi_system",
     "genomics/caprel_system",
     "genomics/dazbog_system",
     "genomics/mokosh_system",

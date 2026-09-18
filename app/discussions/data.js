@@ -222,6 +222,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/abortive_infection_system.html#abortive-infection-subfamily-split-gap"
  },
  {
+  "discussion_id": "aditi-mechanism-gap",
+  "prompt": "Resolve Aditi phage triggers and effector outputs before minting narrower Aditi mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Aditi system",
+  "source_id": "traitmech:000247",
+  "source_file": "aditi_system.yaml",
+  "attaches_to": [
+   "causal_graphs#aditi_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Aditi as a named anti-phage system with DitA and DitB profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/aditi_system.html#aditi-mechanism-gap"
+ },
+ {
   "discussion_id": "avast-subtype-effector-gap",
   "prompt": "Resolve AVAST subtype sensors, phage triggers, and effector outputs before minting narrower Avs1-Avs5 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1993,9 +2012,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 115,
- "total_knowledge_gaps": 34,
- "total_source_entries": 114,
+ "total_discussions": 116,
+ "total_knowledge_gaps": 35,
+ "total_source_entries": 115,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
