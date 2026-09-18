@@ -443,6 +443,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "mokosh-mechanism-gap",
+  "prompt": "Resolve Mokosh phage triggers and effector outputs before minting narrower Mokosh mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Mokosh system",
+  "source_id": "traitmech:000246",
+  "source_file": "mokosh_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mokosh_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Mokosh as a named anti-phage system with type I and type II profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mokosh_system.html#mokosh-mechanism-gap"
+ },
+ {
   "discussion_id": "paris-trigger-and-counterdefense-gap",
   "prompt": "Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA suppression, and non-Ocr phage triggers before minting narrower PARIS subtype children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1974,9 +1993,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 114,
- "total_knowledge_gaps": 33,
- "total_source_entries": 113,
+ "total_discussions": 115,
+ "total_knowledge_gaps": 34,
+ "total_source_entries": 114,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
