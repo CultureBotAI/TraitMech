@@ -478,6 +478,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    if TARGET.exists():
+        raise SystemExit(f"{TARGET.relative_to(REPO_ROOT)} already exists")
+
     record = copy.deepcopy(RECORD)
     record_curation_event(
         record,
