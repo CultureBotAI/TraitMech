@@ -222,6 +222,26 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
+                    "subject": "sparta_heterodimer_assembly",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "sparta_oligomerization",
+                    "description": (
+                        "SPARTA heterodimers are the building blocks of "
+                        "the target-DNA-bound SPARTA oligomer."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": KOOPAL,
+                            "snippet": "four SPARTA heterodimers form oligomers",
+                            "notes": (
+                                "Koopal et al. support oligomer formation "
+                                "from SPARTA heterodimers."
+                            ),
+                        }
+                    ],
+                },
+                {
                     "subject": "guide_target_binding",
                     "predicate": "activates",
                     "predicate_id": "RO:0002213",

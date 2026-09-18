@@ -1014,11 +1014,11 @@
       "label": "SPARTA system",
       "category": "genomics",
       "slug": "sparta_system",
-      "score": 45.0,
+      "score": 30.0,
       "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 6,
+      "edges": 7,
       "nodes": 8,
-      "components": 2,
+      "components": 1,
       "orphans": 0,
       "examples": 0,
       "canonical_examples_reviewed_empty": false,
@@ -1028,9 +1028,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (6 edges) +12",
-        "no canonical_examples +30",
-        "2 components +3"
+        "no canonical_examples +30"
       ]
     },
     {
