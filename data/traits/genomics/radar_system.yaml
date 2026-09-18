@@ -110,18 +110,16 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2023.01.012
       snippet: RdrA and RdrB join to form a giant assembly up to 10 MDa
       notes: Duncan-Lowey et al. support RdrA/RdrB RADAR complex assembly.
-  - subject: rdra_rdrb_complex_assembly
-    predicate: enables
-    predicate_id: RO:0002327
+  - subject: radar_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
     object: adenosine_substrate_deamination
-    description: The RdrA/RdrB RADAR complex enables RdrB deamination of adenosine-containing
-      substrates.
+    description: RADAR loci encode RdrB, which catalyzes ATP-to-ITP deamination.
     evidence:
     - reference: DOI:10.1016/j.cell.2023.01.012
-      snippet: Our results define ATP mononucleotide deamination as a determinant
-        of RADAR immunity
-      notes: Duncan-Lowey et al. support ATP mononucleotide deamination as a RADAR
-        immune output.
+      snippet: RdrB catalyzes ATP-to-ITP conversion in vitro
+      notes: Duncan-Lowey et al. support RdrB as the ATP-to-ITP deaminase encoded
+        by RADAR loci.
   - subject: adenosine_substrate_deamination
     predicate: contributes to
     predicate_id: RO:0002326
@@ -146,18 +144,18 @@ causal_graphs:
         phage replication
       notes: Duncan-Lowey et al. support inosine mononucleotide accumulation as a
         phage-limiting RADAR output.
-  - subject: inosine_nucleotide_accumulation
+  - subject: adenosine_substrate_deamination
     predicate: confers
     predicate_id: METPO:2007700
     object: radar_system_trait
-    description: RADAR-mediated inosine nucleotide accumulation realizes the RADAR
+    description: RADAR-mediated adenosine-nucleotide deamination realizes the RADAR
       antiphage phenotype.
     evidence:
     - reference: DOI:10.1016/j.cell.2023.01.012
       snippet: rapid deamination of adenosine nucleotides is a key mediator of RADAR
         anti-phage defense
-      notes: Duncan-Lowey et al. connect rapid adenosine-nucleotide deamination to
-        RADAR antiphage defense.
+      notes: Duncan-Lowey et al. connect rapid adenosine-nucleotide deamination, rather
+        than downstream inosine accumulation alone, to RADAR antiphage defense.
   - subject: radar_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -183,7 +181,7 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-18'
 curation_history:
-- timestamp: '2026-09-18T10:18:00Z'
+- timestamp: '2026-09-18T09:55:00Z'
   curator: codex
   action: MINTED_TRAITMECH_ID
   changes: Minted RADAR system as a DOI-backed GENOMICS TraitRecord under the phage

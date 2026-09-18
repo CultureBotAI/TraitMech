@@ -20,7 +20,7 @@ TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "radar_system.yaml"
 DUNCAN_LOWEY = "DOI:10.1016/j.cell.2023.01.012"
 GAO = "DOI:10.1016/j.cell.2023.01.026"
 CURATOR = "codex"
-TIMESTAMP = "2026-09-18T10:18:00Z"
+TIMESTAMP = "2026-09-18T09:55:00Z"
 
 RECORD: dict[str, Any] = {
     "identifier": "traitmech:000238",
@@ -254,26 +254,25 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "rdra_rdrb_complex_assembly",
-                    "predicate": "enables",
-                    "predicate_id": "RO:0002327",
+                    "subject": "radar_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
                     "object": "adenosine_substrate_deamination",
                     "description": (
-                        "The RdrA/RdrB RADAR complex enables RdrB "
-                        "deamination of adenosine-containing substrates."
+                        "RADAR loci encode RdrB, which catalyzes "
+                        "ATP-to-ITP deamination."
                     ),
                     "evidence": [
                         {
                             "reference": DUNCAN_LOWEY,
                             "snippet": (
-                                "Our results define ATP mononucleotide "
-                                "deamination as a determinant of RADAR "
-                                "immunity"
+                                "RdrB catalyzes ATP-to-ITP conversion in "
+                                "vitro"
                             ),
                             "notes": (
-                                "Duncan-Lowey et al. support ATP "
-                                "mononucleotide deamination as a RADAR "
-                                "immune output."
+                                "Duncan-Lowey et al. support RdrB as the "
+                                "ATP-to-ITP deaminase encoded by RADAR "
+                                "loci."
                             ),
                         }
                     ],
@@ -334,13 +333,14 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "inosine_nucleotide_accumulation",
+                    "subject": "adenosine_substrate_deamination",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": "radar_system_trait",
                     "description": (
-                        "RADAR-mediated inosine nucleotide accumulation "
-                        "realizes the RADAR antiphage phenotype."
+                        "RADAR-mediated adenosine-nucleotide "
+                        "deamination realizes the RADAR antiphage "
+                        "phenotype."
                     ),
                     "evidence": [
                         {
@@ -352,8 +352,10 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "Duncan-Lowey et al. connect rapid "
-                                "adenosine-nucleotide deamination to "
-                                "RADAR antiphage defense."
+                                "adenosine-nucleotide deamination, "
+                                "rather than downstream inosine "
+                                "accumulation alone, to RADAR antiphage "
+                                "defense."
                             ),
                         }
                     ],
