@@ -1227,6 +1227,10 @@ hachiman locus	GENETIC_ELEMENT	1	data/traits/genomics/hachiman_system.yaml
 hamab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
 hachiman dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
 phage particle production	BIOLOGICAL_PROCESS	1	data/traits/genomics/hachiman_system.yaml
+hna locus	GENETIC_ELEMENT	1	data/traits/genomics/hna_system.yaml
+phage ssb stimulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
+hna nuclease activation	MOLECULAR_FUNCTION	1	data/traits/genomics/hna_system.yaml
+abortive infection response	BIOLOGICAL_PROCESS	1	data/traits/genomics/hna_system.yaml
 kiwa locus	GENETIC_ELEMENT	1	data/traits/genomics/kiwa_system.yaml
 kwaa-kwab supercomplex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/kiwa_system.yaml
 membrane phage sensing and dna binding	BIOLOGICAL_PROCESS	1	data/traits/genomics/kiwa_system.yaml
