@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 632,
+    "records": 633,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 155,
+    "unresearched_mechanism_records": 156,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 0,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 168,
+      "DEEPEN_CAUSAL_GRAPH": 169,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 153
     }
@@ -3704,7 +3704,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 18,
+      "children": 19,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -3727,6 +3727,28 @@
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
       "children": 4,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000238",
+      "label": "RADAR system",
+      "category": "genomics",
+      "slug": "radar_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 6,
+      "nodes": 7,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

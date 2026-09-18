@@ -426,6 +426,23 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/pycsar_system.html#pycsar-signal-and-effector-gap"
  },
  {
+  "discussion_id": "radar-trigger-and-substrate-gap",
+  "prompt": "Resolve RADAR phage triggers, RdrA activation, ATP-versus-RNA deamination, and inosine nucleotide toxicity before minting narrower RADAR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "RADAR system",
+  "source_id": "traitmech:000238",
+  "source_file": "radar_system.yaml",
+  "attaches_to": [],
+  "rationale": "Gao et al. support an RNA translocation and deamination model for RdrA/RdrB RADAR assemblies, whereas Duncan-Lowey et al. found that ATP and dATP mononucleotide deamination rather than robust RNA editing mediates RADAR immunity. The first TraitRecord therefore stays at the RADAR-system level until separate review resolves which activating phage cues, RdrA sensor states, deaminase substrates, and inosine toxicity routes generalize across RADAR loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/radar_system.html#radar-trigger-and-substrate-gap"
+ },
+ {
   "discussion_id": "retron-effector-trigger-gap",
   "prompt": "Resolve retron effector, phage-trigger, and hybrid-system diversity before minting narrower Retron-Sen2, Ec48, or Retron-Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -1855,9 +1872,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 107,
- "total_knowledge_gaps": 26,
- "total_source_entries": 106,
+ "total_discussions": 108,
+ "total_knowledge_gaps": 27,
+ "total_source_entries": 107,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

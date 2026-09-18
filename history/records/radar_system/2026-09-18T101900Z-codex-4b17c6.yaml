@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/radar_system.yaml
+  slug: radar_system
+session:
+  id: 2026-09-18T101900Z-codex-4b17c6
+  timestamp: '2026-09-18T10:19:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add RADAR system trait
+  details: Minted traitmech:000238 for the RdrA/RdrB RADAR phage-defense system after an ignored-and-hidden
+    duplicate search found no exact live TraitMech, METPO, or prior proposal record for RADAR,
+    the expected slug, the source DOIs, or the reserved IDs. Duncan-Lowey et al. and Gao et
+    al. support the restriction by an adenosine deaminase acting on RNA identity, RdrA/RdrB
+    supramolecular assembly, ATP-to-ITP or RNA/RdrA-RdrB mechanism evidence, an Escherichia
+    coli canonical example, and a nonmechanistic causal graph for RADAR-mediated phage defense.
