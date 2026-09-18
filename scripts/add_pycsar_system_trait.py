@@ -79,8 +79,14 @@ RECORD: dict[str, Any] = {
         {
             "reference": TAL,
             "snippet": (
-                "both operons provided substantial defense against "
-                "multiple phages"
+                "The predicted cyclase genes are usually found in an "
+                "operon together with an additional gene, and we "
+                "therefore cloned such two-gene operons, one from "
+                "Escherichia coli 303145 and the other from E. coli "
+                "E831, into the laboratory E. coli strain MG1655. "
+                "Challenging the transformed bacteria with a panel of "
+                "12 phages showed that both operons provided "
+                "substantial defense against multiple phages"
             ),
             "notes": (
                 "Tal et al. support a canonical Escherichia coli example "
@@ -126,7 +132,13 @@ RECORD: dict[str, Any] = {
         },
         {
             "reference": HOU,
-            "snippet": "specific cUMP recognition",
+            "snippet": (
+                "structural characterization of cUMP receptor protein "
+                "PycTIR provides clear picture of specific cUMP "
+                "recognition and identifies a conserved N-terminal "
+                "extension that mediates PycTIR oligomerization and "
+                "activation"
+            ),
             "notes": (
                 "Hou et al. support cyclic UMP recognition by the "
                 "PycTIR cyclic-pyrimidine receptor as one resolved Pycsar "
@@ -365,8 +377,13 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": TAL,
                             "snippet": (
-                                "these molecules activate immune effectors "
-                                "that execute an antiviral response"
+                                "We discovered a family of bacterial "
+                                "pyrimidine cyclase enzymes that "
+                                "specifically synthesize cCMP and cUMP "
+                                "following phage infection and "
+                                "demonstrate that these molecules "
+                                "activate immune effectors that execute "
+                                "an antiviral response"
                             ),
                             "notes": (
                                 "Tal et al. connect cCMP and cUMP to "
@@ -389,8 +406,17 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": TAL,
                             "snippet": (
-                                "both operons provided substantial defense "
-                                "against multiple phages"
+                                "The predicted cyclase genes are usually "
+                                "found in an operon together with an "
+                                "additional gene, and we therefore cloned "
+                                "such two-gene operons, one from "
+                                "Escherichia coli 303145 and the other "
+                                "from E. coli E831, into the laboratory "
+                                "E. coli strain MG1655. Challenging the "
+                                "transformed bacteria with a panel of 12 "
+                                "phages showed that both operons provided "
+                                "substantial defense against multiple "
+                                "phages"
                             ),
                             "notes": (
                                 "Tal et al. demonstrated substantial "
