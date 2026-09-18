@@ -733,6 +733,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/septu_system.html#septu-standalone-retron-regulation-gap"
  },
  {
+  "discussion_id": "shango-mechanism-gap",
+  "prompt": "Resolve Shango phage triggers and effector outputs before minting narrower Shango mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Shango system",
+  "source_id": "traitmech:000255",
+  "source_file": "shango_system.yaml",
+  "attaches_to": [
+   "causal_graphs#shango_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Shango as a named anti-phage system with SngA, SngB, and SngC profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/shango_system.html#shango-mechanism-gap"
+ },
+ {
   "discussion_id": "shedu-sensor-and-substrate-gap",
   "prompt": "Resolve Shedu sensor classes and DNA substrate preferences before minting narrower Shedu subtype or mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2145,9 +2164,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 123,
- "total_knowledge_gaps": 42,
- "total_source_entries": 122,
+ "total_discussions": 124,
+ "total_knowledge_gaps": 43,
+ "total_source_entries": 123,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
