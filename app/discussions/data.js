@@ -754,6 +754,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rosmerta_system.html#rosmerta-mechanism-gap"
  },
  {
+  "discussion_id": "sefir-mechanism-gap",
+  "prompt": "Resolve SEFIR phage triggers and effector outputs before minting narrower SEFIR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SEFIR system",
+  "source_id": "traitmech:000259",
+  "source_file": "sefir_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sefir_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support SEFIR as a named anti-phage system with a bSEFIR profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sefir_system.html#sefir-mechanism-gap"
+ },
+ {
   "discussion_id": "septu-standalone-retron-regulation-gap",
   "prompt": "Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate specificity before minting narrower Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2221,9 +2240,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 127,
- "total_knowledge_gaps": 46,
- "total_source_entries": 126,
+ "total_discussions": 128,
+ "total_knowledge_gaps": 47,
+ "total_source_entries": 127,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
