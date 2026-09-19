@@ -1,0 +1,207 @@
+identifier: traitmech:000289
+label: Veles system
+definition: A phage defense system in which an organism possesses a Veles locus that
+  can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1101/2025.01.08.631966
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Veles
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: VlsA1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: VlsA2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: VlsB1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: VlsB2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: VlsC1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: VlsC2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: Among the remaining eight systems, six demonstrated increased resistance
+    to at least one phage with more than 100 fold reduction in plaque forming units
+    (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly soil dwelling
+    bacteria, we named these systems after deities of the soil and earth (Ceres, Geb,
+    Veles, Prithvi, Ukko and Oshun).
+  notes: Mordret et al. directly name Veles among six Streptomyces systems that increased
+    resistance to at least one phage.
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: The bacterial pangenome encodes an immense array of antiphage systems,
+    yet much of their diversity remains uncharted
+  notes: Mordret et al. motivate a conservative system-level record that does not
+    assert a resolved Veles trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Veles | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language models
+    chart a vast landscape of antiphage defenses
+  notes: The DefenseFinder model registry maps the named Veles system to the Mordret
+    et al. antiphage-system discovery preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsA1                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsA1 in the Veles model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsA2                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsA2 in the Veles model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsB1                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsB1 in the Veles model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsB2                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsB2 in the Veles model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsC1                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsC1 in the Veles model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Veles__VlsC2                                     |                                                  |
+    Veles
+  notes: The DefenseFinder HMM inventory records VlsC2 in the Veles model namespace.
+causal_graphs:
+- graph_id: veles_locus_restricts_phage
+  title: Veles loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Veles locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Veles as a named anti-phage system with VlsA1, VlsA2,
+    VlsB1, VlsB2, VlsC1, and VlsC2 DefenseFinder HMM profile entries while leaving
+    its phage trigger, molecular substrate, antiviral effector output, and subtype
+    breadth unresolved.
+  nodes:
+  - node_id: veles_locus
+    label: Veles locus
+    node_type: GENETIC_ELEMENT
+    description: A Veles anti-phage defense locus cataloged in DefenseFinder with
+      VlsA1, VlsA2, VlsB1, VlsB2, VlsC1, and VlsC2 HMM profile entries.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Veles
+      system.
+  - node_id: veles_system_trait
+    label: Veles system
+    node_type: TRAIT
+    grounding: traitmech:000289
+    description: Possession of a genome-encoded Veles phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: veles_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Veles to a protein- and genomic-language-model
+      antiphage-system discovery preprint and catalogs VlsA1, VlsA2, VlsB1, VlsB2,
+      VlsC1, and VlsC2 HMM profile entries in the Veles model namespace.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Veles among six Streptomyces systems that
+        restricted at least one phage.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Veles | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: The DefenseFinder registry maps Veles itself to the Mordret et al. bacterial
+        antiphage-system discovery preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsA1                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsA1 in the Veles model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsA2                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsA2 in the Veles model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsB1                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsB1 in the Veles model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsB2                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsB2 in the Veles model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsC1                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsC1 in the Veles model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Veles__VlsC2                                     |                                                  |
+        Veles
+      notes: The DefenseFinder HMM inventory records VlsC2 in the Veles model namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: veles_system_trait
+    description: Veles-mediated phage restriction realizes the Veles system trait.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Veles among six systems that increased resistance
+        to at least one phage.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Veles | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: DefenseFinder records Veles as a named system from the Mordret et al.
+        antiphage discovery preprint.
+  - subject: veles_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Veles system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Veles | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses |'
+      notes: DefenseFinder associates Veles with the Mordret et al. bacterial antiphage-system
+        discovery preprint.
+discussions:
+- discussion_id: veles-mechanism-gap
+  prompt: Resolve Veles phage triggers and effector outputs before minting narrower
+    Veles mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mordret et al. and DefenseFinder support Veles as a named anti-phage
+    system with VlsA1, VlsA2, VlsB1, VlsB2, VlsC1, and VlsC2 HMM profile entries,
+    but the trigger, molecular substrate, antiviral effector output, and subtype-specific
+    mechanism are not resolved enough here to assert a narrower mechanistic child
+    trait.
+  attaches_to:
+  - causal_graphs#veles_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T18:44:49Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Veles system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v166.
+  llm_assisted: true

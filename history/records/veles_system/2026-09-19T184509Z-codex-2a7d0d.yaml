@@ -1,0 +1,19 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/veles_system.yaml
+  slug: veles_system
+session:
+  id: 2026-09-19T184509Z-codex-2a7d0d
+  timestamp: '2026-09-19T18:45:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add Veles system genomics trait
+  details: Minted traitmech:000289 for Veles system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024300 in proposals/metpo_traitmech_v166 for upstream
+    migration, and carried the pinned DefenseFinder VlsA1/VlsA2/VlsB1/VlsB2/VlsC1/VlsC2 HMM
+    profile rows as related profile synonyms rather than individual gene or protein traits.
