@@ -1,0 +1,131 @@
+identifier: traitmech:000283
+label: Lugos system
+definition: A phage defense system in which an organism possesses a Lugos locus represented
+  by a VCA0409 profile that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1126/science.ads0768
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Lugos
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: VCA0409
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.ads0768
+  snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae strain
+    encode novel antiphage functions
+  notes: Darracq et al. support treating the newly discovered Vibrio cholerae SCI
+    antiphage cassettes as bacterial anti-phage systems.
+- reference: DOI:10.1126/science.ads0768
+  snippet: Most of these novel systems have little or no similarity to previously
+    known ones, with several providing defense through cell lysis or growth arrest
+  notes: Darracq et al. support a conservative system record that does not assert
+    a resolved Lugos trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Lugos | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons as
+    biobanks of bacterial antiphage defense systems
+  notes: The DefenseFinder model registry maps the named Lugos system to the Darracq
+    et al. SCI antiphage-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Lugos__VCA0409                                   |                                                  |
+    Lugos
+  notes: The DefenseFinder HMM inventory records VCA0409 in the Lugos model namespace.
+causal_graphs:
+- graph_id: lugos_locus_restricts_phage
+  title: Lugos loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Lugos locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Lugos as a named SCI-derived anti-phage system with
+    a VCA0409 DefenseFinder profile while leaving its phage trigger, molecular substrate,
+    antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: lugos_locus
+    label: Lugos locus
+    node_type: GENETIC_ELEMENT
+    description: A Lugos anti-phage defense locus represented in DefenseFinder by
+      a VCA0409 profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Lugos
+      system.
+  - node_id: lugos_system_trait
+    label: Lugos system
+    node_type: TRAIT
+    grounding: traitmech:000283
+    description: Possession of a genome-encoded Lugos phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: lugos_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Lugos to an SCI anti-phage-system discovery paper
+      and represents Lugos loci through the VCA0409 component profile.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae
+        strain encode novel antiphage functions
+      notes: Darracq et al. describe the newly discovered antiphage-system cohort
+        that the DefenseFinder Lugos registry row maps to the Lugos system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Lugos__VCA0409                                   |                                                  |
+        Lugos
+      notes: The DefenseFinder HMM inventory supports VCA0409 as the Lugos component
+        profile.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lugos_system_trait
+    description: Lugos-mediated phage restriction realizes the Lugos system trait.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: Most of these novel systems have little or no similarity to previously
+        known ones
+      notes: Darracq et al. place the Lugos discovery cohort in a set of novel bacterial
+        systems that protect against phages.
+  - subject: lugos_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Lugos system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Lugos | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons
+        as biobanks of bacterial antiphage defense systems
+      notes: DefenseFinder associates Lugos with the Darracq et al. bacterial antiphage-system
+        paper.
+discussions:
+- discussion_id: lugos-mechanism-gap
+  prompt: Resolve Lugos phage triggers and effector outputs before minting narrower
+    Lugos mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Darracq et al. and DefenseFinder support Lugos as a named anti-phage
+    system with a VCA0409 profile, but the trigger, molecular substrate, antiviral
+    effector output, and subtype-specific mechanism are not resolved enough here to
+    assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#lugos_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T15:04:20Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Lugos system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v160.
+  llm_assisted: true

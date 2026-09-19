@@ -842,6 +842,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lamassu_system.html#lamassu-subtype-and-effector-gap"
  },
  {
+  "discussion_id": "lugos-mechanism-gap",
+  "prompt": "Resolve Lugos phage triggers and effector outputs before minting narrower Lugos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Lugos system",
+  "source_id": "traitmech:000283",
+  "source_file": "lugos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#lugos_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Lugos as a named anti-phage system with a VCA0409 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/lugos_system.html#lugos-mechanism-gap"
+ },
+ {
   "discussion_id": "menshen-mechanism-gap",
   "prompt": "Resolve Menshen phage triggers and effector outputs before minting narrower Menshen mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2677,9 +2696,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 151,
- "total_knowledge_gaps": 70,
- "total_source_entries": 150,
+ "total_discussions": 152,
+ "total_knowledge_gaps": 71,
+ "total_source_entries": 151,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
