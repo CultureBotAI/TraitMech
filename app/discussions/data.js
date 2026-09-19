@@ -917,6 +917,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tiamat_system.html#tiamat-mechanism-gap"
  },
  {
+  "discussion_id": "uzume-mechanism-gap",
+  "prompt": "Resolve Uzume phage triggers and effector outputs before minting narrower Uzume mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Uzume system",
+  "source_id": "traitmech:000262",
+  "source_file": "uzume_system.yaml",
+  "attaches_to": [
+   "causal_graphs#uzume_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support Uzume as a named anti-phage system with a UzuA profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/uzume_system.html#uzume-mechanism-gap"
+ },
+ {
   "discussion_id": "wadjet-subfamily-and-substrate-gap",
   "prompt": "Resolve Wadjet subfamily architecture, plasmid substrate specificity, and activation cues before minting narrower Wadjet mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2278,9 +2297,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 130,
- "total_knowledge_gaps": 49,
- "total_source_entries": 129,
+ "total_discussions": 131,
+ "total_knowledge_gaps": 50,
+ "total_source_entries": 130,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
