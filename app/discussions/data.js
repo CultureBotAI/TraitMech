@@ -768,7 +768,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#geb_locus_restricts_phage"
   ],
-  "rationale": "Mordret et al. and DefenseFinder support Geb as a named anti-phage system with GebA1 and GebA2 profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "rationale": "Mordret et al. and DefenseFinder support Geb as a named anti-phage system with GebA1 and GebA2 HMM profile entries, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
