@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dsr_system.yaml
+  slug: dsr_system
+session:
+  id: 2026-09-19T130046Z-codex-a99a28
+  timestamp: '2026-09-19T13:00:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Dsr system genomics trait
+  details: Minted traitmech:000280 for the DOI-backed Dsr defense-associated sirtuin phage-defense
+    system and reserved METPO:1023400 in proposals/metpo_traitmech_v157; evidence comes from
+    Gao et al. 2020, Garb et al. 2022, and pinned DefenseFinder article, rule,
+    and HMM rows.

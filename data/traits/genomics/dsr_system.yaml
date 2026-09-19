@@ -1,0 +1,203 @@
+identifier: traitmech:000280
+label: Dsr system
+definition: A phage defense system in which an organism possesses a defense-associated
+  sirtuin locus whose SIR2-domain effector can deplete NAD+ during bacteriophage defense
+  and is modeled by DefenseFinder as Dsr subtypes.
+definition_source: DOI:10.1038/s41564-022-01207-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Dsr
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: defense-associated sirtuin
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.aba0372
+evidence:
+- reference: DOI:10.1126/science.aba0372
+  snippet: we selected 48 candidate systems to test experimentally for defense activity
+  notes: Gao et al. used heterologous reconstitution and phage challenge as their
+    experimental screen for computationally predicted antiphage systems.
+- reference: DOI:10.1126/science.aba0372
+  snippet: dsr, defense-associated sirtuin
+  notes: Gao et al. introduced dsr as a defense-associated sirtuin name in the candidate-system
+    activity figure.
+- reference: DOI:10.1126/science.aba0372
+  snippet: Additional systems include proteins containing a SIR2 (sirtuin) deacetylase
+    domain
+  notes: Gao et al. place SIR2-domain proteins among additional antiphage defense-system
+    candidates in their domain-architecture analysis.
+- reference: DOI:10.1038/s41564-022-01207-8
+  snippet: DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection,
+    depleting the cell of this essential molecule and aborting phage propagation
+  notes: Garb et al. showed that DSR SIR2-domain proteins can defend through infection-coupled
+    NAD+ depletion.
+- reference: DOI:10.1038/s41564-022-01207-8
+  snippet: DSR2, directly identifies phage tail tube proteins and then becomes an
+    active NADase in Bacillus subtilis
+  notes: Garb et al. experimentally resolved the phage-derived activation cue for
+    one Bacillus subtilis DSR2 system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Dsr | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes
+  notes: The DefenseFinder article registry maps the named Dsr system to the Gao et
+    al. antiphage-system discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"
+  notes: The DefenseFinder rules table models Dsr_I as a single-profile Dsr subtype.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      |
+    Dsr_I
+  notes: The DefenseFinder HMM inventory records the Dsr1 profile in the Dsr_I model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"
+  notes: The DefenseFinder rules table models Dsr_II as a single-profile Dsr subtype.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Dsr_II__Dsr2                                     | Dsr_II__Dsr2                                     |
+    Dsr_II
+  notes: The DefenseFinder HMM inventory records the Dsr2 profile in the Dsr_II model
+    namespace.
+causal_graphs:
+- graph_id: dsr_sirtuin_antiphage_defense
+  title: Dsr loci encode SIR2-domain antiphage proteins
+  description: Conservative system-level sketch linking a Dsr locus to SIR2-domain
+    NAD+ depletion, subtype-specific bacteriophage resistance, and the Dsr system
+    trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Dsr systems at the family level while leaving DefenseFinder
+    Dsr_I/Dsr_II profile boundaries, subtype-specific triggers outside DSR2, host
+    ranges, anti-defense proteins, and exact phage targets unresolved. This Dsr family
+    is distinct from metabolic dissimilatory sulfite reductase DsrAB systems.
+  nodes:
+  - node_id: dsr_locus
+    label: Dsr locus
+    node_type: GENETIC_ELEMENT
+    description: A defense-associated sirtuin antiphage locus represented by Dsr subtype
+      profiles.
+  - node_id: sir2_domain_antiphage_activity
+    label: SIR2-domain antiphage activity
+    node_type: MOLECULAR_FUNCTION
+    description: NADase-associated molecular activity carried by a Dsr SIR2-domain
+      antiphage protein.
+  - node_id: subtype_specific_phage_resistance
+    label: subtype-specific phage resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection against particular bacteriophages by a Dsr subtype.
+  - node_id: dsr_system_trait
+    label: Dsr system
+    node_type: TRAIT
+    grounding: traitmech:000280
+    description: Possession of a genome-encoded defense-associated sirtuin phage defense
+      system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: dsr_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sir2_domain_antiphage_activity
+    description: Dsr loci encode SIR2-domain defense-associated sirtuin proteins.
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: dsr, defense-associated sirtuin
+      notes: Gao et al. connect the Dsr name to a defense-associated sirtuin candidate.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      |
+        Dsr_I
+      notes: DefenseFinder includes Dsr1 in the Dsr_I custom model profile inventory.
+  - subject: sir2_domain_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: subtype_specific_phage_resistance
+    description: Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+
+      during infection and abort phage propagation.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01207-8
+      snippet: DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during
+        infection, depleting the cell of this essential molecule and aborting phage
+        propagation
+      notes: DSR SIR2-domain activity can deplete NAD+ during infection in an abortive
+        phage defense outcome.
+  - subject: dsr_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: subtype_specific_phage_resistance
+    description: Garb et al. support DSR NAD+ depletion as an abortive phage-defense
+      outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01207-8
+      snippet: DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during
+        infection, depleting the cell of this essential molecule and aborting phage
+        propagation
+      notes: Garb et al. directly support infection-coupled DSR NAD+ depletion as
+        an abortive antiphage output.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"
+      notes: The DefenseFinder rules table supports Dsr_I as a named defense-system
+        subtype model with a Dsr1 profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"
+      notes: The DefenseFinder rules table supports Dsr_II as a named defense-system
+        subtype model with a Dsr2 profile.
+  - subject: subtype_specific_phage_resistance
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: dsr_system_trait
+    description: DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within
+      its Dsr system models.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"
+      notes: The Dsr_I rule links the Dsr system namespace to the Dsr_I subtype and
+        Dsr1 profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"
+      notes: The Dsr_II rule links the Dsr system namespace to the Dsr_II subtype
+        and Dsr2 profile.
+  - subject: dsr_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Dsr system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Dsr | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+        antiviral immunity in prokaryotes
+      notes: DefenseFinder associates Dsr with the Gao et al. prokaryotic antiviral-immunity
+        paper.
+discussions:
+- discussion_id: dsr-sirtuin-mechanism-gap
+  prompt: Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved
+    DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming
+    collisions before minting narrower Dsr mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support defense-associated sirtuin proteins as antiphage system
+    components, Garb et al. resolved NAD+ depletion for multiple SIR2-dependent defense
+    systems and tail tube-triggered NADase activation for B. subtilis DSR2, and DefenseFinder
+    models Dsr_I and Dsr_II. This first record stays at Dsr-family level until the
+    DefenseFinder subtype profiles can be aligned to specific experimental DSR1/DSR2
+    systems, trigger proteins, host ranges, and phage-encoded anti-DSR proteins. The
+    DefenseFinder Dsr system is also lexically distinct from metabolic DsrAB dissimilatory
+    sulfite reductase systems.
+  attaches_to:
+  - causal_graphs#dsr_sirtuin_antiphage_defense
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T13:00:46Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Dsr system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact phage-defense
+    Dsr TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v157.
+  llm_assisted: true
