@@ -351,6 +351,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "brigantia-mechanism-gap",
+  "prompt": "Resolve Brigantia phage triggers and effector outputs before minting narrower Brigantia mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Brigantia system",
+  "source_id": "traitmech:000270",
+  "source_file": "brigantia_system.yaml",
+  "attaches_to": [
+   "causal_graphs#brigantia_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Brigantia as a named anti-phage system with a VCA0419 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brigantia_system.html#brigantia-mechanism-gap"
+ },
+ {
   "discussion_id": "bunzi-mechanism-gap",
   "prompt": "Resolve Bunzi phage triggers and effector outputs before minting narrower Bunzi mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2430,9 +2449,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 138,
- "total_knowledge_gaps": 57,
- "total_source_entries": 137,
+ "total_discussions": 139,
+ "total_knowledge_gaps": 58,
+ "total_source_entries": 138,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
