@@ -1,0 +1,155 @@
+identifier: traitmech:000294
+label: Panchino gp28 system
+definition: A phage defense system in which an organism possesses a Panchino gp28
+  locus that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1038/nmicrobiol.2016.251
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Panchino_gp28
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: at least five distinct prophage-expressed viral defense systems that interfere
+    with infection
+  notes: Dedrick et al. place the Cluster N Panchino gp28 system in a cohort of prophage-expressed
+    defenses against lytic and temperate mycobacteriophages.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: The Panchino restriction system (gp28) is a strong candidate for conferring
+    this defense
+  notes: Dedrick et al. identify Panchino gp28 as the candidate restriction system
+    responsible for a heterotypic viral-defense phenotype.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Panchino_gp28 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated defence
+    against viral attack and viral counter-defence
+  notes: The DefenseFinder model registry maps the named Panchino_gp28 system to the
+    Dedrick et al. prophage-mediated viral-defense paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Panchino_gp28__gp28                              | Panchino_gp28__gp28                              |
+    Panchino_gp28
+  notes: The DefenseFinder HMM inventory records gp28 in the Panchino_gp28 model namespace.
+causal_graphs:
+- graph_id: panchino_gp28_locus_restricts_phage
+  title: Panchino gp28 loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Panchino gp28
+    locus to restricted bacteriophage propagation without asserting the unresolved
+    restriction target, methylation context, or target-phage breadth.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Panchino gp28 as a named anti-phage system with
+    a DefenseFinder gp28 profile while leaving its restriction target, methylation
+    requirements, and target-phage breadth unresolved.
+  nodes:
+  - node_id: panchino_gp28_locus
+    label: Panchino gp28 locus
+    node_type: GENETIC_ELEMENT
+    description: A Panchino gp28 anti-phage defense locus cataloged in DefenseFinder
+      with a gp28 HMM profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Panchino
+      gp28 system.
+  - node_id: panchino_gp28_system_trait
+    label: Panchino gp28 system
+    node_type: TRAIT
+    grounding: traitmech:000294
+    description: Possession of a genome-encoded Panchino gp28 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: panchino_gp28_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Dedrick et al. identify Panchino gp28 as a prophage-expressed viral-defense
+      candidate, and DefenseFinder catalogs a gp28 profile in the Panchino_gp28 model
+      namespace.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: The Panchino restriction system (gp28) is a strong candidate for conferring
+        this defense
+      notes: Dedrick et al. support Panchino gp28 as the candidate system that confers
+        a Panchino defense profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Panchino_gp28__gp28                              | Panchino_gp28__gp28                              |
+        Panchino_gp28
+      notes: The DefenseFinder HMM inventory records gp28 in the Panchino_gp28 model
+        namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: panchino_gp28_system_trait
+    description: Panchino-gp28-mediated phage restriction realizes the Panchino gp28
+      system trait.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: at least five distinct prophage-expressed viral defense systems that
+        interfere with infection
+      notes: Dedrick et al. place Panchino gp28 among Cluster N prophage systems that
+        defend against phage infection.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Panchino_gp28 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+        defence against viral attack and viral counter-defence
+      notes: DefenseFinder records Panchino_gp28 as a named system from the Dedrick
+        et al. prophage-defense paper.
+  - subject: panchino_gp28_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Panchino gp28 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Panchino_gp28 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+        defence against viral attack and viral counter-defence |'
+      notes: DefenseFinder associates Panchino_gp28 with the Dedrick et al. prophage-mediated
+        viral-defense paper.
+discussions:
+- discussion_id: panchino_gp28-mechanism-gap
+  prompt: Resolve the Panchino gp28 restriction target, methylation requirements,
+    and homolog breadth before minting narrower Panchino gp28 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Dedrick et al. and DefenseFinder support Panchino gp28 as a named anti-phage
+    system with a gp28 profile, but the restriction target, methylation context, and
+    full target-phage breadth are not resolved enough here to assert a narrower mechanistic
+    child trait.
+  attaches_to:
+  - causal_graphs#panchino_gp28_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T21:37:34Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Panchino gp28 system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v171.
+  llm_assisted: true
+- timestamp: '2026-09-19T22:03:20Z'
+  curator: codex
+  action: DEMOTED_SOURCE_KEY_SYNONYM
+  changes: 'Resolved PR #1085 review issue #1086 by demoting the DefenseFinder source
+    key Panchino_gp28 from exact synonym to related synonym scope.'
+  llm_assisted: true
+- timestamp: '2026-09-19T22:07:53Z'
+  curator: codex
+  action: FIXED_FIXED_WIDTH_SNIPPET
+  changes: 'Resolved PR #1085 review issue #1087 by removing an extra separator space
+    from the two fixed-width DefenseFinder Panchino_gp28__gp28 HMM snippets.'
+  llm_assisted: true
+- timestamp: '2026-09-19T22:13:50Z'
+  curator: codex
+  action: REMOVED_AMBIGUOUS_SYNONYM
+  changes: 'Resolved PR #1085 review issue #1088 by dropping the ambiguous bare gp28
+    related synonym while retaining the pinned Panchino_gp28__gp28 HMM profile as
+    evidence.'
+  llm_assisted: true

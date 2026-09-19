@@ -859,6 +859,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/mokosh_system",
     "genomics/olokun_system",
     "genomics/oshun_system",
+    "genomics/panchino_gp28_system",
     "genomics/prithvi_system",
     "genomics/prometheus_system",
     "genomics/psyrta_system",

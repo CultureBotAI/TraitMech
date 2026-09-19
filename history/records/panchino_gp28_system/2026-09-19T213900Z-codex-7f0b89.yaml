@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/panchino_gp28_system.yaml
+  slug: panchino_gp28_system
+session:
+  id: 2026-09-19T213900Z-codex-7f0b89
+  timestamp: '2026-09-19T21:39:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Panchino gp28 system genomics trait
+  details: Minted traitmech:000294 for Panchino gp28 system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024800 in proposals/metpo_traitmech_v171 for upstream
+    migration, and carried the pinned DefenseFinder gp28 HMM profile row as a related profile
+    synonym rather than an individual gene, protein, prophage, or HMM trait.

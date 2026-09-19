@@ -1032,6 +1032,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/oshun_system.html#oshun-mechanism-gap"
  },
  {
+  "discussion_id": "panchino_gp28-mechanism-gap",
+  "prompt": "Resolve the Panchino gp28 restriction target, methylation requirements, and homolog breadth before minting narrower Panchino gp28 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Panchino gp28 system",
+  "source_id": "traitmech:000294",
+  "source_file": "panchino_gp28_system.yaml",
+  "attaches_to": [
+   "causal_graphs#panchino_gp28_locus_restricts_phage"
+  ],
+  "rationale": "Dedrick et al. and DefenseFinder support Panchino gp28 as a named anti-phage system with a gp28 profile, but the restriction target, methylation context, and full target-phage breadth are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/panchino_gp28_system.html#panchino_gp28-mechanism-gap"
+ },
+ {
   "discussion_id": "paris-trigger-and-counterdefense-gap",
   "prompt": "Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA suppression, and non-Ocr phage triggers before minting narrower PARIS subtype children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2886,9 +2905,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 162,
- "total_knowledge_gaps": 81,
- "total_source_entries": 161,
+ "total_discussions": 163,
+ "total_knowledge_gaps": 82,
+ "total_source_entries": 162,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

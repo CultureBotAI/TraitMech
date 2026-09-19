@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/panchino_gp28_system.yaml
+  slug: panchino_gp28_system
+session:
+  id: 2026-09-19T221358Z-codex-7279ee
+  timestamp: '2026-09-19T22:13:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1088
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1085
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Drop ambiguous Panchino gp28 alias
+  details: 'Resolved PR #1085 review issue #1088 by removing the ambiguous bare gp28 related
+    synonym from the Panchino gp28 system TraitRecord and paired METPO proposal while retaining
+    the pinned Panchino_gp28__gp28 HMM row as evidence.'
