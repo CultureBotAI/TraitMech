@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/darna_system.yaml
+  slug: darna_system
+session:
+  id: 2026-09-19T085631Z-codex-08b008
+  timestamp: '2026-09-19T08:56:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DARNA system
+  details: Minted the DARNA system GENOMICS record as traitmech:000273 under phage defense
+    system with Puteikiene et al. DOI evidence, a pinned DefenseFinder article-registry snippet,
+    a mechanism graph for phage SSB-presented single-stranded DNA activation and host-tRNA
+    cleavage, and a companion metpo_traitmech_v150 proposal reserving METPO:1022700.

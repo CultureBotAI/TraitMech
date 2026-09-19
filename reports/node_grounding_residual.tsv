@@ -1,5 +1,5 @@
 node_label	node_type	node_count	example_files
-restricted phage propagation	BIOLOGICAL_PROCESS	35	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	36	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
@@ -1169,6 +1169,9 @@ crrna-cas effector complex	RNA	1	data/traits/genomics/crispr_cas_system.yaml
 invading nucleic acid target	CHEMICAL	1	data/traits/genomics/crispr_cas_system.yaml
 phage and plasmid pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/crispr_cas_system.yaml
 damona locus	GENETIC_ELEMENT	1	data/traits/genomics/damona_system.yaml
+phage ssb-presented single-stranded dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
+darna activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
+host trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
 sensitive phage infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 dart toxin release	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 viral dna adp-ribosylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
