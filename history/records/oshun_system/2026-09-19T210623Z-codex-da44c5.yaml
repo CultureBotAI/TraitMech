@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/oshun_system.yaml
+  slug: oshun_system
+session:
+  id: 2026-09-19T210623Z-codex-da44c5
+  timestamp: '2026-09-19T21:06:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Oshun system genomics trait
+  details: Minted traitmech:000293 for Oshun system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024700 in proposals/metpo_traitmech_v170 for upstream
+    migration, and carried the pinned DefenseFinder OsnA2 HMM profile row as a related profile
+    synonym rather than an individual gene or protein trait.

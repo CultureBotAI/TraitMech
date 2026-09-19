@@ -1,0 +1,150 @@
+identifier: traitmech:000293
+label: Oshun system
+definition: A phage defense system in which an organism possesses an Oshun locus that
+  can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1101/2025.01.08.631966
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Oshun
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: OsnA2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: Among the remaining eight systems, six demonstrated increased resistance
+    to at least one phage with more than 100 fold reduction in plaque forming units
+    (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly soil dwelling
+    bacteria, we named these systems after deities of the soil and earth (Ceres, Geb,
+    Veles, Prithvi, Ukko and Oshun).
+  notes: Mordret et al. directly name Oshun among six Streptomyces systems that increased
+    resistance to at least one phage.
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: The bacterial pangenome encodes an immense array of antiphage systems,
+    yet much of their diversity remains uncharted
+  notes: Mordret et al. motivate a conservative system-level record that does not
+    assert a resolved Oshun trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Oshun | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language models
+    chart a vast landscape of antiphage defenses
+  notes: The DefenseFinder model registry maps the named Oshun system to the Mordret
+    et al. antiphage-system discovery preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Oshun__OsnA2                                     |                                                  |
+    Oshun
+  notes: The DefenseFinder HMM inventory records OsnA2 in the Oshun model namespace.
+causal_graphs:
+- graph_id: oshun_locus_restricts_phage
+  title: Oshun loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an Oshun locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Oshun as a named anti-phage system with an OsnA2
+    HMM profile entry while leaving its phage trigger, molecular substrate, antiviral
+    effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: oshun_locus
+    label: Oshun locus
+    node_type: GENETIC_ELEMENT
+    description: An Oshun anti-phage defense locus cataloged in DefenseFinder with
+      an OsnA2 HMM profile entry.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Oshun
+      system.
+  - node_id: oshun_system_trait
+    label: Oshun system
+    node_type: TRAIT
+    grounding: traitmech:000293
+    description: Possession of a genome-encoded Oshun phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: oshun_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Oshun to a protein- and genomic-language-model
+      antiphage-system discovery preprint and catalogs an OsnA2 HMM profile entry
+      in the Oshun model namespace.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Oshun among six Streptomyces systems that
+        restricted at least one phage.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Oshun | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: The DefenseFinder registry maps Oshun itself to the Mordret et al. bacterial
+        antiphage-system discovery preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Oshun__OsnA2                                     |                                                  |
+        Oshun
+      notes: The DefenseFinder HMM inventory records OsnA2 in the Oshun model namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: oshun_system_trait
+    description: Oshun-mediated phage restriction realizes the Oshun system trait.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Oshun among six systems that increased resistance
+        to at least one phage.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Oshun | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: DefenseFinder records Oshun as a named system from the Mordret et al.
+        antiphage discovery preprint.
+  - subject: oshun_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Oshun system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Oshun | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses |'
+      notes: DefenseFinder associates Oshun with the Mordret et al. bacterial antiphage-system
+        discovery preprint.
+discussions:
+- discussion_id: oshun-mechanism-gap
+  prompt: Resolve Oshun phage triggers and effector outputs before minting narrower
+    Oshun mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mordret et al. and DefenseFinder support Oshun as a named anti-phage
+    system with an OsnA2 HMM profile entry, but the trigger, molecular substrate,
+    antiviral effector output, and subtype-specific mechanism are not resolved enough
+    here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#oshun_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T21:03:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Oshun system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v170.
+  llm_assisted: true
