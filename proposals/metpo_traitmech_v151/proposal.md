@@ -9,7 +9,7 @@
 
 The pinned METPO snapshot has no active exact class for dCTPdeaminase system,
 the genome-level possession trait for the bacterial dCTP-depletion anti-phage
-defense system. Bernier et al. reported that defensive dCTP deaminase proteins
+defense system. Tal et al. reported that defensive dCTP deaminase proteins
 convert dCTP into deoxy-uracil nucleotides in response to phage infection,
 deplete dCTP from the nucleotide pool, and halt phage replication by starving
 the phage of an essential DNA building block. DefenseFinder models

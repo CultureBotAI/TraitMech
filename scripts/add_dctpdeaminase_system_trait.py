@@ -17,7 +17,7 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "dctpdeaminase_system.yaml"
 
-BERNIER = "DOI:10.1101/2021.04.26.441389"
+TAL = "DOI:10.1101/2021.04.26.441389"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -40,7 +40,7 @@ RECORD: dict[str, Any] = {
         "infection, depletes dCTP from the nucleotide pool, and halts phage "
         "replication by starving the phage of an essential DNA building block."
     ),
-    "definition_source": BERNIER,
+    "definition_source": TAL,
     "trait_category": "GENOMICS",
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
@@ -54,36 +54,36 @@ RECORD: dict[str, Any] = {
     ],
     "evidence": [
         {
-            "reference": BERNIER,
+            "reference": TAL,
             "snippet": (
                 "bacteria employ a similar strategy to defend against phage "
                 "infection"
             ),
             "notes": (
-                "Bernier et al. support nucleotide depletion as a bacterial "
+                "Tal et al. support nucleotide depletion as a bacterial "
                 "anti-phage strategy."
             ),
         },
         {
-            "reference": BERNIER,
+            "reference": TAL,
             "snippet": (
                 "a family of defensive dCTP deaminase proteins that, in "
                 "response to phage infection, convert dCTP into deoxy-uracil "
                 "nucleotides"
             ),
             "notes": (
-                "Bernier et al. support the dCTPdeaminase family as a phage-"
+                "Tal et al. support the dCTPdeaminase family as a phage-"
                 "responsive dCTP-conversion defense."
             ),
         },
         {
-            "reference": BERNIER,
+            "reference": TAL,
             "snippet": (
                 "starving the phage of an essential DNA building block and "
                 "halting its replication"
             ),
             "notes": (
-                "Bernier et al. connect dCTP depletion to phage DNA-building-"
+                "Tal et al. connect dCTP depletion to phage DNA-building-"
                 "block starvation and replication arrest."
             ),
         },
@@ -95,7 +95,7 @@ RECORD: dict[str, Any] = {
             ),
             "notes": (
                 "The DefenseFinder article registry maps the named "
-                "dCTPdeaminase system to the Bernier et al. nucleotide-"
+                "dCTPdeaminase system to the Tal et al. nucleotide-"
                 "depletion preprint."
             ),
         },
@@ -224,13 +224,13 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": (
                                 "defensive dCTP deaminase proteins that, in "
                                 "response to phage infection, convert dCTP"
                             ),
                             "notes": (
-                                "Bernier et al. identify defensive dCTP "
+                                "Tal et al. identify defensive dCTP "
                                 "deaminase proteins that convert dCTP during "
                                 "phage infection."
                             ),
@@ -255,10 +255,10 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": "in response to phage infection, convert dCTP",
                             "notes": (
-                                "Bernier et al. place dCTP conversion in the "
+                                "Tal et al. place dCTP conversion in the "
                                 "phage-infection response."
                             ),
                         }
@@ -275,14 +275,14 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": (
                                 "completely eliminate the specific "
                                 "deoxynucleotide (either dCTP or dGTP) from "
                                 "the nucleotide pool during phage infection"
                             ),
                             "notes": (
-                                "Bernier et al. connect defensive dCTP "
+                                "Tal et al. connect defensive dCTP "
                                 "conversion to loss of dCTP from the "
                                 "nucleotide pool."
                             ),
@@ -300,13 +300,13 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": (
                                 "starving the phage of an essential DNA "
                                 "building block"
                             ),
                             "notes": (
-                                "Bernier et al. support phage DNA-building-"
+                                "Tal et al. support phage DNA-building-"
                                 "block starvation as the output of defensive "
                                 "deoxynucleotide depletion."
                             ),
@@ -323,13 +323,13 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": (
                                 "starving the phage of an essential DNA "
                                 "building block and halting its replication"
                             ),
                             "notes": (
-                                "Bernier et al. place phage-replication arrest "
+                                "Tal et al. place phage-replication arrest "
                                 "downstream of defensive deoxynucleotide "
                                 "depletion."
                             ),
@@ -347,10 +347,10 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": BERNIER,
+                            "reference": TAL,
                             "snippet": "bacteria employ a similar strategy to defend against phage infection",
                             "notes": (
-                                "Bernier et al. support dCTP depletion as a "
+                                "Tal et al. support dCTP depletion as a "
                                 "bacterial phage-defense strategy."
                             ),
                         }
@@ -376,7 +376,7 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "DefenseFinder associates dCTPdeaminase with "
-                                "the Bernier et al. bacterial antiviral "
+                                "the Tal et al. bacterial antiviral "
                                 "nucleotide-depletion preprint."
                             ),
                         }
@@ -396,7 +396,7 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Bernier et al. support dCTPdeaminase as a phage-responsive "
+                "Tal et al. support dCTPdeaminase as a phage-responsive "
                 "dCTP-depletion defense and DefenseFinder models the system "
                 "with a custom dCTPdeaminase HMM profile, but this first "
                 "system-level record does not resolve the universal phage "

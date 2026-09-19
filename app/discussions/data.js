@@ -508,7 +508,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#dctpdeaminase_dctp_depletion_defense"
   ],
-  "rationale": "Bernier et al. support dCTPdeaminase as a phage-responsive dCTP-depletion defense and DefenseFinder models the system with a custom dCTPdeaminase HMM profile, but this first system-level record does not resolve the universal phage sensor, activation route, strain-level accessions, or whether additional unmodeled components define some natural loci.",
+  "rationale": "Tal et al. support dCTPdeaminase as a phage-responsive dCTP-depletion defense and DefenseFinder models the system with a custom dCTPdeaminase HMM profile, but this first system-level record does not resolve the universal phage sensor, activation route, strain-level accessions, or whether additional unmodeled components define some natural loci.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

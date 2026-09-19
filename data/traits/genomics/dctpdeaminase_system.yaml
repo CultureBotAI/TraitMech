@@ -17,21 +17,21 @@ synonyms:
 evidence:
 - reference: DOI:10.1101/2021.04.26.441389
   snippet: bacteria employ a similar strategy to defend against phage infection
-  notes: Bernier et al. support nucleotide depletion as a bacterial anti-phage strategy.
+  notes: Tal et al. support nucleotide depletion as a bacterial anti-phage strategy.
 - reference: DOI:10.1101/2021.04.26.441389
   snippet: a family of defensive dCTP deaminase proteins that, in response to phage
     infection, convert dCTP into deoxy-uracil nucleotides
-  notes: Bernier et al. support the dCTPdeaminase family as a phage-responsive dCTP-conversion
+  notes: Tal et al. support the dCTPdeaminase family as a phage-responsive dCTP-conversion
     defense.
 - reference: DOI:10.1101/2021.04.26.441389
   snippet: starving the phage of an essential DNA building block and halting its replication
-  notes: Bernier et al. connect dCTP depletion to phage DNA-building-block starvation
+  notes: Tal et al. connect dCTP depletion to phage DNA-building-block starvation
     and replication arrest.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: dCTPdeaminase | 10\.1101/2021\.04\.26\.441389 | Antiviral defense via nucleotide
     depletion in bacteria
   notes: The DefenseFinder article registry maps the named dCTPdeaminase system to
-    the Bernier et al. nucleotide-depletion preprint.
+    the Tal et al. nucleotide-depletion preprint.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
   snippet: dCTPdeaminase__dCTPdeaminase
   notes: The DefenseFinder rules table models dCTPdeaminase as a single-profile system.
@@ -101,7 +101,7 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: defensive dCTP deaminase proteins that, in response to phage infection,
         convert dCTP
-      notes: Bernier et al. identify defensive dCTP deaminase proteins that convert
+      notes: Tal et al. identify defensive dCTP deaminase proteins that convert
         dCTP during phage infection.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: dCTPdeaminase__dCTPdeaminase
@@ -115,7 +115,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: in response to phage infection, convert dCTP
-      notes: Bernier et al. place dCTP conversion in the phage-infection response.
+      notes: Tal et al. place dCTP conversion in the phage-infection response.
   - subject: dctp_conversion
     predicate: contributes to
     predicate_id: RO:0002326
@@ -126,7 +126,7 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: completely eliminate the specific deoxynucleotide (either dCTP or dGTP)
         from the nucleotide pool during phage infection
-      notes: Bernier et al. connect defensive dCTP conversion to loss of dCTP from
+      notes: Tal et al. connect defensive dCTP conversion to loss of dCTP from
         the nucleotide pool.
   - subject: dctp_depletion
     predicate: contributes to
@@ -137,7 +137,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: starving the phage of an essential DNA building block
-      notes: Bernier et al. support phage DNA-building-block starvation as the output
+      notes: Tal et al. support phage DNA-building-block starvation as the output
         of defensive deoxynucleotide depletion.
   - subject: phage_dna_building_block_starvation
     predicate: contributes to
@@ -148,7 +148,7 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: starving the phage of an essential DNA building block and halting its
         replication
-      notes: Bernier et al. place phage-replication arrest downstream of defensive
+      notes: Tal et al. place phage-replication arrest downstream of defensive
         deoxynucleotide depletion.
   - subject: halted_phage_replication
     predicate: confers
@@ -159,7 +159,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: bacteria employ a similar strategy to defend against phage infection
-      notes: Bernier et al. support dCTP depletion as a bacterial phage-defense strategy.
+      notes: Tal et al. support dCTP depletion as a bacterial phage-defense strategy.
   - subject: dctpdeaminase_system_trait
     predicate: is a
     predicate_id: rdfs:subClassOf
@@ -169,7 +169,7 @@ causal_graphs:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: dCTPdeaminase | 10\.1101/2021\.04\.26\.441389 | Antiviral defense via
         nucleotide depletion in bacteria
-      notes: DefenseFinder associates dCTPdeaminase with the Bernier et al. bacterial
+      notes: DefenseFinder associates dCTPdeaminase with the Tal et al. bacterial
         antiviral nucleotide-depletion preprint.
 discussions:
 - discussion_id: dctpdeaminase-activation-profile-gap
@@ -177,7 +177,7 @@ discussions:
     accessions before asserting narrower component or subtype traits.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Bernier et al. support dCTPdeaminase as a phage-responsive dCTP-depletion
+  rationale: Tal et al. support dCTPdeaminase as a phage-responsive dCTP-depletion
     defense and DefenseFinder models the system with a custom dCTPdeaminase HMM profile,
     but this first system-level record does not resolve the universal phage sensor,
     activation route, strain-level accessions, or whether additional unmodeled components
