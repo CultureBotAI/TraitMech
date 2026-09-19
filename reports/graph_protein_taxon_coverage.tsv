@@ -217,6 +217,7 @@ data/traits/genomics/tiamat_system.yaml	traitmech:000261	Tiamat system	tiamat_lo
 data/traits/genomics/toxin_system.yaml	traitmech:000226	ToxIN system	toxin_type_iii_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/transposable_element.yaml	traitmech:000092	transposable element	te_transposition_rearrangement	NONMECHANISTIC	1	1	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/uzume_system.yaml	traitmech:000262	Uzume system	uzume_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/viperin_system.yaml	traitmech:000263	Viperin system	viperin_modified_ribonucleotides_restrict_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/wadjet_system.yaml	traitmech:000218	Wadjet system	wadjet_smc_plasmid_restriction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/zorya_system.yaml	traitmech:000217	Zorya system	zorya_zorab_effector_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/acetogenesis.yaml	METPO:1000845	Acetogenesis	acetogenesis_wood_ljungdahl	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-

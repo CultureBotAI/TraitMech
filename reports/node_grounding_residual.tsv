@@ -1377,6 +1377,9 @@ target site duplication	QUALITY	1	data/traits/genomics/transposable_element.yaml
 gene disruption	BIOLOGICAL_PROCESS	1	data/traits/genomics/transposable_element.yaml
 homologous recombination between is copies	BIOLOGICAL_PROCESS	1	data/traits/genomics/transposable_element.yaml
 uzume locus	GENETIC_ELEMENT	1	data/traits/genomics/uzume_system.yaml
+viperin locus	GENETIC_ELEMENT	1	data/traits/genomics/viperin_system.yaml
+modified ribonucleotide production	BIOLOGICAL_PROCESS	1	data/traits/genomics/viperin_system.yaml
+t7 phage transcription inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/viperin_system.yaml
 wadjet locus	GENETIC_ELEMENT	1	data/traits/genomics/wadjet_system.yaml
 wadjet smc atpase cycle	BIOLOGICAL_PROCESS	1	data/traits/genomics/wadjet_system.yaml
 wadjet plasmid dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/wadjet_system.yaml

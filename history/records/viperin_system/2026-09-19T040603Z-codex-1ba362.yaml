@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/viperin_system.yaml
+  slug: viperin_system
+session:
+  id: 2026-09-19T040603Z-codex-1ba362
+  timestamp: '2026-09-19T04:06:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1038
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1036
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - metpo_proposal
+  summary: Align Viperin definition with prokaryotic scope
+  details: 'Addressed Claude review issue #1038 by replacing a bacteria-only phage-protection
+    phrase with source-aligned phage-infection wording in the Viperin definition and METPO
+    proposal.'

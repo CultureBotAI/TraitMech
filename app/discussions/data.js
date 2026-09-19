@@ -936,6 +936,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/uzume_system.html#uzume-mechanism-gap"
  },
  {
+  "discussion_id": "viperin-product-and-subtype-gap",
+  "prompt": "Resolve Viperin nucleotide products, accessory genes, and phage-target breadth before minting narrower Viperin mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Viperin system",
+  "source_id": "traitmech:000263",
+  "source_file": "viperin_system.yaml",
+  "attaches_to": [
+   "causal_graphs#viperin_modified_ribonucleotides_restrict_phage"
+  ],
+  "rationale": "Bernheim et al. support prokaryotic viperins as phage-protective producers of modified ribonucleotides, and DefenseFinder models Viperin through the pVip profile, but Viperin-family loci need separate review before TraitMech asserts one universal antiviral nucleotide, polymerase target, or accessory-gene architecture.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/viperin_system.html#viperin-product-and-subtype-gap"
+ },
+ {
   "discussion_id": "wadjet-subfamily-and-substrate-gap",
   "prompt": "Resolve Wadjet subfamily architecture, plasmid substrate specificity, and activation cues before minting narrower Wadjet mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2297,9 +2316,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 131,
- "total_knowledge_gaps": 50,
- "total_source_entries": 130,
+ "total_discussions": 132,
+ "total_knowledge_gaps": 51,
+ "total_source_entries": 131,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

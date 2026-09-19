@@ -1,0 +1,161 @@
+identifier: traitmech:000263
+label: Viperin system
+definition: A phage defense system in which an organism possesses a prokaryotic viperin
+  locus represented by a pVip profile that can produce antiviral modified ribonucleotides
+  and protect against phage infection.
+definition_source: DOI:10.1038/s41586-020-2762-2
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Viperin
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: pVip
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41586-020-2762-2
+evidence:
+- reference: DOI:10.1038/s41586-020-2762-2
+  snippet: Here we show that eukaryotic viperin originated from a clade of bacterial
+    and archaeal proteins that protect against phage infection
+  notes: Bernheim et al. support treating prokaryotic viperins as bacterial and archaeal
+    phage-protective proteins rather than only as an animal antiviral factor.
+- reference: DOI:10.1038/s41586-020-2762-2
+  snippet: Prokaryotic viperins produce a set of modified ribonucleotides
+  notes: Bernheim et al. support modified ribonucleotide synthesis as a recurring
+    output of prokaryotic viperin proteins.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Viperin | 10\.1038/s41586-020-2762-2 | Prokaryotic viperins produce diverse
+    antiviral molecules
+  notes: The DefenseFinder model registry maps the named Viperin system to the Bernheim
+    et al. prokaryotic viperin paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Viperin\tViperin\t1\t1\tViperin__pVip"
+  notes: The DefenseFinder rules table models Viperin with a pVip profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Viperin__pVip                                    | Viperin__pVip                                    |
+    Viperin
+  notes: The DefenseFinder HMM inventory records pVip in the Viperin model namespace.
+causal_graphs:
+- graph_id: viperin_modified_ribonucleotides_restrict_phage
+  title: Prokaryotic viperins produce antiviral ribonucleotides
+  description: Conservative system-level sketch linking possession of a prokaryotic
+    viperin locus to modified ribonucleotide production and inhibited phage transcription.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures characterized pVip-mediated modified ribonucleotide
+    production and T7 transcription inhibition without asserting one universal nucleotide
+    product, viral polymerase target, accessory-gene architecture, or phage range
+    across all Viperin loci.
+  nodes:
+  - node_id: viperin_locus
+    label: Viperin locus
+    node_type: GENETIC_ELEMENT
+    description: A prokaryotic viperin phage-defense locus satisfying a DefenseFinder
+      rule over the pVip profile.
+  - node_id: modified_ribonucleotide_production
+    label: modified ribonucleotide production
+    node_type: BIOLOGICAL_PROCESS
+    description: Production of modified ribonucleotides by prokaryotic viperin enzymes.
+  - node_id: t7_phage_transcription_inhibition
+    label: T7 phage transcription inhibition
+    node_type: BIOLOGICAL_PROCESS
+    description: Inhibition of T7 phage polymerase-dependent transcription.
+  - node_id: viperin_system_trait
+    label: Viperin system
+    node_type: TRAIT
+    grounding: traitmech:000263
+    description: Possession of a genome-encoded prokaryotic viperin phage-defense
+      locus.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: viperin_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: modified_ribonucleotide_production
+    description: The Viperin locus encodes a pVip-class radical-SAM enzyme that produces
+      modified ribonucleotides.
+    evidence:
+    - reference: DOI:10.1038/s41586-020-2762-2
+      snippet: Prokaryotic viperins produce a set of modified ribonucleotides
+      notes: Bernheim et al. support modified ribonucleotide production as a pVip
+        output.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Viperin\tViperin\t1\t1\tViperin__pVip"
+      notes: The DefenseFinder rules table supports pVip as the required Viperin system
+        profile.
+  - subject: modified_ribonucleotide_production
+    predicate: enables
+    predicate_id: RO:0002327
+    object: t7_phage_transcription_inhibition
+    description: Prokaryotic viperin products can inhibit T7 phage polymerase-dependent
+      transcription.
+    evidence:
+    - reference: DOI:10.1038/s41586-020-2762-2
+      snippet: prokaryotic viperins protect against T7 phage infection by inhibiting
+        viral polymerase-dependent transcription
+      notes: Bernheim et al. connect prokaryotic viperin activity to inhibition of
+        T7 transcription.
+  - subject: t7_phage_transcription_inhibition
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: viperin_system_trait
+    description: Inhibition of phage transcription is a source-backed antiviral output
+      that realizes the Viperin system trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-020-2762-2
+      snippet: prokaryotic viperins protect against T7 phage infection by inhibiting
+        viral polymerase-dependent transcription
+      notes: Bernheim et al. support pVip-mediated protection from T7 phage infection.
+  - subject: viperin_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Viperin system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1038/s41586-020-2762-2
+      snippet: Here we show that eukaryotic viperin originated from a clade of bacterial
+        and archaeal proteins that protect against phage infection
+      notes: Bernheim et al. support Viperin as a prokaryotic phage-defense system.
+discussions:
+- discussion_id: viperin-product-and-subtype-gap
+  prompt: Resolve Viperin nucleotide products, accessory genes, and phage-target breadth
+    before minting narrower Viperin mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Bernheim et al. support prokaryotic viperins as phage-protective producers
+    of modified ribonucleotides, and DefenseFinder models Viperin through the pVip
+    profile, but Viperin-family loci need separate review before TraitMech asserts
+    one universal antiviral nucleotide, polymerase target, or accessory-gene architecture.
+  attaches_to:
+  - causal_graphs#viperin_modified_ribonucleotides_restrict_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T03:43:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Viperin system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v140.
+  llm_assisted: true
+- timestamp: '2026-09-19T03:58:00Z'
+  curator: codex
+  action: EDIT
+  changes: 'Replaced the Viperin phage-defense-system subclass edge snippet with a
+    Bernheim et al. phage-protection abstract span found by local adversarial review
+    in issue #1037.'
+  llm_assisted: true
+- timestamp: '2026-09-19T04:06:03Z'
+  curator: codex
+  action: EDIT
+  changes: 'Aligned the Viperin definition with the bacterial and archaeal prokaryotic
+    scope identified in Claude review issue #1038.'
+  llm_assisted: true
