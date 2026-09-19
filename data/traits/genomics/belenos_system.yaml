@@ -1,0 +1,132 @@
+identifier: traitmech:000268
+label: Belenos system
+definition: A phage defense system in which an organism possesses a Belenos locus
+  represented by a VCA0457 profile that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1126/science.ads0768
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Belenos
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: VCA0457
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.ads0768
+  snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae strain
+    encode novel antiphage functions
+  notes: Darracq et al. support treating the newly discovered Vibrio cholerae SCI
+    antiphage cassettes as bacterial anti-phage systems.
+- reference: DOI:10.1126/science.ads0768
+  snippet: Most of these novel systems have little or no similarity to previously
+    known ones, with several providing defense through cell lysis or growth arrest
+  notes: Darracq et al. support a conservative system record that does not assert
+    a resolved Belenos trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Belenos | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons as
+    biobanks of bacterial antiphage defense systems
+  notes: The DefenseFinder model registry maps the named Belenos system to the Darracq
+    et al. SCI antiphage-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Belenos__VCA0457                                 |                                                  |
+    Belenos
+  notes: The DefenseFinder HMM inventory records VCA0457 in the Belenos model namespace.
+causal_graphs:
+- graph_id: belenos_locus_restricts_phage
+  title: Belenos loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Belenos locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Belenos as a named SCI-derived anti-phage system
+    with a VCA0457 DefenseFinder profile while leaving its phage trigger, molecular
+    substrate, antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: belenos_locus
+    label: Belenos locus
+    node_type: GENETIC_ELEMENT
+    description: A Belenos anti-phage defense locus represented in DefenseFinder by
+      a VCA0457 profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Belenos
+      system.
+  - node_id: belenos_system_trait
+    label: Belenos system
+    node_type: TRAIT
+    grounding: traitmech:000268
+    description: Possession of a genome-encoded Belenos phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: belenos_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Belenos to an SCI anti-phage-system discovery
+      paper and represents Belenos loci through the VCA0457 component profile.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae
+        strain encode novel antiphage functions
+      notes: Darracq et al. describe the newly discovered antiphage-system cohort
+        that the DefenseFinder Belenos registry row maps to the Belenos system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Belenos__VCA0457                                 |                                                  |
+        Belenos
+      notes: The DefenseFinder HMM inventory supports VCA0457 as the Belenos component
+        profile.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: belenos_system_trait
+    description: Belenos-mediated phage restriction realizes the Belenos system trait.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: Most of these novel systems have little or no similarity to previously
+        known ones
+      notes: Darracq et al. place the Belenos discovery cohort in a set of novel bacterial
+        systems that protect against phages.
+  - subject: belenos_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Belenos system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Belenos | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons
+        as biobanks of bacterial antiphage defense systems
+      notes: DefenseFinder associates Belenos with the Darracq et al. bacterial antiphage-system
+        paper.
+discussions:
+- discussion_id: belenos-mechanism-gap
+  prompt: Resolve Belenos phage triggers and effector outputs before minting narrower
+    Belenos mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Darracq et al. and DefenseFinder support Belenos as a named anti-phage
+    system with a VCA0457 profile, but the trigger, molecular substrate, antiviral
+    effector output, and subtype-specific mechanism are not resolved enough here to
+    assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#belenos_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T06:33:51Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Belenos system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v145.
+  llm_assisted: true

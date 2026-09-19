@@ -277,6 +277,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/azaca_system.html#azaca-mechanism-gap"
  },
  {
+  "discussion_id": "belenos-mechanism-gap",
+  "prompt": "Resolve Belenos phage triggers and effector outputs before minting narrower Belenos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Belenos system",
+  "source_id": "traitmech:000268",
+  "source_file": "belenos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#belenos_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Belenos as a named anti-phage system with a VCA0457 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/belenos_system.html#belenos-mechanism-gap"
+ },
+ {
   "discussion_id": "borvo-mechanism-gap",
   "prompt": "Resolve Borvo phage triggers and effector outputs before minting narrower Borvo mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2392,9 +2411,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 136,
- "total_knowledge_gaps": 55,
- "total_source_entries": 135,
+ "total_discussions": 137,
+ "total_knowledge_gaps": 56,
+ "total_source_entries": 136,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

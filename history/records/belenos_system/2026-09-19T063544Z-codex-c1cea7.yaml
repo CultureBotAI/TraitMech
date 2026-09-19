@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/belenos_system.yaml
+  slug: belenos_system
+session:
+  id: 2026-09-19T063544Z-codex-c1cea7
+  timestamp: '2026-09-19T06:35:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Belenos system
+  details: Minted the Belenos system GENOMICS record as traitmech:000268 under phage defense
+    system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory
+    snippets for VCA0457, a conservative nonmechanistic phage-restriction graph, and a companion
+    metpo_traitmech_v145 proposal reserving METPO:1022200.
