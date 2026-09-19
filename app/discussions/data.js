@@ -442,6 +442,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cernunnos_system.html#cernunnos-mechanism-gap"
  },
  {
+  "discussion_id": "damona-mechanism-gap",
+  "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Damona system",
+  "source_id": "traitmech:000272",
+  "source_file": "damona_system.yaml",
+  "attaches_to": [
+   "causal_graphs#damona_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Damona as a named anti-phage system with a VCA0399 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/damona_system.html#damona-mechanism-gap"
+ },
+ {
   "discussion_id": "dazbog-mechanism-gap",
   "prompt": "Resolve Dazbog phage triggers and effector outputs before minting narrower Dazbog mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2468,9 +2487,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 140,
- "total_knowledge_gaps": 59,
- "total_source_entries": 139,
+ "total_discussions": 141,
+ "total_knowledge_gaps": 60,
+ "total_source_entries": 140,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
