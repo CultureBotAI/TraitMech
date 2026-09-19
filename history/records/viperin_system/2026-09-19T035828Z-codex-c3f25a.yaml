@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/viperin_system.yaml
+  slug: viperin_system
+session:
+  id: 2026-09-19T035828Z-codex-c3f25a
+  timestamp: '2026-09-19T03:58:28Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1037
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Tighten Viperin subclass edge evidence
+  details: 'Addressed local adversarial review issue #1037 by replacing the Viperin phage-defense-system
+    subclass edge snippet with a Bernheim et al. abstract span that directly supports prokaryotic
+    viperins as phage-protective bacterial and archaeal proteins.'

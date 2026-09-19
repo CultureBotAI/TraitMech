@@ -283,15 +283,16 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": DEFENSEFINDER_ARTICLES,
+                            "reference": BERNHEIM,
                             "snippet": (
-                                "Prokaryotic viperins produce diverse "
-                                "antiviral molecules"
+                                "Here we show that eukaryotic viperin "
+                                "originated from a clade of bacterial and "
+                                "archaeal proteins that protect against "
+                                "phage infection"
                             ),
                             "notes": (
-                                "DefenseFinder associates Viperin with the "
-                                "Bernheim et al. bacterial and archaeal "
-                                "antiviral paper."
+                                "Bernheim et al. support Viperin as a "
+                                "prokaryotic phage-defense system."
                             ),
                         }
                     ],
