@@ -216,6 +216,7 @@ data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense sy
 data/traits/genomics/phosphorothioate_defense_system.yaml	traitmech:000213	phosphorothioate defense system	phosphorothioate_dna_restriction_antiviral_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	plasmid carriage	plasmid_conjugation_hgt	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/prithvi_system.yaml	traitmech:000290	Prithvi system	prithvi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prophage.yaml	traitmech:000091	prophage	prophage_lysogeny	NONMECHANISTIC	3	1	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/psyrta_system.yaml	traitmech:000257	PsyrTA system	psyrta_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/pycsar_system.yaml	traitmech:000236	Pycsar system	pycsar_cyclic_pyrimidine_phage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

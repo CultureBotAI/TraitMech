@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/prithvi_system.yaml
+  slug: prithvi_system
+session:
+  id: 2026-09-19T191702Z-codex-05a2e4
+  timestamp: '2026-09-19T19:17:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Prithvi system genomics trait
+  details: Minted traitmech:000290 for Prithvi system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024400 in proposals/metpo_traitmech_v167 for upstream
+    migration, and carried the pinned DefenseFinder PtvA HMM profile row as a related profile
+    synonym rather than an individual gene or protein trait.
