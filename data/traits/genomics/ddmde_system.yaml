@@ -49,10 +49,9 @@ canonical_examples:
   reference: DOI:10.1038/s41586-022-04546-y
 causal_graphs:
 - graph_id: ddmde_pago_helicase_plasmid_destruction
-  title: DdmDE couples DdmE target binding to DdmD plasmid destruction
-  description: Process sketch linking a DdmDE locus to DdmE guide DNA target binding,
-    DdmD loading onto target DNA, guide-target handoff, processive plasmid destruction,
-    plasmid clearance, and the DdmDE system trait.
+  title: DdmDE couples DNA recognition to plasmid destruction
+  description: Process sketch linking a DdmDE locus to target DNA recognition, processive
+    plasmid destruction, plasmid clearance, and the DdmDE system trait.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures the DdmDE activation pathway resolved by Bravo et
     al. without asserting every guide-maturation route, native plasmid substrate,
@@ -63,21 +62,11 @@ causal_graphs:
     label: DdmDE locus
     node_type: GENETIC_ELEMENT
     description: An anti-plasmid defense locus encoding DdmD and DdmE components.
-  - node_id: ddme_guide_target_binding
-    label: DdmE guide-target DNA binding
+  - node_id: ddmde_dna_recognition
+    label: DdmDE target DNA recognition
     node_type: BIOLOGICAL_PROCESS
-    description: Target DNA binding by the catalytically inactive, DNA-guided, DNA-targeting
-      prokaryotic Argonaute DdmE.
-  - node_id: ddmd_target_loading
-    label: DdmD target-DNA loading
-    node_type: BIOLOGICAL_PROCESS
-    description: Transition of helicase-nuclease DdmD from an autoinhibited dimeric
-      complex to a monomeric target-loaded state.
-  - node_id: ddmde_guide_target_handover
-    label: DdmDE guide-target handover
-    node_type: BIOLOGICAL_PROCESS
-    description: Handoff of guide and target DNA in the DdmDE guide-target handover
-      complex.
+    description: DdmDE DNA recognition coordinated by the DNA-targeting pAgo DdmE
+      and helicase-nuclease DdmD.
   - node_id: processive_plasmid_destruction
     label: processive plasmid destruction
     node_type: BIOLOGICAL_PROCESS
@@ -95,45 +84,19 @@ causal_graphs:
   - subject: ddmde_locus
     predicate: contributes to
     predicate_id: RO:0002326
-    object: ddme_guide_target_binding
-    description: The DdmDE locus encodes DdmE, a catalytically inactive DNA-guided
-      and DNA-targeting pAgo.
+    object: ddmde_dna_recognition
+    description: The DdmDE locus encodes DdmE and DdmD components that support DdmDE
+      target DNA recognition.
     evidence:
     - reference: DOI:10.1038/s41586-024-07515-9
       snippet: DdmE is a catalytically inactive, DNA-guided, DNA-targeting pAgo
       notes: Bravo et al. define DdmE as the DNA-guided DdmDE pAgo component.
-  - subject: ddmde_locus
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: ddmd_target_loading
-    description: The DdmDE locus encodes DdmD, a helicase-nuclease that loads single-stranded
-      DNA targets.
-    evidence:
     - reference: DOI:10.1038/s41586-024-07515-9
       snippet: helicase-nuclease DdmD transitions from an autoinhibited, dimeric complex
         to a monomeric state upon loading of single-stranded DNA targets
       notes: Bravo et al. connect DdmD to target-DNA loading and the monomeric active
         state.
-  - subject: ddme_guide_target_binding
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: ddmde_guide_target_handover
-    description: DdmE target DNA recognition contributes to DdmDE guide-target handover.
-    evidence:
-    - reference: DOI:10.1038/s41586-024-07515-9
-      snippet: complete structure of the DdmDE–guide–target handover complex
-      notes: Bravo et al. resolve the DdmDE guide-target handover complex.
-  - subject: ddmd_target_loading
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: ddmde_guide_target_handover
-    description: DdmD target loading contributes to the DdmDE guide-target handover
-      state.
-    evidence:
-    - reference: DOI:10.1038/s41586-024-07515-9
-      snippet: complete structure of the DdmDE–guide–target handover complex
-      notes: Bravo et al. resolve the DdmDE guide-target handover complex.
-  - subject: ddmde_guide_target_handover
+  - subject: ddmde_dna_recognition
     predicate: triggers
     object: processive_plasmid_destruction
     description: DdmDE DNA recognition triggers processive plasmid destruction.
@@ -185,4 +148,11 @@ curation_history:
   changes: Minted DdmDE system as a DOI-backed GENOMICS TraitRecord under the quality
     root after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v152.
+  llm_assisted: true
+- timestamp: '2026-09-19T10:30:00Z'
+  curator: codex
+  action: ADVERSARIAL_REVIEW_REPAIR
+  changes: 'Resolved #1055 by simplifying the DdmDE causal graph to a source-supported
+    target-DNA-recognition sketch and removing unsupported guide-target handover input
+    edges.'
   llm_assisted: true

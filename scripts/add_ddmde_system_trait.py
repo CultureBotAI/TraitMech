@@ -132,12 +132,11 @@ RECORD: dict[str, Any] = {
     "causal_graphs": [
         {
             "graph_id": "ddmde_pago_helicase_plasmid_destruction",
-            "title": "DdmDE couples DdmE target binding to DdmD plasmid destruction",
+            "title": "DdmDE couples DNA recognition to plasmid destruction",
             "description": (
-                "Process sketch linking a DdmDE locus to DdmE guide DNA target "
-                "binding, DdmD loading onto target DNA, guide-target handoff, "
-                "processive plasmid destruction, plasmid clearance, and the "
-                "DdmDE system trait."
+                "Process sketch linking a DdmDE locus to target DNA "
+                "recognition, processive plasmid destruction, plasmid "
+                "clearance, and the DdmDE system trait."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
@@ -158,31 +157,12 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "ddme_guide_target_binding",
-                    "label": "DdmE guide-target DNA binding",
+                    "node_id": "ddmde_dna_recognition",
+                    "label": "DdmDE target DNA recognition",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "Target DNA binding by the catalytically inactive, "
-                        "DNA-guided, DNA-targeting prokaryotic Argonaute DdmE."
-                    ),
-                },
-                {
-                    "node_id": "ddmd_target_loading",
-                    "label": "DdmD target-DNA loading",
-                    "node_type": "BIOLOGICAL_PROCESS",
-                    "description": (
-                        "Transition of helicase-nuclease DdmD from an "
-                        "autoinhibited dimeric complex to a monomeric target-"
-                        "loaded state."
-                    ),
-                },
-                {
-                    "node_id": "ddmde_guide_target_handover",
-                    "label": "DdmDE guide-target handover",
-                    "node_type": "BIOLOGICAL_PROCESS",
-                    "description": (
-                        "Handoff of guide and target DNA in the DdmDE guide-"
-                        "target handover complex."
+                        "DdmDE DNA recognition coordinated by the DNA-targeting "
+                        "pAgo DdmE and helicase-nuclease DdmD."
                     ),
                 },
                 {
@@ -216,10 +196,10 @@ RECORD: dict[str, Any] = {
                     "subject": "ddmde_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "ddme_guide_target_binding",
+                    "object": "ddmde_dna_recognition",
                     "description": (
-                        "The DdmDE locus encodes DdmE, a catalytically "
-                        "inactive DNA-guided and DNA-targeting pAgo."
+                        "The DdmDE locus encodes DdmE and DdmD components that "
+                        "support DdmDE target DNA recognition."
                     ),
                     "evidence": [
                         {
@@ -232,19 +212,7 @@ RECORD: dict[str, Any] = {
                                 "Bravo et al. define DdmE as the DNA-guided "
                                 "DdmDE pAgo component."
                             ),
-                        }
-                    ],
-                },
-                {
-                    "subject": "ddmde_locus",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "ddmd_target_loading",
-                    "description": (
-                        "The DdmDE locus encodes DdmD, a helicase-nuclease that "
-                        "loads single-stranded DNA targets."
-                    ),
-                    "evidence": [
+                        },
                         {
                             "reference": BRAVO,
                             "snippet": (
@@ -257,57 +225,11 @@ RECORD: dict[str, Any] = {
                                 "Bravo et al. connect DdmD to target-DNA "
                                 "loading and the monomeric active state."
                             ),
-                        }
+                        },
                     ],
                 },
                 {
-                    "subject": "ddme_guide_target_binding",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "ddmde_guide_target_handover",
-                    "description": (
-                        "DdmE target DNA recognition contributes to DdmDE "
-                        "guide-target handover."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": BRAVO,
-                            "snippet": (
-                                "complete structure of the DdmDE–guide–target "
-                                "handover complex"
-                            ),
-                            "notes": (
-                                "Bravo et al. resolve the DdmDE guide-target "
-                                "handover complex."
-                            ),
-                        }
-                    ],
-                },
-                {
-                    "subject": "ddmd_target_loading",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "ddmde_guide_target_handover",
-                    "description": (
-                        "DdmD target loading contributes to the DdmDE "
-                        "guide-target handover state."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": BRAVO,
-                            "snippet": (
-                                "complete structure of the DdmDE–guide–target "
-                                "handover complex"
-                            ),
-                            "notes": (
-                                "Bravo et al. resolve the DdmDE guide-target "
-                                "handover complex."
-                            ),
-                        }
-                    ],
-                },
-                {
-                    "subject": "ddmde_guide_target_handover",
+                    "subject": "ddmde_dna_recognition",
                     "predicate": "triggers",
                     "object": "processive_plasmid_destruction",
                     "description": (
@@ -420,6 +342,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADVERSARIAL_REVIEW_REPAIR",
+        changes=(
+            "Resolved #1055 by simplifying the DdmDE causal graph to a "
+            "source-supported target-DNA-recognition sketch and removing "
+            "unsupported guide-target handover input edges."
+        ),
+        llm_assisted=True,
+        timestamp="2026-09-19T10:30:00Z",
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
