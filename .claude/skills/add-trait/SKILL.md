@@ -254,6 +254,14 @@ exists; otherwise quote the exact raw HTML and explain in `notes` what the image
 renders as. Never delete an inline image tag while presenting the adjacent text
 as a verbatim snippet.
 
+Fixed-width registry tables, markdown tables, and TSV rows count as verbatim
+sources. When a snippet records a pinned profile or rules table row, quote the
+complete row or a contiguous column span with exact cell text, trimming only
+the outermost table delimiters around that span; do not collapse padding,
+reorder columns, or normalize source profile names. Check the stored snippet
+against the pinned source file, because visual column alignment is easy to lose
+when copying DefenseFinder HMM inventory rows.
+
 For new records, prefer a `snippet` on every DOI/PMID/stable-URL evidence item
 that supports a definition, canonical example, graph edge, or curation
 decision. If the source exposes no concise contiguous passage for that claim,
