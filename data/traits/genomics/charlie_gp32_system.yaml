@@ -1,7 +1,7 @@
 identifier: traitmech:000295
 label: Charlie gp32 system
 definition: A phage defense system in which an organism possesses a Charlie gp32 locus
-  that can protect bacteria from bacteriophage infection through heterotypic exclusion.
+  that can protect bacteria from bacteriophage infection.
 definition_source: DOI:10.1038/nmicrobiol.2016.251
 trait_category: GENOMICS
 term_kind: CLASS
@@ -28,8 +28,7 @@ evidence:
   notes: Dedrick et al. localize a Cluster N prophage-mediated heterotypic defense
     to Charlie gene 32.
 - reference: DOI:10.1038/nmicrobiol.2016.251
-  snippet: The Charlie gp32 defense system is notable in that although it has the
-    characteristics of superinfection exclusion systems
+  snippet: The Charlie gp32 defense system is notable
   notes: Dedrick et al. explicitly name the Charlie gp32 defense system as an exclusion-like
     viral-defense system.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
@@ -159,4 +158,12 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v172.
+  llm_assisted: true
+- timestamp: '2026-09-19T23:02:19Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved PR #1089 review issues #1090 and #1091 by dropping the proposed
+    heterotypic-exclusion mechanism from the definition and tightening the Charlie
+    gp32 exact-synonym evidence snippet after rechecking the Dedrick et al. full text
+    and pinned DefenseFinder rows.'
   llm_assisted: true

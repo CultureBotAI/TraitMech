@@ -31,6 +31,7 @@ DEFENSEFINDER_HMMS = (
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-19T22:40:37Z"
+REVIEW_TIMESTAMP = "2026-09-19T23:02:19Z"
 
 IDENTIFIER = "traitmech:000295"
 SYSTEM = "Charlie gp32"
@@ -58,8 +59,7 @@ RECORD: dict[str, Any] = {
     "label": f"{SYSTEM} system",
     "definition": (
         f"A phage defense system in which an organism possesses a {SYSTEM} "
-        "locus that can protect bacteria from bacteriophage infection through "
-        "heterotypic exclusion."
+        "locus that can protect bacteria from bacteriophage infection."
     ),
     "definition_source": DEDRICK,
     "trait_category": "GENOMICS",
@@ -105,11 +105,7 @@ RECORD: dict[str, Any] = {
         },
         {
             "reference": DEDRICK,
-            "snippet": (
-                "The Charlie gp32 defense system is notable in that although "
-                "it has the characteristics of superinfection exclusion "
-                "systems"
-            ),
+            "snippet": "The Charlie gp32 defense system is notable",
             "notes": (
                 "Dedrick et al. explicitly name the Charlie gp32 defense "
                 "system as an exclusion-like viral-defense system."
@@ -366,6 +362,20 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved PR #1089 review issues #1090 and #1091 by dropping the "
+            "proposed heterotypic-exclusion mechanism from the definition and "
+            "tightening the Charlie gp32 exact-synonym evidence snippet after "
+            "rechecking the Dedrick et al. full text and pinned DefenseFinder "
+            "rows."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
