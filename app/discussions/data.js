@@ -461,6 +461,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/damona_system.html#damona-mechanism-gap"
  },
  {
+  "discussion_id": "darna-model-profile-gap",
+  "prompt": "Resolve DARNA component profiles and locus architecture before minting component-profile synonyms or narrower DARNA subsystem traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DARNA system",
+  "source_id": "traitmech:000273",
+  "source_file": "darna_system.yaml",
+  "attaches_to": [
+   "causal_graphs#darna_phage_ssb_ssdna_cleaves_trna"
+  ],
+  "rationale": "Puteikiene et al. support DARNA as an anti-phage system with a resolved phage-SSB single-stranded-DNA trigger and host-tRNA cleavage output, and DefenseFinder lists DARNA in its article registry. The pinned DefenseFinder snapshot does not yet expose DARNA HMM or rule rows, so this first record does not assert a component-profile synonym or universal locus architecture.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/darna_system.html#darna-model-profile-gap"
+ },
+ {
   "discussion_id": "dazbog-mechanism-gap",
   "prompt": "Resolve Dazbog phage triggers and effector outputs before minting narrower Dazbog mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2487,9 +2506,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 141,
- "total_knowledge_gaps": 60,
- "total_source_entries": 140,
+ "total_discussions": 142,
+ "total_knowledge_gaps": 61,
+ "total_source_entries": 141,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

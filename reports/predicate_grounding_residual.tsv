@@ -14,13 +14,13 @@ requires	11	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/env
 is converted to	10	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/orange_pigmented.yaml
 binds	10	unmapped		data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
+triggers	8	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/genomics/darna_system.yaml
 represses	8	unmapped		data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml
 uses	8	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/metabolism/anaerobic_respiration.yaml
 inactivates	8	unmapped		data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
 precursor of	8	unmapped		data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/green_pigmented.yaml|data/traits/morphology/pigmentation.yaml
 recruits	8	unmapped		data/traits/morphology/axially_filamented.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/filament_shaped.yaml
 determines	7	unmapped		data/traits/ecology/mutualism.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/ph_delta_low.yaml
-triggers	7	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/genomics/dartg_system.yaml
 engages	7	unmapped		data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 positively influences	7	unmapped		data/traits/genomics/gc_mid2.yaml|data/traits/morphology/oval_shaped.yaml
 is substrate for	7	unmapped		data/traits/metabolism/ethanol_fermentation.yaml|data/traits/metabolism/manganese_oxidation.yaml|data/traits/morphology/carotenoid_pigmentation.yaml
