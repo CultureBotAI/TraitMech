@@ -974,6 +974,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/tiamat_system.html#tiamat-mechanism-gap"
  },
  {
+  "discussion_id": "toutatis-mechanism-gap",
+  "prompt": "Resolve Toutatis phage triggers and effector outputs before minting narrower Toutatis mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Toutatis system",
+  "source_id": "traitmech:000267",
+  "source_file": "toutatis_system.yaml",
+  "attaches_to": [
+   "causal_graphs#toutatis_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Toutatis as a named anti-phage system with TutA_VCA0446 and TutB_VCA0447 profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/toutatis_system.html#toutatis-mechanism-gap"
+ },
+ {
   "discussion_id": "uzume-mechanism-gap",
   "prompt": "Resolve Uzume phage triggers and effector outputs before minting narrower Uzume mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2373,9 +2392,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 135,
- "total_knowledge_gaps": 54,
- "total_source_entries": 134,
+ "total_discussions": 136,
+ "total_knowledge_gaps": 55,
+ "total_source_entries": 135,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

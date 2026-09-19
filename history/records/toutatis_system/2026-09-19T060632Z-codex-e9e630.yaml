@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/toutatis_system.yaml
+  slug: toutatis_system
+session:
+  id: 2026-09-19T060632Z-codex-e9e630
+  timestamp: '2026-09-19T06:06:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Toutatis system
+  details: Minted the Toutatis system GENOMICS record as traitmech:000267 under phage defense
+    system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory
+    snippets for TutA_VCA0446 and TutB_VCA0447, a conservative nonmechanistic phage-restriction
+    graph, and a companion metpo_traitmech_v144 proposal reserving METPO:1022100.
