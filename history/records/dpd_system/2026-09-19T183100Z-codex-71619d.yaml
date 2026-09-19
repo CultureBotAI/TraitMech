@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dpd_system.yaml
+  slug: dpd_system
+session:
+  id: 2026-09-19T183100Z-codex-71619d
+  timestamp: '2026-09-19T18:31:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - trait
+  - proposal
+  - canonical_examples
+  summary: Add Dpd system genomics trait
+  details: Minted traitmech:000278 for the DOI-backed Dpd 7-deazaguanine DNA-modification
+    defense system, reserved METPO:1023200 in proposals/metpo_traitmech_v155, and queued canonical-example
+    review until a strain-resolved taxon can be curated from primary evidence.
