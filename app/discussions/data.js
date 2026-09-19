@@ -937,6 +937,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/nemetona_system.html#nemetona-mechanism-gap"
  },
  {
+  "discussion_id": "ogmios-mechanism-gap",
+  "prompt": "Resolve Ogmios phage triggers and effector outputs before minting narrower Ogmios mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ogmios system",
+  "source_id": "traitmech:000286",
+  "source_file": "ogmios_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ogmios_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Ogmios as a named anti-phage system with a VCA0308 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ogmios_system.html#ogmios-mechanism-gap"
+ },
+ {
   "discussion_id": "olokun-mechanism-gap",
   "prompt": "Resolve Olokun phage triggers and effector outputs before minting narrower Olokun mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2734,9 +2753,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 154,
- "total_knowledge_gaps": 73,
- "total_source_entries": 153,
+ "total_discussions": 155,
+ "total_knowledge_gaps": 74,
+ "total_source_entries": 154,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

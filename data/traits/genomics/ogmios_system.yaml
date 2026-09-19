@@ -1,0 +1,131 @@
+identifier: traitmech:000286
+label: Ogmios system
+definition: A phage defense system in which an organism possesses an Ogmios locus
+  represented by a VCA0308 profile that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1126/science.ads0768
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Ogmios
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: VCA0308
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.ads0768
+  snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae strain
+    encode novel antiphage functions
+  notes: Darracq et al. support treating the newly discovered Vibrio cholerae SCI
+    antiphage cassettes as bacterial anti-phage systems.
+- reference: DOI:10.1126/science.ads0768
+  snippet: Most of these novel systems have little or no similarity to previously
+    known ones, with several providing defense through cell lysis or growth arrest
+  notes: Darracq et al. support a conservative system record that does not assert
+    a resolved Ogmios trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Ogmios | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons as
+    biobanks of bacterial antiphage defense systems
+  notes: The DefenseFinder model registry maps the named Ogmios system to the Darracq
+    et al. SCI antiphage-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Ogmios__VCA0308                                  |                                                  |
+    Ogmios
+  notes: The DefenseFinder HMM inventory records VCA0308 in the Ogmios model namespace.
+causal_graphs:
+- graph_id: ogmios_locus_restricts_phage
+  title: Ogmios loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an Ogmios locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Ogmios as a named SCI-derived anti-phage system
+    with a VCA0308 DefenseFinder profile while leaving its phage trigger, molecular
+    substrate, antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: ogmios_locus
+    label: Ogmios locus
+    node_type: GENETIC_ELEMENT
+    description: An Ogmios anti-phage defense locus represented in DefenseFinder by
+      a VCA0308 profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Ogmios
+      system.
+  - node_id: ogmios_system_trait
+    label: Ogmios system
+    node_type: TRAIT
+    grounding: traitmech:000286
+    description: Possession of a genome-encoded Ogmios phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: ogmios_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Ogmios to an SCI anti-phage-system discovery paper
+      and represents Ogmios loci through the VCA0308 component profile.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: nearly 10% of the integron cassettes in the pandemic Vibrio cholerae
+        strain encode novel antiphage functions
+      notes: Darracq et al. describe the newly discovered antiphage-system cohort
+        that the DefenseFinder Ogmios registry row maps to the Ogmios system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Ogmios__VCA0308                                  |                                                  |
+        Ogmios
+      notes: The DefenseFinder HMM inventory supports VCA0308 as the Ogmios component
+        profile.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: ogmios_system_trait
+    description: Ogmios-mediated phage restriction realizes the Ogmios system trait.
+    evidence:
+    - reference: DOI:10.1126/science.ads0768
+      snippet: Most of these novel systems have little or no similarity to previously
+        known ones, with several providing defense through cell lysis or growth arrest
+      notes: Darracq et al. place the Ogmios discovery cohort in a set of novel bacterial
+        systems that protect against phages.
+  - subject: ogmios_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Ogmios system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Ogmios | 10\.1126/science\.ads0768 | Sedentary chromosomal integrons
+        as biobanks of bacterial antiphage defense systems
+      notes: DefenseFinder associates Ogmios with the Darracq et al. bacterial antiphage-system
+        paper.
+discussions:
+- discussion_id: ogmios-mechanism-gap
+  prompt: Resolve Ogmios phage triggers and effector outputs before minting narrower
+    Ogmios mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Darracq et al. and DefenseFinder support Ogmios as a named anti-phage
+    system with a VCA0308 profile, but the trigger, molecular substrate, antiviral
+    effector output, and subtype-specific mechanism are not resolved enough here to
+    assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#ogmios_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T16:33:14Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Ogmios system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v163.
+  llm_assisted: true
