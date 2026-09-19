@@ -807,6 +807,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/shedu_system.html#shedu-sensor-and-substrate-gap"
  },
  {
+  "discussion_id": "shosta-mechanism-gap",
+  "prompt": "Resolve ShosTA phage triggers and effector outputs before minting narrower ShosTA mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ShosTA system",
+  "source_id": "traitmech:000258",
+  "source_file": "shosta_system.yaml",
+  "attaches_to": [
+   "causal_graphs#shosta_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support ShosTA as a named anti-phage system with required ShosA and ShosT profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/shosta_system.html#shosta-mechanism-gap"
+ },
+ {
   "discussion_id": "sparta-native-host-and-substrate-gap",
   "prompt": "Resolve SPARTA natural-host substrates before adding canonical examples or narrower short-pAgo defense children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2202,9 +2221,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 126,
- "total_knowledge_gaps": 45,
- "total_source_entries": 125,
+ "total_discussions": 127,
+ "total_knowledge_gaps": 46,
+ "total_source_entries": 126,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
