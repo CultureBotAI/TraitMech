@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 673,
+    "records": 674,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,14 +14,14 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 196,
+    "unresearched_mechanism_records": 197,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 4,
-      "ADD_CANONICAL_EXAMPLES": 35,
+      "ADD_CANONICAL_EXAMPLES": 36,
       "BUILD_CAUSAL_GRAPH": 119,
       "DEEPEN_CAUSAL_GRAPH": 173,
       "ALREADY_DEEP": 59,
@@ -1351,6 +1351,29 @@
       "researched": false,
       "reasons": [
         "thin graph (4 edges) +12",
+        "no canonical_examples +30"
+      ]
+    },
+    {
+      "identifier": "traitmech:000279",
+      "label": "DRT system",
+      "category": "genomics",
+      "slug": "drt_system",
+      "score": 42.0,
+      "action": "ADD_CANONICAL_EXAMPLES",
+      "edges": 5,
+      "nodes": 5,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (5 edges) +12",
         "no canonical_examples +30"
       ]
     },
@@ -4617,7 +4640,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 57,
+      "children": 58,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

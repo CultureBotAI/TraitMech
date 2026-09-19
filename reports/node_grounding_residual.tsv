@@ -1205,6 +1205,9 @@ dodola locus	GENETIC_ELEMENT	1	data/traits/genomics/dodola_system.yaml
 dpd genomic island	GENETIC_ELEMENT	1	data/traits/genomics/dpd_system.yaml
 7-deazaguanine dna modification	BIOLOGICAL_PROCESS	1	data/traits/genomics/dpd_system.yaml
 restriction-modification behavior	BIOLOGICAL_PROCESS	1	data/traits/genomics/dpd_system.yaml
+drt locus	GENETIC_ELEMENT	1	data/traits/genomics/drt_system.yaml
+defense-associated rt activity	MOLECULAR_FUNCTION	1	data/traits/genomics/drt_system.yaml
+subtype-specific phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/drt_system.yaml
 druantia locus	GENETIC_ELEMENT	1	data/traits/genomics/druantia_system.yaml
 druantia subtype-specific partner activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
 drue helicase-nuclease dna processing	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
