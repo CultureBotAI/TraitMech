@@ -270,8 +270,9 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": DEFENSEFINDER_ARTICLES,
                             "snippet": (
+                                "| Geb | 10\\.1101/2025\\.01\\.08\\.631966 | "
                                 "Protein and genomic language models chart a "
-                                "vast landscape of antiphage defenses"
+                                "vast landscape of antiphage defenses |"
                             ),
                             "notes": (
                                 "DefenseFinder associates Geb with the Mordret "
