@@ -423,6 +423,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cbass_system.html#cbass-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "cernunnos-mechanism-gap",
+  "prompt": "Resolve Cernunnos phage triggers and effector outputs before minting narrower Cernunnos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Cernunnos system",
+  "source_id": "traitmech:000271",
+  "source_file": "cernunnos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#cernunnos_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Cernunnos as a named anti-phage system with a VCA0410 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/cernunnos_system.html#cernunnos-mechanism-gap"
+ },
+ {
   "discussion_id": "dazbog-mechanism-gap",
   "prompt": "Resolve Dazbog phage triggers and effector outputs before minting narrower Dazbog mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2449,9 +2468,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 139,
- "total_knowledge_gaps": 58,
- "total_source_entries": 138,
+ "total_discussions": 140,
+ "total_knowledge_gaps": 59,
+ "total_source_entries": 139,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

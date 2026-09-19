@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/cernunnos_system.yaml
+  slug: cernunnos_system
+session:
+  id: 2026-09-19T080030Z-codex-12c93b
+  timestamp: '2026-09-19T08:00:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Cernunnos system
+  details: Minted the Cernunnos system GENOMICS record as traitmech:000271 under phage defense
+    system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory
+    snippets for VCA0410, a conservative nonmechanistic phage-restriction graph, and a companion
+    metpo_traitmech_v148 proposal reserving METPO:1022500.
