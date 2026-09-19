@@ -101,8 +101,8 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: defensive dCTP deaminase proteins that, in response to phage infection,
         convert dCTP
-      notes: Tal et al. identify defensive dCTP deaminase proteins that convert
-        dCTP during phage infection.
+      notes: Tal et al. identify defensive dCTP deaminase proteins that convert dCTP
+        during phage infection.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: dCTPdeaminase__dCTPdeaminase
       notes: DefenseFinder models the dCTPdeaminase protein profile used to identify
@@ -126,8 +126,8 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: completely eliminate the specific deoxynucleotide (either dCTP or dGTP)
         from the nucleotide pool during phage infection
-      notes: Tal et al. connect defensive dCTP conversion to loss of dCTP from
-        the nucleotide pool.
+      notes: Tal et al. connect defensive dCTP conversion to loss of dCTP from the
+        nucleotide pool.
   - subject: dctp_depletion
     predicate: contributes to
     predicate_id: RO:0002326
@@ -148,8 +148,8 @@ causal_graphs:
     - reference: DOI:10.1101/2021.04.26.441389
       snippet: starving the phage of an essential DNA building block and halting its
         replication
-      notes: Tal et al. place phage-replication arrest downstream of defensive
-        deoxynucleotide depletion.
+      notes: Tal et al. place phage-replication arrest downstream of defensive deoxynucleotide
+        depletion.
   - subject: halted_phage_replication
     predicate: confers
     predicate_id: METPO:2007700
