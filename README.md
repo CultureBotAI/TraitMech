@@ -20,21 +20,21 @@ METPO source class and (optionally) to literature evidence.
 | PHYSIOLOGY | 45 | 48 | 0 | 50 | 94 |
 | ENVIRONMENT | 121 | 0 | 0 | 121 | 122 |
 | ECOLOGY | 26 | 0 | 0 | 26 | 26 |
-| GENOMICS | 19 | 67 | 0 | 86 | 86 |
+| GENOMICS | 19 | 68 | 0 | 87 | 87 |
 | UPPER | 8 | 0 | 0 | 5 | 8 |
 | METABOLISM | 120 | 36 | 23 | 50 | 180 |
 | OBSERVATION | 0 | 0 | 20 | 0 | 20 |
 | QUANTITATIVE_PROPERTY | 0 | 0 | 7 | 0 | 7 |
 | OTHER | 0 | 1 | 0 | 0 | 32 |
-| **TOTAL** | **427** | **155** | **50** | **426** | **670** |
+| **TOTAL** | **427** | **156** | **50** | **427** | **671** |
 
 477 records have a terminal curation status: 427 are `REVIEWED` and 50 are
 `DEPRECATED`; three morphology records, 36 newer metabolism records,
-forty-eight physiology records, sixty-seven genomics records, and one other
+forty-eight physiology records, sixty-eight genomics records, and one other
 record are `PROPOSED`, and thirty-eight records are still `SEEDED` (one
 environment, one metabolism, four morphology, one physiology, and thirty-one
 other).
-Across the corpus, 426 records currently carry causal graphs. The 50 deprecated
+Across the corpus, 427 records currently carry causal graphs. The 50 deprecated
 records (23
 metabolism, 20 observation, 7 quantitative_property) are generic relation or
 measurement carriers from the upstream METPO seed that are not intended to carry
@@ -92,7 +92,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 670 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 671 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
