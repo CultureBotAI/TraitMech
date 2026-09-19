@@ -839,6 +839,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/olokun_system",
     "genomics/psyrta_system",
     "genomics/rosmerta_system",
+    "genomics/sefir_system",
     "genomics/shango_system",
     "genomics/shosta_system",
     "genomics/sparta_system",
