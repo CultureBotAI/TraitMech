@@ -30,6 +30,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-19T23:37:58Z"
+REVIEW_TIMESTAMP = "2026-09-19T23:47:14Z"
 
 IDENTIFIER = "traitmech:000296"
 SYSTEM = "Phrann gp29-gp30"
@@ -259,7 +260,7 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "METPO:2007700",
                     "object": f"{SLUG}_system_trait",
                     "description": (
-                        "Phrann-gp29-gp30-mediated restriction of Tweety and "
+                        "Phrann-gp29-gp30-mediated defense against Tweety and "
                         "Gaia realizes the Phrann gp29-gp30 system trait."
                     ),
                     "evidence": [
@@ -324,10 +325,10 @@ RECORD: dict[str, Any] = {
         {
             "discussion_id": f"{SLUG}-mechanism-gap",
             "prompt": (
-                "Resolve the Phrann gp30 regulator role, lytic trigger, "
-                "(p)ppGpp synthetase activity, and breadth beyond Tweety and "
-                "Gaia before minting narrower Phrann gp29-gp30 mechanism "
-                "children."
+                "Resolve the Phrann gp29-gp30 contribution to TM4 defense, "
+                "Phrann gp30 regulator role, lytic trigger, (p)ppGpp "
+                "synthetase activity, and remaining target-phage breadth "
+                "before minting narrower Phrann gp29-gp30 mechanism children."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -335,9 +336,9 @@ RECORD: dict[str, Any] = {
                 "Dedrick et al. and DefenseFinder support Phrann gp29-gp30 as "
                 "a named anti-phage system with gp29 and gp30 profiles, but "
                 "the Phrann gp30 regulatory role, lytic-phage trigger, direct "
-                "(p)ppGpp activation mechanism, and target breadth are not "
-                "resolved enough here to assert a narrower mechanistic child "
-                "trait."
+                "(p)ppGpp activation mechanism, relative contribution to TM4 "
+                "defense, and remaining target breadth are not resolved enough "
+                "here to assert a narrower mechanistic child trait."
             ),
             "attaches_to": [f"causal_graphs#{SLUG}_locus_restricts_phage"],
             "posed_by": CURATOR,
@@ -370,6 +371,20 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved PR #1092 review issues #1093 and #1094 by replacing a "
+            "restriction-implying Phrann gp29-gp30 edge description with "
+            "generic defense wording and narrowing the breadth knowledge gap "
+            "to the unresolved TM4 contribution and remaining target-phage "
+            "breadth."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

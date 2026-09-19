@@ -122,7 +122,7 @@ causal_graphs:
     predicate: confers
     predicate_id: METPO:2007700
     object: phrann_gp29_gp30_system_trait
-    description: Phrann-gp29-gp30-mediated restriction of Tweety and Gaia realizes
+    description: Phrann-gp29-gp30-mediated defense against Tweety and Gaia realizes
       the Phrann gp29-gp30 system trait.
     evidence:
     - reference: DOI:10.1038/nmicrobiol.2016.251
@@ -148,15 +148,16 @@ causal_graphs:
         viral-defense paper.
 discussions:
 - discussion_id: phrann_gp29_gp30-mechanism-gap
-  prompt: Resolve the Phrann gp30 regulator role, lytic trigger, (p)ppGpp synthetase
-    activity, and breadth beyond Tweety and Gaia before minting narrower Phrann gp29-gp30
-    mechanism children.
+  prompt: Resolve the Phrann gp29-gp30 contribution to TM4 defense, Phrann gp30 regulator
+    role, lytic trigger, (p)ppGpp synthetase activity, and remaining target-phage
+    breadth before minting narrower Phrann gp29-gp30 mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Dedrick et al. and DefenseFinder support Phrann gp29-gp30 as a named
     anti-phage system with gp29 and gp30 profiles, but the Phrann gp30 regulatory
-    role, lytic-phage trigger, direct (p)ppGpp activation mechanism, and target breadth
-    are not resolved enough here to assert a narrower mechanistic child trait.
+    role, lytic-phage trigger, direct (p)ppGpp activation mechanism, relative contribution
+    to TM4 defense, and remaining target breadth are not resolved enough here to assert
+    a narrower mechanistic child trait.
   attaches_to:
   - causal_graphs#phrann_gp29_gp30_locus_restricts_phage
   posed_by: codex
@@ -169,4 +170,12 @@ curation_history:
     phage defense system after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v173.
+  llm_assisted: true
+- timestamp: '2026-09-19T23:47:14Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved PR #1092 review issues #1093 and #1094 by replacing a restriction-implying
+    Phrann gp29-gp30 edge description with generic defense wording and narrowing the
+    breadth knowledge gap to the unresolved TM4 contribution and remaining target-phage
+    breadth.'
   llm_assisted: true

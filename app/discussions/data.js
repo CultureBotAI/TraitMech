@@ -1122,7 +1122,7 @@ window.searchData = [
  },
  {
   "discussion_id": "phrann_gp29_gp30-mechanism-gap",
-  "prompt": "Resolve the Phrann gp30 regulator role, lytic trigger, (p)ppGpp synthetase activity, and breadth beyond Tweety and Gaia before minting narrower Phrann gp29-gp30 mechanism children.",
+  "prompt": "Resolve the Phrann gp29-gp30 contribution to TM4 defense, Phrann gp30 regulator role, lytic trigger, (p)ppGpp synthetase activity, and remaining target-phage breadth before minting narrower Phrann gp29-gp30 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -1132,7 +1132,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#phrann_gp29_gp30_locus_restricts_phage"
   ],
-  "rationale": "Dedrick et al. and DefenseFinder support Phrann gp29-gp30 as a named anti-phage system with gp29 and gp30 profiles, but the Phrann gp30 regulatory role, lytic-phage trigger, direct (p)ppGpp activation mechanism, and target breadth are not resolved enough here to assert a narrower mechanistic child trait.",
+  "rationale": "Dedrick et al. and DefenseFinder support Phrann gp29-gp30 as a named anti-phage system with gp29 and gp30 profiles, but the Phrann gp30 regulatory role, lytic-phage trigger, direct (p)ppGpp activation mechanism, relative contribution to TM4 defense, and remaining target breadth are not resolved enough here to assert a narrower mechanistic child trait.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
