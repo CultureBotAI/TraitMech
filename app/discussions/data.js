@@ -1064,6 +1064,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "prithvi-mechanism-gap",
+  "prompt": "Resolve Prithvi phage triggers and effector outputs before minting narrower Prithvi mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Prithvi system",
+  "source_id": "traitmech:000290",
+  "source_file": "prithvi_system.yaml",
+  "attaches_to": [
+   "causal_graphs#prithvi_locus_restricts_phage"
+  ],
+  "rationale": "Mordret et al. and DefenseFinder support Prithvi as a named anti-phage system with a PtvA HMM profile entry, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/prithvi_system.html#prithvi-mechanism-gap"
+ },
+ {
   "discussion_id": "psyrta-mechanism-gap",
   "prompt": "Resolve PsyrTA phage triggers and effector outputs before minting narrower PsyrTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2810,9 +2829,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 158,
- "total_knowledge_gaps": 77,
- "total_source_entries": 157,
+ "total_discussions": 159,
+ "total_knowledge_gaps": 78,
+ "total_source_entries": 158,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
