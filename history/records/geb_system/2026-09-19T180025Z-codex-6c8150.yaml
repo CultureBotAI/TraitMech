@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/geb_system.yaml
+  slug: geb_system
+session:
+  id: 2026-09-19T180025Z-codex-6c8150
+  timestamp: '2026-09-19T18:00:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: REVIEW
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Added direct Geb validation evidence after PR review
+  details: >-
+    Resolved PR #1073 review issue #1076 by replacing abstract-only
+    validation support with Mordret full-text snippets that directly name Geb
+    among the six phage-restricting systems.
