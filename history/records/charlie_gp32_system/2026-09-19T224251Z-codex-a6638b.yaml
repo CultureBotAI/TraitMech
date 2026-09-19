@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/charlie_gp32_system.yaml
+  slug: charlie_gp32_system
+session:
+  id: 2026-09-19T224251Z-codex-a6638b
+  timestamp: '2026-09-19T22:42:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Charlie gp32 system genomics trait
+  details: Minted traitmech:000295 for Charlie gp32 system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024900 in proposals/metpo_traitmech_v172 for upstream
+    migration, and carried the pinned DefenseFinder gp32 HMM profile row as related profile
+    evidence rather than an individual gene, protein, prophage, or HMM trait.
