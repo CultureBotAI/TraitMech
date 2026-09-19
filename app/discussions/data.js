@@ -1430,6 +1430,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/toutatis_system.html#toutatis-mechanism-gap"
  },
  {
+  "discussion_id": "ukko-mechanism-gap",
+  "prompt": "Resolve Ukko phage triggers and effector outputs before minting narrower Ukko mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ukko system",
+  "source_id": "traitmech:000292",
+  "source_file": "ukko_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ukko_locus_restricts_phage"
+  ],
+  "rationale": "Mordret et al. and DefenseFinder support Ukko as a named anti-phage system with UkkA1, UkkA2, UkkB1, UkkB2, UkkC1, UkkC2, UkkD1, and UkkD2 HMM profile entries, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ukko_system.html#ukko-mechanism-gap"
+ },
+ {
   "discussion_id": "uzume-mechanism-gap",
   "prompt": "Resolve Uzume phage triggers and effector outputs before minting narrower Uzume mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2848,9 +2867,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 160,
- "total_knowledge_gaps": 79,
- "total_source_entries": 159,
+ "total_discussions": 161,
+ "total_knowledge_gaps": 80,
+ "total_source_entries": 160,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
