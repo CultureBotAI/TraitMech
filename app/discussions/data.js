@@ -664,6 +664,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/druantia_system.html#druantia-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "dsr-sirtuin-mechanism-gap",
+  "prompt": "Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved DSR1 and DSR2 NADase triggers, host ranges, anti-defense proteins, and Dsr naming collisions before minting narrower Dsr mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dsr system",
+  "source_id": "traitmech:000280",
+  "source_file": "dsr_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dsr_sirtuin_antiphage_defense"
+  ],
+  "rationale": "Gao et al. support defense-associated sirtuin proteins as antiphage system components, Garb et al. resolved NAD+ depletion for multiple SIR2-dependent defense systems and tail tube-triggered NADase activation for B. subtilis DSR2, and DefenseFinder models Dsr_I and Dsr_II. This first record stays at Dsr-family level until the DefenseFinder subtype profiles can be aligned to specific experimental DSR1/DSR2 systems, trigger proteins, host ranges, and phage-encoded anti-DSR proteins. The DefenseFinder Dsr system is also lexically distinct from metabolic DsrAB dissimilatory sulfite reductase systems.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dsr_system.html#dsr-sirtuin-mechanism-gap"
+ },
+ {
   "discussion_id": "eleos-mechanism-gap",
   "prompt": "Resolve Eleos phage triggers and effector outputs before minting narrower Eleos mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2619,14 +2638,16 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-xref-gap"
  }
 ];
+
 window.searchMetrics = {
- "total_discussions": 148,
- "total_knowledge_gaps": 67,
- "total_source_entries": 147,
+ "total_discussions": 149,
+ "total_knowledge_gaps": 68,
+ "total_source_entries": 148,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
   "KNOWLEDGE_GAP"
  ]
 };
+
 window.repoName = "TraitMech";

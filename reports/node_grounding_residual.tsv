@@ -142,6 +142,7 @@ phage dna-building-block starvation	STATE	2	data/traits/genomics/dctpdeaminase_s
 halted phage replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
+subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 phage propagation	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml
@@ -1207,11 +1208,12 @@ dpd genomic island	GENETIC_ELEMENT	1	data/traits/genomics/dpd_system.yaml
 restriction-modification behavior	BIOLOGICAL_PROCESS	1	data/traits/genomics/dpd_system.yaml
 drt locus	GENETIC_ELEMENT	1	data/traits/genomics/drt_system.yaml
 defense-associated rt activity	MOLECULAR_FUNCTION	1	data/traits/genomics/drt_system.yaml
-subtype-specific phage resistance	BIOLOGICAL_PROCESS	1	data/traits/genomics/drt_system.yaml
 druantia locus	GENETIC_ELEMENT	1	data/traits/genomics/druantia_system.yaml
 druantia subtype-specific partner activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
 drue helicase-nuclease dna processing	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
 downstream phage dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/druantia_system.yaml
+dsr locus	GENETIC_ELEMENT	1	data/traits/genomics/dsr_system.yaml
+sir2-domain antiphage activity	MOLECULAR_FUNCTION	1	data/traits/genomics/dsr_system.yaml
 eleos locus	GENETIC_ELEMENT	1	data/traits/genomics/eleos_system.yaml
 gabija gaja-gajb operon	GENETIC_ELEMENT	1	data/traits/genomics/gabija_system.yaml
 gajab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
