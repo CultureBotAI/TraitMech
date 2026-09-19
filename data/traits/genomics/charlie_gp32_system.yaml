@@ -28,7 +28,10 @@ evidence:
   notes: Dedrick et al. localize a Cluster N prophage-mediated heterotypic defense
     to Charlie gene 32.
 - reference: DOI:10.1038/nmicrobiol.2016.251
-  snippet: The Charlie gp32 defense system is notable
+  snippet: The Charlie gp32 defense system is notable in that although it has the
+    characteristics of superinfection exclusion systems – being membrane located
+    and preventing DNA injection – it has remarkable specificity for a single phage
+    among those tested
   notes: Dedrick et al. explicitly name the Charlie gp32 defense system as an exclusion-like
     viral-defense system.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
@@ -166,4 +169,11 @@ curation_history:
     heterotypic-exclusion mechanism from the definition and tightening the Charlie
     gp32 exact-synonym evidence snippet after rechecking the Dedrick et al. full text
     and pinned DefenseFinder rows.'
+  llm_assisted: true
+- timestamp: '2026-09-19T23:11:07Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved the follow-up PR #1089 review issue #1091 by restoring a complete
+    Dedrick et al. P25 source clause, including American defense spelling as verified
+    in the local PMC full text.'
   llm_assisted: true

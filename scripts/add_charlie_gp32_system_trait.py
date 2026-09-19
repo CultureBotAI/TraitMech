@@ -32,6 +32,7 @@ DEFENSEFINDER_HMMS = (
 CURATOR = "codex"
 TIMESTAMP = "2026-09-19T22:40:37Z"
 REVIEW_TIMESTAMP = "2026-09-19T23:02:19Z"
+FOLLOWUP_REVIEW_TIMESTAMP = "2026-09-19T23:11:07Z"
 
 IDENTIFIER = "traitmech:000295"
 SYSTEM = "Charlie gp32"
@@ -105,7 +106,13 @@ RECORD: dict[str, Any] = {
         },
         {
             "reference": DEDRICK,
-            "snippet": "The Charlie gp32 defense system is notable",
+            "snippet": (
+                "The Charlie gp32 defense system is notable in that although "
+                "it has the characteristics of superinfection exclusion "
+                "systems – being membrane located and preventing DNA "
+                "injection – it has remarkable specificity for a single "
+                "phage among those tested"
+            ),
             "notes": (
                 "Dedrick et al. explicitly name the Charlie gp32 defense "
                 "system as an exclusion-like viral-defense system."
@@ -376,6 +383,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved the follow-up PR #1089 review issue #1091 by restoring "
+            "a complete Dedrick et al. P25 source clause, including American "
+            "defense spelling as verified in the local PMC full text."
+        ),
+        llm_assisted=True,
+        timestamp=FOLLOWUP_REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
