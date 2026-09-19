@@ -702,6 +702,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/eleos_system.html#eleos-mechanism-gap"
  },
  {
+  "discussion_id": "epona-mechanism-gap",
+  "prompt": "Resolve Epona phage triggers and effector outputs before minting narrower Epona mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Epona system",
+  "source_id": "traitmech:000281",
+  "source_file": "epona_system.yaml",
+  "attaches_to": [
+   "causal_graphs#epona_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Epona as a named anti-phage system with a VCA0366 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/epona_system.html#epona-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2638,16 +2657,14 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-xref-gap"
  }
 ];
-
 window.searchMetrics = {
- "total_discussions": 149,
- "total_knowledge_gaps": 68,
- "total_source_entries": 148,
+ "total_discussions": 150,
+ "total_knowledge_gaps": 69,
+ "total_source_entries": 149,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
   "KNOWLEDGE_GAP"
  ]
 };
-
 window.repoName = "TraitMech";
