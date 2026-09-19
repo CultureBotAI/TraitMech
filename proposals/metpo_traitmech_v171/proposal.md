@@ -55,7 +55,7 @@ are shifted from this organism-level GENOMICS possession trait.
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with one
-  exact Panchino_gp28 synonym, one related gp28 source-profile label, and no
+  related DefenseFinder source label and no
   exact external xrefs.
 
 ## Upstream Path

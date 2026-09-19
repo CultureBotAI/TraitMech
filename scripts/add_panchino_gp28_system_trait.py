@@ -41,10 +41,12 @@ PROPOSAL = "proposals/metpo_traitmech_v171"
 
 
 def hmm_inventory_evidence() -> dict[str, str]:
-    hmm = f"{DEFENSEFINDER_SYSTEM}__{PROFILE}"
     return {
         "reference": DEFENSEFINDER_HMMS,
-        "snippet": f"{hmm:<49} | {hmm:<49} | {DEFENSEFINDER_SYSTEM}",
+        "snippet": (
+            "Panchino_gp28__gp28                              | "
+            "Panchino_gp28__gp28                              | Panchino_gp28"
+        ),
         "notes": (
             "The DefenseFinder HMM inventory records gp28 in the "
             "Panchino_gp28 model namespace."
@@ -67,13 +69,8 @@ RECORD: dict[str, Any] = {
     "synonyms": [
         {
             "synonym_text": DEFENSEFINDER_SYSTEM,
-            "synonym_type": "EXACT_SYNONYM",
-            "source": DEFENSEFINDER_ARTICLES,
-        },
-        {
-            "synonym_text": PROFILE,
             "synonym_type": "RELATED_SYNONYM",
-            "source": DEFENSEFINDER_HMMS,
+            "source": DEFENSEFINDER_ARTICLES,
         },
     ],
     "evidence": [
