@@ -186,9 +186,9 @@ RECORD: dict[str, Any] = {
                             "reference": VAN_DEN_BERG,
                             "snippet": VAN_DEN_BERG_VALIDATED_SYSTEMS_SNIPPET,
                             "notes": (
-                                "van den Berg et al. place Prometheus in a "
-                                "discovery cohort of validated phage defense "
-                                "systems related to eukaryotic innate immunity."
+                                "van den Berg et al. validated six phage defense "
+                                "systems related to eukaryotic innate antiviral "
+                                "responses."
                             ),
                         },
                         {
