@@ -841,6 +841,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/dctpdeaminase_system",
     "genomics/ddmde_system",
     "genomics/dgtpase_system",
+    "genomics/divona_system",
     "genomics/dodola_system",
     "genomics/eleos_system",
     "genomics/menshen_system",

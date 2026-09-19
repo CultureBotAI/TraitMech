@@ -571,6 +571,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/disarm_system.html#disarm-downstream-effector-gap"
  },
  {
+  "discussion_id": "divona-mechanism-gap",
+  "prompt": "Resolve Divona phage triggers and effector outputs before minting narrower Divona mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Divona system",
+  "source_id": "traitmech:000277",
+  "source_file": "divona_system.yaml",
+  "attaches_to": [
+   "causal_graphs#divona_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Divona as a named anti-phage system with a VCA0374 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/divona_system.html#divona-mechanism-gap"
+ },
+ {
   "discussion_id": "dodola-mechanism-gap",
   "prompt": "Resolve Dodola phage triggers and effector outputs before minting narrower Dodola mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2563,9 +2582,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 145,
- "total_knowledge_gaps": 64,
- "total_source_entries": 144,
+ "total_discussions": 146,
+ "total_knowledge_gaps": 65,
+ "total_source_entries": 145,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
