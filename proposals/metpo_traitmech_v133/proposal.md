@@ -9,8 +9,8 @@
 
 The pinned METPO snapshot has no active exact class for RosmerTA system, the
 genome-level possession trait for a bacterial antiphage defense locus named in
-Millman et al. DefenseFinder models RosmerTA with RmrA and RmrT profile choices
-in its article registry, rules table, and HMM inventory.
+Millman et al. DefenseFinder models RosmerTA with required RmrA and RmrT
+profiles in its article registry, rules table, and HMM inventory.
 
 This cohort lifts one local class:
 
@@ -50,6 +50,10 @@ systems.
 No exact external mapping is proposed. Individual RosmerTA genes, RmrA/RmrT
 protein profiles, DefenseFinder HMMs, and predicted locus calls are shifted
 from this organism-level GENOMICS possession trait.
+
+The pinned DefenseFinder registry row for RosmerTA uses the final Millman et
+al. Cell Host & Microbe DOI/title rather than the 2022 bioRxiv preprint
+DOI/title used by sibling Millman-system rows.
 
 ## Artifacts
 

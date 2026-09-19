@@ -95,8 +95,10 @@ RECORD: dict[str, Any] = {
             ),
             "notes": (
                 "The DefenseFinder model registry maps the named RosmerTA "
-                "system to the Millman et al. antiphage-system discovery "
-                "paper."
+                "system to the Millman et al. Cell Host & Microbe article; "
+                "the RosmerTA row in the pinned registry uses the final "
+                "article DOI and title rather than the bioRxiv preprint DOI "
+                "used by sibling Millman-system rows."
             ),
         },
         {
@@ -125,7 +127,7 @@ RECORD: dict[str, Any] = {
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 "The graph captures RosmerTA as a named anti-phage system "
-                "with DefenseFinder RmrA and RmrT profile choices while "
+                "with the required DefenseFinder RmrA and RmrT profiles while "
                 "leaving its phage trigger, molecular substrate, antiviral "
                 "effector output, and subtype breadth unresolved."
             ),
@@ -204,8 +206,10 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "The DefenseFinder registry maps RosmerTA "
-                                "itself to the Millman et al. bacterial "
-                                "antiphage-system discovery paper."
+                                "itself to the final Millman et al. bacterial "
+                                "antiphage-system paper, unlike sibling rows "
+                                "from the same discovery cohort that still "
+                                "point at the bioRxiv preprint."
                             ),
                         },
                         {
@@ -217,8 +221,8 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "The DefenseFinder rules table supports "
-                                "RmrA and RmrT as RosmerTA system profile "
-                                "choices."
+                                "both RmrA and RmrT as required RosmerTA "
+                                "system profiles."
                             ),
                         },
                     ],
@@ -254,8 +258,10 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "DefenseFinder records RosmerTA as a named "
-                                "system from the Millman et al. antiphage "
-                                "discovery paper."
+                                "system from the final Millman et al. "
+                                "antiphage-system paper rather than the "
+                                "bioRxiv preprint used by the neighboring "
+                                "Millman cohort rows."
                             ),
                         },
                     ],
@@ -278,6 +284,7 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "DefenseFinder associates RosmerTA with the "
+                                "final Cell Host & Microbe version of the "
                                 "Millman et al. bacterial antiphage-system "
                                 "discovery paper."
                             ),
@@ -298,8 +305,8 @@ RECORD: dict[str, Any] = {
             "status": "OPEN",
             "rationale": (
                 "Millman et al. and DefenseFinder support RosmerTA as a "
-                "named anti-phage system with RmrA and RmrT profile "
-                "choices, but the trigger, molecular substrate, antiviral "
+                "named anti-phage system with required RmrA and RmrT "
+                "profiles, but the trigger, molecular substrate, antiviral "
                 "effector output, and subtype-specific mechanism are not "
                 "resolved enough here to assert a narrower mechanistic child "
                 "trait."

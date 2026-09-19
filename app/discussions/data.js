@@ -727,7 +727,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#rosmerta_locus_restricts_phage"
   ],
-  "rationale": "Millman et al. and DefenseFinder support RosmerTA as a named anti-phage system with RmrA and RmrT profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "rationale": "Millman et al. and DefenseFinder support RosmerTA as a named anti-phage system with required RmrA and RmrT profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
