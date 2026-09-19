@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ceres_system.yaml
+  slug: ceres_system
+session:
+  id: 2026-09-19T182452Z-codex-bcaea7
+  timestamp: '2026-09-19T18:24:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Ceres system trait
+  details: Added traitmech:000288 Ceres system as a DOI-backed GENOMICS child of phage defense
+    system, using Mordret et al. for direct validation of Ceres among six Streptomyces antiphage
+    systems, the pinned DefenseFinder registry for the Ceres-to-Mordret mapping, the pinned
+    DefenseFinder HMM inventory for CrsA1 and CrsA2 profile rows, and a companion METPO proposal
+    reserving METPO:1024200 for the upstream round trip.
