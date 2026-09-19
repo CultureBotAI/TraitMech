@@ -721,6 +721,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/epona_system.html#epona-mechanism-gap"
  },
  {
+  "discussion_id": "esos-mechanism-gap",
+  "prompt": "Resolve Esos phage triggers and effector outputs before minting narrower Esos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Esos system",
+  "source_id": "traitmech:000282",
+  "source_file": "esos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#esos_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Esos as a named anti-phage system with a VCA0450 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/esos_system.html#esos-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2658,9 +2677,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 150,
- "total_knowledge_gaps": 69,
- "total_source_entries": 149,
+ "total_discussions": 151,
+ "total_knowledge_gaps": 70,
+ "total_source_entries": 150,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

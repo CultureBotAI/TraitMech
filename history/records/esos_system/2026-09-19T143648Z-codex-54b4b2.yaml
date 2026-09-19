@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/esos_system.yaml
+  slug: esos_system
+session:
+  id: 2026-09-19T143648Z-codex-54b4b2
+  timestamp: '2026-09-19T14:36:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Esos system genomics trait
+  details: Minted traitmech:000282 for the DOI-backed Esos SCI-derived phage-defense system
+    and reserved METPO:1023600 in proposals/metpo_traitmech_v159; evidence comes from Darracq
+    et al. 2025 and pinned DefenseFinder article and HMM rows.
