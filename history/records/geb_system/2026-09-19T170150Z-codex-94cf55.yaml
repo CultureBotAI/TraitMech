@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/geb_system.yaml
+  slug: geb_system
+session:
+  id: 2026-09-19T170150Z-codex-94cf55
+  timestamp: '2026-09-19T17:01:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Minted Geb system phage defense trait
+  details: Added traitmech:000287 Geb system as a DOI-backed GENOMICS child of phage defense
+    system, with DefenseFinder article and HMM-inventory evidence for the Geb/GebA model,
+    a conservative nonmechanistic antiphage causal graph, and a METPO v164 class proposal
+    reserving METPO:1024100 for the upstream round trip.

@@ -192,6 +192,7 @@ data/traits/genomics/gc_low.yaml	METPO:1000429	GC low	gc_low_mid_low_gc_bin	NONM
 data/traits/genomics/gc_mid1.yaml	METPO:1000430	GC mid1	gc_mid1_high_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_mid2.yaml	METPO:1000431	GC mid2	gc_mid2_mid_high_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_skew.yaml	traitmech:000097	GC skew	gc_skew_replication_strand_asymmetry	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/geb_system.yaml	traitmech:000287	Geb system	geb_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genome_size.yaml	traitmech:000098	genome size	genome_size_population_lifestyle	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genome_streamlining.yaml	traitmech:000099	genome streamlining	streamlining_oligotrophic_selection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/genomic_island.yaml	traitmech:000093	genomic island	gi_hgt_accessory_function	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-

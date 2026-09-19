@@ -1,0 +1,151 @@
+identifier: traitmech:000287
+label: Geb system
+definition: A phage defense system in which an organism possesses a Geb locus represented
+  by GebA1 or GebA2 profiles that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1101/2025.01.08.631966
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Geb
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: GebA1
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: GebA2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: leading to the discovery and experimental validation of six defense systems
+    with novel antiphage proteins
+  notes: Mordret et al. support treating the named systems in their experimentally
+    validated Actinomycetota discovery cohort as bacterial anti-phage systems.
+- reference: DOI:10.1101/2025.01.08.631966
+  snippet: The bacterial pangenome encodes an immense array of antiphage systems,
+    yet much of their diversity remains uncharted
+  notes: Mordret et al. motivate a conservative system-level record that does not
+    assert a resolved Geb trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Geb | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language models
+    chart a vast landscape of antiphage defenses
+  notes: The DefenseFinder model registry maps the named Geb system to the Mordret
+    et al. antiphage-system discovery preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Geb__GebA1                                       |                                                  |
+    Geb
+  notes: The DefenseFinder HMM inventory records GebA1 in the Geb model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Geb__GebA2                                       |                                                  |
+    Geb
+  notes: The DefenseFinder HMM inventory records GebA2 in the Geb model namespace.
+causal_graphs:
+- graph_id: geb_locus_restricts_phage
+  title: Geb loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Geb locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Geb as a named anti-phage system with GebA1 and
+    GebA2 DefenseFinder profile choices while leaving its phage trigger, molecular
+    substrate, antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: geb_locus
+    label: Geb locus
+    node_type: GENETIC_ELEMENT
+    description: A Geb anti-phage defense locus represented in DefenseFinder by GebA1
+      or GebA2 profiles.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Geb system.
+  - node_id: geb_system_trait
+    label: Geb system
+    node_type: TRAIT
+    grounding: traitmech:000287
+    description: Possession of a genome-encoded Geb phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: geb_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Geb to a protein- and genomic-language-model antiphage-system
+      discovery preprint and represents Geb loci through the GebA1 and GebA2 component
+      profile choices.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: leading to the discovery and experimental validation of six defense
+        systems with novel antiphage proteins
+      notes: Mordret et al. describe the anti-phage discovery cohort that the DefenseFinder
+        Geb registry row maps to the Geb system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Geb | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: The DefenseFinder registry maps Geb itself to the Mordret et al. bacterial
+        antiphage-system discovery preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Geb__GebA1                                       |                                                  |
+        Geb
+      notes: The DefenseFinder HMM inventory records GebA1 in the Geb model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Geb__GebA2                                       |                                                  |
+        Geb
+      notes: The DefenseFinder HMM inventory records GebA2 in the Geb model namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: geb_system_trait
+    description: Geb-mediated phage restriction realizes the Geb system trait.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631966
+      snippet: leading to the discovery and experimental validation of six defense
+        systems with novel antiphage proteins
+      notes: Mordret et al. place the Geb discovery cohort in a set of bacterial systems
+        that protect against phages.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Geb | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
+        models chart a vast landscape of antiphage defenses
+      notes: DefenseFinder records Geb as a named system from the Mordret et al. antiphage
+        discovery preprint.
+  - subject: geb_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Geb system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Protein and genomic language models chart a vast landscape of antiphage
+        defenses
+      notes: DefenseFinder associates Geb with the Mordret et al. bacterial antiphage-system
+        discovery preprint.
+discussions:
+- discussion_id: geb-mechanism-gap
+  prompt: Resolve Geb phage triggers and effector outputs before minting narrower
+    Geb mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mordret et al. and DefenseFinder support Geb as a named anti-phage system
+    with GebA1 and GebA2 profile choices, but the trigger, molecular substrate, antiviral
+    effector output, and subtype-specific mechanism are not resolved enough here to
+    assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#geb_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T17:00:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Geb system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v164.
+  llm_assisted: true

@@ -757,6 +757,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gabija_system.html#gabija-activation-and-antidefense-gap"
  },
  {
+  "discussion_id": "geb-mechanism-gap",
+  "prompt": "Resolve Geb phage triggers and effector outputs before minting narrower Geb mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Geb system",
+  "source_id": "traitmech:000287",
+  "source_file": "geb_system.yaml",
+  "attaches_to": [
+   "causal_graphs#geb_locus_restricts_phage"
+  ],
+  "rationale": "Mordret et al. and DefenseFinder support Geb as a named anti-phage system with GebA1 and GebA2 profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/geb_system.html#geb-mechanism-gap"
+ },
+ {
   "discussion_id": "hachiman-subtype-and-trigger-gap",
   "prompt": "Resolve Hachiman subtype effectors, DNA substrates, and activation triggers before minting narrower Hachiman mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2753,9 +2772,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 155,
- "total_knowledge_gaps": 74,
- "total_source_entries": 154,
+ "total_discussions": 156,
+ "total_knowledge_gaps": 75,
+ "total_source_entries": 155,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
