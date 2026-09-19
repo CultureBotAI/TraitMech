@@ -2,7 +2,7 @@ identifier: traitmech:000263
 label: Viperin system
 definition: A phage defense system in which an organism possesses a prokaryotic viperin
   locus represented by a pVip profile that can produce antiviral modified ribonucleotides
-  and protect bacteria from bacteriophage infection.
+  and protect against phage infection.
 definition_source: DOI:10.1038/s41586-020-2762-2
 trait_category: GENOMICS
 term_kind: CLASS
@@ -152,4 +152,10 @@ curation_history:
   changes: 'Replaced the Viperin phage-defense-system subclass edge snippet with a
     Bernheim et al. phage-protection abstract span found by local adversarial review
     in issue #1037.'
+  llm_assisted: true
+- timestamp: '2026-09-19T04:06:03Z'
+  curator: codex
+  action: EDIT
+  changes: 'Aligned the Viperin definition with the bacterial and archaeal prokaryotic
+    scope identified in Claude review issue #1038.'
   llm_assisted: true

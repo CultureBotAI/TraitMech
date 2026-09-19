@@ -57,8 +57,8 @@ RECORD: dict[str, Any] = {
     "definition": (
         "A phage defense system in which an organism possesses a "
         "prokaryotic viperin locus represented by a pVip profile that can "
-        "produce antiviral modified ribonucleotides and protect bacteria "
-        "from bacteriophage infection."
+        "produce antiviral modified ribonucleotides and protect against "
+        "phage infection."
     ),
     "definition_source": BERNHEIM,
     "trait_category": "GENOMICS",
