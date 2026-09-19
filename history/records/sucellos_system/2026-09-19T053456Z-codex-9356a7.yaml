@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sucellos_system.yaml
+  slug: sucellos_system
+session:
+  id: 2026-09-19T053456Z-codex-9356a7
+  timestamp: '2026-09-19T05:34:56Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Sucellos phage-defense system
+  details: Minted traitmech:000266 for the DefenseFinder Sucellos system with DOI-backed SCI
+    antiphage evidence, pinned DefenseFinder article and HMM registry evidence, a conservative
+    nonmechanistic phage-restriction graph, an open Sucellos mechanism knowledge gap, and
+    a v143 METPO placeholder proposal for METPO:1022000.

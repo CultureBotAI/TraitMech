@@ -900,6 +900,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sparta_system.html#sparta-native-host-and-substrate-gap"
  },
  {
+  "discussion_id": "sucellos-mechanism-gap",
+  "prompt": "Resolve Sucellos phage triggers and effector outputs before minting narrower Sucellos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Sucellos system",
+  "source_id": "traitmech:000266",
+  "source_file": "sucellos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sucellos_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Sucellos as a named anti-phage system with SclA_VCA0367 and SclB_VCA0368 profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sucellos_system.html#sucellos-mechanism-gap"
+ },
+ {
   "discussion_id": "taranis-mechanism-gap",
   "prompt": "Resolve Taranis phage triggers and effector outputs before minting narrower Taranis mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2354,9 +2373,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 134,
- "total_knowledge_gaps": 53,
- "total_source_entries": 133,
+ "total_discussions": 135,
+ "total_knowledge_gaps": 54,
+ "total_source_entries": 134,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
