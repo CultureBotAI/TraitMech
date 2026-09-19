@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/nantosuelta_system.yaml
+  slug: nantosuelta_system
+session:
+  id: 2026-09-19T153104Z-codex-09792e
+  timestamp: '2026-09-19T15:31:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Minted Nantosuelta system phage defense trait
+  details: Added traitmech:000284 Nantosuelta system as a DOI-backed GENOMICS child of phage
+    defense system, with DefenseFinder article and HMM-inventory evidence for the Nantosuelta/VCA0322
+    model, a conservative nonmechanistic phage-restriction graph, an open mechanism knowledge
+    gap, and a companion METPO proposal in proposals/metpo_traitmech_v161.
