@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dctpdeaminase_system.yaml
+  slug: dctpdeaminase_system
+session:
+  id: 2026-09-19T092622Z-codex-1d7a2e
+  timestamp: '2026-09-19T09:26:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add dCTPdeaminase system
+  details: Minted the dCTPdeaminase system GENOMICS record as traitmech:000274
+    under phage defense system with Tal et al. DOI evidence, pinned DefenseFinder
+    article-registry, HMM, and rule snippets, a nucleotide-depletion graph for
+    phage-responsive dCTP conversion and phage-replication arrest, and a companion
+    metpo_traitmech_v151 proposal reserving METPO:1022800.

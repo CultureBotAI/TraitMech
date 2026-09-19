@@ -137,6 +137,7 @@ psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment
 cryoprotection	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_low.yaml
 dna melting	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_range_high.yaml|data/traits/environment/thermophilic.yaml
 elevated temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_range_mid2.yaml|data/traits/environment/thermotolerant.yaml
+sensitive phage infection	BIOLOGICAL_PROCESS	2	data/traits/genomics/dartg_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
@@ -1172,11 +1173,15 @@ damona locus	GENETIC_ELEMENT	1	data/traits/genomics/damona_system.yaml
 phage ssb-presented single-stranded dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
 darna activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
 host trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/darna_system.yaml
-sensitive phage infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 dart toxin release	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 viral dna adp-ribosylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/dartg_system.yaml
 inhibited phage genome replication	STATE	1	data/traits/genomics/dartg_system.yaml
 dazbog locus	GENETIC_ELEMENT	1	data/traits/genomics/dazbog_system.yaml
+dctpdeaminase locus	GENETIC_ELEMENT	1	data/traits/genomics/dctpdeaminase_system.yaml
+dctp conversion into deoxy-uracil nucleotides	BIOLOGICAL_PROCESS	1	data/traits/genomics/dctpdeaminase_system.yaml
+dctp nucleotide-pool depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/dctpdeaminase_system.yaml
+phage dna-building-block starvation	STATE	1	data/traits/genomics/dctpdeaminase_system.yaml
+halted phage replication	BIOLOGICAL_PROCESS	1	data/traits/genomics/dctpdeaminase_system.yaml
 disarm host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 disarm 5-prime-overhang dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 drmab core complex	GENE_OR_PROTEIN	1	data/traits/genomics/disarm_system.yaml
