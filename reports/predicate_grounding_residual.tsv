@@ -11,9 +11,9 @@ causally upstream of	14	blocked_by_node_type	RO:0002411	data/traits/metabolism/p
 stabilizes	13	unmapped		data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/desiccation_tolerant.yaml|data/traits/environment/facultatively_acidophilic.yaml
 oxidized by	12	unmapped		data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemotrophic.yaml|data/traits/physiology/lithoheterotrophic.yaml
 requires	11	unmapped		data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
+triggers	10	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/genomics/darna_system.yaml
 is converted to	10	unmapped		data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml|data/traits/morphology/orange_pigmented.yaml
 binds	10	unmapped		data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml|data/traits/morphology/flagellar_arrangement.yaml
-triggers	9	unmapped		data/traits/ecology/symbiosis.yaml|data/traits/environment/stenohaline.yaml|data/traits/genomics/darna_system.yaml
 is required for	8	unmapped		data/traits/ecology/biosafety_level_2.yaml|data/traits/ecology/nitrogen_fixing_symbiosis.yaml|data/traits/environment/obligately_alkaphilic.yaml
 represses	8	unmapped		data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml
 uses	8	unmapped		data/traits/environment/extremely_halophilic.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/metabolism/anaerobic_respiration.yaml

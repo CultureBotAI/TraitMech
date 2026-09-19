@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ddmde_system.yaml
+  slug: ddmde_system
+session:
+  id: 2026-09-19T101838Z-codex-099959
+  timestamp: '2026-09-19T10:18:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add DdmDE system
+  details: Minted the DdmDE system GENOMICS record as traitmech:000275 under the quality root
+    with Jaskolska et al. and Bravo et al. DOI evidence, pinned DefenseFinder article-registry
+    and HMM snippets, a plasmid-destruction graph for DdmE guide-target binding and DdmD target
+    loading, a Vibrio cholerae canonical example, and a companion metpo_traitmech_v152 proposal
+    reserving METPO:1022900.
