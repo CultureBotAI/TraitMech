@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/taranis_system.yaml
+  slug: taranis_system
+session:
+  id: 2026-09-19T050344Z-codex-c76c94
+  timestamp: '2026-09-19T05:03:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Taranis phage-defense system
+  details: Minted traitmech:000265 for the DefenseFinder Taranis system with DOI-backed SCI
+    antiphage evidence, pinned DefenseFinder article and HMM registry evidence, a conservative
+    nonmechanistic phage-restriction graph, an open Taranis mechanism knowledge gap, and a
+    v142 METPO placeholder proposal for METPO:1021900.

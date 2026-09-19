@@ -900,6 +900,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sparta_system.html#sparta-native-host-and-substrate-gap"
  },
  {
+  "discussion_id": "taranis-mechanism-gap",
+  "prompt": "Resolve Taranis phage triggers and effector outputs before minting narrower Taranis mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Taranis system",
+  "source_id": "traitmech:000265",
+  "source_file": "taranis_system.yaml",
+  "attaches_to": [
+   "causal_graphs#taranis_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Taranis as a named anti-phage system with a VCA0396 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/taranis_system.html#taranis-mechanism-gap"
+ },
+ {
   "discussion_id": "thoeris-family-signal-and-trigger-gap",
   "prompt": "Resolve Thoeris family architecture, signal chemistry, and phage triggering before minting narrower Thoeris mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2335,9 +2354,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 133,
- "total_knowledge_gaps": 52,
- "total_source_entries": 132,
+ "total_discussions": 134,
+ "total_knowledge_gaps": 53,
+ "total_source_entries": 133,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

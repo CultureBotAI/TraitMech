@@ -845,6 +845,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/sirona_system",
     "genomics/sofic_system",
     "genomics/sparta_system",
+    "genomics/taranis_system",
     "genomics/tiamat_system",
     "genomics/uzume_system",
     "genomics/viperin_system",
