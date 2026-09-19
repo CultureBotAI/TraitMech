@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ukko_system.yaml
+  slug: ukko_system
+session:
+  id: 2026-09-19T202806Z-codex-8c8f21
+  timestamp: '2026-09-19T20:28:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Ukko system genomics trait
+  details: Minted traitmech:000292 for Ukko system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1024600 in proposals/metpo_traitmech_v169 for upstream
+    migration, and carried the pinned DefenseFinder UkkA1, UkkA2, UkkB1, UkkB2, UkkC1, UkkC2,
+    UkkD1, and UkkD2 HMM profile rows as related profile synonyms rather than individual gene
+    or protein traits.
