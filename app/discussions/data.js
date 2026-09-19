@@ -1083,6 +1083,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/prithvi_system.html#prithvi-mechanism-gap"
  },
  {
+  "discussion_id": "prometheus-mechanism-gap",
+  "prompt": "Resolve Prometheus phage triggers and effector outputs before minting narrower Prometheus mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Prometheus system",
+  "source_id": "traitmech:000291",
+  "source_file": "prometheus_system.yaml",
+  "attaches_to": [
+   "causal_graphs#prometheus_locus_restricts_phage"
+  ],
+  "rationale": "van den Berg et al. and DefenseFinder support Prometheus as a named anti-phage system with a Prometheus__ProA HMM profile entry, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/prometheus_system.html#prometheus-mechanism-gap"
+ },
+ {
   "discussion_id": "psyrta-mechanism-gap",
   "prompt": "Resolve PsyrTA phage triggers and effector outputs before minting narrower PsyrTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2829,9 +2848,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 159,
- "total_knowledge_gaps": 78,
- "total_source_entries": 158,
+ "total_discussions": 160,
+ "total_knowledge_gaps": 79,
+ "total_source_entries": 159,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

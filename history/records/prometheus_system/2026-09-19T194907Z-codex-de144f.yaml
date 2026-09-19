@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/prometheus_system.yaml
+  slug: prometheus_system
+session:
+  id: 2026-09-19T194907Z-codex-de144f
+  timestamp: '2026-09-19T19:49:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - proposal
+  summary: Added Prometheus phage defense system
+  details: Minted traitmech:000291 for the Prometheus phage defense system under phage defense
+    system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO,
+    or prior proposal record; used van den Berg et al. plus pinned DefenseFinder registry/HMM
+    rows as evidence, deliberately left the ambiguous bare ProA profile label out of synonyms,
+    and reserved METPO:1024500 in proposals/metpo_traitmech_v168 for upstream migration.
