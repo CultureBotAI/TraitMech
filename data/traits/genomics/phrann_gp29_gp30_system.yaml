@@ -179,3 +179,12 @@ curation_history:
     breadth knowledge gap to the unresolved TM4 contribution and remaining target-phage
     breadth.'
   llm_assisted: true
+- timestamp: '2026-09-19T23:56:21Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the PR #1092 canonical_examples gap and left canonical_examples
+    empty: the current Phrann gp29-gp30 evidence supports a named phage-defense system
+    and DefenseFinder profiles, but the curated record does not yet cite a source-backed
+    bacterial taxon with a directly observed Phrann gp29-gp30 locus. No paid research
+    was used.'
+  llm_assisted: true

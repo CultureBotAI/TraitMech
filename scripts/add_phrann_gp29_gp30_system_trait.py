@@ -31,6 +31,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-19T23:37:58Z"
 REVIEW_TIMESTAMP = "2026-09-19T23:47:14Z"
+CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-19T23:56:21Z"
 
 IDENTIFIER = "traitmech:000296"
 SYSTEM = "Phrann gp29-gp30"
@@ -385,6 +386,21 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP",
+        changes=(
+            "Reviewed the PR #1092 canonical_examples gap and left "
+            "canonical_examples empty: the current Phrann gp29-gp30 evidence "
+            "supports a named phage-defense system and DefenseFinder profiles, "
+            "but the curated record does not yet cite a source-backed bacterial "
+            "taxon with a directly observed Phrann gp29-gp30 locus. No paid "
+            "research was used."
+        ),
+        llm_assisted=True,
+        timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
