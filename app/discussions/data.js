@@ -535,6 +535,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ddmde_system.html#ddmde-substrate-and-guide-source-gap"
  },
  {
+  "discussion_id": "dgtpase-activation-profile-gap",
+  "prompt": "Resolve dGTPase activation, locus boundaries, and representative enzyme accessions before asserting narrower component or subtype traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "dGTPase system",
+  "source_id": "traitmech:000276",
+  "source_file": "dgtpase_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dgtpase_dgtp_depletion_defense"
+  ],
+  "rationale": "Tal et al. support dGTPase as a phage-responsive dGTP-depletion defense and DefenseFinder models the system with a custom Sp_dGTPase HMM profile, but this first system-level record does not resolve the universal phage sensor, activation route, strain-level accessions, or whether additional unmodeled components define some natural loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dgtpase_system.html#dgtpase-activation-profile-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -2544,9 +2563,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 144,
- "total_knowledge_gaps": 63,
- "total_source_entries": 143,
+ "total_discussions": 145,
+ "total_knowledge_gaps": 64,
+ "total_source_entries": 144,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

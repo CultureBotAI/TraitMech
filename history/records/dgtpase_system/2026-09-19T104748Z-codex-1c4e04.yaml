@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/dgtpase_system.yaml
+  slug: dgtpase_system
+session:
+  id: 2026-09-19T104748Z-codex-1c4e04
+  timestamp: '2026-09-19T10:47:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add dGTPase system
+  details: Minted the dGTPase system GENOMICS record as traitmech:000276 under phage defense
+    system with Tal et al. DOI evidence, pinned DefenseFinder article-registry, rules, and
+    HMM snippets, a conservative dGTP-depletion graph, and a companion metpo_traitmech_v153
+    proposal reserving METPO:1023000.
