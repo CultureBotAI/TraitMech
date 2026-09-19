@@ -1,0 +1,137 @@
+identifier: traitmech:000261
+label: Tiamat system
+definition: A phage defense system in which an organism possesses a Tiamat locus represented
+  by a TmtA profile that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1016/j.chom.2022.09.017
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Tiamat
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1016/j.chom.2022.09.017
+  snippet: discovery of 21 defense systems that protect bacteria from phages, based
+    on computational genomic analyses and phage-infection experiments
+  notes: Millman et al. report the computational and experimental cohort that DefenseFinder
+    cites for Tiamat as a bacterial anti-phage system.
+- reference: DOI:10.1101/2022.05.11.491447
+  snippet: discovery of 21 new defense systems that protect bacteria from phages,
+    based on computational genomic analyses and phage infection experiments
+  notes: The bioRxiv version of Millman et al. independently carries the 21-system
+    discovery claim linked from DefenseFinder's Tiamat article registry.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Tiamat | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+    systems that protect bacteria from phages
+  notes: The DefenseFinder model registry maps the named Tiamat system to the Millman
+    et al. antiphage-system discovery preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Tiamat\tTiamat\t1\t1\tTiamat__TmtA"
+  notes: The DefenseFinder rules table models Tiamat with a TmtA profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Tiamat__TmtA                                     | Tiamat__TmtA                                     |
+    Tiamat
+  notes: The DefenseFinder HMM inventory records TmtA in the Tiamat model namespace.
+causal_graphs:
+- graph_id: tiamat_locus_restricts_phage
+  title: Tiamat loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Tiamat locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Tiamat as a named anti-phage system with the required
+    DefenseFinder TmtA profile while leaving its phage trigger, molecular substrate,
+    antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: tiamat_locus
+    label: Tiamat locus
+    node_type: GENETIC_ELEMENT
+    description: A Tiamat anti-phage defense locus satisfying a DefenseFinder rule
+      over the TmtA profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Tiamat
+      system.
+  - node_id: tiamat_system_trait
+    label: Tiamat system
+    node_type: TRAIT
+    grounding: traitmech:000261
+    description: Possession of a genome-encoded Tiamat phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: tiamat_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Tiamat to a bacterial anti-phage-system discovery
+      preprint and represents Tiamat loci through the TmtA component profile.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: discovery of 21 defense systems that protect bacteria from phages
+      notes: Millman et al. describe the anti-phage discovery cohort that the DefenseFinder
+        Tiamat registry row maps to the Tiamat system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Tiamat | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: The DefenseFinder registry maps Tiamat itself to the Millman et al. bacterial
+        antiphage-system discovery preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Tiamat\tTiamat\t1\t1\tTiamat__TmtA"
+      notes: The DefenseFinder rules table supports TmtA as the required Tiamat system
+        profile.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tiamat_system_trait
+    description: Tiamat-mediated phage restriction realizes the Tiamat system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.09.017
+      snippet: discovery of 21 defense systems that protect bacteria from phages
+      notes: Millman et al. place the Tiamat discovery cohort in the set of bacterial
+        systems that protect against phages.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Tiamat | 10\.1101/2022\.05\.11\.491447 | An expanding arsenal of immune
+        systems that protect bacteria from phages
+      notes: DefenseFinder records Tiamat as a named system from the Millman et al.
+        antiphage discovery preprint.
+  - subject: tiamat_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Tiamat system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: An expanding arsenal of immune systems that protect bacteria from phages
+      notes: DefenseFinder associates Tiamat with the Millman et al. bacterial antiphage-system
+        discovery paper.
+discussions:
+- discussion_id: tiamat-mechanism-gap
+  prompt: Resolve Tiamat phage triggers and effector outputs before minting narrower
+    Tiamat mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Millman et al. and DefenseFinder support Tiamat as a named anti-phage
+    system with a TmtA profile, but the trigger, molecular substrate, antiviral effector
+    output, and subtype-specific mechanism are not resolved enough here to assert
+    a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#tiamat_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T02:44:11Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Tiamat system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v138.
+  llm_assisted: true
