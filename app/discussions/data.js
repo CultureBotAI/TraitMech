@@ -497,6 +497,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dazbog_system.html#dazbog-mechanism-gap"
  },
  {
+  "discussion_id": "dctpdeaminase-activation-profile-gap",
+  "prompt": "Resolve dCTPdeaminase activation, locus boundaries, and representative enzyme accessions before asserting narrower component or subtype traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "dCTPdeaminase system",
+  "source_id": "traitmech:000274",
+  "source_file": "dctpdeaminase_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dctpdeaminase_dctp_depletion_defense"
+  ],
+  "rationale": "Bernier et al. support dCTPdeaminase as a phage-responsive dCTP-depletion defense and DefenseFinder models the system with a custom dCTPdeaminase HMM profile, but this first system-level record does not resolve the universal phage sensor, activation route, strain-level accessions, or whether additional unmodeled components define some natural loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dctpdeaminase_system.html#dctpdeaminase-activation-profile-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -2506,9 +2525,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 142,
- "total_knowledge_gaps": 61,
- "total_source_entries": 141,
+ "total_discussions": 143,
+ "total_knowledge_gaps": 62,
+ "total_source_entries": 142,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
