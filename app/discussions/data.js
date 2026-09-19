@@ -423,6 +423,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cbass_system.html#cbass-subtype-mechanism-gap"
  },
  {
+  "discussion_id": "ceres-mechanism-gap",
+  "prompt": "Resolve Ceres phage triggers and effector outputs before minting narrower Ceres mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ceres system",
+  "source_id": "traitmech:000288",
+  "source_file": "ceres_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ceres_locus_restricts_phage"
+  ],
+  "rationale": "Mordret et al. and DefenseFinder support Ceres as a named anti-phage system with CrsA1 and CrsA2 HMM profile entries, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ceres_system.html#ceres-mechanism-gap"
+ },
+ {
   "discussion_id": "cernunnos-mechanism-gap",
   "prompt": "Resolve Cernunnos phage triggers and effector outputs before minting narrower Cernunnos mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2772,9 +2791,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 156,
- "total_knowledge_gaps": 75,
- "total_source_entries": 155,
+ "total_discussions": 157,
+ "total_knowledge_gaps": 76,
+ "total_source_entries": 156,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
