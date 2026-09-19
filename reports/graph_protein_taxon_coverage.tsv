@@ -171,6 +171,7 @@ data/traits/genomics/darna_system.yaml	traitmech:000273	DARNA system	darna_phage
 data/traits/genomics/dartg_system.yaml	traitmech:000243	DarTG system	dartg_dna_adp_ribosylation_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dazbog_system.yaml	traitmech:000245	Dazbog system	dazbog_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dctpdeaminase_system.yaml	traitmech:000274	dCTPdeaminase system	dctpdeaminase_dctp_depletion_defense	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/ddmde_system.yaml	traitmech:000275	DdmDE system	ddmde_pago_helicase_plasmid_destruction	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dna_sensing_antiphage_defense	MECHANISTIC	1	0	1	1	1	2	2	PASS	0	0	-
 data/traits/genomics/dnd_system.yaml	traitmech:000221	Dnd system	dnd_dna_phosphorothioation_foreign_dna_nicking	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dndcdea_pbeabcd_system.yaml	traitmech:000224	DndCDEA-PbeABCD system	dndcdea_pbeabcd_pt_viral_replication_inhibition	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

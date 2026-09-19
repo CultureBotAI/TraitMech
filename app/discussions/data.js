@@ -516,6 +516,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dctpdeaminase_system.html#dctpdeaminase-activation-profile-gap"
  },
  {
+  "discussion_id": "ddmde-substrate-and-guide-source-gap",
+  "prompt": "Resolve DdmDE natural guide sources, plasmid-substrate breadth, and DdmABC cooperation before minting narrower DdmDE mechanism or subtype traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DdmDE system",
+  "source_id": "traitmech:000275",
+  "source_file": "ddmde_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ddmde_pago_helicase_plasmid_destruction"
+  ],
+  "rationale": "Jaskolska et al. support DdmDE as a V. cholerae plasmid-defense system and Bravo et al. resolve how DdmE and DdmD cooperate for plasmid destruction, but this first system-level record does not assert a universal guide-maturation route, full natural plasmid substrate range, or whether cooperation with DdmABC is required in some hosts.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ddmde_system.html#ddmde-substrate-and-guide-source-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -2525,9 +2544,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 143,
- "total_knowledge_gaps": 62,
- "total_source_entries": 142,
+ "total_discussions": 144,
+ "total_knowledge_gaps": 63,
+ "total_source_entries": 143,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

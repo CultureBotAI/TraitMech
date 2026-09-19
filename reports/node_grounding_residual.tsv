@@ -1182,6 +1182,10 @@ dctp conversion into deoxy-uracil nucleotides	BIOLOGICAL_PROCESS	1	data/traits/g
 dctp nucleotide-pool depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/dctpdeaminase_system.yaml
 phage dna-building-block starvation	STATE	1	data/traits/genomics/dctpdeaminase_system.yaml
 halted phage replication	BIOLOGICAL_PROCESS	1	data/traits/genomics/dctpdeaminase_system.yaml
+ddmde locus	GENETIC_ELEMENT	1	data/traits/genomics/ddmde_system.yaml
+ddmde target dna recognition	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
+processive plasmid destruction	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
+plasmid clearance	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
 disarm host dna methylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 disarm 5-prime-overhang dna sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/disarm_system.yaml
 drmab core complex	GENE_OR_PROTEIN	1	data/traits/genomics/disarm_system.yaml
