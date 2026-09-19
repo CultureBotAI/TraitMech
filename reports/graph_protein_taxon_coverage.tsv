@@ -166,6 +166,7 @@ data/traits/genomics/cbass_system.yaml	traitmech:000212	CBASS system	cbass_cycli
 data/traits/genomics/cernunnos_system.yaml	traitmech:000271	Cernunnos system	cernunnos_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	codon usage bias	codon_bias_translation_efficiency	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	CRISPR-Cas system	crispr_adaptive_immunity	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
+data/traits/genomics/damona_system.yaml	traitmech:000272	Damona system	damona_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dartg_system.yaml	traitmech:000243	DarTG system	dartg_dna_adp_ribosylation_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/dazbog_system.yaml	traitmech:000245	Dazbog system	dazbog_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/disarm_system.yaml	traitmech:000211	DISARM system	disarm_dna_sensing_antiphage_defense	MECHANISTIC	1	0	1	1	1	2	2	PASS	0	0	-

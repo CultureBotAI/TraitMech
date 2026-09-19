@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/damona_system.yaml
+  slug: damona_system
+session:
+  id: 2026-09-19T082430Z-codex-a7f3c2
+  timestamp: '2026-09-19T08:24:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Damona system
+  details: Minted the Damona system GENOMICS record as traitmech:000272 under phage defense
+    system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory
+    snippets for VCA0399, a conservative nonmechanistic phage-restriction graph, and a companion
+    metpo_traitmech_v149 proposal reserving METPO:1022600.
