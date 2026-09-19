@@ -1,5 +1,5 @@
 node_label	node_type	node_count	example_files
-restricted phage propagation	BIOLOGICAL_PROCESS	20	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
+restricted phage propagation	BIOLOGICAL_PROCESS	21	data/traits/genomics/abie_system.yaml|data/traits/genomics/abik_system.yaml|data/traits/genomics/abiq_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
@@ -1315,6 +1315,7 @@ dna damage / replication stress	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/prop
 reca* nucleoprotein filament	GENE_OR_PROTEIN	1	data/traits/genomics/prophage.yaml
 phage-plasmid	GENETIC_ELEMENT	1	data/traits/genomics/prophage.yaml
 extrachromosomal prophage maintenance	BIOLOGICAL_PROCESS	1	data/traits/genomics/prophage.yaml
+psyrta locus	GENETIC_ELEMENT	1	data/traits/genomics/psyrta_system.yaml
 pycsar locus	GENETIC_ELEMENT	1	data/traits/genomics/pycsar_system.yaml
 phage-induced pycc cyclase activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml
 cyclic pyrimidine second messenger synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/pycsar_system.yaml

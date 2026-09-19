@@ -665,6 +665,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/phosphorothioate_defense_system.html#phosphorothioate-subfamily-split-gap"
  },
  {
+  "discussion_id": "psyrta-mechanism-gap",
+  "prompt": "Resolve PsyrTA phage triggers and effector outputs before minting narrower PsyrTA mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PsyrTA system",
+  "source_id": "traitmech:000257",
+  "source_file": "psyrta_system.yaml",
+  "attaches_to": [
+   "causal_graphs#psyrta_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support PsyrTA as a named anti-phage system with required PsyrA and PsyrT profiles, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/psyrta_system.html#psyrta-mechanism-gap"
+ },
+ {
   "discussion_id": "pycsar-signal-and-effector-gap",
   "prompt": "Resolve Pycsar cyclase clades, cyclic pyrimidine specificity, receptor-effector folds, activating phage triggers, and effector outputs before minting narrower Pycsar subtype children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2183,9 +2202,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 125,
- "total_knowledge_gaps": 44,
- "total_source_entries": 124,
+ "total_discussions": 126,
+ "total_knowledge_gaps": 45,
+ "total_source_entries": 125,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
