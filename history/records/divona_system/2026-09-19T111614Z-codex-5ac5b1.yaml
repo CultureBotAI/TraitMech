@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/divona_system.yaml
+  slug: divona_system
+session:
+  id: 2026-09-19T111614Z-codex-5ac5b1
+  timestamp: '2026-09-19T11:16:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Divona system
+  details: Minted the Divona system GENOMICS record as traitmech:000277 under phage defense
+    system with Darracq et al. DOI evidence, pinned DefenseFinder article and HMM inventory
+    snippets for VCA0374, a conservative nonmechanistic phage-restriction graph, and a companion
+    metpo_traitmech_v154 proposal reserving METPO:1023100.
