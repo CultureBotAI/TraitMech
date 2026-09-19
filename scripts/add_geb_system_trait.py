@@ -18,6 +18,13 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "geb_system.yaml"
 
 MORDRET = "DOI:10.1101/2025.01.08.631966"
+MORDRET_VALIDATED_GEB_SNIPPET = (
+    "Among the remaining eight systems, six demonstrated increased resistance "
+    "to at least one phage with more than 100 fold reduction in plaque forming "
+    "units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are "
+    "mostly soil dwelling bacteria, we named these systems after deities of "
+    "the soil and earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun)."
+)
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_ARTICLES = (
@@ -82,14 +89,10 @@ RECORD: dict[str, Any] = {
     "evidence": [
         {
             "reference": MORDRET,
-            "snippet": (
-                "leading to the discovery and experimental validation of six "
-                "defense systems with novel antiphage proteins"
-            ),
+            "snippet": MORDRET_VALIDATED_GEB_SNIPPET,
             "notes": (
-                "Mordret et al. support treating the named systems in their "
-                "experimentally validated Actinomycetota discovery cohort as "
-                "bacterial anti-phage systems."
+                "Mordret et al. directly name Geb among six Streptomyces "
+                "systems that increased resistance to at least one phage."
             ),
         },
         {
@@ -191,15 +194,11 @@ RECORD: dict[str, Any] = {
                     "evidence": [
                         {
                             "reference": MORDRET,
-                            "snippet": (
-                                "leading to the discovery and experimental "
-                                "validation of six defense systems with novel "
-                                "antiphage proteins"
-                            ),
+                            "snippet": MORDRET_VALIDATED_GEB_SNIPPET,
                             "notes": (
-                                "Mordret et al. describe the anti-phage "
-                                "discovery cohort that the DefenseFinder Geb "
-                                "registry row maps to the Geb system."
+                                "Mordret et al. directly name Geb among six "
+                                "Streptomyces systems that restricted at "
+                                "least one phage."
                             ),
                         },
                         {
@@ -230,15 +229,11 @@ RECORD: dict[str, Any] = {
                     "evidence": [
                         {
                             "reference": MORDRET,
-                            "snippet": (
-                                "leading to the discovery and experimental "
-                                "validation of six defense systems with novel "
-                                "antiphage proteins"
-                            ),
+                            "snippet": MORDRET_VALIDATED_GEB_SNIPPET,
                             "notes": (
-                                "Mordret et al. place the Geb discovery "
-                                "cohort in a set of bacterial systems that "
-                                "protect against phages."
+                                "Mordret et al. directly name Geb among six "
+                                "systems that increased resistance to at "
+                                "least one phage."
                             ),
                         },
                         {

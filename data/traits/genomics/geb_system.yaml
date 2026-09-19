@@ -20,10 +20,13 @@ synonyms:
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
 - reference: DOI:10.1101/2025.01.08.631966
-  snippet: leading to the discovery and experimental validation of six defense systems
-    with novel antiphage proteins
-  notes: Mordret et al. support treating the named systems in their experimentally
-    validated Actinomycetota discovery cohort as bacterial anti-phage systems.
+  snippet: Among the remaining eight systems, six demonstrated increased resistance
+    to at least one phage with more than 100 fold reduction in plaque forming units
+    (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly soil dwelling
+    bacteria, we named these systems after deities of the soil and earth (Ceres, Geb,
+    Veles, Prithvi, Ukko and Oshun).
+  notes: Mordret et al. directly name Geb among six Streptomyces systems that increased
+    resistance to at least one phage.
 - reference: DOI:10.1101/2025.01.08.631966
   snippet: The bacterial pangenome encodes an immense array of antiphage systems,
     yet much of their diversity remains uncharted
@@ -83,10 +86,13 @@ causal_graphs:
       model namespace.
     evidence:
     - reference: DOI:10.1101/2025.01.08.631966
-      snippet: leading to the discovery and experimental validation of six defense
-        systems with novel antiphage proteins
-      notes: Mordret et al. describe the anti-phage discovery cohort that the DefenseFinder
-        Geb registry row maps to the Geb system.
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Geb among six Streptomyces systems that
+        restricted at least one phage.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Geb | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
         models chart a vast landscape of antiphage defenses
@@ -107,10 +113,13 @@ causal_graphs:
     description: Geb-mediated phage restriction realizes the Geb system trait.
     evidence:
     - reference: DOI:10.1101/2025.01.08.631966
-      snippet: leading to the discovery and experimental validation of six defense
-        systems with novel antiphage proteins
-      notes: Mordret et al. place the Geb discovery cohort in a set of bacterial systems
-        that protect against phages.
+      snippet: Among the remaining eight systems, six demonstrated increased resistance
+        to at least one phage with more than 100 fold reduction in plaque forming
+        units (PFU) (Figure 3a, Supplementary Figure 5). As Streptomyces are mostly
+        soil dwelling bacteria, we named these systems after deities of the soil and
+        earth (Ceres, Geb, Veles, Prithvi, Ukko and Oshun).
+      notes: Mordret et al. directly name Geb among six systems that increased resistance
+        to at least one phage.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Geb | 10\.1101/2025\.01\.08\.631966 | Protein and genomic language
         models chart a vast landscape of antiphage defenses
@@ -155,4 +164,11 @@ curation_history:
   changes: 'Resolved PR #1073 review issues #1074 and #1075 by making the Geb subclass
     evidence snippet self-supporting and replacing unsupported GebA1-or-GebA2 profile-choice
     wording with wording limited to the DefenseFinder HMM inventory.'
+  llm_assisted: true
+- timestamp: '2026-09-19T18:00:25Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1073 review issue #1076 by replacing abstract-only Geb validation
+    support with Mordret full-text snippets that directly name Geb among the six phage-restricting
+    systems.'
   llm_assisted: true
