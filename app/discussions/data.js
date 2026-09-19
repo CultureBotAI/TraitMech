@@ -716,6 +716,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/retron_system.html#retron-effector-trigger-gap"
  },
  {
+  "discussion_id": "rosmerta-mechanism-gap",
+  "prompt": "Resolve RosmerTA phage triggers and effector outputs before minting narrower RosmerTA mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "RosmerTA system",
+  "source_id": "traitmech:000256",
+  "source_file": "rosmerta_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rosmerta_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support RosmerTA as a named anti-phage system with RmrA and RmrT profile choices, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rosmerta_system.html#rosmerta-mechanism-gap"
+ },
+ {
   "discussion_id": "septu-standalone-retron-regulation-gap",
   "prompt": "Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate specificity before minting narrower Septu mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2164,9 +2183,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 124,
- "total_knowledge_gaps": 43,
- "total_source_entries": 123,
+ "total_discussions": 125,
+ "total_knowledge_gaps": 44,
+ "total_source_entries": 124,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
