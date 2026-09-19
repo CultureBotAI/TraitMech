@@ -609,6 +609,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dodola_system.html#dodola-mechanism-gap"
  },
  {
+  "discussion_id": "dpd-restriction-mechanism-gap",
+  "prompt": "Resolve Dpd restriction targets, phage specificity, and DpdA-K component functions before minting narrower Dpd mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dpd system",
+  "source_id": "traitmech:000278",
+  "source_file": "dpd_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dpd_dna_modification_defense"
+  ],
+  "rationale": "Thiaville et al. support dpdA-K-dependent installation of 7-deazaguanine derivatives into DNA and a likely restriction-modification role, and DefenseFinder supports Dpd as a named multi-profile defense model. This first record does not yet resolve the universal restriction target, modified motif, antiphage substrate breadth, or the necessity of each profiled component across natural Dpd loci.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dpd_system.html#dpd-restriction-mechanism-gap"
+ },
+ {
   "discussion_id": "druantia-subtype-mechanism-gap",
   "prompt": "Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2582,9 +2601,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 146,
- "total_knowledge_gaps": 65,
- "total_source_entries": 145,
+ "total_discussions": 147,
+ "total_knowledge_gaps": 66,
+ "total_source_entries": 146,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
