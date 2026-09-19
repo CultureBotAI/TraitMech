@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/drt_system.yaml
+  slug: drt_system
+session:
+  id: 2026-09-19T123014Z-codex-37dd9a
+  timestamp: '2026-09-19T12:30:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add DRT system genomics trait
+  details: Minted traitmech:000279 for the DOI-backed DRT defense-associated reverse transcriptase
+    phage-defense system and reserved METPO:1023300 in proposals/metpo_traitmech_v156; evidence
+    comes from Gao et al. 2020 plus pinned DefenseFinder article, rule, and HMM rows.

@@ -628,6 +628,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dpd_system.html#dpd-restriction-mechanism-gap"
  },
  {
+  "discussion_id": "drt-subtype-mechanism-gap",
+  "prompt": "Resolve DRT subtype products, partner RNAs or proteins, phage triggers, and antiphage substrates before minting narrower DRT subtype mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DRT system",
+  "source_id": "traitmech:000279",
+  "source_file": "drt_system.yaml",
+  "attaches_to": [
+   "causal_graphs#drt_reverse_transcriptase_antiphage_defense"
+  ],
+  "rationale": "Gao et al. support several active reverse-transcriptase-containing antiphage systems, and DefenseFinder models DRT subtypes such as DRT_1. This first record stays at DRT-family level because the direct products of DRT RT activity, the exact phage triggers, the non-coding RNA role in DRT type 3, and the mechanisms for additional DRT subtypes are not resolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/drt_system.html#drt-subtype-mechanism-gap"
+ },
+ {
   "discussion_id": "druantia-subtype-mechanism-gap",
   "prompt": "Resolve Druantia subtype composition and activation mechanisms before minting narrower Type I, Type II, or Type III Druantia-system children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2601,9 +2620,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 147,
- "total_knowledge_gaps": 66,
- "total_source_entries": 146,
+ "total_discussions": 148,
+ "total_knowledge_gaps": 67,
+ "total_source_entries": 147,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
