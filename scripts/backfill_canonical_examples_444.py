@@ -847,6 +847,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/divona_system",
     "genomics/dodola_system",
     "genomics/eleos_system",
+    "genomics/epona_system",
     "genomics/menshen_system",
     "genomics/mokosh_system",
     "genomics/olokun_system",

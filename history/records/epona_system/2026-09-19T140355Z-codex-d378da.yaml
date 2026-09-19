@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/epona_system.yaml
+  slug: epona_system
+session:
+  id: 2026-09-19T140355Z-codex-d378da
+  timestamp: '2026-09-19T14:03:55Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Epona system genomics trait
+  details: Minted traitmech:000281 for the DOI-backed Epona SCI-derived phage-defense system
+    and reserved METPO:1023500 in proposals/metpo_traitmech_v158; evidence comes from Darracq
+    et al. 2025 and pinned DefenseFinder article and HMM rows.
