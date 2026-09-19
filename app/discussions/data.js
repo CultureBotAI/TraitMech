@@ -296,6 +296,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/belenos_system.html#belenos-mechanism-gap"
  },
  {
+  "discussion_id": "belisama-mechanism-gap",
+  "prompt": "Resolve Belisama phage triggers and effector outputs before minting narrower Belisama mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Belisama system",
+  "source_id": "traitmech:000269",
+  "source_file": "belisama_system.yaml",
+  "attaches_to": [
+   "causal_graphs#belisama_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Belisama as a named anti-phage system with a VCA0458 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/belisama_system.html#belisama-mechanism-gap"
+ },
+ {
   "discussion_id": "borvo-mechanism-gap",
   "prompt": "Resolve Borvo phage triggers and effector outputs before minting narrower Borvo mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2411,9 +2430,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 137,
- "total_knowledge_gaps": 56,
- "total_source_entries": 136,
+ "total_discussions": 138,
+ "total_knowledge_gaps": 57,
+ "total_source_entries": 137,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
