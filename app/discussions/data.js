@@ -845,6 +845,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/shosta_system.html#shosta-mechanism-gap"
  },
  {
+  "discussion_id": "sofic-mechanism-gap",
+  "prompt": "Resolve SoFIC phage triggers and effector outputs before minting narrower SoFIC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SoFIC system",
+  "source_id": "traitmech:000260",
+  "source_file": "sofic_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sofic_locus_restricts_phage"
+  ],
+  "rationale": "Millman et al. and DefenseFinder support SoFIC as a named anti-phage system with a SoFic profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sofic_system.html#sofic-mechanism-gap"
+ },
+ {
   "discussion_id": "sparta-native-host-and-substrate-gap",
   "prompt": "Resolve SPARTA natural-host substrates before adding canonical examples or narrower short-pAgo defense children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2240,9 +2259,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 128,
- "total_knowledge_gaps": 47,
- "total_source_entries": 127,
+ "total_discussions": 129,
+ "total_knowledge_gaps": 48,
+ "total_source_entries": 128,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
