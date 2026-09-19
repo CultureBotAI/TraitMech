@@ -33,11 +33,11 @@ evidence:
   snippet: "PsyrTA\tPsyrTA\t2\t2\tPsyrTA__PsyrA, PsyrTA__PsyrT"
   notes: The DefenseFinder rules table models PsyrTA with PsyrA and PsyrT profiles.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-  snippet: PsyrTA__PsyrA                                     | PsyrTA__PsyrA                                     |
+  snippet: PsyrTA__PsyrA                                    | PsyrTA__PsyrA                                    |
     PsyrTA
   notes: The DefenseFinder HMM inventory records PsyrA as a PsyrTA profile.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-  snippet: PsyrTA__PsyrT                                     | PsyrTA__PsyrT                                     |
+  snippet: PsyrTA__PsyrT                                    | PsyrTA__PsyrT                                    |
     PsyrTA
   notes: The DefenseFinder HMM inventory records PsyrT as a PsyrTA profile.
 causal_graphs:

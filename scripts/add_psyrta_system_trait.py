@@ -44,7 +44,7 @@ def hmm_inventory_evidence(profile: str) -> dict[str, str]:
     hmm = f"PsyrTA__{profile}"
     return {
         "reference": DEFENSEFINDER_HMMS,
-        "snippet": f"{hmm:<49} | {hmm:<49} | PsyrTA",
+        "snippet": f"{hmm:<48} | {hmm:<48} | PsyrTA",
         "notes": (
             "The DefenseFinder HMM inventory records "
             f"{profile} as a PsyrTA profile."
