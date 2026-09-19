@@ -11,8 +11,8 @@ The pinned METPO snapshot has no active exact class for Geb system, the
 genome-level possession trait for a Geb anti-phage locus. Mordret et al.
 reported a protein- and genomic-language-model workflow that discovered and
 experimentally validated six Actinomycetota defense systems with novel
-antiphage proteins, and DefenseFinder models Geb with GebA1 and GebA2 profiles
-in its HMM inventory.
+antiphage proteins, and DefenseFinder catalogs Geb with GebA1 and GebA2 HMM
+profile entries.
 
 This cohort lifts one local class:
 
@@ -40,11 +40,11 @@ Subset tag: `metpo_traitmech_2026_09`.
 |---|---|---|
 | `METPO:1024100` | Geb system | `METPO:1016300` phage defense system |
 
-Geb system captures genome-level possession of a Geb locus represented by the
-GebA1 and GebA2 DefenseFinder profile choices. It excludes individual GebA
-genes; GebA proteins; DefenseFinder HMM profiles; predicted source-database
-rows naming one Geb locus; unresolved Geb trigger or effector activities; and
-other phage-defense systems.
+Geb system captures genome-level possession of a Geb locus cataloged by
+DefenseFinder under a Geb model namespace with GebA1 and GebA2 HMM profile
+entries. It excludes individual GebA genes; GebA proteins; DefenseFinder HMM
+profiles; predicted source-database rows naming one Geb locus; unresolved Geb
+trigger or effector activities; and other phage-defense systems.
 
 ## External Mappings
 

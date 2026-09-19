@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/geb_system.yaml
+  slug: geb_system
+session:
+  id: 2026-09-19T173940Z-codex-bd70c4
+  timestamp: '2026-09-19T17:39:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: UPDATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Scoped Geb profile evidence after PR review
+  details: >-
+    Resolved PR #1073 review issue #1075 by replacing unsupported
+    GebA1-or-GebA2 and profile-choice wording with wording limited to the
+    DefenseFinder Geb HMM inventory, and recorded the review-time subclass
+    evidence tightening from issue #1074 in the live curation history.

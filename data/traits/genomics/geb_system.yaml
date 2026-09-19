@@ -1,7 +1,7 @@
 identifier: traitmech:000287
 label: Geb system
-definition: A phage defense system in which an organism possesses a Geb locus represented
-  by GebA1 or GebA2 profiles that can protect bacteria from bacteriophage infection.
+definition: A phage defense system in which an organism possesses a Geb locus that
+  can protect bacteria from bacteriophage infection.
 definition_source: DOI:10.1101/2025.01.08.631966
 trait_category: GENOMICS
 term_kind: CLASS
@@ -50,14 +50,14 @@ causal_graphs:
     trigger or molecular output.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures Geb as a named anti-phage system with GebA1 and
-    GebA2 DefenseFinder profile choices while leaving its phage trigger, molecular
+    GebA2 DefenseFinder HMM profile entries while leaving its phage trigger, molecular
     substrate, antiviral effector output, and subtype breadth unresolved.
   nodes:
   - node_id: geb_locus
     label: Geb locus
     node_type: GENETIC_ELEMENT
-    description: A Geb anti-phage defense locus represented in DefenseFinder by GebA1
-      or GebA2 profiles.
+    description: A Geb anti-phage defense locus cataloged in DefenseFinder with GebA1
+      and GebA2 HMM profile entries.
   - node_id: restricted_phage_propagation
     label: restricted phage propagation
     node_type: BIOLOGICAL_PROCESS
@@ -79,8 +79,8 @@ causal_graphs:
     predicate_id: RO:0002326
     object: restricted_phage_propagation
     description: DefenseFinder maps Geb to a protein- and genomic-language-model antiphage-system
-      discovery preprint and represents Geb loci through the GebA1 and GebA2 component
-      profile choices.
+      discovery preprint and catalogs GebA1 and GebA2 HMM profile entries in the Geb
+      model namespace.
     evidence:
     - reference: DOI:10.1101/2025.01.08.631966
       snippet: leading to the discovery and experimental validation of six defense
@@ -134,9 +134,9 @@ discussions:
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Mordret et al. and DefenseFinder support Geb as a named anti-phage system
-    with GebA1 and GebA2 profile choices, but the trigger, molecular substrate, antiviral
-    effector output, and subtype-specific mechanism are not resolved enough here to
-    assert a narrower mechanistic child trait.
+    with GebA1 and GebA2 HMM profile entries, but the trigger, molecular substrate,
+    antiviral effector output, and subtype-specific mechanism are not resolved enough
+    here to assert a narrower mechanistic child trait.
   attaches_to:
   - causal_graphs#geb_locus_restricts_phage
   posed_by: codex
@@ -148,4 +148,11 @@ curation_history:
   changes: Minted Geb system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v164.
+  llm_assisted: true
+- timestamp: '2026-09-19T17:39:40Z'
+  curator: codex
+  action: ADDRESSED_PR_REVIEW
+  changes: 'Resolved PR #1073 review issues #1074 and #1075 by making the Geb subclass
+    evidence snippet self-supporting and replacing unsupported GebA1-or-GebA2 profile-choice
+    wording with wording limited to the DefenseFinder HMM inventory.'
   llm_assisted: true

@@ -56,9 +56,8 @@ RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": f"{SYSTEM} system",
     "definition": (
-        f"A phage defense system in which an organism possesses a {SYSTEM} "
-        "locus represented by GebA1 or GebA2 profiles that can protect "
-        "bacteria from bacteriophage infection."
+        f"A phage defense system in which an organism possesses a {SYSTEM} locus "
+        "that can protect bacteria from bacteriophage infection."
     ),
     "definition_source": MORDRET,
     "trait_category": "GENOMICS",
@@ -133,7 +132,7 @@ RECORD: dict[str, Any] = {
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 f"The graph captures {SYSTEM} as a named anti-phage system "
-                "with GebA1 and GebA2 DefenseFinder profile choices while "
+                "with GebA1 and GebA2 DefenseFinder HMM profile entries while "
                 "leaving its phage trigger, molecular substrate, antiviral "
                 "effector output, and subtype breadth unresolved."
             ),
@@ -143,8 +142,8 @@ RECORD: dict[str, Any] = {
                     "label": f"{SYSTEM} locus",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        f"A {SYSTEM} anti-phage defense locus represented in "
-                        "DefenseFinder by GebA1 or GebA2 profiles."
+                        f"A {SYSTEM} anti-phage defense locus cataloged in "
+                        "DefenseFinder with GebA1 and GebA2 HMM profile entries."
                     ),
                 },
                 {
@@ -186,8 +185,8 @@ RECORD: dict[str, Any] = {
                     "description": (
                         f"DefenseFinder maps {SYSTEM} to a protein- and "
                         "genomic-language-model antiphage-system discovery "
-                        "preprint and represents Geb loci through the GebA1 "
-                        "and GebA2 component profile choices."
+                        "preprint and catalogs GebA1 and GebA2 HMM profile "
+                        "entries in the Geb model namespace."
                     ),
                     "evidence": [
                         {
@@ -296,7 +295,7 @@ RECORD: dict[str, Any] = {
             "status": "OPEN",
             "rationale": (
                 f"Mordret et al. and DefenseFinder support {SYSTEM} as a "
-                "named anti-phage system with GebA1 and GebA2 profile choices, "
+                "named anti-phage system with GebA1 and GebA2 HMM profile entries, "
                 "but the trigger, molecular substrate, antiviral effector "
                 "output, and subtype-specific mechanism are not resolved enough "
                 "here to assert a narrower mechanistic child trait."
