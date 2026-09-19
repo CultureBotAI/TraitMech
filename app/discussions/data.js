@@ -899,6 +899,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/mokosh_system.html#mokosh-mechanism-gap"
  },
  {
+  "discussion_id": "nantosuelta-mechanism-gap",
+  "prompt": "Resolve Nantosuelta phage triggers and effector outputs before minting narrower Nantosuelta mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Nantosuelta system",
+  "source_id": "traitmech:000284",
+  "source_file": "nantosuelta_system.yaml",
+  "attaches_to": [
+   "causal_graphs#nantosuelta_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Nantosuelta as a named anti-phage system with a VCA0322 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/nantosuelta_system.html#nantosuelta-mechanism-gap"
+ },
+ {
   "discussion_id": "olokun-mechanism-gap",
   "prompt": "Resolve Olokun phage triggers and effector outputs before minting narrower Olokun mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2696,9 +2715,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 152,
- "total_knowledge_gaps": 71,
- "total_source_entries": 151,
+ "total_discussions": 153,
+ "total_knowledge_gaps": 72,
+ "total_source_entries": 152,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/nantosuelta_system.yaml
+  slug: nantosuelta_system
+session:
+  id: 2026-09-19T154745Z-codex-bea190
+  timestamp: '2026-09-19T15:47:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1070
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Expanded Nantosuelta confers-edge evidence snippet
+  details: Addressed CultureBotAI/TraitMech#1070 by expanding the Darracq snippet on the Nantosuelta
+    confers edge so the verbatim evidence includes the phage-defense clause referenced by
+    the edge note.
