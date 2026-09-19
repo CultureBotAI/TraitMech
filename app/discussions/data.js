@@ -1411,6 +1411,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/uzume_system.html#uzume-mechanism-gap"
  },
  {
+  "discussion_id": "veles-mechanism-gap",
+  "prompt": "Resolve Veles phage triggers and effector outputs before minting narrower Veles mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Veles system",
+  "source_id": "traitmech:000289",
+  "source_file": "veles_system.yaml",
+  "attaches_to": [
+   "causal_graphs#veles_locus_restricts_phage"
+  ],
+  "rationale": "Mordret et al. and DefenseFinder support Veles as a named anti-phage system with VlsA1, VlsA2, VlsB1, VlsB2, VlsC1, and VlsC2 HMM profile entries, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/veles_system.html#veles-mechanism-gap"
+ },
+ {
   "discussion_id": "viperin-product-and-subtype-gap",
   "prompt": "Resolve Viperin nucleotide products, accessory genes, and phage-target breadth before minting narrower Viperin mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2791,9 +2810,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 157,
- "total_knowledge_gaps": 76,
- "total_source_entries": 156,
+ "total_discussions": 158,
+ "total_knowledge_gaps": 77,
+ "total_source_entries": 157,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
