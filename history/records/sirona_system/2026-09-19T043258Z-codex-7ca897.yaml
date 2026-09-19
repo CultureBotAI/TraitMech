@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sirona_system.yaml
+  slug: sirona_system
+session:
+  id: 2026-09-19T043258Z-codex-7ca897
+  timestamp: '2026-09-19T04:32:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Reduce repeated Sirona snippets
+  details: Replaced repeated DefenseFinder article-registry evidence in the Sirona causal
+    graph with VCA0356 HMM inventory evidence where the edge asserts the component profile,
+    and removed a duplicate registry citation from the confers edge so the graph no longer
+    repeats the same URL snippet three times.

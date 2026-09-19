@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/sirona_system.yaml
+  slug: sirona_system
+session:
+  id: 2026-09-19T042818Z-codex-9d7037
+  timestamp: '2026-09-19T04:28:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Sirona phage-defense system
+  details: Minted traitmech:000264 for the DefenseFinder Sirona system with DOI-backed SCI
+    antiphage evidence, pinned DefenseFinder article and HMM registry evidence, a conservative
+    nonmechanistic phage-restriction graph, an open Sirona mechanism knowledge gap, and a
+    v141 METPO placeholder proposal for METPO:1021800.

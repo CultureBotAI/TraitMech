@@ -845,6 +845,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/shosta_system.html#shosta-mechanism-gap"
  },
  {
+  "discussion_id": "sirona-mechanism-gap",
+  "prompt": "Resolve Sirona phage triggers and effector outputs before minting narrower Sirona mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Sirona system",
+  "source_id": "traitmech:000264",
+  "source_file": "sirona_system.yaml",
+  "attaches_to": [
+   "causal_graphs#sirona_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Sirona as a named anti-phage system with a VCA0356 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/sirona_system.html#sirona-mechanism-gap"
+ },
+ {
   "discussion_id": "sofic-mechanism-gap",
   "prompt": "Resolve SoFIC phage triggers and effector outputs before minting narrower SoFIC mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2316,9 +2335,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 132,
- "total_knowledge_gaps": 51,
- "total_source_entries": 131,
+ "total_discussions": 133,
+ "total_knowledge_gaps": 52,
+ "total_source_entries": 132,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
