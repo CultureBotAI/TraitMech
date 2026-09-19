@@ -846,6 +846,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/sparta_system",
     "genomics/tiamat_system",
     "genomics/uzume_system",
+    "genomics/viperin_system",
 }
 
 
