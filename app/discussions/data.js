@@ -461,6 +461,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/cernunnos_system.html#cernunnos-mechanism-gap"
  },
  {
+  "discussion_id": "charlie_gp32-mechanism-gap",
+  "prompt": "Resolve the Charlie gp32 membrane target, Che9c specificity, and homolog breadth before minting narrower Charlie gp32 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Charlie gp32 system",
+  "source_id": "traitmech:000295",
+  "source_file": "charlie_gp32_system.yaml",
+  "attaches_to": [
+   "causal_graphs#charlie_gp32_locus_blocks_phage_entry"
+  ],
+  "rationale": "Dedrick et al. and DefenseFinder support Charlie gp32 as a named anti-phage system with a gp32 profile, but the direct membrane target, determinants of its Che9c specificity, and breadth of homologous loci are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/charlie_gp32_system.html#charlie_gp32-mechanism-gap"
+ },
+ {
   "discussion_id": "damona-mechanism-gap",
   "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2905,9 +2924,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 163,
- "total_knowledge_gaps": 82,
- "total_source_entries": 162,
+ "total_discussions": 164,
+ "total_knowledge_gaps": 83,
+ "total_source_entries": 163,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

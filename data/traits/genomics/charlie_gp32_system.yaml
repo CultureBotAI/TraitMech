@@ -1,0 +1,179 @@
+identifier: traitmech:000295
+label: Charlie gp32 system
+definition: A phage defense system in which an organism possesses a Charlie gp32 locus
+  that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1038/nmicrobiol.2016.251
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Charlie gp32 defense system
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/nmicrobiol.2016.251
+- synonym_text: Charlie_gp32
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: at least five distinct prophage-expressed viral defense systems that interfere
+    with infection
+  notes: Dedrick et al. place the Cluster N Charlie gp32 system in a cohort of prophage-expressed
+    defenses against lytic and temperate mycobacteriophages.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: The gene responsible is Charlie 32 (and presumably the analogous genes
+    in Xeno and SkinnyPete), and a Charlie lysogen in which 32 is deleted loses defense
+    against Che9c
+  notes: Dedrick et al. localize a Cluster N prophage-mediated heterotypic defense
+    to Charlie gene 32.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: The Charlie gp32 defense system is notable in that although it has the
+    characteristics of superinfection exclusion systems – being membrane located and
+    preventing DNA injection – it has remarkable specificity for a single phage among
+    those tested
+  notes: Dedrick et al. explicitly name the Charlie gp32 defense system as an exclusion-like
+    viral-defense system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Charlie_gp32 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated defence
+    against viral attack and viral counter-defence
+  notes: The DefenseFinder model registry maps the named Charlie_gp32 system to the
+    Dedrick et al. prophage-mediated viral-defense paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Charlie_gp32__gp32                               | Charlie_gp32__gp32                               |
+    Charlie_gp32
+  notes: The DefenseFinder HMM inventory records gp32 in the Charlie_gp32 model namespace.
+causal_graphs:
+- graph_id: charlie_gp32_locus_blocks_phage_entry
+  title: Charlie gp32 loci confer heterotypic phage exclusion
+  description: Conservative system-level sketch linking possession of a Charlie gp32
+    locus to blocked Che9c DNA injection and restricted bacteriophage propagation.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Charlie gp32 as a named anti-phage system with a
+    DefenseFinder gp32 profile and a proposed Che9c-exclusion output while leaving
+    the direct gp32 target, the membrane-blocking mechanism, and homolog breadth unresolved.
+  nodes:
+  - node_id: charlie_gp32_locus
+    label: Charlie gp32 locus
+    node_type: GENETIC_ELEMENT
+    description: A Charlie gp32 anti-phage defense locus cataloged in DefenseFinder
+      with a gp32 HMM profile.
+  - node_id: blocked_che9c_dna_injection
+    label: blocked Che9c DNA injection
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced Che9c bacteriophage DNA injection across the cell envelope
+      in cells carrying Charlie gp32.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Charlie
+      gp32 system.
+  - node_id: charlie_gp32_system_trait
+    label: Charlie gp32 system
+    node_type: TRAIT
+    grounding: traitmech:000295
+    description: Possession of a genome-encoded Charlie gp32 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: charlie_gp32_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: blocked_che9c_dna_injection
+    description: Dedrick et al. identify Charlie 32 as the gene responsible for Che9c
+      defense, and DefenseFinder catalogs a gp32 profile in the Charlie_gp32 model
+      namespace.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: The gene responsible is Charlie 32 (and presumably the analogous genes
+        in Xeno and SkinnyPete), and a Charlie lysogen in which 32 is deleted loses
+        defense against Che9c
+      notes: Dedrick et al. support Charlie gp32 as the genetic determinant of the
+        Che9c-exclusion phenotype.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Charlie_gp32__gp32                               | Charlie_gp32__gp32                               |
+        Charlie_gp32
+      notes: The DefenseFinder HMM inventory records gp32 in the Charlie_gp32 model
+        namespace.
+  - subject: blocked_che9c_dna_injection
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Charlie-gp32-mediated blockade of Che9c DNA injection reduces productive
+      phage infection.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: We propose that Charlie gp32 confers heterotypic exclusion, blocking
+        Che9c DNA injection across the membrane
+      notes: Dedrick et al. interpret Charlie gp32 defense as an exclusion-like block
+        to Che9c DNA injection.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: charlie_gp32_system_trait
+    description: Charlie-gp32-mediated Che9c exclusion realizes the Charlie gp32 system
+      trait.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: Charlie gp32 confers survival to Che9c infection, which also is a temperate
+        phage
+      notes: Dedrick et al. show a cellular survival outcome for Charlie-gp32-mediated
+        Che9c defense.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Charlie_gp32 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated defence
+        against viral attack and viral counter-defence
+      notes: DefenseFinder records Charlie_gp32 as a named system from the Dedrick
+        et al. prophage-defense paper.
+  - subject: charlie_gp32_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Charlie gp32 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Charlie_gp32 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+        defence against viral attack and viral counter-defence |'
+      notes: DefenseFinder associates Charlie_gp32 with the Dedrick et al. prophage-mediated
+        viral-defense paper.
+discussions:
+- discussion_id: charlie_gp32-mechanism-gap
+  prompt: Resolve the Charlie gp32 membrane target, Che9c specificity, and homolog
+    breadth before minting narrower Charlie gp32 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Dedrick et al. and DefenseFinder support Charlie gp32 as a named anti-phage
+    system with a gp32 profile, but the direct membrane target, determinants of its
+    Che9c specificity, and breadth of homologous loci are not resolved enough here
+    to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#charlie_gp32_locus_blocks_phage_entry
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T22:40:37Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Charlie gp32 system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v172.
+  llm_assisted: true
+- timestamp: '2026-09-19T23:02:19Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved PR #1089 review issues #1090 and #1091 by dropping the proposed
+    heterotypic-exclusion mechanism from the definition and tightening the Charlie
+    gp32 exact-synonym evidence snippet after rechecking the Dedrick et al. full text
+    and pinned DefenseFinder rows.'
+  llm_assisted: true
+- timestamp: '2026-09-19T23:11:07Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved the follow-up PR #1089 review issue #1091 by restoring a complete
+    Dedrick et al. P25 source clause, including American defense spelling as verified
+    in the local PMC full text.'
+  llm_assisted: true
