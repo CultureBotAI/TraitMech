@@ -918,6 +918,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/nantosuelta_system.html#nantosuelta-mechanism-gap"
  },
  {
+  "discussion_id": "nemetona-mechanism-gap",
+  "prompt": "Resolve Nemetona phage triggers and effector outputs before minting narrower Nemetona mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Nemetona system",
+  "source_id": "traitmech:000285",
+  "source_file": "nemetona_system.yaml",
+  "attaches_to": [
+   "causal_graphs#nemetona_locus_restricts_phage"
+  ],
+  "rationale": "Darracq et al. and DefenseFinder support Nemetona as a named anti-phage system with a VCA0441 profile, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/nemetona_system.html#nemetona-mechanism-gap"
+ },
+ {
   "discussion_id": "olokun-mechanism-gap",
   "prompt": "Resolve Olokun phage triggers and effector outputs before minting narrower Olokun mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2715,9 +2734,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 153,
- "total_knowledge_gaps": 72,
- "total_source_entries": 152,
+ "total_discussions": 154,
+ "total_knowledge_gaps": 73,
+ "total_source_entries": 153,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
