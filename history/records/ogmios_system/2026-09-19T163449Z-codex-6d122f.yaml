@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ogmios_system.yaml
+  slug: ogmios_system
+session:
+  id: 2026-09-19T163449Z-codex-6d122f
+  timestamp: '2026-09-19T16:34:49Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Minted Ogmios system phage defense trait
+  details: Added traitmech:000286 Ogmios system as a DOI-backed GENOMICS child of phage defense
+    system, with DefenseFinder article and HMM-inventory evidence for the Ogmios/VCA0308 model,
+    a conservative nonmechanistic phage-restriction graph, an open mechanism knowledge gap,
+    and a companion METPO proposal in proposals/metpo_traitmech_v163.
