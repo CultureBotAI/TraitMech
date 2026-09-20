@@ -1,0 +1,220 @@
+identifier: traitmech:000320
+label: AbiC system
+definition: An abortive infection system in which an organism possesses an abiC-family
+  locus represented by the DefenseFinder AbiC__AbiC profile and exemplified by the
+  Lactococcus lactis subsp. lactis ME2 pTN20 determinant whose abiC structural gene
+  confers Prf abortive resistance to small isometric-headed phage p2, reducing plaquing,
+  plaque size, and burst size while killing most infected Prf-positive cells.
+definition_source: DOI:10.1128/jb.174.22.7463-7469.1992
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: PMID:1429469
+  snippet: The genetic determinant for Prf (phage resistance five) was subcloned from
+    the conjugative plasmid pTN20
+  notes: Durmaz et al. subcloned the Prf determinant from the Lactococcus lactis ME2
+    conjugative plasmid pTN20.
+- reference: PMID:1429469
+  snippet: Prf reduces the efficiency of plaquing to 10(-2) to 10(-3) and decreases
+    the plaque size and burst size of the small isometric-headed phage p2
+  notes: Durmaz et al. measured Prf-dependent reductions in p2 phage plating efficiency,
+    plaque size, and burst size.
+- reference: PMID:1429469
+  snippet: Prf does not prevent phage adsorption or promote restriction and modification
+    activities
+  notes: Durmaz et al. distinguished Prf activity from adsorption blocking and restriction-modification
+    activities.
+- reference: PMID:1429469
+  snippet: 90% of Prf+ cells infected with phage p2 die. Thus, phage infections in
+    Prf+ cells are aborted.
+  notes: Durmaz et al. showed that most Prf-positive cells infected with phage p2
+    die and interpreted those p2 infections as aborted.
+- reference: PMID:1429469
+  snippet: DNA sequencing identified a 1,056-nucleotide structural gene designated
+    abiC
+  notes: Durmaz et al. identified the abiC structural gene in the Prf determinant.
+- reference: PMID:1429469
+  snippet: Prf+ expression was obtained when abiC was subcloned into the lactococcal
+    expression vector pMG36e
+  notes: Durmaz et al. showed that abiC expression is sufficient for Prf-positive
+    activity in the pMG36e expression vector.
+- reference: PMID:1429469
+  snippet: Unlike abiA, the action of abiC does not appear to affect DNA replication
+  notes: Durmaz et al. left AbiC downstream mechanism unresolved but distinguished
+    it from AbiA-associated DNA-replication effects.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiC model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiC\tAbiC\t1\t1\tAbiC__AbiC"
+  notes: The DefenseFinder rules table models AbiC as a one-component system requiring
+    the AbiC__AbiC profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiC__AbiC                                       | AbiC__AbiC                                       |
+    AbiC                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiC__AbiC under the AbiC model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Durmaz et al. subcloned the Prf determinant from the Lactococcus lactis subsp.
+    lactis ME2 conjugative plasmid pTN20 and showed that the abiC structural gene
+    confers Prf-positive abortive resistance against small isometric-headed phage
+    p2.
+  reference: DOI:10.1128/jb.174.22.7463-7469.1992
+causal_graphs:
+- graph_id: abic_locus_aborts_lactococcal_phage_p2_infection
+  title: AbiC Prf activity aborts lactococcal phage p2 infection
+  description: Conservative system-level sketch linking an abiC-family locus to Prf
+    abortive-infection activity, reduced p2 phage propagation, Prf-positive infected-cell
+    death, and AbiC-system possession without asserting an unresolved molecular target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiC as a named DefenseFinder single-profile abortive-infection
+    system whose ME2 pTN20 prototype restricts small isometric-headed phage p2. It
+    leaves the direct phage trigger, AbiC molecular function, cell-death route, natural
+    locus breadth, and phage escape routes unresolved.
+  nodes:
+  - node_id: abic_locus
+    label: abiC locus
+    node_type: GENETIC_ELEMENT
+    description: An abiC-family abortive-infection locus represented by the DefenseFinder
+      AbiC__AbiC profile.
+  - node_id: abic_prf_activity
+    label: AbiC Prf activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Prf abortive-infection phage resistance mediated by the abiC structural
+      gene.
+  - node_id: p2_phage_propagation_reduction
+    label: p2 phage propagation reduction
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced small isometric-headed phage p2 plating, plaque size, and
+      burst size in an AbiC-containing Lactococcus lactis host.
+  - node_id: prf_positive_infected_cell_death
+    label: Prf-positive infected cell death
+    node_type: BIOLOGICAL_PROCESS
+    description: Death of most Prf-positive Lactococcus lactis cells after infection
+      with phage p2.
+  - node_id: abic_system_trait
+    label: AbiC system
+    node_type: TRAIT
+    grounding: traitmech:000320
+    description: Possession of a genome-encoded AbiC abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abic_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abic_prf_activity
+    description: The abiC-family locus encodes the Prf abortive-infection phage-resistance
+      determinant, and DefenseFinder models AbiC as a one-profile system.
+    evidence:
+    - reference: PMID:1429469
+      snippet: DNA sequencing identified a 1,056-nucleotide structural gene designated
+        abiC
+      notes: Durmaz et al. identified the abiC structural gene within the Prf determinant.
+    - reference: PMID:1429469
+      snippet: Prf+ expression was obtained when abiC was subcloned into the lactococcal
+        expression vector pMG36e
+      notes: Durmaz et al. showed that abiC subcloning is sufficient for Prf-positive
+        expression.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiC\tAbiC\t1\t1\tAbiC__AbiC"
+      notes: The DefenseFinder rules table models AbiC as a one-component system requiring
+        the AbiC__AbiC profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiC__AbiC                                       | AbiC__AbiC                                       |
+        AbiC                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiC__AbiC under the AbiC model
+        namespace.
+  - subject: abic_prf_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: p2_phage_propagation_reduction
+    description: AbiC Prf activity reduces phage p2 plating, plaque size, and burst
+      size.
+    evidence:
+    - reference: PMID:1429469
+      snippet: Prf reduces the efficiency of plaquing to 10(-2) to 10(-3) and decreases
+        the plaque size and burst size of the small isometric-headed phage p2
+      notes: Durmaz et al. measured reduced p2 plating efficiency, plaque size, and
+        burst size in Prf-positive cells.
+  - subject: abic_prf_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: prf_positive_infected_cell_death
+    description: AbiC Prf-positive activity is associated with death of most phage
+      p2-infected host cells.
+    evidence:
+    - reference: PMID:1429469
+      snippet: 90% of Prf+ cells infected with phage p2 die. Thus, phage infections
+        in Prf+ cells are aborted.
+      notes: Durmaz et al. connect the Prf-positive phenotype to infected-cell death
+        and aborted p2 infection.
+  - subject: p2_phage_propagation_reduction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abic_system_trait
+    description: Reduced p2 phage propagation realizes the AbiC abortive-infection
+      trait.
+    evidence:
+    - reference: PMID:1429469
+      snippet: Prf reduces the efficiency of plaquing to 10(-2) to 10(-3) and decreases
+        the plaque size and burst size of the small isometric-headed phage p2
+      notes: Durmaz et al. measured reduced p2 plating efficiency, plaque size, and
+        burst size in Prf-positive cells.
+    - reference: PMID:1429469
+      snippet: Thus, abiC represents a second abortive system found in ME2 that acts
+        at a different point of the phage lytic cycle.
+      notes: Durmaz et al. place abiC in the abortive-infection class and distinguish
+        it from the AbiA system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiC model namespace
+        to a lactococcal abortive-infection review.
+  - subject: abic_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiC system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:1429469
+      snippet: Thus, abiC represents a second abortive system found in ME2
+      notes: Durmaz et al. place abiC in the abortive-infection class of phage defense.
+discussions:
+- discussion_id: abic-trigger-and-death-route-gap
+  prompt: Resolve the AbiC phage trigger, AbiC molecular function, and infected-cell
+    death route before minting narrower AbiC mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Durmaz et al. support AbiC as a named lactococcal abortive-infection
+    determinant that reduces p2 plating, plaque size, and burst size while killing
+    most Prf-positive infected cells. DefenseFinder represents AbiC with a one-profile
+    rule, but this first system-level record leaves the phage trigger, AbiC molecular
+    function, cell-death route, natural locus breadth, and phage escape routes unresolved.
+  attaches_to:
+  - causal_graphs#abic_locus_aborts_lactococcal_phage_p2_infection
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T22:01:24Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiC system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v197.
+  llm_assisted: true

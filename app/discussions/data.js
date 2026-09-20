@@ -224,6 +224,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/abib_system.html#abib-trigger-and-rnase-gap"
  },
  {
+  "discussion_id": "abic-trigger-and-death-route-gap",
+  "prompt": "Resolve the AbiC phage trigger, AbiC molecular function, and infected-cell death route before minting narrower AbiC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AbiC system",
+  "source_id": "traitmech:000320",
+  "source_file": "abic_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abic_locus_aborts_lactococcal_phage_p2_infection"
+  ],
+  "rationale": "Durmaz et al. support AbiC as a named lactococcal abortive-infection determinant that reduces p2 plating, plaque size, and burst size while killing most Prf-positive infected cells. DefenseFinder represents AbiC with a one-profile rule, but this first system-level record leaves the phage trigger, AbiC molecular function, cell-death route, natural locus breadth, and phage escape routes unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abic_system.html#abic-trigger-and-death-route-gap"
+ },
+ {
   "discussion_id": "abid-trigger-and-effector-gap",
   "prompt": "Resolve the AbiD phage trigger, molecular activity, and direct arrest target before minting narrower AbiD mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -353,7 +372,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, and AbiB are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, and traitmech:000319, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., and Parreira et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, and AbiC are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, and traitmech:000320, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., and Durmaz et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3389,9 +3408,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 188,
- "total_knowledge_gaps": 107,
- "total_source_entries": 187,
+ "total_discussions": 189,
+ "total_knowledge_gaps": 108,
+ "total_source_entries": 188,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

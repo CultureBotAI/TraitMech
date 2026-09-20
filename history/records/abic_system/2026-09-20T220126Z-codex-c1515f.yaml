@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abic_system.yaml
+  slug: abic_system
+session:
+  id: 2026-09-20T220126Z-codex-c1515f
+  timestamp: '2026-09-20T22:01:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiC system trait
+  details: Added traitmech:000320 AbiC system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. PMID:1429469 subclones the pTN20 Prf determinant from Lactococcus lactis
+    subsp. lactis ME2, names the abiC structural gene, shows abiC expression confers Prf-positive
+    activity, and links Prf to reduced p2 plaquing, plaque size, burst size, and infected-cell
+    death. Pinned DefenseFinder article, rules, and HMM registries map AbiC to the AbiC__AbiC
+    one-profile model namespace. Reserved METPO:1027400 in proposals/metpo_traitmech_v197
+    for the upstream replacement ID.
