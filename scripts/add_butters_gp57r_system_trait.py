@@ -97,20 +97,6 @@ RECORD: dict[str, Any] = {
         {
             "reference": MOHAMMED,
             "snippet": (
-                "Here, we report that Butters gene 57r (on the reverse "
-                "strand of the annotated forward gene 57), is both necessary "
-                "and sufficient to defend against Island3 and a host of "
-                "other heterotypic phages"
-            ),
-            "notes": (
-                "Mohammed et al. distinguish the reverse gene 57r open "
-                "reading frame from annotated forward gene 57 and connect "
-                "it to Island3 defense."
-            ),
-        },
-        {
-            "reference": MOHAMMED,
-            "snippet": (
                 "mc2155(gp57r) recapitulated defense against Island3 "
                 "comparable to that mounted by mc2155(Butters)"
             ),
@@ -124,7 +110,7 @@ RECORD: dict[str, Any] = {
             "reference": MOHAMMED,
             "snippet": (
                 "Results show that Butters gp57r defends against several "
-                "other phages"
+                "other phages (Fig. 3A)"
             ),
             "notes": (
                 "Mohammed et al. test the breadth of the cloned gp57r "
