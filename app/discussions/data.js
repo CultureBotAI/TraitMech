@@ -266,6 +266,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/abii_system.html#abii-trigger-and-effector-gap"
  },
  {
+  "discussion_id": "abir-component-activity-gap",
+  "prompt": "Resolve the AbiR phage trigger, profile-to-locus mapping, and AbiRa, AbiRb, and AbiRc molecular functions before minting narrower AbiR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AbiR system",
+  "source_id": "traitmech:000317",
+  "source_file": "abir_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abir_loci_impede_phage_dna_replication"
+  ],
+  "rationale": "Twomey et al. support AbiR as a multicomponent abortive-infection system encoded by two separated pKR223 loci, and DefenseFinder represents AbiR with a three-profile rule. This first system-level record leaves the phage trigger, the mapping from the two original genetic loci to AbiRa, AbiRb, and AbiRc profiles, the component molecular activities, and the direct reason that AbiR impedes phage DNA replication unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "PMID:10831451"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abir_system.html#abir-component-activity-gap"
+ },
+ {
   "discussion_id": "abiv-mechanism-gap",
   "prompt": "Resolve the host translational target of the AbiV-SaV complex before minting narrower AbiV mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -294,7 +315,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, and AbiI are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, and traitmech:000316, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., and Su et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, and AbiR are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, and traitmech:000317, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., and Twomey et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3330,9 +3351,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 185,
- "total_knowledge_gaps": 104,
- "total_source_entries": 184,
+ "total_discussions": 186,
+ "total_knowledge_gaps": 105,
+ "total_source_entries": 185,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

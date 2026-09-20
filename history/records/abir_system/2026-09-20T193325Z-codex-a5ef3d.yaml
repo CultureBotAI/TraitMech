@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abir_system.yaml
+  slug: abir_system
+session:
+  id: 2026-09-20T193325Z-codex-a5ef3d
+  timestamp: '2026-09-20T19:33:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiR system trait
+  details: Added traitmech:000317 AbiR system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. PMID:10831451 identifies pKR223 from Lactococcus lactis subsp. lactis
+    KR2 as encoding AbiR, demonstrates that AbiR is encoded by two separated genetic loci,
+    and reports heat-sensitive early abortive-infection activity that impedes phage DNA replication.
+    Pinned DefenseFinder article, rules, and HMM registries map AbiR to the AbiR__AbiRa, AbiR__AbiRb,
+    and AbiR__AbiRc three-profile model namespace. Reserved METPO:1027100 in proposals/metpo_traitmech_v194
+    for the upstream replacement ID.
