@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 708,
+    "records": 709,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 231,
+    "unresearched_mechanism_records": 232,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 64,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 178,
+      "DEEPEN_CAUSAL_GRAPH": 179,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 155
     }
@@ -5372,7 +5372,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 87,
+      "children": 88,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -5490,6 +5490,29 @@
       "researched": false,
       "reasons": [
         "thin graph (5 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000314",
+      "label": "6A-MBL system",
+      "category": "genomics",
+      "slug": "six_a_mbl_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
+        "canonical_examples reviewed empty +0"
       ]
     },
     {

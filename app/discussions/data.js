@@ -1686,6 +1686,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/sirona_system.html#sirona-mechanism-gap"
  },
  {
+  "discussion_id": "six-a-mbl-mechanism-gap",
+  "prompt": "Resolve 6A-MBL phage triggers and effector outputs before minting narrower 6A-MBL mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "6A-MBL system",
+  "source_id": "traitmech:000314",
+  "source_file": "six_a_mbl_system.yaml",
+  "attaches_to": [
+   "causal_graphs#six_a_mbl_locus_restricts_phage"
+  ],
+  "rationale": "van den Berg et al. and DefenseFinder support 6A-MBL as a named anti-phage system with 6A_MBL__cap2_3 and 6A_MBL__MblB HMM profile entries, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/six_a_mbl_system.html#six-a-mbl-mechanism-gap"
+ },
+ {
   "discussion_id": "sofic-mechanism-gap",
   "prompt": "Resolve SoFIC phage triggers and effector outputs before minting narrower SoFIC mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3271,9 +3290,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 182,
- "total_knowledge_gaps": 101,
- "total_source_entries": 181,
+ "total_discussions": 183,
+ "total_knowledge_gaps": 102,
+ "total_source_entries": 182,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
