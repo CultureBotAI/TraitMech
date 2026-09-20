@@ -1,0 +1,242 @@
+identifier: traitmech:000317
+label: AbiR system
+definition: An abortive infection system in which an organism possesses a multicomponent
+  AbiR determinant represented by the DefenseFinder AbiR__AbiRa, AbiR__AbiRb, and
+  AbiR__AbiRc profiles and capable of restricting lactococcal phage propagation by
+  an early abortive-infection mechanism that impedes phage DNA replication, as exemplified
+  by the two pKR223 loci from Lactococcus lactis subsp. lactis KR2 separated by the
+  LlaKR2I restriction-modification genes.
+definition_source: DOI:10.1128/AEM.66.6.2647-2651.2000
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiR
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.66.6.2647-2651.2000
+evidence:
+- reference: PMID:10831451
+  snippet: The native lactococcal plasmid pKR223 encodes two distinct phage resistance
+    mechanisms, a restriction and modification (R/M) system designated LlaKR2I and
+    an abortive infection mechanism (Abi) which affects prolate-headed-phage proliferation
+  notes: Twomey et al. identify native Lactococcus lactis plasmid pKR223 as the source
+    of a restriction-modification system and a separate abortive-infection determinant.
+- reference: PMID:10831451
+  snippet: sequence analysis has validated the novelty of the Abi system, which has
+    now been designated AbiR
+  notes: Twomey et al. name AbiR as the novel abortive-infection system from pKR223.
+- reference: PMID:10831451
+  snippet: Analysis of deletion and insertion clones demonstrated that AbiR was encoded
+    by two genetic loci, separated by the LlaKR2I R/M genes
+  notes: Twomey et al. show that the AbiR phenotype requires two pKR223 loci separated
+    by the LlaKR2I restriction-modification genes.
+- reference: PMID:10831451
+  snippet: Mechanistic studies on the AbiR phenotype indicated that it was heat sensitive
+    and that it impeded phage DNA replication
+  notes: Twomey et al. connect AbiR activity to a heat-sensitive abortive-infection
+    phenotype that impedes phage DNA replication.
+- reference: PMID:10831451
+  snippet: These data indicated that AbiR is a novel multicomponent, heat-sensitive,
+    "early"-functioning Abi system
+  notes: Twomey et al. classify AbiR as a multicomponent early abortive-infection
+    system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiR | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiR model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiR\tAbiR\t3\t3\tAbiR__AbiRa, AbiR__AbiRb, AbiR__AbiRc"
+  notes: The DefenseFinder rules table models AbiR as a three-component system requiring
+    the AbiR__AbiRa, AbiR__AbiRb, and AbiR__AbiRc profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiR__AbiRa                                      | AbiR__AbiRa                                      |
+    AbiR                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiR__AbiRa under the AbiR model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiR__AbiRb                                      | AbiR__AbiRb                                      |
+    AbiR                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiR__AbiRb under the AbiR model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiR__AbiRc                                      | AbiR__AbiRc                                      |
+    AbiR                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiR__AbiRc under the AbiR model
+    namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Twomey et al. characterized AbiR from native plasmid pKR223 of Lactococcus
+    lactis subsp. lactis KR2 and showed a multicomponent, two-locus Abi phenotype
+    that impeded phage DNA replication.
+  reference: DOI:10.1128/AEM.66.6.2647-2651.2000
+causal_graphs:
+- graph_id: abir_loci_impede_phage_dna_replication
+  title: AbiR activity impedes lactococcal phage DNA replication
+  description: Conservative system-level sketch linking the separated pKR223 AbiR
+    loci to AbiR antiphage activity, impeded phage DNA replication, restricted lactococcal
+    phage propagation, and abortive-infection system possession without resolving
+    the phage trigger or individual component activities.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiR as a named DefenseFinder three-profile abortive-infection
+    system whose pKR223 prototype is encoded by two genetic loci and impedes phage
+    DNA replication. It leaves the direct phage trigger, the profile-to-locus mapping,
+    AbiRa, AbiRb, and AbiRc molecular functions, the reason the R/M genes interrupt
+    the two AbiR loci, and phage escape routes unresolved.
+  nodes:
+  - node_id: abir_loci
+    label: AbiR loci
+    node_type: GENETIC_ELEMENT
+    description: A multicomponent abortive-infection determinant encoded by two separated
+      pKR223 loci and represented by the DefenseFinder AbiR rule.
+  - node_id: abir_antiphage_activity
+    label: AbiR antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiR system.
+  - node_id: phage_dna_replication
+    label: phage DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Replication of lactococcal bacteriophage DNA during sensitive-host
+      infection.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of lactococcal phage propagation in an AbiR-containing
+      infected host cell.
+  - node_id: abir_system_trait
+    label: AbiR system
+    node_type: TRAIT
+    grounding: traitmech:000317
+    description: Possession of a genome-encoded AbiR abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abir_loci
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abir_antiphage_activity
+    description: The pKR223 AbiR determinant is encoded by two genetic loci separated
+      by LlaKR2I genes, and DefenseFinder models AbiR as a three-profile system requiring
+      AbiRa, AbiRb, and AbiRc components.
+    evidence:
+    - reference: PMID:10831451
+      snippet: Analysis of deletion and insertion clones demonstrated that AbiR was
+        encoded by two genetic loci, separated by the LlaKR2I R/M genes
+      notes: Twomey et al. show that the AbiR phenotype requires two separated pKR223
+        genetic loci.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiR\tAbiR\t3\t3\tAbiR__AbiRa, AbiR__AbiRb, AbiR__AbiRc"
+      notes: The DefenseFinder rules table models AbiR as a three-component system
+        requiring the AbiR__AbiRa, AbiR__AbiRb, and AbiR__AbiRc profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiR__AbiRa                                      | AbiR__AbiRa                                      |
+        AbiR                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiR__AbiRa under the AbiR model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiR__AbiRb                                      | AbiR__AbiRb                                      |
+        AbiR                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiR__AbiRb under the AbiR model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiR__AbiRc                                      | AbiR__AbiRc                                      |
+        AbiR                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiR__AbiRc under the AbiR model
+        namespace.
+  - subject: abir_antiphage_activity
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_dna_replication
+    description: AbiR antiphage activity impedes sensitive phage DNA replication as
+      an early abortive-infection output.
+    evidence:
+    - reference: PMID:10831451
+      snippet: Mechanistic studies on the AbiR phenotype indicated that it was heat
+        sensitive and that it impeded phage DNA replication
+      notes: Twomey et al. classify the AbiR phenotype as heat-sensitive and DNA-replication
+        impeding.
+  - subject: abir_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: AbiR antiphage activity affects prolate-headed-phage proliferation
+      through a multicomponent early Abi mechanism.
+    evidence:
+    - reference: PMID:10831451
+      snippet: These data indicated that AbiR is a novel multicomponent, heat-sensitive,
+        "early"-functioning Abi system
+      notes: Twomey et al. summarize the AbiR phenotype as multicomponent, heat-sensitive,
+        and early functioning.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abir_system_trait
+    description: Restriction of lactococcal phage propagation realizes the AbiR abortive-infection
+      trait.
+    evidence:
+    - reference: PMID:10831451
+      snippet: sequence analysis has validated the novelty of the Abi system, which
+        has now been designated AbiR
+      notes: Twomey et al. name AbiR as the novel pKR223 abortive-infection system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiR | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiR model namespace
+        to a lactococcal abortive-infection review.
+  - subject: abir_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiR system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:10831451
+      snippet: These data indicated that AbiR is a novel multicomponent, heat-sensitive,
+        "early"-functioning Abi system
+      notes: Twomey et al. classify AbiR in the abortive-infection class of phage
+        defense.
+discussions:
+- discussion_id: abir-component-activity-gap
+  prompt: Resolve the AbiR phage trigger, profile-to-locus mapping, and AbiRa, AbiRb,
+    and AbiRc molecular functions before minting narrower AbiR mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Twomey et al. support AbiR as a multicomponent abortive-infection system
+    encoded by two separated pKR223 loci, and DefenseFinder represents AbiR with a
+    three-profile rule. This first system-level record leaves the phage trigger, the
+    mapping from the two original genetic loci to AbiRa, AbiRb, and AbiRc profiles,
+    the component molecular activities, and the direct reason that AbiR impedes phage
+    DNA replication unresolved.
+  evidence:
+  - reference: PMID:10831451
+    snippet: Analysis of deletion and insertion clones demonstrated that AbiR was
+      encoded by two genetic loci, separated by the LlaKR2I R/M genes
+    notes: Twomey et al. localize AbiR to two separated pKR223 loci rather than to
+      the three-component DefenseFinder profile scheme.
+  attaches_to:
+  - causal_graphs#abir_loci_impede_phage_dna_replication
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T19:30:10Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiR system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v194.
+  llm_assisted: true
+- timestamp: '2026-09-20T20:02:22Z'
+  curator: codex
+  action: REVISED_SCOPE
+  changes: Addressed PR 1154 review issue 1155 by narrowing the AbiR definition to
+    the DefenseFinder AbiR determinant and treating the two separated pKR223 loci
+    from Lactococcus lactis subsp. lactis KR2 as exemplar evidence rather than a constitutive
+    class restriction.
+  llm_assisted: true
