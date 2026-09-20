@@ -91,6 +91,12 @@ PARENT_CHANGES = (
     "split-gap discussion after minting traitmech:000306 for the AbiG "
     "system; other abortive-infection families remain open."
 )
+NODE_LABEL_TIMESTAMP = "2026-09-20T10:19:00Z"
+NODE_LABEL_CHANGES = (
+    "Reused the existing restricted phage propagation causal-node label after "
+    "PR review found that the lactococcal-specific label duplicated the "
+    "taxon-neutral GENOMICS phage-defense node."
+)
 
 
 def article_registry_evidence() -> dict[str, str]:
@@ -324,8 +330,8 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "restricted_lactococcal_phage_propagation",
-                    "label": "restricted lactococcal phage propagation",
+                    "node_id": "restricted_phage_propagation",
+                    "label": "restricted phage propagation",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
                         "Reduced completion of lactococcal phage propagation "
@@ -412,7 +418,7 @@ RECORD: dict[str, Any] = {
                     "subject": "abig_antiphage_activity",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "restricted_lactococcal_phage_propagation",
+                    "object": "restricted_phage_propagation",
                     "description": (
                         "AbiG activity restricts propagation by phi 712 "
                         "and partially restricts phi c2."
@@ -435,7 +441,7 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "restricted_lactococcal_phage_propagation",
+                    "subject": "restricted_phage_propagation",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": "abig_system_trait",
@@ -586,6 +592,14 @@ def build_record() -> dict[str, Any]:
         llm_assisted=True,
         timestamp=TIMESTAMP,
     )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="STANDARDIZED_CAUSAL_NODE_LABEL",
+        changes=NODE_LABEL_CHANGES,
+        llm_assisted=True,
+        timestamp=NODE_LABEL_TIMESTAMP,
+    )
     return record
 
 
@@ -607,7 +621,9 @@ def main() -> int:
 
     if args.apply:
         if TARGET.exists():
-            raise SystemExit(f"{TARGET} already exists")
+            current = load_trait(TARGET)
+            if current.get("identifier") != IDENTIFIER:
+                raise SystemExit(f"{TARGET} does not contain {IDENTIFIER}")
         write_validated_trait(record, TARGET)
         write_validated_trait(parent, ABORTIVE)
     else:

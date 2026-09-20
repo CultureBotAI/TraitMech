@@ -108,8 +108,8 @@ causal_graphs:
     label: phage RNA synthesis
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of sensitive lactococcal phage RNA during infection.
-  - node_id: restricted_lactococcal_phage_propagation
-    label: restricted lactococcal phage propagation
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
     node_type: BIOLOGICAL_PROCESS
     description: Reduced completion of lactococcal phage propagation in an AbiG-containing
       infected host cell.
@@ -164,7 +164,7 @@ causal_graphs:
   - subject: abig_antiphage_activity
     predicate: contributes to
     predicate_id: RO:0002326
-    object: restricted_lactococcal_phage_propagation
+    object: restricted_phage_propagation
     description: AbiG activity restricts propagation by phi 712 and partially restricts
       phi c2.
     evidence:
@@ -174,7 +174,7 @@ causal_graphs:
         species)
       notes: O'Connor et al. measure complete or partial resistance from the AbiG
         mechanism for tested lactococcal phages.
-  - subject: restricted_lactococcal_phage_propagation
+  - subject: restricted_phage_propagation
     predicate: confers
     predicate_id: METPO:2007700
     object: abig_system_trait
@@ -231,4 +231,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v183.
+  llm_assisted: true
+- timestamp: '2026-09-20T10:19:00Z'
+  curator: codex
+  action: STANDARDIZED_CAUSAL_NODE_LABEL
+  changes: Reused the existing restricted phage propagation causal-node label after
+    PR review found that the lactococcal-specific label duplicated the taxon-neutral
+    GENOMICS phage-defense node.
   llm_assisted: true
