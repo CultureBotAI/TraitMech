@@ -857,6 +857,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/nemetona_system",
     "genomics/ogmios_system",
     "genomics/menshen_system",
+    "genomics/mmb_gp29_gp30_system",
     "genomics/mokosh_system",
     "genomics/olokun_system",
     "genomics/oshun_system",
