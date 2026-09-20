@@ -89,6 +89,29 @@
           </li>
 
           <li id="pathograph-1-edge-2">
+            <strong>aba self-immunity element</strong>
+            <span class="edge-predicate">prevents</span>
+            <strong>suppressed lytic phage DNA replication</strong>
+            <code>RO:0002212</code>
+            <p>Owen et al. show that the cognate anti-BstA aba element rescues phage DNA replication from BstA-mediated suppression.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2021.09.002</code>
+                <span class="evidence-snippet">phage DNA replication is strongly suppressed by BstA, but replication can be rescued by the aba element</span>
+                <span class="meta">Owen et al. show that aba counteracts BstA-mediated suppression of phage DNA replication.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1016/j.chom.2021.09.002</code>
+                <span class="evidence-snippet">each bstA locus contains a cognate aba element that is inactive against variant BstA proteins</span>
+                <span class="meta">Owen et al. show that aba self-immunity is specific to its cognate co-encoded BstA variant.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
             <strong>suppressed lytic phage DNA replication</strong>
             <span class="edge-predicate">confers</span>
             <strong>BstA system</strong>
@@ -111,7 +134,7 @@
             </ul>
           </li>
 
-          <li id="pathograph-1-edge-3">
+          <li id="pathograph-1-edge-4">
             <strong>BstA system</strong>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
@@ -194,6 +217,35 @@
 
 
 
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Salmonella enterica subsp. enterica serovar Typhimurium str. D23580</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=568708"
+             rel="nofollow noreferrer"><code>NCBITaxon:568708</code></a>
+
+
+
+
+
+          <a href="https://doi.org/10.1016/j.chom.2021.09.002"
+             rel="nofollow noreferrer"><code>DOI:10.1016/j.chom.2021.09.002</code></a>
+
+
+          <span class="meta">Owen et al. studied BstA in the BTP1 prophage of Salmonella enterica serovar Typhimurium ST313 strain D23580 and showed that BstA mediates defense against Salmonella phage P22.</span>
+        </li>
+
+      </ul>
+    </div>
+
 
 
     <div class="card" id="discussions">
@@ -243,6 +295,12 @@
           <time>2026-09-20T04:37:48Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted BstA system as a DOI-backed GENOMICS TraitRecord under the abortive infection system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v178.</p>
+        </li>
+
+        <li>
+          <time>2026-09-20T05:13:00Z</time> ·
+          <strong>ADDRESS_PR_REVIEW</strong> · codex
+          <p class="changes">Added a Salmonella enterica serovar Typhimurium D23580 canonical example and represented the anti-BstA aba element as an explicit graph node with a supported rescue edge after the PR</p>
         </li>
 
       </ol>
@@ -602,7 +660,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a BstA phage-defense locus to suppressed lytic phage DNA replication and the BstA system trait without asserting the unresolved direct phage trigger, BstA molecular target, or mechanism of aba-mediated self-immunity.", "edges": [{"description": "Owen et al. show that BstA can strongly suppress lytic phage DNA replication, and DefenseFinder catalogs a one-component BstA model.", "evidence": [{"notes": "Owen et al. link BstA to strong suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA"}, {"notes": "The DefenseFinder HMM inventory records a BstA profile for BstA__BstA in the BstA model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "BstA__BstA                                       | BstA__BstA                                       | BstA"}, {"notes": "The DefenseFinder rules table models BstA as a one-component system requiring the BstA__BstA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "BstA\tBstA\t1\t1\tBstA__BstA"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bsta_locus", "target": "suppressed_lytic_phage_dna_replication"}, {"description": "BstA-mediated suppression of lytic-phage DNA replication realizes BstA-system abortive-infection defense.", "evidence": [{"notes": "Owen et al. propose phage-DNA-replication suppression as the mechanism by which BstA mediates abortive infection.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "We propose that BstA protein mediates abortive infection by suppressing phage DNA replication"}, {"notes": "The DefenseFinder article registry maps the named BstA system to the Owen et al. BstA preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "BstA | 10\\.1101/2020\\.07\\.13\\.199331 | Prophage-encoded phage defense proteins with cognate self-immunity"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "suppressed_lytic_phage_dna_replication", "target": "bsta_system_trait"}, {"description": "BstA system possession is an abortive-infection system trait.", "evidence": [{"notes": "Owen et al. classify BstA as an abortive-infection system.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "we propose that BstA is an abortive infection system"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsta_system_trait", "target": "abortive_infection_system"}], "evidence_rows": [{"description": "Owen et al. show that BstA can strongly suppress lytic phage DNA replication, and DefenseFinder catalogs a one-component BstA model.", "edge_id": "edge-1", "evidence": [{"notes": "Owen et al. link BstA to strong suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA"}, {"notes": "The DefenseFinder HMM inventory records a BstA profile for BstA__BstA in the BstA model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "BstA__BstA                                       | BstA__BstA                                       | BstA"}, {"notes": "The DefenseFinder rules table models BstA as a one-component system requiring the BstA__BstA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "BstA\tBstA\t1\t1\tBstA__BstA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BstA locus", "target": "suppressed lytic phage DNA replication"}, {"description": "BstA-mediated suppression of lytic-phage DNA replication realizes BstA-system abortive-infection defense.", "edge_id": "edge-2", "evidence": [{"notes": "Owen et al. propose phage-DNA-replication suppression as the mechanism by which BstA mediates abortive infection.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "We propose that BstA protein mediates abortive infection by suppressing phage DNA replication"}, {"notes": "The DefenseFinder article registry maps the named BstA system to the Owen et al. BstA preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "BstA | 10\\.1101/2020\\.07\\.13\\.199331 | Prophage-encoded phage defense proteins with cognate self-immunity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "suppressed lytic phage DNA replication", "target": "BstA system"}, {"description": "BstA system possession is an abortive-infection system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Owen et al. classify BstA as an abortive-infection system.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "we propose that BstA is an abortive infection system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BstA system", "target": "abortive infection system"}], "graph_id": "bsta_locus_suppresses_phage_dna_replication", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a bacteriophage abortive-infection defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A BstA-family phage-defense locus carrying a BstA coding sequence and cognate anti-BstA aba element.", "grounding": null, "id": "bsta_locus", "is_orphan": false, "label": "BstA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded BstA abortive-infection phage-defense system.", "grounding": "traitmech:000301", "id": "bsta_system_trait", "is_orphan": false, "label": "BstA system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Strong suppression of infecting lytic-phage DNA replication by BstA activity.", "grounding": null, "id": "suppressed_lytic_phage_dna_replication", "is_orphan": false, "label": "suppressed lytic phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures BstA as a named abortive-infection system with a DefenseFinder BstA profile while leaving the direct trigger of BstA localization, the direct DNA replication target, the physical form of the BstA-aba interaction, and the molecular basis for cognate aba specificity unresolved.", "scope_status": "NONMECHANISTIC", "title": "BstA loci suppress lytic phage DNA replication through abortive infection"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a BstA phage-defense locus to suppressed lytic phage DNA replication and the BstA system trait without asserting the unresolved direct phage trigger, BstA molecular target, or mechanism of aba-mediated self-immunity.", "edges": [{"description": "Owen et al. show that BstA can strongly suppress lytic phage DNA replication, and DefenseFinder catalogs a one-component BstA model.", "evidence": [{"notes": "Owen et al. link BstA to strong suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA"}, {"notes": "The DefenseFinder HMM inventory records a BstA profile for BstA__BstA in the BstA model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "BstA__BstA                                       | BstA__BstA                                       | BstA"}, {"notes": "The DefenseFinder rules table models BstA as a one-component system requiring the BstA__BstA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "BstA\tBstA\t1\t1\tBstA__BstA"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bsta_locus", "target": "suppressed_lytic_phage_dna_replication"}, {"description": "Owen et al. show that the cognate anti-BstA aba element rescues phage DNA replication from BstA-mediated suppression.", "evidence": [{"notes": "Owen et al. show that aba counteracts BstA-mediated suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA, but replication can be rescued by the aba element"}, {"notes": "Owen et al. show that aba self-immunity is specific to its cognate co-encoded BstA variant.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "each bstA locus contains a cognate aba element that is inactive against variant BstA proteins"}], "id": "edge-2", "is_orphan": false, "predicate": "prevents", "predicate_id": "RO:0002212", "source": "aba_element", "target": "suppressed_lytic_phage_dna_replication"}, {"description": "BstA-mediated suppression of lytic-phage DNA replication realizes BstA-system abortive-infection defense.", "evidence": [{"notes": "Owen et al. propose phage-DNA-replication suppression as the mechanism by which BstA mediates abortive infection.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "We propose that BstA protein mediates abortive infection by suppressing phage DNA replication"}, {"notes": "The DefenseFinder article registry maps the named BstA system to the Owen et al. BstA preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "BstA | 10\\.1101/2020\\.07\\.13\\.199331 | Prophage-encoded phage defense proteins with cognate self-immunity"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "suppressed_lytic_phage_dna_replication", "target": "bsta_system_trait"}, {"description": "BstA system possession is an abortive-infection system trait.", "evidence": [{"notes": "Owen et al. classify BstA as an abortive-infection system.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "we propose that BstA is an abortive infection system"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsta_system_trait", "target": "abortive_infection_system"}], "evidence_rows": [{"description": "Owen et al. show that BstA can strongly suppress lytic phage DNA replication, and DefenseFinder catalogs a one-component BstA model.", "edge_id": "edge-1", "evidence": [{"notes": "Owen et al. link BstA to strong suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA"}, {"notes": "The DefenseFinder HMM inventory records a BstA profile for BstA__BstA in the BstA model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "BstA__BstA                                       | BstA__BstA                                       | BstA"}, {"notes": "The DefenseFinder rules table models BstA as a one-component system requiring the BstA__BstA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "BstA\tBstA\t1\t1\tBstA__BstA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BstA locus", "target": "suppressed lytic phage DNA replication"}, {"description": "Owen et al. show that the cognate anti-BstA aba element rescues phage DNA replication from BstA-mediated suppression.", "edge_id": "edge-2", "evidence": [{"notes": "Owen et al. show that aba counteracts BstA-mediated suppression of phage DNA replication.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "phage DNA replication is strongly suppressed by BstA, but replication can be rescued by the aba element"}, {"notes": "Owen et al. show that aba self-immunity is specific to its cognate co-encoded BstA variant.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "each bstA locus contains a cognate aba element that is inactive against variant BstA proteins"}], "predicate": "prevents", "predicate_id": "RO:0002212", "source": "aba self-immunity element", "target": "suppressed lytic phage DNA replication"}, {"description": "BstA-mediated suppression of lytic-phage DNA replication realizes BstA-system abortive-infection defense.", "edge_id": "edge-3", "evidence": [{"notes": "Owen et al. propose phage-DNA-replication suppression as the mechanism by which BstA mediates abortive infection.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "We propose that BstA protein mediates abortive infection by suppressing phage DNA replication"}, {"notes": "The DefenseFinder article registry maps the named BstA system to the Owen et al. BstA preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "BstA | 10\\.1101/2020\\.07\\.13\\.199331 | Prophage-encoded phage defense proteins with cognate self-immunity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "suppressed lytic phage DNA replication", "target": "BstA system"}, {"description": "BstA system possession is an abortive-infection system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Owen et al. classify BstA as an abortive-infection system.", "reference": "DOI:10.1016/j.chom.2021.09.002", "snippet": "we propose that BstA is an abortive infection system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BstA system", "target": "abortive infection system"}], "graph_id": "bsta_locus_suppresses_phage_dna_replication", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A cognate anti-BstA aba element that rescues the encoding prophage from BstA-mediated suppression of phage DNA replication.", "grounding": null, "id": "aba_element", "is_orphan": false, "label": "aba self-immunity element", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a bacteriophage abortive-infection defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A BstA-family phage-defense locus carrying a BstA coding sequence and cognate anti-BstA aba element.", "grounding": null, "id": "bsta_locus", "is_orphan": false, "label": "BstA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded BstA abortive-infection phage-defense system.", "grounding": "traitmech:000301", "id": "bsta_system_trait", "is_orphan": false, "label": "BstA system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Strong suppression of infecting lytic-phage DNA replication by BstA activity.", "grounding": null, "id": "suppressed_lytic_phage_dna_replication", "is_orphan": false, "label": "suppressed lytic phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures BstA as a named abortive-infection system with a DefenseFinder BstA profile while leaving the direct trigger of BstA localization, the direct DNA replication target, the physical form of the BstA-aba interaction, and the molecular basis for cognate aba specificity unresolved.", "scope_status": "NONMECHANISTIC", "title": "BstA loci suppress lytic phage DNA replication through abortive infection"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -625,7 +683,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-20 04:37 UTC from
+      Record as of 2026-09-20 05:13 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 696 TraitRecords
       · embedding coverage 68.5%

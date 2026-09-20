@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/bsta_system.yaml
+  slug: bsta_system
+session:
+  id: 2026-09-20T051330Z-codex-595e55
+  timestamp: '2026-09-20T05:13:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1112
+  - https://github.com/CultureBotAI/TraitMech/issues/1113
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1111
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - canonical_examples
+  - causal_graphs
+  summary: Address BstA PR review follow-ups
+  details: 'Addressed adversarial review follow-ups from PR #1111 by adding Salmonella enterica
+    subsp. enterica serovar Typhimurium str. D23580 as a DOI-backed canonical example for
+    the BstA system and by modelling the phage-side aba self-immunity element as an explicit
+    GENETIC_ELEMENT node that prevents BstA-mediated suppression of lytic phage DNA replication.
+    The graph remains NONMECHANISTIC and leaves direct BstA trigger, target, BstA-aba interaction,
+    and specificity details in the existing open knowledge gap.'

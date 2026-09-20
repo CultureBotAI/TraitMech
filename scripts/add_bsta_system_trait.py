@@ -35,6 +35,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T04:37:48Z"
 PARENT_TIMESTAMP = "2026-09-20T04:37:49Z"
+REVIEW_TIMESTAMP = "2026-09-20T05:13:00Z"
 
 IDENTIFIER = "traitmech:000301"
 PROPOSAL = "proposals/metpo_traitmech_v178"
@@ -206,6 +207,22 @@ RECORD: dict[str, Any] = {
         hmm_inventory_evidence(),
         rules_evidence(),
     ],
+    "canonical_examples": [
+        {
+            "taxon_id": "NCBITaxon:568708",
+            "taxon_label": (
+                "Salmonella enterica subsp. enterica serovar "
+                "Typhimurium str. D23580"
+            ),
+            "note": (
+                "Owen et al. studied BstA in the BTP1 prophage of "
+                "Salmonella enterica serovar Typhimurium ST313 strain "
+                "D23580 and showed that BstA mediates defense against "
+                "Salmonella phage P22."
+            ),
+            "reference": OWEN,
+        }
+    ],
     "causal_graphs": [
         {
             "graph_id": "bsta_locus_suppresses_phage_dna_replication",
@@ -238,6 +255,16 @@ RECORD: dict[str, Any] = {
                         "A BstA-family phage-defense locus carrying a "
                         "BstA coding sequence and cognate anti-BstA aba "
                         "element."
+                    ),
+                },
+                {
+                    "node_id": "aba_element",
+                    "label": "aba self-immunity element",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A cognate anti-BstA aba element that rescues the "
+                        "encoding prophage from BstA-mediated suppression of "
+                        "phage DNA replication."
                     ),
                 },
                 {
@@ -295,6 +322,45 @@ RECORD: dict[str, Any] = {
                         },
                         hmm_inventory_evidence(),
                         rules_evidence(),
+                    ],
+                },
+                {
+                    "subject": "aba_element",
+                    "predicate": "prevents",
+                    "predicate_id": "RO:0002212",
+                    "object": "suppressed_lytic_phage_dna_replication",
+                    "description": (
+                        "Owen et al. show that the cognate anti-BstA aba "
+                        "element rescues phage DNA replication from "
+                        "BstA-mediated suppression."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": OWEN,
+                            "snippet": (
+                                "phage DNA replication is strongly suppressed "
+                                "by BstA, but replication can be rescued by "
+                                "the aba element"
+                            ),
+                            "notes": (
+                                "Owen et al. show that aba counteracts "
+                                "BstA-mediated suppression of phage DNA "
+                                "replication."
+                            ),
+                        },
+                        {
+                            "reference": OWEN,
+                            "snippet": (
+                                "each bstA locus contains a cognate aba "
+                                "element that is inactive against variant "
+                                "BstA proteins"
+                            ),
+                            "notes": (
+                                "Owen et al. show that aba self-immunity is "
+                                "specific to its cognate co-encoded BstA "
+                                "variant."
+                            ),
+                        },
                     ],
                 },
                 {
@@ -395,6 +461,19 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Added a Salmonella enterica serovar Typhimurium D23580 "
+            "canonical example and represented the anti-BstA aba element "
+            "as an explicit graph node with a supported rescue edge after "
+            "the PR #1111 adversarial review filed #1112 and #1113."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 

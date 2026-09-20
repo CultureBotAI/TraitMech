@@ -21,9 +21,9 @@
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 4,
-      "ADD_CANONICAL_EXAMPLES": 56,
+      "ADD_CANONICAL_EXAMPLES": 55,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 174,
+      "DEEPEN_CAUSAL_GRAPH": 175,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 155
     }
@@ -1129,29 +1129,6 @@
       "label": "Brigantia system",
       "category": "genomics",
       "slug": "brigantia_system",
-      "score": 42.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 3,
-      "nodes": 4,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (3 edges) +12",
-        "no canonical_examples +30"
-      ]
-    },
-    {
-      "identifier": "traitmech:000301",
-      "label": "BstA system",
-      "category": "genomics",
-      "slug": "bsta_system",
       "score": 42.0,
       "action": "ADD_CANONICAL_EXAMPLES",
       "edges": 3,
@@ -4821,6 +4798,28 @@
       "researched": false,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000301",
+      "label": "BstA system",
+      "category": "genomics",
+      "slug": "bsta_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 4,
+      "nodes": 5,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (4 edges) +12"
       ]
     },
     {
