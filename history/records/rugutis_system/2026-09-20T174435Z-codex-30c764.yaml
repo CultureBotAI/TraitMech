@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rugutis_system.yaml
+  slug: rugutis_system
+session:
+  id: 2026-09-20T174435Z-codex-30c764
+  timestamp: '2026-09-20T17:44:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Rugutis system trait
+  details: Added traitmech:000315 Rugutis system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Rugutis among newly described lactococcal
+    antiphage systems, DOI:10.1073/pnas.2426508122 treats Rugutis as a plasmid-encoded lactococcal
+    phage-resistance system in an escape-mutant screen, and the pinned DefenseFinder article
+    registry maps Rugutis to the Grafakou et al. lactococcal plasmidome discovery paper. Reserved
+    METPO:1026900 in proposals/metpo_traitmech_v192 for the upstream replacement ID.
