@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abiv_system.yaml
+  slug: abiv_system
+session:
+  id: 2026-09-20T041053Z-codex-93bcb1
+  timestamp: '2026-09-20T04:10:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1107
+  urls:
+  - https://doi.org/10.1128/AEM.00093-10
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Refine AbiV follow-up mechanism evidence
+  details: 'Corrected the PR #1107 AbiV review response by reframing the abortive-infection
+    parent discussion from phage-DNA-maturation to translation-inhibition, replacing the AbiV
+    translation-block propagation edge with a Haaber et al. 2010 abstract snippet that names
+    both lytic-cycle inhibition and rapid protein-synthesis inhibition, and recording the
+    second adversarial review correction after the initial history record history/records/abiv_system/2026-09-20T031226Z-codex-d3a693.yaml.'

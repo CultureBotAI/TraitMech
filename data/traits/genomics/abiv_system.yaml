@@ -227,10 +227,14 @@ causal_graphs:
       phage lytic program.
     evidence:
     - reference: DOI:10.1128/AEM.00093-10
-      snippet: The late phage transcripts were almost completely inhibited in the
-        presence of AbiV
-      notes: Haaber et al. connect the early translation block to near-complete inhibition
-        of late phage gene transcription.
+      snippet: AbiV is an abortive infection protein that inhibits the lytic cycle
+        of several virulent phages infecting Lactococcus lactis, while a mutation
+        in the phage gene sav confers insensitivity to AbiV. In this study, we have
+        further characterized the effects of the bacterial AbiV and its interaction
+        with the phage p2 protein SaV. First, we showed that during phage infection
+        of lactococcal AbiV⁺ cells, AbiV rapidly inhibited protein synthesis
+      notes: Haaber et al. frame the AbiV protein-synthesis block as part of AbiV
+        inhibition of the phage lytic cycle.
   - subject: abiv_antiphage_activity
     predicate: contributes to
     predicate_id: RO:0002326
@@ -311,4 +315,10 @@ curation_history:
     review; revised the definition, causal graph, and knowledge gap to include phage
     sav, direct AbiV-SaV complex formation, and AbiV-SaV-linked inhibition of phage
     protein translation.
+  llm_assisted: true
+- timestamp: '2026-09-20T04:10:00Z'
+  curator: codex
+  action: REFINE_FOLLOWUP_MECHANISM_EVIDENCE
+  changes: Refined the AbiV follow-up graph after adversarial review by using lytic-cycle
+    and protein-synthesis evidence for the translation-block propagation edge.
   llm_assisted: true

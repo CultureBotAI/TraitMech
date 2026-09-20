@@ -36,7 +36,9 @@ DEFENSE_FINDER_RULES = f"{DEFENSE_FINDER_RAW}/DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T03:07:25Z"
 REVIEW_FIX_TIMESTAMP = "2026-09-20T03:38:10Z"
+SECOND_REVIEW_FIX_TIMESTAMP = "2026-09-20T04:10:00Z"
 PARENT_TIMESTAMP = "2026-09-20T03:07:26Z"
+PARENT_REVIEW_FIX_TIMESTAMP = "2026-09-20T04:10:01Z"
 
 OLD_DISCUSSION_RATIONALE = (
     "ToxIN, AbiQ, AbiE, AbiZ, AbiK, and AbiT are split out as "
@@ -51,7 +53,7 @@ OLD_DISCUSSION_RATIONALE = (
     "subfamily's trigger, effector, growth-arrest or cell-death mechanism, "
     "and phage escape routes."
 )
-NEW_DISCUSSION_RATIONALE = (
+STALE_ABIV_DISCUSSION_RATIONALE = (
     "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, and AbiV are split out as "
     "traitmech:000226, traitmech:000225, traitmech:000227, "
     "traitmech:000228, traitmech:000229, traitmech:000230, and "
@@ -65,10 +67,29 @@ NEW_DISCUSSION_RATIONALE = (
     "effector, growth-arrest or cell-death mechanism, and phage escape "
     "routes."
 )
+NEW_DISCUSSION_RATIONALE = (
+    "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, and AbiV are split out as "
+    "traitmech:000226, traitmech:000225, traitmech:000227, "
+    "traitmech:000228, traitmech:000229, traitmech:000230, and "
+    "traitmech:000300, respectively. Lopatina et al., Fineran et al., "
+    "Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., "
+    "and Haaber et al. still support Abi as a genomically encoded phage "
+    "defense strategy that spans mechanistically diverse toxin-antitoxin, "
+    "premature-lysis, RT-related polymerase, two-component, "
+    "translation-inhibition, and other Abi families. Additional narrower "
+    "TraitRecords need separate review to ground each subfamily's trigger, "
+    "effector, growth-arrest or cell-death mechanism, and phage escape "
+    "routes."
+)
 PARENT_CHANGES = (
     "Documented AbiV as split out in the open abortive-infection subfamily "
     "split-gap discussion after minting traitmech:000300 for the AbiV system; "
     "other abortive-infection families remain open."
+)
+PARENT_REVIEW_CHANGES = (
+    "Reframed AbiV in the open abortive-infection subfamily split-gap "
+    "discussion as a translation-inhibition family after adding the Haaber "
+    "et al. AbiV-SaV follow-up evidence."
 )
 
 RECORD: dict[str, Any] = {
@@ -539,13 +560,22 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": HAABER_INTERACTION,
                             "snippet": (
-                                "The late phage transcripts were almost "
-                                "completely inhibited in the presence of AbiV"
+                                "AbiV is an abortive infection protein that "
+                                "inhibits the lytic cycle of several virulent "
+                                "phages infecting Lactococcus lactis, while a "
+                                "mutation in the phage gene sav confers "
+                                "insensitivity to AbiV. In this study, we "
+                                "have further characterized the effects of the "
+                                "bacterial AbiV and its interaction with the "
+                                "phage p2 protein SaV. First, we showed that "
+                                "during phage infection of lactococcal AbiV⁺ "
+                                "cells, AbiV rapidly inhibited protein "
+                                "synthesis"
                             ),
                             "notes": (
-                                "Haaber et al. connect the early translation "
-                                "block to near-complete inhibition of late "
-                                "phage gene transcription."
+                                "Haaber et al. frame the AbiV "
+                                "protein-synthesis block as part of AbiV "
+                                "inhibition of the phage lytic cycle."
                             ),
                         },
                     ],
@@ -716,16 +746,29 @@ def update_abortive_parent(record: dict[str, Any]) -> dict[str, Any]:
         "Resolve other abortive-infection families before minting narrower "
         "children under the broad abortive infection system parent."
     )
-    assert discussion["rationale"] == OLD_DISCUSSION_RATIONALE
+    rationale = discussion["rationale"]
+    assert rationale in {
+        OLD_DISCUSSION_RATIONALE,
+        STALE_ABIV_DISCUSSION_RATIONALE,
+    }
     discussion["rationale"] = NEW_DISCUSSION_RATIONALE
 
+    if rationale == OLD_DISCUSSION_RATIONALE:
+        record_curation_event(
+            record,
+            curator=CURATOR,
+            action="RESOLVE_DISCUSSION_SCOPE",
+            changes=PARENT_CHANGES,
+            llm_assisted=True,
+            timestamp=PARENT_TIMESTAMP,
+        )
     record_curation_event(
         record,
         curator=CURATOR,
         action="RESOLVE_DISCUSSION_SCOPE",
-        changes=PARENT_CHANGES,
+        changes=PARENT_REVIEW_CHANGES,
         llm_assisted=True,
-        timestamp=PARENT_TIMESTAMP,
+        timestamp=PARENT_REVIEW_FIX_TIMESTAMP,
     )
     return record
 
@@ -759,6 +802,18 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=REVIEW_FIX_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REFINE_FOLLOWUP_MECHANISM_EVIDENCE",
+        changes=(
+            "Refined the AbiV follow-up graph after adversarial review by "
+            "using lytic-cycle and protein-synthesis evidence for the "
+            "translation-block propagation edge."
+        ),
+        llm_assisted=True,
+        timestamp=SECOND_REVIEW_FIX_TIMESTAMP,
     )
     return record
 
