@@ -94,6 +94,34 @@ def rules_evidence() -> dict[str, str]:
     }
 
 
+def atp_degradation_evidence() -> dict[str, str]:
+    return {
+        "reference": ROUSSET,
+        "snippet": (
+            "upon phage infection, degrade cellular adenosine "
+            "triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"
+        ),
+        "notes": (
+            "Rousset et al. support ATP and dATP degradation as a "
+            "phage-triggered bacterial immune output."
+        ),
+    }
+
+
+def halted_propagation_evidence() -> dict[str, str]:
+    return {
+        "reference": ROUSSET,
+        "snippet": (
+            "ATP and dATP degradation during infection halts phage "
+            "propagation"
+        ),
+        "notes": (
+            "Rousset et al. connect ATP and dATP degradation to "
+            "inhibition of phage propagation."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "Detocs system",
@@ -132,28 +160,8 @@ RECORD: dict[str, Any] = {
                 "architecture."
             ),
         },
-        {
-            "reference": ROUSSET,
-            "snippet": (
-                "upon phage infection, degrade cellular adenosine "
-                "triphosphate (ATP) and deoxyadenosine triphosphate (dATP)"
-            ),
-            "notes": (
-                "Rousset et al. support ATP and dATP degradation as a "
-                "phage-triggered bacterial immune output."
-            ),
-        },
-        {
-            "reference": ROUSSET,
-            "snippet": (
-                "ATP and dATP degradation during infection halts phage "
-                "propagation"
-            ),
-            "notes": (
-                "Rousset et al. connect ATP and dATP degradation to "
-                "inhibition of phage propagation."
-            ),
-        },
+        atp_degradation_evidence(),
+        halted_propagation_evidence(),
         article_registry_evidence(),
         rules_evidence(),
         hmm_inventory_evidence("dtcA"),
@@ -237,10 +245,12 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "RO:0002326",
                     "object": "phage_associated_atp_degradation",
                     "description": (
-                        "Rousset et al. discovered Detocs by analyzing "
-                        "homologs of the immune ATP nucleosidase domain, "
-                        "and DefenseFinder catalogs Detocs with dtcA, "
-                        "dtcB, and dtcC-family profiles."
+                        "Rousset et al. connect ATP nucleosidase-domain "
+                        "bacterial immune effectors to phage-associated "
+                        "ATP and dATP degradation and discovered Detocs "
+                        "from ATP nucleosidase domain homologs; "
+                        "DefenseFinder catalogs Detocs with dtcA, dtcB, "
+                        "and dtcC-family profiles."
                     ),
                     "evidence": [
                         {
@@ -257,6 +267,7 @@ RECORD: dict[str, Any] = {
                                 "domains."
                             ),
                         },
+                        atp_degradation_evidence(),
                         rules_evidence(),
                         hmm_inventory_evidence("dtcA"),
                         hmm_inventory_evidence("dtcB"),
@@ -296,6 +307,7 @@ RECORD: dict[str, Any] = {
                         "the Detocs system trait."
                     ),
                     "evidence": [
+                        halted_propagation_evidence(),
                         {
                             "reference": ROUSSET,
                             "snippet": (

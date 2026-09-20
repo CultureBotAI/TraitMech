@@ -96,15 +96,21 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: phage_associated_atp_degradation
-    description: Rousset et al. discovered Detocs by analyzing homologs of the immune
-      ATP nucleosidase domain, and DefenseFinder catalogs Detocs with dtcA, dtcB,
+    description: Rousset et al. connect ATP nucleosidase-domain bacterial immune effectors
+      to phage-associated ATP and dATP degradation and discovered Detocs from ATP
+      nucleosidase domain homologs; DefenseFinder catalogs Detocs with dtcA, dtcB,
       and dtcC-family profiles.
     evidence:
     - reference: DOI:10.1016/j.cell.2023.07.020
-      snippet: By analyzing homologs of the immune ATP nucleosidase domain, we
-        discover and characterize Detocs, a family of bacterial defense systems
+      snippet: By analyzing homologs of the immune ATP nucleosidase domain, we discover
+        and characterize Detocs, a family of bacterial defense systems
       notes: Rousset et al. identify Detocs from homologs of immune ATP nucleosidase
         domains.
+    - reference: DOI:10.1016/j.cell.2023.07.020
+      snippet: upon phage infection, degrade cellular adenosine triphosphate (ATP)
+        and deoxyadenosine triphosphate (dATP)
+      notes: Rousset et al. support ATP and dATP degradation as a phage-triggered
+        bacterial immune output.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: "Detocs\tDetocs\t2\t2\tDetocs__dtcA, Detocs__dtcB\tDetocs__dtcC"
       notes: The DefenseFinder rules table models the core Detocs system with required
@@ -138,6 +144,10 @@ causal_graphs:
     description: Detocs-associated ATP and dATP depletion realizes the Detocs system
       trait.
     evidence:
+    - reference: DOI:10.1016/j.cell.2023.07.020
+      snippet: ATP and dATP degradation during infection halts phage propagation
+      notes: Rousset et al. connect ATP and dATP degradation to inhibition of phage
+        propagation.
     - reference: DOI:10.1016/j.cell.2023.07.020
       snippet: we discover and characterize Detocs, a family of bacterial defense
         systems
