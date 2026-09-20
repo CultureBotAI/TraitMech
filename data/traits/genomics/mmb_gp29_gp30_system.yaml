@@ -13,37 +13,39 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
 evidence:
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: at least five distinct prophage-expressed viral defense systems that interfere
     with infection
-  notes: Dedrick et al. place the Cluster N MMB gp29-gp30 system in a cohort of prophage-expressed
-    defenses against lytic and temperate mycobacteriophages.
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+  notes: The PMC author manuscript for Dedrick et al. places the Cluster N MMB gp29-gp30
+    system in a cohort of prophage-expressed defenses against lytic and temperate
+    mycobacteriophages.
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: Tweety (F1) is targeted by Xerxes, MMB, Phrann and Panchino
-  notes: Dedrick et al. identify Tweety as one phage targeted by the MichelleMyBell
-    prophage defense profile.
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+  notes: The PMC author manuscript for Dedrick et al. identifies Tweety as one phage
+    targeted by the MichelleMyBell prophage defense profile.
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: Phages MMB, Xerxes, and Pipsqueaks are closely-related in the lysis-immunity
     region (Fig. 4a) and MMB and Xerxes have almost identical patterns of defense
     against eleven individual phages
-  notes: Dedrick et al. connect the MichelleMyBell and Xerxes defense spectra to their
-    shared lysis-immunity-region context.
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+  notes: The PMC author manuscript for Dedrick et al. connects the MichelleMyBell
+    and Xerxes defense spectra to their shared lysis-immunity-region context.
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: we constructed a MMB mutant in which genes 29 and 30 are removed (deletions
     of individual genes appear to generate non-viable mutants; Supplementary Table
     3) and showed that prophage-mediated defense is lost
-  notes: Dedrick et al. deleted the MMB 29-30 interval when testing whether gp29 and
-    gp30 contribute to MMB defense.
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+  notes: The PMC author manuscript for Dedrick et al. deletes the MMB 29-30 interval
+    when testing whether gp29 and gp30 contribute to MMB defense.
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: expressing MMB 29 and 30 confers the same pattern of defense as the MMB
     lysogen
-  notes: Dedrick et al. show that recombinant MMB genes 29 and 30 reproduce the MMB
-    prophage-mediated defense pattern.
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+  notes: The PMC author manuscript for Dedrick et al. shows that recombinant MMB genes
+    29 and 30 reproduce the MMB prophage-mediated defense pattern.
+- reference: DOI:10.1038/nmicrobiol.2016.251
   snippet: MMB 29-30 and Phrann 29-30 also confer survival to infection by a lytic
     Tweety derivative
-  notes: Dedrick et al. show that the MMB gp29-gp30 system can protect bacteria from
-    a lytic Tweety derivative in addition to wild-type Tweety.
+  notes: The PMC author manuscript for Dedrick et al. shows that the MMB gp29-gp30
+    system can protect bacteria from a lytic Tweety derivative in addition to wild-type
+    Tweety.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: MMB_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated defence
     against viral attack and viral counter-defence
@@ -105,17 +107,17 @@ causal_graphs:
       for the tested MMB defense profile, and DefenseFinder catalogs gp29 and gp30
       profiles in the MMB_gp29_gp30 model namespace.
     evidence:
-    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+    - reference: DOI:10.1038/nmicrobiol.2016.251
       snippet: we constructed a MMB mutant in which genes 29 and 30 are removed (deletions
         of individual genes appear to generate non-viable mutants; Supplementary Table
         3) and showed that prophage-mediated defense is lost
-      notes: Dedrick et al. show that deleting the MMB 29-30 interval abolishes MMB
-        prophage-mediated defense.
-    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+      notes: The PMC author manuscript for Dedrick et al. shows that deleting the
+        MMB 29-30 interval abolishes MMB prophage-mediated defense.
+    - reference: DOI:10.1038/nmicrobiol.2016.251
       snippet: expressing MMB 29 and 30 confers the same pattern of defense as the
         MMB lysogen
-      notes: Dedrick et al. show that MMB genes 29 and 30 are sufficient to reproduce
-        the MMB defense pattern.
+      notes: The PMC author manuscript for Dedrick et al. shows that MMB genes 29
+        and 30 are sufficient to reproduce the MMB defense pattern.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: MMB_gp29_gp30__gp29                              | MMB_gp29_gp30__gp29                              |
         MMB_gp29_gp30
@@ -137,11 +139,11 @@ causal_graphs:
     description: MMB-gp29-gp30-mediated restriction of phage propagation realizes
       the MMB gp29-gp30 system trait.
     evidence:
-    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/
+    - reference: DOI:10.1038/nmicrobiol.2016.251
       snippet: expressing MMB 29 and 30 confers the same pattern of defense as the
         MMB lysogen
-      notes: Dedrick et al. show that MMB genes 29 and 30 reproduce the MMB defense
-        pattern.
+      notes: The PMC author manuscript for Dedrick et al. shows that MMB genes 29
+        and 30 reproduce the MMB defense pattern.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: MMB_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
         defence against viral attack and viral counter-defence

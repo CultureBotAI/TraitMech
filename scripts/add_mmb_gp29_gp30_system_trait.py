@@ -18,7 +18,6 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "mmb_gp29_gp30_system.yaml"
 
 DEDRICK = "DOI:10.1038/nmicrobiol.2016.251"
-DEDRICK_PMC = "https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -88,27 +87,29 @@ RECORD: dict[str, Any] = {
     ],
     "evidence": [
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": (
                 "at least five distinct prophage-expressed viral defense "
                 "systems that interfere with infection"
             ),
             "notes": (
-                "Dedrick et al. place the Cluster N MMB gp29-gp30 system in "
-                "a cohort of prophage-expressed defenses against lytic and "
-                "temperate mycobacteriophages."
+                "The PMC author manuscript for Dedrick et al. places the "
+                "Cluster N MMB gp29-gp30 system in a cohort of "
+                "prophage-expressed defenses against lytic and temperate "
+                "mycobacteriophages."
             ),
         },
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": "Tweety (F1) is targeted by Xerxes, MMB, Phrann and Panchino",
             "notes": (
-                "Dedrick et al. identify Tweety as one phage targeted by the "
-                "MichelleMyBell prophage defense profile."
+                "The PMC author manuscript for Dedrick et al. identifies "
+                "Tweety as one phage targeted by the MichelleMyBell "
+                "prophage defense profile."
             ),
         },
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": (
                 "Phages MMB, Xerxes, and Pipsqueaks are closely-related in "
                 "the lysis-immunity region (Fig. 4a) and MMB and Xerxes "
@@ -116,13 +117,13 @@ RECORD: dict[str, Any] = {
                 "individual phages"
             ),
             "notes": (
-                "Dedrick et al. connect the MichelleMyBell and Xerxes "
-                "defense spectra to their shared lysis-immunity-region "
-                "context."
+                "The PMC author manuscript for Dedrick et al. connects the "
+                "MichelleMyBell and Xerxes defense spectra to their shared "
+                "lysis-immunity-region context."
             ),
         },
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": (
                 "we constructed a MMB mutant in which genes 29 and 30 are "
                 "removed (deletions of individual genes appear to generate "
@@ -130,31 +131,33 @@ RECORD: dict[str, Any] = {
                 "prophage-mediated defense is lost"
             ),
             "notes": (
-                "Dedrick et al. deleted the MMB 29-30 interval when testing "
-                "whether gp29 and gp30 contribute to MMB defense."
+                "The PMC author manuscript for Dedrick et al. deletes the "
+                "MMB 29-30 interval when testing whether gp29 and gp30 "
+                "contribute to MMB defense."
             ),
         },
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": (
                 "expressing MMB 29 and 30 confers the same pattern of "
                 "defense as the MMB lysogen"
             ),
             "notes": (
-                "Dedrick et al. show that recombinant MMB genes 29 and 30 "
-                "reproduce the MMB prophage-mediated defense pattern."
+                "The PMC author manuscript for Dedrick et al. shows that "
+                "recombinant MMB genes 29 and 30 reproduce the MMB "
+                "prophage-mediated defense pattern."
             ),
         },
         {
-            "reference": DEDRICK_PMC,
+            "reference": DEDRICK,
             "snippet": (
                 "MMB 29-30 and Phrann 29-30 also confer survival to infection "
                 "by a lytic Tweety derivative"
             ),
             "notes": (
-                "Dedrick et al. show that the MMB gp29-gp30 system can "
-                "protect bacteria from a lytic Tweety derivative in addition "
-                "to wild-type Tweety."
+                "The PMC author manuscript for Dedrick et al. shows that "
+                "the MMB gp29-gp30 system can protect bacteria from a lytic "
+                "Tweety derivative in addition to wild-type Tweety."
             ),
         },
         {
@@ -246,7 +249,7 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": DEDRICK_PMC,
+                            "reference": DEDRICK,
                             "snippet": (
                                 "we constructed a MMB mutant in which genes "
                                 "29 and 30 are removed (deletions of "
@@ -256,21 +259,22 @@ RECORD: dict[str, Any] = {
                                 "is lost"
                             ),
                             "notes": (
-                                "Dedrick et al. show that deleting the MMB "
-                                "29-30 interval abolishes MMB "
-                                "prophage-mediated defense."
+                                "The PMC author manuscript for Dedrick et al. "
+                                "shows that deleting the MMB 29-30 interval "
+                                "abolishes MMB prophage-mediated defense."
                             ),
                         },
                         {
-                            "reference": DEDRICK_PMC,
+                            "reference": DEDRICK,
                             "snippet": (
                                 "expressing MMB 29 and 30 confers the same "
                                 "pattern of defense as the MMB lysogen"
                             ),
                             "notes": (
-                                "Dedrick et al. show that MMB genes 29 and "
-                                "30 are sufficient to reproduce the MMB "
-                                "defense pattern."
+                                "The PMC author manuscript for Dedrick et al. "
+                                "shows that MMB genes 29 and 30 are "
+                                "sufficient to reproduce the MMB defense "
+                                "pattern."
                             ),
                         },
                         hmm_inventory_evidence(GP29_PROFILE),
@@ -289,14 +293,15 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": DEDRICK_PMC,
+                            "reference": DEDRICK,
                             "snippet": (
                                 "expressing MMB 29 and 30 confers the same "
                                 "pattern of defense as the MMB lysogen"
                             ),
                             "notes": (
-                                "Dedrick et al. show that MMB genes 29 and "
-                                "30 reproduce the MMB defense pattern."
+                                "The PMC author manuscript for Dedrick et al. "
+                                "shows that MMB genes 29 and 30 reproduce "
+                                "the MMB defense pattern."
                             ),
                         },
                         {
