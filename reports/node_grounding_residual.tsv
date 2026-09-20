@@ -57,6 +57,7 @@ phage dna replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brex_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
+phage propagation	BIOLOGICAL_PROCESS	3	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/stk2_system.yaml
 atp production	BIOLOGICAL_PROCESS	3	data/traits/metabolism/metabolism.yaml|data/traits/metabolism/proteorhodopsin_phototrophy.yaml|data/traits/physiology/photoheterotrophic.yaml
 rod complex	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width_very_small.yaml|data/traits/morphology/rod_shaped.yaml
 roda-pbp2 complex	GENE_OR_PROTEIN	3	data/traits/morphology/cell_length_medium.yaml|data/traits/morphology/cell_width_medium.yaml|data/traits/morphology/rod_shaped.yaml
@@ -145,7 +146,6 @@ viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_
 subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
-phage propagation	BIOLOGICAL_PROCESS	2	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
 phosphate starvation	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/ploidy.yaml|data/traits/morphology/tailed_shaped.yaml
 genome size	QUALITY	2	data/traits/genomics/rrna_operon_copy_number.yaml|data/traits/physiology/copiotrophic.yaml
@@ -1426,6 +1426,10 @@ sspe dna nicking	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.y
 sspabcd-sspfgh locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
 ssp pt self/nonself discrimination	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
 sspfgh-dependent non-pt dna damage	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspfgh_system.yaml
+stk2 locus	GENETIC_ELEMENT	1	data/traits/genomics/stk2_system.yaml
+stk2 kinase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
+host protein phosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
+host cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/stk2_system.yaml
 sucellos locus	GENETIC_ELEMENT	1	data/traits/genomics/sucellos_system.yaml
 taranis locus	GENETIC_ELEMENT	1	data/traits/genomics/taranis_system.yaml
 thoeris locus	GENETIC_ELEMENT	1	data/traits/genomics/thoeris_system.yaml
