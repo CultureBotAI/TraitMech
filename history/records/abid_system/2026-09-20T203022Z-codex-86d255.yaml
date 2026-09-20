@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abid_system.yaml
+  slug: abid_system
+session:
+  id: 2026-09-20T203022Z-codex-86d255
+  timestamp: '2026-09-20T20:30:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiD system trait
+  details: Added traitmech:000318 AbiD system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. PMID:7646042 identifies the pBF61 determinant from Lactococcus lactis
+    subsp. lactis KR5, reports an abortive phage infection phenotype with reduced sk1 and
+    c2 plating or plaque size and reduced c2 burst size, and verifies that abiD is required
+    for the Abi+ phenotype. Pinned DefenseFinder article, rules, and HMM registries map AbiD
+    to the AbiD__AbiD one-profile model namespace. Reserved METPO:1027200 in proposals/metpo_traitmech_v195
+    for the upstream replacement ID.

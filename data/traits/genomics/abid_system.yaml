@@ -1,0 +1,186 @@
+identifier: traitmech:000318
+label: AbiD system
+definition: An abortive infection system in which an organism possesses an abiD-family
+  locus represented by the DefenseFinder AbiD__AbiD profile and exemplified by the
+  Lactococcus lactis subsp. lactis KR5 pBF61 determinant whose abiD open reading frame
+  confers an abortive phage infection phenotype with reduced plating efficiency, plaque
+  size, and c2 phage burst size.
+definition_source: DOI:10.1128/aem.61.5.2023-2026.1995
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiD
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: PMID:7646042
+  snippet: A 6.3-kb fragment from pBF61 in Lactococcus lactis subsp. lactis KR5 was
+    cloned and found to confer an abortive phage infection (Abi+) phenotype
+  notes: McLandsborough et al. cloned the pBF61-derived fragment from Lactococcus
+    lactis subsp. lactis KR5 and showed that it conferred an Abi phenotype.
+- reference: PMID:7646042
+  snippet: exhibiting a reduction in efficiency of plating and plaque size for small
+    isometric- and prolate-headed bacteriophages sk1 and c2, respectively, and to
+    produce a 10-fold decrease in c2 phage burst size
+  notes: McLandsborough et al. measured reduced plating efficiency, plaque size, and
+    c2 phage burst size from the pBF61 AbiD determinant.
+- reference: PMID:7646042
+  snippet: Phage adsorption was not significantly reduced
+  notes: McLandsborough et al. distinguished AbiD activity from a phage-adsorption
+    block.
+- reference: PMID:7646042
+  snippet: An open reading frame of 1,098 bp was sequenced and designated abiD
+  notes: McLandsborough et al. named the abiD open reading frame within the pBF61
+    determinant.
+- reference: PMID:7646042
+  snippet: Tn5 mutagenesis confirmed that abiD was required for the Abi+ phenotype
+  notes: McLandsborough et al. verified that the abiD open reading frame is required
+    for the abortive-infection phenotype.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiD | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiD model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiD\tAbiD\t1\t1\tAbiD__AbiD"
+  notes: The DefenseFinder rules table models AbiD as a one-component system requiring
+    the AbiD__AbiD profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiD__AbiD                                       | AbiD__AbiD                                       |
+    AbiD                   | Custom                  | 90     |'
+  notes: The DefenseFinder HMM inventory records AbiD__AbiD under the AbiD model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: McLandsborough et al. cloned the pBF61 AbiD determinant from Lactococcus lactis
+    subsp. lactis KR5 and showed that the abiD open reading frame is required for
+    abortive-infection phage resistance.
+  reference: DOI:10.1128/aem.61.5.2023-2026.1995
+causal_graphs:
+- graph_id: abid_locus_reduces_lactococcal_phage_burst
+  title: AbiD activity restricts lactococcal phages
+  description: Conservative system-level sketch linking an abiD-family locus to AbiD
+    antiphage activity, reduced lactococcal phage propagation, and abortive-infection
+    system possession without asserting the unresolved molecular target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiD as a named DefenseFinder single-profile abortive-infection
+    system whose pBF61 prototype restricts sk1 and c2 phages. It leaves the direct
+    phage trigger, AbiD molecular function, cell-death or growth-arrest route, natural
+    locus breadth, and phage escape routes unresolved.
+  nodes:
+  - node_id: abid_locus
+    label: abiD locus
+    node_type: GENETIC_ELEMENT
+    description: An abiD-family abortive-infection locus represented by the DefenseFinder
+      AbiD__AbiD profile.
+  - node_id: abid_antiphage_activity
+    label: AbiD antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiD system.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of lactococcal phage propagation in an AbiD-containing
+      infected host cell.
+  - node_id: abid_system_trait
+    label: AbiD system
+    node_type: TRAIT
+    grounding: traitmech:000318
+    description: Possession of a genome-encoded AbiD abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abid_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abid_antiphage_activity
+    description: The abiD-family locus encodes an abortive-infection phage-resistance
+      determinant, and DefenseFinder models AbiD as a one-profile system.
+    evidence:
+    - reference: PMID:7646042
+      snippet: Tn5 mutagenesis confirmed that abiD was required for the Abi+ phenotype
+      notes: McLandsborough et al. show that the abiD open reading frame is required
+        for the Abi phenotype.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiD\tAbiD\t1\t1\tAbiD__AbiD"
+      notes: The DefenseFinder rules table models AbiD as a one-component system requiring
+        the AbiD__AbiD profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiD__AbiD                                       | AbiD__AbiD                                       |
+        AbiD                   | Custom                  | 90     |'
+      notes: The DefenseFinder HMM inventory records AbiD__AbiD under the AbiD model
+        namespace.
+  - subject: abid_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: AbiD activity restricts tested small isometric- and prolate-headed
+      lactococcal phages.
+    evidence:
+    - reference: PMID:7646042
+      snippet: exhibiting a reduction in efficiency of plating and plaque size for
+        small isometric- and prolate-headed bacteriophages sk1 and c2, respectively,
+        and to produce a 10-fold decrease in c2 phage burst size
+      notes: McLandsborough et al. connect the AbiD determinant to reduced sk1 and
+        c2 plating or plaque size and reduced c2 burst size.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abid_system_trait
+    description: Restriction of lactococcal phage propagation realizes the AbiD abortive-infection
+      trait.
+    evidence:
+    - reference: PMID:7646042
+      snippet: A 6.3-kb fragment from pBF61 in Lactococcus lactis subsp. lactis KR5
+        was cloned and found to confer an abortive phage infection (Abi+) phenotype
+      notes: McLandsborough et al. classify the pBF61 AbiD determinant phenotype as
+        abortive phage infection.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiD | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiD model namespace
+        to a lactococcal abortive-infection review.
+  - subject: abid_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiD system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:7646042
+      snippet: A 6.3-kb fragment from pBF61 in Lactococcus lactis subsp. lactis KR5
+        was cloned and found to confer an abortive phage infection (Abi+) phenotype
+      notes: McLandsborough et al. place AbiD in the abortive-infection class of phage
+        defense.
+discussions:
+- discussion_id: abid-trigger-and-effector-gap
+  prompt: Resolve the AbiD phage trigger, molecular activity, and direct arrest target
+    before minting narrower AbiD mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: McLandsborough et al. support AbiD as a named lactococcal abortive-infection
+    determinant whose cloned pBF61 fragment reduces sk1 plating efficiency and c2
+    burst size, whose abiD open reading frame is required for the Abi phenotype, and
+    whose activity does not primarily block phage adsorption. DefenseFinder represents
+    AbiD with a one-profile rule, but this first system-level record leaves the phage
+    trigger, AbiD molecular function, direct host or phage target, growth-arrest or
+    cell-death route, and phage escape routes unresolved.
+  attaches_to:
+  - causal_graphs#abid_locus_reduces_lactococcal_phage_burst
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T20:30:20Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiD system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v195.
+  llm_assisted: true
