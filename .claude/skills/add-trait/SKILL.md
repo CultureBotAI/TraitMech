@@ -78,6 +78,14 @@ element class or a sequence-composition phenotype; keep unresolved source labels
 out of `EXACT_SYNONYM` and record borderline mapping questions as
 `CURATION_TODO` discussions.
 
+HMM/profile registries need the same interpretation pass. A DefenseFinder or
+similar model namespace can support possession of a genome-encoded system
+trait, but an HMM row does not by itself support an individual protein/domain
+trait, a protein-resolved causal mechanism, or a synonym that expands the
+profile acronym. Keep unresolved model-component relationships in a
+`CURATION_TODO` or `KNOWLEDGE_GAP` rather than turning every profile row into a
+causal node.
+
 ## Pick a target
 
 If the user names a trait, curate that trait only. For an open-ended request to
@@ -273,6 +281,10 @@ strings as `RELATED_SYNONYM` provenance labels by default, especially when they
 contain underscores. Promote one to `EXACT_SYNONYM` only when it is a true
 lexical name for the same trait.
 
+When a source-attributed synonym expands an acronym or otherwise looks
+reconstructed, add evidence that quotes the exact naming sentence or source row.
+Do not infer expanded words from the acronym or trait definition.
+
 Apply that scope test to METPO proposal synonyms too. For enzyme-activity
 phenotypes, a bare enzyme name usually names the molecule rather than the
 organismal phenotype; keep it out of TraitRecord `EXACT_SYNONYM` and proposal
@@ -284,10 +296,11 @@ evidence. If the authoritative source is cofactor-, substrate-, endpoint-, or
 pathway-specific, keep the qualifier in both labels and definitions unless
 separate evidence supports the broader unqualified phenotype.
 
-An evidence snippet must carry the specific definition claim it is attached to.
-Do not use article titles, section headings, keyword fragments, or generic noun
-phrases that name the topic but do not support the asserted substrate, endpoint,
-energy-conservation role, taxon scope, or direction.
+An evidence snippet must carry the specific definition or graph-edge claim it
+is attached to. Do not use article titles, section headings, keyword fragments,
+or generic noun phrases that name the topic but do not support the asserted
+substrate, endpoint, energy-conservation role, taxon scope, direction, or
+causal transition.
 
 A `SEEDED` METPO record still needs DOI, PMID, or stable-URL evidence when prior
 review artifacts marked the term as lacking corpus demand or primary support.
@@ -332,6 +345,14 @@ Positive or negative assay-result children of a reviewed activity parent often
 need only their definition, evidence, and a direct canonical example. Do not add
 a child graph when the reviewed parent already captures the molecular mechanism
 and the child merely records assay polarity.
+
+For HMM/profile-backed phage-defense and other sequence-system traits, keep a
+`NONMECHANISTIC` causal graph at locus or system level unless the branch can add
+a real `GENE_OR_PROTEIN` node with protein examples and a cited canonical
+taxon. Do not encode protein-resolved chemistry through a `GENETIC_ELEMENT`
+node while using `NONMECHANISTIC`; if the natural host, accession-level protein,
+or profile-to-activity mapping is unresolved, say the mechanism is deferred in
+`scope_notes` and open a discussion.
 
 ## Write the record
 
