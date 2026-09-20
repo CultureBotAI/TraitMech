@@ -233,7 +233,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, and AbiV are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, and traitmech:000300, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., and Haaber et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, and BstA are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, and traitmech:000301, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., and Owen et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -387,6 +387,25 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/brigantia_system.html#brigantia-mechanism-gap"
+ },
+ {
+  "discussion_id": "bsta-mechanism-gap",
+  "prompt": "Resolve the direct phage trigger of BstA localization, the direct DNA-replication target, the physical BstA-aba interaction, and the basis of cognate aba specificity before minting narrower BstA-aba mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "BstA system",
+  "source_id": "traitmech:000301",
+  "source_file": "bsta_system.yaml",
+  "attaches_to": [
+   "causal_graphs#bsta_locus_suppresses_phage_dna_replication"
+  ],
+  "rationale": "Owen et al. and DefenseFinder support BstA as a named abortive-infection system with a BstA HMM profile and a cognate aba self-immunity element, but the direct phage trigger that recruits BstA to phage DNA, the precise target by which BstA suppresses lytic phage DNA replication, the physical interaction between aba DNA and BstA, and the molecular basis of BstA-aba specificity remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/bsta_system.html#bsta-mechanism-gap"
  },
  {
   "discussion_id": "bunzi-mechanism-gap",
@@ -3019,9 +3038,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 169,
- "total_knowledge_gaps": 88,
- "total_source_entries": 168,
+ "total_discussions": 170,
+ "total_knowledge_gaps": 89,
+ "total_source_entries": 169,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

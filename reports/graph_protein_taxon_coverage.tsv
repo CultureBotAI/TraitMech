@@ -161,6 +161,7 @@ data/traits/genomics/belisama_system.yaml	traitmech:000269	Belisama system	belis
 data/traits/genomics/borvo_system.yaml	traitmech:000249	Borvo system	borvo_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/brex_system.yaml	traitmech:000210	BREX system	brex_methylation_antiphage_defense	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/genomics/brigantia_system.yaml	traitmech:000270	Brigantia system	brigantia_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/bsta_system.yaml	traitmech:000301	BstA system	bsta_locus_suppresses_phage_dna_replication	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/bunzi_system.yaml	traitmech:000248	Bunzi system	bunzi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/butters_gp30_gp31_system.yaml	traitmech:000298	Butters gp30-gp31 system	butters_gp30_gp31_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/butters_gp57r_system.yaml	traitmech:000299	Butters gp57r system	butters_gp57r_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/bsta_system.yaml
+  slug: bsta_system
+session:
+  id: 2026-09-20T043939Z-claude-code-53cd5f
+  timestamp: '2026-09-20T04:39:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add BstA system genomics trait
+  details: Minted traitmech:000301 for BstA system as a DOI-backed GENOMICS abortive-infection-system
+    possession trait after an ignored-and-hidden duplicate review found no live BstA TraitMech
+    record, METPO class, or prior proposal. The record uses Owen et al. DOI:10.1016/j.chom.2021.09.002
+    for BstA phage-defense, DNA-replication-suppression, and aba self-immunity evidence, carries
+    pinned DefenseFinder registry, HMM inventory, and rule snippets for BstA, updates the
+    abortive-infection parent split-gap discussion, and reserves METPO:1025500 in proposals/metpo_traitmech_v178
+    for upstream migration.
