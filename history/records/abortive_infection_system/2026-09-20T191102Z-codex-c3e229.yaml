@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-20T191102Z-codex-c3e229
+  timestamp: '2026-09-20T19:11:02Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1153
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track AbiI split on abortive infection parent
+  details: 'Added repository-level history for the AbiI split-out edit to the open abortive-infection
+    subfamily split-gap discussion after PR #1152 review identified that the hand-curated
+    parent target only had inline curation history.'

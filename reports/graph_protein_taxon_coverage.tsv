@@ -149,6 +149,7 @@ data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_t
 data/traits/genomics/abie_system.yaml	traitmech:000227	AbiE system	abie_type_iv_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abig_system.yaml	traitmech:000306	AbiG system	abig_inhibits_lactococcal_phage_rna_synthesis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abih_system.yaml	traitmech:000304	AbiH system	abih_locus_restricts_lactococcal_phages	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/abii_system.yaml	traitmech:000316	AbiI system	abii_locus_reduces_lactococcal_phage_burst	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abik_system.yaml	traitmech:000229	AbiK system	abik_rt_polymerase_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abiq_system.yaml	traitmech:000225	AbiQ system	abiq_type_iii_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abit_system.yaml	traitmech:000230	AbiT system	abit_late_phage_development_block	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
