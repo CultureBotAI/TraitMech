@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/detocs_system.yaml
+  slug: detocs_system
+session:
+  id: 2026-09-20T065424Z-codex-1119
+  timestamp: '2026-09-20T06:54:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1119
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1117
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Quote Detocs ATP nucleosidase evidence
+  details: 'Addressed the PR #1117 adversarial review issue #1119 by quoting the Cell
+    abstract sentence that names Detocs as a bacterial defense-system family and moving
+    the Detocs phage-defense subclass edge off a weaker ATP-degradation fragment.'

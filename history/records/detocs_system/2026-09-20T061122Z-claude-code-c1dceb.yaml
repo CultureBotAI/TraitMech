@@ -22,8 +22,7 @@ events:
   summary: Mint Detocs system trait
   details: Minted traitmech:000302 for Detocs system as a DOI-backed GENOMICS phage-defense-system
     child. Added PubMed-verified Cell abstract evidence for Detocs phosphotransfer-signaling
-    discovery, ATP nucleosidase homology, and ATP/dATP depletion, pinned DefenseFinder
-    article, rules, and HMM evidence from commit afb0e5a8b466be53586b13266f5d38d98c3ac268,
-    a conservative ATP-depletion causal graph, an open component-mechanism knowledge
-    gap, and proposals/metpo_traitmech_v179 reserving METPO:1025600 after an ignored-and-hidden
-    duplicate review.
+    discovery and ATP/dATP depletion, pinned DefenseFinder article, rules, and HMM evidence
+    from commit afb0e5a8b466be53586b13266f5d38d98c3ac268, a conservative ATP-depletion causal
+    graph, an open component-mechanism knowledge gap, and proposals/metpo_traitmech_v179 reserving
+    METPO:1025600 after an ignored-and-hidden duplicate review.

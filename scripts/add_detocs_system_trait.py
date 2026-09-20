@@ -31,6 +31,8 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T06:11:22Z"
+ATP_NUCLEOSIDASE_REVIEW_TIMESTAMP = "2026-09-20T06:54:24Z"
+DIRECT_EDGE_EVIDENCE_REVIEW_TIMESTAMP = "2026-09-20T07:11:29Z"
 IDENTIFIER = "traitmech:000302"
 PROPOSAL = "proposals/metpo_traitmech_v179"
 
@@ -392,6 +394,33 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Quoted the Cell abstract sentence that names Detocs as "
+            "a bacterial defense-system family and moved the Detocs "
+            "phage-defense subclass edge off a weaker ATP-degradation "
+            "fragment after the PR 1117 adversarial review filed issue "
+            "1119."
+        ),
+        llm_assisted=True,
+        timestamp=ATP_NUCLEOSIDASE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Attached direct ATP and dATP degradation evidence to the "
+            "Detocs locus causal edge and halted-propagation evidence "
+            "to the Detocs trait-conferral edge after the PR 1117 "
+            "adversarial review filed issue 1121."
+        ),
+        llm_assisted=True,
+        timestamp=DIRECT_EDGE_EVIDENCE_REVIEW_TIMESTAMP,
     )
     return record
 

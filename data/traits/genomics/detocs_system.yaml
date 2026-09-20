@@ -195,3 +195,17 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v179.
   llm_assisted: true
+- timestamp: '2026-09-20T06:54:24Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: Quoted the Cell abstract sentence that names Detocs as a bacterial defense-system
+    family and moved the Detocs phage-defense subclass edge off a weaker ATP-degradation
+    fragment after the PR 1117 adversarial review filed issue 1119.
+  llm_assisted: true
+- timestamp: '2026-09-20T07:11:29Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: Attached direct ATP and dATP degradation evidence to the Detocs locus causal
+    edge and halted-propagation evidence to the Detocs trait-conferral edge after
+    the PR 1117 adversarial review filed issue 1121.
+  llm_assisted: true
