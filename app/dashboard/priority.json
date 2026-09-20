@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 710,
+    "records": 711,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,7 +14,7 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 233,
+    "unresearched_mechanism_records": 234,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
@@ -23,7 +23,7 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 65,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 179,
+      "DEEPEN_CAUSAL_GRAPH": 180,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 155
     }
@@ -5009,6 +5009,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000316",
+      "label": "AbiI system",
+      "category": "genomics",
+      "slug": "abii_system",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 4,
+      "nodes": 5,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (4 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000214",
       "label": "abortive infection system",
       "category": "genomics",
@@ -5021,7 +5043,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 12,
+      "children": 13,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

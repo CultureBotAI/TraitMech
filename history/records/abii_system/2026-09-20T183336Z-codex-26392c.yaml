@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abii_system.yaml
+  slug: abii_system
+session:
+  id: 2026-09-20T183336Z-codex-26392c
+  timestamp: '2026-09-20T18:33:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiI system trait
+  details: Added traitmech:000316 AbiI system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. PMID:9195753 identifies the Lactococcus lactis M138 pND852 phage-resistance
+    locus, localizes its abortive-infection phenotype to a 2.6 kb pND817 fragment, and shows
+    that the single abiI open reading frame is required for phage resistance. Pinned DefenseFinder
+    article, rules, and HMM registries map AbiI to the AbiI__AbiI one-profile model namespace.
+    Reserved METPO:1027000 in proposals/metpo_traitmech_v193 for the upstream replacement
+    ID.
