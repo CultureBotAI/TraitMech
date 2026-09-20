@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/audmula_system.yaml
+  slug: audmula_system
+session:
+  id: 2026-09-20T151843Z-codex-670631
+  timestamp: '2026-09-20T15:18:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Audmula system trait
+  details: Added traitmech:000312 Audmula system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Audmula among newly described lactococcal
+    antiphage systems, DOI:10.1073/pnas.2426508122 treats Audmula as a plasmid-encoded lactococcal
+    phage-resistance system in an escape-mutant screen, and the pinned DefenseFinder article
+    registry maps Audmula to the Grafakou et al. lactococcal plasmidome discovery paper. Reserved
+    METPO:1026600 in proposals/metpo_traitmech_v189 for the upstream replacement ID.

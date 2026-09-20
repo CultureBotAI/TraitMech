@@ -300,6 +300,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/aditi_system.html#aditi-mechanism-gap"
  },
  {
+  "discussion_id": "audmula-mechanism-gap",
+  "prompt": "Resolve Audmula phage triggers and effector outputs before minting narrower Audmula mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Audmula system",
+  "source_id": "traitmech:000312",
+  "source_file": "audmula_system.yaml",
+  "attaches_to": [
+   "causal_graphs#audmula_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al., Mosterd et al., and DefenseFinder support Audmula as a named anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/audmula_system.html#audmula-mechanism-gap"
+ },
+ {
   "discussion_id": "avast-subtype-effector-gap",
   "prompt": "Resolve AVAST subtype sensors, phage triggers, and effector outputs before minting narrower Avs1-Avs5 mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3233,9 +3252,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 180,
- "total_knowledge_gaps": 99,
- "total_source_entries": 179,
+ "total_discussions": 181,
+ "total_knowledge_gaps": 100,
+ "total_source_entries": 180,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
