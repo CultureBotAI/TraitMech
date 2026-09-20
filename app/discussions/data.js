@@ -411,7 +411,7 @@ window.searchData = [
  },
  {
   "discussion_id": "brig1-natural-host-and-profile-gap",
-  "prompt": "Resolve natural Brig1 host taxa, broader Brig1-family specificity, and the Brig1__ADP_ribosyl DefenseFinder profile before minting narrower Brig1 children or adding canonical examples.",
+  "prompt": "Resolve natural Brig1 host taxa, broader Brig1-family specificity, and the Brig1__ADP_ribosyl DefenseFinder profile before minting narrower Brig1 children, adding canonical examples, or curating the protein-resolved glycosylase mechanism.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -419,9 +419,9 @@ window.searchData = [
   "source_id": "traitmech:000307",
   "source_file": "brig1_system.yaml",
   "attaches_to": [
-   "causal_graphs#brig1_excises_modified_t_even_phage_dna"
+   "causal_graphs#brig1_locus_restricts_t_even_phages"
   ],
-  "rationale": "Hallinan et al. functionally isolated the first brig1 gene from a soil metagenomic fragment rather than a sequenced natural isolate, and they showed that experimentally tested Brig1 homologues can protect against T-even phages. The first TraitRecord therefore covers Brig1-family antiphage DNA-glycosylase-system possession while leaving natural host exemplars, the full sequence-level system architecture, and the relationship between the DefenseFinder Brig1__Brig1 and Brig1__ADP_ribosyl profiles to separate subtype review.",
+  "rationale": "Hallinan et al. functionally isolated the first brig1 gene from a soil metagenomic fragment rather than a sequenced natural isolate, and they showed that experimentally tested Brig1 homologues can protect against T-even phages. The first TraitRecord therefore covers Brig1-family antiphage DNA-glycosylase-system possession at locus level while leaving natural host exemplars, accession-level Brig1-family proteins, the protein-grounded glycosylase mechanism, the full sequence-level system architecture, and the relationship between the DefenseFinder Brig1__Brig1 and Brig1__ADP_ribosyl profiles to separate subtype review.",
   "num_experiments": 0,
   "num_evidence": 2,
   "evidence_refs": [

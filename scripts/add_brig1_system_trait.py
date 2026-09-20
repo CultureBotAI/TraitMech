@@ -151,6 +151,17 @@ RECORD: dict[str, Any] = {
         {
             "reference": HALLINAN,
             "snippet": (
+                "We named this gene bacteriophage replication inhibition "
+                "DNA glycosylase 1 (brig1)"
+            ),
+            "notes": (
+                "Hallinan et al. explicitly expand brig1 as bacteriophage "
+                "replication inhibition DNA glycosylase 1."
+            ),
+        },
+        {
+            "reference": HALLINAN,
+            "snippet": (
                 "Together, these data demonstrate that Brig1 targets "
                 "α-glucosylated hmC nucleobases in the viral DNA to "
                 "provide defence against T4"
@@ -179,26 +190,26 @@ RECORD: dict[str, Any] = {
     ],
     "causal_graphs": [
         {
-            "graph_id": "brig1_excises_modified_t_even_phage_dna",
-            "title": "Brig1 excises modified T-even phage DNA",
+            "graph_id": "brig1_locus_restricts_t_even_phages",
+            "title": "Brig1 loci restrict T-even phage propagation",
             "description": (
-                "Conservative system-level sketch linking a brig1-family "
-                "locus to alpha-glucosyl-hmC base excision, abasic-site "
-                "generation, inhibited T4-like phage DNA replication, "
+                "Conservative locus-level sketch linking a brig1-family "
+                "DefenseFinder locus to halted T4-like phage replication, "
                 "restricted T-even phage propagation, and the Brig1 "
-                "phage-defense trait."
+                "phage-defense-system trait."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 "The graph captures Brig1 as a named DefenseFinder "
-                "DNA-glycosylase phage-defense system whose prototype "
-                "targets alpha-glucosyl-hmC nucleobases in T4 DNA and "
-                "inhibits phage DNA replication while leaving the natural "
-                "host, the source of the metagenomic prototype, whether all "
-                "Brig1 homologues target exactly the same glucosylated "
-                "nucleobase, and the relationship of the DefenseFinder "
+                "DNA-glycosylase phage-defense system at locus level and "
+                "deliberately defers a protein-resolved glycosylase "
+                "mechanism. Hallinan et al. characterized the prototype "
+                "Brig1 DNA glycosylase, alpha-glucosyl-hmC base excision, "
+                "and abasic-site generation, but the natural host, "
+                "accession-level Brig1-family proteins, broader substrate "
+                "specificity, and the relationship of the DefenseFinder "
                 "Brig1__ADP_ribosyl profile to characterized Brig1 "
-                "activity unresolved."
+                "activity remain unresolved."
             ),
             "nodes": [
                 {
@@ -211,30 +222,12 @@ RECORD: dict[str, Any] = {
                     ),
                 },
                 {
-                    "node_id": "alpha_glucosyl_hmc_base_excision",
-                    "label": "alpha-glucosyl-hmC base excision",
+                    "node_id": "halted_phage_replication",
+                    "label": "halted phage replication",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "Brig1-mediated excision of alpha-glucosylated "
-                        "hydroxymethylcytosine nucleobases from phage DNA."
-                    ),
-                },
-                {
-                    "node_id": "phage_dna_abasic_site_generation",
-                    "label": "phage DNA abasic-site generation",
-                    "node_type": "BIOLOGICAL_PROCESS",
-                    "description": (
-                        "Generation of abasic sites in glucosylated "
-                        "T-even phage DNA after Brig1-mediated base excision."
-                    ),
-                },
-                {
-                    "node_id": "phage_dna_replication_inhibition",
-                    "label": "phage DNA replication inhibition",
-                    "node_type": "BIOLOGICAL_PROCESS",
-                    "description": (
-                        "Inhibition and depletion of T4 phage DNA during "
-                        "infection downstream of Brig1 activity."
+                        "Arrest of T-even bacteriophage DNA replication "
+                        "downstream of Brig1 locus expression."
                     ),
                 },
                 {
@@ -272,83 +265,11 @@ RECORD: dict[str, Any] = {
                     "subject": "brig1_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
-                    "object": "alpha_glucosyl_hmc_base_excision",
+                    "object": "halted_phage_replication",
                     "description": (
-                        "The brig1 gene encodes a DNA glycosylase that "
-                        "excises alpha-glucosyl-hmC nucleobases."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": HALLINAN,
-                            "snippet": (
-                                "Brig1 is a DNA glycosylase that excises "
-                                "α-glucosyl-hmC nucleobases from ssDNA "
-                                "to generate abasic sites"
-                            ),
-                            "notes": (
-                                "Hallinan et al. directly connect Brig1 "
-                                "glycosylase activity to base excision."
-                            ),
-                        },
-                        brig1_hmm_evidence(),
-                    ],
-                },
-                {
-                    "subject": "alpha_glucosyl_hmc_base_excision",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "phage_dna_abasic_site_generation",
-                    "description": (
-                        "Brig1-mediated excision of alpha-glucosyl-hmC "
-                        "generates abasic sites in modified DNA."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": HALLINAN,
-                            "snippet": (
-                                "excises α-glucosyl-hmC nucleobases "
-                                "from ssDNA to generate abasic sites"
-                            ),
-                            "notes": (
-                                "Hallinan et al. show that the excision "
-                                "reaction yields abasic sites."
-                            ),
-                        }
-                    ],
-                },
-                {
-                    "subject": "phage_dna_abasic_site_generation",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "phage_dna_replication_inhibition",
-                    "description": (
-                        "Brig1-generated abasic sites on alpha-glucosylated "
-                        "phage DNA are associated with inhibited T4 DNA "
-                        "replication during infection."
-                    ),
-                    "evidence": [
-                        {
-                            "reference": HALLINAN,
-                            "snippet": (
-                                "Brig1 targets α-glucosylated hmC "
-                                "nucleobases in the viral DNA to provide "
-                                "defence against T4"
-                            ),
-                            "notes": (
-                                "Hallinan et al. connect modified-base "
-                                "targeting in viral DNA to T4 defense."
-                            ),
-                        }
-                    ],
-                },
-                {
-                    "subject": "phage_dna_replication_inhibition",
-                    "predicate": "contributes to",
-                    "predicate_id": "RO:0002326",
-                    "object": "restricted_phage_propagation",
-                    "description": (
-                        "Brig1-associated inhibition of T4 DNA replication "
-                        "restricts phage propagation after infection."
+                        "Expression of the gene later named brig1 inhibits "
+                        "T4 phage DNA replication, and DefenseFinder "
+                        "catalogs Brig1 profiles for Brig1-family loci."
                     ),
                     "evidence": [
                         {
@@ -360,8 +281,42 @@ RECORD: dict[str, Any] = {
                                 "the infected population"
                             ),
                             "notes": (
-                                "Hallinan et al. measure T4 DNA replication "
-                                "inhibition downstream of Brig1 expression."
+                                "Hallinan et al. connect brig1 expression "
+                                "to inhibited T4 DNA replication in infected "
+                                "cells."
+                            ),
+                        },
+                        brig1_hmm_evidence(),
+                    ],
+                },
+                {
+                    "subject": "halted_phage_replication",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "restricted_phage_propagation",
+                    "description": (
+                        "Brig1-associated inhibition of T4-like phage "
+                        "replication restricts T-even phage propagation "
+                        "after infection."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HALLINAN,
+                            "snippet": (
+                                "Following this approach, we identified "
+                                "Brig1, a DNA glycosylase that excises "
+                                "α-glucosyl-hydroxymethylcytosine "
+                                "nucleobases from the bacteriophage T4 "
+                                "genome to generate abasic sites and inhibit "
+                                "viral replication. Brig1 homologues that "
+                                "provide immunity against T-even phages are "
+                                "present in multiple phage defence loci "
+                                "across distinct clades of bacteria"
+                            ),
+                            "notes": (
+                                "Hallinan et al. connect Brig1-associated "
+                                "T4 replication inhibition to the broader "
+                                "Brig1-family T-even immunity phenotype."
                             ),
                         }
                     ],
@@ -415,7 +370,6 @@ RECORD: dict[str, Any] = {
                                 "system class."
                             ),
                         },
-                        brig1_adp_ribosyl_evidence(),
                     ],
                 },
             ],
@@ -427,8 +381,9 @@ RECORD: dict[str, Any] = {
             "prompt": (
                 "Resolve natural Brig1 host taxa, broader Brig1-family "
                 "specificity, and the Brig1__ADP_ribosyl DefenseFinder "
-                "profile before minting narrower Brig1 children or adding "
-                "canonical examples."
+                "profile before minting narrower Brig1 children, adding "
+                "canonical examples, or curating the protein-resolved "
+                "glycosylase mechanism."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
@@ -439,9 +394,11 @@ RECORD: dict[str, Any] = {
                 "experimentally tested Brig1 homologues can protect "
                 "against T-even phages. The first TraitRecord therefore "
                 "covers Brig1-family antiphage DNA-glycosylase-system "
-                "possession while leaving natural host exemplars, the "
-                "full sequence-level system architecture, and the "
-                "relationship between the DefenseFinder Brig1__Brig1 and "
+                "possession at locus level while leaving natural host "
+                "exemplars, accession-level Brig1-family proteins, the "
+                "protein-grounded glycosylase mechanism, the full "
+                "sequence-level system architecture, and the relationship "
+                "between the DefenseFinder Brig1__Brig1 and "
                 "Brig1__ADP_ribosyl profiles to separate subtype review."
             ),
             "evidence": [
@@ -461,7 +418,7 @@ RECORD: dict[str, Any] = {
                 },
                 brig1_adp_ribosyl_evidence(),
             ],
-            "attaches_to": ["causal_graphs#brig1_excises_modified_t_even_phage_dna"],
+            "attaches_to": ["causal_graphs#brig1_locus_restricts_t_even_phages"],
             "posed_by": CURATOR,
             "posed_date": "2026-09-20",
         }
@@ -484,6 +441,20 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESSED_PR_REVIEW",
+        changes=(
+            "Resolved PR #1130 review issues #1131, #1132, #1133, "
+            "and #1134 by narrowing the Brig1 graph to a locus-level "
+            "DefenseFinder sketch, quoting the brig1 naming sentence, "
+            "removing weak edge evidence, and reusing halted phage "
+            "replication instead of adding a singleton replication node."
+        ),
+        llm_assisted=True,
+        timestamp="2026-09-20T11:12:00Z",
     )
     return record
 

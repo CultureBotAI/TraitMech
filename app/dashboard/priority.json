@@ -1131,8 +1131,8 @@
       "slug": "brig1_system",
       "score": 42.0,
       "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 6,
-      "nodes": 7,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 0,
@@ -1143,7 +1143,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (6 edges) +12",
+        "thin graph (4 edges) +12",
         "no canonical_examples +30"
       ]
     },
