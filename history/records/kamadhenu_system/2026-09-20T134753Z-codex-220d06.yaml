@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/kamadhenu_system.yaml
+  slug: kamadhenu_system
+session:
+  id: 2026-09-20T134753Z-codex-220d06
+  timestamp: '2026-09-20T13:47:53Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Kamadhenu system trait
+  details: Added traitmech:000310 Kamadhenu system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Kamadhenu among newly described lactococcal
+    antiphage systems, DOI:10.1073/pnas.2426508122 treats Kamadhenu as a plasmid-encoded lactococcal
+    phage-resistance system in an escape-mutant screen, and the pinned DefenseFinder article
+    registry maps Kamadhenu to the Grafakou et al. lactococcal plasmidome discovery paper.
+    Reserved METPO:1026400 in proposals/metpo_traitmech_v187 for the upstream replacement
+    ID.

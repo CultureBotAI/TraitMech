@@ -1,0 +1,145 @@
+identifier: traitmech:000310
+label: Kamadhenu system
+definition: A phage defense system in which an organism possesses a Kamadhenu locus
+  that can restrict bacteriophage infection.
+definition_source: DOI:10.1093/nar/gkae671
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Kamadhenu
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkae671
+evidence:
+- reference: DOI:10.1093/nar/gkae671
+  snippet: These systems were named after cheese, cattle or fermentation related deities
+    (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
+  notes: Grafakou et al. named Kamadhenu among seven not previously described lactococcal
+    antiphage systems.
+- reference: DOI:10.1073/pnas.2426508122
+  snippet: we isolated 66 phage escape mutants which had become insensitive to 13
+    distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea, Kamadhenu,
+    Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F, AbiG, AbiJ,
+    AbiP)
+  notes: Mosterd et al. later included Kamadhenu among the distinct plasmid-encoded
+    lactococcal phage-resistance systems investigated by phage escape-mutant isolation.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Kamadhenu | 10\.1093/nar/gkae671 | Discovery of antiphage systems in the
+    lactococcal plasmidome
+  notes: The DefenseFinder article registry maps the named Kamadhenu system to the
+    Grafakou et al. lactococcal antiphage-system discovery paper.
+causal_graphs:
+- graph_id: kamadhenu_locus_restricts_phage
+  title: Kamadhenu loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Kamadhenu
+    locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Kamadhenu as a named lactococcal anti-phage system
+    while leaving its direct phage trigger, molecular substrate, antiviral effector
+    output, natural locus breadth, and the absence of pinned DefenseFinder HMM or
+    rule rows unresolved.
+  nodes:
+  - node_id: kamadhenu_locus
+    label: Kamadhenu locus
+    node_type: GENETIC_ELEMENT
+    description: A Kamadhenu anti-phage defense locus described among lactococcal
+      plasmid-encoded phage-resistance systems.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Kamadhenu
+      system.
+  - node_id: kamadhenu_system_trait
+    label: Kamadhenu system
+    node_type: TRAIT
+    grounding: traitmech:000310
+    description: Possession of a genome-encoded Kamadhenu phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: kamadhenu_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The lactococcal plasmidome screen discovered Kamadhenu as a named
+      antiphage system, and the DefenseFinder article registry maps the Kamadhenu
+      system to that discovery paper.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: These systems were named after cheese, cattle or fermentation related
+        deities (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
+      notes: Grafakou et al. named Kamadhenu as one of the novel lactococcal antiphage
+        systems.
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. treat Kamadhenu as a plasmid-encoded lactococcal phage-resistance
+        system in their escape-mutant screen.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Kamadhenu | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Kamadhenu system to
+        the Grafakou et al. lactococcal antiphage-system discovery paper.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: kamadhenu_system_trait
+    description: Kamadhenu-mediated phage restriction realizes the Kamadhenu system
+      trait.
+    evidence:
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. treat Kamadhenu as a plasmid-encoded lactococcal phage-resistance
+        system in their escape-mutant screen.
+  - subject: kamadhenu_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Kamadhenu system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Kamadhenu | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Kamadhenu system to
+        the Grafakou et al. lactococcal antiphage-system discovery paper.
+discussions:
+- discussion_id: kamadhenu-mechanism-gap
+  prompt: Resolve Kamadhenu phage triggers and effector outputs before minting narrower
+    Kamadhenu mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Grafakou et al., Mosterd et al., and DefenseFinder support Kamadhenu
+    as a named anti-phage system, but the direct trigger, molecular substrate, antiviral
+    effector output, natural locus breadth, and profile-to-component model are not
+    resolved enough here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#kamadhenu_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T13:47:53Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Kamadhenu system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v187.
+  llm_assisted: true
+- timestamp: '2026-09-20T14:22:36Z'
+  curator: codex
+  action: UPDATED_EVIDENCE
+  changes: 'Added direct Mosterd et al. phage-resistance evidence to the Kamadhenu
+    locus edge in response to PR #1140 review issue #1141.'
+  llm_assisted: true
