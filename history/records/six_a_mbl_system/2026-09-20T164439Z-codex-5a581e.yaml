@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/six_a_mbl_system.yaml
+  slug: six_a_mbl_system
+session:
+  id: 2026-09-20T164439Z-codex-5a581e
+  timestamp: '2026-09-20T16:44:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add 6A-MBL phage defense system
+  details: Minted traitmech:000314 as a DOI-backed GENOMICS record for the 6A-MBL phage defense
+    system, grounded it under phage defense system with a conservative nonmechanistic graph,
+    cited van den Berg et al. and pinned DefenseFinder article/HMM registry rows, and reserved
+    METPO:1026800 in proposals/metpo_traitmech_v191 for upstream adoption.
