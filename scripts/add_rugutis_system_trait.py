@@ -12,8 +12,8 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from traitmech.curate.curation_event import record_curation_event
-from traitmech.validation.write_validated import write_validated_trait
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "rugutis_system.yaml"
 
