@@ -1041,6 +1041,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hna_system.html#hna-trigger-and-family-breadth-gap"
  },
  {
+  "discussion_id": "hypnos-mechanism-gap",
+  "prompt": "Resolve Hypnos phage triggers and effector outputs before minting narrower Hypnos mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hypnos system",
+  "source_id": "traitmech:000309",
+  "source_file": "hypnos_system.yaml",
+  "attaches_to": [
+   "causal_graphs#hypnos_locus_restricts_phage"
+  ],
+  "rationale": "van den Berg et al. and DefenseFinder support Hypnos as a named anti-phage system with a Hypnos__HyoA HMM profile entry, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hypnos_system.html#hypnos-mechanism-gap"
+ },
+ {
   "discussion_id": "jukab-vesicle-effector-family-gap",
   "prompt": "Resolve JukB vesicle-destabilization chemistry and the boundaries of other JukA-containing systems before minting narrower mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3176,9 +3195,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 177,
- "total_knowledge_gaps": 96,
- "total_source_entries": 176,
+ "total_discussions": 178,
+ "total_knowledge_gaps": 97,
+ "total_source_entries": 177,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

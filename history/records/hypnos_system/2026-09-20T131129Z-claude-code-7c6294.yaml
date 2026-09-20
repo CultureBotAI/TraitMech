@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hypnos_system.yaml
+  slug: hypnos_system
+session:
+  id: 2026-09-20T131129Z-claude-code-7c6294
+  timestamp: '2026-09-20T13:11:29Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - proposal
+  summary: Add Hypnos system trait
+  details: Minted traitmech:000309 for the Hypnos phage-defense system under phage defense
+    system after an ignored-and-hidden duplicate search found no exact live TraitMech, METPO,
+    history, or proposal record for Hypnos, the expected slug, HyoA, the reserved local ID,
+    or METPO:1026300. van den Berg et al. support the eukaryotic-antiviral-homolog phage-defense
+    discovery cohort; pinned DefenseFinder rows support Hypnos as a named model namespace
+    with a Hypnos__HyoA HMM profile. Added a same-PR METPO v186 proposal reserving METPO:1026300
+    and a nonmechanistic causal graph for Hypnos-mediated phage defense, while leaving the
+    phage trigger and effector output open.
