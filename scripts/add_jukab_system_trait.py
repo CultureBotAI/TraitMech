@@ -386,12 +386,12 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "early_jumbo_phage_progression",
+                    "subject": "epi_vesicle_destabilization",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
                     "object": "jukab_system_trait",
                     "description": (
-                        "Interference with early jumbo-phage progression "
+                        "JukB-associated EPI-vesicle destabilization "
                         "realizes the JukAB defense trait."
                     ),
                     "evidence": [

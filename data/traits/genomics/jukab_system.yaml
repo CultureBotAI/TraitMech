@@ -168,12 +168,12 @@ causal_graphs:
       snippet: suppressing the expression of early phage genes and preventing phage
         DNA replication and phage nucleus assembly while saving the cell
       notes: Li et al. define the anti-phage output of the two-component Juk system.
-  - subject: early_jumbo_phage_progression
+  - subject: epi_vesicle_destabilization
     predicate: confers
     predicate_id: METPO:2007700
     object: jukab_system_trait
-    description: Interference with early jumbo-phage progression realizes the JukAB
-      defense trait.
+    description: JukB-associated EPI-vesicle destabilization realizes the JukAB defense
+      trait.
     evidence:
     - reference: DOI:10.1016/j.cell.2025.02.016
       snippet: a two-component immune system that terminates infection of φKZ-like
