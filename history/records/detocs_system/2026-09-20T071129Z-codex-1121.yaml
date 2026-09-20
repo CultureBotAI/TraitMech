@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/detocs_system.yaml
+  slug: detocs_system
+session:
+  id: 2026-09-20T071129Z-codex-1121
+  timestamp: '2026-09-20T07:11:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1121
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1117
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Attach Detocs causal-edge evidence
+  details: 'Addressed the PR #1117 adversarial review issue #1121 by attaching direct
+    ATP and dATP degradation evidence to the Detocs locus causal edge and
+    halted-propagation evidence to the Detocs trait-conferral edge.'

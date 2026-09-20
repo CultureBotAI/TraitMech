@@ -649,6 +649,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/ddmde_system.html#ddmde-substrate-and-guide-source-gap"
  },
  {
+  "discussion_id": "detocs-component-mechanism-gap",
+  "prompt": "Resolve Detocs phage triggers, component-specific phosphotransfer events, and DtcC-family effector outputs before minting narrower Detocs mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Detocs system",
+  "source_id": "traitmech:000302",
+  "source_file": "detocs_system.yaml",
+  "attaches_to": [
+   "causal_graphs#detocs_locus_depletes_atp"
+  ],
+  "rationale": "Rousset et al. support Detocs as a named family of two-component phosphotransfer-signaling bacterial defense systems, and DefenseFinder represents Detocs with required dtcA and dtcB profiles plus optional dtcC-family profiles. This system-level record leaves the direct phage trigger, component-specific activation route, exact ATP nucleosidase effector architecture, and DtcC-variant outputs unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/detocs_system.html#detocs-component-mechanism-gap"
+ },
+ {
   "discussion_id": "dgtpase-activation-profile-gap",
   "prompt": "Resolve dGTPase activation, locus boundaries, and representative enzyme accessions before asserting narrower component or subtype traits.",
   "kind": "KNOWLEDGE_GAP",
@@ -3038,9 +3057,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 170,
- "total_knowledge_gaps": 89,
- "total_source_entries": 169,
+ "total_discussions": 171,
+ "total_knowledge_gaps": 90,
+ "total_source_entries": 170,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

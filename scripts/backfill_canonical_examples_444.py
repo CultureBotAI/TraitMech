@@ -844,6 +844,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/dazbog_system",
     "genomics/dctpdeaminase_system",
     "genomics/ddmde_system",
+    "genomics/detocs_system",
     "genomics/dpd_system",
     "genomics/drt_system",
     "genomics/dsr_system",

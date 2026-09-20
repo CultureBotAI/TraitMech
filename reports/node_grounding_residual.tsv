@@ -1203,6 +1203,9 @@ ddmde locus	GENETIC_ELEMENT	1	data/traits/genomics/ddmde_system.yaml
 ddmde target dna recognition	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
 processive plasmid destruction	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
 plasmid clearance	BIOLOGICAL_PROCESS	1	data/traits/genomics/ddmde_system.yaml
+detocs locus	GENETIC_ELEMENT	1	data/traits/genomics/detocs_system.yaml
+phage-associated atp and datp degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/detocs_system.yaml
+halted phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/detocs_system.yaml
 dgtpase locus	GENETIC_ELEMENT	1	data/traits/genomics/dgtpase_system.yaml
 dgtp degradation into deoxy-guanosine	BIOLOGICAL_PROCESS	1	data/traits/genomics/dgtpase_system.yaml
 dgtp nucleotide-pool depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/dgtpase_system.yaml
