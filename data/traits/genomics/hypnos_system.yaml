@@ -1,0 +1,145 @@
+identifier: traitmech:000309
+label: Hypnos system
+definition: A phage defense system in which an organism possesses a Hypnos locus that
+  can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1016/j.chom.2024.07.007
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Hypnos
+  synonym_type: EXACT_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: HyoA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1016/j.chom.2024.07.007
+  snippet: We validated six of these phage defense systems, including factors preventing
+    viral attachment, R-loop-acting enzymes, the inflammasome, ubiquitin pathway,
+    and pathogen recognition signaling.
+  notes: van den Berg et al. validated six phage defense systems related to eukaryotic
+    innate antiviral responses.
+- reference: DOI:10.1016/j.chom.2024.07.007
+  snippet: Searching for phage defense systems related to innate antiviral genes from
+    vertebrates and plants, we uncovered over 450 candidates.
+  notes: van den Berg et al. motivate a conservative system-level record that does
+    not assert a resolved Hypnos trigger, effector output, or universal pathway.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Hypnos | 10\.1016/j\.chom\.2024\.07\.007 | Bacterial homologs of innate
+    eukaryotic antiviral defenses with anti-phage activity highlight shared evolutionary
+    roots of viral defenses
+  notes: The DefenseFinder model registry maps the named Hypnos system to the van
+    den Berg et al. antiphage-system discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Hypnos__HyoA                                     |                                                  |
+    Hypnos
+  notes: The DefenseFinder HMM inventory records Hypnos__HyoA in the Hypnos model
+    namespace.
+causal_graphs:
+- graph_id: hypnos_locus_restricts_phage
+  title: Hypnos loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Hypnos locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Hypnos as a named anti-phage system with a Hypnos__HyoA
+    DefenseFinder HMM profile entry while leaving its phage trigger, molecular substrate,
+    antiviral effector output, and subtype breadth unresolved.
+  nodes:
+  - node_id: hypnos_locus
+    label: Hypnos locus
+    node_type: GENETIC_ELEMENT
+    description: A Hypnos anti-phage defense locus cataloged in DefenseFinder with
+      a Hypnos__HyoA HMM profile entry.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Hypnos
+      system.
+  - node_id: hypnos_system_trait
+    label: Hypnos system
+    node_type: TRAIT
+    grounding: traitmech:000309
+    description: Possession of a genome-encoded Hypnos phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: hypnos_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder maps Hypnos to a eukaryotic-antiviral-homolog antiphage-system
+      discovery paper and catalogs a Hypnos__HyoA HMM profile entry in the Hypnos
+      model namespace.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.007
+      snippet: We validated six of these phage defense systems, including factors
+        preventing viral attachment, R-loop-acting enzymes, the inflammasome, ubiquitin
+        pathway, and pathogen recognition signaling.
+      notes: van den Berg et al. validated six phage defense systems related to eukaryotic
+        innate antiviral responses.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Hypnos | 10\.1016/j\.chom\.2024\.07\.007 | Bacterial homologs of innate
+        eukaryotic antiviral defenses with anti-phage activity highlight shared evolutionary
+        roots of viral defenses
+      notes: The DefenseFinder model registry maps the named Hypnos system to the
+        van den Berg et al. antiphage-system discovery paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Hypnos__HyoA                                     |                                                  |
+        Hypnos
+      notes: The DefenseFinder HMM inventory records Hypnos__HyoA in the Hypnos model
+        namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: hypnos_system_trait
+    description: Hypnos-mediated phage restriction realizes the Hypnos system trait.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.07.007
+      snippet: We validated six of these phage defense systems, including factors
+        preventing viral attachment, R-loop-acting enzymes, the inflammasome, ubiquitin
+        pathway, and pathogen recognition signaling.
+      notes: van den Berg et al. validated six phage defense systems related to eukaryotic
+        antiviral responses.
+  - subject: hypnos_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Hypnos system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Hypnos | 10\.1016/j\.chom\.2024\.07\.007 | Bacterial homologs of innate
+        eukaryotic antiviral defenses with anti-phage activity highlight shared evolutionary
+        roots of viral defenses
+      notes: The DefenseFinder model registry maps the named Hypnos system to the
+        van den Berg et al. antiphage-system discovery paper.
+discussions:
+- discussion_id: hypnos-mechanism-gap
+  prompt: Resolve Hypnos phage triggers and effector outputs before minting narrower
+    Hypnos mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: van den Berg et al. and DefenseFinder support Hypnos as a named anti-phage
+    system with a Hypnos__HyoA HMM profile entry, but the trigger, molecular substrate,
+    antiviral effector output, and subtype-specific mechanism are not resolved enough
+    here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#hypnos_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T13:10:22Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Hypnos system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v186.
+  llm_assisted: true
