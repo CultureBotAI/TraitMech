@@ -22,5 +22,6 @@ events:
   summary: Add 6A-MBL phage defense system
   details: Minted traitmech:000314 as a DOI-backed GENOMICS record for the 6A-MBL phage defense
     system, grounded it under phage defense system with a conservative nonmechanistic graph,
-    cited van den Berg et al. and pinned DefenseFinder article/HMM registry rows, and reserved
-    METPO:1026800 in proposals/metpo_traitmech_v191 for upstream adoption.
+    cited van den Berg et al., a stable 6A-MBL naming record, and pinned DefenseFinder article/HMM
+    registry rows, reserved METPO:1026800 in proposals/metpo_traitmech_v191 for upstream adoption,
+    and resolved issue #1148 by sourcing the exact 6A-MBL synonym from verbatim evidence.

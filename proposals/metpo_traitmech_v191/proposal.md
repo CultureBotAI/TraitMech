@@ -10,8 +10,10 @@
 The pinned METPO snapshot has no active exact class for 6A-MBL system, the
 genome-level possession trait for a 6A-MBL anti-phage locus. van den Berg et
 al. reported a search over bacterial homologs of innate eukaryotic antiviral
-defense genes and validated six phage defense systems, and DefenseFinder
-catalogs 6A-MBL with `6A_MBL__cap2_3` and `6A_MBL__MblB` HMM profile entries.
+defense genes, deposited a stable record that names 6A-MBL as a putative
+MBL-nuclease system candidate, and validated six phage defense systems.
+DefenseFinder catalogs 6A-MBL with `6A_MBL__cap2_3` and `6A_MBL__MblB` HMM
+profile entries.
 
 This cohort lifts one local class:
 
@@ -61,8 +63,8 @@ than lexical names for the organism-level possession trait.
 ## Artifacts
 
 - `metpo_proposal_classes_robot.tsv` - 12-column ROBOT class template with one
-  exact 6A-MBL synonym, three related non-exact DefenseFinder labels, and no
-  exact external xrefs.
+  exact 6A-MBL synonym sourced to stable naming evidence, three related
+  non-exact DefenseFinder labels, and no exact external xrefs.
 
 ## Upstream Path
 
@@ -74,3 +76,5 @@ than lexical names for the organism-level possession trait.
 
 - v191, 2026-09: lifts `traitmech:000314 6A-MBL system` into the
   `METPO:1026800` block.
+- PR #1147 review, 2026-09: resolves issue #1148 by adding exact 6A-MBL
+  naming evidence from van den Berg et al.'s stable Zenodo record.

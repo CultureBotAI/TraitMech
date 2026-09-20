@@ -11,7 +11,7 @@ parent_traits:
 synonyms:
 - synonym_text: 6A-MBL
   synonym_type: EXACT_SYNONYM
-  source: DOI:10.1016/j.chom.2024.07.007
+  source: https://zenodo.org/records/11209165
 - synonym_text: 6A_MBL
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
@@ -33,6 +33,11 @@ evidence:
     vertebrates and plants, we uncovered over 450 candidates.
   notes: van den Berg et al. motivate a conservative system-level record that does
     not assert a resolved 6A-MBL trigger, effector output, or universal pathway.
+- reference: https://zenodo.org/records/11209165
+  snippet: In addition, a fused ubiquitin-like E1-E2-JAB protein combined with a putative
+    MBL nuclease (6A-MBL) was found
+  notes: The Zenodo manuscript/supplementary-data record from van den Berg et al.
+    names 6A-MBL as a putative MBL-nuclease system candidate.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: 6A_MBL | 10\.1016/j\.chom\.2024\.07\.007 | Bacterial homologs of innate
     eukaryotic antiviral defenses with anti-phage activity highlight shared evolutionary
@@ -166,4 +171,11 @@ curation_history:
     empty: the current evidence supports a named phage-defense system and DefenseFinder
     profiles, but the curated record does not yet cite a source-backed bacterial taxon
     with a directly observed 6A-MBL locus. No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-09-20T17:16:31Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved issue #1148 by sourcing the exact 6A-MBL synonym from the stable
+    van den Berg Zenodo record that names 6A-MBL verbatim, leaving DefenseFinder model
+    and component labels as related synonyms.'
   llm_assisted: true

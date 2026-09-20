@@ -33,10 +33,16 @@ DEFENSEFINDER_HMMS = (
     "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
     f"{DEFENSEFINDER_COMMIT}/Liste_hmm_system.md"
 )
+VAN_DEN_BERG_ZENODO = "https://zenodo.org/records/11209165"
+VAN_DEN_BERG_6A_MBL_SNIPPET = (
+    "In addition, a fused ubiquitin-like E1-E2-JAB protein combined with a "
+    "putative MBL nuclease (6A-MBL) was found"
+)
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T16:42:08Z"
 CANONICAL_EXAMPLE_REVIEW_TIMESTAMP = "2026-09-20T16:43:08Z"
+REVIEW_REVISION_TIMESTAMP = "2026-09-20T17:16:31Z"
 
 IDENTIFIER = "traitmech:000314"
 PROPOSAL = "proposals/metpo_traitmech_v191"
@@ -74,6 +80,17 @@ def hmm_inventory_evidence(gene_name: str, profile: str) -> dict[str, str]:
     }
 
 
+def zenodo_naming_evidence() -> dict[str, str]:
+    return {
+        "reference": VAN_DEN_BERG_ZENODO,
+        "snippet": VAN_DEN_BERG_6A_MBL_SNIPPET,
+        "notes": (
+            "The Zenodo manuscript/supplementary-data record from van den Berg "
+            "et al. names 6A-MBL as a putative MBL-nuclease system candidate."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "6A-MBL system",
@@ -90,7 +107,7 @@ RECORD: dict[str, Any] = {
         {
             "synonym_text": SYSTEM,
             "synonym_type": "EXACT_SYNONYM",
-            "source": VAN_DEN_BERG,
+            "source": VAN_DEN_BERG_ZENODO,
         },
         {
             "synonym_text": DEFENSEFINDER_SYSTEM,
@@ -130,6 +147,7 @@ RECORD: dict[str, Any] = {
                 "or universal pathway."
             ),
         },
+        zenodo_naming_evidence(),
         article_registry_evidence(),
         hmm_inventory_evidence(CAP23_HMM, "cap2_3"),
         hmm_inventory_evidence(MBLB_HMM, "MblB"),
@@ -309,6 +327,19 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=CANONICAL_EXAMPLE_REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved issue #1148 by sourcing the exact 6A-MBL synonym from "
+            "the stable van den Berg Zenodo record that names 6A-MBL "
+            "verbatim, leaving DefenseFinder model and component labels as "
+            "related synonyms."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_REVISION_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)
