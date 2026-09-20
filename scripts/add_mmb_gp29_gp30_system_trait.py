@@ -18,6 +18,7 @@ from traitmech.validation.write_validated import write_validated_trait  # noqa: 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "mmb_gp29_gp30_system.yaml"
 
 DEDRICK = "DOI:10.1038/nmicrobiol.2016.251"
+DEDRICK_PMC = "https://pmc.ncbi.nlm.nih.gov/articles/PMC5508108/"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -87,7 +88,7 @@ RECORD: dict[str, Any] = {
     ],
     "evidence": [
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": (
                 "at least five distinct prophage-expressed viral defense "
                 "systems that interfere with infection"
@@ -99,7 +100,7 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": "Tweety (F1) is targeted by Xerxes, MMB, Phrann and Panchino",
             "notes": (
                 "Dedrick et al. identify Tweety as one phage targeted by the "
@@ -107,19 +108,21 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": (
-                "MMB and Xerxes have almost identical patterns of defense "
-                "against eleven individual phages"
+                "Phages MMB, Xerxes, and Pipsqueaks are closely-related in "
+                "the lysis-immunity region (Fig. 4a) and MMB and Xerxes "
+                "have almost identical patterns of defense against eleven "
+                "individual phages"
             ),
             "notes": (
                 "Dedrick et al. connect the MichelleMyBell and Xerxes "
-                "lysis-immunity regions to closely matched heterotypic "
-                "defense spectra."
+                "defense spectra to their shared lysis-immunity-region "
+                "context."
             ),
         },
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": (
                 "we constructed a MMB mutant in which genes 29 and 30 are "
                 "removed (deletions of individual genes appear to generate "
@@ -132,7 +135,7 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": (
                 "expressing MMB 29 and 30 confers the same pattern of "
                 "defense as the MMB lysogen"
@@ -143,7 +146,7 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": DEDRICK,
+            "reference": DEDRICK_PMC,
             "snippet": (
                 "MMB 29-30 and Phrann 29-30 also confer survival to infection "
                 "by a lytic Tweety derivative"
@@ -243,7 +246,7 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": DEDRICK,
+                            "reference": DEDRICK_PMC,
                             "snippet": (
                                 "we constructed a MMB mutant in which genes "
                                 "29 and 30 are removed (deletions of "
@@ -259,7 +262,7 @@ RECORD: dict[str, Any] = {
                             ),
                         },
                         {
-                            "reference": DEDRICK,
+                            "reference": DEDRICK_PMC,
                             "snippet": (
                                 "expressing MMB 29 and 30 confers the same "
                                 "pattern of defense as the MMB lysogen"
@@ -286,7 +289,7 @@ RECORD: dict[str, Any] = {
                     ),
                     "evidence": [
                         {
-                            "reference": DEDRICK,
+                            "reference": DEDRICK_PMC,
                             "snippet": (
                                 "expressing MMB 29 and 30 confers the same "
                                 "pattern of defense as the MMB lysogen"
