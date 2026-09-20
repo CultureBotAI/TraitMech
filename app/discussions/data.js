@@ -979,6 +979,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hna_system.html#hna-trigger-and-family-breadth-gap"
  },
  {
+  "discussion_id": "jukab-vesicle-effector-family-gap",
+  "prompt": "Resolve JukB vesicle-destabilization chemistry and the boundaries of other JukA-containing systems before minting narrower mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "JukAB system",
+  "source_id": "traitmech:000305",
+  "source_file": "jukab_system.yaml",
+  "attaches_to": [
+   "causal_graphs#jukab_recruits_effector_to_block_jumbo_phage"
+  ],
+  "rationale": "Li et al. resolve gp241/EPI-vesicle sensing by JukA and direct recruitment of JukB as a two-component JukAB strategy, but the exact chemistry of JukB-mediated vesicle destabilization and the relationship between canonical JukAB and JukA homologs paired with diverse other putative effectors still need narrower review.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/jukab_system.html#jukab-vesicle-effector-family-gap"
+ },
+ {
   "discussion_id": "kiwa-activation-and-counterdefense-gap",
   "prompt": "Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details before minting narrower Kiwa mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3095,9 +3114,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 173,
- "total_knowledge_gaps": 92,
- "total_source_entries": 172,
+ "total_discussions": 174,
+ "total_knowledge_gaps": 93,
+ "total_source_entries": 173,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
