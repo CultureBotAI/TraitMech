@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-20T081436Z-codex-3cdbd3
+  timestamp: '2026-09-20T08:14:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track AbiH split on abortive infection parent
+  details: Updated the open abortive-infection subfamily split-gap discussion after minting
+    traitmech:000304 for AbiH so the parent rationale names AbiH as a resolved narrower record
+    while keeping the gap open for remaining Abi families.

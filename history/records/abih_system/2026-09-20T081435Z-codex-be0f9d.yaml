@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abih_system.yaml
+  slug: abih_system
+session:
+  id: 2026-09-20T081435Z-codex-be0f9d
+  timestamp: '2026-09-20T08:14:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Mint AbiH system trait
+  details: Added traitmech:000304 for the AbiH abortive-infection system with Prevots et al.
+    DOI evidence, pinned DefenseFinder article/rules/HMM evidence, a conservative lactococcal-phage
+    restriction graph, and a same-PR METPO v181 proposal reserving METPO:1025800.
