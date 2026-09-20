@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/brig1_system.yaml
+  slug: brig1_system
+session:
+  id: 2026-09-20T104037Z-codex-11bfdc
+  timestamp: '2026-09-20T10:40:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Brig1 system trait
+  details: Added traitmech:000307 for the Brig1 DNA-glycosylase phage-defense system after
+    an ignored-and-hidden duplicate search found no exact live TraitMech, METPO, history,
+    or proposal record for Brig1, the expected slug, the Hallinan et al. DOI, or the reserved
+    IDs. Hallinan et al. support the Brig1 identity, alpha-glucosyl-hydroxymethylcytosine
+    base excision, abasic-site generation, and inhibition of T4 DNA replication; pinned DefenseFinder
+    rows support the Brig1 model namespace. Added a same-PR METPO v184 proposal reserving
+    METPO:1026100 and a nonmechanistic causal graph for Brig1-mediated T-even phage defense,
+    while leaving natural host examples and subtype-specific profile questions open.
