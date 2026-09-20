@@ -916,6 +916,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/epona_system.html#epona-mechanism-gap"
  },
  {
+  "discussion_id": "erebus-mechanism-gap",
+  "prompt": "Resolve Erebus phage triggers and effector outputs before minting narrower Erebus mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Erebus system",
+  "source_id": "traitmech:000308",
+  "source_file": "erebus_system.yaml",
+  "attaches_to": [
+   "causal_graphs#erebus_locus_restricts_phage"
+  ],
+  "rationale": "van den Berg et al. and DefenseFinder support Erebus as a named anti-phage system with an Erebus__EruA HMM profile entry, but the trigger, molecular substrate, antiviral effector output, and subtype-specific mechanism are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/erebus_system.html#erebus-mechanism-gap"
+ },
+ {
   "discussion_id": "esos-mechanism-gap",
   "prompt": "Resolve Esos phage triggers and effector outputs before minting narrower Esos mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3157,9 +3176,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 176,
- "total_knowledge_gaps": 95,
- "total_source_entries": 175,
+ "total_discussions": 177,
+ "total_knowledge_gaps": 96,
+ "total_source_entries": 176,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
