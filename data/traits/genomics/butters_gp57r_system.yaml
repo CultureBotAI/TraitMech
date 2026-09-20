@@ -1,0 +1,164 @@
+identifier: traitmech:000299
+label: Butters gp57r system
+definition: A phage defense system in which an organism possesses a Butters gp57r
+  locus that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1101/2023.01.03.522681
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Butters_gp57r
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1101/2023.01.03.522681
+  snippet: Butters gp57r is both necessary and sufficient to inhibit infection by
+    Island3 and other phages
+  notes: Mohammed et al. report Butters gp57r as the Butters component that can block
+    Island3 and additional heterotypic phages.
+- reference: DOI:10.1101/2023.01.03.522681
+  snippet: Here, we report that Butters gene 57r (on the reverse strand of the annotated
+    forward gene 57), is both necessary and sufficient to defend against Island3 and
+    a host of other heterotypic phages
+  notes: Mohammed et al. distinguish the reverse gene 57r open reading frame from
+    annotated forward gene 57 and connect it to Island3 defense.
+- reference: DOI:10.1101/2023.01.03.522681
+  snippet: mc2155(gp57r) recapitulated defense against Island3 comparable to that
+    mounted by mc2155(Butters)
+  notes: Mohammed et al. show that expressing Butters gene 57r is sufficient to reproduce
+    Butters-like defense against Island3.
+- reference: DOI:10.1101/2023.01.03.522681
+  snippet: Results show that Butters gp57r defends against several other phages
+  notes: Mohammed et al. test the breadth of the cloned gp57r defense and find protection
+    against additional heterotypic phages.
+- reference: DOI:10.1101/2023.01.03.522681
+  snippet: the proposal that gp57r acts downstream of DNA injection
+  notes: Mohammed et al. narrow the antiviral effect to a post-DNA-injection step
+    without resolving gp57r's direct molecular substrate.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Butters_gp57r | 10\.1101/2023\.01\.03\.522681 | Identification of a new
+    antiphage system inMycobacteriumphage Butters
+  notes: The DefenseFinder model registry maps the named Butters_gp57r system to the
+    Mohammed et al. Butters gp57r antiphage-system preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             |
+    Butters_gp57r
+  notes: The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r
+    in the Butters_gp57r model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"
+  notes: The DefenseFinder rules table models Butters_gp57r as a one-component system
+    requiring the gp57r profile.
+causal_graphs:
+- graph_id: butters_gp57r_locus_restricts_phage
+  title: Butters gp57r loci confer heterotypic phage defense
+  description: Conservative system-level sketch linking possession of a Butters gp57r
+    locus to restricted bacteriophage propagation without asserting the unresolved
+    gp57r substrate, nuclease output, or phage-tail escape mechanism.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Butters gp57r as a named anti-phage system with
+    a DefenseFinder gp57r profile while leaving the direct Island3 or PurpleHaze trigger,
+    the role of the HEPN-associated RX4-6H motif, the primary gp57r molecular output,
+    and homolog breadth unresolved.
+  nodes:
+  - node_id: butters_gp57r_locus
+    label: Butters gp57r locus
+    node_type: GENETIC_ELEMENT
+    description: A Butters gp57r anti-phage defense locus cataloged in DefenseFinder
+      with a gp57r HMM profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Butters
+      gp57r system.
+  - node_id: butters_gp57r_system_trait
+    label: Butters gp57r system
+    node_type: TRAIT
+    grounding: traitmech:000299
+    description: Possession of a genome-encoded Butters gp57r phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: butters_gp57r_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Mohammed et al. show that Butters gp57r is necessary and sufficient
+      for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r
+      model namespace.
+    evidence:
+    - reference: DOI:10.1101/2023.01.03.522681
+      snippet: Butters gp57r is both necessary and sufficient to inhibit infection
+        by Island3 and other phages
+      notes: Mohammed et al. support gp57r as the Butters component that can restrict
+        Island3 and additional heterotypic phages.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             |
+        Butters_gp57r
+      notes: The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r
+        in the Butters_gp57r model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"
+      notes: The DefenseFinder rules table models Butters_gp57r as a one-component
+        system requiring the gp57r profile.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: butters_gp57r_system_trait
+    description: Butters-gp57r-associated restriction of phage propagation realizes
+      the Butters gp57r system trait.
+    evidence:
+    - reference: DOI:10.1101/2023.01.03.522681
+      snippet: mc2155(gp57r) recapitulated defense against Island3 comparable to that
+        mounted by mc2155(Butters)
+      notes: Mohammed et al. show that recombinant expression of Butters gene 57r
+        can reproduce Butters-mediated Island3 defense.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Butters_gp57r | 10\.1101/2023\.01\.03\.522681 | Identification of a
+        new antiphage system inMycobacteriumphage Butters
+      notes: DefenseFinder records Butters_gp57r as a named system from the Mohammed
+        et al. Butters gp57r antiphage-system preprint.
+  - subject: butters_gp57r_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Butters gp57r system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Butters_gp57r | 10\.1101/2023\.01\.03\.522681 | Identification of
+        a new antiphage system inMycobacteriumphage Butters |'
+      notes: DefenseFinder associates Butters_gp57r with the Mohammed et al. Butters
+        gp57r antiphage-system preprint.
+discussions:
+- discussion_id: butters_gp57r-mechanism-gap
+  prompt: Resolve the Butters gp57r direct phage trigger, primary molecular target,
+    HEPN-associated RX4-6H motif requirement, DNA-amplification defect, PurpleHaze
+    minor-tail escape route, and homolog breadth before minting narrower Butters gp57r
+    mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Mohammed et al. and DefenseFinder support Butters gp57r as a named anti-phage
+    system with a gp57r profile, but the direct phage trigger, the biochemical role
+    of its predicted HEPN domain and RX4-6H motif, the primary event leading to failed
+    Island3 DNA amplification, and the defense scope of gp57r homologs in other mycobacteriophages
+    or clinical Mycobacterium abscessus isolates are not resolved enough here to assert
+    a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#butters_gp57r_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T02:22:02Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Butters gp57r system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v176.
+  llm_assisted: true

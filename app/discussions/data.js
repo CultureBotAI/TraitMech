@@ -408,6 +408,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/butters_gp30_gp31_system.html#butters_gp30_gp31-mechanism-gap"
  },
  {
+  "discussion_id": "butters_gp57r-mechanism-gap",
+  "prompt": "Resolve the Butters gp57r direct phage trigger, primary molecular target, HEPN-associated RX4-6H motif requirement, DNA-amplification defect, PurpleHaze minor-tail escape route, and homolog breadth before minting narrower Butters gp57r mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Butters gp57r system",
+  "source_id": "traitmech:000299",
+  "source_file": "butters_gp57r_system.yaml",
+  "attaches_to": [
+   "causal_graphs#butters_gp57r_locus_restricts_phage"
+  ],
+  "rationale": "Mohammed et al. and DefenseFinder support Butters gp57r as a named anti-phage system with a gp57r profile, but the direct phage trigger, the biochemical role of its predicted HEPN domain and RX4-6H motif, the primary event leading to failed Island3 DNA amplification, and the defense scope of gp57r homologs in other mycobacteriophages or clinical Mycobacterium abscessus isolates are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/butters_gp57r_system.html#butters_gp57r-mechanism-gap"
+ },
+ {
   "discussion_id": "caprel-trigger-and-family-breadth-gap",
   "prompt": "Resolve CapRel trigger breadth, phage escape routes, and family-specific activation before minting narrower CapRel mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2981,9 +3000,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 167,
- "total_knowledge_gaps": 86,
- "total_source_entries": 166,
+ "total_discussions": 168,
+ "total_knowledge_gaps": 87,
+ "total_source_entries": 167,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
