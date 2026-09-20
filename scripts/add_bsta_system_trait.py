@@ -36,6 +36,7 @@ CURATOR = "codex"
 TIMESTAMP = "2026-09-20T04:37:48Z"
 PARENT_TIMESTAMP = "2026-09-20T04:37:49Z"
 REVIEW_TIMESTAMP = "2026-09-20T05:13:00Z"
+REVIEW_FOLLOWUP_TIMESTAMP = "2026-09-20T05:25:30Z"
 
 IDENTIFIER = "traitmech:000301"
 PROPOSAL = "proposals/metpo_traitmech_v178"
@@ -233,9 +234,10 @@ RECORD: dict[str, Any] = {
             "description": (
                 "Conservative system-level sketch linking possession of a "
                 "BstA phage-defense locus to suppressed lytic phage DNA "
-                "replication and the BstA system trait without asserting "
-                "the unresolved direct phage trigger, BstA molecular "
-                "target, or mechanism of aba-mediated self-immunity."
+                "replication, cognate aba-mediated self-immunity, and the "
+                "BstA system trait without asserting the unresolved direct "
+                "phage trigger, BstA molecular target, or mechanism of "
+                "aba-mediated self-immunity."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
@@ -253,8 +255,7 @@ RECORD: dict[str, Any] = {
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
                         "A BstA-family phage-defense locus carrying a "
-                        "BstA coding sequence and cognate anti-BstA aba "
-                        "element."
+                        "BstA coding sequence."
                     ),
                 },
                 {
@@ -262,9 +263,17 @@ RECORD: dict[str, Any] = {
                     "label": "aba self-immunity element",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        "A cognate anti-BstA aba element that rescues the "
-                        "encoding prophage from BstA-mediated suppression of "
-                        "phage DNA replication."
+                        "A cognate anti-BstA aba element carried alongside "
+                        "BstA in a BstA-encoding prophage."
+                    ),
+                },
+                {
+                    "node_id": "suppressed_encoding_prophage_dna_replication",
+                    "label": "suppressed encoding-prophage DNA replication",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "BstA-mediated suppression of DNA replication by the "
+                        "BstA-encoding prophage in an aba-sensitive context."
                     ),
                 },
                 {
@@ -300,6 +309,30 @@ RECORD: dict[str, Any] = {
             "edges": [
                 {
                     "subject": "bsta_locus",
+                    "predicate": "includes",
+                    "predicate_id": "biolink:has_part",
+                    "object": "aba_element",
+                    "description": (
+                        "BstA loci contain a cognate anti-BstA aba "
+                        "self-immunity element."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": OWEN,
+                            "snippet": (
+                                "each bstA locus contains a cognate aba "
+                                "element that is inactive against variant "
+                                "BstA proteins"
+                            ),
+                            "notes": (
+                                "Owen et al. show that BstA loci carry "
+                                "cognate aba elements."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "subject": "bsta_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "suppressed_lytic_phage_dna_replication",
@@ -328,11 +361,11 @@ RECORD: dict[str, Any] = {
                     "subject": "aba_element",
                     "predicate": "prevents",
                     "predicate_id": "RO:0002212",
-                    "object": "suppressed_lytic_phage_dna_replication",
+                    "object": "suppressed_encoding_prophage_dna_replication",
                     "description": (
                         "Owen et al. show that the cognate anti-BstA aba "
-                        "element rescues phage DNA replication from "
-                        "BstA-mediated suppression."
+                        "element rescues its encoding prophage's DNA "
+                        "replication from BstA-mediated suppression."
                     ),
                     "evidence": [
                         {
@@ -470,10 +503,23 @@ def build_record() -> dict[str, Any]:
             "Added a Salmonella enterica serovar Typhimurium D23580 "
             "canonical example and represented the anti-BstA aba element "
             "as an explicit graph node with a supported rescue edge after "
-            "the PR #1111 adversarial review filed #1112 and #1113."
+            "the PR 1111 adversarial review filed issues 1112 and 1113."
         ),
         llm_assisted=True,
         timestamp=REVIEW_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Separated aba self-immunity for the BstA-encoding prophage "
+            "from BstA-mediated suppression of incoming lytic phage DNA "
+            "replication after the PR 1111 adversarial review filed issue "
+            "1114."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FOLLOWUP_TIMESTAMP,
     )
     return record
 

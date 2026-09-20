@@ -4807,8 +4807,8 @@
       "slug": "bsta_system",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 4,
-      "nodes": 5,
+      "edges": 5,
+      "nodes": 6,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -4819,7 +4819,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (4 edges) +12"
+        "thin graph (5 edges) +12"
       ]
     },
     {
