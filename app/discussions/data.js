@@ -410,6 +410,28 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/brex_system.html#brex-molecular-coupling-gap"
  },
  {
+  "discussion_id": "brig1-natural-host-and-profile-gap",
+  "prompt": "Resolve natural Brig1 host taxa, broader Brig1-family specificity, and the Brig1__ADP_ribosyl DefenseFinder profile before minting narrower Brig1 children or adding canonical examples.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Brig1 system",
+  "source_id": "traitmech:000307",
+  "source_file": "brig1_system.yaml",
+  "attaches_to": [
+   "causal_graphs#brig1_excises_modified_t_even_phage_dna"
+  ],
+  "rationale": "Hallinan et al. functionally isolated the first brig1 gene from a soil metagenomic fragment rather than a sequenced natural isolate, and they showed that experimentally tested Brig1 homologues can protect against T-even phages. The first TraitRecord therefore covers Brig1-family antiphage DNA-glycosylase-system possession while leaving natural host exemplars, the full sequence-level system architecture, and the relationship between the DefenseFinder Brig1__Brig1 and Brig1__ADP_ribosyl profiles to separate subtype review.",
+  "num_experiments": 0,
+  "num_evidence": 2,
+  "evidence_refs": [
+   "DOI:10.1038/s41586-024-07329-9",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/brig1_system.html#brig1-natural-host-and-profile-gap"
+ },
+ {
   "discussion_id": "brigantia-mechanism-gap",
   "prompt": "Resolve Brigantia phage triggers and effector outputs before minting narrower Brigantia mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3135,9 +3157,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 175,
- "total_knowledge_gaps": 94,
- "total_source_entries": 174,
+ "total_discussions": 176,
+ "total_knowledge_gaps": 95,
+ "total_source_entries": 175,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

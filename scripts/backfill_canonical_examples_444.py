@@ -830,6 +830,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/azaca_system",
     "genomics/belenos_system",
     "genomics/belisama_system",
+    "genomics/brig1_system",
     "genomics/brigantia_system",
     "genomics/borvo_system",
     "genomics/butters_gp30_gp31_system",
