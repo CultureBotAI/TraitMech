@@ -16,10 +16,12 @@ synonyms:
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
 evidence:
 - reference: DOI:10.1016/j.cell.2023.07.020
-  snippet: we discover and characterize Detocs, a family of bacterial defense systems
-    with a two-component phosphotransfer-signaling architecture
-  notes: Rousset et al. name Detocs as a family of bacterial defense systems with
-    two-component phosphotransfer-signaling architecture.
+  snippet: By analyzing homologs of the immune ATP nucleosidase domain, we discover
+    and characterize Detocs, a family of bacterial defense systems with a two-component
+    phosphotransfer-signaling architecture
+  notes: Rousset et al. discover Detocs from immune ATP nucleosidase domain homologs
+    and name it as a bacterial defense-system family with two-component phosphotransfer-signaling
+    architecture.
 - reference: DOI:10.1016/j.cell.2023.07.020
   snippet: upon phage infection, degrade cellular adenosine triphosphate (ATP) and
     deoxyadenosine triphosphate (dATP)
@@ -99,8 +101,8 @@ causal_graphs:
       and dtcC-family profiles.
     evidence:
     - reference: DOI:10.1016/j.cell.2023.07.020
-      snippet: we discover and characterize Detocs, a family of bacterial defense
-        systems
+      snippet: By analyzing homologs of the immune ATP nucleosidase domain, we
+        discover and characterize Detocs, a family of bacterial defense systems
       notes: Rousset et al. identify Detocs from homologs of immune ATP nucleosidase
         domains.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
@@ -152,9 +154,9 @@ causal_graphs:
     description: Detocs system possession is a phage-defense-system trait.
     evidence:
     - reference: DOI:10.1016/j.cell.2023.07.020
-      snippet: upon phage infection
-      notes: Rousset et al. place the Detocs-linked ATP nucleosidase immune output
-        in the phage-infection context.
+      snippet: we discover and characterize Detocs, a family of bacterial defense
+        systems
+      notes: Rousset et al. place Detocs in a bacterial defense-system family.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Detocs | 10\.1101/2023\.01\.24\.525353 | A conserved family of immune
         effectors cleaves cellular ATP upon viral infection

@@ -120,14 +120,16 @@ RECORD: dict[str, Any] = {
         {
             "reference": ROUSSET,
             "snippet": (
+                "By analyzing homologs of the immune ATP nucleosidase domain, "
                 "we discover and characterize Detocs, a family of bacterial "
                 "defense systems with a two-component "
                 "phosphotransfer-signaling architecture"
             ),
             "notes": (
-                "Rousset et al. name Detocs as a family of bacterial "
-                "defense systems with two-component "
-                "phosphotransfer-signaling architecture."
+                "Rousset et al. discover Detocs from immune ATP nucleosidase "
+                "domain homologs and name it as a bacterial defense-system "
+                "family with two-component phosphotransfer-signaling "
+                "architecture."
             ),
         },
         {
@@ -244,8 +246,10 @@ RECORD: dict[str, Any] = {
                         {
                             "reference": ROUSSET,
                             "snippet": (
-                                "we discover and characterize Detocs, a "
-                                "family of bacterial defense systems"
+                                "By analyzing homologs of the immune ATP "
+                                "nucleosidase domain, we discover and "
+                                "characterize Detocs, a family of bacterial "
+                                "defense systems"
                             ),
                             "notes": (
                                 "Rousset et al. identify Detocs from "
@@ -318,11 +322,13 @@ RECORD: dict[str, Any] = {
                     "evidence": [
                         {
                             "reference": ROUSSET,
-                            "snippet": "upon phage infection",
+                            "snippet": (
+                                "we discover and characterize Detocs, a "
+                                "family of bacterial defense systems"
+                            ),
                             "notes": (
-                                "Rousset et al. place the Detocs-linked "
-                                "ATP nucleosidase immune output in the "
-                                "phage-infection context."
+                                "Rousset et al. place Detocs in a bacterial "
+                                "defense-system family."
                             ),
                         },
                         article_registry_evidence(),
