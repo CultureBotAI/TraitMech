@@ -31,11 +31,11 @@ This cohort lifts one local class:
 visually separated and leave room for upstream minting.
 
 The pre-curation collision search included ignored and hidden files across the
-whole repository. No exact same-scope record, `abic_system` slug, `AbiC system`
-label, `AbiC__AbiC` model row, `traitmech:000320`,
-`metpo_traitmech_v197`, `METPO:1027400`,
-`DOI:10.1128/jb.174.22.7463-7469.1992`, or `PMID:1429469` was present
-before this cohort.
+whole repository, plus the pinned DefenseFinder registries used for candidate
+discovery. No exact same-scope record, `abic_system` slug, `AbiC system` label,
+`AbiC__AbiC` model row, `traitmech:000320`, `metpo_traitmech_v197`,
+`METPO:1027400`, `DOI:10.1128/jb.174.22.7463-7469.1992`, or `PMID:1429469`
+was present before this cohort.
 
 Subset tag: `metpo_traitmech_2026_09`.
 
