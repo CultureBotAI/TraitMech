@@ -1576,6 +1576,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rosmerta_system.html#rosmerta-mechanism-gap"
  },
  {
+  "discussion_id": "rugutis-mechanism-gap",
+  "prompt": "Resolve Rugutis phage triggers and effector outputs before minting narrower Rugutis mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rugutis system",
+  "source_id": "traitmech:000315",
+  "source_file": "rugutis_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rugutis_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al., Mosterd et al., and DefenseFinder support Rugutis as a named anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rugutis_system.html#rugutis-mechanism-gap"
+ },
+ {
   "discussion_id": "sefir-mechanism-gap",
   "prompt": "Resolve SEFIR phage triggers and effector outputs before minting narrower SEFIR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3290,9 +3309,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 183,
- "total_knowledge_gaps": 102,
- "total_source_entries": 182,
+ "total_discussions": 184,
+ "total_knowledge_gaps": 103,
+ "total_source_entries": 183,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,138 @@
+identifier: traitmech:000315
+label: Rugutis system
+definition: A phage defense system in which an organism possesses a Rugutis locus
+  that can restrict bacteriophage infection.
+definition_source: DOI:10.1093/nar/gkae671
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Rugutis
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkae671
+evidence:
+- reference: DOI:10.1093/nar/gkae671
+  snippet: These systems were named after cheese, cattle or fermentation related deities
+    (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
+  notes: Grafakou et al. named Rugutis among seven not previously described lactococcal
+    antiphage systems.
+- reference: DOI:10.1073/pnas.2426508122
+  snippet: we isolated 66 phage escape mutants which had become insensitive to 13
+    distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea, Kamadhenu,
+    Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F, AbiG, AbiJ,
+    AbiP)
+  notes: Mosterd et al. later included Rugutis among the distinct plasmid-encoded
+    lactococcal phage-resistance systems investigated by phage escape-mutant isolation.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Rugutis | 10\.1093/nar/gkae671 | Discovery of antiphage systems in the
+    lactococcal plasmidome
+  notes: The DefenseFinder article registry maps the named Rugutis system to the Grafakou
+    et al. lactococcal antiphage-system discovery paper.
+causal_graphs:
+- graph_id: rugutis_locus_restricts_phage
+  title: Rugutis loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Rugutis locus
+    to restricted bacteriophage propagation without asserting the unresolved phage
+    trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Rugutis as a named lactococcal anti-phage system
+    while leaving its direct phage trigger, molecular substrate, antiviral effector
+    output, natural locus breadth, and the absence of pinned DefenseFinder HMM or
+    rule rows unresolved.
+  nodes:
+  - node_id: rugutis_locus
+    label: Rugutis locus
+    node_type: GENETIC_ELEMENT
+    description: A Rugutis anti-phage defense locus described among lactococcal plasmid-encoded
+      phage-resistance systems.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Rugutis
+      system.
+  - node_id: rugutis_system_trait
+    label: Rugutis system
+    node_type: TRAIT
+    grounding: traitmech:000315
+    description: Possession of a genome-encoded Rugutis phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: rugutis_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The lactococcal plasmidome screen discovered Rugutis as a named antiphage
+      system, and the DefenseFinder article registry maps the Rugutis system to that
+      discovery paper.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: These systems were named after cheese, cattle or fermentation related
+        deities (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
+      notes: Grafakou et al. named Rugutis as one of the novel lactococcal antiphage
+        systems.
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. treat Rugutis as a plasmid-encoded lactococcal phage-resistance
+        system in their escape-mutant screen.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Rugutis | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Rugutis system to the
+        Grafakou et al. lactococcal antiphage-system discovery paper.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: rugutis_system_trait
+    description: Rugutis-mediated phage restriction realizes the Rugutis system trait.
+    evidence:
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. treat Rugutis as a plasmid-encoded lactococcal phage-resistance
+        system in their escape-mutant screen.
+  - subject: rugutis_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Rugutis system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Rugutis | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Rugutis system to the
+        Grafakou et al. lactococcal antiphage-system discovery paper.
+discussions:
+- discussion_id: rugutis-mechanism-gap
+  prompt: Resolve Rugutis phage triggers and effector outputs before minting narrower
+    Rugutis mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Grafakou et al., Mosterd et al., and DefenseFinder support Rugutis as
+    a named anti-phage system, but the direct trigger, molecular substrate, antiviral
+    effector output, natural locus breadth, and profile-to-component model are not
+    resolved enough here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#rugutis_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T17:37:28Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Rugutis system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v192.
+  llm_assisted: true
