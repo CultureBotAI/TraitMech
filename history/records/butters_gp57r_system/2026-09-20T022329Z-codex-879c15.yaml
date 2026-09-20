@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/butters_gp57r_system.yaml
+  slug: butters_gp57r_system
+session:
+  id: 2026-09-20T022329Z-codex-879c15
+  timestamp: '2026-09-20T02:23:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1101/2023.01.03.522681
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Butters gp57r system genomics trait
+  details: Minted traitmech:000299 for Butters gp57r system as a DOI-backed GENOMICS phage-defense-system
+    possession trait after an ignored-and-hidden duplicate review found no live Butters gp57r
+    TraitMech record, METPO class, or prior proposal. The record uses Mohammed et al. DOI:10.1101/2023.01.03.522681
+    for Butters gene 57r sufficiency and heterotypic-phage defense evidence, carries pinned
+    DefenseFinder registry, HMM inventory, and rule snippets for Butters_gp57r, and reserves
+    METPO:1025300 in proposals/metpo_traitmech_v176 for upstream migration.

@@ -833,6 +833,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/brigantia_system",
     "genomics/borvo_system",
     "genomics/butters_gp30_gp31_system",
+    "genomics/butters_gp57r_system",
     "genomics/bunzi_system",
     "genomics/caprel_system",
     "genomics/ceres_system",
