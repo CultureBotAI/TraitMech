@@ -9,11 +9,11 @@
 
 The pinned METPO snapshot has no active exact class for AbiU system, the
 genome-level possession trait for an `abiU` abortive-infection locus.
-Dai et al. identified and characterized AbiU from *Lactococcus lactis*,
-isolated the native-plasmid determinant from industrial strain LL51-1, showed
-that AbiU confers resistance to representative c2, 936, and P335 lactococcal
-phages, and connected AbiU with delayed transcription of phages 712 and c2.
-DefenseFinder models AbiU with one required `AbiU__AbiU` profile.
+Dai et al. identified and characterized AbiU from *Lactococcus lactis*
+LL51-1, showed that AbiU confers resistance to representative c2, 936, and
+P335 lactococcal phages, and connected AbiU with delayed transcription of
+phages 712 and c2. DefenseFinder models AbiU with one required `AbiU__AbiU`
+profile.
 
 This cohort lifts one local class:
 

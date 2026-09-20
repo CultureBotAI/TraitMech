@@ -22,7 +22,6 @@ ABORTIVE = REPO_ROOT / "data" / "traits" / "genomics" / "abortive_infection_syst
 
 DAI = "DOI:10.1128/AEM.67.11.5225-5232.2001"
 DAI_PMID = "PMID:11679349"
-DAI_PMC = "https://pmc.ncbi.nlm.nih.gov/articles/PMC93294/"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -180,20 +179,6 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
-            "reference": DAI_PMC,
-            "snippet": (
-                "This study describes the isolation and molecular "
-                "characterization of a novel abortive infection phage "
-                "resistance system, AbiU, from a native plasmid that was "
-                "isolated from a phage-resistant industrial strain, L. lactis "
-                "LL51-1."
-            ),
-            "notes": (
-                "Dai et al. connect the AbiU system to the native plasmid in "
-                "the industrial Lactococcus lactis strain LL51-1."
-            ),
-        },
-        {
             "reference": DAI_PMID,
             "snippet": (
                 "AbiU confers resistance to phages from the three main "
@@ -262,10 +247,9 @@ RECORD: dict[str, Any] = {
             "taxon_id": "NCBITaxon:1358",
             "taxon_label": "Lactococcus lactis",
             "note": (
-                "Dai et al. isolated and characterized AbiU from a native "
-                "plasmid in the phage-resistant industrial Lactococcus "
-                "lactis strain LL51-1 and showed that AbiU confers "
-                "resistance to c2, 936, and P335 lactococcal phages."
+                "Dai et al. characterized AbiU from Lactococcus lactis "
+                "LL51-1 and showed that AbiU confers resistance to c2, "
+                "936, and P335 lactococcal phages."
             ),
             "reference": DAI,
         }
