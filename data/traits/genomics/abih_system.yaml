@@ -1,0 +1,198 @@
+identifier: traitmech:000304
+label: AbiH system
+definition: An abortive infection system in which an organism possesses an abiH-family
+  locus represented by the DefenseFinder AbiH__AbiH profile and exemplified by the
+  Lactococcus lactis S94 abiH gene that encodes lactococcal phage abortive-infection
+  resistance.
+definition_source: DOI:10.1111/j.1574-6968.1996.tb08446.x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiH
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+  snippet: A gene which encodes resistance by abortive infection (Abi+) to bacteriophage
+    was cloned from Lactococcus lactis ssp. lactis biovar. diacetylactis S94
+  notes: Prevots et al. cloned abiH from Lactococcus lactis S94 and connected the
+    locus to bacteriophage resistance by abortive infection.
+- reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+  snippet: This gene was found to confer a reduction in efficiency of plating and
+    plaque size for prolate-headed bacteriophage phi 53 (group I of homology) and
+    total resistance to the small isometric-headed bacteriophage phi 59 (group III
+    of homology)
+  notes: Prevots et al. show that the cloned abiH gene restricts multiple lactococcal
+    phages with distinct plating phenotypes.
+- reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+  snippet: The cloned gene is predicted to encode a polypeptide of 346 amino acid
+    residues with a deduced molecular mass of 41 455 Da
+  notes: Prevots et al. support abiH as an encoded phage-resistance protein rather
+    than a noncoding marker.
+- reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+  snippet: No homology with any previously described genes was found
+  notes: Prevots et al. leave the molecular class and effector mechanism of AbiH unresolved.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
+    of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis biovar\.
+    diacetylactis S94
+  notes: The DefenseFinder article registry maps the named AbiH system to the Prevots
+    et al. abiH cloning paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiH\tAbiH\t1\t1\tAbiH__AbiH"
+  notes: The DefenseFinder rules table models AbiH as a one-component system requiring
+    the AbiH__AbiH profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiH__AbiH                                       | AbiH__AbiH                                       |
+    AbiH                   | PF14253.7               | 30.9   |'
+  notes: The DefenseFinder HMM inventory records the PF14253.7-backed AbiH__AbiH profile
+    under the AbiH model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Prevots et al. cloned abiH from Lactococcus lactis ssp. lactis biovar. diacetylactis
+    S94 and showed that the cloned locus confers abortive-infection phage resistance.
+  reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+causal_graphs:
+- graph_id: abih_locus_restricts_lactococcal_phages
+  title: AbiH activity restricts lactococcal phages
+  description: Conservative system-level sketch linking an abiH-family locus to AbiH
+    antiphage activity, reduced lactococcal phage plaque formation, restricted phage
+    propagation, and abortive-infection system possession without asserting the unresolved
+    phage trigger or molecular target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiH as a named DefenseFinder single-profile abortive-infection
+    system whose prototype abiH gene reduces or abolishes plating by tested lactococcal
+    phages while leaving the direct phage trigger, AbiH molecular function, host or
+    phage target, arrest route, and phage escape routes unresolved.
+  nodes:
+  - node_id: abih_locus
+    label: abiH locus
+    node_type: GENETIC_ELEMENT
+    description: An abiH-family abortive-infection locus represented by the DefenseFinder
+      AbiH__AbiH profile.
+  - node_id: abih_antiphage_activity
+    label: AbiH antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiH protein.
+  - node_id: lactococcal_phage_plaque_formation
+    label: lactococcal phage plaque formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of plaques by AbiH-sensitive phi 53 and phi 59 phages on
+      a Lactococcus lactis indicator lawn.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of AbiH-sensitive lactococcal phage propagation
+      in an AbiH-containing infected host cell.
+  - node_id: abih_system_trait
+    label: AbiH system
+    node_type: TRAIT
+    grounding: traitmech:000304
+    description: Possession of a genome-encoded AbiH abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abih_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abih_antiphage_activity
+    description: The abiH-family locus encodes an abortive-infection phage-resistance
+      determinant, and DefenseFinder models AbiH as a one-profile system.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+      snippet: A gene which encodes resistance by abortive infection (Abi+) to bacteriophage
+      notes: Prevots et al. identify the cloned abiH gene as the abortive-infection
+        phage-resistance determinant.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiH\tAbiH\t1\t1\tAbiH__AbiH"
+      notes: The DefenseFinder rules table models AbiH as a one-component system requiring
+        the AbiH__AbiH profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiH__AbiH                                       | AbiH__AbiH                                       |
+        AbiH                   | PF14253.7               | 30.9   |'
+      notes: The DefenseFinder HMM inventory records the PF14253.7-backed AbiH__AbiH
+        profile under the AbiH model namespace.
+  - subject: abih_antiphage_activity
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: lactococcal_phage_plaque_formation
+    description: AbiH activity reduces phi 53 plating and plaque size and confers
+      total resistance to phi 59.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+      snippet: This gene was found to confer a reduction in efficiency of plating
+        and plaque size for prolate-headed bacteriophage phi 53 (group I of homology)
+        and total resistance to the small isometric-headed bacteriophage phi 59
+      notes: Prevots et al. directly measure reduced or abolished plaque formation
+        for tested lactococcal phages.
+  - subject: abih_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Reduced plating and total phi 59 resistance indicate that AbiH limits
+      completion of tested lactococcal phage infection.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+      snippet: reduction in efficiency of plating and plaque size for prolate-headed
+        bacteriophage phi 53 (group I of homology) and total resistance to the small
+        isometric-headed bacteriophage phi 59 (group III of homology)
+      notes: Prevots et al. support both a partial phi 53 block and total phi 59 resistance
+        from the cloned abiH gene.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abih_system_trait
+    description: Restriction of lactococcal phage propagation realizes the AbiH abortive-infection
+      trait.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+      snippet: encodes resistance by abortive infection (Abi+) to bacteriophage
+      notes: Prevots et al. classify the cloned abiH resistance determinant as abortive
+        infection.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
+        of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis
+        biovar\. diacetylactis S94
+      notes: The DefenseFinder article registry maps the named AbiH system to the
+        Prevots et al. abiH cloning paper.
+  - subject: abih_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiH system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1996.tb08446.x
+      snippet: encodes resistance by abortive infection (Abi+) to bacteriophage
+      notes: Prevots et al. support AbiH as an abortive-infection system.
+discussions:
+- discussion_id: abih-trigger-and-effector-gap
+  prompt: Resolve the AbiH phage trigger, molecular activity, and direct arrest target
+    before minting narrower AbiH mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Prevots et al. support AbiH as a named lactococcal abortive-infection
+    gene whose cloned S94 locus reduces or blocks plating by tested lactococcal phages,
+    and DefenseFinder represents AbiH with a one-profile rule. This system-level record
+    leaves the phage trigger, AbiH molecular function, direct cellular target, growth-arrest
+    or cell-death route, and phage escape routes unresolved.
+  attaches_to:
+  - causal_graphs#abih_locus_restricts_lactococcal_phages
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T08:12:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiH system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v181.
+  llm_assisted: true

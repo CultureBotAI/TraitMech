@@ -205,6 +205,25 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "abih-trigger-and-effector-gap",
+  "prompt": "Resolve the AbiH phage trigger, molecular activity, and direct arrest target before minting narrower AbiH mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AbiH system",
+  "source_id": "traitmech:000304",
+  "source_file": "abih_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abih_locus_restricts_lactococcal_phages"
+  ],
+  "rationale": "Prevots et al. support AbiH as a named lactococcal abortive-infection gene whose cloned S94 locus reduces or blocks plating by tested lactococcal phages, and DefenseFinder represents AbiH with a one-profile rule. This system-level record leaves the phage trigger, AbiH molecular function, direct cellular target, growth-arrest or cell-death route, and phage escape routes unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abih_system.html#abih-trigger-and-effector-gap"
+ },
+ {
   "discussion_id": "abiv-mechanism-gap",
   "prompt": "Resolve the host translational target of the AbiV-SaV complex before minting narrower AbiV mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -233,7 +252,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, and Stk2 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, and traitmech:000303, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., and Depardieu et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, and AbiH are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, and traitmech:000304, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., and Prevots et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3076,9 +3095,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 172,
- "total_knowledge_gaps": 91,
- "total_source_entries": 171,
+ "total_discussions": 173,
+ "total_knowledge_gaps": 92,
+ "total_source_entries": 172,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

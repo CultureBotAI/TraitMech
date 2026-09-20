@@ -147,6 +147,7 @@ data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation
 data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	xerophilic_low_water_activity_growth	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_tolerance_czc_efflux	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/genomics/abie_system.yaml	traitmech:000227	AbiE system	abie_type_iv_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/abih_system.yaml	traitmech:000304	AbiH system	abih_locus_restricts_lactococcal_phages	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abik_system.yaml	traitmech:000229	AbiK system	abik_rt_polymerase_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abiq_system.yaml	traitmech:000225	AbiQ system	abiq_type_iii_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abit_system.yaml	traitmech:000230	AbiT system	abit_late_phage_development_block	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
