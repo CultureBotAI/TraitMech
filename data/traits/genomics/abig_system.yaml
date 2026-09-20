@@ -1,0 +1,234 @@
+identifier: traitmech:000306
+label: AbiG system
+definition: An abortive infection system in which an organism possesses a two-gene
+  abiG locus with abiGi and abiGii open reading frames, exemplified by the Lactococcus
+  lactis subsp. cremoris UC653 plasmid pCI750 locus that restricts lactococcal phages
+  without blocking phage DNA replication and is represented by the DefenseFinder AbiG__AbiGi
+  and AbiG__AbiGii profiles.
+definition_source: DOI:10.1128/aem.62.9.3075-3082.1996
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiG
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/aem.62.9.3075-3082.1996
+evidence:
+- reference: DOI:10.1128/aem.62.9.3075-3082.1996
+  snippet: AbiG is an abortive infection (Abi) mechanism encoded by the conjugative
+    plasmid pCI750 originally isolated from Lactococcus lactis subsp. cremoris UC653
+  notes: O'Connor et al. identify AbiG as an abortive-infection mechanism encoded
+    by the UC653 pCI750 plasmid.
+- reference: DOI:10.1128/aem.62.9.3075-3082.1996
+  snippet: Insensitivity conferred by this Abi manifested itself as complete resistance
+    to phi 712 (936 phage species) with only partial resistance to phi c2 (c2 species)
+  notes: O'Connor et al. show that AbiG restricts tested lactococcal phages with species-dependent
+    strength.
+- reference: DOI:10.1128/aem.62.9.3075-3082.1996
+  snippet: The smallest subclone of pCI750 which expressed the Abi phenotype contained
+    a 3.5-kb insert which encoded two potential open reading frames
+  notes: O'Connor et al. localize AbiG activity to a pCI750 subclone carrying two
+    predicted coding sequences.
+- reference: DOI:10.1128/aem.62.9.3075-3082.1996
+  snippet: abiGi (750 bp) and abiGii (1,194 bp) were separated by 2 bp and appeared
+    to share a single promoter upstream of abiGi
+  notes: O'Connor et al. support abiGi and abiGii as the paired open reading frames
+    of the AbiG locus.
+- reference: DOI:10.1128/aem.62.9.3075-3082.1996
+  snippet: The mechanism did not inhibit phage DNA replication
+  notes: O'Connor et al. rule out phage DNA replication as the blocked step in the
+    original AbiG characterization.
+- reference: DOI:10.1128/aem.65.1.330-335.1999
+  snippet: The abortive infection system AbiG is encoded by the lactococcal plasmid
+    pCI750
+  notes: The follow-up O'Connor et al. study reiterates AbiG as a pCI750-encoded lactococcal
+    abortive-infection system.
+- reference: DOI:10.1128/aem.65.1.330-335.1999
+  snippet: The abiG locus (consisting of two genes, abiGi and abiGii) was examined
+    by Northern blot analysis, revealing two transcripts of approximately 2.8 and
+    1.5 kb which were homologous to the two gene-specific probes
+  notes: O'Connor et al. confirm the abiGi/abiGii two-gene locus at the transcript
+    level.
+- reference: DOI:10.1128/aem.65.1.330-335.1999
+  snippet: Examination of phage sk1 RNA synthesis demonstrated that both the subcloned
+    AbiG and, to a greater extent, pCI750 inhibited this process
+  notes: O'Connor et al. connect the AbiG subclone to inhibited sk1 phage RNA synthesis.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiG | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiG model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiG\tAbiG\t2\t2\tAbiG__AbiGi, AbiG__AbiGii"
+  notes: The DefenseFinder rules table models AbiG as a two-component system requiring
+    the AbiG__AbiGi and AbiG__AbiGii profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiG__AbiGi                                      | AbiG__AbiGi                                      |
+    AbiG                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiG__AbiGi under the AbiG model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiG__AbiGii                                     | AbiG__AbiGii                                     |
+    AbiG                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiG__AbiGii under the AbiG model
+    namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: O'Connor et al. characterized AbiG from conjugative plasmid pCI750, originally
+    isolated from Lactococcus lactis subsp. cremoris UC653, and localized the abortive-infection
+    phenotype to the abiGi/abiGii locus.
+  reference: DOI:10.1128/aem.62.9.3075-3082.1996
+causal_graphs:
+- graph_id: abig_inhibits_lactococcal_phage_rna_synthesis
+  title: AbiG inhibits lactococcal phage RNA synthesis
+  description: Conservative system-level sketch linking an abiGi/abiGii locus to AbiG
+    antiphage activity, inhibited phage RNA synthesis, restricted lactococcal phage
+    propagation, and abortive-infection system possession without asserting AbiG's
+    unresolved primary target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiG as a named DefenseFinder two-profile abortive-infection
+    system whose pCI750 prototype restricts phi 712, partially restricts phi c2, and
+    inhibits phage sk1 and late c2 RNA synthesis while leaving the phage trigger,
+    AbiGi and AbiGii molecular functions, cellular target, growth-arrest or cell-death
+    route, and phage escape routes unresolved.
+  nodes:
+  - node_id: abig_locus
+    label: abiG locus
+    node_type: GENETIC_ELEMENT
+    description: A two-gene abiGi/abiGii abortive-infection locus represented by the
+      DefenseFinder AbiG rule.
+  - node_id: abig_antiphage_activity
+    label: AbiG antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiG system.
+  - node_id: phage_rna_synthesis
+    label: phage RNA synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of sensitive lactococcal phage RNA during infection.
+  - node_id: restricted_lactococcal_phage_propagation
+    label: restricted lactococcal phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced completion of lactococcal phage propagation in an AbiG-containing
+      infected host cell.
+  - node_id: abig_system_trait
+    label: AbiG system
+    node_type: TRAIT
+    grounding: traitmech:000306
+    description: Possession of a genome-encoded AbiG abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abig_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abig_antiphage_activity
+    description: The pCI750 abiG locus carries abiGi and abiGii open reading frames,
+      and DefenseFinder models AbiG as a two-profile system requiring both AbiG components.
+    evidence:
+    - reference: DOI:10.1128/aem.62.9.3075-3082.1996
+      snippet: The smallest subclone of pCI750 which expressed the Abi phenotype contained
+        a 3.5-kb insert which encoded two potential open reading frames
+      notes: O'Connor et al. localize the AbiG phenotype to a two-ORF pCI750 subclone.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiG\tAbiG\t2\t2\tAbiG__AbiGi, AbiG__AbiGii"
+      notes: The DefenseFinder rules table models AbiG as a two-component system requiring
+        the AbiG__AbiGi and AbiG__AbiGii profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiG__AbiGi                                      | AbiG__AbiGi                                      |
+        AbiG                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiG__AbiGi under the AbiG model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiG__AbiGii                                     | AbiG__AbiGii                                     |
+        AbiG                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiG__AbiGii under the AbiG model
+        namespace.
+  - subject: abig_antiphage_activity
+    predicate: mitigates
+    predicate_id: METPO:2007407
+    object: phage_rna_synthesis
+    description: AbiG antiphage activity inhibits RNA synthesis by tested sensitive
+      lactococcal phages.
+    evidence:
+    - reference: DOI:10.1128/aem.65.1.330-335.1999
+      snippet: Examination of phage sk1 RNA synthesis demonstrated that both the subcloned
+        AbiG and, to a greater extent, pCI750 inhibited this process
+      notes: O'Connor et al. show that the AbiG subclone inhibits phage sk1 RNA synthesis.
+  - subject: abig_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_lactococcal_phage_propagation
+    description: AbiG activity restricts propagation by phi 712 and partially restricts
+      phi c2.
+    evidence:
+    - reference: DOI:10.1128/aem.62.9.3075-3082.1996
+      snippet: Insensitivity conferred by this Abi manifested itself as complete resistance
+        to phi 712 (936 phage species) with only partial resistance to phi c2 (c2
+        species)
+      notes: O'Connor et al. measure complete or partial resistance from the AbiG
+        mechanism for tested lactococcal phages.
+  - subject: restricted_lactococcal_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abig_system_trait
+    description: Restriction of lactococcal phage propagation realizes the AbiG abortive-infection
+      trait.
+    evidence:
+    - reference: DOI:10.1128/aem.62.9.3075-3082.1996
+      snippet: AbiG is an abortive infection (Abi) mechanism encoded by the conjugative
+        plasmid pCI750
+      notes: O'Connor et al. classify AbiG as a pCI750 abortive-infection mechanism.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiG | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiG model namespace
+        to a lactococcal abortive-infection review.
+  - subject: abig_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiG system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1128/aem.65.1.330-335.1999
+      snippet: The abortive infection system AbiG is encoded by the lactococcal plasmid
+        pCI750
+      notes: O'Connor et al. explicitly place AbiG in the abortive-infection class
+        of phage defense.
+discussions:
+- discussion_id: abig-primary-target-gap
+  prompt: Resolve the AbiG phage trigger, AbiGi and AbiGii molecular functions, and
+    primary arrest target before minting narrower AbiG mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: O'Connor et al. support AbiG as a named lactococcal abortive-infection
+    system encoded by two adjacent pCI750 open reading frames, and DefenseFinder represents
+    AbiG with a two-profile rule. The 1999 transcription study connects AbiG to inhibited
+    phage sk1 and late c2 RNA synthesis, but it explicitly leaves unresolved whether
+    transcription is the system's primary target or a secondary effect.
+  evidence:
+  - reference: DOI:10.1128/aem.65.1.330-335.1999
+    snippet: AbiG inhibits phage sk1 and late c2 RNA synthesis; however, whether this
+      process of transcription is the primary target of the system or a secondary
+      effect remains to be determined
+    notes: O'Connor et al. identify phage RNA-synthesis inhibition as a downstream
+      AbiG effect while leaving the direct target unresolved.
+  attaches_to:
+  - causal_graphs#abig_inhibits_lactococcal_phage_rna_synthesis
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T09:16:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiG system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v183.
+  llm_assisted: true

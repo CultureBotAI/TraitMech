@@ -1124,6 +1124,10 @@ zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.ya
 abie locus	GENETIC_ELEMENT	1	data/traits/genomics/abie_system.yaml
 abie type iv toxin-antitoxin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abie_system.yaml
 abieii gtp-binding nucleotidyltransferase toxicity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abie_system.yaml
+abig locus	GENETIC_ELEMENT	1	data/traits/genomics/abig_system.yaml
+abig antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abig_system.yaml
+phage rna synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/abig_system.yaml
+restricted lactococcal phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abig_system.yaml
 abih locus	GENETIC_ELEMENT	1	data/traits/genomics/abih_system.yaml
 abih antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abih_system.yaml
 lactococcal phage plaque formation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abih_system.yaml

@@ -170,18 +170,19 @@ discussions:
     under the broad abortive infection system parent.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, and AbiH are split
-    out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228,
+  rationale: ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, and AbiG
+    are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228,
     traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303,
-    and traitmech:000304, respectively. Lopatina et al., Fineran et al., Dy et al.,
-    Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al.,
-    Depardieu et al., and Prevots et al. still support Abi as a genomically encoded
-    phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis,
-    RT-related polymerase, two-component, translation-inhibition, prophage-encoded
-    DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal
-    AbiH phage resistance, and other Abi families. Additional narrower TraitRecords
-    need separate review to ground each subfamily's trigger, effector, growth-arrest
-    or cell-death mechanism, and phage escape routes.
+    traitmech:000304, and traitmech:000306, respectively. Lopatina et al., Fineran
+    et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber
+    et al., Owen et al., Depardieu et al., Prevots et al., and O'Connor et al. still
+    support Abi as a genomically encoded phage defense strategy that spans mechanistically
+    diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component,
+    translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered
+    cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis
+    interference, and other Abi families. Additional narrower TraitRecords need separate
+    review to ground each subfamily's trigger, effector, growth-arrest or cell-death
+    mechanism, and phage escape routes.
   posed_by: codex
   posed_date: '2026-09-15'
 curation_history:
@@ -268,5 +269,12 @@ curation_history:
   action: RESOLVE_DISCUSSION_SCOPE
   changes: Documented AbiH as split out in the open abortive-infection subfamily split-gap
     discussion after minting traitmech:000304 for the AbiH system; other abortive-infection
+    families remain open.
+  llm_assisted: true
+- timestamp: '2026-09-20T09:16:01Z'
+  curator: codex
+  action: RESOLVE_DISCUSSION_SCOPE
+  changes: Documented AbiG as split out in the open abortive-infection subfamily split-gap
+    discussion after minting traitmech:000306 for the AbiG system; other abortive-infection
     families remain open.
   llm_assisted: true

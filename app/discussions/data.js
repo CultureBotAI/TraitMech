@@ -205,6 +205,27 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "abig-primary-target-gap",
+  "prompt": "Resolve the AbiG phage trigger, AbiGi and AbiGii molecular functions, and primary arrest target before minting narrower AbiG mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AbiG system",
+  "source_id": "traitmech:000306",
+  "source_file": "abig_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abig_inhibits_lactococcal_phage_rna_synthesis"
+  ],
+  "rationale": "O'Connor et al. support AbiG as a named lactococcal abortive-infection system encoded by two adjacent pCI750 open reading frames, and DefenseFinder represents AbiG with a two-profile rule. The 1999 transcription study connects AbiG to inhibited phage sk1 and late c2 RNA synthesis, but it explicitly leaves unresolved whether transcription is the system's primary target or a secondary effect.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/aem.65.1.330-335.1999"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abig_system.html#abig-primary-target-gap"
+ },
+ {
   "discussion_id": "abih-trigger-and-effector-gap",
   "prompt": "Resolve the AbiH phage trigger, molecular activity, and direct arrest target before minting narrower AbiH mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -252,7 +273,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, and AbiH are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, and traitmech:000304, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., and Prevots et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, and AbiG are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, and traitmech:000306, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., and O'Connor et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3114,9 +3135,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 174,
- "total_knowledge_gaps": 93,
- "total_source_entries": 173,
+ "total_discussions": 175,
+ "total_knowledge_gaps": 94,
+ "total_source_entries": 174,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
