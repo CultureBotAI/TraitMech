@@ -1125,6 +1125,10 @@ abib locus	GENETIC_ELEMENT	1	data/traits/genomics/abib_system.yaml
 abib antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abib_system.yaml
 sensitive phage transcript degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abib_system.yaml
 sensitive phage development arrest	BIOLOGICAL_PROCESS	1	data/traits/genomics/abib_system.yaml
+abic locus	GENETIC_ELEMENT	1	data/traits/genomics/abic_system.yaml
+abic prf activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abic_system.yaml
+p2 phage propagation reduction	BIOLOGICAL_PROCESS	1	data/traits/genomics/abic_system.yaml
+prf-positive infected cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/abic_system.yaml
 abid locus	GENETIC_ELEMENT	1	data/traits/genomics/abid_system.yaml
 abid antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abid_system.yaml
 abie locus	GENETIC_ELEMENT	1	data/traits/genomics/abie_system.yaml
