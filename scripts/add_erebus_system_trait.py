@@ -36,6 +36,7 @@ DEFENSEFINDER_HMMS = (
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T11:49:00Z"
+REVIEW_TIMESTAMP = "2026-09-20T12:25:08Z"
 
 IDENTIFIER = "traitmech:000308"
 PROPOSAL = "proposals/metpo_traitmech_v185"
@@ -88,6 +89,11 @@ RECORD: dict[str, Any] = {
             "synonym_text": "Erebus",
             "synonym_type": "EXACT_SYNONYM",
             "source": DEFENSEFINDER_ARTICLES,
+        },
+        {
+            "synonym_text": "EruA",
+            "synonym_type": "RELATED_SYNONYM",
+            "source": DEFENSEFINDER_HMMS,
         }
     ],
     "evidence": [
@@ -277,6 +283,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="CURATION_REVIEW_REVISION",
+        changes=(
+            "Resolved PR 1136 review issue 1137 by mirroring the "
+            "proposal-only EruA label as a RELATED_SYNONYM sourced to the "
+            "pinned DefenseFinder HMM inventory."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

@@ -12,6 +12,9 @@ synonyms:
 - synonym_text: Erebus
   synonym_type: EXACT_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: EruA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
 - reference: DOI:10.1016/j.chom.2024.07.007
   snippet: We validated six of these phage defense systems, including factors preventing
@@ -138,4 +141,10 @@ curation_history:
   changes: Minted Erebus system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v185.
+  llm_assisted: true
+- timestamp: '2026-09-20T12:25:08Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: Resolved PR 1136 review issue 1137 by mirroring the proposal-only
+    EruA label as a RELATED_SYNONYM sourced to the pinned DefenseFinder HMM inventory.
   llm_assisted: true
