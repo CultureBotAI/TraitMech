@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/butters_gp30_gp31_system.yaml
+  slug: butters_gp30_gp31_system
+session:
+  id: 2026-09-20T013617Z-codex-06048a
+  timestamp: '2026-09-20T01:36:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1128/mSystems.00534-20
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Butters gp30-gp31 system genomics trait
+  details: Minted traitmech:000298 for Butters gp30-gp31 system as a DOI-backed GENOMICS phage-defense-system
+    possession trait after an ignored-and-hidden duplicate review found no live Butters gp30-gp31
+    TraitMech record, METPO class, or prior proposal. The record uses Mageeney et al. DOI:10.1128/mSystems.00534-20
+    for central-gene and genes 30/31 defense evidence, carries pinned DefenseFinder registry,
+    HMM inventory, and rule snippets for Butters_gp30_gp31, and reserves METPO:1025200 in
+    proposals/metpo_traitmech_v175 for upstream migration.
