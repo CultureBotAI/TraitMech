@@ -92,7 +92,7 @@ TraitMech/
 ├── data/
 │   ├── raw/metpo.owl                    # vendored METPO release (2026-06-12)
 │   ├── embeddings/                      # graph, nearest-neighbour, and UMAP data
-│   └── traits/<category>/<slug>.yaml    # 706 curated TraitRecords
+│   └── traits/<category>/<slug>.yaml    # 707 curated TraitRecords
 ├── mappings/                                # reviewed node and predicate groundings
 ├── research/traits/                         # source-finding reports and sidecars
 ├── proposals/                               # upstream METPO proposal cohorts
