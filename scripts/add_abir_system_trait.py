@@ -169,12 +169,13 @@ RECORD: dict[str, Any] = {
     "label": "AbiR system",
     "definition": (
         "An abortive infection system in which an organism possesses a "
-        "multicomponent AbiR determinant encoded by two separated pKR223 "
-        "genetic loci from Lactococcus lactis subsp. lactis KR2, "
-        "represented by the DefenseFinder AbiR__AbiRa, AbiR__AbiRb, and "
-        "AbiR__AbiRc profiles, and capable of restricting lactococcal "
-        "phage propagation by an early abortive-infection mechanism that "
-        "impedes phage DNA replication."
+        "multicomponent AbiR determinant represented by the DefenseFinder "
+        "AbiR__AbiRa, AbiR__AbiRb, and AbiR__AbiRc profiles and capable "
+        "of restricting lactococcal phage propagation by an early "
+        "abortive-infection mechanism that impedes phage DNA replication, "
+        "as exemplified by the two pKR223 loci from Lactococcus lactis "
+        "subsp. lactis KR2 separated by the LlaKR2I "
+        "restriction-modification genes."
     ),
     "definition_source": TWOMEY,
     "trait_category": "GENOMICS",

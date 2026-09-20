@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abir_system.yaml
+  slug: abir_system
+session:
+  id: 2026-09-20T200222Z-codex-1155
+  timestamp: '2026-09-20T20:02:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1155
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1154
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  summary: Clarify AbiR system family scope
+  details: Addressed PR 1154 review issue 1155 by rewording the AbiR definition
+    and METPO proposal text so the class covers the DefenseFinder three-profile
+    AbiR determinant family and treats the two separated pKR223 loci from Lactococcus
+    lactis subsp. lactis KR2 as exemplar evidence rather than a constitutive class
+    restriction.

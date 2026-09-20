@@ -9,13 +9,12 @@
 
 The pinned METPO snapshot has no active exact class for AbiR system, the
 genome-level possession trait for the multicomponent abortive-infection
-determinant encoded by two separated regions of the pKR223 plasmid in
-Lactococcus lactis subsp. lactis KR2. Twomey et al. named AbiR, showed that
-its phenotype was encoded by two genetic loci separated by the LlaKR2I
-restriction-modification genes, and classified it as a multicomponent,
-heat-sensitive, early-functioning Abi system that impedes phage DNA
-replication. DefenseFinder models AbiR with `AbiR__AbiRa`, `AbiR__AbiRb`, and
-`AbiR__AbiRc` profiles.
+determinant represented by DefenseFinder's `AbiR__AbiRa`, `AbiR__AbiRb`, and
+`AbiR__AbiRc` profiles. Twomey et al. named AbiR from the pKR223 prototype in
+Lactococcus lactis subsp. lactis KR2, showed that its phenotype was encoded by
+two genetic loci separated by the LlaKR2I restriction-modification genes, and
+classified it as a multicomponent, heat-sensitive, early-functioning Abi system
+that impedes phage DNA replication.
 
 This cohort lifts one local class:
 
@@ -47,9 +46,9 @@ Subset tag: `metpo_traitmech_2026_09`.
 | `METPO:1027100` | AbiR system | `METPO:1016800` abortive infection system |
 
 AbiR system captures genome-level possession of the multicomponent AbiR
-determinant originally described on pKR223 and represented by DefenseFinder's
-three required AbiR HMM profiles. It excludes individual `abiR`-region genes;
-AbiR proteins; pKR223 as a plasmid; the intervening LlaKR2I
+determinant represented by DefenseFinder's three required AbiR HMM profiles
+and exemplified by the two separated pKR223 loci. It excludes individual
+`abiR`-region genes; AbiR proteins; pKR223 as a plasmid; the intervening LlaKR2I
 restriction-modification system; individual DefenseFinder HMM profiles; source
 database rows naming one AbiR locus; individual lactococcal phage host-range
 outcomes; and other abortive-infection systems.
