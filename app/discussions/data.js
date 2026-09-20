@@ -389,6 +389,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/bunzi_system.html#bunzi-mechanism-gap"
  },
  {
+  "discussion_id": "butters_gp30_gp31-mechanism-gap",
+  "prompt": "Resolve the Butters gp30 biochemical output, the gp31 modulatory role, the gp30-gp31 stoichiometry, the direct PurpleHaze or Alma trigger, the Island3 gp30-independent defense, and homolog breadth before minting narrower Butters gp30-gp31 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Butters gp30-gp31 system",
+  "source_id": "traitmech:000298",
+  "source_file": "butters_gp30_gp31_system.yaml",
+  "attaches_to": [
+   "causal_graphs#butters_gp30_gp31_locus_restricts_phage"
+  ],
+  "rationale": "Mageeney et al. and DefenseFinder support Butters gp30-gp31 as a named anti-phage system with Butters gp30 and gp31 profiles, but the direct phage trigger, gp30 biochemical output, gp31 modulatory activity, stoichiometry of the possible gp30-gp31 complex, gp30-independent Island3-targeting defense, and relationship to CarolAnn and Sbash homologous systems are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/butters_gp30_gp31_system.html#butters_gp30_gp31-mechanism-gap"
+ },
+ {
   "discussion_id": "caprel-trigger-and-family-breadth-gap",
   "prompt": "Resolve CapRel trigger breadth, phage escape routes, and family-specific activation before minting narrower CapRel mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2962,9 +2981,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 166,
- "total_knowledge_gaps": 85,
- "total_source_entries": 165,
+ "total_discussions": 167,
+ "total_knowledge_gaps": 86,
+ "total_source_entries": 166,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
