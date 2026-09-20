@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abig_system.yaml
+  slug: abig_system
+session:
+  id: 2026-09-20T094346Z-codex-7d114a
+  timestamp: '2026-09-20T09:43:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Created the AbiG system trait.
+  details: Added traitmech:000306 for the AbiG abortive-infection system with O'Connor et
+    al. 1996/1999 DOI evidence, pinned DefenseFinder article/rules/HMM evidence, a Lactococcus
+    lactis canonical example, a conservative nonmechanistic graph for AbiG-associated phage
+    RNA-synthesis inhibition, a knowledge-gap discussion for the unresolved AbiG primary target,
+    and a same-PR METPO v183 proposal reserving METPO:1026000.

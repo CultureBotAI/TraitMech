@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abig_system.yaml
+  slug: abig_system
+session:
+  id: 2026-09-20T101842Z-codex-11cb64
+  timestamp: '2026-09-20T10:18:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1129
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - grounding
+  summary: Reuse restricted phage propagation in AbiG graph
+  details: 'Standardized the AbiG graph''s downstream phage-propagation node to the existing
+    restricted phage propagation label after PR #1127 review found that the lactococcal-specific
+    node duplicated the taxon-neutral GENOMICS phage-defense node.'

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-20T101840Z-codex-ab903a
+  timestamp: '2026-09-20T10:18:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1128
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Record AbiG abortive-infection split-out history
+  details: 'Added the repository-level history record for the AbiG split-out edit to the abortive
+    infection system parent discussion after PR #1127 review identified that the hand-curated
+    parent target only had inline curation history.'
