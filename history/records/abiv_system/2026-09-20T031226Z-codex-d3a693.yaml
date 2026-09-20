@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abiv_system.yaml
+  slug: abiv_system
+session:
+  id: 2026-09-20T031226Z-codex-d3a693
+  timestamp: '2026-09-20T03:12:26Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  urls:
+  - https://doi.org/10.1128/AEM.00780-08
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added AbiV system
+  details: Created traitmech:000300 for the AbiV abortive-infection system, with DOI-backed
+    Haaber et al. evidence, pinned DefenseFinder model registry evidence, a Lactococcus lactis
+    canonical example, a source-bounded nonmechanistic phage-DNA maturation graph, an AbiV
+    mechanism knowledge-gap discussion, the companion METPO v177 proposal, and the abortive-infection
+    parent discussion update that records AbiV as split out.
