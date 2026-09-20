@@ -14,8 +14,8 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from traitmech.curate.curation_event import record_curation_event
-from traitmech.validation.write_validated import write_validated_trait
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
 
 TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "abid_system.yaml"
 ABORTIVE = REPO_ROOT / "data" / "traits" / "genomics" / "abortive_infection_system.yaml"
@@ -25,8 +25,7 @@ MCLANDSBOROUGH_PMID = "PMID:7646042"
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
-    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
-    f"{DEFENSEFINDER_COMMIT}/"
+    f"https://raw.githubusercontent.com/mdmparis/defense-finder-models/{DEFENSEFINDER_COMMIT}/"
 )
 DEFENSEFINDER_ARTICLES = f"{DEFENSEFINDER_PREFIX}List_system_article.md"
 DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
@@ -124,8 +123,7 @@ def hmm_inventory_evidence() -> dict[str, str]:
         "reference": DEFENSEFINDER_HMMS,
         "snippet": HMM_ROW,
         "notes": (
-            "The DefenseFinder HMM inventory records AbiD__AbiD under the "
-            "AbiD model namespace."
+            "The DefenseFinder HMM inventory records AbiD__AbiD under the AbiD model namespace."
         ),
     }
 
@@ -185,16 +183,12 @@ RECORD: dict[str, Any] = {
             "reference": MCLANDSBOROUGH_PMID,
             "snippet": "Phage adsorption was not significantly reduced",
             "notes": (
-                "McLandsborough et al. distinguished AbiD activity from "
-                "a phage-adsorption block."
+                "McLandsborough et al. distinguished AbiD activity from a phage-adsorption block."
             ),
         },
         {
             "reference": MCLANDSBOROUGH_PMID,
-            "snippet": (
-                "An open reading frame of 1,098 bp was sequenced and "
-                "designated abiD"
-            ),
+            "snippet": ("An open reading frame of 1,098 bp was sequenced and designated abiD"),
             "notes": (
                 "McLandsborough et al. named the abiD open reading frame "
                 "within the pBF61 determinant."
@@ -202,10 +196,7 @@ RECORD: dict[str, Any] = {
         },
         {
             "reference": MCLANDSBOROUGH_PMID,
-            "snippet": (
-                "Tn5 mutagenesis confirmed that abiD was required for "
-                "the Abi+ phenotype"
-            ),
+            "snippet": ("Tn5 mutagenesis confirmed that abiD was required for the Abi+ phenotype"),
             "notes": (
                 "McLandsborough et al. verified that the abiD open "
                 "reading frame is required for the abortive-infection "
@@ -264,8 +255,7 @@ RECORD: dict[str, Any] = {
                     "label": "AbiD antiphage activity",
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
-                        "Abortive-infection phage resistance mediated by "
-                        "the AbiD system."
+                        "Abortive-infection phage resistance mediated by the AbiD system."
                     ),
                 },
                 {
@@ -293,8 +283,7 @@ RECORD: dict[str, Any] = {
                     "node_type": "TRAIT",
                     "grounding": "traitmech:000214",
                     "description": (
-                        "Possession of a genome-encoded "
-                        "abortive-infection phage-defense system."
+                        "Possession of a genome-encoded abortive-infection phage-defense system."
                     ),
                 },
             ],
@@ -387,8 +376,7 @@ RECORD: dict[str, Any] = {
                     "predicate_id": "rdfs:subClassOf",
                     "object": "abortive_infection_system_trait",
                     "description": (
-                        "AbiD system possession is an "
-                        "abortive-infection-system trait."
+                        "AbiD system possession is an abortive-infection-system trait."
                     ),
                     "evidence": [
                         {
@@ -432,9 +420,7 @@ RECORD: dict[str, Any] = {
                 "growth-arrest or cell-death route, and phage escape "
                 "routes unresolved."
             ),
-            "attaches_to": [
-                "causal_graphs#abid_locus_reduces_lactococcal_phage_burst"
-            ],
+            "attaches_to": ["causal_graphs#abid_locus_reduces_lactococcal_phage_burst"],
             "posed_by": CURATOR,
             "posed_date": "2026-09-20",
         }
