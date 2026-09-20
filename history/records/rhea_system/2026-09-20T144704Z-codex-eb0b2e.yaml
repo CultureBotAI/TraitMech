@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rhea_system.yaml
+  slug: rhea_system
+session:
+  id: 2026-09-20T144704Z-codex-eb0b2e
+  timestamp: '2026-09-20T14:47:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Rhea system trait
+  details: Added traitmech:000311 Rhea system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system. DOI:10.1093/nar/gkae671 names Rhea among newly described lactococcal antiphage
+    systems, DOI:10.1073/pnas.2426508122 treats Rhea as a plasmid-encoded lactococcal phage-resistance
+    system in an escape-mutant screen, and the pinned DefenseFinder article registry maps
+    Rhea to the Grafakou et al. lactococcal plasmidome discovery paper. Reserved METPO:1026500
+    in proposals/metpo_traitmech_v188 for the upstream replacement ID.
