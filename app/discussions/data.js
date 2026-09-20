@@ -937,6 +937,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/menshen_system.html#menshen-mechanism-gap"
  },
  {
+  "discussion_id": "mmb_gp29_gp30-mechanism-gap",
+  "prompt": "Resolve the MMB gp29 biochemical activity, MMB gp30 regulatory role, lytic trigger, gp29-gp30 interaction, counter-defense specificity, and homolog breadth before minting narrower MMB gp29-gp30 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MMB gp29-gp30 system",
+  "source_id": "traitmech:000297",
+  "source_file": "mmb_gp29_gp30_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mmb_gp29_gp30_locus_restricts_phage"
+  ],
+  "rationale": "Dedrick et al. and DefenseFinder support MMB gp29-gp30 as a named anti-phage system with gp29 and gp30 profiles, but the MMB gp29 biochemical activity, direct gp29-gp30 interaction, triggering Tweety early lytic gene or genes, MMB-specific counter-defense tuning, and relationship to Squirty homologs are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mmb_gp29_gp30_system.html#mmb_gp29_gp30-mechanism-gap"
+ },
+ {
   "discussion_id": "mokosh-mechanism-gap",
   "prompt": "Resolve Mokosh phage triggers and effector outputs before minting narrower Mokosh mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -2943,9 +2962,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 165,
- "total_knowledge_gaps": 84,
- "total_source_entries": 164,
+ "total_discussions": 166,
+ "total_knowledge_gaps": 85,
+ "total_source_entries": 165,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

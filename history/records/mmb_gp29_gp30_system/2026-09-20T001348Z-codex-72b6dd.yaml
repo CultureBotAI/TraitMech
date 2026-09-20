@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mmb_gp29_gp30_system.yaml
+  slug: mmb_gp29_gp30_system
+session:
+  id: 2026-09-20T001348Z-codex-72b6dd
+  timestamp: '2026-09-20T00:13:48Z'
+  actors:
+  - type: ai_agent
+    name: codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add MMB gp29-gp30 system genomics trait
+  details: Minted traitmech:000297 for MMB gp29-gp30 system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1025100 in proposals/metpo_traitmech_v174 for upstream
+    migration, and carried the pinned DefenseFinder gp29 and gp30 HMM profile rows plus the
+    gp29-gp30 rules row as related profile evidence rather than individual gene, protein,
+    or source-row traits.
