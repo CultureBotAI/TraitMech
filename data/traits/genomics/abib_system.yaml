@@ -1,0 +1,200 @@
+identifier: traitmech:000319
+label: AbiB system
+definition: An abortive infection system in which an organism possesses an abiB-family
+  locus represented by the DefenseFinder AbiB__AbiB profile and exemplified by the
+  Lactococcus lactis IL1403 determinant whose AbiB activity blocks sensitive bIL170
+  phage growth and promotes rapid degradation of sensitive phage transcripts after
+  infection.
+definition_source: DOI:10.1046/j.1365-2958.1996.371896.x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiB
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1046/j.1365-2958.1996.371896.x
+evidence:
+- reference: PMID:8825768
+  snippet: The abortive infection determinant AbiB prevents growth of the sensitive
+    phage bIL170, but not of the resistant phage bIL41, on Lactococcus lactis strain
+    IL1403
+  notes: Parreira et al. place AbiB in the abortive-infection class and show that
+    it blocks the sensitive lactococcal phage bIL170 on Lactococcus lactis IL1403.
+- reference: PMID:8825768
+  snippet: AbiB promotes a dramatic degradation of sensitive phage transcripts, starting
+    10-15 min after infection
+  notes: Parreira et al. connect AbiB activity to rapid decay of transcripts from
+    sensitive phages after infection.
+- reference: PMID:8825768
+  snippet: The decay of the transcripts is the probable cause of the arrest of the
+    sensitive phage development
+  notes: Parreira et al. infer that phage transcript decay causes arrest of AbiB-sensitive
+    phage development.
+- reference: PMID:8825768
+  snippet: Mapping of the 5' end of degradation products established that they result
+    from endonucleolytic cleavage preferentially at U/U, A/U and U/A sites
+  notes: Parreira et al. map AbiB-associated phage transcript decay products to preferential
+    endonucleolytic cleavage sites.
+- reference: PMID:8825768
+  snippet: an early product of the sensitive phage either induces the synthesis or
+    stimulates the activity of an RNase in an AbiB+ cell
+  notes: Parreira et al. leave the AbiB trigger and nuclease identity unresolved,
+    favoring an open knowledge gap for narrower mechanism children.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiB | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiB model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiB\tAbiB\t1\t1\tAbiB__AbiB"
+  notes: The DefenseFinder rules table models AbiB as a one-component system requiring
+    the AbiB__AbiB profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiB__AbiB                                       | AbiB__AbiB                                       |
+    AbiB                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Parreira et al. studied AbiB in Lactococcus lactis IL1403 and showed that
+    it prevented sensitive bIL170 phage growth while promoting sensitive phage transcript
+    decay.
+  reference: DOI:10.1046/j.1365-2958.1996.371896.x
+causal_graphs:
+- graph_id: abib_locus_degrades_sensitive_phage_transcripts
+  title: AbiB activity degrades sensitive lactococcal phage transcripts
+  description: Conservative system-level sketch linking an abiB-family locus to AbiB
+    antiphage activity, sensitive-phage transcript degradation, sensitive-phage arrest,
+    and abortive-infection system possession without asserting the unresolved phage
+    trigger or nuclease effector.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiB as a named DefenseFinder single-profile abortive-infection
+    system whose IL1403 prototype restricts bIL170 phage by promoting rapid sensitive-phage
+    transcript degradation. It leaves the direct phage trigger, AbiB molecular function,
+    RNase effector identity, natural locus breadth, and phage escape routes unresolved.
+  nodes:
+  - node_id: abib_locus
+    label: abiB locus
+    node_type: GENETIC_ELEMENT
+    description: An abiB-family abortive-infection locus represented by the DefenseFinder
+      AbiB__AbiB profile.
+  - node_id: abib_antiphage_activity
+    label: AbiB antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiB system.
+  - node_id: sensitive_phage_transcript_degradation
+    label: sensitive phage transcript degradation
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid decay of sensitive lactococcal phage transcripts in an AbiB-containing
+      infected host.
+  - node_id: sensitive_phage_development_arrest
+    label: sensitive phage development arrest
+    node_type: BIOLOGICAL_PROCESS
+    description: Failure of AbiB-sensitive bIL170 phages to complete productive growth
+      on Lactococcus lactis IL1403.
+  - node_id: abib_system_trait
+    label: AbiB system
+    node_type: TRAIT
+    grounding: traitmech:000319
+    description: Possession of a genome-encoded AbiB abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abib_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abib_antiphage_activity
+    description: The abiB-family locus encodes an abortive-infection phage-resistance
+      determinant, and DefenseFinder models AbiB as a one-profile system.
+    evidence:
+    - reference: PMID:8825768
+      snippet: The abortive infection determinant AbiB prevents growth of the sensitive
+        phage bIL170
+      notes: Parreira et al. identify AbiB as an abortive-infection determinant that
+        blocks sensitive phage growth.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiB\tAbiB\t1\t1\tAbiB__AbiB"
+      notes: The DefenseFinder rules table models AbiB as a one-component system requiring
+        the AbiB__AbiB profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiB__AbiB                                       | AbiB__AbiB                                       |
+        AbiB                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiB__AbiB under the AbiB model
+        namespace.
+  - subject: abib_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sensitive_phage_transcript_degradation
+    description: AbiB activity promotes rapid degradation of sensitive phage transcripts
+      after infection.
+    evidence:
+    - reference: PMID:8825768
+      snippet: AbiB promotes a dramatic degradation of sensitive phage transcripts,
+        starting 10-15 min after infection
+      notes: Parreira et al. connect AbiB to rapid decay of sensitive phage transcripts.
+  - subject: sensitive_phage_transcript_degradation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sensitive_phage_development_arrest
+    description: Transcript decay probably arrests development of AbiB-sensitive phages.
+    evidence:
+    - reference: PMID:8825768
+      snippet: The decay of the transcripts is the probable cause of the arrest of
+        the sensitive phage development
+      notes: Parreira et al. interpret phage transcript decay as the likely cause
+        of sensitive phage developmental arrest.
+  - subject: sensitive_phage_development_arrest
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abib_system_trait
+    description: Arrest of sensitive lactococcal phage development realizes the AbiB
+      abortive-infection trait.
+    evidence:
+    - reference: PMID:8825768
+      snippet: The abortive infection determinant AbiB prevents growth of the sensitive
+        phage bIL170
+      notes: Parreira et al. show that AbiB prevents sensitive lactococcal phage growth.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiB | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiB model namespace
+        to a lactococcal abortive-infection review.
+  - subject: abib_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiB system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:8825768
+      snippet: The abortive infection determinant AbiB
+      notes: Parreira et al. place AbiB in the abortive-infection class of phage defense.
+discussions:
+- discussion_id: abib-trigger-and-rnase-gap
+  prompt: Resolve the AbiB phage trigger, AbiB molecular function, and RNase effector
+    before minting narrower AbiB mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Parreira et al. support AbiB as a named lactococcal abortive-infection
+    determinant that prevents bIL170 growth and promotes sensitive phage transcript
+    degradation. DefenseFinder represents AbiB with a one-profile rule, but this first
+    system-level record leaves the phage trigger, AbiB molecular function, RNase effector
+    identity, natural locus breadth, and phage escape routes unresolved.
+  attaches_to:
+  - causal_graphs#abib_locus_degrades_sensitive_phage_transcripts
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T21:21:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiB system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v196.
+  llm_assisted: true

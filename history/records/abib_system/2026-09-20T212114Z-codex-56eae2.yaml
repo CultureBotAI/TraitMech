@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abib_system.yaml
+  slug: abib_system
+session:
+  id: 2026-09-20T212114Z-codex-56eae2
+  timestamp: '2026-09-20T21:21:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiB system trait
+  details: Added traitmech:000319 AbiB system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. PMID:8825768 identifies AbiB as an abortive-infection determinant in
+    Lactococcus lactis strain IL1403, reports that it prevents growth of sensitive bIL170
+    phage, and links AbiB activity to rapid degradation of sensitive phage transcripts and
+    likely arrest of sensitive phage development. Pinned DefenseFinder article, rules, and
+    HMM registries map AbiB to the AbiB__AbiB one-profile model namespace. Reserved METPO:1027300
+    in proposals/metpo_traitmech_v196 for the upstream replacement ID.
