@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-20T225025Z-codex-0bcce9
+  timestamp: '2026-09-20T22:50:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track AbiU split on abortive infection parent
+  details: Documented traitmech:000321 AbiU system in the open abortive-infection subfamily
+    split-gap discussion after minting the DOI-backed child under the abortive infection system
+    parent; other Abi families remain open for future curation.

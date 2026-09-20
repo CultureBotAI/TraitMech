@@ -1,0 +1,235 @@
+identifier: traitmech:000321
+label: AbiU system
+definition: An abortive infection system in which an organism possesses an abiU-family
+  locus represented by the DefenseFinder AbiU__AbiU profile and exemplified by the
+  Lactococcus lactis LL51-1 AbiU determinant, whose abiU1 open reading frame is responsible
+  for phage resistance, whose abiU2 region may downregulate 936/P335 resistance, and
+  whose activity reduces c2, 936, and P335 lactococcal phage plaquing while delaying
+  transcription of phages 712 and c2.
+definition_source: DOI:10.1128/AEM.67.11.5225-5232.2001
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiU
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.67.11.5225-5232.2001
+evidence:
+- reference: PMID:11679349
+  snippet: This study reports on the identification and characterization of a novel
+    abortive infection system, AbiU, from Lactococcus lactis.
+  notes: Dai et al. identify AbiU as a novel Lactococcus lactis abortive-infection
+    system.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC93294/
+  snippet: This study describes the isolation and molecular characterization of a
+    novel abortive infection phage resistance system, AbiU, from a native plasmid
+    that was isolated from a phage-resistant industrial strain, L. lactis LL51-1.
+  notes: Dai et al. connect the AbiU system to the native plasmid in the industrial
+    Lactococcus lactis strain LL51-1.
+- reference: PMID:11679349
+  snippet: 'AbiU confers resistance to phages from the three main industrially relevant
+    lactococcal phage species: c2, 936, and P335.'
+  notes: Dai et al. measured the AbiU activity spectrum across representative c2,
+    936, and P335 lactococcal phages.
+- reference: PMID:11679349
+  snippet: 'The presence of AbiU reduced the efficiency of plaquing against specific
+    phage from each species as follows: 3.7 x 10(-1), 1.0 x 10(-2), and 1.0 x 10(-1),
+    respectively.'
+  notes: Dai et al. quantified phage-specific AbiU reductions in efficiency of plaquing
+    against c2, 936, and P335 representatives.
+- reference: PMID:11679349
+  snippet: abiU involves two open reading frames, abiU1 (1,772 bp) and abiU2 (1,019
+    bp).
+  notes: Dai et al. reported a two-ORF abiU locus rather than resolving AbiU as a
+    single isolated protein trait.
+- reference: PMID:11679349
+  snippet: Evidence indicates that AbiU1 is responsible for phage resistance and that
+    AbiU2 may downregulate phage resistance against 936 and P335 type phages but not
+    c2 type phage.
+  notes: Dai et al. connected AbiU1 to the phage-resistance phenotype and left AbiU2
+    as a likely regulator of a phage-species-specific resistance output.
+- reference: PMID:11679349
+  snippet: AbiU appeared to delay transcription of both phage 712 and c2, with the
+    effect being more marked on phage c2.
+  notes: Dai et al. linked AbiU to delayed phage transcription without resolving the
+    direct phage trigger or AbiU1 target.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiU | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiU model namespace to
+    a lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiU\tAbiU\t1\t1\tAbiU__AbiU"
+  notes: The DefenseFinder rules table models AbiU as a one-component system requiring
+    the AbiU__AbiU profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiU__AbiU                                       | AbiU__AbiU                                       |
+    AbiU                   | Custom                  | 60     |'
+  notes: The DefenseFinder HMM inventory records AbiU__AbiU under the AbiU model namespace.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: Dai et al. isolated and characterized AbiU from a native plasmid in the phage-resistant
+    industrial Lactococcus lactis strain LL51-1 and showed that AbiU confers resistance
+    to c2, 936, and P335 lactococcal phages.
+  reference: DOI:10.1128/AEM.67.11.5225-5232.2001
+causal_graphs:
+- graph_id: abiu_locus_delays_lactococcal_phage_transcription
+  title: AbiU activity delays lactococcal phage transcription
+  description: Conservative system-level sketch linking an abiU-family locus to AbiU
+    antiphage activity, reduced c2/936/P335 phage plaquing, delayed phage 712 and
+    c2 transcription, and AbiU-system possession without asserting the unresolved
+    phage trigger or AbiU1 molecular target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiU as a named DefenseFinder single-profile abortive-infection
+    system whose LL51-1 prototype restricts c2, 936, and P335 lactococcal phages.
+    It leaves the direct phage trigger, AbiU1 molecular function, AbiU2 downregulation
+    route, natural locus breadth, and phage escape routes unresolved.
+  nodes:
+  - node_id: abiu_locus
+    label: abiU locus
+    node_type: GENETIC_ELEMENT
+    description: An abiU-family abortive-infection locus represented by the DefenseFinder
+      AbiU__AbiU profile.
+  - node_id: abiu_antiphage_activity
+    label: AbiU antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive-infection phage resistance mediated by the AbiU system.
+  - node_id: lactococcal_phage_plaquing_reduction
+    label: lactococcal phage plaquing reduction
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced plaquing of c2, 936, and P335 lactococcal phages by an AbiU-containing
+      host.
+  - node_id: phage_transcription_delay
+    label: phage transcription delay
+    node_type: BIOLOGICAL_PROCESS
+    description: Delayed transcription of phages 712 and c2 in AbiU-containing Lactococcus
+      lactis hosts.
+  - node_id: abiu_system_trait
+    label: AbiU system
+    node_type: TRAIT
+    grounding: traitmech:000321
+    description: Possession of a genome-encoded AbiU abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abiu_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiu_antiphage_activity
+    description: The abiU-family locus encodes AbiU antiphage activity, and DefenseFinder
+      models AbiU as a one-profile system.
+    evidence:
+    - reference: PMID:11679349
+      snippet: abiU involves two open reading frames, abiU1 (1,772 bp) and abiU2 (1,019
+        bp).
+      notes: Dai et al. identified the two ORFs in the AbiU determinant.
+    - reference: PMID:11679349
+      snippet: Evidence indicates that AbiU1 is responsible for phage resistance
+      notes: Dai et al. connected AbiU1 to the phage-resistance phenotype.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiU\tAbiU\t1\t1\tAbiU__AbiU"
+      notes: The DefenseFinder rules table models AbiU as a one-component system requiring
+        the AbiU__AbiU profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiU__AbiU                                       | AbiU__AbiU                                       |
+        AbiU                   | Custom                  | 60     |'
+      notes: The DefenseFinder HMM inventory records AbiU__AbiU under the AbiU model
+        namespace.
+  - subject: abiu_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lactococcal_phage_plaquing_reduction
+    description: AbiU activity reduces plaquing of c2, 936, and P335 lactococcal phages.
+    evidence:
+    - reference: PMID:11679349
+      snippet: 'AbiU confers resistance to phages from the three main industrially
+        relevant lactococcal phage species: c2, 936, and P335.'
+      notes: Dai et al. measured AbiU activity against c2, 936, and P335 phages.
+    - reference: PMID:11679349
+      snippet: 'The presence of AbiU reduced the efficiency of plaquing against specific
+        phage from each species as follows: 3.7 x 10(-1), 1.0 x 10(-2), and 1.0 x
+        10(-1), respectively.'
+      notes: Dai et al. quantified phage-specific AbiU EOP reductions.
+  - subject: abiu_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phage_transcription_delay
+    description: AbiU activity delays transcription of lactococcal phages 712 and
+      c2.
+    evidence:
+    - reference: PMID:11679349
+      snippet: AbiU appeared to delay transcription of both phage 712 and c2
+      notes: Dai et al. detected delayed phage 712 and c2 transcription in the presence
+        of AbiU.
+  - subject: lactococcal_phage_plaquing_reduction
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abiu_system_trait
+    description: Reduced c2/936/P335 lactococcal phage plaquing realizes the AbiU
+      abortive-infection trait.
+    evidence:
+    - reference: PMID:11679349
+      snippet: This study reports on the identification and characterization of a
+        novel abortive infection system, AbiU, from Lactococcus lactis.
+      notes: Dai et al. place AbiU in the abortive-infection class of phage defense.
+    - reference: PMID:11679349
+      snippet: The presence of AbiU reduced the efficiency of plaquing against specific
+        phage from each species
+      notes: Dai et al. linked AbiU to reduced lactococcal phage plaquing.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiU | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiU model namespace
+        to a lactococcal abortive-infection review.
+  - subject: phage_transcription_delay
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiu_system_trait
+    description: Delayed 712/c2 phage transcription contributes to the AbiU abortive-infection
+      trait.
+    evidence:
+    - reference: PMID:11679349
+      snippet: AbiU appeared to delay transcription of both phage 712 and c2
+      notes: Dai et al. identified delayed phage transcription as an AbiU-associated
+        output.
+  - subject: abiu_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiU system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:11679349
+      snippet: This study reports on the identification and characterization of a
+        novel abortive infection system, AbiU
+      notes: Dai et al. place AbiU in the abortive-infection class of phage defense.
+discussions:
+- discussion_id: abiu-orf-and-transcription-gap
+  prompt: Resolve the AbiU phage trigger, direct AbiU1 and AbiU2 functions, and phage-transcription-delay
+    route before minting narrower AbiU mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Dai et al. support AbiU as a named lactococcal abortive-infection system
+    that reduces plaquing of c2, 936, and P335 phages and delays 712 and c2 phage
+    transcription. DefenseFinder represents AbiU with a one-profile rule, but this
+    first system-level record leaves the phage trigger, AbiU1 molecular function,
+    AbiU2 downregulation route, natural locus breadth, and phage escape routes unresolved.
+  attaches_to:
+  - causal_graphs#abiu_locus_delays_lactococcal_phage_transcription
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T22:48:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiU system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v198.
+  llm_assisted: true
