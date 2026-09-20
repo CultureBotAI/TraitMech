@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/jukab_system.yaml
+  slug: jukab_system
+session:
+  id: 2026-09-20T085539Z-codex-122d15
+  timestamp: '2026-09-20T08:55:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex-cli
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Created the JukAB system trait.
+  details: Added the DOI-backed and DefenseFinder-backed JukAB system TraitRecord with a conservative
+    phage-defense parent, related Juk synonyms, exact evidence snippets from the final Li et
+    al. Cell article, the PA14 bioRxiv preprint, and pinned DefenseFinder system/HMM/rule
+    sources, a Pseudomonas aeruginosa canonical example, a nonmechanistic graph for JukA
+    gp241/EPI-vesicle sensing, direct JukB recruitment, and JukB-mediated vesicle destabilization,
+    and a knowledge-gap discussion for remaining vesicle-destabilization and JukA-effector
+    family questions. Reserved traitmech:000305 for this proposed trait in METPO cohort v182,
+    verified the proposal with ROBOT/ELK, regenerated trait pages, the priority dashboard,
+    and the discussions browser data, and reran schema, strict, snippet, grounding, proposal,
+    graph, NCBITaxon, and PR sanity audits.
