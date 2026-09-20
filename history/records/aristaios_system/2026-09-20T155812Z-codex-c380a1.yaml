@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/aristaios_system.yaml
+  slug: aristaios_system
+session:
+  id: 2026-09-20T155812Z-codex-c380a1
+  timestamp: '2026-09-20T15:58:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Aristaios system phage-defense trait
+  details: Added traitmech:000313 Aristaios system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Aristaios among newly described lactococcal
+    antiphage systems, DOI:10.1128/aem.01120-24 characterizes Aristaios among three plasmid-encoded
+    lactococcal antiphage systems, and the pinned DefenseFinder article registry maps Aristaios
+    to the Grafakou et al. discovery paper. Reserved METPO:1026700 in proposals/metpo_traitmech_v190
+    for the upstream replacement ID.

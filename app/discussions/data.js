@@ -300,6 +300,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/aditi_system.html#aditi-mechanism-gap"
  },
  {
+  "discussion_id": "aristaios-mechanism-gap",
+  "prompt": "Resolve Aristaios phage triggers and effector outputs before minting narrower Aristaios mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Aristaios system",
+  "source_id": "traitmech:000313",
+  "source_file": "aristaios_system.yaml",
+  "attaches_to": [
+   "causal_graphs#aristaios_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al. and DefenseFinder support Aristaios as a named anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/aristaios_system.html#aristaios-mechanism-gap"
+ },
+ {
   "discussion_id": "audmula-mechanism-gap",
   "prompt": "Resolve Audmula phage triggers and effector outputs before minting narrower Audmula mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3252,9 +3271,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 181,
- "total_knowledge_gaps": 100,
- "total_source_entries": 180,
+ "total_discussions": 182,
+ "total_knowledge_gaps": 101,
+ "total_source_entries": 181,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
