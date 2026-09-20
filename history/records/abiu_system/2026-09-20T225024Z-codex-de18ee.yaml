@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abiu_system.yaml
+  slug: abiu_system
+session:
+  id: 2026-09-20T225024Z-codex-de18ee
+  timestamp: '2026-09-20T22:50:24Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiU system trait
+  details: Added traitmech:000321 AbiU system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system. DOI:10.1128/AEM.67.11.5225-5232.2001 and PMID:11679349 identify AbiU
+    from Lactococcus lactis LL51-1, report that AbiU confers resistance to c2, 936, and
+    P335 lactococcal phages, name the abiU1 and abiU2 open reading frames, and link AbiU
+    to delayed phage 712 and c2 transcription. Pinned DefenseFinder article, rules, and
+    HMM registries map AbiU to the AbiU__AbiU one-profile model namespace. Reserved METPO:1027500
+    in proposals/metpo_traitmech_v198 for the upstream replacement ID.
