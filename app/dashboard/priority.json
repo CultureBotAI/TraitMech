@@ -23,9 +23,9 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 55,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 175,
+      "DEEPEN_CAUSAL_GRAPH": 174,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 154
+      "CURATE_ROOT": 155
     }
   },
   "rows": [
@@ -4196,29 +4196,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000300",
-      "label": "AbiV system",
-      "category": "genomics",
-      "slug": "abiv_system",
-      "score": 15.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 5,
-      "nodes": 6,
-      "components": 1,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (5 edges) +12",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000228",
       "label": "AbiZ system",
       "category": "genomics",
@@ -7809,6 +7786,28 @@
       "series_size": 0,
       "series_overlap": null,
       "researched": true,
+      "reasons": [
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000300",
+      "label": "AbiV system",
+      "category": "genomics",
+      "slug": "abiv_system",
+      "score": 3.0,
+      "action": "CURATE_ROOT",
+      "edges": 10,
+      "nodes": 10,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
       "reasons": [
         "no synonyms +3"
       ]

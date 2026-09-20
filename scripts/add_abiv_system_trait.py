@@ -22,6 +22,8 @@ TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "abiv_system.yaml"
 ABORTIVE = REPO_ROOT / "data" / "traits" / "genomics" / "abortive_infection_system.yaml"
 
 HAABER = "DOI:10.1128/AEM.00780-08"
+HAABER_SAV = "DOI:10.1128/AEM.02093-08"
+HAABER_INTERACTION = "DOI:10.1128/AEM.00093-10"
 
 DEFENSE_FINDER_RAW = (
     "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
@@ -33,6 +35,7 @@ DEFENSE_FINDER_RULES = f"{DEFENSE_FINDER_RAW}/DefenseFinder_rules.tsv"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-20T03:07:25Z"
+REVIEW_FIX_TIMESTAMP = "2026-09-20T03:38:10Z"
 PARENT_TIMESTAMP = "2026-09-20T03:07:26Z"
 
 OLD_DISCUSSION_RATIONALE = (
@@ -74,9 +77,10 @@ RECORD: dict[str, Any] = {
     "definition": (
         "An abortive infection system in which an organism possesses an abiV "
         "locus whose encoded AbiV protein can restrict 936-like or c2-like "
-        "lactococcal phages by interfering with late phage DNA maturation."
+        "lactococcal phages by interacting with phage-encoded SaV and "
+        "inhibiting phage protein translation."
     ),
-    "definition_source": HAABER,
+    "definition_source": HAABER_INTERACTION,
     "trait_category": "GENOMICS",
     "term_kind": "CLASS",
     "mapping_status": "PROPOSED",
@@ -155,6 +159,52 @@ RECORD: dict[str, Any] = {
             ),
         },
         {
+            "reference": HAABER_SAV,
+            "snippet": (
+                "The orf was named sav (for sensitivity to AbiV), and the "
+                "encoded polypeptide was named SaV"
+            ),
+            "notes": (
+                "Haaber et al. name the phage sav gene and encoded SaV "
+                "protein after AbiV-insensitive phage mutant sequencing."
+            ),
+        },
+        {
+            "reference": HAABER_SAV,
+            "snippet": (
+                "Analyses of the sav regions in other AbiV-insensitive phage "
+                "mutants from both the 936 and c2 groups revealed amino acid "
+                "changes in the central region of the SaV protein"
+            ),
+            "notes": (
+                "Haaber et al. show that AbiV escape in 936- and c2-group "
+                "phages maps to the conserved central region of SaV."
+            ),
+        },
+        {
+            "reference": HAABER_INTERACTION,
+            "snippet": (
+                "they strongly and specifically interact with each other to "
+                "form a stable protein complex"
+            ),
+            "notes": (
+                "Haaber et al. demonstrate a strong, specific direct "
+                "interaction between the host AbiV protein and phage SaV."
+            ),
+        },
+        {
+            "reference": HAABER_INTERACTION,
+            "snippet": (
+                "Western blotting showed that translation of both early and "
+                "late phage proteins was severely inhibited in the presence "
+                "of AbiV"
+            ),
+            "notes": (
+                "Haaber et al. connect AbiV-SaV activity to a severe block "
+                "in phage protein translation."
+            ),
+        },
+        {
             "reference": LIST_SYSTEM_ARTICLE,
             "snippet": (
                 "AbiV | 10\\.1128/AEM\\.00780-08 | AbiV, a novel antiphage "
@@ -202,20 +252,22 @@ RECORD: dict[str, Any] = {
     ],
     "causal_graphs": [
         {
-            "graph_id": "abiv_late_phage_dna_maturation_block",
-            "title": "AbiV activity blocks late phage DNA maturation",
+            "graph_id": "abiv_sav_translation_block",
+            "title": "AbiV-SaV activity blocks phage protein translation",
             "description": (
                 "Evidence-backed process sketch linking an abiV locus to AbiV "
-                "antiphage activity, failed late DNA maturation of replicated "
-                "phage DNA, restricted phage propagation, and "
-                "abortive-infection system possession."
+                "antiphage activity, phage sav sensitivity determinants, "
+                "AbiV-SaV complex formation, inhibited host translation, "
+                "blocked phage protein synthesis, restricted phage "
+                "propagation, and abortive-infection system possession."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
-                "The graph captures AbiV at the system level without asserting "
-                "a direct phage trigger, the host substrate, the exact route "
-                "to phage-DNA maturation arrest, a c2-specific mechanism, or "
-                "why one tested 936 phage and the P335 phages were insensitive."
+                "The graph captures the SaV-dependent AbiV complex and "
+                "translation block without asserting the direct host "
+                "translational target of the complex, the detailed route to "
+                "late phage-DNA maturation arrest, or why one tested 936 "
+                "phage and the P335 phages were insensitive."
             ),
             "nodes": [
                 {
@@ -234,6 +286,42 @@ RECORD: dict[str, Any] = {
                     "description": (
                         "Abortive-infection antiphage activity mediated by "
                         "the AbiV protein."
+                    ),
+                },
+                {
+                    "node_id": "sav_phage_gene",
+                    "label": "sav phage gene",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A 936-like or c2-like phage gene whose encoded SaV "
+                        "protein is required for AbiV sensitivity."
+                    ),
+                },
+                {
+                    "node_id": "abiv_sav_complex_formation",
+                    "label": "AbiV-SaV complex formation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Direct interaction of AbiV and phage SaV homodimers "
+                        "to form a stable AbiV-SaV complex."
+                    ),
+                },
+                {
+                    "node_id": "inhibited_host_translation",
+                    "label": "inhibited host translational machinery",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "AbiV-SaV-dependent inhibition of the host "
+                        "translational machinery during phage infection."
+                    ),
+                },
+                {
+                    "node_id": "blocked_phage_protein_synthesis",
+                    "label": "blocked phage protein synthesis",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Reduced translation of early and late phage proteins "
+                        "in an AbiV-containing infected host cell."
                     ),
                 },
                 {
@@ -325,13 +413,152 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
+                    "subject": "sav_phage_gene",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "abiv_sav_complex_formation",
+                    "description": (
+                        "The early phage sav gene encodes SaV, the phage "
+                        "protein needed for AbiV sensitivity."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HAABER_SAV,
+                            "snippet": (
+                                "we concluded that orf26 of phage p2 is "
+                                "involved in sensitivity to AbiV, and the "
+                                "gene was renamed sav"
+                            ),
+                            "notes": (
+                                "Haaber et al. identify phage p2 orf26 as the "
+                                "AbiV sensitivity determinant."
+                            ),
+                        },
+                        {
+                            "reference": HAABER_SAV,
+                            "snippet": (
+                                "Analyses of the sav regions in other "
+                                "AbiV-insensitive phage mutants from both the "
+                                "936 and c2 groups revealed amino acid "
+                                "changes in the central region of the SaV "
+                                "protein"
+                            ),
+                            "notes": (
+                                "Haaber et al. show that AbiV escape in "
+                                "multiple 936- and c2-like phages maps to "
+                                "sav homologues."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "abiv_antiphage_activity",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "abiv_sav_complex_formation",
+                    "description": (
+                        "AbiV directly and specifically interacts with SaV to "
+                        "form a stable AbiV-SaV complex."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HAABER_INTERACTION,
+                            "snippet": (
+                                "they strongly and specifically interact with "
+                                "each other to form a stable protein complex"
+                            ),
+                            "notes": (
+                                "Haaber et al. use SEC-MALS/UV/RI and "
+                                "fluorescence quenching to show direct "
+                                "AbiV-SaV complex formation."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "abiv_sav_complex_formation",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "inhibited_host_translation",
+                    "description": (
+                        "The AbiV-SaV complex inhibits host translational "
+                        "machinery after early sav expression."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HAABER_INTERACTION,
+                            "snippet": (
+                                "A small amount of SaV is produced early and "
+                                "rapidly interacts with the host AbiV protein "
+                                "to form an active complex that inhibits the "
+                                "translational machinery of the cell"
+                            ),
+                            "notes": (
+                                "Haaber et al. conclude that early SaV "
+                                "interacts with AbiV to form the active "
+                                "translation-inhibiting complex."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "inhibited_host_translation",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "blocked_phage_protein_synthesis",
+                    "description": (
+                        "AbiV-SaV-mediated translation inhibition blocks "
+                        "early and late phage protein production."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HAABER_INTERACTION,
+                            "snippet": (
+                                "Western blotting showed that translation of "
+                                "both early and late phage proteins was "
+                                "severely inhibited in the presence of AbiV"
+                            ),
+                            "notes": (
+                                "Haaber et al. show that AbiV blocks "
+                                "translation of phage protein products "
+                                "including SaV, ORF11, and ORF16."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "blocked_phage_protein_synthesis",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "restricted_phage_propagation",
+                    "description": (
+                        "Blocked phage translation prevents completion of the "
+                        "AbiV-sensitive phage lytic program."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": HAABER_INTERACTION,
+                            "snippet": (
+                                "The late phage transcripts were almost "
+                                "completely inhibited in the presence of AbiV"
+                            ),
+                            "notes": (
+                                "Haaber et al. connect the early translation "
+                                "block to near-complete inhibition of late "
+                                "phage gene transcription."
+                            ),
+                        },
+                    ],
+                },
+                {
                     "subject": "abiv_antiphage_activity",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "stalled_phage_dna_maturation",
                     "description": (
                         "AbiV activity prevents cleavage of replicated "
-                        "936-like phage DNA into mature resolved DNA."
+                        "936-like phage DNA into mature resolved DNA as a "
+                        "downstream infection-cycle defect."
                     ),
                     "evidence": [
                         {
@@ -344,7 +571,7 @@ RECORD: dict[str, Any] = {
                                 "Haaber et al. connect AbiV to failed cleavage "
                                 "of replicated phage DNA."
                             ),
-                        }
+                        },
                     ],
                 },
                 {
@@ -369,7 +596,7 @@ RECORD: dict[str, Any] = {
                                 "concatemeric phage DNA in AbiV-containing "
                                 "resistant cells."
                             ),
-                        }
+                        },
                     ],
                 },
                 {
@@ -442,21 +669,20 @@ RECORD: dict[str, Any] = {
         {
             "discussion_id": "abiv-mechanism-gap",
             "prompt": (
-                "Resolve the AbiV phage trigger, host target, c2-specific "
-                "output, and phage-escape routes before minting narrower "
-                "AbiV mechanism children."
+                "Resolve the host translational target of the AbiV-SaV "
+                "complex before minting narrower AbiV mechanism children."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Haaber et al. support AbiV as a single-gene Abi system that "
-                "acts after phage DNA replication and prevents cleavage of "
-                "replicated 936-like phage DNA, but the direct AbiV target, "
-                "the trigger that connects infection to activity, the "
-                "mechanism restricting c2-like phages, and AbiV-insensitive "
-                "escape routes are unresolved."
+                "Haaber et al. identify phage sav as the determinant of "
+                "AbiV sensitivity and support direct AbiV-SaV complex "
+                "formation followed by inhibition of phage protein "
+                "translation, but the precise host translational target and "
+                "complete route from the AbiV-SaV complex to abortive "
+                "infection remain unresolved."
             ),
-            "attaches_to": ["causal_graphs#abiv_late_phage_dna_maturation_block"],
+            "attaches_to": ["causal_graphs#abiv_sav_translation_block"],
             "posed_by": CURATOR,
             "posed_date": "2026-09-20",
         }
@@ -519,6 +745,20 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADD_FOLLOWUP_MECHANISM_EVIDENCE",
+        changes=(
+            "Added the Haaber et al. 2009 and 2010 AbiV follow-up papers "
+            "after adversarial review; revised the definition, causal graph, "
+            "and knowledge gap to include phage sav, direct AbiV-SaV complex "
+            "formation, and AbiV-SaV-linked inhibition of phage protein "
+            "translation."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FIX_TIMESTAMP,
     )
     return record
 

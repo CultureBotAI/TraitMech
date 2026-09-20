@@ -31,7 +31,7 @@
     <h1>AbiV system</h1>
     <p class="curie"><code>traitmech:000300</code> · CLASS · PROPOSED</p>
 
-    <p class="definition">An abortive infection system in which an organism possesses an abiV locus whose encoded AbiV protein can restrict 936-like or c2-like lactococcal phages by interfering with late phage DNA maturation.</p>
+    <p class="definition">An abortive infection system in which an organism possesses an abiV locus whose encoded AbiV protein can restrict 936-like or c2-like lactococcal phages by interacting with phage-encoded SaV and inhibiting phage protein translation.</p>
 
   </header>
 
@@ -40,16 +40,16 @@
 
 
     <div class="card causal-graph-card">
-      <h2>AbiV activity blocks late phage DNA maturation</h2>
-      <p class="meta">Evidence-backed process sketch linking an abiV locus to AbiV antiphage activity, failed late DNA maturation of replicated phage DNA, restricted phage propagation, and abortive-infection system possession.</p>
+      <h2>AbiV-SaV activity blocks phage protein translation</h2>
+      <p class="meta">Evidence-backed process sketch linking an abiV locus to AbiV antiphage activity, phage sav sensitivity determinants, AbiV-SaV complex formation, inhibited host translation, blocked phage protein synthesis, restricted phage propagation, and abortive-infection system possession.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures AbiV at the system level without asserting a direct phage trigger, the host substrate, the exact route to phage-DNA maturation arrest, a c2-specific mechanism, or why one tested 936 phage and the P335 phages were insensitive.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures the SaV-dependent AbiV complex and translation block without asserting the direct host translational target of the complex, the detailed route to late phage-DNA maturation arrest, or why one tested 936 phage and the P335 phages were insensitive.</p>
 
 
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>AbiV activity blocks late phage DNA maturation</title>
+          <title>AbiV-SaV activity blocks phage protein translation</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for AbiV system.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -89,11 +89,102 @@
           </li>
 
           <li id="pathograph-1-edge-2">
+            <strong>sav phage gene</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>AbiV-SaV complex formation</strong>
+            <code>RO:0002326</code>
+            <p>The early phage sav gene encodes SaV, the phage protein needed for AbiV sensitivity.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.02093-08</code>
+                <span class="evidence-snippet">we concluded that orf26 of phage p2 is involved in sensitivity to AbiV, and the gene was renamed sav</span>
+                <span class="meta">Haaber et al. identify phage p2 orf26 as the AbiV sensitivity determinant.</span>
+              </li>
+
+              <li>
+                <code>DOI:10.1128/AEM.02093-08</code>
+                <span class="evidence-snippet">Analyses of the sav regions in other AbiV-insensitive phage mutants from both the 936 and c2 groups revealed amino acid changes in the central region of the SaV protein</span>
+                <span class="meta">Haaber et al. show that AbiV escape in multiple 936- and c2-like phages maps to sav homologues.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>AbiV antiphage activity</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>AbiV-SaV complex formation</strong>
+            <code>RO:0002326</code>
+            <p>AbiV directly and specifically interacts with SaV to form a stable AbiV-SaV complex.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.00093-10</code>
+                <span class="evidence-snippet">they strongly and specifically interact with each other to form a stable protein complex</span>
+                <span class="meta">Haaber et al. use SEC-MALS/UV/RI and fluorescence quenching to show direct AbiV-SaV complex formation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>AbiV-SaV complex formation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>inhibited host translational machinery</strong>
+            <code>RO:0002326</code>
+            <p>The AbiV-SaV complex inhibits host translational machinery after early sav expression.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.00093-10</code>
+                <span class="evidence-snippet">A small amount of SaV is produced early and rapidly interacts with the host AbiV protein to form an active complex that inhibits the translational machinery of the cell</span>
+                <span class="meta">Haaber et al. conclude that early SaV interacts with AbiV to form the active translation-inhibiting complex.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>inhibited host translational machinery</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>blocked phage protein synthesis</strong>
+            <code>RO:0002326</code>
+            <p>AbiV-SaV-mediated translation inhibition blocks early and late phage protein production.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.00093-10</code>
+                <span class="evidence-snippet">Western blotting showed that translation of both early and late phage proteins was severely inhibited in the presence of AbiV</span>
+                <span class="meta">Haaber et al. show that AbiV blocks translation of phage protein products including SaV, ORF11, and ORF16.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>blocked phage protein synthesis</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>restricted phage propagation</strong>
+            <code>RO:0002326</code>
+            <p>Blocked phage translation prevents completion of the AbiV-sensitive phage lytic program.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/AEM.00093-10</code>
+                <span class="evidence-snippet">The late phage transcripts were almost completely inhibited in the presence of AbiV</span>
+                <span class="meta">Haaber et al. connect the early translation block to near-complete inhibition of late phage gene transcription.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-7">
             <strong>AbiV antiphage activity</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>stalled phage DNA maturation</strong>
             <code>RO:0002326</code>
-            <p>AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA.</p>
+            <p>AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA as a downstream infection-cycle defect.</p>
             <ul>
 
               <li>
@@ -105,7 +196,7 @@
             </ul>
           </li>
 
-          <li id="pathograph-1-edge-3">
+          <li id="pathograph-1-edge-8">
             <strong>stalled phage DNA maturation</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
@@ -122,7 +213,7 @@
             </ul>
           </li>
 
-          <li id="pathograph-1-edge-4">
+          <li id="pathograph-1-edge-9">
             <strong>restricted phage propagation</strong>
             <span class="edge-predicate">confers</span>
             <strong>AbiV system</strong>
@@ -145,7 +236,7 @@
             </ul>
           </li>
 
-          <li id="pathograph-1-edge-5">
+          <li id="pathograph-1-edge-10">
             <strong>AbiV system</strong>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
@@ -180,7 +271,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
 
-        <dt>Definition source</dt><dd>DOI:10.1128/AEM.00780-08</dd>
+        <dt>Definition source</dt><dd>DOI:10.1128/AEM.00093-10</dd>
 
 
       </dl>
@@ -258,7 +349,7 @@
 
 
       <div class="discussion" id="abiv-mechanism-gap">
-        <p class="discussion-prompt">Resolve the AbiV phage trigger, host target, c2-specific output, and phage-escape routes before minting narrower AbiV mechanism children.</p>
+        <p class="discussion-prompt">Resolve the host translational target of the AbiV-SaV complex before minting narrower AbiV mechanism children.</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
           <span class="badge">OPEN</span>
@@ -269,11 +360,11 @@
 
 
         <p class="meta">Attached to
-          <code>causal_graphs#abiv_late_phage_dna_maturation_block</code>
+          <code>causal_graphs#abiv_sav_translation_block</code>
         </p>
 
 
-        <p>Haaber et al. support AbiV as a single-gene Abi system that acts after phage DNA replication and prevents cleavage of replicated 936-like phage DNA, but the direct AbiV target, the trigger that connects infection to activity, the mechanism restricting c2-like phages, and AbiV-insensitive escape routes are unresolved.</p>
+        <p>Haaber et al. identify phage sav as the determinant of AbiV sensitivity and support direct AbiV-SaV complex formation followed by inhibition of phage protein translation, but the precise host translational target and complete route from the AbiV-SaV complex to abortive infection remain unresolved.</p>
 
 
 
@@ -297,6 +388,12 @@
           <time>2026-09-20T03:07:25Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted AbiV system as a DOI-backed GENOMICS TraitRecord under the abortive infection system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v177.</p>
+        </li>
+
+        <li>
+          <time>2026-09-20T03:38:10Z</time> ·
+          <strong>ADD_FOLLOWUP_MECHANISM_EVIDENCE</strong> · codex
+          <p class="changes">Added the Haaber et al. 2009 and 2010 AbiV follow-up papers after adversarial review; revised the definition, causal graph, and knowledge gap to include phage sav, direct AbiV-SaV complex formation, and AbiV-SaV-linked inhibition of phage protein translation.</p>
         </li>
 
       </ol>
@@ -656,7 +753,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking an abiV locus to AbiV antiphage activity, failed late DNA maturation of replicated phage DNA, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiV locus encodes the protein required for the cloned phage-resistance phenotype.", "evidence": [{"notes": "Haaber et al. abolish the phenotype with a frameshift in the AbiV open reading frame.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "A subsequent frameshift mutation in the ORF completely eliminated the phage resistance phenotype"}, {"notes": "The DefenseFinder HMM inventory records the custom AbiV profile in the AbiV model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiV__AbiV                                       | AbiV__AbiV                                       | AbiV                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder rules table models AbiV as a single-profile system requiring the AbiV profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiV\tAbiV\t1\t1\tAbiV__AbiV"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_locus", "target": "abiv_antiphage_activity"}, {"description": "AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA.", "evidence": [{"notes": "Haaber et al. connect AbiV to failed cleavage of replicated phage DNA.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "The results described above showed that AbiV prevented cleavage of the replicated phage DNA"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_antiphage_activity", "target": "stalled_phage_dna_maturation"}, {"description": "Accumulation of nonmature concatemeric phage DNA limits completion of AbiV-sensitive phage infection.", "evidence": [{"notes": "Haaber et al. observed uncleaved concatemeric phage DNA in AbiV-containing resistant cells.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "indicated that phage DNA accumulated in its concatemeric (nonmature) form in the resistant L. lactis cells"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stalled_phage_dna_maturation", "target": "restricted_phage_propagation"}, {"description": "Restriction of 936-like or c2-like phage propagation realizes the AbiV abortive-infection defense trait.", "evidence": [{"notes": "Haaber et al. support AbiV-mediated resistance to multiple 936- and c2-group lactococcal phages.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "This ORF provided resistance against virulent lactococcal phages belonging to the 936 and c2 species with an efficiency of plaquing of 10\u22124"}, {"notes": "DefenseFinder records AbiV as a named antiphage abortive-infection system from the Haaber et al. paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiV | 10\\.1128/AEM\\.00780-08 | AbiV, a novel antiphage abortive infection mechanism on the chromosome of Lactococcus lactis subsp\\. cremoris MG1363"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abiv_system_trait"}, {"description": "AbiV system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Haaber et al. name the abiV-encoded phage resistance determinant as an Abi mechanism.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "the gene was designated abiV and the Abi mechanism was designated AbiV"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abiv_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiV locus encodes the protein required for the cloned phage-resistance phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Haaber et al. abolish the phenotype with a frameshift in the AbiV open reading frame.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "A subsequent frameshift mutation in the ORF completely eliminated the phage resistance phenotype"}, {"notes": "The DefenseFinder HMM inventory records the custom AbiV profile in the AbiV model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiV__AbiV                                       | AbiV__AbiV                                       | AbiV                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder rules table models AbiV as a single-profile system requiring the AbiV profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiV\tAbiV\t1\t1\tAbiV__AbiV"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiV locus", "target": "AbiV antiphage activity"}, {"description": "AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Haaber et al. connect AbiV to failed cleavage of replicated phage DNA.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "The results described above showed that AbiV prevented cleavage of the replicated phage DNA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiV antiphage activity", "target": "stalled phage DNA maturation"}, {"description": "Accumulation of nonmature concatemeric phage DNA limits completion of AbiV-sensitive phage infection.", "edge_id": "edge-3", "evidence": [{"notes": "Haaber et al. observed uncleaved concatemeric phage DNA in AbiV-containing resistant cells.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "indicated that phage DNA accumulated in its concatemeric (nonmature) form in the resistant L. lactis cells"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stalled phage DNA maturation", "target": "restricted phage propagation"}, {"description": "Restriction of 936-like or c2-like phage propagation realizes the AbiV abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Haaber et al. support AbiV-mediated resistance to multiple 936- and c2-group lactococcal phages.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "This ORF provided resistance against virulent lactococcal phages belonging to the 936 and c2 species with an efficiency of plaquing of 10\u22124"}, {"notes": "DefenseFinder records AbiV as a named antiphage abortive-infection system from the Haaber et al. paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiV | 10\\.1128/AEM\\.00780-08 | AbiV, a novel antiphage abortive infection mechanism on the chromosome of Lactococcus lactis subsp\\. cremoris MG1363"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiV system"}, {"description": "AbiV system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Haaber et al. name the abiV-encoded phage resistance determinant as an Abi mechanism.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "the gene was designated abiV and the Abi mechanism was designated AbiV"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiV system", "target": "abortive infection system"}], "graph_id": "abiv_late_phage_dna_maturation_block", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection antiphage activity mediated by the AbiV protein.", "grounding": null, "id": "abiv_antiphage_activity", "is_orphan": false, "label": "AbiV antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An abortive-infection locus encoding the AbiV phage resistance determinant.", "grounding": null, "id": "abiv_locus", "is_orphan": false, "label": "abiV locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiV abortive-infection system.", "grounding": "traitmech:000300", "id": "abiv_system_trait", "is_orphan": false, "label": "AbiV system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of 936-like or c2-like phage propagation in an AbiV-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Late phage DNA maturation block in which replicated concatemeric 936-like phage DNA is not cleaved into mature resolved DNA.", "grounding": null, "id": "stalled_phage_dna_maturation", "is_orphan": false, "label": "stalled phage DNA maturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures AbiV at the system level without asserting a direct phage trigger, the host substrate, the exact route to phage-DNA maturation arrest, a c2-specific mechanism, or why one tested 936 phage and the P335 phages were insensitive.", "scope_status": "NONMECHANISTIC", "title": "AbiV activity blocks late phage DNA maturation"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking an abiV locus to AbiV antiphage activity, phage sav sensitivity determinants, AbiV-SaV complex formation, inhibited host translation, blocked phage protein synthesis, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiV locus encodes the protein required for the cloned phage-resistance phenotype.", "evidence": [{"notes": "Haaber et al. abolish the phenotype with a frameshift in the AbiV open reading frame.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "A subsequent frameshift mutation in the ORF completely eliminated the phage resistance phenotype"}, {"notes": "The DefenseFinder HMM inventory records the custom AbiV profile in the AbiV model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiV__AbiV                                       | AbiV__AbiV                                       | AbiV                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder rules table models AbiV as a single-profile system requiring the AbiV profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiV\tAbiV\t1\t1\tAbiV__AbiV"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_locus", "target": "abiv_antiphage_activity"}, {"description": "The early phage sav gene encodes SaV, the phage protein needed for AbiV sensitivity.", "evidence": [{"notes": "Haaber et al. identify phage p2 orf26 as the AbiV sensitivity determinant.", "reference": "DOI:10.1128/AEM.02093-08", "snippet": "we concluded that orf26 of phage p2 is involved in sensitivity to AbiV, and the gene was renamed sav"}, {"notes": "Haaber et al. show that AbiV escape in multiple 936- and c2-like phages maps to sav homologues.", "reference": "DOI:10.1128/AEM.02093-08", "snippet": "Analyses of the sav regions in other AbiV-insensitive phage mutants from both the 936 and c2 groups revealed amino acid changes in the central region of the SaV protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sav_phage_gene", "target": "abiv_sav_complex_formation"}, {"description": "AbiV directly and specifically interacts with SaV to form a stable AbiV-SaV complex.", "evidence": [{"notes": "Haaber et al. use SEC-MALS/UV/RI and fluorescence quenching to show direct AbiV-SaV complex formation.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "they strongly and specifically interact with each other to form a stable protein complex"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_antiphage_activity", "target": "abiv_sav_complex_formation"}, {"description": "The AbiV-SaV complex inhibits host translational machinery after early sav expression.", "evidence": [{"notes": "Haaber et al. conclude that early SaV interacts with AbiV to form the active translation-inhibiting complex.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "A small amount of SaV is produced early and rapidly interacts with the host AbiV protein to form an active complex that inhibits the translational machinery of the cell"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_sav_complex_formation", "target": "inhibited_host_translation"}, {"description": "AbiV-SaV-mediated translation inhibition blocks early and late phage protein production.", "evidence": [{"notes": "Haaber et al. show that AbiV blocks translation of phage protein products including SaV, ORF11, and ORF16.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "Western blotting showed that translation of both early and late phage proteins was severely inhibited in the presence of AbiV"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "inhibited_host_translation", "target": "blocked_phage_protein_synthesis"}, {"description": "Blocked phage translation prevents completion of the AbiV-sensitive phage lytic program.", "evidence": [{"notes": "Haaber et al. connect the early translation block to near-complete inhibition of late phage gene transcription.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "The late phage transcripts were almost completely inhibited in the presence of AbiV"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "blocked_phage_protein_synthesis", "target": "restricted_phage_propagation"}, {"description": "AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA as a downstream infection-cycle defect.", "evidence": [{"notes": "Haaber et al. connect AbiV to failed cleavage of replicated phage DNA.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "The results described above showed that AbiV prevented cleavage of the replicated phage DNA"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiv_antiphage_activity", "target": "stalled_phage_dna_maturation"}, {"description": "Accumulation of nonmature concatemeric phage DNA limits completion of AbiV-sensitive phage infection.", "evidence": [{"notes": "Haaber et al. observed uncleaved concatemeric phage DNA in AbiV-containing resistant cells.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "indicated that phage DNA accumulated in its concatemeric (nonmature) form in the resistant L. lactis cells"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stalled_phage_dna_maturation", "target": "restricted_phage_propagation"}, {"description": "Restriction of 936-like or c2-like phage propagation realizes the AbiV abortive-infection defense trait.", "evidence": [{"notes": "Haaber et al. support AbiV-mediated resistance to multiple 936- and c2-group lactococcal phages.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "This ORF provided resistance against virulent lactococcal phages belonging to the 936 and c2 species with an efficiency of plaquing of 10\u22124"}, {"notes": "DefenseFinder records AbiV as a named antiphage abortive-infection system from the Haaber et al. paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiV | 10\\.1128/AEM\\.00780-08 | AbiV, a novel antiphage abortive infection mechanism on the chromosome of Lactococcus lactis subsp\\. cremoris MG1363"}], "id": "edge-9", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abiv_system_trait"}, {"description": "AbiV system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Haaber et al. name the abiV-encoded phage resistance determinant as an Abi mechanism.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "the gene was designated abiV and the Abi mechanism was designated AbiV"}], "id": "edge-10", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abiv_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiV locus encodes the protein required for the cloned phage-resistance phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Haaber et al. abolish the phenotype with a frameshift in the AbiV open reading frame.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "A subsequent frameshift mutation in the ORF completely eliminated the phage resistance phenotype"}, {"notes": "The DefenseFinder HMM inventory records the custom AbiV profile in the AbiV model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiV__AbiV                                       | AbiV__AbiV                                       | AbiV                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder rules table models AbiV as a single-profile system requiring the AbiV profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiV\tAbiV\t1\t1\tAbiV__AbiV"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiV locus", "target": "AbiV antiphage activity"}, {"description": "The early phage sav gene encodes SaV, the phage protein needed for AbiV sensitivity.", "edge_id": "edge-2", "evidence": [{"notes": "Haaber et al. identify phage p2 orf26 as the AbiV sensitivity determinant.", "reference": "DOI:10.1128/AEM.02093-08", "snippet": "we concluded that orf26 of phage p2 is involved in sensitivity to AbiV, and the gene was renamed sav"}, {"notes": "Haaber et al. show that AbiV escape in multiple 936- and c2-like phages maps to sav homologues.", "reference": "DOI:10.1128/AEM.02093-08", "snippet": "Analyses of the sav regions in other AbiV-insensitive phage mutants from both the 936 and c2 groups revealed amino acid changes in the central region of the SaV protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sav phage gene", "target": "AbiV-SaV complex formation"}, {"description": "AbiV directly and specifically interacts with SaV to form a stable AbiV-SaV complex.", "edge_id": "edge-3", "evidence": [{"notes": "Haaber et al. use SEC-MALS/UV/RI and fluorescence quenching to show direct AbiV-SaV complex formation.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "they strongly and specifically interact with each other to form a stable protein complex"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiV antiphage activity", "target": "AbiV-SaV complex formation"}, {"description": "The AbiV-SaV complex inhibits host translational machinery after early sav expression.", "edge_id": "edge-4", "evidence": [{"notes": "Haaber et al. conclude that early SaV interacts with AbiV to form the active translation-inhibiting complex.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "A small amount of SaV is produced early and rapidly interacts with the host AbiV protein to form an active complex that inhibits the translational machinery of the cell"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiV-SaV complex formation", "target": "inhibited host translational machinery"}, {"description": "AbiV-SaV-mediated translation inhibition blocks early and late phage protein production.", "edge_id": "edge-5", "evidence": [{"notes": "Haaber et al. show that AbiV blocks translation of phage protein products including SaV, ORF11, and ORF16.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "Western blotting showed that translation of both early and late phage proteins was severely inhibited in the presence of AbiV"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "inhibited host translational machinery", "target": "blocked phage protein synthesis"}, {"description": "Blocked phage translation prevents completion of the AbiV-sensitive phage lytic program.", "edge_id": "edge-6", "evidence": [{"notes": "Haaber et al. connect the early translation block to near-complete inhibition of late phage gene transcription.", "reference": "DOI:10.1128/AEM.00093-10", "snippet": "The late phage transcripts were almost completely inhibited in the presence of AbiV"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "blocked phage protein synthesis", "target": "restricted phage propagation"}, {"description": "AbiV activity prevents cleavage of replicated 936-like phage DNA into mature resolved DNA as a downstream infection-cycle defect.", "edge_id": "edge-7", "evidence": [{"notes": "Haaber et al. connect AbiV to failed cleavage of replicated phage DNA.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "The results described above showed that AbiV prevented cleavage of the replicated phage DNA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiV antiphage activity", "target": "stalled phage DNA maturation"}, {"description": "Accumulation of nonmature concatemeric phage DNA limits completion of AbiV-sensitive phage infection.", "edge_id": "edge-8", "evidence": [{"notes": "Haaber et al. observed uncleaved concatemeric phage DNA in AbiV-containing resistant cells.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "indicated that phage DNA accumulated in its concatemeric (nonmature) form in the resistant L. lactis cells"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "stalled phage DNA maturation", "target": "restricted phage propagation"}, {"description": "Restriction of 936-like or c2-like phage propagation realizes the AbiV abortive-infection defense trait.", "edge_id": "edge-9", "evidence": [{"notes": "Haaber et al. support AbiV-mediated resistance to multiple 936- and c2-group lactococcal phages.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "This ORF provided resistance against virulent lactococcal phages belonging to the 936 and c2 species with an efficiency of plaquing of 10\u22124"}, {"notes": "DefenseFinder records AbiV as a named antiphage abortive-infection system from the Haaber et al. paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiV | 10\\.1128/AEM\\.00780-08 | AbiV, a novel antiphage abortive infection mechanism on the chromosome of Lactococcus lactis subsp\\. cremoris MG1363"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiV system"}, {"description": "AbiV system possession is an abortive-infection-system trait.", "edge_id": "edge-10", "evidence": [{"notes": "Haaber et al. name the abiV-encoded phage resistance determinant as an Abi mechanism.", "reference": "DOI:10.1128/AEM.00780-08", "snippet": "the gene was designated abiV and the Abi mechanism was designated AbiV"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiV system", "target": "abortive infection system"}], "graph_id": "abiv_sav_translation_block", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection antiphage activity mediated by the AbiV protein.", "grounding": null, "id": "abiv_antiphage_activity", "is_orphan": false, "label": "AbiV antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An abortive-infection locus encoding the AbiV phage resistance determinant.", "grounding": null, "id": "abiv_locus", "is_orphan": false, "label": "abiV locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct interaction of AbiV and phage SaV homodimers to form a stable AbiV-SaV complex.", "grounding": null, "id": "abiv_sav_complex_formation", "is_orphan": false, "label": "AbiV-SaV complex formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiV abortive-infection system.", "grounding": "traitmech:000300", "id": "abiv_system_trait", "is_orphan": false, "label": "AbiV system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced translation of early and late phage proteins in an AbiV-containing infected host cell.", "grounding": null, "id": "blocked_phage_protein_synthesis", "is_orphan": false, "label": "blocked phage protein synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "AbiV-SaV-dependent inhibition of the host translational machinery during phage infection.", "grounding": null, "id": "inhibited_host_translation", "is_orphan": false, "label": "inhibited host translational machinery", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of 936-like or c2-like phage propagation in an AbiV-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A 936-like or c2-like phage gene whose encoded SaV protein is required for AbiV sensitivity.", "grounding": null, "id": "sav_phage_gene", "is_orphan": false, "label": "sav phage gene", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Late phage DNA maturation block in which replicated concatemeric 936-like phage DNA is not cleaved into mature resolved DNA.", "grounding": null, "id": "stalled_phage_dna_maturation", "is_orphan": false, "label": "stalled phage DNA maturation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures the SaV-dependent AbiV complex and translation block without asserting the direct host translational target of the complex, the detailed route to late phage-DNA maturation arrest, or why one tested 936 phage and the P335 phages were insensitive.", "scope_status": "NONMECHANISTIC", "title": "AbiV-SaV activity blocks phage protein translation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -679,7 +776,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-20 03:07 UTC from
+      Record as of 2026-09-20 03:38 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 695 TraitRecords
       · embedding coverage 68.6%

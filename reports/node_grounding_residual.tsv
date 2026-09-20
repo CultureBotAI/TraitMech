@@ -1135,6 +1135,10 @@ abiti-abitii antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abit_s
 interrupted late phage development	BIOLOGICAL_PROCESS	1	data/traits/genomics/abit_system.yaml
 abiv locus	GENETIC_ELEMENT	1	data/traits/genomics/abiv_system.yaml
 abiv antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiv_system.yaml
+sav phage gene	GENETIC_ELEMENT	1	data/traits/genomics/abiv_system.yaml
+abiv-sav complex formation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiv_system.yaml
+inhibited host translational machinery	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiv_system.yaml
+blocked phage protein synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiv_system.yaml
 stalled phage dna maturation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiv_system.yaml
 abiz locus	GENETIC_ELEMENT	1	data/traits/genomics/abiz_system.yaml
 abiz-enhanced holin/lysin activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abiz_system.yaml

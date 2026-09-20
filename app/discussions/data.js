@@ -206,7 +206,7 @@ window.searchData = [
  },
  {
   "discussion_id": "abiv-mechanism-gap",
-  "prompt": "Resolve the AbiV phage trigger, host target, c2-specific output, and phage-escape routes before minting narrower AbiV mechanism children.",
+  "prompt": "Resolve the host translational target of the AbiV-SaV complex before minting narrower AbiV mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -214,9 +214,9 @@ window.searchData = [
   "source_id": "traitmech:000300",
   "source_file": "abiv_system.yaml",
   "attaches_to": [
-   "causal_graphs#abiv_late_phage_dna_maturation_block"
+   "causal_graphs#abiv_sav_translation_block"
   ],
-  "rationale": "Haaber et al. support AbiV as a single-gene Abi system that acts after phage DNA replication and prevents cleavage of replicated 936-like phage DNA, but the direct AbiV target, the trigger that connects infection to activity, the mechanism restricting c2-like phages, and AbiV-insensitive escape routes are unresolved.",
+  "rationale": "Haaber et al. identify phage sav as the determinant of AbiV sensitivity and support direct AbiV-SaV complex formation followed by inhibition of phage protein translation, but the precise host translational target and complete route from the AbiV-SaV complex to abortive infection remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
