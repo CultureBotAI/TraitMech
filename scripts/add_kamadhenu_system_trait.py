@@ -180,6 +180,15 @@ RECORD: dict[str, Any] = {
                                 "the novel lactococcal antiphage systems."
                             ),
                         },
+                        {
+                            "reference": MOSTERD,
+                            "snippet": MOSTERD_ESCAPE_SNIPPET,
+                            "notes": (
+                                "Mosterd et al. treat Kamadhenu as a "
+                                "plasmid-encoded lactococcal phage-resistance "
+                                "system in their escape-mutant screen."
+                            ),
+                        },
                         article_registry_evidence(),
                     ],
                 },

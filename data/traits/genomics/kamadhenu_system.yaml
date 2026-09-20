@@ -77,6 +77,13 @@ causal_graphs:
         deities (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
       notes: Grafakou et al. named Kamadhenu as one of the novel lactococcal antiphage
         systems.
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. treat Kamadhenu as a plasmid-encoded lactococcal phage-resistance
+        system in their escape-mutant screen.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Kamadhenu | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
         the lactococcal plasmidome
@@ -129,4 +136,10 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v187.
+  llm_assisted: true
+- timestamp: '2026-09-20T14:22:36Z'
+  curator: codex
+  action: UPDATED_EVIDENCE
+  changes: 'Added direct Mosterd et al. phage-resistance evidence to the Kamadhenu
+    locus edge in response to PR #1140 review issue #1141.'
   llm_assisted: true
