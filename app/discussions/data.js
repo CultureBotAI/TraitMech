@@ -233,7 +233,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, and BstA are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, and traitmech:000301, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., and Owen et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, and Stk2 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, and traitmech:000303, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., and Depardieu et al. still support Abi as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, and other Abi families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -1525,6 +1525,25 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/sparta_system.html#sparta-native-host-and-substrate-gap"
+ },
+ {
+  "discussion_id": "stk2-activator-and-death-target-gap",
+  "prompt": "Resolve the Stk2-activating phage protein and lethal host-phosphorylation target before minting narrower Stk2 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Stk2 system",
+  "source_id": "traitmech:000303",
+  "source_file": "stk2_system.yaml",
+  "attaches_to": [
+   "causal_graphs#stk2_activation_aborts_phage_infection"
+  ],
+  "rationale": "Depardieu et al. support Stk2 as a named phage-activated serine/threonine kinase system whose activation causes host-protein phosphorylation, bacterial host-cell death, and abortive infection, and DefenseFinder represents Stk2 with a one-profile model. This system-level record leaves the direct phage activator, the lethal Stk2 phosphorylation target, target conservation across Stk2 loci, and phage escape routes unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/stk2_system.html#stk2-activator-and-death-target-gap"
  },
  {
   "discussion_id": "sucellos-mechanism-gap",
@@ -3057,9 +3076,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 171,
- "total_knowledge_gaps": 90,
- "total_source_entries": 170,
+ "total_discussions": 172,
+ "total_knowledge_gaps": 91,
+ "total_source_entries": 171,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

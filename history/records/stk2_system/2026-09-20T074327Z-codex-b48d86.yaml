@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/stk2_system.yaml
+  slug: stk2_system
+session:
+  id: 2026-09-20T074327Z-codex-b48d86
+  timestamp: '2026-09-20T07:43:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Stk2 system trait
+  details: Added traitmech:000303 for the Stk2 abortive-infection system with Depardieu et
+    al. DOI evidence, pinned DefenseFinder article/rules/HMM evidence, a conservative phage-triggered
+    kinase activation graph, and a same-PR METPO v180 proposal reserving METPO:1025700.
