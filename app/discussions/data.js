@@ -1079,6 +1079,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/jukab_system.html#jukab-vesicle-effector-family-gap"
  },
  {
+  "discussion_id": "kamadhenu-mechanism-gap",
+  "prompt": "Resolve Kamadhenu phage triggers and effector outputs before minting narrower Kamadhenu mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Kamadhenu system",
+  "source_id": "traitmech:000310",
+  "source_file": "kamadhenu_system.yaml",
+  "attaches_to": [
+   "causal_graphs#kamadhenu_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al., Mosterd et al., and DefenseFinder support Kamadhenu as a named anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/kamadhenu_system.html#kamadhenu-mechanism-gap"
+ },
+ {
   "discussion_id": "kiwa-activation-and-counterdefense-gap",
   "prompt": "Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details before minting narrower Kiwa mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3195,9 +3214,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 178,
- "total_knowledge_gaps": 97,
- "total_source_entries": 177,
+ "total_discussions": 179,
+ "total_knowledge_gaps": 98,
+ "total_source_entries": 178,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
