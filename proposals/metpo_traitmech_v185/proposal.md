@@ -42,10 +42,9 @@ Subset tag: `metpo_traitmech_2026_09`.
 
 Erebus system captures genome-level possession of an Erebus locus cataloged by
 DefenseFinder under an Erebus model namespace with an `Erebus__EruA` HMM
-profile entry. It excludes the ambiguous bare EruA label, individual EruA
-genes; EruA proteins; DefenseFinder HMM profiles; predicted source-database
-rows naming one Erebus locus; unresolved Erebus trigger or effector activities;
-and other phage-defense systems.
+profile entry. It excludes individual EruA genes; EruA proteins; DefenseFinder
+HMM profiles; predicted source-database rows naming one Erebus locus; unresolved
+Erebus trigger or effector activities; and other phage-defense systems.
 
 ## External Mappings
 
@@ -53,6 +52,10 @@ No exact external mapping is proposed. The `Erebus__EruA` HMM, individual
 EruA-labeled genes, their corresponding proteins, and unresolved Erebus
 molecular outputs are shifted from this organism-level GENOMICS possession
 trait.
+
+`EruA` is proposed as a related synonym, not an exact synonym, because it is a
+source-profile label for the component HMM rather than a lexical name for the
+organism-level possession trait.
 
 ## Artifacts
 
