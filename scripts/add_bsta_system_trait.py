@@ -37,6 +37,7 @@ TIMESTAMP = "2026-09-20T04:37:48Z"
 PARENT_TIMESTAMP = "2026-09-20T04:37:49Z"
 REVIEW_TIMESTAMP = "2026-09-20T05:13:00Z"
 REVIEW_FOLLOWUP_TIMESTAMP = "2026-09-20T05:25:30Z"
+REVIEW_FINAL_TIMESTAMP = "2026-09-20T05:42:00Z"
 
 IDENTIFIER = "traitmech:000301"
 PROPOSAL = "proposals/metpo_traitmech_v178"
@@ -358,6 +359,32 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
+                    "subject": "bsta_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "suppressed_encoding_prophage_dna_replication",
+                    "description": (
+                        "BstA can suppress DNA replication by an "
+                        "aba-sensitive encoding prophage before cognate aba "
+                        "self-immunity rescues replication."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": OWEN,
+                            "snippet": (
+                                "phage DNA replication is strongly suppressed "
+                                "by BstA, but replication can be rescued by "
+                                "the aba element"
+                            ),
+                            "notes": (
+                                "Owen et al. show that BstA supplies the "
+                                "suppression that the cognate aba element "
+                                "counteracts."
+                            ),
+                        },
+                    ],
+                },
+                {
                     "subject": "aba_element",
                     "predicate": "prevents",
                     "predicate_id": "RO:0002212",
@@ -520,6 +547,18 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=REVIEW_FOLLOWUP_TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Added an explicit BstA locus contribution edge to the "
+            "aba-sensitive encoding-prophage DNA replication suppression "
+            "node after the PR 1111 adversarial review filed issue 1116."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FINAL_TIMESTAMP,
     )
     return record
 

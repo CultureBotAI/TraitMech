@@ -135,6 +135,18 @@ causal_graphs:
       snippet: "BstA\tBstA\t1\t1\tBstA__BstA"
       notes: The DefenseFinder rules table models BstA as a one-component system requiring
         the BstA__BstA profile.
+  - subject: bsta_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: suppressed_encoding_prophage_dna_replication
+    description: BstA can suppress DNA replication by an aba-sensitive encoding prophage
+      before cognate aba self-immunity rescues replication.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2021.09.002
+      snippet: phage DNA replication is strongly suppressed by BstA, but replication
+        can be rescued by the aba element
+      notes: Owen et al. show that BstA supplies the suppression that the cognate
+        aba element counteracts.
   - subject: aba_element
     predicate: prevents
     predicate_id: RO:0002212
@@ -216,4 +228,11 @@ curation_history:
   changes: Separated aba self-immunity for the BstA-encoding prophage from BstA-mediated
     suppression of incoming lytic phage DNA replication after the PR 1111 adversarial
     review filed issue 1114.
+  llm_assisted: true
+- timestamp: '2026-09-20T05:42:00Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: Added an explicit BstA locus contribution edge to the aba-sensitive encoding-prophage
+    DNA replication suppression node after the PR 1111 adversarial review filed issue
+    1116.
   llm_assisted: true
