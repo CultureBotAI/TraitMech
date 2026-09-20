@@ -1,0 +1,190 @@
+identifier: traitmech:000296
+label: Phrann gp29-gp30 system
+definition: A phage defense system in which an organism possesses a Phrann gp29-gp30
+  locus that can protect bacteria from bacteriophage infection.
+definition_source: DOI:10.1038/nmicrobiol.2016.251
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Phrann_gp29_gp30
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: at least five distinct prophage-expressed viral defense systems that interfere
+    with infection
+  notes: Dedrick et al. place the Cluster N Phrann gp29-gp30 system in a cohort of
+    prophage-expressed defenses against lytic and temperate mycobacteriophages.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: Phrann genes 29 and/or 30 are involved in defense against Tweety and Gaia,
+    as a mutant lysogen lacking Phrann 29 loses defense against these phages
+  notes: Dedrick et al. localize part of the Phrann prophage-mediated heterotypic
+    defense phenotype to genes 29 and 30.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: expressing Phrann genes 29 and 30 reproduce the Phrann defense against
+    Tweety and Gaia
+  notes: Dedrick et al. show that recombinant Phrann genes 29 and 30 are sufficient
+    to reproduce Phrann defense against Tweety and Gaia.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: Phrann prophage-mediated defense is strictly heterotypic, and Phrann gp29/gp30
+    does not defend against Phrann or other Cluster N phages
+  notes: Dedrick et al. delimit the Phrann gp29-gp30 defense profile as heterotypic
+    rather than Cluster N superinfection exclusion.
+- reference: DOI:10.1038/nmicrobiol.2016.251
+  snippet: Prophage-mediated defense by (p)ppGpp synthetases is a new and intriguing
+    system for defense against viral attack
+  notes: Dedrick et al. interpret Phrann gp29 as a putative (p)ppGpp synthetase in
+    a prophage-mediated viral-defense system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Phrann_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated defence
+    against viral attack and viral counter-defence
+  notes: The DefenseFinder model registry maps the named Phrann_gp29_gp30 system to
+    the Dedrick et al. prophage-mediated viral-defense paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Phrann_gp29_gp30__gp29                           | Phrann_gp29_gp30__gp29                           |
+    Phrann_gp29_gp30
+  notes: The DefenseFinder HMM inventory records a Phrann gp29-gp30 profile for Phrann_gp29_gp30__gp29
+    in the Phrann_gp29_gp30 model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: Phrann_gp29_gp30__gp30                           | Phrann_gp29_gp30__gp30                           |
+    Phrann_gp29_gp30
+  notes: The DefenseFinder HMM inventory records a Phrann gp29-gp30 profile for Phrann_gp29_gp30__gp30
+    in the Phrann_gp29_gp30 model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Phrann_gp29_gp30\tPhrann_gp29_gp30\t2\t2\tPhrann_gp29_gp30__gp29, Phrann_gp29_gp30__gp30"
+  notes: The DefenseFinder rules table models Phrann_gp29_gp30 as a two-component
+    system requiring gp29 and gp30 profiles.
+causal_graphs:
+- graph_id: phrann_gp29_gp30_locus_restricts_phage
+  title: Phrann gp29-gp30 loci confer heterotypic phage defense
+  description: Conservative system-level sketch linking possession of a Phrann gp29-gp30
+    locus to restricted bacteriophage propagation without asserting the unresolved
+    lytic trigger, gp29-gp30 interaction, or downstream arrest mechanism.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Phrann gp29-gp30 as a named anti-phage system with
+    DefenseFinder gp29 and gp30 profiles while leaving the direct lytic trigger, Phrann
+    gp30 regulatory role, and exact (p)ppGpp-linked arrest mechanism unresolved.
+  nodes:
+  - node_id: phrann_gp29_gp30_locus
+    label: Phrann gp29-gp30 locus
+    node_type: GENETIC_ELEMENT
+    description: A Phrann gp29-gp30 anti-phage defense locus cataloged in DefenseFinder
+      with gp29 and gp30 HMM profiles.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Phrann
+      gp29-gp30 system.
+  - node_id: phrann_gp29_gp30_system_trait
+    label: Phrann gp29-gp30 system
+    node_type: TRAIT
+    grounding: traitmech:000296
+    description: Possession of a genome-encoded Phrann gp29-gp30 phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: phrann_gp29_gp30_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: Dedrick et al. support Phrann genes 29 and 30 in heterotypic phage
+      defense, and DefenseFinder catalogs gp29 and gp30 profiles in the Phrann_gp29_gp30
+      model namespace.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: Phrann genes 29 and/or 30 are involved in defense against Tweety and
+        Gaia, as a mutant lysogen lacking Phrann 29 loses defense against these phages
+      notes: Dedrick et al. connect Phrann genes 29 and 30 to Phrann defense against
+        Tweety and Gaia.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Phrann_gp29_gp30__gp29                           | Phrann_gp29_gp30__gp29                           |
+        Phrann_gp29_gp30
+      notes: The DefenseFinder HMM inventory records a Phrann gp29-gp30 profile for
+        Phrann_gp29_gp30__gp29 in the Phrann_gp29_gp30 model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: Phrann_gp29_gp30__gp30                           | Phrann_gp29_gp30__gp30                           |
+        Phrann_gp29_gp30
+      notes: The DefenseFinder HMM inventory records a Phrann gp29-gp30 profile for
+        Phrann_gp29_gp30__gp30 in the Phrann_gp29_gp30 model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Phrann_gp29_gp30\tPhrann_gp29_gp30\t2\t2\tPhrann_gp29_gp30__gp29,\
+        \ Phrann_gp29_gp30__gp30"
+      notes: The DefenseFinder rules table models Phrann_gp29_gp30 as a two-component
+        system requiring gp29 and gp30 profiles.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: phrann_gp29_gp30_system_trait
+    description: Phrann-gp29-gp30-mediated defense against Tweety and Gaia realizes
+      the Phrann gp29-gp30 system trait.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2016.251
+      snippet: expressing Phrann genes 29 and 30 reproduce the Phrann defense against
+        Tweety and Gaia
+      notes: Dedrick et al. show that genes 29 and 30 are sufficient to reproduce
+        Phrann defense against Tweety and Gaia.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Phrann_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+        defence against viral attack and viral counter-defence
+      notes: DefenseFinder records Phrann_gp29_gp30 as a named system from the Dedrick
+        et al. prophage-defense paper.
+  - subject: phrann_gp29_gp30_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Phrann gp29-gp30 system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Phrann_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+        defence against viral attack and viral counter-defence |'
+      notes: DefenseFinder associates Phrann_gp29_gp30 with the Dedrick et al. prophage-mediated
+        viral-defense paper.
+discussions:
+- discussion_id: phrann_gp29_gp30-mechanism-gap
+  prompt: Resolve the Phrann gp29-gp30 contribution to TM4 defense, Phrann gp30 regulator
+    role, lytic trigger, (p)ppGpp synthetase activity, and remaining target-phage
+    breadth before minting narrower Phrann gp29-gp30 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Dedrick et al. and DefenseFinder support Phrann gp29-gp30 as a named
+    anti-phage system with gp29 and gp30 profiles, but the Phrann gp30 regulatory
+    role, lytic-phage trigger, direct (p)ppGpp activation mechanism, relative contribution
+    to TM4 defense, and remaining target breadth are not resolved enough here to assert
+    a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#phrann_gp29_gp30_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-19'
+curation_history:
+- timestamp: '2026-09-19T23:37:58Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Phrann gp29-gp30 system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system after an ignored-and-hidden duplicate review found no exact
+    live TraitMech, METPO, or prior proposal record; the replacement placeholder is
+    reserved in proposals/metpo_traitmech_v173.
+  llm_assisted: true
+- timestamp: '2026-09-19T23:47:14Z'
+  curator: codex
+  action: CURATION_REVIEW_REVISION
+  changes: 'Resolved PR #1092 review issues #1093 and #1094 by replacing a restriction-implying
+    Phrann gp29-gp30 edge description with generic defense wording and narrowing the
+    breadth knowledge gap to the unresolved TM4 contribution and remaining target-phage
+    breadth.'
+  llm_assisted: true
+- timestamp: '2026-09-19T23:56:21Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the PR #1092 canonical_examples gap and left canonical_examples
+    empty: the current Phrann gp29-gp30 evidence supports a named phage-defense system
+    and DefenseFinder profiles, but the curated record does not yet cite a source-backed
+    bacterial taxon with a directly observed Phrann gp29-gp30 locus. No paid research
+    was used.'
+  llm_assisted: true

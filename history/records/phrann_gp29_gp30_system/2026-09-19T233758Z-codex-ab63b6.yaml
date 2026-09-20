@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/phrann_gp29_gp30_system.yaml
+  slug: phrann_gp29_gp30_system
+session:
+  id: 2026-09-19T233758Z-codex-ab63b6
+  timestamp: '2026-09-19T23:37:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Phrann gp29-gp30 system genomics trait
+  details: Minted traitmech:000296 for Phrann gp29-gp30 system as a DOI-backed GENOMICS phage-defense-system
+    possession trait, reserved METPO:1025000 in proposals/metpo_traitmech_v173 for upstream
+    migration, and carried the pinned DefenseFinder gp29 and gp30 HMM profile rows plus the
+    gp29-gp30 rules row as related profile evidence rather than individual gene, protein,
+    prophage, or HMM traits.
