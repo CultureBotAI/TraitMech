@@ -1500,6 +1500,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/retron_system.html#retron-effector-trigger-gap"
  },
  {
+  "discussion_id": "rhea-mechanism-gap",
+  "prompt": "Resolve Rhea phage triggers and effector outputs before minting narrower Rhea mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Rhea system",
+  "source_id": "traitmech:000311",
+  "source_file": "rhea_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rhea_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al., Mosterd et al., and DefenseFinder support Rhea as a named anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rhea_system.html#rhea-mechanism-gap"
+ },
+ {
   "discussion_id": "rosmerta-mechanism-gap",
   "prompt": "Resolve RosmerTA phage triggers and effector outputs before minting narrower RosmerTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3214,9 +3233,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 179,
- "total_knowledge_gaps": 98,
- "total_source_entries": 178,
+ "total_discussions": 180,
+ "total_knowledge_gaps": 99,
+ "total_source_entries": 179,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
