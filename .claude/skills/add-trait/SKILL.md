@@ -84,7 +84,9 @@ trait, but an HMM row does not by itself support an individual protein/domain
 trait, a protein-resolved causal mechanism, or a synonym that expands the
 profile acronym. Keep unresolved model-component relationships in a
 `CURATION_TODO` or `KNOWLEDGE_GAP` rather than turning every profile row into a
-causal node.
+causal node. An article-registry row without pinned HMM or rule rows is still
+only name-to-paper evidence; cite it for the system identity and record the
+missing model rows as an unresolved coverage gap.
 
 ## Pick a target
 
@@ -352,7 +354,10 @@ a real `GENE_OR_PROTEIN` node with protein examples and a cited canonical
 taxon. Do not encode protein-resolved chemistry through a `GENETIC_ELEMENT`
 node while using `NONMECHANISTIC`; if the natural host, accession-level protein,
 or profile-to-activity mapping is unresolved, say the mechanism is deferred in
-`scope_notes` and open a discussion.
+`scope_notes` and open a discussion. If the pinned registries name the system in
+`List_system_article.md` but do not include it in `Liste_hmm_system.md` or
+`DefenseFinder_rules.tsv`, omit profile-grounded nodes and make that absence
+explicit in `scope_notes`.
 
 ## Write the record
 
