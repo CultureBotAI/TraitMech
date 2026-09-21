@@ -75,7 +75,7 @@ def article_registry_evidence() -> dict[str, str]:
         ),
         "notes": (
             "The DefenseFinder article registry maps the named CmdTAC "
-            "system to the Goesswein et al. CmdTAC mechanism paper; the "
+            "system to the Vassallo et al. CmdTAC mechanism paper; the "
             "pinned DefenseFinder HMM inventory and rules table do not "
             "list CmdTAC, so this row is name-to-paper evidence rather "
             "than model-component evidence."
@@ -88,11 +88,11 @@ RECORD: dict[str, Any] = {
     "label": "CmdTAC system",
     "definition": (
         "An abortive infection system in which an organism possesses a "
-        "cmdTAC toxin-antitoxin-chaperone locus encoding a CmdT "
-        "ADP-ribosyltransferase, a CmdA antitoxin, and a CmdC "
-        "SecB-like chaperone that can sense viral capsid proteins, "
-        "liberate CmdT, modify messenger RNA, and arrest translation to "
-        "inhibit bacteriophage replication."
+        "cmdTAC toxin-antitoxin-chaperone locus whose CmdC chaperone "
+        "senses viral capsid proteins and whose CmdA antitoxin "
+        "degradation liberates the CmdT ADP-ribosyltransferase to modify "
+        "messenger RNA, arrest translation, and inhibit bacteriophage "
+        "replication."
     ),
     "definition_source": GOESSWEIN,
     "trait_category": "GENOMICS",
@@ -110,13 +110,18 @@ RECORD: dict[str, Any] = {
             "synonym_type": "EXACT_SYNONYM",
             "source": GOESSWEIN_PMC,
         },
+        {
+            "synonym_text": "cmdTAC toxin-antitoxin-chaperone locus",
+            "synonym_type": "RELATED_SYNONYM",
+            "source": GOESSWEIN,
+        },
     ],
     "evidence": [
         {
             "reference": GOESSWEIN_PMC,
             "snippet": CMDTAC_DEFENSE_SNIPPET,
             "notes": (
-                "Goesswein et al. name CmdTAC as a widely distributed "
+                "Vassallo et al. name CmdTAC as a widely distributed "
                 "anti-phage defense system that protects against T-even "
                 "phages."
             ),
@@ -125,7 +130,7 @@ RECORD: dict[str, Any] = {
             "reference": GOESSWEIN_PMC,
             "snippet": ECOR22_DISCOVERY_SNIPPET,
             "notes": (
-                "Goesswein et al. trace the CmdTAC system to a functional "
+                "Vassallo et al. trace the CmdTAC system to a functional "
                 "anti-phage defense screen of Escherichia coli ECOR22."
             ),
         },
@@ -149,7 +154,7 @@ RECORD: dict[str, Any] = {
             "reference": GOESSWEIN_PMC,
             "snippet": CMDT_MRNA_SNIPPET,
             "notes": (
-                "Goesswein et al. support CmdT modification of "
+                "Vassallo et al. support CmdT modification of "
                 "single-stranded RNA as the translation-arresting "
                 "antiphage effector output."
             ),
@@ -158,7 +163,7 @@ RECORD: dict[str, Any] = {
             "reference": GOESSWEIN_PMC,
             "snippet": ABI_SNIPPET,
             "notes": (
-                "Goesswein et al. interpret the low-MOI protection and "
+                "Vassallo et al. interpret the low-MOI protection and "
                 "center-of-infection results as consistent with an "
                 "abortive-infection mechanism."
             ),
@@ -170,7 +175,7 @@ RECORD: dict[str, Any] = {
             "taxon_id": "NCBITaxon:562",
             "taxon_label": "Escherichia coli",
             "note": (
-                "Goesswein et al. report that cmdTAC was discovered in "
+                "Vassallo et al. report that cmdTAC was discovered in "
                 "wild Escherichia coli isolate ECOR22 through a functional "
                 "anti-phage defense screen."
             ),
@@ -282,11 +287,10 @@ RECORD: dict[str, Any] = {
                                 "capsid proteins"
                             ),
                             "notes": (
-                                "Goesswein et al. connect CmdC to viral "
+                                "Vassallo et al. connect CmdC to viral "
                                 "capsid protein sensing."
                             ),
-                        },
-                        article_registry_evidence(),
+                        }
                     ],
                 },
                 {
@@ -308,7 +312,7 @@ RECORD: dict[str, Any] = {
                                 "the CmdTAC complex"
                             ),
                             "notes": (
-                                "Goesswein et al. place phage capsid-driven "
+                                "Vassallo et al. place phage capsid-driven "
                                 "CmdC dissociation upstream of antitoxin "
                                 "destabilization."
                             ),
@@ -333,7 +337,7 @@ RECORD: dict[str, Any] = {
                                 "of the CmdT ADP-ribosyltransferase"
                             ),
                             "notes": (
-                                "Goesswein et al. place CmdA degradation "
+                                "Vassallo et al. place CmdA degradation "
                                 "upstream of CmdT liberation."
                             ),
                         },
@@ -361,7 +365,7 @@ RECORD: dict[str, Any] = {
                             "reference": GOESSWEIN_PMC,
                             "snippet": TRANSLATION_ARREST_SNIPPET,
                             "notes": (
-                                "Goesswein et al. connect CmdT-mediated "
+                                "Vassallo et al. connect CmdT-mediated "
                                 "mRNA modification to translation arrest."
                             ),
                         }
@@ -384,7 +388,7 @@ RECORD: dict[str, Any] = {
                                 "of viral replication"
                             ),
                             "notes": (
-                                "Goesswein et al. connect CmdT-mediated "
+                                "Vassallo et al. connect CmdT-mediated "
                                 "mRNA modification to inhibited viral "
                                 "replication."
                             ),
@@ -405,7 +409,7 @@ RECORD: dict[str, Any] = {
                             "reference": GOESSWEIN_PMC,
                             "snippet": ABI_SNIPPET,
                             "notes": (
-                                "Goesswein et al. interpret CmdTAC as "
+                                "Vassallo et al. interpret CmdTAC as "
                                 "consistent with an abortive-infection "
                                 "mechanism."
                             ),
@@ -426,7 +430,7 @@ RECORD: dict[str, Any] = {
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Goesswein et al. support CmdTAC as a "
+                "Vassallo et al. support CmdTAC as a "
                 "toxin-antitoxin-chaperone abortive-infection system in "
                 "which CmdC senses viral capsid proteins and liberates the "
                 "CmdT mRNA ADP-ribosyltransferase. The current "

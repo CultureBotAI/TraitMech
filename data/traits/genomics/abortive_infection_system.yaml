@@ -181,7 +181,7 @@ discussions:
     et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor
     et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz
     et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al.,
-    and Goesswein et al. still support abortive infection as a genomically encoded
+    and Vassallo et al. still support abortive infection as a genomically encoded
     phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis,
     RT-related polymerase, two-component, translation-inhibition, prophage-encoded
     DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal
@@ -373,4 +373,11 @@ curation_history:
   changes: Documented CmdTAC as split out in the open abortive-infection subfamily
     split-gap discussion after minting traitmech:000335 for the CmdTAC system; other
     abortive-infection families remain open.
+  llm_assisted: true
+- timestamp: '2026-09-21T12:26:31Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: Corrected the CmdTAC split-gap source attribution from Goesswein et al.
+    to Vassallo et al. after verifying DOI:10.1038/s41586-024-08102-8 against Crossref
+    and Europe PMC metadata.
   llm_assisted: true

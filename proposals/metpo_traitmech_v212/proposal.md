@@ -9,7 +9,7 @@
 
 The pinned METPO snapshot has no active exact class for CmdTAC system, the
 genome-level possession trait for a toxin-antitoxin-chaperone
-abortive-infection locus. Goesswein et al. characterize CmdTAC as an
+abortive-infection locus. Vassallo et al. characterize CmdTAC as an
 anti-phage defense system in which CmdC senses viral capsid proteins, CmdA is
 degraded, and the liberated CmdT ADP-ribosyltransferase modifies mRNA to block
 translation and abort phage infection. The pinned DefenseFinder article

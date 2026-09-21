@@ -1,9 +1,9 @@
 identifier: traitmech:000335
 label: CmdTAC system
 definition: An abortive infection system in which an organism possesses a cmdTAC toxin-antitoxin-chaperone
-  locus encoding a CmdT ADP-ribosyltransferase, a CmdA antitoxin, and a CmdC SecB-like
-  chaperone that can sense viral capsid proteins, liberate CmdT, modify messenger
-  RNA, and arrest translation to inhibit bacteriophage replication.
+  locus whose CmdC chaperone senses viral capsid proteins and whose CmdA antitoxin
+  degradation liberates the CmdT ADP-ribosyltransferase to modify messenger RNA, arrest
+  translation, and inhibit bacteriophage replication.
 definition_source: DOI:10.1038/s41586-024-08102-8
 trait_category: GENOMICS
 term_kind: CLASS
@@ -17,16 +17,19 @@ synonyms:
 - synonym_text: cmdTAC
   synonym_type: EXACT_SYNONYM
   source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
+- synonym_text: cmdTAC toxin-antitoxin-chaperone locus
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41586-024-08102-8
 evidence:
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: Here we characterize the widely distributed anti-phage defence system CmdTAC,
     which provides robust defence against infection by the T-even family of phages
-  notes: Goesswein et al. name CmdTAC as a widely distributed anti-phage defense system
+  notes: Vassallo et al. name CmdTAC as a widely distributed anti-phage defense system
     that protects against T-even phages.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: was discovered in the genome of the wild E. coli isolate ECOR22 through
     a functional genetic screen for anti-phage defence systems
-  notes: Goesswein et al. trace the CmdTAC system to a functional anti-phage defense
+  notes: Vassallo et al. trace the CmdTAC system to a functional anti-phage defense
     screen of Escherichia coli ECOR22.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: CmdC detects infection by sensing viral capsid proteins, ultimately leading
@@ -42,23 +45,23 @@ evidence:
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: CmdT modifies the N6 position of adenine in GA dinucleotides within single-stranded
     RNAs, leading to arrest of mRNA translation and inhibition of viral replication
-  notes: Goesswein et al. support CmdT modification of single-stranded RNA as the
-    translation-arresting antiphage effector output.
+  notes: Vassallo et al. support CmdT modification of single-stranded RNA as the translation-arresting
+    antiphage effector output.
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
   snippet: These results are consistent with CmdTAC functioning via an Abi mechanism.
-  notes: Goesswein et al. interpret the low-MOI protection and center-of-infection
+  notes: Vassallo et al. interpret the low-MOI protection and center-of-infection
     results as consistent with an abortive-infection mechanism.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: CmdTAC | 10\.1038/s41586-024-08102-8 | Anti-viral defence by an mRNA ADP-ribosyltransferase
     that blocks translation
-  notes: The DefenseFinder article registry maps the named CmdTAC system to the Goesswein
+  notes: The DefenseFinder article registry maps the named CmdTAC system to the Vassallo
     et al. CmdTAC mechanism paper; the pinned DefenseFinder HMM inventory and rules
     table do not list CmdTAC, so this row is name-to-paper evidence rather than model-component
     evidence.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: Goesswein et al. report that cmdTAC was discovered in wild Escherichia coli
+  note: Vassallo et al. report that cmdTAC was discovered in wild Escherichia coli
     isolate ECOR22 through a functional anti-phage defense screen.
   reference: DOI:10.1038/s41586-024-08102-8
 causal_graphs:
@@ -116,14 +119,7 @@ causal_graphs:
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: CmdC detects infection by sensing viral capsid proteins
-      notes: Goesswein et al. connect CmdC to viral capsid protein sensing.
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: CmdTAC | 10\.1038/s41586-024-08102-8 | Anti-viral defence by an mRNA
-        ADP-ribosyltransferase that blocks translation
-      notes: The DefenseFinder article registry maps the named CmdTAC system to the
-        Goesswein et al. CmdTAC mechanism paper; the pinned DefenseFinder HMM inventory
-        and rules table do not list CmdTAC, so this row is name-to-paper evidence
-        rather than model-component evidence.
+      notes: Vassallo et al. connect CmdC to viral capsid protein sensing.
   - subject: cmdc_capsid_sensing
     predicate: contributes to
     predicate_id: RO:0002326
@@ -134,7 +130,7 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: newly synthesized capsid protein triggers dissociation of the chaperone
         CmdC from the CmdTAC complex
-      notes: Goesswein et al. place phage capsid-driven CmdC dissociation upstream
+      notes: Vassallo et al. place phage capsid-driven CmdC dissociation upstream
         of antitoxin destabilization.
   - subject: cmda_degradation
     predicate: contributes to
@@ -145,7 +141,7 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: destabilization and degradation of the antitoxin CmdA, with consequent
         liberation of the CmdT ADP-ribosyltransferase
-      notes: Goesswein et al. place CmdA degradation upstream of CmdT liberation.
+      notes: Vassallo et al. place CmdA degradation upstream of CmdT liberation.
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: CmdT co-precipitated with both CmdA and CmdC
       notes: CmdT co-precipitated with both its antitoxin and chaperone partners.
@@ -158,7 +154,7 @@ causal_graphs:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: CmdT selectively modifies mRNA to block translation and abort the phage
         infection
-      notes: Goesswein et al. connect CmdT-mediated mRNA modification to translation
+      notes: Vassallo et al. connect CmdT-mediated mRNA modification to translation
         arrest.
   - subject: mrna_translation_arrest
     predicate: confers
@@ -169,7 +165,7 @@ causal_graphs:
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: arrest of mRNA translation and inhibition of viral replication
-      notes: Goesswein et al. connect CmdT-mediated mRNA modification to inhibited
+      notes: Vassallo et al. connect CmdT-mediated mRNA modification to inhibited
         viral replication.
   - subject: cmdtac_system_trait
     predicate: is a
@@ -180,7 +176,7 @@ causal_graphs:
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11618068/
       snippet: These results are consistent with CmdTAC functioning via an Abi mechanism.
-      notes: Goesswein et al. interpret CmdTAC as consistent with an abortive-infection
+      notes: Vassallo et al. interpret CmdTAC as consistent with an abortive-infection
         mechanism.
 discussions:
 - discussion_id: cmdtac-family-and-model-coverage-gap
@@ -188,7 +184,7 @@ discussions:
     coverage before minting narrower CmdTAC mechanism children.
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: Goesswein et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection
+  rationale: Vassallo et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection
     system in which CmdC senses viral capsid proteins and liberates the CmdT mRNA
     ADP-ribosyltransferase. The current DefenseFinder snapshot lists CmdTAC in the
     article registry but not in the pinned HMM inventory or rules table, so this record
@@ -206,4 +202,12 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v212.
+  llm_assisted: true
+- timestamp: '2026-09-21T12:26:31Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: Corrected Vassallo et al. author attribution, tightened the CmdTAC system
+    definition to attach mRNA modification to CmdT, carried the proposal-only locus
+    label into the record as a RELATED_SYNONYM, and left the DefenseFinder article-registry
+    row at record-level evidence instead of on the CmdC sensing edge.
   llm_assisted: true

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-21T122631Z-codex-7fa13e
+  timestamp: '2026-09-21T12:26:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Correct CmdTAC source attribution
+  details: Corrected the abortive-infection split-gap discussion to attribute the
+    CmdTAC source paper to Vassallo et al. after Crossref and Europe PMC metadata
+    confirmed Vassallo, Doering, and Laub as the authors of DOI:10.1038/s41586-024-08102-8.
