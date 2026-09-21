@@ -1378,6 +1378,9 @@ nhi locus	GENETIC_ELEMENT	1	data/traits/genomics/nhi_system.yaml
 nhi nuclease-helicase immunity	BIOLOGICAL_PROCESS	1	data/traits/genomics/nhi_system.yaml
 phage-specific replication intermediate degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/nhi_system.yaml
 phage dna accumulation prevention	BIOLOGICAL_PROCESS	1	data/traits/genomics/nhi_system.yaml
+nixi locus	GENETIC_ELEMENT	1	data/traits/genomics/nixi_system.yaml
+icp1 genome cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/nixi_system.yaml
+icp1 replication inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/nixi_system.yaml
 ogmios locus	GENETIC_ELEMENT	1	data/traits/genomics/ogmios_system.yaml
 olokun locus	GENETIC_ELEMENT	1	data/traits/genomics/olokun_system.yaml
 ophion locus	GENETIC_ELEMENT	1	data/traits/genomics/ophion_system.yaml
