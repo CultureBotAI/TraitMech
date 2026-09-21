@@ -45,8 +45,8 @@ evidence:
     are similar to the Abi group of proteins
   notes: EBI InterPro resolves PF07751 as the reviewed Pfam Abi-like protein family
     with short name Abi_2.
-- reference: https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AQ48717%29&fields=accession,id,gene_names,protein_name,xref_pfam&format=tsv
-  snippet: "Q48717\tQ48717_9LACT\tabiD1\tAbiD1\tPF07751;"
+- reference: https://rest.uniprot.org/uniprotkb/Q48717.tsv?fields=accession,id,gene_names,protein_name,xref_pfam,organism_name
+  snippet: "Q48717\tQ48717_9LACT\tabiD1\tAbiD1\tPF07751;\tLactococcus lactis"
   notes: UniProt maps the Lactococcus lactis abiD1/AbiD1 entry to Pfam PF07751, bridging
     primary AbiD1 papers to the Abi_2 HMM family without making DefenseFinder Abi2
     exactly equivalent to AbiD1.

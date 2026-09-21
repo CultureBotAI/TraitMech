@@ -25,9 +25,8 @@ ANBA = "DOI:10.1128/jb.177.13.3818-3823.1995"
 BIDNENKO = "DOI:10.1128/jb.177.13.3824-3829.1995"
 INTERPRO_PF07751 = "https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/"
 UNIPROT_Q48717 = (
-    "https://rest.uniprot.org/uniprotkb/search?"
-    "query=%28accession%3AQ48717%29"
-    "&fields=accession,id,gene_names,protein_name,xref_pfam&format=tsv"
+    "https://rest.uniprot.org/uniprotkb/Q48717.tsv?"
+    "fields=accession,id,gene_names,protein_name,xref_pfam,organism_name"
 )
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
@@ -259,7 +258,10 @@ RECORD: dict[str, Any] = {
         },
         {
             "reference": UNIPROT_Q48717,
-            "snippet": "Q48717\tQ48717_9LACT\tabiD1\tAbiD1\tPF07751;",
+            "snippet": (
+                "Q48717\tQ48717_9LACT\tabiD1\tAbiD1\tPF07751;"
+                "\tLactococcus lactis"
+            ),
             "notes": (
                 "UniProt maps the Lactococcus lactis abiD1/AbiD1 entry "
                 "to Pfam PF07751, bridging primary AbiD1 papers to the "
