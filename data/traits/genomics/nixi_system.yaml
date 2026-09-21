@@ -139,6 +139,24 @@ causal_graphs:
       snippet: NixI, however, is sufficient to limit ICP1 progeny production in a
         single round of infection
       notes: LeGault et al. show that NixI is sufficient to limit ICP1 progeny production.
+  - subject: icp1_genome_cleavage
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: icp1_replication_inhibition
+    description: NixI-dependent cleavage of the ICP1 genome contributes to inhibition
+      of ICP1 replication.
+    evidence:
+    - reference: DOI:10.1093/nar/gkac002
+      snippet: Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage
+        development likely by nicking ICP1’s genome as it transitions to RCR
+      notes: LeGault et al. connect NixI's nicking of ICP1 DNA to blocked phage development
+        during the transition to rolling-circle replication.
+    - reference: DOI:10.1093/nar/gkac002
+      snippet: Together, these data show that PLE encodes a nicking endonuclease,
+        NixI, that is necessary for cleavage of ICP1’s genome in vivo and that shows
+        in vitro specificity for sequences found in ICP1’s genome
+      notes: LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible
+        for ICP1 genome cleavage.
   - subject: icp1_replication_inhibition
     predicate: confers
     predicate_id: METPO:2007700
@@ -193,4 +211,11 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v210.
+  llm_assisted: true
+- timestamp: '2026-09-21T10:30:48Z'
+  curator: codex
+  action: UPDATED_CAUSAL_GRAPH
+  changes: 'Connected ICP1 genome cleavage to ICP1 replication inhibition in the NixI
+    graph so nuclease-mediated DNA cleavage lies on the path from NixI locus to NixI
+    system, addressing issue #1189.'
   llm_assisted: true

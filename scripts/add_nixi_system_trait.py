@@ -311,6 +311,36 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
+                    "subject": "icp1_genome_cleavage",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "icp1_replication_inhibition",
+                    "description": (
+                        "NixI-dependent cleavage of the ICP1 genome "
+                        "contributes to inhibition of ICP1 replication."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": LEGAULT,
+                            "snippet": NIXI_BLOCKS_SNIPPET,
+                            "notes": (
+                                "LeGault et al. connect NixI's nicking of "
+                                "ICP1 DNA to blocked phage development during "
+                                "the transition to rolling-circle replication."
+                            ),
+                        },
+                        {
+                            "reference": LEGAULT,
+                            "snippet": NIXI_CLEAVAGE_SNIPPET,
+                            "notes": (
+                                "LeGault et al. support NixI as the "
+                                "PLE-encoded nicking endonuclease responsible "
+                                "for ICP1 genome cleavage."
+                            ),
+                        },
+                    ],
+                },
+                {
                     "subject": "icp1_replication_inhibition",
                     "predicate": "confers",
                     "predicate_id": "METPO:2007700",
@@ -408,6 +438,18 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="UPDATED_CAUSAL_GRAPH",
+        changes=(
+            "Connected ICP1 genome cleavage to ICP1 replication inhibition "
+            "in the NixI graph so nuclease-mediated DNA cleavage lies on the "
+            "path from NixI locus to NixI system, addressing issue #1189."
+        ),
+        llm_assisted=True,
+        timestamp="2026-09-21T10:30:48Z",
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

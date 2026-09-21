@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/nixi_system.yaml
+  slug: nixi_system
+session:
+  id: 2026-09-21T103150Z-codex-647326
+  timestamp: '2026-09-21T10:31:50Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1189
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Connected NixI genome cleavage to replication inhibition
+  details: 'Addressed CultureBotAI/TraitMech#1189 from PR #1188 review by adding the LeGault-backed
+    ICP1 genome cleavage to ICP1 replication inhibition edge to data/traits/genomics/nixi_system.yaml,
+    keeping the cleavage node on the path from the NixI locus to the NixI system trait.'
