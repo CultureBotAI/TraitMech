@@ -1466,6 +1466,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/fs_hepn_tm_system.html#fs-hepn-tm-mechanism-gap"
  },
  {
+  "discussion_id": "fs-hp-sdh-sah-mechanism-gap",
+  "prompt": "Resolve FS_HP_SDH_sah natural hosts, helper-phage triggers, HP component identity, and SDH_sah partner activity before minting narrower FS_HP_SDH_sah mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "FS-HP-SDH-sah system",
+  "source_id": "traitmech:000349",
+  "source_file": "fs_hp_sdh_sah_system.yaml",
+  "attaches_to": [
+   "causal_graphs#fs_hp_sdh_sah_locus_restricts_phage"
+  ],
+  "rationale": "Fillol-Salom et al. support phage-inducible chromosomal islands as carriers of defense systems that provide broad immunity, and DefenseFinder models FS_HP_SDH_sah as a two-profile system. Its exact natural host breadth, helper-phage trigger, HP component identity, SDH_sah partner activity, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/fs_hp_sdh_sah_system.html#fs-hp-sdh-sah-mechanism-gap"
+ },
+ {
   "discussion_id": "fs-hp-mechanism-gap",
   "prompt": "Resolve FS_HP natural hosts, helper-phage triggers, HP component identity, and effector activity before minting narrower FS_HP mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3992,9 +4011,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 218,
- "total_knowledge_gaps": 136,
- "total_source_entries": 216,
+ "total_discussions": 219,
+ "total_knowledge_gaps": 137,
+ "total_source_entries": 217,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
