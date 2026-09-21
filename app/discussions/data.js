@@ -383,6 +383,30 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/abij_system.html#abij-trigger-and-effector-gap"
  },
  {
+  "discussion_id": "abil-trigger-and-effector-gap",
+  "prompt": "Resolve the AbiL phage trigger, AbiLi and AbiLii activities, AbiLi2 and AbiLii2 HMM row relationships, and ATPase-plus-TOPRIM mechanism before minting narrower AbiL mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "AbiL system",
+  "source_id": "traitmech:000340",
+  "source_file": "abil_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abil_locus_restricts_lactococcal_phage"
+  ],
+  "rationale": "Deng et al. support AbiL as a lactococcal phage abortive infection system, the FEMS review lists AbiL among confirmed two-component lactococcal Abi-like systems, and DefenseFinder represents AbiL with mandatory AbiL__AbiLi and AbiL__AbiLii profiles. The same pinned HMM inventory also contains AbiL__AbiLi2 and AbiL__AbiLii2 rows that are not in the pinned two-profile rule, and the FEMS review summarizes unresolved ATPase and TOPRIM predictions. This first system-level record therefore leaves the direct phage trigger, exact AbiLi and AbiLii molecular activities, accessory-model interpretation, AbiL-to-PARIS similarity, growth-arrest or cell-death route, and phage escape routes unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 4,
+  "evidence_refs": [
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md",
+   "DOI:10.1093/femsre/fuag009",
+   "DOI:10.1093/femsre/fuag009"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abil_system.html#abil-trigger-and-effector-gap"
+ },
+ {
   "discussion_id": "abir-component-activity-gap",
   "prompt": "Resolve the AbiR phage trigger, profile-to-locus mapping, and AbiRa, AbiRb, and AbiRc molecular functions before minting narrower AbiR mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -451,7 +475,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, and AbiJ are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, and traitmech:000339, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., and Deng et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, and AbiL are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, and traitmech:000340, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., and Deng et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3772,9 +3796,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 208,
- "total_knowledge_gaps": 127,
- "total_source_entries": 207,
+ "total_discussions": 209,
+ "total_knowledge_gaps": 128,
+ "total_source_entries": 208,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
