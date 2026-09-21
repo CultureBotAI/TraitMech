@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abialpha_system.yaml
+  slug: abialpha_system
+session:
+  id: 2026-09-21T005500Z-codex-5d0af1
+  timestamp: '2026-09-21T00:55:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1168
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1163
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  summary: Recopy AbiAlpha DefenseFinder HMM registry row
+  details: Addressed PR 1163 review issue 1168 by re-copying the AbiAlpha__AbiAlpha
+    row from the pinned Liste_hmm_system.md source into top-level and graph evidence
+    snippets. Confirmed List_system_article.md already uses the sentence-case AbiAlpha
+    article title stored in the record.

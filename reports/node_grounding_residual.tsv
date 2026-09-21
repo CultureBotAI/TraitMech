@@ -1121,6 +1121,10 @@ zntr merr-family regulator	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolera
 znta transcription	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
 czccba rnd efflux complex	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolerant.yaml
 zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
+abi-alpha locus	GENETIC_ELEMENT	1	data/traits/genomics/abialpha_system.yaml
+abialpha antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abialpha_system.yaml
+idefix lytic-cycle perturbation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abialpha_system.yaml
+infected-cell premature lysis	BIOLOGICAL_PROCESS	1	data/traits/genomics/abialpha_system.yaml
 abib locus	GENETIC_ELEMENT	1	data/traits/genomics/abib_system.yaml
 abib antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abib_system.yaml
 sensitive phage transcript degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abib_system.yaml
