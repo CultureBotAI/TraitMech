@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abio_system.yaml
+  slug: abio_system
+session:
+  id: 2026-09-21T183443Z-codex-8a4f1b
+  timestamp: '2026-09-21T18:34:43Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add AbiO system TraitRecord
+  details: Minted traitmech:000342 for the DOI-backed AbiO system under abortive infection
+    system after ignored-and-hidden duplicate review found no exact same-scope TraitMech,
+    METPO, history, or prior proposal record. Recorded Prevots and Ritzenthaler, FEMS
+    review, and pinned DefenseFinder evidence. Added a conservative NONMECHANISTIC graph
+    and kept the AbiO phage trigger, exact restriction-endonuclease and helicase roles,
+    growth-arrest or cell-death route, and phage escape routes open.
