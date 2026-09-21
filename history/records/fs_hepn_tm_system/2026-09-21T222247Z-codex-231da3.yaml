@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fs_hepn_tm_system.yaml
+  slug: fs_hepn_tm_system
+session:
+  id: 2026-09-21T222247Z-codex-231da3
+  timestamp: '2026-09-21T22:22:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add FS-HEPN-TM system trait
+  details: Minted traitmech:000347 for the DefenseFinder-backed FS-HEPN-TM system under phage
+    defense system with DOI-backed evidence from Fillol-Salom et al., pinned DefenseFinder
+    article, rules, and HMM registry evidence, a conservative nonmechanistic causal graph,
+    an open mechanism-gap discussion, and proposal metpo_traitmech_v224 reserving METPO:1030100
+    for upstream adoption.
