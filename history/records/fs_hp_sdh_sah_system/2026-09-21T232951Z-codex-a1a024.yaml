@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fs_hp_sdh_sah_system.yaml
+  slug: fs_hp_sdh_sah_system
+session:
+  id: 2026-09-21T232951Z-codex-a1a024
+  timestamp: '2026-09-21T23:29:51Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add FS-HP-SDH-sah system trait
+  details: Minted traitmech:000349 for the DefenseFinder-backed FS-HP-SDH-sah system under
+    phage defense system with DOI-backed evidence from Fillol-Salom et al., pinned DefenseFinder
+    article, rules, and HMM registry evidence, a conservative nonmechanistic causal graph,
+    an open mechanism-gap discussion, and proposal metpo_traitmech_v226 reserving METPO:1030300
+    for upstream adoption.
