@@ -205,6 +205,25 @@ window.searchData = [
   "page_url": "../../pages/traits/ecology/gut_associated.html#kgscan-4fc1a06fa1e3"
  },
  {
+  "discussion_id": "abi2-family-boundary-gap",
+  "prompt": "Resolve the natural Abi2 locus breadth, phage trigger, and AbiD/F-group mapping before minting narrower Abi2 mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Abi2 system",
+  "source_id": "traitmech:000338",
+  "source_file": "abi2_system.yaml",
+  "attaches_to": [
+   "causal_graphs#abi2_locus_restricts_phage"
+  ],
+  "rationale": "The DefenseFinder Abi2 model namespace requires the Abi2__Abi_2 PF07751 profile; InterPro treats PF07751 as an Abi-like family, and UniProt maps the AbiD1 protein onto the same Pfam family. This first record leaves unresolved whether DefenseFinder Abi2 exactly corresponds to AbiD1, the broader AbiD/F group, or a different subset of Abi-like loci; it therefore avoids protein-level chemistry and records only the genome-level model namespace.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abi2_system.html#abi2-family-boundary-gap"
+ },
+ {
   "discussion_id": "abialpha-lysis-route-gap",
   "prompt": "Resolve the AbiAlpha direct molecular target, Idefix trigger, lysis route, natural host range, and phage escape routes before minting narrower AbiAlpha mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -410,7 +429,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, and CmdTAC are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, and traitmech:000335, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., and Vassallo et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, and Abi2 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, and traitmech:000338, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., and Anba et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -3731,9 +3750,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 206,
- "total_knowledge_gaps": 125,
- "total_source_entries": 205,
+ "total_discussions": 207,
+ "total_knowledge_gaps": 126,
+ "total_source_entries": 206,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

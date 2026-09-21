@@ -146,6 +146,7 @@ data/traits/environment/thermotolerant.yaml	METPO:1000619	thermotolerant	thermot
 data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	UV radiation tolerant	uv_tolerance_excision_repair	NONMECHANISTIC	2	1	1	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/xerophilic.yaml	traitmech:000011	xerophilic	xerophilic_low_water_activity_growth	NONMECHANISTIC	0	0	0	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	zinc tolerant	zinc_tolerance_czc_efflux	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
+data/traits/genomics/abi2_system.yaml	traitmech:000338	Abi2 system	abi2_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abialpha_system.yaml	traitmech:000322	AbiAlpha system	abialpha_locus_causes_enterococcal_premature_lysis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abib_system.yaml	traitmech:000319	AbiB system	abib_locus_degrades_sensitive_phage_transcripts	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abic_system.yaml	traitmech:000320	AbiC system	abic_locus_aborts_lactococcal_phage_p2_infection	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
