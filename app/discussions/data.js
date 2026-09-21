@@ -437,6 +437,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/aditi_system.html#aditi-mechanism-gap"
  },
  {
+  "discussion_id": "apsab-substrate-and-guide-source-gap",
+  "prompt": "Resolve ApsAB guide sources, plasmid substrates, and model coverage before minting narrower ApsAB mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ApsAB system",
+  "source_id": "traitmech:000328",
+  "source_file": "apsab_system.yaml",
+  "attaches_to": [
+   "causal_graphs#apsab_locus_destabilizes_plasmids"
+  ],
+  "rationale": "Zongo et al. support ApsAB as a two-component E. coli anti-plasmid system and report activity against high- and low-copy-number plasmids, but the direct ApsB guide source, the target-recognition rule, exact plasmid-degradation chemistry, natural substrate range, family-level breadth, and profile-to-component model are not resolved enough here to assert narrower mechanistic or subtype traits.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/apsab_system.html#apsab-substrate-and-guide-source-gap"
+ },
+ {
   "discussion_id": "aristaios-mechanism-gap",
   "prompt": "Resolve Aristaios phage triggers and effector outputs before minting narrower Aristaios mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3541,9 +3560,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 196,
- "total_knowledge_gaps": 115,
- "total_source_entries": 195,
+ "total_discussions": 197,
+ "total_knowledge_gaps": 116,
+ "total_source_entries": 196,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

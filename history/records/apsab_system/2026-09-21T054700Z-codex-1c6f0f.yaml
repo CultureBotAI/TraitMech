@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/apsab_system.yaml
+  slug: apsab_system
+session:
+  id: 2026-09-21T054700Z-codex-1c6f0f
+  timestamp: '2026-09-21T05:47:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add ApsAB system trait
+  details: Added traitmech:000328 ApsAB system as a DOI-backed GENOMICS TraitRecord under
+    the quality root. DOI:10.1038/s41467-024-48219-y names ApsAB as an anti-plasmid system,
+    shows that the F3141-F3140 locus was renamed apsAB, reports that ApsAB targets high- and
+    low-copy-number plasmids, and supports a nuclease/helicase plus Argonaute-like two-component
+    architecture. The pinned DefenseFinder article registry maps ApsAB to the Zongo et al.
+    Escherichia coli anti-plasmid-system paper. Reserved METPO:1028200 in proposals/metpo_traitmech_v205
+    for the upstream replacement ID.
