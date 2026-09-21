@@ -831,6 +831,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/charlie_gp32_system.html#charlie_gp32-mechanism-gap"
  },
  {
+  "discussion_id": "cmdtac-family-and-model-coverage-gap",
+  "prompt": "Resolve CmdTAC family breadth, phage escape routes, and DefenseFinder model coverage before minting narrower CmdTAC mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CmdTAC system",
+  "source_id": "traitmech:000335",
+  "source_file": "cmdtac_system.yaml",
+  "attaches_to": [
+   "causal_graphs#cmdtac_mrna_adp_ribosylation_aborts_phage"
+  ],
+  "rationale": "Goesswein et al. support CmdTAC as a toxin-antitoxin-chaperone abortive-infection system in which CmdC senses viral capsid proteins and liberates the CmdT mRNA ADP-ribosyltransferase. The current DefenseFinder snapshot lists CmdTAC in the article registry but not in the pinned HMM inventory or rules table, so this record leaves model-component coverage, phage specificity beyond Tevenvirinae, escape routes, and natural family breadth unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/cmdtac_system.html#cmdtac-family-and-model-coverage-gap"
+ },
+ {
   "discussion_id": "damona-mechanism-gap",
   "prompt": "Resolve Damona phage triggers and effector outputs before minting narrower Damona mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3674,9 +3693,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 203,
- "total_knowledge_gaps": 122,
- "total_source_entries": 202,
+ "total_discussions": 204,
+ "total_knowledge_gaps": 123,
+ "total_source_entries": 203,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

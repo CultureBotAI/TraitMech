@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/cmdtac_system.yaml
+  slug: cmdtac_system
+session:
+  id: 2026-09-21T114240Z-codex-558ea0
+  timestamp: '2026-09-21T11:42:40Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add CmdTAC abortive-infection trait
+  details: Minted traitmech:000335 for the DOI-backed CmdTAC system under abortive infection
+    system, added CmdTAC evidence from DOI:10.1038/s41586-024-08102-8 and stable PMC full
+    text, recorded the pinned DefenseFinder article-registry row, and left an open model-coverage
+    knowledge gap because the pinned HMM and rules registries do not yet list CmdTAC.

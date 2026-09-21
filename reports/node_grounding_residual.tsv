@@ -1212,6 +1212,11 @@ ceres locus	GENETIC_ELEMENT	1	data/traits/genomics/ceres_system.yaml
 cernunnos locus	GENETIC_ELEMENT	1	data/traits/genomics/cernunnos_system.yaml
 charlie gp32 locus	GENETIC_ELEMENT	1	data/traits/genomics/charlie_gp32_system.yaml
 blocked che9c dna injection	BIOLOGICAL_PROCESS	1	data/traits/genomics/charlie_gp32_system.yaml
+cmdtac locus	GENETIC_ELEMENT	1	data/traits/genomics/cmdtac_system.yaml
+cmdc viral capsid sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/cmdtac_system.yaml
+cmda antitoxin degradation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cmdtac_system.yaml
+cmdt mrna adp-ribosylation	MOLECULAR_FUNCTION	1	data/traits/genomics/cmdtac_system.yaml
+mrna translation arrest	BIOLOGICAL_PROCESS	1	data/traits/genomics/cmdtac_system.yaml
 gene expression level	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 trna abundance	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
 5' mrna secondary structure	QUALITY	1	data/traits/genomics/codon_usage_bias.yaml
