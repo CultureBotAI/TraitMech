@@ -1535,6 +1535,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/nhi_system.html#nhi-trigger-and-substrate-gap"
  },
  {
+  "discussion_id": "nixi-stix-and-satellite-scope-gap",
+  "prompt": "Resolve NixI satellite self-protection, optional Stix profile scope, natural-host protein accessions, and divergent-homolog activity before minting narrower NixI mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "NixI system",
+  "source_id": "traitmech:000333",
+  "source_file": "nixi_system.yaml",
+  "attaches_to": [
+   "causal_graphs#nixi_locus_inhibits_icp1_replication"
+  ],
+  "rationale": "LeGault et al. support NixI as a PLE-encoded nicking endonuclease that cleaves ICP1 DNA and inhibits ICP1 genome replication, and DefenseFinder models NixI with a required NixI__NixI profile plus optional NixI__Stix. This first system-level record leaves the exact PLE self-protection mechanism, the optional Stix profile's experimental scope, the accession-level PLE1 NixI protein, the breadth of divergent homolog activity, and additional PLE anti-ICP1 mechanisms unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/nixi_system.html#nixi-stix-and-satellite-scope-gap"
+ },
+ {
   "discussion_id": "ogmios-mechanism-gap",
   "prompt": "Resolve Ogmios phage triggers and effector outputs before minting narrower Ogmios mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3636,9 +3655,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 201,
- "total_knowledge_gaps": 120,
- "total_source_entries": 200,
+ "total_discussions": 202,
+ "total_knowledge_gaps": 121,
+ "total_source_entries": 201,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
