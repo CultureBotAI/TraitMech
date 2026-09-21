@@ -1260,6 +1260,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_ape_system.html#apea-trigger-and-homolog-scope-gap"
  },
  {
+  "discussion_id": "gasdermin-family-breadth-and-card-nlr-scope-gap",
+  "prompt": "Resolve natural GasderMIN family breadth and CARD-NLR gasdermin context before minting narrower gasdermin subfamily traits.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "GasderMIN system",
+  "source_id": "traitmech:000336",
+  "source_file": "gasdermin_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gasdermin_proteolysis_triggers_pore_cell_death"
+  ],
+  "rationale": "Johnson et al. experimentally tested a Lysobacter bGSDM-containing operon and mechanistically dissected Runella bGSDM protease-triggered toxicity, while some bacterial gasdermins showed no discernible phage restriction in Escherichia coli and the GasderMIN__bGSDM profile is also used in CARD-NLR detector contexts in the pinned DefenseFinder rules table. This record captures the standalone GasderMIN detector namespace and leaves CARD-NLR-associated gasdermins, natural phage triggers, and broader family boundaries unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gasdermin_system.html#gasdermin-family-breadth-and-card-nlr-scope-gap"
+ },
+ {
   "discussion_id": "geb-mechanism-gap",
   "prompt": "Resolve Geb phage triggers and effector outputs before minting narrower Geb mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3693,9 +3712,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 204,
- "total_knowledge_gaps": 123,
- "total_source_entries": 203,
+ "total_discussions": 205,
+ "total_knowledge_gaps": 124,
+ "total_source_entries": 204,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
