@@ -1,0 +1,164 @@
+identifier: traitmech:000347
+label: FS-HEPN-TM system
+definition: A phage defense system in which an organism possesses an FS_HEPN_TM locus
+  represented by DefenseFinder as a two-profile model requiring FS_HEPN_TM__HEPN and
+  FS_HEPN_TM__TM.
+definition_source: DOI:10.1016/j.cell.2022.07.014
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: FS_HEPN_TM
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: FS_HEPN_TM__HEPN
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: FS_HEPN_TM__TM
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:35985290
+  snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal
+    of defense mechanisms
+  notes: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of mobile-element defense mechanisms.
+- reference: PMID:35985290
+  snippet: These defense systems provide broad immunity, blocking not only phage reproduction,
+    but also plasmid and non-cognate PICI transfer.
+  notes: Fillol-Salom et al. support PICI-encoded defense systems as broad immunity
+    determinants against phage reproduction and other mobile genetic element transfer.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: FS_HEPN_TM | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+    mobilizing pathogenicity islands encoding immune systems against competitors
+  notes: The DefenseFinder article registry maps the named FS_HEPN_TM system to the
+    Fillol-Salom et al. PICI defense-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"
+  notes: The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring
+    the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 |
+    FS_HEPN_TM             | PF05168.15              | 20     |'
+  notes: The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   |
+    FS_HEPN_TM             | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.
+causal_graphs:
+- graph_id: fs_hepn_tm_locus_restricts_phage
+  title: FS-HEPN-TM loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an FS_HEPN_TM
+    locus to broad mobile-element defense without asserting the unresolved phage trigger
+    or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures FS-HEPN-TM as a named DefenseFinder two-profile
+    system in the Fillol-Salom PICI defense family while leaving its natural host
+    breadth, helper-phage trigger, HEPN-family substrate, and transmembrane partner
+    function unresolved.
+  nodes:
+  - node_id: fs_hepn_tm_locus
+    label: FS_HEPN_TM locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder FS_HEPN_TM phage-defense locus represented by HEPN-family
+      and transmembrane profiles.
+  - node_id: pici_encoded_mobile_element_defense
+    label: PICI-encoded mobile-element defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Defense by phage-inducible chromosomal island loci against phage
+      reproduction, plasmid transfer, or non-cognate PICI transfer.
+  - node_id: fs_hepn_tm_system_trait
+    label: FS-HEPN-TM system
+    node_type: TRAIT
+    grounding: traitmech:000347
+    description: Possession of a genome-encoded FS-HEPN-TM phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: fs_hepn_tm_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pici_encoded_mobile_element_defense
+    description: DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded
+      immunity study and models it as a two-profile system requiring HEPN-family and
+      transmembrane profiles.
+    evidence:
+    - reference: PMID:35985290
+      snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive
+        arsenal of defense mechanisms
+      notes: Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element
+        defense mechanisms.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_HEPN_TM | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+        from mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_HEPN_TM system to
+        the Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"
+      notes: The DefenseFinder rules table models FS_HEPN_TM as a two-profile system
+        requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 |
+        FS_HEPN_TM             | PF05168.15              | 20     |'
+      notes: The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   |
+        FS_HEPN_TM             | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.
+  - subject: pici_encoded_mobile_element_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: fs_hepn_tm_system_trait
+    description: FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM
+      system trait.
+    evidence:
+    - reference: PMID:35985290
+      snippet: These defense systems provide broad immunity, blocking not only phage
+        reproduction, but also plasmid and non-cognate PICI transfer.
+      notes: Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element
+        immunity determinants.
+  - subject: fs_hepn_tm_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: FS-HEPN-TM system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_HEPN_TM | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+        from mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_HEPN_TM system to
+        the Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"
+      notes: The DefenseFinder rules table models FS_HEPN_TM as a two-profile system
+        requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.
+discussions:
+- discussion_id: fs-hepn-tm-mechanism-gap
+  prompt: Resolve FS_HEPN_TM natural hosts, helper-phage triggers, HEPN-family substrates,
+    and transmembrane partner activity before minting narrower FS_HEPN_TM mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of defense systems that provide broad immunity, and DefenseFinder models FS_HEPN_TM
+    as a two-profile HEPN/transmembrane system. Its exact natural host breadth, helper-phage
+    trigger, substrate, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#fs_hepn_tm_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T22:22:47Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted FS-HEPN-TM system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v224.
+  llm_assisted: true

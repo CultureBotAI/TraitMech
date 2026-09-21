@@ -1447,6 +1447,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/fs_giy_yig_system.html#fs-giy-yig-mechanism-gap"
  },
  {
+  "discussion_id": "fs-hepn-tm-mechanism-gap",
+  "prompt": "Resolve FS_HEPN_TM natural hosts, helper-phage triggers, HEPN-family substrates, and transmembrane partner activity before minting narrower FS_HEPN_TM mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "FS-HEPN-TM system",
+  "source_id": "traitmech:000347",
+  "source_file": "fs_hepn_tm_system.yaml",
+  "attaches_to": [
+   "causal_graphs#fs_hepn_tm_locus_restricts_phage"
+  ],
+  "rationale": "Fillol-Salom et al. support phage-inducible chromosomal islands as carriers of defense systems that provide broad immunity, and DefenseFinder models FS_HEPN_TM as a two-profile HEPN/transmembrane system. Its exact natural host breadth, helper-phage trigger, substrate, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/fs_hepn_tm_system.html#fs-hepn-tm-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3954,9 +3973,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 216,
- "total_knowledge_gaps": 134,
- "total_source_entries": 214,
+ "total_discussions": 217,
+ "total_knowledge_gaps": 135,
+ "total_source_entries": 215,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

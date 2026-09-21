@@ -144,6 +144,7 @@ phage dna-building-block starvation	STATE	2	data/traits/genomics/dctpdeaminase_s
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
+pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	2	data/traits/genomics/fs_giy_yig_system.yaml|data/traits/genomics/fs_hepn_tm_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
@@ -1292,7 +1293,7 @@ erebus locus	GENETIC_ELEMENT	1	data/traits/genomics/erebus_system.yaml
 esos locus	GENETIC_ELEMENT	1	data/traits/genomics/esos_system.yaml
 fliodhais locus	GENETIC_ELEMENT	1	data/traits/genomics/fliodhais_system.yaml
 fs_giy_yig locus	GENETIC_ELEMENT	1	data/traits/genomics/fs_giy_yig_system.yaml
-pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/fs_giy_yig_system.yaml
+fs_hepn_tm locus	GENETIC_ELEMENT	1	data/traits/genomics/fs_hepn_tm_system.yaml
 gabija gaja-gajb operon	GENETIC_ELEMENT	1	data/traits/genomics/gabija_system.yaml
 gajab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
 gabija nucleotide depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
