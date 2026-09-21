@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/hesat_system.yaml
+  slug: hesat_system
+session:
+  id: 2026-09-21T045722Z-codex-a445f6
+  timestamp: '2026-09-21T04:57:22Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Hesat system trait
+  details: Added traitmech:000327 Hesat system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Hesat among newly described lactococcal
+    antiphage systems, identifies Hesat as a single-gene antiphage system, and proposes a
+    colicin-D-like translation-blocking activity upon phage infection. The pinned DefenseFinder
+    article registry maps Hesat to the Grafakou et al. lactococcal plasmidome discovery paper.
+    Reserved METPO:1028100 in proposals/metpo_traitmech_v204 for the upstream replacement
+    ID.
