@@ -206,19 +206,6 @@ RECORD: dict[str, Any] = {
                 "abortive-infection-like output with host-cell death."
             ),
         },
-        {
-            "reference": PARMA,
-            "snippet": (
-                "The Rex system requires a mechanism to prevent lambda "
-                "itself from being excluded during lytic growth."
-            ),
-            "notes": (
-                "This self-exclusion sentence keeps "
-                "bacteriophage-lambda self-protection inside the open "
-                "RexAB mechanism gap instead of making it a separate "
-                "organismal trait."
-            ),
-        },
         article_registry_evidence(),
         rules_evidence(),
         rexa_hmm_inventory_evidence(),

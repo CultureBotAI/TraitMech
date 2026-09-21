@@ -24,12 +24,6 @@ evidence:
     loss of active transport, the hydrolysis of ATP, and cell death.
   notes: Parma et al. support Rex exclusion as an abortive-infection-like output with
     host-cell death.
-- reference: DOI:10.1101/gad.6.3.497
-  snippet: The Rex system requires a mechanism to prevent lambda itself from being
-    excluded during lytic growth.
-  notes: This self-exclusion sentence keeps bacteriophage-lambda self-protection
-    inside the open RexAB mechanism gap instead of making it a separate organismal
-    trait.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: 'RexAB | 10\.1101/gad\.6\.3\.497 | The Rex system of bacteriophage lambda:
     tolerance and altruistic cell death'
