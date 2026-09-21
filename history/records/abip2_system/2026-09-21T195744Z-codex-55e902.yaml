@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abip2_system.yaml
+  slug: abip2_system
+session:
+  id: 2026-09-21T195744Z-codex-55e902
+  timestamp: '2026-09-21T19:57:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1215
+  - https://github.com/CultureBotAI/TraitMech/issues/1216
+  - https://github.com/CultureBotAI/TraitMech/issues/1217
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1214
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  summary: Record AbiP2 PR review repair
+  details: 'Addressed PR #1214 review issues #1215 and #1216 after the original history/records/abip2_system/2026-09-21T191336Z-codex-002185.yaml
+    creation record. The review repair renamed the AbiP2 NONMECHANISTIC graph id so it no
+    longer claimed T5 specificity, added an open CURATION_TODO for the mismatched DefenseFinder
+    AbiP2 article-registry row, regenerated derived pages and discussion data, and validated
+    the repaired record.'
