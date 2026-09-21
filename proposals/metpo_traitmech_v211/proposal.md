@@ -9,10 +9,12 @@
 
 The pinned METPO snapshot has no active exact class for ApeA system, the
 genome-level possession trait for a single-component ApeA phage-defense locus.
-Juozapaitis et al. characterize ApeA as a HEPN-domain antiviral RNase that
-cleaves host tRNAs within their anticodon loops and functions as an abortive
-infection system. DefenseFinder models the source namespace as `Gao_Ape` with
-the single mandatory `Gao_Ape__ApeA` profile.
+Juozapaitis et al. characterize ApeA DNA-phage defense through a HEPN-domain
+antiviral RNase that cleaves host tRNAs within their anticodon loops and
+functions as an abortive infection system. Drobysheva et al. characterize a
+second non-abortive ApeA output in which ApeA cleaves infecting RNA-phage
+genomes. DefenseFinder models the source namespace as `Gao_Ape` with the
+single mandatory `Gao_Ape__ApeA` profile.
 
 This cohort lifts one local class:
 
@@ -48,15 +50,17 @@ ApeA system captures genome-level possession of a single-component ApeA locus
 represented by DefenseFinder's `Gao_Ape__ApeA` HMM profile. It excludes
 individual `apeA` genes; individual ApeA HEPN RNase proteins; the
 DefenseFinder HMM profile; source database rows naming the Gao_Ape model; the
-Ec2ApeA deoxydinucleotide activation mechanism; unresolved Ec1ApeA activators;
+Ec2ApeA deoxydinucleotide activation mechanism; RNA-phage genomic-RNA
+cleavage; host-tRNA anticodon-loop cleavage; unresolved Ec1ApeA activators;
 and other phage-defense systems.
 
 ## External Mappings
 
 No exact external mapping is proposed. ApeA, the Gao_Ape DefenseFinder HMM
-profile, individual genes or RNases, tRNA anticodon-loop cleavage, and
-abortive phage restriction are shifted from this organism-level GENOMICS
-possession trait.
+profile, individual genes or RNases, tRNA anticodon-loop cleavage,
+phage-genomic-RNA cleavage, abortive phage restriction, and non-abortive
+RNA-phage restriction are shifted from this organism-level GENOMICS possession
+trait.
 
 ## Artifacts
 

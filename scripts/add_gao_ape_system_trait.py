@@ -53,6 +53,19 @@ APE_DISCUSSION_SNIPPET = (
     "system by cleaving host tRNAs within their anticodon loops to arrest "
     "translation"
 )
+APE_RNA_BIORXIV = "DOI:10.64898/2026.03.20.713152"
+APE_RNA_PHAGE_SNIPPET = (
+    "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against "
+    "a variety of single-stranded RNA phages."
+)
+APE_PHAGE_GENOME_SNIPPET = (
+    "results show that ApeA stops RNA phage replication by directly "
+    "cleaving the phage genome."
+)
+APE_RNA_NON_ABI_SNIPPET = (
+    "In the case of infection with RNA phages, we did not see evidence for "
+    "induced cell death by Ec1ApeA"
+)
 
 HMM_ROW = (
     "| Gao_Ape__ApeA                                    | "
@@ -110,8 +123,8 @@ RECORD: dict[str, Any] = {
         "A phage defense system in which an organism possesses a "
         "single-component ApeA locus represented by the DefenseFinder "
         "Gao_Ape__ApeA profile, encoding an oligomeric HEPN-domain antiviral "
-        "ribonuclease whose activation can cleave host tRNAs within their "
-        "anticodon loops and drive abortive bacteriophage infection."
+        "ribonuclease whose activation can cleave RNA substrates to restrict "
+        "bacteriophage infection."
     ),
     "definition_source": APE_BIORXIV,
     "trait_category": "GENOMICS",
@@ -174,27 +187,53 @@ RECORD: dict[str, Any] = {
                 "ApeA RNase activity for one ApeA variant."
             ),
         },
+        {
+            "reference": APE_RNA_BIORXIV,
+            "snippet": APE_RNA_PHAGE_SNIPPET,
+            "notes": (
+                "Drobysheva et al. show that Ec1ApeA and Ps2ApeA protect "
+                "against single-stranded RNA phages."
+            ),
+        },
+        {
+            "reference": APE_RNA_BIORXIV,
+            "snippet": APE_PHAGE_GENOME_SNIPPET,
+            "notes": (
+                "Drobysheva et al. support direct phage-genome cleavage as "
+                "an ApeA RNA-phage defense output."
+            ),
+        },
+        {
+            "reference": APE_RNA_BIORXIV,
+            "snippet": APE_RNA_NON_ABI_SNIPPET,
+            "notes": (
+                "Drobysheva et al. distinguish Ec1ApeA RNA-phage defense "
+                "from cell-death abortive infection."
+            ),
+        },
         article_registry_evidence(),
         rules_evidence(),
         hmm_inventory_evidence(),
     ],
     "causal_graphs": [
         {
-            "graph_id": "gao_ape_hepn_rnase_aborts_phage",
-            "title": "ApeA loci activate HEPN RNase phage defense",
+            "graph_id": "gao_ape_hepn_rnase_restricts_phage",
+            "title": "ApeA loci activate HEPN RNase antiphage outputs",
             "description": (
                 "Conservative system-level sketch linking a Gao_Ape/ApeA "
-                "locus to HEPN RNase activation, tRNA anticodon-loop "
-                "cleavage, abortive phage restriction, and the ApeA system "
-                "trait."
+                "locus to HEPN RNase activation, host tRNA anticodon-loop "
+                "cleavage during DNA-phage abortive infection, phage genomic "
+                "RNA cleavage during non-abortive RNA-phage defense, and the "
+                "ApeA system trait."
             ),
             "scope_status": "NONMECHANISTIC",
             "scope_notes": (
                 "The graph captures ApeA as a named DefenseFinder "
-                "single-component system with a HEPN RNase output while "
-                "leaving the natural-host accession breadth, Ec1ApeA versus "
-                "Ec2ApeA trigger differences, the exact phage nuclease "
-                "inputs to deoxydinucleotide signaling, and activity of "
+                "single-component system with alternate HEPN RNase outputs "
+                "while leaving natural-host accession breadth, homolog- and "
+                "phage-class-specific trigger differences, direct RNA-loop "
+                "sensing by Ec1ApeA, the exact DNA-phage nuclease inputs to "
+                "Ec2ApeA deoxydinucleotide signaling, and activity of "
                 "additional homologs unresolved."
             ),
             "nodes": [
@@ -212,8 +251,8 @@ RECORD: dict[str, Any] = {
                     "label": "ApeA HEPN RNase activity",
                     "node_type": "MOLECULAR_FUNCTION",
                     "description": (
-                        "Ligand-triggered ApeA ribonuclease activity "
-                        "dependent on HEPN active-site residues."
+                        "Triggered ApeA ribonuclease activity dependent on "
+                        "HEPN active-site residues."
                     ),
                 },
                 {
@@ -233,6 +272,24 @@ RECORD: dict[str, Any] = {
                         "Abortive-infection defense in which ApeA-mediated "
                         "translation arrest restricts bacteriophage "
                         "propagation."
+                    ),
+                },
+                {
+                    "node_id": "phage_genomic_rna_cleavage",
+                    "label": "phage genomic RNA cleavage",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Direct ApeA-dependent cleavage of an RNA-phage "
+                        "genome by activated HEPN RNase."
+                    ),
+                },
+                {
+                    "node_id": "non_abortive_rna_phage_restriction",
+                    "label": "non-abortive RNA-phage restriction",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Restriction of single-stranded RNA-phage replication "
+                        "without inducing ApeA-dependent host-cell death."
                     ),
                 },
                 {
@@ -282,6 +339,14 @@ RECORD: dict[str, Any] = {
                             "notes": (
                                 "HEPN active-site mutations eliminated "
                                 "activity in Ec1ApeA and Ec2ApeA."
+                            ),
+                        },
+                        {
+                            "reference": APE_RNA_BIORXIV,
+                            "snippet": APE_RNA_PHAGE_SNIPPET,
+                            "notes": (
+                                "Drobysheva et al. support HEPN-dependent "
+                                "Ec1ApeA and Ps2ApeA RNA-phage defense."
                             ),
                         },
                         rules_evidence(),
@@ -362,6 +427,79 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
+                    "subject": "apea_hepn_rnase_activity",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "phage_genomic_rna_cleavage",
+                    "description": (
+                        "Ec1ApeA HEPN RNase activity cleaves infecting "
+                        "RNA-phage genomes."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": APE_RNA_BIORXIV,
+                            "snippet": APE_PHAGE_GENOME_SNIPPET,
+                            "notes": (
+                                "Drobysheva et al. show that ApeA can stop "
+                                "RNA-phage replication by direct phage-genome "
+                                "cleavage."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "subject": "phage_genomic_rna_cleavage",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "non_abortive_rna_phage_restriction",
+                    "description": (
+                        "ApeA-dependent cleavage of the phage genome "
+                        "restricts RNA-phage replication without host-cell "
+                        "death."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": APE_RNA_BIORXIV,
+                            "snippet": APE_PHAGE_GENOME_SNIPPET,
+                            "notes": (
+                                "Direct phage-genome cleavage is the main "
+                                "ApeA output in the assayed RNA-phage "
+                                "infection model."
+                            ),
+                        },
+                        {
+                            "reference": APE_RNA_BIORXIV,
+                            "snippet": APE_RNA_NON_ABI_SNIPPET,
+                            "notes": (
+                                "Drobysheva et al. found no evidence for "
+                                "Ec1ApeA-induced cell death during RNA-phage "
+                                "infection."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "non_abortive_rna_phage_restriction",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": "apea_system_trait",
+                    "description": (
+                        "Non-abortive RNA-phage restriction realizes one "
+                        "ApeA system defense output."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": APE_RNA_BIORXIV,
+                            "snippet": APE_RNA_PHAGE_SNIPPET,
+                            "notes": (
+                                "Drobysheva et al. show that ApeA homologs "
+                                "can protect against single-stranded RNA "
+                                "phages."
+                            ),
+                        }
+                    ],
+                },
+                {
                     "subject": "apea_system_trait",
                     "predicate": "is a",
                     "predicate_id": "rdfs:subClassOf",
@@ -382,24 +520,26 @@ RECORD: dict[str, Any] = {
             "discussion_id": "apea-trigger-and-homolog-scope-gap",
             "prompt": (
                 "Resolve ApeA natural-host loci, homolog-specific "
-                "small-molecule triggers, phage nuclease inputs, and "
-                "subtype activity before minting narrower ApeA mechanism "
-                "children."
+                "DNA-phage versus RNA-phage triggers, phage nuclease inputs, "
+                "phage genomic RNA targets, abortive versus non-abortive "
+                "outputs, and subtype activity before minting narrower ApeA "
+                "mechanism children."
             ),
             "kind": "KNOWLEDGE_GAP",
             "status": "OPEN",
             "rationale": (
-                "Juozapaitis et al. support ApeA as an abortive infection "
-                "system whose HEPN RNase can cleave host tRNAs within their "
-                "anticodon loops, and DefenseFinder models Gao_Ape with the "
-                "Gao_Ape__ApeA profile. This first record stays at system "
-                "level because the curated evidence resolves "
-                "deoxydinucleotide activation for Ec2ApeA, leaves the "
-                "Ec1ApeA activator unidentified, assays several homologs "
-                "heterologously, and does not yet define accession-level "
-                "natural-host breadth."
+                "Juozapaitis et al. support DNA-phage ApeA abortive "
+                "infection through host tRNA anticodon-loop cleavage, "
+                "Drobysheva et al. support non-abortive RNA-phage defense "
+                "through phage-genomic-RNA cleavage, and DefenseFinder "
+                "models Gao_Ape with the Gao_Ape__ApeA profile. This first "
+                "record stays at system level because the curated evidence "
+                "leaves homolog- and phage-class-specific trigger logic, the "
+                "full DNA-versus-RNA substrate split, activity of additional "
+                "homologs, and accession-level natural-host breadth "
+                "unresolved."
             ),
-            "attaches_to": ["causal_graphs#gao_ape_hepn_rnase_aborts_phage"],
+            "attaches_to": ["causal_graphs#gao_ape_hepn_rnase_restricts_phage"],
             "posed_by": CURATOR,
             "posed_date": "2026-09-21",
         }
@@ -444,6 +584,20 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp="2026-09-21T11:04:58Z",
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Broadened the ApeA root definition, graph, evidence, and "
+            "discussion after the PR 1190 adversarial review filed issue "
+            "1191, adding the March 2026 RNA-phage ApeA preprint and "
+            "separating Juozapaitis host-tRNA abortive infection from "
+            "Drobysheva phage-genomic-RNA non-abortive restriction."
+        ),
+        llm_assisted=True,
+        timestamp="2026-09-21T11:20:58Z",
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

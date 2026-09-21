@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_ape_system.yaml
+  slug: gao_ape_system
+session:
+  id: 2026-09-21T112158Z-codex-a5a5d3
+  timestamp: '2026-09-21T11:21:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1191
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1190
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Broadened ApeA system mechanism scope
+  details: 'Addressed issue #1191 from the PR #1190 adversarial review by making ApeA system
+    mechanism-neutral at the root, adding DOI:10.64898/2026.03.20.713152 RNA-phage evidence,
+    splitting host-tRNA abortive infection from phage-genomic-RNA non-abortive restriction
+    in the causal graph, and preserving the canonical-example evidence gap.'

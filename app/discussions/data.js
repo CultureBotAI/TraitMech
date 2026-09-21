@@ -1223,7 +1223,7 @@ window.searchData = [
  },
  {
   "discussion_id": "apea-trigger-and-homolog-scope-gap",
-  "prompt": "Resolve ApeA natural-host loci, homolog-specific small-molecule triggers, phage nuclease inputs, and subtype activity before minting narrower ApeA mechanism children.",
+  "prompt": "Resolve ApeA natural-host loci, homolog-specific DNA-phage versus RNA-phage triggers, phage nuclease inputs, phage genomic RNA targets, abortive versus non-abortive outputs, and subtype activity before minting narrower ApeA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -1231,9 +1231,9 @@ window.searchData = [
   "source_id": "traitmech:000334",
   "source_file": "gao_ape_system.yaml",
   "attaches_to": [
-   "causal_graphs#gao_ape_hepn_rnase_aborts_phage"
+   "causal_graphs#gao_ape_hepn_rnase_restricts_phage"
   ],
-  "rationale": "Juozapaitis et al. support ApeA as an abortive infection system whose HEPN RNase can cleave host tRNAs within their anticodon loops, and DefenseFinder models Gao_Ape with the Gao_Ape__ApeA profile. This first record stays at system level because the curated evidence resolves deoxydinucleotide activation for Ec2ApeA, leaves the Ec1ApeA activator unidentified, assays several homologs heterologously, and does not yet define accession-level natural-host breadth.",
+  "rationale": "Juozapaitis et al. support DNA-phage ApeA abortive infection through host tRNA anticodon-loop cleavage, Drobysheva et al. support non-abortive RNA-phage defense through phage-genomic-RNA cleavage, and DefenseFinder models Gao_Ape with the Gao_Ape__ApeA profile. This first record stays at system level because the curated evidence leaves homolog- and phage-class-specific trigger logic, the full DNA-versus-RNA substrate split, activity of additional homologs, and accession-level natural-host breadth unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],

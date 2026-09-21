@@ -23,9 +23,9 @@
       "CURATE_ROOT_WITH_SUBTYPES": 4,
       "ADD_CANONICAL_EXAMPLES": 70,
       "BUILD_CAUSAL_GRAPH": 119,
-      "DEEPEN_CAUSAL_GRAPH": 193,
+      "DEEPEN_CAUSAL_GRAPH": 192,
       "ALREADY_DEEP": 59,
-      "CURATE_ROOT": 155
+      "CURATE_ROOT": 156
     }
   },
   "rows": [
@@ -5542,29 +5542,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000334",
-      "label": "ApeA system",
-      "category": "genomics",
-      "slug": "gao_ape_system",
-      "score": 12.0,
-      "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 5,
-      "nodes": 6,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": true,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (5 edges) +12",
-        "canonical_examples reviewed empty +0"
-      ]
-    },
-    {
       "identifier": "METPO:1000430",
       "label": "GC mid1",
       "category": "genomics",
@@ -9764,6 +9741,28 @@
       "series_overlap": null,
       "researched": false,
       "reasons": []
+    },
+    {
+      "identifier": "traitmech:000334",
+      "label": "ApeA system",
+      "category": "genomics",
+      "slug": "gao_ape_system",
+      "score": 0.0,
+      "action": "CURATE_ROOT",
+      "edges": 8,
+      "nodes": 8,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": true,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "canonical_examples reviewed empty +0"
+      ]
     },
     {
       "identifier": "METPO:1000432",
