@@ -37,7 +37,7 @@ IDENTIFIER = "traitmech:000322"
 PROPOSAL = "proposals/metpo_traitmech_v199"
 
 HMM_ROW = (
-    "| AbiAlpha__AbiAlpha                               | "
+    "| AbiAlpha__AbiAlpha                               |"
     "                                                  | AbiAlpha               | "
     "PF14337.11              | 27.1   |"
 )

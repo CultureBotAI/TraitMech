@@ -50,7 +50,7 @@ evidence:
   notes: The DefenseFinder article registry maps the named AbiAlpha model namespace
     to the enterococcal AbiAlpha discovery paper.
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-  snippet: '| AbiAlpha__AbiAlpha                               |                                                   |
+  snippet: '| AbiAlpha__AbiAlpha                               |                                                  |
     AbiAlpha               | PF14337.11              | 27.1   |'
   notes: The DefenseFinder HMM inventory records AbiAlpha__AbiAlpha under the AbiAlpha
     model namespace with Pfam PF14337.11.
@@ -124,7 +124,7 @@ causal_graphs:
         mechanism.
       notes: Lossouarn et al. connected ef2833 with the V583 prophage 6 Abi phenotype.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-      snippet: '| AbiAlpha__AbiAlpha                               |                                                   |
+      snippet: '| AbiAlpha__AbiAlpha                               |                                                  |
         AbiAlpha               | PF14337.11              | 27.1   |'
       notes: The DefenseFinder HMM inventory records AbiAlpha__AbiAlpha under the
         AbiAlpha model namespace with Pfam PF14337.11.
@@ -223,4 +223,11 @@ curation_history:
   changes: Addressed PR 1163 review issue 1165 by broadening the AbiAlpha class boundary
     from a prophage locus to an abi-alpha-family locus while keeping Enterococcus
     faecalis V583 prophage 6 as the characterized example.
+  llm_assisted: true
+- timestamp: '2026-09-21T00:55:00Z'
+  curator: codex
+  action: EDIT
+  changes: Re-copied the DefenseFinder AbiAlpha HMM registry row byte-exactly from
+    the pinned Liste_hmm_system.md source while confirming the article-registry title
+    casing against List_system_article.md for PR 1163 review issue 1168.
   llm_assisted: true
