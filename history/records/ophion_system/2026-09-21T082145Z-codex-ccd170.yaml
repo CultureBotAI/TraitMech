@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ophion_system.yaml
+  slug: ophion_system
+session:
+  id: 2026-09-21T082145Z-codex-ccd170
+  timestamp: '2026-09-21T08:21:45Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identifiers
+  - definition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Ophion system trait
+  details: Minted traitmech:000331 for Ophion system as a DOI-backed GENOMICS phage-defense-system
+    record after an ignored-and-hidden duplicate search found no existing Ophion system record,
+    slug, local ID, proposal cohort, or placeholder METPO ID. Added a conservative locus-level
+    causal graph, a knowledge-gap discussion for unresolved jumbo-phage mechanism and DefenseFinder
+    model coverage, and proposal metpo_traitmech_v208 reserving METPO:1028500 for upstream
+    replacement.
