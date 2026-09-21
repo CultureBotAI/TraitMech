@@ -56,6 +56,7 @@ reports/robot/
 # conf/evidence_snippet_baseline.tsv, which IS tracked and IS the artifact with
 # meaning: the baseline is the frozen ratchet, this is just the current run.
 reports/evidence_snippet_audit.tsv
+reports/yaml_category_review/
 
 # research/ is TRACKED. It was ignored as "large, regenerable" until the second
 # half of that turned out to be the expensive half: 342 of 353 reports were lost
