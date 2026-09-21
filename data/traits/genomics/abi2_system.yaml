@@ -1,0 +1,172 @@
+identifier: traitmech:000338
+label: Abi2 system
+definition: An abortive infection system in which an organism possesses a single-component
+  Abi-like locus represented by the DefenseFinder Abi2 model namespace and mandatory
+  Abi2__Abi_2/PF07751 profile.
+definition_source: DOI:10.1016/j.mib.2005.06.006
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: Abi2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Abi2__Abi_2
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Abi_2
+  synonym_type: RELATED_SYNONYM
+  source: https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/
+evidence:
+- reference: DOI:10.1016/j.mib.2005.06.006
+  snippet: Abortive infection (Abi) systems, also called phage exclusion, block phage
+    multiplication and cause premature bacterial cell death upon phage infection.
+  notes: Chopin et al. define the abortive-infection class of phage exclusion systems
+    used by the DefenseFinder Abi2 registry row.
+- reference: DOI:10.1128/jb.177.13.3818-3823.1995
+  snippet: Lactococcal phage abortive infection (AbiD1) determined by plasmid pIL105
+    is active on both prolate- and small-isometric-head phages
+  notes: Anba et al. characterize AbiD1 as a plasmid-encoded lactococcal abortive-infection
+    determinant active on multiple phage morphotypes.
+- reference: DOI:10.1128/jb.177.13.3818-3823.1995
+  snippet: The Abi phenotype was found to be encoded by a single gene, designated
+    abiD1.
+  notes: Anba et al. support a single-gene AbiD1 locus in the Abi-like family that
+    includes PF07751.
+- reference: DOI:10.1128/jb.177.13.3824-3829.1995
+  snippet: Phage bIL66 is unable to grow on Lactococcus lactis cells harboring the
+    abortive infection gene abiD1.
+  notes: Bidnenko et al. connect abiD1 carriage to restriction of bIL66 phage growth
+    in Lactococcus lactis.
+- reference: https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/
+  snippet: This family, found in various bacterial species, contains sequences that
+    are similar to the Abi group of proteins
+  notes: EBI InterPro resolves PF07751 as the reviewed Pfam Abi-like protein family
+    with short name Abi_2 and cites AbiD1 primary literature.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'Abi2 | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named Abi2 model namespace to
+    the Chopin et al. lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Abi2\tAbi2\t1\t1\tAbi2__Abi_2\t\t\t"
+  notes: The DefenseFinder rules table models Abi2 as a one-component system requiring
+    the Abi2__Abi_2 profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Abi2__Abi_2                                      | Abi2__Abi_2                                      |
+    Abi2                   | PF07751.12              | 60     |'
+  notes: The DefenseFinder HMM inventory records Abi2__Abi_2 under the Abi2 model
+    namespace, backed by the Pfam PF07751.12 Abi_2 profile.
+causal_graphs:
+- graph_id: abi2_locus_restricts_phage
+  title: Abi2 loci confer abortive-infection phage defense
+  description: Conservative system-level sketch linking possession of a DefenseFinder
+    Abi2 locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger, small-RNA component, or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Abi2 as a named DefenseFinder single-profile abortive-infection
+    system with an Abi2__Abi_2/PF07751 HMM profile while leaving its natural locus
+    boundaries, AbiD/F-group breadth, upstream regulatory RNA relationships, phage
+    trigger, and direct effector activity unresolved.
+  nodes:
+  - node_id: abi2_locus
+    label: Abi2 locus
+    node_type: GENETIC_ELEMENT
+    description: A single-component Abi2 abortive-infection locus represented by the
+      DefenseFinder Abi2__Abi_2 profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying an Abi2-family
+      abortive-infection system.
+  - node_id: abi2_system_trait
+    label: Abi2 system
+    node_type: TRAIT
+    grounding: traitmech:000338
+    description: Possession of a genome-encoded Abi2 abortive-infection system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abi2_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: DefenseFinder represents Abi2 with the Abi2__Abi_2 Pfam profile,
+      and Abi-like loci mediate abortive-infection phage restriction.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Abi2\tAbi2\t1\t1\tAbi2__Abi_2\t\t\t"
+      notes: The DefenseFinder rules table models Abi2 as a one-component system requiring
+        the Abi2__Abi_2 profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Abi2__Abi_2                                      | Abi2__Abi_2                                      |
+        Abi2                   | PF07751.12              | 60     |'
+      notes: The DefenseFinder HMM inventory records Abi2__Abi_2 under the Abi2 model
+        namespace, backed by the Pfam PF07751.12 Abi_2 profile.
+    - reference: DOI:10.1128/jb.177.13.3818-3823.1995
+      snippet: Lactococcal phage abortive infection (AbiD1) determined by plasmid
+        pIL105 is active on both prolate- and small-isometric-head phages
+      notes: Anba et al. support abortive-infection antiphage activity in the Abi-like
+        family.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abi2_system_trait
+    description: Restriction of phage propagation realizes the Abi2 abortive-infection
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1128/jb.177.13.3824-3829.1995
+      snippet: Phage bIL66 is unable to grow on Lactococcus lactis cells harboring
+        the abortive infection gene abiD1.
+      notes: Bidnenko et al. connect AbiD1-family carriage to blocked phage growth.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'Abi2 | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named Abi2 model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+  - subject: abi2_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: Abi2 system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2005.06.006
+      snippet: Abortive infection (Abi) systems, also called phage exclusion, block
+        phage multiplication and cause premature bacterial cell death upon phage infection.
+      notes: Chopin et al. place Abi systems in the abortive-infection class of phage
+        defense.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'Abi2 | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named Abi2 model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+discussions:
+- discussion_id: abi2-family-boundary-gap
+  prompt: Resolve the natural Abi2 locus breadth, phage trigger, and AbiD/F-group
+    mapping before minting narrower Abi2 mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The DefenseFinder Abi2 model namespace requires the Abi2__Abi_2 PF07751
+    profile, and InterPro treats PF07751 as an Abi-like family connected to AbiD1
+    primary literature. This first record leaves unresolved whether DefenseFinder
+    Abi2 exactly corresponds to AbiD1, the broader AbiD/F group, or a different subset
+    of Abi-like loci; it therefore avoids protein-level chemistry and records only
+    the genome-level model namespace.
+  attaches_to:
+  - causal_graphs#abi2_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T14:52:53Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Abi2 system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v215.
+  llm_assisted: true

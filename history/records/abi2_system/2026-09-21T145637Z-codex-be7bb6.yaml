@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abi2_system.yaml
+  slug: abi2_system
+session:
+  id: 2026-09-21T145637Z-codex-be7bb6
+  timestamp: '2026-09-21T14:56:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add Abi2 system
+  details: Minted traitmech:000338 for the DefenseFinder Abi2 abortive-infection model namespace
+    with DOI-backed AbiD1/Abi-like evidence, pinned DefenseFinder article, HMM, and rules
+    rows, and a conservative nonmechanistic causal graph.
