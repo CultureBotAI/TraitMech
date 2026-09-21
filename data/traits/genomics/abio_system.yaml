@@ -1,0 +1,192 @@
+identifier: traitmech:000342
+label: AbiO system
+definition: An abortive infection system in which an organism possesses a single-component
+  AbiO-family locus represented by DefenseFinder as a mandatory AbiO__AbiO profile.
+definition_source: DOI:10.3168/jds.S0022-0302(98)75713-3
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiO
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: AbiO__AbiO
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.3168/jds.S0022-0302(98)75713-3
+  snippet: Complete Sequence of the New Lactococcal Abortive Phage Resistance Gene
+    abiO
+  notes: Crossref metadata verifies the Prevots and Ritzenthaler 1998 AbiO primary
+    paper title and DOI.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: the majority (18 systems) are each represented by single protein-coding
+    genes
+  notes: The FEMS review lists AbiO among the confirmed lactococcal Abi-like systems
+    in Table 1 and omits AbiO from the named two- and three-component exception lists.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: the AbiO N-terminal domain resembles a restriction endonuclease type II-like
+    domain-containing protein
+  notes: The FEMS review summarizes a predicted nuclease-like AbiO N-terminal domain
+    but does not establish the exact AbiO trigger or effector activity.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: Its C-terminal domain is predicted to encompass a superfamily 1B (SF1B)
+    helicase
+  notes: The FEMS review summarizes a predicted SF1B helicase-like AbiO C-terminal
+    domain without resolving how AbiO arrests infected cells.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: AbiO was previously shown to be toxic in Lactococcus when its encoding
+    gene was cloned in a high-copy number vector
+  notes: The FEMS review treats AbiO overexpression toxicity as support for its abortive-infection
+    phenotype.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiO | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiO model namespace to
+    the Chopin et al. lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiO\tAbiO\t1\t1\tAbiO__AbiO\t\t\t"
+  notes: The DefenseFinder rules table models AbiO as a one-component system requiring
+    the AbiO__AbiO profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiO__AbiO                                       | AbiO__AbiO                                       |
+    AbiO                   | Custom                  | 50     |'
+  notes: The DefenseFinder HMM inventory records AbiO__AbiO under the AbiO model namespace.
+causal_graphs:
+- graph_id: abio_locus_restricts_lactococcal_phage
+  title: AbiO loci confer abortive-infection phage defense
+  description: Conservative system-level sketch linking possession of a DefenseFinder
+    AbiO locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger, predicted nuclease activity, or predicted helicase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiO as a named single-profile lactococcal Abi-like
+    system with the DefenseFinder AbiO__AbiO HMM while leaving its direct phage trigger,
+    restriction-endonuclease interpretation, helicase interpretation, exact molecular
+    activity, phage escape routes, and growth-arrest or cell-death route unresolved.
+  nodes:
+  - node_id: abio_locus
+    label: AbiO locus
+    node_type: GENETIC_ELEMENT
+    description: An AbiO-family abortive-infection locus represented by the DefenseFinder
+      AbiO__AbiO profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage propagation in cells carrying an AbiO-family
+      abortive-infection system.
+  - node_id: abio_system_trait
+    label: AbiO system
+    node_type: TRAIT
+    grounding: traitmech:000342
+    description: Possession of a genome-encoded AbiO abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abio_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The DefenseFinder AbiO namespace is modeled as a one-profile AbiO__AbiO
+      system.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiO\tAbiO\t1\t1\tAbiO__AbiO\t\t\t"
+      notes: The DefenseFinder rules table models AbiO as a one-component system requiring
+        the AbiO__AbiO profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiO__AbiO                                       | AbiO__AbiO                                       |
+        AbiO                   | Custom                  | 50     |'
+      notes: The DefenseFinder HMM inventory records AbiO__AbiO under the AbiO model
+        namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abio_system_trait
+    description: Restriction of phage propagation realizes the AbiO abortive-infection
+      system possession trait.
+    evidence:
+    - reference: DOI:10.3168/jds.S0022-0302(98)75713-3
+      snippet: Complete Sequence of the New Lactococcal Abortive Phage Resistance
+        Gene abiO
+      notes: Crossref metadata verifies the Prevots and Ritzenthaler 1998 AbiO primary
+        paper title and DOI.
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: AbiO was previously shown to be toxic in Lactococcus when its encoding
+        gene was cloned in a high-copy number vector
+      notes: The FEMS review treats AbiO overexpression toxicity as support for its
+        abortive-infection phenotype.
+  - subject: abio_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiO system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.3168/jds.S0022-0302(98)75713-3
+      snippet: Complete Sequence of the New Lactococcal Abortive Phage Resistance
+        Gene abiO
+      notes: Crossref metadata verifies the Prevots and Ritzenthaler 1998 AbiO primary
+        paper title and DOI.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiO | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiO model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+discussions:
+- discussion_id: abio-trigger-and-effector-gap
+  prompt: Resolve the AbiO phage trigger, restriction-endonuclease and helicase activity,
+    and growth-arrest or cell-death route before minting narrower AbiO mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Prevots and Ritzenthaler support AbiO as a lactococcal abortive phage
+    resistance gene, the FEMS review retains AbiO among confirmed lactococcal Abi-like
+    systems, and DefenseFinder represents AbiO with a mandatory AbiO__AbiO profile.
+    The FEMS table leaves the AbiO effect on the cell and phage escape proteins unknown
+    for the tested phages, and the FEMS structural discussion predicts restriction-endonuclease-like
+    and SF1B-helicase-like domains while not resolving the molecular trigger or effector
+    activity. This first system-level record therefore leaves the direct phage trigger,
+    exact molecular activity, growth-arrest or cell-death route, and phage escape
+    routes unresolved.
+  evidence:
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: the AbiO N-terminal domain resembles a restriction endonuclease type
+      II-like domain-containing protein
+    notes: The FEMS review summarizes a predicted nuclease-like AbiO N-terminal domain
+      but does not establish the exact AbiO trigger or effector activity.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: Its C-terminal domain is predicted to encompass a superfamily 1B (SF1B)
+      helicase
+    notes: The FEMS review summarizes a predicted SF1B helicase-like AbiO C-terminal
+      domain without resolving how AbiO arrests infected cells.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: AbiO was previously shown to be toxic in Lactococcus when its encoding
+      gene was cloned in a high-copy number vector
+    notes: The FEMS review treats AbiO overexpression toxicity as support for its
+      abortive-infection phenotype.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "AbiO\tAbiO\t1\t1\tAbiO__AbiO\t\t\t"
+    notes: The DefenseFinder rules table models AbiO as a one-component system requiring
+      the AbiO__AbiO profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| AbiO__AbiO                                       | AbiO__AbiO                                       |
+      AbiO                   | Custom                  | 50     |'
+    notes: The DefenseFinder HMM inventory records AbiO__AbiO under the AbiO model
+      namespace.
+  attaches_to:
+  - causal_graphs#abio_locus_restricts_lactococcal_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T18:34:41Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiO system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v219.
+  llm_assisted: true
