@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/card_nlr_system.yaml
+  slug: card_nlr_system
+session:
+  id: 2026-09-21T135032Z-codex-e14c05
+  timestamp: '2026-09-21T13:50:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add CARD-NLR phage-defense trait
+  details: Minted traitmech:000337 for the DOI- and stable-URL-backed CARD-NLR bacterial phage-defense
+    system under the phage defense system parent, added Wein et al. CARD-like anti-phage defense
+    evidence from DOI:10.1101/2023.05.28.542683 and a stable Europe PMC abstract page, added
+    pinned DefenseFinder registry/profile/rules evidence for CARD_NLR subtypes, and recorded
+    a knowledge gap for CARD-NLR subtype triggers, effectors, and natural-host examples.

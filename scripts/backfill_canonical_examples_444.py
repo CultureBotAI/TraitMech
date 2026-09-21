@@ -840,6 +840,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/butters_gp57r_system",
     "genomics/bunzi_system",
     "genomics/caprel_system",
+    "genomics/card_nlr_system",
     "genomics/ceres_system",
     "genomics/cernunnos_system",
     "genomics/charlie_gp32_system",
