@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fliodhais_system.yaml
+  slug: fliodhais_system
+session:
+  id: 2026-09-21T041936Z-codex-b0507a
+  timestamp: '2026-09-21T04:19:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Fliodhais system trait
+  details: Added traitmech:000326 Fliodhais system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system. DOI:10.1093/nar/gkae671 names Fliodhais among newly described lactococcal
+    antiphage systems, reports that both Fliodhais genetic components are necessary for the
+    observed activity, and describes Fliodhais-associated phage c2 plaque-size reduction.
+    The pinned DefenseFinder article registry maps Fliodhais to the Grafakou et al. lactococcal
+    plasmidome discovery paper. Reserved METPO:1028000 in proposals/metpo_traitmech_v203 for
+    the upstream replacement ID.
