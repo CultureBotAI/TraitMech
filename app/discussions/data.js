@@ -1554,6 +1554,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/olokun_system.html#olokun-mechanism-gap"
  },
  {
+  "discussion_id": "ophion-jumbo-phage-mechanism-gap",
+  "prompt": "Resolve Ophion phage triggers, nucleotide-modification products, and model coverage before minting narrower Ophion mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ophion system",
+  "source_id": "traitmech:000331",
+  "source_file": "ophion_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ophion_locus_restricts_phage"
+  ],
+  "rationale": "Keesman et al. support Ophion as a three-gene anti-jumbo-phage system that blocks progression from the early phage infection vesicle to the phage nucleus, but the direct phage trigger, exact OpnA/OpnB/OpnC interaction sequence, modified nucleotide product, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ophion_system.html#ophion-jumbo-phage-mechanism-gap"
+ },
+ {
   "discussion_id": "oshun-mechanism-gap",
   "prompt": "Resolve Oshun phage triggers and effector outputs before minting narrower Oshun mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3598,9 +3617,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 199,
- "total_knowledge_gaps": 118,
- "total_source_entries": 198,
+ "total_discussions": 200,
+ "total_knowledge_gaps": 119,
+ "total_source_entries": 199,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
