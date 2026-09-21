@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/mazef_system.yaml
+  slug: mazef_system
+session:
+  id: 2026-09-21T210512Z-codex-d63c87
+  timestamp: '2026-09-21T21:05:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add MazEF system trait
+  details: Added traitmech:000345 MazEF system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system; cited Nikolic et al. 2025 native mazEF RNA-phage defense evidence
+    plus pinned DefenseFinder article, rules, and HMM registries; reserved METPO:1029900 in
+    proposals/metpo_traitmech_v222.
