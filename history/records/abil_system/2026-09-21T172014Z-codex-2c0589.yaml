@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abil_system.yaml
+  slug: abil_system
+session:
+  id: 2026-09-21T172014Z-codex-2c0589
+  timestamp: '2026-09-21T17:20:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add AbiL system TraitRecord
+  details: Minted traitmech:000340 for the DOI-backed AbiL system under abortive infection
+    system after ignored-and-hidden duplicate review found no exact same-scope TraitMech,
+    METPO, history, or prior proposal record. Recorded Deng et al., FEMS review, and pinned
+    DefenseFinder evidence. Added a conservative NONMECHANISTIC graph and kept the AbiL trigger,
+    AbiLi and AbiLii activities, accessory HMM rows, ATPase/TOPRIM interpretation, and phage
+    escape routes open.

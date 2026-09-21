@@ -1,0 +1,203 @@
+identifier: traitmech:000340
+label: AbiL system
+definition: An abortive infection system in which an organism possesses a two-component
+  AbiL-family locus represented by DefenseFinder as mandatory AbiL__AbiLi and AbiL__AbiLii
+  profiles.
+definition_source: DOI:10.1016/S0168-1656(98)00175-8
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiL
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: AbiL__AbiLi
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: AbiL__AbiLii
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1016/S0168-1656(98)00175-8
+  snippet: Genetic organization and functional analysis of a novel phage abortive
+    infection system, AbiL, from Lactococcus lactis
+  notes: Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title
+    and DOI.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: 13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG,
+    AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu
+  notes: The FEMS review counts AbiL among the confirmed two-component lactococcal
+    Abi-like systems.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: AbiL has been included among systems such as PARIS, which feature an ABC
+    ATPase and a TOPRIM nuclease
+  notes: The FEMS review places AbiL among predicted ATPase-plus-TOPRIM systems but
+    does not resolve the AbiLi and AbiLii molecular activities.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiL | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiL model namespace to
+    the Chopin et al. lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"
+  notes: The DefenseFinder rules table models AbiL as a two-component system requiring
+    the AbiL__AbiLi and AbiL__AbiLii profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiL__AbiLi                                      | AbiL__AbiLi                                      |
+    AbiL                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model
+    namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiL__AbiLii                                     | AbiL__AbiLii                                     |
+    AbiL                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model
+    namespace.
+causal_graphs:
+- graph_id: abil_locus_restricts_lactococcal_phage
+  title: AbiL loci confer abortive-infection phage defense
+  description: Conservative system-level sketch linking possession of a DefenseFinder
+    AbiL locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger, AbiLi or AbiLii molecular activity, or AbiL-to-PARIS mechanistic
+    correspondence.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiL as a named lactococcal abortive-infection system
+    with DefenseFinder AbiL__AbiLi and AbiL__AbiLii HMM profiles while leaving its
+    direct phage trigger, the exact AbiLi and AbiLii activities, the relationship
+    between the mandatory and suffixed HMM rows, and the similarity of its route to
+    PARIS unresolved.
+  nodes:
+  - node_id: abil_locus
+    label: AbiL locus
+    node_type: GENETIC_ELEMENT
+    description: An AbiL-family abortive-infection locus represented by the DefenseFinder
+      AbiL__AbiLi and AbiL__AbiLii profiles.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage propagation in cells carrying an AbiL-family
+      abortive-infection system.
+  - node_id: abil_system_trait
+    label: AbiL system
+    node_type: TRAIT
+    grounding: traitmech:000340
+    description: Possession of a genome-encoded AbiL abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abil_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi
+      plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"
+      notes: The DefenseFinder rules table models AbiL as a two-component system requiring
+        the AbiL__AbiLi and AbiL__AbiLii profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiL__AbiLi                                      | AbiL__AbiLi                                      |
+        AbiL                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model
+        namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiL__AbiLii                                     | AbiL__AbiLii                                     |
+        AbiL                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model
+        namespace.
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: 13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG,
+        AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu
+      notes: The FEMS review counts AbiL among the confirmed two-component lactococcal
+        Abi-like systems.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abil_system_trait
+    description: Restriction of phage propagation realizes the AbiL abortive-infection
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1016/S0168-1656(98)00175-8
+      snippet: Genetic organization and functional analysis of a novel phage abortive
+        infection system, AbiL, from Lactococcus lactis
+      notes: Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title
+        and DOI.
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: 13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG,
+        AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu
+      notes: The FEMS review counts AbiL among the confirmed two-component lactococcal
+        Abi-like systems.
+  - subject: abil_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiL system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1016/S0168-1656(98)00175-8
+      snippet: Genetic organization and functional analysis of a novel phage abortive
+        infection system, AbiL, from Lactococcus lactis
+      notes: Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title
+        and DOI.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiL | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiL model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+discussions:
+- discussion_id: abil-trigger-and-effector-gap
+  prompt: Resolve the AbiL phage trigger, AbiLi and AbiLii activities, AbiLi2 and
+    AbiLii2 HMM row relationships, and ATPase-plus-TOPRIM mechanism before minting
+    narrower AbiL mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Deng et al. support AbiL as a lactococcal phage abortive infection system,
+    the FEMS review lists AbiL among confirmed two-component lactococcal Abi-like
+    systems, and DefenseFinder represents AbiL with mandatory AbiL__AbiLi and AbiL__AbiLii
+    profiles. The same pinned HMM inventory also contains AbiL__AbiLi2 and AbiL__AbiLii2
+    rows that are not in the pinned two-profile rule, and the FEMS review summarizes
+    unresolved ATPase and TOPRIM predictions. This first system-level record therefore
+    leaves the direct phage trigger, exact AbiLi and AbiLii molecular activities,
+    accessory-model interpretation, AbiL-to-PARIS similarity, growth-arrest or cell-death
+    route, and phage escape routes unresolved.
+  evidence:
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| AbiL__AbiLi2                                     | AbiL__AbiLi2                                     |
+      AbiL                   | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory also records AbiL__AbiLi2 under the AbiL
+      model namespace, but this profile is not listed in the two mandatory profiles
+      in the pinned AbiL rule.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| AbiL__AbiLii2                                    | AbiL__AbiLii2                                    |
+      AbiL                   | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory also records AbiL__AbiLii2 under the AbiL
+      model namespace, but this profile is not listed in the two mandatory profiles
+      in the pinned AbiL rule.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: AbiL has been included among systems such as PARIS, which feature an
+      ABC ATPase and a TOPRIM nuclease
+    notes: The FEMS review places AbiL among predicted ATPase-plus-TOPRIM systems
+      but does not resolve the AbiLi and AbiLii molecular activities.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: No significant sequence similarity was found between the second components
+      of AbiL and PARIS
+    notes: The AbiL-to-PARIS comparison remains indirect for the second component,
+      so this record does not copy the PARIS mechanism onto AbiL.
+  attaches_to:
+  - causal_graphs#abil_locus_restricts_lactococcal_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T17:17:22Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiL system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v217.
+  llm_assisted: true
