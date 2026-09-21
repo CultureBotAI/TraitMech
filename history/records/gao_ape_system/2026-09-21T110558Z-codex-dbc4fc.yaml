@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_ape_system.yaml
+  slug: gao_ape_system
+session:
+  id: 2026-09-21T110558Z-codex-dbc4fc
+  timestamp: '2026-09-21T11:05:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Added ApeA system phage defense trait
+  details: Minted traitmech:000334 for the DefenseFinder-backed ApeA system under phage defense
+    system with DOI-backed evidence from Juozapaitis et al., pinned DefenseFinder article,
+    rules, and HMM rows, a conservative nonmechanistic causal graph, an explicit natural-host
+    canonical example gap, and a reserved METPO:1028800 placeholder in proposals/metpo_traitmech_v211.

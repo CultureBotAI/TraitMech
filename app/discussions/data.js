@@ -1222,6 +1222,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gabija_system.html#gabija-activation-and-antidefense-gap"
  },
  {
+  "discussion_id": "apea-trigger-and-homolog-scope-gap",
+  "prompt": "Resolve ApeA natural-host loci, homolog-specific DNA-phage versus RNA-phage triggers, phage nuclease inputs, phage genomic RNA targets, abortive versus non-abortive outputs, and subtype activity before minting narrower ApeA mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ApeA system",
+  "source_id": "traitmech:000334",
+  "source_file": "gao_ape_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_ape_hepn_rnase_restricts_phage"
+  ],
+  "rationale": "Juozapaitis et al. support DNA-phage ApeA abortive infection through host tRNA anticodon-loop cleavage, Drobysheva et al. support non-abortive RNA-phage defense through phage-genomic-RNA cleavage, and DefenseFinder models Gao_Ape with the Gao_Ape__ApeA profile. This first record stays at system level because the curated evidence leaves homolog- and phage-class-specific trigger logic, the full DNA-versus-RNA substrate split, activity of additional homologs, and accession-level natural-host breadth unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_ape_system.html#apea-trigger-and-homolog-scope-gap"
+ },
+ {
   "discussion_id": "geb-mechanism-gap",
   "prompt": "Resolve Geb phage triggers and effector outputs before minting narrower Geb mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3655,9 +3674,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 202,
- "total_knowledge_gaps": 121,
- "total_source_entries": 201,
+ "total_discussions": 203,
+ "total_knowledge_gaps": 122,
+ "total_source_entries": 202,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

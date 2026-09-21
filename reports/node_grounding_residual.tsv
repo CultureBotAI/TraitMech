@@ -1277,6 +1277,12 @@ gabija gaja-gajb operon	GENETIC_ELEMENT	1	data/traits/genomics/gabija_system.yam
 gajab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
 gabija nucleotide depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
 gabija dna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
+gao_ape locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_ape_system.yaml
+apea hepn rnase activity	MOLECULAR_FUNCTION	1	data/traits/genomics/gao_ape_system.yaml
+trna anticodon-loop cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
+abortive phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
+phage genomic rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
+non-abortive rna-phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 genomic dna	CELLULAR_LOCALIZATION	1	data/traits/genomics/gc_content.yaml
 gc/at mutation bias	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
 gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
