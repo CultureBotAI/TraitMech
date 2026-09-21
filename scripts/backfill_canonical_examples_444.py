@@ -828,6 +828,7 @@ DEFERRED = {
 POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/abi2_system",
     "genomics/abij_system",
+    "genomics/abip2_system",
     "genomics/abin_system",
     "genomics/abio_system",
     "genomics/abil_system",
