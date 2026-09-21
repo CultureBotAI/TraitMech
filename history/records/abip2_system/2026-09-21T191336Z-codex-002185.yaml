@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abip2_system.yaml
+  slug: abip2_system
+session:
+  id: 2026-09-21T191336Z-codex-002185
+  timestamp: '2026-09-21T19:13:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add AbiP2 system trait
+  details: Minted traitmech:000343 for the DOI-backed AbiP2 system under abortive infection
+    system; the record cites Odegrip et al. for the P2-like-coliphage reverse-transcriptase
+    gene, the FEMS review and Mestre et al. for UG/Abi reverse-transcriptase family context,
+    Figiel et al. for Abi-P2 polymerase structure, and pinned DefenseFinder HMM/rule rows
+    for AbiP2__AbiP2 model coverage.
