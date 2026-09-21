@@ -9,8 +9,8 @@
 
 The pinned METPO snapshot has no active exact class for SpbK system, the
 genome-level possession trait for an ICEBs1-like SpbK-family abortive-infection
-locus. Johnson et al. showed that the ICEBs1 `spbK` gene inhibits SPß phage
-production in *Bacillus subtilis* and that SpbK with the SPß `yonE` gene
+locus. Johnson et al. showed that the ICEBs1 `spbK` gene inhibits SPβ phage
+production in *Bacillus subtilis* and that SpbK with the SPβ `yonE` gene
 constitutes an abortive infection system that leads to cell death. DefenseFinder
 maps the named `SpbK` namespace to the required `SpbK__SpbK` HMM profile.
 
@@ -45,16 +45,16 @@ Subset tag: `metpo_traitmech_2026_09`.
 
 SpbK system captures genome-level possession of a SpbK-family locus represented
 by DefenseFinder's `SpbK__SpbK` HMM profile and exemplified by the ICEBs1
-`spbK` gene whose SPß-YonE-dependent activity inhibits SPß production and kills
+`spbK` gene whose SPβ-YonE-dependent activity inhibits SPβ production and kills
 infected cells. It excludes individual `spbK` genes; SpbK proteins; ICEBs1
-elements; SPß `yonE` triggers; bacteriophage SPß; the individual DefenseFinder
+elements; SPβ `yonE` triggers; bacteriophage SPβ; the individual DefenseFinder
 HMM profile; source database rows naming one SpbK locus; unresolved SpbK-YonE
 coupling; TIR-domain effector chemistry; and generic abortive-infection
 systems.
 
 ## External Mappings
 
-No exact external mapping is proposed. SpbK, ICEBs1, SPß, YonE, the
+No exact external mapping is proposed. SpbK, ICEBs1, SPβ, YonE, the
 DefenseFinder HMM, individual phage-exclusion outcomes, and abortive-infection
 processes are shifted from this organism-level GENOMICS possession trait.
 

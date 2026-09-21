@@ -2,7 +2,7 @@ identifier: traitmech:000325
 label: SpbK system
 definition: An abortive infection system in which an organism possesses a SpbK-family
   locus represented by the DefenseFinder SpbK__SpbK profile and exemplified by the
-  ICEBs1 spbK gene whose SPß-YonE-dependent activity inhibits SPß production and kills
+  ICEBs1 spbK gene whose SPβ-YonE-dependent activity inhibits SPβ production and kills
   infected cells.
 definition_source: DOI:10.1371/journal.pgen.1010065
 trait_category: GENOMICS
@@ -18,7 +18,7 @@ evidence:
 - reference: DOI:10.1371/journal.pgen.1010065
   snippet: The ICEBs1 gene spbK, although dispensable for conjugation, was necessary
     and sufficient for the inhibition of SPß.
-  notes: Johnson et al. support spbK as the ICEBs1 locus sufficient for SPß inhibition.
+  notes: Johnson et al. support spbK as the ICEBs1 locus sufficient for SPβ inhibition.
 - reference: DOI:10.1371/journal.pgen.1010065
   snippet: The anti-SPß phenotype (abortive infection) caused by spbK was dependent
     on the SPß gene yonE.
@@ -47,17 +47,17 @@ canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
   note: Johnson et al. showed that ICEBs1 encodes an SpbK-dependent abortive infection
-    system that protects B. subtilis host populations from SPß.
+    system that protects B. subtilis host populations from SPβ.
   reference: DOI:10.1371/journal.pgen.1010065
 causal_graphs:
 - graph_id: spbk_locus_mediates_spb_defense
-  title: SpbK loci mediate SPß abortive defense
+  title: SpbK loci mediate SPβ abortive defense
   description: Conservative system-level sketch linking SpbK-family locus possession
-    to SPß YonE-dependent abortive infection and the SpbK system trait without asserting
+    to SPβ YonE-dependent abortive infection and the SpbK system trait without asserting
     the direct SpbK-YonE coupling event or TIR-domain effector chemistry.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures SpbK as a named DefenseFinder single-profile abortive-infection
-    system whose Bacillus ICEBs1 prototype requires the SPß YonE trigger. It leaves
+    system whose Bacillus ICEBs1 prototype requires the SPβ YonE trigger. It leaves
     the direct SpbK-YonE coupling, TIR-domain output, essential host target, and homolog
     breadth unresolved.
   nodes:
@@ -69,7 +69,7 @@ causal_graphs:
   - node_id: spbk_yone_abortive_infection
     label: SpbK/YonE-dependent abortive infection
     node_type: BIOLOGICAL_PROCESS
-    description: Abortive infection in which SpbK activity depends on the SPß YonE
+    description: Abortive infection in which SpbK activity depends on the SPβ YonE
       gene and causes host growth inhibition and cell death.
   - node_id: spbk_system_trait
     label: SpbK system
@@ -83,13 +83,13 @@ causal_graphs:
     predicate_id: RO:0002326
     object: spbk_yone_abortive_infection
     description: The ICEBs1 spbK locus is necessary and sufficient for YonE-dependent
-      SPß abortive infection, and DefenseFinder represents SpbK with a required SpbK
+      SPβ abortive infection, and DefenseFinder represents SpbK with a required SpbK
       profile.
     evidence:
     - reference: DOI:10.1371/journal.pgen.1010065
       snippet: The ICEBs1 gene spbK, although dispensable for conjugation, was necessary
         and sufficient for the inhibition of SPß.
-      notes: Johnson et al. connect the ICEBs1 spbK gene to SPß inhibition.
+      notes: Johnson et al. connect the ICEBs1 spbK gene to SPβ inhibition.
     - reference: DOI:10.1371/journal.pgen.1010065
       snippet: The anti-SPß phenotype (abortive infection) caused by spbK was dependent
         on the SPß gene yonE.
@@ -112,7 +112,7 @@ causal_graphs:
       snippet: Whatever the mechanism, we conclude that ICEBs1 encodes an abortive
         infection system that protects its host from predation by SPß.
       notes: Johnson et al. classify ICEBs1 spbK activity as an abortive infection
-        system that protects its host from SPß predation.
+        system that protects its host from SPβ predation.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
         genetic elements: An anti-phage gene in an integrative and conjugative element
@@ -121,13 +121,13 @@ causal_graphs:
         to the ICEBs1 SpbK anti-phage paper.
 discussions:
 - discussion_id: spbk-mechanism-gap
-  prompt: Resolve the direct SPß YonE trigger, SpbK TIR-domain output, essential host
+  prompt: Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, essential host
     target, and broader SpbK homolog scope before minting narrower SpbK mechanism
     children.
   kind: KNOWLEDGE_GAP
   status: OPEN
   rationale: Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection
-    gene that inhibits SPß and causes cell death, and DefenseFinder maps SpbK to the
+    gene that inhibits SPβ and causes cell death, and DefenseFinder maps SpbK to the
     SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential
     host target, and homolog breadth remain unresolved.
   attaches_to:
@@ -142,4 +142,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v202.
+  llm_assisted: true
+- timestamp: '2026-09-21T03:45:00Z'
+  curator: codex
+  action: REVISED_TEXT
+  changes: Standardized curator-written SPβ phage mentions to the canonical Greek
+    beta spelling while preserving Johnson et al. evidence snippets exactly as exposed
+    by the PLOS XML.
   llm_assisted: true

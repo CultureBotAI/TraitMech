@@ -190,7 +190,7 @@ discussions:
     reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell
     death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature
     lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage
-    exclusion, ICEBs1 SpbK abortive SPß defense, and other families. Additional narrower
+    exclusion, ICEBs1 SpbK abortive SPβ defense, and other families. Additional narrower
     TraitRecords need separate review to ground each subfamily's trigger, effector,
     growth-arrest or cell-death mechanism, and phage escape routes.
   posed_by: codex
@@ -357,4 +357,11 @@ curation_history:
   changes: Documented SpbK as split out in the open abortive-infection subfamily split-gap
     discussion after minting traitmech:000325 for the SpbK system; other abortive-infection
     families remain open.
+  llm_assisted: true
+- timestamp: '2026-09-21T03:45:00Z'
+  curator: codex
+  action: REVISED_TEXT
+  changes: Standardized curator-written SPβ phage mentions to the canonical Greek
+    beta spelling while preserving Johnson et al. evidence snippets exactly as exposed
+    by the PLOS XML.
   llm_assisted: true

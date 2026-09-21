@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/spbk_system.yaml
+  slug: spbk_system
+session:
+  id: 2026-09-21T034547Z-codex-2d41cc
+  timestamp: '2026-09-21T03:45:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1175
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1174
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Standardize SpbK SPβ spelling
+  details: Standardized curator-written SPβ phage mentions to the canonical Greek beta spelling
+    in the SpbK system definition, notes, canonical example, causal graph, discussion, METPO
+    proposal, and generated artifacts while preserving Johnson et al. evidence snippets exactly
+    as exposed by the PLOS XML.

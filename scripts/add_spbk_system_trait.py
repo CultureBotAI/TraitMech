@@ -33,8 +33,14 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-21T03:22:00Z"
 PARENT_TIMESTAMP = "2026-09-21T03:22:01Z"
+GLYPH_TIMESTAMP = "2026-09-21T03:45:00Z"
 IDENTIFIER = "traitmech:000325"
 PROPOSAL = "proposals/metpo_traitmech_v202"
+GLYPH_CHANGES = (
+    "Standardized curator-written SPβ phage mentions to the canonical "
+    "Greek beta spelling while preserving Johnson et al. evidence snippets "
+    "exactly as exposed by the PLOS XML."
+)
 
 SPBK_HMM_ROW = (
     "| SpbK__SpbK                                       | "
@@ -103,7 +109,7 @@ NEW_PARENT_RATIONALE = (
     "death, lactococcal AbiU phage-transcription delay, enterococcal "
     "AbiAlpha premature lysis, F-plasmid pif-region T7 abortive "
     "infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK "
-    "abortive SPß defense, and other families. Additional narrower "
+    "abortive SPβ defense, and other families. Additional narrower "
     "TraitRecords need separate review to ground each subfamily's "
     "trigger, effector, growth-arrest or cell-death mechanism, and "
     "phage escape routes."
@@ -158,7 +164,7 @@ RECORD: dict[str, Any] = {
         "An abortive infection system in which an organism possesses a "
         "SpbK-family locus represented by the DefenseFinder SpbK__SpbK "
         "profile and exemplified by the ICEBs1 spbK gene whose "
-        "SPß-YonE-dependent activity inhibits SPß production and kills "
+        "SPβ-YonE-dependent activity inhibits SPβ production and kills "
         "infected cells."
     ),
     "definition_source": JOHNSON,
@@ -182,7 +188,7 @@ RECORD: dict[str, Any] = {
             ),
             "notes": (
                 "Johnson et al. support spbK as the ICEBs1 locus sufficient "
-                "for SPß inhibition."
+                "for SPβ inhibition."
             ),
         },
         {
@@ -219,7 +225,7 @@ RECORD: dict[str, Any] = {
             "note": (
                 "Johnson et al. showed that ICEBs1 encodes an SpbK-dependent "
                 "abortive infection system that protects B. subtilis host "
-                "populations from SPß."
+                "populations from SPβ."
             ),
             "reference": JOHNSON,
         }
@@ -227,10 +233,10 @@ RECORD: dict[str, Any] = {
     "causal_graphs": [
         {
             "graph_id": "spbk_locus_mediates_spb_defense",
-            "title": "SpbK loci mediate SPß abortive defense",
+            "title": "SpbK loci mediate SPβ abortive defense",
             "description": (
                 "Conservative system-level sketch linking SpbK-family locus "
-                "possession to SPß YonE-dependent abortive infection and the "
+                "possession to SPβ YonE-dependent abortive infection and the "
                 "SpbK system trait without asserting the direct SpbK-YonE "
                 "coupling event or TIR-domain effector chemistry."
             ),
@@ -238,7 +244,7 @@ RECORD: dict[str, Any] = {
             "scope_notes": (
                 "The graph captures SpbK as a named DefenseFinder single-profile "
                 "abortive-infection system whose Bacillus ICEBs1 prototype "
-                "requires the SPß YonE trigger. It leaves the direct SpbK-YonE "
+                "requires the SPβ YonE trigger. It leaves the direct SpbK-YonE "
                 "coupling, TIR-domain output, essential host target, and "
                 "homolog breadth unresolved."
             ),
@@ -258,7 +264,7 @@ RECORD: dict[str, Any] = {
                     "node_type": "BIOLOGICAL_PROCESS",
                     "description": (
                         "Abortive infection in which SpbK activity depends on "
-                        "the SPß YonE gene and causes host growth inhibition "
+                        "the SPβ YonE gene and causes host growth inhibition "
                         "and cell death."
                     ),
                 },
@@ -281,7 +287,7 @@ RECORD: dict[str, Any] = {
                     "object": "spbk_yone_abortive_infection",
                     "description": (
                         "The ICEBs1 spbK locus is necessary and sufficient for "
-                        "YonE-dependent SPß abortive infection, and DefenseFinder "
+                        "YonE-dependent SPβ abortive infection, and DefenseFinder "
                         "represents SpbK with a required SpbK profile."
                     ),
                     "evidence": [
@@ -294,7 +300,7 @@ RECORD: dict[str, Any] = {
                             ),
                             "notes": (
                                 "Johnson et al. connect the ICEBs1 spbK gene to "
-                                "SPß inhibition."
+                                "SPβ inhibition."
                             ),
                         },
                         {
@@ -333,7 +339,7 @@ RECORD: dict[str, Any] = {
                             "notes": (
                                 "Johnson et al. classify ICEBs1 spbK activity as "
                                 "an abortive infection system that protects its "
-                                "host from SPß predation."
+                                "host from SPβ predation."
                             ),
                         },
                         article_registry_evidence(),
@@ -346,7 +352,7 @@ RECORD: dict[str, Any] = {
         {
             "discussion_id": "spbk-mechanism-gap",
             "prompt": (
-                "Resolve the direct SPß YonE trigger, SpbK TIR-domain output, "
+                "Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, "
                 "essential host target, and broader SpbK homolog scope before "
                 "minting narrower SpbK mechanism children."
             ),
@@ -354,7 +360,7 @@ RECORD: dict[str, Any] = {
             "status": "OPEN",
             "rationale": (
                 "Johnson et al. support ICEBs1 spbK as a YonE-dependent "
-                "abortive infection gene that inhibits SPß and causes cell "
+                "abortive infection gene that inhibits SPβ and causes cell "
                 "death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. "
                 "The direct SpbK-YonE coupling event, TIR-domain output, "
                 "essential host target, and homolog breadth remain unresolved."
@@ -403,6 +409,14 @@ def update_abortive_parent(record: dict[str, Any]) -> dict[str, Any]:
         llm_assisted=True,
         timestamp=PARENT_TIMESTAMP,
     )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVISED_TEXT",
+        changes=GLYPH_CHANGES,
+        llm_assisted=True,
+        timestamp=GLYPH_TIMESTAMP,
+    )
     return record
 
 
@@ -421,6 +435,14 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="REVISED_TEXT",
+        changes=GLYPH_CHANGES,
+        llm_assisted=True,
+        timestamp=GLYPH_TIMESTAMP,
     )
     return record
 
