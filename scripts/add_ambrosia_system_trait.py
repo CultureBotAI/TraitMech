@@ -1,0 +1,350 @@
+#!/usr/bin/env python3
+"""Add the Ambrosia system genomics trait."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import sys
+from pathlib import Path
+from typing import Any
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from traitmech.curate.curation_event import record_curation_event  # noqa: E402
+from traitmech.validation.write_validated import write_validated_trait  # noqa: E402
+
+TARGET = REPO_ROOT / "data" / "traits" / "genomics" / "ambrosia_system.yaml"
+
+KEESMAN = "DOI:10.1101/2025.09.30.679545"
+
+KEESMAN_VALIDATION_SNIPPET = (
+    "From over 500 candidate defense systems, we selected nine for "
+    "experimental testing and validated three: Dionysus, a TerB-encoding "
+    "system that disrupts early phage infection vesicle formation by Jumbo "
+    "phages; Ophion, a Radical SAM-containing system that prevents the "
+    "formation of the Jumbo phage nucleus; and Ambrosia, a tightly regulated "
+    "RM-like system."
+)
+KEESMAN_TARGET_SNIPPET = (
+    "Ambrosia, named after the food and drinks that provide immortality to "
+    "the Greek gods, consists of five genes and provides protection against "
+    "siphophages from the Mesyanzhinovviridae family and myophages from the "
+    "Pbunavirus genus, limiting phage propagation in both solid and liquid "
+    "cultures"
+)
+KEESMAN_COMPOSITION_SNIPPET = (
+    "The five genes of Ambrosia encode a HipB-like XRE transcriptional "
+    "regulator (AbrR), a RM type II-associated N6 adenine-specific DNA "
+    "methylase (MTase, AbrA), a sensor histidine kinase/heat-shock-protein"
+    "(HSP)90-like ATPase (HATPase, AbrB), a response regulator (REC, AbrC), "
+    "and an RM type IV HNH endonuclease (AbrD)"
+)
+KEESMAN_REQUIREMENT_SNIPPET = (
+    "Each protein is required for anti-phage activity, since mutating "
+    "conserved residues in any of the predicted functional domains "
+    "completely abolishes Ambrosia defense activity"
+)
+KEESMAN_MODEL_SNIPPET = (
+    "Overall, our results indicate that the RM-like components of Ambrosia "
+    "do not operate as a conventional type II RM system. Instead, Ambrosia "
+    "appears to represent a distinct, tightly regulated phage defense system "
+    "in which a HipB-like XRE protein and a two-component regulatory module "
+    "control the expression of RM-like enzymes in response to infection"
+)
+
+DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
+DEFENSEFINDER_ARTICLES = (
+    "https://raw.githubusercontent.com/mdmparis/defense-finder-models/"
+    f"{DEFENSEFINDER_COMMIT}/List_system_article.md"
+)
+
+CURATOR = "codex"
+TIMESTAMP = "2026-09-21T06:37:06Z"
+
+IDENTIFIER = "traitmech:000329"
+PROPOSAL = "proposals/metpo_traitmech_v206"
+SYSTEM = "Ambrosia"
+SLUG = "ambrosia"
+
+
+def article_registry_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_ARTICLES,
+        "snippet": (
+            "Ambrosia | 10\\.1101/2025\\.09\\.30\\.679545 | Discovery of "
+            "phage defense systems through component modularity networks"
+        ),
+        "notes": (
+            "The DefenseFinder article registry maps the named Ambrosia "
+            "system to the Keesman et al. modular phage-defense discovery "
+            "preprint; the pinned DefenseFinder HMM inventory and rules "
+            "table do not list Ambrosia, so this row is name-to-paper "
+            "evidence rather than model-component evidence."
+        ),
+    }
+
+
+RECORD: dict[str, Any] = {
+    "identifier": IDENTIFIER,
+    "label": "Ambrosia system",
+    "definition": (
+        "A phage defense system in which an organism possesses a five-gene "
+        "Ambrosia locus encoding AbrR, AbrA, AbrB, AbrC, and AbrD components "
+        "that can limit siphophage and myophage propagation."
+    ),
+    "definition_source": KEESMAN,
+    "trait_category": "GENOMICS",
+    "term_kind": "CLASS",
+    "mapping_status": "PROPOSED",
+    "parent_traits": ["traitmech:000209"],
+    "synonyms": [
+        {
+            "synonym_text": SYSTEM,
+            "synonym_type": "EXACT_SYNONYM",
+            "source": KEESMAN,
+        }
+    ],
+    "evidence": [
+        {
+            "reference": KEESMAN,
+            "snippet": KEESMAN_VALIDATION_SNIPPET,
+            "notes": (
+                "Keesman et al. named Ambrosia among three modular "
+                "phage-defense candidates validated experimentally from an "
+                "initial pool of more than 500 candidates."
+            ),
+        },
+        {
+            "reference": KEESMAN,
+            "snippet": KEESMAN_TARGET_SNIPPET,
+            "notes": (
+                "Keesman et al. support Ambrosia as a five-gene system that "
+                "limits propagation of Mesyanzhinovviridae siphophages and "
+                "Pbunavirus myophages."
+            ),
+        },
+        {
+            "reference": KEESMAN,
+            "snippet": KEESMAN_COMPOSITION_SNIPPET,
+            "notes": (
+                "Keesman et al. describe the Ambrosia locus as encoding AbrR, "
+                "AbrA, AbrB, AbrC, and AbrD components with RM-like and "
+                "two-component regulatory-system features."
+            ),
+        },
+        {
+            "reference": KEESMAN,
+            "snippet": KEESMAN_REQUIREMENT_SNIPPET,
+            "notes": (
+                "Keesman et al. support each predicted functional domain as "
+                "required for the tested Ambrosia anti-phage activity."
+            ),
+        },
+        {
+            "reference": KEESMAN,
+            "snippet": KEESMAN_MODEL_SNIPPET,
+            "notes": (
+                "Keesman et al. argue that Ambrosia is distinct from a "
+                "conventional type II restriction-modification system and is "
+                "regulated in response to phage infection."
+            ),
+        },
+        article_registry_evidence(),
+    ],
+    "causal_graphs": [
+        {
+            "graph_id": f"{SLUG}_locus_restricts_phage",
+            "title": "Ambrosia loci confer bacterial phage defense",
+            "description": (
+                "Conservative system-level sketch linking possession of an "
+                "Ambrosia locus to restricted bacteriophage propagation "
+                "without asserting the unresolved phage trigger, "
+                "transcriptional wiring, or nuclease substrate."
+            ),
+            "scope_status": "NONMECHANISTIC",
+            "scope_notes": (
+                "The graph captures Ambrosia as a named five-gene "
+                "anti-phage system while leaving its direct phage trigger, "
+                "the AbrB/AbrC regulatory chain, the exact AbrA/AbrD "
+                "substrate and DNA modification, natural locus breadth, "
+                "and the absence of pinned DefenseFinder HMM or rule rows "
+                "unresolved."
+            ),
+            "nodes": [
+                {
+                    "node_id": f"{SLUG}_locus",
+                    "label": "Ambrosia locus",
+                    "node_type": "GENETIC_ELEMENT",
+                    "description": (
+                        "A five-gene Ambrosia anti-phage defense locus "
+                        "encoding AbrR, AbrA, AbrB, AbrC, and AbrD "
+                        "components."
+                    ),
+                },
+                {
+                    "node_id": "restricted_phage_propagation",
+                    "label": "restricted phage propagation",
+                    "node_type": "BIOLOGICAL_PROCESS",
+                    "description": (
+                        "Reduced propagation of bacteriophage in cells "
+                        "carrying the Ambrosia system."
+                    ),
+                },
+                {
+                    "node_id": f"{SLUG}_system_trait",
+                    "label": "Ambrosia system",
+                    "node_type": "TRAIT",
+                    "grounding": IDENTIFIER,
+                    "description": (
+                        "Possession of a genome-encoded Ambrosia phage-defense system."
+                    ),
+                },
+                {
+                    "node_id": "phage_defense_system",
+                    "label": "phage defense system",
+                    "node_type": "TRAIT",
+                    "grounding": "traitmech:000209",
+                    "description": (
+                        "Possession of one or more genome-encoded immune "
+                        "systems that inhibit bacteriophage infection."
+                    ),
+                },
+            ],
+            "edges": [
+                {
+                    "subject": f"{SLUG}_locus",
+                    "predicate": "contributes to",
+                    "predicate_id": "RO:0002326",
+                    "object": "restricted_phage_propagation",
+                    "description": (
+                        "The five-gene Ambrosia locus provides protection "
+                        "against siphophages and myophages."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": KEESMAN,
+                            "snippet": KEESMAN_TARGET_SNIPPET,
+                            "notes": (
+                                "Keesman et al. connect the named Ambrosia "
+                                "locus to phage-propagation restriction in "
+                                "solid and liquid cultures."
+                            ),
+                        },
+                        {
+                            "reference": KEESMAN,
+                            "snippet": KEESMAN_REQUIREMENT_SNIPPET,
+                            "notes": (
+                                "Keesman et al. report that conserved-residue "
+                                "mutations in any predicted functional domain "
+                                "abolished Ambrosia defense."
+                            ),
+                        },
+                    ],
+                },
+                {
+                    "subject": "restricted_phage_propagation",
+                    "predicate": "confers",
+                    "predicate_id": "METPO:2007700",
+                    "object": f"{SLUG}_system_trait",
+                    "description": (
+                        "Ambrosia-mediated phage restriction realizes the Ambrosia system trait."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": KEESMAN,
+                            "snippet": KEESMAN_TARGET_SNIPPET,
+                            "notes": (
+                                "Keesman et al. report Ambrosia-mediated "
+                                "limitation of propagation for tested "
+                                "siphophages and myophages."
+                            ),
+                        },
+                        article_registry_evidence(),
+                    ],
+                },
+                {
+                    "subject": f"{SLUG}_system_trait",
+                    "predicate": "is a",
+                    "predicate_id": "rdfs:subClassOf",
+                    "object": "phage_defense_system",
+                    "description": ("Ambrosia system possession is a phage-defense-system trait."),
+                    "evidence": [
+                        {
+                            "reference": KEESMAN,
+                            "snippet": KEESMAN_VALIDATION_SNIPPET,
+                            "notes": (
+                                "Keesman et al. list Ambrosia among "
+                                "experimentally validated phage-defense "
+                                "systems."
+                            ),
+                        },
+                        article_registry_evidence(),
+                    ],
+                },
+            ],
+        }
+    ],
+    "discussions": [
+        {
+            "discussion_id": "ambrosia-regulatory-mechanism-gap",
+            "prompt": (
+                "Resolve Ambrosia phage triggers, DNA targets, and model "
+                "coverage before minting narrower Ambrosia mechanism "
+                "children."
+            ),
+            "kind": "KNOWLEDGE_GAP",
+            "status": "OPEN",
+            "rationale": (
+                "Keesman et al. support Ambrosia as a five-gene anti-phage "
+                "system with tightly regulated RM-like components, but the "
+                "direct phage trigger, the AbrB/AbrC regulatory chain, the "
+                "exact AbrA/AbrD substrate and DNA modification, natural "
+                "locus breadth, and profile-to-component model are not "
+                "resolved enough here to assert a narrower mechanistic child "
+                "trait."
+            ),
+            "attaches_to": [f"causal_graphs#{SLUG}_locus_restricts_phage"],
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-21",
+        }
+    ],
+}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--apply", action="store_true", help=f"write {TARGET.relative_to(REPO_ROOT)}"
+    )
+    args = parser.parse_args()
+
+    record = copy.deepcopy(RECORD)
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="MINTED_TRAITMECH_ID",
+        changes=(
+            "Minted Ambrosia system as a DOI-backed GENOMICS TraitRecord "
+            "under phage defense system after an ignored-and-hidden duplicate "
+            "review found no exact live TraitMech, METPO, history, or prior "
+            f"proposal record; the replacement placeholder is reserved in {PROPOSAL}."
+        ),
+        llm_assisted=True,
+        timestamp=TIMESTAMP,
+    )
+
+    rel = TARGET.relative_to(REPO_ROOT)
+    if args.apply:
+        if TARGET.exists():
+            raise SystemExit(f"{rel} already exists")
+        write_validated_trait(record, TARGET)
+        print(f"wrote {rel}")
+    else:
+        print(f"would write {rel}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

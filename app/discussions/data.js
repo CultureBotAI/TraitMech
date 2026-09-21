@@ -437,6 +437,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/aditi_system.html#aditi-mechanism-gap"
  },
  {
+  "discussion_id": "ambrosia-regulatory-mechanism-gap",
+  "prompt": "Resolve Ambrosia phage triggers, DNA targets, and model coverage before minting narrower Ambrosia mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Ambrosia system",
+  "source_id": "traitmech:000329",
+  "source_file": "ambrosia_system.yaml",
+  "attaches_to": [
+   "causal_graphs#ambrosia_locus_restricts_phage"
+  ],
+  "rationale": "Keesman et al. support Ambrosia as a five-gene anti-phage system with tightly regulated RM-like components, but the direct phage trigger, the AbrB/AbrC regulatory chain, the exact AbrA/AbrD substrate and DNA modification, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/ambrosia_system.html#ambrosia-regulatory-mechanism-gap"
+ },
+ {
   "discussion_id": "apsab-substrate-and-guide-source-gap",
   "prompt": "Resolve ApsAB guide sources, plasmid substrates, and model coverage before minting narrower ApsAB mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3560,9 +3579,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 197,
- "total_knowledge_gaps": 116,
- "total_source_entries": 196,
+ "total_discussions": 198,
+ "total_knowledge_gaps": 117,
+ "total_source_entries": 197,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

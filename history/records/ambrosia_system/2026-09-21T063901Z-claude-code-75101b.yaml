@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ambrosia_system.yaml
+  slug: ambrosia_system
+session:
+  id: 2026-09-21T063901Z-claude-code-75101b
+  timestamp: '2026-09-21T06:39:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identifiers
+  - definition
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Mint Ambrosia system trait
+  details: Minted traitmech:000329 for Ambrosia system as a DOI-backed GENOMICS phage-defense-system
+    record after an ignored-and-hidden duplicate search found no existing Ambrosia system
+    record, slug, DOI, local ID, proposal cohort, or placeholder METPO ID. Added a conservative
+    locus-level causal graph, a knowledge-gap discussion for unresolved regulatory mechanism
+    and DefenseFinder model coverage, and proposal metpo_traitmech_v206 reserving METPO:1028300
+    for upstream replacement.
