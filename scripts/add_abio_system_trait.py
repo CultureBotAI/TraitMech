@@ -74,6 +74,7 @@ PARENT_REPLACEMENTS = (
         ),
     ),
 )
+PARENT_APPLIED_FRAGMENTS = tuple(new for _, new in PARENT_REPLACEMENTS)
 PARENT_CHANGES = (
     "Documented AbiO as split out in the open abortive-infection "
     "subfamily split-gap discussion after minting traitmech:000342 for "
@@ -389,6 +390,9 @@ def update_abortive_parent(record: dict[str, Any]) -> dict[str, Any]:
         "Resolve other abortive-infection families before minting narrower "
         "children under the broad abortive infection system parent."
     )
+    if all(applied in discussion["rationale"] for applied in PARENT_APPLIED_FRAGMENTS):
+        return record
+
     for expected in PARENT_EXPECTED_FRAGMENTS:
         assert expected in discussion["rationale"]
     assert IDENTIFIER not in discussion["rationale"]
