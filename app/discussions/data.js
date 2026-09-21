@@ -1218,6 +1218,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/hailong_system.html#hailong-mechanism-and-family-breadth-gap"
  },
  {
+  "discussion_id": "hesat-mechanism-gap",
+  "prompt": "Resolve Hesat phage triggers and effector outputs before minting narrower Hesat mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Hesat system",
+  "source_id": "traitmech:000327",
+  "source_file": "hesat_system.yaml",
+  "attaches_to": [
+   "causal_graphs#hesat_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al. and DefenseFinder support Hesat as a named single-gene anti-phage system, but the direct trigger, experimentally validated molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/hesat_system.html#hesat-mechanism-gap"
+ },
+ {
   "discussion_id": "hna-trigger-and-family-breadth-gap",
   "prompt": "Resolve Hna trigger breadth, phage escape routes, and family architecture before minting narrower Hna mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3522,9 +3541,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 195,
- "total_knowledge_gaps": 114,
- "total_source_entries": 194,
+ "total_discussions": 196,
+ "total_knowledge_gaps": 115,
+ "total_source_entries": 195,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: .claude/skills/add-trait/SKILL.md
+  slug: add-trait-skill
+session:
+  id: 2026-09-21T052138Z-codex-1d140e
+  timestamp: '2026-09-21T05:21:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - workflow
+  - causal_graphs
+  summary: Clarify article-only DefenseFinder curation
+  details: Updated add-trait guidance from the Hesat curation branch so DefenseFinder article-registry
+    rows without pinned HMM or rules rows are used only as name-to-paper evidence; profile-grounded
+    component nodes stay omitted, and missing model rows are recorded as unresolved scope
+    gaps.
