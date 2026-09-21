@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pif_system.yaml
+  slug: pif_system
+session:
+  id: 2026-09-21T013342Z-codex-edb359
+  timestamp: '2026-09-21T01:33:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Pif system trait
+  details: Added traitmech:000323 Pif system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system after an ignored-and-hidden duplicate review found no exact same-scope
+    live record, METPO class, history record, or prior proposal. Cram et al. support the F-plasmid
+    pif region associated with T7 abortive infection, and the pinned DefenseFinder article,
+    rules, and HMM registries map Pif to required Pif__PifA and Pif__PifC profiles. Reserved
+    METPO:1027700 in proposals/metpo_traitmech_v200 for the upstream replacement class.

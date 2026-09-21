@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-21T013342Z-codex-44b2cc
+  timestamp: '2026-09-21T01:33:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Document Pif abortive-infection split
+  details: Updated the abortive-infection subfamily split-gap discussion after minting traitmech:000323
+    for the Pif system. The edit records Pif alongside the previously split ToxIN, Abi, and
+    BstA/Stk2 families while keeping the remaining abortive-infection-family gap open for
+    other narrower systems.
