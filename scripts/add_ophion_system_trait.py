@@ -55,6 +55,7 @@ DEFENSEFINDER_ARTICLES = (
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-21T08:20:12Z"
+REVIEW_TIMESTAMP = "2026-09-21T08:47:47Z"
 
 IDENTIFIER = "traitmech:000331"
 PROPOSAL = "proposals/metpo_traitmech_v208"
@@ -229,8 +230,10 @@ RECORD: dict[str, Any] = {
                             "snippet": KEESMAN_REQUIREMENT_SNIPPET,
                             "notes": (
                                 "Keesman et al. report that conserved-residue "
-                                "mutations in OpnA, OpnB, and OpnC reduce or "
-                                "abolish Ophion anti-phage activity."
+                                "mutations establish the OpnA Radical SAM "
+                                "and OpnC phosphoribosyl-transferase "
+                                "domains as essential, with partial "
+                                "dependence on OpnB PHP."
                             ),
                         },
                     ],
@@ -328,6 +331,20 @@ def main() -> int:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Tightened the Ophion conserved-residue evidence note after "
+            "the PR 1183 adversarial review filed issue 1184, narrowing "
+            "the claim to essential OpnA Radical SAM and OpnC "
+            "phosphoribosyl-transferase domains plus partial OpnB PHP "
+            "dependence."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
 
     rel = TARGET.relative_to(REPO_ROOT)

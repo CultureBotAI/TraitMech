@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/ophion_system.yaml
+  slug: ophion_system
+session:
+  id: 2026-09-21T084846Z-codex-34545d
+  timestamp: '2026-09-21T08:48:46Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1184
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1183
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Tighten Ophion PHP mutation note
+  details: 'Addressed PR #1183 adversarial review issue #1184 by narrowing the Ophion conserved-residue
+    evidence note to essential OpnA Radical SAM and OpnC phosphoribosyl-transferase domains
+    with partial dependence on OpnB PHP, instead of implying conserved-residue mutations had
+    been shown in all three OpnA, OpnB, and OpnC proteins.'
