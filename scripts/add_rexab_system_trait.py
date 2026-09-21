@@ -213,9 +213,10 @@ RECORD: dict[str, Any] = {
                 "itself from being excluded during lytic growth."
             ),
             "notes": (
-                "Parma et al. leave bacteriophage-lambda self-exclusion "
-                "avoidance as part of Rex system regulation rather than a "
-                "separate organismal trait."
+                "This self-exclusion sentence keeps "
+                "bacteriophage-lambda self-protection inside the open "
+                "RexAB mechanism gap instead of making it a separate "
+                "organismal trait."
             ),
         },
         article_registry_evidence(),

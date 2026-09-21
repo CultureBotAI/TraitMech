@@ -32,8 +32,8 @@ The pre-curation collision search included ignored and hidden files across the
 whole repository, plus the pinned DefenseFinder registries used for candidate
 discovery. No exact same-scope record, `rexab_system` slug, `RexAB system`
 label, `RexAB__RexA` or `RexAB__RexB` model row, `traitmech:000324`,
-`metpo_traitmech_v201`, `METPO:1027800`, `DOI:10.1101/gad.6.3.497`, or
-`DOI:10.1111/mmi.14792` was present before this cohort.
+`metpo_traitmech_v201`, `METPO:1027800`, or `DOI:10.1101/gad.6.3.497`
+was present before this cohort.
 
 Subset tag: `metpo_traitmech_2026_09`.
 
