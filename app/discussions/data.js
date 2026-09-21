@@ -962,6 +962,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/dgtpase_system.html#dgtpase-activation-profile-gap"
  },
  {
+  "discussion_id": "dionysus-jumbo-phage-mechanism-gap",
+  "prompt": "Resolve Dionysus phage triggers, EPI-vesicle pore formation, and model coverage before minting narrower Dionysus mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Dionysus system",
+  "source_id": "traitmech:000330",
+  "source_file": "dionysus_system.yaml",
+  "attaches_to": [
+   "causal_graphs#dionysus_locus_restricts_phage"
+  ],
+  "rationale": "Keesman et al. support Dionysus as a three-gene anti-jumbo-phage system that disrupts the jumbo-phage EPI vesicle stage, but the direct phage trigger, exact DinA/DinB/DinC interaction sequence, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/dionysus_system.html#dionysus-jumbo-phage-mechanism-gap"
+ },
+ {
   "discussion_id": "disarm-downstream-effector-gap",
   "prompt": "Resolve the downstream nuclease or replication-blocking effector coupled to activated DrmAB before adding a more specific DISARM phage-DNA degradation edge.",
   "kind": "KNOWLEDGE_GAP",
@@ -3579,9 +3598,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 198,
- "total_knowledge_gaps": 117,
- "total_source_entries": 197,
+ "total_discussions": 199,
+ "total_knowledge_gaps": 118,
+ "total_source_entries": 198,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
