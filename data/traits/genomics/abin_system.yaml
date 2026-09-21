@@ -1,0 +1,184 @@
+identifier: traitmech:000341
+label: AbiN system
+definition: An abortive infection system in which an organism possesses a single-component
+  AbiN-family locus represented by DefenseFinder as a mandatory AbiN__AbiN profile.
+definition_source: DOI:10.1111/j.1574-6968.1998.tb12879.x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiN
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: AbiN__AbiN
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1111/j.1574-6968.1998.tb12879.x
+  snippet: Nucleotide sequence and analysis of the new chromosomal abortive infection
+    gene abiN of Lactococcus lactis subsp. cremoris S114
+  notes: Crossref metadata verifies the Prevots et al. 1998 AbiN primary paper title
+    and DOI.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: the majority (18 systems) are each represented by single protein-coding
+    genes
+  notes: The FEMS review lists AbiN among the 34 confirmed lactococcal Abi-like systems
+    in Table 1 and omits AbiN from the named two- and three-component exception lists.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: The structure of AbiN is predicted with high confidence by AlphaFold and
+    resembles a putative periplasmic ligand-binding sensor domain protein
+  notes: The FEMS review summarizes a predicted AbiN sensor-like fold but does not
+    establish a molecular trigger or effector activity.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: further research is needed to clarify the mechanism of AbiN and if it functions
+    via abortive infection
+  notes: The FEMS review explicitly leaves the AbiN mechanism unresolved, so this
+    record does not mint a more specific sensor or effector trait.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiN | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiN model namespace to
+    the Chopin et al. lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiN\tAbiN\t1\t1\tAbiN__AbiN\t\t\t"
+  notes: The DefenseFinder rules table models AbiN as a one-component system requiring
+    the AbiN__AbiN profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiN__AbiN                                       | AbiN__AbiN                                       |
+    AbiN                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiN__AbiN under the AbiN model namespace.
+causal_graphs:
+- graph_id: abin_locus_restricts_lactococcal_phage
+  title: AbiN loci confer abortive-infection phage defense
+  description: Conservative system-level sketch linking possession of a DefenseFinder
+    AbiN locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger, predicted ligand-binding sensor role, or molecular effector activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiN as a named single-profile lactococcal Abi-like
+    system with the DefenseFinder AbiN__AbiN HMM while leaving its direct phage trigger,
+    ligand-sensor interpretation, exact molecular activity, phage-cycle step, phage
+    escape routes, and growth-arrest or cell-death route unresolved.
+  nodes:
+  - node_id: abin_locus
+    label: AbiN locus
+    node_type: GENETIC_ELEMENT
+    description: An AbiN-family abortive-infection locus represented by the DefenseFinder
+      AbiN__AbiN profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage propagation in cells carrying an AbiN-family
+      abortive-infection system.
+  - node_id: abin_system_trait
+    label: AbiN system
+    node_type: TRAIT
+    grounding: traitmech:000341
+    description: Possession of a genome-encoded AbiN abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abin_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The DefenseFinder AbiN namespace is modeled as a one-profile AbiN__AbiN
+      system.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiN\tAbiN\t1\t1\tAbiN__AbiN\t\t\t"
+      notes: The DefenseFinder rules table models AbiN as a one-component system requiring
+        the AbiN__AbiN profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiN__AbiN                                       | AbiN__AbiN                                       |
+        AbiN                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiN__AbiN under the AbiN model
+        namespace.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abin_system_trait
+    description: Restriction of phage propagation realizes the AbiN abortive-infection
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1998.tb12879.x
+      snippet: Nucleotide sequence and analysis of the new chromosomal abortive infection
+        gene abiN of Lactococcus lactis subsp. cremoris S114
+      notes: Crossref metadata verifies the Prevots et al. 1998 AbiN primary paper
+        title and DOI.
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: the majority (18 systems) are each represented by single protein-coding
+        genes
+      notes: The FEMS review lists AbiN among the 34 confirmed lactococcal Abi-like
+        systems in Table 1 and omits AbiN from the named two- and three-component
+        exception lists.
+  - subject: abin_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiN system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.1998.tb12879.x
+      snippet: Nucleotide sequence and analysis of the new chromosomal abortive infection
+        gene abiN of Lactococcus lactis subsp. cremoris S114
+      notes: Crossref metadata verifies the Prevots et al. 1998 AbiN primary paper
+        title and DOI.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiN | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiN model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+discussions:
+- discussion_id: abin-trigger-and-effector-gap
+  prompt: Resolve the AbiN phage trigger, molecular activity, predicted ligand-binding
+    sensor interpretation, and growth-arrest or cell-death route before minting narrower
+    AbiN mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Prevots et al. support AbiN as a chromosomal lactococcal abortive infection
+    gene, the FEMS review retains AbiN among confirmed lactococcal Abi-like systems,
+    and DefenseFinder represents AbiN with a mandatory AbiN__AbiN profile. The FEMS
+    table leaves the affected phage lytic-cycle step, phage escape mutants, and mechanism
+    of cell arrest or death unknown, and the FEMS structural discussion predicts a
+    putative ligand-binding sensor fold while explicitly calling for further research
+    on the AbiN mechanism. This first system-level record therefore leaves the direct
+    phage trigger, sensor ligand, exact molecular activity, growth-arrest or cell-death
+    route, and phage escape routes unresolved.
+  evidence:
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: The structure of AbiN is predicted with high confidence by AlphaFold
+      and resembles a putative periplasmic ligand-binding sensor domain protein
+    notes: The FEMS review summarizes a predicted AbiN sensor-like fold but does not
+      establish a molecular trigger or effector activity.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: further research is needed to clarify the mechanism of AbiN and if it
+      functions via abortive infection
+    notes: The FEMS review explicitly leaves the AbiN mechanism unresolved, so this
+      record does not mint a more specific sensor or effector trait.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+    snippet: "AbiN\tAbiN\t1\t1\tAbiN__AbiN\t\t\t"
+    notes: The DefenseFinder rules table models AbiN as a one-component system requiring
+      the AbiN__AbiN profile.
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+    snippet: '| AbiN__AbiN                                       | AbiN__AbiN                                       |
+      AbiN                   | Custom                  | 20     |'
+    notes: The DefenseFinder HMM inventory records AbiN__AbiN under the AbiN model
+      namespace.
+  attaches_to:
+  - causal_graphs#abin_locus_restricts_lactococcal_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T17:52:22Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiN system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v218.
+  llm_assisted: true
