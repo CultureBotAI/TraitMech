@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fs_giy_yig_system.yaml
+  slug: fs_giy_yig_system
+session:
+  id: 2026-09-21T213657Z-codex-39bf45
+  timestamp: '2026-09-21T21:36:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add FS-GIY-YIG system trait
+  details: Minted traitmech:000346 for the DefenseFinder-backed FS-GIY-YIG system under phage
+    defense system with DOI-backed evidence from Fillol-Salom et al., pinned DefenseFinder
+    article, rules, and HMM registry evidence, a conservative nonmechanistic causal graph,
+    an open mechanism-gap discussion, and proposal metpo_traitmech_v223 reserving METPO:1030000
+    for upstream adoption.

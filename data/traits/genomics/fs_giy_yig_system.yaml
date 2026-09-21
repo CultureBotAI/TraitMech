@@ -1,0 +1,151 @@
+identifier: traitmech:000346
+label: FS-GIY-YIG system
+definition: A phage defense system in which an organism possesses an FS_GIY_YIG locus
+  represented by DefenseFinder as a single-profile model requiring FS_GIY_YIG__GIY_YIG.
+definition_source: DOI:10.1016/j.cell.2022.07.014
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: FS_GIY_YIG
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: FS_GIY_YIG__GIY_YIG
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:35985290
+  snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal
+    of defense mechanisms
+  notes: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of mobile-element defense mechanisms.
+- reference: PMID:35985290
+  snippet: These defense systems provide broad immunity, blocking not only phage reproduction,
+    but also plasmid and non-cognate PICI transfer.
+  notes: Fillol-Salom et al. support PICI-encoded defense systems as broad immunity
+    determinants against phage reproduction and other mobile genetic element transfer.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: FS_GIY_YIG | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+    mobilizing pathogenicity islands encoding immune systems against competitors
+  notes: The DefenseFinder article registry maps the named FS_GIY_YIG system to the
+    Fillol-Salom et al. PICI defense-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "FS_GIY_YIG\tFS_GIY_YIG\t1\t1\tFS_GIY_YIG__GIY_YIG"
+  notes: The DefenseFinder rules table models FS_GIY_YIG as a single-profile system
+    requiring the FS_GIY_YIG__GIY_YIG profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| FS_GIY_YIG__GIY_YIG                              | FS_GIY_YIG__GIY_YIG                              |
+    FS_GIY_YIG             | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records FS_GIY_YIG__GIY_YIG under FS_GIY_YIG.
+causal_graphs:
+- graph_id: fs_giy_yig_locus_restricts_phage
+  title: FS-GIY-YIG loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an FS_GIY_YIG
+    locus to broad mobile-element defense without asserting the unresolved phage trigger
+    or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures FS-GIY-YIG as a named DefenseFinder single-profile
+    system in the Fillol-Salom PICI defense family while leaving its natural host
+    breadth, helper-phage trigger, GIY-YIG substrate, and direct effector activity
+    unresolved.
+  nodes:
+  - node_id: fs_giy_yig_locus
+    label: FS_GIY_YIG locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder FS_GIY_YIG phage-defense locus represented by a GIY-YIG
+      nuclease-like profile.
+  - node_id: pici_encoded_mobile_element_defense
+    label: PICI-encoded mobile-element defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Defense by phage-inducible chromosomal island loci against phage
+      reproduction, plasmid transfer, or non-cognate PICI transfer.
+  - node_id: fs_giy_yig_system_trait
+    label: FS-GIY-YIG system
+    node_type: TRAIT
+    grounding: traitmech:000346
+    description: Possession of a genome-encoded FS-GIY-YIG phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: fs_giy_yig_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pici_encoded_mobile_element_defense
+    description: DefenseFinder maps FS_GIY_YIG to the Fillol-Salom et al. PICI-encoded
+      immunity study and models it as a single-profile system requiring a GIY-YIG
+      nuclease-like profile.
+    evidence:
+    - reference: PMID:35985290
+      snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive
+        arsenal of defense mechanisms
+      notes: Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element
+        defense mechanisms.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_GIY_YIG | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+        from mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_GIY_YIG system to
+        the Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_GIY_YIG\tFS_GIY_YIG\t1\t1\tFS_GIY_YIG__GIY_YIG"
+      notes: The DefenseFinder rules table models FS_GIY_YIG as a single-profile system
+        requiring the FS_GIY_YIG__GIY_YIG profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| FS_GIY_YIG__GIY_YIG                              | FS_GIY_YIG__GIY_YIG                              |
+        FS_GIY_YIG             | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records FS_GIY_YIG__GIY_YIG under FS_GIY_YIG.
+  - subject: pici_encoded_mobile_element_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: fs_giy_yig_system_trait
+    description: FS_GIY_YIG-associated mobile-element defense realizes the FS-GIY-YIG
+      system trait.
+    evidence:
+    - reference: PMID:35985290
+      snippet: These defense systems provide broad immunity, blocking not only phage
+        reproduction, but also plasmid and non-cognate PICI transfer.
+      notes: Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element
+        immunity determinants.
+  - subject: fs_giy_yig_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: FS-GIY-YIG system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_GIY_YIG | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+        from mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_GIY_YIG system to
+        the Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_GIY_YIG\tFS_GIY_YIG\t1\t1\tFS_GIY_YIG__GIY_YIG"
+      notes: The DefenseFinder rules table models FS_GIY_YIG as a single-profile system
+        requiring the FS_GIY_YIG__GIY_YIG profile.
+discussions:
+- discussion_id: fs-giy-yig-mechanism-gap
+  prompt: Resolve FS_GIY_YIG natural hosts, helper-phage triggers, GIY-YIG substrates,
+    and effector activity before minting narrower FS_GIY_YIG mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of defense systems that provide broad immunity, and DefenseFinder models FS_GIY_YIG
+    as a single-profile system. Its exact natural host breadth, helper-phage trigger,
+    nuclease substrate, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#fs_giy_yig_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T21:36:57Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted FS-GIY-YIG system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v223.
+  llm_assisted: true

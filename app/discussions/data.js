@@ -1428,6 +1428,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/fliodhais_system.html#fliodhais-mechanism-gap"
  },
  {
+  "discussion_id": "fs-giy-yig-mechanism-gap",
+  "prompt": "Resolve FS_GIY_YIG natural hosts, helper-phage triggers, GIY-YIG substrates, and effector activity before minting narrower FS_GIY_YIG mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "FS-GIY-YIG system",
+  "source_id": "traitmech:000346",
+  "source_file": "fs_giy_yig_system.yaml",
+  "attaches_to": [
+   "causal_graphs#fs_giy_yig_locus_restricts_phage"
+  ],
+  "rationale": "Fillol-Salom et al. support phage-inducible chromosomal islands as carriers of defense systems that provide broad immunity, and DefenseFinder models FS_GIY_YIG as a single-profile system. Its exact natural host breadth, helper-phage trigger, nuclease substrate, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/fs_giy_yig_system.html#fs-giy-yig-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3935,9 +3954,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 215,
- "total_knowledge_gaps": 133,
- "total_source_entries": 213,
+ "total_discussions": 216,
+ "total_knowledge_gaps": 134,
+ "total_source_entries": 214,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
