@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abin_system.yaml
+  slug: abin_system
+session:
+  id: 2026-09-21T175910Z-codex-57980f
+  timestamp: '2026-09-21T17:59:10Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add AbiN system TraitRecord
+  details: Minted traitmech:000341 for the DOI-backed AbiN system under abortive infection
+    system after ignored-and-hidden duplicate review found no exact same-scope TraitMech,
+    METPO, history, or prior proposal record. Recorded Prevots et al., FEMS review, and pinned
+    DefenseFinder evidence. Added a conservative NONMECHANISTIC graph and kept the AbiN phage
+    trigger, molecular activity, predicted ligand-binding sensor interpretation, growth-arrest
+    or cell-death route, and phage escape routes open.
