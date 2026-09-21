@@ -149,9 +149,9 @@ causal_graphs:
     description: AbiJ system possession is an abortive-infection-system trait.
     evidence:
     - reference: DOI:10.1093/femsre/fuag009
-      snippet: A recent large-scale study of lactococcal plasmids revealed 11 novel
-        Abi-like systems
-      notes: The FEMS review places AbiJ within the set of lactococcal Abi-like systems.
+      snippet: AbiJ (Also abi-859)
+      notes: The 2026 FEMS review lists AbiJ, also named abi-859, among the experimentally
+        confirmed lactococcal Abi-like systems.
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: 'AbiJ | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
         lactococci: variations on a theme'
@@ -193,4 +193,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v216.
+  llm_assisted: true
+- timestamp: '2026-09-21T16:48:47Z'
+  curator: codex
+  action: FIX_EVIDENCE_SNIPPET
+  changes: Replaced the AbiJ subclass-edge FEMS table-heading evidence with the AbiJ-specific
+    table row after PR 1208 review issue 1209 found that the original snippet did not
+    itself mention AbiJ.
   llm_assisted: true

@@ -35,6 +35,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 CURATOR = "codex"
 TIMESTAMP = "2026-09-21T16:24:09Z"
 PARENT_TIMESTAMP = "2026-09-21T16:24:10Z"
+REVIEW_FIX_TIMESTAMP = "2026-09-21T16:48:47Z"
 IDENTIFIER = "traitmech:000339"
 PROPOSAL = "proposals/metpo_traitmech_v216"
 
@@ -374,17 +375,7 @@ RECORD: dict[str, Any] = {
                         "AbiJ system possession is an abortive-infection-system trait."
                     ),
                     "evidence": [
-                        {
-                            "reference": FEMS_REVIEW,
-                            "snippet": (
-                                "A recent large-scale study of lactococcal "
-                                "plasmids revealed 11 novel Abi-like systems"
-                            ),
-                            "notes": (
-                                "The FEMS review places AbiJ within the set "
-                                "of lactococcal Abi-like systems."
-                            ),
-                        },
+                        fems_abij_identity_evidence(),
                         article_registry_evidence(),
                     ],
                 },
@@ -499,6 +490,18 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="FIX_EVIDENCE_SNIPPET",
+        changes=(
+            "Replaced the AbiJ subclass-edge FEMS table-heading evidence "
+            "with the AbiJ-specific table row after PR 1208 review issue "
+            "1209 found that the original snippet did not itself mention AbiJ."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_FIX_TIMESTAMP,
     )
     return record
 
