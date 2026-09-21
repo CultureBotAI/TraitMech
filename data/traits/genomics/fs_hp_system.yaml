@@ -1,0 +1,150 @@
+identifier: traitmech:000348
+label: FS-HP system
+definition: A phage defense system in which an organism possesses an FS_HP locus represented
+  by DefenseFinder as a single-profile model requiring FS_HP__HP.
+definition_source: DOI:10.1016/j.cell.2022.07.014
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: FS_HP
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: FS_HP__HP
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:35985290
+  snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal
+    of defense mechanisms
+  notes: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of mobile-element defense mechanisms.
+- reference: PMID:35985290
+  snippet: These defense systems provide broad immunity, blocking not only phage reproduction,
+    but also plasmid and non-cognate PICI transfer.
+  notes: Fillol-Salom et al. support PICI-encoded defense systems as broad immunity
+    determinants against phage reproduction and other mobile genetic element transfer.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: FS_HP | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from mobilizing
+    pathogenicity islands encoding immune systems against competitors
+  notes: The DefenseFinder article registry maps the named FS_HP system to the Fillol-Salom
+    et al. PICI defense-system paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "FS_HP\tFS_HP\t1\t1\tFS_HP__HP"
+  notes: The DefenseFinder rules table models FS_HP as a single-profile system requiring
+    the FS_HP__HP profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| FS_HP__HP                                        | FS_HP__HP                                        |
+    FS_HP                  | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records FS_HP__HP under FS_HP.
+causal_graphs:
+- graph_id: fs_hp_locus_restricts_phage
+  title: FS-HP loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of an FS_HP locus
+    to broad mobile-element defense without asserting the unresolved phage trigger
+    or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures FS-HP as a named DefenseFinder single-profile system
+    in the Fillol-Salom PICI defense family while leaving its natural host breadth,
+    helper-phage trigger, HP component identity, and direct effector activity unresolved.
+  nodes:
+  - node_id: fs_hp_locus
+    label: FS_HP locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder FS_HP phage-defense locus represented by a custom
+      FS_HP__HP profile.
+  - node_id: pici_encoded_mobile_element_defense
+    label: PICI-encoded mobile-element defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Defense by phage-inducible chromosomal island loci against phage
+      reproduction, plasmid transfer, or non-cognate PICI transfer.
+  - node_id: fs_hp_system_trait
+    label: FS-HP system
+    node_type: TRAIT
+    grounding: traitmech:000348
+    description: Possession of a genome-encoded FS-HP phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: fs_hp_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pici_encoded_mobile_element_defense
+    description: DefenseFinder maps FS_HP to the Fillol-Salom et al. PICI-encoded
+      immunity study and models it as a single-profile system requiring a custom FS_HP__HP
+      profile.
+    evidence:
+    - reference: PMID:35985290
+      snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive
+        arsenal of defense mechanisms
+      notes: Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element
+        defense mechanisms.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_HP | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+        mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_HP system to the
+        Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_HP\tFS_HP\t1\t1\tFS_HP__HP"
+      notes: The DefenseFinder rules table models FS_HP as a single-profile system
+        requiring the FS_HP__HP profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| FS_HP__HP                                        | FS_HP__HP                                        |
+        FS_HP                  | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records FS_HP__HP under FS_HP.
+  - subject: pici_encoded_mobile_element_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: fs_hp_system_trait
+    description: FS_HP-associated mobile-element defense realizes the FS-HP system
+      trait.
+    evidence:
+    - reference: PMID:35985290
+      snippet: These defense systems provide broad immunity, blocking not only phage
+        reproduction, but also plasmid and non-cognate PICI transfer.
+      notes: Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element
+        immunity determinants.
+  - subject: fs_hp_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: FS-HP system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_HP | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
+        mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: The DefenseFinder article registry maps the named FS_HP system to the
+        Fillol-Salom et al. PICI defense-system paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "FS_HP\tFS_HP\t1\t1\tFS_HP__HP"
+      notes: The DefenseFinder rules table models FS_HP as a single-profile system
+        requiring the FS_HP__HP profile.
+discussions:
+- discussion_id: fs-hp-mechanism-gap
+  prompt: Resolve FS_HP natural hosts, helper-phage triggers, HP component identity,
+    and effector activity before minting narrower FS_HP mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
+    of defense systems that provide broad immunity, and DefenseFinder models FS_HP
+    as a single-profile system. Its exact natural host breadth, helper-phage trigger,
+    component identity, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#fs_hp_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T22:51:56Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted FS-HP system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v225.
+  llm_assisted: true
