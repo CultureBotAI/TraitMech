@@ -34,6 +34,7 @@ DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-21T20:16:02Z"
+REVIEW_TIMESTAMP = "2026-09-21T20:44:00Z"
 PARENT_TIMESTAMP = "2026-09-21T20:16:03Z"
 IDENTIFIER = "traitmech:000344"
 PROPOSAL = "proposals/metpo_traitmech_v221"
@@ -391,7 +392,7 @@ RECORD: dict[str, Any] = {
                     ],
                 },
                 {
-                    "subject": "phage_dna_replication_inhibition",
+                    "subject": "abia_locus",
                     "predicate": "contributes to",
                     "predicate_id": "RO:0002326",
                     "object": "reduced_lactococcal_phage_propagation",
@@ -565,6 +566,19 @@ def build_record() -> dict[str, Any]:
         ),
         llm_assisted=True,
         timestamp=TIMESTAMP,
+    )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Addressed PR #1218 review issues #1219 and #1220 by "
+            "aligning the v221 METPO ROBOT TSV definition with this "
+            "TraitRecord and moving the AbiA dosage and expression "
+            "evidence onto a direct AbiA locus edge."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
     )
     return record
 

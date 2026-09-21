@@ -159,7 +159,7 @@ causal_graphs:
         AbiA_small             | Custom                  | 300    |'
       notes: The DefenseFinder HMM inventory records AbiA_small__AbiA_small under
         the AbiA_small model namespace.
-  - subject: phage_dna_replication_inhibition
+  - subject: abia_locus
     predicate: contributes to
     predicate_id: RO:0002326
     object: reduced_lactococcal_phage_propagation
@@ -254,4 +254,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v221.
+  llm_assisted: true
+- timestamp: '2026-09-21T20:44:00Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Addressed PR #1218 review issues #1219 and #1220 by aligning the v221
+    METPO ROBOT TSV definition with this TraitRecord and moving the AbiA dosage and
+    expression evidence onto a direct AbiA locus edge.'
   llm_assisted: true

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abia_system.yaml
+  slug: abia_system
+session:
+  id: 2026-09-21T204600Z-codex-294fb1
+  timestamp: '2026-09-21T20:46:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1219
+  - https://github.com/CultureBotAI/TraitMech/issues/1220
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1218
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - ontology_mapping
+  summary: Address AbiA PR review issues
+  details: 'Addressed PR #1218 review issues #1219 and #1220 by aligning the v221 METPO ROBOT
+    TSV definition with the AbiA TraitRecord definition and moving the dosage and expression
+    evidence onto a direct AbiA locus edge while keeping the graph nonmechanistic.'
