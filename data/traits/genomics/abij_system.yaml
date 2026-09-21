@@ -198,6 +198,6 @@ curation_history:
   curator: codex
   action: FIX_EVIDENCE_SNIPPET
   changes: Replaced the AbiJ subclass-edge FEMS table-heading evidence with the AbiJ-specific
-    table row after PR 1208 review issue 1209 found that the original snippet did not
-    itself mention AbiJ.
+    table row after PR 1208 review issue 1209 found that the original snippet did
+    not itself mention AbiJ.
   llm_assisted: true
