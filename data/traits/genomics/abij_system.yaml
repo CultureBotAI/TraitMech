@@ -1,0 +1,196 @@
+identifier: traitmech:000339
+label: AbiJ system
+definition: An abortive infection system in which an organism possesses an AbiJ-family
+  locus represented by the DefenseFinder AbiJ model namespace and mandatory AbiJ__AbiJ
+  profile.
+definition_source: DOI:10.1111/j.1574-6968.1997.tb10185.x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiJ
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: AbiJ__AbiJ
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: abi-859
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1093/femsre/fuag009
+evidence:
+- reference: DOI:10.1111/j.1574-6968.1997.tb10185.x
+  snippet: A novel plasmid-encoded phage abortive infection system from Lactococcus
+    lactis biovar. diacetylactis
+  notes: Europe PMC metadata verifies the Deng et al. 1997 AbiJ primary paper title
+    and PMID:8997719; the DOI landing page was Cloudflare-blocked and Europe PMC exposed
+    no abstract or full text, so this record cites Deng et al. for the primary AbiJ
+    identity and uses later accessible sources for snippet-backed system details.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: Experimentally confirmed lactococcal Abi-like systems, as well as information
+    on their antiphage activity range
+  notes: The FEMS review frames Table 1 as a curated set of experimentally confirmed
+    lactococcal Abi-like systems.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: AbiJ (Also abi-859)
+  notes: The 2026 FEMS review lists AbiJ, also named abi-859, among the experimentally
+    confirmed lactococcal Abi-like systems.
+- reference: DOI:10.1073/pnas.2426508122
+  snippet: we isolated 66 phage escape mutants which had become insensitive to 13
+    distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea, Kamadhenu,
+    Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F, AbiG, AbiJ,
+    AbiP)
+  notes: Mosterd et al. include AbiJ in a set of distinct plasmid-encoded lactococcal
+    phage-resistance systems used for escape-mutant isolation.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: AbiA escape mutants also circumvent AbiJ, which was not observed for other
+    combinations
+  notes: The FEMS review summarizes Mosterd et al.'s escape-mutant evidence linking
+    AbiA escape mutations to AbiJ bypass while not yet identifying AbiJ's direct molecular
+    trigger.
+- reference: DOI:10.1093/femsre/fuag009
+  snippet: Although no particular mechanistic information is currently available for
+    AbiJ
+  notes: The FEMS review explicitly keeps AbiJ mechanism unresolved; this record therefore
+    avoids protein-level chemistry and TA-system mechanism claims.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'AbiJ | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci:
+    variations on a theme'
+  notes: The DefenseFinder article registry maps the named AbiJ model namespace to
+    the Chopin et al. lactococcal abortive-infection review.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "AbiJ\tAbiJ\t1\t1\tAbiJ__AbiJ\t\t\t"
+  notes: The DefenseFinder rules table models AbiJ as a one-component system requiring
+    the AbiJ__AbiJ profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiJ__AbiJ                                       | AbiJ__AbiJ                                       |
+    AbiJ                   | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records AbiJ__AbiJ under the AbiJ model namespace.
+causal_graphs:
+- graph_id: abij_locus_restricts_lactococcal_phage
+  title: AbiJ loci confer abortive-infection phage defense
+  description: Conservative system-level sketch linking possession of a DefenseFinder
+    AbiJ locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger, molecular activity, or arrest route.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiJ as a named single-profile lactococcal abortive-infection
+    system with a DefenseFinder AbiJ__AbiJ HMM profile while leaving its direct phage
+    trigger, AbiJ molecular function, exact relationship to AbiA escape routes, natural
+    locus breadth, and cell-arrest or death route unresolved.
+  nodes:
+  - node_id: abij_locus
+    label: AbiJ locus
+    node_type: GENETIC_ELEMENT
+    description: An AbiJ-family abortive-infection locus represented by the DefenseFinder
+      AbiJ__AbiJ profile.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced bacteriophage propagation in cells carrying an AbiJ-family
+      abortive-infection system.
+  - node_id: abij_system_trait
+    label: AbiJ system
+    node_type: TRAIT
+    grounding: traitmech:000339
+    description: Possession of a genome-encoded AbiJ abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abij_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The DefenseFinder AbiJ namespace is modeled as a one-profile AbiJ__AbiJ
+      system, and AbiJ is a plasmid-encoded lactococcal phage-resistance system.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "AbiJ\tAbiJ\t1\t1\tAbiJ__AbiJ\t\t\t"
+      notes: The DefenseFinder rules table models AbiJ as a one-component system requiring
+        the AbiJ__AbiJ profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiJ__AbiJ                                       | AbiJ__AbiJ                                       |
+        AbiJ                   | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records AbiJ__AbiJ under the AbiJ model
+        namespace.
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. include AbiJ in a set of distinct plasmid-encoded lactococcal
+        phage-resistance systems used for escape-mutant isolation.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abij_system_trait
+    description: Restriction of phage propagation realizes the AbiJ abortive-infection
+      system possession trait.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: AbiJ (Also abi-859)
+      notes: The 2026 FEMS review lists AbiJ, also named abi-859, among the experimentally
+        confirmed lactococcal Abi-like systems.
+    - reference: DOI:10.1073/pnas.2426508122
+      snippet: we isolated 66 phage escape mutants which had become insensitive to
+        13 distinct, plasmid-encoded lactococcal phage resistance systems (i.e. Rhea,
+        Kamadhenu, Rugutis, Audmula, PARIS, type II CBASS, Septu, AbiA, AbiB, AbiD/F,
+        AbiG, AbiJ, AbiP)
+      notes: Mosterd et al. include AbiJ in a set of distinct plasmid-encoded lactococcal
+        phage-resistance systems used for escape-mutant isolation.
+  - subject: abij_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiJ system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: A recent large-scale study of lactococcal plasmids revealed 11 novel
+        Abi-like systems
+      notes: The FEMS review places AbiJ within the set of lactococcal Abi-like systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiJ | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: The DefenseFinder article registry maps the named AbiJ model namespace
+        to the Chopin et al. lactococcal abortive-infection review.
+discussions:
+- discussion_id: abij-trigger-and-effector-gap
+  prompt: Resolve the AbiJ phage trigger, molecular activity, and exact AbiA escape-mutant
+    overlap before minting narrower AbiJ mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Deng et al. support AbiJ as a lactococcal plasmid-encoded abortive-infection
+    system, and DefenseFinder represents AbiJ with a one-profile rule. Mosterd et
+    al. show that AbiJ escape behavior overlaps with AbiA escape mutants, but the
+    FEMS review notes that AbiJ still lacks a resolved mechanism. This first system-level
+    record therefore leaves AbiJ's direct phage trigger, molecular effector activity,
+    natural locus breadth, exact HEPN-domain interpretation, growth-arrest or cell-death
+    route, and phage escape routes unresolved.
+  evidence:
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: While AbiB and AbiJ show only weak predictions (HHpred hits for HEPN
+      domain containing-proteins with E-values > 0.1) or lack identifiable functional
+      domains based on InterPro and HHpred
+    notes: The FEMS review notes that AbiJ HEPN-domain evidence remains weak in sequence/domain-prediction
+      analyses.
+  - reference: DOI:10.1093/femsre/fuag009
+    snippet: Although no particular mechanistic information is currently available
+      for AbiJ
+    notes: The FEMS review leaves AbiJ's mechanism unresolved.
+  attaches_to:
+  - causal_graphs#abij_locus_restricts_lactococcal_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T16:24:09Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiJ system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v216.
+  llm_assisted: true
