@@ -56,6 +56,7 @@ temperature downshift	ENVIRONMENTAL_FACTOR	3	data/traits/environment/temperature
 fatty acid desaturase activity	MOLECULAR_FUNCTION	3	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_phenotype_with_numerical_limits.yaml|data/traits/environment/temperature_range_low.yaml
 halted phage replication	BIOLOGICAL_PROCESS	3	data/traits/genomics/brig1_system.yaml|data/traits/genomics/dctpdeaminase_system.yaml|data/traits/genomics/dgtpase_system.yaml
 phage growth	BIOLOGICAL_PROCESS	3	data/traits/genomics/druantia_system.yaml|data/traits/genomics/retron_system.yaml|data/traits/genomics/septu_system.yaml
+pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	3	data/traits/genomics/fs_giy_yig_system.yaml|data/traits/genomics/fs_hepn_tm_system.yaml|data/traits/genomics/fs_hp_system.yaml
 cytosine deamination	BIOLOGICAL_PROCESS	3	data/traits/genomics/gc_content.yaml|data/traits/genomics/gc_high.yaml|data/traits/genomics/gc_mid2.yaml
 oligotrophic environment	ENVIRONMENTAL_FACTOR	3	data/traits/genomics/genome_streamlining.yaml|data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
 phage propagation	BIOLOGICAL_PROCESS	3	data/traits/genomics/paris_system.yaml|data/traits/genomics/pycsar_system.yaml|data/traits/genomics/stk2_system.yaml
@@ -144,7 +145,6 @@ phage dna-building-block starvation	STATE	2	data/traits/genomics/dctpdeaminase_s
 dna phosphorothioation	BIOLOGICAL_PROCESS	2	data/traits/genomics/dnd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna replication	BIOLOGICAL_PROCESS	2	data/traits/genomics/dndcdea_pbeabcd_system.yaml|data/traits/genomics/phosphorothioate_defense_system.yaml
 subtype-specific phage resistance	BIOLOGICAL_PROCESS	2	data/traits/genomics/drt_system.yaml|data/traits/genomics/dsr_system.yaml
-pici-encoded mobile-element defense	BIOLOGICAL_PROCESS	2	data/traits/genomics/fs_giy_yig_system.yaml|data/traits/genomics/fs_hepn_tm_system.yaml
 accessory function	QUALITY	2	data/traits/genomics/genomic_island.yaml|data/traits/genomics/plasmid_carriage.yaml
 antibiotic selective pressure	ENVIRONMENTAL_FACTOR	2	data/traits/genomics/mobile_genetic_element.yaml|data/traits/genomics/plasmid_carriage.yaml
 plasmid-encoded methylase	GENE_OR_PROTEIN	2	data/traits/genomics/plasmid_carriage.yaml|data/traits/genomics/restriction_modification_system.yaml
@@ -1294,6 +1294,7 @@ esos locus	GENETIC_ELEMENT	1	data/traits/genomics/esos_system.yaml
 fliodhais locus	GENETIC_ELEMENT	1	data/traits/genomics/fliodhais_system.yaml
 fs_giy_yig locus	GENETIC_ELEMENT	1	data/traits/genomics/fs_giy_yig_system.yaml
 fs_hepn_tm locus	GENETIC_ELEMENT	1	data/traits/genomics/fs_hepn_tm_system.yaml
+fs_hp locus	GENETIC_ELEMENT	1	data/traits/genomics/fs_hp_system.yaml
 gabija gaja-gajb operon	GENETIC_ELEMENT	1	data/traits/genomics/gabija_system.yaml
 gajab complex assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
 gabija nucleotide depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gabija_system.yaml
