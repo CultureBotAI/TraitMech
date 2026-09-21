@@ -12,6 +12,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from audit_graph_protein_taxa import (  # noqa: E402
+    LOAD_ERROR_KEY,
     coverage_rows,
     gate_exit_code,
     load_records,
@@ -365,8 +366,14 @@ def test_load_protected_reads_backticked_trait_paths(tmp_path):
 
 
 def test_real_corpus_has_one_row_per_graph():
-    rows = coverage_rows()
-    assert len(rows) == 482
+    records = load_records()
+    rows = coverage_rows(records)
+    graph_count = sum(
+        len(record.get("causal_graphs") or [])
+        for _path, record in records
+        if LOAD_ERROR_KEY not in record
+    )
+    assert len(rows) == graph_count
     assert not any("GENERIC_UNIPROT_GROUNDING" in row["unmet_requirements"] for row in rows)
 
 

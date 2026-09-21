@@ -1516,6 +1516,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/nemetona_system.html#nemetona-mechanism-gap"
  },
  {
+  "discussion_id": "nhi-trigger-and-substrate-gap",
+  "prompt": "Resolve the Nhi phage trigger, exact replication-intermediate substrate, accession-level natural host protein, and homolog breadth before minting narrower mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Nhi system",
+  "source_id": "traitmech:000332",
+  "source_file": "nhi_system.yaml",
+  "attaches_to": [
+   "causal_graphs#nhi_locus_restricts_staphylococcal_phages"
+  ],
+  "rationale": "Bari et al. support Nhi as a compact single-enzyme nuclease-helicase immunity system that prevents phage DNA accumulation and is inferred to target and degrade phage-specific replication intermediates. DefenseFinder models Nhi with a one-profile rule, but this first system-level record leaves the direct phage trigger, exact substrate, natural-host accession, and full taxonomic breadth of functional homologs unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/nhi_system.html#nhi-trigger-and-substrate-gap"
+ },
+ {
   "discussion_id": "ogmios-mechanism-gap",
   "prompt": "Resolve Ogmios phage triggers and effector outputs before minting narrower Ogmios mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3617,9 +3636,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 200,
- "total_knowledge_gaps": 119,
- "total_source_entries": 199,
+ "total_discussions": 201,
+ "total_knowledge_gaps": 120,
+ "total_source_entries": 200,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

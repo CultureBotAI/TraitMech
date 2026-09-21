@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/nhi_system.yaml
+  slug: nhi_system
+session:
+  id: 2026-09-21T091252Z-codex-761641
+  timestamp: '2026-09-21T09:12:52Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Added Nhi system phage defense trait
+  details: Minted traitmech:000332 for the DefenseFinder-backed Nhi system under phage defense
+    system with DOI-backed evidence from Bari et al., pinned DefenseFinder article, rules,
+    and HMM rows, a conservative nonmechanistic causal graph, and a reserved METPO:1028600
+    placeholder in proposals/metpo_traitmech_v209.
