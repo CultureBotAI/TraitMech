@@ -1,0 +1,145 @@
+identifier: traitmech:000325
+label: SpbK system
+definition: An abortive infection system in which an organism possesses a SpbK-family
+  locus represented by the DefenseFinder SpbK__SpbK profile and exemplified by the
+  ICEBs1 spbK gene whose SPß-YonE-dependent activity inhibits SPß production and kills
+  infected cells.
+definition_source: DOI:10.1371/journal.pgen.1010065
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: SpbK
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: DOI:10.1371/journal.pgen.1010065
+  snippet: The ICEBs1 gene spbK, although dispensable for conjugation, was necessary
+    and sufficient for the inhibition of SPß.
+  notes: Johnson et al. support spbK as the ICEBs1 locus sufficient for SPß inhibition.
+- reference: DOI:10.1371/journal.pgen.1010065
+  snippet: The anti-SPß phenotype (abortive infection) caused by spbK was dependent
+    on the SPß gene yonE.
+  notes: Johnson et al. support yonE-dependent abortive infection as the phage-specific
+    SpbK output.
+- reference: DOI:10.1371/journal.pgen.1010065
+  snippet: Co-expression of spbK and yonE inhibited host cell growth and caused a
+    drop in cell viability, even in the absence of any other ICEBs1 or SPß genes.
+  notes: Johnson et al. support SpbK/YonE-associated host growth inhibition and cell
+    death.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile genetic
+    elements: An anti-phage gene in an integrative and conjugative element protects
+    host cells from predation by a temperate bacteriophage'
+  notes: The DefenseFinder article registry maps the named SpbK model namespace to
+    the ICEBs1 SpbK anti-phage paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "SpbK\tSpbK\t1\t1\tSpbK__SpbK"
+  notes: The DefenseFinder rules table models SpbK as a single-profile system requiring
+    the SpbK__SpbK profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| SpbK__SpbK                                       | SpbK__SpbK                                       |
+    SpbK                   | Custom                  | 80     |'
+  notes: The DefenseFinder HMM inventory records SpbK__SpbK under SpbK.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: Johnson et al. showed that ICEBs1 encodes an SpbK-dependent abortive infection
+    system that protects B. subtilis host populations from SPß.
+  reference: DOI:10.1371/journal.pgen.1010065
+causal_graphs:
+- graph_id: spbk_locus_mediates_spb_defense
+  title: SpbK loci mediate SPß abortive defense
+  description: Conservative system-level sketch linking SpbK-family locus possession
+    to SPß YonE-dependent abortive infection and the SpbK system trait without asserting
+    the direct SpbK-YonE coupling event or TIR-domain effector chemistry.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures SpbK as a named DefenseFinder single-profile abortive-infection
+    system whose Bacillus ICEBs1 prototype requires the SPß YonE trigger. It leaves
+    the direct SpbK-YonE coupling, TIR-domain output, essential host target, and homolog
+    breadth unresolved.
+  nodes:
+  - node_id: spbk_locus
+    label: SpbK locus
+    node_type: GENETIC_ELEMENT
+    description: An ICEBs1-like abortive-infection locus represented by the DefenseFinder
+      SpbK__SpbK profile.
+  - node_id: spbk_yone_abortive_infection
+    label: SpbK/YonE-dependent abortive infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive infection in which SpbK activity depends on the SPß YonE
+      gene and causes host growth inhibition and cell death.
+  - node_id: spbk_system_trait
+    label: SpbK system
+    node_type: TRAIT
+    grounding: traitmech:000325
+    description: Possession of a genome-encoded SpbK abortive-infection phage-defense
+      system.
+  edges:
+  - subject: spbk_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: spbk_yone_abortive_infection
+    description: The ICEBs1 spbK locus is necessary and sufficient for YonE-dependent
+      SPß abortive infection, and DefenseFinder represents SpbK with a required SpbK
+      profile.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010065
+      snippet: The ICEBs1 gene spbK, although dispensable for conjugation, was necessary
+        and sufficient for the inhibition of SPß.
+      notes: Johnson et al. connect the ICEBs1 spbK gene to SPß inhibition.
+    - reference: DOI:10.1371/journal.pgen.1010065
+      snippet: The anti-SPß phenotype (abortive infection) caused by spbK was dependent
+        on the SPß gene yonE.
+      notes: Johnson et al. support YonE dependence of SpbK-mediated abortive infection.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "SpbK\tSpbK\t1\t1\tSpbK__SpbK"
+      notes: The DefenseFinder rules table models SpbK as a single-profile system
+        requiring the SpbK__SpbK profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| SpbK__SpbK                                       | SpbK__SpbK                                       |
+        SpbK                   | Custom                  | 80     |'
+      notes: The DefenseFinder HMM inventory records SpbK__SpbK under SpbK.
+  - subject: spbk_yone_abortive_infection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: spbk_system_trait
+    description: SpbK/YonE-dependent abortive infection realizes the SpbK system trait.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010065
+      snippet: Whatever the mechanism, we conclude that ICEBs1 encodes an abortive
+        infection system that protects its host from predation by SPß.
+      notes: Johnson et al. classify ICEBs1 spbK activity as an abortive infection
+        system that protects its host from SPß predation.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
+        genetic elements: An anti-phage gene in an integrative and conjugative element
+        protects host cells from predation by a temperate bacteriophage'
+      notes: The DefenseFinder article registry maps the named SpbK model namespace
+        to the ICEBs1 SpbK anti-phage paper.
+discussions:
+- discussion_id: spbk-mechanism-gap
+  prompt: Resolve the direct SPß YonE trigger, SpbK TIR-domain output, essential host
+    target, and broader SpbK homolog scope before minting narrower SpbK mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection
+    gene that inhibits SPß and causes cell death, and DefenseFinder maps SpbK to the
+    SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential
+    host target, and homolog breadth remain unresolved.
+  attaches_to:
+  - causal_graphs#spbk_locus_mediates_spb_defense
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T03:22:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted SpbK system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v202.
+  llm_assisted: true

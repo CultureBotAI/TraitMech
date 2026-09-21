@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/spbk_system.yaml
+  slug: spbk_system
+session:
+  id: 2026-09-21T031737Z-codex-f36385
+  timestamp: '2026-09-21T03:17:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add SpbK system trait
+  details: Added traitmech:000325 SpbK system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system after an ignored-and-hidden duplicate review found no exact same-scope
+    live record, METPO class, history record, or prior proposal. Johnson et al. support ICEBs1
+    spbK as a YonE-dependent abortive infection gene that inhibits SPß and causes host cell
+    death, and the pinned DefenseFinder article, rules, and HMM registries map SpbK to the
+    required SpbK__SpbK profile. Reserved METPO:1027900 in proposals/metpo_traitmech_v202
+    for the upstream replacement class.
