@@ -30,14 +30,15 @@ This cohort lifts one local class:
 visually separated and leave room for upstream minting.
 
 The pre-curation collision search included ignored and hidden files across the
-whole repository, plus the pinned DefenseFinder article registry, HMM
-inventory, and rules table that supplied the positive GasderMIN row used for
+whole repository for exact TraitMech/METPO records and prior proposal/history
+mentions. Separately, the pinned DefenseFinder article registry, HMM inventory,
+and rules table supplied the positive GasderMIN candidate rows used for
 candidate discovery. No exact same-scope TraitMech or METPO record,
 `gasdermin_system` slug, `GasderMIN system` label, `traitmech:000336`,
 `metpo_traitmech_v213`, `METPO:1029000`, `GasderMIN`,
 `GasderMIN__bGSDM`, `bGSDM`, `DOI:10.1126/science.abj8432`,
 `PMID:35025633`, or `https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/` was
-present before this cohort.
+present in the repository before this cohort.
 
 Subset tag: `metpo_traitmech_2026_09`.
 

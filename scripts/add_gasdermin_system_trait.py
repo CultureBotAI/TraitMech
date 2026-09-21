@@ -107,6 +107,25 @@ def rules_evidence() -> dict[str, str]:
     }
 
 
+def card_nlr_gasdermin_rules_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_RULES,
+        "snippet": (
+            "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\t"
+            "CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\t"
+            "CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, "
+            "CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, "
+            "CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, "
+            "CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, "
+            "CARD_NLR__Trypsine_Endonuclease_new\t"
+        ),
+        "notes": (
+            "The DefenseFinder rules table also models a CARD_NLR_GasderMIN "
+            "subtype with GasderMIN__bGSDM as its mandatory profile."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "GasderMIN system",
@@ -191,6 +210,7 @@ RECORD: dict[str, Any] = {
         article_registry_evidence(),
         hmm_inventory_evidence(),
         rules_evidence(),
+        card_nlr_gasdermin_rules_evidence(),
     ],
     "canonical_examples": [
         {
