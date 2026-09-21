@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gasdermin_system.yaml
+  slug: gasdermin_system
+session:
+  id: 2026-09-21T130006Z-codex-4d329e
+  timestamp: '2026-09-21T13:00:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  summary: Add GasderMIN phage-defense trait
+  details: Minted traitmech:000336 for the DOI-backed GasderMIN bacterial gasdermin phage-defense
+    system under the phage defense system parent, added Johnson et al. evidence from DOI:10.1126/science.abj8432
+    and stable PMC full text, added pinned DefenseFinder registry/profile/rules evidence for
+    GasderMIN__bGSDM, added a Lysobacter enzymogenes canonical example, and recorded a knowledge
+    gap for CARD-NLR-associated gasdermins and family breadth.

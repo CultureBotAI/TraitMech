@@ -1,0 +1,257 @@
+identifier: traitmech:000336
+label: GasderMIN system
+definition: A phage defense system in which an organism possesses a bacterial gasdermin
+  locus represented by the DefenseFinder GasderMIN__bGSDM profile, whose bGSDM effectors
+  are associated with bacteriophage defense and can be proteolytically activated in
+  characterized bGSDM-protease systems to assemble membrane pores, disrupt membrane
+  integrity, and execute cell death.
+definition_source: DOI:10.1126/science.abj8432
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: GasderMIN
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: GasderMIN__bGSDM
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: DOI:10.1126/science.abj8432
+  snippet: We discovered gasdermin homologs encoded in bacteria that defended against
+    phages and executed cell death.
+  notes: Johnson et al. support bacterial gasdermin homologs as phage-defense proteins
+    that execute cell death.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+  snippet: bGSDM-protease systems are found in diverse bacteria and archaea, as well
+    as in metagenomic samples of prokaryotic origin
+  notes: Johnson et al. report bGSDM-protease systems across bacteria, archaea, and
+    prokaryotic metagenomic samples, supporting curation above one engineered locus.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+  snippet: a four gene operon from Lysobacter enzymogenes exhibited robust defense
+    against coliphages T4, T5, and T6
+  notes: Johnson et al. experimentally tested a Lysobacter enzymogenes bGSDM-containing
+    operon that defended against coliphages T4, T5, and T6.
+- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+  snippet: Deletion of the bGSDM gene from the Lysobacter operon abolished protection
+  notes: Deletion of the bGSDM gene from the Lysobacter operon abolished the observed
+    phage protection.
+- reference: DOI:10.1126/science.abj8432
+  snippet: Bacterial gasdermins were activated by dedicated caspase-like proteases
+    that catalyzed site-specific cleavage and the removal of an inhibitory C-terminal
+    peptide.
+  notes: Johnson et al. connect bacterial gasdermin activation to dedicated caspase-like
+    proteases that remove an inhibitory C-terminal peptide.
+- reference: DOI:10.1126/science.abj8432
+  snippet: Release of autoinhibition induced the assembly of large and heterogeneous
+    pores that disrupted membrane integrity.
+  notes: Johnson et al. support pore assembly and membrane disruption as outputs of
+    bacterial gasdermin autoinhibition release.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: GasderMIN | 10\.1101/2021\.06\.07\.447441 | Bacterial gasdermins reveal
+    an ancient mechanism of cell death
+  notes: The DefenseFinder article registry maps the GasderMIN model namespace to
+    the Johnson et al. bacterial gasdermin preprint, later published under DOI:10.1126/science.abj8432.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| GasderMIN__bGSDM                                 | GasderMIN__bGSDM___bGSDM                         |
+    GasderMIN              | Custom                  | 50     |'
+  notes: The DefenseFinder HMM inventory records the bGSDM profile under the GasderMIN
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "GasderMIN\tGasderMIN\t1\t1\tGasderMIN__bGSDM\t\t\t"
+  notes: The DefenseFinder rules table models GasderMIN as a one-mandatory-profile
+    system requiring GasderMIN__bGSDM.
+canonical_examples:
+- taxon_id: NCBITaxon:69
+  taxon_label: Lysobacter enzymogenes
+  note: Johnson et al. showed that a Lysobacter enzymogenes bGSDM-containing operon
+    provided robust defense against coliphages T4, T5, and T6 in an Escherichia coli
+    heterologous assay, and that deleting the bGSDM gene abolished protection.
+  reference: DOI:10.1126/science.abj8432
+causal_graphs:
+- graph_id: gasdermin_proteolysis_triggers_pore_cell_death
+  title: GasderMIN activation forms lethal membrane pores
+  description: System-level sketch linking a bacterial gasdermin locus to phage defense-system
+    possession and linking characterized bGSDM-protease systems to caspase-like proteolytic
+    activation, gasdermin pore assembly, membrane disruption, and cell death.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures GasderMIN as a named DefenseFinder single-mandatory-profile
+    system supported by Johnson et al. bacterial gasdermin experiments while leaving
+    the natural phage trigger, the universality of adjacent protease activation, the
+    full family breadth, and CARD-NLR-associated gasdermin variants unresolved.
+  nodes:
+  - node_id: gasdermin_locus
+    label: bacterial gasdermin locus
+    node_type: GENETIC_ELEMENT
+    description: A bacterial gasdermin phage-defense locus cataloged in DefenseFinder
+      with the GasderMIN__bGSDM profile.
+  - node_id: caspase_like_bgsdm_cleavage
+    label: caspase-like bGSDM cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Site-specific bacterial gasdermin cleavage by a dedicated caspase-like
+      protease.
+  - node_id: gasdermin_pore_assembly
+    label: bacterial gasdermin pore assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of activated bacterial gasdermins into large membrane pores.
+  - node_id: membrane_integrity_disruption
+    label: membrane integrity disruption
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of bacterial membrane integrity after gasdermin pore formation.
+  - node_id: gasdermin_cell_death
+    label: gasdermin-dependent cell death
+    node_type: BIOLOGICAL_PROCESS
+    description: Host cell death executed by activated bacterial gasdermin pores.
+  - node_id: gasdermin_system_trait
+    label: GasderMIN system
+    node_type: TRAIT
+    grounding: traitmech:000336
+    description: Possession of a genome-encoded GasderMIN phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gasdermin_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: caspase_like_bgsdm_cleavage
+    description: Characterized bacterial gasdermin-protease loci can encode dedicated
+      caspase-like proteases that cleave bGSDM effectors and remove their inhibitory
+      C-terminal peptide.
+    evidence:
+    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+      snippet: bGSDM-protease systems are found in diverse bacteria and archaea, as
+        well as in metagenomic samples of prokaryotic origin
+      notes: Johnson et al. describe bGSDM-protease systems across prokaryotic genomes
+        and metagenomes.
+    - reference: DOI:10.1126/science.abj8432
+      snippet: Bacterial gasdermins were activated by dedicated caspase-like proteases
+        that catalyzed site-specific cleavage and the removal of an inhibitory C-terminal
+        peptide.
+      notes: Johnson et al. support caspase-like proteases as direct activators of
+        bacterial gasdermins.
+  - subject: caspase_like_bgsdm_cleavage
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gasdermin_pore_assembly
+    description: Proteolytic release of the inhibitory bacterial gasdermin peptide
+      induces large pore assembly.
+    evidence:
+    - reference: DOI:10.1126/science.abj8432
+      snippet: Release of autoinhibition induced the assembly of large and heterogeneous
+        pores that disrupted membrane integrity.
+      notes: Johnson et al. connect release of autoinhibition to gasdermin pore assembly.
+    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+      snippet: The Runella bGSDM and protease only induced cellular toxicity when
+        expressed together
+      notes: The Runella bGSDM system required both bGSDM and its protease to trigger
+        cellular toxicity.
+  - subject: gasdermin_pore_assembly
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: membrane_integrity_disruption
+    description: Activated bacterial gasdermins assemble pores that disrupt membrane
+      integrity.
+    evidence:
+    - reference: DOI:10.1126/science.abj8432
+      snippet: Release of autoinhibition induced the assembly of large and heterogeneous
+        pores that disrupted membrane integrity.
+      notes: Johnson et al. link bacterial gasdermin pore assembly to disrupted membrane
+        integrity.
+  - subject: membrane_integrity_disruption
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gasdermin_cell_death
+    description: Bacterial gasdermin activation can execute cell death through loss
+      of membrane integrity.
+    evidence:
+    - reference: DOI:10.1126/science.abj8432
+      snippet: We discovered gasdermin homologs encoded in bacteria that defended
+        against phages and executed cell death.
+      notes: Johnson et al. identify bacterial gasdermins as phage-defense homologs
+        that execute cell death.
+  - subject: gasdermin_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gasdermin_system_trait
+    description: The GasderMIN DefenseFinder model identifies a GasderMIN__bGSDM profile,
+      and Johnson et al. show that deleting a bGSDM gene can abolish phage protection
+      by a gasdermin operon.
+    evidence:
+    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+      snippet: a four gene operon from Lysobacter enzymogenes exhibited robust defense
+        against coliphages T4, T5, and T6
+      notes: The tested Lysobacter enzymogenes bGSDM-containing operon protected cells
+        from coliphage challenge.
+    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9134750/
+      snippet: Deletion of the bGSDM gene from the Lysobacter operon abolished protection
+      notes: The bGSDM gene was essential for the Lysobacter operon's observed phage
+        protection.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| GasderMIN__bGSDM                                 | GasderMIN__bGSDM___bGSDM                         |
+        GasderMIN              | Custom                  | 50     |'
+      notes: The DefenseFinder HMM inventory records the bGSDM profile under the GasderMIN
+        model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GasderMIN\tGasderMIN\t1\t1\tGasderMIN__bGSDM\t\t\t"
+      notes: The DefenseFinder rules table models GasderMIN as a one-mandatory-profile
+        system requiring GasderMIN__bGSDM.
+  - subject: gasdermin_cell_death
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gasdermin_system_trait
+    description: Bacterial gasdermin-mediated cell death realizes the GasderMIN phage-defense-system
+      output in tested bGSDM-protease systems.
+    evidence:
+    - reference: DOI:10.1126/science.abj8432
+      snippet: We discovered gasdermin homologs encoded in bacteria that defended
+        against phages and executed cell death.
+      notes: Johnson et al. connect bacterial gasdermin phage defense with cell death.
+  - subject: gasdermin_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: GasderMIN system possession is a bacterial gasdermin phage-defense-system
+      trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: GasderMIN | 10\.1101/2021\.06\.07\.447441 | Bacterial gasdermins reveal
+        an ancient mechanism of cell death
+      notes: The DefenseFinder article registry maps the GasderMIN model namespace
+        to the Johnson et al. bacterial gasdermin preprint, later published under
+        DOI:10.1126/science.abj8432.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "GasderMIN\tGasderMIN\t1\t1\tGasderMIN__bGSDM\t\t\t"
+      notes: The DefenseFinder rules table models GasderMIN as a one-mandatory-profile
+        system requiring GasderMIN__bGSDM.
+discussions:
+- discussion_id: gasdermin-family-breadth-and-card-nlr-scope-gap
+  prompt: Resolve natural GasderMIN family breadth and CARD-NLR gasdermin context
+    before minting narrower gasdermin subfamily traits.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Johnson et al. experimentally tested a Lysobacter bGSDM-containing operon
+    and mechanistically dissected Runella bGSDM protease-triggered toxicity, while
+    some bacterial gasdermins showed no discernible phage restriction in Escherichia
+    coli and the GasderMIN__bGSDM profile is also used in CARD-NLR detector contexts
+    in the pinned DefenseFinder rules table. This record captures the standalone GasderMIN
+    detector namespace and leaves CARD-NLR-associated gasdermins, natural phage triggers,
+    and broader family boundaries unresolved.
+  attaches_to:
+  - causal_graphs#gasdermin_proteolysis_triggers_pore_cell_death
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T13:10:00Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted GasderMIN system as a DOI-backed GENOMICS TraitRecord under the
+    phage defense system parent after an ignored-and-hidden duplicate review found
+    no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v213.
+  llm_assisted: true
