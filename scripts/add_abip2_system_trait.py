@@ -31,12 +31,15 @@ DEFENSEFINDER_PREFIX = (
 )
 DEFENSEFINDER_HMMS = f"{DEFENSEFINDER_PREFIX}Liste_hmm_system.md"
 DEFENSEFINDER_RULES = f"{DEFENSEFINDER_PREFIX}DefenseFinder_rules.tsv"
+DEFENSEFINDER_ARTICLES = f"{DEFENSEFINDER_PREFIX}List_system_article.md"
 
 CURATOR = "codex"
 TIMESTAMP = "2026-09-21T19:10:26Z"
 PARENT_TIMESTAMP = "2026-09-21T19:10:27Z"
+REVIEW_TIMESTAMP = "2026-09-21T19:50:08Z"
 IDENTIFIER = "traitmech:000343"
 PROPOSAL = "proposals/metpo_traitmech_v220"
+GRAPH_ID = "abip2_locus_restricts_phage_propagation"
 
 HMM_ROW = (
     "| AbiP2__AbiP2                                     | "
@@ -44,6 +47,10 @@ HMM_ROW = (
     "Custom                  | 400    |"
 )
 RULES_ROW = "AbiP2\tAbiP2\t1\t1\tAbiP2__AbiP2\t\t\t"
+ARTICLE_ROW = (
+    r"| AbiP2 | 10\.1016/j\.mib\.2005\.06\.006 | "
+    "Phage abortive infection in lactococci: variations on a theme |"
+)
 
 PARENT_EXPECTED_FRAGMENTS = (
     "AbiJ, AbiL, AbiN, and AbiO are split out as ",
@@ -191,6 +198,19 @@ def hmm_inventory_evidence() -> dict[str, str]:
     }
 
 
+def article_registry_triage_evidence() -> dict[str, str]:
+    return {
+        "reference": DEFENSEFINDER_ARTICLES,
+        "snippet": ARTICLE_ROW,
+        "notes": (
+            "The pinned DefenseFinder article registry maps AbiP2 to a "
+            "2005 lactococcal Abi review; that row is tracked as unresolved "
+            "model-to-publication triage rather than positive AbiP2 primary "
+            "literature evidence."
+        ),
+    }
+
+
 RECORD: dict[str, Any] = {
     "identifier": IDENTIFIER,
     "label": "AbiP2 system",
@@ -227,7 +247,7 @@ RECORD: dict[str, Any] = {
     ],
     "causal_graphs": [
         {
-            "graph_id": "abip2_locus_restricts_phage_t5",
+            "graph_id": GRAPH_ID,
             "title": "AbiP2 loci confer reverse-transcriptase-associated phage defense",
             "description": (
                 "Conservative system-level sketch linking possession of a "
@@ -365,7 +385,31 @@ RECORD: dict[str, Any] = {
                 rules_evidence(),
                 hmm_inventory_evidence(),
             ],
-            "attaches_to": ["causal_graphs#abip2_locus_restricts_phage_t5"],
+            "attaches_to": [f"causal_graphs#{GRAPH_ID}"],
+            "posed_by": CURATOR,
+            "posed_date": "2026-09-21",
+        },
+        {
+            "discussion_id": "abip2-defensefinder-article-registry-gap",
+            "prompt": (
+                "Resolve the DefenseFinder AbiP2 article-registry mapping "
+                "before using List_system_article.md as positive system "
+                "literature evidence."
+            ),
+            "kind": "CURATION_TODO",
+            "status": "OPEN",
+            "rationale": (
+                "The pinned DefenseFinder HMM inventory and rules table "
+                "support AbiP2 as a one-profile model namespace, but its "
+                "article registry row maps AbiP2 to a 2005 lactococcal "
+                "abortive-infection review that predates Odegrip et al. "
+                "2006. This record therefore leaves the registry-to-primary "
+                "link unresolved and relies on Odegrip et al., Mestre et "
+                "al., the FEMS review, Figiel et al., and pinned "
+                "DefenseFinder HMM/rule rows for AbiP2 identity and system "
+                "coverage."
+            ),
+            "evidence": [article_registry_triage_evidence()],
             "posed_by": CURATOR,
             "posed_date": "2026-09-21",
         }
@@ -431,7 +475,27 @@ def build_record() -> dict[str, Any]:
         llm_assisted=True,
         timestamp=TIMESTAMP,
     )
+    record_curation_event(
+        record,
+        curator=CURATOR,
+        action="ADDRESS_PR_REVIEW",
+        changes=(
+            "Addressed review issues #1215 and #1216 by renaming the "
+            "NONMECHANISTIC AbiP2 graph id to omit T5 specificity and by "
+            "documenting the unresolved DefenseFinder article-registry row "
+            "that maps AbiP2 to a 2005 lactococcal review."
+        ),
+        llm_assisted=True,
+        timestamp=REVIEW_TIMESTAMP,
+    )
     return record
+
+
+def assert_same_target(record: dict[str, Any]) -> None:
+    assert record["identifier"] == IDENTIFIER
+    assert record["label"] == "AbiP2 system"
+    assert record["mapping_status"] == "PROPOSED"
+    assert record["parent_traits"] == ["traitmech:000214"]
 
 
 def validate_outputs(record: dict[str, Any], parent: dict[str, Any]) -> None:
@@ -452,7 +516,7 @@ def main() -> int:
 
     if args.apply:
         if TARGET.exists():
-            raise SystemExit(f"{TARGET} already exists")
+            assert_same_target(load_trait(TARGET))
         write_validated_trait(record, TARGET)
         write_validated_trait(parent, ABORTIVE)
     else:

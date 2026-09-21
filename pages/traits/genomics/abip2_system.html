@@ -199,7 +199,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -217,7 +217,7 @@
 
 
         <p class="meta">Attached to
-          <code>causal_graphs#abip2_locus_restricts_phage_t5</code>
+          <code>causal_graphs#abip2_locus_restricts_phage_propagation</code>
         </p>
 
 
@@ -286,6 +286,49 @@
 
       </div>
 
+
+      <div class="discussion" id="abip2-defensefinder-article-registry-gap">
+        <p class="discussion-prompt">Resolve the DefenseFinder AbiP2 article-registry mapping before using List_system_article.md as positive system literature evidence.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>abip2-defensefinder-article-registry-gap</code>
+          · raised by codex
+          · 2026-09-21
+        </p>
+
+
+        <p class="meta discussion-unanchored">Not yet attached to a section of this
+          record — a curator sets <code>attaches_to</code> (e.g.
+          <code>causal_graphs#some_edge</code>) so the gap shows beside the
+          mechanism it concerns.</p>
+
+
+        <p>The pinned DefenseFinder HMM inventory and rules table support AbiP2 as a one-profile model namespace, but its article registry row maps AbiP2 to a 2005 lactococcal abortive-infection review that predates Odegrip et al. 2006. This record therefore leaves the registry-to-primary link unresolved and relies on Odegrip et al., Mestre et al., the FEMS review, Figiel et al., and pinned DefenseFinder HMM/rule rows for AbiP2 identity and system coverage.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+
+            <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+
+            <blockquote>| AbiP2 | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in lactococci: variations on a theme |</blockquote>
+
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -298,6 +341,12 @@
           <time>2026-09-21T19:10:26Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted AbiP2 system as a DOI-backed GENOMICS TraitRecord under the abortive infection system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v220.</p>
+        </li>
+
+        <li>
+          <time>2026-09-21T19:50:08Z</time> ·
+          <strong>ADDRESS_PR_REVIEW</strong> · codex
+          <p class="changes">Addressed review issues #1215 and #1216 by renaming the NONMECHANISTIC AbiP2 graph id to omit T5 specificity and by documenting the unresolved DefenseFinder article-registry row that maps AbiP2 to a 2005 lactococcal review.</p>
         </li>
 
       </ol>
@@ -657,7 +706,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a DefenseFinder AbiP2 locus to restricted bacteriophage propagation without asserting the unresolved phage trigger, protein-primed polymerase product, or host-arrest route.", "edges": [{"description": "The DefenseFinder AbiP2 namespace is modeled as a one-profile AbiP2__AbiP2 system, matching the one-gene reverse-transcriptase-associated P2-like coliphage defense architecture.", "evidence": [{"notes": "The DefenseFinder rules table models AbiP2 as a one-component system requiring the AbiP2__AbiP2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiP2\tAbiP2\t1\t1\tAbiP2__AbiP2\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiP2__AbiP2                                     | AbiP2__AbiP2                                     | AbiP2                  | Custom                  | 400    |"}, {"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abip2_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiP2 abortive-infection system possession trait.", "evidence": [{"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abip2_system_trait"}, {"description": "AbiP2 system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Crossref metadata verifies the Odegrip et al. 2006 primary P2-like-coliphage reverse-transcriptase paper title and DOI.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "Identification of a Gene Encoding a Functional Reverse Transcriptase within a Highly Variable Locus in the P2-Like Coliphages"}, {"notes": "The FEMS review explicitly places AbiP2 among UG/Abi reverse transcriptases rather than the unrelated lactococcal AbiP membrane-protein system.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "UG)/Abi RT group, which also includes AbiP2 from E. coli and other predicted RTs"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abip2_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The DefenseFinder AbiP2 namespace is modeled as a one-profile AbiP2__AbiP2 system, matching the one-gene reverse-transcriptase-associated P2-like coliphage defense architecture.", "edge_id": "edge-1", "evidence": [{"notes": "The DefenseFinder rules table models AbiP2 as a one-component system requiring the AbiP2__AbiP2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiP2\tAbiP2\t1\t1\tAbiP2__AbiP2\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiP2__AbiP2                                     | AbiP2__AbiP2                                     | AbiP2                  | Custom                  | 400    |"}, {"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiP2 locus", "target": "restricted phage propagation"}, {"description": "Restriction of phage propagation realizes the AbiP2 abortive-infection system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiP2 system"}, {"description": "AbiP2 system possession is an abortive-infection-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Crossref metadata verifies the Odegrip et al. 2006 primary P2-like-coliphage reverse-transcriptase paper title and DOI.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "Identification of a Gene Encoding a Functional Reverse Transcriptase within a Highly Variable Locus in the P2-Like Coliphages"}, {"notes": "The FEMS review explicitly places AbiP2 among UG/Abi reverse transcriptases rather than the unrelated lactococcal AbiP membrane-protein system.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "UG)/Abi RT group, which also includes AbiP2 from E. coli and other predicted RTs"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiP2 system", "target": "abortive infection system"}], "graph_id": "abip2_locus_restricts_phage_t5", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiP2-family abortive-infection locus represented by the DefenseFinder AbiP2__AbiP2 profile.", "grounding": null, "id": "abip2_locus", "is_orphan": false, "label": "AbiP2 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiP2 abortive-infection phage-defense system.", "grounding": "traitmech:000343", "id": "abip2_system_trait", "is_orphan": false, "label": "AbiP2 system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells carrying an AbiP2-family abortive-infection system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures AbiP2 as a named single-profile reverse-transcriptase-like abortive-infection system with the DefenseFinder AbiP2__AbiP2 HMM while leaving its direct phage trigger, in vivo Abi-P2 polymerase product, UG/Abi family boundary, prophage host range, and cell-arrest or death route unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiP2 loci confer reverse-transcriptase-associated phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a DefenseFinder AbiP2 locus to restricted bacteriophage propagation without asserting the unresolved phage trigger, protein-primed polymerase product, or host-arrest route.", "edges": [{"description": "The DefenseFinder AbiP2 namespace is modeled as a one-profile AbiP2__AbiP2 system, matching the one-gene reverse-transcriptase-associated P2-like coliphage defense architecture.", "evidence": [{"notes": "The DefenseFinder rules table models AbiP2 as a one-component system requiring the AbiP2__AbiP2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiP2\tAbiP2\t1\t1\tAbiP2__AbiP2\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiP2__AbiP2                                     | AbiP2__AbiP2                                     | AbiP2                  | Custom                  | 400    |"}, {"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abip2_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiP2 abortive-infection system possession trait.", "evidence": [{"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abip2_system_trait"}, {"description": "AbiP2 system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Crossref metadata verifies the Odegrip et al. 2006 primary P2-like-coliphage reverse-transcriptase paper title and DOI.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "Identification of a Gene Encoding a Functional Reverse Transcriptase within a Highly Variable Locus in the P2-Like Coliphages"}, {"notes": "The FEMS review explicitly places AbiP2 among UG/Abi reverse transcriptases rather than the unrelated lactococcal AbiP membrane-protein system.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "UG)/Abi RT group, which also includes AbiP2 from E. coli and other predicted RTs"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abip2_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The DefenseFinder AbiP2 namespace is modeled as a one-profile AbiP2__AbiP2 system, matching the one-gene reverse-transcriptase-associated P2-like coliphage defense architecture.", "edge_id": "edge-1", "evidence": [{"notes": "The DefenseFinder rules table models AbiP2 as a one-component system requiring the AbiP2__AbiP2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiP2\tAbiP2\t1\t1\tAbiP2__AbiP2\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiP2__AbiP2                                     | AbiP2__AbiP2                                     | AbiP2                  | Custom                  | 400    |"}, {"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiP2 locus", "target": "restricted phage propagation"}, {"description": "Restriction of phage propagation realizes the AbiP2 abortive-infection system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "The Odegrip et al. abstract supports a reverse-transcriptase gene in the P2-like-coliphage TO region that blocks phage T5.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "The product of one of them exhibits reverse transcriptase activity and blocks infection of phage T5"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiP2 system"}, {"description": "AbiP2 system possession is an abortive-infection-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Crossref metadata verifies the Odegrip et al. 2006 primary P2-like-coliphage reverse-transcriptase paper title and DOI.", "reference": "DOI:10.1128/JB.188.4.1643-1647.2006", "snippet": "Identification of a Gene Encoding a Functional Reverse Transcriptase within a Highly Variable Locus in the P2-Like Coliphages"}, {"notes": "The FEMS review explicitly places AbiP2 among UG/Abi reverse transcriptases rather than the unrelated lactococcal AbiP membrane-protein system.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "UG)/Abi RT group, which also includes AbiP2 from E. coli and other predicted RTs"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiP2 system", "target": "abortive infection system"}], "graph_id": "abip2_locus_restricts_phage_propagation", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiP2-family abortive-infection locus represented by the DefenseFinder AbiP2__AbiP2 profile.", "grounding": null, "id": "abip2_locus", "is_orphan": false, "label": "AbiP2 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiP2 abortive-infection phage-defense system.", "grounding": "traitmech:000343", "id": "abip2_system_trait", "is_orphan": false, "label": "AbiP2 system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells carrying an AbiP2-family abortive-infection system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures AbiP2 as a named single-profile reverse-transcriptase-like abortive-infection system with the DefenseFinder AbiP2__AbiP2 HMM while leaving its direct phage trigger, in vivo Abi-P2 polymerase product, UG/Abi family boundary, prophage host range, and cell-arrest or death route unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiP2 loci confer reverse-transcriptase-associated phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -680,7 +729,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-21 19:10 UTC from
+      Record as of 2026-09-21 19:50 UTC from
       <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 738 TraitRecords
       · embedding coverage 64.6%

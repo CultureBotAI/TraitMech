@@ -465,7 +465,7 @@ window.searchData = [
   "source_id": "traitmech:000343",
   "source_file": "abip2_system.yaml",
   "attaches_to": [
-   "causal_graphs#abip2_locus_restricts_phage_t5"
+   "causal_graphs#abip2_locus_restricts_phage_propagation"
   ],
   "rationale": "Odegrip et al. support a P2-like-coliphage reverse transcriptase gene that blocks phage T5 infection, Mestre et al. describe the UG/Abi reverse-transcriptase family, the FEMS review places AbiP2 in that family rather than the unrelated lactococcal AbiP family, Figiel et al. structurally characterize Abi-P2 as a template-independent Abi polymerase, and DefenseFinder represents AbiP2 with a mandatory AbiP2__AbiP2 profile. This first system-level record therefore leaves the direct phage trigger, in vivo DNA product, exact relationship to broader UG/Abi systems, prophage host breadth, and growth-arrest or cell-death route unresolved.",
   "num_experiments": 0,
@@ -480,6 +480,25 @@ window.searchData = [
   ],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/abip2_system.html#abip2-ug-abi-mechanism-gap"
+ },
+ {
+  "discussion_id": "abip2-defensefinder-article-registry-gap",
+  "prompt": "Resolve the DefenseFinder AbiP2 article-registry mapping before using List_system_article.md as positive system literature evidence.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "AbiP2 system",
+  "source_id": "traitmech:000343",
+  "source_file": "abip2_system.yaml",
+  "attaches_to": [],
+  "rationale": "The pinned DefenseFinder HMM inventory and rules table support AbiP2 as a one-profile model namespace, but its article registry row maps AbiP2 to a 2005 lactococcal abortive-infection review that predates Odegrip et al. 2006. This record therefore leaves the registry-to-primary link unresolved and relies on Odegrip et al., Mestre et al., the FEMS review, Figiel et al., and pinned DefenseFinder HMM/rule rows for AbiP2 identity and system coverage.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/abip2_system.html#abip2-defensefinder-article-registry-gap"
  },
  {
   "discussion_id": "abir-component-activity-gap",
@@ -3871,7 +3890,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 212,
+ "total_discussions": 213,
  "total_knowledge_gaps": 131,
  "total_source_entries": 211,
  "kinds": [

@@ -160,7 +160,7 @@ data/traits/genomics/abik_system.yaml	traitmech:000229	AbiK system	abik_rt_polym
 data/traits/genomics/abil_system.yaml	traitmech:000340	AbiL system	abil_locus_restricts_lactococcal_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abin_system.yaml	traitmech:000341	AbiN system	abin_locus_restricts_lactococcal_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abio_system.yaml	traitmech:000342	AbiO system	abio_locus_restricts_lactococcal_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
-data/traits/genomics/abip2_system.yaml	traitmech:000343	AbiP2 system	abip2_locus_restricts_phage_t5	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/abip2_system.yaml	traitmech:000343	AbiP2 system	abip2_locus_restricts_phage_propagation	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abiq_system.yaml	traitmech:000225	AbiQ system	abiq_type_iii_ta_antiphage_activity	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abir_system.yaml	traitmech:000317	AbiR system	abir_loci_impede_phage_dna_replication	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/abit_system.yaml	traitmech:000230	AbiT system	abit_late_phage_development_block	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

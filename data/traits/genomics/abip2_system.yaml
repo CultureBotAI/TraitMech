@@ -51,7 +51,7 @@ evidence:
   notes: The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model
     namespace.
 causal_graphs:
-- graph_id: abip2_locus_restricts_phage_t5
+- graph_id: abip2_locus_restricts_phage_propagation
   title: AbiP2 loci confer reverse-transcriptase-associated phage defense
   description: Conservative system-level sketch linking possession of a DefenseFinder
     AbiP2 locus to restricted bacteriophage propagation without asserting the unresolved
@@ -180,7 +180,27 @@ discussions:
     notes: The DefenseFinder HMM inventory records AbiP2__AbiP2 under the AbiP2 model
       namespace.
   attaches_to:
-  - causal_graphs#abip2_locus_restricts_phage_t5
+  - causal_graphs#abip2_locus_restricts_phage_propagation
+  posed_by: codex
+  posed_date: '2026-09-21'
+- discussion_id: abip2-defensefinder-article-registry-gap
+  prompt: Resolve the DefenseFinder AbiP2 article-registry mapping before using List_system_article.md
+    as positive system literature evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The pinned DefenseFinder HMM inventory and rules table support AbiP2
+    as a one-profile model namespace, but its article registry row maps AbiP2 to a
+    2005 lactococcal abortive-infection review that predates Odegrip et al. 2006.
+    This record therefore leaves the registry-to-primary link unresolved and relies
+    on Odegrip et al., Mestre et al., the FEMS review, Figiel et al., and pinned DefenseFinder
+    HMM/rule rows for AbiP2 identity and system coverage.
+  evidence:
+  - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+    snippet: '| AbiP2 | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+      in lactococci: variations on a theme |'
+    notes: The pinned DefenseFinder article registry maps AbiP2 to a 2005 lactococcal
+      Abi review; that row is tracked as unresolved model-to-publication triage rather
+      than positive AbiP2 primary literature evidence.
   posed_by: codex
   posed_date: '2026-09-21'
 curation_history:
@@ -191,4 +211,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v220.
+  llm_assisted: true
+- timestamp: '2026-09-21T19:50:08Z'
+  curator: codex
+  action: ADDRESS_PR_REVIEW
+  changes: 'Addressed review issues #1215 and #1216 by renaming the NONMECHANISTIC
+    AbiP2 graph id to omit T5 specificity and by documenting the unresolved DefenseFinder
+    article-registry row that maps AbiP2 to a 2005 lactococcal review.'
   llm_assisted: true
