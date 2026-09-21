@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-21T021800Z-codex-ed81f3
+  timestamp: '2026-09-21T02:18:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Document RexAB abortive-infection split
+  details: Updated the abortive-infection subfamily split-gap discussion after minting traitmech:000324
+    for the RexAB system. The edit records RexAB alongside the previously split ToxIN, Abi,
+    BstA/Stk2, Pif, and other abortive-infection families while keeping the remaining abortive-infection-family
+    gap open for other narrower systems.
