@@ -1682,6 +1682,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/lugos_system.html#lugos-mechanism-gap"
  },
  {
+  "discussion_id": "mazef-activation-breadth-gap",
+  "prompt": "Resolve MazEF activation, direct MazF RNA targets, and RNA- versus DNA-phage breadth before minting narrower MazEF mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "MazEF system",
+  "source_id": "traitmech:000345",
+  "source_file": "mazef_system.yaml",
+  "attaches_to": [
+   "causal_graphs#mazef_rna_phage_defense"
+  ],
+  "rationale": "Nikolic et al. support native MazEF protection against RNA phages and argue that direct interference predominates in those assays, but the phage-induced route to active MazF, the relative contributions of phage-RNA cleavage and host-RNA degradation, the breadth of MazEF DNA-phage defense, and the DefenseFinder MazEF model boundaries remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/mazef_system.html#mazef-activation-breadth-gap"
+ },
+ {
   "discussion_id": "menshen-mechanism-gap",
   "prompt": "Resolve Menshen phage triggers and effector outputs before minting narrower Menshen mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3916,9 +3935,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 214,
- "total_knowledge_gaps": 132,
- "total_source_entries": 212,
+ "total_discussions": 215,
+ "total_knowledge_gaps": 133,
+ "total_source_entries": 213,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
