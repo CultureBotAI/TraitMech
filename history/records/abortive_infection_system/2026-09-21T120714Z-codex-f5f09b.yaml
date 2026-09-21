@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-21T120714Z-codex-f5f09b
+  timestamp: '2026-09-21T12:07:14Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Document CmdTAC abortive-infection split
+  details: Updated the abortive-infection subfamily split-gap discussion after minting
+    traitmech:000335 for the CmdTAC system. The edit records CmdTAC alongside the
+    previously split ToxIN, Abi, BstA/Stk2, Pif, RexAB, SpbK, and other abortive-infection
+    families while keeping the remaining abortive-infection-family gap open for other
+    narrower systems.

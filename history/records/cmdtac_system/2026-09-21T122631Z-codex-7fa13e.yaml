@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/cmdtac_system.yaml
+  slug: cmdtac_system
+session:
+  id: 2026-09-21T122631Z-codex-7fa13e
+  timestamp: '2026-09-21T12:26:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - discussions
+  summary: Address CmdTAC review findings
+  details: Corrected DOI:10.1038/s41586-024-08102-8 source attribution from
+    Goesswein et al. to Vassallo et al., rewrote the definition so mRNA modification
+    is attributed to CmdT rather than the CmdC chaperone, added the proposal-only
+    cmdTAC locus label as a related synonym, and kept the DefenseFinder article-registry
+    row as record-level evidence only.
