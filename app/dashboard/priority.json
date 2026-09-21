@@ -1,6 +1,6 @@
 {
   "meta": {
-    "records": 724,
+    "records": 725,
     "series_families": 10,
     "excluded_non_mechanism": 109,
     "excluded_deprecated": 20,
@@ -14,14 +14,14 @@
     "child_edges_compared": 463,
     "shared_structural_edges": 2,
     "lump_threshold": 0.6,
-    "unresearched_mechanism_records": 247,
+    "unresearched_mechanism_records": 248,
     "actions": {
       "DROP_NON_MECHANISM": 109,
       "DROP_DEPRECATED": 20,
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 4,
-      "ADD_CANONICAL_EXAMPLES": 68,
+      "ADD_CANONICAL_EXAMPLES": 69,
       "BUILD_CAUSAL_GRAPH": 119,
       "DEEPEN_CAUSAL_GRAPH": 190,
       "ALREADY_DEEP": 59,
@@ -1489,6 +1489,29 @@
       "researched": false,
       "reasons": [
         "thin graph (6 edges) +12",
+        "no canonical_examples +30"
+      ]
+    },
+    {
+      "identifier": "traitmech:000330",
+      "label": "Dionysus system",
+      "category": "genomics",
+      "slug": "dionysus_system",
+      "score": 42.0,
+      "action": "ADD_CANONICAL_EXAMPLES",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
         "no canonical_examples +30"
       ]
     },
@@ -5640,7 +5663,7 @@
       "orphans": 0,
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
-      "children": 92,
+      "children": 93,
       "series": null,
       "series_size": 0,
       "series_overlap": null,

@@ -1,0 +1,173 @@
+identifier: traitmech:000330
+label: Dionysus system
+definition: A phage defense system in which an organism possesses a three-gene Dionysus
+  locus encoding DinA, DinB, and DinC components that can block jumbo-phage infection.
+definition_source: DOI:10.1101/2025.09.30.679545
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Dionysus
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1101/2025.09.30.679545
+evidence:
+- reference: DOI:10.1101/2025.09.30.679545
+  snippet: 'From over 500 candidate defense systems, we selected nine for experimental
+    testing and validated three: Dionysus, a TerB-encoding system that disrupts early
+    phage infection vesicle formation by Jumbo phages; Ophion, a Radical SAM-containing
+    system that prevents the formation of the Jumbo phage nucleus; and Ambrosia, a
+    tightly regulated RM-like system.'
+  notes: Keesman et al. named Dionysus among three modular phage-defense candidates
+    validated experimentally from an initial pool of more than 500 candidates.
+- reference: DOI:10.1101/2025.09.30.679545
+  snippet: 'Dionysus is named after the god associated with winemaking and the celebration
+    of life. This defense system consists of three genes encoding: DinA, featuring
+    a merozoite adhesive erythrocyte binding protein (MAEBL) and a transmembrane (TM)
+    domain; DinB, a TerB-like protein; and DinC, a pore-forming toxin (PFT) with four
+    TM domains'
+  notes: Keesman et al. support Dionysus as a three-gene defense system encoding DinA,
+    DinB, and DinC components.
+- reference: DOI:10.1101/2025.09.30.679545
+  snippet: Both Dionysus and Ophion specifically block infection by jumbo phages,
+    which have evolved specialized compartments to protect their DNA from DNA-targeting
+    host defenses
+  notes: Keesman et al. support Dionysus as a system that blocks infection by jumbo
+    phages with early phage infection vesicles.
+- reference: DOI:10.1101/2025.09.30.679545
+  snippet: Specifically, we show that Dionysus forms pores in the EPI vesicle of the
+    jumbo phage to disrupt the infection cycle of the phage at an early stage, similar
+    to the mechanism described for the Juk phage defense system
+  notes: Keesman et al. connect Dionysus to disruption of the jumbo phage early phage
+    infection vesicle and therefore to interruption of the phage infection cycle.
+- reference: DOI:10.1101/2025.09.30.679545
+  snippet: All three proteins of Dionysus are essential for its protective capacity,
+    as mutating a conserved amino acid within the MAEBL-like domain of DinA (H326A),
+    and deletion of DinB or DinC, resulted in the partial (DinA H326A) or complete
+    loss of anti-phage activity
+  notes: Keesman et al. support all three Dionysus proteins as required for full anti-phage
+    protection in the tested system.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Dionysus | 10\.1101/2025\.09\.30\.679545 | Discovery of phage defense systems
+    through component modularity networks
+  notes: The DefenseFinder article registry maps the named Dionysus system to the
+    Keesman et al. modular phage-defense discovery preprint; the pinned DefenseFinder
+    HMM inventory and rules table do not list Dionysus, so this row is name-to-paper
+    evidence rather than model-component evidence.
+causal_graphs:
+- graph_id: dionysus_locus_restricts_phage
+  title: Dionysus loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Dionysus locus
+    to restricted jumbo-phage propagation without asserting the direct phage trigger
+    or protein-resolved pore-forming sequence.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Dionysus as a named three-gene anti-jumbo-phage
+    system while leaving its direct phage trigger, the DinA/DinB/DinC interaction
+    sequence, the natural locus breadth, and the absence of pinned DefenseFinder HMM
+    or rule rows unresolved.
+  nodes:
+  - node_id: dionysus_locus
+    label: Dionysus locus
+    node_type: GENETIC_ELEMENT
+    description: A three-gene Dionysus anti-phage defense locus encoding DinA, DinB,
+      and DinC components.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Dionysus
+      system.
+  - node_id: dionysus_system_trait
+    label: Dionysus system
+    node_type: TRAIT
+    grounding: traitmech:000330
+    description: Possession of a genome-encoded Dionysus phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: dionysus_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The three-gene Dionysus locus restricts infection by jumbo phages.
+    evidence:
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: Both Dionysus and Ophion specifically block infection by jumbo phages,
+        which have evolved specialized compartments to protect their DNA from DNA-targeting
+        host defenses
+      notes: Keesman et al. report that Dionysus blocks infection by jumbo phages.
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: All three proteins of Dionysus are essential for its protective capacity,
+        as mutating a conserved amino acid within the MAEBL-like domain of DinA (H326A),
+        and deletion of DinB or DinC, resulted in the partial (DinA H326A) or complete
+        loss of anti-phage activity
+      notes: Keesman et al. report that DinA, DinB, and DinC perturbations reduce
+        or abolish Dionysus anti-phage activity.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: dionysus_system_trait
+    description: Dionysus-mediated phage restriction realizes the Dionysus system
+      trait.
+    evidence:
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: Specifically, we show that Dionysus forms pores in the EPI vesicle
+        of the jumbo phage to disrupt the infection cycle of the phage at an early
+        stage, similar to the mechanism described for the Juk phage defense system
+      notes: Keesman et al. connect Dionysus activity to disruption of the jumbo-phage
+        infection cycle at an early vesicle stage.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Dionysus | 10\.1101/2025\.09\.30\.679545 | Discovery of phage defense
+        systems through component modularity networks
+      notes: The DefenseFinder article registry maps the named Dionysus system to
+        the Keesman et al. modular phage-defense discovery preprint; the pinned DefenseFinder
+        HMM inventory and rules table do not list Dionysus, so this row is name-to-paper
+        evidence rather than model-component evidence.
+  - subject: dionysus_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Dionysus system possession is a phage-defense-system trait.
+    evidence:
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: 'From over 500 candidate defense systems, we selected nine for experimental
+        testing and validated three: Dionysus, a TerB-encoding system that disrupts
+        early phage infection vesicle formation by Jumbo phages; Ophion, a Radical
+        SAM-containing system that prevents the formation of the Jumbo phage nucleus;
+        and Ambrosia, a tightly regulated RM-like system.'
+      notes: Keesman et al. list Dionysus among experimentally validated phage-defense
+        systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Dionysus | 10\.1101/2025\.09\.30\.679545 | Discovery of phage defense
+        systems through component modularity networks
+      notes: The DefenseFinder article registry maps the named Dionysus system to
+        the Keesman et al. modular phage-defense discovery preprint; the pinned DefenseFinder
+        HMM inventory and rules table do not list Dionysus, so this row is name-to-paper
+        evidence rather than model-component evidence.
+discussions:
+- discussion_id: dionysus-jumbo-phage-mechanism-gap
+  prompt: Resolve Dionysus phage triggers, EPI-vesicle pore formation, and model coverage
+    before minting narrower Dionysus mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Keesman et al. support Dionysus as a three-gene anti-jumbo-phage system
+    that disrupts the jumbo-phage EPI vesicle stage, but the direct phage trigger,
+    exact DinA/DinB/DinC interaction sequence, natural locus breadth, and profile-to-component
+    model are not resolved enough here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#dionysus_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T07:22:15Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Dionysus system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v207.
+  llm_assisted: true

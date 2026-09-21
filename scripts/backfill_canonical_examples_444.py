@@ -853,6 +853,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/drt_system",
     "genomics/dsr_system",
     "genomics/dgtpase_system",
+    "genomics/dionysus_system",
     "genomics/divona_system",
     "genomics/dodola_system",
     "genomics/eleos_system",
