@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abialpha_system.yaml
+  slug: abialpha_system
+session:
+  id: 2026-09-20T234719Z-codex-b9c9fc
+  timestamp: '2026-09-20T23:47:19Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiAlpha system trait
+  details: Added traitmech:000322 AbiAlpha system as a DOI-backed GENOMICS TraitRecord under
+    abortive infection system. DOI:10.3390/v11010048 and PMID:30634666 identify the Enterococcus
+    faecalis V583 prophage 6 AbiAlpha determinant, connect ef2833 with the abortive mechanism,
+    map the system to DUF4393/PF14337, and link AbiAlpha to perturbed Idefix lytic-cycle timing
+    plus premature infected-cell lysis. Pinned DefenseFinder article and HMM registries map
+    AbiAlpha to the AbiAlpha__AbiAlpha model namespace. Reserved METPO:1027600 in proposals/metpo_traitmech_v199
+    for the upstream replacement ID.

@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abortive_infection_system.yaml
+  slug: abortive_infection_system
+session:
+  id: 2026-09-20T234720Z-codex-4718a5
+  timestamp: '2026-09-20T23:47:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - discussions
+  summary: Track AbiAlpha split on abortive infection parent
+  details: Documented traitmech:000322 AbiAlpha system in the open abortive-infection subfamily
+    split-gap discussion after minting the DOI-backed child under the abortive infection system
+    parent; other Abi families remain open for future curation.

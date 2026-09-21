@@ -1,0 +1,219 @@
+identifier: traitmech:000322
+label: AbiAlpha system
+definition: An abortive infection system in which an organism possesses an abi-alpha-family
+  prophage locus represented by the DefenseFinder AbiAlpha__AbiAlpha profile and exemplified
+  by the Enterococcus faecalis V583 prophage 6 abi-alpha determinant, whose encoded
+  DUF4393/PF14337-family activity perturbs the Idefix lytic cycle and causes premature
+  lysis of infected Enterococcus faecalis.
+definition_source: DOI:10.3390/v11010048
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: AbiAlpha
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: PMID:30634666
+  snippet: We found that E. faecalis V583 prophage 6 was particularly efficient in
+    resisting Idefix infection thanks to a new abortive infection (Abi) mechanism,
+    which we designated Abiα.
+  notes: Lossouarn et al. named a new Abi mechanism from Enterococcus faecalis V583
+    prophage 6.
+- reference: PMID:30634666
+  snippet: It corresponded to the Pfam domain family with unknown function DUF4393
+    and conferred a typical Abi phenotype by causing a premature lysis
+  notes: Lossouarn et al. connected AbiAlpha to DUF4393 and an infected-cell premature-lysis
+    phenotype.
+- reference: PMID:30634666
+  snippet: The abiα gene is widespread among prophages of enterococci and other Gram-positive
+    bacteria.
+  notes: Lossouarn et al. describe AbiAlpha homologs as prophage features rather than
+    a single V583-only gene.
+- reference: DOI:10.3390/v11010048
+  snippet: These results confirmed that ef2833 is responsible for the abortive mechanism.
+  notes: Lossouarn et al. experimentally connected ef2833 to the V583 prophage 6 Abi
+    phenotype.
+- reference: DOI:10.3390/v11010048
+  snippet: We concluded that Abiα provokes a lysis asynchrony.
+  notes: Lossouarn et al. linked the AbiAlpha mechanism to altered Idefix lysis timing.
+- reference: DOI:10.3390/v11010048
+  snippet: Upon Idefix infection, cells are dying while the Idefix lytic cycle is
+    perturbed
+  notes: Lossouarn et al. summarized the system as infected-cell death with perturbed
+    Idefix lytic-cycle progression.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: AbiAlpha | 10\.3390/v11010048 | Enterococcus faecalis countermeasures defeat
+    a virulent Picovirinae bacteriophage
+  notes: The DefenseFinder article registry maps the named AbiAlpha model namespace
+    to the enterococcal AbiAlpha discovery paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| AbiAlpha__AbiAlpha                               |                                                   |
+    AbiAlpha               | PF14337.11              | 27.1   |'
+  notes: The DefenseFinder HMM inventory records AbiAlpha__AbiAlpha under the AbiAlpha
+    model namespace with Pfam PF14337.11.
+canonical_examples:
+- taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  note: Lossouarn et al. characterized AbiAlpha from Enterococcus faecalis V583 prophage
+    6 and showed that it causes premature lysis during Idefix infection.
+  reference: DOI:10.3390/v11010048
+causal_graphs:
+- graph_id: abialpha_locus_causes_enterococcal_premature_lysis
+  title: AbiAlpha perturbs Idefix lysis in Enterococcus faecalis
+  description: Conservative system-level sketch linking an abi-alpha-family prophage
+    locus to AbiAlpha antiphage activity, Idefix lytic-cycle perturbation, premature
+    lysis of infected Enterococcus faecalis, and AbiAlpha-system possession without
+    asserting the direct DUF4393-family molecular target.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures AbiAlpha as a named DefenseFinder single-profile
+    abortive-infection system whose V583 prophage 6 prototype restricts Idefix by
+    perturbing lysis timing. It leaves the direct phage trigger, DUF4393-family molecular
+    function, direct Idefix target, natural host range, and phage escape routes unresolved.
+  nodes:
+  - node_id: abialpha_locus
+    label: abi-alpha locus
+    node_type: GENETIC_ELEMENT
+    description: An abi-alpha-family abortive-infection prophage locus represented
+      by the DefenseFinder AbiAlpha__AbiAlpha profile.
+  - node_id: abialpha_antiphage_activity
+    label: AbiAlpha antiphage activity
+    node_type: BIOLOGICAL_PROCESS
+    description: Enterococcal abortive-infection activity mediated by the AbiAlpha
+      system.
+  - node_id: idefix_lytic_cycle_perturbation
+    label: Idefix lytic-cycle perturbation
+    node_type: BIOLOGICAL_PROCESS
+    description: Perturbation of the Idefix lytic cycle in AbiAlpha-containing Enterococcus
+      faecalis.
+  - node_id: infected_cell_premature_lysis
+    label: infected-cell premature lysis
+    node_type: BIOLOGICAL_PROCESS
+    description: Premature lysis of Idefix-infected Enterococcus faecalis cells that
+      express AbiAlpha.
+  - node_id: abialpha_system_trait
+    label: AbiAlpha system
+    node_type: TRAIT
+    grounding: traitmech:000322
+    description: Possession of a genome-encoded AbiAlpha abortive-infection phage-defense
+      system.
+  - node_id: abortive_infection_system_trait
+    label: abortive infection system
+    node_type: TRAIT
+    grounding: traitmech:000214
+    description: Possession of a genome-encoded abortive-infection phage-defense system.
+  edges:
+  - subject: abialpha_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abialpha_antiphage_activity
+    description: The abi-alpha-family locus encoded by V583 prophage 6 is responsible
+      for AbiAlpha antiphage activity, and DefenseFinder models AbiAlpha as a single
+      PF14337-family HMM profile.
+    evidence:
+    - reference: PMID:30634666
+      snippet: We found that E. faecalis V583 prophage 6 was particularly efficient
+        in resisting Idefix infection thanks to a new abortive infection (Abi) mechanism,
+        which we designated Abiα.
+      notes: Lossouarn et al. localized AbiAlpha to Enterococcus faecalis V583 prophage
+        6.
+    - reference: DOI:10.3390/v11010048
+      snippet: These results confirmed that ef2833 is responsible for the abortive
+        mechanism.
+      notes: Lossouarn et al. connected ef2833 with the V583 prophage 6 Abi phenotype.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| AbiAlpha__AbiAlpha                               |                                                   |
+        AbiAlpha               | PF14337.11              | 27.1   |'
+      notes: The DefenseFinder HMM inventory records AbiAlpha__AbiAlpha under the
+        AbiAlpha model namespace with Pfam PF14337.11.
+  - subject: abialpha_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: idefix_lytic_cycle_perturbation
+    description: AbiAlpha activity perturbs the Idefix lytic cycle in infected Enterococcus
+      faecalis cells.
+    evidence:
+    - reference: DOI:10.3390/v11010048
+      snippet: Upon Idefix infection, cells are dying while the Idefix lytic cycle
+        is perturbed
+      notes: Lossouarn et al. summarized the AbiAlpha output as death of infected
+        cells while the Idefix lytic cycle is perturbed.
+  - subject: abialpha_antiphage_activity
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: infected_cell_premature_lysis
+    description: AbiAlpha activity causes premature lysis of Idefix-infected Enterococcus
+      faecalis.
+    evidence:
+    - reference: PMID:30634666
+      snippet: conferred a typical Abi phenotype by causing a premature lysis
+      notes: Lossouarn et al. reported premature lysis as the AbiAlpha-infected-cell
+        output.
+    - reference: DOI:10.3390/v11010048
+      snippet: Based on our results, we can only speculate that Abiα interferes with
+        lysis
+      notes: Lossouarn et al. framed the direct AbiAlpha lysis target as unresolved.
+  - subject: idefix_lytic_cycle_perturbation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abialpha_system_trait
+    description: Perturbation of Idefix lytic-cycle progression contributes to the
+      AbiAlpha system trait.
+    evidence:
+    - reference: DOI:10.3390/v11010048
+      snippet: Upon Idefix infection, cells are dying while the Idefix lytic cycle
+        is perturbed
+      notes: Lossouarn et al. connected AbiAlpha with Idefix lytic-cycle perturbation.
+  - subject: infected_cell_premature_lysis
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: abialpha_system_trait
+    description: Premature lysis of Idefix-infected Enterococcus faecalis realizes
+      the AbiAlpha abortive-infection trait.
+    evidence:
+    - reference: PMID:30634666
+      snippet: It corresponded to the Pfam domain family with unknown function DUF4393
+        and conferred a typical Abi phenotype by causing a premature lysis
+      notes: Lossouarn et al. identified premature lysis as an AbiAlpha Abi phenotype.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: AbiAlpha | 10\.3390/v11010048 | Enterococcus faecalis countermeasures
+        defeat a virulent Picovirinae bacteriophage
+      notes: The DefenseFinder article registry maps the named AbiAlpha model namespace
+        to the enterococcal AbiAlpha discovery paper.
+  - subject: abialpha_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: abortive_infection_system_trait
+    description: AbiAlpha system possession is an abortive-infection-system trait.
+    evidence:
+    - reference: PMID:30634666
+      snippet: a new abortive infection (Abi) mechanism, which we designated Abiα
+      notes: Lossouarn et al. place AbiAlpha in the abortive-infection class of phage
+        defense.
+discussions:
+- discussion_id: abialpha-lysis-route-gap
+  prompt: Resolve the AbiAlpha direct molecular target, Idefix trigger, lysis route,
+    natural host range, and phage escape routes before minting narrower AbiAlpha mechanism
+    children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Lossouarn et al. support AbiAlpha as a prophage-encoded Enterococcus
+    faecalis abortive-infection system that maps to DUF4393/PF14337 and perturbs Idefix
+    lysis timing. DefenseFinder represents AbiAlpha with a one-profile HMM inventory
+    row but does not resolve the direct phage trigger, DUF4393-family molecular function,
+    Idefix lysis target, natural host range, or escape routes.
+  attaches_to:
+  - causal_graphs#abialpha_locus_causes_enterococcal_premature_lysis
+  posed_by: codex
+  posed_date: '2026-09-20'
+curation_history:
+- timestamp: '2026-09-20T23:47:17Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted AbiAlpha system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v199.
+  llm_assisted: true
