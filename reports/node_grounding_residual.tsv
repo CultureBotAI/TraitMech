@@ -1122,6 +1122,9 @@ znta transcription	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.ya
 czccba rnd efflux complex	GENE_OR_PROTEIN	1	data/traits/environment/zinc_tolerant.yaml
 zinc ion buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/zinc_tolerant.yaml
 abi2 locus	GENETIC_ELEMENT	1	data/traits/genomics/abi2_system.yaml
+abia locus	GENETIC_ELEMENT	1	data/traits/genomics/abia_system.yaml
+phage dna replication inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/abia_system.yaml
+reduced lactococcal phage propagation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abia_system.yaml
 abi-alpha locus	GENETIC_ELEMENT	1	data/traits/genomics/abialpha_system.yaml
 abialpha antiphage activity	BIOLOGICAL_PROCESS	1	data/traits/genomics/abialpha_system.yaml
 idefix lytic-cycle perturbation	BIOLOGICAL_PROCESS	1	data/traits/genomics/abialpha_system.yaml

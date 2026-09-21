@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abia_system.yaml
+  slug: abia_system
+session:
+  id: 2026-09-21T201947Z-codex-3bc4a4
+  timestamp: '2026-09-21T20:19:47Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - canonical_examples
+  - causal_graphs
+  - discussions
+  summary: Add AbiA system trait
+  details: Added traitmech:000344 AbiA system as a DOI-backed GENOMICS TraitRecord under abortive
+    infection system; cited Dinsmore and Klaenhammer AbiA copy-number and leucine-repeat papers
+    plus pinned DefenseFinder article, rules, and HMM registries; reserved METPO:1029800 in
+    proposals/metpo_traitmech_v221.
