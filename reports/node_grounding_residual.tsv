@@ -1437,6 +1437,8 @@ retron locus	GENETIC_ELEMENT	1	data/traits/genomics/retron_system.yaml
 retron msdna biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
 rt-msdna effector control	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
 effector-dependent abortive infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/retron_system.yaml
+rexab locus	GENETIC_ELEMENT	1	data/traits/genomics/rexab_system.yaml
+rex exclusion	BIOLOGICAL_PROCESS	1	data/traits/genomics/rexab_system.yaml
 rhea locus	GENETIC_ELEMENT	1	data/traits/genomics/rhea_system.yaml
 rosmerta locus	GENETIC_ELEMENT	1	data/traits/genomics/rosmerta_system.yaml
 growth efficiency	QUALITY	1	data/traits/genomics/rrna_operon_copy_number.yaml

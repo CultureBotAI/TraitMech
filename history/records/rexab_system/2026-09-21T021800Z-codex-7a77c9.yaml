@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/rexab_system.yaml
+  slug: rexab_system
+session:
+  id: 2026-09-21T021800Z-codex-7a77c9
+  timestamp: '2026-09-21T02:18:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add RexAB system trait
+  details: Added traitmech:000324 RexAB system as a DOI-backed GENOMICS TraitRecord under
+    abortive infection system after an ignored-and-hidden duplicate review found no exact
+    same-scope live record, METPO class, history record, or prior proposal. Parma et al. support
+    bacteriophage-lambda rexA and rexB as a two-component system that aborts lytic growth
+    of bacterial viruses, and the pinned DefenseFinder article, rules, and HMM registries
+    map RexAB to required RexAB__RexA and RexAB__RexB profiles. Reserved METPO:1027800 in
+    proposals/metpo_traitmech_v201 for the upstream replacement class.
