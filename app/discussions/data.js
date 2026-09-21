@@ -1129,6 +1129,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/esos_system.html#esos-mechanism-gap"
  },
  {
+  "discussion_id": "fliodhais-mechanism-gap",
+  "prompt": "Resolve Fliodhais phage triggers and effector outputs before minting narrower Fliodhais mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Fliodhais system",
+  "source_id": "traitmech:000326",
+  "source_file": "fliodhais_system.yaml",
+  "attaches_to": [
+   "causal_graphs#fliodhais_locus_restricts_phage"
+  ],
+  "rationale": "Grafakou et al. and DefenseFinder support Fliodhais as a named two-component anti-phage system, but the direct trigger, molecular substrate, antiviral effector output, natural locus breadth, and profile-to-component model are not resolved enough here to assert a narrower mechanistic child trait.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/fliodhais_system.html#fliodhais-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -3503,9 +3522,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 194,
- "total_knowledge_gaps": 113,
- "total_source_entries": 193,
+ "total_discussions": 195,
+ "total_knowledge_gaps": 114,
+ "total_source_entries": 194,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

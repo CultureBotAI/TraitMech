@@ -205,6 +205,7 @@ data/traits/genomics/eleos_system.yaml	traitmech:000250	Eleos system	eleos_locus
 data/traits/genomics/epona_system.yaml	traitmech:000281	Epona system	epona_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/erebus_system.yaml	traitmech:000308	Erebus system	erebus_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/esos_system.yaml	traitmech:000282	Esos system	esos_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/fliodhais_system.yaml	traitmech:000326	Fliodhais system	fliodhais_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

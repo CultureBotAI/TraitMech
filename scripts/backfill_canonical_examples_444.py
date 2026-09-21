@@ -858,6 +858,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/epona_system",
     "genomics/erebus_system",
     "genomics/esos_system",
+    "genomics/fliodhais_system",
     "genomics/geb_system",
     "genomics/hypnos_system",
     "genomics/kamadhenu_system",

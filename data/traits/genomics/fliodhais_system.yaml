@@ -1,0 +1,160 @@
+identifier: traitmech:000326
+label: Fliodhais system
+definition: A phage defense system in which an organism possesses a two-component
+  Fliodhais locus that can reduce Lactococcus bacteriophage c2 plaque development.
+definition_source: DOI:10.1093/nar/gkae671
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Fliodhais
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1093/nar/gkae671
+evidence:
+- reference: DOI:10.1093/nar/gkae671
+  snippet: Based on comparative sequence analysis (BLASTN and BLASTP) and on functional
+    and structural analysis (HHpred and InterPro) the remaining seven antiphage systems
+    (out of the twenty identified) did not display significant homology to any previously
+    described antiphage system, thus rendering them novel antiphage systems (Table
+    1). These systems were named after cheese, cattle or fermentation related deities
+    (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and Hesat)
+  notes: Grafakou et al. named Fliodhais among seven not previously described lactococcal
+    antiphage systems.
+- reference: DOI:10.1093/nar/gkae671
+  snippet: All discovered systems, except Fliodhais, are single gene antiphage systems.
+    Both genetic components are necessary for Fliodhais activity; the described antiphage
+    activity (see below) was not observed when the two components were cloned and
+    tested separately.
+  notes: Grafakou et al. report that the tested Fliodhais system requires both of
+    its genetic components for activity.
+- reference: DOI:10.1093/nar/gkae671
+  snippet: Fliodhais was associated with smaller c2 plaques surrounded by a halo (<1
+    mm clear-centred plaques with a faint ring), a phenotype that was not observed
+    when phage c2 was plated on the wild type strain (up to 4 mm clear-centred plaques
+    without a halo).
+  notes: Grafakou et al. report a Fliodhais-associated c2 plaque morphology distinct
+    from the wild-type Lactococcus host.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Fliodhais | 10\.1093/nar/gkae671 | Discovery of antiphage systems in the
+    lactococcal plasmidome
+  notes: The DefenseFinder article registry maps the named Fliodhais system to the
+    Grafakou et al. lactococcal antiphage-system discovery paper.
+causal_graphs:
+- graph_id: fliodhais_locus_restricts_phage
+  title: Fliodhais loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Fliodhais
+    locus to restricted bacteriophage propagation without asserting the unresolved
+    phage trigger or molecular output.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Fliodhais as a named two-component lactococcal anti-phage
+    system while leaving its direct phage trigger, molecular substrate, antiviral
+    effector output, natural locus breadth, and the absence of pinned DefenseFinder
+    HMM or rule rows unresolved.
+  nodes:
+  - node_id: fliodhais_locus
+    label: Fliodhais locus
+    node_type: GENETIC_ELEMENT
+    description: A Fliodhais anti-phage defense locus described as requiring both
+      genetic components for activity.
+  - node_id: restricted_phage_propagation
+    label: restricted phage propagation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced propagation of bacteriophage in cells carrying the Fliodhais
+      system.
+  - node_id: fliodhais_system_trait
+    label: Fliodhais system
+    node_type: TRAIT
+    grounding: traitmech:000326
+    description: Possession of a genome-encoded Fliodhais phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: fliodhais_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: restricted_phage_propagation
+    description: The lactococcal plasmidome screen discovered Fliodhais as a named
+      two-component antiphage system, and the DefenseFinder article registry maps
+      the Fliodhais system to that discovery paper.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: Based on comparative sequence analysis (BLASTN and BLASTP) and on functional
+        and structural analysis (HHpred and InterPro) the remaining seven antiphage
+        systems (out of the twenty identified) did not display significant homology
+        to any previously described antiphage system, thus rendering them novel antiphage
+        systems (Table 1). These systems were named after cheese, cattle or fermentation
+        related deities (Rhea, Aristaios, Kamadhenu, Fliodhais, Audmula, Rugutis and
+        Hesat)
+      notes: Grafakou et al. named Fliodhais as one of the novel lactococcal antiphage
+        systems.
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: All discovered systems, except Fliodhais, are single gene antiphage
+        systems. Both genetic components are necessary for Fliodhais activity; the
+        described antiphage activity (see below) was not observed when the two components
+        were cloned and tested separately.
+      notes: Grafakou et al. report that both cloned Fliodhais components were necessary
+        for activity.
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: Fliodhais was associated with smaller c2 plaques surrounded by a halo
+        (<1 mm clear-centred plaques with a faint ring), a phenotype that was not
+        observed when phage c2 was plated on the wild type strain (up to 4 mm clear-centred
+        plaques without a halo).
+      notes: Grafakou et al. report Fliodhais-associated c2 plaque-size reduction.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Fliodhais | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Fliodhais system to
+        the Grafakou et al. lactococcal antiphage-system discovery paper.
+  - subject: restricted_phage_propagation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: fliodhais_system_trait
+    description: Fliodhais-mediated phage restriction realizes the Fliodhais system
+      trait.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae671
+      snippet: Fliodhais was associated with smaller c2 plaques surrounded by a halo
+        (<1 mm clear-centred plaques with a faint ring), a phenotype that was not
+        observed when phage c2 was plated on the wild type strain (up to 4 mm clear-centred
+        plaques without a halo).
+      notes: Grafakou et al. report a Fliodhais-linked change in c2 plaque development.
+  - subject: fliodhais_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Fliodhais system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Fliodhais | 10\.1093/nar/gkae671 | Discovery of antiphage systems in
+        the lactococcal plasmidome
+      notes: The DefenseFinder article registry maps the named Fliodhais system to
+        the Grafakou et al. lactococcal antiphage-system discovery paper.
+discussions:
+- discussion_id: fliodhais-mechanism-gap
+  prompt: Resolve Fliodhais phage triggers and effector outputs before minting narrower
+    Fliodhais mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Grafakou et al. and DefenseFinder support Fliodhais as a named two-component
+    anti-phage system, but the direct trigger, molecular substrate, antiviral effector
+    output, natural locus breadth, and profile-to-component model are not resolved
+    enough here to assert a narrower mechanistic child trait.
+  attaches_to:
+  - causal_graphs#fliodhais_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T04:17:19Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Fliodhais system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v203.
+  llm_assisted: true
