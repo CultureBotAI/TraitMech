@@ -8,13 +8,13 @@
 ## Context
 
 The pinned METPO snapshot has no active exact class for AbiAlpha system, the
-genome-level possession trait for a prophage-encoded `abi-alpha` abortive-
-infection locus. Lossouarn et al. identified the Enterococcus faecalis V583
-prophage 6 determinant later represented by the DefenseFinder `AbiAlpha`
-namespace, showed that ef2833 is responsible for the abortive mechanism, and
-linked the DUF4393/PF14337-family system to perturbation of the Idefix lytic
-cycle and premature lysis of infected E. faecalis. DefenseFinder maps AbiAlpha
-to the `AbiAlpha__AbiAlpha` HMM profile.
+genome-level possession trait for an abi-alpha-family abortive-infection locus.
+Lossouarn et al. identified the Enterococcus faecalis V583 prophage 6
+determinant later represented by the DefenseFinder `AbiAlpha` namespace, showed
+that ef2833 is responsible for the abortive mechanism, and linked the
+DUF4393/PF14337-family system to perturbation of the Idefix lytic cycle and
+premature lysis of infected E. faecalis. DefenseFinder maps AbiAlpha to the
+`AbiAlpha__AbiAlpha` HMM profile.
 
 This cohort lifts one local class:
 
@@ -46,9 +46,9 @@ Subset tag: `metpo_traitmech_2026_09`.
 |---|---|---|
 | `METPO:1027600` | AbiAlpha system | `METPO:1016800` abortive infection system |
 
-AbiAlpha system captures genome-level possession of an `abi-alpha` prophage
-locus represented by DefenseFinder's `AbiAlpha__AbiAlpha` HMM profile and
-exemplified by the Enterococcus faecalis V583 prophage 6 determinant. It
+AbiAlpha system captures genome-level possession of an abi-alpha-family locus
+represented by DefenseFinder's `AbiAlpha__AbiAlpha` HMM profile and exemplified
+by the Enterococcus faecalis V583 prophage 6 determinant. It
 excludes the individual `abi-alpha` or `ef2833` gene; AbiAlpha proteins; the
 DUF4393/PF14337 domain and HMM profile; V583 prophage 6 itself; individual
 Idefix host-range outcomes; Idefix adsorption phenotypes; premature-lysis
