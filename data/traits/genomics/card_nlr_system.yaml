@@ -1,0 +1,285 @@
+identifier: traitmech:000337
+label: CARD-NLR system
+definition: A phage defense system in which an organism possesses a CARD-NLR locus
+  represented by the DefenseFinder CARD_NLR model namespace, coupling bacterial CARD-like
+  detector components and NLR-like profiles to subtype-specific GasderMIN, endonuclease,
+  Trypsin_Phospho, or Subtilase effector profiles that can promote cell death after
+  phage recognition.
+definition_source: DOI:10.1101/2023.05.28.542683
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: CARD_NLR
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: CARD_NLR__CARD_Protease
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: CARD_NLR__NLR_new
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: Here we show that CARD-like domains are present in defense systems that
+    protect bacteria against phage.
+  notes: The Wein et al. abstract supports CARD-like-domain systems as bacterial phage-defense
+    systems.
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: The bacterial CARD is essential for protease-mediated activation of certain
+    bacterial gasdermins, which promote cell death once phage infection is recognized.
+  notes: The Wein et al. abstract supports bacterial CARD-mediated protease activation
+    of some bacterial gasdermins after phage recognition.
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: We further show that multiple anti-phage defense systems utilize CARD-like
+    domains to activate a variety of cell death effectors.
+  notes: The Wein et al. abstract states that multiple anti-phage systems use CARD-like
+    domains to activate varied cell-death effectors.
+- reference: https://europepmc.org/article/PPR/PPR668921
+  snippet: We find that these systems are triggered by a conserved immune evasion
+    protein that phages use to overcome the bacterial defense system RexAB, demonstrating
+    that phage proteins inhibiting one defense system can activate another.
+  notes: The Wein et al. abstract reports that these systems can be triggered by a
+    phage immune-evasion protein.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate anti-phage
+    defense in bacterial gasdermin systems
+  notes: The DefenseFinder article registry maps the CARD_NLR model namespace to the
+    Wein et al. bacterial CARD-like domain anti-phage defense preprint.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__CARD_Protease                          | CARD_NLR__CARD_Protease                          |
+    CARD_NLR               | Custom                  | 300    |'
+  notes: The DefenseFinder HMM inventory records a CARD-like protease profile under
+    the CARD_NLR model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__NLR_new                                | CARD_NLR__NLR_new                                |
+    CARD_NLR               | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records an NLR profile under the CARD_NLR
+    model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| CARD_NLR__Trypsin_Phospho                        | CARD_NLR__Trypsin_Phospho                        |
+    CARD_NLR               | Custom                  | 400    |'
+  notes: The DefenseFinder HMM inventory records a Trypsin_Phospho-profiled effector
+    under the CARD_NLR model namespace.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin,\
+    \ CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new,\
+    \ CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"
+  notes: The DefenseFinder rules table models a CARD_NLR endonuclease subtype with
+    CARD-like and NLR-like accessory profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+    \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,\
+    \ CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"
+  notes: The DefenseFinder rules table models a CARD_NLR_GasderMIN subtype with GasderMIN__bGSDM
+    as its mandatory effector profile.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_Phospho\t1\t3\tCARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+    \ CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new,\
+    \ CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"
+  notes: The DefenseFinder rules table models a CARD_NLR_Phospho subtype with CARD-like
+    and NLR-like accessory profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_Subtilase\t1\t3\tCARD_NLR__Subtilase_long_new\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+    \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new,\
+    \ GasderMIN__bGSDM\t"
+  notes: The DefenseFinder rules table models a CARD_NLR subtilase subtype with CARD-like
+    and NLR-like accessory profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
+    \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+    \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
+  notes: The DefenseFinder rules table also models a CARD_NLR_like subtype that requires
+    two of several candidate effector profiles.
+causal_graphs:
+- graph_id: card_nlr_loci_activate_cell_death_effectors
+  title: CARD-NLR loci activate antiphage cell-death effectors
+  description: System-level sketch linking a CARD-NLR locus to CARD-like detector
+    activation, subtype-specific cell-death effector activation, and the CARD-NLR
+    system trait without asserting the molecular mechanism of any one DefenseFinder
+    subtype.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures CARD-NLR as a named DefenseFinder model namespace
+    supported by Wein et al. CARD-like domain anti-phage defense evidence while leaving
+    subtype-specific phage triggers, the effector activation sequence, GasderMIN-associated
+    subtype boundaries, and endonuclease, Trypsin_Phospho, or Subtilase outputs unresolved.
+  nodes:
+  - node_id: card_nlr_locus
+    label: CARD-NLR locus
+    node_type: GENETIC_ELEMENT
+    description: A bacterial anti-phage defense locus cataloged in DefenseFinder with
+      CARD_NLR profiles.
+  - node_id: card_like_detector_activation
+    label: CARD-like detector activation
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of a bacterial CARD-like detector within a CARD-NLR system.
+  - node_id: cell_death_effector_activation
+    label: cell-death effector activation
+    node_type: BIOLOGICAL_PROCESS
+    description: Activation of a gasdermin or other subtype-specific cell-death effector
+      by a CARD-like anti-phage defense system.
+  - node_id: phage_triggered_cell_death
+    label: phage-triggered cell death
+    node_type: BIOLOGICAL_PROCESS
+    description: Host cell death promoted by a CARD-like bacterial anti-phage defense
+      system.
+  - node_id: card_nlr_system_trait
+    label: CARD-NLR system
+    node_type: TRAIT
+    grounding: traitmech:000337
+    description: Possession of a genome-encoded CARD-NLR phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: card_nlr_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: card_like_detector_activation
+    description: CARD-NLR loci couple CARD-like and NLR-like DefenseFinder profiles
+      to subtype-specific effector profiles.
+    evidence:
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: Here we show that CARD-like domains are present in defense systems
+        that protect bacteria against phage.
+      notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage
+        defense systems.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| CARD_NLR__CARD_Protease                          | CARD_NLR__CARD_Protease                          |
+        CARD_NLR               | Custom                  | 300    |'
+      notes: The DefenseFinder HMM inventory records a CARD-like protease profile
+        under the CARD_NLR model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| CARD_NLR__NLR_new                                | CARD_NLR__NLR_new                                |
+        CARD_NLR               | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records an NLR profile under the CARD_NLR
+        model namespace.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin,\
+        \ CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new,\
+        \ CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"
+      notes: The DefenseFinder rules table models a CARD_NLR endonuclease subtype
+        with CARD-like and NLR-like accessory profiles.
+  - subject: card_like_detector_activation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cell_death_effector_activation
+    description: Bacterial CARD-like domains activate subtype-specific cell-death
+      effectors.
+    evidence:
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: We further show that multiple anti-phage defense systems utilize CARD-like
+        domains to activate a variety of cell death effectors.
+      notes: Wein et al. report multiple CARD-like-domain anti-phage systems that
+        activate cell-death effectors.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+        \ CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,\
+        \ CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"
+      notes: The DefenseFinder rules table models a CARD_NLR_GasderMIN subtype with
+        GasderMIN__bGSDM as its mandatory effector profile.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_Phospho\t1\t3\tCARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,\
+        \ CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new,\
+        \ CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"
+      notes: The DefenseFinder rules table models a CARD_NLR_Phospho subtype with
+        CARD-like and NLR-like accessory profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_Subtilase\t1\t3\tCARD_NLR__Subtilase_long_new\t\
+        CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease,\
+        \ CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin,\
+        \ CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"
+      notes: The DefenseFinder rules table models a CARD_NLR subtilase subtype with
+        CARD-like and NLR-like accessory profiles.
+  - subject: cell_death_effector_activation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phage_triggered_cell_death
+    description: Activated gasdermin and non-gasdermin CARD-NLR effectors can promote
+      defense-associated cell death.
+    evidence:
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: The bacterial CARD is essential for protease-mediated activation of
+        certain bacterial gasdermins, which promote cell death once phage infection
+        is recognized.
+      notes: Wein et al. support CARD-dependent gasdermin activation and cell death
+        after phage recognition.
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: We further show that multiple anti-phage defense systems utilize CARD-like
+        domains to activate a variety of cell death effectors.
+      notes: Wein et al. generalize CARD-like-domain activation to multiple cell-death
+        effector classes.
+  - subject: phage_triggered_cell_death
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: card_nlr_system_trait
+    description: CARD-like effector-associated cell death realizes the CARD-NLR phage-defense-system
+      output.
+    evidence:
+    - reference: https://europepmc.org/article/PPR/PPR668921
+      snippet: We find that these systems are triggered by a conserved immune evasion
+        protein that phages use to overcome the bacterial defense system RexAB, demonstrating
+        that phage proteins inhibiting one defense system can activate another.
+      notes: Wein et al. support CARD-like-domain system triggering by a bacteriophage
+        immune-evasion protein.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin,\
+        \ CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"
+      notes: The DefenseFinder rules table also models a CARD_NLR_like subtype that
+        requires two of several candidate effector profiles.
+  - subject: card_nlr_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: CARD-NLR system possession is a phage-defense system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+        anti-phage defense in bacterial gasdermin systems
+      notes: The DefenseFinder article registry maps the CARD_NLR model namespace
+        to the Wein et al. bacterial CARD-like domain anti-phage defense preprint.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease,\
+        \ CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin,\
+        \ CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new,\
+        \ CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"
+      notes: The DefenseFinder rules table models a CARD_NLR endonuclease subtype
+        with CARD-like and NLR-like accessory profiles.
+discussions:
+- discussion_id: card-nlr-subtype-mechanism-gap
+  prompt: Resolve CARD-NLR subtype effectors, phage triggers, natural-host examples,
+    and GasderMIN subtype boundaries before minting narrower CARD-NLR mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Wein et al. support CARD-like domains in multiple anti-phage defense
+    systems that activate cell-death effectors, and DefenseFinder models CARD_NLR
+    subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, and Subtilase effector
+    profiles. This first system-level record leaves the exact phage triggers, CARD-to-effector
+    activation sequence, accession-level natural-host components, and boundaries between
+    standalone GasderMIN and CARD_NLR_GasderMIN contexts unresolved.
+  attaches_to:
+  - causal_graphs#card_nlr_loci_activate_cell_death_effectors
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T13:47:08Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted CARD-NLR system as a DOI- and stable-URL-backed GENOMICS TraitRecord
+    under the phage defense system parent after an ignored-and-hidden duplicate review
+    found no exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v214.
+  llm_assisted: true

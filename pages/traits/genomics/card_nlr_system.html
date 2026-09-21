@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARD-NLR system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>CARD-NLR system</h1>
+    <p class="curie"><code>traitmech:000337</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses a CARD-NLR locus represented by the DefenseFinder CARD_NLR model namespace, coupling bacterial CARD-like detector components and NLR-like profiles to subtype-specific GasderMIN, endonuclease, Trypsin_Phospho, or Subtilase effector profiles that can promote cell death after phage recognition.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>CARD-NLR loci activate antiphage cell-death effectors</h2>
+      <p class="meta">System-level sketch linking a CARD-NLR locus to CARD-like detector activation, subtype-specific cell-death effector activation, and the CARD-NLR system trait without asserting the molecular mechanism of any one DefenseFinder subtype.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures CARD-NLR as a named DefenseFinder model namespace supported by Wein et al. CARD-like domain anti-phage defense evidence while leaving subtype-specific phage triggers, the effector activation sequence, GasderMIN-associated subtype boundaries, and endonuclease, Trypsin_Phospho, or Subtilase outputs unresolved.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>CARD-NLR loci activate antiphage cell-death effectors</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for CARD-NLR system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>CARD-NLR locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>CARD-like detector activation</strong>
+            <code>RO:0002326</code>
+            <p>CARD-NLR loci couple CARD-like and NLR-like DefenseFinder profiles to subtype-specific effector profiles.</p>
+            <ul>
+
+              <li>
+                <code>https://europepmc.org/article/PPR/PPR668921</code>
+                <span class="evidence-snippet">Here we show that CARD-like domains are present in defense systems that protect bacteria against phage.</span>
+                <span class="meta">Wein et al. support bacterial CARD-like domains as parts of anti-phage defense systems.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| CARD_NLR__CARD_Protease                          | CARD_NLR__CARD_Protease                          | CARD_NLR               | Custom                  | 300    |</span>
+                <span class="meta">The DefenseFinder HMM inventory records a CARD-like protease profile under the CARD_NLR model namespace.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| CARD_NLR__NLR_new                                | CARD_NLR__NLR_new                                | CARD_NLR               | Custom                  | 100    |</span>
+                <span class="meta">The DefenseFinder HMM inventory records an NLR profile under the CARD_NLR model namespace.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_Endonuclease	1	3	CARD_NLR__Endonuclease	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin	CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM	</span>
+                <span class="meta">The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>CARD-like detector activation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>cell-death effector activation</strong>
+            <code>RO:0002326</code>
+            <p>Bacterial CARD-like domains activate subtype-specific cell-death effectors.</p>
+            <ul>
+
+              <li>
+                <code>https://europepmc.org/article/PPR/PPR668921</code>
+                <span class="evidence-snippet">We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors.</span>
+                <span class="meta">Wein et al. report multiple CARD-like-domain anti-phage systems that activate cell-death effectors.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_GasderMIN	1	3	GasderMIN__bGSDM	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin	CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new	</span>
+                <span class="meta">The DefenseFinder rules table models a CARD_NLR_GasderMIN subtype with GasderMIN__bGSDM as its mandatory effector profile.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_Phospho	1	3	CARD_NLR__Trypsin_Phospho	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin	CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM	</span>
+                <span class="meta">The DefenseFinder rules table models a CARD_NLR_Phospho subtype with CARD-like and NLR-like accessory profiles.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_Subtilase	1	3	CARD_NLR__Subtilase_long_new	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin	CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM	</span>
+                <span class="meta">The DefenseFinder rules table models a CARD_NLR subtilase subtype with CARD-like and NLR-like accessory profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>cell-death effector activation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>phage-triggered cell death</strong>
+            <code>RO:0002326</code>
+            <p>Activated gasdermin and non-gasdermin CARD-NLR effectors can promote defense-associated cell death.</p>
+            <ul>
+
+              <li>
+                <code>https://europepmc.org/article/PPR/PPR668921</code>
+                <span class="evidence-snippet">The bacterial CARD is essential for protease-mediated activation of certain bacterial gasdermins, which promote cell death once phage infection is recognized.</span>
+                <span class="meta">Wein et al. support CARD-dependent gasdermin activation and cell death after phage recognition.</span>
+              </li>
+
+              <li>
+                <code>https://europepmc.org/article/PPR/PPR668921</code>
+                <span class="evidence-snippet">We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors.</span>
+                <span class="meta">Wein et al. generalize CARD-like-domain activation to multiple cell-death effector classes.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>phage-triggered cell death</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>CARD-NLR system</strong>
+            <code>METPO:2007700</code>
+            <p>CARD-like effector-associated cell death realizes the CARD-NLR phage-defense-system output.</p>
+            <ul>
+
+              <li>
+                <code>https://europepmc.org/article/PPR/PPR668921</code>
+                <span class="evidence-snippet">We find that these systems are triggered by a conserved immune evasion protein that phages use to overcome the bacterial defense system RexAB, demonstrating that phage proteins inhibiting one defense system can activate another.</span>
+                <span class="meta">Wein et al. support CARD-like-domain system triggering by a bacteriophage immune-evasion protein.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_like	2	4	CARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin		</span>
+                <span class="meta">The DefenseFinder rules table also models a CARD_NLR_like subtype that requires two of several candidate effector profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>CARD-NLR system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>CARD-NLR system possession is a phage-defense system trait.</p>
+            <ul>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate anti-phage defense in bacterial gasdermin systems</span>
+                <span class="meta">The DefenseFinder article registry maps the CARD_NLR model namespace to the Wein et al. bacterial CARD-like domain anti-phage defense preprint.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">CARD_NLR	CARD_NLR_Endonuclease	1	3	CARD_NLR__Endonuclease	CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin	CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM	</span>
+                <span class="meta">The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1101/2023.05.28.542683</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (3)</h2>
+      <ul class="synonyms">
+
+        <li>CARD_NLR <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
+
+        <li>CARD_NLR__CARD_Protease <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>CARD_NLR__NLR_new <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="card-nlr-subtype-mechanism-gap">
+        <p class="discussion-prompt">Resolve CARD-NLR subtype effectors, phage triggers, natural-host examples, and GasderMIN subtype boundaries before minting narrower CARD-NLR mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>card-nlr-subtype-mechanism-gap</code>
+          · raised by codex
+          · 2026-09-21
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#card_nlr_loci_activate_cell_death_effectors</code>
+        </p>
+
+
+        <p>Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, and Subtilase effector profiles. This first system-level record leaves the exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, and boundaries between standalone GasderMIN and CARD_NLR_GasderMIN contexts unresolved.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-21T13:47:08Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted CARD-NLR system as a DOI- and stable-URL-backed GENOMICS TraitRecord under the phage defense system parent after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v214.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/card_nlr_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/card_nlr_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/card_nlr_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/card_nlr_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000337" target="_blank" rel="noopener"><code>traitmech:000337</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "System-level sketch linking a CARD-NLR locus to CARD-like detector activation, subtype-specific cell-death effector activation, and the CARD-NLR system trait without asserting the molecular mechanism of any one DefenseFinder subtype.", "edges": [{"description": "CARD-NLR loci couple CARD-like and NLR-like DefenseFinder profiles to subtype-specific effector profiles.", "evidence": [{"notes": "Wein et al. support bacterial CARD-like domains as parts of anti-phage defense systems.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "Here we show that CARD-like domains are present in defense systems that protect bacteria against phage."}, {"notes": "The DefenseFinder HMM inventory records a CARD-like protease profile under the CARD_NLR model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CARD_NLR__CARD_Protease                          | CARD_NLR__CARD_Protease                          | CARD_NLR               | Custom                  | 300    |"}, {"notes": "The DefenseFinder HMM inventory records an NLR profile under the CARD_NLR model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CARD_NLR__NLR_new                                | CARD_NLR__NLR_new                                | CARD_NLR               | Custom                  | 100    |"}, {"notes": "The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "card_nlr_locus", "target": "card_like_detector_activation"}, {"description": "Bacterial CARD-like domains activate subtype-specific cell-death effectors.", "evidence": [{"notes": "Wein et al. report multiple CARD-like-domain anti-phage systems that activate cell-death effectors.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors."}, {"notes": "The DefenseFinder rules table models a CARD_NLR_GasderMIN subtype with GasderMIN__bGSDM as its mandatory effector profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"}, {"notes": "The DefenseFinder rules table models a CARD_NLR_Phospho subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Phospho\t1\t3\tCARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"}, {"notes": "The DefenseFinder rules table models a CARD_NLR subtilase subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Subtilase\t1\t3\tCARD_NLR__Subtilase_long_new\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "card_like_detector_activation", "target": "cell_death_effector_activation"}, {"description": "Activated gasdermin and non-gasdermin CARD-NLR effectors can promote defense-associated cell death.", "evidence": [{"notes": "Wein et al. support CARD-dependent gasdermin activation and cell death after phage recognition.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "The bacterial CARD is essential for protease-mediated activation of certain bacterial gasdermins, which promote cell death once phage infection is recognized."}, {"notes": "Wein et al. generalize CARD-like-domain activation to multiple cell-death effector classes.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors."}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cell_death_effector_activation", "target": "phage_triggered_cell_death"}, {"description": "CARD-like effector-associated cell death realizes the CARD-NLR phage-defense-system output.", "evidence": [{"notes": "Wein et al. support CARD-like-domain system triggering by a bacteriophage immune-evasion protein.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We find that these systems are triggered by a conserved immune evasion protein that phages use to overcome the bacterial defense system RexAB, demonstrating that phage proteins inhibiting one defense system can activate another."}, {"notes": "The DefenseFinder rules table also models a CARD_NLR_like subtype that requires two of several candidate effector profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage_triggered_cell_death", "target": "card_nlr_system_trait"}, {"description": "CARD-NLR system possession is a phage-defense system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the CARD_NLR model namespace to the Wein et al. bacterial CARD-like domain anti-phage defense preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "CARD_NLR | 10\\.1101/2023\\.05\\.28\\.542683 | CARD-like domains mediate anti-phage defense in bacterial gasdermin systems"}, {"notes": "The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "card_nlr_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "CARD-NLR loci couple CARD-like and NLR-like DefenseFinder profiles to subtype-specific effector profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Wein et al. support bacterial CARD-like domains as parts of anti-phage defense systems.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "Here we show that CARD-like domains are present in defense systems that protect bacteria against phage."}, {"notes": "The DefenseFinder HMM inventory records a CARD-like protease profile under the CARD_NLR model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CARD_NLR__CARD_Protease                          | CARD_NLR__CARD_Protease                          | CARD_NLR               | Custom                  | 300    |"}, {"notes": "The DefenseFinder HMM inventory records an NLR profile under the CARD_NLR model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CARD_NLR__NLR_new                                | CARD_NLR__NLR_new                                | CARD_NLR               | Custom                  | 100    |"}, {"notes": "The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CARD-NLR locus", "target": "CARD-like detector activation"}, {"description": "Bacterial CARD-like domains activate subtype-specific cell-death effectors.", "edge_id": "edge-2", "evidence": [{"notes": "Wein et al. report multiple CARD-like-domain anti-phage systems that activate cell-death effectors.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors."}, {"notes": "The DefenseFinder rules table models a CARD_NLR_GasderMIN subtype with GasderMIN__bGSDM as its mandatory effector profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_GasderMIN\t1\t3\tGasderMIN__bGSDM\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new\t"}, {"notes": "The DefenseFinder rules table models a CARD_NLR_Phospho subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Phospho\t1\t3\tCARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"}, {"notes": "The DefenseFinder rules table models a CARD_NLR subtilase subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Subtilase\t1\t3\tCARD_NLR__Subtilase_long_new\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new, GasderMIN__bGSDM\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CARD-like detector activation", "target": "cell-death effector activation"}, {"description": "Activated gasdermin and non-gasdermin CARD-NLR effectors can promote defense-associated cell death.", "edge_id": "edge-3", "evidence": [{"notes": "Wein et al. support CARD-dependent gasdermin activation and cell death after phage recognition.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "The bacterial CARD is essential for protease-mediated activation of certain bacterial gasdermins, which promote cell death once phage infection is recognized."}, {"notes": "Wein et al. generalize CARD-like-domain activation to multiple cell-death effector classes.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We further show that multiple anti-phage defense systems utilize CARD-like domains to activate a variety of cell death effectors."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cell-death effector activation", "target": "phage-triggered cell death"}, {"description": "CARD-like effector-associated cell death realizes the CARD-NLR phage-defense-system output.", "edge_id": "edge-4", "evidence": [{"notes": "Wein et al. support CARD-like-domain system triggering by a bacteriophage immune-evasion protein.", "reference": "https://europepmc.org/article/PPR/PPR668921", "snippet": "We find that these systems are triggered by a conserved immune evasion protein that phages use to overcome the bacterial defense system RexAB, demonstrating that phage proteins inhibiting one defense system can activate another."}, {"notes": "The DefenseFinder rules table also models a CARD_NLR_like subtype that requires two of several candidate effector profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_like\t2\t4\tCARD_NLR__Endonuclease, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase_long_new, CARD_NLR__Trypsin_Phospho\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\t\t"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "phage-triggered cell death", "target": "CARD-NLR system"}, {"description": "CARD-NLR system possession is a phage-defense system trait.", "edge_id": "edge-5", "evidence": [{"notes": "The DefenseFinder article registry maps the CARD_NLR model namespace to the Wein et al. bacterial CARD-like domain anti-phage defense preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "CARD_NLR | 10\\.1101/2023\\.05\\.28\\.542683 | CARD-like domains mediate anti-phage defense in bacterial gasdermin systems"}, {"notes": "The DefenseFinder rules table models a CARD_NLR endonuclease subtype with CARD-like and NLR-like accessory profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR\tCARD_NLR_Endonuclease\t1\t3\tCARD_NLR__Endonuclease\tCARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin\tCARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, GasderMIN__bGSDM\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CARD-NLR system", "target": "phage defense system"}], "graph_id": "card_nlr_loci_activate_cell_death_effectors", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Activation of a bacterial CARD-like detector within a CARD-NLR system.", "grounding": null, "id": "card_like_detector_activation", "is_orphan": false, "label": "CARD-like detector activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A bacterial anti-phage defense locus cataloged in DefenseFinder with CARD_NLR profiles.", "grounding": null, "id": "card_nlr_locus", "is_orphan": false, "label": "CARD-NLR locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded CARD-NLR phage-defense system.", "grounding": "traitmech:000337", "id": "card_nlr_system_trait", "is_orphan": false, "label": "CARD-NLR system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of a gasdermin or other subtype-specific cell-death effector by a CARD-like anti-phage defense system.", "grounding": null, "id": "cell_death_effector_activation", "is_orphan": false, "label": "cell-death effector activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#ecfccb", "description": "Host cell death promoted by a CARD-like bacterial anti-phage defense system.", "grounding": null, "id": "phage_triggered_cell_death", "is_orphan": false, "label": "phage-triggered cell death", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures CARD-NLR as a named DefenseFinder model namespace supported by Wein et al. CARD-like domain anti-phage defense evidence while leaving subtype-specific phage triggers, the effector activation sequence, GasderMIN-associated subtype boundaries, and endonuclease, Trypsin_Phospho, or Subtilase outputs unresolved.", "scope_status": "NONMECHANISTIC", "title": "CARD-NLR loci activate antiphage cell-death effectors"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-21 13:47 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 732 TraitRecords
+      · embedding coverage 65.2%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

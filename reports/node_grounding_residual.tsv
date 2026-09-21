@@ -1204,6 +1204,10 @@ phage trigger binding	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.ya
 caprel toxsas activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 trna pyrophosphorylation	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
 translation blockade	BIOLOGICAL_PROCESS	1	data/traits/genomics/caprel_system.yaml
+card-nlr locus	GENETIC_ELEMENT	1	data/traits/genomics/card_nlr_system.yaml
+card-like detector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_system.yaml
+cell-death effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_system.yaml
+phage-triggered cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/card_nlr_system.yaml
 cbass oligonucleotide cyclase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
 cbass cyclic oligonucleotide synthesis	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml
 cbass effector activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/cbass_system.yaml

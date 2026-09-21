@@ -757,6 +757,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/caprel_system.html#caprel-trigger-and-family-breadth-gap"
  },
  {
+  "discussion_id": "card-nlr-subtype-mechanism-gap",
+  "prompt": "Resolve CARD-NLR subtype effectors, phage triggers, natural-host examples, and GasderMIN subtype boundaries before minting narrower CARD-NLR mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "CARD-NLR system",
+  "source_id": "traitmech:000337",
+  "source_file": "card_nlr_system.yaml",
+  "attaches_to": [
+   "causal_graphs#card_nlr_loci_activate_cell_death_effectors"
+  ],
+  "rationale": "Wein et al. support CARD-like domains in multiple anti-phage defense systems that activate cell-death effectors, and DefenseFinder models CARD_NLR subtypes with gasdermin, endonuclease, CARD_NLR_Phospho, and Subtilase effector profiles. This first system-level record leaves the exact phage triggers, CARD-to-effector activation sequence, accession-level natural-host components, and boundaries between standalone GasderMIN and CARD_NLR_GasderMIN contexts unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/card_nlr_system.html#card-nlr-subtype-mechanism-gap"
+ },
+ {
   "discussion_id": "cbass-subtype-mechanism-gap",
   "prompt": "Resolve CBASS subtype-specific sensing and effector mechanisms before splitting cGAMP-phospholipase, cAAA-nuclease, ancillary-gene, or individual CD-NTase protein-family edges into reviewed graph groundings.",
   "kind": "KNOWLEDGE_GAP",
@@ -3712,9 +3731,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 205,
- "total_knowledge_gaps": 124,
- "total_source_entries": 204,
+ "total_discussions": 206,
+ "total_knowledge_gaps": 125,
+ "total_source_entries": 205,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
