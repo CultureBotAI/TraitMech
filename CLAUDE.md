@@ -26,6 +26,7 @@ presenting a guess as fact.
 - METPO proposals: [metpo-proposal](.claude/skills/metpo-proposal/SKILL.md)
 - Research and curation prioritization: [trait-priority](.claude/skills/trait-priority/SKILL.md)
 - Single-record scientific curation: [curate-yaml-record](.claude/skills/curate-yaml-record/SKILL.md)
+- Record category review: [review-yaml-category](.claude/skills/review-yaml-category/SKILL.md)
 - Paid trait research: [deep-research-trait](.claude/skills/deep-research-trait/SKILL.md) or [research-causal-graphs](.claude/skills/research-causal-graphs/SKILL.md)
 - Backlog reconciliation: [next-tasks](.claude/skills/next-tasks/SKILL.md)
 - Full open-issue queue triage: [review-open-issues](.claude/skills/review-open-issues/SKILL.md)
