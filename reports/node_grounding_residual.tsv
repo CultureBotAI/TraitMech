@@ -1465,6 +1465,8 @@ sparta oligomerization	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.y
 sparta tir-domain nad(p)ase activity	MOLECULAR_FUNCTION	1	data/traits/genomics/sparta_system.yaml
 nad(p)+ depletion	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
 plasmid-invaded cell death	BIOLOGICAL_PROCESS	1	data/traits/genomics/sparta_system.yaml
+spbk locus	GENETIC_ELEMENT	1	data/traits/genomics/spbk_system.yaml
+spbk/yone-dependent abortive infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/spbk_system.yaml
 sspabcd-sspe locus	GENETIC_ELEMENT	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe pt-site recruitment	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml
 sspe gtpase activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/sspabcd_sspe_system.yaml

@@ -410,7 +410,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, and RexAB are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, and traitmech:000324, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., and Parma et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, and SpbK are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, and traitmech:000325, respectively. Lopatina et al., Fineran et al., Dy et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., and Johnson et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -1933,6 +1933,25 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/genomics/sparta_system.html#sparta-native-host-and-substrate-gap"
+ },
+ {
+  "discussion_id": "spbk-mechanism-gap",
+  "prompt": "Resolve the direct SP\u03b2 YonE trigger, SpbK TIR-domain output, essential host target, and broader SpbK homolog scope before minting narrower SpbK mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "SpbK system",
+  "source_id": "traitmech:000325",
+  "source_file": "spbk_system.yaml",
+  "attaches_to": [
+   "causal_graphs#spbk_locus_mediates_spb_defense"
+  ],
+  "rationale": "Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SP\u03b2 and causes cell death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential host target, and homolog breadth remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/spbk_system.html#spbk-mechanism-gap"
  },
  {
   "discussion_id": "stk2-activator-and-death-target-gap",
@@ -3484,9 +3503,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 193,
- "total_knowledge_gaps": 112,
- "total_source_entries": 192,
+ "total_discussions": 194,
+ "total_knowledge_gaps": 113,
+ "total_source_entries": 193,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
