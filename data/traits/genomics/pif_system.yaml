@@ -1,0 +1,154 @@
+identifier: traitmech:000323
+label: Pif system
+definition: An abortive infection system in which an organism possesses an F-plasmid
+  pif-family locus represented by the DefenseFinder Pif__PifA and Pif__PifC profiles
+  and exemplified by the pif region that specifies abortive infection of T7 phage.
+definition_source: DOI:10.1007/BF00327934
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000214
+synonyms:
+- synonym_text: Pif
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+evidence:
+- reference: PMID:6096670
+  snippet: Molecular analysis of F plasmid pif region specifying abortive infection
+    of T7 phage.
+  notes: Cram et al. title the paper around F-plasmid pif-region specification of
+    the T7 abortive-infection phenotype.
+- reference: DOI:10.1007/BF00327934
+  snippet: We report the molecular cloning of the pif region of the F plasmid and
+    its physical dissection by subcloning and deletion analysis.
+  notes: Cram et al. cloned and deletion-mapped the F-plasmid pif region.
+- reference: DOI:10.1007/BF00327934
+  snippet: Examination of the polypeptide products synthesized in maxicells by plasmids
+    carrying defined pif sequences has shown that the region specifies at least two
+    proteins of molecular weights 80,000 and 40,000, the genes for which appear to
+    lie in the same transcriptional unit.
+  notes: Cram et al. support a multigene pif region without resolving a direct PifA
+    or PifC molecular function.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
+    specifying abortive infection of T7 phage
+  notes: The DefenseFinder article registry maps the named Pif model namespace to
+    the F-plasmid pif-region molecular analysis paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Pif\tPif\t2\t2\tPif__PifA, Pif__PifC"
+  notes: The DefenseFinder rules table models Pif as a two-component system requiring
+    both the Pif__PifA and Pif__PifC profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Pif__PifA                                        | Pif__PifA                                        |
+    Pif                    | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Pif__PifA under Pif.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Pif__PifC                                        | Pif__PifC                                        |
+    Pif                    | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records Pif__PifC under Pif.
+causal_graphs:
+- graph_id: pif_locus_specifies_t7_abortive_infection
+  title: Pif locus specifies T7 abortive infection
+  description: Conservative system-level sketch linking an F-plasmid pif-family locus
+    to T7 abortive infection and Pif-system possession without asserting the direct
+    phage trigger, host-cell output, or PifA/PifC molecular targets.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Pif as a named DefenseFinder two-profile abortive-infection
+    system whose F-plasmid prototype specifies T7 abortive infection. It leaves the
+    direct T7 trigger, PifA and PifC molecular functions, host-cell output, and phage
+    escape route unresolved.
+  nodes:
+  - node_id: pif_locus
+    label: pif locus
+    node_type: GENETIC_ELEMENT
+    description: An F-plasmid pif-family abortive-infection locus represented by the
+      DefenseFinder Pif__PifA and Pif__PifC profiles.
+  - node_id: t7_abortive_infection
+    label: T7 abortive infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Abortive infection of T7 phage specified by an F-plasmid pif region.
+  - node_id: pif_system_trait
+    label: Pif system
+    node_type: TRAIT
+    grounding: traitmech:000323
+    description: Possession of a genome-encoded Pif abortive-infection phage-defense
+      system.
+  edges:
+  - subject: pif_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: t7_abortive_infection
+    description: The F-plasmid pif region specifies T7 abortive infection, and DefenseFinder
+      represents Pif with required PifA and PifC profiles.
+    evidence:
+    - reference: PMID:6096670
+      snippet: Molecular analysis of F plasmid pif region specifying abortive infection
+        of T7 phage.
+      notes: Cram et al. frame the F-plasmid pif region as specifying T7 abortive
+        infection.
+    - reference: DOI:10.1007/BF00327934
+      snippet: the region specifies at least two proteins of molecular weights 80,000
+        and 40,000
+      notes: Cram et al. observed two pif-region polypeptides in maxicells.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Pif\tPif\t2\t2\tPif__PifA, Pif__PifC"
+      notes: The DefenseFinder rules table models Pif as a two-component system requiring
+        both the Pif__PifA and Pif__PifC profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Pif__PifA                                        | Pif__PifA                                        |
+        Pif                    | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Pif__PifA under Pif.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Pif__PifC                                        | Pif__PifC                                        |
+        Pif                    | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records Pif__PifC under Pif.
+  - subject: t7_abortive_infection
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pif_system_trait
+    description: F-plasmid-pif-specified T7 abortive infection realizes the Pif system
+      trait.
+    evidence:
+    - reference: PMID:6096670
+      snippet: Molecular analysis of F plasmid pif region specifying abortive infection
+        of T7 phage.
+      notes: Cram et al. support T7 abortive infection as the pif-region output.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
+        specifying abortive infection of T7 phage
+      notes: The DefenseFinder article registry maps the named Pif model namespace
+        to the F-plasmid pif-region molecular analysis paper.
+discussions:
+- discussion_id: pif-output-gap
+  prompt: Resolve the direct T7 trigger, PifA and PifC molecular functions, host-cell
+    output, and phage escape routes before minting narrower Pif mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Cram et al. support an F-plasmid pif-region abortive-infection system
+    that maps to a two-profile DefenseFinder model, but the direct T7 trigger, the
+    molecular functions of PifA and PifC, the host-cell growth-arrest or cell-death
+    output, and phage escape routes remain unresolved.
+  attaches_to:
+  - causal_graphs#pif_locus_specifies_t7_abortive_infection
+  posed_by: codex
+  posed_date: '2026-09-21'
+curation_history:
+- timestamp: '2026-09-21T01:30:12Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Pif system as a DOI-backed GENOMICS TraitRecord under the abortive
+    infection system parent after an ignored-and-hidden duplicate review found no
+    exact live TraitMech, METPO, history, or prior proposal record; the replacement
+    placeholder is reserved in proposals/metpo_traitmech_v200.
+  llm_assisted: true
+- timestamp: '2026-09-21T01:30:13Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed canonical example evidence while minting Pif system and left
+    canonical_examples empty: the Cram et al. prototype supports an F-plasmid pif
+    region that specifies T7 abortive infection and the pinned DefenseFinder registry
+    maps a two-profile Pif namespace, but the available curation sources do not identify
+    a natural organism instance with a directly observed Pif locus. No paid research
+    was used.'
+  llm_assisted: true

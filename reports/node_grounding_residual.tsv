@@ -1392,6 +1392,8 @@ phosphorothioate modification module	GENETIC_ELEMENT	1	data/traits/genomics/phos
 pt-dependent foreign dna targeting	BIOLOGICAL_PROCESS	1	data/traits/genomics/phosphorothioate_defense_system.yaml
 viral dna restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/phosphorothioate_defense_system.yaml
 phrann gp29-gp30 locus	GENETIC_ELEMENT	1	data/traits/genomics/phrann_gp29_gp30_system.yaml
+pif locus	GENETIC_ELEMENT	1	data/traits/genomics/pif_system.yaml
+t7 abortive infection	BIOLOGICAL_PROCESS	1	data/traits/genomics/pif_system.yaml
 toxin-antitoxin system	GENE_OR_PROTEIN	1	data/traits/genomics/plasmid_carriage.yaml
 plasmid vertical inheritance	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml
 restriction of incoming plasmid dna	BIOLOGICAL_PROCESS	1	data/traits/genomics/plasmid_carriage.yaml

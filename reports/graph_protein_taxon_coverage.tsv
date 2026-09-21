@@ -240,6 +240,7 @@ data/traits/genomics/paris_system.yaml	traitmech:000237	PARIS system	paris_ariab
 data/traits/genomics/phage_defense_system.yaml	traitmech:000209	phage defense system	phage_defense_system_hierarchy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phosphorothioate_defense_system.yaml	traitmech:000213	phosphorothioate defense system	phosphorothioate_dna_restriction_antiviral_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/phrann_gp29_gp30_system.yaml	traitmech:000296	Phrann gp29-gp30 system	phrann_gp29_gp30_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/pif_system.yaml	traitmech:000323	Pif system	pif_locus_specifies_t7_abortive_infection	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	plasmid carriage	plasmid_conjugation_hgt	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/ploidy.yaml	traitmech:000100	ploidy	ploidy_repair_survival	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/prithvi_system.yaml	traitmech:000290	Prithvi system	prithvi_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
