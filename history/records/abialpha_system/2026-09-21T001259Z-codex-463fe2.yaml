@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/abialpha_system.yaml
+  slug: abialpha_system
+session:
+  id: 2026-09-21T001259Z-codex-463fe2
+  timestamp: '2026-09-21T00:12:59Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1165
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1163
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - causal_graphs
+  - ontology_mapping
+  summary: Broaden AbiAlpha class boundary after PR review
+  details: 'Addressed PR #1163 review issue #1165 by removing the discovery prophage context
+    from the AbiAlpha trait and METPO proposal class boundary. Kept Enterococcus faecalis
+    V583 prophage 6 as the characterized exemplar and evidence context, left the direct AbiAlpha
+    target and natural host range knowledge gap open, and broadened the generic AbiAlpha locus
+    node to follow sibling Abi system records.'

@@ -1,7 +1,7 @@
 identifier: traitmech:000322
 label: AbiAlpha system
 definition: An abortive infection system in which an organism possesses an abi-alpha-family
-  prophage locus represented by the DefenseFinder AbiAlpha__AbiAlpha profile and exemplified
+  locus represented by the DefenseFinder AbiAlpha__AbiAlpha profile and exemplified
   by the Enterococcus faecalis V583 prophage 6 abi-alpha determinant, whose encoded
   DUF4393/PF14337-family activity perturbs the Idefix lytic cycle and causes premature
   lysis of infected Enterococcus faecalis.
@@ -63,10 +63,10 @@ canonical_examples:
 causal_graphs:
 - graph_id: abialpha_locus_causes_enterococcal_premature_lysis
   title: AbiAlpha perturbs Idefix lysis in Enterococcus faecalis
-  description: Conservative system-level sketch linking an abi-alpha-family prophage
-    locus to AbiAlpha antiphage activity, Idefix lytic-cycle perturbation, premature
-    lysis of infected Enterococcus faecalis, and AbiAlpha-system possession without
-    asserting the direct DUF4393-family molecular target.
+  description: Conservative system-level sketch linking an abi-alpha-family locus
+    to AbiAlpha antiphage activity, Idefix lytic-cycle perturbation, premature lysis
+    of infected Enterococcus faecalis, and AbiAlpha-system possession without asserting
+    the direct DUF4393-family molecular target.
   scope_status: NONMECHANISTIC
   scope_notes: The graph captures AbiAlpha as a named DefenseFinder single-profile
     abortive-infection system whose V583 prophage 6 prototype restricts Idefix by
@@ -76,8 +76,8 @@ causal_graphs:
   - node_id: abialpha_locus
     label: abi-alpha locus
     node_type: GENETIC_ELEMENT
-    description: An abi-alpha-family abortive-infection prophage locus represented
-      by the DefenseFinder AbiAlpha__AbiAlpha profile.
+    description: An abi-alpha-family abortive-infection locus represented by the DefenseFinder
+      AbiAlpha__AbiAlpha profile.
   - node_id: abialpha_antiphage_activity
     label: AbiAlpha antiphage activity
     node_type: BIOLOGICAL_PROCESS
@@ -216,4 +216,11 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v199.
+  llm_assisted: true
+- timestamp: '2026-09-21T00:11:47Z'
+  curator: codex
+  action: EDIT
+  changes: Addressed PR 1163 review issue 1165 by broadening the AbiAlpha class boundary
+    from a prophage locus to an abi-alpha-family locus while keeping Enterococcus
+    faecalis V583 prophage 6 as the characterized example.
   llm_assisted: true

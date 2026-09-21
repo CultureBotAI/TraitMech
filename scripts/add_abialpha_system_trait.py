@@ -137,7 +137,7 @@ RECORD: dict[str, Any] = {
     "label": "AbiAlpha system",
     "definition": (
         "An abortive infection system in which an organism possesses an "
-        "abi-alpha-family prophage locus represented by the DefenseFinder "
+        "abi-alpha-family locus represented by the DefenseFinder "
         "AbiAlpha__AbiAlpha profile and exemplified by the Enterococcus "
         "faecalis V583 prophage 6 abi-alpha determinant, whose encoded "
         "DUF4393/PF14337-family activity perturbs the Idefix lytic cycle "
@@ -243,7 +243,7 @@ RECORD: dict[str, Any] = {
             "title": "AbiAlpha perturbs Idefix lysis in Enterococcus faecalis",
             "description": (
                 "Conservative system-level sketch linking an "
-                "abi-alpha-family prophage locus to AbiAlpha antiphage "
+                "abi-alpha-family locus to AbiAlpha antiphage "
                 "activity, Idefix lytic-cycle perturbation, premature "
                 "lysis of infected Enterococcus faecalis, and "
                 "AbiAlpha-system possession without asserting the direct "
@@ -264,8 +264,8 @@ RECORD: dict[str, Any] = {
                     "label": "abi-alpha locus",
                     "node_type": "GENETIC_ELEMENT",
                     "description": (
-                        "An abi-alpha-family abortive-infection prophage "
-                        "locus represented by the DefenseFinder "
+                        "An abi-alpha-family abortive-infection locus "
+                        "represented by the DefenseFinder "
                         "AbiAlpha__AbiAlpha profile."
                     ),
                 },
