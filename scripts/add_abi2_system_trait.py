@@ -24,6 +24,11 @@ CHOPIN = "DOI:10.1016/j.mib.2005.06.006"
 ANBA = "DOI:10.1128/jb.177.13.3818-3823.1995"
 BIDNENKO = "DOI:10.1128/jb.177.13.3824-3829.1995"
 INTERPRO_PF07751 = "https://www.ebi.ac.uk/interpro/entry/pfam/PF07751/"
+UNIPROT_Q48717 = (
+    "https://rest.uniprot.org/uniprotkb/search?"
+    "query=%28accession%3AQ48717%29"
+    "&fields=accession,id,gene_names,protein_name,xref_pfam&format=tsv"
+)
 
 DEFENSEFINDER_COMMIT = "afb0e5a8b466be53586b13266f5d38d98c3ac268"
 DEFENSEFINDER_PREFIX = (
@@ -225,8 +230,9 @@ RECORD: dict[str, Any] = {
                 "designated abiD1."
             ),
             "notes": (
-                "Anba et al. support a single-gene AbiD1 locus in the "
-                "Abi-like family that includes PF07751."
+                "Anba et al. support a single-gene AbiD1 locus used as "
+                "family-level background for Abi-like abortive-infection "
+                "systems."
             ),
         },
         {
@@ -248,8 +254,17 @@ RECORD: dict[str, Any] = {
             ),
             "notes": (
                 "EBI InterPro resolves PF07751 as the reviewed Pfam "
-                "Abi-like protein family with short name Abi_2 and "
-                "cites AbiD1 primary literature."
+                "Abi-like protein family with short name Abi_2."
+            ),
+        },
+        {
+            "reference": UNIPROT_Q48717,
+            "snippet": "Q48717\tQ48717_9LACT\tabiD1\tAbiD1\tPF07751;",
+            "notes": (
+                "UniProt maps the Lactococcus lactis abiD1/AbiD1 entry "
+                "to Pfam PF07751, bridging primary AbiD1 papers to the "
+                "Abi_2 HMM family without making DefenseFinder Abi2 "
+                "exactly equivalent to AbiD1."
             ),
         },
         article_registry_evidence(),
@@ -409,13 +424,14 @@ RECORD: dict[str, Any] = {
             "status": "OPEN",
             "rationale": (
                 "The DefenseFinder Abi2 model namespace requires the "
-                "Abi2__Abi_2 PF07751 profile, and InterPro treats PF07751 "
-                "as an Abi-like family connected to AbiD1 primary "
-                "literature. This first record leaves unresolved whether "
-                "DefenseFinder Abi2 exactly corresponds to AbiD1, the "
-                "broader AbiD/F group, or a different subset of Abi-like "
-                "loci; it therefore avoids protein-level chemistry and "
-                "records only the genome-level model namespace."
+                "Abi2__Abi_2 PF07751 profile; InterPro treats PF07751 as "
+                "an Abi-like family, and UniProt maps the AbiD1 protein "
+                "onto the same Pfam family. This first record leaves "
+                "unresolved whether DefenseFinder Abi2 exactly corresponds "
+                "to AbiD1, the broader AbiD/F group, or a different subset "
+                "of Abi-like loci; it therefore avoids protein-level "
+                "chemistry and records only the genome-level model "
+                "namespace."
             ),
             "attaches_to": ["causal_graphs#abi2_locus_restricts_phage"],
             "posed_by": CURATOR,

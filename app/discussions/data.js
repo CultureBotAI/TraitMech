@@ -216,7 +216,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#abi2_locus_restricts_phage"
   ],
-  "rationale": "The DefenseFinder Abi2 model namespace requires the Abi2__Abi_2 PF07751 profile, and InterPro treats PF07751 as an Abi-like family connected to AbiD1 primary literature. This first record leaves unresolved whether DefenseFinder Abi2 exactly corresponds to AbiD1, the broader AbiD/F group, or a different subset of Abi-like loci; it therefore avoids protein-level chemistry and records only the genome-level model namespace.",
+  "rationale": "The DefenseFinder Abi2 model namespace requires the Abi2__Abi_2 PF07751 profile; InterPro treats PF07751 as an Abi-like family, and UniProt maps the AbiD1 protein onto the same Pfam family. This first record leaves unresolved whether DefenseFinder Abi2 exactly corresponds to AbiD1, the broader AbiD/F group, or a different subset of Abi-like loci; it therefore avoids protein-level chemistry and records only the genome-level model namespace.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
