@@ -1308,6 +1308,8 @@ trna anticodon-loop cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_s
 abortive phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 phage genomic rna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
 non-abortive rna-phage restriction	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_ape_system.yaml
+gao_rl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_rl_system.yaml
+gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	1	data/traits/genomics/gao_rl_system.yaml
 bacterial gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/gasdermin_system.yaml
 caspase-like bgsdm cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml
 bacterial gasdermin pore assembly	BIOLOGICAL_PROCESS	1	data/traits/genomics/gasdermin_system.yaml

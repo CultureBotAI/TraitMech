@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gao-RL system — GENOMICS — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/genomics.html">GENOMICS</a>
+    </p>
+    <h1>Gao-RL system</h1>
+    <p class="curie"><code>traitmech:000352</code> · CLASS · PROPOSED</p>
+
+    <p class="definition">A phage defense system in which an organism possesses a Gao_RL locus represented by DefenseFinder as a four-profile model requiring Gao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, and Gao_RL__RL_D.</p>
+
+  </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Gao-RL loci confer bacterial phage defense</h2>
+      <p class="meta">Conservative system-level sketch linking possession of a Gao_RL locus to Gao et al. antiviral cassette defense without asserting the unresolved RL component activities.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · The graph captures Gao-RL as a named DefenseFinder four-profile Gao-family system while leaving natural hosts, RL_A/RL_B/RL_C/RL_D protein functions, phage triggers, and direct effector activity unresolved.</p>
+
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Gao-RL loci confer bacterial phage defense</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for Gao-RL system.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>Gao_RL locus</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Gao 2020 antiviral cassette defense</strong>
+            <code>RO:0002326</code>
+            <p>DefenseFinder maps Gao_RL to the Gao et al. systematic antiphage-system discovery paper and models it as a four-profile system requiring RL_A through RL_D.</p>
+            <ul>
+
+              <li>
+                <code>PMID:32855333</code>
+                <span class="evidence-snippet">By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.</span>
+                <span class="meta">Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">Gao_RL | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes</span>
+                <span class="meta">The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">Gao_RL	Gao_RL	4	4	Gao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D</span>
+                <span class="meta">The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Gao_RL__RL_A                                     | Gao_RL__RL_A                                     | Gao_RL                 | Custom                  | 20     |</span>
+                <span class="meta">The DefenseFinder HMM inventory records Gao_RL__RL_A under Gao_RL.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Gao_RL__RL_B                                     | Gao_RL__RL_B                                     | Gao_RL                 | Custom                  | 20     |</span>
+                <span class="meta">The DefenseFinder HMM inventory records Gao_RL__RL_B under Gao_RL.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Gao_RL__RL_C                                     | Gao_RL__RL_C                                     | Gao_RL                 | Custom                  | 20     |</span>
+                <span class="meta">The DefenseFinder HMM inventory records Gao_RL__RL_C under Gao_RL.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code>
+                <span class="evidence-snippet">| Gao_RL__RL_D                                     | Gao_RL__RL_D                                     | Gao_RL                 | Custom                  | 100    |</span>
+                <span class="meta">The DefenseFinder HMM inventory records Gao_RL__RL_D under Gao_RL.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>Gao 2020 antiviral cassette defense</strong>
+            <span class="edge-predicate">confers</span>
+            <strong>Gao-RL system</strong>
+            <code>METPO:2007700</code>
+            <p>Gao_RL-associated antiviral cassette defense realizes the Gao-RL system trait.</p>
+            <ul>
+
+              <li>
+                <code>PMID:32855333</code>
+                <span class="evidence-snippet">These systems incorporate enzymatic activities not previously implicated in antiviral defense, including RNA editing and retron satellite DNA synthesis.</span>
+                <span class="meta">Gao et al. support diverse enzymatic activities in newly discovered antiviral systems.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>Gao-RL system</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>phage defense system</strong>
+            <code>rdfs:subClassOf</code>
+            <p>Gao-RL system possession is a phage-defense-system trait.</p>
+            <ul>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code>
+                <span class="evidence-snippet">Gao_RL | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes</span>
+                <span class="meta">The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.</span>
+              </li>
+
+              <li>
+                <code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv</code>
+                <span class="evidence-snippet">Gao_RL	Gao_RL	4	4	Gao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D</span>
+                <span class="meta">The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2026-06-12)</dd>
+
+        <dt>Definition source</dt><dd>DOI:10.1126/science.aba0372</dd>
+
+
+      </dl>
+    </div>
+
+
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+
+        <li><a href="../../traits/genomics/phage_defense_system.html" >phage defense system <code>traitmech:000209</code></a></li>
+
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <h2>Synonyms (5)</h2>
+      <ul class="synonyms">
+
+        <li>Gao_RL <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
+
+        <li>Gao_RL__RL_A <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Gao_RL__RL_B <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Gao_RL__RL_C <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+        <li>Gao_RL__RL_D <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</span></li>
+
+      </ul>
+    </div>
+
+
+
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+
+      <p class="no-match">No kg-microbe node embedding for this METPO class
+        in the 2026-04-25 deepwalk. Most unmatched terms are
+        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
+        graph encodes as edge attributes, not entity nodes.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="gao-rl-mechanism-gap">
+        <p class="discussion-prompt">Resolve Gao_RL natural hosts, RL_A/RL_B/RL_C/RL_D component functions, phage triggers, and effector activity before minting narrower Gao_RL mechanism children.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>gao-rl-mechanism-gap</code>
+          · raised by codex
+          · 2026-09-22
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#gao_rl_locus_restricts_phage</code>
+        </p>
+
+
+        <p>Gao et al. support widespread antiviral gene cassettes with diverse enzymatic activities, and DefenseFinder models Gao_RL as a four-profile system. The exact natural host breadth, RL component identities, phage trigger, and profile-to-activity mapping remain unresolved.</p>
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+
+        <li>
+          <time>2026-09-22T01:39:05Z</time> ·
+          <strong>MINTED_TRAITMECH_ID</strong> · codex
+          <p class="changes">Minted Gao-RL system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v229.</p>
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/genomics/gao_rl_system.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/gao_rl_system.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/genomics/gao_rl_system.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/genomics/gao_rl_system.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/traitmech:000352" target="_blank" rel="noopener"><code>traitmech:000352</code></a></dd>
+      <dt>Category</dt>
+      <dd>GENOMICS</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>PROPOSED</dd>
+    </dl>
+  </div>
+
+
+</aside>
+</div>
+
+
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a Gao_RL locus to Gao et al. antiviral cassette defense without asserting the unresolved RL component activities.", "edges": [{"description": "DefenseFinder maps Gao_RL to the Gao et al. systematic antiphage-system discovery paper and models it as a four-profile system requiring RL_A through RL_D.", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_RL | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_RL\tGao_RL\t4\t4\tGao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_A under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_A                                     | Gao_RL__RL_A                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_B under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_B                                     | Gao_RL__RL_B                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_C under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_C                                     | Gao_RL__RL_C                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_D under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_D                                     | Gao_RL__RL_D                                     | Gao_RL                 | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_rl_locus", "target": "gao_2020_antiviral_cassette_defense"}, {"description": "Gao_RL-associated antiviral cassette defense realizes the Gao-RL system trait.", "evidence": [{"notes": "Gao et al. support diverse enzymatic activities in newly discovered antiviral systems.", "reference": "PMID:32855333", "snippet": "These systems incorporate enzymatic activities not previously implicated in antiviral defense, including RNA editing and retron satellite DNA synthesis."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gao_2020_antiviral_cassette_defense", "target": "gao_rl_system_trait"}, {"description": "Gao-RL system possession is a phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_RL | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_RL\tGao_RL\t4\t4\tGao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gao_rl_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DefenseFinder maps Gao_RL to the Gao et al. systematic antiphage-system discovery paper and models it as a four-profile system requiring RL_A through RL_D.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_RL | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_RL\tGao_RL\t4\t4\tGao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_A under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_A                                     | Gao_RL__RL_A                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_B under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_B                                     | Gao_RL__RL_B                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_C under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_C                                     | Gao_RL__RL_C                                     | Gao_RL                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_RL__RL_D under Gao_RL.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_RL__RL_D                                     | Gao_RL__RL_D                                     | Gao_RL                 | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gao_RL locus", "target": "Gao 2020 antiviral cassette defense"}, {"description": "Gao_RL-associated antiviral cassette defense realizes the Gao-RL system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Gao et al. support diverse enzymatic activities in newly discovered antiviral systems.", "reference": "PMID:32855333", "snippet": "These systems incorporate enzymatic activities not previously implicated in antiviral defense, including RNA editing and retron satellite DNA synthesis."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Gao 2020 antiviral cassette defense", "target": "Gao-RL system"}, {"description": "Gao-RL system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_RL system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_RL | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_RL as a four-profile system requiring RL_A through RL_D profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_RL\tGao_RL\t4\t4\tGao_RL__RL_A, Gao_RL__RL_B, Gao_RL__RL_C, Gao_RL__RL_D"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Gao-RL system", "target": "phage defense system"}], "graph_id": "gao_rl_locus_restricts_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacteriophage protection by one of the antiviral gene cassettes described in the Gao et al. systematic defense-gene discovery campaign.", "grounding": null, "id": "gao_2020_antiviral_cassette_defense", "is_orphan": false, "label": "Gao 2020 antiviral cassette defense", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Gao_RL phage-defense locus represented by custom RL_A through RL_D profiles.", "grounding": null, "id": "gao_rl_locus", "is_orphan": false, "label": "Gao_RL locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Gao-RL phage-defense system.", "grounding": "traitmech:000352", "id": "gao_rl_system_trait", "is_orphan": false, "label": "Gao-RL system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "xrefs": []}], "protein_example_rows": [], "scope_notes": "The graph captures Gao-RL as a named DefenseFinder four-profile Gao-family system while leaving natural hosts, RL_A/RL_B/RL_C/RL_D protein functions, phage triggers, and direct effector activity unresolved.", "scope_status": "NONMECHANISTIC", "title": "Gao-RL loci confer bacterial phage defense"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <span>TraitMech</span> ·
+      <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+    </div>
+    <div>
+      Record as of 2026-09-22 01:39 UTC from
+      <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
+      · 747 TraitRecords
+      · embedding coverage 63.9%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
+  </div>
+</footer>
+<script src="../../theme-toggle.js"></script>
+</body>
+</html>

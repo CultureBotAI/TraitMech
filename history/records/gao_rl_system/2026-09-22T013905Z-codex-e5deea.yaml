@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/gao_rl_system.yaml
+  slug: gao_rl_system
+session:
+  id: 2026-09-22T013905Z-codex-e5deea
+  timestamp: '2026-09-22T01:39:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add Gao-RL system trait
+  details: Minted traitmech:000352 for the DefenseFinder-backed Gao-RL system under phage
+    defense system with DOI-backed evidence from Gao et al., pinned DefenseFinder article,
+    rules, and HMM registry evidence for the four required Gao_RL profiles, a conservative
+    nonmechanistic causal graph, an open mechanism-gap discussion, and proposal metpo_traitmech_v229
+    reserving METPO:1030600 for upstream adoption.

@@ -226,6 +226,7 @@ data/traits/genomics/fs_hsdr_like_system.yaml	traitmech:000350	FS-HsdR-like syst
 data/traits/genomics/fs_sma_system.yaml	traitmech:000351	FS-Sma system	fs_sma_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gabija_system.yaml	traitmech:000215	Gabija system	gabija_gajab_complex_antiphage_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gao_ape_system.yaml	traitmech:000334	ApeA system	gao_ape_hepn_rnase_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
+data/traits/genomics/gao_rl_system.yaml	traitmech:000352	Gao-RL system	gao_rl_locus_restricts_phage	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gasdermin_system.yaml	traitmech:000336	GasderMIN system	gasdermin_proteolysis_triggers_pore_cell_death	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_content.yaml	METPO:1000127	GC content	gc_content_composition_drivers	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/gc_high.yaml	METPO:1000432	GC high	gc_high_low_gc_bin	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
