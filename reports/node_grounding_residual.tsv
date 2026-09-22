@@ -1,8 +1,8 @@
 node_label	node_type	node_count	example_files
 restricted phage propagation	BIOLOGICAL_PROCESS	82	data/traits/genomics/abi2_system.yaml|data/traits/genomics/abid_system.yaml|data/traits/genomics/abie_system.yaml
 compatible solute accumulation	BIOLOGICAL_PROCESS	12	data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/halotolerant.yaml|data/traits/environment/moderately_halophilic.yaml
+gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	9	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_mza_system.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	8	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/extremely_halophilic.yaml
-gao 2020 antiviral cassette defense	BIOLOGICAL_PROCESS	8	data/traits/genomics/gao_hhe_system.yaml|data/traits/genomics/gao_iet_system.yaml|data/traits/genomics/gao_mza_system.yaml
 phage replication	BIOLOGICAL_PROCESS	7	data/traits/genomics/abortive_infection_system.yaml|data/traits/genomics/avast_system.yaml|data/traits/genomics/cbass_system.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	7	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml
 na+/h+ antiporter activity	MOLECULAR_FUNCTION	6	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/ph_delta_mid2.yaml|data/traits/environment/ph_delta_very_low.yaml
@@ -1315,6 +1315,7 @@ gao_mza locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_mza_system.yaml
 gao_ppl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_ppl_system.yaml
 gao_qat locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_qat_system.yaml
 gao_rl locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_rl_system.yaml
+gao_tery locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_tery_system.yaml
 gao_tmn locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_tmn_system.yaml
 gao_upx locus	GENETIC_ELEMENT	1	data/traits/genomics/gao_upx_system.yaml
 bacterial gasdermin locus	GENETIC_ELEMENT	1	data/traits/genomics/gasdermin_system.yaml

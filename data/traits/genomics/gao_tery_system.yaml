@@ -1,0 +1,174 @@
+identifier: traitmech:000360
+label: Gao-TerY system
+definition: A phage defense system in which an organism possesses a Gao_TerY locus
+  represented by DefenseFinder as a three-profile model requiring Gao_TerY__TerYA,
+  Gao_TerY__TerYB, and Gao_TerY__TerYC.
+definition_source: DOI:10.1126/science.aba0372
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: Gao_TerY
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: Gao_TerY__TerYA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Gao_TerY__TerYB
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: Gao_TerY__TerYC
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:32855333
+  snippet: By systematic defense gene prediction and heterologous reconstitution,
+    here we discover 29 widespread antiviral gene cassettes, collectively present
+    in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.
+  notes: Gao et al. support a systematic defense-gene prediction and heterologous
+    reconstitution campaign that discovered widespread antiviral gene cassettes.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: Gao_TerY | 10\.1126/science\.aba0372 | Diverse enzymatic activities mediate
+    antiviral immunity in prokaryotes
+  notes: The DefenseFinder article registry maps the named Gao_TerY system to the
+    Gao et al. prokaryotic antiviral-immunity paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "Gao_TerY\tGao_TerY\t3\t3\tGao_TerY__TerYA, Gao_TerY__TerYB, Gao_TerY__TerYC"
+  notes: The DefenseFinder rules table models Gao_TerY as a three-profile system requiring
+    the Gao_TerY__TerYA through Gao_TerY__TerYC profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_TerY__TerYA                                  | Gao_TerY__TerYA                                  |
+    Gao_TerY               | Custom                  | 100    |'
+  notes: The DefenseFinder HMM inventory records Gao_TerY__TerYA under Gao_TerY.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_TerY__TerYB                                  | Gao_TerY__TerYB                                  |
+    Gao_TerY               | Custom                  | 38     |'
+  notes: The DefenseFinder HMM inventory records Gao_TerY__TerYB under Gao_TerY.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| Gao_TerY__TerYC                                  | Gao_TerY__TerYC                                  |
+    Gao_TerY               | Custom                  | 200    |'
+  notes: The DefenseFinder HMM inventory records Gao_TerY__TerYC under Gao_TerY.
+causal_graphs:
+- graph_id: gao_tery_locus_restricts_phage
+  title: Gao-TerY loci confer bacterial phage defense
+  description: Conservative system-level sketch linking possession of a Gao_TerY locus
+    to Gao et al. antiviral cassette defense without asserting the unresolved TerY
+    component activities.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures Gao-TerY as a named DefenseFinder three-profile
+    Gao-family system while leaving natural hosts, TerYA/TerYB/TerYC protein functions,
+    phage triggers, and direct effector activity unresolved.
+  nodes:
+  - node_id: gao_tery_locus
+    label: Gao_TerY locus
+    node_type: GENETIC_ELEMENT
+    description: A DefenseFinder Gao_TerY phage-defense locus represented by custom
+      TerYA through TerYC profiles.
+  - node_id: gao_2020_antiviral_cassette_defense
+    label: Gao 2020 antiviral cassette defense
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacteriophage protection by one of the antiviral gene cassettes described
+      in the Gao et al. systematic defense-gene discovery campaign.
+  - node_id: gao_tery_system_trait
+    label: Gao-TerY system
+    node_type: TRAIT
+    grounding: traitmech:000360
+    description: Possession of a genome-encoded Gao-TerY phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: gao_tery_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_2020_antiviral_cassette_defense
+    description: DefenseFinder maps Gao_TerY to the Gao et al. systematic antiphage-system
+      discovery paper and models it as a three-profile system requiring TerYA through
+      TerYC.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_TerY | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_TerY system to
+        the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_TerY\tGao_TerY\t3\t3\tGao_TerY__TerYA, Gao_TerY__TerYB, Gao_TerY__TerYC"
+      notes: The DefenseFinder rules table models Gao_TerY as a three-profile system
+        requiring the Gao_TerY__TerYA through Gao_TerY__TerYC profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_TerY__TerYA                                  | Gao_TerY__TerYA                                  |
+        Gao_TerY               | Custom                  | 100    |'
+      notes: The DefenseFinder HMM inventory records Gao_TerY__TerYA under Gao_TerY.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_TerY__TerYB                                  | Gao_TerY__TerYB                                  |
+        Gao_TerY               | Custom                  | 38     |'
+      notes: The DefenseFinder HMM inventory records Gao_TerY__TerYB under Gao_TerY.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_TerY__TerYC                                  | Gao_TerY__TerYC                                  |
+        Gao_TerY               | Custom                  | 200    |'
+      notes: The DefenseFinder HMM inventory records Gao_TerY__TerYC under Gao_TerY.
+  - subject: gao_2020_antiviral_cassette_defense
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: gao_tery_system_trait
+    description: Gao_TerY-associated antiviral cassette defense realizes the Gao-TerY
+      system trait.
+    evidence:
+    - reference: PMID:32855333
+      snippet: By systematic defense gene prediction and heterologous reconstitution,
+        here we discover 29 widespread antiviral gene cassettes, collectively present
+        in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+        against specific bacteriophages.
+      notes: Gao et al. support bacteriophage protection by widespread antiviral gene
+        cassettes.
+  - subject: gao_tery_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: Gao-TerY system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Gao_TerY | 10\.1126/science\.aba0372 | Diverse enzymatic activities
+        mediate antiviral immunity in prokaryotes
+      notes: The DefenseFinder article registry maps the named Gao_TerY system to
+        the Gao et al. prokaryotic antiviral-immunity paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "Gao_TerY\tGao_TerY\t3\t3\tGao_TerY__TerYA, Gao_TerY__TerYB, Gao_TerY__TerYC"
+      notes: The DefenseFinder rules table models Gao_TerY as a three-profile system
+        requiring the Gao_TerY__TerYA through Gao_TerY__TerYC profiles.
+discussions:
+- discussion_id: gao-tery-mechanism-gap
+  prompt: Resolve Gao_TerY natural hosts, TerY component functions, phage triggers,
+    and effector activity before minting narrower Gao_TerY mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Gao et al. support widespread antiviral gene cassettes that mediate protection
+    against specific bacteriophages, and DefenseFinder models Gao_TerY as a three-profile
+    system. The exact natural host breadth, TerYA/TerYB/TerYC component identities,
+    phage trigger, and profile-to-activity mapping remain unresolved.
+  attaches_to:
+  - causal_graphs#gao_tery_locus_restricts_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T09:00:56Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted Gao-TerY system as a DOI-backed GENOMICS TraitRecord under phage
+    defense system after an ignored-and-hidden duplicate review found no exact live
+    TraitMech, METPO, history, or prior proposal record; the replacement placeholder
+    is reserved in proposals/metpo_traitmech_v237.
+  llm_assisted: true

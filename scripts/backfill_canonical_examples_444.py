@@ -881,6 +881,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/gao_qat_system",
     "genomics/gao_rl_system",
     "genomics/gao_tmn_system",
+    "genomics/gao_tery_system",
     "genomics/gao_upx_system",
     "genomics/geb_system",
     "genomics/hesat_system",
