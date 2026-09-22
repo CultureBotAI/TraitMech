@@ -1578,6 +1578,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_ape_system.html#apea-trigger-and-homolog-scope-gap"
  },
  {
+  "discussion_id": "gao-hhe-mechanism-gap",
+  "prompt": "Resolve Gao_Hhe natural hosts, HheA component function, phage triggers, and effector activity before minting narrower Gao_Hhe mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Hhe system",
+  "source_id": "traitmech:000353",
+  "source_file": "gao_hhe_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_hhe_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Hhe as a single-profile system. The exact natural host breadth, HheA component identity, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_hhe_system.html#gao-hhe-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-rl-mechanism-gap",
   "prompt": "Resolve Gao_RL natural hosts, RL_A/RL_B/RL_C/RL_D component functions, phage triggers, and effector activity before minting narrower Gao_RL mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4068,9 +4087,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 222,
- "total_knowledge_gaps": 140,
- "total_source_entries": 220,
+ "total_discussions": 223,
+ "total_knowledge_gaps": 141,
+ "total_source_entries": 221,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
