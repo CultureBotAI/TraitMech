@@ -2567,6 +2567,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/rloc_system.html#rloc-mechanism-gap"
  },
  {
+  "discussion_id": "rnlab-phage-breadth-evasion-gap",
+  "prompt": "Resolve natural RnlAB phage breadth, wild-type T4 evasion through Dmd, induction or activation routes in non-T4 contexts, and RnlAB profile-to-activity mapping before minting narrower RnlAB mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "RnlAB system",
+  "source_id": "traitmech:000367",
+  "source_file": "rnlab_system.yaml",
+  "attaches_to": [
+   "causal_graphs#rnlab_locus_antagonizes_t4_dmd_mutants"
+  ],
+  "rationale": "Koga et al. support RnlA/RnlB as an Escherichia coli K-12 toxin-antitoxin system whose RNase LS activity can antagonize T4 dmd mutants, Otsuka and Yonesaki show that T4 phage Dmd suppresses RnlA toxicity, and DefenseFinder models RnlAB as a two-profile system with RnlAB__RnlA and RnlAB__RnlB markers. Natural phage breadth, wild-type T4 evasion, non-T4 activation contexts, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "PMID:22403819"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/rnlab_system.html#rnlab-phage-breadth-evasion-gap"
+ },
+ {
   "discussion_id": "rosmerta-mechanism-gap",
   "prompt": "Resolve RosmerTA phage triggers and effector outputs before minting narrower RosmerTA mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4338,9 +4359,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 236,
- "total_knowledge_gaps": 154,
- "total_source_entries": 234,
+ "total_discussions": 237,
+ "total_knowledge_gaps": 155,
+ "total_source_entries": 235,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
