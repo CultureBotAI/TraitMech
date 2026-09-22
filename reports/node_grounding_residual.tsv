@@ -1453,6 +1453,8 @@ foreign protein sensing	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.y
 arib nuclease activation	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 lysine trna cleavage	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
 translation inhibition	BIOLOGICAL_PROCESS	1	data/traits/genomics/paris_system.yaml
+pfiat locus	GENETIC_ELEMENT	1	data/traits/genomics/pfiat_system.yaml
+pf4 phage production regulation	BIOLOGICAL_PROCESS	1	data/traits/genomics/pfiat_system.yaml
 bacteriophage pressure	ENVIRONMENTAL_FACTOR	1	data/traits/genomics/phage_defense_system.yaml
 phosphorothioate modification module	GENETIC_ELEMENT	1	data/traits/genomics/phosphorothioate_defense_system.yaml
 pt-dependent foreign dna targeting	BIOLOGICAL_PROCESS	1	data/traits/genomics/phosphorothioate_defense_system.yaml
