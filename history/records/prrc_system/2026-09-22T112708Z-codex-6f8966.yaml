@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/prrc_system.yaml
+  slug: prrc_system
+session:
+  id: 2026-09-22T112708Z-codex-6f8966
+  timestamp: '2026-09-22T11:27:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  summary: Add PrrC phage-exclusion system trait
+  details: Added traitmech:000364 for the DefenseFinder PrrC two-profile phage-exclusion system,
+    reserved METPO:1031800 in proposals/metpo_traitmech_v241, recorded Uzan and Blanga-Kanfi
+    literature plus pinned DefenseFinder article/rules/HMM evidence, and opened a mechanism-gap
+    discussion for unresolved natural homolog substrates, exact EcoprrI accessory composition,
+    phage trigger logic, and PrrC profile-to-activity mapping.
