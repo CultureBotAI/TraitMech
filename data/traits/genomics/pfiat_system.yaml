@@ -1,0 +1,195 @@
+identifier: traitmech:000365
+label: PfiAT system
+definition: A phage defense system in which an organism possesses a Pf4 prophage-encoded
+  PfiAT toxin-antitoxin locus represented by DefenseFinder as a two-profile model
+  requiring PfiAT__PfiA and PfiAT__PfiT.
+definition_source: DOI:10.1111/1751-7915.13570
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000209
+synonyms:
+- synonym_text: PfiAT
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+- synonym_text: PfiAT__PfiA
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+- synonym_text: PfiAT__PfiT
+  synonym_type: RELATED_SYNONYM
+  source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+evidence:
+- reference: PMID:32246813
+  snippet: we provided experimental evidence to demonstrate that PA0729 and the upstream
+    ORF Rorf0727 near the right attachment site of Pf4 form a type II toxin/antitoxin
+    (TA) pair.
+  notes: Li et al. experimentally identify PA0729 and Rorf0727 in the Pf4 prophage
+    as a PfiT/PfiA type II toxin-antitoxin pair.
+- reference: PMID:32246813
+  snippet: Importantly, we found that the deletion of the toxin gene PA0729 greatly
+    increased Pf4 phage production.
+  notes: Li et al. show that deleting pfiT increases Pf4 phage production.
+- reference: PMID:32246813
+  snippet: We thus suggest the toxin PA0729 be named PfiT for Pf4 inhibition toxin
+    and Rorf0727 be named PfiA for PfiT antitoxin.
+  notes: Li et al. name PA0729 as PfiT and Rorf0727 as PfiA.
+- reference: PMID:32246813
+  snippet: Therefore, this study reveals that the TA systems in Pf prophages can regulate
+    phage production and phage immunity, providing new insights into the function
+    of TAs in mobile genetic elements.
+  notes: Li et al. frame Pf prophage toxin-antitoxin systems as regulators of phage
+    production and phage immunity.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+  snippet: PfiAT | 10\.1111/1751-7915\.13570 | Prophage encoding toxin/antitoxin system
+    PfiT/PfiA inhibits Pf4 production in Pseudomonas aeruginosa
+  notes: The DefenseFinder article registry maps the named PfiAT system to Li et al.'s
+    Pf4 prophage PfiT/PfiA paper.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+  snippet: "PfiAT\tPfiAT\t2\t2\tPfiAT__PfiA, PfiAT__PfiT\t\t\t"
+  notes: The DefenseFinder rules table models PfiAT as a two-profile system requiring
+    the PfiAT__PfiA and PfiAT__PfiT profiles.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PfiAT__PfiA                                      | PfiAT__PfiA                                      |
+    PfiAT                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PfiAT__PfiA under PfiAT.
+- reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+  snippet: '| PfiAT__PfiT                                      | PfiAT__PfiT                                      |
+    PfiAT                  | Custom                  | 20     |'
+  notes: The DefenseFinder HMM inventory records PfiAT__PfiT under PfiAT.
+causal_graphs:
+- graph_id: pfiat_locus_regulates_pf4_phage
+  title: PfiAT loci regulate Pf4 prophage production
+  description: Conservative system-level sketch linking possession of a PfiAT locus
+    to PfiT/PfiA-dependent regulation of Pf4 phage production and immunity without
+    asserting the cellular PfiT toxin target or natural host breadth.
+  scope_status: NONMECHANISTIC
+  scope_notes: The graph captures PfiAT as a named DefenseFinder two-profile Pf prophage
+    system while leaving natural host breadth, the cellular target of PfiT in Pseudomonas,
+    Pf4 phage-immunity coupling, and PfiAT profile-to-activity mapping unresolved.
+  nodes:
+  - node_id: pfiat_locus
+    label: PfiAT locus
+    node_type: GENETIC_ELEMENT
+    description: A Pf prophage-encoded PfiAT toxin-antitoxin locus represented by
+      PfiAT__PfiA and PfiAT__PfiT profiles.
+  - node_id: pf4_phage_production_regulation
+    label: Pf4 phage production regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation of Pf4 phage production and Pf4 phage immunity by a prophage-encoded
+      PfiT/PfiA toxin-antitoxin pair.
+  - node_id: pfiat_system_trait
+    label: PfiAT system
+    node_type: TRAIT
+    grounding: traitmech:000365
+    description: Possession of a genome-encoded PfiAT phage-defense system.
+  - node_id: phage_defense_system
+    label: phage defense system
+    node_type: TRAIT
+    grounding: traitmech:000209
+    description: Possession of one or more genome-encoded immune systems that inhibit
+      bacteriophage infection.
+  edges:
+  - subject: pfiat_locus
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pf4_phage_production_regulation
+    description: Li et al. identify the Pf4 PA0729 and Rorf0727 locus as a PfiT/PfiA
+      toxin-antitoxin pair whose pfiT toxin gene inhibits Pf4 production, and DefenseFinder
+      models PfiAT as a two-profile system.
+    evidence:
+    - reference: PMID:32246813
+      snippet: we provided experimental evidence to demonstrate that PA0729 and the
+        upstream ORF Rorf0727 near the right attachment site of Pf4 form a type II
+        toxin/antitoxin (TA) pair.
+      notes: Li et al. experimentally identify PA0729 and Rorf0727 as a PfiT/PfiA
+        toxin-antitoxin pair near the right attachment site of Pf4.
+    - reference: PMID:32246813
+      snippet: Importantly, we found that the deletion of the toxin gene PA0729 greatly
+        increased Pf4 phage production.
+      notes: Li et al. show that pfiT inhibits Pf4 phage production.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PfiAT | 10\.1111/1751-7915\.13570 | Prophage encoding toxin/antitoxin
+        system PfiT/PfiA inhibits Pf4 production in Pseudomonas aeruginosa
+      notes: The DefenseFinder article registry maps the named PfiAT system to Li
+        et al.'s Pf4 prophage PfiT/PfiA paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PfiAT\tPfiAT\t2\t2\tPfiAT__PfiA, PfiAT__PfiT\t\t\t"
+      notes: The DefenseFinder rules table models PfiAT as a two-profile system requiring
+        the PfiAT__PfiA and PfiAT__PfiT profiles.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PfiAT__PfiA                                      | PfiAT__PfiA                                      |
+        PfiAT                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PfiAT__PfiA under PfiAT.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PfiAT__PfiT                                      | PfiAT__PfiT                                      |
+        PfiAT                  | Custom                  | 20     |'
+      notes: The DefenseFinder HMM inventory records PfiAT__PfiT under PfiAT.
+  - subject: pf4_phage_production_regulation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pfiat_system_trait
+    description: PfiT/PfiA-dependent regulation of Pf4 phage production and immunity
+      realizes the PfiAT system trait.
+    evidence:
+    - reference: PMID:32246813
+      snippet: Therefore, this study reveals that the TA systems in Pf prophages can
+        regulate phage production and phage immunity, providing new insights into
+        the function of TAs in mobile genetic elements.
+      notes: Li et al. support Pf prophage toxin-antitoxin systems as regulators of
+        phage production and phage immunity.
+  - subject: pfiat_system_trait
+    predicate: is a
+    predicate_id: rdfs:subClassOf
+    object: phage_defense_system
+    description: PfiAT system possession is a phage-defense-system trait.
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PfiAT | 10\.1111/1751-7915\.13570 | Prophage encoding toxin/antitoxin
+        system PfiT/PfiA inhibits Pf4 production in Pseudomonas aeruginosa
+      notes: The DefenseFinder article registry maps the named PfiAT system to Li
+        et al.'s Pf4 prophage PfiT/PfiA paper.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: "PfiAT\tPfiAT\t2\t2\tPfiAT__PfiA, PfiAT__PfiT\t\t\t"
+      notes: The DefenseFinder rules table models PfiAT as a two-profile system requiring
+        the PfiAT__PfiA and PfiAT__PfiT profiles.
+discussions:
+- discussion_id: pfiat-mechanism-gap
+  prompt: Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas,
+    Pf prophage production and immunity coupling, and PfiAT profile-to-activity mapping
+    before minting narrower PfiAT mechanism children.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: Li et al. support PA0729/PfiT and Rorf0727/PfiA in the Pf4 prophage as
+    a type II toxin-antitoxin pair that regulates Pf4 production and phage immunity,
+    and DefenseFinder models PfiAT as a two-profile system with PfiAT__PfiA and PfiAT__PfiT
+    markers. Natural host breadth, the cellular target of PfiT, Pf4 immunity coupling,
+    and profile-to-activity mapping remain unresolved.
+  evidence:
+  - reference: PMID:32246813
+    snippet: Homologs of PfiT are also found in other Pseudomonas strains, and the
+      cellular target of PfiT in Pseudomonas will be investigated in future studies.
+    notes: Li et al. explicitly leave the PfiT cellular target unresolved.
+  attaches_to:
+  - causal_graphs#pfiat_locus_regulates_pf4_phage
+  posed_by: codex
+  posed_date: '2026-09-22'
+curation_history:
+- timestamp: '2026-09-22T12:25:36Z'
+  curator: codex
+  action: MINTED_TRAITMECH_ID
+  changes: Minted PfiAT system as a DOI-backed GENOMICS TraitRecord under phage defense
+    system after an ignored-and-hidden duplicate review found no exact live TraitMech,
+    METPO, history, or prior proposal record; the replacement placeholder is reserved
+    in proposals/metpo_traitmech_v242.
+  llm_assisted: true
+- timestamp: '2026-09-22T12:25:37Z'
+  curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: 'Reviewed the PfiAT canonical_examples gap and left canonical_examples
+    empty: the current evidence supports the Pf4 prophage PfiT/PfiA toxin-antitoxin
+    pair, its control of Pf4 phage production and immunity, and the pinned DefenseFinder
+    PfiAT profiles, but does not cite a directly observed natural microbial taxon
+    with a source-backed PfiAT locus broad enough for a canonical example. No paid
+    research was used.'
+  llm_assisted: true

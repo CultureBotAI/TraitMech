@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/pfiat_system.yaml
+  slug: pfiat_system
+session:
+  id: 2026-09-22T122823Z-claude-code-0ac476
+  timestamp: '2026-09-22T12:28:23Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - evidence
+  - causal_graphs
+  - grounding
+  summary: Add PfiAT phage-defense system trait
+  details: Minted traitmech:000365 for PfiAT system as a DOI-backed GENOMICS TraitRecord under
+    phage defense system, using Li et al. evidence for Pf4 prophage PfiT/PfiA regulation and
+    pinned DefenseFinder article, rule, and HMM rows for the PfiAT namespace; reserved METPO:1031900
+    in proposals/metpo_traitmech_v242 for upstream replacement.

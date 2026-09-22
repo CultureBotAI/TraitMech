@@ -2288,6 +2288,27 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/paris_system.html#paris-trigger-and-counterdefense-gap"
  },
  {
+  "discussion_id": "pfiat-mechanism-gap",
+  "prompt": "Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas, Pf prophage production and immunity coupling, and PfiAT profile-to-activity mapping before minting narrower PfiAT mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "PfiAT system",
+  "source_id": "traitmech:000365",
+  "source_file": "pfiat_system.yaml",
+  "attaches_to": [
+   "causal_graphs#pfiat_locus_regulates_pf4_phage"
+  ],
+  "rationale": "Li et al. support PA0729/PfiT and Rorf0727/PfiA in the Pf4 prophage as a type II toxin-antitoxin pair that regulates Pf4 production and phage immunity, and DefenseFinder models PfiAT as a two-profile system with PfiAT__PfiA and PfiAT__PfiT markers. Natural host breadth, the cellular target of PfiT, Pf4 immunity coupling, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "PMID:32246813"
+  ],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/pfiat_system.html#pfiat-mechanism-gap"
+ },
+ {
   "discussion_id": "phage-defense-system-xref-gap",
   "prompt": "Resolve exact ontology xrefs for organism-level phage defense system possession before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -4296,9 +4317,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 234,
- "total_knowledge_gaps": 152,
- "total_source_entries": 232,
+ "total_discussions": 235,
+ "total_knowledge_gaps": 153,
+ "total_source_entries": 233,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
