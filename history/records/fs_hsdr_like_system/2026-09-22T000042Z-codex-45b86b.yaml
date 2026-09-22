@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/genomics/fs_hsdr_like_system.yaml
+  slug: fs_hsdr_like_system
+session:
+  id: 2026-09-22T000042Z-codex-45b86b
+  timestamp: '2026-09-22T00:00:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - identity
+  - evidence
+  - causal_graphs
+  - discussions
+  summary: Add FS-HsdR-like system trait
+  details: Minted traitmech:000350 for the DefenseFinder-backed FS-HsdR-like system under
+    phage defense system with DOI-backed evidence from Fillol-Salom et al., pinned DefenseFinder
+    article, rules, and HMM registry evidence, a conservative nonmechanistic causal graph,
+    an open mechanism-gap discussion, and proposal metpo_traitmech_v227 reserving METPO:1030400
+    for upstream adoption.

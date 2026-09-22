@@ -1504,6 +1504,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/fs_hp_system.html#fs-hp-mechanism-gap"
  },
  {
+  "discussion_id": "fs-hsdr-like-mechanism-gap",
+  "prompt": "Resolve FS_HsdR_like natural hosts, helper-phage triggers, DUF6731 activity, HP component identity, HdrR activity, and the profile-to-activity mapping before minting narrower FS_HsdR_like mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "FS-HsdR-like system",
+  "source_id": "traitmech:000350",
+  "source_file": "fs_hsdr_like_system.yaml",
+  "attaches_to": [
+   "causal_graphs#fs_hsdr_like_locus_restricts_phage"
+  ],
+  "rationale": "Fillol-Salom et al. support phage-inducible chromosomal islands as carriers of defense systems that provide broad immunity, and DefenseFinder models FS_HsdR_like as a two-gene system drawing from three custom profile keys. Its exact natural host breadth, helper-phage trigger, component activities, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/fs_hsdr_like_system.html#fs-hsdr-like-mechanism-gap"
+ },
+ {
   "discussion_id": "gabija-activation-and-antidefense-gap",
   "prompt": "Resolve Gabija activation, stoichiometry, cell-outcome, and phage anti-defense breadth before minting narrower Gabija mechanistic children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4011,9 +4030,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 219,
- "total_knowledge_gaps": 137,
- "total_source_entries": 217,
+ "total_discussions": 220,
+ "total_knowledge_gaps": 138,
+ "total_source_entries": 218,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
