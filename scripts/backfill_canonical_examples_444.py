@@ -877,6 +877,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/gao_hhe_system",
     "genomics/gao_iet_system",
     "genomics/gao_mza_system",
+    "genomics/gao_ppl_system",
     "genomics/gao_rl_system",
     "genomics/geb_system",
     "genomics/hesat_system",

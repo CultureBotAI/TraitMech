@@ -1635,6 +1635,25 @@ window.searchData = [
   "page_url": "../../pages/traits/genomics/gao_mza_system.html#gao-mza-mechanism-gap"
  },
  {
+  "discussion_id": "gao-ppl-mechanism-gap",
+  "prompt": "Resolve Gao_Ppl natural hosts, PplA component function, phage triggers, and effector activity before minting narrower Gao_Ppl mechanism children.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Gao-Ppl system",
+  "source_id": "traitmech:000356",
+  "source_file": "gao_ppl_system.yaml",
+  "attaches_to": [
+   "causal_graphs#gao_ppl_locus_restricts_phage"
+  ],
+  "rationale": "Gao et al. support widespread antiviral gene cassettes that mediate protection against specific bacteriophages, and DefenseFinder models Gao_Ppl as a single-profile system. The exact natural host breadth, PplA component identity, phage trigger, and profile-to-activity mapping remain unresolved.",
+  "num_experiments": 0,
+  "num_evidence": 0,
+  "evidence_refs": [],
+  "posed_by": "codex",
+  "page_url": "../../pages/traits/genomics/gao_ppl_system.html#gao-ppl-mechanism-gap"
+ },
+ {
   "discussion_id": "gao-rl-mechanism-gap",
   "prompt": "Resolve Gao_RL natural hosts, RL_A/RL_B/RL_C/RL_D component functions, phage triggers, and effector activity before minting narrower Gao_RL mechanism children.",
   "kind": "KNOWLEDGE_GAP",
@@ -4125,9 +4144,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 225,
- "total_knowledge_gaps": 143,
- "total_source_entries": 223,
+ "total_discussions": 226,
+ "total_knowledge_gaps": 144,
+ "total_source_entries": 224,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",
